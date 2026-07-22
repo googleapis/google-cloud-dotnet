@@ -27,120 +27,181 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "Citnb29nbGUvY2xvdWQvdGFza3MvdjJiZXRhMy9jbG91ZHRhc2tzLnByb3Rv",
             "Ehpnb29nbGUuY2xvdWQudGFza3MudjJiZXRhMxocZ29vZ2xlL2FwaS9hbm5v",
             "dGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2ds",
-            "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
-            "Y2UucHJvdG8aJmdvb2dsZS9jbG91ZC90YXNrcy92MmJldGEzL3F1ZXVlLnBy",
-            "b3RvGiVnb29nbGUvY2xvdWQvdGFza3MvdjJiZXRhMy90YXNrLnByb3RvGh5n",
-            "b29nbGUvaWFtL3YxL2lhbV9wb2xpY3kucHJvdG8aGmdvb2dsZS9pYW0vdjEv",
-            "cG9saWN5LnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdv",
-            "b2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvIrcBChFMaXN0UXVldWVz",
-            "UmVxdWVzdBI3CgZwYXJlbnQYASABKAlCJ+BBAvpBIRIfY2xvdWR0YXNrcy5n",
-            "b29nbGVhcGlzLmNvbS9RdWV1ZRIOCgZmaWx0ZXIYAiABKAkSEQoJcGFnZV9z",
-            "aXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkSMgoJcmVhZF9tYXNrGAUg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEBImAKEkxpc3RR",
-            "dWV1ZXNSZXNwb25zZRIxCgZxdWV1ZXMYASADKAsyIS5nb29nbGUuY2xvdWQu",
-            "dGFza3MudjJiZXRhMy5RdWV1ZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki",
-            "fAoPR2V0UXVldWVSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofY2xv",
-            "dWR0YXNrcy5nb29nbGVhcGlzLmNvbS9RdWV1ZRIyCglyZWFkX21hc2sYAiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQEihAEKEkNyZWF0",
-            "ZVF1ZXVlUmVxdWVzdBI3CgZwYXJlbnQYASABKAlCJ+BBAvpBIRIfY2xvdWR0",
-            "YXNrcy5nb29nbGVhcGlzLmNvbS9RdWV1ZRI1CgVxdWV1ZRgCIAEoCzIhLmdv",
-            "b2dsZS5jbG91ZC50YXNrcy52MmJldGEzLlF1ZXVlQgPgQQIifAoSVXBkYXRl",
-            "UXVldWVSZXF1ZXN0EjUKBXF1ZXVlGAEgASgLMiEuZ29vZ2xlLmNsb3VkLnRh",
-            "c2tzLnYyYmV0YTMuUXVldWVCA+BBAhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siSwoSRGVsZXRlUXVldWVSZXF1",
-            "ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofY2xvdWR0YXNrcy5nb29nbGVh",
-            "cGlzLmNvbS9RdWV1ZSJKChFQdXJnZVF1ZXVlUmVxdWVzdBI1CgRuYW1lGAEg",
-            "ASgJQifgQQL6QSEKH2Nsb3VkdGFza3MuZ29vZ2xlYXBpcy5jb20vUXVldWUi",
-            "SgoRUGF1c2VRdWV1ZVJlcXVlc3QSNQoEbmFtZRgBIAEoCUIn4EEC+kEhCh9j",
-            "bG91ZHRhc2tzLmdvb2dsZWFwaXMuY29tL1F1ZXVlIksKElJlc3VtZVF1ZXVl",
-            "UmVxdWVzdBI1CgRuYW1lGAEgASgJQifgQQL6QSEKH2Nsb3VkdGFza3MuZ29v",
-            "Z2xlYXBpcy5jb20vUXVldWUirwEKEExpc3RUYXNrc1JlcXVlc3QSNgoGcGFy",
-            "ZW50GAEgASgJQibgQQL6QSASHmNsb3VkdGFza3MuZ29vZ2xlYXBpcy5jb20v",
-            "VGFzaxI8Cg1yZXNwb25zZV92aWV3GAIgASgOMiUuZ29vZ2xlLmNsb3VkLnRh",
-            "c2tzLnYyYmV0YTMuVGFzay5WaWV3EhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpw",
-            "YWdlX3Rva2VuGAQgASgJIl0KEUxpc3RUYXNrc1Jlc3BvbnNlEi8KBXRhc2tz",
-            "GAEgAygLMiAuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuVGFzaxIXCg9u",
-            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkihAEKDkdldFRhc2tSZXF1ZXN0EjQKBG5h",
-            "bWUYASABKAlCJuBBAvpBIAoeY2xvdWR0YXNrcy5nb29nbGVhcGlzLmNvbS9U",
-            "YXNrEjwKDXJlc3BvbnNlX3ZpZXcYAiABKA4yJS5nb29nbGUuY2xvdWQudGFz",
-            "a3MudjJiZXRhMy5UYXNrLlZpZXcivgEKEUNyZWF0ZVRhc2tSZXF1ZXN0EjYK",
-            "BnBhcmVudBgBIAEoCUIm4EEC+kEgEh5jbG91ZHRhc2tzLmdvb2dsZWFwaXMu",
-            "Y29tL1Rhc2sSMwoEdGFzaxgCIAEoCzIgLmdvb2dsZS5jbG91ZC50YXNrcy52",
-            "MmJldGEzLlRhc2tCA+BBAhI8Cg1yZXNwb25zZV92aWV3GAMgASgOMiUuZ29v",
-            "Z2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuVGFzay5WaWV3IkkKEURlbGV0ZVRh",
-            "c2tSZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpBIAoeY2xvdWR0YXNrcy5n",
-            "b29nbGVhcGlzLmNvbS9UYXNrIoQBCg5SdW5UYXNrUmVxdWVzdBI0CgRuYW1l",
-            "GAEgASgJQibgQQL6QSAKHmNsb3VkdGFza3MuZ29vZ2xlYXBpcy5jb20vVGFz",
-            "axI8Cg1yZXNwb25zZV92aWV3GAIgASgOMiUuZ29vZ2xlLmNsb3VkLnRhc2tz",
-            "LnYyYmV0YTMuVGFzay5WaWV3MqUWCgpDbG91ZFRhc2tzEq0BCgpMaXN0UXVl",
-            "dWVzEi0uZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuTGlzdFF1ZXVlc1Jl",
-            "cXVlc3QaLi5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5MaXN0UXVldWVz",
-            "UmVzcG9uc2UiQNpBBnBhcmVudILT5JMCMRIvL3YyYmV0YTMve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9xdWV1ZXMSmgEKCEdldFF1ZXVlEisu",
-            "Z29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuR2V0UXVldWVSZXF1ZXN0GiEu",
-            "Z29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuUXVldWUiPtpBBG5hbWWC0+ST",
-            "AjESLy92MmJldGEzL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcXVl",
-            "dWVzLyp9Eq8BCgtDcmVhdGVRdWV1ZRIuLmdvb2dsZS5jbG91ZC50YXNrcy52",
-            "MmJldGEzLkNyZWF0ZVF1ZXVlUmVxdWVzdBohLmdvb2dsZS5jbG91ZC50YXNr",
-            "cy52MmJldGEzLlF1ZXVlIk3aQQxwYXJlbnQscXVldWWC0+STAjgiLy92MmJl",
-            "dGEzL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcXVldWVzOgVx",
-            "dWV1ZRK6AQoLVXBkYXRlUXVldWUSLi5nb29nbGUuY2xvdWQudGFza3MudjJi",
-            "ZXRhMy5VcGRhdGVRdWV1ZVJlcXVlc3QaIS5nb29nbGUuY2xvdWQudGFza3Mu",
-            "djJiZXRhMy5RdWV1ZSJY2kERcXVldWUsdXBkYXRlX21hc2uC0+STAj4yNS92",
-            "MmJldGEzL3txdWV1ZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcXVl",
-            "dWVzLyp9OgVxdWV1ZRKVAQoLRGVsZXRlUXVldWUSLi5nb29nbGUuY2xvdWQu",
-            "dGFza3MudjJiZXRhMy5EZWxldGVRdWV1ZVJlcXVlc3QaFi5nb29nbGUucHJv",
-            "dG9idWYuRW1wdHkiPtpBBG5hbWWC0+STAjEqLy92MmJldGEzL3tuYW1lPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovcXVldWVzLyp9EqcBCgpQdXJnZVF1ZXVl",
-            "Ei0uZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuUHVyZ2VRdWV1ZVJlcXVl",
-            "c3QaIS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5RdWV1ZSJH2kEEbmFt",
-            "ZYLT5JMCOiI1L3YyYmV0YTMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9xdWV1ZXMvKn06cHVyZ2U6ASoSpwEKClBhdXNlUXVldWUSLS5nb29nbGUu",
-            "Y2xvdWQudGFza3MudjJiZXRhMy5QYXVzZVF1ZXVlUmVxdWVzdBohLmdvb2ds",
-            "ZS5jbG91ZC50YXNrcy52MmJldGEzLlF1ZXVlIkfaQQRuYW1lgtPkkwI6IjUv",
-            "djJiZXRhMy97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8q",
-            "fTpwYXVzZToBKhKqAQoLUmVzdW1lUXVldWUSLi5nb29nbGUuY2xvdWQudGFz",
-            "a3MudjJiZXRhMy5SZXN1bWVRdWV1ZVJlcXVlc3QaIS5nb29nbGUuY2xvdWQu",
-            "dGFza3MudjJiZXRhMy5RdWV1ZSJI2kEEbmFtZYLT5JMCOyI2L3YyYmV0YTMv",
-            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9xdWV1ZXMvKn06cmVzdW1l",
-            "OgEqEqEBCgxHZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBv",
-            "bGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSJW2kEIcmVzb3Vy",
-            "Y2WC0+STAkUiQC92MmJldGEzL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL3F1ZXVlcy8qfTpnZXRJYW1Qb2xpY3k6ASoSqAEKDFNldElhbVBv",
-            "bGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFtUG9saWN5UmVxdWVzdBoVLmdv",
-            "b2dsZS5pYW0udjEuUG9saWN5Il3aQQ9yZXNvdXJjZSxwb2xpY3mC0+STAkUi",
-            "QC92MmJldGEzL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1",
-            "ZXVlcy8qfTpzZXRJYW1Qb2xpY3k6ASoS0wEKElRlc3RJYW1QZXJtaXNzaW9u",
-            "cxIoLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVxdWVzdBop",
-            "Lmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVzcG9uc2UiaNpB",
-            "FHJlc291cmNlLHBlcm1pc3Npb25zgtPkkwJLIkYvdjJiZXRhMy97cmVzb3Vy",
-            "Y2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9xdWV1ZXMvKn06dGVzdElhbVBl",
-            "cm1pc3Npb25zOgEqErIBCglMaXN0VGFza3MSLC5nb29nbGUuY2xvdWQudGFz",
-            "a3MudjJiZXRhMy5MaXN0VGFza3NSZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLnRh",
-            "c2tzLnYyYmV0YTMuTGlzdFRhc2tzUmVzcG9uc2UiSNpBBnBhcmVudILT5JMC",
-            "ORI3L3YyYmV0YTMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1",
-            "ZXVlcy8qfS90YXNrcxKfAQoHR2V0VGFzaxIqLmdvb2dsZS5jbG91ZC50YXNr",
-            "cy52MmJldGEzLkdldFRhc2tSZXF1ZXN0GiAuZ29vZ2xlLmNsb3VkLnRhc2tz",
-            "LnYyYmV0YTMuVGFzayJG2kEEbmFtZYLT5JMCORI3L3YyYmV0YTMve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9xdWV1ZXMvKi90YXNrcy8qfRKvAQoK",
-            "Q3JlYXRlVGFzaxItLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLkNyZWF0",
-            "ZVRhc2tSZXF1ZXN0GiAuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuVGFz",
-            "ayJQ2kELcGFyZW50LHRhc2uC0+STAjwiNy92MmJldGEzL3twYXJlbnQ9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9xdWV1ZXMvKn0vdGFza3M6ASoSmwEKCkRl",
-            "bGV0ZVRhc2sSLS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5EZWxldGVU",
-            "YXNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJG2kEEbmFtZYLT",
-            "5JMCOSo3L3YyYmV0YTMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9x",
-            "dWV1ZXMvKi90YXNrcy8qfRKmAQoHUnVuVGFzaxIqLmdvb2dsZS5jbG91ZC50",
-            "YXNrcy52MmJldGEzLlJ1blRhc2tSZXF1ZXN0GiAuZ29vZ2xlLmNsb3VkLnRh",
-            "c2tzLnYyYmV0YTMuVGFzayJN2kEEbmFtZYLT5JMCQCI7L3YyYmV0YTMve25h",
-            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9xdWV1ZXMvKi90YXNrcy8qfTpy",
-            "dW46ASoaTcpBGWNsb3VkdGFza3MuZ29vZ2xlYXBpcy5jb23SQS5odHRwczov",
-            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQoABCh5j",
-            "b20uZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTNCD0Nsb3VkVGFza3NQcm90",
-            "b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2Nsb3VkdGFza3MvYXBpdjJiZXRh",
-            "My9jbG91ZHRhc2tzcGI7Y2xvdWR0YXNrc3BiogIFVEFTS1NiBnByb3RvMw=="));
+            "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aG2dvb2dsZS9hcGkvZmllbGRf",
+            "aW5mby5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxosZ29vZ2xl",
+            "L2Nsb3VkL3Rhc2tzL3YyYmV0YTMvY21la19jb25maWcucHJvdG8aJmdvb2ds",
+            "ZS9jbG91ZC90YXNrcy92MmJldGEzL3F1ZXVlLnByb3RvGiVnb29nbGUvY2xv",
+            "dWQvdGFza3MvdjJiZXRhMy90YXNrLnByb3RvGh5nb29nbGUvaWFtL3YxL2lh",
+            "bV9wb2xpY3kucHJvdG8aGmdvb2dsZS9pYW0vdjEvcG9saWN5LnByb3RvGiNn",
+            "b29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxobZ29vZ2xlL3By",
+            "b3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFz",
+            "ay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29v",
+            "Z2xlL3JwYy9zdGF0dXMucHJvdG8itwEKEUxpc3RRdWV1ZXNSZXF1ZXN0EjcK",
+            "BnBhcmVudBgBIAEoCUIn4EEC+kEhEh9jbG91ZHRhc2tzLmdvb2dsZWFwaXMu",
+            "Y29tL1F1ZXVlEg4KBmZpbHRlchgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUS",
+            "EgoKcGFnZV90b2tlbhgEIAEoCRIyCglyZWFkX21hc2sYBSABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQEiYAoSTGlzdFF1ZXVlc1Jlc3Bv",
+            "bnNlEjEKBnF1ZXVlcxgBIAMoCzIhLmdvb2dsZS5jbG91ZC50YXNrcy52MmJl",
+            "dGEzLlF1ZXVlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJ8Cg9HZXRRdWV1",
+            "ZVJlcXVlc3QSNQoEbmFtZRgBIAEoCUIn4EEC+kEhCh9jbG91ZHRhc2tzLmdv",
+            "b2dsZWFwaXMuY29tL1F1ZXVlEjIKCXJlYWRfbWFzaxgCIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBASKEAQoSQ3JlYXRlUXVldWVSZXF1",
+            "ZXN0EjcKBnBhcmVudBgBIAEoCUIn4EEC+kEhEh9jbG91ZHRhc2tzLmdvb2ds",
+            "ZWFwaXMuY29tL1F1ZXVlEjUKBXF1ZXVlGAIgASgLMiEuZ29vZ2xlLmNsb3Vk",
+            "LnRhc2tzLnYyYmV0YTMuUXVldWVCA+BBAiJ8ChJVcGRhdGVRdWV1ZVJlcXVl",
+            "c3QSNQoFcXVldWUYASABKAsyIS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRh",
+            "My5RdWV1ZUID4EECEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLkZpZWxkTWFzayJLChJEZWxldGVRdWV1ZVJlcXVlc3QSNQoEbmFt",
+            "ZRgBIAEoCUIn4EEC+kEhCh9jbG91ZHRhc2tzLmdvb2dsZWFwaXMuY29tL1F1",
+            "ZXVlIkoKEVB1cmdlUXVldWVSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpB",
+            "IQofY2xvdWR0YXNrcy5nb29nbGVhcGlzLmNvbS9RdWV1ZSJKChFQYXVzZVF1",
+            "ZXVlUmVxdWVzdBI1CgRuYW1lGAEgASgJQifgQQL6QSEKH2Nsb3VkdGFza3Mu",
+            "Z29vZ2xlYXBpcy5jb20vUXVldWUiSwoSUmVzdW1lUXVldWVSZXF1ZXN0EjUK",
+            "BG5hbWUYASABKAlCJ+BBAvpBIQofY2xvdWR0YXNrcy5nb29nbGVhcGlzLmNv",
+            "bS9RdWV1ZSKvAQoQTGlzdFRhc2tzUmVxdWVzdBI2CgZwYXJlbnQYASABKAlC",
+            "JuBBAvpBIBIeY2xvdWR0YXNrcy5nb29nbGVhcGlzLmNvbS9UYXNrEjwKDXJl",
+            "c3BvbnNlX3ZpZXcYAiABKA4yJS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRh",
+            "My5UYXNrLlZpZXcSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4Y",
+            "BCABKAkiXQoRTGlzdFRhc2tzUmVzcG9uc2USLwoFdGFza3MYASADKAsyIC5n",
+            "b29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5UYXNrEhcKD25leHRfcGFnZV90",
+            "b2tlbhgCIAEoCSKEAQoOR2V0VGFza1JlcXVlc3QSNAoEbmFtZRgBIAEoCUIm",
+            "4EEC+kEgCh5jbG91ZHRhc2tzLmdvb2dsZWFwaXMuY29tL1Rhc2sSPAoNcmVz",
+            "cG9uc2VfdmlldxgCIAEoDjIlLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEz",
+            "LlRhc2suVmlldyK+AQoRQ3JlYXRlVGFza1JlcXVlc3QSNgoGcGFyZW50GAEg",
+            "ASgJQibgQQL6QSASHmNsb3VkdGFza3MuZ29vZ2xlYXBpcy5jb20vVGFzaxIz",
+            "CgR0YXNrGAIgASgLMiAuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuVGFz",
+            "a0ID4EECEjwKDXJlc3BvbnNlX3ZpZXcYAyABKA4yJS5nb29nbGUuY2xvdWQu",
+            "dGFza3MudjJiZXRhMy5UYXNrLlZpZXciuQEKF0JhdGNoQ3JlYXRlVGFza3NS",
+            "ZXF1ZXN0EjcKBnBhcmVudBgBIAEoCUIn4EEC+kEhCh9jbG91ZHRhc2tzLmdv",
+            "b2dsZWFwaXMuY29tL1F1ZXVlEkQKCHJlcXVlc3RzGAIgAygLMi0uZ29vZ2xl",
+            "LmNsb3VkLnRhc2tzLnYyYmV0YTMuQ3JlYXRlVGFza1JlcXVlc3RCA+BBAhIf",
+            "CgpyZXF1ZXN0X2lkGAMgASgJQgvgQQHijM/XCAIIASJJChFEZWxldGVUYXNr",
+            "UmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNsb3VkdGFza3MuZ29v",
+            "Z2xlYXBpcy5jb20vVGFzayKqAQoXQmF0Y2hEZWxldGVUYXNrc1JlcXVlc3QS",
+            "NwoGcGFyZW50GAEgASgJQifgQQL6QSEKH2Nsb3VkdGFza3MuZ29vZ2xlYXBp",
+            "cy5jb20vUXVldWUSNQoFbmFtZXMYAiADKAlCJuBBAvpBIAoeY2xvdWR0YXNr",
+            "cy5nb29nbGVhcGlzLmNvbS9UYXNrEh8KCnJlcXVlc3RfaWQYAyABKAlCC+BB",
+            "AeKMz9cIAggBIuYDChhCYXRjaERlbGV0ZVRhc2tzTWV0YWRhdGESMwoKc3Rh",
+            "cnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
+            "AxIxCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAxJOCgVzdGF0ZRgDIAEoDjI6Lmdvb2dsZS5jbG91ZC50YXNrcy52",
+            "MmJldGEzLkJhdGNoRGVsZXRlVGFza3NNZXRhZGF0YS5TdGF0ZUID4EEDEmYK",
+            "D2ZhaWxlZF9yZXF1ZXN0cxgEIAMoCzJILmdvb2dsZS5jbG91ZC50YXNrcy52",
+            "MmJldGEzLkJhdGNoRGVsZXRlVGFza3NNZXRhZGF0YS5GYWlsZWRSZXF1ZXN0",
+            "c0VudHJ5QgPgQQMaSQoTRmFpbGVkUmVxdWVzdHNFbnRyeRILCgNrZXkYASAB",
+            "KAUSIQoFdmFsdWUYAiABKAsyEi5nb29nbGUucnBjLlN0YXR1czoCOAEiXwoF",
+            "U3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAESDQoJ",
+            "U1VDQ0VFREVEEAISFwoTUEFSVElBTExZX1NVQ0NFRURFRBADEgoKBkZBSUxF",
+            "RBAEIoQBCg5SdW5UYXNrUmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAK",
+            "HmNsb3VkdGFza3MuZ29vZ2xlYXBpcy5jb20vVGFzaxI8Cg1yZXNwb25zZV92",
+            "aWV3GAIgASgOMiUuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuVGFzay5W",
+            "aWV3IksKGEJhdGNoQ3JlYXRlVGFza3NSZXNwb25zZRIvCgV0YXNrcxgBIAMo",
+            "CzIgLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLlRhc2si5gMKGEJhdGNo",
+            "Q3JlYXRlVGFza3NNZXRhZGF0YRIuCgpzdGFydF90aW1lGAEgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgCIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASTgoFc3RhdGUYAyABKA4yOi5nb29n",
+            "bGUuY2xvdWQudGFza3MudjJiZXRhMy5CYXRjaENyZWF0ZVRhc2tzTWV0YWRh",
+            "dGEuU3RhdGVCA+BBAxJhCg9mYWlsZWRfcmVxdWVzdHMYBCADKAsySC5nb29n",
+            "bGUuY2xvdWQudGFza3MudjJiZXRhMy5CYXRjaENyZWF0ZVRhc2tzTWV0YWRh",
+            "dGEuRmFpbGVkUmVxdWVzdHNFbnRyeRpJChNGYWlsZWRSZXF1ZXN0c0VudHJ5",
+            "EgsKA2tleRgBIAEoBRIhCgV2YWx1ZRgCIAEoCzISLmdvb2dsZS5ycGMuU3Rh",
+            "dHVzOgI4ASJuCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1JV",
+            "Tk5JTkcQARINCglTVUNDRUVERUQQAhIXChNQQVJUSUFMTFlfU1VDQ0VFREVE",
+            "EAUSCgoGRkFJTEVEEAMSDQoJQ0FOQ0VMTEVEEAQijAEKF1VwZGF0ZUNtZWtD",
+            "b25maWdSZXF1ZXN0EkAKC2NtZWtfY29uZmlnGAEgASgLMiYuZ29vZ2xlLmNs",
+            "b3VkLnRhc2tzLnYyYmV0YTMuQ21la0NvbmZpZ0ID4EECEi8KC3VwZGF0ZV9t",
+            "YXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJSChRHZXRD",
+            "bWVrQ29uZmlnUmVxdWVzdBI6CgRuYW1lGAEgASgJQizgQQL6QSYKJGNsb3Vk",
+            "dGFza3MuZ29vZ2xlYXBpcy5jb20vQ21la0NvbmZpZzKzHQoKQ2xvdWRUYXNr",
+            "cxKtAQoKTGlzdFF1ZXVlcxItLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEz",
+            "Lkxpc3RRdWV1ZXNSZXF1ZXN0Gi4uZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0",
+            "YTMuTGlzdFF1ZXVlc1Jlc3BvbnNlIkDaQQZwYXJlbnSC0+STAjESLy92MmJl",
+            "dGEzL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcXVldWVzEpoB",
+            "CghHZXRRdWV1ZRIrLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLkdldFF1",
+            "ZXVlUmVxdWVzdBohLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLlF1ZXVl",
+            "Ij7aQQRuYW1lgtPkkwIxEi8vdjJiZXRhMy97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3F1ZXVlcy8qfRKvAQoLQ3JlYXRlUXVldWUSLi5nb29nbGUu",
+            "Y2xvdWQudGFza3MudjJiZXRhMy5DcmVhdGVRdWV1ZVJlcXVlc3QaIS5nb29n",
+            "bGUuY2xvdWQudGFza3MudjJiZXRhMy5RdWV1ZSJN2kEMcGFyZW50LHF1ZXVl",
+            "gtPkkwI4Ii8vdjJiZXRhMy97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyp9L3F1ZXVlczoFcXVldWUSugEKC1VwZGF0ZVF1ZXVlEi4uZ29vZ2xlLmNs",
+            "b3VkLnRhc2tzLnYyYmV0YTMuVXBkYXRlUXVldWVSZXF1ZXN0GiEuZ29vZ2xl",
+            "LmNsb3VkLnRhc2tzLnYyYmV0YTMuUXVldWUiWNpBEXF1ZXVlLHVwZGF0ZV9t",
+            "YXNrgtPkkwI+MjUvdjJiZXRhMy97cXVldWUubmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3F1ZXVlcy8qfToFcXVldWUSlQEKC0RlbGV0ZVF1ZXVlEi4u",
+            "Z29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuRGVsZXRlUXVldWVSZXF1ZXN0",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ij7aQQRuYW1lgtPkkwIxKi8vdjJi",
+            "ZXRhMy97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8qfRKn",
+            "AQoKUHVyZ2VRdWV1ZRItLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLlB1",
+            "cmdlUXVldWVSZXF1ZXN0GiEuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMu",
+            "UXVldWUiR9pBBG5hbWWC0+STAjoiNS92MmJldGEzL3tuYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovcXVldWVzLyp9OnB1cmdlOgEqEqcBCgpQYXVzZVF1",
+            "ZXVlEi0uZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuUGF1c2VRdWV1ZVJl",
+            "cXVlc3QaIS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5RdWV1ZSJH2kEE",
+            "bmFtZYLT5JMCOiI1L3YyYmV0YTMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9xdWV1ZXMvKn06cGF1c2U6ASoSqgEKC1Jlc3VtZVF1ZXVlEi4uZ29v",
+            "Z2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuUmVzdW1lUXVldWVSZXF1ZXN0GiEu",
+            "Z29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuUXVldWUiSNpBBG5hbWWC0+ST",
+            "AjsiNi92MmJldGEzL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcXVl",
+            "dWVzLyp9OnJlc3VtZToBKhKhAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlh",
+            "bS52MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xp",
+            "Y3kiVtpBCHJlc291cmNlgtPkkwJFIkAvdjJiZXRhMy97cmVzb3VyY2U9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9xdWV1ZXMvKn06Z2V0SWFtUG9saWN5OgEq",
+            "EqgBCgxTZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLlNldElhbVBvbGlj",
+            "eVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSJd2kEPcmVzb3VyY2Us",
+            "cG9saWN5gtPkkwJFIkAvdjJiZXRhMy97cmVzb3VyY2U9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9xdWV1ZXMvKn06c2V0SWFtUG9saWN5OgEqEtMBChJUZXN0",
+            "SWFtUGVybWlzc2lvbnMSKC5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJtaXNz",
+            "aW9uc1JlcXVlc3QaKS5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJtaXNzaW9u",
+            "c1Jlc3BvbnNlImjaQRRyZXNvdXJjZSxwZXJtaXNzaW9uc4LT5JMCSyJGL3Yy",
+            "YmV0YTMve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovcXVldWVz",
+            "Lyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKhKyAQoJTGlzdFRhc2tzEiwuZ29v",
+            "Z2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuTGlzdFRhc2tzUmVxdWVzdBotLmdv",
+            "b2dsZS5jbG91ZC50YXNrcy52MmJldGEzLkxpc3RUYXNrc1Jlc3BvbnNlIkja",
+            "QQZwYXJlbnSC0+STAjkSNy92MmJldGEzL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9xdWV1ZXMvKn0vdGFza3MSnwEKB0dldFRhc2sSKi5nb29n",
+            "bGUuY2xvdWQudGFza3MudjJiZXRhMy5HZXRUYXNrUmVxdWVzdBogLmdvb2ds",
+            "ZS5jbG91ZC50YXNrcy52MmJldGEzLlRhc2siRtpBBG5hbWWC0+STAjkSNy92",
+            "MmJldGEzL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcXVldWVzLyov",
+            "dGFza3MvKn0SrwEKCkNyZWF0ZVRhc2sSLS5nb29nbGUuY2xvdWQudGFza3Mu",
+            "djJiZXRhMy5DcmVhdGVUYXNrUmVxdWVzdBogLmdvb2dsZS5jbG91ZC50YXNr",
+            "cy52MmJldGEzLlRhc2siUNpBC3BhcmVudCx0YXNrgtPkkwI8IjcvdjJiZXRh",
+            "My97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovcXVldWVzLyp9L3Rh",
+            "c2tzOgEqEoACChBCYXRjaENyZWF0ZVRhc2tzEjMuZ29vZ2xlLmNsb3VkLnRh",
+            "c2tzLnYyYmV0YTMuQmF0Y2hDcmVhdGVUYXNrc1JlcXVlc3QaHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIpcBykE0ChhCYXRjaENyZWF0ZVRhc2tz",
+            "UmVzcG9uc2USGEJhdGNoQ3JlYXRlVGFza3NNZXRhZGF0YdpBD3BhcmVudCxy",
+            "ZXF1ZXN0c4LT5JMCSCJDL3YyYmV0YTMve3BhcmVudD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3F1ZXVlcy8qfS90YXNrczpiYXRjaENyZWF0ZToBKhKbAQoK",
+            "RGVsZXRlVGFzaxItLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLkRlbGV0",
+            "ZVRhc2tSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkbaQQRuYW1l",
+            "gtPkkwI5KjcvdjJiZXRhMy97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L3F1ZXVlcy8qL3Rhc2tzLyp9EvoBChBCYXRjaERlbGV0ZVRhc2tzEjMuZ29v",
+            "Z2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuQmF0Y2hEZWxldGVUYXNrc1JlcXVl",
+            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIpEBykExChVnb29n",
+            "bGUucHJvdG9idWYuRW1wdHkSGEJhdGNoRGVsZXRlVGFza3NNZXRhZGF0YdpB",
+            "DHBhcmVudCxuYW1lc4LT5JMCSCJDL3YyYmV0YTMve3BhcmVudD1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL3F1ZXVlcy8qfS90YXNrczpiYXRjaERlbGV0ZToB",
+            "KhKmAQoHUnVuVGFzaxIqLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLlJ1",
+            "blRhc2tSZXF1ZXN0GiAuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuVGFz",
+            "ayJN2kEEbmFtZYLT5JMCQCI7L3YyYmV0YTMve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9xdWV1ZXMvKi90YXNrcy8qfTpydW46ASoS3QEKEFVwZGF0",
+            "ZUNtZWtDb25maWcSMy5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5VcGRh",
+            "dGVDbWVrQ29uZmlnUmVxdWVzdBomLmdvb2dsZS5jbG91ZC50YXNrcy52MmJl",
+            "dGEzLkNtZWtDb25maWcibNpBF2NtZWtfY29uZmlnLHVwZGF0ZV9tYXNrgtPk",
+            "kwJMMj0vdjJiZXRhMy97Y21la19jb25maWcubmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2NtZWtDb25maWd9OgtjbWVrX2NvbmZpZxKrAQoNR2V0Q21l",
+            "a0NvbmZpZxIwLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLkdldENtZWtD",
+            "b25maWdSZXF1ZXN0GiYuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuQ21l",
+            "a0NvbmZpZyJA2kEEbmFtZYLT5JMCMxIxL3YyYmV0YTMve25hbWU9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9jbWVrQ29uZmlnfRpNykEZY2xvdWR0YXNrcy5n",
+            "b29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
+            "dGgvY2xvdWQtcGxhdGZvcm1CgAEKHmNvbS5nb29nbGUuY2xvdWQudGFza3Mu",
+            "djJiZXRhM0IPQ2xvdWRUYXNrc1Byb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20v",
+            "Z28vY2xvdWR0YXNrcy9hcGl2MmJldGEzL2Nsb3VkdGFza3NwYjtjbG91ZHRh",
+            "c2tzcGKiAgVUQVNLU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.QueueReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TaskReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.CmekConfigReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.QueueReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TaskReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest), global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "ReadMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse), global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse.Parser, new[]{ "Queues", "NextPageToken" }, null, null, null, null),
@@ -155,8 +216,15 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse), global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse.Parser, new[]{ "Tasks", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest), global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest.Parser, new[]{ "Name", "ResponseView" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest), global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest.Parser, new[]{ "Parent", "Task", "ResponseView" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksRequest), global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksRequest.Parser, new[]{ "Parent", "Requests", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest), global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest), global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest.Parser, new[]{ "Name", "ResponseView" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksRequest), global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksRequest.Parser, new[]{ "Parent", "Names", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata), global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata.Parser, new[]{ "StartTime", "EndTime", "State", "FailedRequests" }, null, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest), global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest.Parser, new[]{ "Name", "ResponseView" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksResponse), global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksResponse.Parser, new[]{ "Tasks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata), global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata.Parser, new[]{ "StartTime", "EndTime", "State", "FailedRequests" }, null, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.UpdateCmekConfigRequest), global::Google.Cloud.Tasks.V2Beta3.UpdateCmekConfigRequest.Parser, new[]{ "CmekConfig", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest), global::Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -3368,11 +3436,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// a task's ID is identical to that of an existing task or a task
     /// that was deleted or executed recently then the call will fail
     /// with [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS].
-    /// If the task's queue was created using Cloud Tasks, then another task with
-    /// the same name can't be created for ~1 hour after the original task was
-    /// deleted or executed. If the task's queue was created using queue.yaml or
-    /// queue.xml, then another task with the same name can't be created
-    /// for ~9 days after the original task was deleted or executed.
+    /// The IDs of deleted tasks are not immediately available for reuse.  It can
+    /// take up to 24 hours (or 9 days if the task's queue was created using a
+    /// queue.yaml or queue.xml) for the task ID to be released and made available
+    /// again.
     ///
     /// Because there is an extra lookup cost to identify duplicate task
     /// names, these [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask]
@@ -3619,6 +3686,290 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
 
   /// <summary>
+  /// Request message for [BatchCreateTasks].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchCreateTasksRequest : pb::IMessage<BatchCreateTasksRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchCreateTasksRequest> _parser = new pb::MessageParser<BatchCreateTasksRequest>(() => new BatchCreateTasksRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchCreateTasksRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2Beta3.CloudtasksReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateTasksRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateTasksRequest(BatchCreateTasksRequest other) : this() {
+      parent_ = other.parent_;
+      requests_ = other.requests_.Clone();
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateTasksRequest Clone() {
+      return new BatchCreateTasksRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The queue name. For example:
+    /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+    ///
+    /// The queue must already exist.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "requests" field.</summary>
+    public const int RequestsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest> _repeated_requests_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest> requests_ = new pbc::RepeatedField<global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest>();
+    /// <summary>
+    /// Required. The list of requests to create tasks.
+    /// The queue specified in parent field of each CreateTaskRequest will be
+    /// the same. This validation happens on the client side as well as in the
+    /// handler.
+    /// BatchCreateTasksRequest.parent will also be the same value as the
+    /// individual CreateTaskRequest.parent .
+    /// The maximum number of requests is 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest> Requests {
+      get { return requests_; }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 3;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. This field will be used to identify the long running operation,
+    /// avoiding duplication when user retries. If not provided, then a UUID will
+    /// be generated at server side.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchCreateTasksRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchCreateTasksRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!requests_.Equals(other.requests_)) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= requests_.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(output, _repeated_requests_codec);
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(ref output, _repeated_requests_codec);
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += requests_.CalculateSize(_repeated_requests_codec);
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchCreateTasksRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      requests_.Add(other.requests_);
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(input, _repeated_requests_codec);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(ref input, _repeated_requests_codec);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request message for deleting a task using
   /// [DeleteTask][google.cloud.tasks.v2beta3.CloudTasks.DeleteTask].
   /// </summary>
@@ -3637,7 +3988,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Tasks.V2Beta3.CloudtasksReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Tasks.V2Beta3.CloudtasksReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3825,6 +4176,668 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   }
 
   /// <summary>
+  /// Request message for deleting a batch of tasks using
+  /// [BatchDeleteTasks][google.cloud.tasks.v2beta3.CloudTasks.BatchDeleteTasks].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchDeleteTasksRequest : pb::IMessage<BatchDeleteTasksRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchDeleteTasksRequest> _parser = new pb::MessageParser<BatchDeleteTasksRequest>(() => new BatchDeleteTasksRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchDeleteTasksRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2Beta3.CloudtasksReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeleteTasksRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeleteTasksRequest(BatchDeleteTasksRequest other) : this() {
+      parent_ = other.parent_;
+      names_ = other.names_.Clone();
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeleteTasksRequest Clone() {
+      return new BatchDeleteTasksRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The queue name. For example:
+    /// Format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "names" field.</summary>
+    public const int NamesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_names_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> names_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Required. The names of the tasks to delete.
+    /// A maximum of 1000 tasks can be deleted in a batch.
+    /// For example:
+    /// Format:
+    /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Names {
+      get { return names_; }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 3;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. This field will be used to identify the long running operation,
+    /// avoiding duplication when user retries. If not provided, then a UUID will
+    /// be generated at server side.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchDeleteTasksRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchDeleteTasksRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!names_.Equals(other.names_)) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= names_.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      names_.WriteTo(output, _repeated_names_codec);
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      names_.WriteTo(ref output, _repeated_names_codec);
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += names_.CalculateSize(_repeated_names_codec);
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchDeleteTasksRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      names_.Add(other.names_);
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            names_.AddEntriesFrom(input, _repeated_names_codec);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            names_.AddEntriesFrom(ref input, _repeated_names_codec);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata for the long-running operation returned by
+  /// [BatchDeleteTasks][google.cloud.tasks.v2beta3.CloudTasks.BatchDeleteTasks].
+  /// This message is used to hold metadata information about the
+  /// batch delete tasks operation; that is, it is put in
+  /// [google.longrunning.Operation.metadata][google.longrunning.Operation.metadata].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchDeleteTasksMetadata : pb::IMessage<BatchDeleteTasksMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchDeleteTasksMetadata> _parser = new pb::MessageParser<BatchDeleteTasksMetadata>(() => new BatchDeleteTasksMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchDeleteTasksMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2Beta3.CloudtasksReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeleteTasksMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeleteTasksMetadata(BatchDeleteTasksMetadata other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      state_ = other.state_;
+      failedRequests_ = other.failedRequests_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeleteTasksMetadata Clone() {
+      return new BatchDeleteTasksMetadata(this);
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Output only. The time when the batch delete started.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// Output only. The time when the batch delete finished.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 3;
+    private global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata.Types.State state_ = global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. The state of the batch delete operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "failed_requests" field.</summary>
+    public const int FailedRequestsFieldNumber = 4;
+    private static readonly pbc::MapField<int, global::Google.Rpc.Status>.Codec _map_failedRequests_codec
+        = new pbc::MapField<int, global::Google.Rpc.Status>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Google.Rpc.Status.Parser), 34);
+    private readonly pbc::MapField<int, global::Google.Rpc.Status> failedRequests_ = new pbc::MapField<int, global::Google.Rpc.Status>();
+    /// <summary>
+    /// Output only. A map of failed requests, where the key is the index of the
+    /// request in BatchDeleteTasksRequest.names and the value is the error status.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<int, global::Google.Rpc.Status> FailedRequests {
+      get { return failedRequests_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchDeleteTasksMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchDeleteTasksMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (State != other.State) return false;
+      if (!FailedRequests.Equals(other.FailedRequests)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (State != global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata.Types.State.Unspecified) hash ^= State.GetHashCode();
+      hash ^= FailedRequests.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (State != global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata.Types.State.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) State);
+      }
+      failedRequests_.WriteTo(output, _map_failedRequests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (State != global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata.Types.State.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) State);
+      }
+      failedRequests_.WriteTo(ref output, _map_failedRequests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (State != global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      size += failedRequests_.CalculateSize(_map_failedRequests_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchDeleteTasksMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.State != global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata.Types.State.Unspecified) {
+        State = other.State;
+      }
+      failedRequests_.MergeFrom(other.failedRequests_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 24: {
+            State = (global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata.Types.State) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            failedRequests_.AddEntriesFrom(input, _map_failedRequests_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 24: {
+            State = (global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata.Types.State) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            failedRequests_.AddEntriesFrom(ref input, _map_failedRequests_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the BatchDeleteTasksMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The state of the batch delete operation.
+      /// This enum is not frozen and new values may be added in the future.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// The default value. This value is used if the state is omitted.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The batch delete is running.
+        /// </summary>
+        [pbr::OriginalName("RUNNING")] Running = 1,
+        /// <summary>
+        /// The batch delete has finished and all tasks were successfully deleted.
+        /// </summary>
+        [pbr::OriginalName("SUCCEEDED")] Succeeded = 2,
+        /// <summary>
+        /// The batch delete has finished with partial success.
+        /// The tasks that failed to be deleted are reported in
+        /// [failed_requests][google.cloud.tasks.v2beta3.BatchDeleteTasksMetadata.failed_requests].
+        /// When all requests in the batch fail,
+        /// [google.longrunning.Operation.error][google.longrunning.Operation.error]
+        /// will be set with `code` = `google.rpc.Code.ABORTED` and `message` = "None
+        /// of the requests succeeded, refer to
+        /// BatchDeleteTasksMetadata.failed_requests for individual error details".
+        /// </summary>
+        [pbr::OriginalName("PARTIALLY_SUCCEEDED")] PartiallySucceeded = 3,
+        /// <summary>
+        /// The batch delete has failed.
+        /// This means the overall batch delete operation failed to complete.
+        /// This can happen due to an internal error preventing the operation from
+        /// finishing.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Request message for forcing a task to run now using
   /// [RunTask][google.cloud.tasks.v2beta3.CloudTasks.RunTask].
   /// </summary>
@@ -3843,7 +4856,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Tasks.V2Beta3.CloudtasksReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Tasks.V2Beta3.CloudtasksReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4073,6 +5086,1044 @@ namespace Google.Cloud.Tasks.V2Beta3 {
           }
           case 16: {
             ResponseView = (global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for [BatchCreateTasks].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchCreateTasksResponse : pb::IMessage<BatchCreateTasksResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchCreateTasksResponse> _parser = new pb::MessageParser<BatchCreateTasksResponse>(() => new BatchCreateTasksResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchCreateTasksResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2Beta3.CloudtasksReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateTasksResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateTasksResponse(BatchCreateTasksResponse other) : this() {
+      tasks_ = other.tasks_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateTasksResponse Clone() {
+      return new BatchCreateTasksResponse(this);
+    }
+
+    /// <summary>Field number for the "tasks" field.</summary>
+    public const int TasksFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Tasks.V2Beta3.Task> _repeated_tasks_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Tasks.V2Beta3.Task.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Tasks.V2Beta3.Task> tasks_ = new pbc::RepeatedField<global::Google.Cloud.Tasks.V2Beta3.Task>();
+    /// <summary>
+    /// The tasks that were successfully created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Tasks.V2Beta3.Task> Tasks {
+      get { return tasks_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchCreateTasksResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchCreateTasksResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!tasks_.Equals(other.tasks_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= tasks_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      tasks_.WriteTo(output, _repeated_tasks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      tasks_.WriteTo(ref output, _repeated_tasks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += tasks_.CalculateSize(_repeated_tasks_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchCreateTasksResponse other) {
+      if (other == null) {
+        return;
+      }
+      tasks_.Add(other.tasks_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            tasks_.AddEntriesFrom(input, _repeated_tasks_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            tasks_.AddEntriesFrom(ref input, _repeated_tasks_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata message for [BatchCreateTasks].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchCreateTasksMetadata : pb::IMessage<BatchCreateTasksMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchCreateTasksMetadata> _parser = new pb::MessageParser<BatchCreateTasksMetadata>(() => new BatchCreateTasksMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchCreateTasksMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2Beta3.CloudtasksReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateTasksMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateTasksMetadata(BatchCreateTasksMetadata other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      state_ = other.state_;
+      failedRequests_ = other.failedRequests_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateTasksMetadata Clone() {
+      return new BatchCreateTasksMetadata(this);
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// The time when the batch create started.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// The time when the batch create finished.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 3;
+    private global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata.Types.State state_ = global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. The state of the batch create operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "failed_requests" field.</summary>
+    public const int FailedRequestsFieldNumber = 4;
+    private static readonly pbc::MapField<int, global::Google.Rpc.Status>.Codec _map_failedRequests_codec
+        = new pbc::MapField<int, global::Google.Rpc.Status>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Google.Rpc.Status.Parser), 34);
+    private readonly pbc::MapField<int, global::Google.Rpc.Status> failedRequests_ = new pbc::MapField<int, global::Google.Rpc.Status>();
+    /// <summary>
+    /// A map of failed requests, where the key is the index of the request in
+    /// BatchCreateTasksRequest.requests and the value is the error status.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<int, global::Google.Rpc.Status> FailedRequests {
+      get { return failedRequests_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchCreateTasksMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchCreateTasksMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (State != other.State) return false;
+      if (!FailedRequests.Equals(other.FailedRequests)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (State != global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata.Types.State.Unspecified) hash ^= State.GetHashCode();
+      hash ^= FailedRequests.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (State != global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata.Types.State.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) State);
+      }
+      failedRequests_.WriteTo(output, _map_failedRequests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (State != global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata.Types.State.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) State);
+      }
+      failedRequests_.WriteTo(ref output, _map_failedRequests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (State != global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      size += failedRequests_.CalculateSize(_map_failedRequests_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchCreateTasksMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.State != global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata.Types.State.Unspecified) {
+        State = other.State;
+      }
+      failedRequests_.MergeFrom(other.failedRequests_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 24: {
+            State = (global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata.Types.State) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            failedRequests_.AddEntriesFrom(input, _map_failedRequests_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 24: {
+            State = (global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata.Types.State) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            failedRequests_.AddEntriesFrom(ref input, _map_failedRequests_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the BatchCreateTasksMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The state of the batch create operation.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// The default value. This value is used if the state is omitted.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The batch create is running.
+        /// </summary>
+        [pbr::OriginalName("RUNNING")] Running = 1,
+        /// <summary>
+        /// The batch create has finished.
+        /// All tasks in the request were successfully created.
+        /// </summary>
+        [pbr::OriginalName("SUCCEEDED")] Succeeded = 2,
+        /// <summary>
+        /// The batch create has finished with partial success.
+        /// The tasks that failed to be created are reported in
+        /// [failed_requests][google.cloud.tasks.v2beta3.BatchCreateTasksMetadata.failed_requests].
+        /// </summary>
+        [pbr::OriginalName("PARTIALLY_SUCCEEDED")] PartiallySucceeded = 5,
+        /// <summary>
+        /// The batch create has failed.
+        /// This means the overall batch create operation failed to complete.
+        /// This can happen due to an internal error preventing the operation from
+        /// finishing.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 3,
+        /// <summary>
+        /// The batch create was cancelled.
+        /// </summary>
+        [pbr::OriginalName("CANCELLED")] Cancelled = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [UpdateCmekConfig][google.cloud.tasks.v2beta3.CloudTasks.UpdateCmekConfig].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateCmekConfigRequest : pb::IMessage<UpdateCmekConfigRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateCmekConfigRequest> _parser = new pb::MessageParser<UpdateCmekConfigRequest>(() => new UpdateCmekConfigRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateCmekConfigRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2Beta3.CloudtasksReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateCmekConfigRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateCmekConfigRequest(UpdateCmekConfigRequest other) : this() {
+      cmekConfig_ = other.cmekConfig_ != null ? other.cmekConfig_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateCmekConfigRequest Clone() {
+      return new UpdateCmekConfigRequest(this);
+    }
+
+    /// <summary>Field number for the "cmek_config" field.</summary>
+    public const int CmekConfigFieldNumber = 1;
+    private global::Google.Cloud.Tasks.V2Beta3.CmekConfig cmekConfig_;
+    /// <summary>
+    /// Required. The config to update.  Its name attribute distinguishes it.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Tasks.V2Beta3.CmekConfig CmekConfig {
+      get { return cmekConfig_; }
+      set {
+        cmekConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// List of fields to be updated in this request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateCmekConfigRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateCmekConfigRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CmekConfig, other.CmekConfig)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (cmekConfig_ != null) hash ^= CmekConfig.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (cmekConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CmekConfig);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (cmekConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CmekConfig);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (cmekConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CmekConfig);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateCmekConfigRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.cmekConfig_ != null) {
+        if (cmekConfig_ == null) {
+          CmekConfig = new global::Google.Cloud.Tasks.V2Beta3.CmekConfig();
+        }
+        CmekConfig.MergeFrom(other.CmekConfig);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (cmekConfig_ == null) {
+              CmekConfig = new global::Google.Cloud.Tasks.V2Beta3.CmekConfig();
+            }
+            input.ReadMessage(CmekConfig);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (cmekConfig_ == null) {
+              CmekConfig = new global::Google.Cloud.Tasks.V2Beta3.CmekConfig();
+            }
+            input.ReadMessage(CmekConfig);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [GetCmekConfig][google.cloud.tasks.v2beta3.CloudTasks.GetCmekConfig].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetCmekConfigRequest : pb::IMessage<GetCmekConfigRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetCmekConfigRequest> _parser = new pb::MessageParser<GetCmekConfigRequest>(() => new GetCmekConfigRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetCmekConfigRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2Beta3.CloudtasksReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetCmekConfigRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetCmekConfigRequest(GetCmekConfigRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetCmekConfigRequest Clone() {
+      return new GetCmekConfigRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The config resource name. For example:
+    /// projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetCmekConfigRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetCmekConfigRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetCmekConfigRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
             break;
           }
         }

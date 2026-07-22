@@ -3,7 +3,7 @@
 //     source: google/cloud/tasks/v2beta3/cloudtasks.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -107,9 +107,21 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest> __Marshaller_google_cloud_tasks_v2beta3_CreateTaskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksRequest> __Marshaller_google_cloud_tasks_v2beta3_BatchCreateTasksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest> __Marshaller_google_cloud_tasks_v2beta3_DeleteTaskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksRequest> __Marshaller_google_cloud_tasks_v2beta3_BatchDeleteTasksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest> __Marshaller_google_cloud_tasks_v2beta3_RunTaskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.UpdateCmekConfigRequest> __Marshaller_google_cloud_tasks_v2beta3_UpdateCmekConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.UpdateCmekConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.CmekConfig> __Marshaller_google_cloud_tasks_v2beta3_CmekConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.CmekConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest> __Marshaller_google_cloud_tasks_v2beta3_GetCmekConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest, global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse> __Method_ListQueues = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest, global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse>(
@@ -224,6 +236,14 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_cloud_tasks_v2beta3_Task);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksRequest, global::Google.LongRunning.Operation> __Method_BatchCreateTasks = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateTasks",
+        __Marshaller_google_cloud_tasks_v2beta3_BatchCreateTasksRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTask = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -232,12 +252,36 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksRequest, global::Google.LongRunning.Operation> __Method_BatchDeleteTasks = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeleteTasks",
+        __Marshaller_google_cloud_tasks_v2beta3_BatchDeleteTasksRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest, global::Google.Cloud.Tasks.V2Beta3.Task> __Method_RunTask = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest, global::Google.Cloud.Tasks.V2Beta3.Task>(
         grpc::MethodType.Unary,
         __ServiceName,
         "RunTask",
         __Marshaller_google_cloud_tasks_v2beta3_RunTaskRequest,
         __Marshaller_google_cloud_tasks_v2beta3_Task);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.UpdateCmekConfigRequest, global::Google.Cloud.Tasks.V2Beta3.CmekConfig> __Method_UpdateCmekConfig = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.UpdateCmekConfigRequest, global::Google.Cloud.Tasks.V2Beta3.CmekConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCmekConfig",
+        __Marshaller_google_cloud_tasks_v2beta3_UpdateCmekConfigRequest,
+        __Marshaller_google_cloud_tasks_v2beta3_CmekConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest, global::Google.Cloud.Tasks.V2Beta3.CmekConfig> __Method_GetCmekConfig = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest, global::Google.Cloud.Tasks.V2Beta3.CmekConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCmekConfig",
+        __Marshaller_google_cloud_tasks_v2beta3_GetCmekConfigRequest,
+        __Marshaller_google_cloud_tasks_v2beta3_CmekConfig);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -329,8 +373,15 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       ///
       /// This command will delete the queue even if it has tasks in it.
       ///
-      /// Note: If you delete a queue, a queue with the same name can't be created
-      /// for 7 days.
+      /// Note : If you delete a queue, you may be prevented from creating a new
+      /// queue with the same name as the deleted queue for a tombstone window of up
+      /// to 3 days. During this window, the CreateQueue operation may appear to
+      /// recreate the queue, but this can be misleading. If you attempt to create
+      /// a queue with the same name as one that is in the tombstone window, run
+      /// GetQueue to confirm that the queue creation was successful. If GetQueue
+      /// returns 200 response code, your queue was successfully created with the
+      /// name of the previously deleted queue. Otherwise, your queue did not
+      /// successfully recreate.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -493,6 +544,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
       /// <summary>
       /// Gets a task.
+      ///
+      /// After a task is successfully executed or has exhausted its retry attempts,
+      /// the task is deleted. A `GetTask` request for a deleted task returns a
+      /// `NOT_FOUND` error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -520,6 +575,22 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
 
       /// <summary>
+      /// Creates a batch of tasks and adds them to a queue.
+      /// This call is not atomic.
+      ///
+      /// All tasks must be for the same queue.
+      /// A maximum of 100 tasks can be created in a single batch.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchCreateTasks(global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a task.
       ///
       /// A task can be deleted if it is scheduled or dispatched. A task
@@ -531,6 +602,22 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTask(global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a batch of tasks.
+      /// This is a non-atomic operation: if deletion fails for some tasks, it
+      /// can still succeed for others. The metadata field of
+      /// google.longrunning.Operation contains details of failed deletions.
+      /// A maximum of 1000 tasks can be deleted in a batch.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchDeleteTasks(global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -549,8 +636,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// a task to be dispatched now.
       ///
       /// The dispatched task is returned. That is, the task that is returned
-      /// contains the [status][Task.status] after the task is dispatched but
-      /// before the task is received by its target.
+      /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+      /// the task is dispatched but before the task is received by its target.
       ///
       /// If Cloud Tasks receives a successful response from the task's
       /// target, then the task will be deleted; otherwise the task's
@@ -569,6 +656,38 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.Task> RunTask(global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates or Updates a CMEK config.
+      ///
+      /// Updates the Customer Managed Encryption Key associated with the Cloud Tasks
+      /// location (Creates if the key does not already exist). All new tasks created
+      /// in the location will be encrypted at-rest with the KMS-key provided in the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.CmekConfig> UpdateCmekConfig(global::Google.Cloud.Tasks.V2Beta3.UpdateCmekConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the CMEK config.
+      ///
+      /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+      /// lcoation. By default there is no kms_key configured.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.CmekConfig> GetCmekConfig(global::Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -907,8 +1026,15 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       ///
       /// This command will delete the queue even if it has tasks in it.
       ///
-      /// Note: If you delete a queue, a queue with the same name can't be created
-      /// for 7 days.
+      /// Note : If you delete a queue, you may be prevented from creating a new
+      /// queue with the same name as the deleted queue for a tombstone window of up
+      /// to 3 days. During this window, the CreateQueue operation may appear to
+      /// recreate the queue, but this can be misleading. If you attempt to create
+      /// a queue with the same name as one that is in the tombstone window, run
+      /// GetQueue to confirm that the queue creation was successful. If GetQueue
+      /// returns 200 response code, your queue was successfully created with the
+      /// name of the previously deleted queue. Otherwise, your queue did not
+      /// successfully recreate.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -932,8 +1058,15 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       ///
       /// This command will delete the queue even if it has tasks in it.
       ///
-      /// Note: If you delete a queue, a queue with the same name can't be created
-      /// for 7 days.
+      /// Note : If you delete a queue, you may be prevented from creating a new
+      /// queue with the same name as the deleted queue for a tombstone window of up
+      /// to 3 days. During this window, the CreateQueue operation may appear to
+      /// recreate the queue, but this can be misleading. If you attempt to create
+      /// a queue with the same name as one that is in the tombstone window, run
+      /// GetQueue to confirm that the queue creation was successful. If GetQueue
+      /// returns 200 response code, your queue was successfully created with the
+      /// name of the previously deleted queue. Otherwise, your queue did not
+      /// successfully recreate.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -955,8 +1088,15 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       ///
       /// This command will delete the queue even if it has tasks in it.
       ///
-      /// Note: If you delete a queue, a queue with the same name can't be created
-      /// for 7 days.
+      /// Note : If you delete a queue, you may be prevented from creating a new
+      /// queue with the same name as the deleted queue for a tombstone window of up
+      /// to 3 days. During this window, the CreateQueue operation may appear to
+      /// recreate the queue, but this can be misleading. If you attempt to create
+      /// a queue with the same name as one that is in the tombstone window, run
+      /// GetQueue to confirm that the queue creation was successful. If GetQueue
+      /// returns 200 response code, your queue was successfully created with the
+      /// name of the previously deleted queue. Otherwise, your queue did not
+      /// successfully recreate.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -980,8 +1120,15 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       ///
       /// This command will delete the queue even if it has tasks in it.
       ///
-      /// Note: If you delete a queue, a queue with the same name can't be created
-      /// for 7 days.
+      /// Note : If you delete a queue, you may be prevented from creating a new
+      /// queue with the same name as the deleted queue for a tombstone window of up
+      /// to 3 days. During this window, the CreateQueue operation may appear to
+      /// recreate the queue, but this can be misleading. If you attempt to create
+      /// a queue with the same name as one that is in the tombstone window, run
+      /// GetQueue to confirm that the queue creation was successful. If GetQueue
+      /// returns 200 response code, your queue was successfully created with the
+      /// name of the previously deleted queue. Otherwise, your queue did not
+      /// successfully recreate.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -1572,6 +1719,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       /// <summary>
       /// Gets a task.
+      ///
+      /// After a task is successfully executed or has exhausted its retry attempts,
+      /// the task is deleted. A `GetTask` request for a deleted task returns a
+      /// `NOT_FOUND` error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1585,6 +1736,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       /// <summary>
       /// Gets a task.
+      ///
+      /// After a task is successfully executed or has exhausted its retry attempts,
+      /// the task is deleted. A `GetTask` request for a deleted task returns a
+      /// `NOT_FOUND` error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1596,6 +1751,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       /// <summary>
       /// Gets a task.
+      ///
+      /// After a task is successfully executed or has exhausted its retry attempts,
+      /// the task is deleted. A `GetTask` request for a deleted task returns a
+      /// `NOT_FOUND` error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1609,6 +1768,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       /// <summary>
       /// Gets a task.
+      ///
+      /// After a task is successfully executed or has exhausted its retry attempts,
+      /// the task is deleted. A `GetTask` request for a deleted task returns a
+      /// `NOT_FOUND` error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1683,6 +1846,70 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTask, null, options, request);
       }
       /// <summary>
+      /// Creates a batch of tasks and adds them to a queue.
+      /// This call is not atomic.
+      ///
+      /// All tasks must be for the same queue.
+      /// A maximum of 100 tasks can be created in a single batch.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchCreateTasks(global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateTasks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a batch of tasks and adds them to a queue.
+      /// This call is not atomic.
+      ///
+      /// All tasks must be for the same queue.
+      /// A maximum of 100 tasks can be created in a single batch.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchCreateTasks(global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateTasks, null, options, request);
+      }
+      /// <summary>
+      /// Creates a batch of tasks and adds them to a queue.
+      /// This call is not atomic.
+      ///
+      /// All tasks must be for the same queue.
+      /// A maximum of 100 tasks can be created in a single batch.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchCreateTasksAsync(global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateTasksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a batch of tasks and adds them to a queue.
+      /// This call is not atomic.
+      ///
+      /// All tasks must be for the same queue.
+      /// A maximum of 100 tasks can be created in a single batch.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchCreateTasksAsync(global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateTasks, null, options, request);
+      }
+      /// <summary>
       /// Deletes a task.
       ///
       /// A task can be deleted if it is scheduled or dispatched. A task
@@ -1747,6 +1974,70 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTask, null, options, request);
       }
       /// <summary>
+      /// Deletes a batch of tasks.
+      /// This is a non-atomic operation: if deletion fails for some tasks, it
+      /// can still succeed for others. The metadata field of
+      /// google.longrunning.Operation contains details of failed deletions.
+      /// A maximum of 1000 tasks can be deleted in a batch.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchDeleteTasks(global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteTasks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a batch of tasks.
+      /// This is a non-atomic operation: if deletion fails for some tasks, it
+      /// can still succeed for others. The metadata field of
+      /// google.longrunning.Operation contains details of failed deletions.
+      /// A maximum of 1000 tasks can be deleted in a batch.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BatchDeleteTasks(global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeleteTasks, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a batch of tasks.
+      /// This is a non-atomic operation: if deletion fails for some tasks, it
+      /// can still succeed for others. The metadata field of
+      /// google.longrunning.Operation contains details of failed deletions.
+      /// A maximum of 1000 tasks can be deleted in a batch.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchDeleteTasksAsync(global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteTasksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a batch of tasks.
+      /// This is a non-atomic operation: if deletion fails for some tasks, it
+      /// can still succeed for others. The metadata field of
+      /// google.longrunning.Operation contains details of failed deletions.
+      /// A maximum of 1000 tasks can be deleted in a batch.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchDeleteTasksAsync(global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteTasks, null, options, request);
+      }
+      /// <summary>
       /// Forces a task to run now.
       ///
       /// When this method is called, Cloud Tasks will dispatch the task, even if
@@ -1760,8 +2051,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// a task to be dispatched now.
       ///
       /// The dispatched task is returned. That is, the task that is returned
-      /// contains the [status][Task.status] after the task is dispatched but
-      /// before the task is received by its target.
+      /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+      /// the task is dispatched but before the task is received by its target.
       ///
       /// If Cloud Tasks receives a successful response from the task's
       /// target, then the task will be deleted; otherwise the task's
@@ -1799,8 +2090,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// a task to be dispatched now.
       ///
       /// The dispatched task is returned. That is, the task that is returned
-      /// contains the [status][Task.status] after the task is dispatched but
-      /// before the task is received by its target.
+      /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+      /// the task is dispatched but before the task is received by its target.
       ///
       /// If Cloud Tasks receives a successful response from the task's
       /// target, then the task will be deleted; otherwise the task's
@@ -1836,8 +2127,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// a task to be dispatched now.
       ///
       /// The dispatched task is returned. That is, the task that is returned
-      /// contains the [status][Task.status] after the task is dispatched but
-      /// before the task is received by its target.
+      /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+      /// the task is dispatched but before the task is received by its target.
       ///
       /// If Cloud Tasks receives a successful response from the task's
       /// target, then the task will be deleted; otherwise the task's
@@ -1875,8 +2166,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// a task to be dispatched now.
       ///
       /// The dispatched task is returned. That is, the task that is returned
-      /// contains the [status][Task.status] after the task is dispatched but
-      /// before the task is received by its target.
+      /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+      /// the task is dispatched but before the task is received by its target.
       ///
       /// If Cloud Tasks receives a successful response from the task's
       /// target, then the task will be deleted; otherwise the task's
@@ -1897,6 +2188,134 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Task> RunTaskAsync(global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunTask, null, options, request);
+      }
+      /// <summary>
+      /// Creates or Updates a CMEK config.
+      ///
+      /// Updates the Customer Managed Encryption Key associated with the Cloud Tasks
+      /// location (Creates if the key does not already exist). All new tasks created
+      /// in the location will be encrypted at-rest with the KMS-key provided in the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Tasks.V2Beta3.CmekConfig UpdateCmekConfig(global::Google.Cloud.Tasks.V2Beta3.UpdateCmekConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCmekConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates or Updates a CMEK config.
+      ///
+      /// Updates the Customer Managed Encryption Key associated with the Cloud Tasks
+      /// location (Creates if the key does not already exist). All new tasks created
+      /// in the location will be encrypted at-rest with the KMS-key provided in the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Tasks.V2Beta3.CmekConfig UpdateCmekConfig(global::Google.Cloud.Tasks.V2Beta3.UpdateCmekConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCmekConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates or Updates a CMEK config.
+      ///
+      /// Updates the Customer Managed Encryption Key associated with the Cloud Tasks
+      /// location (Creates if the key does not already exist). All new tasks created
+      /// in the location will be encrypted at-rest with the KMS-key provided in the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.CmekConfig> UpdateCmekConfigAsync(global::Google.Cloud.Tasks.V2Beta3.UpdateCmekConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCmekConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates or Updates a CMEK config.
+      ///
+      /// Updates the Customer Managed Encryption Key associated with the Cloud Tasks
+      /// location (Creates if the key does not already exist). All new tasks created
+      /// in the location will be encrypted at-rest with the KMS-key provided in the
+      /// config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.CmekConfig> UpdateCmekConfigAsync(global::Google.Cloud.Tasks.V2Beta3.UpdateCmekConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCmekConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets the CMEK config.
+      ///
+      /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+      /// lcoation. By default there is no kms_key configured.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Tasks.V2Beta3.CmekConfig GetCmekConfig(global::Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCmekConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the CMEK config.
+      ///
+      /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+      /// lcoation. By default there is no kms_key configured.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Tasks.V2Beta3.CmekConfig GetCmekConfig(global::Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCmekConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets the CMEK config.
+      ///
+      /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+      /// lcoation. By default there is no kms_key configured.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.CmekConfig> GetCmekConfigAsync(global::Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCmekConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the CMEK config.
+      ///
+      /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+      /// lcoation. By default there is no kms_key configured.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.CmekConfig> GetCmekConfigAsync(global::Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCmekConfig, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -1926,8 +2345,12 @@ namespace Google.Cloud.Tasks.V2Beta3 {
           .AddMethod(__Method_ListTasks, serviceImpl.ListTasks)
           .AddMethod(__Method_GetTask, serviceImpl.GetTask)
           .AddMethod(__Method_CreateTask, serviceImpl.CreateTask)
+          .AddMethod(__Method_BatchCreateTasks, serviceImpl.BatchCreateTasks)
           .AddMethod(__Method_DeleteTask, serviceImpl.DeleteTask)
-          .AddMethod(__Method_RunTask, serviceImpl.RunTask).Build();
+          .AddMethod(__Method_BatchDeleteTasks, serviceImpl.BatchDeleteTasks)
+          .AddMethod(__Method_RunTask, serviceImpl.RunTask)
+          .AddMethod(__Method_UpdateCmekConfig, serviceImpl.UpdateCmekConfig)
+          .AddMethod(__Method_GetCmekConfig, serviceImpl.GetCmekConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1951,8 +2374,12 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       serviceBinder.AddMethod(__Method_ListTasks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tasks.V2Beta3.ListTasksRequest, global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse>(serviceImpl.ListTasks));
       serviceBinder.AddMethod(__Method_GetTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest, global::Google.Cloud.Tasks.V2Beta3.Task>(serviceImpl.GetTask));
       serviceBinder.AddMethod(__Method_CreateTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest, global::Google.Cloud.Tasks.V2Beta3.Task>(serviceImpl.CreateTask));
+      serviceBinder.AddMethod(__Method_BatchCreateTasks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tasks.V2Beta3.BatchCreateTasksRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchCreateTasks));
       serviceBinder.AddMethod(__Method_DeleteTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTask));
+      serviceBinder.AddMethod(__Method_BatchDeleteTasks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchDeleteTasks));
       serviceBinder.AddMethod(__Method_RunTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest, global::Google.Cloud.Tasks.V2Beta3.Task>(serviceImpl.RunTask));
+      serviceBinder.AddMethod(__Method_UpdateCmekConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tasks.V2Beta3.UpdateCmekConfigRequest, global::Google.Cloud.Tasks.V2Beta3.CmekConfig>(serviceImpl.UpdateCmekConfig));
+      serviceBinder.AddMethod(__Method_GetCmekConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest, global::Google.Cloud.Tasks.V2Beta3.CmekConfig>(serviceImpl.GetCmekConfig));
     }
 
   }

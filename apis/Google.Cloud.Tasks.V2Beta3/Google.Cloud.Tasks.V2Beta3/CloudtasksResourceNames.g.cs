@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gctv = Google.Cloud.Tasks.V2Beta3;
 
 namespace Google.Cloud.Tasks.V2Beta3
@@ -136,6 +137,16 @@ namespace Google.Cloud.Tasks.V2Beta3
         }
     }
 
+    public partial class BatchCreateTasksRequest
+    {
+        /// <summary><see cref="QueueName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public QueueName ParentAsQueueName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : QueueName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteTaskRequest
     {
         /// <summary>
@@ -148,6 +159,22 @@ namespace Google.Cloud.Tasks.V2Beta3
         }
     }
 
+    public partial class BatchDeleteTasksRequest
+    {
+        /// <summary><see cref="QueueName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public QueueName ParentAsQueueName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : QueueName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="TaskName"/>-typed view over the <see cref="Names"/> resource name property.</summary>
+        public gax::ResourceNameList<TaskName> TaskNames
+        {
+            get => new gax::ResourceNameList<TaskName>(Names, s => string.IsNullOrEmpty(s) ? null : TaskName.Parse(s, allowUnparsed: true));
+        }
+    }
+
     public partial class RunTaskRequest
     {
         /// <summary>
@@ -156,6 +183,18 @@ namespace Google.Cloud.Tasks.V2Beta3
         public gctv::TaskName TaskName
         {
             get => string.IsNullOrEmpty(Name) ? null : gctv::TaskName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetCmekConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gctv::CmekConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gctv::CmekConfigName CmekConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gctv::CmekConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

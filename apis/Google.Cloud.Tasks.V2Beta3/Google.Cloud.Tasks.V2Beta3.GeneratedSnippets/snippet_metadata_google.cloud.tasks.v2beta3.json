@@ -4067,6 +4067,309 @@
       ]
     },
     {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BatchCreateTasks_sync",
+      "title": "BatchCreateTasksRequestObject",
+      "description": "Snippet for BatchCreateTasks",
+      "file": "CloudTasksClient.BatchCreateTasksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateTasks",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BatchCreateTasks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.BatchCreateTasksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Tasks.V2Beta3.BatchCreateTasksResponse, Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BatchCreateTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BatchCreateTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BatchCreateTasks_async",
+      "title": "BatchCreateTasksRequestObjectAsync",
+      "description": "Snippet for BatchCreateTasksAsync",
+      "file": "CloudTasksClient.BatchCreateTasksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateTasksAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BatchCreateTasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.BatchCreateTasksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Tasks.V2Beta3.BatchCreateTasksResponse, Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata>>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BatchCreateTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BatchCreateTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 69,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 67,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BatchCreateTasks_sync_flattened",
+      "title": "BatchCreateTasks",
+      "description": "Snippet for BatchCreateTasks",
+      "file": "CloudTasksClient.BatchCreateTasksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateTasks",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BatchCreateTasks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Tasks.V2Beta3.CreateTaskRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Tasks.V2Beta3.BatchCreateTasksResponse, Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BatchCreateTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BatchCreateTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BatchCreateTasks_async_flattened",
+      "title": "BatchCreateTasksAsync",
+      "description": "Snippet for BatchCreateTasksAsync",
+      "file": "CloudTasksClient.BatchCreateTasksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateTasksAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BatchCreateTasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Tasks.V2Beta3.CreateTaskRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Tasks.V2Beta3.BatchCreateTasksResponse, Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata>>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BatchCreateTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BatchCreateTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BatchCreateTasks_sync_flattened_resourceNames",
+      "title": "BatchCreateTasksResourceNames",
+      "description": "Snippet for BatchCreateTasks",
+      "file": "CloudTasksClient.BatchCreateTasksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateTasks",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BatchCreateTasks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Tasks.V2Beta3.CreateTaskRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Tasks.V2Beta3.BatchCreateTasksResponse, Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BatchCreateTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BatchCreateTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BatchCreateTasks_async_flattened_resourceNames",
+      "title": "BatchCreateTasksResourceNamesAsync",
+      "description": "Snippet for BatchCreateTasksAsync",
+      "file": "CloudTasksClient.BatchCreateTasksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateTasksAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BatchCreateTasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Tasks.V2Beta3.CreateTaskRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Tasks.V2Beta3.BatchCreateTasksResponse, Google.Cloud.Tasks.V2Beta3.BatchCreateTasksMetadata>>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BatchCreateTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BatchCreateTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_DeleteTask_sync",
       "title": "DeleteTaskRequestObject",
       "description": "Snippet for DeleteTask",
@@ -4351,6 +4654,309 @@
       ]
     },
     {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BatchDeleteTasks_sync",
+      "title": "BatchDeleteTasksRequestObject",
+      "description": "Snippet for BatchDeleteTasks",
+      "file": "CloudTasksClient.BatchDeleteTasksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteTasks",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BatchDeleteTasks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BatchDeleteTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BatchDeleteTasks_async",
+      "title": "BatchDeleteTasksRequestObjectAsync",
+      "description": "Snippet for BatchDeleteTasksAsync",
+      "file": "CloudTasksClient.BatchDeleteTasksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteTasksAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BatchDeleteTasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata>>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BatchDeleteTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 70,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 68,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BatchDeleteTasks_sync_flattened",
+      "title": "BatchDeleteTasks",
+      "description": "Snippet for BatchDeleteTasks",
+      "file": "CloudTasksClient.BatchDeleteTasksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteTasks",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BatchDeleteTasks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BatchDeleteTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BatchDeleteTasks_async_flattened",
+      "title": "BatchDeleteTasksAsync",
+      "description": "Snippet for BatchDeleteTasksAsync",
+      "file": "CloudTasksClient.BatchDeleteTasksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteTasksAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BatchDeleteTasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata>>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BatchDeleteTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BatchDeleteTasks_sync_flattened_resourceNames",
+      "title": "BatchDeleteTasksResourceNames",
+      "description": "Snippet for BatchDeleteTasks",
+      "file": "CloudTasksClient.BatchDeleteTasksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteTasks",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BatchDeleteTasks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.TaskName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BatchDeleteTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_BatchDeleteTasks_async_flattened_resourceNames",
+      "title": "BatchDeleteTasksResourceNamesAsync",
+      "description": "Snippet for BatchDeleteTasksAsync",
+      "file": "CloudTasksClient.BatchDeleteTasksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeleteTasksAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.BatchDeleteTasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.QueueName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.TaskName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Tasks.V2Beta3.BatchDeleteTasksMetadata>>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "BatchDeleteTasks",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.BatchDeleteTasks",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_RunTask_sync",
       "title": "RunTaskRequestObject",
       "description": "Snippet for RunTask",
@@ -4617,6 +5223,493 @@
         "method": {
           "shortName": "RunTask",
           "fullName": "google.cloud.tasks.v2beta3.CloudTasks.RunTask",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_UpdateCmekConfig_sync",
+      "title": "UpdateCmekConfigRequestObject",
+      "description": "Snippet for UpdateCmekConfig",
+      "file": "CloudTasksClient.UpdateCmekConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCmekConfig",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.UpdateCmekConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.UpdateCmekConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.CmekConfig",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "UpdateCmekConfig",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.UpdateCmekConfig",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_UpdateCmekConfig_async",
+      "title": "UpdateCmekConfigRequestObjectAsync",
+      "description": "Snippet for UpdateCmekConfigAsync",
+      "file": "CloudTasksClient.UpdateCmekConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCmekConfigAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.UpdateCmekConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.UpdateCmekConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.CmekConfig>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "UpdateCmekConfig",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.UpdateCmekConfig",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_UpdateCmekConfig_sync_flattened",
+      "title": "UpdateCmekConfig",
+      "description": "Snippet for UpdateCmekConfig",
+      "file": "CloudTasksClient.UpdateCmekConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCmekConfig",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.UpdateCmekConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.CmekConfig",
+            "name": "cmekConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.CmekConfig",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "UpdateCmekConfig",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.UpdateCmekConfig",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_UpdateCmekConfig_async_flattened",
+      "title": "UpdateCmekConfigAsync",
+      "description": "Snippet for UpdateCmekConfigAsync",
+      "file": "CloudTasksClient.UpdateCmekConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCmekConfigAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.UpdateCmekConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.CmekConfig",
+            "name": "cmekConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.CmekConfig>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "UpdateCmekConfig",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.UpdateCmekConfig",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetCmekConfig_sync",
+      "title": "GetCmekConfigRequestObject",
+      "description": "Snippet for GetCmekConfig",
+      "file": "CloudTasksClient.GetCmekConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCmekConfig",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetCmekConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.CmekConfig",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetCmekConfig",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetCmekConfig",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetCmekConfig_async",
+      "title": "GetCmekConfigRequestObjectAsync",
+      "description": "Snippet for GetCmekConfigAsync",
+      "file": "CloudTasksClient.GetCmekConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCmekConfigAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetCmekConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.GetCmekConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.CmekConfig>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetCmekConfig",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetCmekConfig",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetCmekConfig_sync_flattened",
+      "title": "GetCmekConfig",
+      "description": "Snippet for GetCmekConfig",
+      "file": "CloudTasksClient.GetCmekConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCmekConfig",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetCmekConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.CmekConfig",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetCmekConfig",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetCmekConfig",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetCmekConfig_async_flattened",
+      "title": "GetCmekConfigAsync",
+      "description": "Snippet for GetCmekConfigAsync",
+      "file": "CloudTasksClient.GetCmekConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCmekConfigAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetCmekConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.CmekConfig>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetCmekConfig",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetCmekConfig",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetCmekConfig_sync_flattened_resourceNames",
+      "title": "GetCmekConfigResourceNames",
+      "description": "Snippet for GetCmekConfig",
+      "file": "CloudTasksClient.GetCmekConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCmekConfig",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetCmekConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.CmekConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Tasks.V2Beta3.CmekConfig",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetCmekConfig",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetCmekConfig",
+          "service": {
+            "shortName": "CloudTasks",
+            "fullName": "google.cloud.tasks.v2beta3.CloudTasks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtasks_v2beta3_generated_CloudTasks_GetCmekConfig_async_flattened_resourceNames",
+      "title": "GetCmekConfigResourceNamesAsync",
+      "description": "Snippet for GetCmekConfigAsync",
+      "file": "CloudTasksClient.GetCmekConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCmekConfigAsync",
+        "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient.GetCmekConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Tasks.V2Beta3.CmekConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Tasks.V2Beta3.CmekConfig>",
+        "client": {
+          "shortName": "CloudTasksClient",
+          "fullName": "Google.Cloud.Tasks.V2Beta3.CloudTasksClient"
+        },
+        "method": {
+          "shortName": "GetCmekConfig",
+          "fullName": "google.cloud.tasks.v2beta3.CloudTasks.GetCmekConfig",
           "service": {
             "shortName": "CloudTasks",
             "fullName": "google.cloud.tasks.v2beta3.CloudTasks"

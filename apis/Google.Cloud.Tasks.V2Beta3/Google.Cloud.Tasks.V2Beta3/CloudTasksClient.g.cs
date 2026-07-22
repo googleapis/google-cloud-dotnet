@@ -22,6 +22,7 @@ using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
 using sc = System.Collections;
@@ -63,8 +64,14 @@ namespace Google.Cloud.Tasks.V2Beta3
             ListTasksSettings = existing.ListTasksSettings;
             GetTaskSettings = existing.GetTaskSettings;
             CreateTaskSettings = existing.CreateTaskSettings;
+            BatchCreateTasksSettings = existing.BatchCreateTasksSettings;
+            BatchCreateTasksOperationsSettings = existing.BatchCreateTasksOperationsSettings.Clone();
             DeleteTaskSettings = existing.DeleteTaskSettings;
+            BatchDeleteTasksSettings = existing.BatchDeleteTasksSettings;
+            BatchDeleteTasksOperationsSettings = existing.BatchDeleteTasksOperationsSettings.Clone();
             RunTaskSettings = existing.RunTaskSettings;
+            UpdateCmekConfigSettings = existing.UpdateCmekConfigSettings;
+            GetCmekConfigSettings = existing.GetCmekConfigSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -303,6 +310,36 @@ namespace Google.Cloud.Tasks.V2Beta3
         public gaxgrpc::CallSettings CreateTaskSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudTasksClient.BatchCreateTasks</c> and <c>CloudTasksClient.BatchCreateTasksAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateTasksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudTasksClient.BatchCreateTasks</c> and
+        /// <c>CloudTasksClient.BatchCreateTasksAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchCreateTasksOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudTasksClient.DeleteTask</c>
         ///  and <c>CloudTasksClient.DeleteTaskAsync</c>.
         /// </summary>
@@ -324,6 +361,36 @@ namespace Google.Cloud.Tasks.V2Beta3
         public gaxgrpc::CallSettings DeleteTaskSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudTasksClient.BatchDeleteTasks</c> and <c>CloudTasksClient.BatchDeleteTasksAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeleteTasksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudTasksClient.BatchDeleteTasks</c> and
+        /// <c>CloudTasksClient.BatchDeleteTasksAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchDeleteTasksOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>CloudTasksClient.RunTask</c>
         ///  and <c>CloudTasksClient.RunTaskAsync</c>.
         /// </summary>
@@ -334,6 +401,48 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings RunTaskSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudTasksClient.UpdateCmekConfig</c> and <c>CloudTasksClient.UpdateCmekConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 20 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCmekConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudTasksClient.GetCmekConfig</c> and <c>CloudTasksClient.GetCmekConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 20 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetCmekConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1231,8 +1340,15 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// 
         /// This command will delete the queue even if it has tasks in it.
         /// 
-        /// Note: If you delete a queue, a queue with the same name can't be created
-        /// for 7 days.
+        /// Note : If you delete a queue, you may be prevented from creating a new
+        /// queue with the same name as the deleted queue for a tombstone window of up
+        /// to 3 days. During this window, the CreateQueue operation may appear to
+        /// recreate the queue, but this can be misleading. If you attempt to create
+        /// a queue with the same name as one that is in the tombstone window, run
+        /// GetQueue to confirm that the queue creation was successful. If GetQueue
+        /// returns 200 response code, your queue was successfully created with the
+        /// name of the previously deleted queue. Otherwise, your queue did not
+        /// successfully recreate.
         /// 
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -1252,8 +1368,15 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// 
         /// This command will delete the queue even if it has tasks in it.
         /// 
-        /// Note: If you delete a queue, a queue with the same name can't be created
-        /// for 7 days.
+        /// Note : If you delete a queue, you may be prevented from creating a new
+        /// queue with the same name as the deleted queue for a tombstone window of up
+        /// to 3 days. During this window, the CreateQueue operation may appear to
+        /// recreate the queue, but this can be misleading. If you attempt to create
+        /// a queue with the same name as one that is in the tombstone window, run
+        /// GetQueue to confirm that the queue creation was successful. If GetQueue
+        /// returns 200 response code, your queue was successfully created with the
+        /// name of the previously deleted queue. Otherwise, your queue did not
+        /// successfully recreate.
         /// 
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -1273,8 +1396,15 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// 
         /// This command will delete the queue even if it has tasks in it.
         /// 
-        /// Note: If you delete a queue, a queue with the same name can't be created
-        /// for 7 days.
+        /// Note : If you delete a queue, you may be prevented from creating a new
+        /// queue with the same name as the deleted queue for a tombstone window of up
+        /// to 3 days. During this window, the CreateQueue operation may appear to
+        /// recreate the queue, but this can be misleading. If you attempt to create
+        /// a queue with the same name as one that is in the tombstone window, run
+        /// GetQueue to confirm that the queue creation was successful. If GetQueue
+        /// returns 200 response code, your queue was successfully created with the
+        /// name of the previously deleted queue. Otherwise, your queue did not
+        /// successfully recreate.
         /// 
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -1294,8 +1424,15 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// 
         /// This command will delete the queue even if it has tasks in it.
         /// 
-        /// Note: If you delete a queue, a queue with the same name can't be created
-        /// for 7 days.
+        /// Note : If you delete a queue, you may be prevented from creating a new
+        /// queue with the same name as the deleted queue for a tombstone window of up
+        /// to 3 days. During this window, the CreateQueue operation may appear to
+        /// recreate the queue, but this can be misleading. If you attempt to create
+        /// a queue with the same name as one that is in the tombstone window, run
+        /// GetQueue to confirm that the queue creation was successful. If GetQueue
+        /// returns 200 response code, your queue was successfully created with the
+        /// name of the previously deleted queue. Otherwise, your queue did not
+        /// successfully recreate.
         /// 
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -1321,8 +1458,15 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// 
         /// This command will delete the queue even if it has tasks in it.
         /// 
-        /// Note: If you delete a queue, a queue with the same name can't be created
-        /// for 7 days.
+        /// Note : If you delete a queue, you may be prevented from creating a new
+        /// queue with the same name as the deleted queue for a tombstone window of up
+        /// to 3 days. During this window, the CreateQueue operation may appear to
+        /// recreate the queue, but this can be misleading. If you attempt to create
+        /// a queue with the same name as one that is in the tombstone window, run
+        /// GetQueue to confirm that the queue creation was successful. If GetQueue
+        /// returns 200 response code, your queue was successfully created with the
+        /// name of the previously deleted queue. Otherwise, your queue did not
+        /// successfully recreate.
         /// 
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -1348,8 +1492,15 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// 
         /// This command will delete the queue even if it has tasks in it.
         /// 
-        /// Note: If you delete a queue, a queue with the same name can't be created
-        /// for 7 days.
+        /// Note : If you delete a queue, you may be prevented from creating a new
+        /// queue with the same name as the deleted queue for a tombstone window of up
+        /// to 3 days. During this window, the CreateQueue operation may appear to
+        /// recreate the queue, but this can be misleading. If you attempt to create
+        /// a queue with the same name as one that is in the tombstone window, run
+        /// GetQueue to confirm that the queue creation was successful. If GetQueue
+        /// returns 200 response code, your queue was successfully created with the
+        /// name of the previously deleted queue. Otherwise, your queue did not
+        /// successfully recreate.
         /// 
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -1372,8 +1523,15 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// 
         /// This command will delete the queue even if it has tasks in it.
         /// 
-        /// Note: If you delete a queue, a queue with the same name can't be created
-        /// for 7 days.
+        /// Note : If you delete a queue, you may be prevented from creating a new
+        /// queue with the same name as the deleted queue for a tombstone window of up
+        /// to 3 days. During this window, the CreateQueue operation may appear to
+        /// recreate the queue, but this can be misleading. If you attempt to create
+        /// a queue with the same name as one that is in the tombstone window, run
+        /// GetQueue to confirm that the queue creation was successful. If GetQueue
+        /// returns 200 response code, your queue was successfully created with the
+        /// name of the previously deleted queue. Otherwise, your queue did not
+        /// successfully recreate.
         /// 
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -1399,8 +1557,15 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// 
         /// This command will delete the queue even if it has tasks in it.
         /// 
-        /// Note: If you delete a queue, a queue with the same name can't be created
-        /// for 7 days.
+        /// Note : If you delete a queue, you may be prevented from creating a new
+        /// queue with the same name as the deleted queue for a tombstone window of up
+        /// to 3 days. During this window, the CreateQueue operation may appear to
+        /// recreate the queue, but this can be misleading. If you attempt to create
+        /// a queue with the same name as one that is in the tombstone window, run
+        /// GetQueue to confirm that the queue creation was successful. If GetQueue
+        /// returns 200 response code, your queue was successfully created with the
+        /// name of the previously deleted queue. Otherwise, your queue did not
+        /// successfully recreate.
         /// 
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -1426,8 +1591,15 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// 
         /// This command will delete the queue even if it has tasks in it.
         /// 
-        /// Note: If you delete a queue, a queue with the same name can't be created
-        /// for 7 days.
+        /// Note : If you delete a queue, you may be prevented from creating a new
+        /// queue with the same name as the deleted queue for a tombstone window of up
+        /// to 3 days. During this window, the CreateQueue operation may appear to
+        /// recreate the queue, but this can be misleading. If you attempt to create
+        /// a queue with the same name as one that is in the tombstone window, run
+        /// GetQueue to confirm that the queue creation was successful. If GetQueue
+        /// returns 200 response code, your queue was successfully created with the
+        /// name of the previously deleted queue. Otherwise, your queue did not
+        /// successfully recreate.
         /// 
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -2866,6 +3038,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         /// <summary>
         /// Gets a task.
+        /// 
+        /// After a task is successfully executed or has exhausted its retry attempts,
+        /// the task is deleted. A `GetTask` request for a deleted task returns a
+        /// `NOT_FOUND` error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2875,6 +3051,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         /// <summary>
         /// Gets a task.
+        /// 
+        /// After a task is successfully executed or has exhausted its retry attempts,
+        /// the task is deleted. A `GetTask` request for a deleted task returns a
+        /// `NOT_FOUND` error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2884,6 +3064,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         /// <summary>
         /// Gets a task.
+        /// 
+        /// After a task is successfully executed or has exhausted its retry attempts,
+        /// the task is deleted. A `GetTask` request for a deleted task returns a
+        /// `NOT_FOUND` error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2893,6 +3077,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         /// <summary>
         /// Gets a task.
+        /// 
+        /// After a task is successfully executed or has exhausted its retry attempts,
+        /// the task is deleted. A `GetTask` request for a deleted task returns a
+        /// `NOT_FOUND` error.
         /// </summary>
         /// <param name="name">
         /// Required. The task name. For example:
@@ -2908,6 +3096,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         /// <summary>
         /// Gets a task.
+        /// 
+        /// After a task is successfully executed or has exhausted its retry attempts,
+        /// the task is deleted. A `GetTask` request for a deleted task returns a
+        /// `NOT_FOUND` error.
         /// </summary>
         /// <param name="name">
         /// Required. The task name. For example:
@@ -2923,6 +3115,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         /// <summary>
         /// Gets a task.
+        /// 
+        /// After a task is successfully executed or has exhausted its retry attempts,
+        /// the task is deleted. A `GetTask` request for a deleted task returns a
+        /// `NOT_FOUND` error.
         /// </summary>
         /// <param name="name">
         /// Required. The task name. For example:
@@ -2935,6 +3131,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         /// <summary>
         /// Gets a task.
+        /// 
+        /// After a task is successfully executed or has exhausted its retry attempts,
+        /// the task is deleted. A `GetTask` request for a deleted task returns a
+        /// `NOT_FOUND` error.
         /// </summary>
         /// <param name="name">
         /// Required. The task name. For example:
@@ -2950,6 +3150,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         /// <summary>
         /// Gets a task.
+        /// 
+        /// After a task is successfully executed or has exhausted its retry attempts,
+        /// the task is deleted. A `GetTask` request for a deleted task returns a
+        /// `NOT_FOUND` error.
         /// </summary>
         /// <param name="name">
         /// Required. The task name. For example:
@@ -2965,6 +3169,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         /// <summary>
         /// Gets a task.
+        /// 
+        /// After a task is successfully executed or has exhausted its retry attempts,
+        /// the task is deleted. A `GetTask` request for a deleted task returns a
+        /// `NOT_FOUND` error.
         /// </summary>
         /// <param name="name">
         /// Required. The task name. For example:
@@ -3046,11 +3254,10 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task's ID is identical to that of an existing task or a task
         /// that was deleted or executed recently then the call will fail
         /// with [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS].
-        /// If the task's queue was created using Cloud Tasks, then another task with
-        /// the same name can't be created for ~1 hour after the original task was
-        /// deleted or executed. If the task's queue was created using queue.yaml or
-        /// queue.xml, then another task with the same name can't be created
-        /// for ~9 days after the original task was deleted or executed.
+        /// The IDs of deleted tasks are not immediately available for reuse.  It can
+        /// take up to 24 hours (or 9 days if the task's queue was created using a
+        /// queue.yaml or queue.xml) for the task ID to be released and made available
+        /// again.
         /// 
         /// Because there is an extra lookup cost to identify duplicate task
         /// names, these [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask]
@@ -3103,11 +3310,10 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task's ID is identical to that of an existing task or a task
         /// that was deleted or executed recently then the call will fail
         /// with [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS].
-        /// If the task's queue was created using Cloud Tasks, then another task with
-        /// the same name can't be created for ~1 hour after the original task was
-        /// deleted or executed. If the task's queue was created using queue.yaml or
-        /// queue.xml, then another task with the same name can't be created
-        /// for ~9 days after the original task was deleted or executed.
+        /// The IDs of deleted tasks are not immediately available for reuse.  It can
+        /// take up to 24 hours (or 9 days if the task's queue was created using a
+        /// queue.yaml or queue.xml) for the task ID to be released and made available
+        /// again.
         /// 
         /// Because there is an extra lookup cost to identify duplicate task
         /// names, these [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask]
@@ -3160,11 +3366,10 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task's ID is identical to that of an existing task or a task
         /// that was deleted or executed recently then the call will fail
         /// with [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS].
-        /// If the task's queue was created using Cloud Tasks, then another task with
-        /// the same name can't be created for ~1 hour after the original task was
-        /// deleted or executed. If the task's queue was created using queue.yaml or
-        /// queue.xml, then another task with the same name can't be created
-        /// for ~9 days after the original task was deleted or executed.
+        /// The IDs of deleted tasks are not immediately available for reuse.  It can
+        /// take up to 24 hours (or 9 days if the task's queue was created using a
+        /// queue.yaml or queue.xml) for the task ID to be released and made available
+        /// again.
         /// 
         /// Because there is an extra lookup cost to identify duplicate task
         /// names, these [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask]
@@ -3213,11 +3418,10 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task's ID is identical to that of an existing task or a task
         /// that was deleted or executed recently then the call will fail
         /// with [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS].
-        /// If the task's queue was created using Cloud Tasks, then another task with
-        /// the same name can't be created for ~1 hour after the original task was
-        /// deleted or executed. If the task's queue was created using queue.yaml or
-        /// queue.xml, then another task with the same name can't be created
-        /// for ~9 days after the original task was deleted or executed.
+        /// The IDs of deleted tasks are not immediately available for reuse.  It can
+        /// take up to 24 hours (or 9 days if the task's queue was created using a
+        /// queue.yaml or queue.xml) for the task ID to be released and made available
+        /// again.
         /// 
         /// Because there is an extra lookup cost to identify duplicate task
         /// names, these [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask]
@@ -3270,11 +3474,10 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task's ID is identical to that of an existing task or a task
         /// that was deleted or executed recently then the call will fail
         /// with [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS].
-        /// If the task's queue was created using Cloud Tasks, then another task with
-        /// the same name can't be created for ~1 hour after the original task was
-        /// deleted or executed. If the task's queue was created using queue.yaml or
-        /// queue.xml, then another task with the same name can't be created
-        /// for ~9 days after the original task was deleted or executed.
+        /// The IDs of deleted tasks are not immediately available for reuse.  It can
+        /// take up to 24 hours (or 9 days if the task's queue was created using a
+        /// queue.yaml or queue.xml) for the task ID to be released and made available
+        /// again.
         /// 
         /// Because there is an extra lookup cost to identify duplicate task
         /// names, these [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask]
@@ -3327,11 +3530,10 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task's ID is identical to that of an existing task or a task
         /// that was deleted or executed recently then the call will fail
         /// with [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS].
-        /// If the task's queue was created using Cloud Tasks, then another task with
-        /// the same name can't be created for ~1 hour after the original task was
-        /// deleted or executed. If the task's queue was created using queue.yaml or
-        /// queue.xml, then another task with the same name can't be created
-        /// for ~9 days after the original task was deleted or executed.
+        /// The IDs of deleted tasks are not immediately available for reuse.  It can
+        /// take up to 24 hours (or 9 days if the task's queue was created using a
+        /// queue.yaml or queue.xml) for the task ID to be released and made available
+        /// again.
         /// 
         /// Because there is an extra lookup cost to identify duplicate task
         /// names, these [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask]
@@ -3347,6 +3549,261 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Task> CreateTaskAsync(QueueName parent, Task task, st::CancellationToken cancellationToken) =>
             CreateTaskAsync(parent, task, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a batch of tasks and adds them to a queue.
+        /// This call is not atomic.
+        /// 
+        /// All tasks must be for the same queue.
+        /// A maximum of 100 tasks can be created in a single batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata> BatchCreateTasks(BatchCreateTasksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a batch of tasks and adds them to a queue.
+        /// This call is not atomic.
+        /// 
+        /// All tasks must be for the same queue.
+        /// A maximum of 100 tasks can be created in a single batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata>> BatchCreateTasksAsync(BatchCreateTasksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a batch of tasks and adds them to a queue.
+        /// This call is not atomic.
+        /// 
+        /// All tasks must be for the same queue.
+        /// A maximum of 100 tasks can be created in a single batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata>> BatchCreateTasksAsync(BatchCreateTasksRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateTasksAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BatchCreateTasks</c>.</summary>
+        public virtual lro::OperationsClient BatchCreateTasksOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BatchCreateTasks</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata> PollOnceBatchCreateTasks(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchCreateTasksOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchCreateTasks</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata>> PollOnceBatchCreateTasksAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchCreateTasksOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a batch of tasks and adds them to a queue.
+        /// This call is not atomic.
+        /// 
+        /// All tasks must be for the same queue.
+        /// A maximum of 100 tasks can be created in a single batch.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The queue name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// 
+        /// The queue must already exist.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The list of requests to create tasks.
+        /// The queue specified in parent field of each CreateTaskRequest will be
+        /// the same. This validation happens on the client side as well as in the
+        /// handler.
+        /// BatchCreateTasksRequest.parent will also be the same value as the
+        /// individual CreateTaskRequest.parent .
+        /// The maximum number of requests is 100.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata> BatchCreateTasks(string parent, scg::IEnumerable<CreateTaskRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateTasks(new BatchCreateTasksRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of tasks and adds them to a queue.
+        /// This call is not atomic.
+        /// 
+        /// All tasks must be for the same queue.
+        /// A maximum of 100 tasks can be created in a single batch.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The queue name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// 
+        /// The queue must already exist.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The list of requests to create tasks.
+        /// The queue specified in parent field of each CreateTaskRequest will be
+        /// the same. This validation happens on the client side as well as in the
+        /// handler.
+        /// BatchCreateTasksRequest.parent will also be the same value as the
+        /// individual CreateTaskRequest.parent .
+        /// The maximum number of requests is 100.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata>> BatchCreateTasksAsync(string parent, scg::IEnumerable<CreateTaskRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateTasksAsync(new BatchCreateTasksRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of tasks and adds them to a queue.
+        /// This call is not atomic.
+        /// 
+        /// All tasks must be for the same queue.
+        /// A maximum of 100 tasks can be created in a single batch.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The queue name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// 
+        /// The queue must already exist.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The list of requests to create tasks.
+        /// The queue specified in parent field of each CreateTaskRequest will be
+        /// the same. This validation happens on the client side as well as in the
+        /// handler.
+        /// BatchCreateTasksRequest.parent will also be the same value as the
+        /// individual CreateTaskRequest.parent .
+        /// The maximum number of requests is 100.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata>> BatchCreateTasksAsync(string parent, scg::IEnumerable<CreateTaskRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateTasksAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a batch of tasks and adds them to a queue.
+        /// This call is not atomic.
+        /// 
+        /// All tasks must be for the same queue.
+        /// A maximum of 100 tasks can be created in a single batch.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The queue name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// 
+        /// The queue must already exist.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The list of requests to create tasks.
+        /// The queue specified in parent field of each CreateTaskRequest will be
+        /// the same. This validation happens on the client side as well as in the
+        /// handler.
+        /// BatchCreateTasksRequest.parent will also be the same value as the
+        /// individual CreateTaskRequest.parent .
+        /// The maximum number of requests is 100.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata> BatchCreateTasks(QueueName parent, scg::IEnumerable<CreateTaskRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateTasks(new BatchCreateTasksRequest
+            {
+                ParentAsQueueName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of tasks and adds them to a queue.
+        /// This call is not atomic.
+        /// 
+        /// All tasks must be for the same queue.
+        /// A maximum of 100 tasks can be created in a single batch.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The queue name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// 
+        /// The queue must already exist.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The list of requests to create tasks.
+        /// The queue specified in parent field of each CreateTaskRequest will be
+        /// the same. This validation happens on the client side as well as in the
+        /// handler.
+        /// BatchCreateTasksRequest.parent will also be the same value as the
+        /// individual CreateTaskRequest.parent .
+        /// The maximum number of requests is 100.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata>> BatchCreateTasksAsync(QueueName parent, scg::IEnumerable<CreateTaskRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateTasksAsync(new BatchCreateTasksRequest
+            {
+                ParentAsQueueName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a batch of tasks and adds them to a queue.
+        /// This call is not atomic.
+        /// 
+        /// All tasks must be for the same queue.
+        /// A maximum of 100 tasks can be created in a single batch.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The queue name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// 
+        /// The queue must already exist.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The list of requests to create tasks.
+        /// The queue specified in parent field of each CreateTaskRequest will be
+        /// the same. This validation happens on the client side as well as in the
+        /// handler.
+        /// BatchCreateTasksRequest.parent will also be the same value as the
+        /// individual CreateTaskRequest.parent .
+        /// The maximum number of requests is 100.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata>> BatchCreateTasksAsync(QueueName parent, scg::IEnumerable<CreateTaskRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateTasksAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a task.
@@ -3496,6 +3953,237 @@ namespace Google.Cloud.Tasks.V2Beta3
             DeleteTaskAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes a batch of tasks.
+        /// This is a non-atomic operation: if deletion fails for some tasks, it
+        /// can still succeed for others. The metadata field of
+        /// google.longrunning.Operation contains details of failed deletions.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, BatchDeleteTasksMetadata> BatchDeleteTasks(BatchDeleteTasksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a batch of tasks.
+        /// This is a non-atomic operation: if deletion fails for some tasks, it
+        /// can still succeed for others. The metadata field of
+        /// google.longrunning.Operation contains details of failed deletions.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteTasksMetadata>> BatchDeleteTasksAsync(BatchDeleteTasksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a batch of tasks.
+        /// This is a non-atomic operation: if deletion fails for some tasks, it
+        /// can still succeed for others. The metadata field of
+        /// google.longrunning.Operation contains details of failed deletions.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteTasksMetadata>> BatchDeleteTasksAsync(BatchDeleteTasksRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeleteTasksAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BatchDeleteTasks</c>.</summary>
+        public virtual lro::OperationsClient BatchDeleteTasksOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BatchDeleteTasks</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, BatchDeleteTasksMetadata> PollOnceBatchDeleteTasks(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, BatchDeleteTasksMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeleteTasksOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchDeleteTasks</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteTasksMetadata>> PollOnceBatchDeleteTasksAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, BatchDeleteTasksMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeleteTasksOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a batch of tasks.
+        /// This is a non-atomic operation: if deletion fails for some tasks, it
+        /// can still succeed for others. The metadata field of
+        /// google.longrunning.Operation contains details of failed deletions.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The queue name. For example:
+        /// Format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the tasks to delete.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// For example:
+        /// Format:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, BatchDeleteTasksMetadata> BatchDeleteTasks(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteTasks(new BatchDeleteTasksRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a batch of tasks.
+        /// This is a non-atomic operation: if deletion fails for some tasks, it
+        /// can still succeed for others. The metadata field of
+        /// google.longrunning.Operation contains details of failed deletions.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The queue name. For example:
+        /// Format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the tasks to delete.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// For example:
+        /// Format:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteTasksMetadata>> BatchDeleteTasksAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteTasksAsync(new BatchDeleteTasksRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a batch of tasks.
+        /// This is a non-atomic operation: if deletion fails for some tasks, it
+        /// can still succeed for others. The metadata field of
+        /// google.longrunning.Operation contains details of failed deletions.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The queue name. For example:
+        /// Format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the tasks to delete.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// For example:
+        /// Format:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteTasksMetadata>> BatchDeleteTasksAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchDeleteTasksAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a batch of tasks.
+        /// This is a non-atomic operation: if deletion fails for some tasks, it
+        /// can still succeed for others. The metadata field of
+        /// google.longrunning.Operation contains details of failed deletions.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The queue name. For example:
+        /// Format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the tasks to delete.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// For example:
+        /// Format:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, BatchDeleteTasksMetadata> BatchDeleteTasks(QueueName parent, scg::IEnumerable<TaskName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteTasks(new BatchDeleteTasksRequest
+            {
+                ParentAsQueueName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TaskNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a batch of tasks.
+        /// This is a non-atomic operation: if deletion fails for some tasks, it
+        /// can still succeed for others. The metadata field of
+        /// google.longrunning.Operation contains details of failed deletions.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The queue name. For example:
+        /// Format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the tasks to delete.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// For example:
+        /// Format:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteTasksMetadata>> BatchDeleteTasksAsync(QueueName parent, scg::IEnumerable<TaskName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeleteTasksAsync(new BatchDeleteTasksRequest
+            {
+                ParentAsQueueName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TaskNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a batch of tasks.
+        /// This is a non-atomic operation: if deletion fails for some tasks, it
+        /// can still succeed for others. The metadata field of
+        /// google.longrunning.Operation contains details of failed deletions.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The queue name. For example:
+        /// Format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the tasks to delete.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// For example:
+        /// Format:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, BatchDeleteTasksMetadata>> BatchDeleteTasksAsync(QueueName parent, scg::IEnumerable<TaskName> names, st::CancellationToken cancellationToken) =>
+            BatchDeleteTasksAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Forces a task to run now.
         /// 
         /// When this method is called, Cloud Tasks will dispatch the task, even if
@@ -3509,8 +4197,8 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task to be dispatched now.
         /// 
         /// The dispatched task is returned. That is, the task that is returned
-        /// contains the [status][Task.status] after the task is dispatched but
-        /// before the task is received by its target.
+        /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+        /// the task is dispatched but before the task is received by its target.
         /// 
         /// If Cloud Tasks receives a successful response from the task's
         /// target, then the task will be deleted; otherwise the task's
@@ -3544,8 +4232,8 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task to be dispatched now.
         /// 
         /// The dispatched task is returned. That is, the task that is returned
-        /// contains the [status][Task.status] after the task is dispatched but
-        /// before the task is received by its target.
+        /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+        /// the task is dispatched but before the task is received by its target.
         /// 
         /// If Cloud Tasks receives a successful response from the task's
         /// target, then the task will be deleted; otherwise the task's
@@ -3579,8 +4267,8 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task to be dispatched now.
         /// 
         /// The dispatched task is returned. That is, the task that is returned
-        /// contains the [status][Task.status] after the task is dispatched but
-        /// before the task is received by its target.
+        /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+        /// the task is dispatched but before the task is received by its target.
         /// 
         /// If Cloud Tasks receives a successful response from the task's
         /// target, then the task will be deleted; otherwise the task's
@@ -3614,8 +4302,8 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task to be dispatched now.
         /// 
         /// The dispatched task is returned. That is, the task that is returned
-        /// contains the [status][Task.status] after the task is dispatched but
-        /// before the task is received by its target.
+        /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+        /// the task is dispatched but before the task is received by its target.
         /// 
         /// If Cloud Tasks receives a successful response from the task's
         /// target, then the task will be deleted; otherwise the task's
@@ -3655,8 +4343,8 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task to be dispatched now.
         /// 
         /// The dispatched task is returned. That is, the task that is returned
-        /// contains the [status][Task.status] after the task is dispatched but
-        /// before the task is received by its target.
+        /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+        /// the task is dispatched but before the task is received by its target.
         /// 
         /// If Cloud Tasks receives a successful response from the task's
         /// target, then the task will be deleted; otherwise the task's
@@ -3696,8 +4384,8 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task to be dispatched now.
         /// 
         /// The dispatched task is returned. That is, the task that is returned
-        /// contains the [status][Task.status] after the task is dispatched but
-        /// before the task is received by its target.
+        /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+        /// the task is dispatched but before the task is received by its target.
         /// 
         /// If Cloud Tasks receives a successful response from the task's
         /// target, then the task will be deleted; otherwise the task's
@@ -3734,8 +4422,8 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task to be dispatched now.
         /// 
         /// The dispatched task is returned. That is, the task that is returned
-        /// contains the [status][Task.status] after the task is dispatched but
-        /// before the task is received by its target.
+        /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+        /// the task is dispatched but before the task is received by its target.
         /// 
         /// If Cloud Tasks receives a successful response from the task's
         /// target, then the task will be deleted; otherwise the task's
@@ -3775,8 +4463,8 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task to be dispatched now.
         /// 
         /// The dispatched task is returned. That is, the task that is returned
-        /// contains the [status][Task.status] after the task is dispatched but
-        /// before the task is received by its target.
+        /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+        /// the task is dispatched but before the task is received by its target.
         /// 
         /// If Cloud Tasks receives a successful response from the task's
         /// target, then the task will be deleted; otherwise the task's
@@ -3816,8 +4504,8 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task to be dispatched now.
         /// 
         /// The dispatched task is returned. That is, the task that is returned
-        /// contains the [status][Task.status] after the task is dispatched but
-        /// before the task is received by its target.
+        /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+        /// the task is dispatched but before the task is received by its target.
         /// 
         /// If Cloud Tasks receives a successful response from the task's
         /// target, then the task will be deleted; otherwise the task's
@@ -3839,6 +4527,251 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Task> RunTaskAsync(TaskName name, st::CancellationToken cancellationToken) =>
             RunTaskAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates or Updates a CMEK config.
+        /// 
+        /// Updates the Customer Managed Encryption Key associated with the Cloud Tasks
+        /// location (Creates if the key does not already exist). All new tasks created
+        /// in the location will be encrypted at-rest with the KMS-key provided in the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CmekConfig UpdateCmekConfig(UpdateCmekConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates or Updates a CMEK config.
+        /// 
+        /// Updates the Customer Managed Encryption Key associated with the Cloud Tasks
+        /// location (Creates if the key does not already exist). All new tasks created
+        /// in the location will be encrypted at-rest with the KMS-key provided in the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CmekConfig> UpdateCmekConfigAsync(UpdateCmekConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates or Updates a CMEK config.
+        /// 
+        /// Updates the Customer Managed Encryption Key associated with the Cloud Tasks
+        /// location (Creates if the key does not already exist). All new tasks created
+        /// in the location will be encrypted at-rest with the KMS-key provided in the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CmekConfig> UpdateCmekConfigAsync(UpdateCmekConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCmekConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates or Updates a CMEK config.
+        /// 
+        /// Updates the Customer Managed Encryption Key associated with the Cloud Tasks
+        /// location (Creates if the key does not already exist). All new tasks created
+        /// in the location will be encrypted at-rest with the KMS-key provided in the
+        /// config.
+        /// </summary>
+        /// <param name="cmekConfig">
+        /// Required. The config to update.  Its name attribute distinguishes it.
+        /// </param>
+        /// <param name="updateMask">
+        /// List of fields to be updated in this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CmekConfig UpdateCmekConfig(CmekConfig cmekConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCmekConfig(new UpdateCmekConfigRequest
+            {
+                CmekConfig = gax::GaxPreconditions.CheckNotNull(cmekConfig, nameof(cmekConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates or Updates a CMEK config.
+        /// 
+        /// Updates the Customer Managed Encryption Key associated with the Cloud Tasks
+        /// location (Creates if the key does not already exist). All new tasks created
+        /// in the location will be encrypted at-rest with the KMS-key provided in the
+        /// config.
+        /// </summary>
+        /// <param name="cmekConfig">
+        /// Required. The config to update.  Its name attribute distinguishes it.
+        /// </param>
+        /// <param name="updateMask">
+        /// List of fields to be updated in this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CmekConfig> UpdateCmekConfigAsync(CmekConfig cmekConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCmekConfigAsync(new UpdateCmekConfigRequest
+            {
+                CmekConfig = gax::GaxPreconditions.CheckNotNull(cmekConfig, nameof(cmekConfig)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates or Updates a CMEK config.
+        /// 
+        /// Updates the Customer Managed Encryption Key associated with the Cloud Tasks
+        /// location (Creates if the key does not already exist). All new tasks created
+        /// in the location will be encrypted at-rest with the KMS-key provided in the
+        /// config.
+        /// </summary>
+        /// <param name="cmekConfig">
+        /// Required. The config to update.  Its name attribute distinguishes it.
+        /// </param>
+        /// <param name="updateMask">
+        /// List of fields to be updated in this request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CmekConfig> UpdateCmekConfigAsync(CmekConfig cmekConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateCmekConfigAsync(cmekConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the CMEK config.
+        /// 
+        /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+        /// lcoation. By default there is no kms_key configured.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CmekConfig GetCmekConfig(GetCmekConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the CMEK config.
+        /// 
+        /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+        /// lcoation. By default there is no kms_key configured.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CmekConfig> GetCmekConfigAsync(GetCmekConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the CMEK config.
+        /// 
+        /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+        /// lcoation. By default there is no kms_key configured.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CmekConfig> GetCmekConfigAsync(GetCmekConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetCmekConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the CMEK config.
+        /// 
+        /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+        /// lcoation. By default there is no kms_key configured.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The config resource name. For example:
+        /// projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CmekConfig GetCmekConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCmekConfig(new GetCmekConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the CMEK config.
+        /// 
+        /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+        /// lcoation. By default there is no kms_key configured.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The config resource name. For example:
+        /// projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CmekConfig> GetCmekConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCmekConfigAsync(new GetCmekConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the CMEK config.
+        /// 
+        /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+        /// lcoation. By default there is no kms_key configured.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The config resource name. For example:
+        /// projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CmekConfig> GetCmekConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetCmekConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the CMEK config.
+        /// 
+        /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+        /// lcoation. By default there is no kms_key configured.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The config resource name. For example:
+        /// projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CmekConfig GetCmekConfig(CmekConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCmekConfig(new GetCmekConfigRequest
+            {
+                CmekConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the CMEK config.
+        /// 
+        /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+        /// lcoation. By default there is no kms_key configured.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The config resource name. For example:
+        /// projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CmekConfig> GetCmekConfigAsync(CmekConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCmekConfigAsync(new GetCmekConfigRequest
+            {
+                CmekConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the CMEK config.
+        /// 
+        /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+        /// lcoation. By default there is no kms_key configured.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The config resource name. For example:
+        /// projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CmekConfig> GetCmekConfigAsync(CmekConfigName name, st::CancellationToken cancellationToken) =>
+            GetCmekConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CloudTasks client wrapper implementation, for convenient use.</summary>
@@ -3876,9 +4809,17 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         private readonly gaxgrpc::ApiCall<CreateTaskRequest, Task> _callCreateTask;
 
+        private readonly gaxgrpc::ApiCall<BatchCreateTasksRequest, lro::Operation> _callBatchCreateTasks;
+
         private readonly gaxgrpc::ApiCall<DeleteTaskRequest, wkt::Empty> _callDeleteTask;
 
+        private readonly gaxgrpc::ApiCall<BatchDeleteTasksRequest, lro::Operation> _callBatchDeleteTasks;
+
         private readonly gaxgrpc::ApiCall<RunTaskRequest, Task> _callRunTask;
+
+        private readonly gaxgrpc::ApiCall<UpdateCmekConfigRequest, CmekConfig> _callUpdateCmekConfig;
+
+        private readonly gaxgrpc::ApiCall<GetCmekConfigRequest, CmekConfig> _callGetCmekConfig;
 
         /// <summary>
         /// Constructs a client wrapper for the CloudTasks service, with the specified gRPC client and settings.
@@ -3895,6 +4836,8 @@ namespace Google.Cloud.Tasks.V2Beta3
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            BatchCreateTasksOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchCreateTasksOperationsSettings, logger);
+            BatchDeleteTasksOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchDeleteTasksOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListQueues = clientHelper.BuildApiCall<ListQueuesRequest, ListQueuesResponse>("ListQueues", grpcClient.ListQueuesAsync, grpcClient.ListQueues, effectiveSettings.ListQueuesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListQueues);
@@ -3938,12 +4881,24 @@ namespace Google.Cloud.Tasks.V2Beta3
             _callCreateTask = clientHelper.BuildApiCall<CreateTaskRequest, Task>("CreateTask", grpcClient.CreateTaskAsync, grpcClient.CreateTask, effectiveSettings.CreateTaskSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTask);
             Modify_CreateTaskApiCall(ref _callCreateTask);
+            _callBatchCreateTasks = clientHelper.BuildApiCall<BatchCreateTasksRequest, lro::Operation>("BatchCreateTasks", grpcClient.BatchCreateTasksAsync, grpcClient.BatchCreateTasks, effectiveSettings.BatchCreateTasksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateTasks);
+            Modify_BatchCreateTasksApiCall(ref _callBatchCreateTasks);
             _callDeleteTask = clientHelper.BuildApiCall<DeleteTaskRequest, wkt::Empty>("DeleteTask", grpcClient.DeleteTaskAsync, grpcClient.DeleteTask, effectiveSettings.DeleteTaskSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTask);
             Modify_DeleteTaskApiCall(ref _callDeleteTask);
+            _callBatchDeleteTasks = clientHelper.BuildApiCall<BatchDeleteTasksRequest, lro::Operation>("BatchDeleteTasks", grpcClient.BatchDeleteTasksAsync, grpcClient.BatchDeleteTasks, effectiveSettings.BatchDeleteTasksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeleteTasks);
+            Modify_BatchDeleteTasksApiCall(ref _callBatchDeleteTasks);
             _callRunTask = clientHelper.BuildApiCall<RunTaskRequest, Task>("RunTask", grpcClient.RunTaskAsync, grpcClient.RunTask, effectiveSettings.RunTaskSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRunTask);
             Modify_RunTaskApiCall(ref _callRunTask);
+            _callUpdateCmekConfig = clientHelper.BuildApiCall<UpdateCmekConfigRequest, CmekConfig>("UpdateCmekConfig", grpcClient.UpdateCmekConfigAsync, grpcClient.UpdateCmekConfig, effectiveSettings.UpdateCmekConfigSettings).WithGoogleRequestParam("cmek_config.name", request => request.CmekConfig?.Name);
+            Modify_ApiCall(ref _callUpdateCmekConfig);
+            Modify_UpdateCmekConfigApiCall(ref _callUpdateCmekConfig);
+            _callGetCmekConfig = clientHelper.BuildApiCall<GetCmekConfigRequest, CmekConfig>("GetCmekConfig", grpcClient.GetCmekConfigAsync, grpcClient.GetCmekConfig, effectiveSettings.GetCmekConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetCmekConfig);
+            Modify_GetCmekConfigApiCall(ref _callGetCmekConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3977,9 +4932,17 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         partial void Modify_CreateTaskApiCall(ref gaxgrpc::ApiCall<CreateTaskRequest, Task> call);
 
+        partial void Modify_BatchCreateTasksApiCall(ref gaxgrpc::ApiCall<BatchCreateTasksRequest, lro::Operation> call);
+
         partial void Modify_DeleteTaskApiCall(ref gaxgrpc::ApiCall<DeleteTaskRequest, wkt::Empty> call);
 
+        partial void Modify_BatchDeleteTasksApiCall(ref gaxgrpc::ApiCall<BatchDeleteTasksRequest, lro::Operation> call);
+
         partial void Modify_RunTaskApiCall(ref gaxgrpc::ApiCall<RunTaskRequest, Task> call);
+
+        partial void Modify_UpdateCmekConfigApiCall(ref gaxgrpc::ApiCall<UpdateCmekConfigRequest, CmekConfig> call);
+
+        partial void Modify_GetCmekConfigApiCall(ref gaxgrpc::ApiCall<GetCmekConfigRequest, CmekConfig> call);
 
         partial void OnConstruction(CloudTasks.CloudTasksClient grpcClient, CloudTasksSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4017,9 +4980,17 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         partial void Modify_CreateTaskRequest(ref CreateTaskRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_BatchCreateTasksRequest(ref BatchCreateTasksRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteTaskRequest(ref DeleteTaskRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_BatchDeleteTasksRequest(ref BatchDeleteTasksRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_RunTaskRequest(ref RunTaskRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateCmekConfigRequest(ref UpdateCmekConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetCmekConfigRequest(ref GetCmekConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists queues.
@@ -4176,8 +5147,15 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// 
         /// This command will delete the queue even if it has tasks in it.
         /// 
-        /// Note: If you delete a queue, a queue with the same name can't be created
-        /// for 7 days.
+        /// Note : If you delete a queue, you may be prevented from creating a new
+        /// queue with the same name as the deleted queue for a tombstone window of up
+        /// to 3 days. During this window, the CreateQueue operation may appear to
+        /// recreate the queue, but this can be misleading. If you attempt to create
+        /// a queue with the same name as one that is in the tombstone window, run
+        /// GetQueue to confirm that the queue creation was successful. If GetQueue
+        /// returns 200 response code, your queue was successfully created with the
+        /// name of the previously deleted queue. Otherwise, your queue did not
+        /// successfully recreate.
         /// 
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -4200,8 +5178,15 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// 
         /// This command will delete the queue even if it has tasks in it.
         /// 
-        /// Note: If you delete a queue, a queue with the same name can't be created
-        /// for 7 days.
+        /// Note : If you delete a queue, you may be prevented from creating a new
+        /// queue with the same name as the deleted queue for a tombstone window of up
+        /// to 3 days. During this window, the CreateQueue operation may appear to
+        /// recreate the queue, but this can be misleading. If you attempt to create
+        /// a queue with the same name as one that is in the tombstone window, run
+        /// GetQueue to confirm that the queue creation was successful. If GetQueue
+        /// returns 200 response code, your queue was successfully created with the
+        /// name of the previously deleted queue. Otherwise, your queue did not
+        /// successfully recreate.
         /// 
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
@@ -4507,6 +5492,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         /// <summary>
         /// Gets a task.
+        /// 
+        /// After a task is successfully executed or has exhausted its retry attempts,
+        /// the task is deleted. A `GetTask` request for a deleted task returns a
+        /// `NOT_FOUND` error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4519,6 +5508,10 @@ namespace Google.Cloud.Tasks.V2Beta3
 
         /// <summary>
         /// Gets a task.
+        /// 
+        /// After a task is successfully executed or has exhausted its retry attempts,
+        /// the task is deleted. A `GetTask` request for a deleted task returns a
+        /// `NOT_FOUND` error.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4561,6 +5554,41 @@ namespace Google.Cloud.Tasks.V2Beta3
             return _callCreateTask.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>BatchCreateTasks</c>.</summary>
+        public override lro::OperationsClient BatchCreateTasksOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a batch of tasks and adds them to a queue.
+        /// This call is not atomic.
+        /// 
+        /// All tasks must be for the same queue.
+        /// A maximum of 100 tasks can be created in a single batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata> BatchCreateTasks(BatchCreateTasksRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateTasksRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata>(_callBatchCreateTasks.Sync(request, callSettings), BatchCreateTasksOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a batch of tasks and adds them to a queue.
+        /// This call is not atomic.
+        /// 
+        /// All tasks must be for the same queue.
+        /// A maximum of 100 tasks can be created in a single batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata>> BatchCreateTasksAsync(BatchCreateTasksRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateTasksRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchCreateTasksResponse, BatchCreateTasksMetadata>(await _callBatchCreateTasks.Async(request, callSettings).ConfigureAwait(false), BatchCreateTasksOperationsClient);
+        }
+
         /// <summary>
         /// Deletes a task.
         /// 
@@ -4593,6 +5621,41 @@ namespace Google.Cloud.Tasks.V2Beta3
             return _callDeleteTask.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>BatchDeleteTasks</c>.</summary>
+        public override lro::OperationsClient BatchDeleteTasksOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a batch of tasks.
+        /// This is a non-atomic operation: if deletion fails for some tasks, it
+        /// can still succeed for others. The metadata field of
+        /// google.longrunning.Operation contains details of failed deletions.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, BatchDeleteTasksMetadata> BatchDeleteTasks(BatchDeleteTasksRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteTasksRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, BatchDeleteTasksMetadata>(_callBatchDeleteTasks.Sync(request, callSettings), BatchDeleteTasksOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a batch of tasks.
+        /// This is a non-atomic operation: if deletion fails for some tasks, it
+        /// can still succeed for others. The metadata field of
+        /// google.longrunning.Operation contains details of failed deletions.
+        /// A maximum of 1000 tasks can be deleted in a batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, BatchDeleteTasksMetadata>> BatchDeleteTasksAsync(BatchDeleteTasksRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteTasksRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, BatchDeleteTasksMetadata>(await _callBatchDeleteTasks.Async(request, callSettings).ConfigureAwait(false), BatchDeleteTasksOperationsClient);
+        }
+
         /// <summary>
         /// Forces a task to run now.
         /// 
@@ -4607,8 +5670,8 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task to be dispatched now.
         /// 
         /// The dispatched task is returned. That is, the task that is returned
-        /// contains the [status][Task.status] after the task is dispatched but
-        /// before the task is received by its target.
+        /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+        /// the task is dispatched but before the task is received by its target.
         /// 
         /// If Cloud Tasks receives a successful response from the task's
         /// target, then the task will be deleted; otherwise the task's
@@ -4645,8 +5708,8 @@ namespace Google.Cloud.Tasks.V2Beta3
         /// a task to be dispatched now.
         /// 
         /// The dispatched task is returned. That is, the task that is returned
-        /// contains the [status][Task.status] after the task is dispatched but
-        /// before the task is received by its target.
+        /// contains the [status][google.cloud.tasks.v2beta3.Task.first_attempt] after
+        /// the task is dispatched but before the task is received by its target.
         /// 
         /// If Cloud Tasks receives a successful response from the task's
         /// target, then the task will be deleted; otherwise the task's
@@ -4667,6 +5730,70 @@ namespace Google.Cloud.Tasks.V2Beta3
         {
             Modify_RunTaskRequest(ref request, ref callSettings);
             return _callRunTask.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates or Updates a CMEK config.
+        /// 
+        /// Updates the Customer Managed Encryption Key associated with the Cloud Tasks
+        /// location (Creates if the key does not already exist). All new tasks created
+        /// in the location will be encrypted at-rest with the KMS-key provided in the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CmekConfig UpdateCmekConfig(UpdateCmekConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCmekConfigRequest(ref request, ref callSettings);
+            return _callUpdateCmekConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates or Updates a CMEK config.
+        /// 
+        /// Updates the Customer Managed Encryption Key associated with the Cloud Tasks
+        /// location (Creates if the key does not already exist). All new tasks created
+        /// in the location will be encrypted at-rest with the KMS-key provided in the
+        /// config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CmekConfig> UpdateCmekConfigAsync(UpdateCmekConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCmekConfigRequest(ref request, ref callSettings);
+            return _callUpdateCmekConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the CMEK config.
+        /// 
+        /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+        /// lcoation. By default there is no kms_key configured.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CmekConfig GetCmekConfig(GetCmekConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCmekConfigRequest(ref request, ref callSettings);
+            return _callGetCmekConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the CMEK config.
+        /// 
+        /// Gets the Customer Managed Encryption Key configured with the Cloud Tasks
+        /// lcoation. By default there is no kms_key configured.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CmekConfig> GetCmekConfigAsync(GetCmekConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCmekConfigRequest(ref request, ref callSettings);
+            return _callGetCmekConfig.Async(request, callSettings);
         }
     }
 
@@ -4692,6 +5819,20 @@ namespace Google.Cloud.Tasks.V2Beta3
         public scg::IEnumerator<Task> GetEnumerator() => Tasks.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class CloudTasks
+    {
+        public partial class CloudTasksClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 
     public static partial class CloudTasks

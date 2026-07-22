@@ -21,6 +21,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Iam.V1;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
@@ -1643,6 +1644,215 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for BatchCreateTasks</summary>
+        public void BatchCreateTasksRequestObject()
+        {
+            // Snippet: BatchCreateTasks(BatchCreateTasksRequest, CallSettings)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
+            // Initialize request argument(s)
+            gctv::BatchCreateTasksRequest request = new gctv::BatchCreateTasksRequest
+            {
+                ParentAsQueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                Requests =
+                {
+                    new gctv::CreateTaskRequest(),
+                },
+                RequestId = "",
+            };
+            // Make the request
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> response = cloudTasksClient.BatchCreateTasks(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gctv::BatchCreateTasksResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> retrievedResponse = cloudTasksClient.PollOnceBatchCreateTasks(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gctv::BatchCreateTasksResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateTasksAsync</summary>
+        public async Task BatchCreateTasksRequestObjectAsync()
+        {
+            // Snippet: BatchCreateTasksAsync(BatchCreateTasksRequest, CallSettings)
+            // Additional: BatchCreateTasksAsync(BatchCreateTasksRequest, CancellationToken)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            gctv::BatchCreateTasksRequest request = new gctv::BatchCreateTasksRequest
+            {
+                ParentAsQueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                Requests =
+                {
+                    new gctv::CreateTaskRequest(),
+                },
+                RequestId = "",
+            };
+            // Make the request
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> response = await cloudTasksClient.BatchCreateTasksAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gctv::BatchCreateTasksResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> retrievedResponse = await cloudTasksClient.PollOnceBatchCreateTasksAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gctv::BatchCreateTasksResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateTasks</summary>
+        public void BatchCreateTasks()
+        {
+            // Snippet: BatchCreateTasks(string, IEnumerable<CreateTaskRequest>, CallSettings)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
+            IEnumerable<gctv::CreateTaskRequest> requests = new gctv::CreateTaskRequest[]
+            {
+                new gctv::CreateTaskRequest(),
+            };
+            // Make the request
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> response = cloudTasksClient.BatchCreateTasks(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gctv::BatchCreateTasksResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> retrievedResponse = cloudTasksClient.PollOnceBatchCreateTasks(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gctv::BatchCreateTasksResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateTasksAsync</summary>
+        public async Task BatchCreateTasksAsync()
+        {
+            // Snippet: BatchCreateTasksAsync(string, IEnumerable<CreateTaskRequest>, CallSettings)
+            // Additional: BatchCreateTasksAsync(string, IEnumerable<CreateTaskRequest>, CancellationToken)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
+            IEnumerable<gctv::CreateTaskRequest> requests = new gctv::CreateTaskRequest[]
+            {
+                new gctv::CreateTaskRequest(),
+            };
+            // Make the request
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> response = await cloudTasksClient.BatchCreateTasksAsync(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gctv::BatchCreateTasksResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> retrievedResponse = await cloudTasksClient.PollOnceBatchCreateTasksAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gctv::BatchCreateTasksResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateTasks</summary>
+        public void BatchCreateTasksResourceNames()
+        {
+            // Snippet: BatchCreateTasks(QueueName, IEnumerable<CreateTaskRequest>, CallSettings)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
+            // Initialize request argument(s)
+            gctv::QueueName parent = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            IEnumerable<gctv::CreateTaskRequest> requests = new gctv::CreateTaskRequest[]
+            {
+                new gctv::CreateTaskRequest(),
+            };
+            // Make the request
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> response = cloudTasksClient.BatchCreateTasks(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gctv::BatchCreateTasksResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> retrievedResponse = cloudTasksClient.PollOnceBatchCreateTasks(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gctv::BatchCreateTasksResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateTasksAsync</summary>
+        public async Task BatchCreateTasksResourceNamesAsync()
+        {
+            // Snippet: BatchCreateTasksAsync(QueueName, IEnumerable<CreateTaskRequest>, CallSettings)
+            // Additional: BatchCreateTasksAsync(QueueName, IEnumerable<CreateTaskRequest>, CancellationToken)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            gctv::QueueName parent = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            IEnumerable<gctv::CreateTaskRequest> requests = new gctv::CreateTaskRequest[]
+            {
+                new gctv::CreateTaskRequest(),
+            };
+            // Make the request
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> response = await cloudTasksClient.BatchCreateTasksAsync(parent, requests);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gctv::BatchCreateTasksResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gctv::BatchCreateTasksResponse, gctv::BatchCreateTasksMetadata> retrievedResponse = await cloudTasksClient.PollOnceBatchCreateTasksAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gctv::BatchCreateTasksResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteTask</summary>
         public void DeleteTaskRequestObject()
         {
@@ -1727,6 +1937,215 @@ namespace GoogleCSharpSnippets
             gctv::TaskName name = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
             // Make the request
             await cloudTasksClient.DeleteTaskAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteTasks</summary>
+        public void BatchDeleteTasksRequestObject()
+        {
+            // Snippet: BatchDeleteTasks(BatchDeleteTasksRequest, CallSettings)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
+            // Initialize request argument(s)
+            gctv::BatchDeleteTasksRequest request = new gctv::BatchDeleteTasksRequest
+            {
+                ParentAsQueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                TaskNames =
+                {
+                    gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                },
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> response = cloudTasksClient.BatchDeleteTasks(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> retrievedResponse = cloudTasksClient.PollOnceBatchDeleteTasks(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteTasksAsync</summary>
+        public async Task BatchDeleteTasksRequestObjectAsync()
+        {
+            // Snippet: BatchDeleteTasksAsync(BatchDeleteTasksRequest, CallSettings)
+            // Additional: BatchDeleteTasksAsync(BatchDeleteTasksRequest, CancellationToken)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            gctv::BatchDeleteTasksRequest request = new gctv::BatchDeleteTasksRequest
+            {
+                ParentAsQueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                TaskNames =
+                {
+                    gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                },
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> response = await cloudTasksClient.BatchDeleteTasksAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> retrievedResponse = await cloudTasksClient.PollOnceBatchDeleteTasksAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteTasks</summary>
+        public void BatchDeleteTasks()
+        {
+            // Snippet: BatchDeleteTasks(string, IEnumerable<string>, CallSettings)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]",
+            };
+            // Make the request
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> response = cloudTasksClient.BatchDeleteTasks(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> retrievedResponse = cloudTasksClient.PollOnceBatchDeleteTasks(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteTasksAsync</summary>
+        public async Task BatchDeleteTasksAsync()
+        {
+            // Snippet: BatchDeleteTasksAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchDeleteTasksAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/locations/[LOCATION]/queues/[QUEUE]/tasks/[TASK]",
+            };
+            // Make the request
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> response = await cloudTasksClient.BatchDeleteTasksAsync(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> retrievedResponse = await cloudTasksClient.PollOnceBatchDeleteTasksAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteTasks</summary>
+        public void BatchDeleteTasksResourceNames()
+        {
+            // Snippet: BatchDeleteTasks(QueueName, IEnumerable<TaskName>, CallSettings)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
+            // Initialize request argument(s)
+            gctv::QueueName parent = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            IEnumerable<gctv::TaskName> names = new gctv::TaskName[]
+            {
+                gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+            };
+            // Make the request
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> response = cloudTasksClient.BatchDeleteTasks(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> retrievedResponse = cloudTasksClient.PollOnceBatchDeleteTasks(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteTasksAsync</summary>
+        public async Task BatchDeleteTasksResourceNamesAsync()
+        {
+            // Snippet: BatchDeleteTasksAsync(QueueName, IEnumerable<TaskName>, CallSettings)
+            // Additional: BatchDeleteTasksAsync(QueueName, IEnumerable<TaskName>, CancellationToken)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            gctv::QueueName parent = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]");
+            IEnumerable<gctv::TaskName> names = new gctv::TaskName[]
+            {
+                gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+            };
+            // Make the request
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> response = await cloudTasksClient.BatchDeleteTasksAsync(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gctv::BatchDeleteTasksMetadata> retrievedResponse = await cloudTasksClient.PollOnceBatchDeleteTasksAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1816,6 +2235,157 @@ namespace GoogleCSharpSnippets
             gctv::TaskName name = gctv::TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]");
             // Make the request
             gctv::Task response = await cloudTasksClient.RunTaskAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCmekConfig</summary>
+        public void UpdateCmekConfigRequestObject()
+        {
+            // Snippet: UpdateCmekConfig(UpdateCmekConfigRequest, CallSettings)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
+            // Initialize request argument(s)
+            gctv::UpdateCmekConfigRequest request = new gctv::UpdateCmekConfigRequest
+            {
+                CmekConfig = new gctv::CmekConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            gctv::CmekConfig response = cloudTasksClient.UpdateCmekConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCmekConfigAsync</summary>
+        public async Task UpdateCmekConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateCmekConfigAsync(UpdateCmekConfigRequest, CallSettings)
+            // Additional: UpdateCmekConfigAsync(UpdateCmekConfigRequest, CancellationToken)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            gctv::UpdateCmekConfigRequest request = new gctv::UpdateCmekConfigRequest
+            {
+                CmekConfig = new gctv::CmekConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            gctv::CmekConfig response = await cloudTasksClient.UpdateCmekConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCmekConfig</summary>
+        public void UpdateCmekConfig()
+        {
+            // Snippet: UpdateCmekConfig(CmekConfig, FieldMask, CallSettings)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
+            // Initialize request argument(s)
+            gctv::CmekConfig cmekConfig = new gctv::CmekConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gctv::CmekConfig response = cloudTasksClient.UpdateCmekConfig(cmekConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCmekConfigAsync</summary>
+        public async Task UpdateCmekConfigAsync()
+        {
+            // Snippet: UpdateCmekConfigAsync(CmekConfig, FieldMask, CallSettings)
+            // Additional: UpdateCmekConfigAsync(CmekConfig, FieldMask, CancellationToken)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            gctv::CmekConfig cmekConfig = new gctv::CmekConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gctv::CmekConfig response = await cloudTasksClient.UpdateCmekConfigAsync(cmekConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCmekConfig</summary>
+        public void GetCmekConfigRequestObject()
+        {
+            // Snippet: GetCmekConfig(GetCmekConfigRequest, CallSettings)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
+            // Initialize request argument(s)
+            gctv::GetCmekConfigRequest request = new gctv::GetCmekConfigRequest
+            {
+                CmekConfigName = gctv::CmekConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            gctv::CmekConfig response = cloudTasksClient.GetCmekConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCmekConfigAsync</summary>
+        public async Task GetCmekConfigRequestObjectAsync()
+        {
+            // Snippet: GetCmekConfigAsync(GetCmekConfigRequest, CallSettings)
+            // Additional: GetCmekConfigAsync(GetCmekConfigRequest, CancellationToken)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            gctv::GetCmekConfigRequest request = new gctv::GetCmekConfigRequest
+            {
+                CmekConfigName = gctv::CmekConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            gctv::CmekConfig response = await cloudTasksClient.GetCmekConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCmekConfig</summary>
+        public void GetCmekConfig()
+        {
+            // Snippet: GetCmekConfig(string, CallSettings)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/cmekConfig";
+            // Make the request
+            gctv::CmekConfig response = cloudTasksClient.GetCmekConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCmekConfigAsync</summary>
+        public async Task GetCmekConfigAsync()
+        {
+            // Snippet: GetCmekConfigAsync(string, CallSettings)
+            // Additional: GetCmekConfigAsync(string, CancellationToken)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/cmekConfig";
+            // Make the request
+            gctv::CmekConfig response = await cloudTasksClient.GetCmekConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCmekConfig</summary>
+        public void GetCmekConfigResourceNames()
+        {
+            // Snippet: GetCmekConfig(CmekConfigName, CallSettings)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = gctv::CloudTasksClient.Create();
+            // Initialize request argument(s)
+            gctv::CmekConfigName name = gctv::CmekConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            gctv::CmekConfig response = cloudTasksClient.GetCmekConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCmekConfigAsync</summary>
+        public async Task GetCmekConfigResourceNamesAsync()
+        {
+            // Snippet: GetCmekConfigAsync(CmekConfigName, CallSettings)
+            // Additional: GetCmekConfigAsync(CmekConfigName, CancellationToken)
+            // Create client
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
+            // Initialize request argument(s)
+            gctv::CmekConfigName name = gctv::CmekConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            gctv::CmekConfig response = await cloudTasksClient.GetCmekConfigAsync(name);
             // End snippet
         }
     }
