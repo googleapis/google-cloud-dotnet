@@ -1946,6 +1946,493 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "cloudquotas_v1_generated_QuotaAdjusterSettingsManager_UpdateQuotaAdjusterSettings_sync",
+      "title": "UpdateQuotaAdjusterSettingsRequestObject",
+      "description": "Snippet for UpdateQuotaAdjusterSettings",
+      "file": "QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaAdjusterSettings",
+        "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1.UpdateQuotaAdjusterSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettings",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager.UpdateQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1_generated_QuotaAdjusterSettingsManager_UpdateQuotaAdjusterSettings_async",
+      "title": "UpdateQuotaAdjusterSettingsRequestObjectAsync",
+      "description": "Snippet for UpdateQuotaAdjusterSettingsAsync",
+      "file": "QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaAdjusterSettingsAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1.UpdateQuotaAdjusterSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettings>",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager.UpdateQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1_generated_QuotaAdjusterSettingsManager_UpdateQuotaAdjusterSettings_sync_flattened",
+      "title": "UpdateQuotaAdjusterSettings",
+      "description": "Snippet for UpdateQuotaAdjusterSettings",
+      "file": "QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaAdjusterSettings",
+        "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettings",
+            "name": "quotaAdjusterSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettings",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager.UpdateQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1_generated_QuotaAdjusterSettingsManager_UpdateQuotaAdjusterSettings_async_flattened",
+      "title": "UpdateQuotaAdjusterSettingsAsync",
+      "description": "Snippet for UpdateQuotaAdjusterSettingsAsync",
+      "file": "QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaAdjusterSettingsAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettings",
+            "name": "quotaAdjusterSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettings>",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager.UpdateQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1_generated_QuotaAdjusterSettingsManager_GetQuotaAdjusterSettings_sync",
+      "title": "GetQuotaAdjusterSettingsRequestObject",
+      "description": "Snippet for GetQuotaAdjusterSettings",
+      "file": "QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaAdjusterSettings",
+        "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1.GetQuotaAdjusterSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettings",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "GetQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager.GetQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1_generated_QuotaAdjusterSettingsManager_GetQuotaAdjusterSettings_async",
+      "title": "GetQuotaAdjusterSettingsRequestObjectAsync",
+      "description": "Snippet for GetQuotaAdjusterSettingsAsync",
+      "file": "QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaAdjusterSettingsAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1.GetQuotaAdjusterSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettings>",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "GetQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager.GetQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1_generated_QuotaAdjusterSettingsManager_GetQuotaAdjusterSettings_sync_flattened",
+      "title": "GetQuotaAdjusterSettings",
+      "description": "Snippet for GetQuotaAdjusterSettings",
+      "file": "QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaAdjusterSettings",
+        "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettings",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "GetQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager.GetQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1_generated_QuotaAdjusterSettingsManager_GetQuotaAdjusterSettings_async_flattened",
+      "title": "GetQuotaAdjusterSettingsAsync",
+      "description": "Snippet for GetQuotaAdjusterSettingsAsync",
+      "file": "QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaAdjusterSettingsAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettings>",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "GetQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager.GetQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1_generated_QuotaAdjusterSettingsManager_GetQuotaAdjusterSettings_sync_flattened_resourceNames",
+      "title": "GetQuotaAdjusterSettingsResourceNames",
+      "description": "Snippet for GetQuotaAdjusterSettings",
+      "file": "QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaAdjusterSettings",
+        "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettings",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "GetQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager.GetQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1_generated_QuotaAdjusterSettingsManager_GetQuotaAdjusterSettings_async_flattened_resourceNames",
+      "title": "GetQuotaAdjusterSettingsResourceNamesAsync",
+      "description": "Snippet for GetQuotaAdjusterSettingsAsync",
+      "file": "QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaAdjusterSettingsAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettings>",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "GetQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager.GetQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

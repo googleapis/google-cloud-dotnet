@@ -31,6 +31,7 @@ namespace Google.Cloud.CloudQuotas.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return CloudquotasReflection.Descriptor;
+            yield return QuotaAdjusterSettingsReflection.Descriptor;
             yield return ResourcesReflection.Descriptor;
         }
     }

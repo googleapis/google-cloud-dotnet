@@ -49,6 +49,27 @@
           }
         }
       }
+    },
+    "QuotaAdjusterSettingsManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "QuotaAdjusterSettingsManagerClient",
+          "rpcs": {
+            "GetQuotaAdjusterSettings": {
+              "methods": [
+                "GetQuotaAdjusterSettings",
+                "GetQuotaAdjusterSettingsAsync"
+              ]
+            },
+            "UpdateQuotaAdjusterSettings": {
+              "methods": [
+                "UpdateQuotaAdjusterSettings",
+                "UpdateQuotaAdjusterSettingsAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }
