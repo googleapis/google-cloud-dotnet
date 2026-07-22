@@ -273,7 +273,7 @@ namespace Google.Ads.AdManager.V1
         public virtual ContactService.ContactServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Contact` object.
+        /// Retrieves a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -282,7 +282,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Contact` object.
+        /// Retrieves a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -291,7 +291,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Contact` object.
+        /// Retrieves a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -300,7 +300,7 @@ namespace Google.Ads.AdManager.V1
             GetContactAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `Contact` object.
+        /// Retrieves a `Contact` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Contact.
@@ -315,7 +315,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Contact` object.
+        /// Retrieves a `Contact` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Contact.
@@ -330,7 +330,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Contact` object.
+        /// Retrieves a `Contact` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Contact.
@@ -342,7 +342,7 @@ namespace Google.Ads.AdManager.V1
             GetContactAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `Contact` object.
+        /// Retrieves a `Contact` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Contact.
@@ -357,7 +357,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Contact` object.
+        /// Retrieves a `Contact` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Contact.
@@ -372,7 +372,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Contact` object.
+        /// Retrieves a `Contact` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Contact.
@@ -384,7 +384,7 @@ namespace Google.Ads.AdManager.V1
             GetContactAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `Contact` objects.
+        /// Lists `Contact` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -393,7 +393,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `Contact` objects.
+        /// Lists `Contact` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -402,7 +402,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `Contact` objects.
+        /// Lists `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Contacts.
@@ -436,7 +436,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Contact` objects.
+        /// Lists `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Contacts.
@@ -470,7 +470,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Contact` objects.
+        /// Lists `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Contacts.
@@ -504,7 +504,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Contact` objects.
+        /// Lists `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Contacts.
@@ -538,7 +538,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `Contact` object.
+        /// Creates a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -547,7 +547,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create a `Contact` object.
+        /// Creates a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -556,7 +556,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create a `Contact` object.
+        /// Creates a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -565,7 +565,7 @@ namespace Google.Ads.AdManager.V1
             CreateContactAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create a `Contact` object.
+        /// Creates a `Contact` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Contact` will be created.
@@ -584,7 +584,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Contact` object.
+        /// Creates a `Contact` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Contact` will be created.
@@ -603,7 +603,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Contact` object.
+        /// Creates a `Contact` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Contact` will be created.
@@ -618,7 +618,7 @@ namespace Google.Ads.AdManager.V1
             CreateContactAsync(parent, contact, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create a `Contact` object.
+        /// Creates a `Contact` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Contact` will be created.
@@ -637,7 +637,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Contact` object.
+        /// Creates a `Contact` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Contact` will be created.
@@ -656,7 +656,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Contact` object.
+        /// Creates a `Contact` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Contact` will be created.
@@ -671,7 +671,7 @@ namespace Google.Ads.AdManager.V1
             CreateContactAsync(parent, contact, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `Contact` objects.
+        /// Creates `Contact` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -680,7 +680,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch create `Contact` objects.
+        /// Creates `Contact` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -689,7 +689,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch create `Contact` objects.
+        /// Creates `Contact` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -698,7 +698,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateContactsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `Contact` objects.
+        /// Creates `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Contacts` will be created.
@@ -723,7 +723,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `Contact` objects.
+        /// Creates `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Contacts` will be created.
@@ -748,7 +748,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `Contact` objects.
+        /// Creates `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Contacts` will be created.
@@ -766,7 +766,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateContactsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `Contact` objects.
+        /// Creates `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Contacts` will be created.
@@ -791,7 +791,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `Contact` objects.
+        /// Creates `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Contacts` will be created.
@@ -816,7 +816,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `Contact` objects.
+        /// Creates `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Contacts` will be created.
@@ -834,7 +834,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateContactsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update a `Contact` object.
+        /// Updates a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -843,7 +843,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update a `Contact` object.
+        /// Updates a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -852,7 +852,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update a `Contact` object.
+        /// Updates a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -861,7 +861,7 @@ namespace Google.Ads.AdManager.V1
             UpdateContactAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update a `Contact` object.
+        /// Updates a `Contact` object.
         /// </summary>
         /// <param name="contact">
         /// Required. The `Contact` to update.
@@ -881,7 +881,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update a `Contact` object.
+        /// Updates a `Contact` object.
         /// </summary>
         /// <param name="contact">
         /// Required. The `Contact` to update.
@@ -901,7 +901,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update a `Contact` object.
+        /// Updates a `Contact` object.
         /// </summary>
         /// <param name="contact">
         /// Required. The `Contact` to update.
@@ -917,7 +917,7 @@ namespace Google.Ads.AdManager.V1
             UpdateContactAsync(contact, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `Contact` objects.
+        /// Batch updates `Contact` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -926,7 +926,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch update `Contact` objects.
+        /// Batch updates `Contact` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -935,7 +935,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch update `Contact` objects.
+        /// Batch updates `Contact` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -944,7 +944,7 @@ namespace Google.Ads.AdManager.V1
             BatchUpdateContactsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `Contact` objects.
+        /// Batch updates `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Contacts` will be updated.
@@ -969,7 +969,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `Contact` objects.
+        /// Batch updates `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Contacts` will be updated.
@@ -994,7 +994,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `Contact` objects.
+        /// Batch updates `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Contacts` will be updated.
@@ -1012,7 +1012,7 @@ namespace Google.Ads.AdManager.V1
             BatchUpdateContactsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `Contact` objects.
+        /// Batch updates `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Contacts` will be updated.
@@ -1037,7 +1037,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `Contact` objects.
+        /// Batch updates `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Contacts` will be updated.
@@ -1062,7 +1062,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `Contact` objects.
+        /// Batch updates `Contact` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Contacts` will be updated.
@@ -1166,7 +1166,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_BatchUpdateContactsRequest(ref BatchUpdateContactsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a `Contact` object.
+        /// Retrieves a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1178,7 +1178,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `Contact` object.
+        /// Retrieves a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1190,7 +1190,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Contact` objects.
+        /// Lists `Contact` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1202,7 +1202,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Contact` objects.
+        /// Lists `Contact` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1214,7 +1214,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `Contact` object.
+        /// Creates a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1226,7 +1226,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `Contact` object.
+        /// Creates a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1238,7 +1238,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch create `Contact` objects.
+        /// Creates `Contact` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1250,7 +1250,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch create `Contact` objects.
+        /// Creates `Contact` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1262,7 +1262,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update a `Contact` object.
+        /// Updates a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1274,7 +1274,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update a `Contact` object.
+        /// Updates a `Contact` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1286,7 +1286,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch update `Contact` objects.
+        /// Batch updates `Contact` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1298,7 +1298,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch update `Contact` objects.
+        /// Batch updates `Contact` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

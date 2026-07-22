@@ -386,13 +386,40 @@ namespace Google.Ads.AdManager.V1 {
     ///
     /// &lt;b>Filterable fields:&lt;/b>
     /// &lt;ul style="list-style-type:none">
+    ///   &lt;li>&lt;code>archived&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>contractedUnitsBought&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>costType&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>createTime&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>creativePlaceholders.size.canonicalName&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>dealInfo.externalDealId&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>deliveryRateType&lt;/code>&lt;/li>
     ///   &lt;li>&lt;code>displayName&lt;/code>&lt;/li>
     ///   &lt;li>&lt;code>endTime&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>environmentType&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>externalLineItemId&lt;/code>&lt;/li>
     ///   &lt;li>&lt;code>goal.units&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>grpSettings.growbirdNielsenEnabled&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>grpSettings.inTargetRatioEstimateMilliPercent&lt;/code>&lt;/li>
     ///   &lt;li>&lt;code>lineItemType&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>missingCreatives&lt;/code>&lt;/li>
     ///   &lt;li>&lt;code>name&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>notes&lt;/code>&lt;/li>
     ///   &lt;li>&lt;code>order&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>orderDisplayName&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>priority&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>roadblockingType&lt;/code>&lt;/li>
     ///   &lt;li>&lt;code>startTime&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>stats.clickThroughRate&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>stats.clicksDelivered&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>stats.impressionsDelivered&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>stats.viewableImpressionsDelivered&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>status&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>targeting.inventoryTargeting.targetedAdUnits.adUnit&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>targeting.inventoryTargeting.targetedPlacements&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>targeting.mobileApplicationTargeting.firstPartyTargeting.targetedApplications&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>updateSource&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>updateTime&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>webPropertyCode&lt;/code>&lt;/li>
     /// &lt;/ul>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

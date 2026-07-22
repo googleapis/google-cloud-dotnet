@@ -219,7 +219,7 @@ namespace Google.Ads.AdManager.V1
         public virtual RoleService.RoleServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Role` object.
+        /// Retrieves a `Role` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -228,7 +228,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Role` object.
+        /// Retrieves a `Role` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -237,7 +237,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Role` object.
+        /// Retrieves a `Role` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -246,7 +246,7 @@ namespace Google.Ads.AdManager.V1
             GetRoleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `Role` object.
+        /// Retrieves a `Role` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Role.
@@ -261,7 +261,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Role` object.
+        /// Retrieves a `Role` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Role.
@@ -276,7 +276,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Role` object.
+        /// Retrieves a `Role` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Role.
@@ -288,7 +288,7 @@ namespace Google.Ads.AdManager.V1
             GetRoleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `Role` object.
+        /// Retrieves a `Role` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Role.
@@ -303,7 +303,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Role` object.
+        /// Retrieves a `Role` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Role.
@@ -318,7 +318,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Role` object.
+        /// Retrieves a `Role` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Role.
@@ -330,7 +330,7 @@ namespace Google.Ads.AdManager.V1
             GetRoleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `Role` objects.
+        /// Lists `Role` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -339,7 +339,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `Role` objects.
+        /// Lists `Role` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -348,7 +348,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `Role` objects.
+        /// Lists `Role` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Roles.
@@ -382,7 +382,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Role` objects.
+        /// Lists `Role` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Roles.
@@ -416,7 +416,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Role` objects.
+        /// Lists `Role` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Roles.
@@ -450,7 +450,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Role` objects.
+        /// Lists `Role` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Roles.
@@ -534,7 +534,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_ListRolesRequest(ref ListRolesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a `Role` object.
+        /// Retrieves a `Role` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -546,7 +546,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `Role` object.
+        /// Retrieves a `Role` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -558,7 +558,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Role` objects.
+        /// Lists `Role` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -570,7 +570,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Role` objects.
+        /// Lists `Role` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

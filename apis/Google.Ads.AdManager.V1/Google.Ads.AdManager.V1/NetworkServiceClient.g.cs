@@ -220,7 +220,7 @@ namespace Google.Ads.AdManager.V1
         public virtual NetworkService.NetworkServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a Network object.
+        /// Retrieves a `Network` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -229,7 +229,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a Network object.
+        /// Retrieves a `Network` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -238,7 +238,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a Network object.
+        /// Retrieves a `Network` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -247,7 +247,7 @@ namespace Google.Ads.AdManager.V1
             GetNetworkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a Network object.
+        /// Retrieves a `Network` object.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of Network.
@@ -262,7 +262,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a Network object.
+        /// Retrieves a `Network` object.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of Network.
@@ -277,7 +277,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a Network object.
+        /// Retrieves a `Network` object.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of Network.
@@ -289,7 +289,7 @@ namespace Google.Ads.AdManager.V1
             GetNetworkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a Network object.
+        /// Retrieves a `Network` object.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of Network.
@@ -304,7 +304,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a Network object.
+        /// Retrieves a `Network` object.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of Network.
@@ -319,7 +319,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a Network object.
+        /// Retrieves a `Network` object.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of Network.
@@ -331,7 +331,7 @@ namespace Google.Ads.AdManager.V1
             GetNetworkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve all the networks the current user has access to.
+        /// Retrieves all the networks the current user has access to.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -340,7 +340,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve all the networks the current user has access to.
+        /// Retrieves all the networks the current user has access to.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -399,7 +399,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_ListNetworksRequest(ref ListNetworksRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a Network object.
+        /// Retrieves a `Network` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -411,7 +411,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a Network object.
+        /// Retrieves a `Network` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -423,7 +423,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve all the networks the current user has access to.
+        /// Retrieves all the networks the current user has access to.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -435,7 +435,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve all the networks the current user has access to.
+        /// Retrieves all the networks the current user has access to.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

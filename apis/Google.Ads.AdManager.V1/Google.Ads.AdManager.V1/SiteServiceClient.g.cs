@@ -299,7 +299,7 @@ namespace Google.Ads.AdManager.V1
         public virtual SiteService.SiteServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Site` object.
+        /// Retrieves a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -308,7 +308,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Site` object.
+        /// Retrieves a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -317,7 +317,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Site` object.
+        /// Retrieves a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -326,7 +326,7 @@ namespace Google.Ads.AdManager.V1
             GetSiteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `Site` object.
+        /// Retrieves a `Site` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Site.
@@ -341,7 +341,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Site` object.
+        /// Retrieves a `Site` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Site.
@@ -356,7 +356,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Site` object.
+        /// Retrieves a `Site` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Site.
@@ -368,7 +368,7 @@ namespace Google.Ads.AdManager.V1
             GetSiteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `Site` object.
+        /// Retrieves a `Site` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Site.
@@ -383,7 +383,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Site` object.
+        /// Retrieves a `Site` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Site.
@@ -398,7 +398,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Site` object.
+        /// Retrieves a `Site` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Site.
@@ -410,7 +410,7 @@ namespace Google.Ads.AdManager.V1
             GetSiteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `Site` objects.
+        /// Lists `Site` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -419,7 +419,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `Site` objects.
+        /// Lists `Site` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -428,7 +428,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `Site` objects.
+        /// Lists `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Sites.
@@ -462,7 +462,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Site` objects.
+        /// Lists `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Sites.
@@ -496,7 +496,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Site` objects.
+        /// Lists `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Sites.
@@ -530,7 +530,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Site` objects.
+        /// Lists `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Sites.
@@ -564,7 +564,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `Site` object.
+        /// Creates a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -573,7 +573,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create a `Site` object.
+        /// Creates a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -582,7 +582,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create a `Site` object.
+        /// Creates a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -591,7 +591,7 @@ namespace Google.Ads.AdManager.V1
             CreateSiteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create a `Site` object.
+        /// Creates a `Site` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Site` will be created.
@@ -610,7 +610,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Site` object.
+        /// Creates a `Site` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Site` will be created.
@@ -629,7 +629,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Site` object.
+        /// Creates a `Site` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Site` will be created.
@@ -644,7 +644,7 @@ namespace Google.Ads.AdManager.V1
             CreateSiteAsync(parent, site, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create a `Site` object.
+        /// Creates a `Site` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Site` will be created.
@@ -663,7 +663,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Site` object.
+        /// Creates a `Site` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Site` will be created.
@@ -682,7 +682,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Site` object.
+        /// Creates a `Site` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Site` will be created.
@@ -697,7 +697,7 @@ namespace Google.Ads.AdManager.V1
             CreateSiteAsync(parent, site, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `Site` objects.
+        /// Creates `Site` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -706,7 +706,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch create `Site` objects.
+        /// Creates `Site` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -715,7 +715,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch create `Site` objects.
+        /// Creates `Site` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -724,7 +724,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateSitesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `Site` objects.
+        /// Creates `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Sites` will be created.
@@ -749,7 +749,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `Site` objects.
+        /// Creates `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Sites` will be created.
@@ -774,7 +774,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `Site` objects.
+        /// Creates `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Sites` will be created.
@@ -792,7 +792,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateSitesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `Site` objects.
+        /// Creates `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Sites` will be created.
@@ -817,7 +817,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `Site` objects.
+        /// Creates `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Sites` will be created.
@@ -842,7 +842,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `Site` objects.
+        /// Creates `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Sites` will be created.
@@ -860,7 +860,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateSitesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update a `Site` object.
+        /// Updates a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -869,7 +869,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update a `Site` object.
+        /// Updates a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -878,7 +878,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update a `Site` object.
+        /// Updates a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -887,7 +887,7 @@ namespace Google.Ads.AdManager.V1
             UpdateSiteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update a `Site` object.
+        /// Updates a `Site` object.
         /// </summary>
         /// <param name="site">
         /// Required. The `Site` to update.
@@ -907,7 +907,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update a `Site` object.
+        /// Updates a `Site` object.
         /// </summary>
         /// <param name="site">
         /// Required. The `Site` to update.
@@ -927,7 +927,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update a `Site` object.
+        /// Updates a `Site` object.
         /// </summary>
         /// <param name="site">
         /// Required. The `Site` to update.
@@ -943,7 +943,7 @@ namespace Google.Ads.AdManager.V1
             UpdateSiteAsync(site, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `Site` objects.
+        /// Batch updates `Site` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -952,7 +952,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch update `Site` objects.
+        /// Batch updates `Site` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -961,7 +961,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch update `Site` objects.
+        /// Batch updates `Site` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -970,7 +970,7 @@ namespace Google.Ads.AdManager.V1
             BatchUpdateSitesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `Site` objects.
+        /// Batch updates `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Sites` will be updated.
@@ -995,7 +995,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `Site` objects.
+        /// Batch updates `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Sites` will be updated.
@@ -1020,7 +1020,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `Site` objects.
+        /// Batch updates `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Sites` will be updated.
@@ -1038,7 +1038,7 @@ namespace Google.Ads.AdManager.V1
             BatchUpdateSitesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `Site` objects.
+        /// Batch updates `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Sites` will be updated.
@@ -1063,7 +1063,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `Site` objects.
+        /// Batch updates `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Sites` will be updated.
@@ -1088,7 +1088,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `Site` objects.
+        /// Batch updates `Site` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Sites` will be updated.
@@ -1488,7 +1488,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_BatchSubmitSitesForApprovalRequest(ref BatchSubmitSitesForApprovalRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a `Site` object.
+        /// Retrieves a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1500,7 +1500,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `Site` object.
+        /// Retrieves a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1512,7 +1512,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Site` objects.
+        /// Lists `Site` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1524,7 +1524,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Site` objects.
+        /// Lists `Site` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1536,7 +1536,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `Site` object.
+        /// Creates a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1548,7 +1548,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `Site` object.
+        /// Creates a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1560,7 +1560,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch create `Site` objects.
+        /// Creates `Site` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1572,7 +1572,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch create `Site` objects.
+        /// Creates `Site` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1584,7 +1584,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update a `Site` object.
+        /// Updates a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1596,7 +1596,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update a `Site` object.
+        /// Updates a `Site` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1608,7 +1608,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch update `Site` objects.
+        /// Batch updates `Site` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1620,7 +1620,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch update `Site` objects.
+        /// Batch updates `Site` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

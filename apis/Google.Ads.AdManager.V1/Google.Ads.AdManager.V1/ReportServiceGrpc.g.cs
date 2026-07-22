@@ -143,7 +143,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class ReportServiceBase
     {
       /// <summary>
-      /// API to retrieve a `Report` object.
+      /// Retrieves a `Report` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -155,7 +155,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a list of `Report` objects.
+      /// Lists `Report` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -167,7 +167,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to create a `Report` object.
+      /// Creates a `Report` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -179,7 +179,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to update a `Report` object.
+      /// Updates a `Report` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -254,7 +254,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a `Report` object.
+      /// Retrieves a `Report` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -267,7 +267,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `Report` object.
+      /// Retrieves a `Report` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -278,7 +278,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetReport, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a `Report` object.
+      /// Retrieves a `Report` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -291,7 +291,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `Report` object.
+      /// Retrieves a `Report` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -302,7 +302,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetReport, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `Report` objects.
+      /// Lists `Report` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -315,7 +315,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListReports(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `Report` objects.
+      /// Lists `Report` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -326,7 +326,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListReports, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `Report` objects.
+      /// Lists `Report` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -339,7 +339,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListReportsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `Report` objects.
+      /// Lists `Report` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -350,7 +350,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListReports, null, options, request);
       }
       /// <summary>
-      /// API to create a `Report` object.
+      /// Creates a `Report` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -363,7 +363,7 @@ namespace Google.Ads.AdManager.V1 {
         return CreateReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to create a `Report` object.
+      /// Creates a `Report` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -374,7 +374,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateReport, null, options, request);
       }
       /// <summary>
-      /// API to create a `Report` object.
+      /// Creates a `Report` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -387,7 +387,7 @@ namespace Google.Ads.AdManager.V1 {
         return CreateReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to create a `Report` object.
+      /// Creates a `Report` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -398,7 +398,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateReport, null, options, request);
       }
       /// <summary>
-      /// API to update a `Report` object.
+      /// Updates a `Report` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -411,7 +411,7 @@ namespace Google.Ads.AdManager.V1 {
         return UpdateReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to update a `Report` object.
+      /// Updates a `Report` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -422,7 +422,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateReport, null, options, request);
       }
       /// <summary>
-      /// API to update a `Report` object.
+      /// Updates a `Report` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -435,7 +435,7 @@ namespace Google.Ads.AdManager.V1 {
         return UpdateReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to update a `Report` object.
+      /// Updates a `Report` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

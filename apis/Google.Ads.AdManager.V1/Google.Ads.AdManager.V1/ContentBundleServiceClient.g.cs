@@ -47,6 +47,8 @@ namespace Google.Ads.AdManager.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetContentBundleSettings = existing.GetContentBundleSettings;
             ListContentBundlesSettings = existing.ListContentBundlesSettings;
+            BatchActivateContentBundlesSettings = existing.BatchActivateContentBundlesSettings;
+            BatchDeactivateContentBundlesSettings = existing.BatchDeactivateContentBundlesSettings;
             OnCopy(existing);
         }
 
@@ -77,6 +79,32 @@ namespace Google.Ads.AdManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListContentBundlesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContentBundleServiceClient.BatchActivateContentBundles</c> and
+        /// <c>ContentBundleServiceClient.BatchActivateContentBundlesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchActivateContentBundlesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContentBundleServiceClient.BatchDeactivateContentBundles</c> and
+        /// <c>ContentBundleServiceClient.BatchDeactivateContentBundlesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeactivateContentBundlesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ContentBundleServiceSettings"/> object.</returns>
@@ -488,6 +516,314 @@ namespace Google.Ads.AdManager.V1
             }
             return ListContentBundlesAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Activate a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateContentBundlesResponse BatchActivateContentBundles(BatchActivateContentBundlesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Activate a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateContentBundlesResponse> BatchActivateContentBundlesAsync(BatchActivateContentBundlesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Activate a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateContentBundlesResponse> BatchActivateContentBundlesAsync(BatchActivateContentBundlesRequest request, st::CancellationToken cancellationToken) =>
+            BatchActivateContentBundlesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Activate a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `ContentBundles` will be activated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `ContentBundle`s to activate.
+        /// Format: `networks/{network_code}/contentBundles/{content_bundle_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateContentBundlesResponse BatchActivateContentBundles(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateContentBundles(new BatchActivateContentBundlesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Activate a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `ContentBundles` will be activated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `ContentBundle`s to activate.
+        /// Format: `networks/{network_code}/contentBundles/{content_bundle_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateContentBundlesResponse> BatchActivateContentBundlesAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateContentBundlesAsync(new BatchActivateContentBundlesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Activate a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `ContentBundles` will be activated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `ContentBundle`s to activate.
+        /// Format: `networks/{network_code}/contentBundles/{content_bundle_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateContentBundlesResponse> BatchActivateContentBundlesAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchActivateContentBundlesAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Activate a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `ContentBundles` will be activated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `ContentBundle`s to activate.
+        /// Format: `networks/{network_code}/contentBundles/{content_bundle_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateContentBundlesResponse BatchActivateContentBundles(NetworkName parent, scg::IEnumerable<ContentBundleName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateContentBundles(new BatchActivateContentBundlesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ContentBundleNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Activate a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `ContentBundles` will be activated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `ContentBundle`s to activate.
+        /// Format: `networks/{network_code}/contentBundles/{content_bundle_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateContentBundlesResponse> BatchActivateContentBundlesAsync(NetworkName parent, scg::IEnumerable<ContentBundleName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateContentBundlesAsync(new BatchActivateContentBundlesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ContentBundleNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Activate a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `ContentBundles` will be activated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `ContentBundle`s to activate.
+        /// Format: `networks/{network_code}/contentBundles/{content_bundle_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateContentBundlesResponse> BatchActivateContentBundlesAsync(NetworkName parent, scg::IEnumerable<ContentBundleName> names, st::CancellationToken cancellationToken) =>
+            BatchActivateContentBundlesAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateContentBundlesResponse BatchDeactivateContentBundles(BatchDeactivateContentBundlesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deactivates a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateContentBundlesResponse> BatchDeactivateContentBundlesAsync(BatchDeactivateContentBundlesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deactivates a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateContentBundlesResponse> BatchDeactivateContentBundlesAsync(BatchDeactivateContentBundlesRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeactivateContentBundlesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `ContentBundles` will be
+        /// deactivated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `ContentBundle`s to deactivate.
+        /// Format: `networks/{network_code}/contentBundles/{content_bundle_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateContentBundlesResponse BatchDeactivateContentBundles(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateContentBundles(new BatchDeactivateContentBundlesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `ContentBundles` will be
+        /// deactivated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `ContentBundle`s to deactivate.
+        /// Format: `networks/{network_code}/contentBundles/{content_bundle_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateContentBundlesResponse> BatchDeactivateContentBundlesAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateContentBundlesAsync(new BatchDeactivateContentBundlesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `ContentBundles` will be
+        /// deactivated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `ContentBundle`s to deactivate.
+        /// Format: `networks/{network_code}/contentBundles/{content_bundle_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateContentBundlesResponse> BatchDeactivateContentBundlesAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchDeactivateContentBundlesAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `ContentBundles` will be
+        /// deactivated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `ContentBundle`s to deactivate.
+        /// Format: `networks/{network_code}/contentBundles/{content_bundle_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateContentBundlesResponse BatchDeactivateContentBundles(NetworkName parent, scg::IEnumerable<ContentBundleName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateContentBundles(new BatchDeactivateContentBundlesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ContentBundleNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `ContentBundles` will be
+        /// deactivated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `ContentBundle`s to deactivate.
+        /// Format: `networks/{network_code}/contentBundles/{content_bundle_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateContentBundlesResponse> BatchDeactivateContentBundlesAsync(NetworkName parent, scg::IEnumerable<ContentBundleName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateContentBundlesAsync(new BatchDeactivateContentBundlesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ContentBundleNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `ContentBundles` will be
+        /// deactivated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `ContentBundle`s to deactivate.
+        /// Format: `networks/{network_code}/contentBundles/{content_bundle_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateContentBundlesResponse> BatchDeactivateContentBundlesAsync(NetworkName parent, scg::IEnumerable<ContentBundleName> names, st::CancellationToken cancellationToken) =>
+            BatchDeactivateContentBundlesAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ContentBundleService client wrapper implementation, for convenient use.</summary>
@@ -499,6 +835,10 @@ namespace Google.Ads.AdManager.V1
         private readonly gaxgrpc::ApiCall<GetContentBundleRequest, ContentBundle> _callGetContentBundle;
 
         private readonly gaxgrpc::ApiCall<ListContentBundlesRequest, ListContentBundlesResponse> _callListContentBundles;
+
+        private readonly gaxgrpc::ApiCall<BatchActivateContentBundlesRequest, BatchActivateContentBundlesResponse> _callBatchActivateContentBundles;
+
+        private readonly gaxgrpc::ApiCall<BatchDeactivateContentBundlesRequest, BatchDeactivateContentBundlesResponse> _callBatchDeactivateContentBundles;
 
         /// <summary>
         /// Constructs a client wrapper for the ContentBundleService service, with the specified gRPC client and
@@ -522,6 +862,12 @@ namespace Google.Ads.AdManager.V1
             _callListContentBundles = clientHelper.BuildApiCall<ListContentBundlesRequest, ListContentBundlesResponse>("ListContentBundles", grpcClient.ListContentBundlesAsync, grpcClient.ListContentBundles, effectiveSettings.ListContentBundlesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListContentBundles);
             Modify_ListContentBundlesApiCall(ref _callListContentBundles);
+            _callBatchActivateContentBundles = clientHelper.BuildApiCall<BatchActivateContentBundlesRequest, BatchActivateContentBundlesResponse>("BatchActivateContentBundles", grpcClient.BatchActivateContentBundlesAsync, grpcClient.BatchActivateContentBundles, effectiveSettings.BatchActivateContentBundlesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchActivateContentBundles);
+            Modify_BatchActivateContentBundlesApiCall(ref _callBatchActivateContentBundles);
+            _callBatchDeactivateContentBundles = clientHelper.BuildApiCall<BatchDeactivateContentBundlesRequest, BatchDeactivateContentBundlesResponse>("BatchDeactivateContentBundles", grpcClient.BatchDeactivateContentBundlesAsync, grpcClient.BatchDeactivateContentBundles, effectiveSettings.BatchDeactivateContentBundlesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeactivateContentBundles);
+            Modify_BatchDeactivateContentBundlesApiCall(ref _callBatchDeactivateContentBundles);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -531,6 +877,10 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_ListContentBundlesApiCall(ref gaxgrpc::ApiCall<ListContentBundlesRequest, ListContentBundlesResponse> call);
 
+        partial void Modify_BatchActivateContentBundlesApiCall(ref gaxgrpc::ApiCall<BatchActivateContentBundlesRequest, BatchActivateContentBundlesResponse> call);
+
+        partial void Modify_BatchDeactivateContentBundlesApiCall(ref gaxgrpc::ApiCall<BatchDeactivateContentBundlesRequest, BatchDeactivateContentBundlesResponse> call);
+
         partial void OnConstruction(ContentBundleService.ContentBundleServiceClient grpcClient, ContentBundleServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ContentBundleService client</summary>
@@ -539,6 +889,10 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_GetContentBundleRequest(ref GetContentBundleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListContentBundlesRequest(ref ListContentBundlesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchActivateContentBundlesRequest(ref BatchActivateContentBundlesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchDeactivateContentBundlesRequest(ref BatchDeactivateContentBundlesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves a `ContentBundle` object.
@@ -586,6 +940,54 @@ namespace Google.Ads.AdManager.V1
         {
             Modify_ListContentBundlesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListContentBundlesRequest, ListContentBundlesResponse, ContentBundle>(_callListContentBundles, request, callSettings);
+        }
+
+        /// <summary>
+        /// Activate a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchActivateContentBundlesResponse BatchActivateContentBundles(BatchActivateContentBundlesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchActivateContentBundlesRequest(ref request, ref callSettings);
+            return _callBatchActivateContentBundles.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Activate a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchActivateContentBundlesResponse> BatchActivateContentBundlesAsync(BatchActivateContentBundlesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchActivateContentBundlesRequest(ref request, ref callSettings);
+            return _callBatchActivateContentBundles.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deactivates a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchDeactivateContentBundlesResponse BatchDeactivateContentBundles(BatchDeactivateContentBundlesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeactivateContentBundlesRequest(ref request, ref callSettings);
+            return _callBatchDeactivateContentBundles.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deactivates a list of `ContentBundle` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchDeactivateContentBundlesResponse> BatchDeactivateContentBundlesAsync(BatchDeactivateContentBundlesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeactivateContentBundlesRequest(ref request, ref callSettings);
+            return _callBatchDeactivateContentBundles.Async(request, callSettings);
         }
     }
 

@@ -267,5 +267,14 @@ namespace Google.Ads.AdManager.V1
             get => string.IsNullOrEmpty(Order) ? null : OrderName.Parse(Order, allowUnparsed: true);
             set => Order = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="CompanyName"/>-typed view over the <see cref="ViewabilityProviderCompanies"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<CompanyName> ViewabilityProviderCompaniesAsCompanyNames
+        {
+            get => new gax::ResourceNameList<CompanyName>(ViewabilityProviderCompanies, s => string.IsNullOrEmpty(s) ? null : CompanyName.Parse(s, allowUnparsed: true));
+        }
     }
 }

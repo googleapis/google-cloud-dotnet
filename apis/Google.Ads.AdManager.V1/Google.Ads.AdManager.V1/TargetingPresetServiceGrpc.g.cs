@@ -78,6 +78,12 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateTargetingPresetsResponse> __Marshaller_google_ads_admanager_v1_BatchCreateTargetingPresetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateTargetingPresetsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest> __Marshaller_google_ads_admanager_v1_UpdateTargetingPresetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsRequest> __Marshaller_google_ads_admanager_v1_BatchUpdateTargetingPresetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsResponse> __Marshaller_google_ads_admanager_v1_BatchUpdateTargetingPresetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivateTargetingPresetsRequest> __Marshaller_google_ads_admanager_v1_BatchDeactivateTargetingPresetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivateTargetingPresetsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivateTargetingPresetsResponse> __Marshaller_google_ads_admanager_v1_BatchDeactivateTargetingPresetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivateTargetingPresetsResponse.Parser));
@@ -113,6 +119,22 @@ namespace Google.Ads.AdManager.V1 {
         "BatchCreateTargetingPresets",
         __Marshaller_google_ads_admanager_v1_BatchCreateTargetingPresetsRequest,
         __Marshaller_google_ads_admanager_v1_BatchCreateTargetingPresetsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest, global::Google.Ads.AdManager.V1.TargetingPreset> __Method_UpdateTargetingPreset = new grpc::Method<global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest, global::Google.Ads.AdManager.V1.TargetingPreset>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateTargetingPreset",
+        __Marshaller_google_ads_admanager_v1_UpdateTargetingPresetRequest,
+        __Marshaller_google_ads_admanager_v1_TargetingPreset);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsRequest, global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsResponse> __Method_BatchUpdateTargetingPresets = new grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsRequest, global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdateTargetingPresets",
+        __Marshaller_google_ads_admanager_v1_BatchUpdateTargetingPresetsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchUpdateTargetingPresetsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivateTargetingPresetsRequest, global::Google.Ads.AdManager.V1.BatchDeactivateTargetingPresetsResponse> __Method_BatchDeactivateTargetingPresets = new grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivateTargetingPresetsRequest, global::Google.Ads.AdManager.V1.BatchDeactivateTargetingPresetsResponse>(
@@ -179,6 +201,30 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchCreateTargetingPresetsResponse> BatchCreateTargetingPresets(global::Google.Ads.AdManager.V1.BatchCreateTargetingPresetsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a `TargetingPreset` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.TargetingPreset> UpdateTargetingPreset(global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch updates `TargetingPreset` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsResponse> BatchUpdateTargetingPresets(global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -429,6 +475,102 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchCreateTargetingPresets, null, options, request);
       }
       /// <summary>
+      /// Updates a `TargetingPreset` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.TargetingPreset UpdateTargetingPreset(global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTargetingPreset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `TargetingPreset` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.TargetingPreset UpdateTargetingPreset(global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateTargetingPreset, null, options, request);
+      }
+      /// <summary>
+      /// Updates a `TargetingPreset` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.TargetingPreset> UpdateTargetingPresetAsync(global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTargetingPresetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `TargetingPreset` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.TargetingPreset> UpdateTargetingPresetAsync(global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateTargetingPreset, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates `TargetingPreset` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsResponse BatchUpdateTargetingPresets(global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateTargetingPresets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates `TargetingPreset` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsResponse BatchUpdateTargetingPresets(global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateTargetingPresets, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates `TargetingPreset` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsResponse> BatchUpdateTargetingPresetsAsync(global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateTargetingPresetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates `TargetingPreset` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsResponse> BatchUpdateTargetingPresetsAsync(global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateTargetingPresets, null, options, request);
+      }
+      /// <summary>
       /// Batch deactivates `TargetingPreset` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -494,6 +636,8 @@ namespace Google.Ads.AdManager.V1 {
           .AddMethod(__Method_ListTargetingPresets, serviceImpl.ListTargetingPresets)
           .AddMethod(__Method_CreateTargetingPreset, serviceImpl.CreateTargetingPreset)
           .AddMethod(__Method_BatchCreateTargetingPresets, serviceImpl.BatchCreateTargetingPresets)
+          .AddMethod(__Method_UpdateTargetingPreset, serviceImpl.UpdateTargetingPreset)
+          .AddMethod(__Method_BatchUpdateTargetingPresets, serviceImpl.BatchUpdateTargetingPresets)
           .AddMethod(__Method_BatchDeactivateTargetingPresets, serviceImpl.BatchDeactivateTargetingPresets).Build();
     }
 
@@ -508,6 +652,8 @@ namespace Google.Ads.AdManager.V1 {
       serviceBinder.AddMethod(__Method_ListTargetingPresets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListTargetingPresetsRequest, global::Google.Ads.AdManager.V1.ListTargetingPresetsResponse>(serviceImpl.ListTargetingPresets));
       serviceBinder.AddMethod(__Method_CreateTargetingPreset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.CreateTargetingPresetRequest, global::Google.Ads.AdManager.V1.TargetingPreset>(serviceImpl.CreateTargetingPreset));
       serviceBinder.AddMethod(__Method_BatchCreateTargetingPresets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchCreateTargetingPresetsRequest, global::Google.Ads.AdManager.V1.BatchCreateTargetingPresetsResponse>(serviceImpl.BatchCreateTargetingPresets));
+      serviceBinder.AddMethod(__Method_UpdateTargetingPreset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest, global::Google.Ads.AdManager.V1.TargetingPreset>(serviceImpl.UpdateTargetingPreset));
+      serviceBinder.AddMethod(__Method_BatchUpdateTargetingPresets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsRequest, global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsResponse>(serviceImpl.BatchUpdateTargetingPresets));
       serviceBinder.AddMethod(__Method_BatchDeactivateTargetingPresets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDeactivateTargetingPresetsRequest, global::Google.Ads.AdManager.V1.BatchDeactivateTargetingPresetsResponse>(serviceImpl.BatchDeactivateTargetingPresets));
     }
 

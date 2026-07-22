@@ -27,6 +27,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -51,6 +52,8 @@ namespace Google.Ads.AdManager.V1
             ListTargetingPresetsSettings = existing.ListTargetingPresetsSettings;
             CreateTargetingPresetSettings = existing.CreateTargetingPresetSettings;
             BatchCreateTargetingPresetsSettings = existing.BatchCreateTargetingPresetsSettings;
+            UpdateTargetingPresetSettings = existing.UpdateTargetingPresetSettings;
+            BatchUpdateTargetingPresetsSettings = existing.BatchUpdateTargetingPresetsSettings;
             BatchDeactivateTargetingPresetsSettings = existing.BatchDeactivateTargetingPresetsSettings;
             OnCopy(existing);
         }
@@ -108,6 +111,32 @@ namespace Google.Ads.AdManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings BatchCreateTargetingPresetsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TargetingPresetServiceClient.UpdateTargetingPreset</c> and
+        /// <c>TargetingPresetServiceClient.UpdateTargetingPresetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateTargetingPresetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TargetingPresetServiceClient.BatchUpdateTargetingPresets</c> and
+        /// <c>TargetingPresetServiceClient.BatchUpdateTargetingPresetsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchUpdateTargetingPresetsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -857,6 +886,255 @@ namespace Google.Ads.AdManager.V1
             BatchCreateTargetingPresetsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates a `TargetingPreset` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TargetingPreset UpdateTargetingPreset(UpdateTargetingPresetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a `TargetingPreset` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TargetingPreset> UpdateTargetingPresetAsync(UpdateTargetingPresetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a `TargetingPreset` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TargetingPreset> UpdateTargetingPresetAsync(UpdateTargetingPresetRequest request, st::CancellationToken cancellationToken) =>
+            UpdateTargetingPresetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a `TargetingPreset` object.
+        /// </summary>
+        /// <param name="targetingPreset">
+        /// Required. The `TargetingPreset` to update.
+        /// 
+        /// The `TargetingPreset`'s `name` is used to identify the `TargetingPreset` to
+        /// update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TargetingPreset UpdateTargetingPreset(TargetingPreset targetingPreset, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateTargetingPreset(new UpdateTargetingPresetRequest
+            {
+                TargetingPreset = gax::GaxPreconditions.CheckNotNull(targetingPreset, nameof(targetingPreset)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a `TargetingPreset` object.
+        /// </summary>
+        /// <param name="targetingPreset">
+        /// Required. The `TargetingPreset` to update.
+        /// 
+        /// The `TargetingPreset`'s `name` is used to identify the `TargetingPreset` to
+        /// update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TargetingPreset> UpdateTargetingPresetAsync(TargetingPreset targetingPreset, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateTargetingPresetAsync(new UpdateTargetingPresetRequest
+            {
+                TargetingPreset = gax::GaxPreconditions.CheckNotNull(targetingPreset, nameof(targetingPreset)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a `TargetingPreset` object.
+        /// </summary>
+        /// <param name="targetingPreset">
+        /// Required. The `TargetingPreset` to update.
+        /// 
+        /// The `TargetingPreset`'s `name` is used to identify the `TargetingPreset` to
+        /// update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TargetingPreset> UpdateTargetingPresetAsync(TargetingPreset targetingPreset, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateTargetingPresetAsync(targetingPreset, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates `TargetingPreset` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateTargetingPresetsResponse BatchUpdateTargetingPresets(BatchUpdateTargetingPresetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch updates `TargetingPreset` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateTargetingPresetsResponse> BatchUpdateTargetingPresetsAsync(BatchUpdateTargetingPresetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch updates `TargetingPreset` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateTargetingPresetsResponse> BatchUpdateTargetingPresetsAsync(BatchUpdateTargetingPresetsRequest request, st::CancellationToken cancellationToken) =>
+            BatchUpdateTargetingPresetsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates `TargetingPreset` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `TargetingPresets` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateTargetingPresetRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `TargetingPreset` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateTargetingPresetsResponse BatchUpdateTargetingPresets(string parent, scg::IEnumerable<UpdateTargetingPresetRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateTargetingPresets(new BatchUpdateTargetingPresetsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `TargetingPreset` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `TargetingPresets` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateTargetingPresetRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `TargetingPreset` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateTargetingPresetsResponse> BatchUpdateTargetingPresetsAsync(string parent, scg::IEnumerable<UpdateTargetingPresetRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateTargetingPresetsAsync(new BatchUpdateTargetingPresetsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `TargetingPreset` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `TargetingPresets` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateTargetingPresetRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `TargetingPreset` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateTargetingPresetsResponse> BatchUpdateTargetingPresetsAsync(string parent, scg::IEnumerable<UpdateTargetingPresetRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdateTargetingPresetsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates `TargetingPreset` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `TargetingPresets` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateTargetingPresetRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `TargetingPreset` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateTargetingPresetsResponse BatchUpdateTargetingPresets(NetworkName parent, scg::IEnumerable<UpdateTargetingPresetRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateTargetingPresets(new BatchUpdateTargetingPresetsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `TargetingPreset` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `TargetingPresets` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateTargetingPresetRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `TargetingPreset` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateTargetingPresetsResponse> BatchUpdateTargetingPresetsAsync(NetworkName parent, scg::IEnumerable<UpdateTargetingPresetRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateTargetingPresetsAsync(new BatchUpdateTargetingPresetsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `TargetingPreset` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `TargetingPresets` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateTargetingPresetRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `TargetingPreset` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateTargetingPresetsResponse> BatchUpdateTargetingPresetsAsync(NetworkName parent, scg::IEnumerable<UpdateTargetingPresetRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdateTargetingPresetsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Batch deactivates `TargetingPreset` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1010,6 +1288,10 @@ namespace Google.Ads.AdManager.V1
 
         private readonly gaxgrpc::ApiCall<BatchCreateTargetingPresetsRequest, BatchCreateTargetingPresetsResponse> _callBatchCreateTargetingPresets;
 
+        private readonly gaxgrpc::ApiCall<UpdateTargetingPresetRequest, TargetingPreset> _callUpdateTargetingPreset;
+
+        private readonly gaxgrpc::ApiCall<BatchUpdateTargetingPresetsRequest, BatchUpdateTargetingPresetsResponse> _callBatchUpdateTargetingPresets;
+
         private readonly gaxgrpc::ApiCall<BatchDeactivateTargetingPresetsRequest, BatchDeactivateTargetingPresetsResponse> _callBatchDeactivateTargetingPresets;
 
         /// <summary>
@@ -1042,6 +1324,12 @@ namespace Google.Ads.AdManager.V1
             _callBatchCreateTargetingPresets = clientHelper.BuildApiCall<BatchCreateTargetingPresetsRequest, BatchCreateTargetingPresetsResponse>("BatchCreateTargetingPresets", grpcClient.BatchCreateTargetingPresetsAsync, grpcClient.BatchCreateTargetingPresets, effectiveSettings.BatchCreateTargetingPresetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchCreateTargetingPresets);
             Modify_BatchCreateTargetingPresetsApiCall(ref _callBatchCreateTargetingPresets);
+            _callUpdateTargetingPreset = clientHelper.BuildApiCall<UpdateTargetingPresetRequest, TargetingPreset>("UpdateTargetingPreset", grpcClient.UpdateTargetingPresetAsync, grpcClient.UpdateTargetingPreset, effectiveSettings.UpdateTargetingPresetSettings).WithGoogleRequestParam("targeting_preset.name", request => request.TargetingPreset?.Name);
+            Modify_ApiCall(ref _callUpdateTargetingPreset);
+            Modify_UpdateTargetingPresetApiCall(ref _callUpdateTargetingPreset);
+            _callBatchUpdateTargetingPresets = clientHelper.BuildApiCall<BatchUpdateTargetingPresetsRequest, BatchUpdateTargetingPresetsResponse>("BatchUpdateTargetingPresets", grpcClient.BatchUpdateTargetingPresetsAsync, grpcClient.BatchUpdateTargetingPresets, effectiveSettings.BatchUpdateTargetingPresetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchUpdateTargetingPresets);
+            Modify_BatchUpdateTargetingPresetsApiCall(ref _callBatchUpdateTargetingPresets);
             _callBatchDeactivateTargetingPresets = clientHelper.BuildApiCall<BatchDeactivateTargetingPresetsRequest, BatchDeactivateTargetingPresetsResponse>("BatchDeactivateTargetingPresets", grpcClient.BatchDeactivateTargetingPresetsAsync, grpcClient.BatchDeactivateTargetingPresets, effectiveSettings.BatchDeactivateTargetingPresetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchDeactivateTargetingPresets);
             Modify_BatchDeactivateTargetingPresetsApiCall(ref _callBatchDeactivateTargetingPresets);
@@ -1058,6 +1346,10 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_BatchCreateTargetingPresetsApiCall(ref gaxgrpc::ApiCall<BatchCreateTargetingPresetsRequest, BatchCreateTargetingPresetsResponse> call);
 
+        partial void Modify_UpdateTargetingPresetApiCall(ref gaxgrpc::ApiCall<UpdateTargetingPresetRequest, TargetingPreset> call);
+
+        partial void Modify_BatchUpdateTargetingPresetsApiCall(ref gaxgrpc::ApiCall<BatchUpdateTargetingPresetsRequest, BatchUpdateTargetingPresetsResponse> call);
+
         partial void Modify_BatchDeactivateTargetingPresetsApiCall(ref gaxgrpc::ApiCall<BatchDeactivateTargetingPresetsRequest, BatchDeactivateTargetingPresetsResponse> call);
 
         partial void OnConstruction(TargetingPresetService.TargetingPresetServiceClient grpcClient, TargetingPresetServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -1072,6 +1364,10 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_CreateTargetingPresetRequest(ref CreateTargetingPresetRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchCreateTargetingPresetsRequest(ref BatchCreateTargetingPresetsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateTargetingPresetRequest(ref UpdateTargetingPresetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchUpdateTargetingPresetsRequest(ref BatchUpdateTargetingPresetsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchDeactivateTargetingPresetsRequest(ref BatchDeactivateTargetingPresetsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1175,6 +1471,54 @@ namespace Google.Ads.AdManager.V1
         {
             Modify_BatchCreateTargetingPresetsRequest(ref request, ref callSettings);
             return _callBatchCreateTargetingPresets.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a `TargetingPreset` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TargetingPreset UpdateTargetingPreset(UpdateTargetingPresetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateTargetingPresetRequest(ref request, ref callSettings);
+            return _callUpdateTargetingPreset.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a `TargetingPreset` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TargetingPreset> UpdateTargetingPresetAsync(UpdateTargetingPresetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateTargetingPresetRequest(ref request, ref callSettings);
+            return _callUpdateTargetingPreset.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch updates `TargetingPreset` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchUpdateTargetingPresetsResponse BatchUpdateTargetingPresets(BatchUpdateTargetingPresetsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateTargetingPresetsRequest(ref request, ref callSettings);
+            return _callBatchUpdateTargetingPresets.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch updates `TargetingPreset` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchUpdateTargetingPresetsResponse> BatchUpdateTargetingPresetsAsync(BatchUpdateTargetingPresetsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateTargetingPresetsRequest(ref request, ref callSettings);
+            return _callBatchUpdateTargetingPresets.Async(request, callSettings);
         }
 
         /// <summary>

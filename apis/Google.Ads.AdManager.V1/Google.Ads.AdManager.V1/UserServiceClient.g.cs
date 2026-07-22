@@ -205,7 +205,7 @@ namespace Google.Ads.AdManager.V1
         public virtual UserService.UserServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a User object.
+        /// Retrieves a `User` object.
         /// 
         /// To get the current user, the resource name
         /// `networks/{networkCode}/users/me` can be used.
@@ -217,7 +217,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a User object.
+        /// Retrieves a `User` object.
         /// 
         /// To get the current user, the resource name
         /// `networks/{networkCode}/users/me` can be used.
@@ -229,7 +229,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a User object.
+        /// Retrieves a `User` object.
         /// 
         /// To get the current user, the resource name
         /// `networks/{networkCode}/users/me` can be used.
@@ -241,7 +241,7 @@ namespace Google.Ads.AdManager.V1
             GetUserAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a User object.
+        /// Retrieves a `User` object.
         /// 
         /// To get the current user, the resource name
         /// `networks/{networkCode}/users/me` can be used.
@@ -259,7 +259,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a User object.
+        /// Retrieves a `User` object.
         /// 
         /// To get the current user, the resource name
         /// `networks/{networkCode}/users/me` can be used.
@@ -277,7 +277,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a User object.
+        /// Retrieves a `User` object.
         /// 
         /// To get the current user, the resource name
         /// `networks/{networkCode}/users/me` can be used.
@@ -292,7 +292,7 @@ namespace Google.Ads.AdManager.V1
             GetUserAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a User object.
+        /// Retrieves a `User` object.
         /// 
         /// To get the current user, the resource name
         /// `networks/{networkCode}/users/me` can be used.
@@ -310,7 +310,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a User object.
+        /// Retrieves a `User` object.
         /// 
         /// To get the current user, the resource name
         /// `networks/{networkCode}/users/me` can be used.
@@ -328,7 +328,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a User object.
+        /// Retrieves a `User` object.
         /// 
         /// To get the current user, the resource name
         /// `networks/{networkCode}/users/me` can be used.
@@ -384,7 +384,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_GetUserRequest(ref GetUserRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a User object.
+        /// Retrieves a `User` object.
         /// 
         /// To get the current user, the resource name
         /// `networks/{networkCode}/users/me` can be used.
@@ -399,7 +399,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a User object.
+        /// Retrieves a `User` object.
         /// 
         /// To get the current user, the resource name
         /// `networks/{networkCode}/users/me` can be used.

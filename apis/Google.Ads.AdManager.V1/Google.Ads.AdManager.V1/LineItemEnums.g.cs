@@ -25,28 +25,303 @@ namespace Google.Ads.AdManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1nb29nbGUvYWRzL2FkbWFuYWdlci92MS9saW5lX2l0ZW1fZW51bXMucHJv",
-            "dG8SF2dvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxIoICChBMaW5lSXRlbVR5cGVF",
-            "bnVtIu0BCgxMaW5lSXRlbVR5cGUSHgoaTElORV9JVEVNX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABIPCgtTUE9OU09SU0hJUBAMEgwKCFNUQU5EQVJEEA0SCwoHTkVU",
-            "V09SSxAJEggKBEJVTEsQBBISCg5QUklDRV9QUklPUklUWRALEgkKBUhPVVNF",
-            "EAcSEgoOQ0xJQ0tfVFJBQ0tJTkcQBhILCgdBRFNFTlNFEAISDwoLQURfRVhD",
-            "SEFOR0UQAxIKCgZCVU1QRVIQBRISCg5QUkVGRVJSRURfREVBTBAKEhYKEkFV",
-            "RElFTkNFX0VYVEVOU0lPThAOQsYBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFn",
-            "ZXIudjFCEkxpbmVJdGVtRW51bXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5h",
-            "Z2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFk",
-            "TWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90",
-            "bzM="));
+            "dG8SF2dvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxIqgBChRMaW5lSXRlbUNvc3RU",
+            "eXBlRW51bSKPAQoQTGluZUl0ZW1Db3N0VHlwZRIjCh9MSU5FX0lURU1fQ09T",
+            "VF9UWVBFX1VOU1BFQ0lGSUVEEAASCwoDQ1BBEAEaAggBEgcKA0NQQxACEgcK",
+            "A0NQRBADEgcKA0NQTRAEEggKBFZDUE0QBRIRCg1DUE1fSU5fVEFSR0VUEAYS",
+            "BwoDQ1BGEAcSCAoEQ1BDVhAIIoICChBMaW5lSXRlbVR5cGVFbnVtIu0BCgxM",
+            "aW5lSXRlbVR5cGUSHgoaTElORV9JVEVNX1RZUEVfVU5TUEVDSUZJRUQQABIP",
+            "CgtTUE9OU09SU0hJUBAMEgwKCFNUQU5EQVJEEA0SCwoHTkVUV09SSxAJEggK",
+            "BEJVTEsQBBISCg5QUklDRV9QUklPUklUWRALEgkKBUhPVVNFEAcSEgoOQ0xJ",
+            "Q0tfVFJBQ0tJTkcQBhILCgdBRFNFTlNFEAISDwoLQURfRVhDSEFOR0UQAxIK",
+            "CgZCVU1QRVIQBRISCg5QUkVGRVJSRURfREVBTBAKEhYKEkFVRElFTkNFX0VY",
+            "VEVOU0lPThAOIogBCh1MaW5lSXRlbVJlc2VydmF0aW9uU3RhdHVzRW51bSJn",
+            "ChlMaW5lSXRlbVJlc2VydmF0aW9uU3RhdHVzEiwKKExJTkVfSVRFTV9SRVNF",
+            "UlZBVElPTl9TVEFUVVNfVU5TUEVDSUZJRUQQABIMCghSRVNFUlZFRBABEg4K",
+            "ClVOUkVTRVJWRUQQAiKcAgoaTGluZUl0ZW1Db21wdXRlZFN0YXR1c0VudW0i",
+            "/QEKFkxpbmVJdGVtQ29tcHV0ZWRTdGF0dXMSKQolTElORV9JVEVNX0NPTVBV",
+            "VEVEX1NUQVRVU19VTlNQRUNJRklFRBAAEgwKCENBTkNFTEVEEAESDQoJQ09N",
+            "UExFVEVEEAISDgoKREVMSVZFUklORxADEhUKEURFTElWRVJZX0VYVEVOREVE",
+            "EAQSDwoLRElTQVBQUk9WRUQQBRIJCgVEUkFGVBAGEgwKCElOQUNUSVZFEAcS",
+            "CgoGUEFVU0VEEAgSHQoZUEFVU0VEX0lOVkVOVE9SWV9SRUxFQVNFRBAJEhQK",
+            "EFBFTkRJTkdfQVBQUk9WQUwQChIJCgVSRUFEWRALQsYBChtjb20uZ29vZ2xl",
+            "LmFkcy5hZG1hbmFnZXIudjFCEkxpbmVJdGVtRW51bXNQcm90b1ABWkBnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFn",
+            "ZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdH",
+            "b29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFn",
+            "ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LineItemTypeEnum), global::Google.Ads.AdManager.V1.LineItemTypeEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.LineItemTypeEnum.Types.LineItemType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LineItemCostTypeEnum), global::Google.Ads.AdManager.V1.LineItemCostTypeEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.LineItemCostTypeEnum.Types.LineItemCostType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LineItemTypeEnum), global::Google.Ads.AdManager.V1.LineItemTypeEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.LineItemTypeEnum.Types.LineItemType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LineItemReservationStatusEnum), global::Google.Ads.AdManager.V1.LineItemReservationStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.LineItemReservationStatusEnum.Types.LineItemReservationStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LineItemComputedStatusEnum), global::Google.Ads.AdManager.V1.LineItemComputedStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.LineItemComputedStatusEnum.Types.LineItemComputedStatus) }, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
+  /// <summary>
+  /// Wrapper message for
+  /// [LineItemCostType][google.ads.admanager.v1.LineItemCostTypeEnum.LineItemCostType].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LineItemCostTypeEnum : pb::IMessage<LineItemCostTypeEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LineItemCostTypeEnum> _parser = new pb::MessageParser<LineItemCostTypeEnum>(() => new LineItemCostTypeEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LineItemCostTypeEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.LineItemEnumsReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineItemCostTypeEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineItemCostTypeEnum(LineItemCostTypeEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineItemCostTypeEnum Clone() {
+      return new LineItemCostTypeEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LineItemCostTypeEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LineItemCostTypeEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LineItemCostTypeEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the LineItemCostTypeEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Describes the LineItem actions that are billable.
+      /// </summary>
+      public enum LineItemCostType {
+        /// <summary>
+        /// Not specified value.
+        /// </summary>
+        [pbr::OriginalName("LINE_ITEM_COST_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Starting February 22, 2024 the CPA LineItemCostType will only be read as
+        /// part of Spotlight deprecation, learn more at:
+        /// https://support.google.com/admanager/answer/7519021#spotlight
+        ///
+        /// Cost per action. The line item
+        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be one of:
+        ///
+        /// * [LineItemTypeEnum.LineItemType.SPONSORSHIP][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.SPONSORSHIP]
+        /// * [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD]
+        /// * [LineItemTypeEnum.LineItemType.BULK][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.BULK]
+        /// * [LineItemTypeEnum.LineItemType.NETWORK][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.NETWORK]
+        /// </summary>
+        [global::System.ObsoleteAttribute]
+        [pbr::OriginalName("CPA")] Cpa = 1,
+        /// <summary>
+        /// Cost per click. The line item
+        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be one of:
+        ///
+        /// * [LineItemTypeEnum.LineItemType.SPONSORSHIP][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.SPONSORSHIP]
+        /// * [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD]
+        /// * [LineItemTypeEnum.LineItemType.BULK][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.BULK]
+        /// * [LineItemTypeEnum.LineItemType.NETWORK][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.NETWORK]
+        /// * [LineItemTypeEnum.LineItemType.PRICE_PRIORITY][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.PRICE_PRIORITY]
+        /// * [LineItemTypeEnum.LineItemType.HOUSE][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.HOUSE]
+        /// </summary>
+        [pbr::OriginalName("CPC")] Cpc = 2,
+        /// <summary>
+        /// Cost per day. The line item
+        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be one of:
+        ///
+        /// * [LineItemTypeEnum.LineItemType.SPONSORSHIP][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.SPONSORSHIP]
+        /// * [LineItemTypeEnum.LineItemType.NETWORK][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.NETWORK]
+        /// </summary>
+        [pbr::OriginalName("CPD")] Cpd = 3,
+        /// <summary>
+        /// Cost per mille (thousand) impressions. The line item
+        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be one of:
+        ///
+        /// * [LineItemTypeEnum.LineItemType.SPONSORSHIP][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.SPONSORSHIP]
+        /// * [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD]
+        /// * [LineItemTypeEnum.LineItemType.BULK][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.BULK]
+        /// * [LineItemTypeEnum.LineItemType.NETWORK][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.NETWORK]
+        /// * [LineItemTypeEnum.LineItemType.PRICE_PRIORITY][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.PRICE_PRIORITY]
+        /// * [LineItemTypeEnum.LineItemType.HOUSE][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.HOUSE]
+        /// </summary>
+        [pbr::OriginalName("CPM")] Cpm = 4,
+        /// <summary>
+        /// Cost per mille (thousand) Active View viewable impressions. The line item
+        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be one of:
+        ///
+        /// * [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD]
+        /// </summary>
+        [pbr::OriginalName("VCPM")] Vcpm = 5,
+        /// <summary>
+        /// Cost per millie (thousand) in-target impressions. The line item
+        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be one of:
+        ///
+        /// * [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD]
+        /// </summary>
+        [pbr::OriginalName("CPM_IN_TARGET")] CpmInTarget = 6,
+        /// <summary>
+        /// Cost for the entire flight of the deal. The line item
+        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be must be
+        /// one of:
+        ///
+        /// * [LineItemTypeEnum.LineItemType.SPONSORSHIP][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.SPONSORSHIP]
+        /// </summary>
+        [pbr::OriginalName("CPF")] Cpf = 7,
+        /// <summary>
+        /// Cost per completed view. The line item
+        /// [type][google.ads.admanager.v1.LineItem.line_item_type] must be one of:
+        ///
+        /// * [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD].
+        /// </summary>
+        [pbr::OriginalName("CPCV")] Cpcv = 8,
+      }
+
+    }
+    #endregion
+
+  }
+
   /// <summary>
   /// Wrapper message for
   /// [LineItemType][google.ads.admanager.v1.LineItemTypeEnum.LineItemType].
@@ -66,7 +341,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.LineItemEnumsReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Ads.AdManager.V1.LineItemEnumsReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -286,6 +561,429 @@ namespace Google.Ads.AdManager.V1 {
         /// The type of LineItem used for configuring audience extension campaigns.
         /// </summary>
         [pbr::OriginalName("AUDIENCE_EXTENSION")] AudienceExtension = 14,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Wrapper message for
+  /// [LineItemReservationStatus][google.ads.admanager.v1.LineItemReservationStatusEnum.LineItemReservationStatus].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LineItemReservationStatusEnum : pb::IMessage<LineItemReservationStatusEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LineItemReservationStatusEnum> _parser = new pb::MessageParser<LineItemReservationStatusEnum>(() => new LineItemReservationStatusEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LineItemReservationStatusEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.LineItemEnumsReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineItemReservationStatusEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineItemReservationStatusEnum(LineItemReservationStatusEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineItemReservationStatusEnum Clone() {
+      return new LineItemReservationStatusEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LineItemReservationStatusEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LineItemReservationStatusEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LineItemReservationStatusEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the LineItemReservationStatusEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Defines the different reservation statuses of a line item.
+      /// </summary>
+      public enum LineItemReservationStatus {
+        /// <summary>
+        /// No value specified
+        /// </summary>
+        [pbr::OriginalName("LINE_ITEM_RESERVATION_STATUS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates that inventory has been reserved for the line item.
+        /// </summary>
+        [pbr::OriginalName("RESERVED")] Reserved = 1,
+        /// <summary>
+        /// Indicates that inventory has not been reserved for the line item.
+        /// </summary>
+        [pbr::OriginalName("UNRESERVED")] Unreserved = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Wrapper message for
+  /// [LineItemComputedStatus][google.ads.admanager.v1.LineItemComputedStatusEnum.LineItemComputedStatus].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LineItemComputedStatusEnum : pb::IMessage<LineItemComputedStatusEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LineItemComputedStatusEnum> _parser = new pb::MessageParser<LineItemComputedStatusEnum>(() => new LineItemComputedStatusEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LineItemComputedStatusEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.LineItemEnumsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineItemComputedStatusEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineItemComputedStatusEnum(LineItemComputedStatusEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineItemComputedStatusEnum Clone() {
+      return new LineItemComputedStatusEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LineItemComputedStatusEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LineItemComputedStatusEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LineItemComputedStatusEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the LineItemComputedStatusEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Describes the computed LineItem status that is derived from the current
+      /// state of the LineItem.
+      /// </summary>
+      public enum LineItemComputedStatus {
+        /// <summary>
+        /// No value specified.
+        /// </summary>
+        [pbr::OriginalName("LINE_ITEM_COMPUTED_STATUS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The LineItem has been canceled and is no longer eligible to serve. This
+        /// is a legacy status.
+        /// </summary>
+        [pbr::OriginalName("CANCELED")] Canceled = 1,
+        /// <summary>
+        /// The LineItem has completed its run.
+        /// </summary>
+        [pbr::OriginalName("COMPLETED")] Completed = 2,
+        /// <summary>
+        /// The LineItem has begun serving.
+        /// </summary>
+        [pbr::OriginalName("DELIVERING")] Delivering = 3,
+        /// <summary>
+        /// The LineItem has past its endDateTime with an auto extension, but hasn't
+        /// met its goal.
+        /// </summary>
+        [pbr::OriginalName("DELIVERY_EXTENDED")] DeliveryExtended = 4,
+        /// <summary>
+        /// The LineItem has been disapproved and is not eligible to serve.
+        /// </summary>
+        [pbr::OriginalName("DISAPPROVED")] Disapproved = 5,
+        /// <summary>
+        /// The LineItem is still being drafted.
+        /// </summary>
+        [pbr::OriginalName("DRAFT")] Draft = 6,
+        /// <summary>
+        /// The LineItem is inactive. It is either caused by missing creatives or the
+        /// network disabling auto-activation.
+        /// </summary>
+        [pbr::OriginalName("INACTIVE")] Inactive = 7,
+        /// <summary>
+        /// The LineItem has been paused from serving.
+        /// </summary>
+        [pbr::OriginalName("PAUSED")] Paused = 8,
+        /// <summary>
+        /// The LineItem has been paused and its reserved inventory has been
+        /// released. The LineItem will not serve.
+        /// </summary>
+        [pbr::OriginalName("PAUSED_INVENTORY_RELEASED")] PausedInventoryReleased = 9,
+        /// <summary>
+        /// The LineItem has been submitted for approval.
+        /// </summary>
+        [pbr::OriginalName("PENDING_APPROVAL")] PendingApproval = 10,
+        /// <summary>
+        /// The LineItem has been activated and is ready to serve.
+        /// </summary>
+        [pbr::OriginalName("READY")] Ready = 11,
       }
 
     }

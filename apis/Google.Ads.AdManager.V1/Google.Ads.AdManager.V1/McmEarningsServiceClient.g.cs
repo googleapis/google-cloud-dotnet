@@ -210,7 +210,7 @@ namespace Google.Ads.AdManager.V1
         public virtual McmEarningsService.McmEarningsServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `McmEarnings` objects.
+        /// Lists `McmEarnings` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -219,7 +219,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `McmEarnings` objects.
+        /// Lists `McmEarnings` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -228,7 +228,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `McmEarnings` objects.
+        /// Lists `McmEarnings` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of McmEarnings.
@@ -262,7 +262,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `McmEarnings` objects.
+        /// Lists `McmEarnings` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of McmEarnings.
@@ -296,7 +296,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `McmEarnings` objects.
+        /// Lists `McmEarnings` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of McmEarnings.
@@ -330,7 +330,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `McmEarnings` objects.
+        /// Lists `McmEarnings` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of McmEarnings.
@@ -405,7 +405,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_FetchMcmEarningsRequest(ref FetchMcmEarningsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a list of `McmEarnings` objects.
+        /// Lists `McmEarnings` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -417,7 +417,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `McmEarnings` objects.
+        /// Lists `McmEarnings` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

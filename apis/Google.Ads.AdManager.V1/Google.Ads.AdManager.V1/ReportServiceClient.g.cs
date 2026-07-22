@@ -293,7 +293,7 @@ namespace Google.Ads.AdManager.V1
         public virtual ReportService.ReportServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Report` object.
+        /// Retrieves a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -302,7 +302,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Report` object.
+        /// Retrieves a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -311,7 +311,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Report` object.
+        /// Retrieves a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -320,7 +320,7 @@ namespace Google.Ads.AdManager.V1
             GetReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `Report` object.
+        /// Retrieves a `Report` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the report.
@@ -335,7 +335,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Report` object.
+        /// Retrieves a `Report` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the report.
@@ -350,7 +350,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Report` object.
+        /// Retrieves a `Report` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the report.
@@ -362,7 +362,7 @@ namespace Google.Ads.AdManager.V1
             GetReportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `Report` object.
+        /// Retrieves a `Report` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the report.
@@ -377,7 +377,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Report` object.
+        /// Retrieves a `Report` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the report.
@@ -392,7 +392,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Report` object.
+        /// Retrieves a `Report` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the report.
@@ -404,7 +404,7 @@ namespace Google.Ads.AdManager.V1
             GetReportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `Report` objects.
+        /// Lists `Report` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -413,7 +413,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `Report` objects.
+        /// Lists `Report` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -422,7 +422,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `Report` objects.
+        /// Lists `Report` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of reports.
@@ -456,7 +456,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Report` objects.
+        /// Lists `Report` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of reports.
@@ -490,7 +490,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Report` objects.
+        /// Lists `Report` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of reports.
@@ -524,7 +524,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Report` objects.
+        /// Lists `Report` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of reports.
@@ -558,7 +558,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `Report` object.
+        /// Creates a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -567,7 +567,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create a `Report` object.
+        /// Creates a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -576,7 +576,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create a `Report` object.
+        /// Creates a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -585,7 +585,7 @@ namespace Google.Ads.AdManager.V1
             CreateReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create a `Report` object.
+        /// Creates a `Report` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Report` will be created.
@@ -604,7 +604,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Report` object.
+        /// Creates a `Report` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Report` will be created.
@@ -623,7 +623,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Report` object.
+        /// Creates a `Report` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Report` will be created.
@@ -638,7 +638,7 @@ namespace Google.Ads.AdManager.V1
             CreateReportAsync(parent, report, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create a `Report` object.
+        /// Creates a `Report` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Report` will be created.
@@ -657,7 +657,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Report` object.
+        /// Creates a `Report` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Report` will be created.
@@ -676,7 +676,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Report` object.
+        /// Creates a `Report` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Report` will be created.
@@ -691,7 +691,7 @@ namespace Google.Ads.AdManager.V1
             CreateReportAsync(parent, report, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update a `Report` object.
+        /// Updates a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -700,7 +700,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update a `Report` object.
+        /// Updates a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -709,7 +709,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update a `Report` object.
+        /// Updates a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -718,7 +718,7 @@ namespace Google.Ads.AdManager.V1
             UpdateReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update a `Report` object.
+        /// Updates a `Report` object.
         /// </summary>
         /// <param name="report">
         /// Required. The `Report` to update.
@@ -736,7 +736,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update a `Report` object.
+        /// Updates a `Report` object.
         /// </summary>
         /// <param name="report">
         /// Required. The `Report` to update.
@@ -754,7 +754,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update a `Report` object.
+        /// Updates a `Report` object.
         /// </summary>
         /// <param name="report">
         /// Required. The `Report` to update.
@@ -1149,7 +1149,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_FetchReportResultRowsRequest(ref FetchReportResultRowsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a `Report` object.
+        /// Retrieves a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1161,7 +1161,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `Report` object.
+        /// Retrieves a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1173,7 +1173,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Report` objects.
+        /// Lists `Report` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1185,7 +1185,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Report` objects.
+        /// Lists `Report` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1197,7 +1197,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `Report` object.
+        /// Creates a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1209,7 +1209,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `Report` object.
+        /// Creates a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1221,7 +1221,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update a `Report` object.
+        /// Updates a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1233,7 +1233,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update a `Report` object.
+        /// Updates a `Report` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -3205,8 +3205,7 @@ namespace Google.Ads.AdManager.V1 {
   /// <summary>
   /// Mobile Carrier Targeting.
   ///
-  /// Can be used to target/exclude a variety of mobile carriers, such as AT&amp;T,
-  /// Verizon, or T-Mobile.
+  /// Used to target or exclude mobile carriers.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MobileCarrierTargeting : pb::IMessage<MobileCarrierTargeting>

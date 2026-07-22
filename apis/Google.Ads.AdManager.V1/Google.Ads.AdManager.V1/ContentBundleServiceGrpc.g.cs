@@ -71,6 +71,14 @@ namespace Google.Ads.AdManager.V1 {
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListContentBundlesRequest> __Marshaller_google_ads_admanager_v1_ListContentBundlesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListContentBundlesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListContentBundlesResponse> __Marshaller_google_ads_admanager_v1_ListContentBundlesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListContentBundlesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateContentBundlesRequest> __Marshaller_google_ads_admanager_v1_BatchActivateContentBundlesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateContentBundlesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateContentBundlesResponse> __Marshaller_google_ads_admanager_v1_BatchActivateContentBundlesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateContentBundlesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesRequest> __Marshaller_google_ads_admanager_v1_BatchDeactivateContentBundlesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesResponse> __Marshaller_google_ads_admanager_v1_BatchDeactivateContentBundlesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.GetContentBundleRequest, global::Google.Ads.AdManager.V1.ContentBundle> __Method_GetContentBundle = new grpc::Method<global::Google.Ads.AdManager.V1.GetContentBundleRequest, global::Google.Ads.AdManager.V1.ContentBundle>(
@@ -87,6 +95,22 @@ namespace Google.Ads.AdManager.V1 {
         "ListContentBundles",
         __Marshaller_google_ads_admanager_v1_ListContentBundlesRequest,
         __Marshaller_google_ads_admanager_v1_ListContentBundlesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateContentBundlesRequest, global::Google.Ads.AdManager.V1.BatchActivateContentBundlesResponse> __Method_BatchActivateContentBundles = new grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateContentBundlesRequest, global::Google.Ads.AdManager.V1.BatchActivateContentBundlesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchActivateContentBundles",
+        __Marshaller_google_ads_admanager_v1_BatchActivateContentBundlesRequest,
+        __Marshaller_google_ads_admanager_v1_BatchActivateContentBundlesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesRequest, global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesResponse> __Method_BatchDeactivateContentBundles = new grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesRequest, global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeactivateContentBundles",
+        __Marshaller_google_ads_admanager_v1_BatchDeactivateContentBundlesRequest,
+        __Marshaller_google_ads_admanager_v1_BatchDeactivateContentBundlesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -118,6 +142,30 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.ListContentBundlesResponse> ListContentBundles(global::Google.Ads.AdManager.V1.ListContentBundlesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Activate a list of `ContentBundle` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchActivateContentBundlesResponse> BatchActivateContentBundles(global::Google.Ads.AdManager.V1.BatchActivateContentBundlesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deactivates a list of `ContentBundle` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesResponse> BatchDeactivateContentBundles(global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -247,6 +295,102 @@ namespace Google.Ads.AdManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListContentBundles, null, options, request);
       }
+      /// <summary>
+      /// Activate a list of `ContentBundle` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivateContentBundlesResponse BatchActivateContentBundles(global::Google.Ads.AdManager.V1.BatchActivateContentBundlesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivateContentBundles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Activate a list of `ContentBundle` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivateContentBundlesResponse BatchActivateContentBundles(global::Google.Ads.AdManager.V1.BatchActivateContentBundlesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchActivateContentBundles, null, options, request);
+      }
+      /// <summary>
+      /// Activate a list of `ContentBundle` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivateContentBundlesResponse> BatchActivateContentBundlesAsync(global::Google.Ads.AdManager.V1.BatchActivateContentBundlesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivateContentBundlesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Activate a list of `ContentBundle` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivateContentBundlesResponse> BatchActivateContentBundlesAsync(global::Google.Ads.AdManager.V1.BatchActivateContentBundlesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchActivateContentBundles, null, options, request);
+      }
+      /// <summary>
+      /// Deactivates a list of `ContentBundle` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesResponse BatchDeactivateContentBundles(global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeactivateContentBundles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deactivates a list of `ContentBundle` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesResponse BatchDeactivateContentBundles(global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeactivateContentBundles, null, options, request);
+      }
+      /// <summary>
+      /// Deactivates a list of `ContentBundle` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesResponse> BatchDeactivateContentBundlesAsync(global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeactivateContentBundlesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deactivates a list of `ContentBundle` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesResponse> BatchDeactivateContentBundlesAsync(global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeactivateContentBundles, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ContentBundleServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -262,7 +406,9 @@ namespace Google.Ads.AdManager.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetContentBundle, serviceImpl.GetContentBundle)
-          .AddMethod(__Method_ListContentBundles, serviceImpl.ListContentBundles).Build();
+          .AddMethod(__Method_ListContentBundles, serviceImpl.ListContentBundles)
+          .AddMethod(__Method_BatchActivateContentBundles, serviceImpl.BatchActivateContentBundles)
+          .AddMethod(__Method_BatchDeactivateContentBundles, serviceImpl.BatchDeactivateContentBundles).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -274,6 +420,8 @@ namespace Google.Ads.AdManager.V1 {
     {
       serviceBinder.AddMethod(__Method_GetContentBundle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.GetContentBundleRequest, global::Google.Ads.AdManager.V1.ContentBundle>(serviceImpl.GetContentBundle));
       serviceBinder.AddMethod(__Method_ListContentBundles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListContentBundlesRequest, global::Google.Ads.AdManager.V1.ListContentBundlesResponse>(serviceImpl.ListContentBundles));
+      serviceBinder.AddMethod(__Method_BatchActivateContentBundles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchActivateContentBundlesRequest, global::Google.Ads.AdManager.V1.BatchActivateContentBundlesResponse>(serviceImpl.BatchActivateContentBundles));
+      serviceBinder.AddMethod(__Method_BatchDeactivateContentBundles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesRequest, global::Google.Ads.AdManager.V1.BatchDeactivateContentBundlesResponse>(serviceImpl.BatchDeactivateContentBundles));
     }
 
   }

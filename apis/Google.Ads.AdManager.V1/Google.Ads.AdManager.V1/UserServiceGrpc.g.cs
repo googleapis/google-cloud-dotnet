@@ -87,7 +87,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class UserServiceBase
     {
       /// <summary>
-      /// API to retrieve a User object.
+      /// Retrieves a `User` object.
       ///
       /// To get the current user, the resource name
       /// `networks/{networkCode}/users/me` can be used.
@@ -131,7 +131,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a User object.
+      /// Retrieves a `User` object.
       ///
       /// To get the current user, the resource name
       /// `networks/{networkCode}/users/me` can be used.
@@ -147,7 +147,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a User object.
+      /// Retrieves a `User` object.
       ///
       /// To get the current user, the resource name
       /// `networks/{networkCode}/users/me` can be used.
@@ -161,7 +161,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetUser, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a User object.
+      /// Retrieves a `User` object.
       ///
       /// To get the current user, the resource name
       /// `networks/{networkCode}/users/me` can be used.
@@ -177,7 +177,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a User object.
+      /// Retrieves a `User` object.
       ///
       /// To get the current user, the resource name
       /// `networks/{networkCode}/users/me` can be used.

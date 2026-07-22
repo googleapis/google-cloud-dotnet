@@ -30,7 +30,7 @@ namespace Google.Ads.AdManager.V1 {
             "Z2VyL3YxL2N1c3RvbV9maWVsZF92YWx1ZS5wcm90bxopZ29vZ2xlL2Fkcy9h",
             "ZG1hbmFnZXIvdjEvb3JkZXJfZW51bXMucHJvdG8aH2dvb2dsZS9hcGkvZmll",
             "bGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8imw8KBU9yZGVyEhEK",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ihBEKBU9yZGVyEhEK",
             "BG5hbWUYASABKAlCA+BBCBIcCghvcmRlcl9pZBgEIAEoA0IFGAHgQQNIAIgB",
             "ARIeCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAkgBiAEBEh4KDHByb2dyYW1t",
             "YXRpYxgDIAEoCEID4EEBSAKIAQESPgoKdHJhZmZpY2tlchgXIAEoCUIl4EEC",
@@ -65,24 +65,29 @@ namespace Google.Ads.AdManager.V1 {
             "TAoYZWZmZWN0aXZlX2FwcGxpZWRfbGFiZWxzGBogAygLMiUuZ29vZ2xlLmFk",
             "cy5hZG1hbmFnZXIudjEuQXBwbGllZExhYmVsQgPgQQMSSwoTY3VzdG9tX2Zp",
             "ZWxkX3ZhbHVlcxgmIAMoCzIpLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkN1",
-            "c3RvbUZpZWxkVmFsdWVCA+BBATpa6kFXCh5hZG1hbmFnZXIuZ29vZ2xlYXBp",
-            "cy5jb20vT3JkZXISJm5ldHdvcmtzL3tuZXR3b3JrX2NvZGV9L29yZGVycy97",
-            "b3JkZXJ9KgZvcmRlcnMyBW9yZGVyQgsKCV9vcmRlcl9pZEIPCg1fZGlzcGxh",
-            "eV9uYW1lQg8KDV9wcm9ncmFtbWF0aWNCDQoLX3RyYWZmaWNrZXJCDQoLX2Fk",
-            "dmVydGlzZXJCCQoHX2FnZW5jeUIKCghfY3JlYXRvckIQCg5fY3VycmVuY3lf",
-            "Y29kZUINCgtfc3RhcnRfdGltZUILCglfZW5kX3RpbWVCFQoTX3VubGltaXRl",
-            "ZF9lbmRfdGltZUIUChJfZXh0ZXJuYWxfb3JkZXJfaWRCCwoJX2FyY2hpdmVk",
-            "QhcKFV9sYXN0X21vZGlmaWVkX2J5X2FwcEIOCgxfdXBkYXRlX3RpbWVCCAoG",
-            "X25vdGVzQgwKCl9wb19udW1iZXJCCQoHX3N0YXR1c0IOCgxfc2FsZXNwZXJz",
-            "b25CxgEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIST3JkZXJNZXNz",
-            "YWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
-            "ZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdHb29nbGUuQWRz",
-            "LkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29v",
-            "Z2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "c3RvbUZpZWxkVmFsdWVCA+BBARInChVpbXByZXNzaW9uc19kZWxpdmVyZWQY",
+            "KSABKANCA+BBA0gTiAEBEigKFnRvdGFsX2NsaWNrc19kZWxpdmVyZWQYNSAB",
+            "KANCA+BBA0gUiAEBEjYKJHRvdGFsX3ZpZXdhYmxlX2ltcHJlc3Npb25zX2Rl",
+            "bGl2ZXJlZBg2IAEoA0ID4EEDSBWIAQE6WupBVwoeYWRtYW5hZ2VyLmdvb2ds",
+            "ZWFwaXMuY29tL09yZGVyEiZuZXR3b3Jrcy97bmV0d29ya19jb2RlfS9vcmRl",
+            "cnMve29yZGVyfSoGb3JkZXJzMgVvcmRlckILCglfb3JkZXJfaWRCDwoNX2Rp",
+            "c3BsYXlfbmFtZUIPCg1fcHJvZ3JhbW1hdGljQg0KC190cmFmZmlja2VyQg0K",
+            "C19hZHZlcnRpc2VyQgkKB19hZ2VuY3lCCgoIX2NyZWF0b3JCEAoOX2N1cnJl",
+            "bmN5X2NvZGVCDQoLX3N0YXJ0X3RpbWVCCwoJX2VuZF90aW1lQhUKE191bmxp",
+            "bWl0ZWRfZW5kX3RpbWVCFAoSX2V4dGVybmFsX29yZGVyX2lkQgsKCV9hcmNo",
+            "aXZlZEIXChVfbGFzdF9tb2RpZmllZF9ieV9hcHBCDgoMX3VwZGF0ZV90aW1l",
+            "QggKBl9ub3Rlc0IMCgpfcG9fbnVtYmVyQgkKB19zdGF0dXNCDgoMX3NhbGVz",
+            "cGVyc29uQhgKFl9pbXByZXNzaW9uc19kZWxpdmVyZWRCGQoXX3RvdGFsX2Ns",
+            "aWNrc19kZWxpdmVyZWRCJwolX3RvdGFsX3ZpZXdhYmxlX2ltcHJlc3Npb25z",
+            "X2RlbGl2ZXJlZELGAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhJP",
+            "cmRlck1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dv",
+            "b2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJc",
+            "VjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AppliedLabelReflection.Descriptor, global::Google.Ads.AdManager.V1.CustomFieldValueReflection.Descriptor, global::Google.Ads.AdManager.V1.OrderEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Order), global::Google.Ads.AdManager.V1.Order.Parser, new[]{ "Name", "OrderId", "DisplayName", "Programmatic", "Trafficker", "AdvertiserContacts", "Advertiser", "AgencyContacts", "Agency", "AppliedTeams", "EffectiveTeams", "Creator", "CurrencyCode", "StartTime", "EndTime", "UnlimitedEndTime", "ExternalOrderId", "Archived", "LastModifiedByApp", "UpdateTime", "Notes", "PoNumber", "Status", "Salesperson", "SecondarySalespeople", "SecondaryTraffickers", "AppliedLabels", "EffectiveAppliedLabels", "CustomFieldValues" }, new[]{ "OrderId", "DisplayName", "Programmatic", "Trafficker", "Advertiser", "Agency", "Creator", "CurrencyCode", "StartTime", "EndTime", "UnlimitedEndTime", "ExternalOrderId", "Archived", "LastModifiedByApp", "UpdateTime", "Notes", "PoNumber", "Status", "Salesperson" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Order), global::Google.Ads.AdManager.V1.Order.Parser, new[]{ "Name", "OrderId", "DisplayName", "Programmatic", "Trafficker", "AdvertiserContacts", "Advertiser", "AgencyContacts", "Agency", "AppliedTeams", "EffectiveTeams", "Creator", "CurrencyCode", "StartTime", "EndTime", "UnlimitedEndTime", "ExternalOrderId", "Archived", "LastModifiedByApp", "UpdateTime", "Notes", "PoNumber", "Status", "Salesperson", "SecondarySalespeople", "SecondaryTraffickers", "AppliedLabels", "EffectiveAppliedLabels", "CustomFieldValues", "ImpressionsDelivered", "TotalClicksDelivered", "TotalViewableImpressionsDelivered" }, new[]{ "OrderId", "DisplayName", "Programmatic", "Trafficker", "Advertiser", "Agency", "Creator", "CurrencyCode", "StartTime", "EndTime", "UnlimitedEndTime", "ExternalOrderId", "Archived", "LastModifiedByApp", "UpdateTime", "Notes", "PoNumber", "Status", "Salesperson", "ImpressionsDelivered", "TotalClicksDelivered", "TotalViewableImpressionsDelivered" }, null, null, null)
           }));
     }
     #endregion
@@ -158,6 +163,9 @@ namespace Google.Ads.AdManager.V1 {
       appliedLabels_ = other.appliedLabels_.Clone();
       effectiveAppliedLabels_ = other.effectiveAppliedLabels_.Clone();
       customFieldValues_ = other.customFieldValues_.Clone();
+      impressionsDelivered_ = other.impressionsDelivered_;
+      totalClicksDelivered_ = other.totalClicksDelivered_;
+      totalViewableImpressionsDelivered_ = other.totalViewableImpressionsDelivered_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -534,9 +542,9 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool UnlimitedEndTime {
-      get { if ((_hasBits0 & 32) != 0) { return unlimitedEndTime_; } else { return UnlimitedEndTimeDefaultValue; } }
+      get { if ((_hasBits0 & 64) != 0) { return unlimitedEndTime_; } else { return UnlimitedEndTimeDefaultValue; } }
       set {
-        _hasBits0 |= 32;
+        _hasBits0 |= 64;
         unlimitedEndTime_ = value;
       }
     }
@@ -544,13 +552,13 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasUnlimitedEndTime {
-      get { return (_hasBits0 & 32) != 0; }
+      get { return (_hasBits0 & 64) != 0; }
     }
     /// <summary>Clears the value of the "unlimited_end_time" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearUnlimitedEndTime() {
-      _hasBits0 &= ~32;
+      _hasBits0 &= ~64;
     }
 
     /// <summary>Field number for the "external_order_id" field.</summary>
@@ -855,6 +863,100 @@ namespace Google.Ads.AdManager.V1 {
       get { return customFieldValues_; }
     }
 
+    /// <summary>Field number for the "impressions_delivered" field.</summary>
+    public const int ImpressionsDeliveredFieldNumber = 41;
+    private readonly static long ImpressionsDeliveredDefaultValue = 0L;
+
+    private long impressionsDelivered_;
+    /// <summary>
+    /// Output only. The total number of impressions delivered for Line items in
+    /// this order.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ImpressionsDelivered {
+      get { if ((_hasBits0 & 32) != 0) { return impressionsDelivered_; } else { return ImpressionsDeliveredDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        impressionsDelivered_ = value;
+      }
+    }
+    /// <summary>Gets whether the "impressions_delivered" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasImpressionsDelivered {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "impressions_delivered" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearImpressionsDelivered() {
+      _hasBits0 &= ~32;
+    }
+
+    /// <summary>Field number for the "total_clicks_delivered" field.</summary>
+    public const int TotalClicksDeliveredFieldNumber = 53;
+    private readonly static long TotalClicksDeliveredDefaultValue = 0L;
+
+    private long totalClicksDelivered_;
+    /// <summary>
+    /// Output only. Total clicks delivered for all Line items of this `Order`.
+    /// This value is calculated from the associated `LineItem` values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long TotalClicksDelivered {
+      get { if ((_hasBits0 & 128) != 0) { return totalClicksDelivered_; } else { return TotalClicksDeliveredDefaultValue; } }
+      set {
+        _hasBits0 |= 128;
+        totalClicksDelivered_ = value;
+      }
+    }
+    /// <summary>Gets whether the "total_clicks_delivered" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTotalClicksDelivered {
+      get { return (_hasBits0 & 128) != 0; }
+    }
+    /// <summary>Clears the value of the "total_clicks_delivered" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTotalClicksDelivered() {
+      _hasBits0 &= ~128;
+    }
+
+    /// <summary>Field number for the "total_viewable_impressions_delivered" field.</summary>
+    public const int TotalViewableImpressionsDeliveredFieldNumber = 54;
+    private readonly static long TotalViewableImpressionsDeliveredDefaultValue = 0L;
+
+    private long totalViewableImpressionsDelivered_;
+    /// <summary>
+    /// Output only. Total viewable impressions delivered for all Line items of
+    /// this `Order`. This value is calculated from the associated `LineItem`
+    /// values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long TotalViewableImpressionsDelivered {
+      get { if ((_hasBits0 & 256) != 0) { return totalViewableImpressionsDelivered_; } else { return TotalViewableImpressionsDeliveredDefaultValue; } }
+      set {
+        _hasBits0 |= 256;
+        totalViewableImpressionsDelivered_ = value;
+      }
+    }
+    /// <summary>Gets whether the "total_viewable_impressions_delivered" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTotalViewableImpressionsDelivered {
+      get { return (_hasBits0 & 256) != 0; }
+    }
+    /// <summary>Clears the value of the "total_viewable_impressions_delivered" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTotalViewableImpressionsDelivered() {
+      _hasBits0 &= ~256;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -899,6 +1001,9 @@ namespace Google.Ads.AdManager.V1 {
       if(!appliedLabels_.Equals(other.appliedLabels_)) return false;
       if(!effectiveAppliedLabels_.Equals(other.effectiveAppliedLabels_)) return false;
       if(!customFieldValues_.Equals(other.customFieldValues_)) return false;
+      if (ImpressionsDelivered != other.ImpressionsDelivered) return false;
+      if (TotalClicksDelivered != other.TotalClicksDelivered) return false;
+      if (TotalViewableImpressionsDelivered != other.TotalViewableImpressionsDelivered) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -935,6 +1040,9 @@ namespace Google.Ads.AdManager.V1 {
       hash ^= appliedLabels_.GetHashCode();
       hash ^= effectiveAppliedLabels_.GetHashCode();
       hash ^= customFieldValues_.GetHashCode();
+      if (HasImpressionsDelivered) hash ^= ImpressionsDelivered.GetHashCode();
+      if (HasTotalClicksDelivered) hash ^= TotalClicksDelivered.GetHashCode();
+      if (HasTotalViewableImpressionsDelivered) hash ^= TotalViewableImpressionsDelivered.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1038,9 +1146,21 @@ namespace Google.Ads.AdManager.V1 {
       effectiveAppliedLabels_.WriteTo(output, _repeated_effectiveAppliedLabels_codec);
       effectiveTeams_.WriteTo(output, _repeated_effectiveTeams_codec);
       customFieldValues_.WriteTo(output, _repeated_customFieldValues_codec);
+      if (HasImpressionsDelivered) {
+        output.WriteRawTag(200, 2);
+        output.WriteInt64(ImpressionsDelivered);
+      }
       if (HasUnlimitedEndTime) {
         output.WriteRawTag(232, 2);
         output.WriteBool(UnlimitedEndTime);
+      }
+      if (HasTotalClicksDelivered) {
+        output.WriteRawTag(168, 3);
+        output.WriteInt64(TotalClicksDelivered);
+      }
+      if (HasTotalViewableImpressionsDelivered) {
+        output.WriteRawTag(176, 3);
+        output.WriteInt64(TotalViewableImpressionsDelivered);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1137,9 +1257,21 @@ namespace Google.Ads.AdManager.V1 {
       effectiveAppliedLabels_.WriteTo(ref output, _repeated_effectiveAppliedLabels_codec);
       effectiveTeams_.WriteTo(ref output, _repeated_effectiveTeams_codec);
       customFieldValues_.WriteTo(ref output, _repeated_customFieldValues_codec);
+      if (HasImpressionsDelivered) {
+        output.WriteRawTag(200, 2);
+        output.WriteInt64(ImpressionsDelivered);
+      }
       if (HasUnlimitedEndTime) {
         output.WriteRawTag(232, 2);
         output.WriteBool(UnlimitedEndTime);
+      }
+      if (HasTotalClicksDelivered) {
+        output.WriteRawTag(168, 3);
+        output.WriteInt64(TotalClicksDelivered);
+      }
+      if (HasTotalViewableImpressionsDelivered) {
+        output.WriteRawTag(176, 3);
+        output.WriteInt64(TotalViewableImpressionsDelivered);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1220,6 +1352,15 @@ namespace Google.Ads.AdManager.V1 {
       size += appliedLabels_.CalculateSize(_repeated_appliedLabels_codec);
       size += effectiveAppliedLabels_.CalculateSize(_repeated_effectiveAppliedLabels_codec);
       size += customFieldValues_.CalculateSize(_repeated_customFieldValues_codec);
+      if (HasImpressionsDelivered) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(ImpressionsDelivered);
+      }
+      if (HasTotalClicksDelivered) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(TotalClicksDelivered);
+      }
+      if (HasTotalViewableImpressionsDelivered) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(TotalViewableImpressionsDelivered);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1310,6 +1451,15 @@ namespace Google.Ads.AdManager.V1 {
       appliedLabels_.Add(other.appliedLabels_);
       effectiveAppliedLabels_.Add(other.effectiveAppliedLabels_);
       customFieldValues_.Add(other.customFieldValues_);
+      if (other.HasImpressionsDelivered) {
+        ImpressionsDelivered = other.ImpressionsDelivered;
+      }
+      if (other.HasTotalClicksDelivered) {
+        TotalClicksDelivered = other.TotalClicksDelivered;
+      }
+      if (other.HasTotalViewableImpressionsDelivered) {
+        TotalViewableImpressionsDelivered = other.TotalViewableImpressionsDelivered;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1450,8 +1600,20 @@ namespace Google.Ads.AdManager.V1 {
             customFieldValues_.AddEntriesFrom(input, _repeated_customFieldValues_codec);
             break;
           }
+          case 328: {
+            ImpressionsDelivered = input.ReadInt64();
+            break;
+          }
           case 360: {
             UnlimitedEndTime = input.ReadBool();
+            break;
+          }
+          case 424: {
+            TotalClicksDelivered = input.ReadInt64();
+            break;
+          }
+          case 432: {
+            TotalViewableImpressionsDelivered = input.ReadInt64();
             break;
           }
         }
@@ -1594,8 +1756,20 @@ namespace Google.Ads.AdManager.V1 {
             customFieldValues_.AddEntriesFrom(ref input, _repeated_customFieldValues_codec);
             break;
           }
+          case 328: {
+            ImpressionsDelivered = input.ReadInt64();
+            break;
+          }
           case 360: {
             UnlimitedEndTime = input.ReadBool();
+            break;
+          }
+          case 424: {
+            TotalClicksDelivered = input.ReadInt64();
+            break;
+          }
+          case 432: {
+            TotalViewableImpressionsDelivered = input.ReadInt64();
             break;
           }
         }

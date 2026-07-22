@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     using Google.Ads.AdManager.V1;
     using Google.Api.Gax;
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -390,6 +391,228 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateContentBundles</summary>
+        public void BatchActivateContentBundlesRequestObject()
+        {
+            // Snippet: BatchActivateContentBundles(BatchActivateContentBundlesRequest, CallSettings)
+            // Create client
+            ContentBundleServiceClient contentBundleServiceClient = ContentBundleServiceClient.Create();
+            // Initialize request argument(s)
+            BatchActivateContentBundlesRequest request = new BatchActivateContentBundlesRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                ContentBundleNames =
+                {
+                    ContentBundleName.FromNetworkCodeContentBundle("[NETWORK_CODE]", "[CONTENT_BUNDLE]"),
+                },
+            };
+            // Make the request
+            BatchActivateContentBundlesResponse response = contentBundleServiceClient.BatchActivateContentBundles(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateContentBundlesAsync</summary>
+        public async Task BatchActivateContentBundlesRequestObjectAsync()
+        {
+            // Snippet: BatchActivateContentBundlesAsync(BatchActivateContentBundlesRequest, CallSettings)
+            // Additional: BatchActivateContentBundlesAsync(BatchActivateContentBundlesRequest, CancellationToken)
+            // Create client
+            ContentBundleServiceClient contentBundleServiceClient = await ContentBundleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchActivateContentBundlesRequest request = new BatchActivateContentBundlesRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                ContentBundleNames =
+                {
+                    ContentBundleName.FromNetworkCodeContentBundle("[NETWORK_CODE]", "[CONTENT_BUNDLE]"),
+                },
+            };
+            // Make the request
+            BatchActivateContentBundlesResponse response = await contentBundleServiceClient.BatchActivateContentBundlesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateContentBundles</summary>
+        public void BatchActivateContentBundles()
+        {
+            // Snippet: BatchActivateContentBundles(string, IEnumerable<string>, CallSettings)
+            // Create client
+            ContentBundleServiceClient contentBundleServiceClient = ContentBundleServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/contentBundles/[CONTENT_BUNDLE]",
+            };
+            // Make the request
+            BatchActivateContentBundlesResponse response = contentBundleServiceClient.BatchActivateContentBundles(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateContentBundlesAsync</summary>
+        public async Task BatchActivateContentBundlesAsync()
+        {
+            // Snippet: BatchActivateContentBundlesAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchActivateContentBundlesAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            ContentBundleServiceClient contentBundleServiceClient = await ContentBundleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/contentBundles/[CONTENT_BUNDLE]",
+            };
+            // Make the request
+            BatchActivateContentBundlesResponse response = await contentBundleServiceClient.BatchActivateContentBundlesAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateContentBundles</summary>
+        public void BatchActivateContentBundlesResourceNames()
+        {
+            // Snippet: BatchActivateContentBundles(NetworkName, IEnumerable<ContentBundleName>, CallSettings)
+            // Create client
+            ContentBundleServiceClient contentBundleServiceClient = ContentBundleServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<ContentBundleName> names = new ContentBundleName[]
+            {
+                ContentBundleName.FromNetworkCodeContentBundle("[NETWORK_CODE]", "[CONTENT_BUNDLE]"),
+            };
+            // Make the request
+            BatchActivateContentBundlesResponse response = contentBundleServiceClient.BatchActivateContentBundles(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateContentBundlesAsync</summary>
+        public async Task BatchActivateContentBundlesResourceNamesAsync()
+        {
+            // Snippet: BatchActivateContentBundlesAsync(NetworkName, IEnumerable<ContentBundleName>, CallSettings)
+            // Additional: BatchActivateContentBundlesAsync(NetworkName, IEnumerable<ContentBundleName>, CancellationToken)
+            // Create client
+            ContentBundleServiceClient contentBundleServiceClient = await ContentBundleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<ContentBundleName> names = new ContentBundleName[]
+            {
+                ContentBundleName.FromNetworkCodeContentBundle("[NETWORK_CODE]", "[CONTENT_BUNDLE]"),
+            };
+            // Make the request
+            BatchActivateContentBundlesResponse response = await contentBundleServiceClient.BatchActivateContentBundlesAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateContentBundles</summary>
+        public void BatchDeactivateContentBundlesRequestObject()
+        {
+            // Snippet: BatchDeactivateContentBundles(BatchDeactivateContentBundlesRequest, CallSettings)
+            // Create client
+            ContentBundleServiceClient contentBundleServiceClient = ContentBundleServiceClient.Create();
+            // Initialize request argument(s)
+            BatchDeactivateContentBundlesRequest request = new BatchDeactivateContentBundlesRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                ContentBundleNames =
+                {
+                    ContentBundleName.FromNetworkCodeContentBundle("[NETWORK_CODE]", "[CONTENT_BUNDLE]"),
+                },
+            };
+            // Make the request
+            BatchDeactivateContentBundlesResponse response = contentBundleServiceClient.BatchDeactivateContentBundles(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateContentBundlesAsync</summary>
+        public async Task BatchDeactivateContentBundlesRequestObjectAsync()
+        {
+            // Snippet: BatchDeactivateContentBundlesAsync(BatchDeactivateContentBundlesRequest, CallSettings)
+            // Additional: BatchDeactivateContentBundlesAsync(BatchDeactivateContentBundlesRequest, CancellationToken)
+            // Create client
+            ContentBundleServiceClient contentBundleServiceClient = await ContentBundleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchDeactivateContentBundlesRequest request = new BatchDeactivateContentBundlesRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                ContentBundleNames =
+                {
+                    ContentBundleName.FromNetworkCodeContentBundle("[NETWORK_CODE]", "[CONTENT_BUNDLE]"),
+                },
+            };
+            // Make the request
+            BatchDeactivateContentBundlesResponse response = await contentBundleServiceClient.BatchDeactivateContentBundlesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateContentBundles</summary>
+        public void BatchDeactivateContentBundles()
+        {
+            // Snippet: BatchDeactivateContentBundles(string, IEnumerable<string>, CallSettings)
+            // Create client
+            ContentBundleServiceClient contentBundleServiceClient = ContentBundleServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/contentBundles/[CONTENT_BUNDLE]",
+            };
+            // Make the request
+            BatchDeactivateContentBundlesResponse response = contentBundleServiceClient.BatchDeactivateContentBundles(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateContentBundlesAsync</summary>
+        public async Task BatchDeactivateContentBundlesAsync()
+        {
+            // Snippet: BatchDeactivateContentBundlesAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchDeactivateContentBundlesAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            ContentBundleServiceClient contentBundleServiceClient = await ContentBundleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/contentBundles/[CONTENT_BUNDLE]",
+            };
+            // Make the request
+            BatchDeactivateContentBundlesResponse response = await contentBundleServiceClient.BatchDeactivateContentBundlesAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateContentBundles</summary>
+        public void BatchDeactivateContentBundlesResourceNames()
+        {
+            // Snippet: BatchDeactivateContentBundles(NetworkName, IEnumerable<ContentBundleName>, CallSettings)
+            // Create client
+            ContentBundleServiceClient contentBundleServiceClient = ContentBundleServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<ContentBundleName> names = new ContentBundleName[]
+            {
+                ContentBundleName.FromNetworkCodeContentBundle("[NETWORK_CODE]", "[CONTENT_BUNDLE]"),
+            };
+            // Make the request
+            BatchDeactivateContentBundlesResponse response = contentBundleServiceClient.BatchDeactivateContentBundles(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateContentBundlesAsync</summary>
+        public async Task BatchDeactivateContentBundlesResourceNamesAsync()
+        {
+            // Snippet: BatchDeactivateContentBundlesAsync(NetworkName, IEnumerable<ContentBundleName>, CallSettings)
+            // Additional: BatchDeactivateContentBundlesAsync(NetworkName, IEnumerable<ContentBundleName>, CancellationToken)
+            // Create client
+            ContentBundleServiceClient contentBundleServiceClient = await ContentBundleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<ContentBundleName> names = new ContentBundleName[]
+            {
+                ContentBundleName.FromNetworkCodeContentBundle("[NETWORK_CODE]", "[CONTENT_BUNDLE]"),
+            };
+            // Make the request
+            BatchDeactivateContentBundlesResponse response = await contentBundleServiceClient.BatchDeactivateContentBundlesAsync(parent, names);
             // End snippet
         }
     }

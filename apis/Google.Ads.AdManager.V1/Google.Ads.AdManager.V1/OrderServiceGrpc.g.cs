@@ -71,6 +71,78 @@ namespace Google.Ads.AdManager.V1 {
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListOrdersRequest> __Marshaller_google_ads_admanager_v1_ListOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListOrdersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListOrdersResponse> __Marshaller_google_ads_admanager_v1_ListOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateOrdersRequest> __Marshaller_google_ads_admanager_v1_BatchCreateOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateOrdersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateOrdersResponse> __Marshaller_google_ads_admanager_v1_BatchCreateOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateOrdersRequest> __Marshaller_google_ads_admanager_v1_BatchUpdateOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateOrdersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateOrdersResponse> __Marshaller_google_ads_admanager_v1_BatchUpdateOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchApproveOrdersRequest> __Marshaller_google_ads_admanager_v1_BatchApproveOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchApproveOrdersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchApproveOrdersResponse> __Marshaller_google_ads_admanager_v1_BatchApproveOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchApproveOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersRequest> __Marshaller_google_ads_admanager_v1_BatchApproveAndOverbookOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersResponse> __Marshaller_google_ads_admanager_v1_BatchApproveAndOverbookOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalRequest> __Marshaller_google_ads_admanager_v1_BatchSubmitOrdersForApprovalRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalResponse> __Marshaller_google_ads_admanager_v1_BatchSubmitOrdersForApprovalResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookRequest> __Marshaller_google_ads_admanager_v1_BatchSubmitOrdersForApprovalAndOverbookRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookResponse> __Marshaller_google_ads_admanager_v1_BatchSubmitOrdersForApprovalAndOverbookResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesRequest> __Marshaller_google_ads_admanager_v1_BatchSubmitOrdersForApprovalWithoutReservationChangesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesResponse> __Marshaller_google_ads_admanager_v1_BatchSubmitOrdersForApprovalWithoutReservationChangesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchPauseOrdersRequest> __Marshaller_google_ads_admanager_v1_BatchPauseOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchPauseOrdersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchPauseOrdersResponse> __Marshaller_google_ads_admanager_v1_BatchPauseOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchPauseOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchResumeOrdersRequest> __Marshaller_google_ads_admanager_v1_BatchResumeOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchResumeOrdersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchResumeOrdersResponse> __Marshaller_google_ads_admanager_v1_BatchResumeOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchResumeOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersRequest> __Marshaller_google_ads_admanager_v1_BatchResumeAndOverbookOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersResponse> __Marshaller_google_ads_admanager_v1_BatchResumeAndOverbookOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationRequest> __Marshaller_google_ads_admanager_v1_BatchApproveOrdersWithoutReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationResponse> __Marshaller_google_ads_admanager_v1_BatchApproveOrdersWithoutReservationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchArchiveOrdersRequest> __Marshaller_google_ads_admanager_v1_BatchArchiveOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchArchiveOrdersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchArchiveOrdersResponse> __Marshaller_google_ads_admanager_v1_BatchArchiveOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchArchiveOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersRequest> __Marshaller_google_ads_admanager_v1_BatchUnarchiveOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersResponse> __Marshaller_google_ads_admanager_v1_BatchUnarchiveOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeleteOrdersRequest> __Marshaller_google_ads_admanager_v1_BatchDeleteOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeleteOrdersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeleteOrdersResponse> __Marshaller_google_ads_admanager_v1_BatchDeleteOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeleteOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersRequest> __Marshaller_google_ads_admanager_v1_BatchDisapproveOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDisapproveOrdersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersResponse> __Marshaller_google_ads_admanager_v1_BatchDisapproveOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDisapproveOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesRequest> __Marshaller_google_ads_admanager_v1_BatchDisapproveOrdersWithoutReservationChangesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesResponse> __Marshaller_google_ads_admanager_v1_BatchDisapproveOrdersWithoutReservationChangesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchRetractOrdersRequest> __Marshaller_google_ads_admanager_v1_BatchRetractOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchRetractOrdersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchRetractOrdersResponse> __Marshaller_google_ads_admanager_v1_BatchRetractOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchRetractOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesRequest> __Marshaller_google_ads_admanager_v1_BatchRetractOrdersWithoutReservationChangesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesResponse> __Marshaller_google_ads_admanager_v1_BatchRetractOrdersWithoutReservationChangesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.GetOrderRequest, global::Google.Ads.AdManager.V1.Order> __Method_GetOrder = new grpc::Method<global::Google.Ads.AdManager.V1.GetOrderRequest, global::Google.Ads.AdManager.V1.Order>(
@@ -87,6 +159,150 @@ namespace Google.Ads.AdManager.V1 {
         "ListOrders",
         __Marshaller_google_ads_admanager_v1_ListOrdersRequest,
         __Marshaller_google_ads_admanager_v1_ListOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateOrdersRequest, global::Google.Ads.AdManager.V1.BatchCreateOrdersResponse> __Method_BatchCreateOrders = new grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateOrdersRequest, global::Google.Ads.AdManager.V1.BatchCreateOrdersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateOrders",
+        __Marshaller_google_ads_admanager_v1_BatchCreateOrdersRequest,
+        __Marshaller_google_ads_admanager_v1_BatchCreateOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateOrdersRequest, global::Google.Ads.AdManager.V1.BatchUpdateOrdersResponse> __Method_BatchUpdateOrders = new grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateOrdersRequest, global::Google.Ads.AdManager.V1.BatchUpdateOrdersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdateOrders",
+        __Marshaller_google_ads_admanager_v1_BatchUpdateOrdersRequest,
+        __Marshaller_google_ads_admanager_v1_BatchUpdateOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchApproveOrdersRequest, global::Google.Ads.AdManager.V1.BatchApproveOrdersResponse> __Method_BatchApproveOrders = new grpc::Method<global::Google.Ads.AdManager.V1.BatchApproveOrdersRequest, global::Google.Ads.AdManager.V1.BatchApproveOrdersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchApproveOrders",
+        __Marshaller_google_ads_admanager_v1_BatchApproveOrdersRequest,
+        __Marshaller_google_ads_admanager_v1_BatchApproveOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersRequest, global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersResponse> __Method_BatchApproveAndOverbookOrders = new grpc::Method<global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersRequest, global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchApproveAndOverbookOrders",
+        __Marshaller_google_ads_admanager_v1_BatchApproveAndOverbookOrdersRequest,
+        __Marshaller_google_ads_admanager_v1_BatchApproveAndOverbookOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalRequest, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalResponse> __Method_BatchSubmitOrdersForApproval = new grpc::Method<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalRequest, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchSubmitOrdersForApproval",
+        __Marshaller_google_ads_admanager_v1_BatchSubmitOrdersForApprovalRequest,
+        __Marshaller_google_ads_admanager_v1_BatchSubmitOrdersForApprovalResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookRequest, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookResponse> __Method_BatchSubmitOrdersForApprovalAndOverbook = new grpc::Method<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookRequest, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchSubmitOrdersForApprovalAndOverbook",
+        __Marshaller_google_ads_admanager_v1_BatchSubmitOrdersForApprovalAndOverbookRequest,
+        __Marshaller_google_ads_admanager_v1_BatchSubmitOrdersForApprovalAndOverbookResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesRequest, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesResponse> __Method_BatchSubmitOrdersForApprovalWithoutReservationChanges = new grpc::Method<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesRequest, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchSubmitOrdersForApprovalWithoutReservationChanges",
+        __Marshaller_google_ads_admanager_v1_BatchSubmitOrdersForApprovalWithoutReservationChangesRequest,
+        __Marshaller_google_ads_admanager_v1_BatchSubmitOrdersForApprovalWithoutReservationChangesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchPauseOrdersRequest, global::Google.Ads.AdManager.V1.BatchPauseOrdersResponse> __Method_BatchPauseOrders = new grpc::Method<global::Google.Ads.AdManager.V1.BatchPauseOrdersRequest, global::Google.Ads.AdManager.V1.BatchPauseOrdersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchPauseOrders",
+        __Marshaller_google_ads_admanager_v1_BatchPauseOrdersRequest,
+        __Marshaller_google_ads_admanager_v1_BatchPauseOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchResumeOrdersRequest, global::Google.Ads.AdManager.V1.BatchResumeOrdersResponse> __Method_BatchResumeOrders = new grpc::Method<global::Google.Ads.AdManager.V1.BatchResumeOrdersRequest, global::Google.Ads.AdManager.V1.BatchResumeOrdersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchResumeOrders",
+        __Marshaller_google_ads_admanager_v1_BatchResumeOrdersRequest,
+        __Marshaller_google_ads_admanager_v1_BatchResumeOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersRequest, global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersResponse> __Method_BatchResumeAndOverbookOrders = new grpc::Method<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersRequest, global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchResumeAndOverbookOrders",
+        __Marshaller_google_ads_admanager_v1_BatchResumeAndOverbookOrdersRequest,
+        __Marshaller_google_ads_admanager_v1_BatchResumeAndOverbookOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationRequest, global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationResponse> __Method_BatchApproveOrdersWithoutReservation = new grpc::Method<global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationRequest, global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchApproveOrdersWithoutReservation",
+        __Marshaller_google_ads_admanager_v1_BatchApproveOrdersWithoutReservationRequest,
+        __Marshaller_google_ads_admanager_v1_BatchApproveOrdersWithoutReservationResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchArchiveOrdersRequest, global::Google.Ads.AdManager.V1.BatchArchiveOrdersResponse> __Method_BatchArchiveOrders = new grpc::Method<global::Google.Ads.AdManager.V1.BatchArchiveOrdersRequest, global::Google.Ads.AdManager.V1.BatchArchiveOrdersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchArchiveOrders",
+        __Marshaller_google_ads_admanager_v1_BatchArchiveOrdersRequest,
+        __Marshaller_google_ads_admanager_v1_BatchArchiveOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersRequest, global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersResponse> __Method_BatchUnarchiveOrders = new grpc::Method<global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersRequest, global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUnarchiveOrders",
+        __Marshaller_google_ads_admanager_v1_BatchUnarchiveOrdersRequest,
+        __Marshaller_google_ads_admanager_v1_BatchUnarchiveOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchDeleteOrdersRequest, global::Google.Ads.AdManager.V1.BatchDeleteOrdersResponse> __Method_BatchDeleteOrders = new grpc::Method<global::Google.Ads.AdManager.V1.BatchDeleteOrdersRequest, global::Google.Ads.AdManager.V1.BatchDeleteOrdersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeleteOrders",
+        __Marshaller_google_ads_admanager_v1_BatchDeleteOrdersRequest,
+        __Marshaller_google_ads_admanager_v1_BatchDeleteOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersRequest, global::Google.Ads.AdManager.V1.BatchDisapproveOrdersResponse> __Method_BatchDisapproveOrders = new grpc::Method<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersRequest, global::Google.Ads.AdManager.V1.BatchDisapproveOrdersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDisapproveOrders",
+        __Marshaller_google_ads_admanager_v1_BatchDisapproveOrdersRequest,
+        __Marshaller_google_ads_admanager_v1_BatchDisapproveOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesRequest, global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesResponse> __Method_BatchDisapproveOrdersWithoutReservationChanges = new grpc::Method<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesRequest, global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDisapproveOrdersWithoutReservationChanges",
+        __Marshaller_google_ads_admanager_v1_BatchDisapproveOrdersWithoutReservationChangesRequest,
+        __Marshaller_google_ads_admanager_v1_BatchDisapproveOrdersWithoutReservationChangesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchRetractOrdersRequest, global::Google.Ads.AdManager.V1.BatchRetractOrdersResponse> __Method_BatchRetractOrders = new grpc::Method<global::Google.Ads.AdManager.V1.BatchRetractOrdersRequest, global::Google.Ads.AdManager.V1.BatchRetractOrdersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchRetractOrders",
+        __Marshaller_google_ads_admanager_v1_BatchRetractOrdersRequest,
+        __Marshaller_google_ads_admanager_v1_BatchRetractOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesRequest, global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesResponse> __Method_BatchRetractOrdersWithoutReservationChanges = new grpc::Method<global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesRequest, global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchRetractOrdersWithoutReservationChanges",
+        __Marshaller_google_ads_admanager_v1_BatchRetractOrdersWithoutReservationChangesRequest,
+        __Marshaller_google_ads_admanager_v1_BatchRetractOrdersWithoutReservationChangesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -123,6 +339,223 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.ListOrdersResponse> ListOrders(global::Google.Ads.AdManager.V1.ListOrdersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates `Order` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchCreateOrdersResponse> BatchCreateOrders(global::Google.Ads.AdManager.V1.BatchCreateOrdersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch updates `Order` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchUpdateOrdersResponse> BatchUpdateOrders(global::Google.Ads.AdManager.V1.BatchUpdateOrdersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Approves a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchApproveOrdersResponse> BatchApproveOrders(global::Google.Ads.AdManager.V1.BatchApproveOrdersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Approves and overbooks a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersResponse> BatchApproveAndOverbookOrders(global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Submits a list of `Order` objects for approval.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalResponse> BatchSubmitOrdersForApproval(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Submits and overbooks a list of `Order` objects for approval.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookResponse> BatchSubmitOrdersForApprovalAndOverbook(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Submits a list of `Order` objects for approval without changing reservation
+      /// status.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesResponse> BatchSubmitOrdersForApprovalWithoutReservationChanges(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Pauses a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchPauseOrdersResponse> BatchPauseOrders(global::Google.Ads.AdManager.V1.BatchPauseOrdersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Resumes a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchResumeOrdersResponse> BatchResumeOrders(global::Google.Ads.AdManager.V1.BatchResumeOrdersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Resumes and overbooks a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersResponse> BatchResumeAndOverbookOrders(global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Approves a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationResponse> BatchApproveOrdersWithoutReservation(global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Archives a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchArchiveOrdersResponse> BatchArchiveOrders(global::Google.Ads.AdManager.V1.BatchArchiveOrdersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Unarchives a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersResponse> BatchUnarchiveOrders(global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchDeleteOrdersResponse> BatchDeleteOrders(global::Google.Ads.AdManager.V1.BatchDeleteOrdersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Disapproves a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersResponse> BatchDisapproveOrders(global::Google.Ads.AdManager.V1.BatchDisapproveOrdersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Disapproves a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesResponse> BatchDisapproveOrdersWithoutReservationChanges(global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retracts a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchRetractOrdersResponse> BatchRetractOrders(global::Google.Ads.AdManager.V1.BatchRetractOrdersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retracts a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesResponse> BatchRetractOrdersWithoutReservationChanges(global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -272,6 +705,874 @@ namespace Google.Ads.AdManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListOrders, null, options, request);
       }
+      /// <summary>
+      /// Creates `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateOrdersResponse BatchCreateOrders(global::Google.Ads.AdManager.V1.BatchCreateOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateOrders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateOrdersResponse BatchCreateOrders(global::Google.Ads.AdManager.V1.BatchCreateOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateOrders, null, options, request);
+      }
+      /// <summary>
+      /// Creates `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateOrdersResponse> BatchCreateOrdersAsync(global::Google.Ads.AdManager.V1.BatchCreateOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateOrdersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateOrdersResponse> BatchCreateOrdersAsync(global::Google.Ads.AdManager.V1.BatchCreateOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateOrders, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateOrdersResponse BatchUpdateOrders(global::Google.Ads.AdManager.V1.BatchUpdateOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateOrders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateOrdersResponse BatchUpdateOrders(global::Google.Ads.AdManager.V1.BatchUpdateOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateOrders, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateOrdersResponse> BatchUpdateOrdersAsync(global::Google.Ads.AdManager.V1.BatchUpdateOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateOrdersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateOrdersResponse> BatchUpdateOrdersAsync(global::Google.Ads.AdManager.V1.BatchUpdateOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateOrders, null, options, request);
+      }
+      /// <summary>
+      /// Approves a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchApproveOrdersResponse BatchApproveOrders(global::Google.Ads.AdManager.V1.BatchApproveOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchApproveOrders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Approves a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchApproveOrdersResponse BatchApproveOrders(global::Google.Ads.AdManager.V1.BatchApproveOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchApproveOrders, null, options, request);
+      }
+      /// <summary>
+      /// Approves a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchApproveOrdersResponse> BatchApproveOrdersAsync(global::Google.Ads.AdManager.V1.BatchApproveOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchApproveOrdersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Approves a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchApproveOrdersResponse> BatchApproveOrdersAsync(global::Google.Ads.AdManager.V1.BatchApproveOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchApproveOrders, null, options, request);
+      }
+      /// <summary>
+      /// Approves and overbooks a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersResponse BatchApproveAndOverbookOrders(global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchApproveAndOverbookOrders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Approves and overbooks a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersResponse BatchApproveAndOverbookOrders(global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchApproveAndOverbookOrders, null, options, request);
+      }
+      /// <summary>
+      /// Approves and overbooks a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersResponse> BatchApproveAndOverbookOrdersAsync(global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchApproveAndOverbookOrdersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Approves and overbooks a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersResponse> BatchApproveAndOverbookOrdersAsync(global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchApproveAndOverbookOrders, null, options, request);
+      }
+      /// <summary>
+      /// Submits a list of `Order` objects for approval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalResponse BatchSubmitOrdersForApproval(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchSubmitOrdersForApproval(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submits a list of `Order` objects for approval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalResponse BatchSubmitOrdersForApproval(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchSubmitOrdersForApproval, null, options, request);
+      }
+      /// <summary>
+      /// Submits a list of `Order` objects for approval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalResponse> BatchSubmitOrdersForApprovalAsync(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchSubmitOrdersForApprovalAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submits a list of `Order` objects for approval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalResponse> BatchSubmitOrdersForApprovalAsync(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchSubmitOrdersForApproval, null, options, request);
+      }
+      /// <summary>
+      /// Submits and overbooks a list of `Order` objects for approval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookResponse BatchSubmitOrdersForApprovalAndOverbook(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchSubmitOrdersForApprovalAndOverbook(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submits and overbooks a list of `Order` objects for approval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookResponse BatchSubmitOrdersForApprovalAndOverbook(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchSubmitOrdersForApprovalAndOverbook, null, options, request);
+      }
+      /// <summary>
+      /// Submits and overbooks a list of `Order` objects for approval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookResponse> BatchSubmitOrdersForApprovalAndOverbookAsync(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchSubmitOrdersForApprovalAndOverbookAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submits and overbooks a list of `Order` objects for approval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookResponse> BatchSubmitOrdersForApprovalAndOverbookAsync(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchSubmitOrdersForApprovalAndOverbook, null, options, request);
+      }
+      /// <summary>
+      /// Submits a list of `Order` objects for approval without changing reservation
+      /// status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesResponse BatchSubmitOrdersForApprovalWithoutReservationChanges(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchSubmitOrdersForApprovalWithoutReservationChanges(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submits a list of `Order` objects for approval without changing reservation
+      /// status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesResponse BatchSubmitOrdersForApprovalWithoutReservationChanges(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchSubmitOrdersForApprovalWithoutReservationChanges, null, options, request);
+      }
+      /// <summary>
+      /// Submits a list of `Order` objects for approval without changing reservation
+      /// status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesResponse> BatchSubmitOrdersForApprovalWithoutReservationChangesAsync(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchSubmitOrdersForApprovalWithoutReservationChangesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Submits a list of `Order` objects for approval without changing reservation
+      /// status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesResponse> BatchSubmitOrdersForApprovalWithoutReservationChangesAsync(global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchSubmitOrdersForApprovalWithoutReservationChanges, null, options, request);
+      }
+      /// <summary>
+      /// Pauses a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchPauseOrdersResponse BatchPauseOrders(global::Google.Ads.AdManager.V1.BatchPauseOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchPauseOrders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Pauses a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchPauseOrdersResponse BatchPauseOrders(global::Google.Ads.AdManager.V1.BatchPauseOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchPauseOrders, null, options, request);
+      }
+      /// <summary>
+      /// Pauses a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchPauseOrdersResponse> BatchPauseOrdersAsync(global::Google.Ads.AdManager.V1.BatchPauseOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchPauseOrdersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Pauses a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchPauseOrdersResponse> BatchPauseOrdersAsync(global::Google.Ads.AdManager.V1.BatchPauseOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchPauseOrders, null, options, request);
+      }
+      /// <summary>
+      /// Resumes a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchResumeOrdersResponse BatchResumeOrders(global::Google.Ads.AdManager.V1.BatchResumeOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchResumeOrders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Resumes a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchResumeOrdersResponse BatchResumeOrders(global::Google.Ads.AdManager.V1.BatchResumeOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchResumeOrders, null, options, request);
+      }
+      /// <summary>
+      /// Resumes a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchResumeOrdersResponse> BatchResumeOrdersAsync(global::Google.Ads.AdManager.V1.BatchResumeOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchResumeOrdersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Resumes a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchResumeOrdersResponse> BatchResumeOrdersAsync(global::Google.Ads.AdManager.V1.BatchResumeOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchResumeOrders, null, options, request);
+      }
+      /// <summary>
+      /// Resumes and overbooks a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersResponse BatchResumeAndOverbookOrders(global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchResumeAndOverbookOrders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Resumes and overbooks a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersResponse BatchResumeAndOverbookOrders(global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchResumeAndOverbookOrders, null, options, request);
+      }
+      /// <summary>
+      /// Resumes and overbooks a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersResponse> BatchResumeAndOverbookOrdersAsync(global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchResumeAndOverbookOrdersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Resumes and overbooks a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersResponse> BatchResumeAndOverbookOrdersAsync(global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchResumeAndOverbookOrders, null, options, request);
+      }
+      /// <summary>
+      /// Approves a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationResponse BatchApproveOrdersWithoutReservation(global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchApproveOrdersWithoutReservation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Approves a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationResponse BatchApproveOrdersWithoutReservation(global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchApproveOrdersWithoutReservation, null, options, request);
+      }
+      /// <summary>
+      /// Approves a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationResponse> BatchApproveOrdersWithoutReservationAsync(global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchApproveOrdersWithoutReservationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Approves a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationResponse> BatchApproveOrdersWithoutReservationAsync(global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchApproveOrdersWithoutReservation, null, options, request);
+      }
+      /// <summary>
+      /// Archives a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchArchiveOrdersResponse BatchArchiveOrders(global::Google.Ads.AdManager.V1.BatchArchiveOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchArchiveOrders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Archives a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchArchiveOrdersResponse BatchArchiveOrders(global::Google.Ads.AdManager.V1.BatchArchiveOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchArchiveOrders, null, options, request);
+      }
+      /// <summary>
+      /// Archives a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchArchiveOrdersResponse> BatchArchiveOrdersAsync(global::Google.Ads.AdManager.V1.BatchArchiveOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchArchiveOrdersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Archives a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchArchiveOrdersResponse> BatchArchiveOrdersAsync(global::Google.Ads.AdManager.V1.BatchArchiveOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchArchiveOrders, null, options, request);
+      }
+      /// <summary>
+      /// Unarchives a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersResponse BatchUnarchiveOrders(global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUnarchiveOrders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Unarchives a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersResponse BatchUnarchiveOrders(global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUnarchiveOrders, null, options, request);
+      }
+      /// <summary>
+      /// Unarchives a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersResponse> BatchUnarchiveOrdersAsync(global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUnarchiveOrdersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Unarchives a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersResponse> BatchUnarchiveOrdersAsync(global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUnarchiveOrders, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeleteOrdersResponse BatchDeleteOrders(global::Google.Ads.AdManager.V1.BatchDeleteOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteOrders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeleteOrdersResponse BatchDeleteOrders(global::Google.Ads.AdManager.V1.BatchDeleteOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeleteOrders, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeleteOrdersResponse> BatchDeleteOrdersAsync(global::Google.Ads.AdManager.V1.BatchDeleteOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeleteOrdersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeleteOrdersResponse> BatchDeleteOrdersAsync(global::Google.Ads.AdManager.V1.BatchDeleteOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteOrders, null, options, request);
+      }
+      /// <summary>
+      /// Disapproves a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDisapproveOrdersResponse BatchDisapproveOrders(global::Google.Ads.AdManager.V1.BatchDisapproveOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDisapproveOrders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disapproves a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDisapproveOrdersResponse BatchDisapproveOrders(global::Google.Ads.AdManager.V1.BatchDisapproveOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDisapproveOrders, null, options, request);
+      }
+      /// <summary>
+      /// Disapproves a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersResponse> BatchDisapproveOrdersAsync(global::Google.Ads.AdManager.V1.BatchDisapproveOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDisapproveOrdersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disapproves a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersResponse> BatchDisapproveOrdersAsync(global::Google.Ads.AdManager.V1.BatchDisapproveOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDisapproveOrders, null, options, request);
+      }
+      /// <summary>
+      /// Disapproves a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesResponse BatchDisapproveOrdersWithoutReservationChanges(global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDisapproveOrdersWithoutReservationChanges(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disapproves a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesResponse BatchDisapproveOrdersWithoutReservationChanges(global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDisapproveOrdersWithoutReservationChanges, null, options, request);
+      }
+      /// <summary>
+      /// Disapproves a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesResponse> BatchDisapproveOrdersWithoutReservationChangesAsync(global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDisapproveOrdersWithoutReservationChangesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disapproves a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesResponse> BatchDisapproveOrdersWithoutReservationChangesAsync(global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDisapproveOrdersWithoutReservationChanges, null, options, request);
+      }
+      /// <summary>
+      /// Retracts a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchRetractOrdersResponse BatchRetractOrders(global::Google.Ads.AdManager.V1.BatchRetractOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchRetractOrders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retracts a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchRetractOrdersResponse BatchRetractOrders(global::Google.Ads.AdManager.V1.BatchRetractOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchRetractOrders, null, options, request);
+      }
+      /// <summary>
+      /// Retracts a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchRetractOrdersResponse> BatchRetractOrdersAsync(global::Google.Ads.AdManager.V1.BatchRetractOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchRetractOrdersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retracts a list of `Order` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchRetractOrdersResponse> BatchRetractOrdersAsync(global::Google.Ads.AdManager.V1.BatchRetractOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchRetractOrders, null, options, request);
+      }
+      /// <summary>
+      /// Retracts a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesResponse BatchRetractOrdersWithoutReservationChanges(global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchRetractOrdersWithoutReservationChanges(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retracts a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesResponse BatchRetractOrdersWithoutReservationChanges(global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchRetractOrdersWithoutReservationChanges, null, options, request);
+      }
+      /// <summary>
+      /// Retracts a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesResponse> BatchRetractOrdersWithoutReservationChangesAsync(global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchRetractOrdersWithoutReservationChangesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retracts a list of `Order` objects without changing reservation status.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesResponse> BatchRetractOrdersWithoutReservationChangesAsync(global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchRetractOrdersWithoutReservationChanges, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override OrderServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -287,7 +1588,25 @@ namespace Google.Ads.AdManager.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetOrder, serviceImpl.GetOrder)
-          .AddMethod(__Method_ListOrders, serviceImpl.ListOrders).Build();
+          .AddMethod(__Method_ListOrders, serviceImpl.ListOrders)
+          .AddMethod(__Method_BatchCreateOrders, serviceImpl.BatchCreateOrders)
+          .AddMethod(__Method_BatchUpdateOrders, serviceImpl.BatchUpdateOrders)
+          .AddMethod(__Method_BatchApproveOrders, serviceImpl.BatchApproveOrders)
+          .AddMethod(__Method_BatchApproveAndOverbookOrders, serviceImpl.BatchApproveAndOverbookOrders)
+          .AddMethod(__Method_BatchSubmitOrdersForApproval, serviceImpl.BatchSubmitOrdersForApproval)
+          .AddMethod(__Method_BatchSubmitOrdersForApprovalAndOverbook, serviceImpl.BatchSubmitOrdersForApprovalAndOverbook)
+          .AddMethod(__Method_BatchSubmitOrdersForApprovalWithoutReservationChanges, serviceImpl.BatchSubmitOrdersForApprovalWithoutReservationChanges)
+          .AddMethod(__Method_BatchPauseOrders, serviceImpl.BatchPauseOrders)
+          .AddMethod(__Method_BatchResumeOrders, serviceImpl.BatchResumeOrders)
+          .AddMethod(__Method_BatchResumeAndOverbookOrders, serviceImpl.BatchResumeAndOverbookOrders)
+          .AddMethod(__Method_BatchApproveOrdersWithoutReservation, serviceImpl.BatchApproveOrdersWithoutReservation)
+          .AddMethod(__Method_BatchArchiveOrders, serviceImpl.BatchArchiveOrders)
+          .AddMethod(__Method_BatchUnarchiveOrders, serviceImpl.BatchUnarchiveOrders)
+          .AddMethod(__Method_BatchDeleteOrders, serviceImpl.BatchDeleteOrders)
+          .AddMethod(__Method_BatchDisapproveOrders, serviceImpl.BatchDisapproveOrders)
+          .AddMethod(__Method_BatchDisapproveOrdersWithoutReservationChanges, serviceImpl.BatchDisapproveOrdersWithoutReservationChanges)
+          .AddMethod(__Method_BatchRetractOrders, serviceImpl.BatchRetractOrders)
+          .AddMethod(__Method_BatchRetractOrdersWithoutReservationChanges, serviceImpl.BatchRetractOrdersWithoutReservationChanges).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -299,6 +1618,24 @@ namespace Google.Ads.AdManager.V1 {
     {
       serviceBinder.AddMethod(__Method_GetOrder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.GetOrderRequest, global::Google.Ads.AdManager.V1.Order>(serviceImpl.GetOrder));
       serviceBinder.AddMethod(__Method_ListOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListOrdersRequest, global::Google.Ads.AdManager.V1.ListOrdersResponse>(serviceImpl.ListOrders));
+      serviceBinder.AddMethod(__Method_BatchCreateOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchCreateOrdersRequest, global::Google.Ads.AdManager.V1.BatchCreateOrdersResponse>(serviceImpl.BatchCreateOrders));
+      serviceBinder.AddMethod(__Method_BatchUpdateOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUpdateOrdersRequest, global::Google.Ads.AdManager.V1.BatchUpdateOrdersResponse>(serviceImpl.BatchUpdateOrders));
+      serviceBinder.AddMethod(__Method_BatchApproveOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchApproveOrdersRequest, global::Google.Ads.AdManager.V1.BatchApproveOrdersResponse>(serviceImpl.BatchApproveOrders));
+      serviceBinder.AddMethod(__Method_BatchApproveAndOverbookOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersRequest, global::Google.Ads.AdManager.V1.BatchApproveAndOverbookOrdersResponse>(serviceImpl.BatchApproveAndOverbookOrders));
+      serviceBinder.AddMethod(__Method_BatchSubmitOrdersForApproval, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalRequest, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalResponse>(serviceImpl.BatchSubmitOrdersForApproval));
+      serviceBinder.AddMethod(__Method_BatchSubmitOrdersForApprovalAndOverbook, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookRequest, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalAndOverbookResponse>(serviceImpl.BatchSubmitOrdersForApprovalAndOverbook));
+      serviceBinder.AddMethod(__Method_BatchSubmitOrdersForApprovalWithoutReservationChanges, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesRequest, global::Google.Ads.AdManager.V1.BatchSubmitOrdersForApprovalWithoutReservationChangesResponse>(serviceImpl.BatchSubmitOrdersForApprovalWithoutReservationChanges));
+      serviceBinder.AddMethod(__Method_BatchPauseOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchPauseOrdersRequest, global::Google.Ads.AdManager.V1.BatchPauseOrdersResponse>(serviceImpl.BatchPauseOrders));
+      serviceBinder.AddMethod(__Method_BatchResumeOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchResumeOrdersRequest, global::Google.Ads.AdManager.V1.BatchResumeOrdersResponse>(serviceImpl.BatchResumeOrders));
+      serviceBinder.AddMethod(__Method_BatchResumeAndOverbookOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersRequest, global::Google.Ads.AdManager.V1.BatchResumeAndOverbookOrdersResponse>(serviceImpl.BatchResumeAndOverbookOrders));
+      serviceBinder.AddMethod(__Method_BatchApproveOrdersWithoutReservation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationRequest, global::Google.Ads.AdManager.V1.BatchApproveOrdersWithoutReservationResponse>(serviceImpl.BatchApproveOrdersWithoutReservation));
+      serviceBinder.AddMethod(__Method_BatchArchiveOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchArchiveOrdersRequest, global::Google.Ads.AdManager.V1.BatchArchiveOrdersResponse>(serviceImpl.BatchArchiveOrders));
+      serviceBinder.AddMethod(__Method_BatchUnarchiveOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersRequest, global::Google.Ads.AdManager.V1.BatchUnarchiveOrdersResponse>(serviceImpl.BatchUnarchiveOrders));
+      serviceBinder.AddMethod(__Method_BatchDeleteOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDeleteOrdersRequest, global::Google.Ads.AdManager.V1.BatchDeleteOrdersResponse>(serviceImpl.BatchDeleteOrders));
+      serviceBinder.AddMethod(__Method_BatchDisapproveOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersRequest, global::Google.Ads.AdManager.V1.BatchDisapproveOrdersResponse>(serviceImpl.BatchDisapproveOrders));
+      serviceBinder.AddMethod(__Method_BatchDisapproveOrdersWithoutReservationChanges, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesRequest, global::Google.Ads.AdManager.V1.BatchDisapproveOrdersWithoutReservationChangesResponse>(serviceImpl.BatchDisapproveOrdersWithoutReservationChanges));
+      serviceBinder.AddMethod(__Method_BatchRetractOrders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchRetractOrdersRequest, global::Google.Ads.AdManager.V1.BatchRetractOrdersResponse>(serviceImpl.BatchRetractOrders));
+      serviceBinder.AddMethod(__Method_BatchRetractOrdersWithoutReservationChanges, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesRequest, global::Google.Ads.AdManager.V1.BatchRetractOrdersWithoutReservationChangesResponse>(serviceImpl.BatchRetractOrdersWithoutReservationChanges));
     }
 
   }

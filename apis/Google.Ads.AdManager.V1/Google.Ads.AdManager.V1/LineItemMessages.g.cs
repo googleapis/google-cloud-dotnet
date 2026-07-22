@@ -25,38 +25,166 @@ namespace Google.Ads.AdManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjBnb29nbGUvYWRzL2FkbWFuYWdlci92MS9saW5lX2l0ZW1fbWVzc2FnZXMu",
-            "cHJvdG8SF2dvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxGjBnb29nbGUvYWRzL2Fk",
-            "bWFuYWdlci92MS9jdXN0b21fZmllbGRfdmFsdWUucHJvdG8aImdvb2dsZS9h",
-            "ZHMvYWRtYW5hZ2VyL3YxL2dvYWwucHJvdG8aLWdvb2dsZS9hZHMvYWRtYW5h",
-            "Z2VyL3YxL2xpbmVfaXRlbV9lbnVtcy5wcm90bxofZ29vZ2xlL2FwaS9maWVs",
-            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3R5cGUv",
-            "bW9uZXkucHJvdG8i+QUKCExpbmVJdGVtEhEKBG5hbWUYASABKAlCA+BBCBI9",
-            "CgVvcmRlchgCIAEoCUIp4EEC4EEF+kEgCh5hZG1hbmFnZXIuZ29vZ2xlYXBp",
-            "cy5jb20vT3JkZXJIAIgBARIeCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAkgB",
-            "iAEBEjgKCnN0YXJ0X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQJIAogBARI2CghlbmRfdGltZRgHIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBA0gDiAEBElgKDmxpbmVfaXRlbV90eXBl",
-            "GBEgASgOMjYuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuTGluZUl0ZW1UeXBl",
-            "RW51bS5MaW5lSXRlbVR5cGVCA+BBAkgEiAEBEioKBHJhdGUYFCABKAsyEi5n",
-            "b29nbGUudHlwZS5Nb25leUID4EECSAWIAQESLAoGYnVkZ2V0GCMgASgLMhIu",
-            "Z29vZ2xlLnR5cGUuTW9uZXlCA+BBA0gGiAEBEksKE2N1c3RvbV9maWVsZF92",
-            "YWx1ZXMYOyADKAsyKS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DdXN0b21G",
-            "aWVsZFZhbHVlQgPgQQESNQoEZ29hbBhMIAEoCzIdLmdvb2dsZS5hZHMuYWRt",
-            "YW5hZ2VyLnYxLkdvYWxCA+BBAUgHiAEBOmrqQWcKIWFkbWFuYWdlci5nb29n",
-            "bGVhcGlzLmNvbS9MaW5lSXRlbRItbmV0d29ya3Mve25ldHdvcmtfY29kZX0v",
-            "bGluZUl0ZW1zL3tsaW5lX2l0ZW19KglsaW5lSXRlbXMyCGxpbmVJdGVtQggK",
-            "Bl9vcmRlckIPCg1fZGlzcGxheV9uYW1lQg0KC19zdGFydF90aW1lQgsKCV9l",
-            "bmRfdGltZUIRCg9fbGluZV9pdGVtX3R5cGVCBwoFX3JhdGVCCQoHX2J1ZGdl",
-            "dEIHCgVfZ29hbELJAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhVM",
-            "aW5lSXRlbU1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoC",
-            "F0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFn",
-            "ZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "cHJvdG8SF2dvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxGitnb29nbGUvYWRzL2Fk",
+            "bWFuYWdlci92MS9hcHBsaWVkX2xhYmVsLnByb3RvGjxnb29nbGUvYWRzL2Fk",
+            "bWFuYWdlci92MS9jaGlsZF9jb250ZW50X2VsaWdpYmlsaXR5X2VudW0ucHJv",
+            "dG8aMmdvb2dsZS9hZHMvYWRtYW5hZ2VyL3YxL2NyZWF0aXZlX3BsYWNlaG9s",
+            "ZGVyLnByb3RvGjBnb29nbGUvYWRzL2FkbWFuYWdlci92MS9jcmVhdGl2ZV90",
+            "YXJnZXRpbmcucHJvdG8aMGdvb2dsZS9hZHMvYWRtYW5hZ2VyL3YxL2N1c3Rv",
+            "bV9maWVsZF92YWx1ZS5wcm90bxoxZ29vZ2xlL2Fkcy9hZG1hbmFnZXIvdjEv",
+            "Y3VzdG9tX3BhY2luZ19jdXJ2ZS5wcm90bxosZ29vZ2xlL2Fkcy9hZG1hbmFn",
+            "ZXIvdjEvZGVsaXZlcnlfZW51bXMucHJvdG8aMGdvb2dsZS9hZHMvYWRtYW5h",
+            "Z2VyL3YxL2RlbGl2ZXJ5X2luZGljYXRvci5wcm90bxozZ29vZ2xlL2Fkcy9h",
+            "ZG1hbmFnZXIvdjEvZW52aXJvbm1lbnRfdHlwZV9lbnVtLnByb3RvGjJnb29n",
+            "bGUvYWRzL2FkbWFuYWdlci92MS9leGNsdXNpb25fc2NvcGVfZW51bS5wcm90",
+            "bxorZ29vZ2xlL2Fkcy9hZG1hbmFnZXIvdjEvZnJlcXVlbmN5X2NhcC5wcm90",
+            "bxoiZ29vZ2xlL2Fkcy9hZG1hbmFnZXIvdjEvZ29hbC5wcm90bxoqZ29vZ2xl",
+            "L2Fkcy9hZG1hbmFnZXIvdjEvZ3JwX3NldHRpbmdzLnByb3RvGjtnb29nbGUv",
+            "YWRzL2FkbWFuYWdlci92MS9saW5lX2l0ZW1fYWxsb3dlZF9mb3JtYXRfZW51",
+            "bS5wcm90bxoxZ29vZ2xlL2Fkcy9hZG1hbmFnZXIvdjEvbGluZV9pdGVtX2Rl",
+            "YWxfaW5mby5wcm90bxpFZ29vZ2xlL2Fkcy9hZG1hbmFnZXIvdjEvbGluZV9p",
+            "dGVtX2RlbGl2ZXJ5X2ZvcmVjYXN0X3NvdXJjZV9lbnVtLnByb3RvGjBnb29n",
+            "bGUvYWRzL2FkbWFuYWdlci92MS9saW5lX2l0ZW1fZGlzY291bnQucHJvdG8a",
+            "LWdvb2dsZS9hZHMvYWRtYW5hZ2VyL3YxL2xpbmVfaXRlbV9lbnVtcy5wcm90",
+            "bxotZ29vZ2xlL2Fkcy9hZG1hbmFnZXIvdjEvbGluZV9pdGVtX3N0YXRzLnBy",
+            "b3RvGjRnb29nbGUvYWRzL2FkbWFuYWdlci92MS9za2lwcGFibGVfYWRfdHlw",
+            "ZV9lbnVtLnByb3RvGidnb29nbGUvYWRzL2FkbWFuYWdlci92MS90YXJnZXRp",
+            "bmcucHJvdG8aPmdvb2dsZS9hZHMvYWRtYW5hZ2VyL3YxL3RoaXJkX3BhcnR5",
+            "X21lYXN1cmVtZW50X3NldHRpbmdzLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxk",
+            "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh5n",
+            "b29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1",
+            "Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS90eXBlL21vbmV5LnByb3RvIv0q",
+            "CghMaW5lSXRlbRIRCgRuYW1lGAEgASgJQgPgQQgSPQoFb3JkZXIYAiABKAlC",
+            "KeBBAuBBBfpBIAoeYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL09yZGVySACI",
+            "AQESHgoMZGlzcGxheV9uYW1lGAMgASgJQgPgQQJIAYgBARInChVleHRlcm5h",
+            "bF9saW5lX2l0ZW1faWQYBCABKAlCA+BBAUgCiAEBEiQKEm9yZGVyX2Rpc3Bs",
+            "YXlfbmFtZRgFIAEoCUID4EEDSAOIAQESOAoKc3RhcnRfdGltZRgGIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAkgEiAEBEj0KD3Rhcmdl",
+            "dF9lbmRfdGltZRhfIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAUgFiAEBEjYKCGVuZF90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEID4EEDSAaIAQESJQoTYXV0b19leHRlbnNpb25fZGF5cxgI",
+            "IAEoBUID4EEBSAeIAQESJwoSZW5kX3RpbWVfdW5saW1pdGVkGAkgASgIQgbg",
+            "QQHgQQdICIgBARJwChZjcmVhdGl2ZV9yb3RhdGlvbl90eXBlGAogASgOMkYu",
+            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3JlYXRpdmVSb3RhdGlvblR5cGVF",
+            "bnVtLkNyZWF0aXZlUm90YXRpb25UeXBlQgPgQQJICYgBARJ3ChJkZWxpdmVy",
+            "eV9yYXRlX3R5cGUYCyABKA4yTi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5M",
+            "aW5lSXRlbURlbGl2ZXJ5UmF0ZVR5cGVFbnVtLkxpbmVJdGVtRGVsaXZlcnlS",
+            "YXRlVHlwZUIG4EEB4EEHSAqIAQESiQEKGGRlbGl2ZXJ5X2ZvcmVjYXN0X3Nv",
+            "dXJjZRgMIAEoDjJaLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkxpbmVJdGVt",
+            "RGVsaXZlcnlGb3JlY2FzdFNvdXJjZUVudW0uTGluZUl0ZW1EZWxpdmVyeUZv",
+            "cmVjYXN0U291cmNlQgbgQQHgQQdIC4gBARJRChNjdXN0b21fcGFjaW5nX2N1",
+            "cnZlGA0gASgLMiouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tUGFj",
+            "aW5nQ3VydmVCA+BBAUgMiAEBEmYKEXJvYWRibG9ja2luZ190eXBlGA4gASgO",
+            "Mj4uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuUm9hZGJsb2NraW5nVHlwZUVu",
+            "dW0uUm9hZGJsb2NraW5nVHlwZUIG4EEB4EEHSA2IAQESZAoRc2tpcHBhYmxl",
+            "X2FkX3R5cGUYDyABKA4yPC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Ta2lw",
+            "cGFibGVBZFR5cGVFbnVtLlNraXBwYWJsZUFkVHlwZUIG4EEB4EEHSA6IAQES",
+            "QgoOZnJlcXVlbmN5X2NhcHMYECADKAsyJS5nb29nbGUuYWRzLmFkbWFuYWdl",
+            "ci52MS5GcmVxdWVuY3lDYXBCA+BBARJYCg5saW5lX2l0ZW1fdHlwZRgRIAEo",
+            "DjI2Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkxpbmVJdGVtVHlwZUVudW0u",
+            "TGluZUl0ZW1UeXBlQgPgQQJID4gBARIdCghwcmlvcml0eRgTIAEoBUIG4EEB",
+            "4EEHSBCIAQESKgoEcmF0ZRgUIAEoCzISLmdvb2dsZS50eXBlLk1vbmV5QgPg",
+            "QQJIEYgBARIyCgl2YWx1ZV9jcG0YFSABKAsyEi5nb29nbGUudHlwZS5Nb25l",
+            "eUIG4EEB4EEHSBKIAQESWwoJY29zdF90eXBlGBYgASgOMj4uZ29vZ2xlLmFk",
+            "cy5hZG1hbmFnZXIudjEuTGluZUl0ZW1Db3N0VHlwZUVudW0uTGluZUl0ZW1D",
+            "b3N0VHlwZUID4EECSBOIAQESRQoIZGlzY291bnQYFyABKAsyKS5nb29nbGUu",
+            "YWRzLmFkbWFuYWdlci52MS5MaW5lSXRlbURpc2NvdW50QgPgQQFIFIgBARIp",
+            "Chdjb250cmFjdGVkX3VuaXRzX2JvdWdodBgYIAEoA0ID4EEBSBWIAQESUAoV",
+            "Y3JlYXRpdmVfcGxhY2Vob2xkZXJzGBkgAygLMiwuZ29vZ2xlLmFkcy5hZG1h",
+            "bmFnZXIudjEuQ3JlYXRpdmVQbGFjZWhvbGRlckID4EECEmMKEGVudmlyb25t",
+            "ZW50X3R5cGUYGiABKA4yPC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5FbnZp",
+            "cm9ubWVudFR5cGVFbnVtLkVudmlyb25tZW50VHlwZUIG4EEB4EEHSBaIAQES",
+            "eQoZY29tcGFuaW9uX2RlbGl2ZXJ5X29wdGlvbhgbIAEoDjJMLmdvb2dsZS5h",
+            "ZHMuYWRtYW5hZ2VyLnYxLkNvbXBhbmlvbkRlbGl2ZXJ5T3B0aW9uRW51bS5D",
+            "b21wYW5pb25EZWxpdmVyeU9wdGlvbkID4EEBSBeIAQESIAoOYWxsb3dfb3Zl",
+            "cmJvb2sYHCABKAhCA+BBBEgYiAEBEiYKFHNraXBfaW52ZW50b3J5X2NoZWNr",
+            "GB0gASgIQgPgQQRIGYgBARI4CiZza2lwX2Nyb3NzX3NlbGxpbmdfcnVsZV93",
+            "YXJuaW5nX2NoZWNrcxgeIAEoCEID4EEESBqIAQESJQoTcmVzZXJ2ZV9vbl9j",
+            "cmVhdGlvbhgfIAEoCEID4EEESBuIAQESPwoFc3RhdHMYICABKAsyJi5nb29n",
+            "bGUuYWRzLmFkbWFuYWdlci52MS5MaW5lSXRlbVN0YXRzQgPgQQNIHIgBARJQ",
+            "ChJkZWxpdmVyeV9pbmRpY2F0b3IYISABKAsyKi5nb29nbGUuYWRzLmFkbWFu",
+            "YWdlci52MS5EZWxpdmVyeUluZGljYXRvckID4EEDSB2IAQESLAoGYnVkZ2V0",
+            "GCMgASgLMhIuZ29vZ2xlLnR5cGUuTW9uZXlCA+BBA0geiAEBEmQKBnN0YXR1",
+            "cxgkIAEoDjJKLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkxpbmVJdGVtQ29t",
+            "cHV0ZWRTdGF0dXNFbnVtLkxpbmVJdGVtQ29tcHV0ZWRTdGF0dXNCA+BBA0gf",
+            "iAEBEnYKEnJlc2VydmF0aW9uX3N0YXR1cxgmIAEoDjJQLmdvb2dsZS5hZHMu",
+            "YWRtYW5hZ2VyLnYxLkxpbmVJdGVtUmVzZXJ2YXRpb25TdGF0dXNFbnVtLkxp",
+            "bmVJdGVtUmVzZXJ2YXRpb25TdGF0dXNCA+BBA0ggiAEBEhoKCGFyY2hpdmVk",
+            "GCcgASgIQgPgQQNIIYgBARIjChF3ZWJfcHJvcGVydHlfY29kZRgxIAEoCUID",
+            "4EEBSCKIAQESQgoOYXBwbGllZF9sYWJlbHMYMiADKAsyJS5nb29nbGUuYWRz",
+            "LmFkbWFuYWdlci52MS5BcHBsaWVkTGFiZWxCA+BBARJMChhlZmZlY3RpdmVf",
+            "YXBwbGllZF9sYWJlbHMYMyADKAsyJS5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MS5BcHBsaWVkTGFiZWxCA+BBAxIzCiFzYW1lX2FkdmVydGlzZXJfZXhjZXB0",
+            "aW9uX2VuYWJsZWQYNCABKAhCA+BBAUgjiAEBEh8KDXVwZGF0ZV9zb3VyY2UY",
+            "NSABKAlCA+BBA0gkiAEBEhcKBW5vdGVzGDYgASgJQgPgQQFIJYgBARJtChxj",
+            "b21wZXRpdGl2ZV9jb25zdHJhaW50X3Njb3BlGDggASgOMjouZ29vZ2xlLmFk",
+            "cy5hZG1hbmFnZXIudjEuRXhjbHVzaW9uU2NvcGVFbnVtLkV4Y2x1c2lvblNj",
+            "b3BlQgbgQQHgQQdIJogBARI5Cgt1cGRhdGVfdGltZRg5IAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA0gniAEBEjkKC2NyZWF0ZV90aW1l",
+            "GDogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDSCiIAQES",
+            "SwoTY3VzdG9tX2ZpZWxkX3ZhbHVlcxg7IAMoCzIpLmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLkN1c3RvbUZpZWxkVmFsdWVCA+BBARIjChFtaXNzaW5nX2Ny",
+            "ZWF0aXZlcxg9IAEoCEID4EEDSCmIAQESagogdGhpcmRfcGFydHlfbWVhc3Vy",
+            "ZW1lbnRfc2V0dGluZ3MYQyABKAsyNi5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MS5UaGlyZFBhcnR5TWVhc3VyZW1lbnRTZXR0aW5nc0ID4EEBSCqIAQESKQoX",
+            "eW91dHViZV9raWRzX3Jlc3RyaWN0ZWQYSiABKAhCA+BBAUgriAEBEkgKG21h",
+            "eF92aWRlb19jcmVhdGl2ZV9kdXJhdGlvbhhLIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbkID4EEBSCyIAQESNQoEZ29hbBhMIAEoCzIdLmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkdvYWxCA+BBAUgtiAEBEjsKD3NlY29uZGFy",
+            "eV9nb2FscxhkIAMoCzIdLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkdvYWxC",
+            "A+BBARJECgxncnBfc2V0dGluZ3MYTiABKAsyJC5nb29nbGUuYWRzLmFkbWFu",
+            "YWdlci52MS5HcnBTZXR0aW5nc0ID4EEBSC6IAQESRgoJZGVhbF9pbmZvGE8g",
+            "ASgLMikuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuTGluZUl0ZW1EZWFsSW5m",
+            "b0ID4EEBSC+IAQESUAoedmlld2FiaWxpdHlfcHJvdmlkZXJfY29tcGFuaWVz",
+            "GFUgAygJQijgQQH6QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Db21w",
+            "YW55EnwKGWNoaWxkX2NvbnRlbnRfZWxpZ2liaWxpdHkYViABKA4yTC5nb29n",
+            "bGUuYWRzLmFkbWFuYWdlci52MS5DaGlsZENvbnRlbnRFbGlnaWJpbGl0eUVu",
+            "dW0uQ2hpbGRDb250ZW50RWxpZ2liaWxpdHlCBuBBAeBBB0gwiAEBEicKFWN1",
+            "c3RvbV92YXN0X2V4dGVuc2lvbhhYIAEoCUID4EEBSDGIAQESMQofc3BvbnNv",
+            "cnNoaXBfZXhjbHVzaXZpdHlfZW5hYmxlZBhZIAEoCEID4EEBSDKIAQESMwoh",
+            "cmVwZWF0ZWRfY3JlYXRpdmVfc2VydmluZ19lbmFibGVkGFogASgIQgPgQQFI",
+            "M4gBARI/Cgl0YXJnZXRpbmcYXSABKAsyIi5nb29nbGUuYWRzLmFkbWFuYWdl",
+            "ci52MS5UYXJnZXRpbmdCA+BBAkg0iAEBEkwKE2NyZWF0aXZlX3RhcmdldGlu",
+            "Z3MYXiADKAsyKi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DcmVhdGl2ZVRh",
+            "cmdldGluZ0ID4EEBEmYKD2FsbG93ZWRfZm9ybWF0cxhwIAMoDjJILmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkxpbmVJdGVtQWxsb3dlZEZvcm1hdEVudW0u",
+            "TGluZUl0ZW1BbGxvd2VkRm9ybWF0QgPgQQE6aupBZwohYWRtYW5hZ2VyLmdv",
+            "b2dsZWFwaXMuY29tL0xpbmVJdGVtEi1uZXR3b3Jrcy97bmV0d29ya19jb2Rl",
+            "fS9saW5lSXRlbXMve2xpbmVfaXRlbX0qCWxpbmVJdGVtczIIbGluZUl0ZW1C",
+            "CAoGX29yZGVyQg8KDV9kaXNwbGF5X25hbWVCGAoWX2V4dGVybmFsX2xpbmVf",
+            "aXRlbV9pZEIVChNfb3JkZXJfZGlzcGxheV9uYW1lQg0KC19zdGFydF90aW1l",
+            "QhIKEF90YXJnZXRfZW5kX3RpbWVCCwoJX2VuZF90aW1lQhYKFF9hdXRvX2V4",
+            "dGVuc2lvbl9kYXlzQhUKE19lbmRfdGltZV91bmxpbWl0ZWRCGQoXX2NyZWF0",
+            "aXZlX3JvdGF0aW9uX3R5cGVCFQoTX2RlbGl2ZXJ5X3JhdGVfdHlwZUIbChlf",
+            "ZGVsaXZlcnlfZm9yZWNhc3Rfc291cmNlQhYKFF9jdXN0b21fcGFjaW5nX2N1",
+            "cnZlQhQKEl9yb2FkYmxvY2tpbmdfdHlwZUIUChJfc2tpcHBhYmxlX2FkX3R5",
+            "cGVCEQoPX2xpbmVfaXRlbV90eXBlQgsKCV9wcmlvcml0eUIHCgVfcmF0ZUIM",
+            "CgpfdmFsdWVfY3BtQgwKCl9jb3N0X3R5cGVCCwoJX2Rpc2NvdW50QhoKGF9j",
+            "b250cmFjdGVkX3VuaXRzX2JvdWdodEITChFfZW52aXJvbm1lbnRfdHlwZUIc",
+            "ChpfY29tcGFuaW9uX2RlbGl2ZXJ5X29wdGlvbkIRCg9fYWxsb3dfb3ZlcmJv",
+            "b2tCFwoVX3NraXBfaW52ZW50b3J5X2NoZWNrQikKJ19za2lwX2Nyb3NzX3Nl",
+            "bGxpbmdfcnVsZV93YXJuaW5nX2NoZWNrc0IWChRfcmVzZXJ2ZV9vbl9jcmVh",
+            "dGlvbkIICgZfc3RhdHNCFQoTX2RlbGl2ZXJ5X2luZGljYXRvckIJCgdfYnVk",
+            "Z2V0QgkKB19zdGF0dXNCFQoTX3Jlc2VydmF0aW9uX3N0YXR1c0ILCglfYXJj",
+            "aGl2ZWRCFAoSX3dlYl9wcm9wZXJ0eV9jb2RlQiQKIl9zYW1lX2FkdmVydGlz",
+            "ZXJfZXhjZXB0aW9uX2VuYWJsZWRCEAoOX3VwZGF0ZV9zb3VyY2VCCAoGX25v",
+            "dGVzQh8KHV9jb21wZXRpdGl2ZV9jb25zdHJhaW50X3Njb3BlQg4KDF91cGRh",
+            "dGVfdGltZUIOCgxfY3JlYXRlX3RpbWVCFAoSX21pc3NpbmdfY3JlYXRpdmVz",
+            "QiMKIV90aGlyZF9wYXJ0eV9tZWFzdXJlbWVudF9zZXR0aW5nc0IaChhfeW91",
+            "dHViZV9raWRzX3Jlc3RyaWN0ZWRCHgocX21heF92aWRlb19jcmVhdGl2ZV9k",
+            "dXJhdGlvbkIHCgVfZ29hbEIPCg1fZ3JwX3NldHRpbmdzQgwKCl9kZWFsX2lu",
+            "Zm9CHAoaX2NoaWxkX2NvbnRlbnRfZWxpZ2liaWxpdHlCGAoWX2N1c3RvbV92",
+            "YXN0X2V4dGVuc2lvbkIiCiBfc3BvbnNvcnNoaXBfZXhjbHVzaXZpdHlfZW5h",
+            "YmxlZEIkCiJfcmVwZWF0ZWRfY3JlYXRpdmVfc2VydmluZ19lbmFibGVkQgwK",
+            "Cl90YXJnZXRpbmdCyQEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIV",
+            "TGluZUl0ZW1NZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKq",
+            "AhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5h",
+            "Z2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.CustomFieldValueReflection.Descriptor, global::Google.Ads.AdManager.V1.GoalReflection.Descriptor, global::Google.Ads.AdManager.V1.LineItemEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AppliedLabelReflection.Descriptor, global::Google.Ads.AdManager.V1.ChildContentEligibilityEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.CreativePlaceholderReflection.Descriptor, global::Google.Ads.AdManager.V1.CreativeTargetingReflection.Descriptor, global::Google.Ads.AdManager.V1.CustomFieldValueReflection.Descriptor, global::Google.Ads.AdManager.V1.CustomPacingCurveReflection.Descriptor, global::Google.Ads.AdManager.V1.DeliveryEnumsReflection.Descriptor, global::Google.Ads.AdManager.V1.DeliveryIndicatorReflection.Descriptor, global::Google.Ads.AdManager.V1.EnvironmentTypeEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.ExclusionScopeEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.FrequencyCapReflection.Descriptor, global::Google.Ads.AdManager.V1.GoalReflection.Descriptor, global::Google.Ads.AdManager.V1.GrpSettingsReflection.Descriptor, global::Google.Ads.AdManager.V1.LineItemAllowedFormatEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.LineItemDealInfoReflection.Descriptor, global::Google.Ads.AdManager.V1.LineItemDeliveryForecastSourceEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.LineItemDiscountReflection.Descriptor, global::Google.Ads.AdManager.V1.LineItemEnumsReflection.Descriptor, global::Google.Ads.AdManager.V1.LineItemStatsReflection.Descriptor, global::Google.Ads.AdManager.V1.SkippableAdTypeEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor, global::Google.Ads.AdManager.V1.ThirdPartyMeasurementSettingsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LineItem), global::Google.Ads.AdManager.V1.LineItem.Parser, new[]{ "Name", "Order", "DisplayName", "StartTime", "EndTime", "LineItemType", "Rate", "Budget", "CustomFieldValues", "Goal" }, new[]{ "Order", "DisplayName", "StartTime", "EndTime", "LineItemType", "Rate", "Budget", "Goal" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LineItem), global::Google.Ads.AdManager.V1.LineItem.Parser, new[]{ "Name", "Order", "DisplayName", "ExternalLineItemId", "OrderDisplayName", "StartTime", "TargetEndTime", "EndTime", "AutoExtensionDays", "EndTimeUnlimited", "CreativeRotationType", "DeliveryRateType", "DeliveryForecastSource", "CustomPacingCurve", "RoadblockingType", "SkippableAdType", "FrequencyCaps", "LineItemType", "Priority", "Rate", "ValueCpm", "CostType", "Discount", "ContractedUnitsBought", "CreativePlaceholders", "EnvironmentType", "CompanionDeliveryOption", "AllowOverbook", "SkipInventoryCheck", "SkipCrossSellingRuleWarningChecks", "ReserveOnCreation", "Stats", "DeliveryIndicator", "Budget", "Status", "ReservationStatus", "Archived", "WebPropertyCode", "AppliedLabels", "EffectiveAppliedLabels", "SameAdvertiserExceptionEnabled", "UpdateSource", "Notes", "CompetitiveConstraintScope", "UpdateTime", "CreateTime", "CustomFieldValues", "MissingCreatives", "ThirdPartyMeasurementSettings", "YoutubeKidsRestricted", "MaxVideoCreativeDuration", "Goal", "SecondaryGoals", "GrpSettings", "DealInfo", "ViewabilityProviderCompanies", "ChildContentEligibility", "CustomVastExtension", "SponsorshipExclusivityEnabled", "RepeatedCreativeServingEnabled", "Targeting", "CreativeTargetings", "AllowedFormats" }, new[]{ "Order", "DisplayName", "ExternalLineItemId", "OrderDisplayName", "StartTime", "TargetEndTime", "EndTime", "AutoExtensionDays", "EndTimeUnlimited", "CreativeRotationType", "DeliveryRateType", "DeliveryForecastSource", "CustomPacingCurve", "RoadblockingType", "SkippableAdType", "LineItemType", "Priority", "Rate", "ValueCpm", "CostType", "Discount", "ContractedUnitsBought", "EnvironmentType", "CompanionDeliveryOption", "AllowOverbook", "SkipInventoryCheck", "SkipCrossSellingRuleWarningChecks", "ReserveOnCreation", "Stats", "DeliveryIndicator", "Budget", "Status", "ReservationStatus", "Archived", "WebPropertyCode", "SameAdvertiserExceptionEnabled", "UpdateSource", "Notes", "CompetitiveConstraintScope", "UpdateTime", "CreateTime", "MissingCreatives", "ThirdPartyMeasurementSettings", "YoutubeKidsRestricted", "MaxVideoCreativeDuration", "Goal", "GrpSettings", "DealInfo", "ChildContentEligibility", "CustomVastExtension", "SponsorshipExclusivityEnabled", "RepeatedCreativeServingEnabled", "Targeting" }, null, null, null)
           }));
     }
     #endregion
@@ -108,13 +236,66 @@ namespace Google.Ads.AdManager.V1 {
       name_ = other.name_;
       order_ = other.order_;
       displayName_ = other.displayName_;
+      externalLineItemId_ = other.externalLineItemId_;
+      orderDisplayName_ = other.orderDisplayName_;
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      targetEndTime_ = other.targetEndTime_ != null ? other.targetEndTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      autoExtensionDays_ = other.autoExtensionDays_;
+      endTimeUnlimited_ = other.endTimeUnlimited_;
+      creativeRotationType_ = other.creativeRotationType_;
+      deliveryRateType_ = other.deliveryRateType_;
+      deliveryForecastSource_ = other.deliveryForecastSource_;
+      customPacingCurve_ = other.customPacingCurve_ != null ? other.customPacingCurve_.Clone() : null;
+      roadblockingType_ = other.roadblockingType_;
+      skippableAdType_ = other.skippableAdType_;
+      frequencyCaps_ = other.frequencyCaps_.Clone();
       lineItemType_ = other.lineItemType_;
+      priority_ = other.priority_;
       rate_ = other.rate_ != null ? other.rate_.Clone() : null;
+      valueCpm_ = other.valueCpm_ != null ? other.valueCpm_.Clone() : null;
+      costType_ = other.costType_;
+      discount_ = other.discount_ != null ? other.discount_.Clone() : null;
+      contractedUnitsBought_ = other.contractedUnitsBought_;
+      creativePlaceholders_ = other.creativePlaceholders_.Clone();
+      environmentType_ = other.environmentType_;
+      companionDeliveryOption_ = other.companionDeliveryOption_;
+      allowOverbook_ = other.allowOverbook_;
+      skipInventoryCheck_ = other.skipInventoryCheck_;
+      skipCrossSellingRuleWarningChecks_ = other.skipCrossSellingRuleWarningChecks_;
+      reserveOnCreation_ = other.reserveOnCreation_;
+      stats_ = other.stats_ != null ? other.stats_.Clone() : null;
+      deliveryIndicator_ = other.deliveryIndicator_ != null ? other.deliveryIndicator_.Clone() : null;
       budget_ = other.budget_ != null ? other.budget_.Clone() : null;
+      status_ = other.status_;
+      reservationStatus_ = other.reservationStatus_;
+      archived_ = other.archived_;
+      webPropertyCode_ = other.webPropertyCode_;
+      appliedLabels_ = other.appliedLabels_.Clone();
+      effectiveAppliedLabels_ = other.effectiveAppliedLabels_.Clone();
+      sameAdvertiserExceptionEnabled_ = other.sameAdvertiserExceptionEnabled_;
+      updateSource_ = other.updateSource_;
+      notes_ = other.notes_;
+      competitiveConstraintScope_ = other.competitiveConstraintScope_;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       customFieldValues_ = other.customFieldValues_.Clone();
+      missingCreatives_ = other.missingCreatives_;
+      thirdPartyMeasurementSettings_ = other.thirdPartyMeasurementSettings_ != null ? other.thirdPartyMeasurementSettings_.Clone() : null;
+      youtubeKidsRestricted_ = other.youtubeKidsRestricted_;
+      maxVideoCreativeDuration_ = other.maxVideoCreativeDuration_ != null ? other.maxVideoCreativeDuration_.Clone() : null;
       goal_ = other.goal_ != null ? other.goal_.Clone() : null;
+      secondaryGoals_ = other.secondaryGoals_.Clone();
+      grpSettings_ = other.grpSettings_ != null ? other.grpSettings_.Clone() : null;
+      dealInfo_ = other.dealInfo_ != null ? other.dealInfo_.Clone() : null;
+      viewabilityProviderCompanies_ = other.viewabilityProviderCompanies_.Clone();
+      childContentEligibility_ = other.childContentEligibility_;
+      customVastExtension_ = other.customVastExtension_;
+      sponsorshipExclusivityEnabled_ = other.sponsorshipExclusivityEnabled_;
+      repeatedCreativeServingEnabled_ = other.repeatedCreativeServingEnabled_;
+      targeting_ = other.targeting_ != null ? other.targeting_.Clone() : null;
+      creativeTargetings_ = other.creativeTargetings_.Clone();
+      allowedFormats_ = other.allowedFormats_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -176,8 +357,8 @@ namespace Google.Ads.AdManager.V1 {
 
     private string displayName_;
     /// <summary>
-    /// Required. The name of the line item. This attribute is required and has a
-    /// maximum length of 255 characters.
+    /// Required. The name of the line item. This attribute has a maximum length of
+    /// 255 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -200,6 +381,65 @@ namespace Google.Ads.AdManager.V1 {
       displayName_ = null;
     }
 
+    /// <summary>Field number for the "external_line_item_id" field.</summary>
+    public const int ExternalLineItemIdFieldNumber = 4;
+    private readonly static string ExternalLineItemIdDefaultValue = "";
+
+    private string externalLineItemId_;
+    /// <summary>
+    /// Optional. An identifier for the LineItem that is meaningful to the
+    /// publisher. This attribute has a maximum length of 255 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ExternalLineItemId {
+      get { return externalLineItemId_ ?? ExternalLineItemIdDefaultValue; }
+      set {
+        externalLineItemId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "external_line_item_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExternalLineItemId {
+      get { return externalLineItemId_ != null; }
+    }
+    /// <summary>Clears the value of the "external_line_item_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExternalLineItemId() {
+      externalLineItemId_ = null;
+    }
+
+    /// <summary>Field number for the "order_display_name" field.</summary>
+    public const int OrderDisplayNameFieldNumber = 5;
+    private readonly static string OrderDisplayNameDefaultValue = "";
+
+    private string orderDisplayName_;
+    /// <summary>
+    /// Output only. The name of the Order.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrderDisplayName {
+      get { return orderDisplayName_ ?? OrderDisplayNameDefaultValue; }
+      set {
+        orderDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "order_display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOrderDisplayName {
+      get { return orderDisplayName_ != null; }
+    }
+    /// <summary>Clears the value of the "order_display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOrderDisplayName() {
+      orderDisplayName_ = null;
+    }
+
     /// <summary>Field number for the "start_time" field.</summary>
     public const int StartTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
@@ -216,12 +456,32 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "target_end_time" field.</summary>
+    public const int TargetEndTimeFieldNumber = 95;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp targetEndTime_;
+    /// <summary>
+    /// Optional. The target end time of the line item. This attribute is required
+    /// unless
+    /// [end_time_unlimited][google.ads.admanager.v1.LineItem.end_time_unlimited]
+    /// is set to true. If specified, it must be after the
+    /// [start_time][google.ads.admanager.v1.LineItem.start_time]. This does not
+    /// include auto extension days.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp TargetEndTime {
+      get { return targetEndTime_; }
+      set {
+        targetEndTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "end_time" field.</summary>
     public const int EndTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
     /// Output only. The timestamp when the LineItem will stop serving. This
-    /// attribute is read-only and includes auto extension days.
+    /// attribute includes auto extension days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -232,23 +492,276 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "auto_extension_days" field.</summary>
+    public const int AutoExtensionDaysFieldNumber = 8;
+    private readonly static int AutoExtensionDaysDefaultValue = 0;
+
+    private int autoExtensionDays_;
+    /// <summary>
+    /// Optional. The number of days to allow a line item to deliver past its
+    /// [target_end_time][google.ads.admanager.v1.LineItem.target_end_time]. A
+    /// maximum of 7 days is allowed. This is feature is only available for Ad
+    /// Manager 360 accounts.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int AutoExtensionDays {
+      get { if ((_hasBits0 & 1) != 0) { return autoExtensionDays_; } else { return AutoExtensionDaysDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        autoExtensionDays_ = value;
+      }
+    }
+    /// <summary>Gets whether the "auto_extension_days" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAutoExtensionDays {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "auto_extension_days" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAutoExtensionDays() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "end_time_unlimited" field.</summary>
+    public const int EndTimeUnlimitedFieldNumber = 9;
+    private readonly static bool EndTimeUnlimitedDefaultValue = false;
+
+    private bool endTimeUnlimited_;
+    /// <summary>
+    /// Optional. Non-empty default. Specifies whether or not the LineItem has an
+    /// end time. This attribute defaults to false. It can be be set to true for
+    /// only line items of type SPONSORSHIP, NETWORK, PRICE_PRIORITY and HOUSE.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EndTimeUnlimited {
+      get { if ((_hasBits0 & 2) != 0) { return endTimeUnlimited_; } else { return EndTimeUnlimitedDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        endTimeUnlimited_ = value;
+      }
+    }
+    /// <summary>Gets whether the "end_time_unlimited" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEndTimeUnlimited {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "end_time_unlimited" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEndTimeUnlimited() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "creative_rotation_type" field.</summary>
+    public const int CreativeRotationTypeFieldNumber = 10;
+    private readonly static global::Google.Ads.AdManager.V1.CreativeRotationTypeEnum.Types.CreativeRotationType CreativeRotationTypeDefaultValue = global::Google.Ads.AdManager.V1.CreativeRotationTypeEnum.Types.CreativeRotationType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CreativeRotationTypeEnum.Types.CreativeRotationType creativeRotationType_;
+    /// <summary>
+    /// Required. The strategy used for displaying multiple Creative objects that
+    /// are associated with the LineItem.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CreativeRotationTypeEnum.Types.CreativeRotationType CreativeRotationType {
+      get { if ((_hasBits0 & 4) != 0) { return creativeRotationType_; } else { return CreativeRotationTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        creativeRotationType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "creative_rotation_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCreativeRotationType {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "creative_rotation_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCreativeRotationType() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "delivery_rate_type" field.</summary>
+    public const int DeliveryRateTypeFieldNumber = 11;
+    private readonly static global::Google.Ads.AdManager.V1.LineItemDeliveryRateTypeEnum.Types.LineItemDeliveryRateType DeliveryRateTypeDefaultValue = global::Google.Ads.AdManager.V1.LineItemDeliveryRateTypeEnum.Types.LineItemDeliveryRateType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.LineItemDeliveryRateTypeEnum.Types.LineItemDeliveryRateType deliveryRateType_;
+    /// <summary>
+    /// Optional. Non-empty default. The strategy for delivering ads over the
+    /// course of the line item's duration. This attribute defaults to EVENLY or
+    /// FRONTLOADED depending on the network's configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.LineItemDeliveryRateTypeEnum.Types.LineItemDeliveryRateType DeliveryRateType {
+      get { if ((_hasBits0 & 8) != 0) { return deliveryRateType_; } else { return DeliveryRateTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        deliveryRateType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "delivery_rate_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDeliveryRateType {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "delivery_rate_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDeliveryRateType() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "delivery_forecast_source" field.</summary>
+    public const int DeliveryForecastSourceFieldNumber = 12;
+    private readonly static global::Google.Ads.AdManager.V1.LineItemDeliveryForecastSourceEnum.Types.LineItemDeliveryForecastSource DeliveryForecastSourceDefaultValue = global::Google.Ads.AdManager.V1.LineItemDeliveryForecastSourceEnum.Types.LineItemDeliveryForecastSource.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.LineItemDeliveryForecastSourceEnum.Types.LineItemDeliveryForecastSource deliveryForecastSource_;
+    /// <summary>
+    /// Optional. Non-empty default. Strategy for choosing forecasted traffic
+    /// shapes to pace line items. This field defaults to HISTORICAL.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.LineItemDeliveryForecastSourceEnum.Types.LineItemDeliveryForecastSource DeliveryForecastSource {
+      get { if ((_hasBits0 & 16) != 0) { return deliveryForecastSource_; } else { return DeliveryForecastSourceDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        deliveryForecastSource_ = value;
+      }
+    }
+    /// <summary>Gets whether the "delivery_forecast_source" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDeliveryForecastSource {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "delivery_forecast_source" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDeliveryForecastSource() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "custom_pacing_curve" field.</summary>
+    public const int CustomPacingCurveFieldNumber = 13;
+    private global::Google.Ads.AdManager.V1.CustomPacingCurve customPacingCurve_;
+    /// <summary>
+    /// Optional. The curve that is used to pace the line item's delivery. This
+    /// field is required if and only if the delivery forecast source is
+    /// CUSTOM_PACING_CURVE.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CustomPacingCurve CustomPacingCurve {
+      get { return customPacingCurve_; }
+      set {
+        customPacingCurve_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "roadblocking_type" field.</summary>
+    public const int RoadblockingTypeFieldNumber = 14;
+    private readonly static global::Google.Ads.AdManager.V1.RoadblockingTypeEnum.Types.RoadblockingType RoadblockingTypeDefaultValue = global::Google.Ads.AdManager.V1.RoadblockingTypeEnum.Types.RoadblockingType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.RoadblockingTypeEnum.Types.RoadblockingType roadblockingType_;
+    /// <summary>
+    /// Optional. Non-empty default. The strategy for serving roadblocked
+    /// creatives, that is, instances where multiple creatives must be served
+    /// together on a single web page. This attribute defaults to ONE_OR_MORE.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.RoadblockingTypeEnum.Types.RoadblockingType RoadblockingType {
+      get { if ((_hasBits0 & 32) != 0) { return roadblockingType_; } else { return RoadblockingTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        roadblockingType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "roadblocking_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRoadblockingType {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "roadblocking_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRoadblockingType() {
+      _hasBits0 &= ~32;
+    }
+
+    /// <summary>Field number for the "skippable_ad_type" field.</summary>
+    public const int SkippableAdTypeFieldNumber = 15;
+    private readonly static global::Google.Ads.AdManager.V1.SkippableAdTypeEnum.Types.SkippableAdType SkippableAdTypeDefaultValue = global::Google.Ads.AdManager.V1.SkippableAdTypeEnum.Types.SkippableAdType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.SkippableAdTypeEnum.Types.SkippableAdType skippableAdType_;
+    /// <summary>
+    /// Optional. Non-empty default. The nature of the line item's creatives'
+    /// skippability. This attribute is only applicable for video line items, and
+    /// defaults to NOT_SKIPPABLE.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.SkippableAdTypeEnum.Types.SkippableAdType SkippableAdType {
+      get { if ((_hasBits0 & 64) != 0) { return skippableAdType_; } else { return SkippableAdTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 64;
+        skippableAdType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "skippable_ad_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSkippableAdType {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "skippable_ad_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSkippableAdType() {
+      _hasBits0 &= ~64;
+    }
+
+    /// <summary>Field number for the "frequency_caps" field.</summary>
+    public const int FrequencyCapsFieldNumber = 16;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.FrequencyCap> _repeated_frequencyCaps_codec
+        = pb::FieldCodec.ForMessage(130, global::Google.Ads.AdManager.V1.FrequencyCap.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.FrequencyCap> frequencyCaps_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.FrequencyCap>();
+    /// <summary>
+    /// Optional. The set of frequency capping units for this LineItem.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.FrequencyCap> FrequencyCaps {
+      get { return frequencyCaps_; }
+    }
+
     /// <summary>Field number for the "line_item_type" field.</summary>
     public const int LineItemTypeFieldNumber = 17;
     private readonly static global::Google.Ads.AdManager.V1.LineItemTypeEnum.Types.LineItemType LineItemTypeDefaultValue = global::Google.Ads.AdManager.V1.LineItemTypeEnum.Types.LineItemType.Unspecified;
 
     private global::Google.Ads.AdManager.V1.LineItemTypeEnum.Types.LineItemType lineItemType_;
     /// <summary>
-    /// Required. Indicates the line item type of a LineItem. This attribute is
-    /// required. The line item type determines the default priority of the line
-    /// item. More information can be found at
-    /// https://support.google.com/admanager/answer/177279.
+    /// Required. Indicates the line item type of a LineItem. The line item type
+    /// determines the default priority of the line item. More information can be
+    /// found at https://support.google.com/admanager/answer/177279.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.LineItemTypeEnum.Types.LineItemType LineItemType {
-      get { if ((_hasBits0 & 1) != 0) { return lineItemType_; } else { return LineItemTypeDefaultValue; } }
+      get { if ((_hasBits0 & 128) != 0) { return lineItemType_; } else { return LineItemTypeDefaultValue; } }
       set {
-        _hasBits0 |= 1;
+        _hasBits0 |= 128;
         lineItemType_ = value;
       }
     }
@@ -256,13 +769,61 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasLineItemType {
-      get { return (_hasBits0 & 1) != 0; }
+      get { return (_hasBits0 & 128) != 0; }
     }
     /// <summary>Clears the value of the "line_item_type" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearLineItemType() {
-      _hasBits0 &= ~1;
+      _hasBits0 &= ~128;
+    }
+
+    /// <summary>Field number for the "priority" field.</summary>
+    public const int PriorityFieldNumber = 19;
+    private readonly static int PriorityDefaultValue = 0;
+
+    private int priority_;
+    /// <summary>
+    /// Optional. Non-empty default. The priority for the line item. Valid values
+    /// range from 1 to 16. This field defaults to the default priority of the
+    /// LineItemType. The following list shows the default, minimum, and maximum
+    /// priority values are for each line item type:
+    ///   - LineItemType: default priority (minimum priority, maximum priority)
+    ///   - SPONSORSHIP: 4 (2, 5)
+    ///   - STANDARD: 8 (6, 10)
+    ///   - NETWORK: 12 (11, 14)
+    ///   - BULK: 12 (11, 14)
+    ///   - PRICE_PRIORITY: 12 (11, 14)
+    ///   - HOUSE: 16 (15, 16)
+    ///   - CLICK_TRACKING: 16 (1, 16)
+    ///   - AD_EXCHANGE: 12 (1, 16)
+    ///   - ADSENSE: 12 (1, 16)
+    ///   - BUMPER: 16 (15, 16)
+    ///   - ADMOB: 21 (1, 16)
+    ///   - PREFERRED_DEAL: 12 (12, 12)
+    /// This field can only be edited by certain networks, otherwise a
+    /// PermissionError will occur.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Priority {
+      get { if ((_hasBits0 & 256) != 0) { return priority_; } else { return PriorityDefaultValue; } }
+      set {
+        _hasBits0 |= 256;
+        priority_ = value;
+      }
+    }
+    /// <summary>Gets whether the "priority" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPriority {
+      get { return (_hasBits0 & 256) != 0; }
+    }
+    /// <summary>Clears the value of the "priority" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPriority() {
+      _hasBits0 &= ~256;
     }
 
     /// <summary>Field number for the "rate" field.</summary>
@@ -277,6 +838,365 @@ namespace Google.Ads.AdManager.V1 {
       get { return rate_; }
       set {
         rate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "value_cpm" field.</summary>
+    public const int ValueCpmFieldNumber = 21;
+    private global::Google.Type.Money valueCpm_;
+    /// <summary>
+    /// Optional. Non-empty default. An amount to help the adserver rank inventory.
+    /// [value_cpm][google.ads.admanager.v1.LineItem.value_cpm] artificially raises
+    /// the value of inventory over the
+    /// [rate][google.ads.admanager.v1.LineItem.rate] but avoids raising the actual
+    /// [rate][google.ads.admanager.v1.LineItem.rate]. This attribute defaults to a
+    /// Money object in the local currency with units and nanos set to 0.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.Money ValueCpm {
+      get { return valueCpm_; }
+      set {
+        valueCpm_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cost_type" field.</summary>
+    public const int CostTypeFieldNumber = 22;
+    private readonly static global::Google.Ads.AdManager.V1.LineItemCostTypeEnum.Types.LineItemCostType CostTypeDefaultValue = global::Google.Ads.AdManager.V1.LineItemCostTypeEnum.Types.LineItemCostType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.LineItemCostTypeEnum.Types.LineItemCostType costType_;
+    /// <summary>
+    /// Required. The method used for billing this LineItem.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.LineItemCostTypeEnum.Types.LineItemCostType CostType {
+      get { if ((_hasBits0 & 512) != 0) { return costType_; } else { return CostTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 512;
+        costType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "cost_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCostType {
+      get { return (_hasBits0 & 512) != 0; }
+    }
+    /// <summary>Clears the value of the "cost_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCostType() {
+      _hasBits0 &= ~512;
+    }
+
+    /// <summary>Field number for the "discount" field.</summary>
+    public const int DiscountFieldNumber = 23;
+    private global::Google.Ads.AdManager.V1.LineItemDiscount discount_;
+    /// <summary>
+    /// Optional. Discount information for the line item.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.LineItemDiscount Discount {
+      get { return discount_; }
+      set {
+        discount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "contracted_units_bought" field.</summary>
+    public const int ContractedUnitsBoughtFieldNumber = 24;
+    private readonly static long ContractedUnitsBoughtDefaultValue = 0L;
+
+    private long contractedUnitsBought_;
+    /// <summary>
+    /// Optional. This attribute is only applicable for certain line item types and
+    /// acts as an "FYI" or note, which does not impact adserving or other backend
+    /// systems. For SPONSORSHIP line items, this represents the minimum quantity,
+    /// which is a lifetime impression volume goal for reporting purposes only. For
+    /// STANDARD line items, this represent the contracted quantity, which is the
+    /// number of units specified in the contract the advertiser has bought for
+    /// this LineItem. This field is just a "FYI" for traffickers to manually
+    /// intervene with the LineItem when needed. This attribute is only available
+    /// for STANDARD line items if you have this feature enabled on your network.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ContractedUnitsBought {
+      get { if ((_hasBits0 & 1024) != 0) { return contractedUnitsBought_; } else { return ContractedUnitsBoughtDefaultValue; } }
+      set {
+        _hasBits0 |= 1024;
+        contractedUnitsBought_ = value;
+      }
+    }
+    /// <summary>Gets whether the "contracted_units_bought" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContractedUnitsBought {
+      get { return (_hasBits0 & 1024) != 0; }
+    }
+    /// <summary>Clears the value of the "contracted_units_bought" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContractedUnitsBought() {
+      _hasBits0 &= ~1024;
+    }
+
+    /// <summary>Field number for the "creative_placeholders" field.</summary>
+    public const int CreativePlaceholdersFieldNumber = 25;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CreativePlaceholder> _repeated_creativePlaceholders_codec
+        = pb::FieldCodec.ForMessage(202, global::Google.Ads.AdManager.V1.CreativePlaceholder.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativePlaceholder> creativePlaceholders_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativePlaceholder>();
+    /// <summary>
+    /// Required. Details about the creatives that are expected to serve through
+    /// this LineItem.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativePlaceholder> CreativePlaceholders {
+      get { return creativePlaceholders_; }
+    }
+
+    /// <summary>Field number for the "environment_type" field.</summary>
+    public const int EnvironmentTypeFieldNumber = 26;
+    private readonly static global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType EnvironmentTypeDefaultValue = global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType environmentType_;
+    /// <summary>
+    /// Optional. Non-empty default. The environment that the LineItem is
+    /// targeting. The default value is BROWSER. If this value is VIDEO_PLAYER,
+    /// then this line item can only target AdUnits that have AdUnitSizes whose
+    /// environmentType is also VIDEO_PLAYER.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType EnvironmentType {
+      get { if ((_hasBits0 & 2048) != 0) { return environmentType_; } else { return EnvironmentTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 2048;
+        environmentType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "environment_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEnvironmentType {
+      get { return (_hasBits0 & 2048) != 0; }
+    }
+    /// <summary>Clears the value of the "environment_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEnvironmentType() {
+      _hasBits0 &= ~2048;
+    }
+
+    /// <summary>Field number for the "companion_delivery_option" field.</summary>
+    public const int CompanionDeliveryOptionFieldNumber = 27;
+    private readonly static global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption CompanionDeliveryOptionDefaultValue = global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption companionDeliveryOption_;
+    /// <summary>
+    /// Optional. The delivery option for companions. Setting this field is only
+    /// meaningful if the following conditions are met:
+    ///   - The "Guaranteed roadblocks" feature is enabled on your network.
+    ///   - One of the following is true (both cannot be true, these are mutually
+    ///   exclusive).
+    ///     - The environmentType is VIDEO_PLAYER.
+    ///     - The roadblockingType is CREATIVE_SET.
+    /// This field defaults to OPTIONAL if the conditions are met.
+    /// In all other cases it defaults to UNKNOWN and is not meaningful.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption CompanionDeliveryOption {
+      get { if ((_hasBits0 & 4096) != 0) { return companionDeliveryOption_; } else { return CompanionDeliveryOptionDefaultValue; } }
+      set {
+        _hasBits0 |= 4096;
+        companionDeliveryOption_ = value;
+      }
+    }
+    /// <summary>Gets whether the "companion_delivery_option" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCompanionDeliveryOption {
+      get { return (_hasBits0 & 4096) != 0; }
+    }
+    /// <summary>Clears the value of the "companion_delivery_option" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCompanionDeliveryOption() {
+      _hasBits0 &= ~4096;
+    }
+
+    /// <summary>Field number for the "allow_overbook" field.</summary>
+    public const int AllowOverbookFieldNumber = 28;
+    private readonly static bool AllowOverbookDefaultValue = false;
+
+    private bool allowOverbook_;
+    /// <summary>
+    /// Input only. The flag indicates whether overbooking should be allowed when
+    /// creating or updating reservations of line item types SPONSORSHIP and
+    /// STANDARD. When true, operations on this line item will never
+    /// trigger a ForecastError, which corresponds to an overbook warning in the
+    /// UI. The default value is false.  Note: this field won't persist on the
+    /// line item itself, and the value will only affect the current request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllowOverbook {
+      get { if ((_hasBits0 & 8192) != 0) { return allowOverbook_; } else { return AllowOverbookDefaultValue; } }
+      set {
+        _hasBits0 |= 8192;
+        allowOverbook_ = value;
+      }
+    }
+    /// <summary>Gets whether the "allow_overbook" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAllowOverbook {
+      get { return (_hasBits0 & 8192) != 0; }
+    }
+    /// <summary>Clears the value of the "allow_overbook" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAllowOverbook() {
+      _hasBits0 &= ~8192;
+    }
+
+    /// <summary>Field number for the "skip_inventory_check" field.</summary>
+    public const int SkipInventoryCheckFieldNumber = 29;
+    private readonly static bool SkipInventoryCheckDefaultValue = false;
+
+    private bool skipInventoryCheck_;
+    /// <summary>
+    /// Input only. The flag indicates whether the inventory check should be
+    /// skipped when creating or updating a line item. The default value is false.
+    /// Note: this field won't persist on the line item itself, and the value will
+    /// only affect the current request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SkipInventoryCheck {
+      get { if ((_hasBits0 & 16384) != 0) { return skipInventoryCheck_; } else { return SkipInventoryCheckDefaultValue; } }
+      set {
+        _hasBits0 |= 16384;
+        skipInventoryCheck_ = value;
+      }
+    }
+    /// <summary>Gets whether the "skip_inventory_check" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSkipInventoryCheck {
+      get { return (_hasBits0 & 16384) != 0; }
+    }
+    /// <summary>Clears the value of the "skip_inventory_check" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSkipInventoryCheck() {
+      _hasBits0 &= ~16384;
+    }
+
+    /// <summary>Field number for the "skip_cross_selling_rule_warning_checks" field.</summary>
+    public const int SkipCrossSellingRuleWarningChecksFieldNumber = 30;
+    private readonly static bool SkipCrossSellingRuleWarningChecksDefaultValue = false;
+
+    private bool skipCrossSellingRuleWarningChecks_;
+    /// <summary>
+    /// Input only. True to skip checks for warnings from rules applied to line
+    /// items targeting inventory shared by a distributor partner for cross selling
+    /// when performing an action on this line item. The default is false. Note:
+    /// this field won't persist on the line item itself, and the value will only
+    /// affect the current request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SkipCrossSellingRuleWarningChecks {
+      get { if ((_hasBits0 & 32768) != 0) { return skipCrossSellingRuleWarningChecks_; } else { return SkipCrossSellingRuleWarningChecksDefaultValue; } }
+      set {
+        _hasBits0 |= 32768;
+        skipCrossSellingRuleWarningChecks_ = value;
+      }
+    }
+    /// <summary>Gets whether the "skip_cross_selling_rule_warning_checks" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSkipCrossSellingRuleWarningChecks {
+      get { return (_hasBits0 & 32768) != 0; }
+    }
+    /// <summary>Clears the value of the "skip_cross_selling_rule_warning_checks" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSkipCrossSellingRuleWarningChecks() {
+      _hasBits0 &= ~32768;
+    }
+
+    /// <summary>Field number for the "reserve_on_creation" field.</summary>
+    public const int ReserveOnCreationFieldNumber = 31;
+    private readonly static bool ReserveOnCreationDefaultValue = false;
+
+    private bool reserveOnCreation_;
+    /// <summary>
+    /// Input only. The flag indicates whether inventory should be reserved when
+    /// creating a line item of types SPONSORSHIP and STANDARD in an unapproved
+    /// Order. The default value is false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ReserveOnCreation {
+      get { if ((_hasBits0 & 65536) != 0) { return reserveOnCreation_; } else { return ReserveOnCreationDefaultValue; } }
+      set {
+        _hasBits0 |= 65536;
+        reserveOnCreation_ = value;
+      }
+    }
+    /// <summary>Gets whether the "reserve_on_creation" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasReserveOnCreation {
+      get { return (_hasBits0 & 65536) != 0; }
+    }
+    /// <summary>Clears the value of the "reserve_on_creation" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReserveOnCreation() {
+      _hasBits0 &= ~65536;
+    }
+
+    /// <summary>Field number for the "stats" field.</summary>
+    public const int StatsFieldNumber = 32;
+    private global::Google.Ads.AdManager.V1.LineItemStats stats_;
+    /// <summary>
+    /// Output only. Contains trafficking statistics for the line item. This will
+    /// be empty in case there are no statistics for a line item yet.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.LineItemStats Stats {
+      get { return stats_; }
+      set {
+        stats_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "delivery_indicator" field.</summary>
+    public const int DeliveryIndicatorFieldNumber = 33;
+    private global::Google.Ads.AdManager.V1.DeliveryIndicator deliveryIndicator_;
+    /// <summary>
+    /// Output only. Indicates how well the line item has been performing. This
+    /// will be empty if the delivery indicator information is not available due to
+    /// one of the following reasons:
+    ///   - The line item is not delivering.
+    ///   - The line item has an unlimited goal or cap.
+    ///   - The line item has a percentage based goal or cap.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.DeliveryIndicator DeliveryIndicator {
+      get { return deliveryIndicator_; }
+      set {
+        deliveryIndicator_ = value;
       }
     }
 
@@ -296,6 +1216,312 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 36;
+    private readonly static global::Google.Ads.AdManager.V1.LineItemComputedStatusEnum.Types.LineItemComputedStatus StatusDefaultValue = global::Google.Ads.AdManager.V1.LineItemComputedStatusEnum.Types.LineItemComputedStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.LineItemComputedStatusEnum.Types.LineItemComputedStatus status_;
+    /// <summary>
+    /// Output only. The status of the LineItem.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.LineItemComputedStatusEnum.Types.LineItemComputedStatus Status {
+      get { if ((_hasBits0 & 131072) != 0) { return status_; } else { return StatusDefaultValue; } }
+      set {
+        _hasBits0 |= 131072;
+        status_ = value;
+      }
+    }
+    /// <summary>Gets whether the "status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStatus {
+      get { return (_hasBits0 & 131072) != 0; }
+    }
+    /// <summary>Clears the value of the "status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStatus() {
+      _hasBits0 &= ~131072;
+    }
+
+    /// <summary>Field number for the "reservation_status" field.</summary>
+    public const int ReservationStatusFieldNumber = 38;
+    private readonly static global::Google.Ads.AdManager.V1.LineItemReservationStatusEnum.Types.LineItemReservationStatus ReservationStatusDefaultValue = global::Google.Ads.AdManager.V1.LineItemReservationStatusEnum.Types.LineItemReservationStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.LineItemReservationStatusEnum.Types.LineItemReservationStatus reservationStatus_;
+    /// <summary>
+    /// Output only. Describes whether or not inventory has been reserved for the
+    /// LineItem.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.LineItemReservationStatusEnum.Types.LineItemReservationStatus ReservationStatus {
+      get { if ((_hasBits0 & 262144) != 0) { return reservationStatus_; } else { return ReservationStatusDefaultValue; } }
+      set {
+        _hasBits0 |= 262144;
+        reservationStatus_ = value;
+      }
+    }
+    /// <summary>Gets whether the "reservation_status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasReservationStatus {
+      get { return (_hasBits0 & 262144) != 0; }
+    }
+    /// <summary>Clears the value of the "reservation_status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReservationStatus() {
+      _hasBits0 &= ~262144;
+    }
+
+    /// <summary>Field number for the "archived" field.</summary>
+    public const int ArchivedFieldNumber = 39;
+    private readonly static bool ArchivedDefaultValue = false;
+
+    private bool archived_;
+    /// <summary>
+    /// Output only. The archival status of the LineItem.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Archived {
+      get { if ((_hasBits0 & 524288) != 0) { return archived_; } else { return ArchivedDefaultValue; } }
+      set {
+        _hasBits0 |= 524288;
+        archived_ = value;
+      }
+    }
+    /// <summary>Gets whether the "archived" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasArchived {
+      get { return (_hasBits0 & 524288) != 0; }
+    }
+    /// <summary>Clears the value of the "archived" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearArchived() {
+      _hasBits0 &= ~524288;
+    }
+
+    /// <summary>Field number for the "web_property_code" field.</summary>
+    public const int WebPropertyCodeFieldNumber = 49;
+    private readonly static string WebPropertyCodeDefaultValue = "";
+
+    private string webPropertyCode_;
+    /// <summary>
+    /// Optional. The web property code used for dynamic allocation line items.
+    /// This web property is only required with line item types AD_EXCHANGE and
+    /// ADSENSE.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string WebPropertyCode {
+      get { return webPropertyCode_ ?? WebPropertyCodeDefaultValue; }
+      set {
+        webPropertyCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "web_property_code" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasWebPropertyCode {
+      get { return webPropertyCode_ != null; }
+    }
+    /// <summary>Clears the value of the "web_property_code" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearWebPropertyCode() {
+      webPropertyCode_ = null;
+    }
+
+    /// <summary>Field number for the "applied_labels" field.</summary>
+    public const int AppliedLabelsFieldNumber = 50;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.AppliedLabel> _repeated_appliedLabels_codec
+        = pb::FieldCodec.ForMessage(402, global::Google.Ads.AdManager.V1.AppliedLabel.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.AppliedLabel> appliedLabels_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.AppliedLabel>();
+    /// <summary>
+    /// Optional. The set of labels applied directly to this line item.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.AppliedLabel> AppliedLabels {
+      get { return appliedLabels_; }
+    }
+
+    /// <summary>Field number for the "effective_applied_labels" field.</summary>
+    public const int EffectiveAppliedLabelsFieldNumber = 51;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.AppliedLabel> _repeated_effectiveAppliedLabels_codec
+        = pb::FieldCodec.ForMessage(410, global::Google.Ads.AdManager.V1.AppliedLabel.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.AppliedLabel> effectiveAppliedLabels_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.AppliedLabel>();
+    /// <summary>
+    /// Output only. Contains the set of labels inherited from the order that
+    /// contains this line item and the advertiser that owns the order. If a label
+    /// has been negated, only the negated label is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.AppliedLabel> EffectiveAppliedLabels {
+      get { return effectiveAppliedLabels_; }
+    }
+
+    /// <summary>Field number for the "same_advertiser_exception_enabled" field.</summary>
+    public const int SameAdvertiserExceptionEnabledFieldNumber = 52;
+    private readonly static bool SameAdvertiserExceptionEnabledDefaultValue = false;
+
+    private bool sameAdvertiserExceptionEnabled_;
+    /// <summary>
+    /// Optional. If a line item has a series of competitive exclusions on it, it
+    /// could be blocked from serving with line items from the same advertiser.
+    /// Setting this to true will allow line items from the same advertiser to
+    /// serve regardless of the other competitive exclusion labels being applied.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SameAdvertiserExceptionEnabled {
+      get { if ((_hasBits0 & 1048576) != 0) { return sameAdvertiserExceptionEnabled_; } else { return SameAdvertiserExceptionEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 1048576;
+        sameAdvertiserExceptionEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "same_advertiser_exception_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSameAdvertiserExceptionEnabled {
+      get { return (_hasBits0 & 1048576) != 0; }
+    }
+    /// <summary>Clears the value of the "same_advertiser_exception_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSameAdvertiserExceptionEnabled() {
+      _hasBits0 &= ~1048576;
+    }
+
+    /// <summary>Field number for the "update_source" field.</summary>
+    public const int UpdateSourceFieldNumber = 53;
+    private readonly static string UpdateSourceDefaultValue = "";
+
+    private string updateSource_;
+    /// <summary>
+    /// Output only. The application that last modified this line item.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UpdateSource {
+      get { return updateSource_ ?? UpdateSourceDefaultValue; }
+      set {
+        updateSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "update_source" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUpdateSource {
+      get { return updateSource_ != null; }
+    }
+    /// <summary>Clears the value of the "update_source" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUpdateSource() {
+      updateSource_ = null;
+    }
+
+    /// <summary>Field number for the "notes" field.</summary>
+    public const int NotesFieldNumber = 54;
+    private readonly static string NotesDefaultValue = "";
+
+    private string notes_;
+    /// <summary>
+    /// Optional. Provides any additional notes that may annotate the LineItem.
+    /// This attribute has a maximum length of 65,535 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Notes {
+      get { return notes_ ?? NotesDefaultValue; }
+      set {
+        notes_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "notes" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNotes {
+      get { return notes_ != null; }
+    }
+    /// <summary>Clears the value of the "notes" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNotes() {
+      notes_ = null;
+    }
+
+    /// <summary>Field number for the "competitive_constraint_scope" field.</summary>
+    public const int CompetitiveConstraintScopeFieldNumber = 56;
+    private readonly static global::Google.Ads.AdManager.V1.ExclusionScopeEnum.Types.ExclusionScope CompetitiveConstraintScopeDefaultValue = global::Google.Ads.AdManager.V1.ExclusionScopeEnum.Types.ExclusionScope.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.ExclusionScopeEnum.Types.ExclusionScope competitiveConstraintScope_;
+    /// <summary>
+    /// Optional. Non-empty default. The CompetitiveConstraintScope for the
+    /// competitive exclusion labels assigned to this line item. This field
+    /// defaults to POD.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ExclusionScopeEnum.Types.ExclusionScope CompetitiveConstraintScope {
+      get { if ((_hasBits0 & 2097152) != 0) { return competitiveConstraintScope_; } else { return CompetitiveConstraintScopeDefaultValue; } }
+      set {
+        _hasBits0 |= 2097152;
+        competitiveConstraintScope_ = value;
+      }
+    }
+    /// <summary>Gets whether the "competitive_constraint_scope" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCompetitiveConstraintScope {
+      get { return (_hasBits0 & 2097152) != 0; }
+    }
+    /// <summary>Clears the value of the "competitive_constraint_scope" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCompetitiveConstraintScope() {
+      _hasBits0 &= ~2097152;
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 57;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The time this line item was last modified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 58;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The time this line item was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "custom_field_values" field.</summary>
     public const int CustomFieldValuesFieldNumber = 59;
     private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CustomFieldValue> _repeated_customFieldValues_codec
@@ -308,6 +1534,114 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CustomFieldValue> CustomFieldValues {
       get { return customFieldValues_; }
+    }
+
+    /// <summary>Field number for the "missing_creatives" field.</summary>
+    public const int MissingCreativesFieldNumber = 61;
+    private readonly static bool MissingCreativesDefaultValue = false;
+
+    private bool missingCreatives_;
+    /// <summary>
+    /// Output only. Indicates if a LineItem is missing any Creative creatives for
+    /// the creativePlaceholders specified.  Creative Creatives can be considered
+    /// missing for several reasons including:
+    ///  - Not enough Creative creatives of a certain size have been uploaded, as
+    ///    determined by
+    ///    [expected_creative_count][google.ads.admanager.v1.CreativePlaceholder.expected_creative_count].
+    ///    For example a LineItem specifies 750x350, 400x200 but only a 750x350 was
+    ///    uploaded. Or LineItem specifies 750x350 with an expected count of 2, but
+    ///    only one was uploaded.
+    ///  - The [Creative.applied_labels][] of an associated Creative don't match
+    ///    the
+    ///    [CreativePlaceholder.applied_labels][google.ads.admanager.v1.CreativePlaceholder.applied_labels]
+    ///    of the LineItem. For example LineItem specifies 750x350 with a Foo
+    ///    AppliedLabel but a 750x350 creative without a AppliedLabel was uploaded.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool MissingCreatives {
+      get { if ((_hasBits0 & 4194304) != 0) { return missingCreatives_; } else { return MissingCreativesDefaultValue; } }
+      set {
+        _hasBits0 |= 4194304;
+        missingCreatives_ = value;
+      }
+    }
+    /// <summary>Gets whether the "missing_creatives" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMissingCreatives {
+      get { return (_hasBits0 & 4194304) != 0; }
+    }
+    /// <summary>Clears the value of the "missing_creatives" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMissingCreatives() {
+      _hasBits0 &= ~4194304;
+    }
+
+    /// <summary>Field number for the "third_party_measurement_settings" field.</summary>
+    public const int ThirdPartyMeasurementSettingsFieldNumber = 67;
+    private global::Google.Ads.AdManager.V1.ThirdPartyMeasurementSettings thirdPartyMeasurementSettings_;
+    /// <summary>
+    /// Optional. Third party auto-pixeling settings for cross-sell Partners.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ThirdPartyMeasurementSettings ThirdPartyMeasurementSettings {
+      get { return thirdPartyMeasurementSettings_; }
+      set {
+        thirdPartyMeasurementSettings_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "youtube_kids_restricted" field.</summary>
+    public const int YoutubeKidsRestrictedFieldNumber = 74;
+    private readonly static bool YoutubeKidsRestrictedDefaultValue = false;
+
+    private bool youtubeKidsRestricted_;
+    /// <summary>
+    /// Optional. Designates this line item as intended for YT Kids app. If true,
+    /// all creatives associated with this line item must be reviewed and approved.
+    /// See the help center article for more information:
+    /// https://support.google.com/yt-partner-sales/answer/10015534.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool YoutubeKidsRestricted {
+      get { if ((_hasBits0 & 8388608) != 0) { return youtubeKidsRestricted_; } else { return YoutubeKidsRestrictedDefaultValue; } }
+      set {
+        _hasBits0 |= 8388608;
+        youtubeKidsRestricted_ = value;
+      }
+    }
+    /// <summary>Gets whether the "youtube_kids_restricted" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasYoutubeKidsRestricted {
+      get { return (_hasBits0 & 8388608) != 0; }
+    }
+    /// <summary>Clears the value of the "youtube_kids_restricted" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearYoutubeKidsRestricted() {
+      _hasBits0 &= ~8388608;
+    }
+
+    /// <summary>Field number for the "max_video_creative_duration" field.</summary>
+    public const int MaxVideoCreativeDurationFieldNumber = 75;
+    private global::Google.Protobuf.WellKnownTypes.Duration maxVideoCreativeDuration_;
+    /// <summary>
+    /// Optional. The max duration of a video creative associated with this
+    /// LineItem. This attribute is only meaningful for video line items. This
+    /// attribute is required for video line items and must be greater than 0.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration MaxVideoCreativeDuration {
+      get { return maxVideoCreativeDuration_; }
+      set {
+        maxVideoCreativeDuration_ = value;
+      }
     }
 
     /// <summary>Field number for the "goal" field.</summary>
@@ -324,6 +1658,248 @@ namespace Google.Ads.AdManager.V1 {
       set {
         goal_ = value;
       }
+    }
+
+    /// <summary>Field number for the "secondary_goals" field.</summary>
+    public const int SecondaryGoalsFieldNumber = 100;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.Goal> _repeated_secondaryGoals_codec
+        = pb::FieldCodec.ForMessage(802, global::Google.Ads.AdManager.V1.Goal.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.Goal> secondaryGoals_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.Goal>();
+    /// <summary>
+    /// Optional. The secondary goals that this LineItem is associated with. This
+    /// is required and meaningful only if the
+    /// [line_item_type][google.ads.admanager.v1.LineItem.line_item_type] is
+    /// SPONSORSHIP and [cost_type][google.ads.admanager.v1.LineItem.cost_type] is
+    /// CPM.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.Goal> SecondaryGoals {
+      get { return secondaryGoals_; }
+    }
+
+    /// <summary>Field number for the "grp_settings" field.</summary>
+    public const int GrpSettingsFieldNumber = 78;
+    private global::Google.Ads.AdManager.V1.GrpSettings grpSettings_;
+    /// <summary>
+    /// Optional. Contains the information for a line item which has a target GRP
+    /// demographic.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.GrpSettings GrpSettings {
+      get { return grpSettings_; }
+      set {
+        grpSettings_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "deal_info" field.</summary>
+    public const int DealInfoFieldNumber = 79;
+    private global::Google.Ads.AdManager.V1.LineItemDealInfo dealInfo_;
+    /// <summary>
+    /// Optional. The deal information associated with this line item, if it is
+    /// programmatic.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.LineItemDealInfo DealInfo {
+      get { return dealInfo_; }
+      set {
+        dealInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "viewability_provider_companies" field.</summary>
+    public const int ViewabilityProviderCompaniesFieldNumber = 85;
+    private static readonly pb::FieldCodec<string> _repeated_viewabilityProviderCompanies_codec
+        = pb::FieldCodec.ForString(682);
+    private readonly pbc::RepeatedField<string> viewabilityProviderCompanies_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Optional IDs of the Company that provide ad verification for this
+    /// line item.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ViewabilityProviderCompanies {
+      get { return viewabilityProviderCompanies_; }
+    }
+
+    /// <summary>Field number for the "child_content_eligibility" field.</summary>
+    public const int ChildContentEligibilityFieldNumber = 86;
+    private readonly static global::Google.Ads.AdManager.V1.ChildContentEligibilityEnum.Types.ChildContentEligibility ChildContentEligibilityDefaultValue = global::Google.Ads.AdManager.V1.ChildContentEligibilityEnum.Types.ChildContentEligibility.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.ChildContentEligibilityEnum.Types.ChildContentEligibility childContentEligibility_;
+    /// <summary>
+    /// Optional. Non-empty default. Child content eligibility designation for this
+    /// line item. This field defaults to DISALLOWED.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ChildContentEligibilityEnum.Types.ChildContentEligibility ChildContentEligibility {
+      get { if ((_hasBits0 & 16777216) != 0) { return childContentEligibility_; } else { return ChildContentEligibilityDefaultValue; } }
+      set {
+        _hasBits0 |= 16777216;
+        childContentEligibility_ = value;
+      }
+    }
+    /// <summary>Gets whether the "child_content_eligibility" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasChildContentEligibility {
+      get { return (_hasBits0 & 16777216) != 0; }
+    }
+    /// <summary>Clears the value of the "child_content_eligibility" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearChildContentEligibility() {
+      _hasBits0 &= ~16777216;
+    }
+
+    /// <summary>Field number for the "custom_vast_extension" field.</summary>
+    public const int CustomVastExtensionFieldNumber = 88;
+    private readonly static string CustomVastExtensionDefaultValue = "";
+
+    private string customVastExtension_;
+    /// <summary>
+    /// Optional. Custom XML to be rendered in a custom VAST response at serving
+    /// time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomVastExtension {
+      get { return customVastExtension_ ?? CustomVastExtensionDefaultValue; }
+      set {
+        customVastExtension_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "custom_vast_extension" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCustomVastExtension {
+      get { return customVastExtension_ != null; }
+    }
+    /// <summary>Clears the value of the "custom_vast_extension" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCustomVastExtension() {
+      customVastExtension_ = null;
+    }
+
+    /// <summary>Field number for the "sponsorship_exclusivity_enabled" field.</summary>
+    public const int SponsorshipExclusivityEnabledFieldNumber = 89;
+    private readonly static bool SponsorshipExclusivityEnabledDefaultValue = false;
+
+    private bool sponsorshipExclusivityEnabled_;
+    /// <summary>
+    /// Optional. Whether the line item is enabled for sponsorship exclusivity.  If
+    /// true, only exclusive sponsorships can be served on inventory targeted by
+    /// this LineItem. This control should only be available for 100% video
+    /// sponsorships.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SponsorshipExclusivityEnabled {
+      get { if ((_hasBits0 & 33554432) != 0) { return sponsorshipExclusivityEnabled_; } else { return SponsorshipExclusivityEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 33554432;
+        sponsorshipExclusivityEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "sponsorship_exclusivity_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSponsorshipExclusivityEnabled {
+      get { return (_hasBits0 & 33554432) != 0; }
+    }
+    /// <summary>Clears the value of the "sponsorship_exclusivity_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSponsorshipExclusivityEnabled() {
+      _hasBits0 &= ~33554432;
+    }
+
+    /// <summary>Field number for the "repeated_creative_serving_enabled" field.</summary>
+    public const int RepeatedCreativeServingEnabledFieldNumber = 90;
+    private readonly static bool RepeatedCreativeServingEnabledDefaultValue = false;
+
+    private bool repeatedCreativeServingEnabled_;
+    /// <summary>
+    /// Optional. Indicates whether repeated creative serving is enabled for this
+    /// line item.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool RepeatedCreativeServingEnabled {
+      get { if ((_hasBits0 & 67108864) != 0) { return repeatedCreativeServingEnabled_; } else { return RepeatedCreativeServingEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 67108864;
+        repeatedCreativeServingEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "repeated_creative_serving_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRepeatedCreativeServingEnabled {
+      get { return (_hasBits0 & 67108864) != 0; }
+    }
+    /// <summary>Clears the value of the "repeated_creative_serving_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRepeatedCreativeServingEnabled() {
+      _hasBits0 &= ~67108864;
+    }
+
+    /// <summary>Field number for the "targeting" field.</summary>
+    public const int TargetingFieldNumber = 93;
+    private global::Google.Ads.AdManager.V1.Targeting targeting_;
+    /// <summary>
+    /// Required. Contains the targeting criteria for the ad campaign.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.Targeting Targeting {
+      get { return targeting_; }
+      set {
+        targeting_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "creative_targetings" field.</summary>
+    public const int CreativeTargetingsFieldNumber = 94;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CreativeTargeting> _repeated_creativeTargetings_codec
+        = pb::FieldCodec.ForMessage(754, global::Google.Ads.AdManager.V1.CreativeTargeting.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativeTargeting> creativeTargetings_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativeTargeting>();
+    /// <summary>
+    /// Optional. A list of CreativeTargeting objects that can be used to specify
+    /// creative level targeting for this line item. Creative level targeting is
+    /// specified in a
+    /// [CreativePlaceholder.creative_targeting_display_name][google.ads.admanager.v1.CreativePlaceholder.creative_targeting_display_name]
+    /// field by referencing the [CreativeTargeting.display_name][] field. It also
+    /// needs to be re-specified in the
+    /// [LineItemCreativeAssociation.targeting_display_name][] field when
+    /// associating a line item with a creative that fits into that placeholder.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreativeTargeting> CreativeTargetings {
+      get { return creativeTargetings_; }
+    }
+
+    /// <summary>Field number for the "allowed_formats" field.</summary>
+    public const int AllowedFormatsFieldNumber = 112;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.LineItemAllowedFormatEnum.Types.LineItemAllowedFormat> _repeated_allowedFormats_codec
+        = pb::FieldCodec.ForEnum(898, x => (int) x, x => (global::Google.Ads.AdManager.V1.LineItemAllowedFormatEnum.Types.LineItemAllowedFormat) x);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.LineItemAllowedFormatEnum.Types.LineItemAllowedFormat> allowedFormats_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.LineItemAllowedFormatEnum.Types.LineItemAllowedFormat>();
+    /// <summary>
+    /// Optional. The set of allowed formats for this line item.
+    /// If empty, all formats are allowed. This property only applies
+    /// to programmatic video line items.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.LineItemAllowedFormatEnum.Types.LineItemAllowedFormat> AllowedFormats {
+      get { return allowedFormats_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -344,13 +1920,66 @@ namespace Google.Ads.AdManager.V1 {
       if (Name != other.Name) return false;
       if (Order != other.Order) return false;
       if (DisplayName != other.DisplayName) return false;
+      if (ExternalLineItemId != other.ExternalLineItemId) return false;
+      if (OrderDisplayName != other.OrderDisplayName) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(TargetEndTime, other.TargetEndTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (AutoExtensionDays != other.AutoExtensionDays) return false;
+      if (EndTimeUnlimited != other.EndTimeUnlimited) return false;
+      if (CreativeRotationType != other.CreativeRotationType) return false;
+      if (DeliveryRateType != other.DeliveryRateType) return false;
+      if (DeliveryForecastSource != other.DeliveryForecastSource) return false;
+      if (!object.Equals(CustomPacingCurve, other.CustomPacingCurve)) return false;
+      if (RoadblockingType != other.RoadblockingType) return false;
+      if (SkippableAdType != other.SkippableAdType) return false;
+      if(!frequencyCaps_.Equals(other.frequencyCaps_)) return false;
       if (LineItemType != other.LineItemType) return false;
+      if (Priority != other.Priority) return false;
       if (!object.Equals(Rate, other.Rate)) return false;
+      if (!object.Equals(ValueCpm, other.ValueCpm)) return false;
+      if (CostType != other.CostType) return false;
+      if (!object.Equals(Discount, other.Discount)) return false;
+      if (ContractedUnitsBought != other.ContractedUnitsBought) return false;
+      if(!creativePlaceholders_.Equals(other.creativePlaceholders_)) return false;
+      if (EnvironmentType != other.EnvironmentType) return false;
+      if (CompanionDeliveryOption != other.CompanionDeliveryOption) return false;
+      if (AllowOverbook != other.AllowOverbook) return false;
+      if (SkipInventoryCheck != other.SkipInventoryCheck) return false;
+      if (SkipCrossSellingRuleWarningChecks != other.SkipCrossSellingRuleWarningChecks) return false;
+      if (ReserveOnCreation != other.ReserveOnCreation) return false;
+      if (!object.Equals(Stats, other.Stats)) return false;
+      if (!object.Equals(DeliveryIndicator, other.DeliveryIndicator)) return false;
       if (!object.Equals(Budget, other.Budget)) return false;
+      if (Status != other.Status) return false;
+      if (ReservationStatus != other.ReservationStatus) return false;
+      if (Archived != other.Archived) return false;
+      if (WebPropertyCode != other.WebPropertyCode) return false;
+      if(!appliedLabels_.Equals(other.appliedLabels_)) return false;
+      if(!effectiveAppliedLabels_.Equals(other.effectiveAppliedLabels_)) return false;
+      if (SameAdvertiserExceptionEnabled != other.SameAdvertiserExceptionEnabled) return false;
+      if (UpdateSource != other.UpdateSource) return false;
+      if (Notes != other.Notes) return false;
+      if (CompetitiveConstraintScope != other.CompetitiveConstraintScope) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if(!customFieldValues_.Equals(other.customFieldValues_)) return false;
+      if (MissingCreatives != other.MissingCreatives) return false;
+      if (!object.Equals(ThirdPartyMeasurementSettings, other.ThirdPartyMeasurementSettings)) return false;
+      if (YoutubeKidsRestricted != other.YoutubeKidsRestricted) return false;
+      if (!object.Equals(MaxVideoCreativeDuration, other.MaxVideoCreativeDuration)) return false;
       if (!object.Equals(Goal, other.Goal)) return false;
+      if(!secondaryGoals_.Equals(other.secondaryGoals_)) return false;
+      if (!object.Equals(GrpSettings, other.GrpSettings)) return false;
+      if (!object.Equals(DealInfo, other.DealInfo)) return false;
+      if(!viewabilityProviderCompanies_.Equals(other.viewabilityProviderCompanies_)) return false;
+      if (ChildContentEligibility != other.ChildContentEligibility) return false;
+      if (CustomVastExtension != other.CustomVastExtension) return false;
+      if (SponsorshipExclusivityEnabled != other.SponsorshipExclusivityEnabled) return false;
+      if (RepeatedCreativeServingEnabled != other.RepeatedCreativeServingEnabled) return false;
+      if (!object.Equals(Targeting, other.Targeting)) return false;
+      if(!creativeTargetings_.Equals(other.creativeTargetings_)) return false;
+      if(!allowedFormats_.Equals(other.allowedFormats_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -361,13 +1990,66 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (HasOrder) hash ^= Order.GetHashCode();
       if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasExternalLineItemId) hash ^= ExternalLineItemId.GetHashCode();
+      if (HasOrderDisplayName) hash ^= OrderDisplayName.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (targetEndTime_ != null) hash ^= TargetEndTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (HasAutoExtensionDays) hash ^= AutoExtensionDays.GetHashCode();
+      if (HasEndTimeUnlimited) hash ^= EndTimeUnlimited.GetHashCode();
+      if (HasCreativeRotationType) hash ^= CreativeRotationType.GetHashCode();
+      if (HasDeliveryRateType) hash ^= DeliveryRateType.GetHashCode();
+      if (HasDeliveryForecastSource) hash ^= DeliveryForecastSource.GetHashCode();
+      if (customPacingCurve_ != null) hash ^= CustomPacingCurve.GetHashCode();
+      if (HasRoadblockingType) hash ^= RoadblockingType.GetHashCode();
+      if (HasSkippableAdType) hash ^= SkippableAdType.GetHashCode();
+      hash ^= frequencyCaps_.GetHashCode();
       if (HasLineItemType) hash ^= LineItemType.GetHashCode();
+      if (HasPriority) hash ^= Priority.GetHashCode();
       if (rate_ != null) hash ^= Rate.GetHashCode();
+      if (valueCpm_ != null) hash ^= ValueCpm.GetHashCode();
+      if (HasCostType) hash ^= CostType.GetHashCode();
+      if (discount_ != null) hash ^= Discount.GetHashCode();
+      if (HasContractedUnitsBought) hash ^= ContractedUnitsBought.GetHashCode();
+      hash ^= creativePlaceholders_.GetHashCode();
+      if (HasEnvironmentType) hash ^= EnvironmentType.GetHashCode();
+      if (HasCompanionDeliveryOption) hash ^= CompanionDeliveryOption.GetHashCode();
+      if (HasAllowOverbook) hash ^= AllowOverbook.GetHashCode();
+      if (HasSkipInventoryCheck) hash ^= SkipInventoryCheck.GetHashCode();
+      if (HasSkipCrossSellingRuleWarningChecks) hash ^= SkipCrossSellingRuleWarningChecks.GetHashCode();
+      if (HasReserveOnCreation) hash ^= ReserveOnCreation.GetHashCode();
+      if (stats_ != null) hash ^= Stats.GetHashCode();
+      if (deliveryIndicator_ != null) hash ^= DeliveryIndicator.GetHashCode();
       if (budget_ != null) hash ^= Budget.GetHashCode();
+      if (HasStatus) hash ^= Status.GetHashCode();
+      if (HasReservationStatus) hash ^= ReservationStatus.GetHashCode();
+      if (HasArchived) hash ^= Archived.GetHashCode();
+      if (HasWebPropertyCode) hash ^= WebPropertyCode.GetHashCode();
+      hash ^= appliedLabels_.GetHashCode();
+      hash ^= effectiveAppliedLabels_.GetHashCode();
+      if (HasSameAdvertiserExceptionEnabled) hash ^= SameAdvertiserExceptionEnabled.GetHashCode();
+      if (HasUpdateSource) hash ^= UpdateSource.GetHashCode();
+      if (HasNotes) hash ^= Notes.GetHashCode();
+      if (HasCompetitiveConstraintScope) hash ^= CompetitiveConstraintScope.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       hash ^= customFieldValues_.GetHashCode();
+      if (HasMissingCreatives) hash ^= MissingCreatives.GetHashCode();
+      if (thirdPartyMeasurementSettings_ != null) hash ^= ThirdPartyMeasurementSettings.GetHashCode();
+      if (HasYoutubeKidsRestricted) hash ^= YoutubeKidsRestricted.GetHashCode();
+      if (maxVideoCreativeDuration_ != null) hash ^= MaxVideoCreativeDuration.GetHashCode();
       if (goal_ != null) hash ^= Goal.GetHashCode();
+      hash ^= secondaryGoals_.GetHashCode();
+      if (grpSettings_ != null) hash ^= GrpSettings.GetHashCode();
+      if (dealInfo_ != null) hash ^= DealInfo.GetHashCode();
+      hash ^= viewabilityProviderCompanies_.GetHashCode();
+      if (HasChildContentEligibility) hash ^= ChildContentEligibility.GetHashCode();
+      if (HasCustomVastExtension) hash ^= CustomVastExtension.GetHashCode();
+      if (HasSponsorshipExclusivityEnabled) hash ^= SponsorshipExclusivityEnabled.GetHashCode();
+      if (HasRepeatedCreativeServingEnabled) hash ^= RepeatedCreativeServingEnabled.GetHashCode();
+      if (targeting_ != null) hash ^= Targeting.GetHashCode();
+      hash ^= creativeTargetings_.GetHashCode();
+      hash ^= allowedFormats_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -398,6 +2080,14 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(26);
         output.WriteString(DisplayName);
       }
+      if (HasExternalLineItemId) {
+        output.WriteRawTag(34);
+        output.WriteString(ExternalLineItemId);
+      }
+      if (HasOrderDisplayName) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderDisplayName);
+      }
       if (startTime_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(StartTime);
@@ -406,23 +2096,203 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(EndTime);
       }
+      if (HasAutoExtensionDays) {
+        output.WriteRawTag(64);
+        output.WriteInt32(AutoExtensionDays);
+      }
+      if (HasEndTimeUnlimited) {
+        output.WriteRawTag(72);
+        output.WriteBool(EndTimeUnlimited);
+      }
+      if (HasCreativeRotationType) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) CreativeRotationType);
+      }
+      if (HasDeliveryRateType) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) DeliveryRateType);
+      }
+      if (HasDeliveryForecastSource) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) DeliveryForecastSource);
+      }
+      if (customPacingCurve_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(CustomPacingCurve);
+      }
+      if (HasRoadblockingType) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) RoadblockingType);
+      }
+      if (HasSkippableAdType) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) SkippableAdType);
+      }
+      frequencyCaps_.WriteTo(output, _repeated_frequencyCaps_codec);
       if (HasLineItemType) {
         output.WriteRawTag(136, 1);
         output.WriteEnum((int) LineItemType);
+      }
+      if (HasPriority) {
+        output.WriteRawTag(152, 1);
+        output.WriteInt32(Priority);
       }
       if (rate_ != null) {
         output.WriteRawTag(162, 1);
         output.WriteMessage(Rate);
       }
+      if (valueCpm_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(ValueCpm);
+      }
+      if (HasCostType) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) CostType);
+      }
+      if (discount_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(Discount);
+      }
+      if (HasContractedUnitsBought) {
+        output.WriteRawTag(192, 1);
+        output.WriteInt64(ContractedUnitsBought);
+      }
+      creativePlaceholders_.WriteTo(output, _repeated_creativePlaceholders_codec);
+      if (HasEnvironmentType) {
+        output.WriteRawTag(208, 1);
+        output.WriteEnum((int) EnvironmentType);
+      }
+      if (HasCompanionDeliveryOption) {
+        output.WriteRawTag(216, 1);
+        output.WriteEnum((int) CompanionDeliveryOption);
+      }
+      if (HasAllowOverbook) {
+        output.WriteRawTag(224, 1);
+        output.WriteBool(AllowOverbook);
+      }
+      if (HasSkipInventoryCheck) {
+        output.WriteRawTag(232, 1);
+        output.WriteBool(SkipInventoryCheck);
+      }
+      if (HasSkipCrossSellingRuleWarningChecks) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(SkipCrossSellingRuleWarningChecks);
+      }
+      if (HasReserveOnCreation) {
+        output.WriteRawTag(248, 1);
+        output.WriteBool(ReserveOnCreation);
+      }
+      if (stats_ != null) {
+        output.WriteRawTag(130, 2);
+        output.WriteMessage(Stats);
+      }
+      if (deliveryIndicator_ != null) {
+        output.WriteRawTag(138, 2);
+        output.WriteMessage(DeliveryIndicator);
+      }
       if (budget_ != null) {
         output.WriteRawTag(154, 2);
         output.WriteMessage(Budget);
       }
+      if (HasStatus) {
+        output.WriteRawTag(160, 2);
+        output.WriteEnum((int) Status);
+      }
+      if (HasReservationStatus) {
+        output.WriteRawTag(176, 2);
+        output.WriteEnum((int) ReservationStatus);
+      }
+      if (HasArchived) {
+        output.WriteRawTag(184, 2);
+        output.WriteBool(Archived);
+      }
+      if (HasWebPropertyCode) {
+        output.WriteRawTag(138, 3);
+        output.WriteString(WebPropertyCode);
+      }
+      appliedLabels_.WriteTo(output, _repeated_appliedLabels_codec);
+      effectiveAppliedLabels_.WriteTo(output, _repeated_effectiveAppliedLabels_codec);
+      if (HasSameAdvertiserExceptionEnabled) {
+        output.WriteRawTag(160, 3);
+        output.WriteBool(SameAdvertiserExceptionEnabled);
+      }
+      if (HasUpdateSource) {
+        output.WriteRawTag(170, 3);
+        output.WriteString(UpdateSource);
+      }
+      if (HasNotes) {
+        output.WriteRawTag(178, 3);
+        output.WriteString(Notes);
+      }
+      if (HasCompetitiveConstraintScope) {
+        output.WriteRawTag(192, 3);
+        output.WriteEnum((int) CompetitiveConstraintScope);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(202, 3);
+        output.WriteMessage(UpdateTime);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(210, 3);
+        output.WriteMessage(CreateTime);
+      }
       customFieldValues_.WriteTo(output, _repeated_customFieldValues_codec);
+      if (HasMissingCreatives) {
+        output.WriteRawTag(232, 3);
+        output.WriteBool(MissingCreatives);
+      }
+      if (thirdPartyMeasurementSettings_ != null) {
+        output.WriteRawTag(154, 4);
+        output.WriteMessage(ThirdPartyMeasurementSettings);
+      }
+      if (HasYoutubeKidsRestricted) {
+        output.WriteRawTag(208, 4);
+        output.WriteBool(YoutubeKidsRestricted);
+      }
+      if (maxVideoCreativeDuration_ != null) {
+        output.WriteRawTag(218, 4);
+        output.WriteMessage(MaxVideoCreativeDuration);
+      }
       if (goal_ != null) {
         output.WriteRawTag(226, 4);
         output.WriteMessage(Goal);
       }
+      if (grpSettings_ != null) {
+        output.WriteRawTag(242, 4);
+        output.WriteMessage(GrpSettings);
+      }
+      if (dealInfo_ != null) {
+        output.WriteRawTag(250, 4);
+        output.WriteMessage(DealInfo);
+      }
+      viewabilityProviderCompanies_.WriteTo(output, _repeated_viewabilityProviderCompanies_codec);
+      if (HasChildContentEligibility) {
+        output.WriteRawTag(176, 5);
+        output.WriteEnum((int) ChildContentEligibility);
+      }
+      if (HasCustomVastExtension) {
+        output.WriteRawTag(194, 5);
+        output.WriteString(CustomVastExtension);
+      }
+      if (HasSponsorshipExclusivityEnabled) {
+        output.WriteRawTag(200, 5);
+        output.WriteBool(SponsorshipExclusivityEnabled);
+      }
+      if (HasRepeatedCreativeServingEnabled) {
+        output.WriteRawTag(208, 5);
+        output.WriteBool(RepeatedCreativeServingEnabled);
+      }
+      if (targeting_ != null) {
+        output.WriteRawTag(234, 5);
+        output.WriteMessage(Targeting);
+      }
+      creativeTargetings_.WriteTo(output, _repeated_creativeTargetings_codec);
+      if (targetEndTime_ != null) {
+        output.WriteRawTag(250, 5);
+        output.WriteMessage(TargetEndTime);
+      }
+      secondaryGoals_.WriteTo(output, _repeated_secondaryGoals_codec);
+      allowedFormats_.WriteTo(output, _repeated_allowedFormats_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -445,6 +2315,14 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(26);
         output.WriteString(DisplayName);
       }
+      if (HasExternalLineItemId) {
+        output.WriteRawTag(34);
+        output.WriteString(ExternalLineItemId);
+      }
+      if (HasOrderDisplayName) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderDisplayName);
+      }
       if (startTime_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(StartTime);
@@ -453,23 +2331,203 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(EndTime);
       }
+      if (HasAutoExtensionDays) {
+        output.WriteRawTag(64);
+        output.WriteInt32(AutoExtensionDays);
+      }
+      if (HasEndTimeUnlimited) {
+        output.WriteRawTag(72);
+        output.WriteBool(EndTimeUnlimited);
+      }
+      if (HasCreativeRotationType) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) CreativeRotationType);
+      }
+      if (HasDeliveryRateType) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) DeliveryRateType);
+      }
+      if (HasDeliveryForecastSource) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) DeliveryForecastSource);
+      }
+      if (customPacingCurve_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(CustomPacingCurve);
+      }
+      if (HasRoadblockingType) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) RoadblockingType);
+      }
+      if (HasSkippableAdType) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) SkippableAdType);
+      }
+      frequencyCaps_.WriteTo(ref output, _repeated_frequencyCaps_codec);
       if (HasLineItemType) {
         output.WriteRawTag(136, 1);
         output.WriteEnum((int) LineItemType);
+      }
+      if (HasPriority) {
+        output.WriteRawTag(152, 1);
+        output.WriteInt32(Priority);
       }
       if (rate_ != null) {
         output.WriteRawTag(162, 1);
         output.WriteMessage(Rate);
       }
+      if (valueCpm_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(ValueCpm);
+      }
+      if (HasCostType) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) CostType);
+      }
+      if (discount_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(Discount);
+      }
+      if (HasContractedUnitsBought) {
+        output.WriteRawTag(192, 1);
+        output.WriteInt64(ContractedUnitsBought);
+      }
+      creativePlaceholders_.WriteTo(ref output, _repeated_creativePlaceholders_codec);
+      if (HasEnvironmentType) {
+        output.WriteRawTag(208, 1);
+        output.WriteEnum((int) EnvironmentType);
+      }
+      if (HasCompanionDeliveryOption) {
+        output.WriteRawTag(216, 1);
+        output.WriteEnum((int) CompanionDeliveryOption);
+      }
+      if (HasAllowOverbook) {
+        output.WriteRawTag(224, 1);
+        output.WriteBool(AllowOverbook);
+      }
+      if (HasSkipInventoryCheck) {
+        output.WriteRawTag(232, 1);
+        output.WriteBool(SkipInventoryCheck);
+      }
+      if (HasSkipCrossSellingRuleWarningChecks) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(SkipCrossSellingRuleWarningChecks);
+      }
+      if (HasReserveOnCreation) {
+        output.WriteRawTag(248, 1);
+        output.WriteBool(ReserveOnCreation);
+      }
+      if (stats_ != null) {
+        output.WriteRawTag(130, 2);
+        output.WriteMessage(Stats);
+      }
+      if (deliveryIndicator_ != null) {
+        output.WriteRawTag(138, 2);
+        output.WriteMessage(DeliveryIndicator);
+      }
       if (budget_ != null) {
         output.WriteRawTag(154, 2);
         output.WriteMessage(Budget);
       }
+      if (HasStatus) {
+        output.WriteRawTag(160, 2);
+        output.WriteEnum((int) Status);
+      }
+      if (HasReservationStatus) {
+        output.WriteRawTag(176, 2);
+        output.WriteEnum((int) ReservationStatus);
+      }
+      if (HasArchived) {
+        output.WriteRawTag(184, 2);
+        output.WriteBool(Archived);
+      }
+      if (HasWebPropertyCode) {
+        output.WriteRawTag(138, 3);
+        output.WriteString(WebPropertyCode);
+      }
+      appliedLabels_.WriteTo(ref output, _repeated_appliedLabels_codec);
+      effectiveAppliedLabels_.WriteTo(ref output, _repeated_effectiveAppliedLabels_codec);
+      if (HasSameAdvertiserExceptionEnabled) {
+        output.WriteRawTag(160, 3);
+        output.WriteBool(SameAdvertiserExceptionEnabled);
+      }
+      if (HasUpdateSource) {
+        output.WriteRawTag(170, 3);
+        output.WriteString(UpdateSource);
+      }
+      if (HasNotes) {
+        output.WriteRawTag(178, 3);
+        output.WriteString(Notes);
+      }
+      if (HasCompetitiveConstraintScope) {
+        output.WriteRawTag(192, 3);
+        output.WriteEnum((int) CompetitiveConstraintScope);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(202, 3);
+        output.WriteMessage(UpdateTime);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(210, 3);
+        output.WriteMessage(CreateTime);
+      }
       customFieldValues_.WriteTo(ref output, _repeated_customFieldValues_codec);
+      if (HasMissingCreatives) {
+        output.WriteRawTag(232, 3);
+        output.WriteBool(MissingCreatives);
+      }
+      if (thirdPartyMeasurementSettings_ != null) {
+        output.WriteRawTag(154, 4);
+        output.WriteMessage(ThirdPartyMeasurementSettings);
+      }
+      if (HasYoutubeKidsRestricted) {
+        output.WriteRawTag(208, 4);
+        output.WriteBool(YoutubeKidsRestricted);
+      }
+      if (maxVideoCreativeDuration_ != null) {
+        output.WriteRawTag(218, 4);
+        output.WriteMessage(MaxVideoCreativeDuration);
+      }
       if (goal_ != null) {
         output.WriteRawTag(226, 4);
         output.WriteMessage(Goal);
       }
+      if (grpSettings_ != null) {
+        output.WriteRawTag(242, 4);
+        output.WriteMessage(GrpSettings);
+      }
+      if (dealInfo_ != null) {
+        output.WriteRawTag(250, 4);
+        output.WriteMessage(DealInfo);
+      }
+      viewabilityProviderCompanies_.WriteTo(ref output, _repeated_viewabilityProviderCompanies_codec);
+      if (HasChildContentEligibility) {
+        output.WriteRawTag(176, 5);
+        output.WriteEnum((int) ChildContentEligibility);
+      }
+      if (HasCustomVastExtension) {
+        output.WriteRawTag(194, 5);
+        output.WriteString(CustomVastExtension);
+      }
+      if (HasSponsorshipExclusivityEnabled) {
+        output.WriteRawTag(200, 5);
+        output.WriteBool(SponsorshipExclusivityEnabled);
+      }
+      if (HasRepeatedCreativeServingEnabled) {
+        output.WriteRawTag(208, 5);
+        output.WriteBool(RepeatedCreativeServingEnabled);
+      }
+      if (targeting_ != null) {
+        output.WriteRawTag(234, 5);
+        output.WriteMessage(Targeting);
+      }
+      creativeTargetings_.WriteTo(ref output, _repeated_creativeTargetings_codec);
+      if (targetEndTime_ != null) {
+        output.WriteRawTag(250, 5);
+        output.WriteMessage(TargetEndTime);
+      }
+      secondaryGoals_.WriteTo(ref output, _repeated_secondaryGoals_codec);
+      allowedFormats_.WriteTo(ref output, _repeated_allowedFormats_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -489,25 +2547,168 @@ namespace Google.Ads.AdManager.V1 {
       if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
+      if (HasExternalLineItemId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalLineItemId);
+      }
+      if (HasOrderDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderDisplayName);
+      }
       if (startTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (targetEndTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TargetEndTime);
       }
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
       }
+      if (HasAutoExtensionDays) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AutoExtensionDays);
+      }
+      if (HasEndTimeUnlimited) {
+        size += 1 + 1;
+      }
+      if (HasCreativeRotationType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CreativeRotationType);
+      }
+      if (HasDeliveryRateType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DeliveryRateType);
+      }
+      if (HasDeliveryForecastSource) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DeliveryForecastSource);
+      }
+      if (customPacingCurve_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomPacingCurve);
+      }
+      if (HasRoadblockingType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RoadblockingType);
+      }
+      if (HasSkippableAdType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SkippableAdType);
+      }
+      size += frequencyCaps_.CalculateSize(_repeated_frequencyCaps_codec);
       if (HasLineItemType) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) LineItemType);
+      }
+      if (HasPriority) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(Priority);
       }
       if (rate_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Rate);
       }
+      if (valueCpm_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ValueCpm);
+      }
+      if (HasCostType) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) CostType);
+      }
+      if (discount_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Discount);
+      }
+      if (HasContractedUnitsBought) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(ContractedUnitsBought);
+      }
+      size += creativePlaceholders_.CalculateSize(_repeated_creativePlaceholders_codec);
+      if (HasEnvironmentType) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) EnvironmentType);
+      }
+      if (HasCompanionDeliveryOption) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) CompanionDeliveryOption);
+      }
+      if (HasAllowOverbook) {
+        size += 2 + 1;
+      }
+      if (HasSkipInventoryCheck) {
+        size += 2 + 1;
+      }
+      if (HasSkipCrossSellingRuleWarningChecks) {
+        size += 2 + 1;
+      }
+      if (HasReserveOnCreation) {
+        size += 2 + 1;
+      }
+      if (stats_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Stats);
+      }
+      if (deliveryIndicator_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DeliveryIndicator);
+      }
       if (budget_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Budget);
       }
+      if (HasStatus) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (HasReservationStatus) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ReservationStatus);
+      }
+      if (HasArchived) {
+        size += 2 + 1;
+      }
+      if (HasWebPropertyCode) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(WebPropertyCode);
+      }
+      size += appliedLabels_.CalculateSize(_repeated_appliedLabels_codec);
+      size += effectiveAppliedLabels_.CalculateSize(_repeated_effectiveAppliedLabels_codec);
+      if (HasSameAdvertiserExceptionEnabled) {
+        size += 2 + 1;
+      }
+      if (HasUpdateSource) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(UpdateSource);
+      }
+      if (HasNotes) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Notes);
+      }
+      if (HasCompetitiveConstraintScope) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) CompetitiveConstraintScope);
+      }
+      if (updateTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (createTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
       size += customFieldValues_.CalculateSize(_repeated_customFieldValues_codec);
+      if (HasMissingCreatives) {
+        size += 2 + 1;
+      }
+      if (thirdPartyMeasurementSettings_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ThirdPartyMeasurementSettings);
+      }
+      if (HasYoutubeKidsRestricted) {
+        size += 2 + 1;
+      }
+      if (maxVideoCreativeDuration_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MaxVideoCreativeDuration);
+      }
       if (goal_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Goal);
       }
+      size += secondaryGoals_.CalculateSize(_repeated_secondaryGoals_codec);
+      if (grpSettings_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(GrpSettings);
+      }
+      if (dealInfo_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DealInfo);
+      }
+      size += viewabilityProviderCompanies_.CalculateSize(_repeated_viewabilityProviderCompanies_codec);
+      if (HasChildContentEligibility) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ChildContentEligibility);
+      }
+      if (HasCustomVastExtension) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CustomVastExtension);
+      }
+      if (HasSponsorshipExclusivityEnabled) {
+        size += 2 + 1;
+      }
+      if (HasRepeatedCreativeServingEnabled) {
+        size += 2 + 1;
+      }
+      if (targeting_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Targeting);
+      }
+      size += creativeTargetings_.CalculateSize(_repeated_creativeTargetings_codec);
+      size += allowedFormats_.CalculateSize(_repeated_allowedFormats_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -529,11 +2730,23 @@ namespace Google.Ads.AdManager.V1 {
       if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
       }
+      if (other.HasExternalLineItemId) {
+        ExternalLineItemId = other.ExternalLineItemId;
+      }
+      if (other.HasOrderDisplayName) {
+        OrderDisplayName = other.OrderDisplayName;
+      }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
           StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.targetEndTime_ != null) {
+        if (targetEndTime_ == null) {
+          TargetEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        TargetEndTime.MergeFrom(other.TargetEndTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
@@ -541,8 +2754,39 @@ namespace Google.Ads.AdManager.V1 {
         }
         EndTime.MergeFrom(other.EndTime);
       }
+      if (other.HasAutoExtensionDays) {
+        AutoExtensionDays = other.AutoExtensionDays;
+      }
+      if (other.HasEndTimeUnlimited) {
+        EndTimeUnlimited = other.EndTimeUnlimited;
+      }
+      if (other.HasCreativeRotationType) {
+        CreativeRotationType = other.CreativeRotationType;
+      }
+      if (other.HasDeliveryRateType) {
+        DeliveryRateType = other.DeliveryRateType;
+      }
+      if (other.HasDeliveryForecastSource) {
+        DeliveryForecastSource = other.DeliveryForecastSource;
+      }
+      if (other.customPacingCurve_ != null) {
+        if (customPacingCurve_ == null) {
+          CustomPacingCurve = new global::Google.Ads.AdManager.V1.CustomPacingCurve();
+        }
+        CustomPacingCurve.MergeFrom(other.CustomPacingCurve);
+      }
+      if (other.HasRoadblockingType) {
+        RoadblockingType = other.RoadblockingType;
+      }
+      if (other.HasSkippableAdType) {
+        SkippableAdType = other.SkippableAdType;
+      }
+      frequencyCaps_.Add(other.frequencyCaps_);
       if (other.HasLineItemType) {
         LineItemType = other.LineItemType;
+      }
+      if (other.HasPriority) {
+        Priority = other.Priority;
       }
       if (other.rate_ != null) {
         if (rate_ == null) {
@@ -550,19 +2794,158 @@ namespace Google.Ads.AdManager.V1 {
         }
         Rate.MergeFrom(other.Rate);
       }
+      if (other.valueCpm_ != null) {
+        if (valueCpm_ == null) {
+          ValueCpm = new global::Google.Type.Money();
+        }
+        ValueCpm.MergeFrom(other.ValueCpm);
+      }
+      if (other.HasCostType) {
+        CostType = other.CostType;
+      }
+      if (other.discount_ != null) {
+        if (discount_ == null) {
+          Discount = new global::Google.Ads.AdManager.V1.LineItemDiscount();
+        }
+        Discount.MergeFrom(other.Discount);
+      }
+      if (other.HasContractedUnitsBought) {
+        ContractedUnitsBought = other.ContractedUnitsBought;
+      }
+      creativePlaceholders_.Add(other.creativePlaceholders_);
+      if (other.HasEnvironmentType) {
+        EnvironmentType = other.EnvironmentType;
+      }
+      if (other.HasCompanionDeliveryOption) {
+        CompanionDeliveryOption = other.CompanionDeliveryOption;
+      }
+      if (other.HasAllowOverbook) {
+        AllowOverbook = other.AllowOverbook;
+      }
+      if (other.HasSkipInventoryCheck) {
+        SkipInventoryCheck = other.SkipInventoryCheck;
+      }
+      if (other.HasSkipCrossSellingRuleWarningChecks) {
+        SkipCrossSellingRuleWarningChecks = other.SkipCrossSellingRuleWarningChecks;
+      }
+      if (other.HasReserveOnCreation) {
+        ReserveOnCreation = other.ReserveOnCreation;
+      }
+      if (other.stats_ != null) {
+        if (stats_ == null) {
+          Stats = new global::Google.Ads.AdManager.V1.LineItemStats();
+        }
+        Stats.MergeFrom(other.Stats);
+      }
+      if (other.deliveryIndicator_ != null) {
+        if (deliveryIndicator_ == null) {
+          DeliveryIndicator = new global::Google.Ads.AdManager.V1.DeliveryIndicator();
+        }
+        DeliveryIndicator.MergeFrom(other.DeliveryIndicator);
+      }
       if (other.budget_ != null) {
         if (budget_ == null) {
           Budget = new global::Google.Type.Money();
         }
         Budget.MergeFrom(other.Budget);
       }
+      if (other.HasStatus) {
+        Status = other.Status;
+      }
+      if (other.HasReservationStatus) {
+        ReservationStatus = other.ReservationStatus;
+      }
+      if (other.HasArchived) {
+        Archived = other.Archived;
+      }
+      if (other.HasWebPropertyCode) {
+        WebPropertyCode = other.WebPropertyCode;
+      }
+      appliedLabels_.Add(other.appliedLabels_);
+      effectiveAppliedLabels_.Add(other.effectiveAppliedLabels_);
+      if (other.HasSameAdvertiserExceptionEnabled) {
+        SameAdvertiserExceptionEnabled = other.SameAdvertiserExceptionEnabled;
+      }
+      if (other.HasUpdateSource) {
+        UpdateSource = other.UpdateSource;
+      }
+      if (other.HasNotes) {
+        Notes = other.Notes;
+      }
+      if (other.HasCompetitiveConstraintScope) {
+        CompetitiveConstraintScope = other.CompetitiveConstraintScope;
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
       customFieldValues_.Add(other.customFieldValues_);
+      if (other.HasMissingCreatives) {
+        MissingCreatives = other.MissingCreatives;
+      }
+      if (other.thirdPartyMeasurementSettings_ != null) {
+        if (thirdPartyMeasurementSettings_ == null) {
+          ThirdPartyMeasurementSettings = new global::Google.Ads.AdManager.V1.ThirdPartyMeasurementSettings();
+        }
+        ThirdPartyMeasurementSettings.MergeFrom(other.ThirdPartyMeasurementSettings);
+      }
+      if (other.HasYoutubeKidsRestricted) {
+        YoutubeKidsRestricted = other.YoutubeKidsRestricted;
+      }
+      if (other.maxVideoCreativeDuration_ != null) {
+        if (maxVideoCreativeDuration_ == null) {
+          MaxVideoCreativeDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        MaxVideoCreativeDuration.MergeFrom(other.MaxVideoCreativeDuration);
+      }
       if (other.goal_ != null) {
         if (goal_ == null) {
           Goal = new global::Google.Ads.AdManager.V1.Goal();
         }
         Goal.MergeFrom(other.Goal);
       }
+      secondaryGoals_.Add(other.secondaryGoals_);
+      if (other.grpSettings_ != null) {
+        if (grpSettings_ == null) {
+          GrpSettings = new global::Google.Ads.AdManager.V1.GrpSettings();
+        }
+        GrpSettings.MergeFrom(other.GrpSettings);
+      }
+      if (other.dealInfo_ != null) {
+        if (dealInfo_ == null) {
+          DealInfo = new global::Google.Ads.AdManager.V1.LineItemDealInfo();
+        }
+        DealInfo.MergeFrom(other.DealInfo);
+      }
+      viewabilityProviderCompanies_.Add(other.viewabilityProviderCompanies_);
+      if (other.HasChildContentEligibility) {
+        ChildContentEligibility = other.ChildContentEligibility;
+      }
+      if (other.HasCustomVastExtension) {
+        CustomVastExtension = other.CustomVastExtension;
+      }
+      if (other.HasSponsorshipExclusivityEnabled) {
+        SponsorshipExclusivityEnabled = other.SponsorshipExclusivityEnabled;
+      }
+      if (other.HasRepeatedCreativeServingEnabled) {
+        RepeatedCreativeServingEnabled = other.RepeatedCreativeServingEnabled;
+      }
+      if (other.targeting_ != null) {
+        if (targeting_ == null) {
+          Targeting = new global::Google.Ads.AdManager.V1.Targeting();
+        }
+        Targeting.MergeFrom(other.Targeting);
+      }
+      creativeTargetings_.Add(other.creativeTargetings_);
+      allowedFormats_.Add(other.allowedFormats_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -594,6 +2977,14 @@ namespace Google.Ads.AdManager.V1 {
             DisplayName = input.ReadString();
             break;
           }
+          case 34: {
+            ExternalLineItemId = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderDisplayName = input.ReadString();
+            break;
+          }
           case 50: {
             if (startTime_ == null) {
               StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -608,8 +2999,51 @@ namespace Google.Ads.AdManager.V1 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 64: {
+            AutoExtensionDays = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            EndTimeUnlimited = input.ReadBool();
+            break;
+          }
+          case 80: {
+            CreativeRotationType = (global::Google.Ads.AdManager.V1.CreativeRotationTypeEnum.Types.CreativeRotationType) input.ReadEnum();
+            break;
+          }
+          case 88: {
+            DeliveryRateType = (global::Google.Ads.AdManager.V1.LineItemDeliveryRateTypeEnum.Types.LineItemDeliveryRateType) input.ReadEnum();
+            break;
+          }
+          case 96: {
+            DeliveryForecastSource = (global::Google.Ads.AdManager.V1.LineItemDeliveryForecastSourceEnum.Types.LineItemDeliveryForecastSource) input.ReadEnum();
+            break;
+          }
+          case 106: {
+            if (customPacingCurve_ == null) {
+              CustomPacingCurve = new global::Google.Ads.AdManager.V1.CustomPacingCurve();
+            }
+            input.ReadMessage(CustomPacingCurve);
+            break;
+          }
+          case 112: {
+            RoadblockingType = (global::Google.Ads.AdManager.V1.RoadblockingTypeEnum.Types.RoadblockingType) input.ReadEnum();
+            break;
+          }
+          case 120: {
+            SkippableAdType = (global::Google.Ads.AdManager.V1.SkippableAdTypeEnum.Types.SkippableAdType) input.ReadEnum();
+            break;
+          }
+          case 130: {
+            frequencyCaps_.AddEntriesFrom(input, _repeated_frequencyCaps_codec);
+            break;
+          }
           case 136: {
             LineItemType = (global::Google.Ads.AdManager.V1.LineItemTypeEnum.Types.LineItemType) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            Priority = input.ReadInt32();
             break;
           }
           case 162: {
@@ -619,6 +3053,70 @@ namespace Google.Ads.AdManager.V1 {
             input.ReadMessage(Rate);
             break;
           }
+          case 170: {
+            if (valueCpm_ == null) {
+              ValueCpm = new global::Google.Type.Money();
+            }
+            input.ReadMessage(ValueCpm);
+            break;
+          }
+          case 176: {
+            CostType = (global::Google.Ads.AdManager.V1.LineItemCostTypeEnum.Types.LineItemCostType) input.ReadEnum();
+            break;
+          }
+          case 186: {
+            if (discount_ == null) {
+              Discount = new global::Google.Ads.AdManager.V1.LineItemDiscount();
+            }
+            input.ReadMessage(Discount);
+            break;
+          }
+          case 192: {
+            ContractedUnitsBought = input.ReadInt64();
+            break;
+          }
+          case 202: {
+            creativePlaceholders_.AddEntriesFrom(input, _repeated_creativePlaceholders_codec);
+            break;
+          }
+          case 208: {
+            EnvironmentType = (global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType) input.ReadEnum();
+            break;
+          }
+          case 216: {
+            CompanionDeliveryOption = (global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption) input.ReadEnum();
+            break;
+          }
+          case 224: {
+            AllowOverbook = input.ReadBool();
+            break;
+          }
+          case 232: {
+            SkipInventoryCheck = input.ReadBool();
+            break;
+          }
+          case 240: {
+            SkipCrossSellingRuleWarningChecks = input.ReadBool();
+            break;
+          }
+          case 248: {
+            ReserveOnCreation = input.ReadBool();
+            break;
+          }
+          case 258: {
+            if (stats_ == null) {
+              Stats = new global::Google.Ads.AdManager.V1.LineItemStats();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+          case 266: {
+            if (deliveryIndicator_ == null) {
+              DeliveryIndicator = new global::Google.Ads.AdManager.V1.DeliveryIndicator();
+            }
+            input.ReadMessage(DeliveryIndicator);
+            break;
+          }
           case 282: {
             if (budget_ == null) {
               Budget = new global::Google.Type.Money();
@@ -626,8 +3124,84 @@ namespace Google.Ads.AdManager.V1 {
             input.ReadMessage(Budget);
             break;
           }
+          case 288: {
+            Status = (global::Google.Ads.AdManager.V1.LineItemComputedStatusEnum.Types.LineItemComputedStatus) input.ReadEnum();
+            break;
+          }
+          case 304: {
+            ReservationStatus = (global::Google.Ads.AdManager.V1.LineItemReservationStatusEnum.Types.LineItemReservationStatus) input.ReadEnum();
+            break;
+          }
+          case 312: {
+            Archived = input.ReadBool();
+            break;
+          }
+          case 394: {
+            WebPropertyCode = input.ReadString();
+            break;
+          }
+          case 402: {
+            appliedLabels_.AddEntriesFrom(input, _repeated_appliedLabels_codec);
+            break;
+          }
+          case 410: {
+            effectiveAppliedLabels_.AddEntriesFrom(input, _repeated_effectiveAppliedLabels_codec);
+            break;
+          }
+          case 416: {
+            SameAdvertiserExceptionEnabled = input.ReadBool();
+            break;
+          }
+          case 426: {
+            UpdateSource = input.ReadString();
+            break;
+          }
+          case 434: {
+            Notes = input.ReadString();
+            break;
+          }
+          case 448: {
+            CompetitiveConstraintScope = (global::Google.Ads.AdManager.V1.ExclusionScopeEnum.Types.ExclusionScope) input.ReadEnum();
+            break;
+          }
+          case 458: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 466: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
           case 474: {
             customFieldValues_.AddEntriesFrom(input, _repeated_customFieldValues_codec);
+            break;
+          }
+          case 488: {
+            MissingCreatives = input.ReadBool();
+            break;
+          }
+          case 538: {
+            if (thirdPartyMeasurementSettings_ == null) {
+              ThirdPartyMeasurementSettings = new global::Google.Ads.AdManager.V1.ThirdPartyMeasurementSettings();
+            }
+            input.ReadMessage(ThirdPartyMeasurementSettings);
+            break;
+          }
+          case 592: {
+            YoutubeKidsRestricted = input.ReadBool();
+            break;
+          }
+          case 602: {
+            if (maxVideoCreativeDuration_ == null) {
+              MaxVideoCreativeDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(MaxVideoCreativeDuration);
             break;
           }
           case 610: {
@@ -635,6 +3209,67 @@ namespace Google.Ads.AdManager.V1 {
               Goal = new global::Google.Ads.AdManager.V1.Goal();
             }
             input.ReadMessage(Goal);
+            break;
+          }
+          case 626: {
+            if (grpSettings_ == null) {
+              GrpSettings = new global::Google.Ads.AdManager.V1.GrpSettings();
+            }
+            input.ReadMessage(GrpSettings);
+            break;
+          }
+          case 634: {
+            if (dealInfo_ == null) {
+              DealInfo = new global::Google.Ads.AdManager.V1.LineItemDealInfo();
+            }
+            input.ReadMessage(DealInfo);
+            break;
+          }
+          case 682: {
+            viewabilityProviderCompanies_.AddEntriesFrom(input, _repeated_viewabilityProviderCompanies_codec);
+            break;
+          }
+          case 688: {
+            ChildContentEligibility = (global::Google.Ads.AdManager.V1.ChildContentEligibilityEnum.Types.ChildContentEligibility) input.ReadEnum();
+            break;
+          }
+          case 706: {
+            CustomVastExtension = input.ReadString();
+            break;
+          }
+          case 712: {
+            SponsorshipExclusivityEnabled = input.ReadBool();
+            break;
+          }
+          case 720: {
+            RepeatedCreativeServingEnabled = input.ReadBool();
+            break;
+          }
+          case 746: {
+            if (targeting_ == null) {
+              Targeting = new global::Google.Ads.AdManager.V1.Targeting();
+            }
+            input.ReadMessage(Targeting);
+            break;
+          }
+          case 754: {
+            creativeTargetings_.AddEntriesFrom(input, _repeated_creativeTargetings_codec);
+            break;
+          }
+          case 762: {
+            if (targetEndTime_ == null) {
+              TargetEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(TargetEndTime);
+            break;
+          }
+          case 802: {
+            secondaryGoals_.AddEntriesFrom(input, _repeated_secondaryGoals_codec);
+            break;
+          }
+          case 898:
+          case 896: {
+            allowedFormats_.AddEntriesFrom(input, _repeated_allowedFormats_codec);
             break;
           }
         }
@@ -668,6 +3303,14 @@ namespace Google.Ads.AdManager.V1 {
             DisplayName = input.ReadString();
             break;
           }
+          case 34: {
+            ExternalLineItemId = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderDisplayName = input.ReadString();
+            break;
+          }
           case 50: {
             if (startTime_ == null) {
               StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -682,8 +3325,51 @@ namespace Google.Ads.AdManager.V1 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 64: {
+            AutoExtensionDays = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            EndTimeUnlimited = input.ReadBool();
+            break;
+          }
+          case 80: {
+            CreativeRotationType = (global::Google.Ads.AdManager.V1.CreativeRotationTypeEnum.Types.CreativeRotationType) input.ReadEnum();
+            break;
+          }
+          case 88: {
+            DeliveryRateType = (global::Google.Ads.AdManager.V1.LineItemDeliveryRateTypeEnum.Types.LineItemDeliveryRateType) input.ReadEnum();
+            break;
+          }
+          case 96: {
+            DeliveryForecastSource = (global::Google.Ads.AdManager.V1.LineItemDeliveryForecastSourceEnum.Types.LineItemDeliveryForecastSource) input.ReadEnum();
+            break;
+          }
+          case 106: {
+            if (customPacingCurve_ == null) {
+              CustomPacingCurve = new global::Google.Ads.AdManager.V1.CustomPacingCurve();
+            }
+            input.ReadMessage(CustomPacingCurve);
+            break;
+          }
+          case 112: {
+            RoadblockingType = (global::Google.Ads.AdManager.V1.RoadblockingTypeEnum.Types.RoadblockingType) input.ReadEnum();
+            break;
+          }
+          case 120: {
+            SkippableAdType = (global::Google.Ads.AdManager.V1.SkippableAdTypeEnum.Types.SkippableAdType) input.ReadEnum();
+            break;
+          }
+          case 130: {
+            frequencyCaps_.AddEntriesFrom(ref input, _repeated_frequencyCaps_codec);
+            break;
+          }
           case 136: {
             LineItemType = (global::Google.Ads.AdManager.V1.LineItemTypeEnum.Types.LineItemType) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            Priority = input.ReadInt32();
             break;
           }
           case 162: {
@@ -693,6 +3379,70 @@ namespace Google.Ads.AdManager.V1 {
             input.ReadMessage(Rate);
             break;
           }
+          case 170: {
+            if (valueCpm_ == null) {
+              ValueCpm = new global::Google.Type.Money();
+            }
+            input.ReadMessage(ValueCpm);
+            break;
+          }
+          case 176: {
+            CostType = (global::Google.Ads.AdManager.V1.LineItemCostTypeEnum.Types.LineItemCostType) input.ReadEnum();
+            break;
+          }
+          case 186: {
+            if (discount_ == null) {
+              Discount = new global::Google.Ads.AdManager.V1.LineItemDiscount();
+            }
+            input.ReadMessage(Discount);
+            break;
+          }
+          case 192: {
+            ContractedUnitsBought = input.ReadInt64();
+            break;
+          }
+          case 202: {
+            creativePlaceholders_.AddEntriesFrom(ref input, _repeated_creativePlaceholders_codec);
+            break;
+          }
+          case 208: {
+            EnvironmentType = (global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType) input.ReadEnum();
+            break;
+          }
+          case 216: {
+            CompanionDeliveryOption = (global::Google.Ads.AdManager.V1.CompanionDeliveryOptionEnum.Types.CompanionDeliveryOption) input.ReadEnum();
+            break;
+          }
+          case 224: {
+            AllowOverbook = input.ReadBool();
+            break;
+          }
+          case 232: {
+            SkipInventoryCheck = input.ReadBool();
+            break;
+          }
+          case 240: {
+            SkipCrossSellingRuleWarningChecks = input.ReadBool();
+            break;
+          }
+          case 248: {
+            ReserveOnCreation = input.ReadBool();
+            break;
+          }
+          case 258: {
+            if (stats_ == null) {
+              Stats = new global::Google.Ads.AdManager.V1.LineItemStats();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+          case 266: {
+            if (deliveryIndicator_ == null) {
+              DeliveryIndicator = new global::Google.Ads.AdManager.V1.DeliveryIndicator();
+            }
+            input.ReadMessage(DeliveryIndicator);
+            break;
+          }
           case 282: {
             if (budget_ == null) {
               Budget = new global::Google.Type.Money();
@@ -700,8 +3450,84 @@ namespace Google.Ads.AdManager.V1 {
             input.ReadMessage(Budget);
             break;
           }
+          case 288: {
+            Status = (global::Google.Ads.AdManager.V1.LineItemComputedStatusEnum.Types.LineItemComputedStatus) input.ReadEnum();
+            break;
+          }
+          case 304: {
+            ReservationStatus = (global::Google.Ads.AdManager.V1.LineItemReservationStatusEnum.Types.LineItemReservationStatus) input.ReadEnum();
+            break;
+          }
+          case 312: {
+            Archived = input.ReadBool();
+            break;
+          }
+          case 394: {
+            WebPropertyCode = input.ReadString();
+            break;
+          }
+          case 402: {
+            appliedLabels_.AddEntriesFrom(ref input, _repeated_appliedLabels_codec);
+            break;
+          }
+          case 410: {
+            effectiveAppliedLabels_.AddEntriesFrom(ref input, _repeated_effectiveAppliedLabels_codec);
+            break;
+          }
+          case 416: {
+            SameAdvertiserExceptionEnabled = input.ReadBool();
+            break;
+          }
+          case 426: {
+            UpdateSource = input.ReadString();
+            break;
+          }
+          case 434: {
+            Notes = input.ReadString();
+            break;
+          }
+          case 448: {
+            CompetitiveConstraintScope = (global::Google.Ads.AdManager.V1.ExclusionScopeEnum.Types.ExclusionScope) input.ReadEnum();
+            break;
+          }
+          case 458: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 466: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
           case 474: {
             customFieldValues_.AddEntriesFrom(ref input, _repeated_customFieldValues_codec);
+            break;
+          }
+          case 488: {
+            MissingCreatives = input.ReadBool();
+            break;
+          }
+          case 538: {
+            if (thirdPartyMeasurementSettings_ == null) {
+              ThirdPartyMeasurementSettings = new global::Google.Ads.AdManager.V1.ThirdPartyMeasurementSettings();
+            }
+            input.ReadMessage(ThirdPartyMeasurementSettings);
+            break;
+          }
+          case 592: {
+            YoutubeKidsRestricted = input.ReadBool();
+            break;
+          }
+          case 602: {
+            if (maxVideoCreativeDuration_ == null) {
+              MaxVideoCreativeDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(MaxVideoCreativeDuration);
             break;
           }
           case 610: {
@@ -709,6 +3535,67 @@ namespace Google.Ads.AdManager.V1 {
               Goal = new global::Google.Ads.AdManager.V1.Goal();
             }
             input.ReadMessage(Goal);
+            break;
+          }
+          case 626: {
+            if (grpSettings_ == null) {
+              GrpSettings = new global::Google.Ads.AdManager.V1.GrpSettings();
+            }
+            input.ReadMessage(GrpSettings);
+            break;
+          }
+          case 634: {
+            if (dealInfo_ == null) {
+              DealInfo = new global::Google.Ads.AdManager.V1.LineItemDealInfo();
+            }
+            input.ReadMessage(DealInfo);
+            break;
+          }
+          case 682: {
+            viewabilityProviderCompanies_.AddEntriesFrom(ref input, _repeated_viewabilityProviderCompanies_codec);
+            break;
+          }
+          case 688: {
+            ChildContentEligibility = (global::Google.Ads.AdManager.V1.ChildContentEligibilityEnum.Types.ChildContentEligibility) input.ReadEnum();
+            break;
+          }
+          case 706: {
+            CustomVastExtension = input.ReadString();
+            break;
+          }
+          case 712: {
+            SponsorshipExclusivityEnabled = input.ReadBool();
+            break;
+          }
+          case 720: {
+            RepeatedCreativeServingEnabled = input.ReadBool();
+            break;
+          }
+          case 746: {
+            if (targeting_ == null) {
+              Targeting = new global::Google.Ads.AdManager.V1.Targeting();
+            }
+            input.ReadMessage(Targeting);
+            break;
+          }
+          case 754: {
+            creativeTargetings_.AddEntriesFrom(ref input, _repeated_creativeTargetings_codec);
+            break;
+          }
+          case 762: {
+            if (targetEndTime_ == null) {
+              TargetEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(TargetEndTime);
+            break;
+          }
+          case 802: {
+            secondaryGoals_.AddEntriesFrom(ref input, _repeated_secondaryGoals_codec);
+            break;
+          }
+          case 898:
+          case 896: {
+            allowedFormats_.AddEntriesFrom(ref input, _repeated_allowedFormats_codec);
             break;
           }
         }

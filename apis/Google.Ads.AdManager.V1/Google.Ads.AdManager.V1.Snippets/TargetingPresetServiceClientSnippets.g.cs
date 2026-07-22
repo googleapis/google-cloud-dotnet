@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     using Google.Ads.AdManager.V1;
     using Google.Api.Gax;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -595,6 +596,181 @@ namespace GoogleCSharpSnippets
             };
             // Make the request
             BatchCreateTargetingPresetsResponse response = await targetingPresetServiceClient.BatchCreateTargetingPresetsAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTargetingPreset</summary>
+        public void UpdateTargetingPresetRequestObject()
+        {
+            // Snippet: UpdateTargetingPreset(UpdateTargetingPresetRequest, CallSettings)
+            // Create client
+            TargetingPresetServiceClient targetingPresetServiceClient = TargetingPresetServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateTargetingPresetRequest request = new UpdateTargetingPresetRequest
+            {
+                TargetingPreset = new TargetingPreset(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            TargetingPreset response = targetingPresetServiceClient.UpdateTargetingPreset(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTargetingPresetAsync</summary>
+        public async Task UpdateTargetingPresetRequestObjectAsync()
+        {
+            // Snippet: UpdateTargetingPresetAsync(UpdateTargetingPresetRequest, CallSettings)
+            // Additional: UpdateTargetingPresetAsync(UpdateTargetingPresetRequest, CancellationToken)
+            // Create client
+            TargetingPresetServiceClient targetingPresetServiceClient = await TargetingPresetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateTargetingPresetRequest request = new UpdateTargetingPresetRequest
+            {
+                TargetingPreset = new TargetingPreset(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            TargetingPreset response = await targetingPresetServiceClient.UpdateTargetingPresetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTargetingPreset</summary>
+        public void UpdateTargetingPreset()
+        {
+            // Snippet: UpdateTargetingPreset(TargetingPreset, FieldMask, CallSettings)
+            // Create client
+            TargetingPresetServiceClient targetingPresetServiceClient = TargetingPresetServiceClient.Create();
+            // Initialize request argument(s)
+            TargetingPreset targetingPreset = new TargetingPreset();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            TargetingPreset response = targetingPresetServiceClient.UpdateTargetingPreset(targetingPreset, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTargetingPresetAsync</summary>
+        public async Task UpdateTargetingPresetAsync()
+        {
+            // Snippet: UpdateTargetingPresetAsync(TargetingPreset, FieldMask, CallSettings)
+            // Additional: UpdateTargetingPresetAsync(TargetingPreset, FieldMask, CancellationToken)
+            // Create client
+            TargetingPresetServiceClient targetingPresetServiceClient = await TargetingPresetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TargetingPreset targetingPreset = new TargetingPreset();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            TargetingPreset response = await targetingPresetServiceClient.UpdateTargetingPresetAsync(targetingPreset, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateTargetingPresets</summary>
+        public void BatchUpdateTargetingPresetsRequestObject()
+        {
+            // Snippet: BatchUpdateTargetingPresets(BatchUpdateTargetingPresetsRequest, CallSettings)
+            // Create client
+            TargetingPresetServiceClient targetingPresetServiceClient = TargetingPresetServiceClient.Create();
+            // Initialize request argument(s)
+            BatchUpdateTargetingPresetsRequest request = new BatchUpdateTargetingPresetsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new UpdateTargetingPresetRequest(),
+                },
+            };
+            // Make the request
+            BatchUpdateTargetingPresetsResponse response = targetingPresetServiceClient.BatchUpdateTargetingPresets(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateTargetingPresetsAsync</summary>
+        public async Task BatchUpdateTargetingPresetsRequestObjectAsync()
+        {
+            // Snippet: BatchUpdateTargetingPresetsAsync(BatchUpdateTargetingPresetsRequest, CallSettings)
+            // Additional: BatchUpdateTargetingPresetsAsync(BatchUpdateTargetingPresetsRequest, CancellationToken)
+            // Create client
+            TargetingPresetServiceClient targetingPresetServiceClient = await TargetingPresetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchUpdateTargetingPresetsRequest request = new BatchUpdateTargetingPresetsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new UpdateTargetingPresetRequest(),
+                },
+            };
+            // Make the request
+            BatchUpdateTargetingPresetsResponse response = await targetingPresetServiceClient.BatchUpdateTargetingPresetsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateTargetingPresets</summary>
+        public void BatchUpdateTargetingPresets()
+        {
+            // Snippet: BatchUpdateTargetingPresets(string, IEnumerable<UpdateTargetingPresetRequest>, CallSettings)
+            // Create client
+            TargetingPresetServiceClient targetingPresetServiceClient = TargetingPresetServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<UpdateTargetingPresetRequest> requests = new UpdateTargetingPresetRequest[]
+            {
+                new UpdateTargetingPresetRequest(),
+            };
+            // Make the request
+            BatchUpdateTargetingPresetsResponse response = targetingPresetServiceClient.BatchUpdateTargetingPresets(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateTargetingPresetsAsync</summary>
+        public async Task BatchUpdateTargetingPresetsAsync()
+        {
+            // Snippet: BatchUpdateTargetingPresetsAsync(string, IEnumerable<UpdateTargetingPresetRequest>, CallSettings)
+            // Additional: BatchUpdateTargetingPresetsAsync(string, IEnumerable<UpdateTargetingPresetRequest>, CancellationToken)
+            // Create client
+            TargetingPresetServiceClient targetingPresetServiceClient = await TargetingPresetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<UpdateTargetingPresetRequest> requests = new UpdateTargetingPresetRequest[]
+            {
+                new UpdateTargetingPresetRequest(),
+            };
+            // Make the request
+            BatchUpdateTargetingPresetsResponse response = await targetingPresetServiceClient.BatchUpdateTargetingPresetsAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateTargetingPresets</summary>
+        public void BatchUpdateTargetingPresetsResourceNames()
+        {
+            // Snippet: BatchUpdateTargetingPresets(NetworkName, IEnumerable<UpdateTargetingPresetRequest>, CallSettings)
+            // Create client
+            TargetingPresetServiceClient targetingPresetServiceClient = TargetingPresetServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<UpdateTargetingPresetRequest> requests = new UpdateTargetingPresetRequest[]
+            {
+                new UpdateTargetingPresetRequest(),
+            };
+            // Make the request
+            BatchUpdateTargetingPresetsResponse response = targetingPresetServiceClient.BatchUpdateTargetingPresets(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateTargetingPresetsAsync</summary>
+        public async Task BatchUpdateTargetingPresetsResourceNamesAsync()
+        {
+            // Snippet: BatchUpdateTargetingPresetsAsync(NetworkName, IEnumerable<UpdateTargetingPresetRequest>, CallSettings)
+            // Additional: BatchUpdateTargetingPresetsAsync(NetworkName, IEnumerable<UpdateTargetingPresetRequest>, CancellationToken)
+            // Create client
+            TargetingPresetServiceClient targetingPresetServiceClient = await TargetingPresetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<UpdateTargetingPresetRequest> requests = new UpdateTargetingPresetRequest[]
+            {
+                new UpdateTargetingPresetRequest(),
+            };
+            // Make the request
+            BatchUpdateTargetingPresetsResponse response = await targetingPresetServiceClient.BatchUpdateTargetingPresetsAsync(parent, requests);
             // End snippet
         }
 

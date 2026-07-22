@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaav = Google.Ads.AdManager.V1;
+using gax = Google.Api.Gax;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -40,6 +41,46 @@ namespace Google.Ads.AdManager.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchActivateContentBundlesRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ContentBundleName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<ContentBundleName> ContentBundleNames
+        {
+            get => new gax::ResourceNameList<ContentBundleName>(Names, s => string.IsNullOrEmpty(s) ? null : ContentBundleName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class BatchDeactivateContentBundlesRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ContentBundleName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<ContentBundleName> ContentBundleNames
+        {
+            get => new gax::ResourceNameList<ContentBundleName>(Names, s => string.IsNullOrEmpty(s) ? null : ContentBundleName.Parse(s, allowUnparsed: true));
         }
     }
 }

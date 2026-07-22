@@ -4419,7 +4419,7 @@ namespace Google.Ads.AdManager.V1 {
         /// API fields).
         ///
         /// Compatible with the following report types: `HISTORICAL`, `REACH`,
-        /// `REVENUE_VERIFICATION`, `AD_SPEED`
+        /// `REVENUE_VERIFICATION`, `AD_SPEED`, `ON_PLATFORM_MULTICALL`
         ///
         /// Data format: `ENUM`
         /// </summary>
@@ -4430,7 +4430,7 @@ namespace Google.Ads.AdManager.V1 {
         /// Corresponds to "Demand channel" in the Ad Manager UI.
         ///
         /// Compatible with the following report types: `HISTORICAL`, `REACH`,
-        /// `REVENUE_VERIFICATION`, `AD_SPEED`
+        /// `REVENUE_VERIFICATION`, `AD_SPEED`, `ON_PLATFORM_MULTICALL`
         ///
         /// Data format: `STRING`
         /// </summary>

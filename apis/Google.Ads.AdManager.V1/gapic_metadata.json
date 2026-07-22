@@ -583,6 +583,18 @@
         "grpc": {
           "libraryClient": "ContentBundleServiceClient",
           "rpcs": {
+            "BatchActivateContentBundles": {
+              "methods": [
+                "BatchActivateContentBundles",
+                "BatchActivateContentBundlesAsync"
+              ]
+            },
+            "BatchDeactivateContentBundles": {
+              "methods": [
+                "BatchDeactivateContentBundles",
+                "BatchDeactivateContentBundlesAsync"
+              ]
+            },
             "GetContentBundle": {
               "methods": [
                 "GetContentBundle",
@@ -635,6 +647,39 @@
               "methods": [
                 "ListContent",
                 "ListContentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "CreativeSetService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CreativeSetServiceClient",
+          "rpcs": {
+            "CreateCreativeSet": {
+              "methods": [
+                "CreateCreativeSet",
+                "CreateCreativeSetAsync"
+              ]
+            },
+            "GetCreativeSet": {
+              "methods": [
+                "GetCreativeSet",
+                "GetCreativeSetAsync"
+              ]
+            },
+            "ListCreativeSets": {
+              "methods": [
+                "ListCreativeSets",
+                "ListCreativeSetsAsync"
+              ]
+            },
+            "UpdateCreativeSet": {
+              "methods": [
+                "UpdateCreativeSet",
+                "UpdateCreativeSetAsync"
               ]
             }
           }
@@ -1282,6 +1327,114 @@
         "grpc": {
           "libraryClient": "OrderServiceClient",
           "rpcs": {
+            "BatchApproveAndOverbookOrders": {
+              "methods": [
+                "BatchApproveAndOverbookOrders",
+                "BatchApproveAndOverbookOrdersAsync"
+              ]
+            },
+            "BatchApproveOrders": {
+              "methods": [
+                "BatchApproveOrders",
+                "BatchApproveOrdersAsync"
+              ]
+            },
+            "BatchApproveOrdersWithoutReservation": {
+              "methods": [
+                "BatchApproveOrdersWithoutReservation",
+                "BatchApproveOrdersWithoutReservationAsync"
+              ]
+            },
+            "BatchArchiveOrders": {
+              "methods": [
+                "BatchArchiveOrders",
+                "BatchArchiveOrdersAsync"
+              ]
+            },
+            "BatchCreateOrders": {
+              "methods": [
+                "BatchCreateOrders",
+                "BatchCreateOrdersAsync"
+              ]
+            },
+            "BatchDeleteOrders": {
+              "methods": [
+                "BatchDeleteOrders",
+                "BatchDeleteOrdersAsync"
+              ]
+            },
+            "BatchDisapproveOrders": {
+              "methods": [
+                "BatchDisapproveOrders",
+                "BatchDisapproveOrdersAsync"
+              ]
+            },
+            "BatchDisapproveOrdersWithoutReservationChanges": {
+              "methods": [
+                "BatchDisapproveOrdersWithoutReservationChanges",
+                "BatchDisapproveOrdersWithoutReservationChangesAsync"
+              ]
+            },
+            "BatchPauseOrders": {
+              "methods": [
+                "BatchPauseOrders",
+                "BatchPauseOrdersAsync"
+              ]
+            },
+            "BatchResumeAndOverbookOrders": {
+              "methods": [
+                "BatchResumeAndOverbookOrders",
+                "BatchResumeAndOverbookOrdersAsync"
+              ]
+            },
+            "BatchResumeOrders": {
+              "methods": [
+                "BatchResumeOrders",
+                "BatchResumeOrdersAsync"
+              ]
+            },
+            "BatchRetractOrders": {
+              "methods": [
+                "BatchRetractOrders",
+                "BatchRetractOrdersAsync"
+              ]
+            },
+            "BatchRetractOrdersWithoutReservationChanges": {
+              "methods": [
+                "BatchRetractOrdersWithoutReservationChanges",
+                "BatchRetractOrdersWithoutReservationChangesAsync"
+              ]
+            },
+            "BatchSubmitOrdersForApproval": {
+              "methods": [
+                "BatchSubmitOrdersForApproval",
+                "BatchSubmitOrdersForApprovalAsync"
+              ]
+            },
+            "BatchSubmitOrdersForApprovalAndOverbook": {
+              "methods": [
+                "BatchSubmitOrdersForApprovalAndOverbook",
+                "BatchSubmitOrdersForApprovalAndOverbookAsync"
+              ]
+            },
+            "BatchSubmitOrdersForApprovalWithoutReservationChanges": {
+              "methods": [
+                "BatchSubmitOrdersForApprovalWithoutReservationChanges",
+                "BatchSubmitOrdersForApprovalWithoutReservationChangesAsync"
+              ]
+            },
+            "BatchUnarchiveOrders": {
+              "methods": [
+                "BatchUnarchiveOrders",
+                "BatchUnarchiveOrdersAsync"
+              ]
+            },
+            "BatchUpdateOrders": {
+              "methods": [
+                "BatchUpdateOrders",
+                "BatchUpdateOrdersAsync"
+              ]
+            },
             "GetOrder": {
               "methods": [
                 "GetOrder",
@@ -1592,6 +1745,63 @@
         }
       }
     },
+    "SlateService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SlateServiceClient",
+          "rpcs": {
+            "BatchArchiveSlates": {
+              "methods": [
+                "BatchArchiveSlates",
+                "BatchArchiveSlatesAsync"
+              ]
+            },
+            "BatchCreateSlates": {
+              "methods": [
+                "BatchCreateSlates",
+                "BatchCreateSlatesAsync"
+              ]
+            },
+            "BatchUnarchiveSlates": {
+              "methods": [
+                "BatchUnarchiveSlates",
+                "BatchUnarchiveSlatesAsync"
+              ]
+            },
+            "BatchUpdateSlates": {
+              "methods": [
+                "BatchUpdateSlates",
+                "BatchUpdateSlatesAsync"
+              ]
+            },
+            "CreateSlate": {
+              "methods": [
+                "CreateSlate",
+                "CreateSlateAsync"
+              ]
+            },
+            "GetSlate": {
+              "methods": [
+                "GetSlate",
+                "GetSlateAsync"
+              ]
+            },
+            "ListSlates": {
+              "methods": [
+                "ListSlates",
+                "ListSlatesAsync"
+              ]
+            },
+            "UpdateSlate": {
+              "methods": [
+                "UpdateSlate",
+                "UpdateSlateAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "SuggestedAdUnitService": {
       "clients": {
         "grpc": {
@@ -1636,6 +1846,12 @@
                 "BatchDeactivateTargetingPresetsAsync"
               ]
             },
+            "BatchUpdateTargetingPresets": {
+              "methods": [
+                "BatchUpdateTargetingPresets",
+                "BatchUpdateTargetingPresetsAsync"
+              ]
+            },
             "CreateTargetingPreset": {
               "methods": [
                 "CreateTargetingPreset",
@@ -1652,6 +1868,12 @@
               "methods": [
                 "ListTargetingPresets",
                 "ListTargetingPresetsAsync"
+              ]
+            },
+            "UpdateTargetingPreset": {
+              "methods": [
+                "UpdateTargetingPreset",
+                "UpdateTargetingPresetAsync"
               ]
             }
           }

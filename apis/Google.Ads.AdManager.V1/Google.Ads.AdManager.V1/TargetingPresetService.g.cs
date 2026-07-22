@@ -29,69 +29,91 @@ namespace Google.Ads.AdManager.V1 {
             "YWRzL2FkbWFuYWdlci92MS90YXJnZXRpbmdfcHJlc2V0X21lc3NhZ2VzLnBy",
             "b3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBp",
             "L2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
-            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byJbChlHZXRUYXJnZXRpbmdQ",
-            "cmVzZXRSZXF1ZXN0Ej4KBG5hbWUYASABKAlCMOBBAvpBKgooYWRtYW5hZ2Vy",
-            "Lmdvb2dsZWFwaXMuY29tL1RhcmdldGluZ1ByZXNldCLHAQobTGlzdFRhcmdl",
-            "dGluZ1ByZXNldHNSZXF1ZXN0EjgKBnBhcmVudBgBIAEoCUIo4EEC+kEiCiBh",
-            "ZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vTmV0d29yaxIWCglwYWdlX3NpemUY",
-            "AiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVy",
-            "GAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBARIRCgRza2lwGAYg",
-            "ASgFQgPgQQEikAEKHExpc3RUYXJnZXRpbmdQcmVzZXRzUmVzcG9uc2USQwoR",
-            "dGFyZ2V0aW5nX3ByZXNldHMYASADKAsyKC5nb29nbGUuYWRzLmFkbWFuYWdl",
-            "ci52MS5UYXJnZXRpbmdQcmVzZXQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
-            "EhIKCnRvdGFsX3NpemUYAyABKAUioQEKHENyZWF0ZVRhcmdldGluZ1ByZXNl",
-            "dFJlcXVlc3QSOAoGcGFyZW50GAEgASgJQijgQQL6QSIKIGFkbWFuYWdlci5n",
-            "b29nbGVhcGlzLmNvbS9OZXR3b3JrEkcKEHRhcmdldGluZ19wcmVzZXQYAiAB",
-            "KAsyKC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5UYXJnZXRpbmdQcmVzZXRC",
-            "A+BBAiKsAQoiQmF0Y2hDcmVhdGVUYXJnZXRpbmdQcmVzZXRzUmVxdWVzdBI4",
-            "CgZwYXJlbnQYASABKAlCKOBBAvpBIgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMu",
-            "Y29tL05ldHdvcmsSTAoIcmVxdWVzdHMYAiADKAsyNS5nb29nbGUuYWRzLmFk",
-            "bWFuYWdlci52MS5DcmVhdGVUYXJnZXRpbmdQcmVzZXRSZXF1ZXN0QgPgQQIi",
-            "agojQmF0Y2hDcmVhdGVUYXJnZXRpbmdQcmVzZXRzUmVzcG9uc2USQwoRdGFy",
-            "Z2V0aW5nX3ByZXNldHMYASADKAsyKC5nb29nbGUuYWRzLmFkbWFuYWdlci52",
-            "MS5UYXJnZXRpbmdQcmVzZXQihAEKIERlYWN0aXZhdGVUYXJnZXRpbmdQcmVz",
-            "ZXRSZXF1ZXN0Ej4KBG5hbWUYASABKAlCMOBBAvpBKgooYWRtYW5hZ2VyLmdv",
-            "b2dsZWFwaXMuY29tL1RhcmdldGluZ1ByZXNldBIgChN0YXJnZXRpbmdfcHJl",
-            "c2V0X2lkGAIgASgDQgPgQQIitAEKJkJhdGNoRGVhY3RpdmF0ZVRhcmdldGlu",
-            "Z1ByZXNldHNSZXF1ZXN0EjgKBnBhcmVudBgBIAEoCUIo4EEC+kEiCiBhZG1h",
-            "bmFnZXIuZ29vZ2xlYXBpcy5jb20vTmV0d29yaxJQCghyZXF1ZXN0cxgCIAMo",
-            "CzI5Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkRlYWN0aXZhdGVUYXJnZXRp",
-            "bmdQcmVzZXRSZXF1ZXN0QgPgQQIiPwonQmF0Y2hEZWFjdGl2YXRlVGFyZ2V0",
-            "aW5nUHJlc2V0c1Jlc3BvbnNlEhQKDGNoYW5nZV9jb3VudBgBIAEoAzLHCQoW",
-            "VGFyZ2V0aW5nUHJlc2V0U2VydmljZRKrAQoSR2V0VGFyZ2V0aW5nUHJlc2V0",
-            "EjIuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuR2V0VGFyZ2V0aW5nUHJlc2V0",
+            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxogZ29vZ2xlL3Byb3RvYnVm",
+            "L2ZpZWxkX21hc2sucHJvdG8iWwoZR2V0VGFyZ2V0aW5nUHJlc2V0UmVxdWVz",
+            "dBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKGFkbWFuYWdlci5nb29nbGVhcGlz",
+            "LmNvbS9UYXJnZXRpbmdQcmVzZXQixwEKG0xpc3RUYXJnZXRpbmdQcmVzZXRz",
+            "UmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKOBBAvpBIgogYWRtYW5hZ2VyLmdv",
+            "b2dsZWFwaXMuY29tL05ldHdvcmsSFgoJcGFnZV9zaXplGAIgASgFQgPgQQES",
+            "FwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEB",
+            "EhUKCG9yZGVyX2J5GAUgASgJQgPgQQESEQoEc2tpcBgGIAEoBUID4EEBIpAB",
+            "ChxMaXN0VGFyZ2V0aW5nUHJlc2V0c1Jlc3BvbnNlEkMKEXRhcmdldGluZ19w",
+            "cmVzZXRzGAEgAygLMiguZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVGFyZ2V0",
+            "aW5nUHJlc2V0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRISCgp0b3RhbF9z",
+            "aXplGAMgASgFIqEBChxDcmVhdGVUYXJnZXRpbmdQcmVzZXRSZXF1ZXN0EjgK",
+            "BnBhcmVudBgBIAEoCUIo4EEC+kEiCiBhZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
+            "b20vTmV0d29yaxJHChB0YXJnZXRpbmdfcHJlc2V0GAIgASgLMiguZ29vZ2xl",
+            "LmFkcy5hZG1hbmFnZXIudjEuVGFyZ2V0aW5nUHJlc2V0QgPgQQIirAEKIkJh",
+            "dGNoQ3JlYXRlVGFyZ2V0aW5nUHJlc2V0c1JlcXVlc3QSOAoGcGFyZW50GAEg",
+            "ASgJQijgQQL6QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3Jr",
+            "EkwKCHJlcXVlc3RzGAIgAygLMjUuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEu",
+            "Q3JlYXRlVGFyZ2V0aW5nUHJlc2V0UmVxdWVzdEID4EECImoKI0JhdGNoQ3Jl",
+            "YXRlVGFyZ2V0aW5nUHJlc2V0c1Jlc3BvbnNlEkMKEXRhcmdldGluZ19wcmVz",
+            "ZXRzGAEgAygLMiguZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVGFyZ2V0aW5n",
+            "UHJlc2V0Ip0BChxVcGRhdGVUYXJnZXRpbmdQcmVzZXRSZXF1ZXN0EkcKEHRh",
+            "cmdldGluZ19wcmVzZXQYASABKAsyKC5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MS5UYXJnZXRpbmdQcmVzZXRCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBASKsAQoiQmF0Y2hVcGRh",
+            "dGVUYXJnZXRpbmdQcmVzZXRzUmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKOBB",
+            "AvpBIgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSTAoIcmVx",
+            "dWVzdHMYAiADKAsyNS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5VcGRhdGVU",
+            "YXJnZXRpbmdQcmVzZXRSZXF1ZXN0QgPgQQIiagojQmF0Y2hVcGRhdGVUYXJn",
+            "ZXRpbmdQcmVzZXRzUmVzcG9uc2USQwoRdGFyZ2V0aW5nX3ByZXNldHMYASAD",
+            "KAsyKC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5UYXJnZXRpbmdQcmVzZXQi",
+            "hAEKIERlYWN0aXZhdGVUYXJnZXRpbmdQcmVzZXRSZXF1ZXN0Ej4KBG5hbWUY",
+            "ASABKAlCMOBBAvpBKgooYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Rhcmdl",
+            "dGluZ1ByZXNldBIgChN0YXJnZXRpbmdfcHJlc2V0X2lkGAIgASgDQgPgQQIi",
+            "tAEKJkJhdGNoRGVhY3RpdmF0ZVRhcmdldGluZ1ByZXNldHNSZXF1ZXN0EjgK",
+            "BnBhcmVudBgBIAEoCUIo4EEC+kEiCiBhZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
+            "b20vTmV0d29yaxJQCghyZXF1ZXN0cxgCIAMoCzI5Lmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLkRlYWN0aXZhdGVUYXJnZXRpbmdQcmVzZXRSZXF1ZXN0QgPg",
+            "QQIiPwonQmF0Y2hEZWFjdGl2YXRlVGFyZ2V0aW5nUHJlc2V0c1Jlc3BvbnNl",
+            "EhQKDGNoYW5nZV9jb3VudBgBIAEoAzKkDQoWVGFyZ2V0aW5nUHJlc2V0U2Vy",
+            "dmljZRKrAQoSR2V0VGFyZ2V0aW5nUHJlc2V0EjIuZ29vZ2xlLmFkcy5hZG1h",
+            "bmFnZXIudjEuR2V0VGFyZ2V0aW5nUHJlc2V0UmVxdWVzdBooLmdvb2dsZS5h",
+            "ZHMuYWRtYW5hZ2VyLnYxLlRhcmdldGluZ1ByZXNldCI32kEEbmFtZYLT5JMC",
+            "KhIoL3YxL3tuYW1lPW5ldHdvcmtzLyovdGFyZ2V0aW5nUHJlc2V0cy8qfRK+",
+            "AQoUTGlzdFRhcmdldGluZ1ByZXNldHMSNC5nb29nbGUuYWRzLmFkbWFuYWdl",
+            "ci52MS5MaXN0VGFyZ2V0aW5nUHJlc2V0c1JlcXVlc3QaNS5nb29nbGUuYWRz",
+            "LmFkbWFuYWdlci52MS5MaXN0VGFyZ2V0aW5nUHJlc2V0c1Jlc3BvbnNlIjna",
+            "QQZwYXJlbnSC0+STAioSKC92MS97cGFyZW50PW5ldHdvcmtzLyp9L3Rhcmdl",
+            "dGluZ1ByZXNldHMS1gEKFUNyZWF0ZVRhcmdldGluZ1ByZXNldBI1Lmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkNyZWF0ZVRhcmdldGluZ1ByZXNldFJlcXVl",
+            "c3QaKC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5UYXJnZXRpbmdQcmVzZXQi",
+            "XNpBF3BhcmVudCx0YXJnZXRpbmdfcHJlc2V0gtPkkwI8IigvdjEve3BhcmVu",
+            "dD1uZXR3b3Jrcy8qfS90YXJnZXRpbmdQcmVzZXRzOhB0YXJnZXRpbmdfcHJl",
+            "c2V0EusBChtCYXRjaENyZWF0ZVRhcmdldGluZ1ByZXNldHMSOy5nb29nbGUu",
+            "YWRzLmFkbWFuYWdlci52MS5CYXRjaENyZWF0ZVRhcmdldGluZ1ByZXNldHNS",
+            "ZXF1ZXN0GjwuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQmF0Y2hDcmVhdGVU",
+            "YXJnZXRpbmdQcmVzZXRzUmVzcG9uc2UiUdpBD3BhcmVudCxyZXF1ZXN0c4LT",
+            "5JMCOSI0L3YxL3twYXJlbnQ9bmV0d29ya3MvKn0vdGFyZ2V0aW5nUHJlc2V0",
+            "czpiYXRjaENyZWF0ZToBKhLsAQoVVXBkYXRlVGFyZ2V0aW5nUHJlc2V0EjUu",
+            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVXBkYXRlVGFyZ2V0aW5nUHJlc2V0",
             "UmVxdWVzdBooLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlRhcmdldGluZ1By",
-            "ZXNldCI32kEEbmFtZYLT5JMCKhIoL3YxL3tuYW1lPW5ldHdvcmtzLyovdGFy",
-            "Z2V0aW5nUHJlc2V0cy8qfRK+AQoUTGlzdFRhcmdldGluZ1ByZXNldHMSNC5n",
-            "b29nbGUuYWRzLmFkbWFuYWdlci52MS5MaXN0VGFyZ2V0aW5nUHJlc2V0c1Jl",
-            "cXVlc3QaNS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5MaXN0VGFyZ2V0aW5n",
-            "UHJlc2V0c1Jlc3BvbnNlIjnaQQZwYXJlbnSC0+STAioSKC92MS97cGFyZW50",
-            "PW5ldHdvcmtzLyp9L3RhcmdldGluZ1ByZXNldHMS1gEKFUNyZWF0ZVRhcmdl",
-            "dGluZ1ByZXNldBI1Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNyZWF0ZVRh",
-            "cmdldGluZ1ByZXNldFJlcXVlc3QaKC5nb29nbGUuYWRzLmFkbWFuYWdlci52",
-            "MS5UYXJnZXRpbmdQcmVzZXQiXNpBF3BhcmVudCx0YXJnZXRpbmdfcHJlc2V0",
-            "gtPkkwI8IigvdjEve3BhcmVudD1uZXR3b3Jrcy8qfS90YXJnZXRpbmdQcmVz",
-            "ZXRzOhB0YXJnZXRpbmdfcHJlc2V0EusBChtCYXRjaENyZWF0ZVRhcmdldGlu",
-            "Z1ByZXNldHMSOy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5CYXRjaENyZWF0",
-            "ZVRhcmdldGluZ1ByZXNldHNSZXF1ZXN0GjwuZ29vZ2xlLmFkcy5hZG1hbmFn",
-            "ZXIudjEuQmF0Y2hDcmVhdGVUYXJnZXRpbmdQcmVzZXRzUmVzcG9uc2UiUdpB",
-            "D3BhcmVudCxyZXF1ZXN0c4LT5JMCOSI0L3YxL3twYXJlbnQ9bmV0d29ya3Mv",
-            "Kn0vdGFyZ2V0aW5nUHJlc2V0czpiYXRjaENyZWF0ZToBKhL6AQofQmF0Y2hE",
-            "ZWFjdGl2YXRlVGFyZ2V0aW5nUHJlc2V0cxI/Lmdvb2dsZS5hZHMuYWRtYW5h",
-            "Z2VyLnYxLkJhdGNoRGVhY3RpdmF0ZVRhcmdldGluZ1ByZXNldHNSZXF1ZXN0",
-            "GkAuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQmF0Y2hEZWFjdGl2YXRlVGFy",
-            "Z2V0aW5nUHJlc2V0c1Jlc3BvbnNlIlTaQQ9wYXJlbnQscmVxdWVzdHOC0+ST",
-            "AjwiNy92MS97cGFyZW50PW5ldHdvcmtzLyp9L3RhcmdldGluZ1ByZXNldDpi",
-            "YXRjaERlYWN0aXZhdGU6ASoaespBGGFkbWFuYWdlci5nb29nbGVhcGlzLmNv",
-            "bdJBXGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYWRtYW5hZ2Vy",
-            "LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYWRtYW5hZ2VyLnJl",
-            "YWRvbmx5Qs8BChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCG1Rhcmdl",
-            "dGluZ1ByZXNldFNlcnZpY2VQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2Vy",
-            "qgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFu",
-            "YWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "ZXNldCJy2kEcdGFyZ2V0aW5nX3ByZXNldCx1cGRhdGVfbWFza4LT5JMCTTI5",
+            "L3YxL3t0YXJnZXRpbmdfcHJlc2V0Lm5hbWU9bmV0d29ya3MvKi90YXJnZXRp",
+            "bmdQcmVzZXRzLyp9OhB0YXJnZXRpbmdfcHJlc2V0EusBChtCYXRjaFVwZGF0",
+            "ZVRhcmdldGluZ1ByZXNldHMSOy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5C",
+            "YXRjaFVwZGF0ZVRhcmdldGluZ1ByZXNldHNSZXF1ZXN0GjwuZ29vZ2xlLmFk",
+            "cy5hZG1hbmFnZXIudjEuQmF0Y2hVcGRhdGVUYXJnZXRpbmdQcmVzZXRzUmVz",
+            "cG9uc2UiUdpBD3BhcmVudCxyZXF1ZXN0c4LT5JMCOSI0L3YxL3twYXJlbnQ9",
+            "bmV0d29ya3MvKn0vdGFyZ2V0aW5nUHJlc2V0czpiYXRjaFVwZGF0ZToBKhL6",
+            "AQofQmF0Y2hEZWFjdGl2YXRlVGFyZ2V0aW5nUHJlc2V0cxI/Lmdvb2dsZS5h",
+            "ZHMuYWRtYW5hZ2VyLnYxLkJhdGNoRGVhY3RpdmF0ZVRhcmdldGluZ1ByZXNl",
+            "dHNSZXF1ZXN0GkAuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQmF0Y2hEZWFj",
+            "dGl2YXRlVGFyZ2V0aW5nUHJlc2V0c1Jlc3BvbnNlIlTaQQ9wYXJlbnQscmVx",
+            "dWVzdHOC0+STAjwiNy92MS97cGFyZW50PW5ldHdvcmtzLyp9L3RhcmdldGlu",
+            "Z1ByZXNldDpiYXRjaERlYWN0aXZhdGU6ASoaespBGGFkbWFuYWdlci5nb29n",
+            "bGVhcGlzLmNvbdJBXGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "YWRtYW5hZ2VyLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYWRt",
+            "YW5hZ2VyLnJlYWRvbmx5Qs8BChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIu",
+            "djFCG1RhcmdldGluZ1ByZXNldFNlcnZpY2VQcm90b1ABWkBnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7",
+            "YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVc",
+            "QWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.TargetingPresetMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.TargetingPresetMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.GetTargetingPresetRequest), global::Google.Ads.AdManager.V1.GetTargetingPresetRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ListTargetingPresetsRequest), global::Google.Ads.AdManager.V1.ListTargetingPresetsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy", "Skip" }, null, null, null, null),
@@ -99,6 +121,9 @@ namespace Google.Ads.AdManager.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CreateTargetingPresetRequest), global::Google.Ads.AdManager.V1.CreateTargetingPresetRequest.Parser, new[]{ "Parent", "TargetingPreset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchCreateTargetingPresetsRequest), global::Google.Ads.AdManager.V1.BatchCreateTargetingPresetsRequest.Parser, new[]{ "Parent", "Requests" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchCreateTargetingPresetsResponse), global::Google.Ads.AdManager.V1.BatchCreateTargetingPresetsResponse.Parser, new[]{ "TargetingPresets" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest), global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest.Parser, new[]{ "TargetingPreset", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsRequest), global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsRequest.Parser, new[]{ "Parent", "Requests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsResponse), global::Google.Ads.AdManager.V1.BatchUpdateTargetingPresetsResponse.Parser, new[]{ "TargetingPresets" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DeactivateTargetingPresetRequest), global::Google.Ads.AdManager.V1.DeactivateTargetingPresetRequest.Parser, new[]{ "Name", "TargetingPresetId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchDeactivateTargetingPresetsRequest), global::Google.Ads.AdManager.V1.BatchDeactivateTargetingPresetsRequest.Parser, new[]{ "Parent", "Requests" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchDeactivateTargetingPresetsResponse), global::Google.Ads.AdManager.V1.BatchDeactivateTargetingPresetsResponse.Parser, new[]{ "ChangeCount" }, null, null, null, null)
@@ -1706,6 +1731,701 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
+  /// Request object for `UpdateTargetingPreset` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateTargetingPresetRequest : pb::IMessage<UpdateTargetingPresetRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateTargetingPresetRequest> _parser = new pb::MessageParser<UpdateTargetingPresetRequest>(() => new UpdateTargetingPresetRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateTargetingPresetRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.TargetingPresetServiceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateTargetingPresetRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateTargetingPresetRequest(UpdateTargetingPresetRequest other) : this() {
+      targetingPreset_ = other.targetingPreset_ != null ? other.targetingPreset_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateTargetingPresetRequest Clone() {
+      return new UpdateTargetingPresetRequest(this);
+    }
+
+    /// <summary>Field number for the "targeting_preset" field.</summary>
+    public const int TargetingPresetFieldNumber = 1;
+    private global::Google.Ads.AdManager.V1.TargetingPreset targetingPreset_;
+    /// <summary>
+    /// Required. The `TargetingPreset` to update.
+    ///
+    /// The `TargetingPreset`'s `name` is used to identify the `TargetingPreset` to
+    /// update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.TargetingPreset TargetingPreset {
+      get { return targetingPreset_; }
+      set {
+        targetingPreset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. The list of fields to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateTargetingPresetRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateTargetingPresetRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(TargetingPreset, other.TargetingPreset)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (targetingPreset_ != null) hash ^= TargetingPreset.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (targetingPreset_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(TargetingPreset);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (targetingPreset_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(TargetingPreset);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (targetingPreset_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TargetingPreset);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateTargetingPresetRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.targetingPreset_ != null) {
+        if (targetingPreset_ == null) {
+          TargetingPreset = new global::Google.Ads.AdManager.V1.TargetingPreset();
+        }
+        TargetingPreset.MergeFrom(other.TargetingPreset);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (targetingPreset_ == null) {
+              TargetingPreset = new global::Google.Ads.AdManager.V1.TargetingPreset();
+            }
+            input.ReadMessage(TargetingPreset);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (targetingPreset_ == null) {
+              TargetingPreset = new global::Google.Ads.AdManager.V1.TargetingPreset();
+            }
+            input.ReadMessage(TargetingPreset);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request object for `BatchUpdateTargetingPresets` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchUpdateTargetingPresetsRequest : pb::IMessage<BatchUpdateTargetingPresetsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchUpdateTargetingPresetsRequest> _parser = new pb::MessageParser<BatchUpdateTargetingPresetsRequest>(() => new BatchUpdateTargetingPresetsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchUpdateTargetingPresetsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.TargetingPresetServiceReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateTargetingPresetsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateTargetingPresetsRequest(BatchUpdateTargetingPresetsRequest other) : this() {
+      parent_ = other.parent_;
+      requests_ = other.requests_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateTargetingPresetsRequest Clone() {
+      return new BatchUpdateTargetingPresetsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent resource where `TargetingPresets` will be updated.
+    /// Format: `networks/{network_code}`
+    /// The parent field in the UpdateTargetingPresetRequest must match this
+    /// field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "requests" field.</summary>
+    public const int RequestsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest> _repeated_requests_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest> requests_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest>();
+    /// <summary>
+    /// Required. The `TargetingPreset` objects to update.
+    /// A maximum of 100 objects can be updated in a batch.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.UpdateTargetingPresetRequest> Requests {
+      get { return requests_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchUpdateTargetingPresetsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchUpdateTargetingPresetsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!requests_.Equals(other.requests_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= requests_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(ref output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += requests_.CalculateSize(_repeated_requests_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchUpdateTargetingPresetsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      requests_.Add(other.requests_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(ref input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response object for `BatchUpdateTargetingPresets` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchUpdateTargetingPresetsResponse : pb::IMessage<BatchUpdateTargetingPresetsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchUpdateTargetingPresetsResponse> _parser = new pb::MessageParser<BatchUpdateTargetingPresetsResponse>(() => new BatchUpdateTargetingPresetsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchUpdateTargetingPresetsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.TargetingPresetServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateTargetingPresetsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateTargetingPresetsResponse(BatchUpdateTargetingPresetsResponse other) : this() {
+      targetingPresets_ = other.targetingPresets_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateTargetingPresetsResponse Clone() {
+      return new BatchUpdateTargetingPresetsResponse(this);
+    }
+
+    /// <summary>Field number for the "targeting_presets" field.</summary>
+    public const int TargetingPresetsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.TargetingPreset> _repeated_targetingPresets_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Ads.AdManager.V1.TargetingPreset.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.TargetingPreset> targetingPresets_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.TargetingPreset>();
+    /// <summary>
+    /// The `TargetingPreset` objects updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.TargetingPreset> TargetingPresets {
+      get { return targetingPresets_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchUpdateTargetingPresetsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchUpdateTargetingPresetsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!targetingPresets_.Equals(other.targetingPresets_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= targetingPresets_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      targetingPresets_.WriteTo(output, _repeated_targetingPresets_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      targetingPresets_.WriteTo(ref output, _repeated_targetingPresets_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += targetingPresets_.CalculateSize(_repeated_targetingPresets_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchUpdateTargetingPresetsResponse other) {
+      if (other == null) {
+        return;
+      }
+      targetingPresets_.Add(other.targetingPresets_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            targetingPresets_.AddEntriesFrom(input, _repeated_targetingPresets_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            targetingPresets_.AddEntriesFrom(ref input, _repeated_targetingPresets_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request object for `DeactivateTargetingPreset` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1723,7 +2443,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingPresetServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingPresetServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1968,7 +2688,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingPresetServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingPresetServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2201,7 +2921,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingPresetServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingPresetServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
