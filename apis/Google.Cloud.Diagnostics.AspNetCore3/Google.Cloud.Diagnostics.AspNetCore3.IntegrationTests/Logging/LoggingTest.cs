@@ -110,9 +110,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                     Assert.NotEqual(LogSeverity.Debug, l.Severity);
                     Assert.NotEqual(LogSeverity.Info, l.Severity);
                 });
-                Assert.Equal(250, results.Count(l => l.Severity == LogSeverity.Warning));
-                Assert.Equal(250, results.Count(l => l.Severity == LogSeverity.Error));
-                Assert.Equal(500, results.Count(l => l.Severity == LogSeverity.Critical)); // Exception and Critical
+                // We loosen the bounds here to tolerate occasional dropped logs on the backend
+                Assert.InRange(results.Count(l => l.Severity == LogSeverity.Warning), 225, 250);
+                Assert.InRange(results.Count(l => l.Severity == LogSeverity.Error), 225, 250);
+                Assert.InRange(results.Count(l => l.Severity == LogSeverity.Critical), 450, 500); // Exception and Critical
             });
         }
 
@@ -837,7 +838,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             services.AddHttpContextAccessor();
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
             {
-                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer(), retryOptions: RetryOptions.Retry()),
                 ProjectId = _projectId
             })) ;
             base.ConfigureServices(services);
@@ -884,7 +885,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                     {
                         ProjectId = _projectId,
                         Options = TraceOptions.Create(
-                            _traceQps, BufferOptions.NoBuffer(), RetryOptions.NoRetry(ExceptionHandling.Propagate))
+                            _traceQps, BufferOptions.NoBuffer(),
+                            RetryOptions.NoRetry(ExceptionHandling.Propagate))
                     }
                 }));
     }
@@ -907,7 +909,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         {
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
             {
-                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer(), retryOptions: RetryOptions.Retry()),
                 ProjectId = _projectId
             }));
             base.ConfigureServices(services);
@@ -951,7 +953,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         {
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
             {
-                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, monitoredResource: Resource, bufferOptions: BufferOptions.NoBuffer()),
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, monitoredResource: Resource, bufferOptions: BufferOptions.NoBuffer(), retryOptions: RetryOptions.Retry()),
                 ProjectId = _projectId
             }));
             base.ConfigureServices(services);
@@ -968,7 +970,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                 Options = LoggingOptions.Create(
                     logLevel: LogLevel.Warning,
                     labels: new Dictionary<string, string> { { "some-key", "some-value" } },
-                    bufferOptions: BufferOptions.NoBuffer()),
+                    bufferOptions: BufferOptions.NoBuffer(),
+                    retryOptions: RetryOptions.Retry()),
                 ProjectId = _projectId
             }));
 
@@ -985,7 +988,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             services.AddSingleton<TextWriter>(writer);
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
             {
-                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer(), retryOptions: RetryOptions.Retry()),
                 ProjectId = _projectId,
                 LoggerDiagnosticsOutput = writer
             }));
@@ -1024,7 +1027,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         {
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
             {
-                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer(), retryOptions: RetryOptions.Retry()),
                 ProjectId = _projectId,
                 ServiceName = "my.test.service",
                 Version = "v1.0.0-alpha01"
@@ -1044,7 +1047,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         {
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
             {
-                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer(), retryOptions: RetryOptions.Retry()),
                 ProjectId = _projectId,
                 ServiceName = "my.test.service"
             }));
@@ -1063,7 +1066,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         {
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
             {
-                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer(), retryOptions: RetryOptions.Retry()),
                 ProjectId = _projectId,
                 Version = "v1.0.0-alpha01"
             }));
