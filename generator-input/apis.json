@@ -1785,6 +1785,26 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Cloud.CommerceProducer.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Commerce Producer",
+      "productUrl": "https://docs.cloud.google.com/marketplace/docs/partners/commerce-producer-api/reference",
+      "description": "Partner API for the Cloud Commerce Producer API Early Access.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/commerceproducer/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "commerceproducer",
+      "serviceConfigFile": "commerceproducer_v1beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Common",
       "version": "2.3.0",
       "type": "other",
