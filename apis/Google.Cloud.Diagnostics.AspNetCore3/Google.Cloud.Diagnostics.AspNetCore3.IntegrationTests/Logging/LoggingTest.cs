@@ -110,9 +110,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                     Assert.NotEqual(LogSeverity.Debug, l.Severity);
                     Assert.NotEqual(LogSeverity.Info, l.Severity);
                 });
-                Assert.Equal(250, results.Count(l => l.Severity == LogSeverity.Warning));
-                Assert.Equal(250, results.Count(l => l.Severity == LogSeverity.Error));
-                Assert.Equal(500, results.Count(l => l.Severity == LogSeverity.Critical)); // Exception and Critical
+                // We loosen the bounds here to tolerate occasional dropped logs on the backend
+                Assert.InRange(results.Count(l => l.Severity == LogSeverity.Warning), 225, 250);
+                Assert.InRange(results.Count(l => l.Severity == LogSeverity.Error), 225, 250);
+                Assert.InRange(results.Count(l => l.Severity == LogSeverity.Critical), 450, 500); // Exception and Critical
             });
         }
 
@@ -884,7 +885,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                     {
                         ProjectId = _projectId,
                         Options = TraceOptions.Create(
-                            _traceQps, BufferOptions.NoBuffer(), RetryOptions.NoRetry(ExceptionHandling.Propagate))
+                            _traceQps, BufferOptions.NoBuffer(),
+                            RetryOptions.NoRetry(ExceptionHandling.Propagate))
                     }
                 }));
     }

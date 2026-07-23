@@ -5129,7 +5129,7 @@
             "id": "Google.Cloud.CommerceProducer.V1Beta",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "apiPaths": [
                 "google/cloud/commerceproducer/v1beta"
             ],
