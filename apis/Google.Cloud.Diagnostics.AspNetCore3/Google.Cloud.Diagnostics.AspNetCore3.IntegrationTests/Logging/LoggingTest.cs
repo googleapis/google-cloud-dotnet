@@ -838,7 +838,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             services.AddHttpContextAccessor();
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
             {
-                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer(), retryOptions: RetryOptions.Retry()),
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
                 ProjectId = _projectId
             })) ;
             base.ConfigureServices(services);
@@ -909,7 +909,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         {
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
             {
-                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer(), retryOptions: RetryOptions.Retry()),
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
                 ProjectId = _projectId
             }));
             base.ConfigureServices(services);
@@ -953,7 +953,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         {
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
             {
-                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, monitoredResource: Resource, bufferOptions: BufferOptions.NoBuffer(), retryOptions: RetryOptions.Retry()),
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, monitoredResource: Resource, bufferOptions: BufferOptions.NoBuffer()),
                 ProjectId = _projectId
             }));
             base.ConfigureServices(services);
@@ -970,8 +970,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                 Options = LoggingOptions.Create(
                     logLevel: LogLevel.Warning,
                     labels: new Dictionary<string, string> { { "some-key", "some-value" } },
-                    bufferOptions: BufferOptions.NoBuffer(),
-                    retryOptions: RetryOptions.Retry()),
+                    bufferOptions: BufferOptions.NoBuffer()),
                 ProjectId = _projectId
             }));
 
@@ -988,7 +987,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             services.AddSingleton<TextWriter>(writer);
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
             {
-                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer(), retryOptions: RetryOptions.Retry()),
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
                 ProjectId = _projectId,
                 LoggerDiagnosticsOutput = writer
             }));
@@ -1027,7 +1026,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         {
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
             {
-                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer(), retryOptions: RetryOptions.Retry()),
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
                 ProjectId = _projectId,
                 ServiceName = "my.test.service",
                 Version = "v1.0.0-alpha01"
@@ -1047,7 +1046,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         {
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
             {
-                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer(), retryOptions: RetryOptions.Retry()),
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
                 ProjectId = _projectId,
                 ServiceName = "my.test.service"
             }));
@@ -1066,7 +1065,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         {
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
             {
-                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer(), retryOptions: RetryOptions.Retry()),
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
                 ProjectId = _projectId,
                 Version = "v1.0.0-alpha01"
             }));
