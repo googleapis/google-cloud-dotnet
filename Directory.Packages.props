@@ -53,7 +53,7 @@
     <PackageVersion Include="CommandLineParser" Version="2.9.1" />
     <PackageVersion Include="SharpCompress" Version="0.50.1" />
     <PackageVersion Include="NodaTime" Version="3.3.3" />
-    <PackageVersion Include="LibGit2Sharp" Version="0.30.0" />
+    <PackageVersion Include="LibGit2Sharp" Version="0.32.0" />
     <PackageVersion Include="NuGet.Protocol" Version="7.6.0" />
     <PackageVersion Include="Octokit" Version="14.0.0" />
     <PackageVersion Include="GitHubJwt" Version="0.0.6" />
