@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.74.0, released 2026-07-27
+
+### New features
+
+- Add Route to GroundingChunk.Maps in Vertex AI v1
+
+### Documentation improvements
+
+- Expand GroundingChunk.Maps documentation to describe route support
+
 ## Version 3.73.0, released 2026-07-13
 
 ### New features
