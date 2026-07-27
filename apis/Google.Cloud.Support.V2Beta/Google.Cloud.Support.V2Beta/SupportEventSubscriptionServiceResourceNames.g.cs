@@ -82,4 +82,17 @@ namespace Google.Cloud.Support.V2Beta
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ExpungeSupportEventSubscriptionRequest
+    {
+        /// <summary>
+        /// <see cref="gcsv::SupportEventSubscriptionName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcsv::SupportEventSubscriptionName SupportEventSubscriptionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::SupportEventSubscriptionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

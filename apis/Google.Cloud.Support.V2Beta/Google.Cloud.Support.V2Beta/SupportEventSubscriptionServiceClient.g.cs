@@ -55,6 +55,7 @@ namespace Google.Cloud.Support.V2Beta
             UpdateSupportEventSubscriptionSettings = existing.UpdateSupportEventSubscriptionSettings;
             DeleteSupportEventSubscriptionSettings = existing.DeleteSupportEventSubscriptionSettings;
             UndeleteSupportEventSubscriptionSettings = existing.UndeleteSupportEventSubscriptionSettings;
+            ExpungeSupportEventSubscriptionSettings = existing.ExpungeSupportEventSubscriptionSettings;
             OnCopy(existing);
         }
 
@@ -137,6 +138,19 @@ namespace Google.Cloud.Support.V2Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UndeleteSupportEventSubscriptionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SupportEventSubscriptionServiceClient.ExpungeSupportEventSubscription</c> and
+        /// <c>SupportEventSubscriptionServiceClient.ExpungeSupportEventSubscriptionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExpungeSupportEventSubscriptionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SupportEventSubscriptionServiceSettings"/> object.</returns>
@@ -534,7 +548,7 @@ namespace Google.Cloud.Support.V2Beta
             GetSupportEventSubscriptionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists support event subscriptions.
+        /// Lists support event subscriptions for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -543,7 +557,7 @@ namespace Google.Cloud.Support.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists support event subscriptions.
+        /// Lists support event subscriptions for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -552,7 +566,7 @@ namespace Google.Cloud.Support.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists support event subscriptions.
+        /// Lists support event subscriptions for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. The fully qualified name of the Cloud resource to list support
@@ -586,7 +600,7 @@ namespace Google.Cloud.Support.V2Beta
         }
 
         /// <summary>
-        /// Lists support event subscriptions.
+        /// Lists support event subscriptions for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. The fully qualified name of the Cloud resource to list support
@@ -620,7 +634,7 @@ namespace Google.Cloud.Support.V2Beta
         }
 
         /// <summary>
-        /// Lists support event subscriptions.
+        /// Lists support event subscriptions for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. The fully qualified name of the Cloud resource to list support
@@ -654,7 +668,7 @@ namespace Google.Cloud.Support.V2Beta
         }
 
         /// <summary>
-        /// Lists support event subscriptions.
+        /// Lists support event subscriptions for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. The fully qualified name of the Cloud resource to list support
@@ -913,6 +927,393 @@ namespace Google.Cloud.Support.V2Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SupportEventSubscription> UndeleteSupportEventSubscriptionAsync(UndeleteSupportEventSubscriptionRequest request, st::CancellationToken cancellationToken) =>
             UndeleteSupportEventSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Expunges a support event subscription.
+        /// 
+        /// EXAMPLES:
+        /// 
+        /// cURL:
+        /// 
+        /// ```shell
+        /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// curl \
+        /// --request POST \
+        /// --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+        /// "https://cloudsupport.googleapis.com/v2beta/$support_event_subscription:expunge"
+        /// ```
+        /// 
+        /// Python:
+        /// 
+        /// ```python
+        /// import googleapiclient.discovery
+        /// 
+        /// api_version = "v2beta"
+        /// supportApiService = googleapiclient.discovery.build(
+        /// serviceName="cloudsupport",
+        /// version=api_version,
+        /// discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+        /// )
+        /// 
+        /// request = supportApiService.supportEventSubscriptions().expunge(
+        /// name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// )
+        /// print(request.execute())
+        /// ```
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void ExpungeSupportEventSubscription(ExpungeSupportEventSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Expunges a support event subscription.
+        /// 
+        /// EXAMPLES:
+        /// 
+        /// cURL:
+        /// 
+        /// ```shell
+        /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// curl \
+        /// --request POST \
+        /// --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+        /// "https://cloudsupport.googleapis.com/v2beta/$support_event_subscription:expunge"
+        /// ```
+        /// 
+        /// Python:
+        /// 
+        /// ```python
+        /// import googleapiclient.discovery
+        /// 
+        /// api_version = "v2beta"
+        /// supportApiService = googleapiclient.discovery.build(
+        /// serviceName="cloudsupport",
+        /// version=api_version,
+        /// discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+        /// )
+        /// 
+        /// request = supportApiService.supportEventSubscriptions().expunge(
+        /// name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// )
+        /// print(request.execute())
+        /// ```
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ExpungeSupportEventSubscriptionAsync(ExpungeSupportEventSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Expunges a support event subscription.
+        /// 
+        /// EXAMPLES:
+        /// 
+        /// cURL:
+        /// 
+        /// ```shell
+        /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// curl \
+        /// --request POST \
+        /// --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+        /// "https://cloudsupport.googleapis.com/v2beta/$support_event_subscription:expunge"
+        /// ```
+        /// 
+        /// Python:
+        /// 
+        /// ```python
+        /// import googleapiclient.discovery
+        /// 
+        /// api_version = "v2beta"
+        /// supportApiService = googleapiclient.discovery.build(
+        /// serviceName="cloudsupport",
+        /// version=api_version,
+        /// discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+        /// )
+        /// 
+        /// request = supportApiService.supportEventSubscriptions().expunge(
+        /// name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// )
+        /// print(request.execute())
+        /// ```
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ExpungeSupportEventSubscriptionAsync(ExpungeSupportEventSubscriptionRequest request, st::CancellationToken cancellationToken) =>
+            ExpungeSupportEventSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Expunges a support event subscription.
+        /// 
+        /// EXAMPLES:
+        /// 
+        /// cURL:
+        /// 
+        /// ```shell
+        /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// curl \
+        /// --request POST \
+        /// --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+        /// "https://cloudsupport.googleapis.com/v2beta/$support_event_subscription:expunge"
+        /// ```
+        /// 
+        /// Python:
+        /// 
+        /// ```python
+        /// import googleapiclient.discovery
+        /// 
+        /// api_version = "v2beta"
+        /// supportApiService = googleapiclient.discovery.build(
+        /// serviceName="cloudsupport",
+        /// version=api_version,
+        /// discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+        /// )
+        /// 
+        /// request = supportApiService.supportEventSubscriptions().expunge(
+        /// name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// )
+        /// print(request.execute())
+        /// ```
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the support event subscription to expunge.
+        /// Format:
+        /// organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void ExpungeSupportEventSubscription(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ExpungeSupportEventSubscription(new ExpungeSupportEventSubscriptionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Expunges a support event subscription.
+        /// 
+        /// EXAMPLES:
+        /// 
+        /// cURL:
+        /// 
+        /// ```shell
+        /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// curl \
+        /// --request POST \
+        /// --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+        /// "https://cloudsupport.googleapis.com/v2beta/$support_event_subscription:expunge"
+        /// ```
+        /// 
+        /// Python:
+        /// 
+        /// ```python
+        /// import googleapiclient.discovery
+        /// 
+        /// api_version = "v2beta"
+        /// supportApiService = googleapiclient.discovery.build(
+        /// serviceName="cloudsupport",
+        /// version=api_version,
+        /// discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+        /// )
+        /// 
+        /// request = supportApiService.supportEventSubscriptions().expunge(
+        /// name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// )
+        /// print(request.execute())
+        /// ```
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the support event subscription to expunge.
+        /// Format:
+        /// organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ExpungeSupportEventSubscriptionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ExpungeSupportEventSubscriptionAsync(new ExpungeSupportEventSubscriptionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Expunges a support event subscription.
+        /// 
+        /// EXAMPLES:
+        /// 
+        /// cURL:
+        /// 
+        /// ```shell
+        /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// curl \
+        /// --request POST \
+        /// --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+        /// "https://cloudsupport.googleapis.com/v2beta/$support_event_subscription:expunge"
+        /// ```
+        /// 
+        /// Python:
+        /// 
+        /// ```python
+        /// import googleapiclient.discovery
+        /// 
+        /// api_version = "v2beta"
+        /// supportApiService = googleapiclient.discovery.build(
+        /// serviceName="cloudsupport",
+        /// version=api_version,
+        /// discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+        /// )
+        /// 
+        /// request = supportApiService.supportEventSubscriptions().expunge(
+        /// name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// )
+        /// print(request.execute())
+        /// ```
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the support event subscription to expunge.
+        /// Format:
+        /// organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ExpungeSupportEventSubscriptionAsync(string name, st::CancellationToken cancellationToken) =>
+            ExpungeSupportEventSubscriptionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Expunges a support event subscription.
+        /// 
+        /// EXAMPLES:
+        /// 
+        /// cURL:
+        /// 
+        /// ```shell
+        /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// curl \
+        /// --request POST \
+        /// --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+        /// "https://cloudsupport.googleapis.com/v2beta/$support_event_subscription:expunge"
+        /// ```
+        /// 
+        /// Python:
+        /// 
+        /// ```python
+        /// import googleapiclient.discovery
+        /// 
+        /// api_version = "v2beta"
+        /// supportApiService = googleapiclient.discovery.build(
+        /// serviceName="cloudsupport",
+        /// version=api_version,
+        /// discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+        /// )
+        /// 
+        /// request = supportApiService.supportEventSubscriptions().expunge(
+        /// name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// )
+        /// print(request.execute())
+        /// ```
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the support event subscription to expunge.
+        /// Format:
+        /// organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void ExpungeSupportEventSubscription(SupportEventSubscriptionName name, gaxgrpc::CallSettings callSettings = null) =>
+            ExpungeSupportEventSubscription(new ExpungeSupportEventSubscriptionRequest
+            {
+                SupportEventSubscriptionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Expunges a support event subscription.
+        /// 
+        /// EXAMPLES:
+        /// 
+        /// cURL:
+        /// 
+        /// ```shell
+        /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// curl \
+        /// --request POST \
+        /// --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+        /// "https://cloudsupport.googleapis.com/v2beta/$support_event_subscription:expunge"
+        /// ```
+        /// 
+        /// Python:
+        /// 
+        /// ```python
+        /// import googleapiclient.discovery
+        /// 
+        /// api_version = "v2beta"
+        /// supportApiService = googleapiclient.discovery.build(
+        /// serviceName="cloudsupport",
+        /// version=api_version,
+        /// discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+        /// )
+        /// 
+        /// request = supportApiService.supportEventSubscriptions().expunge(
+        /// name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// )
+        /// print(request.execute())
+        /// ```
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the support event subscription to expunge.
+        /// Format:
+        /// organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ExpungeSupportEventSubscriptionAsync(SupportEventSubscriptionName name, gaxgrpc::CallSettings callSettings = null) =>
+            ExpungeSupportEventSubscriptionAsync(new ExpungeSupportEventSubscriptionRequest
+            {
+                SupportEventSubscriptionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Expunges a support event subscription.
+        /// 
+        /// EXAMPLES:
+        /// 
+        /// cURL:
+        /// 
+        /// ```shell
+        /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// curl \
+        /// --request POST \
+        /// --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+        /// "https://cloudsupport.googleapis.com/v2beta/$support_event_subscription:expunge"
+        /// ```
+        /// 
+        /// Python:
+        /// 
+        /// ```python
+        /// import googleapiclient.discovery
+        /// 
+        /// api_version = "v2beta"
+        /// supportApiService = googleapiclient.discovery.build(
+        /// serviceName="cloudsupport",
+        /// version=api_version,
+        /// discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+        /// )
+        /// 
+        /// request = supportApiService.supportEventSubscriptions().expunge(
+        /// name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// )
+        /// print(request.execute())
+        /// ```
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the support event subscription to expunge.
+        /// Format:
+        /// organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ExpungeSupportEventSubscriptionAsync(SupportEventSubscriptionName name, st::CancellationToken cancellationToken) =>
+            ExpungeSupportEventSubscriptionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>SupportEventSubscriptionService client wrapper implementation, for convenient use.</summary>
@@ -932,6 +1333,8 @@ namespace Google.Cloud.Support.V2Beta
         private readonly gaxgrpc::ApiCall<DeleteSupportEventSubscriptionRequest, SupportEventSubscription> _callDeleteSupportEventSubscription;
 
         private readonly gaxgrpc::ApiCall<UndeleteSupportEventSubscriptionRequest, SupportEventSubscription> _callUndeleteSupportEventSubscription;
+
+        private readonly gaxgrpc::ApiCall<ExpungeSupportEventSubscriptionRequest, wkt::Empty> _callExpungeSupportEventSubscription;
 
         /// <summary>
         /// Constructs a client wrapper for the SupportEventSubscriptionService service, with the specified gRPC client
@@ -969,6 +1372,9 @@ namespace Google.Cloud.Support.V2Beta
             _callUndeleteSupportEventSubscription = clientHelper.BuildApiCall<UndeleteSupportEventSubscriptionRequest, SupportEventSubscription>("UndeleteSupportEventSubscription", grpcClient.UndeleteSupportEventSubscriptionAsync, grpcClient.UndeleteSupportEventSubscription, effectiveSettings.UndeleteSupportEventSubscriptionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUndeleteSupportEventSubscription);
             Modify_UndeleteSupportEventSubscriptionApiCall(ref _callUndeleteSupportEventSubscription);
+            _callExpungeSupportEventSubscription = clientHelper.BuildApiCall<ExpungeSupportEventSubscriptionRequest, wkt::Empty>("ExpungeSupportEventSubscription", grpcClient.ExpungeSupportEventSubscriptionAsync, grpcClient.ExpungeSupportEventSubscription, effectiveSettings.ExpungeSupportEventSubscriptionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callExpungeSupportEventSubscription);
+            Modify_ExpungeSupportEventSubscriptionApiCall(ref _callExpungeSupportEventSubscription);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -986,6 +1392,8 @@ namespace Google.Cloud.Support.V2Beta
 
         partial void Modify_UndeleteSupportEventSubscriptionApiCall(ref gaxgrpc::ApiCall<UndeleteSupportEventSubscriptionRequest, SupportEventSubscription> call);
 
+        partial void Modify_ExpungeSupportEventSubscriptionApiCall(ref gaxgrpc::ApiCall<ExpungeSupportEventSubscriptionRequest, wkt::Empty> call);
+
         partial void OnConstruction(SupportEventSubscriptionService.SupportEventSubscriptionServiceClient grpcClient, SupportEventSubscriptionServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC SupportEventSubscriptionService client</summary>
@@ -1002,6 +1410,8 @@ namespace Google.Cloud.Support.V2Beta
         partial void Modify_DeleteSupportEventSubscriptionRequest(ref DeleteSupportEventSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UndeleteSupportEventSubscriptionRequest(ref UndeleteSupportEventSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExpungeSupportEventSubscriptionRequest(ref ExpungeSupportEventSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a support event subscription for an organization.
@@ -1052,7 +1462,7 @@ namespace Google.Cloud.Support.V2Beta
         }
 
         /// <summary>
-        /// Lists support event subscriptions.
+        /// Lists support event subscriptions for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1064,7 +1474,7 @@ namespace Google.Cloud.Support.V2Beta
         }
 
         /// <summary>
-        /// Lists support event subscriptions.
+        /// Lists support event subscriptions for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1145,6 +1555,90 @@ namespace Google.Cloud.Support.V2Beta
         {
             Modify_UndeleteSupportEventSubscriptionRequest(ref request, ref callSettings);
             return _callUndeleteSupportEventSubscription.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Expunges a support event subscription.
+        /// 
+        /// EXAMPLES:
+        /// 
+        /// cURL:
+        /// 
+        /// ```shell
+        /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// curl \
+        /// --request POST \
+        /// --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+        /// "https://cloudsupport.googleapis.com/v2beta/$support_event_subscription:expunge"
+        /// ```
+        /// 
+        /// Python:
+        /// 
+        /// ```python
+        /// import googleapiclient.discovery
+        /// 
+        /// api_version = "v2beta"
+        /// supportApiService = googleapiclient.discovery.build(
+        /// serviceName="cloudsupport",
+        /// version=api_version,
+        /// discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+        /// )
+        /// 
+        /// request = supportApiService.supportEventSubscriptions().expunge(
+        /// name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// )
+        /// print(request.execute())
+        /// ```
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void ExpungeSupportEventSubscription(ExpungeSupportEventSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExpungeSupportEventSubscriptionRequest(ref request, ref callSettings);
+            _callExpungeSupportEventSubscription.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Expunges a support event subscription.
+        /// 
+        /// EXAMPLES:
+        /// 
+        /// cURL:
+        /// 
+        /// ```shell
+        /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// curl \
+        /// --request POST \
+        /// --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+        /// "https://cloudsupport.googleapis.com/v2beta/$support_event_subscription:expunge"
+        /// ```
+        /// 
+        /// Python:
+        /// 
+        /// ```python
+        /// import googleapiclient.discovery
+        /// 
+        /// api_version = "v2beta"
+        /// supportApiService = googleapiclient.discovery.build(
+        /// serviceName="cloudsupport",
+        /// version=api_version,
+        /// discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+        /// )
+        /// 
+        /// request = supportApiService.supportEventSubscriptions().expunge(
+        /// name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+        /// )
+        /// print(request.execute())
+        /// ```
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task ExpungeSupportEventSubscriptionAsync(ExpungeSupportEventSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExpungeSupportEventSubscriptionRequest(ref request, ref callSettings);
+            return _callExpungeSupportEventSubscription.Async(request, callSettings);
         }
     }
 
