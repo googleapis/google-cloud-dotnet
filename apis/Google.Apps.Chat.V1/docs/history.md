@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta27, released 2026-07-27
+
+### New features
+
+- Addition of Membership Affiliation information
+
 ## Version 1.0.0-beta26, released 2026-07-13
 
 ### New features
