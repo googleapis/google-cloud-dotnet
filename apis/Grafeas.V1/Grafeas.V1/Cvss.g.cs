@@ -52,7 +52,7 @@ namespace Grafeas.V1 {
             "UEVDSUZJRUQQABITCg9TQ09QRV9VTkNIQU5HRUQQARIRCg1TQ09QRV9DSEFO",
             "R0VEEAIiUgoGSW1wYWN0EhYKEklNUEFDVF9VTlNQRUNJRklFRBAAEg8KC0lN",
             "UEFDVF9ISUdIEAESDgoKSU1QQUNUX0xPVxACEg8KC0lNUEFDVF9OT05FEAMi",
-            "uAsKBENWU1MSEgoKYmFzZV9zY29yZRgBIAEoAhIcChRleHBsb2l0YWJpbGl0",
+            "zhIKBENWU1MSEgoKYmFzZV9zY29yZRgBIAEoAhIcChRleHBsb2l0YWJpbGl0",
             "eV9zY29yZRgCIAEoAhIUCgxpbXBhY3Rfc2NvcmUYAyABKAISNAoNYXR0YWNr",
             "X3ZlY3RvchgEIAEoDjIdLmdyYWZlYXMudjEuQ1ZTUy5BdHRhY2tWZWN0b3IS",
             "PAoRYXR0YWNrX2NvbXBsZXhpdHkYBSABKA4yIS5ncmFmZWFzLnYxLkNWU1Mu",
@@ -64,36 +64,57 @@ namespace Grafeas.V1 {
             "djEuQ1ZTUy5TY29wZRI3ChZjb25maWRlbnRpYWxpdHlfaW1wYWN0GAogASgO",
             "MhcuZ3JhZmVhcy52MS5DVlNTLkltcGFjdBIxChBpbnRlZ3JpdHlfaW1wYWN0",
             "GAsgASgOMhcuZ3JhZmVhcy52MS5DVlNTLkltcGFjdBI0ChNhdmFpbGFiaWxp",
-            "dHlfaW1wYWN0GAwgASgOMhcuZ3JhZmVhcy52MS5DVlNTLkltcGFjdCKZAQoM",
-            "QXR0YWNrVmVjdG9yEh0KGUFUVEFDS19WRUNUT1JfVU5TUEVDSUZJRUQQABIZ",
-            "ChVBVFRBQ0tfVkVDVE9SX05FVFdPUksQARIaChZBVFRBQ0tfVkVDVE9SX0FE",
-            "SkFDRU5UEAISFwoTQVRUQUNLX1ZFQ1RPUl9MT0NBTBADEhoKFkFUVEFDS19W",
-            "RUNUT1JfUEhZU0lDQUwQBCKKAQoQQXR0YWNrQ29tcGxleGl0eRIhCh1BVFRB",
-            "Q0tfQ09NUExFWElUWV9VTlNQRUNJRklFRBAAEhkKFUFUVEFDS19DT01QTEVY",
-            "SVRZX0xPVxABEhoKFkFUVEFDS19DT01QTEVYSVRZX0hJR0gQAhIcChhBVFRB",
-            "Q0tfQ09NUExFWElUWV9NRURJVU0QAyKBAQoOQXV0aGVudGljYXRpb24SHgoa",
-            "QVVUSEVOVElDQVRJT05fVU5TUEVDSUZJRUQQABIbChdBVVRIRU5USUNBVElP",
-            "Tl9NVUxUSVBMRRABEhkKFUFVVEhFTlRJQ0FUSU9OX1NJTkdMRRACEhcKE0FV",
-            "VEhFTlRJQ0FUSU9OX05PTkUQAyKSAQoSUHJpdmlsZWdlc1JlcXVpcmVkEiMK",
-            "H1BSSVZJTEVHRVNfUkVRVUlSRURfVU5TUEVDSUZJRUQQABIcChhQUklWSUxF",
-            "R0VTX1JFUVVJUkVEX05PTkUQARIbChdQUklWSUxFR0VTX1JFUVVJUkVEX0xP",
-            "VxACEhwKGFBSSVZJTEVHRVNfUkVRVUlSRURfSElHSBADIm0KD1VzZXJJbnRl",
-            "cmFjdGlvbhIgChxVU0VSX0lOVEVSQUNUSU9OX1VOU1BFQ0lGSUVEEAASGQoV",
-            "VVNFUl9JTlRFUkFDVElPTl9OT05FEAESHQoZVVNFUl9JTlRFUkFDVElPTl9S",
-            "RVFVSVJFRBACIkYKBVNjb3BlEhUKEVNDT1BFX1VOU1BFQ0lGSUVEEAASEwoP",
-            "U0NPUEVfVU5DSEFOR0VEEAESEQoNU0NPUEVfQ0hBTkdFRBACInsKBkltcGFj",
-            "dBIWChJJTVBBQ1RfVU5TUEVDSUZJRUQQABIPCgtJTVBBQ1RfSElHSBABEg4K",
-            "CklNUEFDVF9MT1cQAhIPCgtJTVBBQ1RfTk9ORRADEhIKDklNUEFDVF9QQVJU",
-            "SUFMEAQSEwoPSU1QQUNUX0NPTVBMRVRFEAUqUwoLQ1ZTU1ZlcnNpb24SHAoY",
-            "Q1ZTU19WRVJTSU9OX1VOU1BFQ0lGSUVEEAASEgoOQ1ZTU19WRVJTSU9OXzIQ",
-            "ARISCg5DVlNTX1ZFUlNJT05fMxACQlwKDWlvLmdyYWZlYXMudjFCCUNWU1NQ",
-            "cm90b1ABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2dyYWZlYXMvdjE7Z3JhZmVhc6ICA0dSQWIGcHJvdG8z"));
+            "dHlfaW1wYWN0GAwgASgOMhcuZ3JhZmVhcy52MS5DVlNTLkltcGFjdBJAChNh",
+            "dHRhY2tfcmVxdWlyZW1lbnRzGA0gASgOMiMuZ3JhZmVhcy52MS5DVlNTLkF0",
+            "dGFja1JlcXVpcmVtZW50cxJJCih2dWxuZXJhYmxlX3N5c3RlbV9jb25maWRl",
+            "bnRpYWxpdHlfaW1wYWN0GA4gASgOMhcuZ3JhZmVhcy52MS5DVlNTLkltcGFj",
+            "dBJDCiJ2dWxuZXJhYmxlX3N5c3RlbV9pbnRlZ3JpdHlfaW1wYWN0GA8gASgO",
+            "MhcuZ3JhZmVhcy52MS5DVlNTLkltcGFjdBJGCiV2dWxuZXJhYmxlX3N5c3Rl",
+            "bV9hdmFpbGFiaWxpdHlfaW1wYWN0GBAgASgOMhcuZ3JhZmVhcy52MS5DVlNT",
+            "LkltcGFjdBJJCihzdWJzZXF1ZW50X3N5c3RlbV9jb25maWRlbnRpYWxpdHlf",
+            "aW1wYWN0GBEgASgOMhcuZ3JhZmVhcy52MS5DVlNTLkltcGFjdBJDCiJzdWJz",
+            "ZXF1ZW50X3N5c3RlbV9pbnRlZ3JpdHlfaW1wYWN0GBIgASgOMhcuZ3JhZmVh",
+            "cy52MS5DVlNTLkltcGFjdBJGCiVzdWJzZXF1ZW50X3N5c3RlbV9hdmFpbGFi",
+            "aWxpdHlfaW1wYWN0GBMgASgOMhcuZ3JhZmVhcy52MS5DVlNTLkltcGFjdBI6",
+            "ChBleHBsb2l0X21hdHVyaXR5GBQgASgOMiAuZ3JhZmVhcy52MS5DVlNTLkV4",
+            "cGxvaXRNYXR1cml0eSKZAQoMQXR0YWNrVmVjdG9yEh0KGUFUVEFDS19WRUNU",
+            "T1JfVU5TUEVDSUZJRUQQABIZChVBVFRBQ0tfVkVDVE9SX05FVFdPUksQARIa",
+            "ChZBVFRBQ0tfVkVDVE9SX0FESkFDRU5UEAISFwoTQVRUQUNLX1ZFQ1RPUl9M",
+            "T0NBTBADEhoKFkFUVEFDS19WRUNUT1JfUEhZU0lDQUwQBCKKAQoQQXR0YWNr",
+            "Q29tcGxleGl0eRIhCh1BVFRBQ0tfQ09NUExFWElUWV9VTlNQRUNJRklFRBAA",
+            "EhkKFUFUVEFDS19DT01QTEVYSVRZX0xPVxABEhoKFkFUVEFDS19DT01QTEVY",
+            "SVRZX0hJR0gQAhIcChhBVFRBQ0tfQ09NUExFWElUWV9NRURJVU0QAyKBAQoO",
+            "QXV0aGVudGljYXRpb24SHgoaQVVUSEVOVElDQVRJT05fVU5TUEVDSUZJRUQQ",
+            "ABIbChdBVVRIRU5USUNBVElPTl9NVUxUSVBMRRABEhkKFUFVVEhFTlRJQ0FU",
+            "SU9OX1NJTkdMRRACEhcKE0FVVEhFTlRJQ0FUSU9OX05PTkUQAyKSAQoSUHJp",
+            "dmlsZWdlc1JlcXVpcmVkEiMKH1BSSVZJTEVHRVNfUkVRVUlSRURfVU5TUEVD",
+            "SUZJRUQQABIcChhQUklWSUxFR0VTX1JFUVVJUkVEX05PTkUQARIbChdQUklW",
+            "SUxFR0VTX1JFUVVJUkVEX0xPVxACEhwKGFBSSVZJTEVHRVNfUkVRVUlSRURf",
+            "SElHSBADIqgBCg9Vc2VySW50ZXJhY3Rpb24SIAocVVNFUl9JTlRFUkFDVElP",
+            "Tl9VTlNQRUNJRklFRBAAEhkKFVVTRVJfSU5URVJBQ1RJT05fTk9ORRABEh0K",
+            "GVVTRVJfSU5URVJBQ1RJT05fUkVRVUlSRUQQAhIcChhVU0VSX0lOVEVSQUNU",
+            "SU9OX1BBU1NJVkUQAxIbChdVU0VSX0lOVEVSQUNUSU9OX0FDVElWRRAEIkYK",
+            "BVNjb3BlEhUKEVNDT1BFX1VOU1BFQ0lGSUVEEAASEwoPU0NPUEVfVU5DSEFO",
+            "R0VEEAESEQoNU0NPUEVfQ0hBTkdFRBACInsKBkltcGFjdBIWChJJTVBBQ1Rf",
+            "VU5TUEVDSUZJRUQQABIPCgtJTVBBQ1RfSElHSBABEg4KCklNUEFDVF9MT1cQ",
+            "AhIPCgtJTVBBQ1RfTk9ORRADEhIKDklNUEFDVF9QQVJUSUFMEAQSEwoPSU1Q",
+            "QUNUX0NPTVBMRVRFEAUieAoSQXR0YWNrUmVxdWlyZW1lbnRzEiMKH0FUVEFD",
+            "S19SRVFVSVJFTUVOVFNfVU5TUEVDSUZJRUQQABIcChhBVFRBQ0tfUkVRVUlS",
+            "RU1FTlRTX05PTkUQARIfChtBVFRBQ0tfUkVRVUlSRU1FTlRTX1BSRVNFTlQQ",
+            "AiKvAQoPRXhwbG9pdE1hdHVyaXR5EiAKHEVYUExPSVRfTUFUVVJJVFlfVU5T",
+            "UEVDSUZJRUQQABIgChxFWFBMT0lUX01BVFVSSVRZX05PVF9ERUZJTkVEEAES",
+            "HQoZRVhQTE9JVF9NQVRVUklUWV9BVFRBQ0tFRBACEhgKFEVYUExPSVRfTUFU",
+            "VVJJVFlfUE9DEAMSHwobRVhQTE9JVF9NQVRVUklUWV9VTlJFUE9SVEVEEAQq",
+            "ZwoLQ1ZTU1ZlcnNpb24SHAoYQ1ZTU19WRVJTSU9OX1VOU1BFQ0lGSUVEEAAS",
+            "EgoOQ1ZTU19WRVJTSU9OXzIQARISCg5DVlNTX1ZFUlNJT05fMxACEhIKDkNW",
+            "U1NfVkVSU0lPTl80EANCXAoNaW8uZ3JhZmVhcy52MUIJQ1ZTU1Byb3RvUAFa",
+            "OGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZ3JhZmVh",
+            "cy92MTtncmFmZWFzogIDR1JBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.CVSSVersion), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.CVSSv3), global::Grafeas.V1.CVSSv3.Parser, new[]{ "BaseScore", "ExploitabilityScore", "ImpactScore", "AttackVector", "AttackComplexity", "PrivilegesRequired", "UserInteraction", "Scope", "ConfidentialityImpact", "IntegrityImpact", "AvailabilityImpact" }, null, new[]{ typeof(global::Grafeas.V1.CVSSv3.Types.AttackVector), typeof(global::Grafeas.V1.CVSSv3.Types.AttackComplexity), typeof(global::Grafeas.V1.CVSSv3.Types.PrivilegesRequired), typeof(global::Grafeas.V1.CVSSv3.Types.UserInteraction), typeof(global::Grafeas.V1.CVSSv3.Types.Scope), typeof(global::Grafeas.V1.CVSSv3.Types.Impact) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.CVSS), global::Grafeas.V1.CVSS.Parser, new[]{ "BaseScore", "ExploitabilityScore", "ImpactScore", "AttackVector", "AttackComplexity", "Authentication", "PrivilegesRequired", "UserInteraction", "Scope", "ConfidentialityImpact", "IntegrityImpact", "AvailabilityImpact" }, null, new[]{ typeof(global::Grafeas.V1.CVSS.Types.AttackVector), typeof(global::Grafeas.V1.CVSS.Types.AttackComplexity), typeof(global::Grafeas.V1.CVSS.Types.Authentication), typeof(global::Grafeas.V1.CVSS.Types.PrivilegesRequired), typeof(global::Grafeas.V1.CVSS.Types.UserInteraction), typeof(global::Grafeas.V1.CVSS.Types.Scope), typeof(global::Grafeas.V1.CVSS.Types.Impact) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.CVSS), global::Grafeas.V1.CVSS.Parser, new[]{ "BaseScore", "ExploitabilityScore", "ImpactScore", "AttackVector", "AttackComplexity", "Authentication", "PrivilegesRequired", "UserInteraction", "Scope", "ConfidentialityImpact", "IntegrityImpact", "AvailabilityImpact", "AttackRequirements", "VulnerableSystemConfidentialityImpact", "VulnerableSystemIntegrityImpact", "VulnerableSystemAvailabilityImpact", "SubsequentSystemConfidentialityImpact", "SubsequentSystemIntegrityImpact", "SubsequentSystemAvailabilityImpact", "ExploitMaturity" }, null, new[]{ typeof(global::Grafeas.V1.CVSS.Types.AttackVector), typeof(global::Grafeas.V1.CVSS.Types.AttackComplexity), typeof(global::Grafeas.V1.CVSS.Types.Authentication), typeof(global::Grafeas.V1.CVSS.Types.PrivilegesRequired), typeof(global::Grafeas.V1.CVSS.Types.UserInteraction), typeof(global::Grafeas.V1.CVSS.Types.Scope), typeof(global::Grafeas.V1.CVSS.Types.Impact), typeof(global::Grafeas.V1.CVSS.Types.AttackRequirements), typeof(global::Grafeas.V1.CVSS.Types.ExploitMaturity) }, null, null)
           }));
     }
     #endregion
@@ -104,9 +125,22 @@ namespace Grafeas.V1 {
   /// CVSS Version.
   /// </summary>
   public enum CVSSVersion {
+    /// <summary>
+    /// Unspecified.
+    /// </summary>
     [pbr::OriginalName("CVSS_VERSION_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// CVSS v2.
+    /// </summary>
     [pbr::OriginalName("CVSS_VERSION_2")] _2 = 1,
+    /// <summary>
+    /// CVSS v3.
+    /// </summary>
     [pbr::OriginalName("CVSS_VERSION_3")] _3 = 2,
+    /// <summary>
+    /// CVSS v4.
+    /// </summary>
+    [pbr::OriginalName("CVSS_VERSION_4")] _4 = 3,
   }
 
   #endregion
@@ -793,6 +827,14 @@ namespace Grafeas.V1 {
       confidentialityImpact_ = other.confidentialityImpact_;
       integrityImpact_ = other.integrityImpact_;
       availabilityImpact_ = other.availabilityImpact_;
+      attackRequirements_ = other.attackRequirements_;
+      vulnerableSystemConfidentialityImpact_ = other.vulnerableSystemConfidentialityImpact_;
+      vulnerableSystemIntegrityImpact_ = other.vulnerableSystemIntegrityImpact_;
+      vulnerableSystemAvailabilityImpact_ = other.vulnerableSystemAvailabilityImpact_;
+      subsequentSystemConfidentialityImpact_ = other.subsequentSystemConfidentialityImpact_;
+      subsequentSystemIntegrityImpact_ = other.subsequentSystemIntegrityImpact_;
+      subsequentSystemAvailabilityImpact_ = other.subsequentSystemAvailabilityImpact_;
+      exploitMaturity_ = other.exploitMaturity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -845,9 +887,7 @@ namespace Grafeas.V1 {
     public const int AttackVectorFieldNumber = 4;
     private global::Grafeas.V1.CVSS.Types.AttackVector attackVector_ = global::Grafeas.V1.CVSS.Types.AttackVector.Unspecified;
     /// <summary>
-    /// Base Metrics
-    /// Represents the intrinsic characteristics of a vulnerability that are
-    /// constant over time and across user environments.
+    /// Attack Vector (AV). Defined in CVSS v2, v3, v4.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -861,6 +901,9 @@ namespace Grafeas.V1 {
     /// <summary>Field number for the "attack_complexity" field.</summary>
     public const int AttackComplexityFieldNumber = 5;
     private global::Grafeas.V1.CVSS.Types.AttackComplexity attackComplexity_ = global::Grafeas.V1.CVSS.Types.AttackComplexity.Unspecified;
+    /// <summary>
+    /// Attack Complexity (AC). Defined in CVSS v2, v3, v4.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Grafeas.V1.CVSS.Types.AttackComplexity AttackComplexity {
@@ -873,6 +916,9 @@ namespace Grafeas.V1 {
     /// <summary>Field number for the "authentication" field.</summary>
     public const int AuthenticationFieldNumber = 6;
     private global::Grafeas.V1.CVSS.Types.Authentication authentication_ = global::Grafeas.V1.CVSS.Types.Authentication.Unspecified;
+    /// <summary>
+    /// Authentication (Au). Defined in CVSS v2.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Grafeas.V1.CVSS.Types.Authentication Authentication {
@@ -885,6 +931,9 @@ namespace Grafeas.V1 {
     /// <summary>Field number for the "privileges_required" field.</summary>
     public const int PrivilegesRequiredFieldNumber = 7;
     private global::Grafeas.V1.CVSS.Types.PrivilegesRequired privilegesRequired_ = global::Grafeas.V1.CVSS.Types.PrivilegesRequired.Unspecified;
+    /// <summary>
+    /// Privileges Required (PR). Defined in CVSS v3, v4.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Grafeas.V1.CVSS.Types.PrivilegesRequired PrivilegesRequired {
@@ -897,6 +946,9 @@ namespace Grafeas.V1 {
     /// <summary>Field number for the "user_interaction" field.</summary>
     public const int UserInteractionFieldNumber = 8;
     private global::Grafeas.V1.CVSS.Types.UserInteraction userInteraction_ = global::Grafeas.V1.CVSS.Types.UserInteraction.Unspecified;
+    /// <summary>
+    /// User Interaction (UI). Defined in CVSS v3, v4.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Grafeas.V1.CVSS.Types.UserInteraction UserInteraction {
@@ -909,6 +961,9 @@ namespace Grafeas.V1 {
     /// <summary>Field number for the "scope" field.</summary>
     public const int ScopeFieldNumber = 9;
     private global::Grafeas.V1.CVSS.Types.Scope scope_ = global::Grafeas.V1.CVSS.Types.Scope.Unspecified;
+    /// <summary>
+    /// Scope (S). Defined in CVSS v3.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Grafeas.V1.CVSS.Types.Scope Scope {
@@ -921,6 +976,9 @@ namespace Grafeas.V1 {
     /// <summary>Field number for the "confidentiality_impact" field.</summary>
     public const int ConfidentialityImpactFieldNumber = 10;
     private global::Grafeas.V1.CVSS.Types.Impact confidentialityImpact_ = global::Grafeas.V1.CVSS.Types.Impact.Unspecified;
+    /// <summary>
+    /// Confidentiality Impact (C). Defined in CVSS v2, v3.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Grafeas.V1.CVSS.Types.Impact ConfidentialityImpact {
@@ -933,6 +991,9 @@ namespace Grafeas.V1 {
     /// <summary>Field number for the "integrity_impact" field.</summary>
     public const int IntegrityImpactFieldNumber = 11;
     private global::Grafeas.V1.CVSS.Types.Impact integrityImpact_ = global::Grafeas.V1.CVSS.Types.Impact.Unspecified;
+    /// <summary>
+    /// Integrity Impact (I). Defined in CVSS v2, v3.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Grafeas.V1.CVSS.Types.Impact IntegrityImpact {
@@ -945,12 +1006,135 @@ namespace Grafeas.V1 {
     /// <summary>Field number for the "availability_impact" field.</summary>
     public const int AvailabilityImpactFieldNumber = 12;
     private global::Grafeas.V1.CVSS.Types.Impact availabilityImpact_ = global::Grafeas.V1.CVSS.Types.Impact.Unspecified;
+    /// <summary>
+    /// Availability Impact (A). Defined in CVSS v2, v3.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Grafeas.V1.CVSS.Types.Impact AvailabilityImpact {
       get { return availabilityImpact_; }
       set {
         availabilityImpact_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "attack_requirements" field.</summary>
+    public const int AttackRequirementsFieldNumber = 13;
+    private global::Grafeas.V1.CVSS.Types.AttackRequirements attackRequirements_ = global::Grafeas.V1.CVSS.Types.AttackRequirements.Unspecified;
+    /// <summary>
+    /// Attack Requirements (AT). Defined in CVSS v4.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.CVSS.Types.AttackRequirements AttackRequirements {
+      get { return attackRequirements_; }
+      set {
+        attackRequirements_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vulnerable_system_confidentiality_impact" field.</summary>
+    public const int VulnerableSystemConfidentialityImpactFieldNumber = 14;
+    private global::Grafeas.V1.CVSS.Types.Impact vulnerableSystemConfidentialityImpact_ = global::Grafeas.V1.CVSS.Types.Impact.Unspecified;
+    /// <summary>
+    /// Vulnerable System Confidentiality Impact (VC). Defined in CVSS v4.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.CVSS.Types.Impact VulnerableSystemConfidentialityImpact {
+      get { return vulnerableSystemConfidentialityImpact_; }
+      set {
+        vulnerableSystemConfidentialityImpact_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vulnerable_system_integrity_impact" field.</summary>
+    public const int VulnerableSystemIntegrityImpactFieldNumber = 15;
+    private global::Grafeas.V1.CVSS.Types.Impact vulnerableSystemIntegrityImpact_ = global::Grafeas.V1.CVSS.Types.Impact.Unspecified;
+    /// <summary>
+    /// Vulnerable System Integrity Impact (VI). Defined in CVSS v4.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.CVSS.Types.Impact VulnerableSystemIntegrityImpact {
+      get { return vulnerableSystemIntegrityImpact_; }
+      set {
+        vulnerableSystemIntegrityImpact_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vulnerable_system_availability_impact" field.</summary>
+    public const int VulnerableSystemAvailabilityImpactFieldNumber = 16;
+    private global::Grafeas.V1.CVSS.Types.Impact vulnerableSystemAvailabilityImpact_ = global::Grafeas.V1.CVSS.Types.Impact.Unspecified;
+    /// <summary>
+    /// Vulnerable System Availability Impact (VA). Defined in CVSS v4.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.CVSS.Types.Impact VulnerableSystemAvailabilityImpact {
+      get { return vulnerableSystemAvailabilityImpact_; }
+      set {
+        vulnerableSystemAvailabilityImpact_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "subsequent_system_confidentiality_impact" field.</summary>
+    public const int SubsequentSystemConfidentialityImpactFieldNumber = 17;
+    private global::Grafeas.V1.CVSS.Types.Impact subsequentSystemConfidentialityImpact_ = global::Grafeas.V1.CVSS.Types.Impact.Unspecified;
+    /// <summary>
+    /// Subsequent System Confidentiality Impact (SC). Defined in CVSS v4.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.CVSS.Types.Impact SubsequentSystemConfidentialityImpact {
+      get { return subsequentSystemConfidentialityImpact_; }
+      set {
+        subsequentSystemConfidentialityImpact_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "subsequent_system_integrity_impact" field.</summary>
+    public const int SubsequentSystemIntegrityImpactFieldNumber = 18;
+    private global::Grafeas.V1.CVSS.Types.Impact subsequentSystemIntegrityImpact_ = global::Grafeas.V1.CVSS.Types.Impact.Unspecified;
+    /// <summary>
+    /// Subsequent System Integrity Impact (SI). Defined in CVSS v4.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.CVSS.Types.Impact SubsequentSystemIntegrityImpact {
+      get { return subsequentSystemIntegrityImpact_; }
+      set {
+        subsequentSystemIntegrityImpact_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "subsequent_system_availability_impact" field.</summary>
+    public const int SubsequentSystemAvailabilityImpactFieldNumber = 19;
+    private global::Grafeas.V1.CVSS.Types.Impact subsequentSystemAvailabilityImpact_ = global::Grafeas.V1.CVSS.Types.Impact.Unspecified;
+    /// <summary>
+    /// Subsequent System Availability Impact (SA). Defined in CVSS v4.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.CVSS.Types.Impact SubsequentSystemAvailabilityImpact {
+      get { return subsequentSystemAvailabilityImpact_; }
+      set {
+        subsequentSystemAvailabilityImpact_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "exploit_maturity" field.</summary>
+    public const int ExploitMaturityFieldNumber = 20;
+    private global::Grafeas.V1.CVSS.Types.ExploitMaturity exploitMaturity_ = global::Grafeas.V1.CVSS.Types.ExploitMaturity.Unspecified;
+    /// <summary>
+    /// Exploit Maturity (E). Defined in CVSS v4.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.CVSS.Types.ExploitMaturity ExploitMaturity {
+      get { return exploitMaturity_; }
+      set {
+        exploitMaturity_ = value;
       }
     }
 
@@ -981,6 +1165,14 @@ namespace Grafeas.V1 {
       if (ConfidentialityImpact != other.ConfidentialityImpact) return false;
       if (IntegrityImpact != other.IntegrityImpact) return false;
       if (AvailabilityImpact != other.AvailabilityImpact) return false;
+      if (AttackRequirements != other.AttackRequirements) return false;
+      if (VulnerableSystemConfidentialityImpact != other.VulnerableSystemConfidentialityImpact) return false;
+      if (VulnerableSystemIntegrityImpact != other.VulnerableSystemIntegrityImpact) return false;
+      if (VulnerableSystemAvailabilityImpact != other.VulnerableSystemAvailabilityImpact) return false;
+      if (SubsequentSystemConfidentialityImpact != other.SubsequentSystemConfidentialityImpact) return false;
+      if (SubsequentSystemIntegrityImpact != other.SubsequentSystemIntegrityImpact) return false;
+      if (SubsequentSystemAvailabilityImpact != other.SubsequentSystemAvailabilityImpact) return false;
+      if (ExploitMaturity != other.ExploitMaturity) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1000,6 +1192,14 @@ namespace Grafeas.V1 {
       if (ConfidentialityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) hash ^= ConfidentialityImpact.GetHashCode();
       if (IntegrityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) hash ^= IntegrityImpact.GetHashCode();
       if (AvailabilityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) hash ^= AvailabilityImpact.GetHashCode();
+      if (AttackRequirements != global::Grafeas.V1.CVSS.Types.AttackRequirements.Unspecified) hash ^= AttackRequirements.GetHashCode();
+      if (VulnerableSystemConfidentialityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) hash ^= VulnerableSystemConfidentialityImpact.GetHashCode();
+      if (VulnerableSystemIntegrityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) hash ^= VulnerableSystemIntegrityImpact.GetHashCode();
+      if (VulnerableSystemAvailabilityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) hash ^= VulnerableSystemAvailabilityImpact.GetHashCode();
+      if (SubsequentSystemConfidentialityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) hash ^= SubsequentSystemConfidentialityImpact.GetHashCode();
+      if (SubsequentSystemIntegrityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) hash ^= SubsequentSystemIntegrityImpact.GetHashCode();
+      if (SubsequentSystemAvailabilityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) hash ^= SubsequentSystemAvailabilityImpact.GetHashCode();
+      if (ExploitMaturity != global::Grafeas.V1.CVSS.Types.ExploitMaturity.Unspecified) hash ^= ExploitMaturity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1066,6 +1266,38 @@ namespace Grafeas.V1 {
         output.WriteRawTag(96);
         output.WriteEnum((int) AvailabilityImpact);
       }
+      if (AttackRequirements != global::Grafeas.V1.CVSS.Types.AttackRequirements.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) AttackRequirements);
+      }
+      if (VulnerableSystemConfidentialityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) VulnerableSystemConfidentialityImpact);
+      }
+      if (VulnerableSystemIntegrityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) VulnerableSystemIntegrityImpact);
+      }
+      if (VulnerableSystemAvailabilityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) VulnerableSystemAvailabilityImpact);
+      }
+      if (SubsequentSystemConfidentialityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) SubsequentSystemConfidentialityImpact);
+      }
+      if (SubsequentSystemIntegrityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) SubsequentSystemIntegrityImpact);
+      }
+      if (SubsequentSystemAvailabilityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) SubsequentSystemAvailabilityImpact);
+      }
+      if (ExploitMaturity != global::Grafeas.V1.CVSS.Types.ExploitMaturity.Unspecified) {
+        output.WriteRawTag(160, 1);
+        output.WriteEnum((int) ExploitMaturity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1124,6 +1356,38 @@ namespace Grafeas.V1 {
         output.WriteRawTag(96);
         output.WriteEnum((int) AvailabilityImpact);
       }
+      if (AttackRequirements != global::Grafeas.V1.CVSS.Types.AttackRequirements.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) AttackRequirements);
+      }
+      if (VulnerableSystemConfidentialityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) VulnerableSystemConfidentialityImpact);
+      }
+      if (VulnerableSystemIntegrityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) VulnerableSystemIntegrityImpact);
+      }
+      if (VulnerableSystemAvailabilityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) VulnerableSystemAvailabilityImpact);
+      }
+      if (SubsequentSystemConfidentialityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) SubsequentSystemConfidentialityImpact);
+      }
+      if (SubsequentSystemIntegrityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        output.WriteRawTag(144, 1);
+        output.WriteEnum((int) SubsequentSystemIntegrityImpact);
+      }
+      if (SubsequentSystemAvailabilityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) SubsequentSystemAvailabilityImpact);
+      }
+      if (ExploitMaturity != global::Grafeas.V1.CVSS.Types.ExploitMaturity.Unspecified) {
+        output.WriteRawTag(160, 1);
+        output.WriteEnum((int) ExploitMaturity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1169,6 +1433,30 @@ namespace Grafeas.V1 {
       }
       if (AvailabilityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AvailabilityImpact);
+      }
+      if (AttackRequirements != global::Grafeas.V1.CVSS.Types.AttackRequirements.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AttackRequirements);
+      }
+      if (VulnerableSystemConfidentialityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) VulnerableSystemConfidentialityImpact);
+      }
+      if (VulnerableSystemIntegrityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) VulnerableSystemIntegrityImpact);
+      }
+      if (VulnerableSystemAvailabilityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) VulnerableSystemAvailabilityImpact);
+      }
+      if (SubsequentSystemConfidentialityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) SubsequentSystemConfidentialityImpact);
+      }
+      if (SubsequentSystemIntegrityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) SubsequentSystemIntegrityImpact);
+      }
+      if (SubsequentSystemAvailabilityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) SubsequentSystemAvailabilityImpact);
+      }
+      if (ExploitMaturity != global::Grafeas.V1.CVSS.Types.ExploitMaturity.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ExploitMaturity);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1217,6 +1505,30 @@ namespace Grafeas.V1 {
       }
       if (other.AvailabilityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
         AvailabilityImpact = other.AvailabilityImpact;
+      }
+      if (other.AttackRequirements != global::Grafeas.V1.CVSS.Types.AttackRequirements.Unspecified) {
+        AttackRequirements = other.AttackRequirements;
+      }
+      if (other.VulnerableSystemConfidentialityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        VulnerableSystemConfidentialityImpact = other.VulnerableSystemConfidentialityImpact;
+      }
+      if (other.VulnerableSystemIntegrityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        VulnerableSystemIntegrityImpact = other.VulnerableSystemIntegrityImpact;
+      }
+      if (other.VulnerableSystemAvailabilityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        VulnerableSystemAvailabilityImpact = other.VulnerableSystemAvailabilityImpact;
+      }
+      if (other.SubsequentSystemConfidentialityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        SubsequentSystemConfidentialityImpact = other.SubsequentSystemConfidentialityImpact;
+      }
+      if (other.SubsequentSystemIntegrityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        SubsequentSystemIntegrityImpact = other.SubsequentSystemIntegrityImpact;
+      }
+      if (other.SubsequentSystemAvailabilityImpact != global::Grafeas.V1.CVSS.Types.Impact.Unspecified) {
+        SubsequentSystemAvailabilityImpact = other.SubsequentSystemAvailabilityImpact;
+      }
+      if (other.ExploitMaturity != global::Grafeas.V1.CVSS.Types.ExploitMaturity.Unspecified) {
+        ExploitMaturity = other.ExploitMaturity;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1283,6 +1595,38 @@ namespace Grafeas.V1 {
           }
           case 96: {
             AvailabilityImpact = (global::Grafeas.V1.CVSS.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            AttackRequirements = (global::Grafeas.V1.CVSS.Types.AttackRequirements) input.ReadEnum();
+            break;
+          }
+          case 112: {
+            VulnerableSystemConfidentialityImpact = (global::Grafeas.V1.CVSS.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 120: {
+            VulnerableSystemIntegrityImpact = (global::Grafeas.V1.CVSS.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 128: {
+            VulnerableSystemAvailabilityImpact = (global::Grafeas.V1.CVSS.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 136: {
+            SubsequentSystemConfidentialityImpact = (global::Grafeas.V1.CVSS.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 144: {
+            SubsequentSystemIntegrityImpact = (global::Grafeas.V1.CVSS.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            SubsequentSystemAvailabilityImpact = (global::Grafeas.V1.CVSS.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 160: {
+            ExploitMaturity = (global::Grafeas.V1.CVSS.Types.ExploitMaturity) input.ReadEnum();
             break;
           }
         }
@@ -1352,6 +1696,38 @@ namespace Grafeas.V1 {
             AvailabilityImpact = (global::Grafeas.V1.CVSS.Types.Impact) input.ReadEnum();
             break;
           }
+          case 104: {
+            AttackRequirements = (global::Grafeas.V1.CVSS.Types.AttackRequirements) input.ReadEnum();
+            break;
+          }
+          case 112: {
+            VulnerableSystemConfidentialityImpact = (global::Grafeas.V1.CVSS.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 120: {
+            VulnerableSystemIntegrityImpact = (global::Grafeas.V1.CVSS.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 128: {
+            VulnerableSystemAvailabilityImpact = (global::Grafeas.V1.CVSS.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 136: {
+            SubsequentSystemConfidentialityImpact = (global::Grafeas.V1.CVSS.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 144: {
+            SubsequentSystemIntegrityImpact = (global::Grafeas.V1.CVSS.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            SubsequentSystemAvailabilityImpact = (global::Grafeas.V1.CVSS.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 160: {
+            ExploitMaturity = (global::Grafeas.V1.CVSS.Types.ExploitMaturity) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -1362,54 +1738,214 @@ namespace Grafeas.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Attack Vector.
+      /// </summary>
       public enum AttackVector {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
         [pbr::OriginalName("ATTACK_VECTOR_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Attack Vector: Network (AV:N). Defined in CVSS v2, v3, v4.
+        /// </summary>
         [pbr::OriginalName("ATTACK_VECTOR_NETWORK")] Network = 1,
+        /// <summary>
+        /// Attack Vector: Adjacent (AV:A). Defined in CVSS v2, v3, v4.
+        /// </summary>
         [pbr::OriginalName("ATTACK_VECTOR_ADJACENT")] Adjacent = 2,
+        /// <summary>
+        ///  Attack Vector: Local (AV:L). Defined in CVSS v2, v3, v4.
+        /// </summary>
         [pbr::OriginalName("ATTACK_VECTOR_LOCAL")] Local = 3,
+        /// <summary>
+        /// Attack Vector: Physical (AV:P). Defined in CVSS v3, v4.
+        /// </summary>
         [pbr::OriginalName("ATTACK_VECTOR_PHYSICAL")] Physical = 4,
       }
 
+      /// <summary>
+      /// Attack Complexity.
+      /// </summary>
       public enum AttackComplexity {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
         [pbr::OriginalName("ATTACK_COMPLEXITY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Low attack complexity (AC:L). Defined in CVSS v2, v3, v4.
+        /// </summary>
         [pbr::OriginalName("ATTACK_COMPLEXITY_LOW")] Low = 1,
+        /// <summary>
+        /// High attack complexity (AC:H). Defined in CVSS v2, v3, v4.
+        /// </summary>
         [pbr::OriginalName("ATTACK_COMPLEXITY_HIGH")] High = 2,
+        /// <summary>
+        /// Medium attack complexity (AC:M). Defined in CVSS v2.
+        /// </summary>
         [pbr::OriginalName("ATTACK_COMPLEXITY_MEDIUM")] Medium = 3,
       }
 
+      /// <summary>
+      /// Authentication.
+      /// </summary>
       public enum Authentication {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
         [pbr::OriginalName("AUTHENTICATION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Multiple authentication required (Au:M). Defined in CVSS v2.
+        /// </summary>
         [pbr::OriginalName("AUTHENTICATION_MULTIPLE")] Multiple = 1,
+        /// <summary>
+        /// Single authentication required (Au:S). Defined in CVSS v2.
+        /// </summary>
         [pbr::OriginalName("AUTHENTICATION_SINGLE")] Single = 2,
+        /// <summary>
+        /// No authentication required (Au:N). Defined in CVSS v2.
+        /// </summary>
         [pbr::OriginalName("AUTHENTICATION_NONE")] None = 3,
       }
 
+      /// <summary>
+      /// Privileges Required.
+      /// </summary>
       public enum PrivilegesRequired {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
         [pbr::OriginalName("PRIVILEGES_REQUIRED_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// No privileges required (PR:N). Defined in CVSS v3, v4.
+        /// </summary>
         [pbr::OriginalName("PRIVILEGES_REQUIRED_NONE")] None = 1,
+        /// <summary>
+        /// Low privileges required (PR:L). Defined in CVSS v3, v4.
+        /// </summary>
         [pbr::OriginalName("PRIVILEGES_REQUIRED_LOW")] Low = 2,
+        /// <summary>
+        /// High privileges required (PR:H). Defined in CVSS v3, v4.
+        /// </summary>
         [pbr::OriginalName("PRIVILEGES_REQUIRED_HIGH")] High = 3,
       }
 
+      /// <summary>
+      /// User Interaction.
+      /// </summary>
       public enum UserInteraction {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
         [pbr::OriginalName("USER_INTERACTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// No user interaction required (UI:N). Defined in CVSS v3, v4.
+        /// </summary>
         [pbr::OriginalName("USER_INTERACTION_NONE")] None = 1,
+        /// <summary>
+        /// User interaction required (UI:R). Defined in CVSS v3.
+        /// </summary>
         [pbr::OriginalName("USER_INTERACTION_REQUIRED")] Required = 2,
+        /// <summary>
+        /// Passive user interaction required (UI:P). Defined in CVSS v4.
+        /// </summary>
+        [pbr::OriginalName("USER_INTERACTION_PASSIVE")] Passive = 3,
+        /// <summary>
+        /// Active user interaction required (UI:A). Defined in CVSS v4.
+        /// </summary>
+        [pbr::OriginalName("USER_INTERACTION_ACTIVE")] Active = 4,
       }
 
+      /// <summary>
+      /// Scope.
+      /// </summary>
       public enum Scope {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
         [pbr::OriginalName("SCOPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Scope: Unchanged (S:U). Defined in CVSS v3.
+        /// </summary>
         [pbr::OriginalName("SCOPE_UNCHANGED")] Unchanged = 1,
+        /// <summary>
+        /// Scope: Changed (S:C). Defined in CVSS v3.
+        /// </summary>
         [pbr::OriginalName("SCOPE_CHANGED")] Changed = 2,
       }
 
+      /// <summary>
+      /// Impact.
+      /// </summary>
       public enum Impact {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
         [pbr::OriginalName("IMPACT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// High impact (H). Defined in CVSS v3, v4.
+        /// </summary>
         [pbr::OriginalName("IMPACT_HIGH")] High = 1,
+        /// <summary>
+        /// Low impact (L). Defined in CVSS v3, v4.
+        /// </summary>
         [pbr::OriginalName("IMPACT_LOW")] Low = 2,
+        /// <summary>
+        /// No impact (N). Defined in CVSS v2, v3, v4.
+        /// </summary>
         [pbr::OriginalName("IMPACT_NONE")] None = 3,
+        /// <summary>
+        /// Partial impact (P). Defined in CVSS v2.
+        /// </summary>
         [pbr::OriginalName("IMPACT_PARTIAL")] Partial = 4,
+        /// <summary>
+        /// Complete impact (C). Defined in CVSS v2.
+        /// </summary>
         [pbr::OriginalName("IMPACT_COMPLETE")] Complete = 5,
+      }
+
+      /// <summary>
+      /// Attack Requirements.
+      /// </summary>
+      public enum AttackRequirements {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
+        [pbr::OriginalName("ATTACK_REQUIREMENTS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// No attack requirements (AT:N). Defined in CVSS v4.
+        /// </summary>
+        [pbr::OriginalName("ATTACK_REQUIREMENTS_NONE")] None = 1,
+        /// <summary>
+        /// Attack requirements: Present (AT:P). Defined in CVSS v4.
+        /// </summary>
+        [pbr::OriginalName("ATTACK_REQUIREMENTS_PRESENT")] Present = 2,
+      }
+
+      /// <summary>
+      /// Exploit Maturity (E). Defined in CVSS v4.
+      /// </summary>
+      public enum ExploitMaturity {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
+        [pbr::OriginalName("EXPLOIT_MATURITY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Exploit maturity: Not defined (E:X). Defined in CVSS v4.
+        /// </summary>
+        [pbr::OriginalName("EXPLOIT_MATURITY_NOT_DEFINED")] NotDefined = 1,
+        /// <summary>
+        /// Exploit maturity: Attacked (E:A). Defined in CVSS v4.
+        /// </summary>
+        [pbr::OriginalName("EXPLOIT_MATURITY_ATTACKED")] Attacked = 2,
+        /// <summary>
+        /// Exploit maturity: Proof-of-concept (E:P). Defined in CVSS v4.
+        /// </summary>
+        [pbr::OriginalName("EXPLOIT_MATURITY_POC")] Poc = 3,
+        /// <summary>
+        /// Exploit maturity: Unreported (E:U). Defined in CVSS v4.
+        /// </summary>
+        [pbr::OriginalName("EXPLOIT_MATURITY_UNREPORTED")] Unreported = 4,
       }
 
     }
