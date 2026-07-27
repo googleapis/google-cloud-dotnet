@@ -3306,6 +3306,206 @@
       ]
     },
     {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateManagedFolder_sync",
+      "title": "UpdateManagedFolderRequestObject",
+      "description": "Snippet for UpdateManagedFolder",
+      "file": "StorageControlClient.UpdateManagedFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateManagedFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateManagedFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.UpdateManagedFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.ManagedFolder",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateManagedFolder_async",
+      "title": "UpdateManagedFolderRequestObjectAsync",
+      "description": "Snippet for UpdateManagedFolderAsync",
+      "file": "StorageControlClient.UpdateManagedFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateManagedFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateManagedFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.UpdateManagedFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.ManagedFolder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateManagedFolder_sync_flattened",
+      "title": "UpdateManagedFolder",
+      "description": "Snippet for UpdateManagedFolder",
+      "file": "StorageControlClient.UpdateManagedFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateManagedFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateManagedFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ManagedFolder",
+            "name": "managedFolder"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.ManagedFolder",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateManagedFolder_async_flattened",
+      "title": "UpdateManagedFolderAsync",
+      "description": "Snippet for UpdateManagedFolderAsync",
+      "file": "StorageControlClient.UpdateManagedFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateManagedFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateManagedFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ManagedFolder",
+            "name": "managedFolder"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.ManagedFolder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "storage_v2_generated_StorageControl_CreateAnywhereCache_sync",
       "title": "CreateAnywhereCacheRequestObject",
       "description": "Snippet for CreateAnywhereCache",
@@ -5255,6 +5455,1115 @@
         "method": {
           "shortName": "ListAnywhereCaches",
           "fullName": "google.storage.control.v2.StorageControl.ListAnywhereCaches",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateRapidCache_sync",
+      "title": "CreateRapidCacheRequestObject",
+      "description": "Snippet for CreateRapidCache",
+      "file": "StorageControlClient.CreateRapidCacheRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRapidCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateRapidCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.CreateRapidCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.CreateRapidCacheMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.CreateRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateRapidCache_async",
+      "title": "CreateRapidCacheRequestObjectAsync",
+      "description": "Snippet for CreateRapidCacheAsync",
+      "file": "StorageControlClient.CreateRapidCacheRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRapidCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateRapidCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.CreateRapidCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.CreateRapidCacheMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.CreateRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateRapidCache_sync_flattened",
+      "title": "CreateRapidCache",
+      "description": "Snippet for CreateRapidCache",
+      "file": "StorageControlClient.CreateRapidCacheSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRapidCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateRapidCache",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.RapidCache",
+            "name": "rapidCache"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.CreateRapidCacheMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.CreateRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateRapidCache_async_flattened",
+      "title": "CreateRapidCacheAsync",
+      "description": "Snippet for CreateRapidCacheAsync",
+      "file": "StorageControlClient.CreateRapidCacheAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRapidCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateRapidCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.RapidCache",
+            "name": "rapidCache"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.CreateRapidCacheMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.CreateRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateRapidCache_sync_flattened_resourceNames",
+      "title": "CreateRapidCacheResourceNames",
+      "description": "Snippet for CreateRapidCache",
+      "file": "StorageControlClient.CreateRapidCacheResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRapidCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateRapidCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.RapidCache",
+            "name": "rapidCache"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.CreateRapidCacheMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.CreateRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateRapidCache_async_flattened_resourceNames",
+      "title": "CreateRapidCacheResourceNamesAsync",
+      "description": "Snippet for CreateRapidCacheAsync",
+      "file": "StorageControlClient.CreateRapidCacheResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRapidCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateRapidCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.RapidCache",
+            "name": "rapidCache"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.CreateRapidCacheMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.CreateRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateRapidCache_sync",
+      "title": "UpdateRapidCacheRequestObject",
+      "description": "Snippet for UpdateRapidCache",
+      "file": "StorageControlClient.UpdateRapidCacheRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRapidCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateRapidCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.UpdateRapidCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.UpdateRapidCacheMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateRapidCache_async",
+      "title": "UpdateRapidCacheRequestObjectAsync",
+      "description": "Snippet for UpdateRapidCacheAsync",
+      "file": "StorageControlClient.UpdateRapidCacheRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRapidCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateRapidCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.UpdateRapidCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.UpdateRapidCacheMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateRapidCache_sync_flattened",
+      "title": "UpdateRapidCache",
+      "description": "Snippet for UpdateRapidCache",
+      "file": "StorageControlClient.UpdateRapidCacheSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRapidCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateRapidCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.RapidCache",
+            "name": "rapidCache"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.UpdateRapidCacheMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_UpdateRapidCache_async_flattened",
+      "title": "UpdateRapidCacheAsync",
+      "description": "Snippet for UpdateRapidCacheAsync",
+      "file": "StorageControlClient.UpdateRapidCacheAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateRapidCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.UpdateRapidCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.RapidCache",
+            "name": "rapidCache"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.UpdateRapidCacheMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "UpdateRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.UpdateRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetRapidCache_sync",
+      "title": "GetRapidCacheRequestObject",
+      "description": "Snippet for GetRapidCache",
+      "file": "StorageControlClient.GetRapidCacheRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRapidCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetRapidCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetRapidCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.RapidCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.GetRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetRapidCache_async",
+      "title": "GetRapidCacheRequestObjectAsync",
+      "description": "Snippet for GetRapidCacheAsync",
+      "file": "StorageControlClient.GetRapidCacheRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRapidCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetRapidCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetRapidCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.RapidCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.GetRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetRapidCache_sync_flattened",
+      "title": "GetRapidCache",
+      "description": "Snippet for GetRapidCache",
+      "file": "StorageControlClient.GetRapidCacheSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRapidCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetRapidCache",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.RapidCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.GetRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetRapidCache_async_flattened",
+      "title": "GetRapidCacheAsync",
+      "description": "Snippet for GetRapidCacheAsync",
+      "file": "StorageControlClient.GetRapidCacheAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRapidCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetRapidCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.RapidCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.GetRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetRapidCache_sync_flattened_resourceNames",
+      "title": "GetRapidCacheResourceNames",
+      "description": "Snippet for GetRapidCache",
+      "file": "StorageControlClient.GetRapidCacheResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRapidCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetRapidCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.RapidCacheName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.RapidCache",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.GetRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetRapidCache_async_flattened_resourceNames",
+      "title": "GetRapidCacheResourceNamesAsync",
+      "description": "Snippet for GetRapidCacheAsync",
+      "file": "StorageControlClient.GetRapidCacheResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRapidCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetRapidCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.RapidCacheName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.RapidCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.GetRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListRapidCaches_sync",
+      "title": "ListRapidCachesRequestObject",
+      "description": "Snippet for ListRapidCaches",
+      "file": "StorageControlClient.ListRapidCachesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRapidCaches",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListRapidCaches",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ListRapidCachesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListRapidCachesResponse, Google.Cloud.Storage.Control.V2.RapidCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListRapidCaches",
+          "fullName": "google.storage.control.v2.StorageControl.ListRapidCaches",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListRapidCaches_async",
+      "title": "ListRapidCachesRequestObjectAsync",
+      "description": "Snippet for ListRapidCachesAsync",
+      "file": "StorageControlClient.ListRapidCachesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRapidCachesAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListRapidCachesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ListRapidCachesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListRapidCachesResponse, Google.Cloud.Storage.Control.V2.RapidCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListRapidCaches",
+          "fullName": "google.storage.control.v2.StorageControl.ListRapidCaches",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListRapidCaches_sync_flattened",
+      "title": "ListRapidCaches",
+      "description": "Snippet for ListRapidCaches",
+      "file": "StorageControlClient.ListRapidCachesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRapidCaches",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListRapidCaches",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListRapidCachesResponse, Google.Cloud.Storage.Control.V2.RapidCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListRapidCaches",
+          "fullName": "google.storage.control.v2.StorageControl.ListRapidCaches",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListRapidCaches_async_flattened",
+      "title": "ListRapidCachesAsync",
+      "description": "Snippet for ListRapidCachesAsync",
+      "file": "StorageControlClient.ListRapidCachesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRapidCachesAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListRapidCachesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListRapidCachesResponse, Google.Cloud.Storage.Control.V2.RapidCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListRapidCaches",
+          "fullName": "google.storage.control.v2.StorageControl.ListRapidCaches",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListRapidCaches_sync_flattened_resourceNames",
+      "title": "ListRapidCachesResourceNames",
+      "description": "Snippet for ListRapidCaches",
+      "file": "StorageControlClient.ListRapidCachesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRapidCaches",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListRapidCaches",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListRapidCachesResponse, Google.Cloud.Storage.Control.V2.RapidCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListRapidCaches",
+          "fullName": "google.storage.control.v2.StorageControl.ListRapidCaches",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListRapidCaches_async_flattened_resourceNames",
+      "title": "ListRapidCachesResourceNamesAsync",
+      "description": "Snippet for ListRapidCachesAsync",
+      "file": "StorageControlClient.ListRapidCachesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRapidCachesAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListRapidCachesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListRapidCachesResponse, Google.Cloud.Storage.Control.V2.RapidCache>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListRapidCaches",
+          "fullName": "google.storage.control.v2.StorageControl.ListRapidCaches",
           "service": {
             "shortName": "StorageControl",
             "fullName": "google.storage.control.v2.StorageControl"

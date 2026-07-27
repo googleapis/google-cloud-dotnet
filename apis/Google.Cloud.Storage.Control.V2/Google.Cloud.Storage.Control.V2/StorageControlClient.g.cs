@@ -62,6 +62,7 @@ namespace Google.Cloud.Storage.Control.V2
             DeleteManagedFolderSettings = existing.DeleteManagedFolderSettings;
             GetManagedFolderSettings = existing.GetManagedFolderSettings;
             ListManagedFoldersSettings = existing.ListManagedFoldersSettings;
+            UpdateManagedFolderSettings = existing.UpdateManagedFolderSettings;
             CreateAnywhereCacheSettings = existing.CreateAnywhereCacheSettings;
             CreateAnywhereCacheOperationsSettings = existing.CreateAnywhereCacheOperationsSettings.Clone();
             UpdateAnywhereCacheSettings = existing.UpdateAnywhereCacheSettings;
@@ -71,6 +72,12 @@ namespace Google.Cloud.Storage.Control.V2
             ResumeAnywhereCacheSettings = existing.ResumeAnywhereCacheSettings;
             GetAnywhereCacheSettings = existing.GetAnywhereCacheSettings;
             ListAnywhereCachesSettings = existing.ListAnywhereCachesSettings;
+            CreateRapidCacheSettings = existing.CreateRapidCacheSettings;
+            CreateRapidCacheOperationsSettings = existing.CreateRapidCacheOperationsSettings.Clone();
+            UpdateRapidCacheSettings = existing.UpdateRapidCacheSettings;
+            UpdateRapidCacheOperationsSettings = existing.UpdateRapidCacheOperationsSettings.Clone();
+            GetRapidCacheSettings = existing.GetRapidCacheSettings;
+            ListRapidCachesSettings = existing.ListRapidCachesSettings;
             GetProjectIntelligenceConfigSettings = existing.GetProjectIntelligenceConfigSettings;
             UpdateProjectIntelligenceConfigSettings = existing.UpdateProjectIntelligenceConfigSettings;
             GetFolderIntelligenceConfigSettings = existing.GetFolderIntelligenceConfigSettings;
@@ -103,14 +110,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateFolderSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings CreateFolderSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -137,14 +144,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetFolderSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings GetFolderSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -159,14 +166,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListFoldersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings ListFoldersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -181,14 +188,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings RenameFolderSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings RenameFolderSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>StorageControlClient.RenameFolder</c> and
@@ -222,14 +229,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteFolderRecursiveSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings DeleteFolderRecursiveSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>StorageControlClient.DeleteFolderRecursive</c> and
@@ -262,14 +269,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetStorageLayoutSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings GetStorageLayoutSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -308,14 +315,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetManagedFolderSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings GetManagedFolderSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -330,14 +337,26 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListManagedFoldersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings ListManagedFoldersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.UpdateManagedFolder</c> and <c>StorageControlClient.UpdateManagedFolderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateManagedFolderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -352,14 +371,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings CreateAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>StorageControlClient.CreateAnywhereCache</c> and
@@ -392,14 +411,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings UpdateAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>StorageControlClient.UpdateAnywhereCache</c> and
@@ -432,14 +451,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DisableAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings DisableAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -454,14 +473,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings PauseAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings PauseAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -476,14 +495,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ResumeAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings ResumeAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -498,14 +517,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings GetAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -520,14 +539,98 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListAnywhereCachesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings ListAnywhereCachesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.CreateRapidCache</c> and <c>StorageControlClient.CreateRapidCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateRapidCacheSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>StorageControlClient.CreateRapidCache</c> and
+        /// <c>StorageControlClient.CreateRapidCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateRapidCacheOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.UpdateRapidCache</c> and <c>StorageControlClient.UpdateRapidCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateRapidCacheSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>StorageControlClient.UpdateRapidCache</c> and
+        /// <c>StorageControlClient.UpdateRapidCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateRapidCacheOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.GetRapidCache</c> and <c>StorageControlClient.GetRapidCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRapidCacheSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.ListRapidCaches</c> and <c>StorageControlClient.ListRapidCachesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRapidCachesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -543,14 +646,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetProjectIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings GetProjectIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -566,14 +669,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateProjectIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings UpdateProjectIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -589,14 +692,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetFolderIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings GetFolderIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -612,14 +715,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateFolderIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings UpdateFolderIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -635,14 +738,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetOrganizationIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings GetOrganizationIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -658,14 +761,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateOrganizationIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings UpdateOrganizationIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -717,14 +820,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetIntelligenceFindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings GetIntelligenceFindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -740,14 +843,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListIntelligenceFindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings ListIntelligenceFindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -763,14 +866,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings SummarizeIntelligenceFindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings SummarizeIntelligenceFindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -786,14 +889,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetIntelligenceFindingRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings GetIntelligenceFindingRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -809,14 +912,14 @@ namespace Google.Cloud.Storage.Control.V2
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.Internal"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
         /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListIntelligenceFindingRevisionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+        public gaxgrpc::CallSettings ListIntelligenceFindingRevisionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="StorageControlSettings"/> object.</returns>
@@ -2581,6 +2684,116 @@ namespace Google.Cloud.Storage.Control.V2
         }
 
         /// <summary>
+        /// Updates a managed folder. Currently, this RPC only supports updating the
+        /// `rapid_cache_config` field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ManagedFolder UpdateManagedFolder(UpdateManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a managed folder. Currently, this RPC only supports updating the
+        /// `rapid_cache_config` field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> UpdateManagedFolderAsync(UpdateManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a managed folder. Currently, this RPC only supports updating the
+        /// `rapid_cache_config` field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> UpdateManagedFolderAsync(UpdateManagedFolderRequest request, st::CancellationToken cancellationToken) =>
+            UpdateManagedFolderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a managed folder. Currently, this RPC only supports updating the
+        /// `rapid_cache_config` field.
+        /// </summary>
+        /// <param name="managedFolder">
+        /// Required. Properties of the managed folder being updated. Currently, this
+        /// RPC only supports updating the `rapid_cache_config` field in
+        /// `managed_folder`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Update mask for managed_folder.
+        /// Currently, this RPC only supports updating the `rapid_cache_config`
+        /// field in `managed_folder`. This field also supports update mask for the
+        /// subfields in the map of `rapid_cache_config`. The user can specify the
+        /// update mask for `rapid_cache_config.policies` and
+        /// `rapid_cache_config.policies.&lt;key&gt;`, but patching is not supported for
+        /// a field within `RapidCachePolicy.policies.&lt;key&gt;`, like
+        /// rapid_cache_config.policies.[key].ingest_on_write.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ManagedFolder UpdateManagedFolder(ManagedFolder managedFolder, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateManagedFolder(new UpdateManagedFolderRequest
+            {
+                ManagedFolder = gax::GaxPreconditions.CheckNotNull(managedFolder, nameof(managedFolder)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a managed folder. Currently, this RPC only supports updating the
+        /// `rapid_cache_config` field.
+        /// </summary>
+        /// <param name="managedFolder">
+        /// Required. Properties of the managed folder being updated. Currently, this
+        /// RPC only supports updating the `rapid_cache_config` field in
+        /// `managed_folder`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Update mask for managed_folder.
+        /// Currently, this RPC only supports updating the `rapid_cache_config`
+        /// field in `managed_folder`. This field also supports update mask for the
+        /// subfields in the map of `rapid_cache_config`. The user can specify the
+        /// update mask for `rapid_cache_config.policies` and
+        /// `rapid_cache_config.policies.&lt;key&gt;`, but patching is not supported for
+        /// a field within `RapidCachePolicy.policies.&lt;key&gt;`, like
+        /// rapid_cache_config.policies.[key].ingest_on_write.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> UpdateManagedFolderAsync(ManagedFolder managedFolder, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateManagedFolderAsync(new UpdateManagedFolderRequest
+            {
+                ManagedFolder = gax::GaxPreconditions.CheckNotNull(managedFolder, nameof(managedFolder)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a managed folder. Currently, this RPC only supports updating the
+        /// `rapid_cache_config` field.
+        /// </summary>
+        /// <param name="managedFolder">
+        /// Required. Properties of the managed folder being updated. Currently, this
+        /// RPC only supports updating the `rapid_cache_config` field in
+        /// `managed_folder`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Update mask for managed_folder.
+        /// Currently, this RPC only supports updating the `rapid_cache_config`
+        /// field in `managed_folder`. This field also supports update mask for the
+        /// subfields in the map of `rapid_cache_config`. The user can specify the
+        /// update mask for `rapid_cache_config.policies` and
+        /// `rapid_cache_config.policies.&lt;key&gt;`, but patching is not supported for
+        /// a field within `RapidCachePolicy.policies.&lt;key&gt;`, like
+        /// rapid_cache_config.policies.[key].ingest_on_write.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> UpdateManagedFolderAsync(ManagedFolder managedFolder, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateManagedFolderAsync(managedFolder, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates an Anywhere Cache instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3511,6 +3724,559 @@ namespace Google.Cloud.Storage.Control.V2
                 request.PageSize = pageSize.Value;
             }
             return ListAnywhereCachesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RapidCache, CreateRapidCacheMetadata> CreateRapidCache(CreateRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, CreateRapidCacheMetadata>> CreateRapidCacheAsync(CreateRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, CreateRapidCacheMetadata>> CreateRapidCacheAsync(CreateRapidCacheRequest request, st::CancellationToken cancellationToken) =>
+            CreateRapidCacheAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateRapidCache</c>.</summary>
+        public virtual lro::OperationsClient CreateRapidCacheOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateRapidCache</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RapidCache, CreateRapidCacheMetadata> PollOnceCreateRapidCache(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RapidCache, CreateRapidCacheMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateRapidCacheOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateRapidCache</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, CreateRapidCacheMetadata>> PollOnceCreateRapidCacheAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RapidCache, CreateRapidCacheMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateRapidCacheOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// Format: `projects/{project}/buckets/{bucket}`
+        /// </param>
+        /// <param name="rapidCache">
+        /// Required. The RapidCache to create. Default values for ingest_on_write, ttl
+        /// and admission_policy will be applied if not specified in the request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RapidCache, CreateRapidCacheMetadata> CreateRapidCache(string parent, RapidCache rapidCache, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRapidCache(new CreateRapidCacheRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RapidCache = gax::GaxPreconditions.CheckNotNull(rapidCache, nameof(rapidCache)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// Format: `projects/{project}/buckets/{bucket}`
+        /// </param>
+        /// <param name="rapidCache">
+        /// Required. The RapidCache to create. Default values for ingest_on_write, ttl
+        /// and admission_policy will be applied if not specified in the request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, CreateRapidCacheMetadata>> CreateRapidCacheAsync(string parent, RapidCache rapidCache, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRapidCacheAsync(new CreateRapidCacheRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                RapidCache = gax::GaxPreconditions.CheckNotNull(rapidCache, nameof(rapidCache)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// Format: `projects/{project}/buckets/{bucket}`
+        /// </param>
+        /// <param name="rapidCache">
+        /// Required. The RapidCache to create. Default values for ingest_on_write, ttl
+        /// and admission_policy will be applied if not specified in the request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, CreateRapidCacheMetadata>> CreateRapidCacheAsync(string parent, RapidCache rapidCache, st::CancellationToken cancellationToken) =>
+            CreateRapidCacheAsync(parent, rapidCache, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// Format: `projects/{project}/buckets/{bucket}`
+        /// </param>
+        /// <param name="rapidCache">
+        /// Required. The RapidCache to create. Default values for ingest_on_write, ttl
+        /// and admission_policy will be applied if not specified in the request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RapidCache, CreateRapidCacheMetadata> CreateRapidCache(BucketName parent, RapidCache rapidCache, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRapidCache(new CreateRapidCacheRequest
+            {
+                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RapidCache = gax::GaxPreconditions.CheckNotNull(rapidCache, nameof(rapidCache)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// Format: `projects/{project}/buckets/{bucket}`
+        /// </param>
+        /// <param name="rapidCache">
+        /// Required. The RapidCache to create. Default values for ingest_on_write, ttl
+        /// and admission_policy will be applied if not specified in the request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, CreateRapidCacheMetadata>> CreateRapidCacheAsync(BucketName parent, RapidCache rapidCache, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRapidCacheAsync(new CreateRapidCacheRequest
+            {
+                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RapidCache = gax::GaxPreconditions.CheckNotNull(rapidCache, nameof(rapidCache)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// Format: `projects/{project}/buckets/{bucket}`
+        /// </param>
+        /// <param name="rapidCache">
+        /// Required. The RapidCache to create. Default values for ingest_on_write, ttl
+        /// and admission_policy will be applied if not specified in the request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, CreateRapidCacheMetadata>> CreateRapidCacheAsync(BucketName parent, RapidCache rapidCache, st::CancellationToken cancellationToken) =>
+            CreateRapidCacheAsync(parent, rapidCache, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RapidCache, UpdateRapidCacheMetadata> UpdateRapidCache(UpdateRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, UpdateRapidCacheMetadata>> UpdateRapidCacheAsync(UpdateRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, UpdateRapidCacheMetadata>> UpdateRapidCacheAsync(UpdateRapidCacheRequest request, st::CancellationToken cancellationToken) =>
+            UpdateRapidCacheAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateRapidCache</c>.</summary>
+        public virtual lro::OperationsClient UpdateRapidCacheOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateRapidCache</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RapidCache, UpdateRapidCacheMetadata> PollOnceUpdateRapidCache(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RapidCache, UpdateRapidCacheMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRapidCacheOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateRapidCache</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, UpdateRapidCacheMetadata>> PollOnceUpdateRapidCacheAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RapidCache, UpdateRapidCacheMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRapidCacheOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="rapidCache">
+        /// Required. The RapidCache to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. List of fields to be updated. Mutable fields of RapidCache
+        /// include `ttl`, `admission_policy` and `ingest_on_write`.
+        /// 
+        /// To specify ALL fields, specify a single field with the value `*`. Note: We
+        /// recommend against doing this. If a new field is introduced at a later time,
+        /// an older client updating with the `*` may accidentally reset the new
+        /// field's value.
+        /// 
+        /// Not specifying any fields is an error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RapidCache, UpdateRapidCacheMetadata> UpdateRapidCache(RapidCache rapidCache, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRapidCache(new UpdateRapidCacheRequest
+            {
+                RapidCache = gax::GaxPreconditions.CheckNotNull(rapidCache, nameof(rapidCache)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="rapidCache">
+        /// Required. The RapidCache to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. List of fields to be updated. Mutable fields of RapidCache
+        /// include `ttl`, `admission_policy` and `ingest_on_write`.
+        /// 
+        /// To specify ALL fields, specify a single field with the value `*`. Note: We
+        /// recommend against doing this. If a new field is introduced at a later time,
+        /// an older client updating with the `*` may accidentally reset the new
+        /// field's value.
+        /// 
+        /// Not specifying any fields is an error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, UpdateRapidCacheMetadata>> UpdateRapidCacheAsync(RapidCache rapidCache, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRapidCacheAsync(new UpdateRapidCacheRequest
+            {
+                RapidCache = gax::GaxPreconditions.CheckNotNull(rapidCache, nameof(rapidCache)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="rapidCache">
+        /// Required. The RapidCache to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. List of fields to be updated. Mutable fields of RapidCache
+        /// include `ttl`, `admission_policy` and `ingest_on_write`.
+        /// 
+        /// To specify ALL fields, specify a single field with the value `*`. Note: We
+        /// recommend against doing this. If a new field is introduced at a later time,
+        /// an older client updating with the `*` may accidentally reset the new
+        /// field's value.
+        /// 
+        /// Not specifying any fields is an error.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, UpdateRapidCacheMetadata>> UpdateRapidCacheAsync(RapidCache rapidCache, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateRapidCacheAsync(rapidCache, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RapidCache GetRapidCache(GetRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RapidCache> GetRapidCacheAsync(GetRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RapidCache> GetRapidCacheAsync(GetRapidCacheRequest request, st::CancellationToken cancellationToken) =>
+            GetRapidCacheAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a Rapid Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RapidCache GetRapidCache(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRapidCache(new GetRapidCacheRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a Rapid Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RapidCache> GetRapidCacheAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRapidCacheAsync(new GetRapidCacheRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a Rapid Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RapidCache> GetRapidCacheAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRapidCacheAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a Rapid Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RapidCache GetRapidCache(RapidCacheName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRapidCache(new GetRapidCacheRequest
+            {
+                RapidCacheName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a Rapid Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RapidCache> GetRapidCacheAsync(RapidCacheName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRapidCacheAsync(new GetRapidCacheRequest
+            {
+                RapidCacheName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a Rapid Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RapidCache> GetRapidCacheAsync(RapidCacheName name, st::CancellationToken cancellationToken) =>
+            GetRapidCacheAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists Rapid Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RapidCache"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRapidCachesResponse, RapidCache> ListRapidCaches(ListRapidCachesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Rapid Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RapidCache"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRapidCachesResponse, RapidCache> ListRapidCachesAsync(ListRapidCachesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Rapid Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RapidCache"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRapidCachesResponse, RapidCache> ListRapidCaches(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRapidCachesRequest request = new ListRapidCachesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRapidCaches(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Rapid Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RapidCache"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRapidCachesResponse, RapidCache> ListRapidCachesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRapidCachesRequest request = new ListRapidCachesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRapidCachesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Rapid Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RapidCache"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRapidCachesResponse, RapidCache> ListRapidCaches(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRapidCachesRequest request = new ListRapidCachesRequest
+            {
+                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRapidCaches(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Rapid Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RapidCache"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRapidCachesResponse, RapidCache> ListRapidCachesAsync(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRapidCachesRequest request = new ListRapidCachesRequest
+            {
+                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRapidCachesAsync(request, callSettings);
         }
 
         /// <summary>
@@ -4806,7 +5572,7 @@ namespace Google.Cloud.Storage.Control.V2
             GetIntelligenceFindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// Lists the `IntelligenceFinding` resources for the specified the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4815,7 +5581,7 @@ namespace Google.Cloud.Storage.Control.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// Lists the `IntelligenceFinding` resources for the specified the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4824,7 +5590,7 @@ namespace Google.Cloud.Storage.Control.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// Lists the `IntelligenceFinding` resources for the specified the project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent of the `IntelligenceFinding` resource.
@@ -4859,7 +5625,7 @@ namespace Google.Cloud.Storage.Control.V2
         }
 
         /// <summary>
-        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// Lists the `IntelligenceFinding` resources for the specified the project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent of the `IntelligenceFinding` resource.
@@ -4894,7 +5660,7 @@ namespace Google.Cloud.Storage.Control.V2
         }
 
         /// <summary>
-        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// Lists the `IntelligenceFinding` resources for the specified the project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent of the `IntelligenceFinding` resource.
@@ -4929,7 +5695,7 @@ namespace Google.Cloud.Storage.Control.V2
         }
 
         /// <summary>
-        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// Lists the `IntelligenceFinding` resources for the specified the project.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent of the `IntelligenceFinding` resource.
@@ -4964,8 +5730,8 @@ namespace Google.Cloud.Storage.Control.V2
         }
 
         /// <summary>
-        /// Summarize the intelligence findings for the specified scope(org, folder or
-        /// project).
+        /// Summarizes the intelligence findings for the specified scope (organization,
+        /// folder or project).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4974,8 +5740,8 @@ namespace Google.Cloud.Storage.Control.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Summarize the intelligence findings for the specified scope(org, folder or
-        /// project).
+        /// Summarizes the intelligence findings for the specified scope (organization,
+        /// folder or project).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4984,8 +5750,8 @@ namespace Google.Cloud.Storage.Control.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Summarize the intelligence findings for the specified scope(org, folder or
-        /// project).
+        /// Summarizes the intelligence findings for the specified scope (organization,
+        /// folder or project).
         /// </summary>
         /// <param name="parent">
         /// Required. The scope to summarize the findings for.
@@ -5022,8 +5788,8 @@ namespace Google.Cloud.Storage.Control.V2
         }
 
         /// <summary>
-        /// Summarize the intelligence findings for the specified scope(org, folder or
-        /// project).
+        /// Summarizes the intelligence findings for the specified scope (organization,
+        /// folder or project).
         /// </summary>
         /// <param name="parent">
         /// Required. The scope to summarize the findings for.
@@ -5373,6 +6139,8 @@ namespace Google.Cloud.Storage.Control.V2
 
         private readonly gaxgrpc::ApiCall<ListManagedFoldersRequest, ListManagedFoldersResponse> _callListManagedFolders;
 
+        private readonly gaxgrpc::ApiCall<UpdateManagedFolderRequest, ManagedFolder> _callUpdateManagedFolder;
+
         private readonly gaxgrpc::ApiCall<CreateAnywhereCacheRequest, lro::Operation> _callCreateAnywhereCache;
 
         private readonly gaxgrpc::ApiCall<UpdateAnywhereCacheRequest, lro::Operation> _callUpdateAnywhereCache;
@@ -5386,6 +6154,14 @@ namespace Google.Cloud.Storage.Control.V2
         private readonly gaxgrpc::ApiCall<GetAnywhereCacheRequest, AnywhereCache> _callGetAnywhereCache;
 
         private readonly gaxgrpc::ApiCall<ListAnywhereCachesRequest, ListAnywhereCachesResponse> _callListAnywhereCaches;
+
+        private readonly gaxgrpc::ApiCall<CreateRapidCacheRequest, lro::Operation> _callCreateRapidCache;
+
+        private readonly gaxgrpc::ApiCall<UpdateRapidCacheRequest, lro::Operation> _callUpdateRapidCache;
+
+        private readonly gaxgrpc::ApiCall<GetRapidCacheRequest, RapidCache> _callGetRapidCache;
+
+        private readonly gaxgrpc::ApiCall<ListRapidCachesRequest, ListRapidCachesResponse> _callListRapidCaches;
 
         private readonly gaxgrpc::ApiCall<GetProjectIntelligenceConfigRequest, IntelligenceConfig> _callGetProjectIntelligenceConfig;
 
@@ -5434,6 +6210,8 @@ namespace Google.Cloud.Storage.Control.V2
             DeleteFolderRecursiveOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFolderRecursiveOperationsSettings, logger);
             CreateAnywhereCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAnywhereCacheOperationsSettings, logger);
             UpdateAnywhereCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAnywhereCacheOperationsSettings, logger);
+            CreateRapidCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRapidCacheOperationsSettings, logger);
+            UpdateRapidCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRapidCacheOperationsSettings, logger);
             _callCreateFolder = clientHelper.BuildApiCall<CreateFolderRequest, Folder>("CreateFolder", grpcClient.CreateFolderAsync, grpcClient.CreateFolder, effectiveSettings.CreateFolderSettings).WithGoogleRequestParam("bucket", request => request.Parent);
             Modify_ApiCall(ref _callCreateFolder);
             Modify_CreateFolderApiCall(ref _callCreateFolder);
@@ -5467,6 +6245,9 @@ namespace Google.Cloud.Storage.Control.V2
             _callListManagedFolders = clientHelper.BuildApiCall<ListManagedFoldersRequest, ListManagedFoldersResponse>("ListManagedFolders", grpcClient.ListManagedFoldersAsync, grpcClient.ListManagedFolders, effectiveSettings.ListManagedFoldersSettings).WithGoogleRequestParam("bucket", request => request.Parent);
             Modify_ApiCall(ref _callListManagedFolders);
             Modify_ListManagedFoldersApiCall(ref _callListManagedFolders);
+            _callUpdateManagedFolder = clientHelper.BuildApiCall<UpdateManagedFolderRequest, ManagedFolder>("UpdateManagedFolder", grpcClient.UpdateManagedFolderAsync, grpcClient.UpdateManagedFolder, effectiveSettings.UpdateManagedFolderSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateManagedFolderRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.ManagedFolder?.Name));
+            Modify_ApiCall(ref _callUpdateManagedFolder);
+            Modify_UpdateManagedFolderApiCall(ref _callUpdateManagedFolder);
             _callCreateAnywhereCache = clientHelper.BuildApiCall<CreateAnywhereCacheRequest, lro::Operation>("CreateAnywhereCache", grpcClient.CreateAnywhereCacheAsync, grpcClient.CreateAnywhereCache, effectiveSettings.CreateAnywhereCacheSettings).WithGoogleRequestParam("bucket", request => request.Parent);
             Modify_ApiCall(ref _callCreateAnywhereCache);
             Modify_CreateAnywhereCacheApiCall(ref _callCreateAnywhereCache);
@@ -5488,6 +6269,18 @@ namespace Google.Cloud.Storage.Control.V2
             _callListAnywhereCaches = clientHelper.BuildApiCall<ListAnywhereCachesRequest, ListAnywhereCachesResponse>("ListAnywhereCaches", grpcClient.ListAnywhereCachesAsync, grpcClient.ListAnywhereCaches, effectiveSettings.ListAnywhereCachesSettings).WithGoogleRequestParam("bucket", request => request.Parent);
             Modify_ApiCall(ref _callListAnywhereCaches);
             Modify_ListAnywhereCachesApiCall(ref _callListAnywhereCaches);
+            _callCreateRapidCache = clientHelper.BuildApiCall<CreateRapidCacheRequest, lro::Operation>("CreateRapidCache", grpcClient.CreateRapidCacheAsync, grpcClient.CreateRapidCache, effectiveSettings.CreateRapidCacheSettings).WithGoogleRequestParam("bucket", request => request.Parent);
+            Modify_ApiCall(ref _callCreateRapidCache);
+            Modify_CreateRapidCacheApiCall(ref _callCreateRapidCache);
+            _callUpdateRapidCache = clientHelper.BuildApiCall<UpdateRapidCacheRequest, lro::Operation>("UpdateRapidCache", grpcClient.UpdateRapidCacheAsync, grpcClient.UpdateRapidCache, effectiveSettings.UpdateRapidCacheSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateRapidCacheRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.RapidCache?.Name));
+            Modify_ApiCall(ref _callUpdateRapidCache);
+            Modify_UpdateRapidCacheApiCall(ref _callUpdateRapidCache);
+            _callGetRapidCache = clientHelper.BuildApiCall<GetRapidCacheRequest, RapidCache>("GetRapidCache", grpcClient.GetRapidCacheAsync, grpcClient.GetRapidCache, effectiveSettings.GetRapidCacheSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetRapidCacheRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
+            Modify_ApiCall(ref _callGetRapidCache);
+            Modify_GetRapidCacheApiCall(ref _callGetRapidCache);
+            _callListRapidCaches = clientHelper.BuildApiCall<ListRapidCachesRequest, ListRapidCachesResponse>("ListRapidCaches", grpcClient.ListRapidCachesAsync, grpcClient.ListRapidCaches, effectiveSettings.ListRapidCachesSettings).WithGoogleRequestParam("bucket", request => request.Parent);
+            Modify_ApiCall(ref _callListRapidCaches);
+            Modify_ListRapidCachesApiCall(ref _callListRapidCaches);
             _callGetProjectIntelligenceConfig = clientHelper.BuildApiCall<GetProjectIntelligenceConfigRequest, IntelligenceConfig>("GetProjectIntelligenceConfig", grpcClient.GetProjectIntelligenceConfigAsync, grpcClient.GetProjectIntelligenceConfig, effectiveSettings.GetProjectIntelligenceConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetProjectIntelligenceConfig);
             Modify_GetProjectIntelligenceConfigApiCall(ref _callGetProjectIntelligenceConfig);
@@ -5557,6 +6350,8 @@ namespace Google.Cloud.Storage.Control.V2
 
         partial void Modify_ListManagedFoldersApiCall(ref gaxgrpc::ApiCall<ListManagedFoldersRequest, ListManagedFoldersResponse> call);
 
+        partial void Modify_UpdateManagedFolderApiCall(ref gaxgrpc::ApiCall<UpdateManagedFolderRequest, ManagedFolder> call);
+
         partial void Modify_CreateAnywhereCacheApiCall(ref gaxgrpc::ApiCall<CreateAnywhereCacheRequest, lro::Operation> call);
 
         partial void Modify_UpdateAnywhereCacheApiCall(ref gaxgrpc::ApiCall<UpdateAnywhereCacheRequest, lro::Operation> call);
@@ -5570,6 +6365,14 @@ namespace Google.Cloud.Storage.Control.V2
         partial void Modify_GetAnywhereCacheApiCall(ref gaxgrpc::ApiCall<GetAnywhereCacheRequest, AnywhereCache> call);
 
         partial void Modify_ListAnywhereCachesApiCall(ref gaxgrpc::ApiCall<ListAnywhereCachesRequest, ListAnywhereCachesResponse> call);
+
+        partial void Modify_CreateRapidCacheApiCall(ref gaxgrpc::ApiCall<CreateRapidCacheRequest, lro::Operation> call);
+
+        partial void Modify_UpdateRapidCacheApiCall(ref gaxgrpc::ApiCall<UpdateRapidCacheRequest, lro::Operation> call);
+
+        partial void Modify_GetRapidCacheApiCall(ref gaxgrpc::ApiCall<GetRapidCacheRequest, RapidCache> call);
+
+        partial void Modify_ListRapidCachesApiCall(ref gaxgrpc::ApiCall<ListRapidCachesRequest, ListRapidCachesResponse> call);
 
         partial void Modify_GetProjectIntelligenceConfigApiCall(ref gaxgrpc::ApiCall<GetProjectIntelligenceConfigRequest, IntelligenceConfig> call);
 
@@ -5626,6 +6429,8 @@ namespace Google.Cloud.Storage.Control.V2
 
         partial void Modify_ListManagedFoldersRequest(ref ListManagedFoldersRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_UpdateManagedFolderRequest(ref UpdateManagedFolderRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateAnywhereCacheRequest(ref CreateAnywhereCacheRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateAnywhereCacheRequest(ref UpdateAnywhereCacheRequest request, ref gaxgrpc::CallSettings settings);
@@ -5639,6 +6444,14 @@ namespace Google.Cloud.Storage.Control.V2
         partial void Modify_GetAnywhereCacheRequest(ref GetAnywhereCacheRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListAnywhereCachesRequest(ref ListAnywhereCachesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateRapidCacheRequest(ref CreateRapidCacheRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateRapidCacheRequest(ref UpdateRapidCacheRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetRapidCacheRequest(ref GetRapidCacheRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListRapidCachesRequest(ref ListRapidCachesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetProjectIntelligenceConfigRequest(ref GetProjectIntelligenceConfigRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6054,6 +6867,32 @@ namespace Google.Cloud.Storage.Control.V2
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListManagedFoldersRequest, ListManagedFoldersResponse, ManagedFolder>(_callListManagedFolders, request, callSettings);
         }
 
+        /// <summary>
+        /// Updates a managed folder. Currently, this RPC only supports updating the
+        /// `rapid_cache_config` field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ManagedFolder UpdateManagedFolder(UpdateManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateManagedFolderRequest(ref request, ref callSettings);
+            return _callUpdateManagedFolder.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a managed folder. Currently, this RPC only supports updating the
+        /// `rapid_cache_config` field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ManagedFolder> UpdateManagedFolderAsync(UpdateManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateManagedFolderRequest(ref request, ref callSettings);
+            return _callUpdateManagedFolder.Async(request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>CreateAnywhereCache</c>.</summary>
         public override lro::OperationsClient CreateAnywhereCacheOperationsClient { get; }
 
@@ -6304,6 +7143,108 @@ namespace Google.Cloud.Storage.Control.V2
             }
             Modify_ListAnywhereCachesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAnywhereCachesRequest, ListAnywhereCachesResponse, AnywhereCache>(_callListAnywhereCaches, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateRapidCache</c>.</summary>
+        public override lro::OperationsClient CreateRapidCacheOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RapidCache, CreateRapidCacheMetadata> CreateRapidCache(CreateRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRapidCacheRequest(ref request, ref callSettings);
+            return new lro::Operation<RapidCache, CreateRapidCacheMetadata>(_callCreateRapidCache.Sync(request, callSettings), CreateRapidCacheOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RapidCache, CreateRapidCacheMetadata>> CreateRapidCacheAsync(CreateRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateRapidCacheRequest(ref request, ref callSettings);
+            return new lro::Operation<RapidCache, CreateRapidCacheMetadata>(await _callCreateRapidCache.Async(request, callSettings).ConfigureAwait(false), CreateRapidCacheOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateRapidCache</c>.</summary>
+        public override lro::OperationsClient UpdateRapidCacheOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RapidCache, UpdateRapidCacheMetadata> UpdateRapidCache(UpdateRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRapidCacheRequest(ref request, ref callSettings);
+            return new lro::Operation<RapidCache, UpdateRapidCacheMetadata>(_callUpdateRapidCache.Sync(request, callSettings), UpdateRapidCacheOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RapidCache, UpdateRapidCacheMetadata>> UpdateRapidCacheAsync(UpdateRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRapidCacheRequest(ref request, ref callSettings);
+            return new lro::Operation<RapidCache, UpdateRapidCacheMetadata>(await _callUpdateRapidCache.Async(request, callSettings).ConfigureAwait(false), UpdateRapidCacheOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RapidCache GetRapidCache(GetRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRapidCacheRequest(ref request, ref callSettings);
+            return _callGetRapidCache.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RapidCache> GetRapidCacheAsync(GetRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRapidCacheRequest(ref request, ref callSettings);
+            return _callGetRapidCache.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Rapid Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RapidCache"/> resources.</returns>
+        public override gax::PagedEnumerable<ListRapidCachesResponse, RapidCache> ListRapidCaches(ListRapidCachesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRapidCachesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRapidCachesRequest, ListRapidCachesResponse, RapidCache>(_callListRapidCaches, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Rapid Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RapidCache"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListRapidCachesResponse, RapidCache> ListRapidCachesAsync(ListRapidCachesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRapidCachesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRapidCachesRequest, ListRapidCachesResponse, RapidCache>(_callListRapidCaches, request, callSettings);
         }
 
         /// <summary>
@@ -6575,7 +7516,7 @@ namespace Google.Cloud.Storage.Control.V2
         }
 
         /// <summary>
-        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// Lists the `IntelligenceFinding` resources for the specified the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6587,7 +7528,7 @@ namespace Google.Cloud.Storage.Control.V2
         }
 
         /// <summary>
-        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// Lists the `IntelligenceFinding` resources for the specified the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6599,8 +7540,8 @@ namespace Google.Cloud.Storage.Control.V2
         }
 
         /// <summary>
-        /// Summarize the intelligence findings for the specified scope(org, folder or
-        /// project).
+        /// Summarizes the intelligence findings for the specified scope (organization,
+        /// folder or project).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6612,8 +7553,8 @@ namespace Google.Cloud.Storage.Control.V2
         }
 
         /// <summary>
-        /// Summarize the intelligence findings for the specified scope(org, folder or
-        /// project).
+        /// Summarizes the intelligence findings for the specified scope (organization,
+        /// folder or project).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6685,6 +7626,10 @@ namespace Google.Cloud.Storage.Control.V2
     {
     }
 
+    public partial class ListRapidCachesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListIntelligenceFindingsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -6717,6 +7662,14 @@ namespace Google.Cloud.Storage.Control.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<AnywhereCache> GetEnumerator() => AnywhereCaches.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListRapidCachesResponse : gaxgrpc::IPageResponse<RapidCache>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RapidCache> GetEnumerator() => RapidCaches.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

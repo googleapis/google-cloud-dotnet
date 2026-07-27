@@ -1630,6 +1630,76 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateManagedFolder</summary>
+        public void UpdateManagedFolderRequestObject()
+        {
+            // Snippet: UpdateManagedFolder(UpdateManagedFolderRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::UpdateManagedFolderRequest request = new gcscv::UpdateManagedFolderRequest
+            {
+                ManagedFolder = new gcscv::ManagedFolder(),
+                UpdateMask = new FieldMask(),
+                IfMetagenerationMatch = 0L,
+                IfMetagenerationNotMatch = 0L,
+                RequestId = "",
+            };
+            // Make the request
+            gcscv::ManagedFolder response = storageControlClient.UpdateManagedFolder(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateManagedFolderAsync</summary>
+        public async Task UpdateManagedFolderRequestObjectAsync()
+        {
+            // Snippet: UpdateManagedFolderAsync(UpdateManagedFolderRequest, CallSettings)
+            // Additional: UpdateManagedFolderAsync(UpdateManagedFolderRequest, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::UpdateManagedFolderRequest request = new gcscv::UpdateManagedFolderRequest
+            {
+                ManagedFolder = new gcscv::ManagedFolder(),
+                UpdateMask = new FieldMask(),
+                IfMetagenerationMatch = 0L,
+                IfMetagenerationNotMatch = 0L,
+                RequestId = "",
+            };
+            // Make the request
+            gcscv::ManagedFolder response = await storageControlClient.UpdateManagedFolderAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateManagedFolder</summary>
+        public void UpdateManagedFolder()
+        {
+            // Snippet: UpdateManagedFolder(ManagedFolder, FieldMask, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::ManagedFolder managedFolder = new gcscv::ManagedFolder();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcscv::ManagedFolder response = storageControlClient.UpdateManagedFolder(managedFolder, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateManagedFolderAsync</summary>
+        public async Task UpdateManagedFolderAsync()
+        {
+            // Snippet: UpdateManagedFolderAsync(ManagedFolder, FieldMask, CallSettings)
+            // Additional: UpdateManagedFolderAsync(ManagedFolder, FieldMask, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::ManagedFolder managedFolder = new gcscv::ManagedFolder();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcscv::ManagedFolder response = await storageControlClient.UpdateManagedFolderAsync(managedFolder, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateAnywhereCache</summary>
         public void CreateAnywhereCacheRequestObject()
         {
@@ -2562,6 +2632,694 @@ namespace GoogleCSharpSnippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (gcscv::AnywhereCache item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRapidCache</summary>
+        public void CreateRapidCacheRequestObject()
+        {
+            // Snippet: CreateRapidCache(CreateRapidCacheRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::CreateRapidCacheRequest request = new gcscv::CreateRapidCacheRequest
+            {
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                RapidCache = new gcscv::RapidCache(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> response = storageControlClient.CreateRapidCache(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> retrievedResponse = storageControlClient.PollOnceCreateRapidCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRapidCacheAsync</summary>
+        public async Task CreateRapidCacheRequestObjectAsync()
+        {
+            // Snippet: CreateRapidCacheAsync(CreateRapidCacheRequest, CallSettings)
+            // Additional: CreateRapidCacheAsync(CreateRapidCacheRequest, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::CreateRapidCacheRequest request = new gcscv::CreateRapidCacheRequest
+            {
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                RapidCache = new gcscv::RapidCache(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> response = await storageControlClient.CreateRapidCacheAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> retrievedResponse = await storageControlClient.PollOnceCreateRapidCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRapidCache</summary>
+        public void CreateRapidCache()
+        {
+            // Snippet: CreateRapidCache(string, RapidCache, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/buckets/[BUCKET]";
+            gcscv::RapidCache rapidCache = new gcscv::RapidCache();
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> response = storageControlClient.CreateRapidCache(parent, rapidCache);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> retrievedResponse = storageControlClient.PollOnceCreateRapidCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRapidCacheAsync</summary>
+        public async Task CreateRapidCacheAsync()
+        {
+            // Snippet: CreateRapidCacheAsync(string, RapidCache, CallSettings)
+            // Additional: CreateRapidCacheAsync(string, RapidCache, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/buckets/[BUCKET]";
+            gcscv::RapidCache rapidCache = new gcscv::RapidCache();
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> response = await storageControlClient.CreateRapidCacheAsync(parent, rapidCache);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> retrievedResponse = await storageControlClient.PollOnceCreateRapidCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRapidCache</summary>
+        public void CreateRapidCacheResourceNames()
+        {
+            // Snippet: CreateRapidCache(BucketName, RapidCache, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::RapidCache rapidCache = new gcscv::RapidCache();
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> response = storageControlClient.CreateRapidCache(parent, rapidCache);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> retrievedResponse = storageControlClient.PollOnceCreateRapidCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRapidCacheAsync</summary>
+        public async Task CreateRapidCacheResourceNamesAsync()
+        {
+            // Snippet: CreateRapidCacheAsync(BucketName, RapidCache, CallSettings)
+            // Additional: CreateRapidCacheAsync(BucketName, RapidCache, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::RapidCache rapidCache = new gcscv::RapidCache();
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> response = await storageControlClient.CreateRapidCacheAsync(parent, rapidCache);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::CreateRapidCacheMetadata> retrievedResponse = await storageControlClient.PollOnceCreateRapidCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRapidCache</summary>
+        public void UpdateRapidCacheRequestObject()
+        {
+            // Snippet: UpdateRapidCache(UpdateRapidCacheRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::UpdateRapidCacheRequest request = new gcscv::UpdateRapidCacheRequest
+            {
+                RapidCache = new gcscv::RapidCache(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::UpdateRapidCacheMetadata> response = storageControlClient.UpdateRapidCache(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::UpdateRapidCacheMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::UpdateRapidCacheMetadata> retrievedResponse = storageControlClient.PollOnceUpdateRapidCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRapidCacheAsync</summary>
+        public async Task UpdateRapidCacheRequestObjectAsync()
+        {
+            // Snippet: UpdateRapidCacheAsync(UpdateRapidCacheRequest, CallSettings)
+            // Additional: UpdateRapidCacheAsync(UpdateRapidCacheRequest, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::UpdateRapidCacheRequest request = new gcscv::UpdateRapidCacheRequest
+            {
+                RapidCache = new gcscv::RapidCache(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::UpdateRapidCacheMetadata> response = await storageControlClient.UpdateRapidCacheAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::UpdateRapidCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::UpdateRapidCacheMetadata> retrievedResponse = await storageControlClient.PollOnceUpdateRapidCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRapidCache</summary>
+        public void UpdateRapidCache()
+        {
+            // Snippet: UpdateRapidCache(RapidCache, FieldMask, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::RapidCache rapidCache = new gcscv::RapidCache();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::UpdateRapidCacheMetadata> response = storageControlClient.UpdateRapidCache(rapidCache, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::UpdateRapidCacheMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::UpdateRapidCacheMetadata> retrievedResponse = storageControlClient.PollOnceUpdateRapidCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRapidCacheAsync</summary>
+        public async Task UpdateRapidCacheAsync()
+        {
+            // Snippet: UpdateRapidCacheAsync(RapidCache, FieldMask, CallSettings)
+            // Additional: UpdateRapidCacheAsync(RapidCache, FieldMask, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::RapidCache rapidCache = new gcscv::RapidCache();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::UpdateRapidCacheMetadata> response = await storageControlClient.UpdateRapidCacheAsync(rapidCache, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::UpdateRapidCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::UpdateRapidCacheMetadata> retrievedResponse = await storageControlClient.PollOnceUpdateRapidCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRapidCache</summary>
+        public void GetRapidCacheRequestObject()
+        {
+            // Snippet: GetRapidCache(GetRapidCacheRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::GetRapidCacheRequest request = new gcscv::GetRapidCacheRequest
+            {
+                RapidCacheName = gcscv::RapidCacheName.FromProjectBucketRapidCache("[PROJECT]", "[BUCKET]", "[RAPID_CACHE]"),
+                RequestId = "",
+            };
+            // Make the request
+            gcscv::RapidCache response = storageControlClient.GetRapidCache(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRapidCacheAsync</summary>
+        public async Task GetRapidCacheRequestObjectAsync()
+        {
+            // Snippet: GetRapidCacheAsync(GetRapidCacheRequest, CallSettings)
+            // Additional: GetRapidCacheAsync(GetRapidCacheRequest, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::GetRapidCacheRequest request = new gcscv::GetRapidCacheRequest
+            {
+                RapidCacheName = gcscv::RapidCacheName.FromProjectBucketRapidCache("[PROJECT]", "[BUCKET]", "[RAPID_CACHE]"),
+                RequestId = "",
+            };
+            // Make the request
+            gcscv::RapidCache response = await storageControlClient.GetRapidCacheAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRapidCache</summary>
+        public void GetRapidCache()
+        {
+            // Snippet: GetRapidCache(string, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/rapidCaches/[RAPID_CACHE]";
+            // Make the request
+            gcscv::RapidCache response = storageControlClient.GetRapidCache(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRapidCacheAsync</summary>
+        public async Task GetRapidCacheAsync()
+        {
+            // Snippet: GetRapidCacheAsync(string, CallSettings)
+            // Additional: GetRapidCacheAsync(string, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/rapidCaches/[RAPID_CACHE]";
+            // Make the request
+            gcscv::RapidCache response = await storageControlClient.GetRapidCacheAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRapidCache</summary>
+        public void GetRapidCacheResourceNames()
+        {
+            // Snippet: GetRapidCache(RapidCacheName, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::RapidCacheName name = gcscv::RapidCacheName.FromProjectBucketRapidCache("[PROJECT]", "[BUCKET]", "[RAPID_CACHE]");
+            // Make the request
+            gcscv::RapidCache response = storageControlClient.GetRapidCache(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRapidCacheAsync</summary>
+        public async Task GetRapidCacheResourceNamesAsync()
+        {
+            // Snippet: GetRapidCacheAsync(RapidCacheName, CallSettings)
+            // Additional: GetRapidCacheAsync(RapidCacheName, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::RapidCacheName name = gcscv::RapidCacheName.FromProjectBucketRapidCache("[PROJECT]", "[BUCKET]", "[RAPID_CACHE]");
+            // Make the request
+            gcscv::RapidCache response = await storageControlClient.GetRapidCacheAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRapidCaches</summary>
+        public void ListRapidCachesRequestObject()
+        {
+            // Snippet: ListRapidCaches(ListRapidCachesRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::ListRapidCachesRequest request = new gcscv::ListRapidCachesRequest
+            {
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                RequestId = "",
+            };
+            // Make the request
+            PagedEnumerable<gcscv::ListRapidCachesResponse, gcscv::RapidCache> response = storageControlClient.ListRapidCaches(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcscv::RapidCache item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcscv::ListRapidCachesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::RapidCache item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::RapidCache> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::RapidCache item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRapidCachesAsync</summary>
+        public async Task ListRapidCachesRequestObjectAsync()
+        {
+            // Snippet: ListRapidCachesAsync(ListRapidCachesRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::ListRapidCachesRequest request = new gcscv::ListRapidCachesRequest
+            {
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                RequestId = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcscv::ListRapidCachesResponse, gcscv::RapidCache> response = storageControlClient.ListRapidCachesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcscv::RapidCache item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcscv::ListRapidCachesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::RapidCache item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::RapidCache> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::RapidCache item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRapidCaches</summary>
+        public void ListRapidCaches()
+        {
+            // Snippet: ListRapidCaches(string, string, int?, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/buckets/[BUCKET]";
+            // Make the request
+            PagedEnumerable<gcscv::ListRapidCachesResponse, gcscv::RapidCache> response = storageControlClient.ListRapidCaches(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcscv::RapidCache item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcscv::ListRapidCachesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::RapidCache item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::RapidCache> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::RapidCache item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRapidCachesAsync</summary>
+        public async Task ListRapidCachesAsync()
+        {
+            // Snippet: ListRapidCachesAsync(string, string, int?, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/buckets/[BUCKET]";
+            // Make the request
+            PagedAsyncEnumerable<gcscv::ListRapidCachesResponse, gcscv::RapidCache> response = storageControlClient.ListRapidCachesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcscv::RapidCache item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcscv::ListRapidCachesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::RapidCache item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::RapidCache> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::RapidCache item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRapidCaches</summary>
+        public void ListRapidCachesResourceNames()
+        {
+            // Snippet: ListRapidCaches(BucketName, string, int?, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            // Make the request
+            PagedEnumerable<gcscv::ListRapidCachesResponse, gcscv::RapidCache> response = storageControlClient.ListRapidCaches(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcscv::RapidCache item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcscv::ListRapidCachesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::RapidCache item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::RapidCache> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::RapidCache item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRapidCachesAsync</summary>
+        public async Task ListRapidCachesResourceNamesAsync()
+        {
+            // Snippet: ListRapidCachesAsync(BucketName, string, int?, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            // Make the request
+            PagedAsyncEnumerable<gcscv::ListRapidCachesResponse, gcscv::RapidCache> response = storageControlClient.ListRapidCachesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcscv::RapidCache item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcscv::ListRapidCachesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::RapidCache item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::RapidCache> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::RapidCache item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
