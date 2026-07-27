@@ -5130,6 +5130,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "21a792a08ee2aad508568f82e860d91b942978a6",
             "apiPaths": [
                 "google/cloud/commerceproducer/v1beta"
             ],
