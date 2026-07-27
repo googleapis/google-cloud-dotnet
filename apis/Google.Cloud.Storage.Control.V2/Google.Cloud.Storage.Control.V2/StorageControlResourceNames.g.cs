@@ -1006,6 +1006,257 @@ namespace Google.Cloud.Storage.Control.V2
         public static bool operator !=(AnywhereCacheName a, AnywhereCacheName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>RapidCache</c> resource.</summary>
+    public sealed partial class RapidCacheName : gax::IResourceName, sys::IEquatable<RapidCacheName>
+    {
+        /// <summary>The possible contents of <see cref="RapidCacheName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}</c>.
+            /// </summary>
+            ProjectBucketRapidCache = 1,
+        }
+
+        private static gax::PathTemplate s_projectBucketRapidCache = new gax::PathTemplate("projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}");
+
+        /// <summary>Creates a <see cref="RapidCacheName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="RapidCacheName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static RapidCacheName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new RapidCacheName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="RapidCacheName"/> with the pattern
+        /// <c>projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="rapidCacheId">The <c>RapidCache</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="RapidCacheName"/> constructed from the provided ids.</returns>
+        public static RapidCacheName FromProjectBucketRapidCache(string projectId, string bucketId, string rapidCacheId) =>
+            new RapidCacheName(ResourceNameType.ProjectBucketRapidCache, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), rapidCacheId: gax::GaxPreconditions.CheckNotNullOrEmpty(rapidCacheId, nameof(rapidCacheId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RapidCacheName"/> with pattern
+        /// <c>projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="rapidCacheId">The <c>RapidCache</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RapidCacheName"/> with pattern
+        /// <c>projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}</c>.
+        /// </returns>
+        public static string Format(string projectId, string bucketId, string rapidCacheId) =>
+            FormatProjectBucketRapidCache(projectId, bucketId, rapidCacheId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RapidCacheName"/> with pattern
+        /// <c>projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="rapidCacheId">The <c>RapidCache</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RapidCacheName"/> with pattern
+        /// <c>projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}</c>.
+        /// </returns>
+        public static string FormatProjectBucketRapidCache(string projectId, string bucketId, string rapidCacheId) =>
+            s_projectBucketRapidCache.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), gax::GaxPreconditions.CheckNotNullOrEmpty(rapidCacheId, nameof(rapidCacheId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="RapidCacheName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="rapidCacheName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="RapidCacheName"/> if successful.</returns>
+        public static RapidCacheName Parse(string rapidCacheName) => Parse(rapidCacheName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="RapidCacheName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="rapidCacheName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="RapidCacheName"/> if successful.</returns>
+        public static RapidCacheName Parse(string rapidCacheName, bool allowUnparsed) =>
+            TryParse(rapidCacheName, allowUnparsed, out RapidCacheName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RapidCacheName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="rapidCacheName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RapidCacheName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string rapidCacheName, out RapidCacheName result) =>
+            TryParse(rapidCacheName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RapidCacheName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="rapidCacheName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RapidCacheName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string rapidCacheName, bool allowUnparsed, out RapidCacheName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(rapidCacheName, nameof(rapidCacheName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectBucketRapidCache.TryParseName(rapidCacheName, out resourceName))
+            {
+                result = FromProjectBucketRapidCache(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(rapidCacheName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private RapidCacheName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string bucketId = null, string projectId = null, string rapidCacheId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            BucketId = bucketId;
+            ProjectId = projectId;
+            RapidCacheId = rapidCacheId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="RapidCacheName"/> class from the component parts of pattern
+        /// <c>projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="rapidCacheId">The <c>RapidCache</c> ID. Must not be <c>null</c> or empty.</param>
+        public RapidCacheName(string projectId, string bucketId, string rapidCacheId) : this(ResourceNameType.ProjectBucketRapidCache, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), rapidCacheId: gax::GaxPreconditions.CheckNotNullOrEmpty(rapidCacheId, nameof(rapidCacheId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Bucket</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string BucketId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>RapidCache</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string RapidCacheId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectBucketRapidCache: return s_projectBucketRapidCache.Expand(ProjectId, BucketId, RapidCacheId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as RapidCacheName);
+
+        /// <inheritdoc/>
+        public bool Equals(RapidCacheName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(RapidCacheName a, RapidCacheName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(RapidCacheName a, RapidCacheName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>IntelligenceConfig</c> resource.</summary>
     public sealed partial class IntelligenceConfigName : gax::IResourceName, sys::IEquatable<IntelligenceConfigName>
     {
@@ -2372,6 +2623,50 @@ namespace Google.Cloud.Storage.Control.V2
     }
 
     public partial class ListAnywhereCachesRequest
+    {
+        /// <summary><see cref="BucketName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public BucketName ParentAsBucketName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : BucketName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RapidCache
+    {
+        /// <summary>
+        /// <see cref="gcscv::RapidCacheName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::RapidCacheName RapidCacheName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::RapidCacheName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateRapidCacheRequest
+    {
+        /// <summary><see cref="BucketName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public BucketName ParentAsBucketName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : BucketName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetRapidCacheRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::RapidCacheName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::RapidCacheName RapidCacheName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::RapidCacheName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListRapidCachesRequest
     {
         /// <summary><see cref="BucketName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public BucketName ParentAsBucketName

@@ -28,6 +28,12 @@
                 "CreateManagedFolderAsync"
               ]
             },
+            "CreateRapidCache": {
+              "methods": [
+                "CreateRapidCache",
+                "CreateRapidCacheAsync"
+              ]
+            },
             "DeleteFolder": {
               "methods": [
                 "DeleteFolder",
@@ -106,6 +112,12 @@
                 "GetProjectIntelligenceConfigAsync"
               ]
             },
+            "GetRapidCache": {
+              "methods": [
+                "GetRapidCache",
+                "GetRapidCacheAsync"
+              ]
+            },
             "GetStorageLayout": {
               "methods": [
                 "GetStorageLayout",
@@ -140,6 +152,12 @@
               "methods": [
                 "ListManagedFolders",
                 "ListManagedFoldersAsync"
+              ]
+            },
+            "ListRapidCaches": {
+              "methods": [
+                "ListRapidCaches",
+                "ListRapidCachesAsync"
               ]
             },
             "PauseAnywhereCache": {
@@ -190,6 +208,12 @@
                 "UpdateFolderIntelligenceConfigAsync"
               ]
             },
+            "UpdateManagedFolder": {
+              "methods": [
+                "UpdateManagedFolder",
+                "UpdateManagedFolderAsync"
+              ]
+            },
             "UpdateOrganizationIntelligenceConfig": {
               "methods": [
                 "UpdateOrganizationIntelligenceConfig",
@@ -200,6 +224,12 @@
               "methods": [
                 "UpdateProjectIntelligenceConfig",
                 "UpdateProjectIntelligenceConfigAsync"
+              ]
+            },
+            "UpdateRapidCache": {
+              "methods": [
+                "UpdateRapidCache",
+                "UpdateRapidCacheAsync"
               ]
             }
           }
