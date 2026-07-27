@@ -1,0 +1,144 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.commerceproducer.v1beta",
+  "libraryPackage": "Google.Cloud.CommerceProducer.V1Beta",
+  "services": {
+    "CommerceTransaction": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CommerceTransactionClient",
+          "rpcs": {
+            "CancelPrivateOffer": {
+              "methods": [
+                "CancelPrivateOffer",
+                "CancelPrivateOfferAsync"
+              ]
+            },
+            "CreatePrivateOffer": {
+              "methods": [
+                "CreatePrivateOffer",
+                "CreatePrivateOfferAsync"
+              ]
+            },
+            "CreatePrivateOfferDocument": {
+              "methods": [
+                "CreatePrivateOfferDocument",
+                "CreatePrivateOfferDocumentAsync"
+              ]
+            },
+            "DeletePrivateOffer": {
+              "methods": [
+                "DeletePrivateOffer",
+                "DeletePrivateOfferAsync"
+              ]
+            },
+            "DeletePrivateOfferDocument": {
+              "methods": [
+                "DeletePrivateOfferDocument",
+                "DeletePrivateOfferDocumentAsync"
+              ]
+            },
+            "GetPrivateOffer": {
+              "methods": [
+                "GetPrivateOffer",
+                "GetPrivateOfferAsync"
+              ]
+            },
+            "GetPrivateOfferDocument": {
+              "methods": [
+                "GetPrivateOfferDocument",
+                "GetPrivateOfferDocumentAsync"
+              ]
+            },
+            "GetService": {
+              "methods": [
+                "GetService",
+                "GetServiceAsync"
+              ]
+            },
+            "GetSku": {
+              "methods": [
+                "GetSku",
+                "GetSkuAsync"
+              ]
+            },
+            "GetSkuGroup": {
+              "methods": [
+                "GetSkuGroup",
+                "GetSkuGroupAsync"
+              ]
+            },
+            "GetStandardOffer": {
+              "methods": [
+                "GetStandardOffer",
+                "GetStandardOfferAsync"
+              ]
+            },
+            "ListPrivateOfferDocuments": {
+              "methods": [
+                "ListPrivateOfferDocuments",
+                "ListPrivateOfferDocumentsAsync"
+              ]
+            },
+            "ListPrivateOffers": {
+              "methods": [
+                "ListPrivateOffers",
+                "ListPrivateOffersAsync"
+              ]
+            },
+            "ListServices": {
+              "methods": [
+                "ListServices",
+                "ListServicesAsync"
+              ]
+            },
+            "ListSkuGroups": {
+              "methods": [
+                "ListSkuGroups",
+                "ListSkuGroupsAsync"
+              ]
+            },
+            "ListSkus": {
+              "methods": [
+                "ListSkus",
+                "ListSkusAsync"
+              ]
+            },
+            "ListStandardOffers": {
+              "methods": [
+                "ListStandardOffers",
+                "ListStandardOffersAsync"
+              ]
+            },
+            "PublishPrivateOffer": {
+              "methods": [
+                "PublishPrivateOffer",
+                "PublishPrivateOfferAsync"
+              ]
+            },
+            "ResolveAmendmentTarget": {
+              "methods": [
+                "ResolveAmendmentTarget",
+                "ResolveAmendmentTargetAsync"
+              ]
+            },
+            "UpdatePrivateOffer": {
+              "methods": [
+                "UpdatePrivateOffer",
+                "UpdatePrivateOfferAsync"
+              ]
+            },
+            "UpdatePrivateOfferDocument": {
+              "methods": [
+                "UpdatePrivateOfferDocument",
+                "UpdatePrivateOfferDocumentAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
