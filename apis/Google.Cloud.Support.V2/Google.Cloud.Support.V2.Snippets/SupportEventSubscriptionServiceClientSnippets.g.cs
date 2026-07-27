@@ -669,5 +669,92 @@ namespace GoogleCSharpSnippets
             SupportEventSubscription response = await supportEventSubscriptionServiceClient.UndeleteSupportEventSubscriptionAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for ExpungeSupportEventSubscription</summary>
+        public void ExpungeSupportEventSubscriptionRequestObject()
+        {
+            // Snippet: ExpungeSupportEventSubscription(ExpungeSupportEventSubscriptionRequest, CallSettings)
+            // Create client
+            SupportEventSubscriptionServiceClient supportEventSubscriptionServiceClient = SupportEventSubscriptionServiceClient.Create();
+            // Initialize request argument(s)
+            ExpungeSupportEventSubscriptionRequest request = new ExpungeSupportEventSubscriptionRequest
+            {
+                SupportEventSubscriptionName = SupportEventSubscriptionName.FromOrganizationSupportEventSubscription("[ORGANIZATION]", "[SUPPORT_EVENT_SUBSCRIPTION]"),
+            };
+            // Make the request
+            supportEventSubscriptionServiceClient.ExpungeSupportEventSubscription(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExpungeSupportEventSubscriptionAsync</summary>
+        public async Task ExpungeSupportEventSubscriptionRequestObjectAsync()
+        {
+            // Snippet: ExpungeSupportEventSubscriptionAsync(ExpungeSupportEventSubscriptionRequest, CallSettings)
+            // Additional: ExpungeSupportEventSubscriptionAsync(ExpungeSupportEventSubscriptionRequest, CancellationToken)
+            // Create client
+            SupportEventSubscriptionServiceClient supportEventSubscriptionServiceClient = await SupportEventSubscriptionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ExpungeSupportEventSubscriptionRequest request = new ExpungeSupportEventSubscriptionRequest
+            {
+                SupportEventSubscriptionName = SupportEventSubscriptionName.FromOrganizationSupportEventSubscription("[ORGANIZATION]", "[SUPPORT_EVENT_SUBSCRIPTION]"),
+            };
+            // Make the request
+            await supportEventSubscriptionServiceClient.ExpungeSupportEventSubscriptionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExpungeSupportEventSubscription</summary>
+        public void ExpungeSupportEventSubscription()
+        {
+            // Snippet: ExpungeSupportEventSubscription(string, CallSettings)
+            // Create client
+            SupportEventSubscriptionServiceClient supportEventSubscriptionServiceClient = SupportEventSubscriptionServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/supportEventSubscriptions/[SUPPORT_EVENT_SUBSCRIPTION]";
+            // Make the request
+            supportEventSubscriptionServiceClient.ExpungeSupportEventSubscription(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExpungeSupportEventSubscriptionAsync</summary>
+        public async Task ExpungeSupportEventSubscriptionAsync()
+        {
+            // Snippet: ExpungeSupportEventSubscriptionAsync(string, CallSettings)
+            // Additional: ExpungeSupportEventSubscriptionAsync(string, CancellationToken)
+            // Create client
+            SupportEventSubscriptionServiceClient supportEventSubscriptionServiceClient = await SupportEventSubscriptionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/supportEventSubscriptions/[SUPPORT_EVENT_SUBSCRIPTION]";
+            // Make the request
+            await supportEventSubscriptionServiceClient.ExpungeSupportEventSubscriptionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExpungeSupportEventSubscription</summary>
+        public void ExpungeSupportEventSubscriptionResourceNames()
+        {
+            // Snippet: ExpungeSupportEventSubscription(SupportEventSubscriptionName, CallSettings)
+            // Create client
+            SupportEventSubscriptionServiceClient supportEventSubscriptionServiceClient = SupportEventSubscriptionServiceClient.Create();
+            // Initialize request argument(s)
+            SupportEventSubscriptionName name = SupportEventSubscriptionName.FromOrganizationSupportEventSubscription("[ORGANIZATION]", "[SUPPORT_EVENT_SUBSCRIPTION]");
+            // Make the request
+            supportEventSubscriptionServiceClient.ExpungeSupportEventSubscription(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExpungeSupportEventSubscriptionAsync</summary>
+        public async Task ExpungeSupportEventSubscriptionResourceNamesAsync()
+        {
+            // Snippet: ExpungeSupportEventSubscriptionAsync(SupportEventSubscriptionName, CallSettings)
+            // Additional: ExpungeSupportEventSubscriptionAsync(SupportEventSubscriptionName, CancellationToken)
+            // Create client
+            SupportEventSubscriptionServiceClient supportEventSubscriptionServiceClient = await SupportEventSubscriptionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SupportEventSubscriptionName name = SupportEventSubscriptionName.FromOrganizationSupportEventSubscription("[ORGANIZATION]", "[SUPPORT_EVENT_SUBSCRIPTION]");
+            // Make the request
+            await supportEventSubscriptionServiceClient.ExpungeSupportEventSubscriptionAsync(name);
+            // End snippet
+        }
     }
 }
