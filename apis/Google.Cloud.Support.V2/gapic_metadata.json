@@ -127,6 +127,12 @@
                 "DeleteSupportEventSubscriptionAsync"
               ]
             },
+            "ExpungeSupportEventSubscription": {
+              "methods": [
+                "ExpungeSupportEventSubscription",
+                "ExpungeSupportEventSubscriptionAsync"
+              ]
+            },
             "GetSupportEventSubscription": {
               "methods": [
                 "GetSupportEventSubscription",

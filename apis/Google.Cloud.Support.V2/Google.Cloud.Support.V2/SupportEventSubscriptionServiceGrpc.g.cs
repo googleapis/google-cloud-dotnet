@@ -79,6 +79,10 @@ namespace Google.Cloud.Support.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Support.V2.DeleteSupportEventSubscriptionRequest> __Marshaller_google_cloud_support_v2_DeleteSupportEventSubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2.DeleteSupportEventSubscriptionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Support.V2.UndeleteSupportEventSubscriptionRequest> __Marshaller_google_cloud_support_v2_UndeleteSupportEventSubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2.UndeleteSupportEventSubscriptionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Support.V2.ExpungeSupportEventSubscriptionRequest> __Marshaller_google_cloud_support_v2_ExpungeSupportEventSubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2.ExpungeSupportEventSubscriptionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Support.V2.CreateSupportEventSubscriptionRequest, global::Google.Cloud.Support.V2.SupportEventSubscription> __Method_CreateSupportEventSubscription = new grpc::Method<global::Google.Cloud.Support.V2.CreateSupportEventSubscriptionRequest, global::Google.Cloud.Support.V2.SupportEventSubscription>(
@@ -128,6 +132,14 @@ namespace Google.Cloud.Support.V2 {
         __Marshaller_google_cloud_support_v2_UndeleteSupportEventSubscriptionRequest,
         __Marshaller_google_cloud_support_v2_SupportEventSubscription);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Support.V2.ExpungeSupportEventSubscriptionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ExpungeSupportEventSubscription = new grpc::Method<global::Google.Cloud.Support.V2.ExpungeSupportEventSubscriptionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExpungeSupportEventSubscription",
+        __Marshaller_google_cloud_support_v2_ExpungeSupportEventSubscriptionRequest,
+        __Marshaller_google_protobuf_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -163,7 +175,7 @@ namespace Google.Cloud.Support.V2 {
       }
 
       /// <summary>
-      /// Lists support event subscriptions.
+      /// Lists support event subscriptions for an organization.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -206,6 +218,48 @@ namespace Google.Cloud.Support.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Support.V2.SupportEventSubscription> UndeleteSupportEventSubscription(global::Google.Cloud.Support.V2.UndeleteSupportEventSubscriptionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Expunges a support event subscription.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+      /// curl \
+      ///   --request POST \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$support_event_subscription:expunge"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      ///
+      /// request = supportApiService.supportEventSubscriptions().expunge(
+      ///     name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> ExpungeSupportEventSubscription(global::Google.Cloud.Support.V2.ExpungeSupportEventSubscriptionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -336,7 +390,7 @@ namespace Google.Cloud.Support.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSupportEventSubscription, null, options, request);
       }
       /// <summary>
-      /// Lists support event subscriptions.
+      /// Lists support event subscriptions for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -349,7 +403,7 @@ namespace Google.Cloud.Support.V2 {
         return ListSupportEventSubscriptions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists support event subscriptions.
+      /// Lists support event subscriptions for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -360,7 +414,7 @@ namespace Google.Cloud.Support.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListSupportEventSubscriptions, null, options, request);
       }
       /// <summary>
-      /// Lists support event subscriptions.
+      /// Lists support event subscriptions for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -373,7 +427,7 @@ namespace Google.Cloud.Support.V2 {
         return ListSupportEventSubscriptionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists support event subscriptions.
+      /// Lists support event subscriptions for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -527,6 +581,174 @@ namespace Google.Cloud.Support.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UndeleteSupportEventSubscription, null, options, request);
       }
+      /// <summary>
+      /// Expunges a support event subscription.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+      /// curl \
+      ///   --request POST \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$support_event_subscription:expunge"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      ///
+      /// request = supportApiService.supportEventSubscriptions().expunge(
+      ///     name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty ExpungeSupportEventSubscription(global::Google.Cloud.Support.V2.ExpungeSupportEventSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExpungeSupportEventSubscription(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Expunges a support event subscription.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+      /// curl \
+      ///   --request POST \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$support_event_subscription:expunge"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      ///
+      /// request = supportApiService.supportEventSubscriptions().expunge(
+      ///     name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty ExpungeSupportEventSubscription(global::Google.Cloud.Support.V2.ExpungeSupportEventSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExpungeSupportEventSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Expunges a support event subscription.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+      /// curl \
+      ///   --request POST \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$support_event_subscription:expunge"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      ///
+      /// request = supportApiService.supportEventSubscriptions().expunge(
+      ///     name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ExpungeSupportEventSubscriptionAsync(global::Google.Cloud.Support.V2.ExpungeSupportEventSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExpungeSupportEventSubscriptionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Expunges a support event subscription.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+      /// curl \
+      ///   --request POST \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$support_event_subscription:expunge"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      ///
+      /// request = supportApiService.supportEventSubscriptions().expunge(
+      ///     name="organizations/123456789/supportEventSubscriptions/abcdef123456"
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ExpungeSupportEventSubscriptionAsync(global::Google.Cloud.Support.V2.ExpungeSupportEventSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExpungeSupportEventSubscription, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SupportEventSubscriptionServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -546,7 +768,8 @@ namespace Google.Cloud.Support.V2 {
           .AddMethod(__Method_ListSupportEventSubscriptions, serviceImpl.ListSupportEventSubscriptions)
           .AddMethod(__Method_UpdateSupportEventSubscription, serviceImpl.UpdateSupportEventSubscription)
           .AddMethod(__Method_DeleteSupportEventSubscription, serviceImpl.DeleteSupportEventSubscription)
-          .AddMethod(__Method_UndeleteSupportEventSubscription, serviceImpl.UndeleteSupportEventSubscription).Build();
+          .AddMethod(__Method_UndeleteSupportEventSubscription, serviceImpl.UndeleteSupportEventSubscription)
+          .AddMethod(__Method_ExpungeSupportEventSubscription, serviceImpl.ExpungeSupportEventSubscription).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -562,6 +785,7 @@ namespace Google.Cloud.Support.V2 {
       serviceBinder.AddMethod(__Method_UpdateSupportEventSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Support.V2.UpdateSupportEventSubscriptionRequest, global::Google.Cloud.Support.V2.SupportEventSubscription>(serviceImpl.UpdateSupportEventSubscription));
       serviceBinder.AddMethod(__Method_DeleteSupportEventSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Support.V2.DeleteSupportEventSubscriptionRequest, global::Google.Cloud.Support.V2.SupportEventSubscription>(serviceImpl.DeleteSupportEventSubscription));
       serviceBinder.AddMethod(__Method_UndeleteSupportEventSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Support.V2.UndeleteSupportEventSubscriptionRequest, global::Google.Cloud.Support.V2.SupportEventSubscription>(serviceImpl.UndeleteSupportEventSubscription));
+      serviceBinder.AddMethod(__Method_ExpungeSupportEventSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Support.V2.ExpungeSupportEventSubscriptionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.ExpungeSupportEventSubscription));
     }
 
   }
