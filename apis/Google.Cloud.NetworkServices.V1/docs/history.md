@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.7.0, released 2026-07-27
+
+### New features
+
+- Deprecate client_tls_policy field from Endpoint Policy proto
+- A new field `resource_uris` is added to message `.google.cloud.networkservices.v1.AgentGateway`
+
+### Documentation improvements
+
+- Fix unclosed backtick in AgentGateway registries comment
+
 ## Version 1.6.0, released 2026-06-18
 
 ### New features
