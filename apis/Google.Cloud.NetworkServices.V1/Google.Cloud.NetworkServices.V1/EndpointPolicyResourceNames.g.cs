@@ -1119,6 +1119,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// <summary>
         /// <see cref="ClientTlsPolicyName"/>-typed view over the <see cref="ClientTlsPolicy"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public ClientTlsPolicyName ClientTlsPolicyAsClientTlsPolicyName
         {
             get => string.IsNullOrEmpty(ClientTlsPolicy) ? null : ClientTlsPolicyName.Parse(ClientTlsPolicy, allowUnparsed: true);
