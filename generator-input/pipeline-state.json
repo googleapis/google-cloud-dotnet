@@ -5127,10 +5127,12 @@
         },
         {
             "id": "Google.Cloud.CommerceProducer.V1Beta",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-07-28T23:32:30.548848970Z",
             "lastGeneratedCommit": "21a792a08ee2aad508568f82e860d91b942978a6",
+            "lastReleasedCommit": "21a792a08ee2aad508568f82e860d91b942978a6",
             "apiPaths": [
                 "google/cloud/commerceproducer/v1beta"
             ],
