@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.8.0, released 2026-07-28
+
+### New features
+
+- A new method `ExpungeSupportEventSubscription` is added to service `SupportEventSubscriptionService`
+- A new message `ExpungeSupportEventSubscriptionRequest` is added
+
+### Bug fixes
+
+- Align HTTP paths with enforced matching
+
+### Documentation improvements
+
+- A comment for method `ListSupportEventSubscriptions` in service `SupportEventSubscriptionService` is changed
+
 ## Version 1.7.0, released 2026-07-06
 
 ### New features
