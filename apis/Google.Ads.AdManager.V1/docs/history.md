@@ -1,25 +1,5 @@
 # Version history
 
-## Version 1.0.0-beta08, released 2026-07-27
-
-### New features
-
-- Added additional LineItem fields
-- Added `BatchActivateContentBundles` and `BatchDeactivateContentBundles` methods to `ContentBundleService`
-- Added CreativeSetService
-- Added `SlateService`
-- Added the Creative entity
-- Added OrderService write methods and additional stats fields.
-- Added TargetingPresetService update methods
-
-### Bug fixes
-
-- Moved Schedule messages from report_messages.proto to report_delivery.proto
-
-### Documentation improvements
-
-- Updated method descriptions to use a consistent style
-
 ## Version 1.0.0-beta07, released 2026-07-20
 
 ### New features
