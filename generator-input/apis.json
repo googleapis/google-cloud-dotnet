@@ -1786,7 +1786,7 @@
     },
     {
       "id": "Google.Cloud.CommerceProducer.V1Beta",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Cloud Commerce Producer",
       "productUrl": "https://docs.cloud.google.com/marketplace/docs/partners/commerce-producer-api/reference",
