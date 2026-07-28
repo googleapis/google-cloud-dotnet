@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.0.0-beta09, released 2026-07-28
+
+### New features
+
+- Add BatchCreateTasks and BatchDeleteTasks to CloudTasks v2beta3
+- Add retry_config field to Task in CloudTasks v2beta3
+
+### Documentation improvements
+
+- Update documentation comments in CloudTasks v2beta3
+
 ## Version 3.0.0-beta08, released 2025-11-06
 
 ### New features
