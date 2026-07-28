@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.3.0, released 2026-07-28
+
+### New features
+
+- Publish Cloud Quotas v1 GA client library protos and GAPIC Bazel rules
+
+### Documentation improvements
+
+- Correct typo in comment for field `quota_id`
+
 ## Version 1.2.0, released 2025-11-05
 
 ### New features
