@@ -273,7 +273,7 @@
     },
     {
       "id": "Google.Backstory",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta01",
       "type": "other",
       "description": "Common Universal Data Model (UDM) and Entity protos used by Chronicle.",
       "tags": [],
