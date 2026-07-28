@@ -4295,12 +4295,12 @@
         },
         {
             "id": "Google.Cloud.Support.V2Beta",
-            "currentVersion": "1.0.0-beta05",
+            "currentVersion": "1.0.0-beta04",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-07-27T19:25:35.616078017Z",
+            "releaseTimestamp": "2026-07-06T19:14:17.203469256Z",
             "lastGeneratedCommit": "09bc253ea6b336c1a214487684f4eb303bd7fc62",
-            "lastReleasedCommit": "09bc253ea6b336c1a214487684f4eb303bd7fc62",
+            "lastReleasedCommit": "03756fd6c5353d30fe1d10a3a878756f99f71579",
             "apiPaths": [
                 "google/cloud/support/v2beta"
             ],
