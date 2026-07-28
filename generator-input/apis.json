@@ -4292,7 +4292,7 @@
     },
     {
       "id": "Google.Cloud.NetworkConnectivity.V1Beta",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Network Connectivity",
       "productUrl": "https://docs.cloud.google.com/network-connectivity/docs/concepts",

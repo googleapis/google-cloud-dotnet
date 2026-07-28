@@ -4932,12 +4932,12 @@
         },
         {
             "id": "Google.Cloud.NetworkConnectivity.V1Beta",
-            "currentVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta02",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-03-05T08:48:44.844147286Z",
+            "releaseTimestamp": "2026-07-28T21:11:14.776988315Z",
             "lastGeneratedCommit": "6a884cdff865c7b92ec43918680bf711685f1447",
-            "lastReleasedCommit": "5328d7103e480708b3fe2458f90441c3e720a15c",
+            "lastReleasedCommit": "6a884cdff865c7b92ec43918680bf711685f1447",
             "apiPaths": [
                 "google/cloud/networkconnectivity/v1beta"
             ],
