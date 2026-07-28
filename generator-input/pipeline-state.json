@@ -3,12 +3,12 @@
     "libraries": [
         {
             "id": "Google.Ads.AdManager.V1",
-            "currentVersion": "1.0.0-beta07",
+            "currentVersion": "1.0.0-beta08",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-07-20T19:06:23.212857498Z",
+            "releaseTimestamp": "2026-07-28T20:49:15.951458241Z",
             "lastGeneratedCommit": "a15a5b7adf695d1b6b17359ff64bfb4a83d0750b",
-            "lastReleasedCommit": "9cbb0fd09b64116cfcf869e2cf2fdd53e4aba56e",
+            "lastReleasedCommit": "a15a5b7adf695d1b6b17359ff64bfb4a83d0750b",
             "apiPaths": [
                 "google/ads/admanager/v1"
             ],
