@@ -1,18 +1,5 @@
 # Version history
 
-## Version 1.9.0, released 2026-07-28
-
-### New features
-
-- Add new CreateRapidCache
-- Add new UpdateRapidCache
-- Add new GetRapidCache
-- Add new ListRapidCache
-
-### Documentation improvements
-
-- Update reference documentation for the `StorageControl` service, including `IntelligenceFindings`, `AnywhereCache`, and related configuration messages.
-
 ## Version 1.8.0, released 2026-05-30
 
 ### New features
