@@ -53,6 +53,7 @@ namespace Google.Apps.Chat.V1
             GetMessageSettings = existing.GetMessageSettings;
             UpdateMessageSettings = existing.UpdateMessageSettings;
             DeleteMessageSettings = existing.DeleteMessageSettings;
+            SearchMessagesSettings = existing.SearchMessagesSettings;
             GetAttachmentSettings = existing.GetAttachmentSettings;
             UploadAttachmentSettings = existing.UploadAttachmentSettings;
             ListSpacesSettings = existing.ListSpacesSettings;
@@ -224,6 +225,24 @@ namespace Google.Apps.Chat.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteMessageSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.SearchMessages</c> and <c>ChatServiceClient.SearchMessagesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchMessagesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -3845,6 +3864,848 @@ namespace Google.Apps.Chat.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteMessageAsync(MessageName name, st::CancellationToken cancellationToken) =>
             DeleteMessageAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Searches for messages in Google Chat that the calling user has access to.
+        /// Returns a list of messages matching the search criteria.
+        /// 
+        /// To search across all spaces the user has access to, set `parent` to
+        /// `spaces/-`. Using any other value for `parent` results in an
+        /// `INVALID_ARGUMENT` error. The returned messages have their `name` field
+        /// populated with the full resource name, which includes the specific `space`
+        /// in which the message resides.
+        /// 
+        /// This API doesn't return all message types. The types of messages listed
+        /// below aren't included in the response. Use
+        /// [ListMessages][google.chat.v1.ChatService.ListMessages] to list all
+        /// messages.
+        /// 
+        /// - Private Messages that are visible to the authenticated user.
+        /// - Messages posted by Chat apps in spaces or group chats.
+        /// - Messages in a Chat app DM.
+        /// - Messages from blocked users.
+        /// - Messages in spaces that the caller has muted.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SearchMessageResult"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchMessagesResponse, SearchMessageResult> SearchMessages(SearchMessagesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches for messages in Google Chat that the calling user has access to.
+        /// Returns a list of messages matching the search criteria.
+        /// 
+        /// To search across all spaces the user has access to, set `parent` to
+        /// `spaces/-`. Using any other value for `parent` results in an
+        /// `INVALID_ARGUMENT` error. The returned messages have their `name` field
+        /// populated with the full resource name, which includes the specific `space`
+        /// in which the message resides.
+        /// 
+        /// This API doesn't return all message types. The types of messages listed
+        /// below aren't included in the response. Use
+        /// [ListMessages][google.chat.v1.ChatService.ListMessages] to list all
+        /// messages.
+        /// 
+        /// - Private Messages that are visible to the authenticated user.
+        /// - Messages posted by Chat apps in spaces or group chats.
+        /// - Messages in a Chat app DM.
+        /// - Messages from blocked users.
+        /// - Messages in spaces that the caller has muted.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SearchMessageResult"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchMessagesResponse, SearchMessageResult> SearchMessagesAsync(SearchMessagesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches for messages in Google Chat that the calling user has access to.
+        /// Returns a list of messages matching the search criteria.
+        /// 
+        /// To search across all spaces the user has access to, set `parent` to
+        /// `spaces/-`. Using any other value for `parent` results in an
+        /// `INVALID_ARGUMENT` error. The returned messages have their `name` field
+        /// populated with the full resource name, which includes the specific `space`
+        /// in which the message resides.
+        /// 
+        /// This API doesn't return all message types. The types of messages listed
+        /// below aren't included in the response. Use
+        /// [ListMessages][google.chat.v1.ChatService.ListMessages] to list all
+        /// messages.
+        /// 
+        /// - Private Messages that are visible to the authenticated user.
+        /// - Messages posted by Chat apps in spaces or group chats.
+        /// - Messages in a Chat app DM.
+        /// - Messages from blocked users.
+        /// - Messages in spaces that the caller has muted.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the space to search within.
+        /// 
+        /// To search across all spaces the user has access to, set this field to
+        /// `spaces/-`. Using any other value for `parent` results in an
+        /// `INVALID_ARGUMENT` error.
+        /// 
+        /// To limit the search to one or more spaces, use `space.name` or
+        /// `space.display_name` in the `filter`.
+        /// </param>
+        /// <param name="filter">
+        /// Required. A search query.
+        /// 
+        /// The query can specify one or more search keywords, which are used to filter
+        /// the results,
+        /// 
+        /// You can also filter the results using the following message fields:
+        /// 
+        /// - `create_time`: Accepts a timestamp in
+        /// [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and the
+        /// supported comparison operators are: `&lt;` and `&gt;=`.
+        /// - `sender.name`: The resource name of the sender (`users/{user}`). Only
+        /// supports `=`. You can use the e-mail as an alias for `{user}`. For
+        /// example, `users/example@gmail.com`, where `example@gmail.com` is the
+        /// e-mail of the Google Chat user.
+        /// - `space.name`: The resource name of the space where the message is posted.
+        /// (`spaces/{space}`). Only supports `=`. If this filter is not set, the
+        /// search is performed across all direct messages and spaces the user has
+        /// access to as a space member.
+        /// - `space.display_name`: Supports the operator `:` (has) and filters spaces
+        /// based on a partial match of their display name. Results are limited to
+        /// the top five space matches. For example, `space.display_name:Project`
+        /// searches for messages in the top five spaces that contain the word
+        /// "Project" in their display names.
+        /// - `attachment`: Supports the operator `:*` (has any) to check for the
+        /// presence of attachments. If `attachment:*` is specified, only messages
+        /// that have at least one attachment are returned.
+        /// - `annotations.user_mentions.user.name`: The resource name of the mentioned
+        /// user (`users/{user}`). Only supports `:` (has). For example:
+        /// `annotations.user_mentions.user.name:"users/1234567890"` returns only
+        /// messages that contain a mention to the specified user. Alternatively, the
+        /// alias `me` can be used to filter for messages that mention the caller
+        /// user, for example: `annotations.user_mentions.user.name:users/me`. You
+        /// can also use the e-mail as an alias for `{user}`, for example,
+        /// `users/example@gmail.com`.
+        /// 
+        /// For advanced filtering, the following functions are also available:
+        /// 
+        /// - `has_link()`: Returns only messages that have at least one hyperlink in
+        /// the message text.
+        /// - `is_unread()`: Filters out messages that have been read by the calling
+        /// user.
+        /// 
+        /// Using the `space.display_name` filter requires that the calling credentials
+        /// include one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// 
+        /// Using the `is_unread()` filter requires that the calling credentials
+        /// include one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
+        /// 
+        /// 
+        /// Across different fields, only `AND` operators are supported. A valid
+        /// example is `sender.name = "users/1234567890" AND is_unread()`. The word
+        /// `AND` is optional and is implied if omitted. For example, `sender.name =
+        /// "users/1234567890" is_unread()` is valid and is equivalent to the previous
+        /// example. An invalid example is `sender.name = "users/1234567890" OR
+        /// is_unread()` because `OR` is not supported between different fields.
+        /// 
+        /// Among the same field:
+        /// 
+        /// - `create_time` supports only `AND`, and can only be used to represent
+        /// an interval, such as `create_time &gt;= "2022-01-01T00:00:00+00:00" AND
+        /// create_time &lt; "2023-01-01T00:00:00+00:00"`.
+        /// - `sender.name` supports only the `OR` operator, for example:
+        /// `sender.name = "users/1234567890" OR sender.name = "users/0987654321"`.
+        /// - `space.name` supports only the `OR` operator, for example:
+        /// `space.name = "spaces/ABCDEFGH" OR space.name = "spaces/QWERTYUI"`.
+        /// - `space.display_name` supports the operators `AND` and `OR`, but not a
+        /// mix of both. For example:
+        /// `space.display_name:Project AND space.display_name:Tasks` returns
+        /// messages that are in spaces with display names containing both `Project`
+        /// and `Tasks`, whereas
+        /// `space.display_name:Project OR space.display_name:Tasks` returns messages
+        /// that are in spaces with display names containing either `Project` or
+        /// `Tasks` or both.
+        /// - `annotations.user_mentions.user.name` supports the operators `AND` and
+        /// `OR`, but not a mix of both. For example:
+        /// `annotations.user_mentions.user.name:"users/1234567890" AND
+        /// annotations.user_mentions.user.name:"users/0987654321"` returns only
+        /// messages that mentions both users, whereas
+        /// `annotations.user_mentions.user.name:"users/1234567890" OR
+        /// annotations.user_mentions.user.name:"users/0987654321"` returns messages
+        /// that mention either user or both.
+        /// 
+        /// Parentheses are required to disambiguate operator precedence when combining
+        /// `AND` and `OR` operators in the same query. For example:
+        /// `(sender.name="users/me" OR sender.name="users/123456") AND is_unread()`.
+        /// Otherwise, parentheses are optional.
+        /// 
+        /// The following example queries are valid:
+        /// 
+        /// ```
+        /// "Pending reports" AND create_time &gt;= "2023-01-01T00:00:00Z"
+        /// 
+        /// sender.name = "users/example@gmail.com"
+        /// 
+        /// annotations.user_mentions.user.name:"users/0987654321"
+        /// 
+        /// attachment:* AND space.name = "spaces/ABCDEFGH"
+        /// 
+        /// tasks AND is_unread() AND sender.name = "users/1234567890"
+        /// 
+        /// "things to do" "urgent"
+        /// 
+        /// (sender.name = "users/1234567890")
+        /// AND (create_time &lt; "2023-05-01T00:00:00Z")
+        /// 
+        /// tasks AND space.name = "spaces/ABCDEFGH" AND has_link()
+        /// 
+        /// "project one" is_unread()
+        /// 
+        /// space.display_name:Project tasks
+        /// ```
+        /// 
+        /// The maximum query length is 1,000 characters.
+        /// 
+        /// Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+        /// error.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SearchMessageResult"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchMessagesResponse, SearchMessageResult> SearchMessages(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchMessagesRequest request = new SearchMessagesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchMessages(request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches for messages in Google Chat that the calling user has access to.
+        /// Returns a list of messages matching the search criteria.
+        /// 
+        /// To search across all spaces the user has access to, set `parent` to
+        /// `spaces/-`. Using any other value for `parent` results in an
+        /// `INVALID_ARGUMENT` error. The returned messages have their `name` field
+        /// populated with the full resource name, which includes the specific `space`
+        /// in which the message resides.
+        /// 
+        /// This API doesn't return all message types. The types of messages listed
+        /// below aren't included in the response. Use
+        /// [ListMessages][google.chat.v1.ChatService.ListMessages] to list all
+        /// messages.
+        /// 
+        /// - Private Messages that are visible to the authenticated user.
+        /// - Messages posted by Chat apps in spaces or group chats.
+        /// - Messages in a Chat app DM.
+        /// - Messages from blocked users.
+        /// - Messages in spaces that the caller has muted.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the space to search within.
+        /// 
+        /// To search across all spaces the user has access to, set this field to
+        /// `spaces/-`. Using any other value for `parent` results in an
+        /// `INVALID_ARGUMENT` error.
+        /// 
+        /// To limit the search to one or more spaces, use `space.name` or
+        /// `space.display_name` in the `filter`.
+        /// </param>
+        /// <param name="filter">
+        /// Required. A search query.
+        /// 
+        /// The query can specify one or more search keywords, which are used to filter
+        /// the results,
+        /// 
+        /// You can also filter the results using the following message fields:
+        /// 
+        /// - `create_time`: Accepts a timestamp in
+        /// [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and the
+        /// supported comparison operators are: `&lt;` and `&gt;=`.
+        /// - `sender.name`: The resource name of the sender (`users/{user}`). Only
+        /// supports `=`. You can use the e-mail as an alias for `{user}`. For
+        /// example, `users/example@gmail.com`, where `example@gmail.com` is the
+        /// e-mail of the Google Chat user.
+        /// - `space.name`: The resource name of the space where the message is posted.
+        /// (`spaces/{space}`). Only supports `=`. If this filter is not set, the
+        /// search is performed across all direct messages and spaces the user has
+        /// access to as a space member.
+        /// - `space.display_name`: Supports the operator `:` (has) and filters spaces
+        /// based on a partial match of their display name. Results are limited to
+        /// the top five space matches. For example, `space.display_name:Project`
+        /// searches for messages in the top five spaces that contain the word
+        /// "Project" in their display names.
+        /// - `attachment`: Supports the operator `:*` (has any) to check for the
+        /// presence of attachments. If `attachment:*` is specified, only messages
+        /// that have at least one attachment are returned.
+        /// - `annotations.user_mentions.user.name`: The resource name of the mentioned
+        /// user (`users/{user}`). Only supports `:` (has). For example:
+        /// `annotations.user_mentions.user.name:"users/1234567890"` returns only
+        /// messages that contain a mention to the specified user. Alternatively, the
+        /// alias `me` can be used to filter for messages that mention the caller
+        /// user, for example: `annotations.user_mentions.user.name:users/me`. You
+        /// can also use the e-mail as an alias for `{user}`, for example,
+        /// `users/example@gmail.com`.
+        /// 
+        /// For advanced filtering, the following functions are also available:
+        /// 
+        /// - `has_link()`: Returns only messages that have at least one hyperlink in
+        /// the message text.
+        /// - `is_unread()`: Filters out messages that have been read by the calling
+        /// user.
+        /// 
+        /// Using the `space.display_name` filter requires that the calling credentials
+        /// include one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// 
+        /// Using the `is_unread()` filter requires that the calling credentials
+        /// include one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
+        /// 
+        /// 
+        /// Across different fields, only `AND` operators are supported. A valid
+        /// example is `sender.name = "users/1234567890" AND is_unread()`. The word
+        /// `AND` is optional and is implied if omitted. For example, `sender.name =
+        /// "users/1234567890" is_unread()` is valid and is equivalent to the previous
+        /// example. An invalid example is `sender.name = "users/1234567890" OR
+        /// is_unread()` because `OR` is not supported between different fields.
+        /// 
+        /// Among the same field:
+        /// 
+        /// - `create_time` supports only `AND`, and can only be used to represent
+        /// an interval, such as `create_time &gt;= "2022-01-01T00:00:00+00:00" AND
+        /// create_time &lt; "2023-01-01T00:00:00+00:00"`.
+        /// - `sender.name` supports only the `OR` operator, for example:
+        /// `sender.name = "users/1234567890" OR sender.name = "users/0987654321"`.
+        /// - `space.name` supports only the `OR` operator, for example:
+        /// `space.name = "spaces/ABCDEFGH" OR space.name = "spaces/QWERTYUI"`.
+        /// - `space.display_name` supports the operators `AND` and `OR`, but not a
+        /// mix of both. For example:
+        /// `space.display_name:Project AND space.display_name:Tasks` returns
+        /// messages that are in spaces with display names containing both `Project`
+        /// and `Tasks`, whereas
+        /// `space.display_name:Project OR space.display_name:Tasks` returns messages
+        /// that are in spaces with display names containing either `Project` or
+        /// `Tasks` or both.
+        /// - `annotations.user_mentions.user.name` supports the operators `AND` and
+        /// `OR`, but not a mix of both. For example:
+        /// `annotations.user_mentions.user.name:"users/1234567890" AND
+        /// annotations.user_mentions.user.name:"users/0987654321"` returns only
+        /// messages that mentions both users, whereas
+        /// `annotations.user_mentions.user.name:"users/1234567890" OR
+        /// annotations.user_mentions.user.name:"users/0987654321"` returns messages
+        /// that mention either user or both.
+        /// 
+        /// Parentheses are required to disambiguate operator precedence when combining
+        /// `AND` and `OR` operators in the same query. For example:
+        /// `(sender.name="users/me" OR sender.name="users/123456") AND is_unread()`.
+        /// Otherwise, parentheses are optional.
+        /// 
+        /// The following example queries are valid:
+        /// 
+        /// ```
+        /// "Pending reports" AND create_time &gt;= "2023-01-01T00:00:00Z"
+        /// 
+        /// sender.name = "users/example@gmail.com"
+        /// 
+        /// annotations.user_mentions.user.name:"users/0987654321"
+        /// 
+        /// attachment:* AND space.name = "spaces/ABCDEFGH"
+        /// 
+        /// tasks AND is_unread() AND sender.name = "users/1234567890"
+        /// 
+        /// "things to do" "urgent"
+        /// 
+        /// (sender.name = "users/1234567890")
+        /// AND (create_time &lt; "2023-05-01T00:00:00Z")
+        /// 
+        /// tasks AND space.name = "spaces/ABCDEFGH" AND has_link()
+        /// 
+        /// "project one" is_unread()
+        /// 
+        /// space.display_name:Project tasks
+        /// ```
+        /// 
+        /// The maximum query length is 1,000 characters.
+        /// 
+        /// Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+        /// error.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SearchMessageResult"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchMessagesResponse, SearchMessageResult> SearchMessagesAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchMessagesRequest request = new SearchMessagesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchMessagesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches for messages in Google Chat that the calling user has access to.
+        /// Returns a list of messages matching the search criteria.
+        /// 
+        /// To search across all spaces the user has access to, set `parent` to
+        /// `spaces/-`. Using any other value for `parent` results in an
+        /// `INVALID_ARGUMENT` error. The returned messages have their `name` field
+        /// populated with the full resource name, which includes the specific `space`
+        /// in which the message resides.
+        /// 
+        /// This API doesn't return all message types. The types of messages listed
+        /// below aren't included in the response. Use
+        /// [ListMessages][google.chat.v1.ChatService.ListMessages] to list all
+        /// messages.
+        /// 
+        /// - Private Messages that are visible to the authenticated user.
+        /// - Messages posted by Chat apps in spaces or group chats.
+        /// - Messages in a Chat app DM.
+        /// - Messages from blocked users.
+        /// - Messages in spaces that the caller has muted.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the space to search within.
+        /// 
+        /// To search across all spaces the user has access to, set this field to
+        /// `spaces/-`. Using any other value for `parent` results in an
+        /// `INVALID_ARGUMENT` error.
+        /// 
+        /// To limit the search to one or more spaces, use `space.name` or
+        /// `space.display_name` in the `filter`.
+        /// </param>
+        /// <param name="filter">
+        /// Required. A search query.
+        /// 
+        /// The query can specify one or more search keywords, which are used to filter
+        /// the results,
+        /// 
+        /// You can also filter the results using the following message fields:
+        /// 
+        /// - `create_time`: Accepts a timestamp in
+        /// [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and the
+        /// supported comparison operators are: `&lt;` and `&gt;=`.
+        /// - `sender.name`: The resource name of the sender (`users/{user}`). Only
+        /// supports `=`. You can use the e-mail as an alias for `{user}`. For
+        /// example, `users/example@gmail.com`, where `example@gmail.com` is the
+        /// e-mail of the Google Chat user.
+        /// - `space.name`: The resource name of the space where the message is posted.
+        /// (`spaces/{space}`). Only supports `=`. If this filter is not set, the
+        /// search is performed across all direct messages and spaces the user has
+        /// access to as a space member.
+        /// - `space.display_name`: Supports the operator `:` (has) and filters spaces
+        /// based on a partial match of their display name. Results are limited to
+        /// the top five space matches. For example, `space.display_name:Project`
+        /// searches for messages in the top five spaces that contain the word
+        /// "Project" in their display names.
+        /// - `attachment`: Supports the operator `:*` (has any) to check for the
+        /// presence of attachments. If `attachment:*` is specified, only messages
+        /// that have at least one attachment are returned.
+        /// - `annotations.user_mentions.user.name`: The resource name of the mentioned
+        /// user (`users/{user}`). Only supports `:` (has). For example:
+        /// `annotations.user_mentions.user.name:"users/1234567890"` returns only
+        /// messages that contain a mention to the specified user. Alternatively, the
+        /// alias `me` can be used to filter for messages that mention the caller
+        /// user, for example: `annotations.user_mentions.user.name:users/me`. You
+        /// can also use the e-mail as an alias for `{user}`, for example,
+        /// `users/example@gmail.com`.
+        /// 
+        /// For advanced filtering, the following functions are also available:
+        /// 
+        /// - `has_link()`: Returns only messages that have at least one hyperlink in
+        /// the message text.
+        /// - `is_unread()`: Filters out messages that have been read by the calling
+        /// user.
+        /// 
+        /// Using the `space.display_name` filter requires that the calling credentials
+        /// include one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// 
+        /// Using the `is_unread()` filter requires that the calling credentials
+        /// include one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
+        /// 
+        /// 
+        /// Across different fields, only `AND` operators are supported. A valid
+        /// example is `sender.name = "users/1234567890" AND is_unread()`. The word
+        /// `AND` is optional and is implied if omitted. For example, `sender.name =
+        /// "users/1234567890" is_unread()` is valid and is equivalent to the previous
+        /// example. An invalid example is `sender.name = "users/1234567890" OR
+        /// is_unread()` because `OR` is not supported between different fields.
+        /// 
+        /// Among the same field:
+        /// 
+        /// - `create_time` supports only `AND`, and can only be used to represent
+        /// an interval, such as `create_time &gt;= "2022-01-01T00:00:00+00:00" AND
+        /// create_time &lt; "2023-01-01T00:00:00+00:00"`.
+        /// - `sender.name` supports only the `OR` operator, for example:
+        /// `sender.name = "users/1234567890" OR sender.name = "users/0987654321"`.
+        /// - `space.name` supports only the `OR` operator, for example:
+        /// `space.name = "spaces/ABCDEFGH" OR space.name = "spaces/QWERTYUI"`.
+        /// - `space.display_name` supports the operators `AND` and `OR`, but not a
+        /// mix of both. For example:
+        /// `space.display_name:Project AND space.display_name:Tasks` returns
+        /// messages that are in spaces with display names containing both `Project`
+        /// and `Tasks`, whereas
+        /// `space.display_name:Project OR space.display_name:Tasks` returns messages
+        /// that are in spaces with display names containing either `Project` or
+        /// `Tasks` or both.
+        /// - `annotations.user_mentions.user.name` supports the operators `AND` and
+        /// `OR`, but not a mix of both. For example:
+        /// `annotations.user_mentions.user.name:"users/1234567890" AND
+        /// annotations.user_mentions.user.name:"users/0987654321"` returns only
+        /// messages that mentions both users, whereas
+        /// `annotations.user_mentions.user.name:"users/1234567890" OR
+        /// annotations.user_mentions.user.name:"users/0987654321"` returns messages
+        /// that mention either user or both.
+        /// 
+        /// Parentheses are required to disambiguate operator precedence when combining
+        /// `AND` and `OR` operators in the same query. For example:
+        /// `(sender.name="users/me" OR sender.name="users/123456") AND is_unread()`.
+        /// Otherwise, parentheses are optional.
+        /// 
+        /// The following example queries are valid:
+        /// 
+        /// ```
+        /// "Pending reports" AND create_time &gt;= "2023-01-01T00:00:00Z"
+        /// 
+        /// sender.name = "users/example@gmail.com"
+        /// 
+        /// annotations.user_mentions.user.name:"users/0987654321"
+        /// 
+        /// attachment:* AND space.name = "spaces/ABCDEFGH"
+        /// 
+        /// tasks AND is_unread() AND sender.name = "users/1234567890"
+        /// 
+        /// "things to do" "urgent"
+        /// 
+        /// (sender.name = "users/1234567890")
+        /// AND (create_time &lt; "2023-05-01T00:00:00Z")
+        /// 
+        /// tasks AND space.name = "spaces/ABCDEFGH" AND has_link()
+        /// 
+        /// "project one" is_unread()
+        /// 
+        /// space.display_name:Project tasks
+        /// ```
+        /// 
+        /// The maximum query length is 1,000 characters.
+        /// 
+        /// Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+        /// error.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SearchMessageResult"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchMessagesResponse, SearchMessageResult> SearchMessages(SpaceName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchMessagesRequest request = new SearchMessagesRequest
+            {
+                ParentAsSpaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchMessages(request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches for messages in Google Chat that the calling user has access to.
+        /// Returns a list of messages matching the search criteria.
+        /// 
+        /// To search across all spaces the user has access to, set `parent` to
+        /// `spaces/-`. Using any other value for `parent` results in an
+        /// `INVALID_ARGUMENT` error. The returned messages have their `name` field
+        /// populated with the full resource name, which includes the specific `space`
+        /// in which the message resides.
+        /// 
+        /// This API doesn't return all message types. The types of messages listed
+        /// below aren't included in the response. Use
+        /// [ListMessages][google.chat.v1.ChatService.ListMessages] to list all
+        /// messages.
+        /// 
+        /// - Private Messages that are visible to the authenticated user.
+        /// - Messages posted by Chat apps in spaces or group chats.
+        /// - Messages in a Chat app DM.
+        /// - Messages from blocked users.
+        /// - Messages in spaces that the caller has muted.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the space to search within.
+        /// 
+        /// To search across all spaces the user has access to, set this field to
+        /// `spaces/-`. Using any other value for `parent` results in an
+        /// `INVALID_ARGUMENT` error.
+        /// 
+        /// To limit the search to one or more spaces, use `space.name` or
+        /// `space.display_name` in the `filter`.
+        /// </param>
+        /// <param name="filter">
+        /// Required. A search query.
+        /// 
+        /// The query can specify one or more search keywords, which are used to filter
+        /// the results,
+        /// 
+        /// You can also filter the results using the following message fields:
+        /// 
+        /// - `create_time`: Accepts a timestamp in
+        /// [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and the
+        /// supported comparison operators are: `&lt;` and `&gt;=`.
+        /// - `sender.name`: The resource name of the sender (`users/{user}`). Only
+        /// supports `=`. You can use the e-mail as an alias for `{user}`. For
+        /// example, `users/example@gmail.com`, where `example@gmail.com` is the
+        /// e-mail of the Google Chat user.
+        /// - `space.name`: The resource name of the space where the message is posted.
+        /// (`spaces/{space}`). Only supports `=`. If this filter is not set, the
+        /// search is performed across all direct messages and spaces the user has
+        /// access to as a space member.
+        /// - `space.display_name`: Supports the operator `:` (has) and filters spaces
+        /// based on a partial match of their display name. Results are limited to
+        /// the top five space matches. For example, `space.display_name:Project`
+        /// searches for messages in the top five spaces that contain the word
+        /// "Project" in their display names.
+        /// - `attachment`: Supports the operator `:*` (has any) to check for the
+        /// presence of attachments. If `attachment:*` is specified, only messages
+        /// that have at least one attachment are returned.
+        /// - `annotations.user_mentions.user.name`: The resource name of the mentioned
+        /// user (`users/{user}`). Only supports `:` (has). For example:
+        /// `annotations.user_mentions.user.name:"users/1234567890"` returns only
+        /// messages that contain a mention to the specified user. Alternatively, the
+        /// alias `me` can be used to filter for messages that mention the caller
+        /// user, for example: `annotations.user_mentions.user.name:users/me`. You
+        /// can also use the e-mail as an alias for `{user}`, for example,
+        /// `users/example@gmail.com`.
+        /// 
+        /// For advanced filtering, the following functions are also available:
+        /// 
+        /// - `has_link()`: Returns only messages that have at least one hyperlink in
+        /// the message text.
+        /// - `is_unread()`: Filters out messages that have been read by the calling
+        /// user.
+        /// 
+        /// Using the `space.display_name` filter requires that the calling credentials
+        /// include one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// 
+        /// Using the `is_unread()` filter requires that the calling credentials
+        /// include one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
+        /// 
+        /// 
+        /// Across different fields, only `AND` operators are supported. A valid
+        /// example is `sender.name = "users/1234567890" AND is_unread()`. The word
+        /// `AND` is optional and is implied if omitted. For example, `sender.name =
+        /// "users/1234567890" is_unread()` is valid and is equivalent to the previous
+        /// example. An invalid example is `sender.name = "users/1234567890" OR
+        /// is_unread()` because `OR` is not supported between different fields.
+        /// 
+        /// Among the same field:
+        /// 
+        /// - `create_time` supports only `AND`, and can only be used to represent
+        /// an interval, such as `create_time &gt;= "2022-01-01T00:00:00+00:00" AND
+        /// create_time &lt; "2023-01-01T00:00:00+00:00"`.
+        /// - `sender.name` supports only the `OR` operator, for example:
+        /// `sender.name = "users/1234567890" OR sender.name = "users/0987654321"`.
+        /// - `space.name` supports only the `OR` operator, for example:
+        /// `space.name = "spaces/ABCDEFGH" OR space.name = "spaces/QWERTYUI"`.
+        /// - `space.display_name` supports the operators `AND` and `OR`, but not a
+        /// mix of both. For example:
+        /// `space.display_name:Project AND space.display_name:Tasks` returns
+        /// messages that are in spaces with display names containing both `Project`
+        /// and `Tasks`, whereas
+        /// `space.display_name:Project OR space.display_name:Tasks` returns messages
+        /// that are in spaces with display names containing either `Project` or
+        /// `Tasks` or both.
+        /// - `annotations.user_mentions.user.name` supports the operators `AND` and
+        /// `OR`, but not a mix of both. For example:
+        /// `annotations.user_mentions.user.name:"users/1234567890" AND
+        /// annotations.user_mentions.user.name:"users/0987654321"` returns only
+        /// messages that mentions both users, whereas
+        /// `annotations.user_mentions.user.name:"users/1234567890" OR
+        /// annotations.user_mentions.user.name:"users/0987654321"` returns messages
+        /// that mention either user or both.
+        /// 
+        /// Parentheses are required to disambiguate operator precedence when combining
+        /// `AND` and `OR` operators in the same query. For example:
+        /// `(sender.name="users/me" OR sender.name="users/123456") AND is_unread()`.
+        /// Otherwise, parentheses are optional.
+        /// 
+        /// The following example queries are valid:
+        /// 
+        /// ```
+        /// "Pending reports" AND create_time &gt;= "2023-01-01T00:00:00Z"
+        /// 
+        /// sender.name = "users/example@gmail.com"
+        /// 
+        /// annotations.user_mentions.user.name:"users/0987654321"
+        /// 
+        /// attachment:* AND space.name = "spaces/ABCDEFGH"
+        /// 
+        /// tasks AND is_unread() AND sender.name = "users/1234567890"
+        /// 
+        /// "things to do" "urgent"
+        /// 
+        /// (sender.name = "users/1234567890")
+        /// AND (create_time &lt; "2023-05-01T00:00:00Z")
+        /// 
+        /// tasks AND space.name = "spaces/ABCDEFGH" AND has_link()
+        /// 
+        /// "project one" is_unread()
+        /// 
+        /// space.display_name:Project tasks
+        /// ```
+        /// 
+        /// The maximum query length is 1,000 characters.
+        /// 
+        /// Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+        /// error.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SearchMessageResult"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchMessagesResponse, SearchMessageResult> SearchMessagesAsync(SpaceName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchMessagesRequest request = new SearchMessagesRequest
+            {
+                ParentAsSpaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchMessagesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the metadata of a message attachment. The attachment data is fetched
@@ -13813,6 +14674,8 @@ namespace Google.Apps.Chat.V1
 
         private readonly gaxgrpc::ApiCall<DeleteMessageRequest, wkt::Empty> _callDeleteMessage;
 
+        private readonly gaxgrpc::ApiCall<SearchMessagesRequest, SearchMessagesResponse> _callSearchMessages;
+
         private readonly gaxgrpc::ApiCall<GetAttachmentRequest, Attachment> _callGetAttachment;
 
         private readonly gaxgrpc::ApiCall<UploadAttachmentRequest, UploadAttachmentResponse> _callUploadAttachment;
@@ -13931,6 +14794,9 @@ namespace Google.Apps.Chat.V1
             _callDeleteMessage = clientHelper.BuildApiCall<DeleteMessageRequest, wkt::Empty>("DeleteMessage", grpcClient.DeleteMessageAsync, grpcClient.DeleteMessage, effectiveSettings.DeleteMessageSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteMessage);
             Modify_DeleteMessageApiCall(ref _callDeleteMessage);
+            _callSearchMessages = clientHelper.BuildApiCall<SearchMessagesRequest, SearchMessagesResponse>("SearchMessages", grpcClient.SearchMessagesAsync, grpcClient.SearchMessages, effectiveSettings.SearchMessagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSearchMessages);
+            Modify_SearchMessagesApiCall(ref _callSearchMessages);
             _callGetAttachment = clientHelper.BuildApiCall<GetAttachmentRequest, Attachment>("GetAttachment", grpcClient.GetAttachmentAsync, grpcClient.GetAttachment, effectiveSettings.GetAttachmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAttachment);
             Modify_GetAttachmentApiCall(ref _callGetAttachment);
@@ -14073,6 +14939,8 @@ namespace Google.Apps.Chat.V1
 
         partial void Modify_DeleteMessageApiCall(ref gaxgrpc::ApiCall<DeleteMessageRequest, wkt::Empty> call);
 
+        partial void Modify_SearchMessagesApiCall(ref gaxgrpc::ApiCall<SearchMessagesRequest, SearchMessagesResponse> call);
+
         partial void Modify_GetAttachmentApiCall(ref gaxgrpc::ApiCall<GetAttachmentRequest, Attachment> call);
 
         partial void Modify_UploadAttachmentApiCall(ref gaxgrpc::ApiCall<UploadAttachmentRequest, UploadAttachmentResponse> call);
@@ -14173,6 +15041,8 @@ namespace Google.Apps.Chat.V1
         partial void Modify_UpdateMessageRequest(ref UpdateMessageRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteMessageRequest(ref DeleteMessageRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchMessagesRequest(ref SearchMessagesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetAttachmentRequest(ref GetAttachmentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -14814,6 +15684,82 @@ namespace Google.Apps.Chat.V1
         {
             Modify_DeleteMessageRequest(ref request, ref callSettings);
             return _callDeleteMessage.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches for messages in Google Chat that the calling user has access to.
+        /// Returns a list of messages matching the search criteria.
+        /// 
+        /// To search across all spaces the user has access to, set `parent` to
+        /// `spaces/-`. Using any other value for `parent` results in an
+        /// `INVALID_ARGUMENT` error. The returned messages have their `name` field
+        /// populated with the full resource name, which includes the specific `space`
+        /// in which the message resides.
+        /// 
+        /// This API doesn't return all message types. The types of messages listed
+        /// below aren't included in the response. Use
+        /// [ListMessages][google.chat.v1.ChatService.ListMessages] to list all
+        /// messages.
+        /// 
+        /// - Private Messages that are visible to the authenticated user.
+        /// - Messages posted by Chat apps in spaces or group chats.
+        /// - Messages in a Chat app DM.
+        /// - Messages from blocked users.
+        /// - Messages in spaces that the caller has muted.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SearchMessageResult"/> resources.</returns>
+        public override gax::PagedEnumerable<SearchMessagesResponse, SearchMessageResult> SearchMessages(SearchMessagesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchMessagesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchMessagesRequest, SearchMessagesResponse, SearchMessageResult>(_callSearchMessages, request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches for messages in Google Chat that the calling user has access to.
+        /// Returns a list of messages matching the search criteria.
+        /// 
+        /// To search across all spaces the user has access to, set `parent` to
+        /// `spaces/-`. Using any other value for `parent` results in an
+        /// `INVALID_ARGUMENT` error. The returned messages have their `name` field
+        /// populated with the full resource name, which includes the specific `space`
+        /// in which the message resides.
+        /// 
+        /// This API doesn't return all message types. The types of messages listed
+        /// below aren't included in the response. Use
+        /// [ListMessages][google.chat.v1.ChatService.ListMessages] to list all
+        /// messages.
+        /// 
+        /// - Private Messages that are visible to the authenticated user.
+        /// - Messages posted by Chat apps in spaces or group chats.
+        /// - Messages in a Chat app DM.
+        /// - Messages from blocked users.
+        /// - Messages in spaces that the caller has muted.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SearchMessageResult"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<SearchMessagesResponse, SearchMessageResult> SearchMessagesAsync(SearchMessagesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchMessagesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchMessagesRequest, SearchMessagesResponse, SearchMessageResult>(_callSearchMessages, request, callSettings);
         }
 
         /// <summary>
@@ -17351,6 +18297,10 @@ namespace Google.Apps.Chat.V1
     {
     }
 
+    public partial class SearchMessagesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListSpacesRequest : gaxgrpc::IPageRequest
     {
     }
@@ -17395,6 +18345,14 @@ namespace Google.Apps.Chat.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Membership> GetEnumerator() => Memberships.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class SearchMessagesResponse : gaxgrpc::IPageResponse<SearchMessageResult>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SearchMessageResult> GetEnumerator() => Results.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

@@ -1489,9 +1489,9 @@ namespace Google.Apps.Chat.V1 {
         /// </summary>
         [pbr::OriginalName("SPACE_THREADING_STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Named spaces that support message threads. When users respond to a
-        /// message, they can reply in-thread, which keeps their response in the
-        /// context of the original message.
+        /// Spaces that support message threads. When users respond to a message,
+        /// they can reply in-thread, which keeps their response in the context of
+        /// the original message.
         /// </summary>
         [pbr::OriginalName("THREADED_MESSAGES")] ThreadedMessages = 2,
         /// <summary>
@@ -1500,8 +1500,11 @@ namespace Google.Apps.Chat.V1 {
         /// </summary>
         [pbr::OriginalName("GROUPED_MESSAGES")] GroupedMessages = 3,
         /// <summary>
-        /// Direct messages (DMs) between two people and group conversations between
-        /// 3 or more people.
+        /// Spaces that don't support message threading. This space threading state
+        /// is only used for special cases including:
+        ///
+        /// * Continuous meeting chat where threading is intentionally turned off.
+        /// * Legacy group conversations that were created prior to 2022.
         /// </summary>
         [pbr::OriginalName("UNTHREADED_MESSAGES")] UnthreadedMessages = 4,
       }

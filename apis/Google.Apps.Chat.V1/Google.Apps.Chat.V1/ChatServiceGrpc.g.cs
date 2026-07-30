@@ -89,6 +89,10 @@ namespace Google.Apps.Chat.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.SearchMessagesRequest> __Marshaller_google_chat_v1_SearchMessagesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.SearchMessagesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.SearchMessagesResponse> __Marshaller_google_chat_v1_SearchMessagesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.SearchMessagesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.GetAttachmentRequest> __Marshaller_google_chat_v1_GetAttachmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.GetAttachmentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.Attachment> __Marshaller_google_chat_v1_Attachment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.Attachment.Parser));
@@ -270,6 +274,14 @@ namespace Google.Apps.Chat.V1 {
         "DeleteMessage",
         __Marshaller_google_chat_v1_DeleteMessageRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.SearchMessagesRequest, global::Google.Apps.Chat.V1.SearchMessagesResponse> __Method_SearchMessages = new grpc::Method<global::Google.Apps.Chat.V1.SearchMessagesRequest, global::Google.Apps.Chat.V1.SearchMessagesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchMessages",
+        __Marshaller_google_chat_v1_SearchMessagesRequest,
+        __Marshaller_google_chat_v1_SearchMessagesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Apps.Chat.V1.GetAttachmentRequest, global::Google.Apps.Chat.V1.Attachment> __Method_GetAttachment = new grpc::Method<global::Google.Apps.Chat.V1.GetAttachmentRequest, global::Google.Apps.Chat.V1.Attachment>(
@@ -885,6 +897,44 @@ namespace Google.Apps.Chat.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMessage(global::Google.Apps.Chat.V1.DeleteMessageRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Searches for messages in Google Chat that the calling user has access to.
+      /// Returns a list of messages matching the search criteria.
+      ///
+      /// To search across all spaces the user has access to, set `parent` to
+      /// `spaces/-`. Using any other value for `parent` results in an
+      /// `INVALID_ARGUMENT` error. The returned messages have their `name` field
+      /// populated with the full resource name, which includes the specific `space`
+      /// in which the message resides.
+      ///
+      /// This API doesn't return all message types. The types of messages listed
+      /// below aren't included in the response. Use
+      /// [ListMessages][google.chat.v1.ChatService.ListMessages] to list all
+      /// messages.
+      ///
+      /// - Private Messages that are visible to the authenticated user.
+      /// - Messages posted by Chat apps in spaces or group chats.
+      /// - Messages in a Chat app DM.
+      /// - Messages from blocked users.
+      /// - Messages in spaces that the caller has muted.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.messages.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.messages`
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.SearchMessagesResponse> SearchMessages(global::Google.Apps.Chat.V1.SearchMessagesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3300,6 +3350,158 @@ namespace Google.Apps.Chat.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMessageAsync(global::Google.Apps.Chat.V1.DeleteMessageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteMessage, null, options, request);
+      }
+      /// <summary>
+      /// Searches for messages in Google Chat that the calling user has access to.
+      /// Returns a list of messages matching the search criteria.
+      ///
+      /// To search across all spaces the user has access to, set `parent` to
+      /// `spaces/-`. Using any other value for `parent` results in an
+      /// `INVALID_ARGUMENT` error. The returned messages have their `name` field
+      /// populated with the full resource name, which includes the specific `space`
+      /// in which the message resides.
+      ///
+      /// This API doesn't return all message types. The types of messages listed
+      /// below aren't included in the response. Use
+      /// [ListMessages][google.chat.v1.ChatService.ListMessages] to list all
+      /// messages.
+      ///
+      /// - Private Messages that are visible to the authenticated user.
+      /// - Messages posted by Chat apps in spaces or group chats.
+      /// - Messages in a Chat app DM.
+      /// - Messages from blocked users.
+      /// - Messages in spaces that the caller has muted.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.messages.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.messages`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.SearchMessagesResponse SearchMessages(global::Google.Apps.Chat.V1.SearchMessagesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchMessages(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches for messages in Google Chat that the calling user has access to.
+      /// Returns a list of messages matching the search criteria.
+      ///
+      /// To search across all spaces the user has access to, set `parent` to
+      /// `spaces/-`. Using any other value for `parent` results in an
+      /// `INVALID_ARGUMENT` error. The returned messages have their `name` field
+      /// populated with the full resource name, which includes the specific `space`
+      /// in which the message resides.
+      ///
+      /// This API doesn't return all message types. The types of messages listed
+      /// below aren't included in the response. Use
+      /// [ListMessages][google.chat.v1.ChatService.ListMessages] to list all
+      /// messages.
+      ///
+      /// - Private Messages that are visible to the authenticated user.
+      /// - Messages posted by Chat apps in spaces or group chats.
+      /// - Messages in a Chat app DM.
+      /// - Messages from blocked users.
+      /// - Messages in spaces that the caller has muted.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.messages.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.messages`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.SearchMessagesResponse SearchMessages(global::Google.Apps.Chat.V1.SearchMessagesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchMessages, null, options, request);
+      }
+      /// <summary>
+      /// Searches for messages in Google Chat that the calling user has access to.
+      /// Returns a list of messages matching the search criteria.
+      ///
+      /// To search across all spaces the user has access to, set `parent` to
+      /// `spaces/-`. Using any other value for `parent` results in an
+      /// `INVALID_ARGUMENT` error. The returned messages have their `name` field
+      /// populated with the full resource name, which includes the specific `space`
+      /// in which the message resides.
+      ///
+      /// This API doesn't return all message types. The types of messages listed
+      /// below aren't included in the response. Use
+      /// [ListMessages][google.chat.v1.ChatService.ListMessages] to list all
+      /// messages.
+      ///
+      /// - Private Messages that are visible to the authenticated user.
+      /// - Messages posted by Chat apps in spaces or group chats.
+      /// - Messages in a Chat app DM.
+      /// - Messages from blocked users.
+      /// - Messages in spaces that the caller has muted.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.messages.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.messages`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.SearchMessagesResponse> SearchMessagesAsync(global::Google.Apps.Chat.V1.SearchMessagesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchMessagesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches for messages in Google Chat that the calling user has access to.
+      /// Returns a list of messages matching the search criteria.
+      ///
+      /// To search across all spaces the user has access to, set `parent` to
+      /// `spaces/-`. Using any other value for `parent` results in an
+      /// `INVALID_ARGUMENT` error. The returned messages have their `name` field
+      /// populated with the full resource name, which includes the specific `space`
+      /// in which the message resides.
+      ///
+      /// This API doesn't return all message types. The types of messages listed
+      /// below aren't included in the response. Use
+      /// [ListMessages][google.chat.v1.ChatService.ListMessages] to list all
+      /// messages.
+      ///
+      /// - Private Messages that are visible to the authenticated user.
+      /// - Messages posted by Chat apps in spaces or group chats.
+      /// - Messages in a Chat app DM.
+      /// - Messages from blocked users.
+      /// - Messages in spaces that the caller has muted.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.messages.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.messages`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.SearchMessagesResponse> SearchMessagesAsync(global::Google.Apps.Chat.V1.SearchMessagesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchMessages, null, options, request);
       }
       /// <summary>
       /// Gets the metadata of a message attachment. The attachment data is fetched
@@ -8374,6 +8576,7 @@ namespace Google.Apps.Chat.V1 {
           .AddMethod(__Method_GetMessage, serviceImpl.GetMessage)
           .AddMethod(__Method_UpdateMessage, serviceImpl.UpdateMessage)
           .AddMethod(__Method_DeleteMessage, serviceImpl.DeleteMessage)
+          .AddMethod(__Method_SearchMessages, serviceImpl.SearchMessages)
           .AddMethod(__Method_GetAttachment, serviceImpl.GetAttachment)
           .AddMethod(__Method_UploadAttachment, serviceImpl.UploadAttachment)
           .AddMethod(__Method_ListSpaces, serviceImpl.ListSpaces)
@@ -8431,6 +8634,7 @@ namespace Google.Apps.Chat.V1 {
       serviceBinder.AddMethod(__Method_GetMessage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetMessageRequest, global::Google.Apps.Chat.V1.Message>(serviceImpl.GetMessage));
       serviceBinder.AddMethod(__Method_UpdateMessage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.UpdateMessageRequest, global::Google.Apps.Chat.V1.Message>(serviceImpl.UpdateMessage));
       serviceBinder.AddMethod(__Method_DeleteMessage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.DeleteMessageRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteMessage));
+      serviceBinder.AddMethod(__Method_SearchMessages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.SearchMessagesRequest, global::Google.Apps.Chat.V1.SearchMessagesResponse>(serviceImpl.SearchMessages));
       serviceBinder.AddMethod(__Method_GetAttachment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetAttachmentRequest, global::Google.Apps.Chat.V1.Attachment>(serviceImpl.GetAttachment));
       serviceBinder.AddMethod(__Method_UploadAttachment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.UploadAttachmentRequest, global::Google.Apps.Chat.V1.UploadAttachmentResponse>(serviceImpl.UploadAttachment));
       serviceBinder.AddMethod(__Method_ListSpaces, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.ListSpacesRequest, global::Google.Apps.Chat.V1.ListSpacesResponse>(serviceImpl.ListSpaces));
