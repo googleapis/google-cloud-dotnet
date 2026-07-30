@@ -2026,6 +2026,341 @@
       ]
     },
     {
+      "regionTag": "chat_v1_generated_ChatService_SearchMessages_sync",
+      "title": "SearchMessagesRequestObject",
+      "description": "Snippet for SearchMessages",
+      "file": "ChatServiceClient.SearchMessagesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchMessages",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.SearchMessages",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SearchMessagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.SearchMessagesResponse, Google.Apps.Chat.V1.SearchMessageResult>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "SearchMessages",
+          "fullName": "google.chat.v1.ChatService.SearchMessages",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_SearchMessages_async",
+      "title": "SearchMessagesRequestObjectAsync",
+      "description": "Snippet for SearchMessagesAsync",
+      "file": "ChatServiceClient.SearchMessagesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchMessagesAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.SearchMessagesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SearchMessagesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.SearchMessagesResponse, Google.Apps.Chat.V1.SearchMessageResult>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "SearchMessages",
+          "fullName": "google.chat.v1.ChatService.SearchMessages",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_SearchMessages_sync_flattened",
+      "title": "SearchMessages",
+      "description": "Snippet for SearchMessages",
+      "file": "ChatServiceClient.SearchMessagesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchMessages",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.SearchMessages",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.SearchMessagesResponse, Google.Apps.Chat.V1.SearchMessageResult>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "SearchMessages",
+          "fullName": "google.chat.v1.ChatService.SearchMessages",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_SearchMessages_async_flattened",
+      "title": "SearchMessagesAsync",
+      "description": "Snippet for SearchMessagesAsync",
+      "file": "ChatServiceClient.SearchMessagesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchMessagesAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.SearchMessagesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.SearchMessagesResponse, Google.Apps.Chat.V1.SearchMessageResult>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "SearchMessages",
+          "fullName": "google.chat.v1.ChatService.SearchMessages",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_SearchMessages_sync_flattened_resourceNames",
+      "title": "SearchMessagesResourceNames",
+      "description": "Snippet for SearchMessages",
+      "file": "ChatServiceClient.SearchMessagesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchMessages",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.SearchMessages",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SpaceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Chat.V1.SearchMessagesResponse, Google.Apps.Chat.V1.SearchMessageResult>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "SearchMessages",
+          "fullName": "google.chat.v1.ChatService.SearchMessages",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_SearchMessages_async_flattened_resourceNames",
+      "title": "SearchMessagesResourceNamesAsync",
+      "description": "Snippet for SearchMessagesAsync",
+      "file": "ChatServiceClient.SearchMessagesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchMessagesAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.SearchMessagesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SpaceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Chat.V1.SearchMessagesResponse, Google.Apps.Chat.V1.SearchMessageResult>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "SearchMessages",
+          "fullName": "google.chat.v1.ChatService.SearchMessages",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "chat_v1_generated_ChatService_GetAttachment_sync",
       "title": "GetAttachmentRequestObject",
       "description": "Snippet for GetAttachment",

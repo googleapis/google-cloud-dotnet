@@ -824,4 +824,14 @@ namespace Google.Apps.Chat.V1
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class SearchMessagesRequest
+    {
+        /// <summary><see cref="SpaceName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public SpaceName ParentAsSpaceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SpaceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

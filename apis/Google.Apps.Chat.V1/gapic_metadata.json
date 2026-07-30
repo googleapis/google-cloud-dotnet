@@ -238,6 +238,12 @@
                 "PositionSectionAsync"
               ]
             },
+            "SearchMessages": {
+              "methods": [
+                "SearchMessages",
+                "SearchMessagesAsync"
+              ]
+            },
             "SearchSpaces": {
               "methods": [
                 "SearchSpaces",

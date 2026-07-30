@@ -1027,6 +1027,292 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for SearchMessages</summary>
+        public void SearchMessagesRequestObject()
+        {
+            // Snippet: SearchMessages(SearchMessagesRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            SearchMessagesRequest request = new SearchMessagesRequest
+            {
+                ParentAsSpaceName = SpaceName.FromSpace("[SPACE]"),
+                Filter = "",
+                OrderBy = "",
+                View = SearchMessagesRequest.Types.SearchMessagesView.Unspecified,
+            };
+            // Make the request
+            PagedEnumerable<SearchMessagesResponse, SearchMessageResult> response = chatServiceClient.SearchMessages(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SearchMessageResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchMessagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchMessageResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchMessageResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchMessageResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchMessagesAsync</summary>
+        public async Task SearchMessagesRequestObjectAsync()
+        {
+            // Snippet: SearchMessagesAsync(SearchMessagesRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchMessagesRequest request = new SearchMessagesRequest
+            {
+                ParentAsSpaceName = SpaceName.FromSpace("[SPACE]"),
+                Filter = "",
+                OrderBy = "",
+                View = SearchMessagesRequest.Types.SearchMessagesView.Unspecified,
+            };
+            // Make the request
+            PagedAsyncEnumerable<SearchMessagesResponse, SearchMessageResult> response = chatServiceClient.SearchMessagesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (SearchMessageResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (SearchMessagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchMessageResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchMessageResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchMessageResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchMessages</summary>
+        public void SearchMessages()
+        {
+            // Snippet: SearchMessages(string, string, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "spaces/[SPACE]";
+            string filter = "";
+            // Make the request
+            PagedEnumerable<SearchMessagesResponse, SearchMessageResult> response = chatServiceClient.SearchMessages(parent, filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SearchMessageResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchMessagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchMessageResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchMessageResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchMessageResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchMessagesAsync</summary>
+        public async Task SearchMessagesAsync()
+        {
+            // Snippet: SearchMessagesAsync(string, string, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "spaces/[SPACE]";
+            string filter = "";
+            // Make the request
+            PagedAsyncEnumerable<SearchMessagesResponse, SearchMessageResult> response = chatServiceClient.SearchMessagesAsync(parent, filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (SearchMessageResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (SearchMessagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchMessageResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchMessageResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchMessageResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchMessages</summary>
+        public void SearchMessagesResourceNames()
+        {
+            // Snippet: SearchMessages(SpaceName, string, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            SpaceName parent = SpaceName.FromSpace("[SPACE]");
+            string filter = "";
+            // Make the request
+            PagedEnumerable<SearchMessagesResponse, SearchMessageResult> response = chatServiceClient.SearchMessages(parent, filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SearchMessageResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchMessagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchMessageResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchMessageResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchMessageResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchMessagesAsync</summary>
+        public async Task SearchMessagesResourceNamesAsync()
+        {
+            // Snippet: SearchMessagesAsync(SpaceName, string, string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SpaceName parent = SpaceName.FromSpace("[SPACE]");
+            string filter = "";
+            // Make the request
+            PagedAsyncEnumerable<SearchMessagesResponse, SearchMessageResult> response = chatServiceClient.SearchMessagesAsync(parent, filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (SearchMessageResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (SearchMessagesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchMessageResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchMessageResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchMessageResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for GetAttachment</summary>
         public void GetAttachmentRequestObject()
         {
