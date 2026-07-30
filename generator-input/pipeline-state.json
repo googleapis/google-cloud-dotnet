@@ -5150,6 +5150,8 @@
         "google/cloud/redis/cluster/v1beta1",
         "google/cloud/securesourcemanager/v1",
         "google/cloud/securityposture/v1",
+        "google/cloud/sql/v1",
+        "google/cloud/sql/v1beta4",
         "google/cloud/telcoautomation/v1alpha1",
         "google/maps/weather/v1",
         "google/shopping/merchant/productstudio/v1alpha",
