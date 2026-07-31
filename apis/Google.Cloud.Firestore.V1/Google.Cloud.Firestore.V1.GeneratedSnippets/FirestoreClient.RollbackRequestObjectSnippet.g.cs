@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 Database = "",
                 Transaction = ByteString.Empty,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             firestoreClient.Rollback(request);

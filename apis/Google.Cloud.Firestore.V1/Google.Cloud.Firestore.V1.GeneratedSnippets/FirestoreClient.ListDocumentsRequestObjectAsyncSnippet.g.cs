@@ -46,6 +46,7 @@ namespace GoogleCSharpSnippets
                 Mask = new DocumentMask(),
                 Transaction = ByteString.Empty,
                 ShowMissing = false,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             PagedAsyncEnumerable<ListDocumentsResponse, Document> response = firestoreClient.ListDocumentsAsync(request);

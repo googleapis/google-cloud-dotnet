@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
                 Name = "",
                 Mask = new DocumentMask(),
                 Transaction = ByteString.Empty,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             Document response = firestoreClient.GetDocument(request);
@@ -59,6 +60,7 @@ namespace GoogleCSharpSnippets
                 Name = "",
                 Mask = new DocumentMask(),
                 Transaction = ByteString.Empty,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             Document response = await firestoreClient.GetDocumentAsync(request);
@@ -80,6 +82,7 @@ namespace GoogleCSharpSnippets
                 Mask = new DocumentMask(),
                 Transaction = ByteString.Empty,
                 ShowMissing = false,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             PagedEnumerable<ListDocumentsResponse, Document> response = firestoreClient.ListDocuments(request);
@@ -133,6 +136,7 @@ namespace GoogleCSharpSnippets
                 Mask = new DocumentMask(),
                 Transaction = ByteString.Empty,
                 ShowMissing = false,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             PagedAsyncEnumerable<ListDocumentsResponse, Document> response = firestoreClient.ListDocumentsAsync(request);
@@ -184,6 +188,7 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new DocumentMask(),
                 Mask = new DocumentMask(),
                 CurrentDocument = new Precondition(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             Document response = firestoreClient.UpdateDocument(request);
@@ -204,6 +209,7 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new DocumentMask(),
                 Mask = new DocumentMask(),
                 CurrentDocument = new Precondition(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             Document response = await firestoreClient.UpdateDocumentAsync(request);
@@ -250,6 +256,7 @@ namespace GoogleCSharpSnippets
             {
                 Name = "",
                 CurrentDocument = new Precondition(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             firestoreClient.DeleteDocument(request);
@@ -268,6 +275,7 @@ namespace GoogleCSharpSnippets
             {
                 Name = "",
                 CurrentDocument = new Precondition(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             await firestoreClient.DeleteDocumentAsync(request);
@@ -314,6 +322,7 @@ namespace GoogleCSharpSnippets
                 Documents = { "", },
                 Mask = new DocumentMask(),
                 Transaction = ByteString.Empty,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request, returning a streaming response
             using FirestoreClient.BatchGetDocumentsStream response = firestoreClient.BatchGetDocuments(request);
@@ -341,6 +350,7 @@ namespace GoogleCSharpSnippets
             {
                 Database = "",
                 Options = new TransactionOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             BeginTransactionResponse response = firestoreClient.BeginTransaction(request);
@@ -359,6 +369,7 @@ namespace GoogleCSharpSnippets
             {
                 Database = "",
                 Options = new TransactionOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             BeginTransactionResponse response = await firestoreClient.BeginTransactionAsync(request);
@@ -404,6 +415,7 @@ namespace GoogleCSharpSnippets
                 Database = "",
                 Writes = { new Write(), },
                 Transaction = ByteString.Empty,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             CommitResponse response = firestoreClient.Commit(request);
@@ -423,6 +435,7 @@ namespace GoogleCSharpSnippets
                 Database = "",
                 Writes = { new Write(), },
                 Transaction = ByteString.Empty,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             CommitResponse response = await firestoreClient.CommitAsync(request);
@@ -469,6 +482,7 @@ namespace GoogleCSharpSnippets
             {
                 Database = "",
                 Transaction = ByteString.Empty,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             firestoreClient.Rollback(request);
@@ -487,6 +501,7 @@ namespace GoogleCSharpSnippets
             {
                 Database = "",
                 Transaction = ByteString.Empty,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             await firestoreClient.RollbackAsync(request);
@@ -535,6 +550,7 @@ namespace GoogleCSharpSnippets
                 StructuredQuery = new StructuredQuery(),
                 Transaction = ByteString.Empty,
                 ExplainOptions = new ExplainOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request, returning a streaming response
             using FirestoreClient.RunQueryStream response = firestoreClient.RunQuery(request);
@@ -564,6 +580,7 @@ namespace GoogleCSharpSnippets
                 StructuredPipeline = new StructuredPipeline(),
                 Transaction = ByteString.Empty,
                 AutoCommitTransaction = false,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request, returning a streaming response
             using FirestoreClient.ExecutePipelineStream response = firestoreClient.ExecutePipeline(request);
@@ -593,6 +610,7 @@ namespace GoogleCSharpSnippets
                 StructuredAggregationQuery = new StructuredAggregationQuery(),
                 Transaction = ByteString.Empty,
                 ExplainOptions = new ExplainOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request, returning a streaming response
             using FirestoreClient.RunAggregationQueryStream response = firestoreClient.RunAggregationQuery(request);
@@ -622,6 +640,7 @@ namespace GoogleCSharpSnippets
                 StructuredQuery = new StructuredQuery(),
                 PartitionCount = 0L,
                 ReadTime = new Timestamp(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             PagedEnumerable<PartitionQueryResponse, Cursor> response = firestoreClient.PartitionQuery(request);
@@ -673,6 +692,7 @@ namespace GoogleCSharpSnippets
                 StructuredQuery = new StructuredQuery(),
                 PartitionCount = 0L,
                 ReadTime = new Timestamp(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             PagedAsyncEnumerable<PartitionQueryResponse, Cursor> response = firestoreClient.PartitionQueryAsync(request);
@@ -748,6 +768,7 @@ namespace GoogleCSharpSnippets
                     Writes = { new Write(), },
                     StreamToken = ByteString.Empty,
                     Labels = { { "", "" }, },
+                    RequestOptions = new RequestOptions(),
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);
@@ -797,6 +818,7 @@ namespace GoogleCSharpSnippets
                     Database = "",
                     AddTarget = new Target(),
                     Labels = { { "", "" }, },
+                    RequestOptions = new RequestOptions(),
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);
@@ -822,6 +844,7 @@ namespace GoogleCSharpSnippets
             {
                 Parent = "",
                 ReadTime = new Timestamp(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             PagedEnumerable<ListCollectionIdsResponse, string> response = firestoreClient.ListCollectionIds(request);
@@ -871,6 +894,7 @@ namespace GoogleCSharpSnippets
             {
                 Parent = "",
                 ReadTime = new Timestamp(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             PagedAsyncEnumerable<ListCollectionIdsResponse, string> response = firestoreClient.ListCollectionIdsAsync(request);
@@ -1011,6 +1035,7 @@ namespace GoogleCSharpSnippets
                 Database = "",
                 Writes = { new Write(), },
                 Labels = { { "", "" }, },
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             BatchWriteResponse response = firestoreClient.BatchWrite(request);
@@ -1030,6 +1055,7 @@ namespace GoogleCSharpSnippets
                 Database = "",
                 Writes = { new Write(), },
                 Labels = { { "", "" }, },
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             BatchWriteResponse response = await firestoreClient.BatchWriteAsync(request);
@@ -1050,6 +1076,7 @@ namespace GoogleCSharpSnippets
                 DocumentId = "",
                 Document = new Document(),
                 Mask = new DocumentMask(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             Document response = firestoreClient.CreateDocument(request);
@@ -1071,6 +1098,7 @@ namespace GoogleCSharpSnippets
                 DocumentId = "",
                 Document = new Document(),
                 Mask = new DocumentMask(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             Document response = await firestoreClient.CreateDocumentAsync(request);

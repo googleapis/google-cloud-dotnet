@@ -67,6 +67,7 @@ namespace GoogleCSharpSnippets
                     Writes = { new Write(), },
                     StreamToken = ByteString.Empty,
                     Labels = { { "", "" }, },
+                    RequestOptions = new RequestOptions(),
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);

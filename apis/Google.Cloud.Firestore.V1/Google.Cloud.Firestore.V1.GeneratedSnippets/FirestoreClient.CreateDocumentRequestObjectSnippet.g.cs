@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 DocumentId = "",
                 Document = new Document(),
                 Mask = new DocumentMask(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             Document response = firestoreClient.CreateDocument(request);

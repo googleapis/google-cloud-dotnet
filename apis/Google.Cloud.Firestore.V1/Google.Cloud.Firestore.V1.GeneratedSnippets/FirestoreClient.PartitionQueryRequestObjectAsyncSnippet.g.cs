@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 StructuredQuery = new StructuredQuery(),
                 PartitionCount = 0L,
                 ReadTime = new Timestamp(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             PagedAsyncEnumerable<PartitionQueryResponse, Cursor> response = firestoreClient.PartitionQueryAsync(request);

@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 Documents = { "", },
                 Mask = new DocumentMask(),
                 Transaction = ByteString.Empty,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request, returning a streaming response
             using FirestoreClient.BatchGetDocumentsStream response = firestoreClient.BatchGetDocuments(request);

@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
                 Database = "",
                 Writes = { new Write(), },
                 Labels = { { "", "" }, },
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             BatchWriteResponse response = await firestoreClient.BatchWriteAsync(request);

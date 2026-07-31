@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 Mask = new DocumentMask(),
                 Transaction = ByteString.Empty,
                 ShowMissing = false,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             PagedEnumerable<ListDocumentsResponse, Document> response = firestoreClient.ListDocuments(request);
