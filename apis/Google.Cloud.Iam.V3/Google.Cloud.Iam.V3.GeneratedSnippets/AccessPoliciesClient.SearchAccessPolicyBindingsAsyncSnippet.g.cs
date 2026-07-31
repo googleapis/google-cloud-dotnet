@@ -16,15 +16,15 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START iam_v3_generated_PolicyBindings_SearchTargetPolicyBindings_async]
+    // [START iam_v3_generated_AccessPolicies_SearchAccessPolicyBindings_async_flattened]
     using Google.Api.Gax;
     using Google.Cloud.Iam.V3;
     using System;
     using System.Threading.Tasks;
 
-    public sealed partial class GeneratedPolicyBindingsClientSnippets
+    public sealed partial class GeneratedAccessPoliciesClientSnippets
     {
-        /// <summary>Snippet for SearchTargetPolicyBindingsAsync</summary>
+        /// <summary>Snippet for SearchAccessPolicyBindingsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,19 +32,14 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task SearchTargetPolicyBindingsRequestObjectAsync()
+        public async Task SearchAccessPolicyBindingsAsync()
         {
             // Create client
-            PolicyBindingsClient policyBindingsClient = await PolicyBindingsClient.CreateAsync();
+            AccessPoliciesClient accessPoliciesClient = await AccessPoliciesClient.CreateAsync();
             // Initialize request argument(s)
-            SearchTargetPolicyBindingsRequest request = new SearchTargetPolicyBindingsRequest
-            {
-                Target = "",
-                ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
-                Filter = "",
-            };
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/accessPolicies/[ACCESS_POLICY]";
             // Make the request
-            PagedAsyncEnumerable<SearchTargetPolicyBindingsResponse, PolicyBinding> response = policyBindingsClient.SearchTargetPolicyBindingsAsync(request);
+            PagedAsyncEnumerable<SearchAccessPolicyBindingsResponse, PolicyBinding> response = accessPoliciesClient.SearchAccessPolicyBindingsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
             await foreach (PolicyBinding item in response)
@@ -54,7 +49,7 @@ namespace GoogleCSharpSnippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (SearchTargetPolicyBindingsResponse page in response.AsRawResponses())
+            await foreach (SearchAccessPolicyBindingsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -79,5 +74,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END iam_v3_generated_PolicyBindings_SearchTargetPolicyBindings_async]
+    // [END iam_v3_generated_AccessPolicies_SearchAccessPolicyBindings_async_flattened]
 }

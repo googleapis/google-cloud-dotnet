@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 Target = "",
                 ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<SearchTargetPolicyBindingsResponse, PolicyBinding> response = policyBindingsClient.SearchTargetPolicyBindings(request);
