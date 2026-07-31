@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 Database = "",
                 Writes = { new Write(), },
                 Transaction = ByteString.Empty,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             CommitResponse response = await firestoreClient.CommitAsync(request);

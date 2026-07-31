@@ -64,6 +64,7 @@ namespace GoogleCSharpSnippets
                     Database = "",
                     AddTarget = new Target(),
                     Labels = { { "", "" }, },
+                    RequestOptions = new RequestOptions(),
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);

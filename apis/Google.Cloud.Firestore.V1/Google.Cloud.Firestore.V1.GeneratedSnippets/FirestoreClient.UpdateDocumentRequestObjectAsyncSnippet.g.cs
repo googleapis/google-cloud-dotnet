@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new DocumentMask(),
                 Mask = new DocumentMask(),
                 CurrentDocument = new Precondition(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             Document response = await firestoreClient.UpdateDocumentAsync(request);

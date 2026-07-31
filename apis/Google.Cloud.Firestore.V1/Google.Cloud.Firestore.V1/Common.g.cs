@@ -40,7 +40,8 @@ namespace Google.Cloud.Firestore.V1 {
             "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSABCFgoUY29uc2lzdGVu",
             "Y3lfc2VsZWN0b3IiVAoPQ29uY3VycmVuY3lNb2RlEiAKHENPTkNVUlJFTkNZ",
             "X01PREVfVU5TUEVDSUZJRUQQABIOCgpPUFRJTUlTVElDEAESDwoLUEVTU0lN",
-            "SVNUSUMQAkIGCgRtb2RlQsMBChdjb20uZ29vZ2xlLmZpcmVzdG9yZS52MUIL",
+            "SVNUSUMQAkIGCgRtb2RlIisKDlJlcXVlc3RPcHRpb25zEhkKDHJlcXVlc3Rf",
+            "dGFncxgBIAMoCUID4EEBQsMBChdjb20uZ29vZ2xlLmZpcmVzdG9yZS52MUIL",
             "Q29tbW9uUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9maXJlc3RvcmUv",
             "YXBpdjEvZmlyZXN0b3JlcGI7ZmlyZXN0b3JlcGKiAgRHQ0ZTqgIZR29vZ2xl",
             "LkNsb3VkLkZpcmVzdG9yZS5WMcoCGUdvb2dsZVxDbG91ZFxGaXJlc3RvcmVc",
@@ -51,7 +52,8 @@ namespace Google.Cloud.Firestore.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentMask), global::Google.Cloud.Firestore.V1.DocumentMask.Parser, new[]{ "FieldPaths" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Precondition), global::Google.Cloud.Firestore.V1.Precondition.Parser, new[]{ "Exists", "UpdateTime" }, new[]{ "ConditionType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions), global::Google.Cloud.Firestore.V1.TransactionOptions.Parser, new[]{ "ReadOnly", "ReadWrite" }, new[]{ "Mode" }, new[]{ typeof(global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ConcurrencyMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "RetryTransaction", "ConcurrencyMode" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadOnly.Parser, new[]{ "ReadTime" }, new[]{ "ConsistencySelector" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadOnly.Parser, new[]{ "ReadTime" }, new[]{ "ConsistencySelector" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RequestOptions), global::Google.Cloud.Firestore.V1.RequestOptions.Parser, new[]{ "RequestTags" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1392,6 +1394,199 @@ namespace Google.Cloud.Firestore.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Options for a server request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RequestOptions : pb::IMessage<RequestOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RequestOptions> _parser = new pb::MessageParser<RequestOptions>(() => new RequestOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RequestOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Firestore.V1.CommonReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RequestOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RequestOptions(RequestOptions other) : this() {
+      requestTags_ = other.requestTags_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RequestOptions Clone() {
+      return new RequestOptions(this);
+    }
+
+    /// <summary>Field number for the "request_tags" field.</summary>
+    public const int RequestTagsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_requestTags_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> requestTags_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The request tags for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> RequestTags {
+      get { return requestTags_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RequestOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RequestOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!requestTags_.Equals(other.requestTags_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= requestTags_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      requestTags_.WriteTo(output, _repeated_requestTags_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      requestTags_.WriteTo(ref output, _repeated_requestTags_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += requestTags_.CalculateSize(_repeated_requestTags_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RequestOptions other) {
+      if (other == null) {
+        return;
+      }
+      requestTags_.Add(other.requestTags_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            requestTags_.AddEntriesFrom(input, _repeated_requestTags_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            requestTags_.AddEntriesFrom(ref input, _repeated_requestTags_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

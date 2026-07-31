@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
             {
                 Parent = "",
                 ReadTime = new Timestamp(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             PagedAsyncEnumerable<ListCollectionIdsResponse, string> response = firestoreClient.ListCollectionIdsAsync(request);

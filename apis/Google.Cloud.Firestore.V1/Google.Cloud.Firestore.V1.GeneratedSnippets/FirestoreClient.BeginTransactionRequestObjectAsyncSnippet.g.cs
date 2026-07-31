@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 Database = "",
                 Options = new TransactionOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             BeginTransactionResponse response = await firestoreClient.BeginTransactionAsync(request);

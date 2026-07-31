@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 Name = "",
                 Mask = new DocumentMask(),
                 Transaction = ByteString.Empty,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             Document response = await firestoreClient.GetDocumentAsync(request);

@@ -37,270 +37,295 @@ namespace Google.Cloud.Firestore.V1 {
             "cmVzdG9yZS92MS93cml0ZS5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5",
             "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGh5nb29n",
             "bGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVz",
-            "LnByb3RvIrgBChJHZXREb2N1bWVudFJlcXVlc3QSEQoEbmFtZRgBIAEoCUID",
+            "LnByb3RvIvsBChJHZXREb2N1bWVudFJlcXVlc3QSEQoEbmFtZRgBIAEoCUID",
             "4EECEi8KBG1hc2sYAiABKAsyIS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3Vt",
             "ZW50TWFzaxIVCgt0cmFuc2FjdGlvbhgDIAEoDEgAEi8KCXJlYWRfdGltZRgF",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAEIWChRjb25zaXN0",
-            "ZW5jeV9zZWxlY3RvciK7AgoUTGlzdERvY3VtZW50c1JlcXVlc3QSEwoGcGFy",
-            "ZW50GAEgASgJQgPgQQISGgoNY29sbGVjdGlvbl9pZBgCIAEoCUID4EEBEhYK",
-            "CXBhZ2Vfc2l6ZRgDIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YBCABKAlCA+BB",
-            "ARIVCghvcmRlcl9ieRgGIAEoCUID4EEBEjQKBG1hc2sYByABKAsyIS5nb29n",
-            "bGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50TWFza0ID4EEBEhUKC3RyYW5zYWN0",
-            "aW9uGAggASgMSAASLwoJcmVhZF90aW1lGAogASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEgAEhQKDHNob3dfbWlzc2luZxgMIAEoCEIWChRjb25z",
-            "aXN0ZW5jeV9zZWxlY3RvciJiChVMaXN0RG9jdW1lbnRzUmVzcG9uc2USMAoJ",
-            "ZG9jdW1lbnRzGAEgAygLMh0uZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVu",
-            "dBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkixAEKFUNyZWF0ZURvY3VtZW50",
-            "UmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhIaCg1jb2xsZWN0aW9uX2lk",
-            "GAIgASgJQgPgQQISEwoLZG9jdW1lbnRfaWQYAyABKAkSNAoIZG9jdW1lbnQY",
-            "BCABKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50QgPgQQISLwoE",
-            "bWFzaxgFIAEoCzIhLmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnRNYXNr",
-            "IvMBChVVcGRhdGVEb2N1bWVudFJlcXVlc3QSNAoIZG9jdW1lbnQYASABKAsy",
-            "HS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50QgPgQQISNgoLdXBkYXRl",
-            "X21hc2sYAiABKAsyIS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50TWFz",
-            "axIvCgRtYXNrGAMgASgLMiEuZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVu",
-            "dE1hc2sSOwoQY3VycmVudF9kb2N1bWVudBgEIAEoCzIhLmdvb2dsZS5maXJl",
-            "c3RvcmUudjEuUHJlY29uZGl0aW9uImcKFURlbGV0ZURvY3VtZW50UmVxdWVz",
-            "dBIRCgRuYW1lGAEgASgJQgPgQQISOwoQY3VycmVudF9kb2N1bWVudBgCIAEo",
-            "CzIhLmdvb2dsZS5maXJlc3RvcmUudjEuUHJlY29uZGl0aW9uIpkCChhCYXRj",
-            "aEdldERvY3VtZW50c1JlcXVlc3QSFQoIZGF0YWJhc2UYASABKAlCA+BBAhIR",
-            "Cglkb2N1bWVudHMYAiADKAkSLwoEbWFzaxgDIAEoCzIhLmdvb2dsZS5maXJl",
-            "c3RvcmUudjEuRG9jdW1lbnRNYXNrEhUKC3RyYW5zYWN0aW9uGAQgASgMSAAS",
-            "QgoPbmV3X3RyYW5zYWN0aW9uGAUgASgLMicuZ29vZ2xlLmZpcmVzdG9yZS52",
-            "MS5UcmFuc2FjdGlvbk9wdGlvbnNIABIvCglyZWFkX3RpbWUYByABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wSABCFgoUY29uc2lzdGVuY3lfc2Vs",
-            "ZWN0b3IirAEKGUJhdGNoR2V0RG9jdW1lbnRzUmVzcG9uc2USLgoFZm91bmQY",
-            "ASABKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50SAASEQoHbWlz",
-            "c2luZxgCIAEoCUgAEhMKC3RyYW5zYWN0aW9uGAMgASgMEi0KCXJlYWRfdGlt",
-            "ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCCAoGcmVzdWx0",
-            "ImoKF0JlZ2luVHJhbnNhY3Rpb25SZXF1ZXN0EhUKCGRhdGFiYXNlGAEgASgJ",
-            "QgPgQQISOAoHb3B0aW9ucxgCIAEoCzInLmdvb2dsZS5maXJlc3RvcmUudjEu",
-            "VHJhbnNhY3Rpb25PcHRpb25zIi8KGEJlZ2luVHJhbnNhY3Rpb25SZXNwb25z",
-            "ZRITCgt0cmFuc2FjdGlvbhgBIAEoDCJnCg1Db21taXRSZXF1ZXN0EhUKCGRh",
-            "dGFiYXNlGAEgASgJQgPgQQISKgoGd3JpdGVzGAIgAygLMhouZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MS5Xcml0ZRITCgt0cmFuc2FjdGlvbhgDIAEoDCJ6Cg5Db21t",
-            "aXRSZXNwb25zZRI3Cg13cml0ZV9yZXN1bHRzGAEgAygLMiAuZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MS5Xcml0ZVJlc3VsdBIvCgtjb21taXRfdGltZRgCIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiQgoPUm9sbGJhY2tSZXF1ZXN0",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIABJBCg9yZXF1ZXN0",
+            "X29wdGlvbnMYCiABKAsyIy5nb29nbGUuZmlyZXN0b3JlLnYxLlJlcXVlc3RP",
+            "cHRpb25zQgPgQQFCFgoUY29uc2lzdGVuY3lfc2VsZWN0b3Ii/gIKFExpc3RE",
+            "b2N1bWVudHNSZXF1ZXN0EhMKBnBhcmVudBgBIAEoCUID4EECEhoKDWNvbGxl",
+            "Y3Rpb25faWQYAiABKAlCA+BBARIWCglwYWdlX3NpemUYAyABKAVCA+BBARIX",
+            "CgpwYWdlX3Rva2VuGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBiABKAlCA+BB",
+            "ARI0CgRtYXNrGAcgASgLMiEuZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVu",
+            "dE1hc2tCA+BBARIVCgt0cmFuc2FjdGlvbhgIIAEoDEgAEi8KCXJlYWRfdGlt",
+            "ZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIABIUCgxzaG93",
+            "X21pc3NpbmcYDCABKAgSQQoPcmVxdWVzdF9vcHRpb25zGA0gASgLMiMuZ29v",
+            "Z2xlLmZpcmVzdG9yZS52MS5SZXF1ZXN0T3B0aW9uc0ID4EEBQhYKFGNvbnNp",
+            "c3RlbmN5X3NlbGVjdG9yImIKFUxpc3REb2N1bWVudHNSZXNwb25zZRIwCglk",
+            "b2N1bWVudHMYASADKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50",
+            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKHAgoVQ3JlYXRlRG9jdW1lbnRS",
+            "ZXF1ZXN0EhMKBnBhcmVudBgBIAEoCUID4EECEhoKDWNvbGxlY3Rpb25faWQY",
+            "AiABKAlCA+BBAhITCgtkb2N1bWVudF9pZBgDIAEoCRI0Cghkb2N1bWVudBgE",
+            "IAEoCzIdLmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnRCA+BBAhIvCgRt",
+            "YXNrGAUgASgLMiEuZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudE1hc2sS",
+            "QQoPcmVxdWVzdF9vcHRpb25zGAYgASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS52",
+            "MS5SZXF1ZXN0T3B0aW9uc0ID4EEBIrYCChVVcGRhdGVEb2N1bWVudFJlcXVl",
+            "c3QSNAoIZG9jdW1lbnQYASABKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLkRv",
+            "Y3VtZW50QgPgQQISNgoLdXBkYXRlX21hc2sYAiABKAsyIS5nb29nbGUuZmly",
+            "ZXN0b3JlLnYxLkRvY3VtZW50TWFzaxIvCgRtYXNrGAMgASgLMiEuZ29vZ2xl",
+            "LmZpcmVzdG9yZS52MS5Eb2N1bWVudE1hc2sSOwoQY3VycmVudF9kb2N1bWVu",
+            "dBgEIAEoCzIhLmdvb2dsZS5maXJlc3RvcmUudjEuUHJlY29uZGl0aW9uEkEK",
+            "D3JlcXVlc3Rfb3B0aW9ucxgFIAEoCzIjLmdvb2dsZS5maXJlc3RvcmUudjEu",
+            "UmVxdWVzdE9wdGlvbnNCA+BBASKqAQoVRGVsZXRlRG9jdW1lbnRSZXF1ZXN0",
+            "EhEKBG5hbWUYASABKAlCA+BBAhI7ChBjdXJyZW50X2RvY3VtZW50GAIgASgL",
+            "MiEuZ29vZ2xlLmZpcmVzdG9yZS52MS5QcmVjb25kaXRpb24SQQoPcmVxdWVz",
+            "dF9vcHRpb25zGAMgASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS52MS5SZXF1ZXN0",
+            "T3B0aW9uc0ID4EEBItwCChhCYXRjaEdldERvY3VtZW50c1JlcXVlc3QSFQoI",
+            "ZGF0YWJhc2UYASABKAlCA+BBAhIRCglkb2N1bWVudHMYAiADKAkSLwoEbWFz",
+            "axgDIAEoCzIhLmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnRNYXNrEhUK",
+            "C3RyYW5zYWN0aW9uGAQgASgMSAASQgoPbmV3X3RyYW5zYWN0aW9uGAUgASgL",
+            "MicuZ29vZ2xlLmZpcmVzdG9yZS52MS5UcmFuc2FjdGlvbk9wdGlvbnNIABIv",
+            "CglyZWFkX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "SAASQQoPcmVxdWVzdF9vcHRpb25zGAggASgLMiMuZ29vZ2xlLmZpcmVzdG9y",
+            "ZS52MS5SZXF1ZXN0T3B0aW9uc0ID4EEBQhYKFGNvbnNpc3RlbmN5X3NlbGVj",
+            "dG9yIqwBChlCYXRjaEdldERvY3VtZW50c1Jlc3BvbnNlEi4KBWZvdW5kGAEg",
+            "ASgLMh0uZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudEgAEhEKB21pc3Np",
+            "bmcYAiABKAlIABITCgt0cmFuc2FjdGlvbhgDIAEoDBItCglyZWFkX3RpbWUY",
+            "BCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQggKBnJlc3VsdCKt",
+            "AQoXQmVnaW5UcmFuc2FjdGlvblJlcXVlc3QSFQoIZGF0YWJhc2UYASABKAlC",
+            "A+BBAhI4CgdvcHRpb25zGAIgASgLMicuZ29vZ2xlLmZpcmVzdG9yZS52MS5U",
+            "cmFuc2FjdGlvbk9wdGlvbnMSQQoPcmVxdWVzdF9vcHRpb25zGAMgASgLMiMu",
+            "Z29vZ2xlLmZpcmVzdG9yZS52MS5SZXF1ZXN0T3B0aW9uc0ID4EEBIi8KGEJl",
+            "Z2luVHJhbnNhY3Rpb25SZXNwb25zZRITCgt0cmFuc2FjdGlvbhgBIAEoDCKq",
+            "AQoNQ29tbWl0UmVxdWVzdBIVCghkYXRhYmFzZRgBIAEoCUID4EECEioKBndy",
+            "aXRlcxgCIAMoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEuV3JpdGUSEwoLdHJh",
+            "bnNhY3Rpb24YAyABKAwSQQoPcmVxdWVzdF9vcHRpb25zGAQgASgLMiMuZ29v",
+            "Z2xlLmZpcmVzdG9yZS52MS5SZXF1ZXN0T3B0aW9uc0ID4EEBInoKDkNvbW1p",
+            "dFJlc3BvbnNlEjcKDXdyaXRlX3Jlc3VsdHMYASADKAsyIC5nb29nbGUuZmly",
+            "ZXN0b3JlLnYxLldyaXRlUmVzdWx0Ei8KC2NvbW1pdF90aW1lGAIgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKFAQoPUm9sbGJhY2tSZXF1ZXN0",
             "EhUKCGRhdGFiYXNlGAEgASgJQgPgQQISGAoLdHJhbnNhY3Rpb24YAiABKAxC",
-            "A+BBAiLdAgoPUnVuUXVlcnlSZXF1ZXN0EhMKBnBhcmVudBgBIAEoCUID4EEC",
-            "EkAKEHN0cnVjdHVyZWRfcXVlcnkYAiABKAsyJC5nb29nbGUuZmlyZXN0b3Jl",
-            "LnYxLlN0cnVjdHVyZWRRdWVyeUgAEhUKC3RyYW5zYWN0aW9uGAUgASgMSAES",
-            "QgoPbmV3X3RyYW5zYWN0aW9uGAYgASgLMicuZ29vZ2xlLmZpcmVzdG9yZS52",
-            "MS5UcmFuc2FjdGlvbk9wdGlvbnNIARIvCglyZWFkX3RpbWUYByABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wSAESQQoPZXhwbGFpbl9vcHRpb25z",
-            "GAogASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS52MS5FeHBsYWluT3B0aW9uc0ID",
-            "4EEBQgwKCnF1ZXJ5X3R5cGVCFgoUY29uc2lzdGVuY3lfc2VsZWN0b3IihwIK",
-            "EFJ1blF1ZXJ5UmVzcG9uc2USEwoLdHJhbnNhY3Rpb24YAiABKAwSLwoIZG9j",
-            "dW1lbnQYASABKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50Ei0K",
-            "CXJlYWRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "FwoPc2tpcHBlZF9yZXN1bHRzGAQgASgFEg4KBGRvbmUYBiABKAhIABI8Cg9l",
-            "eHBsYWluX21ldHJpY3MYCyABKAsyIy5nb29nbGUuZmlyZXN0b3JlLnYxLkV4",
-            "cGxhaW5NZXRyaWNzQhcKFWNvbnRpbnVhdGlvbl9zZWxlY3RvciLSAgoWRXhl",
-            "Y3V0ZVBpcGVsaW5lUmVxdWVzdBIVCghkYXRhYmFzZRgBIAEoCUID4EECEkYK",
-            "E3N0cnVjdHVyZWRfcGlwZWxpbmUYAiABKAsyJy5nb29nbGUuZmlyZXN0b3Jl",
-            "LnYxLlN0cnVjdHVyZWRQaXBlbGluZUgAEhUKC3RyYW5zYWN0aW9uGAUgASgM",
-            "SAESQgoPbmV3X3RyYW5zYWN0aW9uGAYgASgLMicuZ29vZ2xlLmZpcmVzdG9y",
-            "ZS52MS5UcmFuc2FjdGlvbk9wdGlvbnNIARIvCglyZWFkX3RpbWUYByABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAESJAoXYXV0b19jb21taXRf",
-            "dHJhbnNhY3Rpb24YCSABKAhCA+BBAUIPCg1waXBlbGluZV90eXBlQhYKFGNv",
-            "bnNpc3RlbmN5X3NlbGVjdG9yIswBChdFeGVjdXRlUGlwZWxpbmVSZXNwb25z",
-            "ZRITCgt0cmFuc2FjdGlvbhgBIAEoDBIuCgdyZXN1bHRzGAIgAygLMh0uZ29v",
-            "Z2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudBIyCg5leGVjdXRpb25fdGltZRgD",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASOAoNZXhwbGFpbl9z",
-            "dGF0cxgEIAEoCzIhLmdvb2dsZS5maXJlc3RvcmUudjEuRXhwbGFpblN0YXRz",
-            "Iv8CChpSdW5BZ2dyZWdhdGlvblF1ZXJ5UmVxdWVzdBITCgZwYXJlbnQYASAB",
-            "KAlCA+BBAhJXChxzdHJ1Y3R1cmVkX2FnZ3JlZ2F0aW9uX3F1ZXJ5GAIgASgL",
-            "Mi8uZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkQWdncmVnYXRpb25R",
-            "dWVyeUgAEhUKC3RyYW5zYWN0aW9uGAQgASgMSAESQgoPbmV3X3RyYW5zYWN0",
-            "aW9uGAUgASgLMicuZ29vZ2xlLmZpcmVzdG9yZS52MS5UcmFuc2FjdGlvbk9w",
-            "dGlvbnNIARIvCglyZWFkX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wSAESQQoPZXhwbGFpbl9vcHRpb25zGAggASgLMiMuZ29vZ2xl",
-            "LmZpcmVzdG9yZS52MS5FeHBsYWluT3B0aW9uc0ID4EEBQgwKCnF1ZXJ5X3R5",
-            "cGVCFgoUY29uc2lzdGVuY3lfc2VsZWN0b3Ii1wEKG1J1bkFnZ3JlZ2F0aW9u",
-            "UXVlcnlSZXNwb25zZRI2CgZyZXN1bHQYASABKAsyJi5nb29nbGUuZmlyZXN0",
-            "b3JlLnYxLkFnZ3JlZ2F0aW9uUmVzdWx0EhMKC3RyYW5zYWN0aW9uGAIgASgM",
-            "Ei0KCXJlYWRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXASPAoPZXhwbGFpbl9tZXRyaWNzGAogASgLMiMuZ29vZ2xlLmZpcmVzdG9y",
-            "ZS52MS5FeHBsYWluTWV0cmljcyKFAgoVUGFydGl0aW9uUXVlcnlSZXF1ZXN0",
-            "EhMKBnBhcmVudBgBIAEoCUID4EECEkAKEHN0cnVjdHVyZWRfcXVlcnkYAiAB",
-            "KAsyJC5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVyeUgAEhcK",
-            "D3BhcnRpdGlvbl9jb3VudBgDIAEoAxISCgpwYWdlX3Rva2VuGAQgASgJEhEK",
-            "CXBhZ2Vfc2l6ZRgFIAEoBRIvCglyZWFkX3RpbWUYBiABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wSAFCDAoKcXVlcnlfdHlwZUIWChRjb25zaXN0",
-            "ZW5jeV9zZWxlY3RvciJiChZQYXJ0aXRpb25RdWVyeVJlc3BvbnNlEi8KCnBh",
-            "cnRpdGlvbnMYASADKAsyGy5nb29nbGUuZmlyZXN0b3JlLnYxLkN1cnNvchIX",
-            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki6AEKDFdyaXRlUmVxdWVzdBIVCghk",
-            "YXRhYmFzZRgBIAEoCUID4EECEhEKCXN0cmVhbV9pZBgCIAEoCRIqCgZ3cml0",
-            "ZXMYAyADKAsyGi5nb29nbGUuZmlyZXN0b3JlLnYxLldyaXRlEhQKDHN0cmVh",
-            "bV90b2tlbhgEIAEoDBI9CgZsYWJlbHMYBSADKAsyLS5nb29nbGUuZmlyZXN0",
-            "b3JlLnYxLldyaXRlUmVxdWVzdC5MYWJlbHNFbnRyeRotCgtMYWJlbHNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIqIBCg1Xcml0ZVJl",
-            "c3BvbnNlEhEKCXN0cmVhbV9pZBgBIAEoCRIUCgxzdHJlYW1fdG9rZW4YAiAB",
-            "KAwSNwoNd3JpdGVfcmVzdWx0cxgDIAMoCzIgLmdvb2dsZS5maXJlc3RvcmUu",
-            "djEuV3JpdGVSZXN1bHQSLwoLY29tbWl0X3RpbWUYBCABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wIvIBCg1MaXN0ZW5SZXF1ZXN0EhUKCGRhdGFi",
-            "YXNlGAEgASgJQgPgQQISMQoKYWRkX3RhcmdldBgCIAEoCzIbLmdvb2dsZS5m",
-            "aXJlc3RvcmUudjEuVGFyZ2V0SAASFwoNcmVtb3ZlX3RhcmdldBgDIAEoBUgA",
-            "Ej4KBmxhYmVscxgEIAMoCzIuLmdvb2dsZS5maXJlc3RvcmUudjEuTGlzdGVu",
-            "UmVxdWVzdC5MYWJlbHNFbnRyeRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBQg8KDXRhcmdldF9jaGFuZ2Ui1QIKDkxp",
-            "c3RlblJlc3BvbnNlEjoKDXRhcmdldF9jaGFuZ2UYAiABKAsyIS5nb29nbGUu",
-            "ZmlyZXN0b3JlLnYxLlRhcmdldENoYW5nZUgAEj4KD2RvY3VtZW50X2NoYW5n",
-            "ZRgDIAEoCzIjLmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnRDaGFuZ2VI",
-            "ABI+Cg9kb2N1bWVudF9kZWxldGUYBCABKAsyIy5nb29nbGUuZmlyZXN0b3Jl",
-            "LnYxLkRvY3VtZW50RGVsZXRlSAASPgoPZG9jdW1lbnRfcmVtb3ZlGAYgASgL",
-            "MiMuZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudFJlbW92ZUgAEjYKBmZp",
-            "bHRlchgFIAEoCzIkLmdvb2dsZS5maXJlc3RvcmUudjEuRXhpc3RlbmNlRmls",
-            "dGVySABCDwoNcmVzcG9uc2VfdHlwZSLWAwoGVGFyZ2V0EjgKBXF1ZXJ5GAIg",
-            "ASgLMicuZ29vZ2xlLmZpcmVzdG9yZS52MS5UYXJnZXQuUXVlcnlUYXJnZXRI",
-            "ABJACglkb2N1bWVudHMYAyABKAsyKy5nb29nbGUuZmlyZXN0b3JlLnYxLlRh",
-            "cmdldC5Eb2N1bWVudHNUYXJnZXRIABIWCgxyZXN1bWVfdG9rZW4YBCABKAxI",
-            "ARIvCglyZWFkX3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wSAESEQoJdGFyZ2V0X2lkGAUgASgFEgwKBG9uY2UYBiABKAgSMwoOZXhw",
-            "ZWN0ZWRfY291bnQYDCABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1",
-            "ZRokCg9Eb2N1bWVudHNUYXJnZXQSEQoJZG9jdW1lbnRzGAIgAygJGm0KC1F1",
-            "ZXJ5VGFyZ2V0Eg4KBnBhcmVudBgBIAEoCRJAChBzdHJ1Y3R1cmVkX3F1ZXJ5",
-            "GAIgASgLMiQuZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnlI",
-            "AEIMCgpxdWVyeV90eXBlQg0KC3RhcmdldF90eXBlQg0KC3Jlc3VtZV90eXBl",
-            "IqoCCgxUYXJnZXRDaGFuZ2USTgoSdGFyZ2V0X2NoYW5nZV90eXBlGAEgASgO",
-            "MjIuZ29vZ2xlLmZpcmVzdG9yZS52MS5UYXJnZXRDaGFuZ2UuVGFyZ2V0Q2hh",
-            "bmdlVHlwZRISCgp0YXJnZXRfaWRzGAIgAygFEiEKBWNhdXNlGAMgASgLMhIu",
-            "Z29vZ2xlLnJwYy5TdGF0dXMSFAoMcmVzdW1lX3Rva2VuGAQgASgMEi0KCXJl",
-            "YWRfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiTgoQ",
-            "VGFyZ2V0Q2hhbmdlVHlwZRINCglOT19DSEFOR0UQABIHCgNBREQQARIKCgZS",
-            "RU1PVkUQAhILCgdDVVJSRU5UEAMSCQoFUkVTRVQQBCKfAQoYTGlzdENvbGxl",
-            "Y3Rpb25JZHNSZXF1ZXN0EhMKBnBhcmVudBgBIAEoCUID4EECEhEKCXBhZ2Vf",
-            "c2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEi8KCXJlYWRfdGltZRgE",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAEIWChRjb25zaXN0",
-            "ZW5jeV9zZWxlY3RvciJMChlMaXN0Q29sbGVjdGlvbklkc1Jlc3BvbnNlEhYK",
-            "DmNvbGxlY3Rpb25faWRzGAEgAygJEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CSLJAQoRQmF0Y2hXcml0ZVJlcXVlc3QSFQoIZGF0YWJhc2UYASABKAlCA+BB",
-            "AhIqCgZ3cml0ZXMYAiADKAsyGi5nb29nbGUuZmlyZXN0b3JlLnYxLldyaXRl",
-            "EkIKBmxhYmVscxgDIAMoCzIyLmdvb2dsZS5maXJlc3RvcmUudjEuQmF0Y2hX",
-            "cml0ZVJlcXVlc3QuTGFiZWxzRW50cnkaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJxChJCYXRjaFdyaXRlUmVzcG9u",
-            "c2USNwoNd3JpdGVfcmVzdWx0cxgBIAMoCzIgLmdvb2dsZS5maXJlc3RvcmUu",
-            "djEuV3JpdGVSZXN1bHQSIgoGc3RhdHVzGAIgAygLMhIuZ29vZ2xlLnJwYy5T",
-            "dGF0dXMy+xsKCUZpcmVzdG9yZRKPAQoLR2V0RG9jdW1lbnQSJy5nb29nbGUu",
-            "ZmlyZXN0b3JlLnYxLkdldERvY3VtZW50UmVxdWVzdBodLmdvb2dsZS5maXJl",
-            "c3RvcmUudjEuRG9jdW1lbnQiOILT5JMCMhIwL3YxL3tuYW1lPXByb2plY3Rz",
-            "LyovZGF0YWJhc2VzLyovZG9jdW1lbnRzLyovKip9EvUBCg1MaXN0RG9jdW1l",
-            "bnRzEikuZ29vZ2xlLmZpcmVzdG9yZS52MS5MaXN0RG9jdW1lbnRzUmVxdWVz",
-            "dBoqLmdvb2dsZS5maXJlc3RvcmUudjEuTGlzdERvY3VtZW50c1Jlc3BvbnNl",
-            "IowBgtPkkwKFARJCL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9kYXRhYmFzZXMv",
-            "Ki9kb2N1bWVudHMvKi8qKn0ve2NvbGxlY3Rpb25faWR9Wj8SPS92MS97cGFy",
-            "ZW50PXByb2plY3RzLyovZGF0YWJhc2VzLyovZG9jdW1lbnRzfS97Y29sbGVj",
-            "dGlvbl9pZH0SvwEKDlVwZGF0ZURvY3VtZW50EiouZ29vZ2xlLmZpcmVzdG9y",
-            "ZS52MS5VcGRhdGVEb2N1bWVudFJlcXVlc3QaHS5nb29nbGUuZmlyZXN0b3Jl",
-            "LnYxLkRvY3VtZW50ImLaQRRkb2N1bWVudCx1cGRhdGVfbWFza4LT5JMCRTI5",
-            "L3YxL3tkb2N1bWVudC5uYW1lPXByb2plY3RzLyovZGF0YWJhc2VzLyovZG9j",
-            "dW1lbnRzLyovKip9Oghkb2N1bWVudBKVAQoORGVsZXRlRG9jdW1lbnQSKi5n",
-            "b29nbGUuZmlyZXN0b3JlLnYxLkRlbGV0ZURvY3VtZW50UmVxdWVzdBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSI/2kEEbmFtZYLT5JMCMiowL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovZGF0YWJhc2VzLyovZG9jdW1lbnRzLyovKip9ErkBChFC",
-            "YXRjaEdldERvY3VtZW50cxItLmdvb2dsZS5maXJlc3RvcmUudjEuQmF0Y2hH",
-            "ZXREb2N1bWVudHNSZXF1ZXN0Gi4uZ29vZ2xlLmZpcmVzdG9yZS52MS5CYXRj",
-            "aEdldERvY3VtZW50c1Jlc3BvbnNlIkOC0+STAj0iOC92MS97ZGF0YWJhc2U9",
-            "cHJvamVjdHMvKi9kYXRhYmFzZXMvKn0vZG9jdW1lbnRzOmJhdGNoR2V0OgEq",
-            "MAESxwEKEEJlZ2luVHJhbnNhY3Rpb24SLC5nb29nbGUuZmlyZXN0b3JlLnYx",
-            "LkJlZ2luVHJhbnNhY3Rpb25SZXF1ZXN0Gi0uZ29vZ2xlLmZpcmVzdG9yZS52",
-            "MS5CZWdpblRyYW5zYWN0aW9uUmVzcG9uc2UiVtpBCGRhdGFiYXNlgtPkkwJF",
-            "IkAvdjEve2RhdGFiYXNlPXByb2plY3RzLyovZGF0YWJhc2VzLyp9L2RvY3Vt",
-            "ZW50czpiZWdpblRyYW5zYWN0aW9uOgEqEqYBCgZDb21taXQSIi5nb29nbGUu",
-            "ZmlyZXN0b3JlLnYxLkNvbW1pdFJlcXVlc3QaIy5nb29nbGUuZmlyZXN0b3Jl",
-            "LnYxLkNvbW1pdFJlc3BvbnNlIlPaQQ9kYXRhYmFzZSx3cml0ZXOC0+STAjsi",
-            "Ni92MS97ZGF0YWJhc2U9cHJvamVjdHMvKi9kYXRhYmFzZXMvKn0vZG9jdW1l",
-            "bnRzOmNvbW1pdDoBKhKkAQoIUm9sbGJhY2sSJC5nb29nbGUuZmlyZXN0b3Jl",
-            "LnYxLlJvbGxiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJa",
-            "2kEUZGF0YWJhc2UsdHJhbnNhY3Rpb26C0+STAj0iOC92MS97ZGF0YWJhc2U9",
-            "cHJvamVjdHMvKi9kYXRhYmFzZXMvKn0vZG9jdW1lbnRzOnJvbGxiYWNrOgEq",
-            "Et8BCghSdW5RdWVyeRIkLmdvb2dsZS5maXJlc3RvcmUudjEuUnVuUXVlcnlS",
-            "ZXF1ZXN0GiUuZ29vZ2xlLmZpcmVzdG9yZS52MS5SdW5RdWVyeVJlc3BvbnNl",
-            "IoMBgtPkkwJ9IjYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2RhdGFiYXNlcy8q",
-            "L2RvY3VtZW50c306cnVuUXVlcnk6ASpaQCI7L3YxL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9kYXRhYmFzZXMvKi9kb2N1bWVudHMvKi8qKn06cnVuUXVlcnk6ASow",
-            "ARKeAgoPRXhlY3V0ZVBpcGVsaW5lEisuZ29vZ2xlLmZpcmVzdG9yZS52MS5F",
-            "eGVjdXRlUGlwZWxpbmVSZXF1ZXN0GiwuZ29vZ2xlLmZpcmVzdG9yZS52MS5F",
-            "eGVjdXRlUGlwZWxpbmVSZXNwb25zZSKtAYLT5JMCRCI/L3YxL3tkYXRhYmFz",
-            "ZT1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qfS9kb2N1bWVudHM6ZXhlY3V0ZVBp",
-            "cGVsaW5lOgEqitPkkwJdEiYKCGRhdGFiYXNlEhpwcm9qZWN0cy97cHJvamVj",
-            "dF9pZD0qfS8qKhIzCghkYXRhYmFzZRIncHJvamVjdHMvKi9kYXRhYmFzZXMv",
-            "e2RhdGFiYXNlX2lkPSp9LyoqMAESlwIKE1J1bkFnZ3JlZ2F0aW9uUXVlcnkS",
-            "Ly5nb29nbGUuZmlyZXN0b3JlLnYxLlJ1bkFnZ3JlZ2F0aW9uUXVlcnlSZXF1",
-            "ZXN0GjAuZ29vZ2xlLmZpcmVzdG9yZS52MS5SdW5BZ2dyZWdhdGlvblF1ZXJ5",
-            "UmVzcG9uc2UimgGC0+STApMBIkEvdjEve3BhcmVudD1wcm9qZWN0cy8qL2Rh",
-            "dGFiYXNlcy8qL2RvY3VtZW50c306cnVuQWdncmVnYXRpb25RdWVyeToBKlpL",
-            "IkYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qL2RvY3VtZW50",
-            "cy8qLyoqfTpydW5BZ2dyZWdhdGlvblF1ZXJ5OgEqMAES/AEKDlBhcnRpdGlv",
-            "blF1ZXJ5EiouZ29vZ2xlLmZpcmVzdG9yZS52MS5QYXJ0aXRpb25RdWVyeVJl",
-            "cXVlc3QaKy5nb29nbGUuZmlyZXN0b3JlLnYxLlBhcnRpdGlvblF1ZXJ5UmVz",
-            "cG9uc2UikAGC0+STAokBIjwvdjEve3BhcmVudD1wcm9qZWN0cy8qL2RhdGFi",
-            "YXNlcy8qL2RvY3VtZW50c306cGFydGl0aW9uUXVlcnk6ASpaRiJBL3YxL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9kb2N1bWVudHMvKi8qKn06",
-            "cGFydGl0aW9uUXVlcnk6ASoSlAEKBVdyaXRlEiEuZ29vZ2xlLmZpcmVzdG9y",
-            "ZS52MS5Xcml0ZVJlcXVlc3QaIi5nb29nbGUuZmlyZXN0b3JlLnYxLldyaXRl",
-            "UmVzcG9uc2UiQILT5JMCOiI1L3YxL3tkYXRhYmFzZT1wcm9qZWN0cy8qL2Rh",
-            "dGFiYXNlcy8qfS9kb2N1bWVudHM6d3JpdGU6ASooATABEpgBCgZMaXN0ZW4S",
-            "Ii5nb29nbGUuZmlyZXN0b3JlLnYxLkxpc3RlblJlcXVlc3QaIy5nb29nbGUu",
-            "ZmlyZXN0b3JlLnYxLkxpc3RlblJlc3BvbnNlIkGC0+STAjsiNi92MS97ZGF0",
-            "YWJhc2U9cHJvamVjdHMvKi9kYXRhYmFzZXMvKn0vZG9jdW1lbnRzOmxpc3Rl",
-            "bjoBKigBMAESlAIKEUxpc3RDb2xsZWN0aW9uSWRzEi0uZ29vZ2xlLmZpcmVz",
-            "dG9yZS52MS5MaXN0Q29sbGVjdGlvbklkc1JlcXVlc3QaLi5nb29nbGUuZmly",
-            "ZXN0b3JlLnYxLkxpc3RDb2xsZWN0aW9uSWRzUmVzcG9uc2UinwHaQQZwYXJl",
-            "bnSC0+STAo8BIj8vdjEve3BhcmVudD1wcm9qZWN0cy8qL2RhdGFiYXNlcy8q",
-            "L2RvY3VtZW50c306bGlzdENvbGxlY3Rpb25JZHM6ASpaSSJEL3YxL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9kb2N1bWVudHMvKi8qKn06bGlz",
-            "dENvbGxlY3Rpb25JZHM6ASoSpAEKCkJhdGNoV3JpdGUSJi5nb29nbGUuZmly",
-            "ZXN0b3JlLnYxLkJhdGNoV3JpdGVSZXF1ZXN0GicuZ29vZ2xlLmZpcmVzdG9y",
-            "ZS52MS5CYXRjaFdyaXRlUmVzcG9uc2UiRYLT5JMCPyI6L3YxL3tkYXRhYmFz",
-            "ZT1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qfS9kb2N1bWVudHM6YmF0Y2hXcml0",
-            "ZToBKhKvAQoOQ3JlYXRlRG9jdW1lbnQSKi5nb29nbGUuZmlyZXN0b3JlLnYx",
-            "LkNyZWF0ZURvY3VtZW50UmVxdWVzdBodLmdvb2dsZS5maXJlc3RvcmUudjEu",
-            "RG9jdW1lbnQiUoLT5JMCTCJAL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9kYXRh",
-            "YmFzZXMvKi9kb2N1bWVudHMvKip9L3tjb2xsZWN0aW9uX2lkfToIZG9jdW1l",
-            "bnQadspBGGZpcmVzdG9yZS5nb29nbGVhcGlzLmNvbdJBWGh0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kYXRhc3RvcmVCvwEKF2NvbS5nb29n",
-            "bGUuZmlyZXN0b3JlLnYxQg5GaXJlc3RvcmVQcm90b1ABWjtjbG91ZC5nb29n",
-            "bGUuY29tL2dvL2ZpcmVzdG9yZS9hcGl2MS9maXJlc3RvcmVwYjtmaXJlc3Rv",
-            "cmVwYqoCGUdvb2dsZS5DbG91ZC5GaXJlc3RvcmUuVjHKAhlHb29nbGVcQ2xv",
-            "dWRcRmlyZXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RmlyZXN0b3JlOjpW",
-            "MWIGcHJvdG8z"));
+            "A+BBAhJBCg9yZXF1ZXN0X29wdGlvbnMYAyABKAsyIy5nb29nbGUuZmlyZXN0",
+            "b3JlLnYxLlJlcXVlc3RPcHRpb25zQgPgQQEioAMKD1J1blF1ZXJ5UmVxdWVz",
+            "dBITCgZwYXJlbnQYASABKAlCA+BBAhJAChBzdHJ1Y3R1cmVkX3F1ZXJ5GAIg",
+            "ASgLMiQuZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnlIABIV",
+            "Cgt0cmFuc2FjdGlvbhgFIAEoDEgBEkIKD25ld190cmFuc2FjdGlvbhgGIAEo",
+            "CzInLmdvb2dsZS5maXJlc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRpb25zSAES",
+            "LwoJcmVhZF90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEgBEkEKD2V4cGxhaW5fb3B0aW9ucxgKIAEoCzIjLmdvb2dsZS5maXJlc3Rv",
+            "cmUudjEuRXhwbGFpbk9wdGlvbnNCA+BBARJBCg9yZXF1ZXN0X29wdGlvbnMY",
+            "CyABKAsyIy5nb29nbGUuZmlyZXN0b3JlLnYxLlJlcXVlc3RPcHRpb25zQgPg",
+            "QQFCDAoKcXVlcnlfdHlwZUIWChRjb25zaXN0ZW5jeV9zZWxlY3RvciKHAgoQ",
+            "UnVuUXVlcnlSZXNwb25zZRITCgt0cmFuc2FjdGlvbhgCIAEoDBIvCghkb2N1",
+            "bWVudBgBIAEoCzIdLmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnQSLQoJ",
+            "cmVhZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIX",
+            "Cg9za2lwcGVkX3Jlc3VsdHMYBCABKAUSDgoEZG9uZRgGIAEoCEgAEjwKD2V4",
+            "cGxhaW5fbWV0cmljcxgLIAEoCzIjLmdvb2dsZS5maXJlc3RvcmUudjEuRXhw",
+            "bGFpbk1ldHJpY3NCFwoVY29udGludWF0aW9uX3NlbGVjdG9yIpUDChZFeGVj",
+            "dXRlUGlwZWxpbmVSZXF1ZXN0EhUKCGRhdGFiYXNlGAEgASgJQgPgQQISRgoT",
+            "c3RydWN0dXJlZF9waXBlbGluZRgCIAEoCzInLmdvb2dsZS5maXJlc3RvcmUu",
+            "djEuU3RydWN0dXJlZFBpcGVsaW5lSAASFQoLdHJhbnNhY3Rpb24YBSABKAxI",
+            "ARJCCg9uZXdfdHJhbnNhY3Rpb24YBiABKAsyJy5nb29nbGUuZmlyZXN0b3Jl",
+            "LnYxLlRyYW5zYWN0aW9uT3B0aW9uc0gBEi8KCXJlYWRfdGltZRgHIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIARIkChdhdXRvX2NvbW1pdF90",
+            "cmFuc2FjdGlvbhgJIAEoCEID4EEBEkEKD3JlcXVlc3Rfb3B0aW9ucxgKIAEo",
+            "CzIjLmdvb2dsZS5maXJlc3RvcmUudjEuUmVxdWVzdE9wdGlvbnNCA+BBAUIP",
+            "Cg1waXBlbGluZV90eXBlQhYKFGNvbnNpc3RlbmN5X3NlbGVjdG9yIswBChdF",
+            "eGVjdXRlUGlwZWxpbmVSZXNwb25zZRITCgt0cmFuc2FjdGlvbhgBIAEoDBIu",
+            "CgdyZXN1bHRzGAIgAygLMh0uZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVu",
+            "dBIyCg5leGVjdXRpb25fdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASOAoNZXhwbGFpbl9zdGF0cxgEIAEoCzIhLmdvb2dsZS5maXJl",
+            "c3RvcmUudjEuRXhwbGFpblN0YXRzIsIDChpSdW5BZ2dyZWdhdGlvblF1ZXJ5",
+            "UmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhJXChxzdHJ1Y3R1cmVkX2Fn",
+            "Z3JlZ2F0aW9uX3F1ZXJ5GAIgASgLMi8uZ29vZ2xlLmZpcmVzdG9yZS52MS5T",
+            "dHJ1Y3R1cmVkQWdncmVnYXRpb25RdWVyeUgAEhUKC3RyYW5zYWN0aW9uGAQg",
+            "ASgMSAESQgoPbmV3X3RyYW5zYWN0aW9uGAUgASgLMicuZ29vZ2xlLmZpcmVz",
+            "dG9yZS52MS5UcmFuc2FjdGlvbk9wdGlvbnNIARIvCglyZWFkX3RpbWUYBiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAESQQoPZXhwbGFpbl9v",
+            "cHRpb25zGAggASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS52MS5FeHBsYWluT3B0",
+            "aW9uc0ID4EEBEkEKD3JlcXVlc3Rfb3B0aW9ucxgJIAEoCzIjLmdvb2dsZS5m",
+            "aXJlc3RvcmUudjEuUmVxdWVzdE9wdGlvbnNCA+BBAUIMCgpxdWVyeV90eXBl",
+            "QhYKFGNvbnNpc3RlbmN5X3NlbGVjdG9yItcBChtSdW5BZ2dyZWdhdGlvblF1",
+            "ZXJ5UmVzcG9uc2USNgoGcmVzdWx0GAEgASgLMiYuZ29vZ2xlLmZpcmVzdG9y",
+            "ZS52MS5BZ2dyZWdhdGlvblJlc3VsdBITCgt0cmFuc2FjdGlvbhgCIAEoDBIt",
+            "CglyZWFkX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "EjwKD2V4cGxhaW5fbWV0cmljcxgKIAEoCzIjLmdvb2dsZS5maXJlc3RvcmUu",
+            "djEuRXhwbGFpbk1ldHJpY3MiyAIKFVBhcnRpdGlvblF1ZXJ5UmVxdWVzdBIT",
+            "CgZwYXJlbnQYASABKAlCA+BBAhJAChBzdHJ1Y3R1cmVkX3F1ZXJ5GAIgASgL",
+            "MiQuZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnlIABIXCg9w",
+            "YXJ0aXRpb25fY291bnQYAyABKAMSEgoKcGFnZV90b2tlbhgEIAEoCRIRCglw",
+            "YWdlX3NpemUYBSABKAUSLwoJcmVhZF90aW1lGAYgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEgBEkEKD3JlcXVlc3Rfb3B0aW9ucxgHIAEoCzIj",
+            "Lmdvb2dsZS5maXJlc3RvcmUudjEuUmVxdWVzdE9wdGlvbnNCA+BBAUIMCgpx",
+            "dWVyeV90eXBlQhYKFGNvbnNpc3RlbmN5X3NlbGVjdG9yImIKFlBhcnRpdGlv",
+            "blF1ZXJ5UmVzcG9uc2USLwoKcGFydGl0aW9ucxgBIAMoCzIbLmdvb2dsZS5m",
+            "aXJlc3RvcmUudjEuQ3Vyc29yEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKr",
+            "AgoMV3JpdGVSZXF1ZXN0EhUKCGRhdGFiYXNlGAEgASgJQgPgQQISEQoJc3Ry",
+            "ZWFtX2lkGAIgASgJEioKBndyaXRlcxgDIAMoCzIaLmdvb2dsZS5maXJlc3Rv",
+            "cmUudjEuV3JpdGUSFAoMc3RyZWFtX3Rva2VuGAQgASgMEj0KBmxhYmVscxgF",
+            "IAMoCzItLmdvb2dsZS5maXJlc3RvcmUudjEuV3JpdGVSZXF1ZXN0LkxhYmVs",
+            "c0VudHJ5EkEKD3JlcXVlc3Rfb3B0aW9ucxgGIAEoCzIjLmdvb2dsZS5maXJl",
+            "c3RvcmUudjEuUmVxdWVzdE9wdGlvbnNCA+BBARotCgtMYWJlbHNFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIqIBCg1Xcml0ZVJlc3Bv",
+            "bnNlEhEKCXN0cmVhbV9pZBgBIAEoCRIUCgxzdHJlYW1fdG9rZW4YAiABKAwS",
+            "NwoNd3JpdGVfcmVzdWx0cxgDIAMoCzIgLmdvb2dsZS5maXJlc3RvcmUudjEu",
+            "V3JpdGVSZXN1bHQSLwoLY29tbWl0X3RpbWUYBCABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wIrUCCg1MaXN0ZW5SZXF1ZXN0EhUKCGRhdGFiYXNl",
+            "GAEgASgJQgPgQQISMQoKYWRkX3RhcmdldBgCIAEoCzIbLmdvb2dsZS5maXJl",
+            "c3RvcmUudjEuVGFyZ2V0SAASFwoNcmVtb3ZlX3RhcmdldBgDIAEoBUgAEj4K",
+            "BmxhYmVscxgEIAMoCzIuLmdvb2dsZS5maXJlc3RvcmUudjEuTGlzdGVuUmVx",
+            "dWVzdC5MYWJlbHNFbnRyeRJBCg9yZXF1ZXN0X29wdGlvbnMYBSABKAsyIy5n",
+            "b29nbGUuZmlyZXN0b3JlLnYxLlJlcXVlc3RPcHRpb25zQgPgQQEaLQoLTGFi",
+            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUIPCg10",
+            "YXJnZXRfY2hhbmdlItUCCg5MaXN0ZW5SZXNwb25zZRI6Cg10YXJnZXRfY2hh",
+            "bmdlGAIgASgLMiEuZ29vZ2xlLmZpcmVzdG9yZS52MS5UYXJnZXRDaGFuZ2VI",
+            "ABI+Cg9kb2N1bWVudF9jaGFuZ2UYAyABKAsyIy5nb29nbGUuZmlyZXN0b3Jl",
+            "LnYxLkRvY3VtZW50Q2hhbmdlSAASPgoPZG9jdW1lbnRfZGVsZXRlGAQgASgL",
+            "MiMuZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudERlbGV0ZUgAEj4KD2Rv",
+            "Y3VtZW50X3JlbW92ZRgGIAEoCzIjLmdvb2dsZS5maXJlc3RvcmUudjEuRG9j",
+            "dW1lbnRSZW1vdmVIABI2CgZmaWx0ZXIYBSABKAsyJC5nb29nbGUuZmlyZXN0",
+            "b3JlLnYxLkV4aXN0ZW5jZUZpbHRlckgAQg8KDXJlc3BvbnNlX3R5cGUi1gMK",
+            "BlRhcmdldBI4CgVxdWVyeRgCIAEoCzInLmdvb2dsZS5maXJlc3RvcmUudjEu",
+            "VGFyZ2V0LlF1ZXJ5VGFyZ2V0SAASQAoJZG9jdW1lbnRzGAMgASgLMisuZ29v",
+            "Z2xlLmZpcmVzdG9yZS52MS5UYXJnZXQuRG9jdW1lbnRzVGFyZ2V0SAASFgoM",
+            "cmVzdW1lX3Rva2VuGAQgASgMSAESLwoJcmVhZF90aW1lGAsgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBEhEKCXRhcmdldF9pZBgFIAEoBRIM",
+            "CgRvbmNlGAYgASgIEjMKDmV4cGVjdGVkX2NvdW50GAwgASgLMhsuZ29vZ2xl",
+            "LnByb3RvYnVmLkludDMyVmFsdWUaJAoPRG9jdW1lbnRzVGFyZ2V0EhEKCWRv",
+            "Y3VtZW50cxgCIAMoCRptCgtRdWVyeVRhcmdldBIOCgZwYXJlbnQYASABKAkS",
+            "QAoQc3RydWN0dXJlZF9xdWVyeRgCIAEoCzIkLmdvb2dsZS5maXJlc3RvcmUu",
+            "djEuU3RydWN0dXJlZFF1ZXJ5SABCDAoKcXVlcnlfdHlwZUINCgt0YXJnZXRf",
+            "dHlwZUINCgtyZXN1bWVfdHlwZSKqAgoMVGFyZ2V0Q2hhbmdlEk4KEnRhcmdl",
+            "dF9jaGFuZ2VfdHlwZRgBIAEoDjIyLmdvb2dsZS5maXJlc3RvcmUudjEuVGFy",
+            "Z2V0Q2hhbmdlLlRhcmdldENoYW5nZVR5cGUSEgoKdGFyZ2V0X2lkcxgCIAMo",
+            "BRIhCgVjYXVzZRgDIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEhQKDHJlc3Vt",
+            "ZV90b2tlbhgEIAEoDBItCglyZWFkX3RpbWUYBiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wIk4KEFRhcmdldENoYW5nZVR5cGUSDQoJTk9fQ0hB",
+            "TkdFEAASBwoDQUREEAESCgoGUkVNT1ZFEAISCwoHQ1VSUkVOVBADEgkKBVJF",
+            "U0VUEAQi4gEKGExpc3RDb2xsZWN0aW9uSWRzUmVxdWVzdBITCgZwYXJlbnQY",
+            "ASABKAlCA+BBAhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgD",
+            "IAEoCRIvCglyZWFkX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wSAASQQoPcmVxdWVzdF9vcHRpb25zGAUgASgLMiMuZ29vZ2xlLmZp",
+            "cmVzdG9yZS52MS5SZXF1ZXN0T3B0aW9uc0ID4EEBQhYKFGNvbnNpc3RlbmN5",
+            "X3NlbGVjdG9yIkwKGUxpc3RDb2xsZWN0aW9uSWRzUmVzcG9uc2USFgoOY29s",
+            "bGVjdGlvbl9pZHMYASADKAkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIowC",
+            "ChFCYXRjaFdyaXRlUmVxdWVzdBIVCghkYXRhYmFzZRgBIAEoCUID4EECEioK",
+            "BndyaXRlcxgCIAMoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEuV3JpdGUSQgoG",
+            "bGFiZWxzGAMgAygLMjIuZ29vZ2xlLmZpcmVzdG9yZS52MS5CYXRjaFdyaXRl",
+            "UmVxdWVzdC5MYWJlbHNFbnRyeRJBCg9yZXF1ZXN0X29wdGlvbnMYBCABKAsy",
+            "Iy5nb29nbGUuZmlyZXN0b3JlLnYxLlJlcXVlc3RPcHRpb25zQgPgQQEaLQoL",
+            "TGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJx",
+            "ChJCYXRjaFdyaXRlUmVzcG9uc2USNwoNd3JpdGVfcmVzdWx0cxgBIAMoCzIg",
+            "Lmdvb2dsZS5maXJlc3RvcmUudjEuV3JpdGVSZXN1bHQSIgoGc3RhdHVzGAIg",
+            "AygLMhIuZ29vZ2xlLnJwYy5TdGF0dXMy+xsKCUZpcmVzdG9yZRKPAQoLR2V0",
+            "RG9jdW1lbnQSJy5nb29nbGUuZmlyZXN0b3JlLnYxLkdldERvY3VtZW50UmVx",
+            "dWVzdBodLmdvb2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnQiOILT5JMCMhIw",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovZGF0YWJhc2VzLyovZG9jdW1lbnRzLyov",
+            "Kip9EvUBCg1MaXN0RG9jdW1lbnRzEikuZ29vZ2xlLmZpcmVzdG9yZS52MS5M",
+            "aXN0RG9jdW1lbnRzUmVxdWVzdBoqLmdvb2dsZS5maXJlc3RvcmUudjEuTGlz",
+            "dERvY3VtZW50c1Jlc3BvbnNlIowBgtPkkwKFARJCL3YxL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9kYXRhYmFzZXMvKi9kb2N1bWVudHMvKi8qKn0ve2NvbGxlY3Rp",
+            "b25faWR9Wj8SPS92MS97cGFyZW50PXByb2plY3RzLyovZGF0YWJhc2VzLyov",
+            "ZG9jdW1lbnRzfS97Y29sbGVjdGlvbl9pZH0SvwEKDlVwZGF0ZURvY3VtZW50",
+            "EiouZ29vZ2xlLmZpcmVzdG9yZS52MS5VcGRhdGVEb2N1bWVudFJlcXVlc3Qa",
+            "HS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50ImLaQRRkb2N1bWVudCx1",
+            "cGRhdGVfbWFza4LT5JMCRTI5L3YxL3tkb2N1bWVudC5uYW1lPXByb2plY3Rz",
+            "LyovZGF0YWJhc2VzLyovZG9jdW1lbnRzLyovKip9Oghkb2N1bWVudBKVAQoO",
+            "RGVsZXRlRG9jdW1lbnQSKi5nb29nbGUuZmlyZXN0b3JlLnYxLkRlbGV0ZURv",
+            "Y3VtZW50UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI/2kEEbmFt",
+            "ZYLT5JMCMiowL3YxL3tuYW1lPXByb2plY3RzLyovZGF0YWJhc2VzLyovZG9j",
+            "dW1lbnRzLyovKip9ErkBChFCYXRjaEdldERvY3VtZW50cxItLmdvb2dsZS5m",
+            "aXJlc3RvcmUudjEuQmF0Y2hHZXREb2N1bWVudHNSZXF1ZXN0Gi4uZ29vZ2xl",
+            "LmZpcmVzdG9yZS52MS5CYXRjaEdldERvY3VtZW50c1Jlc3BvbnNlIkOC0+ST",
+            "Aj0iOC92MS97ZGF0YWJhc2U9cHJvamVjdHMvKi9kYXRhYmFzZXMvKn0vZG9j",
+            "dW1lbnRzOmJhdGNoR2V0OgEqMAESxwEKEEJlZ2luVHJhbnNhY3Rpb24SLC5n",
+            "b29nbGUuZmlyZXN0b3JlLnYxLkJlZ2luVHJhbnNhY3Rpb25SZXF1ZXN0Gi0u",
+            "Z29vZ2xlLmZpcmVzdG9yZS52MS5CZWdpblRyYW5zYWN0aW9uUmVzcG9uc2Ui",
+            "VtpBCGRhdGFiYXNlgtPkkwJFIkAvdjEve2RhdGFiYXNlPXByb2plY3RzLyov",
+            "ZGF0YWJhc2VzLyp9L2RvY3VtZW50czpiZWdpblRyYW5zYWN0aW9uOgEqEqYB",
+            "CgZDb21taXQSIi5nb29nbGUuZmlyZXN0b3JlLnYxLkNvbW1pdFJlcXVlc3Qa",
+            "Iy5nb29nbGUuZmlyZXN0b3JlLnYxLkNvbW1pdFJlc3BvbnNlIlPaQQ9kYXRh",
+            "YmFzZSx3cml0ZXOC0+STAjsiNi92MS97ZGF0YWJhc2U9cHJvamVjdHMvKi9k",
+            "YXRhYmFzZXMvKn0vZG9jdW1lbnRzOmNvbW1pdDoBKhKkAQoIUm9sbGJhY2sS",
+            "JC5nb29nbGUuZmlyZXN0b3JlLnYxLlJvbGxiYWNrUmVxdWVzdBoWLmdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eSJa2kEUZGF0YWJhc2UsdHJhbnNhY3Rpb26C0+ST",
+            "Aj0iOC92MS97ZGF0YWJhc2U9cHJvamVjdHMvKi9kYXRhYmFzZXMvKn0vZG9j",
+            "dW1lbnRzOnJvbGxiYWNrOgEqEt8BCghSdW5RdWVyeRIkLmdvb2dsZS5maXJl",
+            "c3RvcmUudjEuUnVuUXVlcnlSZXF1ZXN0GiUuZ29vZ2xlLmZpcmVzdG9yZS52",
+            "MS5SdW5RdWVyeVJlc3BvbnNlIoMBgtPkkwJ9IjYvdjEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL2RhdGFiYXNlcy8qL2RvY3VtZW50c306cnVuUXVlcnk6ASpaQCI7",
+            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9kb2N1bWVudHMv",
+            "Ki8qKn06cnVuUXVlcnk6ASowARKeAgoPRXhlY3V0ZVBpcGVsaW5lEisuZ29v",
+            "Z2xlLmZpcmVzdG9yZS52MS5FeGVjdXRlUGlwZWxpbmVSZXF1ZXN0GiwuZ29v",
+            "Z2xlLmZpcmVzdG9yZS52MS5FeGVjdXRlUGlwZWxpbmVSZXNwb25zZSKtAYLT",
+            "5JMCRCI/L3YxL3tkYXRhYmFzZT1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qfS9k",
+            "b2N1bWVudHM6ZXhlY3V0ZVBpcGVsaW5lOgEqitPkkwJdEiYKCGRhdGFiYXNl",
+            "Ehpwcm9qZWN0cy97cHJvamVjdF9pZD0qfS8qKhIzCghkYXRhYmFzZRIncHJv",
+            "amVjdHMvKi9kYXRhYmFzZXMve2RhdGFiYXNlX2lkPSp9LyoqMAESlwIKE1J1",
+            "bkFnZ3JlZ2F0aW9uUXVlcnkSLy5nb29nbGUuZmlyZXN0b3JlLnYxLlJ1bkFn",
+            "Z3JlZ2F0aW9uUXVlcnlSZXF1ZXN0GjAuZ29vZ2xlLmZpcmVzdG9yZS52MS5S",
+            "dW5BZ2dyZWdhdGlvblF1ZXJ5UmVzcG9uc2UimgGC0+STApMBIkEvdjEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qL2RvY3VtZW50c306cnVuQWdn",
+            "cmVnYXRpb25RdWVyeToBKlpLIkYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2Rh",
+            "dGFiYXNlcy8qL2RvY3VtZW50cy8qLyoqfTpydW5BZ2dyZWdhdGlvblF1ZXJ5",
+            "OgEqMAES/AEKDlBhcnRpdGlvblF1ZXJ5EiouZ29vZ2xlLmZpcmVzdG9yZS52",
+            "MS5QYXJ0aXRpb25RdWVyeVJlcXVlc3QaKy5nb29nbGUuZmlyZXN0b3JlLnYx",
+            "LlBhcnRpdGlvblF1ZXJ5UmVzcG9uc2UikAGC0+STAokBIjwvdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qL2RvY3VtZW50c306cGFydGl0aW9u",
+            "UXVlcnk6ASpaRiJBL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9kYXRhYmFzZXMv",
+            "Ki9kb2N1bWVudHMvKi8qKn06cGFydGl0aW9uUXVlcnk6ASoSlAEKBVdyaXRl",
+            "EiEuZ29vZ2xlLmZpcmVzdG9yZS52MS5Xcml0ZVJlcXVlc3QaIi5nb29nbGUu",
+            "ZmlyZXN0b3JlLnYxLldyaXRlUmVzcG9uc2UiQILT5JMCOiI1L3YxL3tkYXRh",
+            "YmFzZT1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qfS9kb2N1bWVudHM6d3JpdGU6",
+            "ASooATABEpgBCgZMaXN0ZW4SIi5nb29nbGUuZmlyZXN0b3JlLnYxLkxpc3Rl",
+            "blJlcXVlc3QaIy5nb29nbGUuZmlyZXN0b3JlLnYxLkxpc3RlblJlc3BvbnNl",
+            "IkGC0+STAjsiNi92MS97ZGF0YWJhc2U9cHJvamVjdHMvKi9kYXRhYmFzZXMv",
+            "Kn0vZG9jdW1lbnRzOmxpc3RlbjoBKigBMAESlAIKEUxpc3RDb2xsZWN0aW9u",
+            "SWRzEi0uZ29vZ2xlLmZpcmVzdG9yZS52MS5MaXN0Q29sbGVjdGlvbklkc1Jl",
+            "cXVlc3QaLi5nb29nbGUuZmlyZXN0b3JlLnYxLkxpc3RDb2xsZWN0aW9uSWRz",
+            "UmVzcG9uc2UinwHaQQZwYXJlbnSC0+STAo8BIj8vdjEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL2RhdGFiYXNlcy8qL2RvY3VtZW50c306bGlzdENvbGxlY3Rpb25J",
+            "ZHM6ASpaSSJEL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9k",
+            "b2N1bWVudHMvKi8qKn06bGlzdENvbGxlY3Rpb25JZHM6ASoSpAEKCkJhdGNo",
+            "V3JpdGUSJi5nb29nbGUuZmlyZXN0b3JlLnYxLkJhdGNoV3JpdGVSZXF1ZXN0",
+            "GicuZ29vZ2xlLmZpcmVzdG9yZS52MS5CYXRjaFdyaXRlUmVzcG9uc2UiRYLT",
+            "5JMCPyI6L3YxL3tkYXRhYmFzZT1wcm9qZWN0cy8qL2RhdGFiYXNlcy8qfS9k",
+            "b2N1bWVudHM6YmF0Y2hXcml0ZToBKhKvAQoOQ3JlYXRlRG9jdW1lbnQSKi5n",
+            "b29nbGUuZmlyZXN0b3JlLnYxLkNyZWF0ZURvY3VtZW50UmVxdWVzdBodLmdv",
+            "b2dsZS5maXJlc3RvcmUudjEuRG9jdW1lbnQiUoLT5JMCTCJAL3YxL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9kYXRhYmFzZXMvKi9kb2N1bWVudHMvKip9L3tjb2xs",
+            "ZWN0aW9uX2lkfToIZG9jdW1lbnQadspBGGZpcmVzdG9yZS5nb29nbGVhcGlz",
+            "LmNvbdJBWGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
+            "cGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kYXRh",
+            "c3RvcmVCvwEKF2NvbS5nb29nbGUuZmlyZXN0b3JlLnYxQg5GaXJlc3RvcmVQ",
+            "cm90b1ABWjtjbG91ZC5nb29nbGUuY29tL2dvL2ZpcmVzdG9yZS9hcGl2MS9m",
+            "aXJlc3RvcmVwYjtmaXJlc3RvcmVwYqoCGUdvb2dsZS5DbG91ZC5GaXJlc3Rv",
+            "cmUuVjHKAhlHb29nbGVcQ2xvdWRcRmlyZXN0b3JlXFYx6gIcR29vZ2xlOjpD",
+            "bG91ZDo6RmlyZXN0b3JlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Cloud.Firestore.V1.AggregationResultReflection.Descriptor, global::Google.Cloud.Firestore.V1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Cloud.Firestore.V1.ExplainStatsReflection.Descriptor, global::Google.Cloud.Firestore.V1.PipelineReflection.Descriptor, global::Google.Cloud.Firestore.V1.QueryReflection.Descriptor, global::Google.Cloud.Firestore.V1.QueryProfileReflection.Descriptor, global::Google.Cloud.Firestore.V1.WriteReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.GetDocumentRequest), global::Google.Cloud.Firestore.V1.GetDocumentRequest.Parser, new[]{ "Name", "Mask", "Transaction", "ReadTime" }, new[]{ "ConsistencySelector" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListDocumentsRequest), global::Google.Cloud.Firestore.V1.ListDocumentsRequest.Parser, new[]{ "Parent", "CollectionId", "PageSize", "PageToken", "OrderBy", "Mask", "Transaction", "ReadTime", "ShowMissing" }, new[]{ "ConsistencySelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.GetDocumentRequest), global::Google.Cloud.Firestore.V1.GetDocumentRequest.Parser, new[]{ "Name", "Mask", "Transaction", "ReadTime", "RequestOptions" }, new[]{ "ConsistencySelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListDocumentsRequest), global::Google.Cloud.Firestore.V1.ListDocumentsRequest.Parser, new[]{ "Parent", "CollectionId", "PageSize", "PageToken", "OrderBy", "Mask", "Transaction", "ReadTime", "ShowMissing", "RequestOptions" }, new[]{ "ConsistencySelector" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListDocumentsResponse), global::Google.Cloud.Firestore.V1.ListDocumentsResponse.Parser, new[]{ "Documents", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.CreateDocumentRequest), global::Google.Cloud.Firestore.V1.CreateDocumentRequest.Parser, new[]{ "Parent", "CollectionId", "DocumentId", "Document", "Mask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.UpdateDocumentRequest), global::Google.Cloud.Firestore.V1.UpdateDocumentRequest.Parser, new[]{ "Document", "UpdateMask", "Mask", "CurrentDocument" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DeleteDocumentRequest), global::Google.Cloud.Firestore.V1.DeleteDocumentRequest.Parser, new[]{ "Name", "CurrentDocument" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest), global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest.Parser, new[]{ "Database", "Documents", "Mask", "Transaction", "NewTransaction", "ReadTime" }, new[]{ "ConsistencySelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.CreateDocumentRequest), global::Google.Cloud.Firestore.V1.CreateDocumentRequest.Parser, new[]{ "Parent", "CollectionId", "DocumentId", "Document", "Mask", "RequestOptions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.UpdateDocumentRequest), global::Google.Cloud.Firestore.V1.UpdateDocumentRequest.Parser, new[]{ "Document", "UpdateMask", "Mask", "CurrentDocument", "RequestOptions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DeleteDocumentRequest), global::Google.Cloud.Firestore.V1.DeleteDocumentRequest.Parser, new[]{ "Name", "CurrentDocument", "RequestOptions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest), global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest.Parser, new[]{ "Database", "Documents", "Mask", "Transaction", "NewTransaction", "ReadTime", "RequestOptions" }, new[]{ "ConsistencySelector" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse), global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse.Parser, new[]{ "Found", "Missing", "Transaction", "ReadTime" }, new[]{ "Result" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BeginTransactionRequest), global::Google.Cloud.Firestore.V1.BeginTransactionRequest.Parser, new[]{ "Database", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BeginTransactionRequest), global::Google.Cloud.Firestore.V1.BeginTransactionRequest.Parser, new[]{ "Database", "Options", "RequestOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BeginTransactionResponse), global::Google.Cloud.Firestore.V1.BeginTransactionResponse.Parser, new[]{ "Transaction" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.CommitRequest), global::Google.Cloud.Firestore.V1.CommitRequest.Parser, new[]{ "Database", "Writes", "Transaction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.CommitRequest), global::Google.Cloud.Firestore.V1.CommitRequest.Parser, new[]{ "Database", "Writes", "Transaction", "RequestOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.CommitResponse), global::Google.Cloud.Firestore.V1.CommitResponse.Parser, new[]{ "WriteResults", "CommitTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RollbackRequest), global::Google.Cloud.Firestore.V1.RollbackRequest.Parser, new[]{ "Database", "Transaction" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunQueryRequest), global::Google.Cloud.Firestore.V1.RunQueryRequest.Parser, new[]{ "Parent", "StructuredQuery", "Transaction", "NewTransaction", "ReadTime", "ExplainOptions" }, new[]{ "QueryType", "ConsistencySelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RollbackRequest), global::Google.Cloud.Firestore.V1.RollbackRequest.Parser, new[]{ "Database", "Transaction", "RequestOptions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunQueryRequest), global::Google.Cloud.Firestore.V1.RunQueryRequest.Parser, new[]{ "Parent", "StructuredQuery", "Transaction", "NewTransaction", "ReadTime", "ExplainOptions", "RequestOptions" }, new[]{ "QueryType", "ConsistencySelector" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunQueryResponse), global::Google.Cloud.Firestore.V1.RunQueryResponse.Parser, new[]{ "Transaction", "Document", "ReadTime", "SkippedResults", "Done", "ExplainMetrics" }, new[]{ "ContinuationSelector" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ExecutePipelineRequest), global::Google.Cloud.Firestore.V1.ExecutePipelineRequest.Parser, new[]{ "Database", "StructuredPipeline", "Transaction", "NewTransaction", "ReadTime", "AutoCommitTransaction" }, new[]{ "PipelineType", "ConsistencySelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ExecutePipelineRequest), global::Google.Cloud.Firestore.V1.ExecutePipelineRequest.Parser, new[]{ "Database", "StructuredPipeline", "Transaction", "NewTransaction", "ReadTime", "AutoCommitTransaction", "RequestOptions" }, new[]{ "PipelineType", "ConsistencySelector" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ExecutePipelineResponse), global::Google.Cloud.Firestore.V1.ExecutePipelineResponse.Parser, new[]{ "Transaction", "Results", "ExecutionTime", "ExplainStats" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunAggregationQueryRequest), global::Google.Cloud.Firestore.V1.RunAggregationQueryRequest.Parser, new[]{ "Parent", "StructuredAggregationQuery", "Transaction", "NewTransaction", "ReadTime", "ExplainOptions" }, new[]{ "QueryType", "ConsistencySelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunAggregationQueryRequest), global::Google.Cloud.Firestore.V1.RunAggregationQueryRequest.Parser, new[]{ "Parent", "StructuredAggregationQuery", "Transaction", "NewTransaction", "ReadTime", "ExplainOptions", "RequestOptions" }, new[]{ "QueryType", "ConsistencySelector" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.RunAggregationQueryResponse), global::Google.Cloud.Firestore.V1.RunAggregationQueryResponse.Parser, new[]{ "Result", "Transaction", "ReadTime", "ExplainMetrics" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.PartitionQueryRequest), global::Google.Cloud.Firestore.V1.PartitionQueryRequest.Parser, new[]{ "Parent", "StructuredQuery", "PartitionCount", "PageToken", "PageSize", "ReadTime" }, new[]{ "QueryType", "ConsistencySelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.PartitionQueryRequest), global::Google.Cloud.Firestore.V1.PartitionQueryRequest.Parser, new[]{ "Parent", "StructuredQuery", "PartitionCount", "PageToken", "PageSize", "ReadTime", "RequestOptions" }, new[]{ "QueryType", "ConsistencySelector" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.PartitionQueryResponse), global::Google.Cloud.Firestore.V1.PartitionQueryResponse.Parser, new[]{ "Partitions", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.WriteRequest), global::Google.Cloud.Firestore.V1.WriteRequest.Parser, new[]{ "Database", "StreamId", "Writes", "StreamToken", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.WriteRequest), global::Google.Cloud.Firestore.V1.WriteRequest.Parser, new[]{ "Database", "StreamId", "Writes", "StreamToken", "Labels", "RequestOptions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.WriteResponse), global::Google.Cloud.Firestore.V1.WriteResponse.Parser, new[]{ "StreamId", "StreamToken", "WriteResults", "CommitTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListenRequest), global::Google.Cloud.Firestore.V1.ListenRequest.Parser, new[]{ "Database", "AddTarget", "RemoveTarget", "Labels" }, new[]{ "TargetChange" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListenRequest), global::Google.Cloud.Firestore.V1.ListenRequest.Parser, new[]{ "Database", "AddTarget", "RemoveTarget", "Labels", "RequestOptions" }, new[]{ "TargetChange" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListenResponse), global::Google.Cloud.Firestore.V1.ListenResponse.Parser, new[]{ "TargetChange", "DocumentChange", "DocumentDelete", "DocumentRemove", "Filter" }, new[]{ "ResponseType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Target), global::Google.Cloud.Firestore.V1.Target.Parser, new[]{ "Query", "Documents", "ResumeToken", "ReadTime", "TargetId", "Once", "ExpectedCount" }, new[]{ "TargetType", "ResumeType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Target.Types.DocumentsTarget), global::Google.Cloud.Firestore.V1.Target.Types.DocumentsTarget.Parser, new[]{ "Documents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Target.Types.QueryTarget), global::Google.Cloud.Firestore.V1.Target.Types.QueryTarget.Parser, new[]{ "Parent", "StructuredQuery" }, new[]{ "QueryType" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TargetChange), global::Google.Cloud.Firestore.V1.TargetChange.Parser, new[]{ "TargetChangeType", "TargetIds", "Cause", "ResumeToken", "ReadTime" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.TargetChange.Types.TargetChangeType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest), global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ReadTime" }, new[]{ "ConsistencySelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest), global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ReadTime", "RequestOptions" }, new[]{ "ConsistencySelector" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse), global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse.Parser, new[]{ "CollectionIds", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BatchWriteRequest), global::Google.Cloud.Firestore.V1.BatchWriteRequest.Parser, new[]{ "Database", "Writes", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BatchWriteRequest), global::Google.Cloud.Firestore.V1.BatchWriteRequest.Parser, new[]{ "Database", "Writes", "Labels", "RequestOptions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.BatchWriteResponse), global::Google.Cloud.Firestore.V1.BatchWriteResponse.Parser, new[]{ "WriteResults", "Status" }, null, null, null, null)
           }));
     }
@@ -349,6 +374,7 @@ namespace Google.Cloud.Firestore.V1 {
     public GetDocumentRequest(GetDocumentRequest other) : this() {
       name_ = other.name_;
       mask_ = other.mask_ != null ? other.mask_.Clone() : null;
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       switch (other.ConsistencySelectorCase) {
         case ConsistencySelectorOneofCase.Transaction:
           Transaction = other.Transaction;
@@ -449,6 +475,21 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 10;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     private object consistencySelector_;
     /// <summary>Enum of possible cases for the "consistency_selector" oneof.</summary>
     public enum ConsistencySelectorOneofCase {
@@ -489,6 +530,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (!object.Equals(Mask, other.Mask)) return false;
       if (Transaction != other.Transaction) return false;
       if (!object.Equals(ReadTime, other.ReadTime)) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       if (ConsistencySelectorCase != other.ConsistencySelectorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -501,6 +543,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (mask_ != null) hash ^= Mask.GetHashCode();
       if (HasTransaction) hash ^= Transaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       hash ^= (int) consistencySelectorCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -536,6 +579,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ReadTime);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -562,6 +609,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ReadTime);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -584,6 +635,9 @@ namespace Google.Cloud.Firestore.V1 {
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadTime);
       }
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -604,6 +658,12 @@ namespace Google.Cloud.Firestore.V1 {
           Mask = new global::Google.Cloud.Firestore.V1.DocumentMask();
         }
         Mask.MergeFrom(other.Mask);
+      }
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
       }
       switch (other.ConsistencySelectorCase) {
         case ConsistencySelectorOneofCase.Transaction:
@@ -660,6 +720,13 @@ namespace Google.Cloud.Firestore.V1 {
             ReadTime = subBuilder;
             break;
           }
+          case 82: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -701,6 +768,13 @@ namespace Google.Cloud.Firestore.V1 {
             }
             input.ReadMessage(subBuilder);
             ReadTime = subBuilder;
+            break;
+          }
+          case 82: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -756,6 +830,7 @@ namespace Google.Cloud.Firestore.V1 {
       orderBy_ = other.orderBy_;
       mask_ = other.mask_ != null ? other.mask_.Clone() : null;
       showMissing_ = other.showMissing_;
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       switch (other.ConsistencySelectorCase) {
         case ConsistencySelectorOneofCase.Transaction:
           Transaction = other.Transaction;
@@ -961,6 +1036,21 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 13;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     private object consistencySelector_;
     /// <summary>Enum of possible cases for the "consistency_selector" oneof.</summary>
     public enum ConsistencySelectorOneofCase {
@@ -1006,6 +1096,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (Transaction != other.Transaction) return false;
       if (!object.Equals(ReadTime, other.ReadTime)) return false;
       if (ShowMissing != other.ShowMissing) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       if (ConsistencySelectorCase != other.ConsistencySelectorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1023,6 +1114,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (HasTransaction) hash ^= Transaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
       if (ShowMissing != false) hash ^= ShowMissing.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       hash ^= (int) consistencySelectorCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1078,6 +1170,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(96);
         output.WriteBool(ShowMissing);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1124,6 +1220,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(96);
         output.WriteBool(ShowMissing);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1161,6 +1261,9 @@ namespace Google.Cloud.Firestore.V1 {
       if (ShowMissing != false) {
         size += 1 + 1;
       }
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1196,6 +1299,12 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (other.ShowMissing != false) {
         ShowMissing = other.ShowMissing;
+      }
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
       }
       switch (other.ConsistencySelectorCase) {
         case ConsistencySelectorOneofCase.Transaction:
@@ -1272,6 +1381,13 @@ namespace Google.Cloud.Firestore.V1 {
             ShowMissing = input.ReadBool();
             break;
           }
+          case 106: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -1333,6 +1449,13 @@ namespace Google.Cloud.Firestore.V1 {
           }
           case 96: {
             ShowMissing = input.ReadBool();
+            break;
+          }
+          case 106: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -1622,6 +1745,7 @@ namespace Google.Cloud.Firestore.V1 {
       documentId_ = other.documentId_;
       document_ = other.document_ != null ? other.document_.Clone() : null;
       mask_ = other.mask_ != null ? other.mask_.Clone() : null;
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1714,6 +1838,21 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 6;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1734,6 +1873,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (DocumentId != other.DocumentId) return false;
       if (!object.Equals(Document, other.Document)) return false;
       if (!object.Equals(Mask, other.Mask)) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1746,6 +1886,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (DocumentId.Length != 0) hash ^= DocumentId.GetHashCode();
       if (document_ != null) hash ^= Document.GetHashCode();
       if (mask_ != null) hash ^= Mask.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1784,6 +1925,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Mask);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1814,6 +1959,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Mask);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1838,6 +1987,9 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (mask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Mask);
+      }
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1871,6 +2023,12 @@ namespace Google.Cloud.Firestore.V1 {
           Mask = new global::Google.Cloud.Firestore.V1.DocumentMask();
         }
         Mask.MergeFrom(other.Mask);
+      }
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1917,6 +2075,13 @@ namespace Google.Cloud.Firestore.V1 {
             input.ReadMessage(Mask);
             break;
           }
+          case 50: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -1960,6 +2125,13 @@ namespace Google.Cloud.Firestore.V1 {
               Mask = new global::Google.Cloud.Firestore.V1.DocumentMask();
             }
             input.ReadMessage(Mask);
+            break;
+          }
+          case 50: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -2012,6 +2184,7 @@ namespace Google.Cloud.Firestore.V1 {
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       mask_ = other.mask_ != null ? other.mask_.Clone() : null;
       currentDocument_ = other.currentDocument_ != null ? other.currentDocument_.Clone() : null;
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2092,6 +2265,21 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 5;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2111,6 +2299,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
       if (!object.Equals(Mask, other.Mask)) return false;
       if (!object.Equals(CurrentDocument, other.CurrentDocument)) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2122,6 +2311,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
       if (mask_ != null) hash ^= Mask.GetHashCode();
       if (currentDocument_ != null) hash ^= CurrentDocument.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2156,6 +2346,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(CurrentDocument);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2182,6 +2376,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(CurrentDocument);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2203,6 +2401,9 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (currentDocument_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CurrentDocument);
+      }
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2239,6 +2440,12 @@ namespace Google.Cloud.Firestore.V1 {
           CurrentDocument = new global::Google.Cloud.Firestore.V1.Precondition();
         }
         CurrentDocument.MergeFrom(other.CurrentDocument);
+      }
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2287,6 +2494,13 @@ namespace Google.Cloud.Firestore.V1 {
             input.ReadMessage(CurrentDocument);
             break;
           }
+          case 42: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -2332,6 +2546,13 @@ namespace Google.Cloud.Firestore.V1 {
               CurrentDocument = new global::Google.Cloud.Firestore.V1.Precondition();
             }
             input.ReadMessage(CurrentDocument);
+            break;
+          }
+          case 42: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -2382,6 +2603,7 @@ namespace Google.Cloud.Firestore.V1 {
     public DeleteDocumentRequest(DeleteDocumentRequest other) : this() {
       name_ = other.name_;
       currentDocument_ = other.currentDocument_ != null ? other.currentDocument_.Clone() : null;
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2423,6 +2645,21 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 3;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2440,6 +2677,7 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (Name != other.Name) return false;
       if (!object.Equals(CurrentDocument, other.CurrentDocument)) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2449,6 +2687,7 @@ namespace Google.Cloud.Firestore.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (currentDocument_ != null) hash ^= CurrentDocument.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2475,6 +2714,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(CurrentDocument);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2493,6 +2736,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(CurrentDocument);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2508,6 +2755,9 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (currentDocument_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CurrentDocument);
+      }
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2529,6 +2779,12 @@ namespace Google.Cloud.Firestore.V1 {
           CurrentDocument = new global::Google.Cloud.Firestore.V1.Precondition();
         }
         CurrentDocument.MergeFrom(other.CurrentDocument);
+      }
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2560,6 +2816,13 @@ namespace Google.Cloud.Firestore.V1 {
             input.ReadMessage(CurrentDocument);
             break;
           }
+          case 26: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -2588,6 +2851,13 @@ namespace Google.Cloud.Firestore.V1 {
               CurrentDocument = new global::Google.Cloud.Firestore.V1.Precondition();
             }
             input.ReadMessage(CurrentDocument);
+            break;
+          }
+          case 26: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -2639,6 +2909,7 @@ namespace Google.Cloud.Firestore.V1 {
       database_ = other.database_;
       documents_ = other.documents_.Clone();
       mask_ = other.mask_ != null ? other.mask_.Clone() : null;
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       switch (other.ConsistencySelectorCase) {
         case ConsistencySelectorOneofCase.Transaction:
           Transaction = other.Transaction;
@@ -2777,6 +3048,21 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 8;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     private object consistencySelector_;
     /// <summary>Enum of possible cases for the "consistency_selector" oneof.</summary>
     public enum ConsistencySelectorOneofCase {
@@ -2820,6 +3106,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (Transaction != other.Transaction) return false;
       if (!object.Equals(NewTransaction, other.NewTransaction)) return false;
       if (!object.Equals(ReadTime, other.ReadTime)) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       if (ConsistencySelectorCase != other.ConsistencySelectorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2834,6 +3121,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (HasTransaction) hash ^= Transaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.NewTransaction) hash ^= NewTransaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       hash ^= (int) consistencySelectorCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2874,6 +3162,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(ReadTime);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2905,6 +3197,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(ReadTime);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2931,6 +3227,9 @@ namespace Google.Cloud.Firestore.V1 {
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadTime);
       }
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2952,6 +3251,12 @@ namespace Google.Cloud.Firestore.V1 {
           Mask = new global::Google.Cloud.Firestore.V1.DocumentMask();
         }
         Mask.MergeFrom(other.Mask);
+      }
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
       }
       switch (other.ConsistencySelectorCase) {
         case ConsistencySelectorOneofCase.Transaction:
@@ -3027,6 +3332,13 @@ namespace Google.Cloud.Firestore.V1 {
             ReadTime = subBuilder;
             break;
           }
+          case 66: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -3081,6 +3393,13 @@ namespace Google.Cloud.Firestore.V1 {
             }
             input.ReadMessage(subBuilder);
             ReadTime = subBuilder;
+            break;
+          }
+          case 66: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -3532,6 +3851,7 @@ namespace Google.Cloud.Firestore.V1 {
     public BeginTransactionRequest(BeginTransactionRequest other) : this() {
       database_ = other.database_;
       options_ = other.options_ != null ? other.options_.Clone() : null;
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3573,6 +3893,21 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 3;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3590,6 +3925,7 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (Database != other.Database) return false;
       if (!object.Equals(Options, other.Options)) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3599,6 +3935,7 @@ namespace Google.Cloud.Firestore.V1 {
       int hash = 1;
       if (Database.Length != 0) hash ^= Database.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3625,6 +3962,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Options);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3643,6 +3984,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Options);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3658,6 +4003,9 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (options_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
+      }
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3679,6 +4027,12 @@ namespace Google.Cloud.Firestore.V1 {
           Options = new global::Google.Cloud.Firestore.V1.TransactionOptions();
         }
         Options.MergeFrom(other.Options);
+      }
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3710,6 +4064,13 @@ namespace Google.Cloud.Firestore.V1 {
             input.ReadMessage(Options);
             break;
           }
+          case 26: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -3738,6 +4099,13 @@ namespace Google.Cloud.Firestore.V1 {
               Options = new global::Google.Cloud.Firestore.V1.TransactionOptions();
             }
             input.ReadMessage(Options);
+            break;
+          }
+          case 26: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -3993,6 +4361,7 @@ namespace Google.Cloud.Firestore.V1 {
       database_ = other.database_;
       writes_ = other.writes_.Clone();
       transaction_ = other.transaction_;
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4049,6 +4418,21 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 4;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4067,6 +4451,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (Database != other.Database) return false;
       if(!writes_.Equals(other.writes_)) return false;
       if (Transaction != other.Transaction) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4077,6 +4462,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (Database.Length != 0) hash ^= Database.GetHashCode();
       hash ^= writes_.GetHashCode();
       if (Transaction.Length != 0) hash ^= Transaction.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4104,6 +4490,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(26);
         output.WriteBytes(Transaction);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4123,6 +4513,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(26);
         output.WriteBytes(Transaction);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4139,6 +4533,9 @@ namespace Google.Cloud.Firestore.V1 {
       size += writes_.CalculateSize(_repeated_writes_codec);
       if (Transaction.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Transaction);
+      }
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4158,6 +4555,12 @@ namespace Google.Cloud.Firestore.V1 {
       writes_.Add(other.writes_);
       if (other.Transaction.Length != 0) {
         Transaction = other.Transaction;
+      }
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4190,6 +4593,13 @@ namespace Google.Cloud.Firestore.V1 {
             Transaction = input.ReadBytes();
             break;
           }
+          case 34: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -4219,6 +4629,13 @@ namespace Google.Cloud.Firestore.V1 {
           }
           case 26: {
             Transaction = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -4514,6 +4931,7 @@ namespace Google.Cloud.Firestore.V1 {
     public RollbackRequest(RollbackRequest other) : this() {
       database_ = other.database_;
       transaction_ = other.transaction_;
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4554,6 +4972,21 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 3;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4571,6 +5004,7 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (Database != other.Database) return false;
       if (Transaction != other.Transaction) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4580,6 +5014,7 @@ namespace Google.Cloud.Firestore.V1 {
       int hash = 1;
       if (Database.Length != 0) hash ^= Database.GetHashCode();
       if (Transaction.Length != 0) hash ^= Transaction.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4606,6 +5041,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(18);
         output.WriteBytes(Transaction);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4624,6 +5063,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(18);
         output.WriteBytes(Transaction);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4639,6 +5082,9 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (Transaction.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Transaction);
+      }
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4657,6 +5103,12 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (other.Transaction.Length != 0) {
         Transaction = other.Transaction;
+      }
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4685,6 +5137,13 @@ namespace Google.Cloud.Firestore.V1 {
             Transaction = input.ReadBytes();
             break;
           }
+          case 26: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -4710,6 +5169,13 @@ namespace Google.Cloud.Firestore.V1 {
           }
           case 18: {
             Transaction = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -4759,6 +5225,7 @@ namespace Google.Cloud.Firestore.V1 {
     public RunQueryRequest(RunQueryRequest other) : this() {
       parent_ = other.parent_;
       explainOptions_ = other.explainOptions_ != null ? other.explainOptions_.Clone() : null;
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.StructuredQuery:
           StructuredQuery = other.StructuredQuery.Clone();
@@ -4905,6 +5372,21 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 11;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     private object queryType_;
     /// <summary>Enum of possible cases for the "query_type" oneof.</summary>
     public enum QueryTypeOneofCase {
@@ -4968,6 +5450,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (!object.Equals(NewTransaction, other.NewTransaction)) return false;
       if (!object.Equals(ReadTime, other.ReadTime)) return false;
       if (!object.Equals(ExplainOptions, other.ExplainOptions)) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       if (QueryTypeCase != other.QueryTypeCase) return false;
       if (ConsistencySelectorCase != other.ConsistencySelectorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -4983,6 +5466,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.NewTransaction) hash ^= NewTransaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
       if (explainOptions_ != null) hash ^= ExplainOptions.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       hash ^= (int) queryTypeCase_;
       hash ^= (int) consistencySelectorCase_;
       if (_unknownFields != null) {
@@ -5027,6 +5511,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(ExplainOptions);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5061,6 +5549,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(ExplainOptions);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5089,6 +5581,9 @@ namespace Google.Cloud.Firestore.V1 {
       if (explainOptions_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExplainOptions);
       }
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5109,6 +5604,12 @@ namespace Google.Cloud.Firestore.V1 {
           ExplainOptions = new global::Google.Cloud.Firestore.V1.ExplainOptions();
         }
         ExplainOptions.MergeFrom(other.ExplainOptions);
+      }
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
       }
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.StructuredQuery:
@@ -5198,6 +5699,13 @@ namespace Google.Cloud.Firestore.V1 {
             input.ReadMessage(ExplainOptions);
             break;
           }
+          case 90: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -5257,6 +5765,13 @@ namespace Google.Cloud.Firestore.V1 {
               ExplainOptions = new global::Google.Cloud.Firestore.V1.ExplainOptions();
             }
             input.ReadMessage(ExplainOptions);
+            break;
+          }
+          case 90: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -5797,6 +6312,7 @@ namespace Google.Cloud.Firestore.V1 {
     public ExecutePipelineRequest(ExecutePipelineRequest other) : this() {
       database_ = other.database_;
       autoCommitTransaction_ = other.autoCommitTransaction_;
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       switch (other.PipelineTypeCase) {
         case PipelineTypeOneofCase.StructuredPipeline:
           StructuredPipeline = other.StructuredPipeline.Clone();
@@ -5940,6 +6456,21 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 10;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     private object pipelineType_;
     /// <summary>Enum of possible cases for the "pipeline_type" oneof.</summary>
     public enum PipelineTypeOneofCase {
@@ -6003,6 +6534,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (!object.Equals(NewTransaction, other.NewTransaction)) return false;
       if (!object.Equals(ReadTime, other.ReadTime)) return false;
       if (AutoCommitTransaction != other.AutoCommitTransaction) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       if (PipelineTypeCase != other.PipelineTypeCase) return false;
       if (ConsistencySelectorCase != other.ConsistencySelectorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -6018,6 +6550,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.NewTransaction) hash ^= NewTransaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
       if (AutoCommitTransaction != false) hash ^= AutoCommitTransaction.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       hash ^= (int) pipelineTypeCase_;
       hash ^= (int) consistencySelectorCase_;
       if (_unknownFields != null) {
@@ -6062,6 +6595,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(72);
         output.WriteBool(AutoCommitTransaction);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6096,6 +6633,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(72);
         output.WriteBool(AutoCommitTransaction);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6124,6 +6665,9 @@ namespace Google.Cloud.Firestore.V1 {
       if (AutoCommitTransaction != false) {
         size += 1 + 1;
       }
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -6141,6 +6685,12 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (other.AutoCommitTransaction != false) {
         AutoCommitTransaction = other.AutoCommitTransaction;
+      }
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
       }
       switch (other.PipelineTypeCase) {
         case PipelineTypeOneofCase.StructuredPipeline:
@@ -6227,6 +6777,13 @@ namespace Google.Cloud.Firestore.V1 {
             AutoCommitTransaction = input.ReadBool();
             break;
           }
+          case 82: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -6283,6 +6840,13 @@ namespace Google.Cloud.Firestore.V1 {
           }
           case 72: {
             AutoCommitTransaction = input.ReadBool();
+            break;
+          }
+          case 82: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -6694,6 +7258,7 @@ namespace Google.Cloud.Firestore.V1 {
     public RunAggregationQueryRequest(RunAggregationQueryRequest other) : this() {
       parent_ = other.parent_;
       explainOptions_ = other.explainOptions_ != null ? other.explainOptions_.Clone() : null;
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.StructuredAggregationQuery:
           StructuredAggregationQuery = other.StructuredAggregationQuery.Clone();
@@ -6840,6 +7405,21 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 9;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     private object queryType_;
     /// <summary>Enum of possible cases for the "query_type" oneof.</summary>
     public enum QueryTypeOneofCase {
@@ -6903,6 +7483,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (!object.Equals(NewTransaction, other.NewTransaction)) return false;
       if (!object.Equals(ReadTime, other.ReadTime)) return false;
       if (!object.Equals(ExplainOptions, other.ExplainOptions)) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       if (QueryTypeCase != other.QueryTypeCase) return false;
       if (ConsistencySelectorCase != other.ConsistencySelectorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -6918,6 +7499,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.NewTransaction) hash ^= NewTransaction.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
       if (explainOptions_ != null) hash ^= ExplainOptions.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       hash ^= (int) queryTypeCase_;
       hash ^= (int) consistencySelectorCase_;
       if (_unknownFields != null) {
@@ -6962,6 +7544,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(ExplainOptions);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6996,6 +7582,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(ExplainOptions);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7024,6 +7614,9 @@ namespace Google.Cloud.Firestore.V1 {
       if (explainOptions_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExplainOptions);
       }
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -7044,6 +7637,12 @@ namespace Google.Cloud.Firestore.V1 {
           ExplainOptions = new global::Google.Cloud.Firestore.V1.ExplainOptions();
         }
         ExplainOptions.MergeFrom(other.ExplainOptions);
+      }
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
       }
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.StructuredAggregationQuery:
@@ -7133,6 +7732,13 @@ namespace Google.Cloud.Firestore.V1 {
             input.ReadMessage(ExplainOptions);
             break;
           }
+          case 74: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -7192,6 +7798,13 @@ namespace Google.Cloud.Firestore.V1 {
               ExplainOptions = new global::Google.Cloud.Firestore.V1.ExplainOptions();
             }
             input.ReadMessage(ExplainOptions);
+            break;
+          }
+          case 74: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -7610,6 +8223,7 @@ namespace Google.Cloud.Firestore.V1 {
       partitionCount_ = other.partitionCount_;
       pageToken_ = other.pageToken_;
       pageSize_ = other.pageSize_;
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.StructuredQuery:
           StructuredQuery = other.StructuredQuery.Clone();
@@ -7756,6 +8370,21 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 7;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     private object queryType_;
     /// <summary>Enum of possible cases for the "query_type" oneof.</summary>
     public enum QueryTypeOneofCase {
@@ -7817,6 +8446,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (PageToken != other.PageToken) return false;
       if (PageSize != other.PageSize) return false;
       if (!object.Equals(ReadTime, other.ReadTime)) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       if (QueryTypeCase != other.QueryTypeCase) return false;
       if (ConsistencySelectorCase != other.ConsistencySelectorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -7832,6 +8462,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       hash ^= (int) queryTypeCase_;
       hash ^= (int) consistencySelectorCase_;
       if (_unknownFields != null) {
@@ -7876,6 +8507,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(ReadTime);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7910,6 +8545,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(ReadTime);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7938,6 +8577,9 @@ namespace Google.Cloud.Firestore.V1 {
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadTime);
       }
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -7961,6 +8603,12 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (other.PageSize != 0) {
         PageSize = other.PageSize;
+      }
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
       }
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.StructuredQuery:
@@ -8033,6 +8681,13 @@ namespace Google.Cloud.Firestore.V1 {
             ReadTime = subBuilder;
             break;
           }
+          case 58: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -8084,6 +8739,13 @@ namespace Google.Cloud.Firestore.V1 {
             }
             input.ReadMessage(subBuilder);
             ReadTime = subBuilder;
+            break;
+          }
+          case 58: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -8397,6 +9059,7 @@ namespace Google.Cloud.Firestore.V1 {
       writes_ = other.writes_.Clone();
       streamToken_ = other.streamToken_;
       labels_ = other.labels_.Clone();
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8501,6 +9164,21 @@ namespace Google.Cloud.Firestore.V1 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 6;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8521,6 +9199,7 @@ namespace Google.Cloud.Firestore.V1 {
       if(!writes_.Equals(other.writes_)) return false;
       if (StreamToken != other.StreamToken) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8533,6 +9212,7 @@ namespace Google.Cloud.Firestore.V1 {
       hash ^= writes_.GetHashCode();
       if (StreamToken.Length != 0) hash ^= StreamToken.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8565,6 +9245,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteBytes(StreamToken);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (requestOptions_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8589,6 +9273,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteBytes(StreamToken);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (requestOptions_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8610,6 +9298,9 @@ namespace Google.Cloud.Firestore.V1 {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(StreamToken);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -8633,6 +9324,12 @@ namespace Google.Cloud.Firestore.V1 {
         StreamToken = other.StreamToken;
       }
       labels_.MergeFrom(other.labels_);
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8672,6 +9369,13 @@ namespace Google.Cloud.Firestore.V1 {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
+          case 50: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -8709,6 +9413,13 @@ namespace Google.Cloud.Firestore.V1 {
           }
           case 42: {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 50: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -9088,6 +9799,7 @@ namespace Google.Cloud.Firestore.V1 {
     public ListenRequest(ListenRequest other) : this() {
       database_ = other.database_;
       labels_ = other.labels_.Clone();
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       switch (other.TargetChangeCase) {
         case TargetChangeOneofCase.AddTarget:
           AddTarget = other.AddTarget.Clone();
@@ -9180,6 +9892,21 @@ namespace Google.Cloud.Firestore.V1 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 5;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     private object targetChange_;
     /// <summary>Enum of possible cases for the "target_change" oneof.</summary>
     public enum TargetChangeOneofCase {
@@ -9220,6 +9947,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (!object.Equals(AddTarget, other.AddTarget)) return false;
       if (RemoveTarget != other.RemoveTarget) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       if (TargetChangeCase != other.TargetChangeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -9232,6 +9960,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (targetChangeCase_ == TargetChangeOneofCase.AddTarget) hash ^= AddTarget.GetHashCode();
       if (HasRemoveTarget) hash ^= RemoveTarget.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       hash ^= (int) targetChangeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -9264,6 +9993,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteInt32(RemoveTarget);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (requestOptions_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9287,6 +10020,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteInt32(RemoveTarget);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (requestOptions_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9307,6 +10044,9 @@ namespace Google.Cloud.Firestore.V1 {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RemoveTarget);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -9323,6 +10063,12 @@ namespace Google.Cloud.Firestore.V1 {
         Database = other.Database;
       }
       labels_.MergeFrom(other.labels_);
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
+      }
       switch (other.TargetChangeCase) {
         case TargetChangeOneofCase.AddTarget:
           if (AddTarget == null) {
@@ -9375,6 +10121,13 @@ namespace Google.Cloud.Firestore.V1 {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
+          case 42: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -9413,6 +10166,13 @@ namespace Google.Cloud.Firestore.V1 {
           }
           case 34: {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 42: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -11467,6 +12227,7 @@ namespace Google.Cloud.Firestore.V1 {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       switch (other.ConsistencySelectorCase) {
         case ConsistencySelectorOneofCase.ReadTime:
           ReadTime = other.ReadTime.Clone();
@@ -11553,6 +12314,21 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 5;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     private object consistencySelector_;
     /// <summary>Enum of possible cases for the "consistency_selector" oneof.</summary>
     public enum ConsistencySelectorOneofCase {
@@ -11592,6 +12368,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       if (!object.Equals(ReadTime, other.ReadTime)) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       if (ConsistencySelectorCase != other.ConsistencySelectorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -11604,6 +12381,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       hash ^= (int) consistencySelectorCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -11639,6 +12417,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ReadTime);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -11665,6 +12447,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ReadTime);
       }
+      if (requestOptions_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -11687,6 +12473,9 @@ namespace Google.Cloud.Firestore.V1 {
       if (consistencySelectorCase_ == ConsistencySelectorOneofCase.ReadTime) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadTime);
       }
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -11707,6 +12496,12 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
+      }
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
       }
       switch (other.ConsistencySelectorCase) {
         case ConsistencySelectorOneofCase.ReadTime:
@@ -11757,6 +12552,13 @@ namespace Google.Cloud.Firestore.V1 {
             ReadTime = subBuilder;
             break;
           }
+          case 42: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -11795,6 +12597,13 @@ namespace Google.Cloud.Firestore.V1 {
             }
             input.ReadMessage(subBuilder);
             ReadTime = subBuilder;
+            break;
+          }
+          case 42: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }
@@ -12080,6 +12889,7 @@ namespace Google.Cloud.Firestore.V1 {
       database_ = other.database_;
       writes_ = other.writes_.Clone();
       labels_ = other.labels_.Clone();
+      requestOptions_ = other.requestOptions_ != null ? other.requestOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -12137,6 +12947,21 @@ namespace Google.Cloud.Firestore.V1 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "request_options" field.</summary>
+    public const int RequestOptionsFieldNumber = 4;
+    private global::Google.Cloud.Firestore.V1.RequestOptions requestOptions_;
+    /// <summary>
+    /// Optional. Any additional options for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.RequestOptions RequestOptions {
+      get { return requestOptions_; }
+      set {
+        requestOptions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -12155,6 +12980,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (Database != other.Database) return false;
       if(!writes_.Equals(other.writes_)) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (!object.Equals(RequestOptions, other.RequestOptions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -12165,6 +12991,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (Database.Length != 0) hash ^= Database.GetHashCode();
       hash ^= writes_.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (requestOptions_ != null) hash ^= RequestOptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -12189,6 +13016,10 @@ namespace Google.Cloud.Firestore.V1 {
       }
       writes_.WriteTo(output, _repeated_writes_codec);
       labels_.WriteTo(output, _map_labels_codec);
+      if (requestOptions_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -12205,6 +13036,10 @@ namespace Google.Cloud.Firestore.V1 {
       }
       writes_.WriteTo(ref output, _repeated_writes_codec);
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (requestOptions_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RequestOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -12220,6 +13055,9 @@ namespace Google.Cloud.Firestore.V1 {
       }
       size += writes_.CalculateSize(_repeated_writes_codec);
       size += labels_.CalculateSize(_map_labels_codec);
+      if (requestOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestOptions);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -12237,6 +13075,12 @@ namespace Google.Cloud.Firestore.V1 {
       }
       writes_.Add(other.writes_);
       labels_.MergeFrom(other.labels_);
+      if (other.requestOptions_ != null) {
+        if (requestOptions_ == null) {
+          RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+        }
+        RequestOptions.MergeFrom(other.RequestOptions);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -12268,6 +13112,13 @@ namespace Google.Cloud.Firestore.V1 {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
+          case 34: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
+            break;
+          }
         }
       }
     #endif
@@ -12297,6 +13148,13 @@ namespace Google.Cloud.Firestore.V1 {
           }
           case 26: {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 34: {
+            if (requestOptions_ == null) {
+              RequestOptions = new global::Google.Cloud.Firestore.V1.RequestOptions();
+            }
+            input.ReadMessage(RequestOptions);
             break;
           }
         }

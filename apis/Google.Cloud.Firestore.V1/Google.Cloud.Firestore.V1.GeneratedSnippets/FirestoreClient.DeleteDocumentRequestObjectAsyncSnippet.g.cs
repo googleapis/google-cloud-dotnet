@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 Name = "",
                 CurrentDocument = new Precondition(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             await firestoreClient.DeleteDocumentAsync(request);
