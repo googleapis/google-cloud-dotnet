@@ -3921,6 +3921,7 @@ namespace GoogleCSharpSnippets
             gcdv::InstallNpmPackagesRequest request = new gcdv::InstallNpmPackagesRequest
             {
                 WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                PipelineConfig = new gcdv::PipelineConfig(),
             };
             // Make the request
             gcdv::InstallNpmPackagesResponse response = dataformClient.InstallNpmPackages(request);
@@ -3938,6 +3939,7 @@ namespace GoogleCSharpSnippets
             gcdv::InstallNpmPackagesRequest request = new gcdv::InstallNpmPackagesRequest
             {
                 WorkspaceAsWorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                PipelineConfig = new gcdv::PipelineConfig(),
             };
             // Make the request
             gcdv::InstallNpmPackagesResponse response = await dataformClient.InstallNpmPackagesAsync(request);
