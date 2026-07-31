@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             InstallNpmPackagesRequest request = new InstallNpmPackagesRequest
             {
                 WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                PipelineConfig = new PipelineConfig(),
             };
             // Make the request
             InstallNpmPackagesResponse response = dataformClient.InstallNpmPackages(request);
