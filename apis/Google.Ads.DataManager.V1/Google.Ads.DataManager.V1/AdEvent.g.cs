@@ -39,7 +39,7 @@ namespace Google.Ads.DataManager.V1 {
             "QQISFQoIZXZlbnRfaWQYBiABKAlCA+BBARI7Cgl1c2VyX2RhdGEYByABKAsy",
             "Iy5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlVzZXJEYXRhQgPgQQESPwoL",
             "ZGV2aWNlX2luZm8YCCABKAsyJS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYx",
-            "LkRldmljZUluZm9CA+BBARIdChBtb2JpbGVfZGV2aWNlX2lkGAkgASgJQgPg",
+            "LkRldmljZUluZm9CA+BBAhIdChBtb2JpbGVfZGV2aWNlX2lkGAkgASgJQgPg",
             "QQESGAoLY2FtcGFpZ25faWQYCiABKAlCA+BBAhIaCg1jYW1wYWlnbl9uYW1l",
             "GAsgASgJQgPgQQISGAoLYWRfZ3JvdXBfaWQYDCABKAlCA+BBARISCgVhZF9p",
             "ZBgNIAEoCUID4EEBEjQKB2FkX3R5cGUYDiABKA4yIS5nb29nbGUuYWRzLmRh",
@@ -49,7 +49,7 @@ namespace Google.Ads.DataManager.V1 {
             "CgxhZF9wbGFjZW1lbnQYEiABKA4yJi5nb29nbGUuYWRzLmRhdGFtYW5hZ2Vy",
             "LnYxLkFkUGxhY2VtZW50SAMSHQoTYWRfcGxhY2VtZW50X3N0cmluZxgTIAEo",
             "CUgDEhYKCWFkX2hlaWdodBgUIAEoBUID4EEBEhUKCGFkX3dpZHRoGBUgASgF",
-            "QgPgQQESGAoLcmVnaW9uX2NvZGUYFiABKAlCA+BBAhITCgZzb3VyY2UYFyAB",
+            "QgPgQQESGAoLcmVnaW9uX2NvZGUYFiABKAlCA+BBARITCgZzb3VyY2UYFyAB",
             "KAlCA+BBAhITCgZtZWRpdW0YGCABKAlCA+BBAhJCCg50YXJnZXRpbmdfdHlw",
             "ZRgZIAEoDjIoLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuVGFyZ2V0aW5n",
             "VHlwZUgEEh8KFXRhcmdldGluZ190eXBlX3N0cmluZxgaIAEoCUgEEkAKDXBs",
@@ -682,7 +682,7 @@ namespace Google.Ads.DataManager.V1 {
     public const int DeviceInfoFieldNumber = 8;
     private global::Google.Ads.DataManager.V1.DeviceInfo deviceInfo_;
     /// <summary>
-    /// Optional. Information gathered about the device being used when the ad
+    /// Required. Information gathered about the device being used when the ad
     /// event happened.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -977,7 +977,7 @@ namespace Google.Ads.DataManager.V1 {
     public const int RegionCodeFieldNumber = 22;
     private string regionCode_ = "";
     /// <summary>
-    /// Required. The ISO 3166-2 country plus subdivision.
+    /// Optional. The ISO 3166-2 country plus subdivision.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

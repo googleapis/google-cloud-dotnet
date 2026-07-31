@@ -423,6 +423,10 @@ namespace Google.Ads.DataManager.V1 {
     /// - `&lt;=`
     /// - `:` (has)
     ///
+    /// **Supported Functions:**
+    /// - `IN(field, value1, value2, ...)`: returns true if the field matches any
+    /// of the values.  Example: `IN(display_name, "name1", "name2")`
+    ///
     /// Supported fields:
     ///
     /// - `id`

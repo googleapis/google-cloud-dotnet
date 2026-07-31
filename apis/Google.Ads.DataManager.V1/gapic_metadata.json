@@ -28,6 +28,12 @@
                 "IngestEventsAsync"
               ]
             },
+            "RemoveAllAudienceMembers": {
+              "methods": [
+                "RemoveAllAudienceMembers",
+                "RemoveAllAudienceMembersAsync"
+              ]
+            },
             "RemoveAudienceMembers": {
               "methods": [
                 "RemoveAudienceMembers",

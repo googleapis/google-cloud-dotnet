@@ -2274,6 +2274,7 @@ namespace Google.Ads.DataManager.V1 {
         [pbr::OriginalName("PAIR_ID")] PairId = 4,
         /// <summary>
         /// Data Management Platform IDs:
+        ///
         /// - Google User ID
         /// - Partner Provided ID
         /// - Publisher Provided ID
@@ -2282,6 +2283,7 @@ namespace Google.Ads.DataManager.V1 {
         /// - Roku ID
         /// - Amazon Fire TV ID
         /// - Xbox or Microsoft ID
+        /// - Generic Device ID
         /// </summary>
         [pbr::OriginalName("PSEUDONYMOUS_ID")] PseudonymousId = 5,
       }

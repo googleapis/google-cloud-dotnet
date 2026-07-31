@@ -46,6 +46,7 @@ namespace Google.Ads.DataManager.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             IngestAudienceMembersSettings = existing.IngestAudienceMembersSettings;
             RemoveAudienceMembersSettings = existing.RemoveAudienceMembersSettings;
+            RemoveAllAudienceMembersSettings = existing.RemoveAllAudienceMembersSettings;
             IngestEventsSettings = existing.IngestEventsSettings;
             IngestAdEventsSettings = existing.IngestAdEventsSettings;
             RetrieveRequestStatusSettings = existing.RetrieveRequestStatusSettings;
@@ -79,6 +80,19 @@ namespace Google.Ads.DataManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings RemoveAudienceMembersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>IngestionServiceClient.RemoveAllAudienceMembers</c> and
+        /// <c>IngestionServiceClient.RemoveAllAudienceMembersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RemoveAllAudienceMembersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -325,6 +339,33 @@ namespace Google.Ads.DataManager.V1
             RemoveAudienceMembersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Removes all audience members from the provided destinations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RemoveAllAudienceMembersResponse RemoveAllAudienceMembers(RemoveAllAudienceMembersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Removes all audience members from the provided destinations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveAllAudienceMembersResponse> RemoveAllAudienceMembersAsync(RemoveAllAudienceMembersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Removes all audience members from the provided destinations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveAllAudienceMembersResponse> RemoveAllAudienceMembersAsync(RemoveAllAudienceMembersRequest request, st::CancellationToken cancellationToken) =>
+            RemoveAllAudienceMembersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Uploads a list of
         /// [Event][google.ads.datamanager.v1.Event] resources from
         /// the provided [Destination][google.ads.datamanager.v1.Destination].
@@ -434,6 +475,8 @@ namespace Google.Ads.DataManager.V1
 
         private readonly gaxgrpc::ApiCall<RemoveAudienceMembersRequest, RemoveAudienceMembersResponse> _callRemoveAudienceMembers;
 
+        private readonly gaxgrpc::ApiCall<RemoveAllAudienceMembersRequest, RemoveAllAudienceMembersResponse> _callRemoveAllAudienceMembers;
+
         private readonly gaxgrpc::ApiCall<IngestEventsRequest, IngestEventsResponse> _callIngestEvents;
 
         private readonly gaxgrpc::ApiCall<IngestAdEventsRequest, IngestAdEventsResponse> _callIngestAdEvents;
@@ -461,6 +504,9 @@ namespace Google.Ads.DataManager.V1
             _callRemoveAudienceMembers = clientHelper.BuildApiCall<RemoveAudienceMembersRequest, RemoveAudienceMembersResponse>("RemoveAudienceMembers", grpcClient.RemoveAudienceMembersAsync, grpcClient.RemoveAudienceMembers, effectiveSettings.RemoveAudienceMembersSettings);
             Modify_ApiCall(ref _callRemoveAudienceMembers);
             Modify_RemoveAudienceMembersApiCall(ref _callRemoveAudienceMembers);
+            _callRemoveAllAudienceMembers = clientHelper.BuildApiCall<RemoveAllAudienceMembersRequest, RemoveAllAudienceMembersResponse>("RemoveAllAudienceMembers", grpcClient.RemoveAllAudienceMembersAsync, grpcClient.RemoveAllAudienceMembers, effectiveSettings.RemoveAllAudienceMembersSettings);
+            Modify_ApiCall(ref _callRemoveAllAudienceMembers);
+            Modify_RemoveAllAudienceMembersApiCall(ref _callRemoveAllAudienceMembers);
             _callIngestEvents = clientHelper.BuildApiCall<IngestEventsRequest, IngestEventsResponse>("IngestEvents", grpcClient.IngestEventsAsync, grpcClient.IngestEvents, effectiveSettings.IngestEventsSettings);
             Modify_ApiCall(ref _callIngestEvents);
             Modify_IngestEventsApiCall(ref _callIngestEvents);
@@ -479,6 +525,8 @@ namespace Google.Ads.DataManager.V1
 
         partial void Modify_RemoveAudienceMembersApiCall(ref gaxgrpc::ApiCall<RemoveAudienceMembersRequest, RemoveAudienceMembersResponse> call);
 
+        partial void Modify_RemoveAllAudienceMembersApiCall(ref gaxgrpc::ApiCall<RemoveAllAudienceMembersRequest, RemoveAllAudienceMembersResponse> call);
+
         partial void Modify_IngestEventsApiCall(ref gaxgrpc::ApiCall<IngestEventsRequest, IngestEventsResponse> call);
 
         partial void Modify_IngestAdEventsApiCall(ref gaxgrpc::ApiCall<IngestAdEventsRequest, IngestAdEventsResponse> call);
@@ -493,6 +541,8 @@ namespace Google.Ads.DataManager.V1
         partial void Modify_IngestAudienceMembersRequest(ref IngestAudienceMembersRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RemoveAudienceMembersRequest(ref RemoveAudienceMembersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RemoveAllAudienceMembersRequest(ref RemoveAllAudienceMembersRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_IngestEventsRequest(ref IngestEventsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -554,6 +604,30 @@ namespace Google.Ads.DataManager.V1
         {
             Modify_RemoveAudienceMembersRequest(ref request, ref callSettings);
             return _callRemoveAudienceMembers.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Removes all audience members from the provided destinations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RemoveAllAudienceMembersResponse RemoveAllAudienceMembers(RemoveAllAudienceMembersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveAllAudienceMembersRequest(ref request, ref callSettings);
+            return _callRemoveAllAudienceMembers.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Removes all audience members from the provided destinations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RemoveAllAudienceMembersResponse> RemoveAllAudienceMembersAsync(RemoveAllAudienceMembersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveAllAudienceMembersRequest(ref request, ref callSettings);
+            return _callRemoveAllAudienceMembers.Async(request, callSettings);
         }
 
         /// <summary>

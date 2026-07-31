@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Ads.DataManager.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -120,6 +121,43 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for RemoveAllAudienceMembers</summary>
+        public void RemoveAllAudienceMembersRequestObject()
+        {
+            // Snippet: RemoveAllAudienceMembers(RemoveAllAudienceMembersRequest, CallSettings)
+            // Create client
+            IngestionServiceClient ingestionServiceClient = IngestionServiceClient.Create();
+            // Initialize request argument(s)
+            RemoveAllAudienceMembersRequest request = new RemoveAllAudienceMembersRequest
+            {
+                Destinations = { new Destination(), },
+                RemoveAsOfTime = new Timestamp(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            RemoveAllAudienceMembersResponse response = ingestionServiceClient.RemoveAllAudienceMembers(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveAllAudienceMembersAsync</summary>
+        public async Task RemoveAllAudienceMembersRequestObjectAsync()
+        {
+            // Snippet: RemoveAllAudienceMembersAsync(RemoveAllAudienceMembersRequest, CallSettings)
+            // Additional: RemoveAllAudienceMembersAsync(RemoveAllAudienceMembersRequest, CancellationToken)
+            // Create client
+            IngestionServiceClient ingestionServiceClient = await IngestionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RemoveAllAudienceMembersRequest request = new RemoveAllAudienceMembersRequest
+            {
+                Destinations = { new Destination(), },
+                RemoveAsOfTime = new Timestamp(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            RemoveAllAudienceMembersResponse response = await ingestionServiceClient.RemoveAllAudienceMembersAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for IngestEvents</summary>
         public void IngestEventsRequestObject()
         {
@@ -174,7 +212,6 @@ namespace GoogleCSharpSnippets
             {
                 AdEvents = { new AdEvent(), },
                 EncryptionInfo = new EncryptionInfo(),
-                ValidateOnly = false,
             };
             // Make the request
             IngestAdEventsResponse response = ingestionServiceClient.IngestAdEvents(request);
@@ -193,7 +230,6 @@ namespace GoogleCSharpSnippets
             {
                 AdEvents = { new AdEvent(), },
                 EncryptionInfo = new EncryptionInfo(),
-                ValidateOnly = false,
             };
             // Make the request
             IngestAdEventsResponse response = await ingestionServiceClient.IngestAdEventsAsync(request);

@@ -205,6 +205,103 @@
       ]
     },
     {
+      "regionTag": "datamanager_v1_generated_IngestionService_RemoveAllAudienceMembers_sync",
+      "title": "RemoveAllAudienceMembersRequestObject",
+      "description": "Snippet for RemoveAllAudienceMembers",
+      "file": "IngestionServiceClient.RemoveAllAudienceMembersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveAllAudienceMembers",
+        "fullName": "Google.Ads.DataManager.V1.IngestionServiceClient.RemoveAllAudienceMembers",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.RemoveAllAudienceMembersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.RemoveAllAudienceMembersResponse",
+        "client": {
+          "shortName": "IngestionServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.IngestionServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveAllAudienceMembers",
+          "fullName": "google.ads.datamanager.v1.IngestionService.RemoveAllAudienceMembers",
+          "service": {
+            "shortName": "IngestionService",
+            "fullName": "google.ads.datamanager.v1.IngestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_IngestionService_RemoveAllAudienceMembers_async",
+      "title": "RemoveAllAudienceMembersRequestObjectAsync",
+      "description": "Snippet for RemoveAllAudienceMembersAsync",
+      "file": "IngestionServiceClient.RemoveAllAudienceMembersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveAllAudienceMembersAsync",
+        "fullName": "Google.Ads.DataManager.V1.IngestionServiceClient.RemoveAllAudienceMembersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.RemoveAllAudienceMembersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.RemoveAllAudienceMembersResponse>",
+        "client": {
+          "shortName": "IngestionServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.IngestionServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveAllAudienceMembers",
+          "fullName": "google.ads.datamanager.v1.IngestionService.RemoveAllAudienceMembers",
+          "service": {
+            "shortName": "IngestionService",
+            "fullName": "google.ads.datamanager.v1.IngestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "datamanager_v1_generated_IngestionService_IngestEvents_sync",
       "title": "IngestEventsRequestObject",
       "description": "Snippet for IngestEvents",
@@ -339,12 +436,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 45,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 44,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -388,12 +485,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 45,
+          "end": 44,
           "type": "SHORT"
         }
       ]

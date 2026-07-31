@@ -25,7 +25,7 @@ namespace Google.Ads.DataManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2Vycm9yLnByb3RvEhlnb29n",
-            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxKvshCgtFcnJvclJlYXNvbhIcChhFUlJP",
+            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxKsIiCgtFcnJvclJlYXNvbhIcChhFUlJP",
             "Ul9SRUFTT05fVU5TUEVDSUZJRUQQABISCg5JTlRFUk5BTF9FUlJPUhABEhUK",
             "EURFQURMSU5FX0VYQ0VFREVEEAISFgoSUkVTT1VSQ0VfRVhIQVVTVEVEEAMS",
             "DQoJTk9UX0ZPVU5EEAQSFQoRUEVSTUlTU0lPTl9ERU5JRUQQBRIUChBJTlZB",
@@ -122,11 +122,13 @@ namespace Google.Ads.DataManager.V1 {
             "VkFMSURfQ1VTVE9NX1ZBUklBQkxFX1ZBTFVFEHcSHQoZQ1VTVE9NX1ZBUklB",
             "QkxFX05PVF9GT1VORBB4EisKJ0JBU0VMSU5FX0xPQ0FUSU9OX0FVVE9fREVU",
             "RUNUSU9OX0ZBSUxFRBB6EiIKHklOU0lHSFRTX01JU1NJTkdfRk9SX0RJTUVO",
-            "U0lPThB7QscBCh1jb20uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MUIKRXJy",
-            "b3JQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFtYW5hZ2VyL2Fw",
-            "aXYxL2RhdGFtYW5hZ2VycGI7ZGF0YW1hbmFnZXJwYqoCGUdvb2dsZS5BZHMu",
-            "RGF0YU1hbmFnZXIuVjHKAhlHb29nbGVcQWRzXERhdGFNYW5hZ2VyXFYx6gIc",
-            "R29vZ2xlOjpBZHM6OkRhdGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "U0lPThB7EiYKIlJFUVVJUkVEX1BSRVJFUVVJU0lURV9MSU5LX01JU1NJTkcQ",
+            "fBIdChlJTlZBTElEX1JFTU9WRV9BU19PRl9USU1FEH1CxwEKHWNvbS5nb29n",
+            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxQgpFcnJvclByb3RvUAFaQWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vZGF0YW1hbmFnZXIvYXBpdjEvZGF0YW1hbmFnZXJwYjtk",
+            "YXRhbWFuYWdlcnBiqgIZR29vZ2xlLkFkcy5EYXRhTWFuYWdlci5WMcoCGUdv",
+            "b2dsZVxBZHNcRGF0YU1hbmFnZXJcVjHqAhxHb29nbGU6OkFkczo6RGF0YU1h",
+            "bmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.ErrorReason), }, null, null));
@@ -654,6 +656,16 @@ namespace Google.Ads.DataManager.V1 {
     /// Insights missing for this dimension.
     /// </summary>
     [pbr::OriginalName("INSIGHTS_MISSING_FOR_DIMENSION")] InsightsMissingForDimension = 123,
+    /// <summary>
+    /// A required prerequisite link (such as a Google Ads link) must exist for
+    /// the Google Analytics property to perform this operation.
+    /// </summary>
+    [pbr::OriginalName("REQUIRED_PREREQUISITE_LINK_MISSING")] RequiredPrerequisiteLinkMissing = 124,
+    /// <summary>
+    /// The remove as of time must be in the past or present. Future timestamps are
+    /// not permitted for removing audience members.
+    /// </summary>
+    [pbr::OriginalName("INVALID_REMOVE_AS_OF_TIME")] InvalidRemoveAsOfTime = 125,
   }
 
   #endregion
