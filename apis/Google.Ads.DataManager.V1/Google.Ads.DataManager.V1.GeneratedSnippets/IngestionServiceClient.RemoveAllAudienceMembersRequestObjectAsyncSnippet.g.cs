@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START datamanager_v1_generated_IngestionService_IngestAdEvents_async]
+    // [START datamanager_v1_generated_IngestionService_RemoveAllAudienceMembers_async]
     using Google.Ads.DataManager.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedIngestionServiceClientSnippets
     {
-        /// <summary>Snippet for IngestAdEventsAsync</summary>
+        /// <summary>Snippet for RemoveAllAudienceMembersAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,19 +31,20 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task IngestAdEventsRequestObjectAsync()
+        public async Task RemoveAllAudienceMembersRequestObjectAsync()
         {
             // Create client
             IngestionServiceClient ingestionServiceClient = await IngestionServiceClient.CreateAsync();
             // Initialize request argument(s)
-            IngestAdEventsRequest request = new IngestAdEventsRequest
+            RemoveAllAudienceMembersRequest request = new RemoveAllAudienceMembersRequest
             {
-                AdEvents = { new AdEvent(), },
-                EncryptionInfo = new EncryptionInfo(),
+                Destinations = { new Destination(), },
+                RemoveAsOfTime = new Timestamp(),
+                ValidateOnly = false,
             };
             // Make the request
-            IngestAdEventsResponse response = await ingestionServiceClient.IngestAdEventsAsync(request);
+            RemoveAllAudienceMembersResponse response = await ingestionServiceClient.RemoveAllAudienceMembersAsync(request);
         }
     }
-    // [END datamanager_v1_generated_IngestionService_IngestAdEvents_async]
+    // [END datamanager_v1_generated_IngestionService_RemoveAllAudienceMembers_async]
 }

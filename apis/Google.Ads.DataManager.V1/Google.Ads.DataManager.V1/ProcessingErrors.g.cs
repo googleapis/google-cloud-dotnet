@@ -33,82 +33,102 @@ namespace Google.Ads.DataManager.V1 {
             "PwoOd2FybmluZ19jb3VudHMYASADKAsyJy5nb29nbGUuYWRzLmRhdGFtYW5h",
             "Z2VyLnYxLldhcm5pbmdDb3VudCJoCgxXYXJuaW5nQ291bnQSFAoMcmVjb3Jk",
             "X2NvdW50GAEgASgDEkIKBnJlYXNvbhgCIAEoDjIyLmdvb2dsZS5hZHMuZGF0",
-            "YW1hbmFnZXIudjEuUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24q/BEKFVByb2Nl",
-            "c3NpbmdFcnJvclJlYXNvbhInCiNQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9V",
-            "TlNQRUNJRklFRBAAEjMKL1BST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOVkFM",
-            "SURfQ1VTVE9NX1ZBUklBQkxFEAESNwozUFJPQ0VTU0lOR19FUlJPUl9SRUFT",
-            "T05fQ1VTVE9NX1ZBUklBQkxFX05PVF9FTkFCTEVEEAISKQolUFJPQ0VTU0lO",
-            "R19FUlJPUl9SRUFTT05fRVZFTlRfVE9PX09MRBADEioKJlBST0NFU1NJTkdf",
-            "RVJST1JfUkVBU09OX0RFTklFRF9DT05TRU5UEAQSJgoiUFJPQ0VTU0lOR19F",
-            "UlJPUl9SRUFTT05fTk9fQ09OU0VOVBAFEisKJ1BST0NFU1NJTkdfRVJST1Jf",
-            "UkVBU09OX1VOS05PV05fQ09OU0VOVBAGEisKJ1BST0NFU1NJTkdfRVJST1Jf",
-            "UkVBU09OX0RVUExJQ0FURV9HQ0xJRBAHEjQKMFBST0NFU1NJTkdfRVJST1Jf",
-            "UkVBU09OX0RVUExJQ0FURV9UUkFOU0FDVElPTl9JRBAIEioKJlBST0NFU1NJ",
-            "TkdfRVJST1JfUkVBU09OX0lOVkFMSURfR0JSQUlEEAkSKQolUFJPQ0VTU0lO",
-            "R19FUlJPUl9SRUFTT05fSU5WQUxJRF9HQ0xJRBAKEi8KK1BST0NFU1NJTkdf",
-            "RVJST1JfUkVBU09OX0lOVkFMSURfTUVSQ0hBTlRfSUQQCxIqCiZQUk9DRVNT",
-            "SU5HX0VSUk9SX1JFQVNPTl9JTlZBTElEX1dCUkFJRBAMEioKJlBST0NFU1NJ",
-            "TkdfRVJST1JfUkVBU09OX0lOVEVSTkFMX0VSUk9SEA0SVQpRUFJPQ0VTU0lO",
-            "R19FUlJPUl9SRUFTT05fREVTVElOQVRJT05fQUNDT1VOVF9FTkhBTkNFRF9D",
-            "T05WRVJTSU9OU19URVJNU19OT1RfU0lHTkVEEA4SKQolUFJPQ0VTU0lOR19F",
-            "UlJPUl9SRUFTT05fSU5WQUxJRF9FVkVOVBAPEj0KOVBST0NFU1NJTkdfRVJS",
-            "T1JfUkVBU09OX0lOU1VGRklDSUVOVF9NQVRDSEVEX1RSQU5TQUNUSU9OUxAQ",
-            "EjUKMVBST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOU1VGRklDSUVOVF9UUkFO",
-            "U0FDVElPTlMQERIqCiZQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9JTlZBTElE",
-            "X0ZPUk1BVBASEiwKKFBST0NFU1NJTkdfRVJST1JfUkVBU09OX0RFQ1JZUFRJ",
-            "T05fRVJST1IQExIwCixQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9ERUtfREVD",
-            "UllQVElPTl9FUlJPUhAUEicKI1BST0NFU1NJTkdfRVJST1JfUkVBU09OX0lO",
-            "VkFMSURfV0lQEBUSJwojUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fSU5WQUxJ",
-            "RF9LRUsQFhIrCidQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9XSVBfQVVUSF9G",
-            "QUlMRUQQFxIxCi1QUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9LRUtfUEVSTUlT",
-            "U0lPTl9ERU5JRUQQGBIrCidQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9BV1Nf",
-            "QVVUSF9GQUlMRUQQGxI8CjhQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9VU0VS",
-            "X0lERU5USUZJRVJfREVDUllQVElPTl9FUlJPUhAZEkEKPVBST0NFU1NJTkdf",
-            "RVJST1JfT1BFUkFUSU5HX0FDQ09VTlRfTUlTTUFUQ0hfRk9SX0FEX0lERU5U",
-            "SUZJRVIQGhJUClBQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9PTkVfUEVSX0NM",
-            "SUNLX0NPTlZFUlNJT05fQUNUSU9OX05PVF9QRVJNSVRURURfV0lUSF9CUkFJ",
-            "RBAcEi4KKlBST0NFU1NJTkdfRVJST1JfUkVBU09OX01BVENIX0lEX05PVF9G",
-            "T1VORBAdEjoKNlBST0NFU1NJTkdfRVJST1JfUkVBU09OX1VTRVJfSURfTk9U",
-            "X0ZPVU5EX0ZPUl9NQVRDSF9JRBAeEjcKM1BST0NFU1NJTkdfRVJST1JfUkVB",
-            "U09OX1VTRVJfSURfTk9UX0ZPVU5EX0ZPUl9HQ0xJRBAfEjcKM1BST0NFU1NJ",
-            "TkdfRVJST1JfUkVBU09OX1VTRVJfSURfTk9UX0ZPVU5EX0ZPUl9EQ0xJRBAg",
-            "EjIKLlBST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOVkFMSURfQURfSURFTlRJ",
-            "RklFUlMQIRI0CjBQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9JTlZBTElEX01P",
-            "QklMRV9JRF9GT1JNQVQQIhI6CjZQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9P",
-            "UklHSU5BTF9DT05WRVJTSU9OU19OT1RfRk9VTkQQIxIxCi1QUk9DRVNTSU5H",
-            "X0VSUk9SX1JFQVNPTl9FVkVOVF9JRF9ERUNPREVfRVJST1IQJBI/CjtQUk9D",
-            "RVNTSU5HX0VSUk9SX1JFQVNPTl9VU0VSX0lEX05PVF9GT1VORF9GT1JfSU1Q",
-            "UkVTU0lPTl9JRBAlEi0KKVBST0NFU1NJTkdfRVJST1JfUkVBU09OX1VTRVJf",
-            "SURfTk9UX0ZPVU5EECYSNQoxUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fQ09O",
-            "VkVSU0lPTl9QUkVDRURFU19DTElDSxAnEiwKKFBST0NFU1NJTkdfRVJST1Jf",
-            "UkVBU09OX1RPT19SRUNFTlRfQ0xJQ0sQKBIpCiVQUk9DRVNTSU5HX0VSUk9S",
-            "X1JFQVNPTl9JTlZBTElEX0NMSUNLECkSPwo7UFJPQ0VTU0lOR19FUlJPUl9S",
-            "RUFTT05fSU5WQUxJRF9PUEVSQVRJTkdfQUNDT1VOVF9GT1JfQ0xJQ0sQKhIr",
-            "CidQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9DTElDS19OT1RfRk9VTkQQKyr/",
-            "AwoXUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24SKQolUFJPQ0VTU0lOR19XQVJO",
-            "SU5HX1JFQVNPTl9VTlNQRUNJRklFRBAAEjMKL1BST0NFU1NJTkdfV0FSTklO",
-            "R19SRUFTT05fS0VLX1BFUk1JU1NJT05fREVOSUVEEAESMgouUFJPQ0VTU0lO",
-            "R19XQVJOSU5HX1JFQVNPTl9ERUtfREVDUllQVElPTl9FUlJPUhACEi4KKlBS",
-            "T0NFU1NJTkdfV0FSTklOR19SRUFTT05fREVDUllQVElPTl9FUlJPUhADEi0K",
-            "KVBST0NFU1NJTkdfV0FSTklOR19SRUFTT05fV0lQX0FVVEhfRkFJTEVEEAQS",
-            "KQolUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9JTlZBTElEX1dJUBAFEikK",
-            "JVBST0NFU1NJTkdfV0FSTklOR19SRUFTT05fSU5WQUxJRF9LRUsQBhI+CjpQ",
-            "Uk9DRVNTSU5HX1dBUk5JTkdfUkVBU09OX1VTRVJfSURFTlRJRklFUl9ERUNS",
-            "WVBUSU9OX0VSUk9SEAcSLAooUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9J",
-            "TlRFUk5BTF9FUlJPUhAIEi0KKVBST0NFU1NJTkdfV0FSTklOR19SRUFTT05f",
-            "QVdTX0FVVEhfRkFJTEVEEAlC0gEKHWNvbS5nb29nbGUuYWRzLmRhdGFtYW5h",
-            "Z2VyLnYxQhVQcm9jZXNzaW5nRXJyb3JzUHJvdG9QAVpBY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9kYXRhbWFuYWdlci9hcGl2MS9kYXRhbWFuYWdlcnBiO2RhdGFt",
-            "YW5hZ2VycGKqAhlHb29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xl",
-            "XEFkc1xEYXRhTWFuYWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdl",
-            "cjo6VjFiBnByb3RvMw=="));
+            "YW1hbmFnZXIudjEuUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24ibAoMRmllbGRX",
+            "YXJuaW5nEjgKBnJlYXNvbhgBIAEoDjIoLmdvb2dsZS5hZHMuZGF0YW1hbmFn",
+            "ZXIudjEuV2FybmluZ1JlYXNvbhITCgtkZXNjcmlwdGlvbhgCIAEoCRINCgVm",
+            "aWVsZBgDIAEoCSq7EgoVUHJvY2Vzc2luZ0Vycm9yUmVhc29uEicKI1BST0NF",
+            "U1NJTkdfRVJST1JfUkVBU09OX1VOU1BFQ0lGSUVEEAASMwovUFJPQ0VTU0lO",
+            "R19FUlJPUl9SRUFTT05fSU5WQUxJRF9DVVNUT01fVkFSSUFCTEUQARI3CjNQ",
+            "Uk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9DVVNUT01fVkFSSUFCTEVfTk9UX0VO",
+            "QUJMRUQQAhIpCiVQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9FVkVOVF9UT09f",
+            "T0xEEAMSKgomUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fREVOSUVEX0NPTlNF",
+            "TlQQBBImCiJQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9OT19DT05TRU5UEAUS",
+            "KwonUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fVU5LTk9XTl9DT05TRU5UEAYS",
+            "KwonUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fRFVQTElDQVRFX0dDTElEEAcS",
+            "NAowUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fRFVQTElDQVRFX1RSQU5TQUNU",
+            "SU9OX0lEEAgSKgomUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fSU5WQUxJRF9H",
+            "QlJBSUQQCRIpCiVQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9JTlZBTElEX0dD",
+            "TElEEAoSLworUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fSU5WQUxJRF9NRVJD",
+            "SEFOVF9JRBALEioKJlBST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOVkFMSURf",
+            "V0JSQUlEEAwSKgomUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fSU5URVJOQUxf",
+            "RVJST1IQDRJVClFQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9ERVNUSU5BVElP",
+            "Tl9BQ0NPVU5UX0VOSEFOQ0VEX0NPTlZFUlNJT05TX1RFUk1TX05PVF9TSUdO",
+            "RUQQDhIpCiVQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9JTlZBTElEX0VWRU5U",
+            "EA8SPQo5UFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fSU5TVUZGSUNJRU5UX01B",
+            "VENIRURfVFJBTlNBQ1RJT05TEBASNQoxUFJPQ0VTU0lOR19FUlJPUl9SRUFT",
+            "T05fSU5TVUZGSUNJRU5UX1RSQU5TQUNUSU9OUxAREioKJlBST0NFU1NJTkdf",
+            "RVJST1JfUkVBU09OX0lOVkFMSURfRk9STUFUEBISLAooUFJPQ0VTU0lOR19F",
+            "UlJPUl9SRUFTT05fREVDUllQVElPTl9FUlJPUhATEjAKLFBST0NFU1NJTkdf",
+            "RVJST1JfUkVBU09OX0RFS19ERUNSWVBUSU9OX0VSUk9SEBQSJwojUFJPQ0VT",
+            "U0lOR19FUlJPUl9SRUFTT05fSU5WQUxJRF9XSVAQFRInCiNQUk9DRVNTSU5H",
+            "X0VSUk9SX1JFQVNPTl9JTlZBTElEX0tFSxAWEisKJ1BST0NFU1NJTkdfRVJS",
+            "T1JfUkVBU09OX1dJUF9BVVRIX0ZBSUxFRBAXEjEKLVBST0NFU1NJTkdfRVJS",
+            "T1JfUkVBU09OX0tFS19QRVJNSVNTSU9OX0RFTklFRBAYEisKJ1BST0NFU1NJ",
+            "TkdfRVJST1JfUkVBU09OX0FXU19BVVRIX0ZBSUxFRBAbEjwKOFBST0NFU1NJ",
+            "TkdfRVJST1JfUkVBU09OX1VTRVJfSURFTlRJRklFUl9ERUNSWVBUSU9OX0VS",
+            "Uk9SEBkSQQo9UFJPQ0VTU0lOR19FUlJPUl9PUEVSQVRJTkdfQUNDT1VOVF9N",
+            "SVNNQVRDSF9GT1JfQURfSURFTlRJRklFUhAaElQKUFBST0NFU1NJTkdfRVJS",
+            "T1JfUkVBU09OX09ORV9QRVJfQ0xJQ0tfQ09OVkVSU0lPTl9BQ1RJT05fTk9U",
+            "X1BFUk1JVFRFRF9XSVRIX0JSQUlEEBwSLgoqUFJPQ0VTU0lOR19FUlJPUl9S",
+            "RUFTT05fTUFUQ0hfSURfTk9UX0ZPVU5EEB0SOgo2UFJPQ0VTU0lOR19FUlJP",
+            "Ul9SRUFTT05fVVNFUl9JRF9OT1RfRk9VTkRfRk9SX01BVENIX0lEEB4SNwoz",
+            "UFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fVVNFUl9JRF9OT1RfRk9VTkRfRk9S",
+            "X0dDTElEEB8SNwozUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fVVNFUl9JRF9O",
+            "T1RfRk9VTkRfRk9SX0RDTElEECASMgouUFJPQ0VTU0lOR19FUlJPUl9SRUFT",
+            "T05fSU5WQUxJRF9BRF9JREVOVElGSUVSUxAhEjQKMFBST0NFU1NJTkdfRVJS",
+            "T1JfUkVBU09OX0lOVkFMSURfTU9CSUxFX0lEX0ZPUk1BVBAiEjoKNlBST0NF",
+            "U1NJTkdfRVJST1JfUkVBU09OX09SSUdJTkFMX0NPTlZFUlNJT05TX05PVF9G",
+            "T1VORBAjEjEKLVBST0NFU1NJTkdfRVJST1JfUkVBU09OX0VWRU5UX0lEX0RF",
+            "Q09ERV9FUlJPUhAkEj8KO1BST0NFU1NJTkdfRVJST1JfUkVBU09OX1VTRVJf",
+            "SURfTk9UX0ZPVU5EX0ZPUl9JTVBSRVNTSU9OX0lEECUSLQopUFJPQ0VTU0lO",
+            "R19FUlJPUl9SRUFTT05fVVNFUl9JRF9OT1RfRk9VTkQQJhI1CjFQUk9DRVNT",
+            "SU5HX0VSUk9SX1JFQVNPTl9DT05WRVJTSU9OX1BSRUNFREVTX0NMSUNLECcS",
+            "LAooUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fVE9PX1JFQ0VOVF9DTElDSxAo",
+            "EikKJVBST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOVkFMSURfQ0xJQ0sQKRI/",
+            "CjtQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9JTlZBTElEX09QRVJBVElOR19B",
+            "Q0NPVU5UX0ZPUl9DTElDSxAqEisKJ1BST0NFU1NJTkdfRVJST1JfUkVBU09O",
+            "X0NMSUNLX05PVF9GT1VORBArEj0KOVBST0NFU1NJTkdfRVJST1JfUkVBU09O",
+            "X0VYVEVSTkFMX0FUVFJJQlVUSU9OX0RBVEFfTUlTU0lORxAsKv8DChdQcm9j",
+            "ZXNzaW5nV2FybmluZ1JlYXNvbhIpCiVQUk9DRVNTSU5HX1dBUk5JTkdfUkVB",
+            "U09OX1VOU1BFQ0lGSUVEEAASMwovUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNP",
+            "Tl9LRUtfUEVSTUlTU0lPTl9ERU5JRUQQARIyCi5QUk9DRVNTSU5HX1dBUk5J",
+            "TkdfUkVBU09OX0RFS19ERUNSWVBUSU9OX0VSUk9SEAISLgoqUFJPQ0VTU0lO",
+            "R19XQVJOSU5HX1JFQVNPTl9ERUNSWVBUSU9OX0VSUk9SEAMSLQopUFJPQ0VT",
+            "U0lOR19XQVJOSU5HX1JFQVNPTl9XSVBfQVVUSF9GQUlMRUQQBBIpCiVQUk9D",
+            "RVNTSU5HX1dBUk5JTkdfUkVBU09OX0lOVkFMSURfV0lQEAUSKQolUFJPQ0VT",
+            "U0lOR19XQVJOSU5HX1JFQVNPTl9JTlZBTElEX0tFSxAGEj4KOlBST0NFU1NJ",
+            "TkdfV0FSTklOR19SRUFTT05fVVNFUl9JREVOVElGSUVSX0RFQ1JZUFRJT05f",
+            "RVJST1IQBxIsCihQUk9DRVNTSU5HX1dBUk5JTkdfUkVBU09OX0lOVEVSTkFM",
+            "X0VSUk9SEAgSLQopUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9BV1NfQVVU",
+            "SF9GQUlMRUQQCSrCBQoNV2FybmluZ1JlYXNvbhIeChpXQVJOSU5HX1JFQVNP",
+            "Tl9VTlNQRUNJRklFRBAAEi4KKldBUk5JTkdfUkVBU09OX0NVU1RPTV9WQVJJ",
+            "QUJMRV9OT1RfRU5BQkxFRBABEjEKLVdBUk5JTkdfUkVBU09OX0NVU1RPTV9W",
+            "QVJJQUJMRV9OT1RfUFJFREVGSU5FRBACEkAKPFdBUk5JTkdfUkVBU09OX0NB",
+            "UlRfREFUQV9OT1RfU1VQUE9SVEVEX1dJVEhfR0JSQUlEX09SX1dCUkFJRBAD",
+            "Ej0KOVdBUk5JTkdfUkVBU09OX0NBUlRfREFUQV9JVEVNX01FUkNIQU5UX1BS",
+            "T0RVQ1RfSURfTUlTU0lORxAEEjQKMFdBUk5JTkdfUkVBU09OX0NBUlRfREFU",
+            "QV9JVEVNX1VOSVRfUFJJQ0VfTUlTU0lORxAFEhoKFldBUk5JTkdfUkVBU09O",
+            "X0dFTkVSSUMQBhIkCiBXQVJOSU5HX1JFQVNPTl9JTlZBTElEX0NMSUVOVF9J",
+            "RBAHEisKJ1dBUk5JTkdfUkVBU09OX0lOVkFMSURfU1VCRElWSVNJT05fQ09E",
+            "RRAIEiYKIldBUk5JTkdfUkVBU09OX0lOVkFMSURfUkVHSU9OX0NPREUQCRIs",
+            "CihXQVJOSU5HX1JFQVNPTl9JTlZBTElEX1NVQkNPTlRJTkVOVF9DT0RFEAoS",
+            "KQolV0FSTklOR19SRUFTT05fSU5WQUxJRF9DT05USU5FTlRfQ09ERRALEioK",
+            "JldBUk5JTkdfUkVBU09OX0lOVkFMSURfREVWSUNFX0NBVEVHT1JZEAwSMwov",
+            "V0FSTklOR19SRUFTT05fSU5WQUxJRF9ERVZJQ0VfU0NSRUVOX1JFU09MVVRJ",
+            "T04QDRImCiJXQVJOSU5HX1JFQVNPTl9JTlZBTElEX01FUkNIQU5UX0lEEA5C",
+            "0gEKHWNvbS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxQhVQcm9jZXNzaW5n",
+            "RXJyb3JzUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhbWFuYWdl",
+            "ci9hcGl2MS9kYXRhbWFuYWdlcnBiO2RhdGFtYW5hZ2VycGKqAhlHb29nbGUu",
+            "QWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdlclxW",
+            "MeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.ProcessingErrorReason), typeof(global::Google.Ads.DataManager.V1.ProcessingWarningReason), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.ProcessingErrorReason), typeof(global::Google.Ads.DataManager.V1.ProcessingWarningReason), typeof(global::Google.Ads.DataManager.V1.WarningReason), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.ErrorInfo), global::Google.Ads.DataManager.V1.ErrorInfo.Parser, new[]{ "ErrorCounts" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.ErrorCount), global::Google.Ads.DataManager.V1.ErrorCount.Parser, new[]{ "RecordCount", "Reason" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.WarningInfo), global::Google.Ads.DataManager.V1.WarningInfo.Parser, new[]{ "WarningCounts" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.WarningCount), global::Google.Ads.DataManager.V1.WarningCount.Parser, new[]{ "RecordCount", "Reason" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.WarningCount), global::Google.Ads.DataManager.V1.WarningCount.Parser, new[]{ "RecordCount", "Reason" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.FieldWarning), global::Google.Ads.DataManager.V1.FieldWarning.Parser, new[]{ "Reason", "Description", "Field" }, null, null, null, null)
           }));
     }
     #endregion
@@ -308,6 +328,11 @@ namespace Google.Ads.DataManager.V1 {
     /// A corresponding click can't be found that matches the provided attributes.
     /// </summary>
     [pbr::OriginalName("PROCESSING_ERROR_REASON_CLICK_NOT_FOUND")] ClickNotFound = 43,
+    /// <summary>
+    /// External attribution data is missing. Sending events to a destination for
+    /// an external attribution conversion action isn't supported.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_EXTERNAL_ATTRIBUTION_DATA_MISSING")] ExternalAttributionDataMissing = 44,
   }
 
   /// <summary>
@@ -358,6 +383,95 @@ namespace Google.Ads.DataManager.V1 {
     /// The system failed to authenticate with AWS.
     /// </summary>
     [pbr::OriginalName("PROCESSING_WARNING_REASON_AWS_AUTH_FAILED")] AwsAuthFailed = 9,
+  }
+
+  /// <summary>
+  /// Reasons for non-blocking warnings returned during ingestion.
+  /// </summary>
+  public enum WarningReason {
+    /// <summary>
+    /// Unspecified warning reason.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// A custom variable in
+    /// [`custom_variables`][google.ads.datamanager.v1.Event.custom_variables] is
+    /// not enabled in the account.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_CUSTOM_VARIABLE_NOT_ENABLED")] CustomVariableNotEnabled = 1,
+    /// <summary>
+    /// A custom variable value in
+    /// [`custom_variables`][google.ads.datamanager.v1.Event.custom_variables] is
+    /// not among the predefined allowed values configured for the custom variable
+    /// on the destination account.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_CUSTOM_VARIABLE_NOT_PREDEFINED")] CustomVariableNotPredefined = 2,
+    /// <summary>
+    /// The [`cart_data`][google.ads.datamanager.v1.Event.cart_data] is not
+    /// supported with [`gbraid`][google.ads.datamanager.v1.AdIdentifiers.gbraid]
+    /// or [`wbraid`][google.ads.datamanager.v1.AdIdentifiers.wbraid].
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_CART_DATA_NOT_SUPPORTED_WITH_GBRAID_OR_WBRAID")] CartDataNotSupportedWithGbraidOrWbraid = 3,
+    /// <summary>
+    /// The
+    /// [`merchant_product_id`][google.ads.datamanager.v1.Item.merchant_product_id]
+    /// is missing in the cart item.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_CART_DATA_ITEM_MERCHANT_PRODUCT_ID_MISSING")] CartDataItemMerchantProductIdMissing = 4,
+    /// <summary>
+    /// The [`unit_price`][google.ads.datamanager.v1.Item.unit_price] is missing in
+    /// the cart item.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_CART_DATA_ITEM_UNIT_PRICE_MISSING")] CartDataItemUnitPriceMissing = 5,
+    /// <summary>
+    /// Generic warning reason for issues that do not fit into other specific
+    /// categories.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_GENERIC")] Generic = 6,
+    /// <summary>
+    /// The [`client_id`][google.ads.datamanager.v1.Event.client_id] is invalid.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_INVALID_CLIENT_ID")] InvalidClientId = 7,
+    /// <summary>
+    /// The
+    /// [`subdivision_code`][google.ads.datamanager.v1.EventLocation.subdivision_code]
+    /// is invalid.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_INVALID_SUBDIVISION_CODE")] InvalidSubdivisionCode = 8,
+    /// <summary>
+    /// The [`region_code`][google.ads.datamanager.v1.EventLocation.region_code]
+    /// is invalid.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_INVALID_REGION_CODE")] InvalidRegionCode = 9,
+    /// <summary>
+    /// The
+    /// [`subcontinent_code`][google.ads.datamanager.v1.EventLocation.subcontinent_code]
+    /// is invalid.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_INVALID_SUBCONTINENT_CODE")] InvalidSubcontinentCode = 10,
+    /// <summary>
+    /// The
+    /// [`continent_code`][google.ads.datamanager.v1.EventLocation.continent_code]
+    /// is invalid.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_INVALID_CONTINENT_CODE")] InvalidContinentCode = 11,
+    /// <summary>
+    /// The device [`category`][google.ads.datamanager.v1.DeviceInfo.category]
+    /// is invalid.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_INVALID_DEVICE_CATEGORY")] InvalidDeviceCategory = 12,
+    /// <summary>
+    /// The device
+    /// [`screen_height`][google.ads.datamanager.v1.DeviceInfo.screen_height] or
+    /// [`screen_width`][google.ads.datamanager.v1.DeviceInfo.screen_width] is
+    /// invalid.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_INVALID_DEVICE_SCREEN_RESOLUTION")] InvalidDeviceScreenResolution = 13,
+    /// <summary>
+    /// The [`merchant_id`][google.ads.datamanager.v1.CartData.merchant_id] is
+    /// invalid.
+    /// </summary>
+    [pbr::OriginalName("WARNING_REASON_INVALID_MERCHANT_ID")] InvalidMerchantId = 14,
   }
 
   #endregion
@@ -1229,6 +1343,291 @@ namespace Google.Ads.DataManager.V1 {
           }
           case 16: {
             Reason = (global::Google.Ads.DataManager.V1.ProcessingWarningReason) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Detailed row-level warning with field paths.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FieldWarning : pb::IMessage<FieldWarning>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FieldWarning> _parser = new pb::MessageParser<FieldWarning>(() => new FieldWarning());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FieldWarning> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.ProcessingErrorsReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FieldWarning() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FieldWarning(FieldWarning other) : this() {
+      reason_ = other.reason_;
+      description_ = other.description_;
+      field_ = other.field_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FieldWarning Clone() {
+      return new FieldWarning(this);
+    }
+
+    /// <summary>Field number for the "reason" field.</summary>
+    public const int ReasonFieldNumber = 1;
+    private global::Google.Ads.DataManager.V1.WarningReason reason_ = global::Google.Ads.DataManager.V1.WarningReason.Unspecified;
+    /// <summary>
+    /// The warning reason.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.WarningReason Reason {
+      get { return reason_; }
+      set {
+        reason_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 2;
+    private string description_ = "";
+    /// <summary>
+    /// The detailed warning message describing the issue.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field" field.</summary>
+    public const int FieldFieldNumber = 3;
+    private string field_ = "";
+    /// <summary>
+    /// The field path that triggered the warning. Uses the same format as
+    /// [google.rpc.BadRequest.FieldViolation.field][google.rpc.BadRequest.FieldViolation.field].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Field {
+      get { return field_; }
+      set {
+        field_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FieldWarning);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FieldWarning other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Reason != other.Reason) return false;
+      if (Description != other.Description) return false;
+      if (Field != other.Field) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Reason != global::Google.Ads.DataManager.V1.WarningReason.Unspecified) hash ^= Reason.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (Field.Length != 0) hash ^= Field.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Reason != global::Google.Ads.DataManager.V1.WarningReason.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Reason);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (Field.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Field);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Reason != global::Google.Ads.DataManager.V1.WarningReason.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Reason);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (Field.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Field);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Reason != global::Google.Ads.DataManager.V1.WarningReason.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (Field.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Field);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FieldWarning other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Reason != global::Google.Ads.DataManager.V1.WarningReason.Unspecified) {
+        Reason = other.Reason;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.Field.Length != 0) {
+        Field = other.Field;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Reason = (global::Google.Ads.DataManager.V1.WarningReason) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            Field = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Reason = (global::Google.Ads.DataManager.V1.WarningReason) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            Field = input.ReadString();
             break;
           }
         }

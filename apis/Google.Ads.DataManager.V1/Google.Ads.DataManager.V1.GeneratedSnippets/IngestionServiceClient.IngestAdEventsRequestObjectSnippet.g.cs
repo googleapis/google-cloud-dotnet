@@ -38,7 +38,6 @@ namespace GoogleCSharpSnippets
             {
                 AdEvents = { new AdEvent(), },
                 EncryptionInfo = new EncryptionInfo(),
-                ValidateOnly = false,
             };
             // Make the request
             IngestAdEventsResponse response = ingestionServiceClient.IngestAdEvents(request);

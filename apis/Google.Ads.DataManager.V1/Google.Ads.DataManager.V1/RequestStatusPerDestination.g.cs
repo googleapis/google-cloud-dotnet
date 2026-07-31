@@ -29,7 +29,7 @@ namespace Google.Ads.DataManager.V1 {
             "MRorZ29vZ2xlL2Fkcy9kYXRhbWFuYWdlci92MS9kZXN0aW5hdGlvbi5wcm90",
             "bxoqZ29vZ2xlL2Fkcy9kYXRhbWFuYWdlci92MS9tYXRjaF9yYXRlLnByb3Rv",
             "GjFnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL3Byb2Nlc3NpbmdfZXJyb3Jz",
-            "LnByb3RvIuocChtSZXF1ZXN0U3RhdHVzUGVyRGVzdGluYXRpb24SOwoLZGVz",
+            "LnByb3RvIp4lChtSZXF1ZXN0U3RhdHVzUGVyRGVzdGluYXRpb24SOwoLZGVz",
             "dGluYXRpb24YASABKAsyJi5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkRl",
             "c3RpbmF0aW9uElwKDnJlcXVlc3Rfc3RhdHVzGAIgASgOMkQuZ29vZ2xlLmFk",
             "cy5kYXRhbWFuYWdlci52MS5SZXF1ZXN0U3RhdHVzUGVyRGVzdGluYXRpb24u",
@@ -44,40 +44,56 @@ namespace Google.Ads.DataManager.V1 {
             "ZW50c1N0YXR1c0gAEn0KH2F1ZGllbmNlX21lbWJlcnNfcmVtb3ZhbF9zdGF0",
             "dXMYBiABKAsyUi5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlJlcXVlc3RT",
             "dGF0dXNQZXJEZXN0aW5hdGlvbi5SZW1vdmVBdWRpZW5jZU1lbWJlcnNTdGF0",
-            "dXNIABrsBQobSW5nZXN0QXVkaWVuY2VNZW1iZXJzU3RhdHVzEnEKGnVzZXJf",
-            "ZGF0YV9pbmdlc3Rpb25fc3RhdHVzGAEgASgLMksuZ29vZ2xlLmFkcy5kYXRh",
-            "bWFuYWdlci52MS5SZXF1ZXN0U3RhdHVzUGVyRGVzdGluYXRpb24uSW5nZXN0",
-            "VXNlckRhdGFTdGF0dXNIABJ1Chxtb2JpbGVfZGF0YV9pbmdlc3Rpb25fc3Rh",
-            "dHVzGAIgASgLMk0uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5SZXF1ZXN0",
-            "U3RhdHVzUGVyRGVzdGluYXRpb24uSW5nZXN0TW9iaWxlRGF0YVN0YXR1c0gA",
-            "EnEKGnBhaXJfZGF0YV9pbmdlc3Rpb25fc3RhdHVzGAMgASgLMksuZ29vZ2xl",
-            "LmFkcy5kYXRhbWFuYWdlci52MS5SZXF1ZXN0U3RhdHVzUGVyRGVzdGluYXRp",
-            "b24uSW5nZXN0UGFpckRhdGFTdGF0dXNIABJ2Ch11c2VyX2lkX2RhdGFfaW5n",
-            "ZXN0aW9uX3N0YXR1cxgEIAEoCzJNLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIu",
-            "djEuUmVxdWVzdFN0YXR1c1BlckRlc3RpbmF0aW9uLkluZ2VzdFVzZXJJZERh",
-            "dGFTdGF0dXNIABJxChpwcGlkX2RhdGFfaW5nZXN0aW9uX3N0YXR1cxgFIAEo",
-            "CzJLLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUmVxdWVzdFN0YXR1c1Bl",
-            "ckRlc3RpbmF0aW9uLkluZ2VzdFBwaWREYXRhU3RhdHVzSAASewofY29tcG9z",
-            "aXRlX2RhdGFfaW5nZXN0aW9uX3N0YXR1cxgGIAEoCzJQLmdvb2dsZS5hZHMu",
-            "ZGF0YW1hbmFnZXIudjEuUmVxdWVzdFN0YXR1c1BlckRlc3RpbmF0aW9uLklu",
-            "Z2VzdENvbXBvc2l0ZURhdGFTdGF0dXNIAEIICgZzdGF0dXMa4AUKG1JlbW92",
-            "ZUF1ZGllbmNlTWVtYmVyc1N0YXR1cxJvChh1c2VyX2RhdGFfcmVtb3ZhbF9z",
-            "dGF0dXMYASABKAsySy5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlJlcXVl",
-            "c3RTdGF0dXNQZXJEZXN0aW5hdGlvbi5SZW1vdmVVc2VyRGF0YVN0YXR1c0gA",
-            "EnMKGm1vYmlsZV9kYXRhX3JlbW92YWxfc3RhdHVzGAIgASgLMk0uZ29vZ2xl",
-            "LmFkcy5kYXRhbWFuYWdlci52MS5SZXF1ZXN0U3RhdHVzUGVyRGVzdGluYXRp",
-            "b24uUmVtb3ZlTW9iaWxlRGF0YVN0YXR1c0gAEm8KGHBhaXJfZGF0YV9yZW1v",
-            "dmFsX3N0YXR1cxgDIAEoCzJLLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEu",
-            "UmVxdWVzdFN0YXR1c1BlckRlc3RpbmF0aW9uLlJlbW92ZVBhaXJEYXRhU3Rh",
-            "dHVzSAASdAobdXNlcl9pZF9kYXRhX3JlbW92YWxfc3RhdHVzGAQgASgLMk0u",
-            "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5SZXF1ZXN0U3RhdHVzUGVyRGVz",
-            "dGluYXRpb24uUmVtb3ZlVXNlcklkRGF0YVN0YXR1c0gAEm8KGHBwaWRfZGF0",
-            "YV9yZW1vdmFsX3N0YXR1cxgFIAEoCzJLLmdvb2dsZS5hZHMuZGF0YW1hbmFn",
-            "ZXIudjEuUmVxdWVzdFN0YXR1c1BlckRlc3RpbmF0aW9uLlJlbW92ZVBwaWRE",
-            "YXRhU3RhdHVzSAASeQodY29tcG9zaXRlX2RhdGFfcmVtb3ZhbF9zdGF0dXMY",
-            "BiABKAsyUC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlJlcXVlc3RTdGF0",
-            "dXNQZXJEZXN0aW5hdGlvbi5SZW1vdmVDb21wb3NpdGVEYXRhU3RhdHVzSABC",
-            "CAoGc3RhdHVzGioKEkluZ2VzdEV2ZW50c1N0YXR1cxIUCgxyZWNvcmRfY291",
+            "dXNIABKDAQoicmVtb3ZlX2FsbF9hdWRpZW5jZV9tZW1iZXJzX3N0YXR1cxgI",
+            "IAEoCzJVLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUmVxdWVzdFN0YXR1",
+            "c1BlckRlc3RpbmF0aW9uLlJlbW92ZUFsbEF1ZGllbmNlTWVtYmVyc1N0YXR1",
+            "c0gAGoIIChtJbmdlc3RBdWRpZW5jZU1lbWJlcnNTdGF0dXMScQoadXNlcl9k",
+            "YXRhX2luZ2VzdGlvbl9zdGF0dXMYASABKAsySy5nb29nbGUuYWRzLmRhdGFt",
+            "YW5hZ2VyLnYxLlJlcXVlc3RTdGF0dXNQZXJEZXN0aW5hdGlvbi5Jbmdlc3RV",
+            "c2VyRGF0YVN0YXR1c0gAEnUKHG1vYmlsZV9kYXRhX2luZ2VzdGlvbl9zdGF0",
+            "dXMYAiABKAsyTS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlJlcXVlc3RT",
+            "dGF0dXNQZXJEZXN0aW5hdGlvbi5Jbmdlc3RNb2JpbGVEYXRhU3RhdHVzSAAS",
+            "cQoacGFpcl9kYXRhX2luZ2VzdGlvbl9zdGF0dXMYAyABKAsySy5nb29nbGUu",
+            "YWRzLmRhdGFtYW5hZ2VyLnYxLlJlcXVlc3RTdGF0dXNQZXJEZXN0aW5hdGlv",
+            "bi5Jbmdlc3RQYWlyRGF0YVN0YXR1c0gAEnYKHXVzZXJfaWRfZGF0YV9pbmdl",
+            "c3Rpb25fc3RhdHVzGAQgASgLMk0uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52",
+            "MS5SZXF1ZXN0U3RhdHVzUGVyRGVzdGluYXRpb24uSW5nZXN0VXNlcklkRGF0",
+            "YVN0YXR1c0gAEnEKGnBwaWRfZGF0YV9pbmdlc3Rpb25fc3RhdHVzGAUgASgL",
+            "MksuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5SZXF1ZXN0U3RhdHVzUGVy",
+            "RGVzdGluYXRpb24uSW5nZXN0UHBpZERhdGFTdGF0dXNIABJ7Ch9jb21wb3Np",
+            "dGVfZGF0YV9pbmdlc3Rpb25fc3RhdHVzGAYgASgLMlAuZ29vZ2xlLmFkcy5k",
+            "YXRhbWFuYWdlci52MS5SZXF1ZXN0U3RhdHVzUGVyRGVzdGluYXRpb24uSW5n",
+            "ZXN0Q29tcG9zaXRlRGF0YVN0YXR1c0gAEoMBCiRnb29nbGVfdXNlcl9pZF9k",
+            "YXRhX2luZ2VzdGlvbl9zdGF0dXMYByABKAsyUy5nb29nbGUuYWRzLmRhdGFt",
+            "YW5hZ2VyLnYxLlJlcXVlc3RTdGF0dXNQZXJEZXN0aW5hdGlvbi5Jbmdlc3RH",
+            "b29nbGVVc2VySWREYXRhU3RhdHVzSAASjQEKKXBhcnRuZXJfcHJvdmlkZWRf",
+            "aWRfZGF0YV9pbmdlc3Rpb25fc3RhdHVzGAggASgLMlguZ29vZ2xlLmFkcy5k",
+            "YXRhbWFuYWdlci52MS5SZXF1ZXN0U3RhdHVzUGVyRGVzdGluYXRpb24uSW5n",
+            "ZXN0UGFydG5lclByb3ZpZGVkSWREYXRhU3RhdHVzSABCCAoGc3RhdHVzGvIH",
+            "ChtSZW1vdmVBdWRpZW5jZU1lbWJlcnNTdGF0dXMSbwoYdXNlcl9kYXRhX3Jl",
+            "bW92YWxfc3RhdHVzGAEgASgLMksuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52",
+            "MS5SZXF1ZXN0U3RhdHVzUGVyRGVzdGluYXRpb24uUmVtb3ZlVXNlckRhdGFT",
+            "dGF0dXNIABJzChptb2JpbGVfZGF0YV9yZW1vdmFsX3N0YXR1cxgCIAEoCzJN",
+            "Lmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUmVxdWVzdFN0YXR1c1BlckRl",
+            "c3RpbmF0aW9uLlJlbW92ZU1vYmlsZURhdGFTdGF0dXNIABJvChhwYWlyX2Rh",
+            "dGFfcmVtb3ZhbF9zdGF0dXMYAyABKAsySy5nb29nbGUuYWRzLmRhdGFtYW5h",
+            "Z2VyLnYxLlJlcXVlc3RTdGF0dXNQZXJEZXN0aW5hdGlvbi5SZW1vdmVQYWly",
+            "RGF0YVN0YXR1c0gAEnQKG3VzZXJfaWRfZGF0YV9yZW1vdmFsX3N0YXR1cxgE",
+            "IAEoCzJNLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUmVxdWVzdFN0YXR1",
+            "c1BlckRlc3RpbmF0aW9uLlJlbW92ZVVzZXJJZERhdGFTdGF0dXNIABJvChhw",
+            "cGlkX2RhdGFfcmVtb3ZhbF9zdGF0dXMYBSABKAsySy5nb29nbGUuYWRzLmRh",
+            "dGFtYW5hZ2VyLnYxLlJlcXVlc3RTdGF0dXNQZXJEZXN0aW5hdGlvbi5SZW1v",
+            "dmVQcGlkRGF0YVN0YXR1c0gAEnkKHWNvbXBvc2l0ZV9kYXRhX3JlbW92YWxf",
+            "c3RhdHVzGAYgASgLMlAuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5SZXF1",
+            "ZXN0U3RhdHVzUGVyRGVzdGluYXRpb24uUmVtb3ZlQ29tcG9zaXRlRGF0YVN0",
+            "YXR1c0gAEoEBCiJnb29nbGVfdXNlcl9pZF9kYXRhX3JlbW92YWxfc3RhdHVz",
+            "GAcgASgLMlMuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5SZXF1ZXN0U3Rh",
+            "dHVzUGVyRGVzdGluYXRpb24uUmVtb3ZlR29vZ2xlVXNlcklkRGF0YVN0YXR1",
+            "c0gAEosBCidwYXJ0bmVyX3Byb3ZpZGVkX2lkX2RhdGFfcmVtb3ZhbF9zdGF0",
+            "dXMYCCABKAsyWC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlJlcXVlc3RT",
+            "dGF0dXNQZXJEZXN0aW5hdGlvbi5SZW1vdmVQYXJ0bmVyUHJvdmlkZWRJZERh",
+            "dGFTdGF0dXNIAEIICgZzdGF0dXMaIAoeUmVtb3ZlQWxsQXVkaWVuY2VNZW1i",
+            "ZXJzU3RhdHVzGioKEkluZ2VzdEV2ZW50c1N0YXR1cxIUCgxyZWNvcmRfY291",
             "bnQYASABKAMalwEKFEluZ2VzdFVzZXJEYXRhU3RhdHVzEhQKDHJlY29yZF9j",
             "b3VudBgBIAEoAxIdChV1c2VyX2lkZW50aWZpZXJfY291bnQYAiABKAMSSgoX",
             "dXBsb2FkX21hdGNoX3JhdGVfcmFuZ2UYAyABKA4yKS5nb29nbGUuYWRzLmRh",
@@ -104,24 +120,33 @@ namespace Google.Ads.DataManager.V1 {
             "cG9zaXRlRGF0YVN0YXR1cxIUCgxyZWNvcmRfY291bnQYASABKAMSXgoQZGF0",
             "YV90eXBlX2NvdW50cxgCIAMoCzJELmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIu",
             "djEuUmVxdWVzdFN0YXR1c1BlckRlc3RpbmF0aW9uLkRhdGFUeXBlQ291bnQa",
-            "bQoNRGF0YVR5cGVDb3VudBJNCgR0eXBlGAEgASgOMj8uZ29vZ2xlLmFkcy5k",
-            "YXRhbWFuYWdlci52MS5SZXF1ZXN0U3RhdHVzUGVyRGVzdGluYXRpb24uRGF0",
-            "YVR5cGUSDQoFY291bnQYAiABKAMiaQoNUmVxdWVzdFN0YXR1cxIaChZSRVFV",
-            "RVNUX1NUQVRVU19VTktOT1dOEAASCwoHU1VDQ0VTUxABEg4KClBST0NFU1NJ",
-            "TkcQAhIKCgZGQUlMRUQQAxITCg9QQVJUSUFMX1NVQ0NFU1MQBCJfCghEYXRh",
-            "VHlwZRIZChVEQVRBX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVFTUFJTBABEhAK",
-            "DFBIT05FX05VTUJFUhACEgsKB0FERFJFU1MQAxIOCgpJUF9BRERSRVNTEARC",
-            "CAoGc3RhdHVzQt0BCh1jb20uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MUIg",
-            "UmVxdWVzdFN0YXR1c1BlckRlc3RpbmF0aW9uUHJvdG9QAVpBY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9kYXRhbWFuYWdlci9hcGl2MS9kYXRhbWFuYWdlcnBiO2Rh",
-            "dGFtYW5hZ2VycGKqAhlHb29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29v",
-            "Z2xlXEFkc1xEYXRhTWFuYWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFu",
-            "YWdlcjo6VjFiBnByb3RvMw=="));
+            "UgocSW5nZXN0R29vZ2xlVXNlcklkRGF0YVN0YXR1cxIUCgxyZWNvcmRfY291",
+            "bnQYASABKAMSHAoUZ29vZ2xlX3VzZXJfaWRfY291bnQYAiABKAMaUgocUmVt",
+            "b3ZlR29vZ2xlVXNlcklkRGF0YVN0YXR1cxIUCgxyZWNvcmRfY291bnQYASAB",
+            "KAMSHAoUZ29vZ2xlX3VzZXJfaWRfY291bnQYAiABKAMaXAohSW5nZXN0UGFy",
+            "dG5lclByb3ZpZGVkSWREYXRhU3RhdHVzEhQKDHJlY29yZF9jb3VudBgBIAEo",
+            "AxIhChlwYXJ0bmVyX3Byb3ZpZGVkX2lkX2NvdW50GAIgASgDGlwKIVJlbW92",
+            "ZVBhcnRuZXJQcm92aWRlZElkRGF0YVN0YXR1cxIUCgxyZWNvcmRfY291bnQY",
+            "ASABKAMSIQoZcGFydG5lcl9wcm92aWRlZF9pZF9jb3VudBgCIAEoAxptCg1E",
+            "YXRhVHlwZUNvdW50Ek0KBHR5cGUYASABKA4yPy5nb29nbGUuYWRzLmRhdGFt",
+            "YW5hZ2VyLnYxLlJlcXVlc3RTdGF0dXNQZXJEZXN0aW5hdGlvbi5EYXRhVHlw",
+            "ZRINCgVjb3VudBgCIAEoAyJpCg1SZXF1ZXN0U3RhdHVzEhoKFlJFUVVFU1Rf",
+            "U1RBVFVTX1VOS05PV04QABILCgdTVUNDRVNTEAESDgoKUFJPQ0VTU0lORxAC",
+            "EgoKBkZBSUxFRBADEhMKD1BBUlRJQUxfU1VDQ0VTUxAEIl8KCERhdGFUeXBl",
+            "EhkKFURBVEFfVFlQRV9VTlNQRUNJRklFRBAAEgkKBUVNQUlMEAESEAoMUEhP",
+            "TkVfTlVNQkVSEAISCwoHQUREUkVTUxADEg4KCklQX0FERFJFU1MQBEIICgZz",
+            "dGF0dXNC3QEKHWNvbS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxQiBSZXF1",
+            "ZXN0U3RhdHVzUGVyRGVzdGluYXRpb25Qcm90b1ABWkFjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2RhdGFtYW5hZ2VyL2FwaXYxL2RhdGFtYW5hZ2VycGI7ZGF0YW1h",
+            "bmFnZXJwYqoCGUdvb2dsZS5BZHMuRGF0YU1hbmFnZXIuVjHKAhlHb29nbGVc",
+            "QWRzXERhdGFNYW5hZ2VyXFYx6gIcR29vZ2xlOjpBZHM6OkRhdGFNYW5hZ2Vy",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.DataManager.V1.DestinationReflection.Descriptor, global::Google.Ads.DataManager.V1.MatchRateReflection.Descriptor, global::Google.Ads.DataManager.V1.ProcessingErrorsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Parser, new[]{ "Destination", "RequestStatus", "ErrorInfo", "WarningInfo", "AudienceMembersIngestionStatus", "EventsIngestionStatus", "AudienceMembersRemovalStatus" }, new[]{ "Status" }, new[]{ typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RequestStatus), typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.DataType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestAudienceMembersStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestAudienceMembersStatus.Parser, new[]{ "UserDataIngestionStatus", "MobileDataIngestionStatus", "PairDataIngestionStatus", "UserIdDataIngestionStatus", "PpidDataIngestionStatus", "CompositeDataIngestionStatus" }, new[]{ "Status" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveAudienceMembersStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveAudienceMembersStatus.Parser, new[]{ "UserDataRemovalStatus", "MobileDataRemovalStatus", "PairDataRemovalStatus", "UserIdDataRemovalStatus", "PpidDataRemovalStatus", "CompositeDataRemovalStatus" }, new[]{ "Status" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Parser, new[]{ "Destination", "RequestStatus", "ErrorInfo", "WarningInfo", "AudienceMembersIngestionStatus", "EventsIngestionStatus", "AudienceMembersRemovalStatus", "RemoveAllAudienceMembersStatus" }, new[]{ "Status" }, new[]{ typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RequestStatus), typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.DataType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestAudienceMembersStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestAudienceMembersStatus.Parser, new[]{ "UserDataIngestionStatus", "MobileDataIngestionStatus", "PairDataIngestionStatus", "UserIdDataIngestionStatus", "PpidDataIngestionStatus", "CompositeDataIngestionStatus", "GoogleUserIdDataIngestionStatus", "PartnerProvidedIdDataIngestionStatus" }, new[]{ "Status" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveAudienceMembersStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveAudienceMembersStatus.Parser, new[]{ "UserDataRemovalStatus", "MobileDataRemovalStatus", "PairDataRemovalStatus", "UserIdDataRemovalStatus", "PpidDataRemovalStatus", "CompositeDataRemovalStatus", "GoogleUserIdDataRemovalStatus", "PartnerProvidedIdDataRemovalStatus" }, new[]{ "Status" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveAllAudienceMembersStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveAllAudienceMembersStatus.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestEventsStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestEventsStatus.Parser, new[]{ "RecordCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestUserDataStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestUserDataStatus.Parser, new[]{ "RecordCount", "UserIdentifierCount", "UploadMatchRateRange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveUserDataStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveUserDataStatus.Parser, new[]{ "RecordCount", "UserIdentifierCount" }, null, null, null, null),
@@ -135,6 +160,10 @@ namespace Google.Ads.DataManager.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemovePpidDataStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemovePpidDataStatus.Parser, new[]{ "RecordCount", "PpidCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestCompositeDataStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestCompositeDataStatus.Parser, new[]{ "RecordCount", "DataTypeCounts", "UploadMatchRateRange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveCompositeDataStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveCompositeDataStatus.Parser, new[]{ "RecordCount", "DataTypeCounts" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestGoogleUserIdDataStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestGoogleUserIdDataStatus.Parser, new[]{ "RecordCount", "GoogleUserIdCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveGoogleUserIdDataStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveGoogleUserIdDataStatus.Parser, new[]{ "RecordCount", "GoogleUserIdCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestPartnerProvidedIdDataStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestPartnerProvidedIdDataStatus.Parser, new[]{ "RecordCount", "PartnerProvidedIdCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemovePartnerProvidedIdDataStatus), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemovePartnerProvidedIdDataStatus.Parser, new[]{ "RecordCount", "PartnerProvidedIdCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.DataTypeCount), global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.DataTypeCount.Parser, new[]{ "Type", "Count" }, null, null, null, null)})
           }));
     }
@@ -193,6 +222,9 @@ namespace Google.Ads.DataManager.V1 {
           break;
         case StatusOneofCase.AudienceMembersRemovalStatus:
           AudienceMembersRemovalStatus = other.AudienceMembersRemovalStatus.Clone();
+          break;
+        case StatusOneofCase.RemoveAllAudienceMembersStatus:
+          RemoveAllAudienceMembersStatus = other.RemoveAllAudienceMembersStatus.Clone();
           break;
       }
 
@@ -324,6 +356,21 @@ namespace Google.Ads.DataManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "remove_all_audience_members_status" field.</summary>
+    public const int RemoveAllAudienceMembersStatusFieldNumber = 8;
+    /// <summary>
+    /// The status of the remove all audience members request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveAllAudienceMembersStatus RemoveAllAudienceMembersStatus {
+      get { return statusCase_ == StatusOneofCase.RemoveAllAudienceMembersStatus ? (global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveAllAudienceMembersStatus) status_ : null; }
+      set {
+        status_ = value;
+        statusCase_ = value == null ? StatusOneofCase.None : StatusOneofCase.RemoveAllAudienceMembersStatus;
+      }
+    }
+
     private object status_;
     /// <summary>Enum of possible cases for the "status" oneof.</summary>
     public enum StatusOneofCase {
@@ -331,6 +378,7 @@ namespace Google.Ads.DataManager.V1 {
       AudienceMembersIngestionStatus = 4,
       EventsIngestionStatus = 5,
       AudienceMembersRemovalStatus = 6,
+      RemoveAllAudienceMembersStatus = 8,
     }
     private StatusOneofCase statusCase_ = StatusOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -368,6 +416,7 @@ namespace Google.Ads.DataManager.V1 {
       if (!object.Equals(AudienceMembersIngestionStatus, other.AudienceMembersIngestionStatus)) return false;
       if (!object.Equals(EventsIngestionStatus, other.EventsIngestionStatus)) return false;
       if (!object.Equals(AudienceMembersRemovalStatus, other.AudienceMembersRemovalStatus)) return false;
+      if (!object.Equals(RemoveAllAudienceMembersStatus, other.RemoveAllAudienceMembersStatus)) return false;
       if (StatusCase != other.StatusCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -383,6 +432,7 @@ namespace Google.Ads.DataManager.V1 {
       if (statusCase_ == StatusOneofCase.AudienceMembersIngestionStatus) hash ^= AudienceMembersIngestionStatus.GetHashCode();
       if (statusCase_ == StatusOneofCase.EventsIngestionStatus) hash ^= EventsIngestionStatus.GetHashCode();
       if (statusCase_ == StatusOneofCase.AudienceMembersRemovalStatus) hash ^= AudienceMembersRemovalStatus.GetHashCode();
+      if (statusCase_ == StatusOneofCase.RemoveAllAudienceMembersStatus) hash ^= RemoveAllAudienceMembersStatus.GetHashCode();
       hash ^= (int) statusCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -430,6 +480,10 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(WarningInfo);
       }
+      if (statusCase_ == StatusOneofCase.RemoveAllAudienceMembersStatus) {
+        output.WriteRawTag(66);
+        output.WriteMessage(RemoveAllAudienceMembersStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -468,6 +522,10 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(WarningInfo);
       }
+      if (statusCase_ == StatusOneofCase.RemoveAllAudienceMembersStatus) {
+        output.WriteRawTag(66);
+        output.WriteMessage(RemoveAllAudienceMembersStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -498,6 +556,9 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (statusCase_ == StatusOneofCase.AudienceMembersRemovalStatus) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AudienceMembersRemovalStatus);
+      }
+      if (statusCase_ == StatusOneofCase.RemoveAllAudienceMembersStatus) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RemoveAllAudienceMembersStatus);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -550,6 +611,12 @@ namespace Google.Ads.DataManager.V1 {
             AudienceMembersRemovalStatus = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveAudienceMembersStatus();
           }
           AudienceMembersRemovalStatus.MergeFrom(other.AudienceMembersRemovalStatus);
+          break;
+        case StatusOneofCase.RemoveAllAudienceMembersStatus:
+          if (RemoveAllAudienceMembersStatus == null) {
+            RemoveAllAudienceMembersStatus = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveAllAudienceMembersStatus();
+          }
+          RemoveAllAudienceMembersStatus.MergeFrom(other.RemoveAllAudienceMembersStatus);
           break;
       }
 
@@ -624,6 +691,15 @@ namespace Google.Ads.DataManager.V1 {
             input.ReadMessage(WarningInfo);
             break;
           }
+          case 66: {
+            global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveAllAudienceMembersStatus subBuilder = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveAllAudienceMembersStatus();
+            if (statusCase_ == StatusOneofCase.RemoveAllAudienceMembersStatus) {
+              subBuilder.MergeFrom(RemoveAllAudienceMembersStatus);
+            }
+            input.ReadMessage(subBuilder);
+            RemoveAllAudienceMembersStatus = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -693,6 +769,15 @@ namespace Google.Ads.DataManager.V1 {
               WarningInfo = new global::Google.Ads.DataManager.V1.WarningInfo();
             }
             input.ReadMessage(WarningInfo);
+            break;
+          }
+          case 66: {
+            global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveAllAudienceMembersStatus subBuilder = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveAllAudienceMembersStatus();
+            if (statusCase_ == StatusOneofCase.RemoveAllAudienceMembersStatus) {
+              subBuilder.MergeFrom(RemoveAllAudienceMembersStatus);
+            }
+            input.ReadMessage(subBuilder);
+            RemoveAllAudienceMembersStatus = subBuilder;
             break;
           }
         }
@@ -826,6 +911,12 @@ namespace Google.Ads.DataManager.V1 {
             case StatusOneofCase.CompositeDataIngestionStatus:
               CompositeDataIngestionStatus = other.CompositeDataIngestionStatus.Clone();
               break;
+            case StatusOneofCase.GoogleUserIdDataIngestionStatus:
+              GoogleUserIdDataIngestionStatus = other.GoogleUserIdDataIngestionStatus.Clone();
+              break;
+            case StatusOneofCase.PartnerProvidedIdDataIngestionStatus:
+              PartnerProvidedIdDataIngestionStatus = other.PartnerProvidedIdDataIngestionStatus.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -927,6 +1018,37 @@ namespace Google.Ads.DataManager.V1 {
           }
         }
 
+        /// <summary>Field number for the "google_user_id_data_ingestion_status" field.</summary>
+        public const int GoogleUserIdDataIngestionStatusFieldNumber = 7;
+        /// <summary>
+        /// The status of the google user id data ingestion to the destination.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestGoogleUserIdDataStatus GoogleUserIdDataIngestionStatus {
+          get { return statusCase_ == StatusOneofCase.GoogleUserIdDataIngestionStatus ? (global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestGoogleUserIdDataStatus) status_ : null; }
+          set {
+            status_ = value;
+            statusCase_ = value == null ? StatusOneofCase.None : StatusOneofCase.GoogleUserIdDataIngestionStatus;
+          }
+        }
+
+        /// <summary>Field number for the "partner_provided_id_data_ingestion_status" field.</summary>
+        public const int PartnerProvidedIdDataIngestionStatusFieldNumber = 8;
+        /// <summary>
+        /// The status of the partner provided id data ingestion to the
+        /// destination.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestPartnerProvidedIdDataStatus PartnerProvidedIdDataIngestionStatus {
+          get { return statusCase_ == StatusOneofCase.PartnerProvidedIdDataIngestionStatus ? (global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestPartnerProvidedIdDataStatus) status_ : null; }
+          set {
+            status_ = value;
+            statusCase_ = value == null ? StatusOneofCase.None : StatusOneofCase.PartnerProvidedIdDataIngestionStatus;
+          }
+        }
+
         private object status_;
         /// <summary>Enum of possible cases for the "status" oneof.</summary>
         public enum StatusOneofCase {
@@ -937,6 +1059,8 @@ namespace Google.Ads.DataManager.V1 {
           UserIdDataIngestionStatus = 4,
           PpidDataIngestionStatus = 5,
           CompositeDataIngestionStatus = 6,
+          GoogleUserIdDataIngestionStatus = 7,
+          PartnerProvidedIdDataIngestionStatus = 8,
         }
         private StatusOneofCase statusCase_ = StatusOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -973,6 +1097,8 @@ namespace Google.Ads.DataManager.V1 {
           if (!object.Equals(UserIdDataIngestionStatus, other.UserIdDataIngestionStatus)) return false;
           if (!object.Equals(PpidDataIngestionStatus, other.PpidDataIngestionStatus)) return false;
           if (!object.Equals(CompositeDataIngestionStatus, other.CompositeDataIngestionStatus)) return false;
+          if (!object.Equals(GoogleUserIdDataIngestionStatus, other.GoogleUserIdDataIngestionStatus)) return false;
+          if (!object.Equals(PartnerProvidedIdDataIngestionStatus, other.PartnerProvidedIdDataIngestionStatus)) return false;
           if (StatusCase != other.StatusCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -987,6 +1113,8 @@ namespace Google.Ads.DataManager.V1 {
           if (statusCase_ == StatusOneofCase.UserIdDataIngestionStatus) hash ^= UserIdDataIngestionStatus.GetHashCode();
           if (statusCase_ == StatusOneofCase.PpidDataIngestionStatus) hash ^= PpidDataIngestionStatus.GetHashCode();
           if (statusCase_ == StatusOneofCase.CompositeDataIngestionStatus) hash ^= CompositeDataIngestionStatus.GetHashCode();
+          if (statusCase_ == StatusOneofCase.GoogleUserIdDataIngestionStatus) hash ^= GoogleUserIdDataIngestionStatus.GetHashCode();
+          if (statusCase_ == StatusOneofCase.PartnerProvidedIdDataIngestionStatus) hash ^= PartnerProvidedIdDataIngestionStatus.GetHashCode();
           hash ^= (int) statusCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1030,6 +1158,14 @@ namespace Google.Ads.DataManager.V1 {
             output.WriteRawTag(50);
             output.WriteMessage(CompositeDataIngestionStatus);
           }
+          if (statusCase_ == StatusOneofCase.GoogleUserIdDataIngestionStatus) {
+            output.WriteRawTag(58);
+            output.WriteMessage(GoogleUserIdDataIngestionStatus);
+          }
+          if (statusCase_ == StatusOneofCase.PartnerProvidedIdDataIngestionStatus) {
+            output.WriteRawTag(66);
+            output.WriteMessage(PartnerProvidedIdDataIngestionStatus);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1064,6 +1200,14 @@ namespace Google.Ads.DataManager.V1 {
             output.WriteRawTag(50);
             output.WriteMessage(CompositeDataIngestionStatus);
           }
+          if (statusCase_ == StatusOneofCase.GoogleUserIdDataIngestionStatus) {
+            output.WriteRawTag(58);
+            output.WriteMessage(GoogleUserIdDataIngestionStatus);
+          }
+          if (statusCase_ == StatusOneofCase.PartnerProvidedIdDataIngestionStatus) {
+            output.WriteRawTag(66);
+            output.WriteMessage(PartnerProvidedIdDataIngestionStatus);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1091,6 +1235,12 @@ namespace Google.Ads.DataManager.V1 {
           }
           if (statusCase_ == StatusOneofCase.CompositeDataIngestionStatus) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(CompositeDataIngestionStatus);
+          }
+          if (statusCase_ == StatusOneofCase.GoogleUserIdDataIngestionStatus) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(GoogleUserIdDataIngestionStatus);
+          }
+          if (statusCase_ == StatusOneofCase.PartnerProvidedIdDataIngestionStatus) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PartnerProvidedIdDataIngestionStatus);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1140,6 +1290,18 @@ namespace Google.Ads.DataManager.V1 {
                 CompositeDataIngestionStatus = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestCompositeDataStatus();
               }
               CompositeDataIngestionStatus.MergeFrom(other.CompositeDataIngestionStatus);
+              break;
+            case StatusOneofCase.GoogleUserIdDataIngestionStatus:
+              if (GoogleUserIdDataIngestionStatus == null) {
+                GoogleUserIdDataIngestionStatus = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestGoogleUserIdDataStatus();
+              }
+              GoogleUserIdDataIngestionStatus.MergeFrom(other.GoogleUserIdDataIngestionStatus);
+              break;
+            case StatusOneofCase.PartnerProvidedIdDataIngestionStatus:
+              if (PartnerProvidedIdDataIngestionStatus == null) {
+                PartnerProvidedIdDataIngestionStatus = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestPartnerProvidedIdDataStatus();
+              }
+              PartnerProvidedIdDataIngestionStatus.MergeFrom(other.PartnerProvidedIdDataIngestionStatus);
               break;
           }
 
@@ -1216,6 +1378,24 @@ namespace Google.Ads.DataManager.V1 {
                 CompositeDataIngestionStatus = subBuilder;
                 break;
               }
+              case 58: {
+                global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestGoogleUserIdDataStatus subBuilder = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestGoogleUserIdDataStatus();
+                if (statusCase_ == StatusOneofCase.GoogleUserIdDataIngestionStatus) {
+                  subBuilder.MergeFrom(GoogleUserIdDataIngestionStatus);
+                }
+                input.ReadMessage(subBuilder);
+                GoogleUserIdDataIngestionStatus = subBuilder;
+                break;
+              }
+              case 66: {
+                global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestPartnerProvidedIdDataStatus subBuilder = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestPartnerProvidedIdDataStatus();
+                if (statusCase_ == StatusOneofCase.PartnerProvidedIdDataIngestionStatus) {
+                  subBuilder.MergeFrom(PartnerProvidedIdDataIngestionStatus);
+                }
+                input.ReadMessage(subBuilder);
+                PartnerProvidedIdDataIngestionStatus = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -1289,6 +1469,24 @@ namespace Google.Ads.DataManager.V1 {
                 CompositeDataIngestionStatus = subBuilder;
                 break;
               }
+              case 58: {
+                global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestGoogleUserIdDataStatus subBuilder = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestGoogleUserIdDataStatus();
+                if (statusCase_ == StatusOneofCase.GoogleUserIdDataIngestionStatus) {
+                  subBuilder.MergeFrom(GoogleUserIdDataIngestionStatus);
+                }
+                input.ReadMessage(subBuilder);
+                GoogleUserIdDataIngestionStatus = subBuilder;
+                break;
+              }
+              case 66: {
+                global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestPartnerProvidedIdDataStatus subBuilder = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.IngestPartnerProvidedIdDataStatus();
+                if (statusCase_ == StatusOneofCase.PartnerProvidedIdDataIngestionStatus) {
+                  subBuilder.MergeFrom(PartnerProvidedIdDataIngestionStatus);
+                }
+                input.ReadMessage(subBuilder);
+                PartnerProvidedIdDataIngestionStatus = subBuilder;
+                break;
+              }
             }
           }
         }
@@ -1352,6 +1550,12 @@ namespace Google.Ads.DataManager.V1 {
               break;
             case StatusOneofCase.CompositeDataRemovalStatus:
               CompositeDataRemovalStatus = other.CompositeDataRemovalStatus.Clone();
+              break;
+            case StatusOneofCase.GoogleUserIdDataRemovalStatus:
+              GoogleUserIdDataRemovalStatus = other.GoogleUserIdDataRemovalStatus.Clone();
+              break;
+            case StatusOneofCase.PartnerProvidedIdDataRemovalStatus:
+              PartnerProvidedIdDataRemovalStatus = other.PartnerProvidedIdDataRemovalStatus.Clone();
               break;
           }
 
@@ -1454,6 +1658,37 @@ namespace Google.Ads.DataManager.V1 {
           }
         }
 
+        /// <summary>Field number for the "google_user_id_data_removal_status" field.</summary>
+        public const int GoogleUserIdDataRemovalStatusFieldNumber = 7;
+        /// <summary>
+        /// The status of the google user id data removal from the destination.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveGoogleUserIdDataStatus GoogleUserIdDataRemovalStatus {
+          get { return statusCase_ == StatusOneofCase.GoogleUserIdDataRemovalStatus ? (global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveGoogleUserIdDataStatus) status_ : null; }
+          set {
+            status_ = value;
+            statusCase_ = value == null ? StatusOneofCase.None : StatusOneofCase.GoogleUserIdDataRemovalStatus;
+          }
+        }
+
+        /// <summary>Field number for the "partner_provided_id_data_removal_status" field.</summary>
+        public const int PartnerProvidedIdDataRemovalStatusFieldNumber = 8;
+        /// <summary>
+        /// The status of the partner provided id data removal from the
+        /// destination.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemovePartnerProvidedIdDataStatus PartnerProvidedIdDataRemovalStatus {
+          get { return statusCase_ == StatusOneofCase.PartnerProvidedIdDataRemovalStatus ? (global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemovePartnerProvidedIdDataStatus) status_ : null; }
+          set {
+            status_ = value;
+            statusCase_ = value == null ? StatusOneofCase.None : StatusOneofCase.PartnerProvidedIdDataRemovalStatus;
+          }
+        }
+
         private object status_;
         /// <summary>Enum of possible cases for the "status" oneof.</summary>
         public enum StatusOneofCase {
@@ -1464,6 +1699,8 @@ namespace Google.Ads.DataManager.V1 {
           UserIdDataRemovalStatus = 4,
           PpidDataRemovalStatus = 5,
           CompositeDataRemovalStatus = 6,
+          GoogleUserIdDataRemovalStatus = 7,
+          PartnerProvidedIdDataRemovalStatus = 8,
         }
         private StatusOneofCase statusCase_ = StatusOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1500,6 +1737,8 @@ namespace Google.Ads.DataManager.V1 {
           if (!object.Equals(UserIdDataRemovalStatus, other.UserIdDataRemovalStatus)) return false;
           if (!object.Equals(PpidDataRemovalStatus, other.PpidDataRemovalStatus)) return false;
           if (!object.Equals(CompositeDataRemovalStatus, other.CompositeDataRemovalStatus)) return false;
+          if (!object.Equals(GoogleUserIdDataRemovalStatus, other.GoogleUserIdDataRemovalStatus)) return false;
+          if (!object.Equals(PartnerProvidedIdDataRemovalStatus, other.PartnerProvidedIdDataRemovalStatus)) return false;
           if (StatusCase != other.StatusCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -1514,6 +1753,8 @@ namespace Google.Ads.DataManager.V1 {
           if (statusCase_ == StatusOneofCase.UserIdDataRemovalStatus) hash ^= UserIdDataRemovalStatus.GetHashCode();
           if (statusCase_ == StatusOneofCase.PpidDataRemovalStatus) hash ^= PpidDataRemovalStatus.GetHashCode();
           if (statusCase_ == StatusOneofCase.CompositeDataRemovalStatus) hash ^= CompositeDataRemovalStatus.GetHashCode();
+          if (statusCase_ == StatusOneofCase.GoogleUserIdDataRemovalStatus) hash ^= GoogleUserIdDataRemovalStatus.GetHashCode();
+          if (statusCase_ == StatusOneofCase.PartnerProvidedIdDataRemovalStatus) hash ^= PartnerProvidedIdDataRemovalStatus.GetHashCode();
           hash ^= (int) statusCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1557,6 +1798,14 @@ namespace Google.Ads.DataManager.V1 {
             output.WriteRawTag(50);
             output.WriteMessage(CompositeDataRemovalStatus);
           }
+          if (statusCase_ == StatusOneofCase.GoogleUserIdDataRemovalStatus) {
+            output.WriteRawTag(58);
+            output.WriteMessage(GoogleUserIdDataRemovalStatus);
+          }
+          if (statusCase_ == StatusOneofCase.PartnerProvidedIdDataRemovalStatus) {
+            output.WriteRawTag(66);
+            output.WriteMessage(PartnerProvidedIdDataRemovalStatus);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1591,6 +1840,14 @@ namespace Google.Ads.DataManager.V1 {
             output.WriteRawTag(50);
             output.WriteMessage(CompositeDataRemovalStatus);
           }
+          if (statusCase_ == StatusOneofCase.GoogleUserIdDataRemovalStatus) {
+            output.WriteRawTag(58);
+            output.WriteMessage(GoogleUserIdDataRemovalStatus);
+          }
+          if (statusCase_ == StatusOneofCase.PartnerProvidedIdDataRemovalStatus) {
+            output.WriteRawTag(66);
+            output.WriteMessage(PartnerProvidedIdDataRemovalStatus);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1618,6 +1875,12 @@ namespace Google.Ads.DataManager.V1 {
           }
           if (statusCase_ == StatusOneofCase.CompositeDataRemovalStatus) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(CompositeDataRemovalStatus);
+          }
+          if (statusCase_ == StatusOneofCase.GoogleUserIdDataRemovalStatus) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(GoogleUserIdDataRemovalStatus);
+          }
+          if (statusCase_ == StatusOneofCase.PartnerProvidedIdDataRemovalStatus) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PartnerProvidedIdDataRemovalStatus);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1667,6 +1930,18 @@ namespace Google.Ads.DataManager.V1 {
                 CompositeDataRemovalStatus = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveCompositeDataStatus();
               }
               CompositeDataRemovalStatus.MergeFrom(other.CompositeDataRemovalStatus);
+              break;
+            case StatusOneofCase.GoogleUserIdDataRemovalStatus:
+              if (GoogleUserIdDataRemovalStatus == null) {
+                GoogleUserIdDataRemovalStatus = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveGoogleUserIdDataStatus();
+              }
+              GoogleUserIdDataRemovalStatus.MergeFrom(other.GoogleUserIdDataRemovalStatus);
+              break;
+            case StatusOneofCase.PartnerProvidedIdDataRemovalStatus:
+              if (PartnerProvidedIdDataRemovalStatus == null) {
+                PartnerProvidedIdDataRemovalStatus = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemovePartnerProvidedIdDataStatus();
+              }
+              PartnerProvidedIdDataRemovalStatus.MergeFrom(other.PartnerProvidedIdDataRemovalStatus);
               break;
           }
 
@@ -1743,6 +2018,24 @@ namespace Google.Ads.DataManager.V1 {
                 CompositeDataRemovalStatus = subBuilder;
                 break;
               }
+              case 58: {
+                global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveGoogleUserIdDataStatus subBuilder = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveGoogleUserIdDataStatus();
+                if (statusCase_ == StatusOneofCase.GoogleUserIdDataRemovalStatus) {
+                  subBuilder.MergeFrom(GoogleUserIdDataRemovalStatus);
+                }
+                input.ReadMessage(subBuilder);
+                GoogleUserIdDataRemovalStatus = subBuilder;
+                break;
+              }
+              case 66: {
+                global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemovePartnerProvidedIdDataStatus subBuilder = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemovePartnerProvidedIdDataStatus();
+                if (statusCase_ == StatusOneofCase.PartnerProvidedIdDataRemovalStatus) {
+                  subBuilder.MergeFrom(PartnerProvidedIdDataRemovalStatus);
+                }
+                input.ReadMessage(subBuilder);
+                PartnerProvidedIdDataRemovalStatus = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -1816,6 +2109,188 @@ namespace Google.Ads.DataManager.V1 {
                 CompositeDataRemovalStatus = subBuilder;
                 break;
               }
+              case 58: {
+                global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveGoogleUserIdDataStatus subBuilder = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemoveGoogleUserIdDataStatus();
+                if (statusCase_ == StatusOneofCase.GoogleUserIdDataRemovalStatus) {
+                  subBuilder.MergeFrom(GoogleUserIdDataRemovalStatus);
+                }
+                input.ReadMessage(subBuilder);
+                GoogleUserIdDataRemovalStatus = subBuilder;
+                break;
+              }
+              case 66: {
+                global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemovePartnerProvidedIdDataStatus subBuilder = new global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Types.RemovePartnerProvidedIdDataStatus();
+                if (statusCase_ == StatusOneofCase.PartnerProvidedIdDataRemovalStatus) {
+                  subBuilder.MergeFrom(PartnerProvidedIdDataRemovalStatus);
+                }
+                input.ReadMessage(subBuilder);
+                PartnerProvidedIdDataRemovalStatus = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The status of the remove all audience members request.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RemoveAllAudienceMembersStatus : pb::IMessage<RemoveAllAudienceMembersStatus>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RemoveAllAudienceMembersStatus> _parser = new pb::MessageParser<RemoveAllAudienceMembersStatus>(() => new RemoveAllAudienceMembersStatus());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RemoveAllAudienceMembersStatus> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemoveAllAudienceMembersStatus() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemoveAllAudienceMembersStatus(RemoveAllAudienceMembersStatus other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemoveAllAudienceMembersStatus Clone() {
+          return new RemoveAllAudienceMembersStatus(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RemoveAllAudienceMembersStatus);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RemoveAllAudienceMembersStatus other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RemoveAllAudienceMembersStatus other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
             }
           }
         }
@@ -1841,7 +2316,7 @@ namespace Google.Ads.DataManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2048,7 +2523,7 @@ namespace Google.Ads.DataManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[3]; }
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2336,7 +2811,7 @@ namespace Google.Ads.DataManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[4]; }
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2585,7 +3060,7 @@ namespace Google.Ads.DataManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[5]; }
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[6]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2833,7 +3308,7 @@ namespace Google.Ads.DataManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[6]; }
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[7]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3082,7 +3557,7 @@ namespace Google.Ads.DataManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[7]; }
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[8]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3330,7 +3805,7 @@ namespace Google.Ads.DataManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[8]; }
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[9]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3579,7 +4054,7 @@ namespace Google.Ads.DataManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[9]; }
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[10]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3827,7 +4302,7 @@ namespace Google.Ads.DataManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[10]; }
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[11]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4076,7 +4551,7 @@ namespace Google.Ads.DataManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[11]; }
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[12]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4324,7 +4799,7 @@ namespace Google.Ads.DataManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[12]; }
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[13]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4573,7 +5048,7 @@ namespace Google.Ads.DataManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[13]; }
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[14]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4851,7 +5326,7 @@ namespace Google.Ads.DataManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[14]; }
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[15]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5071,6 +5546,1000 @@ namespace Google.Ads.DataManager.V1 {
       }
 
       /// <summary>
+      /// The status of the google user id data ingestion to the destination
+      /// containing stats related to the ingestion.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class IngestGoogleUserIdDataStatus : pb::IMessage<IngestGoogleUserIdDataStatus>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<IngestGoogleUserIdDataStatus> _parser = new pb::MessageParser<IngestGoogleUserIdDataStatus>(() => new IngestGoogleUserIdDataStatus());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<IngestGoogleUserIdDataStatus> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[16]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IngestGoogleUserIdDataStatus() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IngestGoogleUserIdDataStatus(IngestGoogleUserIdDataStatus other) : this() {
+          recordCount_ = other.recordCount_;
+          googleUserIdCount_ = other.googleUserIdCount_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IngestGoogleUserIdDataStatus Clone() {
+          return new IngestGoogleUserIdDataStatus(this);
+        }
+
+        /// <summary>Field number for the "record_count" field.</summary>
+        public const int RecordCountFieldNumber = 1;
+        private long recordCount_;
+        /// <summary>
+        /// The total count of audience members sent in the upload request for the
+        /// destination. Includes all audience members in the request, regardless of
+        /// whether they were successfully ingested or not.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long RecordCount {
+          get { return recordCount_; }
+          set {
+            recordCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "google_user_id_count" field.</summary>
+        public const int GoogleUserIdCountFieldNumber = 2;
+        private long googleUserIdCount_;
+        /// <summary>
+        /// The total count of google user ids sent in the upload request for the
+        /// destination. Includes all google user ids in the request, regardless of
+        /// whether they were successfully ingested or not.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long GoogleUserIdCount {
+          get { return googleUserIdCount_; }
+          set {
+            googleUserIdCount_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as IngestGoogleUserIdDataStatus);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(IngestGoogleUserIdDataStatus other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (RecordCount != other.RecordCount) return false;
+          if (GoogleUserIdCount != other.GoogleUserIdCount) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (RecordCount != 0L) hash ^= RecordCount.GetHashCode();
+          if (GoogleUserIdCount != 0L) hash ^= GoogleUserIdCount.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (RecordCount != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(RecordCount);
+          }
+          if (GoogleUserIdCount != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(GoogleUserIdCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RecordCount != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(RecordCount);
+          }
+          if (GoogleUserIdCount != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(GoogleUserIdCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (RecordCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(RecordCount);
+          }
+          if (GoogleUserIdCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(GoogleUserIdCount);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(IngestGoogleUserIdDataStatus other) {
+          if (other == null) {
+            return;
+          }
+          if (other.RecordCount != 0L) {
+            RecordCount = other.RecordCount;
+          }
+          if (other.GoogleUserIdCount != 0L) {
+            GoogleUserIdCount = other.GoogleUserIdCount;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                RecordCount = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                GoogleUserIdCount = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                RecordCount = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                GoogleUserIdCount = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The status of the google user id data removal from the destination.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RemoveGoogleUserIdDataStatus : pb::IMessage<RemoveGoogleUserIdDataStatus>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RemoveGoogleUserIdDataStatus> _parser = new pb::MessageParser<RemoveGoogleUserIdDataStatus>(() => new RemoveGoogleUserIdDataStatus());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RemoveGoogleUserIdDataStatus> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[17]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemoveGoogleUserIdDataStatus() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemoveGoogleUserIdDataStatus(RemoveGoogleUserIdDataStatus other) : this() {
+          recordCount_ = other.recordCount_;
+          googleUserIdCount_ = other.googleUserIdCount_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemoveGoogleUserIdDataStatus Clone() {
+          return new RemoveGoogleUserIdDataStatus(this);
+        }
+
+        /// <summary>Field number for the "record_count" field.</summary>
+        public const int RecordCountFieldNumber = 1;
+        private long recordCount_;
+        /// <summary>
+        /// The total count of audience members sent in the removal request. Includes
+        /// all audience members in the request, regardless of whether they were
+        /// successfully removed or not.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long RecordCount {
+          get { return recordCount_; }
+          set {
+            recordCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "google_user_id_count" field.</summary>
+        public const int GoogleUserIdCountFieldNumber = 2;
+        private long googleUserIdCount_;
+        /// <summary>
+        /// The total count of google user ids sent in the removal request. Includes
+        /// all google user ids in the request, regardless of whether they were
+        /// successfully removed or not.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long GoogleUserIdCount {
+          get { return googleUserIdCount_; }
+          set {
+            googleUserIdCount_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RemoveGoogleUserIdDataStatus);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RemoveGoogleUserIdDataStatus other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (RecordCount != other.RecordCount) return false;
+          if (GoogleUserIdCount != other.GoogleUserIdCount) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (RecordCount != 0L) hash ^= RecordCount.GetHashCode();
+          if (GoogleUserIdCount != 0L) hash ^= GoogleUserIdCount.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (RecordCount != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(RecordCount);
+          }
+          if (GoogleUserIdCount != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(GoogleUserIdCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RecordCount != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(RecordCount);
+          }
+          if (GoogleUserIdCount != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(GoogleUserIdCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (RecordCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(RecordCount);
+          }
+          if (GoogleUserIdCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(GoogleUserIdCount);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RemoveGoogleUserIdDataStatus other) {
+          if (other == null) {
+            return;
+          }
+          if (other.RecordCount != 0L) {
+            RecordCount = other.RecordCount;
+          }
+          if (other.GoogleUserIdCount != 0L) {
+            GoogleUserIdCount = other.GoogleUserIdCount;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                RecordCount = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                GoogleUserIdCount = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                RecordCount = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                GoogleUserIdCount = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The status of the partner provided id data ingestion to the destination
+      /// containing stats related to the ingestion.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class IngestPartnerProvidedIdDataStatus : pb::IMessage<IngestPartnerProvidedIdDataStatus>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<IngestPartnerProvidedIdDataStatus> _parser = new pb::MessageParser<IngestPartnerProvidedIdDataStatus>(() => new IngestPartnerProvidedIdDataStatus());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<IngestPartnerProvidedIdDataStatus> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[18]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IngestPartnerProvidedIdDataStatus() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IngestPartnerProvidedIdDataStatus(IngestPartnerProvidedIdDataStatus other) : this() {
+          recordCount_ = other.recordCount_;
+          partnerProvidedIdCount_ = other.partnerProvidedIdCount_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IngestPartnerProvidedIdDataStatus Clone() {
+          return new IngestPartnerProvidedIdDataStatus(this);
+        }
+
+        /// <summary>Field number for the "record_count" field.</summary>
+        public const int RecordCountFieldNumber = 1;
+        private long recordCount_;
+        /// <summary>
+        /// The total count of audience members sent in the upload request for the
+        /// destination. Includes all audience members in the request, regardless of
+        /// whether they were successfully ingested or not.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long RecordCount {
+          get { return recordCount_; }
+          set {
+            recordCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "partner_provided_id_count" field.</summary>
+        public const int PartnerProvidedIdCountFieldNumber = 2;
+        private long partnerProvidedIdCount_;
+        /// <summary>
+        /// The total count of partner provided ids sent in the upload request for
+        /// the destination. Includes all partner provided ids in the request,
+        /// regardless of whether they were successfully ingested or not.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long PartnerProvidedIdCount {
+          get { return partnerProvidedIdCount_; }
+          set {
+            partnerProvidedIdCount_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as IngestPartnerProvidedIdDataStatus);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(IngestPartnerProvidedIdDataStatus other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (RecordCount != other.RecordCount) return false;
+          if (PartnerProvidedIdCount != other.PartnerProvidedIdCount) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (RecordCount != 0L) hash ^= RecordCount.GetHashCode();
+          if (PartnerProvidedIdCount != 0L) hash ^= PartnerProvidedIdCount.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (RecordCount != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(RecordCount);
+          }
+          if (PartnerProvidedIdCount != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(PartnerProvidedIdCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RecordCount != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(RecordCount);
+          }
+          if (PartnerProvidedIdCount != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(PartnerProvidedIdCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (RecordCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(RecordCount);
+          }
+          if (PartnerProvidedIdCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(PartnerProvidedIdCount);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(IngestPartnerProvidedIdDataStatus other) {
+          if (other == null) {
+            return;
+          }
+          if (other.RecordCount != 0L) {
+            RecordCount = other.RecordCount;
+          }
+          if (other.PartnerProvidedIdCount != 0L) {
+            PartnerProvidedIdCount = other.PartnerProvidedIdCount;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                RecordCount = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                PartnerProvidedIdCount = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                RecordCount = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                PartnerProvidedIdCount = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The status of the partner provided id data removal from the destination.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RemovePartnerProvidedIdDataStatus : pb::IMessage<RemovePartnerProvidedIdDataStatus>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RemovePartnerProvidedIdDataStatus> _parser = new pb::MessageParser<RemovePartnerProvidedIdDataStatus>(() => new RemovePartnerProvidedIdDataStatus());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RemovePartnerProvidedIdDataStatus> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[19]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemovePartnerProvidedIdDataStatus() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemovePartnerProvidedIdDataStatus(RemovePartnerProvidedIdDataStatus other) : this() {
+          recordCount_ = other.recordCount_;
+          partnerProvidedIdCount_ = other.partnerProvidedIdCount_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RemovePartnerProvidedIdDataStatus Clone() {
+          return new RemovePartnerProvidedIdDataStatus(this);
+        }
+
+        /// <summary>Field number for the "record_count" field.</summary>
+        public const int RecordCountFieldNumber = 1;
+        private long recordCount_;
+        /// <summary>
+        /// The total count of audience members sent in the removal request. Includes
+        /// all audience members in the request, regardless of whether they were
+        /// successfully removed or not.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long RecordCount {
+          get { return recordCount_; }
+          set {
+            recordCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "partner_provided_id_count" field.</summary>
+        public const int PartnerProvidedIdCountFieldNumber = 2;
+        private long partnerProvidedIdCount_;
+        /// <summary>
+        /// The total count of partner provided ids sent in the removal request.
+        /// Includes all partner provided ids in the request, regardless of whether
+        /// they were successfully removed or not.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long PartnerProvidedIdCount {
+          get { return partnerProvidedIdCount_; }
+          set {
+            partnerProvidedIdCount_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RemovePartnerProvidedIdDataStatus);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RemovePartnerProvidedIdDataStatus other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (RecordCount != other.RecordCount) return false;
+          if (PartnerProvidedIdCount != other.PartnerProvidedIdCount) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (RecordCount != 0L) hash ^= RecordCount.GetHashCode();
+          if (PartnerProvidedIdCount != 0L) hash ^= PartnerProvidedIdCount.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (RecordCount != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(RecordCount);
+          }
+          if (PartnerProvidedIdCount != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(PartnerProvidedIdCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RecordCount != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(RecordCount);
+          }
+          if (PartnerProvidedIdCount != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(PartnerProvidedIdCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (RecordCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(RecordCount);
+          }
+          if (PartnerProvidedIdCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(PartnerProvidedIdCount);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RemovePartnerProvidedIdDataStatus other) {
+          if (other == null) {
+            return;
+          }
+          if (other.RecordCount != 0L) {
+            RecordCount = other.RecordCount;
+          }
+          if (other.PartnerProvidedIdCount != 0L) {
+            PartnerProvidedIdCount = other.PartnerProvidedIdCount;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                RecordCount = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                PartnerProvidedIdCount = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                RecordCount = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                PartnerProvidedIdCount = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// The count for a specific data type.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -5088,7 +6557,7 @@ namespace Google.Ads.DataManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[15]; }
+          get { return global::Google.Ads.DataManager.V1.RequestStatusPerDestination.Descriptor.NestedTypes[20]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

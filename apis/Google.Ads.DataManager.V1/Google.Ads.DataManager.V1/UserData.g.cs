@@ -31,20 +31,22 @@ namespace Google.Ads.DataManager.V1 {
             "ZmllckID4EECIooBCg5Vc2VySWRlbnRpZmllchIXCg1lbWFpbF9hZGRyZXNz",
             "GAEgASgJSAASFgoMcGhvbmVfbnVtYmVyGAIgASgJSAASOQoHYWRkcmVzcxgD",
             "IAEoCzImLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuQWRkcmVzc0luZm9I",
-            "AEIMCgppZGVudGlmaWVyInQKC0FkZHJlc3NJbmZvEhcKCmdpdmVuX25hbWUY",
-            "ASABKAlCA+BBAhIYCgtmYW1pbHlfbmFtZRgCIAEoCUID4EECEhgKC3JlZ2lv",
-            "bl9jb2RlGAMgASgJQgPgQQISGAoLcG9zdGFsX2NvZGUYBCABKAlCA+BBAkLK",
-            "AQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCDVVzZXJEYXRhUHJv",
-            "dG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhbWFuYWdlci9hcGl2MS9k",
-            "YXRhbWFuYWdlcnBiO2RhdGFtYW5hZ2VycGKqAhlHb29nbGUuQWRzLkRhdGFN",
-            "YW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdlclxWMeoCHEdvb2ds",
-            "ZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "AEIMCgppZGVudGlmaWVyIsQBCgtBZGRyZXNzSW5mbxIXCgpnaXZlbl9uYW1l",
+            "GAEgASgJQgPgQQISGAoLZmFtaWx5X25hbWUYAiABKAlCA+BBAhIYCgtyZWdp",
+            "b25fY29kZRgDIAEoCUID4EECEhgKC3Bvc3RhbF9jb2RlGAQgASgJQgPgQQIS",
+            "GQoMYWRkcmVzc19saW5lGAUgASgJQgPgQQESEQoEY2l0eRgGIAEoCUID4EEB",
+            "EiAKE2FkbWluaXN0cmF0aXZlX2FyZWEYByABKAlCA+BBAULKAQodY29tLmdv",
+            "b2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCDVVzZXJEYXRhUHJvdG9QAVpBY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9kYXRhbWFuYWdlci9hcGl2MS9kYXRhbWFuYWdl",
+            "cnBiO2RhdGFtYW5hZ2VycGKqAhlHb29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYx",
+            "ygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdlclxWMeoCHEdvb2dsZTo6QWRzOjpE",
+            "YXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.UserData), global::Google.Ads.DataManager.V1.UserData.Parser, new[]{ "UserIdentifiers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.UserIdentifier), global::Google.Ads.DataManager.V1.UserIdentifier.Parser, new[]{ "EmailAddress", "PhoneNumber", "Address" }, new[]{ "Identifier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.AddressInfo), global::Google.Ads.DataManager.V1.AddressInfo.Parser, new[]{ "GivenName", "FamilyName", "RegionCode", "PostalCode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.AddressInfo), global::Google.Ads.DataManager.V1.AddressInfo.Parser, new[]{ "GivenName", "FamilyName", "RegionCode", "PostalCode", "AddressLine", "City", "AdministrativeArea" }, null, null, null, null)
           }));
     }
     #endregion
@@ -654,6 +656,9 @@ namespace Google.Ads.DataManager.V1 {
       familyName_ = other.familyName_;
       regionCode_ = other.regionCode_;
       postalCode_ = other.postalCode_;
+      addressLine_ = other.addressLine_;
+      city_ = other.city_;
+      administrativeArea_ = other.administrativeArea_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -726,6 +731,71 @@ namespace Google.Ads.DataManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "address_line" field.</summary>
+    public const int AddressLineFieldNumber = 5;
+    private string addressLine_ = "";
+    /// <summary>
+    /// Optional. The street and number of the user's address. Used only for
+    /// Google Analytics. This field is hashed and possibly encrypted.
+    ///
+    /// Normalize the value before hashing:
+    ///
+    /// - Remove symbol characters
+    /// - Convert to lowercase
+    /// - Remove leading and trailing whitespace
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AddressLine {
+      get { return addressLine_; }
+      set {
+        addressLine_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "city" field.</summary>
+    public const int CityFieldNumber = 6;
+    private string city_ = "";
+    /// <summary>
+    /// Optional. The city of the user's address. Used only for Google Analytics.
+    ///
+    /// The value should be normalized as such:
+    ///
+    /// - Remove symbol characters
+    /// - Convert to lowercase
+    /// - Remove leading and trailing whitespace
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string City {
+      get { return city_; }
+      set {
+        city_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "administrative_area" field.</summary>
+    public const int AdministrativeAreaFieldNumber = 7;
+    private string administrativeArea_ = "";
+    /// <summary>
+    /// Optional. The administrative area (state/province) of the user's address.
+    /// Used only for Google Analytics.
+    ///
+    /// The value should be normalized as such:
+    ///
+    /// - Remove symbol characters
+    /// - Convert to lowercase
+    /// - Remove leading and trailing whitespace
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AdministrativeArea {
+      get { return administrativeArea_; }
+      set {
+        administrativeArea_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -745,6 +815,9 @@ namespace Google.Ads.DataManager.V1 {
       if (FamilyName != other.FamilyName) return false;
       if (RegionCode != other.RegionCode) return false;
       if (PostalCode != other.PostalCode) return false;
+      if (AddressLine != other.AddressLine) return false;
+      if (City != other.City) return false;
+      if (AdministrativeArea != other.AdministrativeArea) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -756,6 +829,9 @@ namespace Google.Ads.DataManager.V1 {
       if (FamilyName.Length != 0) hash ^= FamilyName.GetHashCode();
       if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
       if (PostalCode.Length != 0) hash ^= PostalCode.GetHashCode();
+      if (AddressLine.Length != 0) hash ^= AddressLine.GetHashCode();
+      if (City.Length != 0) hash ^= City.GetHashCode();
+      if (AdministrativeArea.Length != 0) hash ^= AdministrativeArea.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -790,6 +866,18 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(34);
         output.WriteString(PostalCode);
       }
+      if (AddressLine.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AddressLine);
+      }
+      if (City.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(City);
+      }
+      if (AdministrativeArea.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(AdministrativeArea);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -816,6 +904,18 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(34);
         output.WriteString(PostalCode);
       }
+      if (AddressLine.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AddressLine);
+      }
+      if (City.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(City);
+      }
+      if (AdministrativeArea.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(AdministrativeArea);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -837,6 +937,15 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (PostalCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PostalCode);
+      }
+      if (AddressLine.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AddressLine);
+      }
+      if (City.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(City);
+      }
+      if (AdministrativeArea.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AdministrativeArea);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -861,6 +970,15 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (other.PostalCode.Length != 0) {
         PostalCode = other.PostalCode;
+      }
+      if (other.AddressLine.Length != 0) {
+        AddressLine = other.AddressLine;
+      }
+      if (other.City.Length != 0) {
+        City = other.City;
+      }
+      if (other.AdministrativeArea.Length != 0) {
+        AdministrativeArea = other.AdministrativeArea;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -897,6 +1015,18 @@ namespace Google.Ads.DataManager.V1 {
             PostalCode = input.ReadString();
             break;
           }
+          case 42: {
+            AddressLine = input.ReadString();
+            break;
+          }
+          case 50: {
+            City = input.ReadString();
+            break;
+          }
+          case 58: {
+            AdministrativeArea = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -930,6 +1060,18 @@ namespace Google.Ads.DataManager.V1 {
           }
           case 34: {
             PostalCode = input.ReadString();
+            break;
+          }
+          case 42: {
+            AddressLine = input.ReadString();
+            break;
+          }
+          case 50: {
+            City = input.ReadString();
+            break;
+          }
+          case 58: {
+            AdministrativeArea = input.ReadString();
             break;
           }
         }
