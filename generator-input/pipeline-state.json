@@ -97,7 +97,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-07-28T23:10:27.672196344Z",
-            "lastGeneratedCommit": "36d9a9bd106644eec36c5aeb183a6d62d00ed4fd",
+            "lastGeneratedCommit": "57394718a71457aa37ab002352b22081976bdd91",
             "lastReleasedCommit": "a8598f68e1be76c31ac74f1cdcbe33fce642094d",
             "apiPaths": [
                 "google/chat/v1"
@@ -277,7 +277,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-07-28T23:12:14.928297924Z",
-            "lastGeneratedCommit": "916f9cd2c6e18a61fbd61cf46a2fbe17b4c04200",
+            "lastGeneratedCommit": "f2c732892b18addf64b732ec5bab25a66d0637c5",
             "lastReleasedCommit": "916f9cd2c6e18a61fbd61cf46a2fbe17b4c04200",
             "apiPaths": [
                 "google/cloud/aiplatform/v1beta1"
