@@ -35635,6 +35635,670 @@
       ]
     },
     {
+      "regionTag": "compute_v1_generated_Hosts_Get_sync",
+      "title": "GetRequestObject",
+      "description": "Snippet for Get",
+      "file": "HostsClient.GetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.HostsClient.Get",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetHostRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.Host",
+        "client": {
+          "shortName": "HostsClient",
+          "fullName": "Google.Cloud.Compute.V1.HostsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.Hosts.Get",
+          "service": {
+            "shortName": "Hosts",
+            "fullName": "google.cloud.compute.v1.Hosts"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Hosts_Get_async",
+      "title": "GetRequestObjectAsync",
+      "description": "Snippet for GetAsync",
+      "file": "HostsClient.GetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.HostsClient.GetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetHostRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Host>",
+        "client": {
+          "shortName": "HostsClient",
+          "fullName": "Google.Cloud.Compute.V1.HostsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.Hosts.Get",
+          "service": {
+            "shortName": "Hosts",
+            "fullName": "google.cloud.compute.v1.Hosts"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Hosts_Get_sync_flattened",
+      "title": "Get",
+      "description": "Snippet for Get",
+      "file": "HostsClient.GetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.HostsClient.Get",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "association"
+          },
+          {
+            "type": "System.String",
+            "name": "host"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.Host",
+        "client": {
+          "shortName": "HostsClient",
+          "fullName": "Google.Cloud.Compute.V1.HostsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.Hosts.Get",
+          "service": {
+            "shortName": "Hosts",
+            "fullName": "google.cloud.compute.v1.Hosts"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Hosts_Get_async_flattened",
+      "title": "GetAsync",
+      "description": "Snippet for GetAsync",
+      "file": "HostsClient.GetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.HostsClient.GetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "association"
+          },
+          {
+            "type": "System.String",
+            "name": "host"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.Host>",
+        "client": {
+          "shortName": "HostsClient",
+          "fullName": "Google.Cloud.Compute.V1.HostsClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.Hosts.Get",
+          "service": {
+            "shortName": "Hosts",
+            "fullName": "google.cloud.compute.v1.Hosts"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Hosts_GetVersion_sync",
+      "title": "GetVersionRequestObject",
+      "description": "Snippet for GetVersion",
+      "file": "HostsClient.GetVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVersion",
+        "fullName": "Google.Cloud.Compute.V1.HostsClient.GetVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetVersionHostRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "HostsClient",
+          "fullName": "Google.Cloud.Compute.V1.HostsClient"
+        },
+        "method": {
+          "shortName": "GetVersion",
+          "fullName": "google.cloud.compute.v1.Hosts.GetVersion",
+          "service": {
+            "shortName": "Hosts",
+            "fullName": "google.cloud.compute.v1.Hosts"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Hosts_GetVersion_async",
+      "title": "GetVersionRequestObjectAsync",
+      "description": "Snippet for GetVersionAsync",
+      "file": "HostsClient.GetVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVersionAsync",
+        "fullName": "Google.Cloud.Compute.V1.HostsClient.GetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetVersionHostRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "HostsClient",
+          "fullName": "Google.Cloud.Compute.V1.HostsClient"
+        },
+        "method": {
+          "shortName": "GetVersion",
+          "fullName": "google.cloud.compute.v1.Hosts.GetVersion",
+          "service": {
+            "shortName": "Hosts",
+            "fullName": "google.cloud.compute.v1.Hosts"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 69,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 67,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Hosts_GetVersion_sync_flattened",
+      "title": "GetVersion",
+      "description": "Snippet for GetVersion",
+      "file": "HostsClient.GetVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVersion",
+        "fullName": "Google.Cloud.Compute.V1.HostsClient.GetVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "association"
+          },
+          {
+            "type": "System.String",
+            "name": "host"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.HostsGetVersionRequest",
+            "name": "hostsGetVersionRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "HostsClient",
+          "fullName": "Google.Cloud.Compute.V1.HostsClient"
+        },
+        "method": {
+          "shortName": "GetVersion",
+          "fullName": "google.cloud.compute.v1.Hosts.GetVersion",
+          "service": {
+            "shortName": "Hosts",
+            "fullName": "google.cloud.compute.v1.Hosts"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Hosts_GetVersion_async_flattened",
+      "title": "GetVersionAsync",
+      "description": "Snippet for GetVersionAsync",
+      "file": "HostsClient.GetVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVersionAsync",
+        "fullName": "Google.Cloud.Compute.V1.HostsClient.GetVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "association"
+          },
+          {
+            "type": "System.String",
+            "name": "host"
+          },
+          {
+            "type": "Google.Cloud.Compute.V1.HostsGetVersionRequest",
+            "name": "hostsGetVersionRequestResource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "HostsClient",
+          "fullName": "Google.Cloud.Compute.V1.HostsClient"
+        },
+        "method": {
+          "shortName": "GetVersion",
+          "fullName": "google.cloud.compute.v1.Hosts.GetVersion",
+          "service": {
+            "shortName": "Hosts",
+            "fullName": "google.cloud.compute.v1.Hosts"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Hosts_List_sync",
+      "title": "ListRequestObject",
+      "description": "Snippet for List",
+      "file": "HostsClient.ListRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "List",
+        "fullName": "Google.Cloud.Compute.V1.HostsClient.List",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.ListHostsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.HostsListResponse, Google.Cloud.Compute.V1.Host>",
+        "client": {
+          "shortName": "HostsClient",
+          "fullName": "Google.Cloud.Compute.V1.HostsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.Hosts.List",
+          "service": {
+            "shortName": "Hosts",
+            "fullName": "google.cloud.compute.v1.Hosts"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Hosts_List_async",
+      "title": "ListRequestObjectAsync",
+      "description": "Snippet for ListAsync",
+      "file": "HostsClient.ListRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAsync",
+        "fullName": "Google.Cloud.Compute.V1.HostsClient.ListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.ListHostsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.HostsListResponse, Google.Cloud.Compute.V1.Host>",
+        "client": {
+          "shortName": "HostsClient",
+          "fullName": "Google.Cloud.Compute.V1.HostsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.Hosts.List",
+          "service": {
+            "shortName": "Hosts",
+            "fullName": "google.cloud.compute.v1.Hosts"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Hosts_List_sync_flattened",
+      "title": "List",
+      "description": "Snippet for List",
+      "file": "HostsClient.ListSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "List",
+        "fullName": "Google.Cloud.Compute.V1.HostsClient.List",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "association"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.HostsListResponse, Google.Cloud.Compute.V1.Host>",
+        "client": {
+          "shortName": "HostsClient",
+          "fullName": "Google.Cloud.Compute.V1.HostsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.Hosts.List",
+          "service": {
+            "shortName": "Hosts",
+            "fullName": "google.cloud.compute.v1.Hosts"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_Hosts_List_async_flattened",
+      "title": "ListAsync",
+      "description": "Snippet for ListAsync",
+      "file": "HostsClient.ListAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAsync",
+        "fullName": "Google.Cloud.Compute.V1.HostsClient.ListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "association"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.HostsListResponse, Google.Cloud.Compute.V1.Host>",
+        "client": {
+          "shortName": "HostsClient",
+          "fullName": "Google.Cloud.Compute.V1.HostsClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.Hosts.List",
+          "service": {
+            "shortName": "Hosts",
+            "fullName": "google.cloud.compute.v1.Hosts"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "compute_v1_generated_ImageFamilyViews_Get_sync",
       "title": "GetRequestObject",
       "description": "Snippet for Get",
@@ -49864,12 +50528,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 66,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 64,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -49913,12 +50577,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 67,
+          "end": 68,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 65,
+          "end": 66,
           "type": "SHORT"
         }
       ]
@@ -57760,12 +58424,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 67,
+          "end": 68,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 65,
+          "end": 66,
           "type": "SHORT"
         }
       ]
@@ -57809,12 +58473,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 68,
+          "end": 69,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 66,
+          "end": 67,
           "type": "SHORT"
         }
       ]
@@ -153849,6 +154513,414 @@
           "service": {
             "shortName": "Regions",
             "fullName": "google.cloud.compute.v1.Regions"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ReliabilityRisks_Get_sync",
+      "title": "GetRequestObject",
+      "description": "Snippet for Get",
+      "file": "ReliabilityRisksClient.GetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient.Get",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetReliabilityRiskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.ReliabilityRisk",
+        "client": {
+          "shortName": "ReliabilityRisksClient",
+          "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ReliabilityRisks.Get",
+          "service": {
+            "shortName": "ReliabilityRisks",
+            "fullName": "google.cloud.compute.v1.ReliabilityRisks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ReliabilityRisks_Get_async",
+      "title": "GetRequestObjectAsync",
+      "description": "Snippet for GetAsync",
+      "file": "ReliabilityRisksClient.GetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient.GetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetReliabilityRiskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.ReliabilityRisk>",
+        "client": {
+          "shortName": "ReliabilityRisksClient",
+          "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ReliabilityRisks.Get",
+          "service": {
+            "shortName": "ReliabilityRisks",
+            "fullName": "google.cloud.compute.v1.ReliabilityRisks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ReliabilityRisks_Get_sync_flattened",
+      "title": "Get",
+      "description": "Snippet for Get",
+      "file": "ReliabilityRisksClient.GetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Get",
+        "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient.Get",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "reliabilityRisk"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Compute.V1.ReliabilityRisk",
+        "client": {
+          "shortName": "ReliabilityRisksClient",
+          "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ReliabilityRisks.Get",
+          "service": {
+            "shortName": "ReliabilityRisks",
+            "fullName": "google.cloud.compute.v1.ReliabilityRisks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ReliabilityRisks_Get_async_flattened",
+      "title": "GetAsync",
+      "description": "Snippet for GetAsync",
+      "file": "ReliabilityRisksClient.GetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAsync",
+        "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient.GetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "reliabilityRisk"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Compute.V1.ReliabilityRisk>",
+        "client": {
+          "shortName": "ReliabilityRisksClient",
+          "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient"
+        },
+        "method": {
+          "shortName": "Get",
+          "fullName": "google.cloud.compute.v1.ReliabilityRisks.Get",
+          "service": {
+            "shortName": "ReliabilityRisks",
+            "fullName": "google.cloud.compute.v1.ReliabilityRisks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ReliabilityRisks_List_sync",
+      "title": "ListRequestObject",
+      "description": "Snippet for List",
+      "file": "ReliabilityRisksClient.ListRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "List",
+        "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient.List",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.ListReliabilityRisksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.ReliabilityRisksListResponse, Google.Cloud.Compute.V1.ReliabilityRisk>",
+        "client": {
+          "shortName": "ReliabilityRisksClient",
+          "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.ReliabilityRisks.List",
+          "service": {
+            "shortName": "ReliabilityRisks",
+            "fullName": "google.cloud.compute.v1.ReliabilityRisks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ReliabilityRisks_List_async",
+      "title": "ListRequestObjectAsync",
+      "description": "Snippet for ListAsync",
+      "file": "ReliabilityRisksClient.ListRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAsync",
+        "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient.ListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.ListReliabilityRisksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.ReliabilityRisksListResponse, Google.Cloud.Compute.V1.ReliabilityRisk>",
+        "client": {
+          "shortName": "ReliabilityRisksClient",
+          "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.ReliabilityRisks.List",
+          "service": {
+            "shortName": "ReliabilityRisks",
+            "fullName": "google.cloud.compute.v1.ReliabilityRisks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ReliabilityRisks_List_sync_flattened",
+      "title": "List",
+      "description": "Snippet for List",
+      "file": "ReliabilityRisksClient.ListSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "List",
+        "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient.List",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Compute.V1.ReliabilityRisksListResponse, Google.Cloud.Compute.V1.ReliabilityRisk>",
+        "client": {
+          "shortName": "ReliabilityRisksClient",
+          "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.ReliabilityRisks.List",
+          "service": {
+            "shortName": "ReliabilityRisks",
+            "fullName": "google.cloud.compute.v1.ReliabilityRisks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ReliabilityRisks_List_async_flattened",
+      "title": "ListAsync",
+      "description": "Snippet for ListAsync",
+      "file": "ReliabilityRisksClient.ListAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAsync",
+        "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient.ListAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Compute.V1.ReliabilityRisksListResponse, Google.Cloud.Compute.V1.ReliabilityRisk>",
+        "client": {
+          "shortName": "ReliabilityRisksClient",
+          "fullName": "Google.Cloud.Compute.V1.ReliabilityRisksClient"
+        },
+        "method": {
+          "shortName": "List",
+          "fullName": "google.cloud.compute.v1.ReliabilityRisks.List",
+          "service": {
+            "shortName": "ReliabilityRisks",
+            "fullName": "google.cloud.compute.v1.ReliabilityRisks"
           }
         }
       },

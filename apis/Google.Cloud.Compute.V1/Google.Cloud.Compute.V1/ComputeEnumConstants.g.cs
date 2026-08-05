@@ -2973,6 +2973,12 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.NetworkOptimizedC4N"/>.
+                /// </summary>
+                public const string NetworkOptimizedC4N = "NETWORK_OPTIMIZED_C4N";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.StorageOptimizedZ3"/>.
                 /// </summary>
                 public const string StorageOptimizedZ3 = "STORAGE_OPTIMIZED_Z3";
@@ -6069,6 +6075,92 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.Host"/> message.
+        /// </summary>
+        public static class Host
+        {
+            /// <summary>
+            /// Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Host.Types.State"/>
+            /// enum.
+            /// </summary>
+            public static class State
+            {
+                /// <summary>
+                /// Wire representation of <see cref="global::Google.Cloud.Compute.V1.Host.Types.State.UndefinedState"/>
+                /// .
+                /// </summary>
+                public const string UndefinedState = "UNDEFINED_STATE";
+
+                /// <summary>
+                /// Wire representation of <see cref="global::Google.Cloud.Compute.V1.Host.Types.State.Active"/>.
+                /// </summary>
+                public const string Active = "ACTIVE";
+
+                /// <summary>
+                /// Wire representation of <see cref="global::Google.Cloud.Compute.V1.Host.Types.State.Creating"/>.
+                /// </summary>
+                public const string Creating = "CREATING";
+
+                /// <summary>
+                /// Wire representation of <see cref="global::Google.Cloud.Compute.V1.Host.Types.State.Deleting"/>.
+                /// </summary>
+                public const string Deleting = "DELETING";
+
+                /// <summary>
+                /// Wire representation of <see cref="global::Google.Cloud.Compute.V1.Host.Types.State.Unspecified"/>.
+                /// </summary>
+                public const string Unspecified = "STATE_UNSPECIFIED";
+
+                /// <summary>
+                /// Wire representation of <see cref="global::Google.Cloud.Compute.V1.Host.Types.State.Unavailable"/>.
+                /// </summary>
+                public const string Unavailable = "UNAVAILABLE";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.HostsGetVersionRequest"/>
+        /// message.
+        /// </summary>
+        public static class HostsGetVersionRequest
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.HostsGetVersionRequest.Types.SbomSelections"/> enum.
+            /// </summary>
+            public static class SbomSelections
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.HostsGetVersionRequest.Types.SbomSelections.UndefinedSbomSelections"/>
+                /// .
+                /// </summary>
+                public const string UndefinedSbomSelections = "UNDEFINED_SBOM_SELECTIONS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.HostsGetVersionRequest.Types.SbomSelections.SbomSelectionCurrent"/>
+                /// .
+                /// </summary>
+                public const string SbomSelectionCurrent = "SBOM_SELECTION_CURRENT";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.HostsGetVersionRequest.Types.SbomSelections.SbomSelectionTarget"/>
+                /// .
+                /// </summary>
+                public const string SbomSelectionTarget = "SBOM_SELECTION_TARGET";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.HostsGetVersionRequest.Types.SbomSelections.SbomSelectionUnspecified"/>
+                /// .
+                /// </summary>
+                public const string SbomSelectionUnspecified = "SBOM_SELECTION_UNSPECIFIED";
+            }
+        }
+
+        /// <summary>
         /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.HttpRedirectAction"/>
         /// message.
         /// </summary>
@@ -6337,6 +6429,12 @@ namespace Google.Cloud.Compute.V1
                 /// Wire representation of <see cref="global::Google.Cloud.Compute.V1.Instance.Types.Status.Pending"/>.
                 /// </summary>
                 public const string Pending = "PENDING";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Instance.Types.Status.PendingStop"/>.
+                /// </summary>
+                public const string PendingStop = "PENDING_STOP";
 
                 /// <summary>
                 /// Wire representation of
@@ -7176,6 +7274,12 @@ namespace Google.Cloud.Compute.V1
                 /// <see cref="global::Google.Cloud.Compute.V1.InstanceWithNamedPorts.Types.Status.Pending"/>.
                 /// </summary>
                 public const string Pending = "PENDING";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InstanceWithNamedPorts.Types.Status.PendingStop"/>.
+                /// </summary>
+                public const string PendingStop = "PENDING_STOP";
 
                 /// <summary>
                 /// Wire representation of
@@ -10094,6 +10198,12 @@ namespace Google.Cloud.Compute.V1
                 /// <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.Pending"/>.
                 /// </summary>
                 public const string Pending = "PENDING";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.PendingStop"/>.
+                /// </summary>
+                public const string PendingStop = "PENDING_STOP";
 
                 /// <summary>
                 /// Wire representation of
@@ -16693,6 +16803,142 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string HighThroughput = "HIGH_THROUGHPUT";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.ResourceStatusShutdownDetails"/> message.
+        /// </summary>
+        public static class ResourceStatusShutdownDetails
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.ResourceStatusShutdownDetails.Types.StopState"/> enum.
+            /// </summary>
+            public static class StopState
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ResourceStatusShutdownDetails.Types.StopState.UndefinedStopState"/>
+                /// .
+                /// </summary>
+                public const string UndefinedStopState = "UNDEFINED_STOP_STATE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ResourceStatusShutdownDetails.Types.StopState.PendingStop"/>
+                /// .
+                /// </summary>
+                public const string PendingStop = "PENDING_STOP";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ResourceStatusShutdownDetails.Types.StopState.Stopping"/>
+                /// .
+                /// </summary>
+                public const string Stopping = "STOPPING";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.ResourceStatusShutdownDetails.Types.TargetState"/> enum.
+            /// </summary>
+            public static class TargetState
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ResourceStatusShutdownDetails.Types.TargetState.UndefinedTargetState"/>
+                /// .
+                /// </summary>
+                public const string UndefinedTargetState = "UNDEFINED_TARGET_STATE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ResourceStatusShutdownDetails.Types.TargetState.Deleted"/>
+                /// .
+                /// </summary>
+                public const string Deleted = "DELETED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ResourceStatusShutdownDetails.Types.TargetState.Stopped"/>
+                /// .
+                /// </summary>
+                public const string Stopped = "STOPPED";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.RiskDetails"/> message.
+        /// </summary>
+        public static class RiskDetails
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.RiskDetails.Types.Severity"/> enum.
+            /// </summary>
+            public static class Severity
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.RiskDetails.Types.Severity.UndefinedSeverity"/>.
+                /// </summary>
+                public const string UndefinedSeverity = "UNDEFINED_SEVERITY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.RiskDetails.Types.Severity.Critical"/>.
+                /// </summary>
+                public const string Critical = "CRITICAL";
+
+                /// <summary>
+                /// Wire representation of <see cref="global::Google.Cloud.Compute.V1.RiskDetails.Types.Severity.High"/>
+                /// .
+                /// </summary>
+                public const string High = "HIGH";
+
+                /// <summary>
+                /// Wire representation of <see cref="global::Google.Cloud.Compute.V1.RiskDetails.Types.Severity.Low"/>.
+                /// </summary>
+                public const string Low = "LOW";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.RiskDetails.Types.Severity.Medium"/>.
+                /// </summary>
+                public const string Medium = "MEDIUM";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.RiskDetails.Types.Severity.Unspecified"/>.
+                /// </summary>
+                public const string Unspecified = "SEVERITY_UNSPECIFIED";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.RiskDetails.Types.Type"/> enum.
+            /// </summary>
+            public static class Type
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.RiskDetails.Types.Type.UndefinedType"/>.
+                /// </summary>
+                public const string UndefinedType = "UNDEFINED_TYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.RiskDetails.Types.Type.GlobalDns"/>.
+                /// </summary>
+                public const string GlobalDns = "GLOBAL_DNS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.RiskDetails.Types.Type.RiskTypeUnspecified"/>.
+                /// </summary>
+                public const string RiskTypeUnspecified = "RISK_TYPE_UNSPECIFIED";
             }
         }
 
