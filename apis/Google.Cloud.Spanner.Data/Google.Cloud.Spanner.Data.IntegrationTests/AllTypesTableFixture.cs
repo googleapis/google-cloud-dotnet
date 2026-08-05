@@ -15,6 +15,7 @@
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Protobuf.WellKnownTypes;
 using Xunit;
+using static Google.Cloud.Spanner.Data.SpannerDbType;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
@@ -39,11 +40,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  K,
                  BoolValue,
                  Int64Value,
-                 Int64BackedEnumValue,
                  Float32Value,
                  Float64Value,
                  StringValue,
-                 StringBackedEnumValue,
                  NumericValue,
                  BytesValue,
                  TimestampValue,
@@ -79,11 +78,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @K,
                  @BoolValue,
                  @Int64Value,
-                 @Int64BackedEnumValue,
                  @Float32Value,
                  @Float64Value,
                  @StringValue,
-                 @StringBackedEnumValue,
                  @NumericValue,
                  @BytesValue,
                  @TimestampValue,
@@ -123,11 +120,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             K                                   STRING(MAX) NOT NULL,
                             BoolValue                           BOOL,
                             Int64Value                          INT64,
-                            Int64BackedEnumValue                INT64,
                             Float32Value                        FLOAT32,
                             Float64Value                        FLOAT64,
                             StringValue                         STRING(MAX),
-                            StringBackedEnumValue               STRING(MAX),
                             NumericValue                        NUMERIC,
                             BytesValue                          BYTES(MAX),
                             TimestampValue                      TIMESTAMP,
@@ -139,8 +134,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ProtobufPersonValue                 {Person.Descriptor.FullName},
                             ProtobufValueWrapperValue           {ValueWrapper.Descriptor.FullName},
                             UuidValue                           UUID,
-                            TopLevelEnumValue                   {Color.Blue.GetProtobufEnumFqn()},
-                            NestedEnumValue                     {Pet.Types.Species.Cat.GetProtobufEnumFqn()},
+                            TopLevelEnumValue                   {ProtobufEnumCache.GetEnumDescriptor(typeof(Color)).FullName},
+                            NestedEnumValue                     {ProtobufEnumCache.GetEnumDescriptor(typeof(Pet.Types.Species)).FullName},
                             BoolArrayValue                      ARRAY<BOOL>,
                             Int64ArrayValue                     ARRAY<INT64>,
                             Float32ArrayValue                   ARRAY<FLOAT32>,
@@ -157,8 +152,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ProtobufRectangleArrayValue         ARRAY<{Rectangle.Descriptor.FullName}>,
                             ProtobufPersonArrayValue            ARRAY<{Person.Descriptor.FullName}>,
                             UuidArrayValue                      ARRAY<UUID>,
-                            TopLevelEnumArrayValue              ARRAY<{Color.Blue.GetProtobufEnumFqn()}>,
-                            NestedEnumArrayValue                ARRAY<{Pet.Types.Species.Cat.GetProtobufEnumFqn()}>,
+                            TopLevelEnumArrayValue              ARRAY<{ProtobufEnumCache.GetEnumDescriptor(typeof(Color)).FullName}>,
+                            NestedEnumArrayValue                ARRAY<{ProtobufEnumCache.GetEnumDescriptor(typeof(Pet.Types.Species)).FullName}>,
                             ProtobufValueWrapperArrayValue      ARRAY<{ValueWrapper.Descriptor.FullName}>
                           ) PRIMARY KEY(K)");
 

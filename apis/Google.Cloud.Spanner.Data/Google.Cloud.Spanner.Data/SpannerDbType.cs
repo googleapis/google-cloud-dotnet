@@ -111,13 +111,6 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public static SpannerDbType Uuid { get; } = new SpannerDbType(TypeCode.Uuid);
 
-        /// <summary>
-        /// Protobuf message
-        /// </summary>
-        internal const string ProtobufMessage = "Protobuf Message";
-
-        internal const string ProtobufEnum = "Protobuf Enum";
-
         private static readonly Dictionary<V1.Type, SpannerDbType> s_simpleTypes
             = new Dictionary<V1.Type, SpannerDbType>
             {
@@ -194,8 +187,16 @@ namespace Google.Cloud.Spanner.Data
         private SpannerDbType(List<StructField> structFields)
             : this(TypeCode.Struct) => StructFields = structFields;
 
-        private SpannerDbType(TypeCode typeCode, string protobufTypeName)
-            : this(typeCode) => ProtobufTypeName = GaxPreconditions.CheckNotNullOrEmpty(protobufTypeName, nameof(protobufTypeName));
+        private SpannerDbType(TypeCode typeCode, string protobufTypeName) : this(typeCode)
+        {
+            if (typeCode != TypeCode.Proto && typeCode != TypeCode.Enum)
+            {
+                throw new ArgumentException(
+                    $"Protobuf type name found alongside invalid Type {typeCode}");
+            }
+
+            ProtobufTypeName = GaxPreconditions.CheckNotNullOrEmpty(protobufTypeName, nameof(protobufTypeName));
+        }
 
         /// <summary>
         /// The corresponding <see cref="DbType"/> for this Cloud Spanner type.
@@ -384,7 +385,7 @@ namespace Google.Cloud.Spanner.Data
             new SpannerDbType(TypeCode.Proto, protobufTypeName);
 
         // Internal for testing
-        internal static SpannerDbType ForEnum(string enumFQN) => new(TypeCode.Enum, enumFQN);
+        internal static SpannerDbType ForEnum(string enumTypeName) => new(TypeCode.Enum, enumTypeName);
 
         /// <summary>
         /// Returns a SpannerDbType given a ClrType.
@@ -439,7 +440,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 return new SpannerDbType(TypeCode.Proto, descriptor.FullName);
             }
-            if (type.IsEnum && ProtobufEnumCache.GetEnumDescriptor(type) is EnumDescriptor enumDescriptor)
+            if (ProtobufEnumCache.GetEnumDescriptor(type) is EnumDescriptor enumDescriptor)
             {
                 return new SpannerDbType(TypeCode.Enum, enumDescriptor.FullName);
             }

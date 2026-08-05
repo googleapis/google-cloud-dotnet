@@ -148,12 +148,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f");
         }
 
-        private static IEnumerable<DayOfWeek> GetEnumsForArray()
-        {
-            yield return DayOfWeek.Monday;
-            yield return DayOfWeek.Thursday;
-        }
-
         private static IEnumerable<Color> GetTopLevelEnumsForArray()
         {
             yield return Color.Blue;
@@ -223,8 +217,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { (ushort) 1, SpannerDbType.Float32, "1" };
             yield return new object[] { "1", SpannerDbType.Float32, "1" };
             yield return new object[] { "1.5", SpannerDbType.Float32, "1.5" };
-            yield return new object[] { Color.Red, SpannerDbType.Float32, "1" };
-            yield return new object[] { Pet.Types.Species.Dog, SpannerDbType.Float32, "2" };
             yield return new object[] { DBNull.Value, SpannerDbType.Float32, "null" };
 
             // Spanner type = Float64 tests.
@@ -246,8 +238,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { (ushort)1, SpannerDbType.Float64, "1" };
             yield return new object[] { "1", SpannerDbType.Float64, "1" };
             yield return new object[] { "1.5", SpannerDbType.Float64, "1.5" };
-            yield return new object[] { Color.Red, SpannerDbType.Float64, "1" };
-            yield return new object[] { Pet.Types.Species.Dog, SpannerDbType.Float64, "2" };
             yield return new object[] { DBNull.Value, SpannerDbType.Float64, "null" };
 
             // Spanner type = Int64 tests.
@@ -267,9 +257,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { 1L, SpannerDbType.Int64, Quote("1") };
             yield return new object[] { (ulong)1, SpannerDbType.Int64, Quote("1") };
             yield return new object[] { (short)1, SpannerDbType.Int64, Quote("1") };
-            yield return new object[] { (ushort)1, SpannerDbType.Int64, Quote("1") };
-            yield return new object[] { Color.Red, SpannerDbType.Int64, Quote("1") };
-            yield return new object[] { Pet.Types.Species.Dog, SpannerDbType.Int64, Quote("2") };
+            yield return new object[] { (ushort) 1, SpannerDbType.Int64, Quote("1") };
             yield return new object[] { "1", SpannerDbType.Int64, Quote("1") };
 
             // Spanner type = Bool tests.
@@ -324,8 +312,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { (short)1, SpannerDbType.String, Quote("1") };
             yield return new object[] { (ushort)1, SpannerDbType.String, Quote("1") };
             yield return new object[] { s_testDate, SpannerDbType.String, Quote("2017-01-31T03:15:30.5Z") };
-            yield return new object[] { Color.Red, SpannerDbType.String, Quote(Color.Red.ToString()) };
-            yield return new object[] { Pet.Types.Species.Dog, SpannerDbType.String, Quote(Pet.Types.Species.Dog.ToString()) };
 
             // Spanner type = Numeric tests.
             yield return new object[] { SpannerNumeric.Epsilon, SpannerDbType.Numeric, Quote("0.000000001") };
@@ -410,7 +396,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "passthrubadbytes", SpannerDbType.Bytes, Quote("passthrubadbytes") };
 
             // Protobuf Enum
-            yield return new object[] { Color.Red, SpannerDbType.FromClrType(typeof(Pet.Types.Species)), Quote(((long) Color.Red).ToString()) };
+            yield return new object[] { Color.Red, SpannerDbType.FromClrType(typeof(Color)), Quote(((long) Color.Red).ToString()) };
             yield return new object[] { Pet.Types.Species.Dog, SpannerDbType.FromClrType(typeof(Pet.Types.Species)), Quote(((long) Pet.Types.Species.Dog).ToString()) };
             yield return new object[] { 1, SpannerDbType.FromClrType(typeof(Pet.Types.Species)), Quote(1.ToString()) };
             yield return new object[] { "1", SpannerDbType.FromClrType(typeof(Pet.Types.Species)), Quote(1.ToString()) };
@@ -420,11 +406,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 new List<string>(GetStringsForArray()), SpannerDbType.ArrayOf(SpannerDbType.String),
                 "[ \"abc\", \"123\", \"def\" ]"
-            };
-            yield return new object[]
-            {
-                new List<DayOfWeek>(GetEnumsForArray()), SpannerDbType.ArrayOf(SpannerDbType.String),
-                $"[ {Quote(DayOfWeek.Monday.ToString())}, {Quote(DayOfWeek.Thursday.ToString())} ]"
             };
             yield return new object[]
             {
@@ -926,6 +907,28 @@ namespace Google.Cloud.Spanner.Data.Tests
             { 0L, SpannerDbType.Int64, typeof(long) },
             { null, SpannerDbType.String, typeof(string) }
         };
+
+        [Fact]
+        public void ToProtobufType_DifferentEnumTypeAndValue_ThrowsException()
+        {
+            var protobufEnumValue = Color.Red;
+            var differentProtobufEnumDbType = SpannerDbType.FromClrType(typeof(Pet.Types.Species));
+
+            Assert.Throws<ArgumentException>(()
+                => differentProtobufEnumDbType.ToProtobufValue(protobufEnumValue));
+        }
+
+        [Fact]
+        public void ConvertToClrType_DifferentEnumTypeAndValue_ThrowsException()
+        {
+            var protobufEnumWireValue = JsonParser.Default.Parse<Value>(Quote(((long) Color.Red).ToString()));
+            var protobufEnumDbType = SpannerDbType.FromClrType(typeof(Color));
+
+            var differentProtobufEnumClrType = typeof(Pet.Types.Species);
+
+            Assert.Throws<ArgumentException>(()
+                => protobufEnumDbType.ConvertToClrType(protobufValue: protobufEnumWireValue, targetClrType: differentProtobufEnumClrType, SpannerConversionOptions.Default, topLevel: true));
+        }
 
         [Theory]
         [MemberData(nameof(UseClrDefaultForNulls))]

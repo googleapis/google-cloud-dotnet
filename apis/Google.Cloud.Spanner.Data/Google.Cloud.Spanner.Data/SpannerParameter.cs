@@ -146,12 +146,7 @@ namespace Google.Cloud.Spanner.Data
             if (SpannerDbType.TypeCode == TypeCode.Unspecified && Value != null)
             {
                 throw new ArgumentException(
-                    $"{nameof(SpannerDbType)} must be set to one of "
-                    + $"({nameof(SpannerDbType.Bool)}, {nameof(SpannerDbType.Int64)}, {nameof(SpannerDbType.Float32)} ,{nameof(SpannerDbType.Float64)},"
-                    + $" {nameof(SpannerDbType.Timestamp)}, {nameof(SpannerDbType.Date)}, {nameof(SpannerDbType.String)},"
-                    + $" {nameof(SpannerDbType.Bytes)}, {nameof(SpannerDbType.Json)}, {nameof(SpannerDbType.PgJsonb)}, {nameof(SpannerDbType.Numeric)},"
-                    + $" {nameof(SpannerDbType.PgNumeric)}, {nameof(SpannerDbType.PgOid)}), {nameof(SpannerDbType.Interval)}, {nameof(SpannerDbType.Uuid)},"
-                    + $" {SpannerDbType.ProtobufMessage}, {SpannerDbType.ProtobufEnum})");
+                    $"{nameof(SpannerDbType)} set to {TypeCode.Unspecified} for {Value}");
             }
             return Value;
         }

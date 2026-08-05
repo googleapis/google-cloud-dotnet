@@ -82,10 +82,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BoolValue", SpannerDbType.Bool, null },
                 { "Float32Value", SpannerDbType.Float32, null },
                 { "Int64Value", SpannerDbType.Int64, null },
-                { "Int64BackedEnumValue", SpannerDbType.Int64, null },
                 { "Float64Value", SpannerDbType.Float64, null },
                 { "StringValue", SpannerDbType.String, null },
-                { "StringBackedEnumValue", SpannerDbType.String, null },
                 { "BytesValue", SpannerDbType.Bytes, null },
                 { "TimestampValue", SpannerDbType.Timestamp, null },
                 { "DateValue", SpannerDbType.Date, null },
@@ -131,11 +129,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64Value")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64BackedEnumValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Float32Value")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Float64Value")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("StringValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("StringBackedEnumValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BytesValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("DateValue")));
@@ -234,11 +230,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 { "BoolValue", SpannerDbType.Bool, true },
                 { "Int64Value", SpannerDbType.Int64, 1 },
-                { "Int64BackedEnumValue", SpannerDbType.Int64, DayOfWeek.Monday },
                 { "Float32Value", SpannerDbType.Float32, 2.718f },
                 { "Float64Value", SpannerDbType.Float64, 3.14 },
                 { "StringValue", SpannerDbType.String, "abc" },
-                { "StringBackedEnumValue", SpannerDbType.String, DayOfWeek.Monday },
                 { "BytesValue", SpannerDbType.Bytes, new byte[] { 4, 5, 6 } },
                 { "TimestampValue", SpannerDbType.Timestamp, testTimestamp },
                 { "DateValue", SpannerDbType.Date, testDate },
@@ -284,11 +278,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 Assert.True(reader.GetFieldValue<bool>(reader.GetOrdinal("BoolValue")));
                 Assert.Equal(1, reader.GetFieldValue<long>(reader.GetOrdinal("Int64Value")));
-                Assert.Equal((long) DayOfWeek.Monday, reader.GetFieldValue<long>(reader.GetOrdinal("Int64BackedEnumValue")));
                 Assert.Equal(2.718f, reader.GetFieldValue<float>(reader.GetOrdinal("Float32Value")), 3);
                 Assert.Equal(3.14, reader.GetFieldValue<double>(reader.GetOrdinal("Float64Value")), 2);
                 Assert.Equal("abc", reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
-                Assert.Equal(DayOfWeek.Monday.ToString(), reader.GetFieldValue<string>(reader.GetOrdinal("StringBackedEnumValue")));
                 Assert.Equal(new byte[] { 4, 5, 6 }, reader.GetFieldValue<byte[]>(reader.GetOrdinal("BytesValue")));
                 long length = reader.GetBytes(reader.GetOrdinal("BytesValue"), 0L, null, 0, int.MaxValue);
                 Assert.Equal(3L, length);

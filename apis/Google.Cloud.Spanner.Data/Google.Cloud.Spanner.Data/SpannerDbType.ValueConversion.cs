@@ -14,6 +14,7 @@
 
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
+using Google.Protobuf.Reflection;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections;
@@ -307,19 +308,11 @@ namespace Google.Cloud.Spanner.Data
                     }
                     throw new ArgumentException($"Interval parameters must be of type {typeof(Interval).FullName} or string");
                 case TypeCode.Enum:
-                    if (value is string enumStr)
-                    {
-                        return Value.ForString(enumStr);
-                    }
-                    if (value is System.Enum or sbyte or short or int or long)
+                    if (ProtobufTypeName == ProtobufEnumCache.GetEnumDescriptor(value.GetType())?.FullName)
                     {
                         return Value.ForString(Convert.ToInt64(value, InvariantCulture).ToString(InvariantCulture));
                     }
-                    if (value is byte or ushort or uint or ulong)
-                    {
-                        return Value.ForString(Convert.ToUInt64(value, InvariantCulture).ToString(InvariantCulture));
-                    }
-                    throw new ArgumentException($"Enum parameters must be of one of the following types: System.Enum, string, sbyte, short, int, long, byte, ushort, uint, ulong");
+                    throw new ArgumentException($"Protobuf Enum parameter type must match");
                 default:
                     throw new ArgumentOutOfRangeException(nameof(TypeCode), TypeCode, null);
             }
@@ -735,17 +728,6 @@ namespace Google.Cloud.Spanner.Data
                 }
             }
 
-            if (targetClrType.IsEnum)
-            {
-                return wireValue.KindCase switch
-                {
-                    Value.KindOneofCase.NumberValue => System.Enum.ToObject(targetClrType, Convert.ToInt64(wireValue.NumberValue, InvariantCulture)),
-                    Value.KindOneofCase.StringValue => System.Enum.Parse(targetClrType, wireValue.StringValue),
-                    _ => throw new InvalidOperationException(
-                            $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}")
-                };
-            }
-
             if (typeof(IList).IsAssignableFrom(targetClrType))
             {
                 if (targetClrType == typeof(IList))
@@ -777,6 +759,14 @@ namespace Google.Cloud.Spanner.Data
             {
                 var messageBytes = Convert.FromBase64String(wireValue.StringValue);
                 return parser.ParseFrom(messageBytes);
+            }
+
+            if (TypeCode == TypeCode.Enum
+                && ProtobufEnumCache.GetEnumDescriptor(targetClrType) is EnumDescriptor enumDescriptor
+                && ProtobufTypeName == enumDescriptor.FullName)
+            {
+                // Spanner Protobufs are returned as stringified enum integer constants, e.g. "2"
+                return System.Enum.Parse(targetClrType, wireValue.StringValue);
             }
 
             throw new ArgumentException(

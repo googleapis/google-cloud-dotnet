@@ -63,12 +63,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 // Base types.
                 { "BoolValue", typeof(bool), SpannerDbType.Bool },
                 { "Int64Value", typeof(long), SpannerDbType.Int64 },
-                { "Int64BackedEnumValue", typeof(long), SpannerDbType.Int64 },
                 { "Float32Value", typeof(float), SpannerDbType.Float32 },
                 { "Float64Value", typeof(double), SpannerDbType.Float64 },
                 { "NumericValue", typeof(SpannerNumeric), SpannerDbType.Numeric },
                 { "StringValue", typeof(string), SpannerDbType.String },
-                { "StringBackedEnumValue", typeof(string), SpannerDbType.String },
                 { "BytesValue", typeof(byte[]), SpannerDbType.Bytes },
                 { "TimestampValue", typeof(DateTime), SpannerDbType.Timestamp },
                 { "DateValue", typeof(DateTime), SpannerDbType.Date },

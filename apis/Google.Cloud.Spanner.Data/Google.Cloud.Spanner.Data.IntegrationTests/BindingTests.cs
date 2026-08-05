@@ -236,9 +236,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public Task BindInt64() => TestBindNonNull(SpannerDbType.Int64, 1, r => r.GetInt64(0));
 
         [Fact]
-        public Task BindInt64BackedEnumValue() => TestBindNonNull(SpannerDbType.Int64, DayOfWeek.Monday, r => r.GetFieldValue<DayOfWeek>(0));
-
-        [Fact]
         public Task BindInt64Array() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
             new long?[] { 1, null, 0 });
@@ -269,12 +266,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.String,
             "abc",
             r => r.GetString(0));
-
-        [Fact]
-        public Task BindStringBackedEnumValue() => TestBindNonNull(
-            SpannerDbType.String,
-            DayOfWeek.Monday,
-            r => r.GetFieldValue<DayOfWeek>(0));
 
         [Fact]
         public Task BindStringArray() => TestBindNonNull(
