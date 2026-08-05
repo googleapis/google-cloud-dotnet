@@ -249,13 +249,14 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
             "cm91cHNSZXNwb25zZSJC2kEGcGFyZW50gtPkkwIzEjEvdjFiZXRhL3twYXJl",
             "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vc2t1R3JvdXBzGlPKQR9jb21t",
             "ZXJjZXByb2R1Y2VyLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULtAQooY29tLmdvb2ds",
+            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKUAgooY29tLmdvb2ds",
             "ZS5jbG91ZC5jb21tZXJjZXByb2R1Y2VyLnYxYmV0YUIYQ29tbWVyY2VUcmFu",
             "c2FjdGlvblByb3RvUAFaVGNsb3VkLmdvb2dsZS5jb20vZ28vY29tbWVyY2Vw",
             "cm9kdWNlci9hcGl2MWJldGEvY29tbWVyY2Vwcm9kdWNlcnBiO2NvbW1lcmNl",
             "cHJvZHVjZXJwYqoCJEdvb2dsZS5DbG91ZC5Db21tZXJjZVByb2R1Y2VyLlYx",
-            "QmV0YeoCJ0dvb2dsZTo6Q2xvdWQ6OkNvbW1lcmNlUHJvZHVjZXI6OlYxYmV0",
-            "YWIGcHJvdG8z"));
+            "QmV0YcoCJEdvb2dsZVxDbG91ZFxDb21tZXJjZVByb2R1Y2VyXFYxYmV0YeoC",
+            "J0dvb2dsZTo6Q2xvdWQ6OkNvbW1lcmNlUHJvZHVjZXI6OlYxYmV0YWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferReflection.Descriptor, global::Google.Cloud.CommerceProducer.V1Beta.ServiceReflection.Descriptor, global::Google.Cloud.CommerceProducer.V1Beta.SkuReflection.Descriptor, global::Google.Cloud.CommerceProducer.V1Beta.SkuGroupReflection.Descriptor, global::Google.Cloud.CommerceProducer.V1Beta.StandardOfferReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferView), typeof(global::Google.Cloud.CommerceProducer.V1Beta.StandardOfferView), typeof(global::Google.Cloud.CommerceProducer.V1Beta.ServiceView), }, null, new pbr::GeneratedClrTypeInfo[] {

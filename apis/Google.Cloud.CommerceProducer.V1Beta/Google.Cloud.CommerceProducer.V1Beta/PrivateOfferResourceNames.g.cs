@@ -630,6 +630,17 @@ namespace Google.Cloud.CommerceProducer.V1Beta
                             }
                         }
                     }
+
+                    public partial class AdditionalContractValue
+                    {
+                        /// <summary>
+                        /// <see cref="SkuName"/>-typed view over the <see cref="EligibleSkus"/> resource name property.
+                        /// </summary>
+                        public gax::ResourceNameList<SkuName> EligibleSkusAsSkuNames
+                        {
+                            get => new gax::ResourceNameList<SkuName>(EligibleSkus, s => string.IsNullOrEmpty(s) ? null : SkuName.Parse(s, allowUnparsed: true));
+                        }
+                    }
                 }
             }
         }

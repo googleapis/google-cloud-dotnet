@@ -30,7 +30,7 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
             "bGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
             "YW1wLnByb3RvGhpnb29nbGUvdHlwZS9kYXRldGltZS5wcm90bxoZZ29vZ2xl",
             "L3R5cGUvZGVjaW1hbC5wcm90bxoXZ29vZ2xlL3R5cGUvbW9uZXkucHJvdG8i",
-            "9C4KDFByaXZhdGVPZmZlchJqChRzaW5nbGVfcHJvZHVjdF9vZmZlchgMIAEo",
+            "jTEKDFByaXZhdGVPZmZlchJqChRzaW5nbGVfcHJvZHVjdF9vZmZlchgMIAEo",
             "CzJFLmdvb2dsZS5jbG91ZC5jb21tZXJjZXByb2R1Y2VyLnYxYmV0YS5Qcml2",
             "YXRlT2ZmZXIuU2luZ2xlUHJvZHVjdE9mZmVyQgPgQQFIABIRCgRuYW1lGAEg",
             "ASgJQgPgQQgSTAoFc3RhdGUYAyABKA4yOC5nb29nbGUuY2xvdWQuY29tbWVy",
@@ -83,7 +83,7 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
             "U1RBUlRfVElNRRACImwKCUVuZFBvbGljeRIaChZFTkRfUE9MSUNZX1VOU1BF",
             "Q0lGSUVEEAASEgoOQUZURVJfRFVSQVRJT04QARIWChJTQ0hFRFVMRURfRU5E",
             "X1RJTUUQAhIXChNNQVRDSF9BTUVOREVEX09GRkVSEANCEQoPZW5kX3BvbGlj",
-            "eV9kYXRhQgkKB3JlbmV3YWwa/RgKElNpbmdsZVByb2R1Y3RPZmZlchJVChVh",
+            "eV9kYXRhQgkKB3JlbmV3YWwalhsKElNpbmdsZVByb2R1Y3RPZmZlchJVChVh",
             "bWVuZGVkX3ByaXZhdGVfb2ZmZXIYAyABKAlCNOBBAfpBLgosY29tbWVyY2Vw",
             "cm9kdWNlci5nb29nbGVhcGlzLmNvbS9Qcml2YXRlT2ZmZXJIABJXChZhbWVu",
             "ZGVkX3N0YW5kYXJkX29mZmVyGAQgASgJQjXgQQH6QS8KLWNvbW1lcmNlcHJv",
@@ -107,84 +107,91 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
             "bmdsZVByb2R1Y3RPZmZlci5Db250cmFjdFZhbHVlQgPgQQMSbgoNcmV2ZW51",
             "ZV9zaGFyZRgMIAEoCzJSLmdvb2dsZS5jbG91ZC5jb21tZXJjZXByb2R1Y2Vy",
             "LnYxYmV0YS5Qcml2YXRlT2ZmZXIuU2luZ2xlUHJvZHVjdE9mZmVyLlJldmVu",
-            "dWVTaGFyZUID4EEDGjgKB0ZlYXR1cmUSGQoMZGlzcGxheV9uYW1lGAEgASgJ",
-            "QgPgQQESEgoFdmFsdWUYAiABKAlCA+BBARqICAoKUHJpY2VNb2RlbBJxCghm",
-            "bGF0X2ZlZRgCIAEoCzJYLmdvb2dsZS5jbG91ZC5jb21tZXJjZXByb2R1Y2Vy",
-            "LnYxYmV0YS5Qcml2YXRlT2ZmZXIuU2luZ2xlUHJvZHVjdE9mZmVyLlByaWNl",
-            "TW9kZWwuRmxhdEZlZUID4EEBSAASdgoKY29tbWl0bWVudBgDIAEoCzJbLmdv",
-            "b2dsZS5jbG91ZC5jb21tZXJjZXByb2R1Y2VyLnYxYmV0YS5Qcml2YXRlT2Zm",
-            "ZXIuU2luZ2xlUHJvZHVjdE9mZmVyLlByaWNlTW9kZWwuQ29tbWl0bWVudEID",
-            "4EEBSAASagoFdXNhZ2UYASABKAsyVi5nb29nbGUuY2xvdWQuY29tbWVyY2Vw",
-            "cm9kdWNlci52MWJldGEuUHJpdmF0ZU9mZmVyLlNpbmdsZVByb2R1Y3RPZmZl",
-            "ci5QcmljZU1vZGVsLlVzYWdlQgPgQQEauAEKC1NrdURpc2NvdW50EjoKA3Nr",
-            "dRgBIAEoCUIr4EEB+kElCiNjb21tZXJjZXByb2R1Y2VyLmdvb2dsZWFwaXMu",
-            "Y29tL1NrdUgAEiAKEWNsb3VkX2JpbGxpbmdfc2t1GAMgASgJQgPgQQFIABI1",
-            "ChBkaXNjb3VudF9wZXJjZW50GAIgASgLMhQuZ29vZ2xlLnR5cGUuRGVjaW1h",
-            "bEID4EEBSAFCCAoGdGFyZ2V0QgoKCGRpc2NvdW50Gr4BCgVVc2FnZRI7Chhk",
-            "ZWZhdWx0X2Rpc2NvdW50X3BlcmNlbnQYASABKAsyFC5nb29nbGUudHlwZS5E",
-            "ZWNpbWFsQgPgQQESeAoNc2t1X2Rpc2NvdW50cxgCIAMoCzJcLmdvb2dsZS5j",
-            "bG91ZC5jb21tZXJjZXByb2R1Y2VyLnYxYmV0YS5Qcml2YXRlT2ZmZXIuU2lu",
-            "Z2xlUHJvZHVjdE9mZmVyLlByaWNlTW9kZWwuU2t1RGlzY291bnRCA+BBARo9",
-            "CgdGbGF0RmVlEjIKEWZsYXRfZmVlX292ZXJyaWRlGAEgASgLMhIuZ29vZ2xl",
-            "LnR5cGUuTW9uZXlCA+BBARrXAQoKQ29tbWl0bWVudBIyChFjb21taXRtZW50",
-            "X2Ftb3VudBgBIAEoCzISLmdvb2dsZS50eXBlLk1vbmV5QgPgQQESMwoQZGlz",
-            "Y291bnRfcGVyY2VudBgCIAEoCzIULmdvb2dsZS50eXBlLkRlY2ltYWxCA+BB",
-            "ARIyChFhZGRpdGlvbmFsX2NyZWRpdBgDIAEoCzISLmdvb2dsZS50eXBlLk1v",
-            "bmV5QgPgQQESLAofZGlzY2FyZF9wcmV2aW91c19jcmVkaXRfYmFsYW5jZRgE",
-            "IAEoCEID4EEBQg4KDHN1YnNjcmlwdGlvbhrIAwoVU3RhbmRhcmRJbnRlcnZh",
-            "bFByaWNlEowBChFzdGFuZGFyZF9pbnRlcnZhbBgBIAEoDjJsLmdvb2dsZS5j",
-            "bG91ZC5jb21tZXJjZXByb2R1Y2VyLnYxYmV0YS5Qcml2YXRlT2ZmZXIuU2lu",
-            "Z2xlUHJvZHVjdE9mZmVyLlN0YW5kYXJkSW50ZXJ2YWxQcmljZS5TdGFuZGFy",
-            "ZEludGVydmFsQgPgQQESagoLcHJpY2VfbW9kZWwYAiABKAsyUC5nb29nbGUu",
+            "dWVTaGFyZUID4EEDEoUBChlhZGRpdGlvbmFsX2NvbnRyYWN0X3ZhbHVlGA0g",
+            "ASgLMl0uZ29vZ2xlLmNsb3VkLmNvbW1lcmNlcHJvZHVjZXIudjFiZXRhLlBy",
+            "aXZhdGVPZmZlci5TaW5nbGVQcm9kdWN0T2ZmZXIuQWRkaXRpb25hbENvbnRy",
+            "YWN0VmFsdWVCA+BBARo4CgdGZWF0dXJlEhkKDGRpc3BsYXlfbmFtZRgBIAEo",
+            "CUID4EEBEhIKBXZhbHVlGAIgASgJQgPgQQEaiAgKClByaWNlTW9kZWwScQoI",
+            "ZmxhdF9mZWUYAiABKAsyWC5nb29nbGUuY2xvdWQuY29tbWVyY2Vwcm9kdWNl",
+            "ci52MWJldGEuUHJpdmF0ZU9mZmVyLlNpbmdsZVByb2R1Y3RPZmZlci5Qcmlj",
+            "ZU1vZGVsLkZsYXRGZWVCA+BBAUgAEnYKCmNvbW1pdG1lbnQYAyABKAsyWy5n",
+            "b29nbGUuY2xvdWQuY29tbWVyY2Vwcm9kdWNlci52MWJldGEuUHJpdmF0ZU9m",
+            "ZmVyLlNpbmdsZVByb2R1Y3RPZmZlci5QcmljZU1vZGVsLkNvbW1pdG1lbnRC",
+            "A+BBAUgAEmoKBXVzYWdlGAEgASgLMlYuZ29vZ2xlLmNsb3VkLmNvbW1lcmNl",
+            "cHJvZHVjZXIudjFiZXRhLlByaXZhdGVPZmZlci5TaW5nbGVQcm9kdWN0T2Zm",
+            "ZXIuUHJpY2VNb2RlbC5Vc2FnZUID4EEBGrgBCgtTa3VEaXNjb3VudBI6CgNz",
+            "a3UYASABKAlCK+BBAfpBJQojY29tbWVyY2Vwcm9kdWNlci5nb29nbGVhcGlz",
+            "LmNvbS9Ta3VIABIgChFjbG91ZF9iaWxsaW5nX3NrdRgDIAEoCUID4EEBSAAS",
+            "NQoQZGlzY291bnRfcGVyY2VudBgCIAEoCzIULmdvb2dsZS50eXBlLkRlY2lt",
+            "YWxCA+BBAUgBQggKBnRhcmdldEIKCghkaXNjb3VudBq+AQoFVXNhZ2USOwoY",
+            "ZGVmYXVsdF9kaXNjb3VudF9wZXJjZW50GAEgASgLMhQuZ29vZ2xlLnR5cGUu",
+            "RGVjaW1hbEID4EEBEngKDXNrdV9kaXNjb3VudHMYAiADKAsyXC5nb29nbGUu",
             "Y2xvdWQuY29tbWVyY2Vwcm9kdWNlci52MWJldGEuUHJpdmF0ZU9mZmVyLlNp",
-            "bmdsZVByb2R1Y3RPZmZlci5QcmljZU1vZGVsQgPgQQEiswEKEFN0YW5kYXJk",
-            "SW50ZXJ2YWwSIQodU1RBTkRBUkRfSU5URVJWQUxfVU5TUEVDSUZJRUQQABIX",
-            "Cg9NT05USExZX1BPU1RQQVkQARoCCAESFAoQTU9OVEhMWV9QUk9SQVRFRBAC",
-            "EhgKFE1PTlRITFlfTk9UX1BST1JBVEVEEAMSGgoWUVVBUlRFUkxZX05PVF9Q",
-            "Uk9SQVRFRBAEEhcKE1lFQVJMWV9OT1RfUFJPUkFURUQQBRqpAQoLSW5zdGFs",
-            "bG1lbnQSLgoKc3RhcnRfdGltZRgBIAEoCzIVLmdvb2dsZS50eXBlLkRhdGVU",
-            "aW1lQgPgQQESagoLcHJpY2VfbW9kZWwYAiABKAsyUC5nb29nbGUuY2xvdWQu",
-            "Y29tbWVyY2Vwcm9kdWNlci52MWJldGEuUHJpdmF0ZU9mZmVyLlNpbmdsZVBy",
-            "b2R1Y3RPZmZlci5QcmljZU1vZGVsQgPgQQEagwEKE0N1c3RvbUludGVydmFs",
-            "UHJpY2USbAoMaW5zdGFsbG1lbnRzGAEgAygLMlEuZ29vZ2xlLmNsb3VkLmNv",
-            "bW1lcmNlcHJvZHVjZXIudjFiZXRhLlByaXZhdGVPZmZlci5TaW5nbGVQcm9k",
-            "dWN0T2ZmZXIuSW5zdGFsbG1lbnRCA+BBARpGCg1Db250cmFjdFZhbHVlEjUK",
-            "FHRvdGFsX2NvbnRyYWN0X3ZhbHVlGAEgASgLMhIuZ29vZ2xlLnR5cGUuTW9u",
-            "ZXlCA+BBAxqmAQoMUmV2ZW51ZVNoYXJlEkoKJ2N1cnJlbnRfdGVybV92ZW5k",
-            "b3JfbmV0X3JldmVudWVfcGVyY2VudBgBIAEoCzIULmdvb2dsZS50eXBlLkRl",
-            "Y2ltYWxCA+BBAxJKCidyZW5ld2FsX3Rlcm1fdmVuZG9yX25ldF9yZXZlbnVl",
-            "X3BlcmNlbnQYAiABKAsyFC5nb29nbGUudHlwZS5EZWNpbWFsQgPgQQNCDwoN",
-            "YW1lbmRlZF9vZmZlckIHCgVwcmljZSJ9CgVTdGF0ZRIVChFTVEFURV9VTlNQ",
-            "RUNJRklFRBAAEgkKBURSQUZUEAESDgoKUFVCTElTSElORxACEg0KCVBVQkxJ",
-            "U0hFRBADEgwKCEFDQ0VQVEVEEAQSDQoJQ0FOQ0VMTEVEEAUSCwoHRVhQSVJF",
-            "RBAGEgkKBUVOREVEEAcibwoNT2ZmZXJEZWFsVHlwZRIfChtPRkZFUl9ERUFM",
-            "X1RZUEVfVU5TUEVDSUZJRUQQABIRCg1DSEFOTkVMX1NISUZUEAESDQoJTUlH",
-            "UkFUSU9OEAISEgoOTkFUSVZFX1JFTkVXQUwQAxIHCgNORVcQBDqWAepBkgEK",
-            "LGNvbW1lcmNlcHJvZHVjZXIuZ29vZ2xlYXBpcy5jb20vUHJpdmF0ZU9mZmVy",
-            "EkVwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcHJp",
-            "dmF0ZU9mZmVycy97cHJpdmF0ZV9vZmZlcn0qDXByaXZhdGVPZmZlcnMyDHBy",
-            "aXZhdGVPZmZlckIJCgdjb250ZW50IsgFChRQcml2YXRlT2ZmZXJEb2N1bWVu",
-            "dBIdCg5pbmxpbmVfY29udGVudBgGIAEoDEID4EEBSAASEQoEbmFtZRgBIAEo",
-            "CUID4EEIEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEmMKDWRvY3VtZW50X3R5cGUYBCAB",
-            "KA4yRy5nb29nbGUuY2xvdWQuY29tbWVyY2Vwcm9kdWNlci52MWJldGEuUHJp",
-            "dmF0ZU9mZmVyRG9jdW1lbnQuRG9jdW1lbnRUeXBlQgPgQQISFgoJbWltZV90",
-            "eXBlGAUgASgJQgPgQQEiwwEKDERvY3VtZW50VHlwZRIdChlET0NVTUVOVF9U",
-            "WVBFX1VOU1BFQ0lGSUVEEAASJQohQ1VTVE9NX0VORF9VU0VSX0xJQ0VOU0Vf",
-            "QUdSRUVNRU5UEAESFQoRU1RBVEVNRU5UX09GX1dPUksQAhIqCiZTVEFOREFS",
-            "RF9FTkRfVVNFUl9MSUNFTlNFX0FHUkVFTUVOVF9WMRADEioKJlNUQU5EQVJE",
-            "X0VORF9VU0VSX0xJQ0VOU0VfQUdSRUVNRU5UX1YyEAQ6wwHqQb8BCjRjb21t",
-            "ZXJjZXByb2R1Y2VyLmdvb2dsZWFwaXMuY29tL1ByaXZhdGVPZmZlckRvY3Vt",
-            "ZW50Elpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "cHJpdmF0ZU9mZmVycy97cHJpdmF0ZV9vZmZlcn0vZG9jdW1lbnRzL3tkb2N1",
-            "bWVudH0qFXByaXZhdGVPZmZlckRvY3VtZW50czIUcHJpdmF0ZU9mZmVyRG9j",
-            "dW1lbnRCCQoHY29udGVudELmAQooY29tLmdvb2dsZS5jbG91ZC5jb21tZXJj",
-            "ZXByb2R1Y2VyLnYxYmV0YUIRUHJpdmF0ZU9mZmVyUHJvdG9QAVpUY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9jb21tZXJjZXByb2R1Y2VyL2FwaXYxYmV0YS9jb21t",
-            "ZXJjZXByb2R1Y2VycGI7Y29tbWVyY2Vwcm9kdWNlcnBiqgIkR29vZ2xlLkNs",
-            "b3VkLkNvbW1lcmNlUHJvZHVjZXIuVjFCZXRh6gInR29vZ2xlOjpDbG91ZDo6",
-            "Q29tbWVyY2VQcm9kdWNlcjo6VjFiZXRhYgZwcm90bzM="));
+            "bmdsZVByb2R1Y3RPZmZlci5QcmljZU1vZGVsLlNrdURpc2NvdW50QgPgQQEa",
+            "PQoHRmxhdEZlZRIyChFmbGF0X2ZlZV9vdmVycmlkZRgBIAEoCzISLmdvb2ds",
+            "ZS50eXBlLk1vbmV5QgPgQQEa1wEKCkNvbW1pdG1lbnQSMgoRY29tbWl0bWVu",
+            "dF9hbW91bnQYASABKAsyEi5nb29nbGUudHlwZS5Nb25leUID4EEBEjMKEGRp",
+            "c2NvdW50X3BlcmNlbnQYAiABKAsyFC5nb29nbGUudHlwZS5EZWNpbWFsQgPg",
+            "QQESMgoRYWRkaXRpb25hbF9jcmVkaXQYAyABKAsyEi5nb29nbGUudHlwZS5N",
+            "b25leUID4EEBEiwKH2Rpc2NhcmRfcHJldmlvdXNfY3JlZGl0X2JhbGFuY2UY",
+            "BCABKAhCA+BBAUIOCgxzdWJzY3JpcHRpb24ayAMKFVN0YW5kYXJkSW50ZXJ2",
+            "YWxQcmljZRKMAQoRc3RhbmRhcmRfaW50ZXJ2YWwYASABKA4ybC5nb29nbGUu",
+            "Y2xvdWQuY29tbWVyY2Vwcm9kdWNlci52MWJldGEuUHJpdmF0ZU9mZmVyLlNp",
+            "bmdsZVByb2R1Y3RPZmZlci5TdGFuZGFyZEludGVydmFsUHJpY2UuU3RhbmRh",
+            "cmRJbnRlcnZhbEID4EEBEmoKC3ByaWNlX21vZGVsGAIgASgLMlAuZ29vZ2xl",
+            "LmNsb3VkLmNvbW1lcmNlcHJvZHVjZXIudjFiZXRhLlByaXZhdGVPZmZlci5T",
+            "aW5nbGVQcm9kdWN0T2ZmZXIuUHJpY2VNb2RlbEID4EEBIrMBChBTdGFuZGFy",
+            "ZEludGVydmFsEiEKHVNUQU5EQVJEX0lOVEVSVkFMX1VOU1BFQ0lGSUVEEAAS",
+            "FwoPTU9OVEhMWV9QT1NUUEFZEAEaAggBEhQKEE1PTlRITFlfUFJPUkFURUQQ",
+            "AhIYChRNT05USExZX05PVF9QUk9SQVRFRBADEhoKFlFVQVJURVJMWV9OT1Rf",
+            "UFJPUkFURUQQBBIXChNZRUFSTFlfTk9UX1BST1JBVEVEEAUaqQEKC0luc3Rh",
+            "bGxtZW50Ei4KCnN0YXJ0X3RpbWUYASABKAsyFS5nb29nbGUudHlwZS5EYXRl",
+            "VGltZUID4EEBEmoKC3ByaWNlX21vZGVsGAIgASgLMlAuZ29vZ2xlLmNsb3Vk",
+            "LmNvbW1lcmNlcHJvZHVjZXIudjFiZXRhLlByaXZhdGVPZmZlci5TaW5nbGVQ",
+            "cm9kdWN0T2ZmZXIuUHJpY2VNb2RlbEID4EEBGoMBChNDdXN0b21JbnRlcnZh",
+            "bFByaWNlEmwKDGluc3RhbGxtZW50cxgBIAMoCzJRLmdvb2dsZS5jbG91ZC5j",
+            "b21tZXJjZXByb2R1Y2VyLnYxYmV0YS5Qcml2YXRlT2ZmZXIuU2luZ2xlUHJv",
+            "ZHVjdE9mZmVyLkluc3RhbGxtZW50QgPgQQEaRgoNQ29udHJhY3RWYWx1ZRI1",
+            "ChR0b3RhbF9jb250cmFjdF92YWx1ZRgBIAEoCzISLmdvb2dsZS50eXBlLk1v",
+            "bmV5QgPgQQMapgEKDFJldmVudWVTaGFyZRJKCidjdXJyZW50X3Rlcm1fdmVu",
+            "ZG9yX25ldF9yZXZlbnVlX3BlcmNlbnQYASABKAsyFC5nb29nbGUudHlwZS5E",
+            "ZWNpbWFsQgPgQQMSSgoncmVuZXdhbF90ZXJtX3ZlbmRvcl9uZXRfcmV2ZW51",
+            "ZV9wZXJjZW50GAIgASgLMhQuZ29vZ2xlLnR5cGUuRGVjaW1hbEID4EEDGo4B",
+            "ChdBZGRpdGlvbmFsQ29udHJhY3RWYWx1ZRIvCg5jb250cmFjdF92YWx1ZRgB",
+            "IAEoCzISLmdvb2dsZS50eXBlLk1vbmV5QgPgQQESQgoNZWxpZ2libGVfc2t1",
+            "cxgCIAMoCUIr4EEB+kElCiNjb21tZXJjZXByb2R1Y2VyLmdvb2dsZWFwaXMu",
+            "Y29tL1NrdUIPCg1hbWVuZGVkX29mZmVyQgcKBXByaWNlIn0KBVN0YXRlEhUK",
+            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASCQoFRFJBRlQQARIOCgpQVUJMSVNISU5H",
+            "EAISDQoJUFVCTElTSEVEEAMSDAoIQUNDRVBURUQQBBINCglDQU5DRUxMRUQQ",
+            "BRILCgdFWFBJUkVEEAYSCQoFRU5ERUQQByJvCg1PZmZlckRlYWxUeXBlEh8K",
+            "G09GRkVSX0RFQUxfVFlQRV9VTlNQRUNJRklFRBAAEhEKDUNIQU5ORUxfU0hJ",
+            "RlQQARINCglNSUdSQVRJT04QAhISCg5OQVRJVkVfUkVORVdBTBADEgcKA05F",
+            "VxAEOpYB6kGSAQosY29tbWVyY2Vwcm9kdWNlci5nb29nbGVhcGlzLmNvbS9Q",
+            "cml2YXRlT2ZmZXISRXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9wcml2YXRlT2ZmZXJzL3twcml2YXRlX29mZmVyfSoNcHJpdmF0",
+            "ZU9mZmVyczIMcHJpdmF0ZU9mZmVyQgkKB2NvbnRlbnQiyAUKFFByaXZhdGVP",
+            "ZmZlckRvY3VtZW50Eh0KDmlubGluZV9jb250ZW50GAYgASgMQgPgQQFIABIR",
+            "CgRuYW1lGAEgASgJQgPgQQgSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYAyAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSYwoNZG9jdW1l",
+            "bnRfdHlwZRgEIAEoDjJHLmdvb2dsZS5jbG91ZC5jb21tZXJjZXByb2R1Y2Vy",
+            "LnYxYmV0YS5Qcml2YXRlT2ZmZXJEb2N1bWVudC5Eb2N1bWVudFR5cGVCA+BB",
+            "AhIWCgltaW1lX3R5cGUYBSABKAlCA+BBASLDAQoMRG9jdW1lbnRUeXBlEh0K",
+            "GURPQ1VNRU5UX1RZUEVfVU5TUEVDSUZJRUQQABIlCiFDVVNUT01fRU5EX1VT",
+            "RVJfTElDRU5TRV9BR1JFRU1FTlQQARIVChFTVEFURU1FTlRfT0ZfV09SSxAC",
+            "EioKJlNUQU5EQVJEX0VORF9VU0VSX0xJQ0VOU0VfQUdSRUVNRU5UX1YxEAMS",
+            "KgomU1RBTkRBUkRfRU5EX1VTRVJfTElDRU5TRV9BR1JFRU1FTlRfVjIQBDrD",
+            "AepBvwEKNGNvbW1lcmNlcHJvZHVjZXIuZ29vZ2xlYXBpcy5jb20vUHJpdmF0",
+            "ZU9mZmVyRG9jdW1lbnQSWnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9wcml2YXRlT2ZmZXJzL3twcml2YXRlX29mZmVyfS9kb2N1",
+            "bWVudHMve2RvY3VtZW50fSoVcHJpdmF0ZU9mZmVyRG9jdW1lbnRzMhRwcml2",
+            "YXRlT2ZmZXJEb2N1bWVudEIJCgdjb250ZW50Qo0CCihjb20uZ29vZ2xlLmNs",
+            "b3VkLmNvbW1lcmNlcHJvZHVjZXIudjFiZXRhQhFQcml2YXRlT2ZmZXJQcm90",
+            "b1ABWlRjbG91ZC5nb29nbGUuY29tL2dvL2NvbW1lcmNlcHJvZHVjZXIvYXBp",
+            "djFiZXRhL2NvbW1lcmNlcHJvZHVjZXJwYjtjb21tZXJjZXByb2R1Y2VycGKq",
+            "AiRHb29nbGUuQ2xvdWQuQ29tbWVyY2VQcm9kdWNlci5WMUJldGHKAiRHb29n",
+            "bGVcQ2xvdWRcQ29tbWVyY2VQcm9kdWNlclxWMWJldGHqAidHb29nbGU6OkNs",
+            "b3VkOjpDb21tZXJjZVByb2R1Y2VyOjpWMWJldGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.DecimalReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -193,7 +200,7 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.PartnerContact), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.PartnerContact.Parser, new[]{ "Contact", "Email" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.Customer), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.Customer.Parser, new[]{ "EntityTitle", "Contact", "Email", "Address", "TargetBillingAccount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.Term), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.Term.Parser, new[]{ "DurationMonths", "ScheduledEndTime", "MaxRenewalCount", "UnlimitedRenewal", "StartPolicy", "ScheduledStartTime", "EndPolicy", "EffectiveTermEndTime" }, new[]{ "EndPolicyData", "Renewal" }, new[]{ typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.Term.Types.StartPolicy), typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.Term.Types.EndPolicy) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Parser, new[]{ "AmendedPrivateOffer", "AmendedStandardOffer", "StandardIntervalPrice", "CustomIntervalPrice", "BaseStandardOffer", "ServiceLevel", "ResellerPrivateOfferPlanId", "Features", "EffectiveInstallmentTimeline", "ContractValue", "RevenueShare" }, new[]{ "AmendedOffer", "Price" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.Feature), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.Feature.Parser, new[]{ "DisplayName", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Parser, new[]{ "AmendedPrivateOffer", "AmendedStandardOffer", "StandardIntervalPrice", "CustomIntervalPrice", "BaseStandardOffer", "ServiceLevel", "ResellerPrivateOfferPlanId", "Features", "EffectiveInstallmentTimeline", "ContractValue", "RevenueShare", "AdditionalContractValue" }, new[]{ "AmendedOffer", "Price" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.Feature), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.Feature.Parser, new[]{ "DisplayName", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.PriceModel), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.PriceModel.Parser, new[]{ "FlatFee", "Commitment", "Usage" }, new[]{ "Subscription" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.PriceModel.Types.SkuDiscount), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.PriceModel.Types.SkuDiscount.Parser, new[]{ "Sku", "CloudBillingSku", "DiscountPercent" }, new[]{ "Target", "Discount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.PriceModel.Types.Usage), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.PriceModel.Types.Usage.Parser, new[]{ "DefaultDiscountPercent", "SkuDiscounts" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.PriceModel.Types.FlatFee), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.PriceModel.Types.FlatFee.Parser, new[]{ "FlatFeeOverride" }, null, null, null, null),
@@ -202,7 +209,8 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.Installment), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.Installment.Parser, new[]{ "StartTime", "PriceModel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.CustomIntervalPrice), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.CustomIntervalPrice.Parser, new[]{ "Installments" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.ContractValue), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.ContractValue.Parser, new[]{ "TotalContractValue" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.RevenueShare), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.RevenueShare.Parser, new[]{ "CurrentTermVendorNetRevenuePercent", "RenewalTermVendorNetRevenuePercent" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.RevenueShare), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.RevenueShare.Parser, new[]{ "CurrentTermVendorNetRevenuePercent", "RenewalTermVendorNetRevenuePercent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.AdditionalContractValue), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.AdditionalContractValue.Parser, new[]{ "ContractValue", "EligibleSkus" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferDocument), global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferDocument.Parser, new[]{ "InlineContent", "Name", "CreateTime", "UpdateTime", "DocumentType", "MimeType" }, new[]{ "Content" }, new[]{ typeof(global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferDocument.Types.DocumentType) }, null, null)
           }));
     }
@@ -3407,6 +3415,7 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
           effectiveInstallmentTimeline_ = other.effectiveInstallmentTimeline_.Clone();
           contractValue_ = other.contractValue_ != null ? other.contractValue_.Clone() : null;
           revenueShare_ = other.revenueShare_ != null ? other.revenueShare_.Clone() : null;
+          additionalContractValue_ = other.additionalContractValue_ != null ? other.additionalContractValue_.Clone() : null;
           switch (other.AmendedOfferCase) {
             case AmendedOfferOneofCase.AmendedPrivateOffer:
               AmendedPrivateOffer = other.AmendedPrivateOffer;
@@ -3715,6 +3724,22 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
           }
         }
 
+        /// <summary>Field number for the "additional_contract_value" field.</summary>
+        public const int AdditionalContractValueFieldNumber = 13;
+        private global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.AdditionalContractValue additionalContractValue_;
+        /// <summary>
+        /// Optional. Additional contract value that the customer is legally
+        /// obligated to spend on the product over the duration of the offer.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.AdditionalContractValue AdditionalContractValue {
+          get { return additionalContractValue_; }
+          set {
+            additionalContractValue_ = value;
+          }
+        }
+
         private object amendedOffer_;
         /// <summary>Enum of possible cases for the "amended_offer" oneof.</summary>
         public enum AmendedOfferOneofCase {
@@ -3783,6 +3808,7 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
           if(!effectiveInstallmentTimeline_.Equals(other.effectiveInstallmentTimeline_)) return false;
           if (!object.Equals(ContractValue, other.ContractValue)) return false;
           if (!object.Equals(RevenueShare, other.RevenueShare)) return false;
+          if (!object.Equals(AdditionalContractValue, other.AdditionalContractValue)) return false;
           if (AmendedOfferCase != other.AmendedOfferCase) return false;
           if (PriceCase != other.PriceCase) return false;
           return Equals(_unknownFields, other._unknownFields);
@@ -3803,6 +3829,7 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
           hash ^= effectiveInstallmentTimeline_.GetHashCode();
           if (contractValue_ != null) hash ^= ContractValue.GetHashCode();
           if (revenueShare_ != null) hash ^= RevenueShare.GetHashCode();
+          if (additionalContractValue_ != null) hash ^= AdditionalContractValue.GetHashCode();
           hash ^= (int) amendedOfferCase_;
           hash ^= (int) priceCase_;
           if (_unknownFields != null) {
@@ -3861,6 +3888,10 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
             output.WriteRawTag(98);
             output.WriteMessage(RevenueShare);
           }
+          if (additionalContractValue_ != null) {
+            output.WriteRawTag(106);
+            output.WriteMessage(AdditionalContractValue);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3909,6 +3940,10 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
             output.WriteRawTag(98);
             output.WriteMessage(RevenueShare);
           }
+          if (additionalContractValue_ != null) {
+            output.WriteRawTag(106);
+            output.WriteMessage(AdditionalContractValue);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3948,6 +3983,9 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
           if (revenueShare_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(RevenueShare);
           }
+          if (additionalContractValue_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AdditionalContractValue);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -3982,6 +4020,12 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
               RevenueShare = new global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.RevenueShare();
             }
             RevenueShare.MergeFrom(other.RevenueShare);
+          }
+          if (other.additionalContractValue_ != null) {
+            if (additionalContractValue_ == null) {
+              AdditionalContractValue = new global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.AdditionalContractValue();
+            }
+            AdditionalContractValue.MergeFrom(other.AdditionalContractValue);
           }
           switch (other.AmendedOfferCase) {
             case AmendedOfferOneofCase.AmendedPrivateOffer:
@@ -4086,6 +4130,13 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
                 input.ReadMessage(RevenueShare);
                 break;
               }
+              case 106: {
+                if (additionalContractValue_ == null) {
+                  AdditionalContractValue = new global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.AdditionalContractValue();
+                }
+                input.ReadMessage(AdditionalContractValue);
+                break;
+              }
             }
           }
         #endif
@@ -4163,6 +4214,13 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
                   RevenueShare = new global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.RevenueShare();
                 }
                 input.ReadMessage(RevenueShare);
+                break;
+              }
+              case 106: {
+                if (additionalContractValue_ == null) {
+                  AdditionalContractValue = new global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Types.AdditionalContractValue();
+                }
+                input.ReadMessage(AdditionalContractValue);
                 break;
               }
             }
@@ -7452,6 +7510,285 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
                       RenewalTermVendorNetRevenuePercent = new global::Google.Type.Decimal();
                     }
                     input.ReadMessage(RenewalTermVendorNetRevenuePercent);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Additional contract value that represents a spend obligation or target
+          /// contract value tracked out-of-band by the partner.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class AdditionalContractValue : pb::IMessage<AdditionalContractValue>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<AdditionalContractValue> _parser = new pb::MessageParser<AdditionalContractValue>(() => new AdditionalContractValue());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<AdditionalContractValue> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.CommerceProducer.V1Beta.PrivateOffer.Types.SingleProductOffer.Descriptor.NestedTypes[7]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AdditionalContractValue() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AdditionalContractValue(AdditionalContractValue other) : this() {
+              contractValue_ = other.contractValue_ != null ? other.contractValue_.Clone() : null;
+              eligibleSkus_ = other.eligibleSkus_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AdditionalContractValue Clone() {
+              return new AdditionalContractValue(this);
+            }
+
+            /// <summary>Field number for the "contract_value" field.</summary>
+            public const int ContractValueFieldNumber = 1;
+            private global::Google.Type.Money contractValue_;
+            /// <summary>
+            /// Optional. The absolute, cumulative contract value of the customer's
+            /// spend obligation that is added on top of the automatically billed fees
+            /// from Google. This amount is not automatically billed or invoiced by
+            /// Google; instead, it is tracked as a legal spend guarantee to be met via
+            /// usage reporting and manually trued-up by partners.
+            ///
+            /// The overall total contract value of the offer is calculated as the
+            /// sum of Google-billed fees (from installments), plus this additional
+            /// contract value.
+            ///
+            /// For amendments, this field must be set to the new cumulative
+            /// additional total.
+            ///
+            /// For example:
+            ///
+            /// * Initial Offer: 3 installments of $15 (total $45 billed by Google)
+            ///   plus an `additional_contract_value` of $100 (billed by Partner, with
+            ///   true-ups happening at the end of the offer's term).
+            ///   The overall total contract value of the offer is $145 ($45 + $100).
+            /// * Amended Offer: 6 installments of $15 (total $90 billed by Google)
+            ///   plus an `additional_contract_value` of $70 (billed by Partner, with
+            ///   true-ups happening at the end of the offer's term).
+            ///   The overall total contract value of the amended offer is $160
+            ///   ($90 + $70).
+            ///
+            /// Must be non-negative. The maximum allowed value is 1,000,000,000 USD.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Type.Money ContractValue {
+              get { return contractValue_; }
+              set {
+                contractValue_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "eligible_skus" field.</summary>
+            public const int EligibleSkusFieldNumber = 2;
+            private static readonly pb::FieldCodec<string> _repeated_eligibleSkus_codec
+                = pb::FieldCodec.ForString(18);
+            private readonly pbc::RepeatedField<string> eligibleSkus_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// Optional. The resource names of the SKUs whose tracked usage is
+            /// eligible to contribute toward satisfying this additional contract value
+            /// obligation.
+            ///
+            /// This list explicitly separates core spend obligations from exclusions
+            /// like overage fees, which do not count toward meeting the customer's
+            /// legal spend commitment.
+            ///
+            /// Must be non-empty for the offer to be published.
+            ///
+            /// Format:
+            /// projects/{project}/locations/{location}/services/{service}/skus/{sku}
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> EligibleSkus {
+              get { return eligibleSkus_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as AdditionalContractValue);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(AdditionalContractValue other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(ContractValue, other.ContractValue)) return false;
+              if(!eligibleSkus_.Equals(other.eligibleSkus_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (contractValue_ != null) hash ^= ContractValue.GetHashCode();
+              hash ^= eligibleSkus_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (contractValue_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(ContractValue);
+              }
+              eligibleSkus_.WriteTo(output, _repeated_eligibleSkus_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (contractValue_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(ContractValue);
+              }
+              eligibleSkus_.WriteTo(ref output, _repeated_eligibleSkus_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (contractValue_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContractValue);
+              }
+              size += eligibleSkus_.CalculateSize(_repeated_eligibleSkus_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(AdditionalContractValue other) {
+              if (other == null) {
+                return;
+              }
+              if (other.contractValue_ != null) {
+                if (contractValue_ == null) {
+                  ContractValue = new global::Google.Type.Money();
+                }
+                ContractValue.MergeFrom(other.ContractValue);
+              }
+              eligibleSkus_.Add(other.eligibleSkus_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    if (contractValue_ == null) {
+                      ContractValue = new global::Google.Type.Money();
+                    }
+                    input.ReadMessage(ContractValue);
+                    break;
+                  }
+                  case 18: {
+                    eligibleSkus_.AddEntriesFrom(input, _repeated_eligibleSkus_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (contractValue_ == null) {
+                      ContractValue = new global::Google.Type.Money();
+                    }
+                    input.ReadMessage(ContractValue);
+                    break;
+                  }
+                  case 18: {
+                    eligibleSkus_.AddEntriesFrom(ref input, _repeated_eligibleSkus_codec);
                     break;
                   }
                 }
