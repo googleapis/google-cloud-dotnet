@@ -787,6 +787,38 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gccv::HostsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddHostsClient(this IServiceCollection services, sys::Action<gccv::HostsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::HostsClientBuilder builder = new gccv::HostsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gccv::HostsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddHostsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::HostsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::HostsClientBuilder builder = new gccv::HostsClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>
         /// Adds a singleton <see cref="gccv::ImageFamilyViewsClient"/> to <paramref name="services"/>.
         /// </summary>
@@ -3167,6 +3199,42 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gccv::RegionsClientBuilder builder = new gccv::RegionsClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::ReliabilityRisksClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddReliabilityRisksClient(this IServiceCollection services, sys::Action<gccv::ReliabilityRisksClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::ReliabilityRisksClientBuilder builder = new gccv::ReliabilityRisksClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::ReliabilityRisksClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddReliabilityRisksClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::ReliabilityRisksClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::ReliabilityRisksClientBuilder builder = new gccv::ReliabilityRisksClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });

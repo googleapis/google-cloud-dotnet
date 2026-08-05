@@ -929,6 +929,7 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.Delete(request);
@@ -965,6 +966,7 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.DeleteAsync(request);
@@ -5528,6 +5530,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 DiscardLocalSsd = false,
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.Stop(request);
@@ -5565,6 +5568,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 DiscardLocalSsd = false,
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.StopAsync(request);
