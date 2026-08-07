@@ -167,11 +167,15 @@ public class SpannerBuiltInMetricsInterceptorTests
     {
         { "gfet4t7; dur=12.5", 12.5, null },
         { "gfet4t7; dur = 42", 42.0, null },
+        { "afe; dur=8.5", null, 8.5 },
+        { "afe; dur = 24", null, 24.0 },
+        { "gfet4t7; dur=12.5, afe; dur=8.5", 12.5, 8.5 },
         { "other; dur=5, gfet4t7; dur=12.5", 12.5, null },
         { "other_metric; dur=12.5", null, null },
         { "not_gfet4t7; dur=99.0", null, null },
         { "not_afe; dur=99.0", null, null },
         { "gfet4t7; dur=invalid", null, null },
+        { "afe; dur=invalid", null, null }
     };
 
     [Theory]
@@ -196,6 +200,34 @@ public class SpannerBuiltInMetricsInterceptorTests
                     () => { })).ResponseAsync;
         });
 
+        ValidateServerTimingMeasurements(measurements, expectedGfeLatency, expectedAfeLatency);
+    }
+
+    [Theory]
+    [MemberData(nameof(ServerTimingTestCases))]
+    public async Task RecordsMetrics_AsyncServerStreamingCall_ExtractsServerTiming(
+        string serverTimingHeader,
+        double? expectedGfeLatency,
+        double? expectedAfeLatency)
+    {
+        var metadata = new Metadata { { "server-timing", serverTimingHeader } };
+
+        var measurements = await RunWithMeterListenerAsync(async () =>
+        {
+            s_interceptor.AsyncServerStreamingCall(
+                s_fakeRequest,
+                CreateContext(MethodType.ServerStreaming),
+                (req, ctx) => new AsyncServerStreamingCall<string>(
+                    null,
+                    Task.FromResult(metadata),
+                    () => Status.DefaultSuccess,
+                    () => new Metadata(),
+                    () => { }));
+            await Task.Delay(50);
+        });
+
+        ValidateServerTimingMeasurements(measurements, expectedGfeLatency, expectedAfeLatency);
+    }
 
     private static void ValidateServerTimingMeasurements(
         IEnumerable<Measurement> measurements,

@@ -26,6 +26,7 @@ internal static partial class SpannerBuiltInMetrics
 {
     private const string ServerTimingHeader = "server-timing";
     private const string GfeMetricPrefix = "gfet4t7";
+    private const string AfeMetricPrefix = "afe";
     private const string GfeDurationPrefix = "dur";
 
     private static readonly string s_statusOk = StatusCode.OK.ToString();
@@ -126,6 +127,24 @@ internal static partial class SpannerBuiltInMetrics
                 // We bypass GFE metrics since blocking gRPC calls don't natively expose response headers.
                 RecordAttemptMetrics(context.Method.Name, dbNameProvider, status, elapsedMs);
             }
+        }
+
+        /// <inheritdoc/>
+        public override AsyncServerStreamingCall<TResponse> AsyncServerStreamingCall<TRequest, TResponse>(
+            TRequest request,
+            ClientInterceptorContext<TRequest, TResponse> context,
+            AsyncServerStreamingCallContinuation<TRequest, TResponse> continuation)
+        {
+            if (request is not IDatabaseNameProvider dbNameProvider)
+            {
+                return continuation(request, context);
+            }
+
+            var call = continuation(request, context);
+            var labels = Labeler.GetLabels(context.Method.Name, dbNameProvider, s_statusOk, _clientIdentity);
+            _ = RecordServerTimingAsync(call.ResponseHeadersAsync, labels);
+
+            return call;
         }
 
         /// <summary>
