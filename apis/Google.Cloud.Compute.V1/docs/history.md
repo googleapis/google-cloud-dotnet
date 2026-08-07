@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.30.0, released 2026-08-07
+
+### New features
+
+- Update Compute v1 to revision 20260722
+
+### Documentation improvements
+
+- Update various comments
+
 ## Version 3.29.0, released 2026-07-20
 
 ### New features
