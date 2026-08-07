@@ -1,5 +1,36 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2026-08-07
+
+### New features
+
+- Add google_user_id_data and partner_provided_id_data to AudienceMember
+- Add GoogleUserIdData and PartnerProvidedIdData messages to audience.proto
+- Add Google User ID and Partner Provided ID status fields to request status
+- Add RemoveAllAudienceMembers RPC to IngestionService
+- Add RemoveAllAudienceMembersRequest and RemoveAllAudienceMembersResponse
+- Add RemoveAllAudienceMembersStatus to request status
+- Add address_line, city, and administrative_area fields to UserData
+- Add FieldWarning message and WarningReason enum to processing_errors.proto
+- Add field_warnings to IngestEventsResponse and IngestAudienceMembersResponse
+- Add REQUIRED_PREREQUISITE_LINK_MISSING and INVALID_REMOVE_AS_OF_TIME to ErrorCode
+- Add PROCESSING_ERROR_REASON_EXTERNAL_ATTRIBUTION_DATA_MISSING error reason
+- Make region_code OPTIONAL in AdEvent
+- Deprecate validate_only in IngestAdEventsRequest
+
+### Bug fixes
+
+- Make device_info REQUIRED in AdEvent
+- Make encryption_info REQUIRED in IngestAdEventsRequest
+
+### Documentation improvements
+
+- Update description of mobileIds in audience.proto to include new device types
+- Document IP address requirement context in device_info.proto
+- Update ListPartnerLinks page size default from 10 to 50
+- Document partner_customer_account.account_id filter in ListPartnerLinks
+- Document IN function support in user list services filter expressions
+
 ## Version 1.0.0-beta08, released 2026-06-18
 
 ### New features
