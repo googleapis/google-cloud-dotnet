@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Metrics;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.V1;
 
@@ -170,6 +171,95 @@ internal static partial class SpannerBuiltInMetrics
             return new ClientIdentity(clientId, reducedHash);
         }
     }
+
+    internal static void RecordOperationMetrics(
+        string methodName,
+        IDatabaseNameProvider dbNameProvider,
+        string status,
+        double latencyMs,
+        ClientIdentity clientIdentity)
+    {
+        try
+        {
+            var labels = Labeler.GetLabels(methodName, dbNameProvider, status, clientIdentity);
+            s_operationCounter.Add(1, labels);
+            s_operationLatency.Record(latencyMs, labels);
+        }
+        catch
+        {
+            // Silently swallow exceptions.
+        }
+    }
+
+    internal static async Task RecordAttemptMetricsAsync(
+        Task<Grpc.Core.Metadata> headersTask,
+        string methodName,
+        IDatabaseNameProvider dbNameProvider,
+        string status,
+        double latencyMs,
+        ClientIdentity clientIdentity)
+    {
+        try
+        {
+            var labels = Labeler.GetLabels(methodName, dbNameProvider, status, clientIdentity);
+            s_attemptCounter.Add(1, labels);
+            s_attemptLatency.Record(latencyMs, labels);
+            await RecordServerTimingAsync(headersTask, labels).ConfigureAwait(false);
+        }
+        catch
+        {
+            // Silently swallow exceptions.
+        }
+    }
+
+    internal static async Task RecordServerTimingAsync(Task<Grpc.Core.Metadata> headersTask, KeyValuePair<string, object>[] labels)
+    {
+        try
+        {
+            if (headersTask == null)
+            {
+                return;
+            }
+
+            var headers = await headersTask.ConfigureAwait(false);
+            if (headers == null)
+            {
+                return;
+            }
+
+            foreach (var header in headers)
+            {
+                if (string.Equals(header.Key, ServerTimingHeader, StringComparison.OrdinalIgnoreCase))
+                {
+                    MetricsInterceptor.EmitServerTimingMetrics(header.Value, GfeMetricPrefix, duration => s_gfeLatency.Record(duration, labels));
+                    MetricsInterceptor.EmitServerTimingMetrics(header.Value, AfeMetricPrefix, duration => s_gfeLatency.Record(duration, labels));
+                }
+            }
+        }
+        catch
+        {
+            // Silently swallow exceptions.
+        }
+    }
+    internal static void RecordAttemptMetrics(
+        string methodName,
+        IDatabaseNameProvider dbNameProvider,
+        string status,
+        double latencyMs,
+        ClientIdentity clientIdentity)
+    {
+        try
+        {
+            var labels = Labeler.GetLabels(methodName, dbNameProvider, status, clientIdentity);
+            s_attemptCounter.Add(1, labels);
+            s_attemptLatency.Record(latencyMs, labels);
+        }
+        catch
+        {
+            // Silently swallow exceptions.
+        }
+    }
+
 
     /// <summary>
     /// Represents the unique identity of a client, including its ID and generated hash.
