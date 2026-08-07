@@ -5127,12 +5127,12 @@
         },
         {
             "id": "Google.Cloud.CommerceProducer.V1Beta",
-            "currentVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta02",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-07-28T23:32:30.548848970Z",
+            "releaseTimestamp": "2026-08-07T17:44:19.999510353Z",
             "lastGeneratedCommit": "e0c53fe374ef9fdff0f870d58e7e9a66457b7b29",
-            "lastReleasedCommit": "21a792a08ee2aad508568f82e860d91b942978a6",
+            "lastReleasedCommit": "e0c53fe374ef9fdff0f870d58e7e9a66457b7b29",
             "apiPaths": [
                 "google/cloud/commerceproducer/v1beta"
             ],
