@@ -170,10 +170,29 @@ namespace Google.Cloud.Spanner.V1
             GaxPreconditions.CheckState(CallInvoker is null || AffinityChannelPoolConfiguration is null, "Channel affinity cannot be configured with a custom CallInvoker.");
         }
 
-        partial void InterceptBuild(ref SpannerClient client) => client = MaybeCreateEmulatorClientBuilder()?.Build();
+        partial void InterceptBuild(ref SpannerClient client)
+        {
+            client = MaybeCreateEmulatorClientBuilder()?.Build();
+            client ??= BuildImpl();
+            client = new SpannerBuiltInMetrics.BuiltInMetricsWrapper(client);
+        }
 
-        partial void InterceptBuildAsync(CancellationToken cancellationToken, ref Task<SpannerClient> task) =>
-            task = MaybeCreateEmulatorClientBuilder()?.BuildAsync(cancellationToken);
+        partial void InterceptBuildAsync(CancellationToken cancellationToken, ref Task<SpannerClient> task)
+        {
+            task = WrapClientAsync(cancellationToken);
+        }
+
+        private async Task<SpannerClient> WrapClientAsync(CancellationToken cancellationToken)
+        {
+            var emulatorTask = MaybeCreateEmulatorClientBuilder()?.BuildAsync(cancellationToken);
+            SpannerClient client = null;
+            if (emulatorTask != null)
+            {
+                client = await emulatorTask.ConfigureAwait(false);
+            }
+            client ??= await BuildAsyncImpl(cancellationToken).ConfigureAwait(false);
+            return new SpannerBuiltInMetrics.BuiltInMetricsWrapper(client);
+        }
 
         /// <inheritdoc/>
         protected override CallInvoker CreateCallInvoker()
@@ -187,7 +206,9 @@ namespace Google.Cloud.Spanner.V1
                     GetChannelOptions(),
                     GetApiConfig(),
                     EffectiveGrpcAdapter);
-            return invoker.Intercept(RequestIdOnExceptionInterceptor.Instance);
+            return invoker
+                .Intercept(RequestIdOnExceptionInterceptor.Instance)
+                .Intercept(new SpannerBuiltInMetrics.MetricsInterceptor(SpannerBuiltInMetrics.Labeler.GenerateIdentity()));
         }
 
         /// <inheritdoc/>
@@ -202,7 +223,9 @@ namespace Google.Cloud.Spanner.V1
                     GetChannelOptions(),
                     GetApiConfig(),
                     EffectiveGrpcAdapter);
-            return invoker.Intercept(RequestIdOnExceptionInterceptor.Instance);
+            return invoker
+                .Intercept(RequestIdOnExceptionInterceptor.Instance)
+                .Intercept(new SpannerBuiltInMetrics.MetricsInterceptor(SpannerBuiltInMetrics.Labeler.GenerateIdentity()));
         }
 
         private ApiConfig GetApiConfig() => new ApiConfig

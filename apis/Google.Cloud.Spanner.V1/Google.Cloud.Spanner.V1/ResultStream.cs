@@ -54,6 +54,8 @@ namespace Google.Cloud.Spanner.V1
         private readonly RetrySettings _retrySettings;
         private readonly int _maxBufferSize;
 
+        internal SpannerBuiltInMetrics.StreamTracer Tracer { get; }
+
         /// <summary>
         /// Indicates whether the underlying stream has completed. We may still be draining results from the buffer.
         /// </summary>
@@ -88,6 +90,7 @@ namespace Google.Cloud.Spanner.V1
             _callSettings = callSettings;
             _maxBufferSize = GaxPreconditions.CheckArgumentRange(maxBufferSize, nameof(maxBufferSize), 1, 10_000);
             _retrySettings = GaxPreconditions.CheckNotNull(retrySettings, nameof(retrySettings));
+            Tracer = new SpannerBuiltInMetrics.StreamTracer(_client, _request);
         }
 
         public PartialResultSet Current { get; private set; }
@@ -157,6 +160,7 @@ namespace Google.Cloud.Spanner.V1
                         {
                             // Note: no cancellation token here; if we've been given a short cancellation token,
                             // it ought to apply to just the MoveNext call, not the original request.
+                            Tracer.StartAttempt();
                             _grpcCall = _request.ExecuteStreaming(_client, _callSettings);
                             hasNext = await MoveNextAsync().ConfigureAwait(false);
                             // We don't need to buble Current here, that's done elsewhere if hasNext is true.
@@ -208,15 +212,18 @@ namespace Google.Cloud.Spanner.V1
                     {
                         _finished = true;
                         // Let the next iteration of the loop return 0 or buffered data.
+                        Tracer.RecordAttempt(_grpcCall, StatusCode.OK.ToString());
                     }
                 }
                 catch (RpcException e) when (e.StatusCode == StatusCode.Cancelled && cancellationToken.IsCancellationRequested)
                 {
+                    Tracer.RecordAttempt(_grpcCall, e);
                     // gRPC throws RpcException, but it's more idiomatic to see an OperationCanceledException
                     cancellationToken.ThrowIfCancellationRequested();
                 }
                 catch (RpcException e) when (_safeToRetry && retryState.CanRetry(e))
                 {
+                    Tracer.RecordAttempt(_grpcCall, e);
                     _client.Settings.Logger.Warn($"Exception when reading from result stream. Retrying.", e);
                     await retryState.WaitAsync(e, cancellationToken).ConfigureAwait(false);
 
@@ -224,6 +231,11 @@ namespace Google.Cloud.Spanner.V1
                     _buffer.Clear();
                     _grpcCall?.Dispose();
                     _grpcCall = null;
+                }
+                catch (Exception ex)
+                {
+                    Tracer.RecordAttempt(_grpcCall, ex);
+                    throw;
                 }
             }
         }
