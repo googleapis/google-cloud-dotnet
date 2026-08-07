@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.4.0, released 2026-08-07
+
+### New features
+
+- Add RequestOptions and request_options to Firestore v1 protos
+
 ## Version 4.3.0, released 2026-06-15
 
 ### New features
