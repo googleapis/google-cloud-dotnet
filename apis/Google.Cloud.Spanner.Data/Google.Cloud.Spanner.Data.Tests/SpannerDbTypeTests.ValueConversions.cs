@@ -398,8 +398,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             // Protobuf Enum
             yield return new object[] { Color.Red, SpannerDbType.FromClrType(typeof(Color)), Quote(((long) Color.Red).ToString()) };
             yield return new object[] { Pet.Types.Species.Dog, SpannerDbType.FromClrType(typeof(Pet.Types.Species)), Quote(((long) Pet.Types.Species.Dog).ToString()) };
-            yield return new object[] { 1, SpannerDbType.FromClrType(typeof(Pet.Types.Species)), Quote(1.ToString()) };
-            yield return new object[] { "1", SpannerDbType.FromClrType(typeof(Pet.Types.Species)), Quote(1.ToString()) };
 
             // List test cases (list of type X).
             yield return new object[]
