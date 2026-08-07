@@ -13,8 +13,10 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.Metrics;
 
 namespace Google.Cloud.Spanner.V1;
@@ -49,6 +51,48 @@ internal static partial class SpannerBuiltInMetrics
     internal static readonly Histogram<double> s_attemptLatency = s_spannerMeter.CreateHistogram<double>(AttemptLatenciesName);
     internal static readonly Histogram<double> s_gfeLatency = s_spannerMeter.CreateHistogram<double>(GfeLatenciesName);
     internal static readonly Counter<long> s_gfeConnectivityErrorCounter = s_spannerMeter.CreateCounter<long>(GfeConnectivityErrorCountName);
+
+    private static readonly string s_statusOk = StatusCode.OK.ToString();
+    private static readonly string s_statusUnknown = StatusCode.Unknown.ToString();
+
+    /// <summary>
+    /// Records attempt-level metrics including count and latency.
+    /// </summary>
+    /// <param name="latencyMs">The elapsed duration of the attempt in milliseconds.</param>
+    /// <param name="methodName">The name of the gRPC method invoked.</param>
+    /// <param name="dbNameProvider">The provider holding database context details.</param>
+    /// <param name="status">The resolved status of the attempt.</param>
+    /// <param name="clientIdentity">The identity context for the client executing the attempt.</param>
+    internal static void RecordAttemptMetrics(double latencyMs, string methodName, IDatabaseNameProvider dbNameProvider, string status, ClientIdentity clientIdentity)
+    {
+        try
+        {
+            var labels = Labeler.GetLabels(methodName, dbNameProvider, status, clientIdentity);
+            RecordAttemptMetrics(latencyMs, labels);
+        }
+        catch
+        {
+            // Silently swallow exceptions.
+        }
+    }
+
+    /// <summary>
+    /// Records attempt-level metrics including count and latency.
+    /// </summary>
+    /// <param name="latencyMs">The elapsed duration of the attempt in milliseconds.</param>
+    /// <param name="labels">The metric labels to apply to the measurement.</param>
+    internal static void RecordAttemptMetrics(double latencyMs, KeyValuePair<string, object>[] labels)
+    {
+        try
+        {
+            s_attemptCounter.Add(1, labels);
+            s_attemptLatency.Record(latencyMs, labels);
+        }
+        catch
+        {
+            // Silently swallow exceptions.
+        }
+    }
 
     /// <summary>
     /// Helper class to extract and generate resource tags and metric labels.
@@ -196,5 +240,49 @@ internal static partial class SpannerBuiltInMetrics
         /// Gets the hash of the client ID.
         /// </summary>
         public string Hash { get; }
+    }
+
+    /// <summary>
+    /// A stopwatch to measure elapesed time.
+    /// </summary>
+    internal interface IStopwatch
+    {
+        /// <summary>
+        /// Gets the total elapsed time measured by the stopwatch, in milliseconds.
+        /// </summary>
+        double ElapsedMilliseconds { get; }
+    }
+
+    /// <summary>
+    /// A provider that generates new <see cref="IStopwatch"/> instances.
+    /// </summary>
+    internal interface IStopwatchProvider
+    {
+        /// <summary>
+        /// Initializes and starts a new <see cref="IStopwatch"/>.
+        /// </summary>
+        /// <returns>A new, running stopwatch.</returns>
+        IStopwatch StartNew();
+    }
+
+    /// <summary>
+    /// The default implementation of <see cref="IStopwatchProvider"/> utilizing <see cref="Stopwatch"/>.
+    /// </summary>
+    private sealed class DefaultStopwatchProvider : IStopwatchProvider
+    {
+        /// <summary>
+        /// The singleton instance of the default stopwatch provider.
+        /// </summary>
+        public static readonly DefaultStopwatchProvider Instance = new();
+
+        /// <inheritdoc/>
+        public IStopwatch StartNew() => new StopwatchWrapper(Stopwatch.StartNew());
+
+        /// <inheritdoc/>
+        private class StopwatchWrapper(Stopwatch stopwatch) : IStopwatch
+        {
+            /// <inheritdoc/>
+            public double ElapsedMilliseconds => stopwatch.Elapsed.TotalMilliseconds;
+        }
     }
 }
