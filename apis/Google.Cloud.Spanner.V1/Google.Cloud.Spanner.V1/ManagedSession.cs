@@ -28,6 +28,11 @@ public sealed partial class ManagedSession
     private readonly LifecycleManager _lifecycleManager;
 
     /// <summary>
+    /// The Spanner client used by this managed session.
+    /// </summary>
+    public SpannerClient Client => _options.Client;
+
+    /// <summary>
     /// Creates a <see cref="ManagedSession"/> for the given <paramref name="options"/>.
     /// </summary>
     public ManagedSession(ManagedSessionOptions options)

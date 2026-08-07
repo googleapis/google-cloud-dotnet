@@ -52,9 +52,8 @@ namespace Google.Cloud.Spanner.Data
     {
         private readonly object _sync = new object();
 
-        // The SessionPool to use to allocate sessions. This is obtained from the SessionPoolManager,
-        // and released when the connection is closed/disposed.
-        private SessionPool _sessionPool;
+        // The ManagedSession used to begin transactions. This is obtained from the SessionManager.
+        private ManagedSession _managedSession;
 
         private ConnectionState _state = ConnectionState.Closed;
 
@@ -108,7 +107,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The logger used by this connection. This is never null.
         /// </summary>
-        internal Logger Logger => Builder.SessionPoolManager.Logger;
+        internal Logger Logger => Builder.SessionManager.SpannerSettings.Logger;
 
         /// <inheritdoc />
         public override ConnectionState State
@@ -210,11 +209,11 @@ namespace Google.Cloud.Spanner.Data
             {
                 return;
             }
-            Open(GetTransactionEnlister());
+            Open(GetTransactionEnlister(), requireSession: false);
         }
 
         /// <inheritdoc />
-        public override Task OpenAsync(CancellationToken cancellationToken) => OpenAsyncImpl(GetTransactionEnlister(), cancellationToken);
+        public override Task OpenAsync(CancellationToken cancellationToken) => OpenAsyncImpl(GetTransactionEnlister(), requireSession: false);
 
         /// <summary>
         /// Opens the connection within a <see cref="System.Transactions.TransactionScope"/> with specific
@@ -251,7 +250,7 @@ namespace Google.Cloud.Spanner.Data
             // Copy options because SpannerTransactionOptions is mutable.
             options = options is null ? new SpannerTransactionOptions() : new SpannerTransactionOptions(options);
 
-            Open(() => EnlistTransaction(transaction, creationOptions, options));
+            Open(() => EnlistTransaction(transaction, creationOptions, options), requireSession: false);
         }
 
         /// <summary>
@@ -290,7 +289,7 @@ namespace Google.Cloud.Spanner.Data
             // Copy options because SpannerTransactionOptions is mutable.
             options = options is null ? new SpannerTransactionOptions() : new SpannerTransactionOptions(options);
 
-            return OpenAsyncImpl(() => EnlistTransaction(transaction, creationOptions, options), cancellationToken);
+            return OpenAsyncImpl(() => EnlistTransaction(transaction, creationOptions, options), requireSession: false);
         }
 
         /// <summary>
@@ -322,9 +321,9 @@ namespace Google.Cloud.Spanner.Data
         public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = default) =>
             OpenAsync(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(timestampBound), options: null, cancellationToken);
 
-        private void Open(Action transactionEnlister)
+        private void Open(Action transactionEnlister, bool requireSession)
         {
-            Func<Task> taskRunner = () => OpenAsyncImpl(transactionEnlister, CancellationToken.None);
+            Func<Task> taskRunner = () => OpenAsyncImpl(transactionEnlister, requireSession);
 
             // This is slightly annoying, but hard to get round: most of our timeouts use Expiration, but this is more of
             // a BCL-oriented timeout.
@@ -343,17 +342,19 @@ namespace Google.Cloud.Spanner.Data
         /// and potentially enlists the connection in the current transaction.
         /// </summary>
         /// <param name="transactionEnlister">Enlistment delegate; may be null.</param>
-        /// <param name="cancellationToken">Cancellation token; may be None</param>
-        private Task OpenAsyncImpl(Action transactionEnlister, CancellationToken cancellationToken)
+        /// <param name="requireSession"></param>
+        private Task OpenAsyncImpl(Action transactionEnlister, bool requireSession)
         {
-            // TODO: Use the cancellation token. We can't at the moment, as the only reason for this being async is
-            // due to credential fetching, and we can't pass a cancellation token to any of that.
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
                 {
                     ConnectionState previousState;
                     lock (_sync)
                     {
+                        if (requireSession)
+                        {
+                            Builder.AssertCanAcquireSession();
+                        }
                         previousState = _state;
                         if (IsOpen)
                         {
@@ -370,7 +371,7 @@ namespace Google.Cloud.Spanner.Data
                     OnStateChange(new StateChangeEventArgs(previousState, ConnectionState.Connecting));
                     try
                     {
-                        _sessionPool = await Builder.AcquireSessionPoolAsync().ConfigureAwait(false);
+                            _managedSession = await Builder.MaybeAcquireSessionAsync(requireSession).ConfigureAwait(false);
                     }
                     finally
                     {
@@ -378,7 +379,7 @@ namespace Google.Cloud.Spanner.Data
                         // but it's not clear whether or not that's a problem.
                         lock (_sync)
                         {
-                            _state = _sessionPool != null ? ConnectionState.Open : ConnectionState.Broken;
+                            _state = _managedSession is not null || !requireSession ? ConnectionState.Open : ConnectionState.Broken;
                         }
                         if (IsOpen)
                         {
@@ -579,22 +580,25 @@ namespace Google.Cloud.Spanner.Data
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
                 {
-                    await OpenAsync(cancellationToken).ConfigureAwait(false);
+                    await OpenAsyncImpl(GetTransactionEnlister(), requireSession: true).ConfigureAwait(false);
 
-                    PooledSession session;
+                    ManagedTransaction transaction;
                     SpannerTransactionCreationOptions effectiveCreationOptions;
                     if (transactionCreationOptions.TransactionId is null)
                     {
-                        session = await AcquireSessionAsync(transactionCreationOptions, cancellationToken, out effectiveCreationOptions).ConfigureAwait(false);
+                        transaction = await BeginManagedTransactionAsync(transactionCreationOptions, cancellationToken, out effectiveCreationOptions).ConfigureAwait(false);
                     }
                     else
                     {
                         SessionName sessionName = SessionName.Parse(transactionCreationOptions.TransactionId.Session);
                         ByteString transactionIdBytes = ByteString.FromBase64(transactionCreationOptions.TransactionId.Id);
-                        session = _sessionPool.CreateDetachedSession(sessionName, transactionIdBytes, TransactionOptions.ModeOneofCase.ReadOnly);
+                        var timestamp = transactionCreationOptions.EffectiveTimestampBound?.Timestamp;
+                        var readTimestamp = timestamp.HasValue ? Protobuf.WellKnownTypes.Timestamp.FromDateTime(timestamp.Value) : null;
+                        transaction = ManagedTransaction.FromTransaction(
+                            _managedSession.Client, new Session { SessionName = sessionName }, transactionIdBytes, transactionCreationOptions.GetTransactionOptions(), readTimestamp);
                         effectiveCreationOptions = transactionCreationOptions;
                     }
-                    return new SpannerTransaction(this, session, effectiveCreationOptions, transactionOptions, isRetriable: false);
+                    return new SpannerTransaction(this, transaction, effectiveCreationOptions, transactionOptions, isRetriable: false);
                 }, "SpannerConnection.BeginTransactionAsync", Logger);
         }
 
@@ -632,8 +636,8 @@ namespace Google.Cloud.Spanner.Data
 
             RetriableTransaction transaction = new RetriableTransaction(
                 this,
-                Builder.SessionPoolManager.SpannerSettings.Clock ?? SystemClock.Instance,
-                Builder.SessionPoolManager.SpannerSettings.Scheduler ?? SystemScheduler.Instance,
+                Builder.SessionManager.SpannerSettings.Clock ?? SystemClock.Instance,
+                Builder.SessionManager.SpannerSettings.Scheduler ?? SystemScheduler.Instance,
                 transactionCreationOptions,
                 transactionOptions,
                 retryOptions: null);
@@ -1005,11 +1009,17 @@ namespace Google.Cloud.Spanner.Data
         /// </remarks>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>A task which will complete when the session pool has reached its minimum size.</returns>
-        public async Task WhenSessionPoolReady(CancellationToken cancellationToken = default)
+        public Task WhenSessionPoolReady(CancellationToken cancellationToken = default) => EnsureFreshSessionAsync(cancellationToken);
+
+        /// <summary>
+        /// Waits until the underlying managed session is fresh.
+        /// </summary>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>A task which will complete when the underlying session is fresh.</returns>
+        public async Task EnsureFreshSessionAsync(CancellationToken cancellationToken = default)
         {
-            var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(WhenSessionPoolReady));
-            await OpenAsync(cancellationToken).ConfigureAwait(false);
-            await _sessionPool.WhenPoolReady(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
+            await OpenAsyncImpl(GetTransactionEnlister(), requireSession: true).ConfigureAwait(false);
+            await _managedSession.EnsureFreshAsync(cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -1021,39 +1031,32 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>An <see cref="IAsyncEnumerable{BatchWriteResult}"/> representing the results of the operation.</returns>
         internal async IAsyncEnumerable<SpannerBatchWriteCommand.BatchWriteResult> ExecuteBatchWriteAsync(BatchWriteRequest request, int timeout, [System.Runtime.CompilerServices.EnumeratorCancellation] CancellationToken cancellationToken)
         {
-            await OpenAsync(cancellationToken).ConfigureAwait(false);
-            var key = GetSessionPoolSegmentKey(nameof(ExecuteBatchWriteAsync));
+            await OpenAsyncImpl(GetTransactionEnlister(), requireSession: true).ConfigureAwait(false);
             var callSettings = CreateCallSettings(settings => settings.BatchWriteSettings, timeout, cancellationToken);
 
-#pragma warning disable CS0618 // Disable the warning for the specific obsolete member
-            var responseStream = await _sessionPool.BatchWriteAsync(request, key, callSettings).ConfigureAwait(false);
-#pragma warning restore CS0618
+            var responseStream = await _managedSession.BatchWriteAsync(request, callSettings).ConfigureAwait(false);
             await foreach (var response in responseStream.WithCancellation(cancellationToken).ConfigureAwait(false))
             {
                 yield return new SpannerBatchWriteCommand.BatchWriteResult(response);
             }
         }
 
-        internal Task<PooledSession> AcquireSessionAsync(SpannerTransactionCreationOptions creationOptions, CancellationToken cancellationToken, out SpannerTransactionCreationOptions effectiveCreationOptions)
+        internal Task<ManagedTransaction> BeginManagedTransactionAsync(SpannerTransactionCreationOptions creationOptions, CancellationToken cancellationToken, out SpannerTransactionCreationOptions effectiveCreationOptions)
         {
-            SessionPool pool;
-            DatabaseName databaseName;
             effectiveCreationOptions = MaybeWithConnectionDefaults(creationOptions);
+            ManagedSession session;
 
             lock (_sync)
             {
                 AssertOpen("acquire session.");
-                pool = _sessionPool;
-                databaseName = Builder.DatabaseName;
+                session = _managedSession;
             }
-            if (databaseName is null)
-            {
-                throw new InvalidOperationException("Unable to acquire session on connection with no database name");
-            }
-            var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(AcquireSessionAsync));
-            return effectiveCreationOptions?.IsDetached == true ?
-                pool.AcquireDetachedSessionAsync(sessionPoolSegmentKey, effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true, cancellationToken) :
-                pool.AcquireSessionAsync(sessionPoolSegmentKey, effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true, cancellationToken);
+            
+            return session.BeginTransactionAsync(
+                effectiveCreationOptions?.GetTransactionOptions(),
+                effectiveCreationOptions?.IsSingleUse ?? false,
+                effectiveCreationOptions?.IsDetached ?? false,
+                cancellationToken);
         }
 
         private SpannerTransactionCreationOptions MaybeWithConnectionDefaults(SpannerTransactionCreationOptions transactionCreationOptions)
@@ -1081,12 +1084,7 @@ namespace Google.Cloud.Spanner.Data
         /// </remarks>
         /// <param name="cancellationToken">An optional token for canceling the returned task. This does not cancel the shutdown itself.</param>
         /// <returns>A task which will complete when the session pool has finished shutting down.</returns>
-        public async Task ShutdownSessionPoolAsync(CancellationToken cancellationToken = default)
-        {
-            var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(ShutdownSessionPoolAsync));
-            await OpenAsync(cancellationToken).ConfigureAwait(false);
-            await _sessionPool.ShutdownPoolAsync(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
-        }
+        public Task ShutdownSessionPoolAsync(CancellationToken cancellationToken = default) => Task.CompletedTask;
 
         /// <summary>
         /// Retrieves statistics for the session pool associated with the corresponding <see cref="SessionPoolSegmentKey"/>. The connection string must
@@ -1130,8 +1128,6 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override void Close()
         {
-            SessionPool sessionPool;
-
             ConnectionState oldState;
             lock (_sync)
             {
@@ -1141,18 +1137,8 @@ namespace Google.Cloud.Spanner.Data
                 }
 
                 oldState = _state;
-                sessionPool = _sessionPool;
-
-                _sessionPool = null;
+                _managedSession = null;
                 _state = ConnectionState.Closed;
-            }
-
-            if (sessionPool != null)
-            {
-                // Note: if we're in an implicit transaction using TransactionScope, this will "release" the session pool
-                // back to the session pool manager before we're really done with it, but that's okay - it will just report
-                // inaccurate connection counts temporarily. This is an inherent problem with implicit transactions.
-                Builder.SessionPoolManager.Release(sessionPool);
             }
 
             if (oldState != _state)
@@ -1191,11 +1177,11 @@ namespace Google.Cloud.Spanner.Data
         }
 
         internal CallSettings CreateCallSettings(Func<SpannerSettings, CallSettings> settingsProvider, CancellationToken cancellationToken) =>
-            settingsProvider(Builder.SessionPoolManager.SpannerSettings).WithCancellationToken(cancellationToken);
+            settingsProvider(Builder.SessionManager.SpannerSettings).WithCancellationToken(cancellationToken);
 
         internal CallSettings CreateCallSettings(Func<SpannerSettings, CallSettings> settingsProvider, int timeoutSeconds, CancellationToken cancellationToken)
         {
-            var originalSettings = settingsProvider(Builder.SessionPoolManager.SpannerSettings);
+            var originalSettings = settingsProvider(Builder.SessionManager.SpannerSettings);
             var expiration = timeoutSeconds == 0 && !Builder.AllowImmediateTimeouts ? Expiration.None : Expiration.FromTimeout(TimeSpan.FromSeconds(timeoutSeconds));
             return originalSettings.WithExpiration(expiration).WithCancellationToken(cancellationToken);
         }
