@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.75.0, released 2026-08-07
+
+### New features
+
+- Add Tool.ExaAiSearch to Vertex AI v1
+
 ## Version 3.74.0, released 2026-07-28
 
 ### New features
