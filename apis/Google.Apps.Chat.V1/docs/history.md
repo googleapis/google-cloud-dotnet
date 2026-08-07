@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta28, released 2026-08-07
+
+### New features
+
+- Addition of the Search Messages API
+
+### Documentation improvements
+
+- Update reference documentation for the Search Messages API, and the message and Space resources
+
 ## Version 1.0.0-beta27, released 2026-07-28
 
 ### New features
