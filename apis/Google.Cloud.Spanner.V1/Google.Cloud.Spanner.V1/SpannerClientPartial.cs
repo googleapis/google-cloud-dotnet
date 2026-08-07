@@ -29,6 +29,8 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public virtual SpannerSettings Settings { get; protected set; }
 
+        internal SpannerBuiltInMetrics.ClientIdentity ClientIdentity { get; } = SpannerBuiltInMetrics.Labeler.GenerateIdentity();
+
         internal void MaybeApplyRouteToLeaderHeader(ref CallSettings settings, TransactionOptions.ModeOneofCase transactionMode)
         {
             if (transactionMode == TransactionOptions.ModeOneofCase.ReadWrite ||

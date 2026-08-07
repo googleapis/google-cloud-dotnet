@@ -110,4 +110,17 @@ public class SpannerBuiltInMetricsTests
         Assert.Equal(6, clientHash.Length);
         Assert.True(int.TryParse(clientHash, System.Globalization.NumberStyles.HexNumber, null, out int _));
     }
+
+    [Fact]
+    public void StreamTracer_RecordsOperationAndAttemptMetrics()
+    {
+        var request = new ReadRequest { SessionAsSessionName = s_sessionName };
+        var readOrQueryRequest = ReadOrQueryRequest.FromReadRequest(request);
+        var tracer = new SpannerBuiltInMetrics.StreamTracer(SpannerClient.Create(), readOrQueryRequest);
+
+        tracer.StartOperation();
+        tracer.StartAttempt();
+        tracer.RecordAttempt<PartialResultSet>(null, "OK");
+        tracer.RecordOperationSuccess();
+    }
 }
