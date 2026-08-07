@@ -4,6 +4,12 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 4.4.0, released 2026-08-07
+
+### New features
+
+- Add RequestOptions and request_options to Firestore v1 protos
+
 ## Version 4.3.0, released 2026-06-15
 
 ### New features
