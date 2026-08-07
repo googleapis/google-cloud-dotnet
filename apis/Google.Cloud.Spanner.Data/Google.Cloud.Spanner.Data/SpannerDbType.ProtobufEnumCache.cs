@@ -31,7 +31,7 @@ public partial class SpannerDbType
 
         /// <summary>
         /// If <paramref name="enumType"/> is a Protobuf enum, attempts to return the corresponding <see cref="EnumDescriptor"/>
-        /// from the cache. If not present in the cache, uses reflection to find it and add it to the cache, then returns it.
+        /// from the cache. If not present in the cache, uses reflection to find it and add it to the cache then returns it.
         /// Returns null if <paramref name="enumType"/> is not a Protobuf enum.
         /// </summary>
         /// <param name="enumType">The Protobuf enum type</param>
