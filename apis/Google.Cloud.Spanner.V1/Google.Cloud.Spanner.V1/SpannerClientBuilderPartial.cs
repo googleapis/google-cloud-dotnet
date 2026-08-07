@@ -187,7 +187,9 @@ namespace Google.Cloud.Spanner.V1
                     GetChannelOptions(),
                     GetApiConfig(),
                     EffectiveGrpcAdapter);
-            return invoker.Intercept(RequestIdOnExceptionInterceptor.Instance);
+            return invoker
+                .Intercept(RequestIdOnExceptionInterceptor.Instance)
+                .Intercept(new SpannerBuiltInMetrics.MetricsInterceptor(SpannerBuiltInMetrics.Labeler.GenerateIdentity()));
         }
 
         /// <inheritdoc/>
@@ -202,7 +204,9 @@ namespace Google.Cloud.Spanner.V1
                     GetChannelOptions(),
                     GetApiConfig(),
                     EffectiveGrpcAdapter);
-            return invoker.Intercept(RequestIdOnExceptionInterceptor.Instance);
+            return invoker
+                .Intercept(RequestIdOnExceptionInterceptor.Instance)
+                .Intercept(new SpannerBuiltInMetrics.MetricsInterceptor(SpannerBuiltInMetrics.Labeler.GenerateIdentity()));
         }
 
         private ApiConfig GetApiConfig() => new ApiConfig
