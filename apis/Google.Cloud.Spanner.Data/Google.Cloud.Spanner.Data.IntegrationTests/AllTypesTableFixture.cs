@@ -15,6 +15,7 @@
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Protobuf.WellKnownTypes;
 using Xunit;
+using static Google.Cloud.Spanner.Data.SpannerDbType;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
@@ -53,6 +54,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  ProtobufPersonValue,
                  ProtobufValueWrapperValue,
                  UuidValue,
+                 TopLevelEnumValue,
+                 NestedEnumValue,
                  BoolArrayValue,
                  Int64ArrayValue,
                  Float32ArrayValue,
@@ -69,6 +72,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  ProtobufRectangleArrayValue,
                  ProtobufPersonArrayValue,
                  UuidArrayValue,
+                 TopLevelEnumArrayValue,
+                 NestedEnumArrayValue,
                  ProtobufValueWrapperArrayValue) VALUES(
                  @K,
                  @BoolValue,
@@ -87,6 +92,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @ProtobufPersonValue,
                  @ProtobufValueWrapperValue,
                  @UuidValue,
+                 @TopLevelEnumValue,
+                 @NestedEnumValue,
                  @BoolArrayValue,
                  @Int64ArrayValue,
                  @Float32ArrayValue,
@@ -103,6 +110,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @ProtobufRectangleArrayValue,
                  @ProtobufPersonArrayValue,
                  @UuidArrayValue,
+                 @TopLevelEnumArrayValue,
+                 @NestedEnumArrayValue,
                  @ProtobufValueWrapperArrayValue
                )";
 
@@ -125,6 +134,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ProtobufPersonValue                 {Person.Descriptor.FullName},
                             ProtobufValueWrapperValue           {ValueWrapper.Descriptor.FullName},
                             UuidValue                           UUID,
+                            TopLevelEnumValue                   {ProtobufEnumCache.GetEnumDescriptor(typeof(Color)).FullName},
+                            NestedEnumValue                     {ProtobufEnumCache.GetEnumDescriptor(typeof(Pet.Types.Species)).FullName},
                             BoolArrayValue                      ARRAY<BOOL>,
                             Int64ArrayValue                     ARRAY<INT64>,
                             Float32ArrayValue                   ARRAY<FLOAT32>,
@@ -141,7 +152,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ProtobufRectangleArrayValue         ARRAY<{Rectangle.Descriptor.FullName}>,
                             ProtobufPersonArrayValue            ARRAY<{Person.Descriptor.FullName}>,
                             UuidArrayValue                      ARRAY<UUID>,
-                            ProtobufValueWrapperArrayValue      ARRAY<{ValueWrapper.Descriptor.FullName}>,
+                            TopLevelEnumArrayValue              ARRAY<{ProtobufEnumCache.GetEnumDescriptor(typeof(Color)).FullName}>,
+                            NestedEnumArrayValue                ARRAY<{ProtobufEnumCache.GetEnumDescriptor(typeof(Pet.Types.Species)).FullName}>,
+                            ProtobufValueWrapperArrayValue      ARRAY<{ValueWrapper.Descriptor.FullName}>
                           ) PRIMARY KEY(K)");
 
         private string MaybeEmptyOnProduction(string text, bool skip) => skip && !RunningOnEmulator ? "" : text;

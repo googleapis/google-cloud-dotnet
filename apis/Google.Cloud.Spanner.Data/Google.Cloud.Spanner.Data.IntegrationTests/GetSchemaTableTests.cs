@@ -76,6 +76,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "ProtobufValueValue", typeof(Value), SpannerDbType.FromClrType(typeof(Value)) },
                 { "ProtobufPersonValue", typeof(Value), SpannerDbType.FromClrType(typeof(Person)) },
                 { "ProtobufValueWrapperValue", typeof(Value), SpannerDbType.FromClrType(typeof(ValueWrapper)) },
+                { "TopLevelEnumValue", typeof(Value), SpannerDbType.FromClrType(typeof(Color)) },
+                { "NestedEnumValue", typeof(Value), SpannerDbType.FromClrType(typeof(Pet.Types.Species)) },
                 { "UuidValue", typeof(Guid), SpannerDbType.Uuid },
 
                 // Array types.
@@ -95,6 +97,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "ProtobufValueArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))) },
                 { "ProtobufPersonArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))) },
                 { "ProtobufValueWrapperArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))) },
+                { "TopLevelEnumArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Color))) },
+                { "NestedEnumArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Pet.Types.Species))) },
                 { "UuidArrayValue", typeof(List<Guid>), SpannerDbType.ArrayOf(SpannerDbType.Uuid) },
             };
 

@@ -110,11 +110,12 @@ namespace Google.Cloud.Spanner.Data
                     spannerDbType = new SpannerDbType(fields);
                     return true;
                 case TypeCode.Proto:
+                case TypeCode.Enum:
                     if (string.IsNullOrEmpty(remainder))
                     {
                         return false;
                     }
-                    spannerDbType = new SpannerDbType(remainder);
+                    spannerDbType = new SpannerDbType(type.Code, remainder);
                     return true;
                 default:
                     return false;
@@ -233,7 +234,8 @@ namespace Google.Cloud.Spanner.Data
             }
             if (ProtobufTypeName != null)
             {
-                return $"PROTO<{ProtobufTypeName}>";
+                string prefix = TypeCode.ToString().ToUpperInvariant();
+                return $"{prefix}<{ProtobufTypeName}>";
             }
             if (TypeAnnotationCode == TypeAnnotationCode.PgNumeric)
             {

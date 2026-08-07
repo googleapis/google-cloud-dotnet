@@ -148,6 +148,18 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f");
         }
 
+        private static IEnumerable<Color> GetTopLevelEnumsForArray()
+        {
+            yield return Color.Blue;
+            yield return Color.Red;
+        }
+
+        private static IEnumerable<Pet.Types.Species> GetNestedEnumsForArray()
+        {
+            yield return Pet.Types.Species.Horse;
+            yield return Pet.Types.Species.Cat;
+        }
+
         private static readonly BigInteger MaxValueForPgNumeric = BigInteger.Pow(10, 147455) - 1;
 
         private static readonly string ExpectedMaxValueForPgNumeric = MaxValueForPgNumeric.ToString();
@@ -245,7 +257,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { 1L, SpannerDbType.Int64, Quote("1") };
             yield return new object[] { (ulong)1, SpannerDbType.Int64, Quote("1") };
             yield return new object[] { (short)1, SpannerDbType.Int64, Quote("1") };
-            yield return new object[] { (ushort)1, SpannerDbType.Int64, Quote("1") };
+            yield return new object[] { (ushort) 1, SpannerDbType.Int64, Quote("1") };
             yield return new object[] { "1", SpannerDbType.Int64, Quote("1") };
 
             // Spanner type = Bool tests.
@@ -300,6 +312,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { (short)1, SpannerDbType.String, Quote("1") };
             yield return new object[] { (ushort)1, SpannerDbType.String, Quote("1") };
             yield return new object[] { s_testDate, SpannerDbType.String, Quote("2017-01-31T03:15:30.5Z") };
+
             // Spanner type = Numeric tests.
             yield return new object[] { SpannerNumeric.Epsilon, SpannerDbType.Numeric, Quote("0.000000001") };
             yield return new object[] { (byte)1, SpannerDbType.Numeric, Quote("1") };
@@ -382,6 +395,10 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { s_bytesToEncode, SpannerDbType.Bytes, Quote(s_base64Encoded) };
             yield return new object[] { "passthrubadbytes", SpannerDbType.Bytes, Quote("passthrubadbytes") };
 
+            // Protobuf Enum
+            yield return new object[] { Color.Red, SpannerDbType.FromClrType(typeof(Color)), Quote(((long) Color.Red).ToString()) };
+            yield return new object[] { Pet.Types.Species.Dog, SpannerDbType.FromClrType(typeof(Pet.Types.Species)), Quote(((long) Pet.Types.Species.Dog).ToString()) };
+
             // List test cases (list of type X).
             yield return new object[]
             {
@@ -442,6 +459,16 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 new List<Guid>(GetGuidsForArray()), SpannerDbType.ArrayOf(SpannerDbType.Uuid),
                 "[ \"00000000-0000-0000-0000-000000000000\", \"8f8c4746-17b1-4d9f-a634-58e11942095f\" ]"
+            };
+            yield return new object[]
+            {
+                new List<Color>(GetTopLevelEnumsForArray()), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Color))),
+                $"[ {Quote(((long) Color.Blue).ToString())}, {Quote(((long) Color.Red).ToString())} ]"
+            };
+            yield return new object[]
+            {
+                new List<Pet.Types.Species>(GetNestedEnumsForArray()), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Pet.Types.Species))),
+                $"[ {Quote(((long) Pet.Types.Species.Horse).ToString())}, {Quote(((long) Pet.Types.Species.Cat).ToString())} ]"
             };
             // JSON can not be converted from Value to Clr, as there is no unique Clr type for JSON.
             yield return new object[]
@@ -878,6 +905,28 @@ namespace Google.Cloud.Spanner.Data.Tests
             { 0L, SpannerDbType.Int64, typeof(long) },
             { null, SpannerDbType.String, typeof(string) }
         };
+
+        [Fact]
+        public void ToProtobufType_DifferentEnumTypeAndValue_ThrowsException()
+        {
+            var protobufEnumValue = Color.Red;
+            var differentProtobufEnumDbType = SpannerDbType.FromClrType(typeof(Pet.Types.Species));
+
+            Assert.Throws<ArgumentException>(()
+                => differentProtobufEnumDbType.ToProtobufValue(protobufEnumValue));
+        }
+
+        [Fact]
+        public void ConvertToClrType_DifferentEnumTypeAndValue_ThrowsException()
+        {
+            var protobufEnumWireValue = JsonParser.Default.Parse<Value>(Quote(((long) Color.Red).ToString()));
+            var protobufEnumDbType = SpannerDbType.FromClrType(typeof(Color));
+
+            var differentProtobufEnumClrType = typeof(Pet.Types.Species);
+
+            Assert.Throws<ArgumentException>(()
+                => protobufEnumDbType.ConvertToClrType(protobufValue: protobufEnumWireValue, targetClrType: differentProtobufEnumClrType, SpannerConversionOptions.Default, topLevel: true));
+        }
 
         [Theory]
         [MemberData(nameof(UseClrDefaultForNulls))]
