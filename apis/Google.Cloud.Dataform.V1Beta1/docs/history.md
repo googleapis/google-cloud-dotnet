@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta13, released 2026-08-07
+
+### New features
+
+- Add workflow trigger configuration support
+- Add PipelineConfig to support different pipeline types and paths
+- Add GCS repository snapshot support for notebook runtimes
+- Add file_path tracking to notebook workflow actions
+
+### Documentation improvements
+
+- A comment for field `time_zone` in message `.google.cloud.dataform.v1beta1.ReleaseConfig` is changed
+- A comment for field `time_zone` in message `.google.cloud.dataform.v1beta1.WorkflowConfig` is changed
+
 ## Version 1.0.0-beta12, released 2026-06-22
 
 ### New features
