@@ -4797,13 +4797,12 @@
         },
         {
             "id": "Google.Cloud.Maintenance.Api.V1",
-            "currentVersion": "1.0.0-beta01",
-            "nextVersion": "1.0.0",
+            "currentVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-12-09T11:29:42.796464234Z",
+            "releaseTimestamp": "2026-08-10T23:07:21.756591014Z",
             "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "lastReleasedCommit": "fe58211356a91f4140ed51893703910db05ade91",
+            "lastReleasedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "apiPaths": [
                 "google/cloud/maintenance/api/v1"
             ],
