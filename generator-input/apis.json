@@ -3023,6 +3023,26 @@
       ]
     },
     {
+      "id": "Google.Cloud.Ftp.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud FTP",
+      "productUrl": "https://docs.cloud.google.com/cloud-ftp",
+      "description": "A managed, cloud-native solution to move data in and out of Google Cloud by using SSH File Transfer Protocol (SFTP).",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/ftp/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "ftp",
+      "serviceConfigFile": "ftp_v1.yaml",
+      "transport": "rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Functions.V1",
       "version": "2.8.0",
       "type": "grpc",

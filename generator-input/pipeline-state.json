@@ -5139,6 +5139,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.CommerceProducer.V1Beta/Google.Cloud.CommerceProducer.V1Beta"
             ]
+        },
+        {
+            "id": "Google.Cloud.Ftp.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/ftp/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Ftp.V1/Google.Cloud.Ftp.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
