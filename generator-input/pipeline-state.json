@@ -4175,11 +4175,10 @@
         },
         {
             "id": "Google.Cloud.Chronicle.V1",
-            "currentVersion": "1.0.0-beta07",
-            "nextVersion": "1.0.0",
+            "currentVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-07-06T19:11:14.127293999Z",
+            "releaseTimestamp": "2026-08-10T22:54:44.113064870Z",
             "lastGeneratedCommit": "0fcabfc28371e7bab8107402eb06ad58134ee383",
             "lastReleasedCommit": "0fcabfc28371e7bab8107402eb06ad58134ee383",
             "apiPaths": [
