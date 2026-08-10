@@ -2797,7 +2797,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T09:32:31.018459819Z",
-            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastGeneratedCommit": "2d0def9c8f9a195fda2b9f524e5eedcfa1b670b6",
             "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/retail/v2"
