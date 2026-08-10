@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta83, released 2026-08-10
+
+### New features
+
+- Add endpoint field to BatchPredictionJob for bring-your-own-endpoint batch prediction
+
 ## Version 1.0.0-beta82, released 2026-08-07
 
 ### New features
