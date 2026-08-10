@@ -310,6 +310,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             set => Model = value?.ToString() ?? "";
         }
 
+        /// <summary>
+        /// <see cref="EndpointName"/>-typed view over the <see cref="Endpoint"/> resource name property.
+        /// </summary>
+        public EndpointName EndpointAsEndpointName
+        {
+            get => string.IsNullOrEmpty(Endpoint) ? null : EndpointName.Parse(Endpoint, allowUnparsed: true);
+            set => Endpoint = value?.ToString() ?? "";
+        }
+
         public partial class Types
         {
             public partial class OutputInfo
