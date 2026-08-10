@@ -3490,13 +3490,12 @@
         },
         {
             "id": "Google.Cloud.VisionAI.V1",
-            "currentVersion": "1.0.0-beta01",
-            "nextVersion": "1.0.0",
+            "currentVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-02-09T14:14:24.893592892Z",
+            "releaseTimestamp": "2026-08-10T22:50:29.435747157Z",
             "lastGeneratedCommit": "359422ce8d726f52e0ad35b48024896c714fa033",
-            "lastReleasedCommit": "fe4d9b3bcaae6282d1d6ee57a42fed53b334931b",
+            "lastReleasedCommit": "359422ce8d726f52e0ad35b48024896c714fa033",
             "apiPaths": [
                 "google/cloud/visionai/v1"
             ],
