@@ -4727,13 +4727,12 @@
         },
         {
             "id": "Google.Cloud.GkeRecommender.V1",
-            "currentVersion": "1.0.0-beta01",
-            "nextVersion": "1.0.0",
+            "currentVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-01-08T09:01:09.149280518Z",
+            "releaseTimestamp": "2026-08-10T23:05:55.486520156Z",
             "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
-            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
+            "lastReleasedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "apiPaths": [
                 "google/cloud/gkerecommender/v1"
             ],
