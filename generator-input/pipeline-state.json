@@ -4442,11 +4442,10 @@
         },
         {
             "id": "Google.Cloud.LicenseManager.V1",
-            "currentVersion": "1.0.0-beta01",
-            "nextVersion": "1.0.0",
+            "currentVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-05-18T14:20:52.910622347Z",
+            "releaseTimestamp": "2026-08-10T23:04:35.319265364Z",
             "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "lastReleasedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "apiPaths": [
