@@ -85,7 +85,7 @@ namespace Google.Cloud.Bigtable.V2 {
             "Z29vZ2xlLmJpZ3RhYmxlLnYyLlJvd0ZpbHRlchIyCgt0cnVlX2ZpbHRlchgC",
             "IAEoCzIdLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dGaWx0ZXISMwoMZmFsc2Vf",
             "ZmlsdGVyGAMgASgLMh0uZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd0ZpbHRlckII",
-            "CgZmaWx0ZXIirQgKCE11dGF0aW9uEjgKCHNldF9jZWxsGAEgASgLMiQuZ29v",
+            "CgZmaWx0ZXIi3gkKCE11dGF0aW9uEjgKCHNldF9jZWxsGAEgASgLMiQuZ29v",
             "Z2xlLmJpZ3RhYmxlLnYyLk11dGF0aW9uLlNldENlbGxIABI9CgthZGRfdG9f",
             "Y2VsbBgFIAEoCzImLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbi5BZGRU",
             "b0NlbGxIABJBCg1tZXJnZV90b19jZWxsGAYgASgLMiguZ29vZ2xlLmJpZ3Rh",
@@ -94,48 +94,52 @@ namespace Google.Cloud.Bigtable.V2 {
             "bGV0ZUZyb21Db2x1bW5IABJLChJkZWxldGVfZnJvbV9mYW1pbHkYAyABKAsy",
             "LS5nb29nbGUuYmlndGFibGUudjIuTXV0YXRpb24uRGVsZXRlRnJvbUZhbWls",
             "eUgAEkUKD2RlbGV0ZV9mcm9tX3JvdxgEIAEoCzIqLmdvb2dsZS5iaWd0YWJs",
-            "ZS52Mi5NdXRhdGlvbi5EZWxldGVGcm9tUm93SAAaYQoHU2V0Q2VsbBITCgtm",
-            "YW1pbHlfbmFtZRgBIAEoCRIYChBjb2x1bW5fcXVhbGlmaWVyGAIgASgMEhgK",
-            "EHRpbWVzdGFtcF9taWNyb3MYAyABKAMSDQoFdmFsdWUYBCABKAwarQEKCUFk",
-            "ZFRvQ2VsbBITCgtmYW1pbHlfbmFtZRgBIAEoCRIzChBjb2x1bW5fcXVhbGlm",
-            "aWVyGAIgASgLMhkuZ29vZ2xlLmJpZ3RhYmxlLnYyLlZhbHVlEiwKCXRpbWVz",
-            "dGFtcBgDIAEoCzIZLmdvb2dsZS5iaWd0YWJsZS52Mi5WYWx1ZRIoCgVpbnB1",
-            "dBgEIAEoCzIZLmdvb2dsZS5iaWd0YWJsZS52Mi5WYWx1ZRqvAQoLTWVyZ2VU",
-            "b0NlbGwSEwoLZmFtaWx5X25hbWUYASABKAkSMwoQY29sdW1uX3F1YWxpZmll",
-            "chgCIAEoCzIZLmdvb2dsZS5iaWd0YWJsZS52Mi5WYWx1ZRIsCgl0aW1lc3Rh",
-            "bXAYAyABKAsyGS5nb29nbGUuYmlndGFibGUudjIuVmFsdWUSKAoFaW5wdXQY",
-            "BCABKAsyGS5nb29nbGUuYmlndGFibGUudjIuVmFsdWUaeQoQRGVsZXRlRnJv",
-            "bUNvbHVtbhITCgtmYW1pbHlfbmFtZRgBIAEoCRIYChBjb2x1bW5fcXVhbGlm",
-            "aWVyGAIgASgMEjYKCnRpbWVfcmFuZ2UYAyABKAsyIi5nb29nbGUuYmlndGFi",
-            "bGUudjIuVGltZXN0YW1wUmFuZ2UaJwoQRGVsZXRlRnJvbUZhbWlseRITCgtm",
-            "YW1pbHlfbmFtZRgBIAEoCRoPCg1EZWxldGVGcm9tUm93QgoKCG11dGF0aW9u",
-            "IoABChNSZWFkTW9kaWZ5V3JpdGVSdWxlEhMKC2ZhbWlseV9uYW1lGAEgASgJ",
-            "EhgKEGNvbHVtbl9xdWFsaWZpZXIYAiABKAwSFgoMYXBwZW5kX3ZhbHVlGAMg",
-            "ASgMSAASGgoQaW5jcmVtZW50X2Ftb3VudBgEIAEoA0gAQgYKBHJ1bGUiQgoP",
-            "U3RyZWFtUGFydGl0aW9uEi8KCXJvd19yYW5nZRgBIAEoCzIcLmdvb2dsZS5i",
-            "aWd0YWJsZS52Mi5Sb3dSYW5nZSJXChhTdHJlYW1Db250aW51YXRpb25Ub2tl",
-            "bnMSOwoGdG9rZW5zGAEgAygLMisuZ29vZ2xlLmJpZ3RhYmxlLnYyLlN0cmVh",
-            "bUNvbnRpbnVhdGlvblRva2VuImAKF1N0cmVhbUNvbnRpbnVhdGlvblRva2Vu",
-            "EjYKCXBhcnRpdGlvbhgBIAEoCzIjLmdvb2dsZS5iaWd0YWJsZS52Mi5TdHJl",
-            "YW1QYXJ0aXRpb24SDQoFdG9rZW4YAiABKAkiDQoLUHJvdG9Gb3JtYXQiRgoO",
-            "Q29sdW1uTWV0YWRhdGESDAoEbmFtZRgBIAEoCRImCgR0eXBlGAIgASgLMhgu",
-            "Z29vZ2xlLmJpZ3RhYmxlLnYyLlR5cGUiQgoLUHJvdG9TY2hlbWESMwoHY29s",
-            "dW1ucxgBIAMoCzIiLmdvb2dsZS5iaWd0YWJsZS52Mi5Db2x1bW5NZXRhZGF0",
-            "YSJWChFSZXN1bHRTZXRNZXRhZGF0YRI3Cgxwcm90b19zY2hlbWEYASABKAsy",
-            "Hy5nb29nbGUuYmlndGFibGUudjIuUHJvdG9TY2hlbWFIAEIICgZzY2hlbWEi",
-            "NgoJUHJvdG9Sb3dzEikKBnZhbHVlcxgCIAMoCzIZLmdvb2dsZS5iaWd0YWJs",
-            "ZS52Mi5WYWx1ZSIkCg5Qcm90b1Jvd3NCYXRjaBISCgpiYXRjaF9kYXRhGAEg",
-            "ASgMItUBChBQYXJ0aWFsUmVzdWx0U2V0Ej4KEHByb3RvX3Jvd3NfYmF0Y2gY",
-            "AyABKAsyIi5nb29nbGUuYmlndGFibGUudjIuUHJvdG9Sb3dzQmF0Y2hIABIb",
-            "Cg5iYXRjaF9jaGVja3N1bRgGIAEoDUgBiAEBEhQKDHJlc3VtZV90b2tlbhgF",
-            "IAEoDBINCgVyZXNldBgHIAEoCBIcChRlc3RpbWF0ZWRfYmF0Y2hfc2l6ZRgE",
-            "IAEoBUIOCgxwYXJ0aWFsX3Jvd3NCEQoPX2JhdGNoX2NoZWNrc3VtIkwKC0lk",
-            "ZW1wb3RlbmN5Eg0KBXRva2VuGAEgASgMEi4KCnN0YXJ0X3RpbWUYAiABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQrMBChZjb20uZ29vZ2xlLmJp",
-            "Z3RhYmxlLnYyQglEYXRhUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9i",
-            "aWd0YWJsZS9hcGl2Mi9iaWd0YWJsZXBiO2JpZ3RhYmxlcGKqAhhHb29nbGUu",
-            "Q2xvdWQuQmlndGFibGUuVjLKAhhHb29nbGVcQ2xvdWRcQmlndGFibGVcVjLq",
-            "AhtHb29nbGU6OkNsb3VkOjpCaWd0YWJsZTo6VjJiBnByb3RvMw=="));
+            "ZS52Mi5NdXRhdGlvbi5EZWxldGVGcm9tUm93SAASSwoQdGltZXN0YW1wX29y",
+            "aWdpbhgHIAEoDjIsLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbi5UaW1l",
+            "c3RhbXBPcmlnaW5CA+BBARphCgdTZXRDZWxsEhMKC2ZhbWlseV9uYW1lGAEg",
+            "ASgJEhgKEGNvbHVtbl9xdWFsaWZpZXIYAiABKAwSGAoQdGltZXN0YW1wX21p",
+            "Y3JvcxgDIAEoAxINCgV2YWx1ZRgEIAEoDBqtAQoJQWRkVG9DZWxsEhMKC2Zh",
+            "bWlseV9uYW1lGAEgASgJEjMKEGNvbHVtbl9xdWFsaWZpZXIYAiABKAsyGS5n",
+            "b29nbGUuYmlndGFibGUudjIuVmFsdWUSLAoJdGltZXN0YW1wGAMgASgLMhku",
+            "Z29vZ2xlLmJpZ3RhYmxlLnYyLlZhbHVlEigKBWlucHV0GAQgASgLMhkuZ29v",
+            "Z2xlLmJpZ3RhYmxlLnYyLlZhbHVlGq8BCgtNZXJnZVRvQ2VsbBITCgtmYW1p",
+            "bHlfbmFtZRgBIAEoCRIzChBjb2x1bW5fcXVhbGlmaWVyGAIgASgLMhkuZ29v",
+            "Z2xlLmJpZ3RhYmxlLnYyLlZhbHVlEiwKCXRpbWVzdGFtcBgDIAEoCzIZLmdv",
+            "b2dsZS5iaWd0YWJsZS52Mi5WYWx1ZRIoCgVpbnB1dBgEIAEoCzIZLmdvb2ds",
+            "ZS5iaWd0YWJsZS52Mi5WYWx1ZRp5ChBEZWxldGVGcm9tQ29sdW1uEhMKC2Zh",
+            "bWlseV9uYW1lGAEgASgJEhgKEGNvbHVtbl9xdWFsaWZpZXIYAiABKAwSNgoK",
+            "dGltZV9yYW5nZRgDIAEoCzIiLmdvb2dsZS5iaWd0YWJsZS52Mi5UaW1lc3Rh",
+            "bXBSYW5nZRonChBEZWxldGVGcm9tRmFtaWx5EhMKC2ZhbWlseV9uYW1lGAEg",
+            "ASgJGg8KDURlbGV0ZUZyb21Sb3ciYgoPVGltZXN0YW1wT3JpZ2luEiAKHFRJ",
+            "TUVTVEFNUF9PUklHSU5fVU5TUEVDSUZJRUQQABISCg5VU0VSX1NQRUNJRklF",
+            "RBABEhkKFUNMSUVOVF9BVVRPX0dFTkVSQVRFRBACQgoKCG11dGF0aW9uIoAB",
+            "ChNSZWFkTW9kaWZ5V3JpdGVSdWxlEhMKC2ZhbWlseV9uYW1lGAEgASgJEhgK",
+            "EGNvbHVtbl9xdWFsaWZpZXIYAiABKAwSFgoMYXBwZW5kX3ZhbHVlGAMgASgM",
+            "SAASGgoQaW5jcmVtZW50X2Ftb3VudBgEIAEoA0gAQgYKBHJ1bGUiQgoPU3Ry",
+            "ZWFtUGFydGl0aW9uEi8KCXJvd19yYW5nZRgBIAEoCzIcLmdvb2dsZS5iaWd0",
+            "YWJsZS52Mi5Sb3dSYW5nZSJXChhTdHJlYW1Db250aW51YXRpb25Ub2tlbnMS",
+            "OwoGdG9rZW5zGAEgAygLMisuZ29vZ2xlLmJpZ3RhYmxlLnYyLlN0cmVhbUNv",
+            "bnRpbnVhdGlvblRva2VuImAKF1N0cmVhbUNvbnRpbnVhdGlvblRva2VuEjYK",
+            "CXBhcnRpdGlvbhgBIAEoCzIjLmdvb2dsZS5iaWd0YWJsZS52Mi5TdHJlYW1Q",
+            "YXJ0aXRpb24SDQoFdG9rZW4YAiABKAkiDQoLUHJvdG9Gb3JtYXQiRgoOQ29s",
+            "dW1uTWV0YWRhdGESDAoEbmFtZRgBIAEoCRImCgR0eXBlGAIgASgLMhguZ29v",
+            "Z2xlLmJpZ3RhYmxlLnYyLlR5cGUiQgoLUHJvdG9TY2hlbWESMwoHY29sdW1u",
+            "cxgBIAMoCzIiLmdvb2dsZS5iaWd0YWJsZS52Mi5Db2x1bW5NZXRhZGF0YSJW",
+            "ChFSZXN1bHRTZXRNZXRhZGF0YRI3Cgxwcm90b19zY2hlbWEYASABKAsyHy5n",
+            "b29nbGUuYmlndGFibGUudjIuUHJvdG9TY2hlbWFIAEIICgZzY2hlbWEiNgoJ",
+            "UHJvdG9Sb3dzEikKBnZhbHVlcxgCIAMoCzIZLmdvb2dsZS5iaWd0YWJsZS52",
+            "Mi5WYWx1ZSIkCg5Qcm90b1Jvd3NCYXRjaBISCgpiYXRjaF9kYXRhGAEgASgM",
+            "ItUBChBQYXJ0aWFsUmVzdWx0U2V0Ej4KEHByb3RvX3Jvd3NfYmF0Y2gYAyAB",
+            "KAsyIi5nb29nbGUuYmlndGFibGUudjIuUHJvdG9Sb3dzQmF0Y2hIABIbCg5i",
+            "YXRjaF9jaGVja3N1bRgGIAEoDUgBiAEBEhQKDHJlc3VtZV90b2tlbhgFIAEo",
+            "DBINCgVyZXNldBgHIAEoCBIcChRlc3RpbWF0ZWRfYmF0Y2hfc2l6ZRgEIAEo",
+            "BUIOCgxwYXJ0aWFsX3Jvd3NCEQoPX2JhdGNoX2NoZWNrc3VtIkwKC0lkZW1w",
+            "b3RlbmN5Eg0KBXRva2VuGAEgASgMEi4KCnN0YXJ0X3RpbWUYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQrMBChZjb20uZ29vZ2xlLmJpZ3Rh",
+            "YmxlLnYyQglEYXRhUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9iaWd0",
+            "YWJsZS9hcGl2Mi9iaWd0YWJsZXBiO2JpZ3RhYmxlcGKqAhhHb29nbGUuQ2xv",
+            "dWQuQmlndGFibGUuVjLKAhhHb29nbGVcQ2xvdWRcQmlndGFibGVcVjLqAhtH",
+            "b29nbGU6OkNsb3VkOjpCaWd0YWJsZTo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Bigtable.V2.TypesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -154,7 +158,7 @@ namespace Google.Cloud.Bigtable.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RowFilter), global::Google.Cloud.Bigtable.V2.RowFilter.Parser, new[]{ "Chain", "Interleave", "Condition", "Sink", "PassAllFilter", "BlockAllFilter", "RowKeyRegexFilter", "RowSampleFilter", "FamilyNameRegexFilter", "ColumnQualifierRegexFilter", "ColumnRangeFilter", "TimestampRangeFilter", "ValueRegexFilter", "ValueRangeFilter", "CellsPerRowOffsetFilter", "CellsPerRowLimitFilter", "CellsPerColumnLimitFilter", "StripValueTransformer", "ApplyLabelTransformer", "ValueBitmaskFilter" }, new[]{ "Filter" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RowFilter.Types.Chain), global::Google.Cloud.Bigtable.V2.RowFilter.Types.Chain.Parser, new[]{ "Filters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RowFilter.Types.Interleave), global::Google.Cloud.Bigtable.V2.RowFilter.Types.Interleave.Parser, new[]{ "Filters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RowFilter.Types.Condition), global::Google.Cloud.Bigtable.V2.RowFilter.Types.Condition.Parser, new[]{ "PredicateFilter", "TrueFilter", "FalseFilter" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation), global::Google.Cloud.Bigtable.V2.Mutation.Parser, new[]{ "SetCell", "AddToCell", "MergeToCell", "DeleteFromColumn", "DeleteFromFamily", "DeleteFromRow" }, new[]{ "Mutation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation.Types.SetCell), global::Google.Cloud.Bigtable.V2.Mutation.Types.SetCell.Parser, new[]{ "FamilyName", "ColumnQualifier", "TimestampMicros", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation), global::Google.Cloud.Bigtable.V2.Mutation.Parser, new[]{ "SetCell", "AddToCell", "MergeToCell", "DeleteFromColumn", "DeleteFromFamily", "DeleteFromRow", "TimestampOrigin" }, new[]{ "Mutation" }, new[]{ typeof(global::Google.Cloud.Bigtable.V2.Mutation.Types.TimestampOrigin) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation.Types.SetCell), global::Google.Cloud.Bigtable.V2.Mutation.Types.SetCell.Parser, new[]{ "FamilyName", "ColumnQualifier", "TimestampMicros", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation.Types.AddToCell), global::Google.Cloud.Bigtable.V2.Mutation.Types.AddToCell.Parser, new[]{ "FamilyName", "ColumnQualifier", "Timestamp", "Input" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation.Types.MergeToCell), global::Google.Cloud.Bigtable.V2.Mutation.Types.MergeToCell.Parser, new[]{ "FamilyName", "ColumnQualifier", "Timestamp", "Input" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromColumn), global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromColumn.Parser, new[]{ "FamilyName", "ColumnQualifier", "TimeRange" }, null, null, null, null),
@@ -6492,6 +6496,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Mutation(Mutation other) : this() {
+      timestampOrigin_ = other.timestampOrigin_;
       switch (other.MutationCase) {
         case MutationOneofCase.SetCell:
           SetCell = other.SetCell.Clone();
@@ -6612,6 +6617,21 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "timestamp_origin" field.</summary>
+    public const int TimestampOriginFieldNumber = 7;
+    private global::Google.Cloud.Bigtable.V2.Mutation.Types.TimestampOrigin timestampOrigin_ = global::Google.Cloud.Bigtable.V2.Mutation.Types.TimestampOrigin.Unspecified;
+    /// <summary>
+    /// Optional. The origin of the timestamp in this mutation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.Mutation.Types.TimestampOrigin TimestampOrigin {
+      get { return timestampOrigin_; }
+      set {
+        timestampOrigin_ = value;
+      }
+    }
+
     private object mutation_;
     /// <summary>Enum of possible cases for the "mutation" oneof.</summary>
     public enum MutationOneofCase {
@@ -6658,6 +6678,7 @@ namespace Google.Cloud.Bigtable.V2 {
       if (!object.Equals(DeleteFromColumn, other.DeleteFromColumn)) return false;
       if (!object.Equals(DeleteFromFamily, other.DeleteFromFamily)) return false;
       if (!object.Equals(DeleteFromRow, other.DeleteFromRow)) return false;
+      if (TimestampOrigin != other.TimestampOrigin) return false;
       if (MutationCase != other.MutationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6672,6 +6693,7 @@ namespace Google.Cloud.Bigtable.V2 {
       if (mutationCase_ == MutationOneofCase.DeleteFromColumn) hash ^= DeleteFromColumn.GetHashCode();
       if (mutationCase_ == MutationOneofCase.DeleteFromFamily) hash ^= DeleteFromFamily.GetHashCode();
       if (mutationCase_ == MutationOneofCase.DeleteFromRow) hash ^= DeleteFromRow.GetHashCode();
+      if (TimestampOrigin != global::Google.Cloud.Bigtable.V2.Mutation.Types.TimestampOrigin.Unspecified) hash ^= TimestampOrigin.GetHashCode();
       hash ^= (int) mutationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6715,6 +6737,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(MergeToCell);
       }
+      if (TimestampOrigin != global::Google.Cloud.Bigtable.V2.Mutation.Types.TimestampOrigin.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) TimestampOrigin);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6749,6 +6775,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(MergeToCell);
       }
+      if (TimestampOrigin != global::Google.Cloud.Bigtable.V2.Mutation.Types.TimestampOrigin.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) TimestampOrigin);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6777,6 +6807,9 @@ namespace Google.Cloud.Bigtable.V2 {
       if (mutationCase_ == MutationOneofCase.DeleteFromRow) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteFromRow);
       }
+      if (TimestampOrigin != global::Google.Cloud.Bigtable.V2.Mutation.Types.TimestampOrigin.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TimestampOrigin);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -6788,6 +6821,9 @@ namespace Google.Cloud.Bigtable.V2 {
     public void MergeFrom(Mutation other) {
       if (other == null) {
         return;
+      }
+      if (other.TimestampOrigin != global::Google.Cloud.Bigtable.V2.Mutation.Types.TimestampOrigin.Unspecified) {
+        TimestampOrigin = other.TimestampOrigin;
       }
       switch (other.MutationCase) {
         case MutationOneofCase.SetCell:
@@ -6901,6 +6937,10 @@ namespace Google.Cloud.Bigtable.V2 {
             MergeToCell = subBuilder;
             break;
           }
+          case 56: {
+            TimestampOrigin = (global::Google.Cloud.Bigtable.V2.Mutation.Types.TimestampOrigin) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -6974,6 +7014,10 @@ namespace Google.Cloud.Bigtable.V2 {
             MergeToCell = subBuilder;
             break;
           }
+          case 56: {
+            TimestampOrigin = (global::Google.Cloud.Bigtable.V2.Mutation.Types.TimestampOrigin) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -6984,6 +7028,32 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Represents the origin of the timestamp in the mutation.
+      /// </summary>
+      public enum TimestampOrigin {
+        /// <summary>
+        /// Default value. Should not be explicitly set.
+        /// </summary>
+        [pbr::OriginalName("TIMESTAMP_ORIGIN_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates that the timestamp was explicitly provided by the user (either
+        /// `>0` or `-1` for server-assigned).
+        /// The server will reject the mutation if the timestamp's precision does not
+        /// match the table's granularity.
+        /// (e.g., a millisecond table only allows timestamps that are multiples of
+        /// 1000).
+        /// </summary>
+        [pbr::OriginalName("USER_SPECIFIED")] UserSpecified = 1,
+        /// <summary>
+        /// Indicates that the timestamp was auto-generated by the client library.
+        /// The server will truncate the timestamp's precision to match the table's
+        /// granularity.
+        /// (e.g., zeroing the last 3 digits for a millisecond table).
+        /// </summary>
+        [pbr::OriginalName("CLIENT_AUTO_GENERATED")] ClientAutoGenerated = 2,
+      }
+
       /// <summary>
       /// A Mutation which sets the value of the specified cell.
       /// </summary>
