@@ -2104,6 +2104,7 @@
         {
             "id": "Google.Cloud.Memorystore.V1",
             "currentVersion": "1.0.0-beta09",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-07-20T19:17:16.253354969Z",
@@ -2524,6 +2525,7 @@
         {
             "id": "Google.Cloud.ParameterManager.V1",
             "currentVersion": "1.0.0-beta04",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T08:51:30.749475165Z",
@@ -3491,6 +3493,7 @@
         {
             "id": "Google.Cloud.VisionAI.V1",
             "currentVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-02-09T14:14:24.893592892Z",
@@ -4116,6 +4119,7 @@
         {
             "id": "Google.Cloud.StorageBatchOperations.V1",
             "currentVersion": "1.0.0-beta06",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-05-04T19:26:35.334904201Z",
@@ -4176,6 +4180,7 @@
         {
             "id": "Google.Cloud.Chronicle.V1",
             "currentVersion": "1.0.0-beta07",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-07-06T19:11:14.127293999Z",
@@ -4191,6 +4196,7 @@
         {
             "id": "Google.Cloud.DeviceStreaming.V1",
             "currentVersion": "1.0.0-beta02",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T17:26:27.439320482Z",
@@ -4206,6 +4212,7 @@
         {
             "id": "Google.Cloud.FinancialServices.V1",
             "currentVersion": "1.0.0-beta02",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T17:27:02.412023853Z",
@@ -4221,6 +4228,7 @@
         {
             "id": "Google.Cloud.Lustre.V1",
             "currentVersion": "1.0.0-beta04",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T22:15:10.249685096Z",
@@ -4266,6 +4274,7 @@
         {
             "id": "Google.Cloud.ModelArmor.V1",
             "currentVersion": "1.0.0-beta07",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-07-06T19:13:00.730555078Z",
@@ -4281,6 +4290,7 @@
         {
             "id": "Google.Cloud.Dataform.V1",
             "currentVersion": "1.0.0-beta05",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-08-07T17:40:22.871547387Z",
@@ -4413,6 +4423,7 @@
         {
             "id": "Google.Cloud.ConfigDelivery.V1",
             "currentVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-05-18T14:20:13.735117329Z",
@@ -4443,6 +4454,7 @@
         {
             "id": "Google.Cloud.LicenseManager.V1",
             "currentVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-05-18T14:20:52.910622347Z",
@@ -4713,6 +4725,7 @@
         {
             "id": "Google.Cloud.LocationFinder.V1",
             "currentVersion": "1.0.0-beta02",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T22:22:08.690652417Z",
@@ -4728,6 +4741,7 @@
         {
             "id": "Google.Cloud.GkeRecommender.V1",
             "currentVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-01-08T09:01:09.149280518Z",
@@ -4798,6 +4812,7 @@
         {
             "id": "Google.Cloud.Maintenance.Api.V1",
             "currentVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-12-09T11:29:42.796464234Z",
@@ -4843,6 +4858,7 @@
         {
             "id": "Google.Cloud.AuditManager.V1",
             "currentVersion": "1.0.0-beta03",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-03-02T14:12:00.030251252Z",
@@ -4858,6 +4874,7 @@
         {
             "id": "Google.Cloud.Ces.V1",
             "currentVersion": "1.0.0-beta04",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-07-13T19:24:26.191756558Z",
@@ -4888,6 +4905,7 @@
         {
             "id": "Google.Cloud.VectorSearch.V1",
             "currentVersion": "1.0.0-beta06",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-06-29T21:51:42.998483229Z",
@@ -4903,6 +4921,7 @@
         {
             "id": "Google.Cloud.HypercomputeCluster.V1",
             "currentVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-02-25T08:47:56.993994159Z",
@@ -5038,6 +5057,7 @@
         {
             "id": "Google.Cloud.GeminiDataAnalytics.V1",
             "currentVersion": "1.0.0-beta02",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-05-30T00:08:14.230489585Z",
@@ -5083,6 +5103,7 @@
         {
             "id": "Google.Cloud.AgentRegistry.V1",
             "currentVersion": "1.0.0-beta01",
+            "nextVersion": "1.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-06-29T21:53:14.938776655Z",
