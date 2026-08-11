@@ -54,7 +54,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "QZsBCixvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9DbG91ZFZtQ2x1",
             "c3RlchJKcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
             "L2Nsb3VkVm1DbHVzdGVycy97Y2xvdWRfdm1fY2x1c3Rlcn0qD2Nsb3VkVm1D",
-            "bHVzdGVyczIOY2xvdWRWbUNsdXN0ZXIitQ4KGENsb3VkVm1DbHVzdGVyUHJv",
+            "bHVzdGVyczIOY2xvdWRWbUNsdXN0ZXIixRIKGENsb3VkVm1DbHVzdGVyUHJv",
             "cGVydGllcxIRCgRvY2lkGAEgASgJQgPgQQMSXwoMbGljZW5zZV90eXBlGAIg",
             "ASgOMkQuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkNsb3VkVm1D",
             "bHVzdGVyUHJvcGVydGllcy5MaWNlbnNlVHlwZUID4EECEhcKCmdpX3ZlcnNp",
@@ -86,30 +86,41 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "ZC5vcmFjbGVkYXRhYmFzZS52MS5Db21wdXRlTW9kZWxCA+BBAxJ0ChdzdG9y",
             "YWdlX21hbmFnZW1lbnRfdHlwZRgmIAEoDjJOLmdvb2dsZS5jbG91ZC5vcmFj",
             "bGVkYXRhYmFzZS52MS5DbG91ZFZtQ2x1c3RlclByb3BlcnRpZXMuU3RvcmFn",
-            "ZU1hbmFnZW1lbnRUeXBlQgPgQQMiXQoLTGljZW5zZVR5cGUSHAoYTElDRU5T",
-            "RV9UWVBFX1VOU1BFQ0lGSUVEEAASFAoQTElDRU5TRV9JTkNMVURFRBABEhoK",
-            "FkJSSU5HX1lPVVJfT1dOX0xJQ0VOU0UQAiJHCg5EaXNrUmVkdW5kYW5jeRIf",
-            "ChtESVNLX1JFRFVOREFOQ1lfVU5TUEVDSUZJRUQQABIICgRISUdIEAESCgoG",
-            "Tk9STUFMEAIilwEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASEAoM",
-            "UFJPVklTSU9OSU5HEAESDQoJQVZBSUxBQkxFEAISDAoIVVBEQVRJTkcQAxIP",
-            "CgtURVJNSU5BVElORxAEEg4KClRFUk1JTkFURUQQBRIKCgZGQUlMRUQQBhIb",
-            "ChdNQUlOVEVOQU5DRV9JTl9QUk9HUkVTUxAHIlcKFVN0b3JhZ2VNYW5hZ2Vt",
-            "ZW50VHlwZRInCiNTVE9SQUdFX01BTkFHRU1FTlRfVFlQRV9VTlNQRUNJRklF",
-            "RBAAEgcKA0FTTRABEgwKCEVYQVNDQUxFEAIijAEKFURhdGFDb2xsZWN0aW9u",
-            "T3B0aW9ucxInChpkaWFnbm9zdGljc19ldmVudHNfZW5hYmxlZBgBIAEoCEID",
-            "4EEBEiYKGWhlYWx0aF9tb25pdG9yaW5nX2VuYWJsZWQYAiABKAhCA+BBARIi",
-            "ChVpbmNpZGVudF9sb2dzX2VuYWJsZWQYAyABKAhCA+BBAULtAQoiY29tLmdv",
-            "b2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MUITQ2xvdWRWbUNsdXN0ZXJQ",
-            "cm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL29yYWNsZWRhdGFiYXNlL2Fw",
-            "aXYxL29yYWNsZWRhdGFiYXNlcGI7b3JhY2xlZGF0YWJhc2VwYqoCHkdvb2ds",
-            "ZS5DbG91ZC5PcmFjbGVEYXRhYmFzZS5WMcoCHkdvb2dsZVxDbG91ZFxPcmFj",
-            "bGVEYXRhYmFzZVxWMeoCIUdvb2dsZTo6Q2xvdWQ6Ok9yYWNsZURhdGFiYXNl",
-            "OjpWMWIGcHJvdG8z"));
+            "ZU1hbmFnZW1lbnRUeXBlQgPgQQMSegobdm1fZmlsZV9zeXN0ZW1fc3RvcmFn",
+            "ZV90eXBlGCcgASgOMlAuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYx",
+            "LkNsb3VkVm1DbHVzdGVyUHJvcGVydGllcy5WbUZpbGVTeXN0ZW1TdG9yYWdl",
+            "VHlwZUID4EEBEnEKFnZtX2JhY2t1cF9zdG9yYWdlX3R5cGUYKCABKA4yTC5n",
+            "b29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQ2xvdWRWbUNsdXN0ZXJQ",
+            "cm9wZXJ0aWVzLlZtQmFja3VwU3RvcmFnZVR5cGVCA+BBASJdCgtMaWNlbnNl",
+            "VHlwZRIcChhMSUNFTlNFX1RZUEVfVU5TUEVDSUZJRUQQABIUChBMSUNFTlNF",
+            "X0lOQ0xVREVEEAESGgoWQlJJTkdfWU9VUl9PV05fTElDRU5TRRACIkcKDkRp",
+            "c2tSZWR1bmRhbmN5Eh8KG0RJU0tfUkVEVU5EQU5DWV9VTlNQRUNJRklFRBAA",
+            "EggKBEhJR0gQARIKCgZOT1JNQUwQAiKXAQoFU3RhdGUSFQoRU1RBVEVfVU5T",
+            "UEVDSUZJRUQQABIQCgxQUk9WSVNJT05JTkcQARINCglBVkFJTEFCTEUQAhIM",
+            "CghVUERBVElORxADEg8KC1RFUk1JTkFUSU5HEAQSDgoKVEVSTUlOQVRFRBAF",
+            "EgoKBkZBSUxFRBAGEhsKF01BSU5URU5BTkNFX0lOX1BST0dSRVNTEAciVwoV",
+            "U3RvcmFnZU1hbmFnZW1lbnRUeXBlEicKI1NUT1JBR0VfTUFOQUdFTUVOVF9U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASBwoDQVNNEAESDAoIRVhBU0NBTEUQAiKXAQoX",
+            "Vm1GaWxlU3lzdGVtU3RvcmFnZVR5cGUSKwonVk1fRklMRV9TWVNURU1fU1RP",
+            "UkFHRV9UWVBFX1VOU1BFQ0lGSUVEEAASJQohVk1fRklMRV9TWVNURU1fU1RP",
+            "UkFHRV9UWVBFX0xPQ0FMEAESKAokVk1fRklMRV9TWVNURU1fU1RPUkFHRV9U",
+            "WVBFX0VYQVNDQUxFEAIihAEKE1ZtQmFja3VwU3RvcmFnZVR5cGUSJgoiVk1f",
+            "QkFDS1VQX1NUT1JBR0VfVFlQRV9VTlNQRUNJRklFRBAAEiAKHFZNX0JBQ0tV",
+            "UF9TVE9SQUdFX1RZUEVfTE9DQUwQARIjCh9WTV9CQUNLVVBfU1RPUkFHRV9U",
+            "WVBFX0VYQVNDQUxFEAIijAEKFURhdGFDb2xsZWN0aW9uT3B0aW9ucxInChpk",
+            "aWFnbm9zdGljc19ldmVudHNfZW5hYmxlZBgBIAEoCEID4EEBEiYKGWhlYWx0",
+            "aF9tb25pdG9yaW5nX2VuYWJsZWQYAiABKAhCA+BBARIiChVpbmNpZGVudF9s",
+            "b2dzX2VuYWJsZWQYAyABKAhCA+BBAULtAQoiY29tLmdvb2dsZS5jbG91ZC5v",
+            "cmFjbGVkYXRhYmFzZS52MUITQ2xvdWRWbUNsdXN0ZXJQcm90b1ABWkpjbG91",
+            "ZC5nb29nbGUuY29tL2dvL29yYWNsZWRhdGFiYXNlL2FwaXYxL29yYWNsZWRh",
+            "dGFiYXNlcGI7b3JhY2xlZGF0YWJhc2VwYqoCHkdvb2dsZS5DbG91ZC5PcmFj",
+            "bGVEYXRhYmFzZS5WMcoCHkdvb2dsZVxDbG91ZFxPcmFjbGVEYXRhYmFzZVxW",
+            "MeoCIUdvb2dsZTo6Q2xvdWQ6Ok9yYWNsZURhdGFiYXNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OracleDatabase.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmCluster), global::Google.Cloud.OracleDatabase.V1.CloudVmCluster.Parser, new[]{ "Name", "ExadataInfrastructure", "DisplayName", "Properties", "Labels", "CreateTime", "Cidr", "BackupSubnetCidr", "Network", "GcpOracleZone", "OdbNetwork", "OdbSubnet", "BackupOdbSubnet", "IdentityConnector", "ExascaleDbStorageVault" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties), global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Parser, new[]{ "Ocid", "LicenseType", "GiVersion", "TimeZone", "SshPublicKeys", "NodeCount", "Shape", "OcpuCount", "MemorySizeGb", "DbNodeStorageSizeGb", "StorageSizeGb", "DataStorageSizeTb", "DiskRedundancy", "SparseDiskgroupEnabled", "LocalBackupEnabled", "HostnamePrefix", "DiagnosticsDataCollectionOptions", "State", "ScanListenerPortTcp", "ScanListenerPortTcpSsl", "Domain", "ScanDns", "Hostname", "CpuCoreCount", "SystemVersion", "ScanIpIds", "ScanDnsRecordId", "OciUrl", "DbServerOcids", "CompartmentId", "DnsListenerIp", "ClusterName", "ComputeModel", "StorageManagementType" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.LicenseType), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.DiskRedundancy), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.State), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.StorageManagementType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties), global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Parser, new[]{ "Ocid", "LicenseType", "GiVersion", "TimeZone", "SshPublicKeys", "NodeCount", "Shape", "OcpuCount", "MemorySizeGb", "DbNodeStorageSizeGb", "StorageSizeGb", "DataStorageSizeTb", "DiskRedundancy", "SparseDiskgroupEnabled", "LocalBackupEnabled", "HostnamePrefix", "DiagnosticsDataCollectionOptions", "State", "ScanListenerPortTcp", "ScanListenerPortTcpSsl", "Domain", "ScanDns", "Hostname", "CpuCoreCount", "SystemVersion", "ScanIpIds", "ScanDnsRecordId", "OciUrl", "DbServerOcids", "CompartmentId", "DnsListenerIp", "ClusterName", "ComputeModel", "StorageManagementType", "VmFileSystemStorageType", "VmBackupStorageType" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.LicenseType), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.DiskRedundancy), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.State), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.StorageManagementType), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmFileSystemStorageType), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmBackupStorageType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DataCollectionOptions), global::Google.Cloud.OracleDatabase.V1.DataCollectionOptions.Parser, new[]{ "DiagnosticsEventsEnabled", "HealthMonitoringEnabled", "IncidentLogsEnabled" }, null, null, null, null)
           }));
     }
@@ -987,6 +998,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
       clusterName_ = other.clusterName_;
       computeModel_ = other.computeModel_;
       storageManagementType_ = other.storageManagementType_;
+      vmFileSystemStorageType_ = other.vmFileSystemStorageType_;
+      vmBackupStorageType_ = other.vmBackupStorageType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1507,6 +1520,38 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
+    /// <summary>Field number for the "vm_file_system_storage_type" field.</summary>
+    public const int VmFileSystemStorageTypeFieldNumber = 39;
+    private global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmFileSystemStorageType vmFileSystemStorageType_ = global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmFileSystemStorageType.Unspecified;
+    /// <summary>
+    /// Optional. Specifies whether VM file system storage / VM images are stored
+    /// on local DB server storage or Exascale storage.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmFileSystemStorageType VmFileSystemStorageType {
+      get { return vmFileSystemStorageType_; }
+      set {
+        vmFileSystemStorageType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vm_backup_storage_type" field.</summary>
+    public const int VmBackupStorageTypeFieldNumber = 40;
+    private global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmBackupStorageType vmBackupStorageType_ = global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmBackupStorageType.Unspecified;
+    /// <summary>
+    /// Optional. Specifies whether VM backups are stored on local DB server
+    /// storage or Exascale storage.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmBackupStorageType VmBackupStorageType {
+      get { return vmBackupStorageType_; }
+      set {
+        vmBackupStorageType_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1556,6 +1601,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (ClusterName != other.ClusterName) return false;
       if (ComputeModel != other.ComputeModel) return false;
       if (StorageManagementType != other.StorageManagementType) return false;
+      if (VmFileSystemStorageType != other.VmFileSystemStorageType) return false;
+      if (VmBackupStorageType != other.VmBackupStorageType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1597,6 +1644,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (ClusterName.Length != 0) hash ^= ClusterName.GetHashCode();
       if (ComputeModel != global::Google.Cloud.OracleDatabase.V1.ComputeModel.Unspecified) hash ^= ComputeModel.GetHashCode();
       if (StorageManagementType != global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.StorageManagementType.Unspecified) hash ^= StorageManagementType.GetHashCode();
+      if (VmFileSystemStorageType != global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmFileSystemStorageType.Unspecified) hash ^= VmFileSystemStorageType.GetHashCode();
+      if (VmBackupStorageType != global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmBackupStorageType.Unspecified) hash ^= VmBackupStorageType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1742,6 +1791,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(176, 2);
         output.WriteEnum((int) StorageManagementType);
       }
+      if (VmFileSystemStorageType != global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmFileSystemStorageType.Unspecified) {
+        output.WriteRawTag(184, 2);
+        output.WriteEnum((int) VmFileSystemStorageType);
+      }
+      if (VmBackupStorageType != global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmBackupStorageType.Unspecified) {
+        output.WriteRawTag(192, 2);
+        output.WriteEnum((int) VmBackupStorageType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1879,6 +1936,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(176, 2);
         output.WriteEnum((int) StorageManagementType);
       }
+      if (VmFileSystemStorageType != global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmFileSystemStorageType.Unspecified) {
+        output.WriteRawTag(184, 2);
+        output.WriteEnum((int) VmFileSystemStorageType);
+      }
+      if (VmBackupStorageType != global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmBackupStorageType.Unspecified) {
+        output.WriteRawTag(192, 2);
+        output.WriteEnum((int) VmBackupStorageType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1984,6 +2049,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (StorageManagementType != global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.StorageManagementType.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) StorageManagementType);
+      }
+      if (VmFileSystemStorageType != global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmFileSystemStorageType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) VmFileSystemStorageType);
+      }
+      if (VmBackupStorageType != global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmBackupStorageType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) VmBackupStorageType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2098,6 +2169,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (other.StorageManagementType != global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.StorageManagementType.Unspecified) {
         StorageManagementType = other.StorageManagementType;
+      }
+      if (other.VmFileSystemStorageType != global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmFileSystemStorageType.Unspecified) {
+        VmFileSystemStorageType = other.VmFileSystemStorageType;
+      }
+      if (other.VmBackupStorageType != global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmBackupStorageType.Unspecified) {
+        VmBackupStorageType = other.VmBackupStorageType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2258,6 +2335,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 304: {
             StorageManagementType = (global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.StorageManagementType) input.ReadEnum();
+            break;
+          }
+          case 312: {
+            VmFileSystemStorageType = (global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmFileSystemStorageType) input.ReadEnum();
+            break;
+          }
+          case 320: {
+            VmBackupStorageType = (global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmBackupStorageType) input.ReadEnum();
             break;
           }
         }
@@ -2421,6 +2506,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
             StorageManagementType = (global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.StorageManagementType) input.ReadEnum();
             break;
           }
+          case 312: {
+            VmFileSystemStorageType = (global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmFileSystemStorageType) input.ReadEnum();
+            break;
+          }
+          case 320: {
+            VmBackupStorageType = (global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.VmBackupStorageType) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -2521,6 +2614,42 @@ namespace Google.Cloud.OracleDatabase.V1 {
         /// Exascale storage management.
         /// </summary>
         [pbr::OriginalName("EXASCALE")] Exascale = 2,
+      }
+
+      /// <summary>
+      /// Storage types for VM File System.
+      /// </summary>
+      public enum VmFileSystemStorageType {
+        /// <summary>
+        /// Unspecified storage type.
+        /// </summary>
+        [pbr::OriginalName("VM_FILE_SYSTEM_STORAGE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Local DB server storage.
+        /// </summary>
+        [pbr::OriginalName("VM_FILE_SYSTEM_STORAGE_TYPE_LOCAL")] Local = 1,
+        /// <summary>
+        /// Exascale storage.
+        /// </summary>
+        [pbr::OriginalName("VM_FILE_SYSTEM_STORAGE_TYPE_EXASCALE")] Exascale = 2,
+      }
+
+      /// <summary>
+      /// Storage types for VM Backup.
+      /// </summary>
+      public enum VmBackupStorageType {
+        /// <summary>
+        /// Unspecified storage type.
+        /// </summary>
+        [pbr::OriginalName("VM_BACKUP_STORAGE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Local DB server storage.
+        /// </summary>
+        [pbr::OriginalName("VM_BACKUP_STORAGE_TYPE_LOCAL")] Local = 1,
+        /// <summary>
+        /// Exascale storage.
+        /// </summary>
+        [pbr::OriginalName("VM_BACKUP_STORAGE_TYPE_EXASCALE")] Exascale = 2,
       }
 
     }

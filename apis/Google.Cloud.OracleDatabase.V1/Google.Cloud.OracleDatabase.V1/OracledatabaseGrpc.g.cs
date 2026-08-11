@@ -158,6 +158,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.FailoverAutonomousDatabaseRequest> __Marshaller_google_cloud_oracledatabase_v1_FailoverAutonomousDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.FailoverAutonomousDatabaseRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.RefreshAutonomousDatabaseRequest> __Marshaller_google_cloud_oracledatabase_v1_RefreshAutonomousDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.RefreshAutonomousDatabaseRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.GetAutonomousDatabaseRefreshableClonesRequest> __Marshaller_google_cloud_oracledatabase_v1_GetAutonomousDatabaseRefreshableClonesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.GetAutonomousDatabaseRefreshableClonesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones> __Marshaller_google_cloud_oracledatabase_v1_AutonomousDatabaseRefreshableClones = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListOdbNetworksRequest> __Marshaller_google_cloud_oracledatabase_v1_ListOdbNetworksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListOdbNetworksRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OracleDatabase.V1.ListOdbNetworksResponse> __Marshaller_google_cloud_oracledatabase_v1_ListOdbNetworksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OracleDatabase.V1.ListOdbNetworksResponse.Parser));
@@ -549,6 +555,22 @@ namespace Google.Cloud.OracleDatabase.V1 {
         "FailoverAutonomousDatabase",
         __Marshaller_google_cloud_oracledatabase_v1_FailoverAutonomousDatabaseRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.RefreshAutonomousDatabaseRequest, global::Google.LongRunning.Operation> __Method_RefreshAutonomousDatabase = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.RefreshAutonomousDatabaseRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RefreshAutonomousDatabase",
+        __Marshaller_google_cloud_oracledatabase_v1_RefreshAutonomousDatabaseRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.GetAutonomousDatabaseRefreshableClonesRequest, global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones> __Method_GetAutonomousDatabaseRefreshableClones = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.GetAutonomousDatabaseRefreshableClonesRequest, global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAutonomousDatabaseRefreshableClones",
+        __Marshaller_google_cloud_oracledatabase_v1_GetAutonomousDatabaseRefreshableClonesRequest,
+        __Marshaller_google_cloud_oracledatabase_v1_AutonomousDatabaseRefreshableClones);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListOdbNetworksRequest, global::Google.Cloud.OracleDatabase.V1.ListOdbNetworksResponse> __Method_ListOdbNetworks = new grpc::Method<global::Google.Cloud.OracleDatabase.V1.ListOdbNetworksRequest, global::Google.Cloud.OracleDatabase.V1.ListOdbNetworksResponse>(
@@ -1305,6 +1327,30 @@ namespace Google.Cloud.OracleDatabase.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> FailoverAutonomousDatabase(global::Google.Cloud.OracleDatabase.V1.FailoverAutonomousDatabaseRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Refreshes the refreshable clone of an Autonomous Database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RefreshAutonomousDatabase(global::Google.Cloud.OracleDatabase.V1.RefreshAutonomousDatabaseRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the refreshable clones for a given Autonomous Database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones> GetAutonomousDatabaseRefreshableClones(global::Google.Cloud.OracleDatabase.V1.GetAutonomousDatabaseRefreshableClonesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3379,6 +3425,102 @@ namespace Google.Cloud.OracleDatabase.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> FailoverAutonomousDatabaseAsync(global::Google.Cloud.OracleDatabase.V1.FailoverAutonomousDatabaseRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_FailoverAutonomousDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Refreshes the refreshable clone of an Autonomous Database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RefreshAutonomousDatabase(global::Google.Cloud.OracleDatabase.V1.RefreshAutonomousDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RefreshAutonomousDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Refreshes the refreshable clone of an Autonomous Database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RefreshAutonomousDatabase(global::Google.Cloud.OracleDatabase.V1.RefreshAutonomousDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RefreshAutonomousDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Refreshes the refreshable clone of an Autonomous Database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RefreshAutonomousDatabaseAsync(global::Google.Cloud.OracleDatabase.V1.RefreshAutonomousDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RefreshAutonomousDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Refreshes the refreshable clone of an Autonomous Database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RefreshAutonomousDatabaseAsync(global::Google.Cloud.OracleDatabase.V1.RefreshAutonomousDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RefreshAutonomousDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Gets the refreshable clones for a given Autonomous Database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones GetAutonomousDatabaseRefreshableClones(global::Google.Cloud.OracleDatabase.V1.GetAutonomousDatabaseRefreshableClonesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAutonomousDatabaseRefreshableClones(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the refreshable clones for a given Autonomous Database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones GetAutonomousDatabaseRefreshableClones(global::Google.Cloud.OracleDatabase.V1.GetAutonomousDatabaseRefreshableClonesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAutonomousDatabaseRefreshableClones, null, options, request);
+      }
+      /// <summary>
+      /// Gets the refreshable clones for a given Autonomous Database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones> GetAutonomousDatabaseRefreshableClonesAsync(global::Google.Cloud.OracleDatabase.V1.GetAutonomousDatabaseRefreshableClonesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAutonomousDatabaseRefreshableClonesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the refreshable clones for a given Autonomous Database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones> GetAutonomousDatabaseRefreshableClonesAsync(global::Google.Cloud.OracleDatabase.V1.GetAutonomousDatabaseRefreshableClonesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAutonomousDatabaseRefreshableClones, null, options, request);
       }
       /// <summary>
       /// Lists the ODB Networks in a given project and location.
@@ -5752,6 +5894,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
           .AddMethod(__Method_RestartAutonomousDatabase, serviceImpl.RestartAutonomousDatabase)
           .AddMethod(__Method_SwitchoverAutonomousDatabase, serviceImpl.SwitchoverAutonomousDatabase)
           .AddMethod(__Method_FailoverAutonomousDatabase, serviceImpl.FailoverAutonomousDatabase)
+          .AddMethod(__Method_RefreshAutonomousDatabase, serviceImpl.RefreshAutonomousDatabase)
+          .AddMethod(__Method_GetAutonomousDatabaseRefreshableClones, serviceImpl.GetAutonomousDatabaseRefreshableClones)
           .AddMethod(__Method_ListOdbNetworks, serviceImpl.ListOdbNetworks)
           .AddMethod(__Method_GetOdbNetwork, serviceImpl.GetOdbNetwork)
           .AddMethod(__Method_CreateOdbNetwork, serviceImpl.CreateOdbNetwork)
@@ -5839,6 +5983,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
       serviceBinder.AddMethod(__Method_RestartAutonomousDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.RestartAutonomousDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.RestartAutonomousDatabase));
       serviceBinder.AddMethod(__Method_SwitchoverAutonomousDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.SwitchoverAutonomousDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.SwitchoverAutonomousDatabase));
       serviceBinder.AddMethod(__Method_FailoverAutonomousDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.FailoverAutonomousDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.FailoverAutonomousDatabase));
+      serviceBinder.AddMethod(__Method_RefreshAutonomousDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.RefreshAutonomousDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.RefreshAutonomousDatabase));
+      serviceBinder.AddMethod(__Method_GetAutonomousDatabaseRefreshableClones, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetAutonomousDatabaseRefreshableClonesRequest, global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones>(serviceImpl.GetAutonomousDatabaseRefreshableClones));
       serviceBinder.AddMethod(__Method_ListOdbNetworks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.ListOdbNetworksRequest, global::Google.Cloud.OracleDatabase.V1.ListOdbNetworksResponse>(serviceImpl.ListOdbNetworks));
       serviceBinder.AddMethod(__Method_GetOdbNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.GetOdbNetworkRequest, global::Google.Cloud.OracleDatabase.V1.OdbNetwork>(serviceImpl.GetOdbNetwork));
       serviceBinder.AddMethod(__Method_CreateOdbNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OracleDatabase.V1.CreateOdbNetworkRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateOdbNetwork));

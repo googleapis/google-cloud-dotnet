@@ -166,6 +166,12 @@
                 "GetAutonomousDatabaseAsync"
               ]
             },
+            "GetAutonomousDatabaseRefreshableClones": {
+              "methods": [
+                "GetAutonomousDatabaseRefreshableClones",
+                "GetAutonomousDatabaseRefreshableClonesAsync"
+              ]
+            },
             "GetCloudExadataInfrastructure": {
               "methods": [
                 "GetCloudExadataInfrastructure",
@@ -410,6 +416,12 @@
               "methods": [
                 "ListPluggableDatabases",
                 "ListPluggableDatabasesAsync"
+              ]
+            },
+            "RefreshAutonomousDatabase": {
+              "methods": [
+                "RefreshAutonomousDatabase",
+                "RefreshAutonomousDatabaseAsync"
               ]
             },
             "RemoveVirtualMachineExadbVmCluster": {

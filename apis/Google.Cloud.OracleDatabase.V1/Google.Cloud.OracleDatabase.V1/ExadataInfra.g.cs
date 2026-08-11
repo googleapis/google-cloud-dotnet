@@ -73,48 +73,51 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "IAEoCUID4EEDEiYKGW1vbnRobHlfZGJfc2VydmVyX3ZlcnNpb24YGyABKAlC",
             "A+BBAxJICg1jb21wdXRlX21vZGVsGB8gASgOMiwuZ29vZ2xlLmNsb3VkLm9y",
             "YWNsZWRhdGFiYXNlLnYxLkNvbXB1dGVNb2RlbEID4EEDEiEKFGRhdGFiYXNl",
-            "X3NlcnZlcl90eXBlGB0gASgJQgPgQQMSIAoTc3RvcmFnZV9zZXJ2ZXJfdHlw",
-            "ZRgeIAEoCUID4EEDEkwKD2V4YXNjYWxlX2NvbmZpZxggIAEoCzIuLmdvb2ds",
+            "X3NlcnZlcl90eXBlGB0gASgJQgPgQQESIAoTc3RvcmFnZV9zZXJ2ZXJfdHlw",
+            "ZRgeIAEoCUID4EEBEkwKD2V4YXNjYWxlX2NvbmZpZxggIAEoCzIuLmdvb2ds",
             "ZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5FeGFzY2FsZUNvbmZpZ0ID4EED",
             "IpcBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhAKDFBST1ZJU0lP",
             "TklORxABEg0KCUFWQUlMQUJMRRACEgwKCFVQREFUSU5HEAMSDwoLVEVSTUlO",
             "QVRJTkcQBBIOCgpURVJNSU5BVEVEEAUSCgoGRkFJTEVEEAYSGwoXTUFJTlRF",
-            "TkFOQ0VfSU5fUFJPR1JFU1MQByJcCg5FeGFzY2FsZUNvbmZpZxIiChV0b3Rh",
-            "bF9zdG9yYWdlX3NpemVfZ2IYASABKAVCA+BBAxImChlhdmFpbGFibGVfc3Rv",
-            "cmFnZV9zaXplX2diGAIgASgFQgPgQQMipQUKEU1haW50ZW5hbmNlV2luZG93",
-            "EmYKCnByZWZlcmVuY2UYASABKA4yTS5nb29nbGUuY2xvdWQub3JhY2xlZGF0",
-            "YWJhc2UudjEuTWFpbnRlbmFuY2VXaW5kb3cuTWFpbnRlbmFuY2VXaW5kb3dQ",
-            "cmVmZXJlbmNlQgPgQQESJwoGbW9udGhzGAIgAygOMhIuZ29vZ2xlLnR5cGUu",
-            "TW9udGhCA+BBARIbCg53ZWVrc19vZl9tb250aBgDIAMoBUID4EEBEjEKDGRh",
-            "eXNfb2Zfd2VlaxgEIAMoDjIWLmdvb2dsZS50eXBlLkRheU9mV2Vla0ID4EEB",
-            "EhkKDGhvdXJzX29mX2RheRgFIAMoBUID4EEBEhsKDmxlYWRfdGltZV93ZWVr",
-            "GAYgASgFQgPgQQESWgoNcGF0Y2hpbmdfbW9kZRgHIAEoDjI+Lmdvb2dsZS5j",
-            "bG91ZC5vcmFjbGVkYXRhYmFzZS52MS5NYWludGVuYW5jZVdpbmRvdy5QYXRj",
-            "aGluZ01vZGVCA+BBARInChpjdXN0b21fYWN0aW9uX3RpbWVvdXRfbWlucxgI",
-            "IAEoBUID4EEBEi0KIGlzX2N1c3RvbV9hY3Rpb25fdGltZW91dF9lbmFibGVk",
-            "GAkgASgIQgPgQQEidgobTWFpbnRlbmFuY2VXaW5kb3dQcmVmZXJlbmNlEi0K",
-            "KU1BSU5URU5BTkNFX1dJTkRPV19QUkVGRVJFTkNFX1VOU1BFQ0lGSUVEEAAS",
-            "FQoRQ1VTVE9NX1BSRUZFUkVOQ0UQARIRCg1OT19QUkVGRVJFTkNFEAIiSwoM",
-            "UGF0Y2hpbmdNb2RlEh0KGVBBVENISU5HX01PREVfVU5TUEVDSUZJRUQQABIL",
-            "CgdST0xMSU5HEAESDwoLTk9OX1JPTExJTkcQAiLJAQoyQ29uZmlndXJlRXhh",
-            "c2NhbGVDbG91ZEV4YWRhdGFJbmZyYXN0cnVjdHVyZVJlcXVlc3QSTgoEbmFt",
-            "ZRgBIAEoCUJA4EEC+kE6CjhvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNv",
-            "bS9DbG91ZEV4YWRhdGFJbmZyYXN0cnVjdHVyZRIiChV0b3RhbF9zdG9yYWdl",
-            "X3NpemVfZ2IYAiABKAVCA+BBAhIfCgpyZXF1ZXN0X2lkGAMgASgJQgvgQQHi",
-            "jM/XCAIIAUL5AQoiY29tLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52",
-            "MUIfQ2xvdWRFeGFkYXRhSW5mcmFzdHJ1Y3R1cmVQcm90b1ABWkpjbG91ZC5n",
-            "b29nbGUuY29tL2dvL29yYWNsZWRhdGFiYXNlL2FwaXYxL29yYWNsZWRhdGFi",
-            "YXNlcGI7b3JhY2xlZGF0YWJhc2VwYqoCHkdvb2dsZS5DbG91ZC5PcmFjbGVE",
-            "YXRhYmFzZS5WMcoCHkdvb2dsZVxDbG91ZFxPcmFjbGVEYXRhYmFzZVxWMeoC",
-            "IUdvb2dsZTo6Q2xvdWQ6Ok9yYWNsZURhdGFiYXNlOjpWMWIGcHJvdG8z"));
+            "TkFOQ0VfSU5fUFJPR1JFU1MQByKuAQoORXhhc2NhbGVDb25maWcSIgoVdG90",
+            "YWxfc3RvcmFnZV9zaXplX2diGAEgASgFQgPgQQMSJgoZYXZhaWxhYmxlX3N0",
+            "b3JhZ2Vfc2l6ZV9nYhgCIAEoBUID4EEDEiUKGHRvdGFsX3ZtX3N0b3JhZ2Vf",
+            "c2l6ZV9nYhgDIAEoBUID4EEDEikKHGF2YWlsYWJsZV92bV9zdG9yYWdlX3Np",
+            "emVfZ2IYBCABKAVCA+BBAyKlBQoRTWFpbnRlbmFuY2VXaW5kb3cSZgoKcHJl",
+            "ZmVyZW5jZRgBIAEoDjJNLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52",
+            "MS5NYWludGVuYW5jZVdpbmRvdy5NYWludGVuYW5jZVdpbmRvd1ByZWZlcmVu",
+            "Y2VCA+BBARInCgZtb250aHMYAiADKA4yEi5nb29nbGUudHlwZS5Nb250aEID",
+            "4EEBEhsKDndlZWtzX29mX21vbnRoGAMgAygFQgPgQQESMQoMZGF5c19vZl93",
+            "ZWVrGAQgAygOMhYuZ29vZ2xlLnR5cGUuRGF5T2ZXZWVrQgPgQQESGQoMaG91",
+            "cnNfb2ZfZGF5GAUgAygFQgPgQQESGwoObGVhZF90aW1lX3dlZWsYBiABKAVC",
+            "A+BBARJaCg1wYXRjaGluZ19tb2RlGAcgASgOMj4uZ29vZ2xlLmNsb3VkLm9y",
+            "YWNsZWRhdGFiYXNlLnYxLk1haW50ZW5hbmNlV2luZG93LlBhdGNoaW5nTW9k",
+            "ZUID4EEBEicKGmN1c3RvbV9hY3Rpb25fdGltZW91dF9taW5zGAggASgFQgPg",
+            "QQESLQogaXNfY3VzdG9tX2FjdGlvbl90aW1lb3V0X2VuYWJsZWQYCSABKAhC",
+            "A+BBASJ2ChtNYWludGVuYW5jZVdpbmRvd1ByZWZlcmVuY2USLQopTUFJTlRF",
+            "TkFOQ0VfV0lORE9XX1BSRUZFUkVOQ0VfVU5TUEVDSUZJRUQQABIVChFDVVNU",
+            "T01fUFJFRkVSRU5DRRABEhEKDU5PX1BSRUZFUkVOQ0UQAiJLCgxQYXRjaGlu",
+            "Z01vZGUSHQoZUEFUQ0hJTkdfTU9ERV9VTlNQRUNJRklFRBAAEgsKB1JPTExJ",
+            "TkcQARIPCgtOT05fUk9MTElORxACIvABCjJDb25maWd1cmVFeGFzY2FsZUNs",
+            "b3VkRXhhZGF0YUluZnJhc3RydWN0dXJlUmVxdWVzdBJOCgRuYW1lGAEgASgJ",
+            "QkDgQQL6QToKOG9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL0Nsb3Vk",
+            "RXhhZGF0YUluZnJhc3RydWN0dXJlEiIKFXRvdGFsX3N0b3JhZ2Vfc2l6ZV9n",
+            "YhgCIAEoBUID4EECEiUKGHRvdGFsX3ZtX3N0b3JhZ2Vfc2l6ZV9nYhgEIAEo",
+            "BUID4EEBEh8KCnJlcXVlc3RfaWQYAyABKAlCC+BBAeKMz9cIAggBQvkBCiJj",
+            "b20uZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxQh9DbG91ZEV4YWRh",
+            "dGFJbmZyYXN0cnVjdHVyZVByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "b3JhY2xlZGF0YWJhc2UvYXBpdjEvb3JhY2xlZGF0YWJhc2VwYjtvcmFjbGVk",
+            "YXRhYmFzZXBiqgIeR29vZ2xlLkNsb3VkLk9yYWNsZURhdGFiYXNlLlYxygIe",
+            "R29vZ2xlXENsb3VkXE9yYWNsZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpDbG91",
+            "ZDo6T3JhY2xlRGF0YWJhc2U6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OracleDatabase.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.MonthReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudExadataInfrastructure), global::Google.Cloud.OracleDatabase.V1.CloudExadataInfrastructure.Parser, new[]{ "Name", "DisplayName", "GcpOracleZone", "EntitlementId", "Properties", "Labels", "CreateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudExadataInfrastructureProperties), global::Google.Cloud.OracleDatabase.V1.CloudExadataInfrastructureProperties.Parser, new[]{ "Ocid", "ComputeCount", "StorageCount", "TotalStorageSizeGb", "AvailableStorageSizeGb", "MaintenanceWindow", "State", "Shape", "OciUrl", "CpuCount", "MaxCpuCount", "MemorySizeGb", "MaxMemoryGb", "DbNodeStorageSizeGb", "MaxDbNodeStorageSizeGb", "DataStorageSizeTb", "MaxDataStorageTb", "ActivatedStorageCount", "AdditionalStorageCount", "DbServerVersion", "StorageServerVersion", "NextMaintenanceRunId", "NextMaintenanceRunTime", "NextSecurityMaintenanceRunTime", "CustomerContacts", "MonthlyStorageServerVersion", "MonthlyDbServerVersion", "ComputeModel", "DatabaseServerType", "StorageServerType", "ExascaleConfig" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.CloudExadataInfrastructureProperties.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ExascaleConfig), global::Google.Cloud.OracleDatabase.V1.ExascaleConfig.Parser, new[]{ "TotalStorageSizeGb", "AvailableStorageSizeGb" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ExascaleConfig), global::Google.Cloud.OracleDatabase.V1.ExascaleConfig.Parser, new[]{ "TotalStorageSizeGb", "AvailableStorageSizeGb", "TotalVmStorageSizeGb", "AvailableVmStorageSizeGb" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.MaintenanceWindow), global::Google.Cloud.OracleDatabase.V1.MaintenanceWindow.Parser, new[]{ "Preference", "Months", "WeeksOfMonth", "DaysOfWeek", "HoursOfDay", "LeadTimeWeek", "PatchingMode", "CustomActionTimeoutMins", "IsCustomActionTimeoutEnabled" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.MaintenanceWindow.Types.MaintenanceWindowPreference), typeof(global::Google.Cloud.OracleDatabase.V1.MaintenanceWindow.Types.PatchingMode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ConfigureExascaleCloudExadataInfrastructureRequest), global::Google.Cloud.OracleDatabase.V1.ConfigureExascaleCloudExadataInfrastructureRequest.Parser, new[]{ "Name", "TotalStorageSizeGb", "RequestId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ConfigureExascaleCloudExadataInfrastructureRequest), global::Google.Cloud.OracleDatabase.V1.ConfigureExascaleCloudExadataInfrastructureRequest.Parser, new[]{ "Name", "TotalStorageSizeGb", "TotalVmStorageSizeGb", "RequestId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1090,7 +1093,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int DatabaseServerTypeFieldNumber = 29;
     private string databaseServerType_ = "";
     /// <summary>
-    /// Output only. The database server type of the Exadata Infrastructure.
+    /// Optional. The database server type of the Exadata Infrastructure.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1105,7 +1108,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int StorageServerTypeFieldNumber = 30;
     private string storageServerType_ = "";
     /// <summary>
-    /// Output only. The storage server type of the Exadata Infrastructure.
+    /// Optional. The storage server type of the Exadata Infrastructure.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2104,6 +2107,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public ExascaleConfig(ExascaleConfig other) : this() {
       totalStorageSizeGb_ = other.totalStorageSizeGb_;
       availableStorageSizeGb_ = other.availableStorageSizeGb_;
+      totalVmStorageSizeGb_ = other.totalVmStorageSizeGb_;
+      availableVmStorageSizeGb_ = other.availableVmStorageSizeGb_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2143,6 +2148,36 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
+    /// <summary>Field number for the "total_vm_storage_size_gb" field.</summary>
+    public const int TotalVmStorageSizeGbFieldNumber = 3;
+    private int totalVmStorageSizeGb_;
+    /// <summary>
+    /// Output only. Storage size needed for VM storage on Exascale in GBs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TotalVmStorageSizeGb {
+      get { return totalVmStorageSizeGb_; }
+      set {
+        totalVmStorageSizeGb_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "available_vm_storage_size_gb" field.</summary>
+    public const int AvailableVmStorageSizeGbFieldNumber = 4;
+    private int availableVmStorageSizeGb_;
+    /// <summary>
+    /// Output only. Available storage size for VM storage on Exascale in GBs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int AvailableVmStorageSizeGb {
+      get { return availableVmStorageSizeGb_; }
+      set {
+        availableVmStorageSizeGb_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2160,6 +2195,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (TotalStorageSizeGb != other.TotalStorageSizeGb) return false;
       if (AvailableStorageSizeGb != other.AvailableStorageSizeGb) return false;
+      if (TotalVmStorageSizeGb != other.TotalVmStorageSizeGb) return false;
+      if (AvailableVmStorageSizeGb != other.AvailableVmStorageSizeGb) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2169,6 +2206,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
       int hash = 1;
       if (TotalStorageSizeGb != 0) hash ^= TotalStorageSizeGb.GetHashCode();
       if (AvailableStorageSizeGb != 0) hash ^= AvailableStorageSizeGb.GetHashCode();
+      if (TotalVmStorageSizeGb != 0) hash ^= TotalVmStorageSizeGb.GetHashCode();
+      if (AvailableVmStorageSizeGb != 0) hash ^= AvailableVmStorageSizeGb.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2195,6 +2234,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(AvailableStorageSizeGb);
       }
+      if (TotalVmStorageSizeGb != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(TotalVmStorageSizeGb);
+      }
+      if (AvailableVmStorageSizeGb != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(AvailableVmStorageSizeGb);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2213,6 +2260,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(AvailableStorageSizeGb);
       }
+      if (TotalVmStorageSizeGb != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(TotalVmStorageSizeGb);
+      }
+      if (AvailableVmStorageSizeGb != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(AvailableVmStorageSizeGb);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2228,6 +2283,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (AvailableStorageSizeGb != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(AvailableStorageSizeGb);
+      }
+      if (TotalVmStorageSizeGb != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalVmStorageSizeGb);
+      }
+      if (AvailableVmStorageSizeGb != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AvailableVmStorageSizeGb);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2246,6 +2307,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (other.AvailableStorageSizeGb != 0) {
         AvailableStorageSizeGb = other.AvailableStorageSizeGb;
+      }
+      if (other.TotalVmStorageSizeGb != 0) {
+        TotalVmStorageSizeGb = other.TotalVmStorageSizeGb;
+      }
+      if (other.AvailableVmStorageSizeGb != 0) {
+        AvailableVmStorageSizeGb = other.AvailableVmStorageSizeGb;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2274,6 +2341,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
             AvailableStorageSizeGb = input.ReadInt32();
             break;
           }
+          case 24: {
+            TotalVmStorageSizeGb = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            AvailableVmStorageSizeGb = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -2299,6 +2374,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 16: {
             AvailableStorageSizeGb = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            TotalVmStorageSizeGb = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            AvailableVmStorageSizeGb = input.ReadInt32();
             break;
           }
         }
@@ -2897,6 +2980,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public ConfigureExascaleCloudExadataInfrastructureRequest(ConfigureExascaleCloudExadataInfrastructureRequest other) : this() {
       name_ = other.name_;
       totalStorageSizeGb_ = other.totalStorageSizeGb_;
+      totalVmStorageSizeGb_ = other.totalVmStorageSizeGb_;
       requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2939,6 +3023,21 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
+    /// <summary>Field number for the "total_vm_storage_size_gb" field.</summary>
+    public const int TotalVmStorageSizeGbFieldNumber = 4;
+    private int totalVmStorageSizeGb_;
+    /// <summary>
+    /// Optional. Storage size needed for VM storage on Exascale in GBs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TotalVmStorageSizeGb {
+      get { return totalVmStorageSizeGb_; }
+      set {
+        totalVmStorageSizeGb_ = value;
+      }
+    }
+
     /// <summary>Field number for the "request_id" field.</summary>
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
@@ -2971,6 +3070,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (Name != other.Name) return false;
       if (TotalStorageSizeGb != other.TotalStorageSizeGb) return false;
+      if (TotalVmStorageSizeGb != other.TotalVmStorageSizeGb) return false;
       if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2981,6 +3081,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (TotalStorageSizeGb != 0) hash ^= TotalStorageSizeGb.GetHashCode();
+      if (TotalVmStorageSizeGb != 0) hash ^= TotalVmStorageSizeGb.GetHashCode();
       if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3012,6 +3113,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(26);
         output.WriteString(RequestId);
       }
+      if (TotalVmStorageSizeGb != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(TotalVmStorageSizeGb);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3034,6 +3139,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(26);
         output.WriteString(RequestId);
       }
+      if (TotalVmStorageSizeGb != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(TotalVmStorageSizeGb);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3049,6 +3158,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (TotalStorageSizeGb != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalStorageSizeGb);
+      }
+      if (TotalVmStorageSizeGb != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalVmStorageSizeGb);
       }
       if (RequestId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
@@ -3070,6 +3182,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (other.TotalStorageSizeGb != 0) {
         TotalStorageSizeGb = other.TotalStorageSizeGb;
+      }
+      if (other.TotalVmStorageSizeGb != 0) {
+        TotalVmStorageSizeGb = other.TotalVmStorageSizeGb;
       }
       if (other.RequestId.Length != 0) {
         RequestId = other.RequestId;
@@ -3105,6 +3220,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
             RequestId = input.ReadString();
             break;
           }
+          case 32: {
+            TotalVmStorageSizeGb = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -3134,6 +3253,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 26: {
             RequestId = input.ReadString();
+            break;
+          }
+          case 32: {
+            TotalVmStorageSizeGb = input.ReadInt32();
             break;
           }
         }
