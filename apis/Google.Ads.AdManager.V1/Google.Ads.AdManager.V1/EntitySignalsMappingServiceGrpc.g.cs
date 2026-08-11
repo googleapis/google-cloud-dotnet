@@ -143,7 +143,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class EntitySignalsMappingServiceBase
     {
       /// <summary>
-      /// API to retrieve a `EntitySignalsMapping` object.
+      /// Retrieves a `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -155,7 +155,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a list of `EntitySignalsMapping` objects.
+      /// Lists `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -167,7 +167,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to create an `EntitySignalsMapping` object.
+      /// Creates an `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -179,7 +179,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to update an `EntitySignalsMapping` object.
+      /// Updates an `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -191,7 +191,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to batch create `EntitySignalsMapping` objects.
+      /// Creates `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -203,7 +203,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to batch update `EntitySignalsMapping` objects.
+      /// Batch updates `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -244,7 +244,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a `EntitySignalsMapping` object.
+      /// Retrieves a `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -257,7 +257,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetEntitySignalsMapping(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `EntitySignalsMapping` object.
+      /// Retrieves a `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -268,7 +268,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetEntitySignalsMapping, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a `EntitySignalsMapping` object.
+      /// Retrieves a `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -281,7 +281,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetEntitySignalsMappingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `EntitySignalsMapping` object.
+      /// Retrieves a `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -292,7 +292,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetEntitySignalsMapping, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `EntitySignalsMapping` objects.
+      /// Lists `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -305,7 +305,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListEntitySignalsMappings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `EntitySignalsMapping` objects.
+      /// Lists `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -316,7 +316,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListEntitySignalsMappings, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `EntitySignalsMapping` objects.
+      /// Lists `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -329,7 +329,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListEntitySignalsMappingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `EntitySignalsMapping` objects.
+      /// Lists `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -340,7 +340,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListEntitySignalsMappings, null, options, request);
       }
       /// <summary>
-      /// API to create an `EntitySignalsMapping` object.
+      /// Creates an `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -353,7 +353,7 @@ namespace Google.Ads.AdManager.V1 {
         return CreateEntitySignalsMapping(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to create an `EntitySignalsMapping` object.
+      /// Creates an `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -364,7 +364,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateEntitySignalsMapping, null, options, request);
       }
       /// <summary>
-      /// API to create an `EntitySignalsMapping` object.
+      /// Creates an `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -377,7 +377,7 @@ namespace Google.Ads.AdManager.V1 {
         return CreateEntitySignalsMappingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to create an `EntitySignalsMapping` object.
+      /// Creates an `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -388,7 +388,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateEntitySignalsMapping, null, options, request);
       }
       /// <summary>
-      /// API to update an `EntitySignalsMapping` object.
+      /// Updates an `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -401,7 +401,7 @@ namespace Google.Ads.AdManager.V1 {
         return UpdateEntitySignalsMapping(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to update an `EntitySignalsMapping` object.
+      /// Updates an `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -412,7 +412,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateEntitySignalsMapping, null, options, request);
       }
       /// <summary>
-      /// API to update an `EntitySignalsMapping` object.
+      /// Updates an `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -425,7 +425,7 @@ namespace Google.Ads.AdManager.V1 {
         return UpdateEntitySignalsMappingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to update an `EntitySignalsMapping` object.
+      /// Updates an `EntitySignalsMapping` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -436,7 +436,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateEntitySignalsMapping, null, options, request);
       }
       /// <summary>
-      /// API to batch create `EntitySignalsMapping` objects.
+      /// Creates `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -449,7 +449,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchCreateEntitySignalsMappings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch create `EntitySignalsMapping` objects.
+      /// Creates `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -460,7 +460,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchCreateEntitySignalsMappings, null, options, request);
       }
       /// <summary>
-      /// API to batch create `EntitySignalsMapping` objects.
+      /// Creates `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -473,7 +473,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchCreateEntitySignalsMappingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch create `EntitySignalsMapping` objects.
+      /// Creates `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -484,7 +484,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchCreateEntitySignalsMappings, null, options, request);
       }
       /// <summary>
-      /// API to batch update `EntitySignalsMapping` objects.
+      /// Batch updates `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -497,7 +497,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchUpdateEntitySignalsMappings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch update `EntitySignalsMapping` objects.
+      /// Batch updates `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -508,7 +508,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateEntitySignalsMappings, null, options, request);
       }
       /// <summary>
-      /// API to batch update `EntitySignalsMapping` objects.
+      /// Batch updates `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -521,7 +521,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchUpdateEntitySignalsMappingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch update `EntitySignalsMapping` objects.
+      /// Batch updates `EntitySignalsMapping` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

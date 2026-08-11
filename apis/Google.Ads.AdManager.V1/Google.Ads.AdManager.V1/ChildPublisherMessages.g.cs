@@ -25,21 +25,58 @@ namespace Google.Ads.AdManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjZnb29nbGUvYWRzL2FkbWFuYWdlci92MS9jaGlsZF9wdWJsaXNoZXJfbWVz",
-            "c2FnZXMucHJvdG8SF2dvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxGh9nb29nbGUv",
-            "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
-            "LnByb3RvIq8BCg5DaGlsZFB1Ymxpc2hlchIRCgRuYW1lGAEgASgJQgPgQQg6",
-            "iQHqQYUBCidhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQ2hpbGRQdWJsaXNo",
-            "ZXISOW5ldHdvcmtzL3tuZXR3b3JrX2NvZGV9L2NoaWxkUHVibGlzaGVycy97",
-            "Y2hpbGRfcHVibGlzaGVyfSoPY2hpbGRQdWJsaXNoZXJzMg5jaGlsZFB1Ymxp",
-            "c2hlckLPAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhtDaGlsZFB1",
-            "Ymxpc2hlck1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoC",
-            "F0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFn",
-            "ZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "c2FnZXMucHJvdG8SF2dvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxGidnb29nbGUv",
+            "YWRzL2FkbWFuYWdlci92MS9tY21fZW51bXMucHJvdG8aH2dvb2dsZS9hcGkv",
+            "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
+            "dG8i5g0KDkNoaWxkUHVibGlzaGVyEhEKBG5hbWUYASABKAlCA+BBCBIeCgxk",
+            "aXNwbGF5X25hbWUYAyABKAlCA+BBAkgAiAEBEhcKBWVtYWlsGAQgASgJQgPg",
+            "QQJIAYgBARJECg1jaGlsZF9uZXR3b3JrGAUgASgJQijgQQX6QSIKIGFkbWFu",
+            "YWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrSAKIAQESXQoPZGVsZWdhdGlv",
+            "bl90eXBlGAkgASgOMjouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuRGVsZWdh",
+            "dGlvblR5cGVFbnVtLkRlbGVnYXRpb25UeXBlQgPgQQJIA4gBARIzCiFwYXJl",
+            "bnRfcmV2ZW51ZV9zaGFyZV9taWxsaXBlcmNlbnQYCiABKANCA+BBAUgEiAEB",
+            "EhsKCXNlbGxlcl9pZBgLIAEoCUID4EEBSAWIAQESZgoQcmVhZGluZXNzX3N0",
+            "YXR1cxgMIAEoDjJCLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLk1jbVJlYWRp",
+            "bmVzc1N0YXR1c0VudW0uTWNtUmVhZGluZXNzU3RhdHVzQgPgQQNIBogBARJ3",
+            "ChFpbnZpdGF0aW9uX3N0YXR1cxgNIAEoDjJSLmdvb2dsZS5hZHMuYWRtYW5h",
+            "Z2VyLnYxLkRlbGVnYXRpb25JbnZpdGF0aW9uU3RhdHVzRW51bS5EZWxlZ2F0",
+            "aW9uSW52aXRhdGlvblN0YXR1c0ID4EEDSAeIAQEScQoPYXBwcm92YWxfc3Rh",
+            "dHVzGA8gASgOMk4uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuRGVsZWdhdGlv",
+            "bkFwcHJvdmFsU3RhdHVzRW51bS5EZWxlZ2F0aW9uQXBwcm92YWxTdGF0dXNC",
+            "A+BBA0gIiAEBEp4BChxpZGVudGl0eV92ZXJpZmljYXRpb25fc3RhdHVzGBEg",
+            "ASgOMm4uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ2hpbGRQdWJsaXNoZXJJ",
+            "ZGVudGl0eVZlcmlmaWNhdGlvblN0YXR1c0VudW0uQ2hpbGRQdWJsaXNoZXJJ",
+            "ZGVudGl0eVZlcmlmaWNhdGlvblN0YXR1c0ID4EEDSAmIAQESmwEKG2FkZHJl",
+            "c3NfdmVyaWZpY2F0aW9uX3N0YXR1cxgTIAEoDjJsLmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLkNoaWxkUHVibGlzaGVyQWRkcmVzc1ZlcmlmaWNhdGlvblN0",
+            "YXR1c0VudW0uQ2hpbGRQdWJsaXNoZXJBZGRyZXNzVmVyaWZpY2F0aW9uU3Rh",
+            "dHVzQgPgQQNICogBARJ9ChhwZW5kaW5nX29uYm9hcmRpbmdfdGFza3MYFiAD",
+            "KA4yVi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DaGlsZFB1Ymxpc2hlck9u",
+            "Ym9hcmRpbmdUYXNrRW51bS5DaGlsZFB1Ymxpc2hlck9uYm9hcmRpbmdUYXNr",
+            "QgPgQQMSbgoOYWNjb3VudF9zdGF0dXMYGiABKA4yTC5nb29nbGUuYWRzLmFk",
+            "bWFuYWdlci52MS5EZWxlZ2F0aW9uQWNjb3VudFN0YXR1c0VudW0uRGVsZWdh",
+            "dGlvbkFjY291bnRTdGF0dXNCA+BBA0gLiAEBEkQKMmFwcHJvdmVkX21hbmFn",
+            "ZV9hY2NvdW50X3JldmVudWVfc2hhcmVfbWlsbGlwZXJjZW50GB0gASgDQgPg",
+            "QQNIDIgBATqJAepBhQEKJ2FkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9DaGls",
+            "ZFB1Ymxpc2hlchI5bmV0d29ya3Mve25ldHdvcmtfY29kZX0vY2hpbGRQdWJs",
+            "aXNoZXJzL3tjaGlsZF9wdWJsaXNoZXJ9Kg9jaGlsZFB1Ymxpc2hlcnMyDmNo",
+            "aWxkUHVibGlzaGVyQg8KDV9kaXNwbGF5X25hbWVCCAoGX2VtYWlsQhAKDl9j",
+            "aGlsZF9uZXR3b3JrQhIKEF9kZWxlZ2F0aW9uX3R5cGVCJAoiX3BhcmVudF9y",
+            "ZXZlbnVlX3NoYXJlX21pbGxpcGVyY2VudEIMCgpfc2VsbGVyX2lkQhMKEV9y",
+            "ZWFkaW5lc3Nfc3RhdHVzQhQKEl9pbnZpdGF0aW9uX3N0YXR1c0ISChBfYXBw",
+            "cm92YWxfc3RhdHVzQh8KHV9pZGVudGl0eV92ZXJpZmljYXRpb25fc3RhdHVz",
+            "Qh4KHF9hZGRyZXNzX3ZlcmlmaWNhdGlvbl9zdGF0dXNCEQoPX2FjY291bnRf",
+            "c3RhdHVzQjUKM19hcHByb3ZlZF9tYW5hZ2VfYWNjb3VudF9yZXZlbnVlX3No",
+            "YXJlX21pbGxpcGVyY2VudELPAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2Vy",
+            "LnYxQhtDaGlsZFB1Ymxpc2hlck1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3Yx",
+            "O2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xl",
+            "XEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.McmEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ChildPublisher), global::Google.Ads.AdManager.V1.ChildPublisher.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ChildPublisher), global::Google.Ads.AdManager.V1.ChildPublisher.Parser, new[]{ "Name", "DisplayName", "Email", "ChildNetwork", "DelegationType", "ParentRevenueShareMillipercent", "SellerId", "ReadinessStatus", "InvitationStatus", "ApprovalStatus", "IdentityVerificationStatus", "AddressVerificationStatus", "PendingOnboardingTasks", "AccountStatus", "ApprovedManageAccountRevenueShareMillipercent" }, new[]{ "DisplayName", "Email", "ChildNetwork", "DelegationType", "ParentRevenueShareMillipercent", "SellerId", "ReadinessStatus", "InvitationStatus", "ApprovalStatus", "IdentityVerificationStatus", "AddressVerificationStatus", "AccountStatus", "ApprovedManageAccountRevenueShareMillipercent" }, null, null, null)
           }));
     }
     #endregion
@@ -57,6 +94,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<ChildPublisher> _parser = new pb::MessageParser<ChildPublisher>(() => new ChildPublisher());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ChildPublisher> Parser { get { return _parser; } }
@@ -84,7 +122,22 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChildPublisher(ChildPublisher other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
+      displayName_ = other.displayName_;
+      email_ = other.email_;
+      childNetwork_ = other.childNetwork_;
+      delegationType_ = other.delegationType_;
+      parentRevenueShareMillipercent_ = other.parentRevenueShareMillipercent_;
+      sellerId_ = other.sellerId_;
+      readinessStatus_ = other.readinessStatus_;
+      invitationStatus_ = other.invitationStatus_;
+      approvalStatus_ = other.approvalStatus_;
+      identityVerificationStatus_ = other.identityVerificationStatus_;
+      addressVerificationStatus_ = other.addressVerificationStatus_;
+      pendingOnboardingTasks_ = other.pendingOnboardingTasks_.Clone();
+      accountStatus_ = other.accountStatus_;
+      approvedManageAccountRevenueShareMillipercent_ = other.approvedManageAccountRevenueShareMillipercent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -111,6 +164,445 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 3;
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
+    /// <summary>
+    /// Required. The display name of the
+    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_ ?? DisplayNameDefaultValue; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
+
+    /// <summary>Field number for the "email" field.</summary>
+    public const int EmailFieldNumber = 4;
+    private readonly static string EmailDefaultValue = "";
+
+    private string email_;
+    /// <summary>
+    /// Required. The email for the
+    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Email {
+      get { return email_ ?? EmailDefaultValue; }
+      set {
+        email_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "email" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEmail {
+      get { return email_ != null; }
+    }
+    /// <summary>Clears the value of the "email" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEmail() {
+      email_ = null;
+    }
+
+    /// <summary>Field number for the "child_network" field.</summary>
+    public const int ChildNetworkFieldNumber = 5;
+    private readonly static string ChildNetworkDefaultValue = "";
+
+    private string childNetwork_;
+    /// <summary>
+    /// Immutable. The resource name of the
+    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]'s Ad Manager
+    /// network.
+    ///
+    /// Format: `networks/{network_code}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ChildNetwork {
+      get { return childNetwork_ ?? ChildNetworkDefaultValue; }
+      set {
+        childNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "child_network" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasChildNetwork {
+      get { return childNetwork_ != null; }
+    }
+    /// <summary>Clears the value of the "child_network" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearChildNetwork() {
+      childNetwork_ = null;
+    }
+
+    /// <summary>Field number for the "delegation_type" field.</summary>
+    public const int DelegationTypeFieldNumber = 9;
+    private readonly static global::Google.Ads.AdManager.V1.DelegationTypeEnum.Types.DelegationType DelegationTypeDefaultValue = global::Google.Ads.AdManager.V1.DelegationTypeEnum.Types.DelegationType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.DelegationTypeEnum.Types.DelegationType delegationType_;
+    /// <summary>
+    /// Required. The type of delegation for the
+    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher].
+    ///
+    /// This attribute is immutable while the relationship is active.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.DelegationTypeEnum.Types.DelegationType DelegationType {
+      get { if ((_hasBits0 & 1) != 0) { return delegationType_; } else { return DelegationTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        delegationType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "delegation_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDelegationType {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "delegation_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDelegationType() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "parent_revenue_share_millipercent" field.</summary>
+    public const int ParentRevenueShareMillipercentFieldNumber = 10;
+    private readonly static long ParentRevenueShareMillipercentDefaultValue = 0L;
+
+    private long parentRevenueShareMillipercent_;
+    /// <summary>
+    /// Optional. The revenue share that the parent publisher will receive in
+    /// millipercent. For example, 15000 millipercent is 15%.
+    ///
+    /// This attribute is only settable for Manage Account
+    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s of non-reseller
+    /// parent publishers. Otherwise, it is read-only and always 100%.
+    ///
+    /// Additionally, this attribute is immutable while the relationship is active.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ParentRevenueShareMillipercent {
+      get { if ((_hasBits0 & 2) != 0) { return parentRevenueShareMillipercent_; } else { return ParentRevenueShareMillipercentDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        parentRevenueShareMillipercent_ = value;
+      }
+    }
+    /// <summary>Gets whether the "parent_revenue_share_millipercent" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasParentRevenueShareMillipercent {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "parent_revenue_share_millipercent" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearParentRevenueShareMillipercent() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "seller_id" field.</summary>
+    public const int SellerIdFieldNumber = 11;
+    private readonly static string SellerIdDefaultValue = "";
+
+    private string sellerId_;
+    /// <summary>
+    /// Optional. The seller ID for the
+    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher], as specified in
+    /// the parent publisher's sellers.json file.
+    ///
+    /// This attribute is only applicable to Manage Inventory
+    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SellerId {
+      get { return sellerId_ ?? SellerIdDefaultValue; }
+      set {
+        sellerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "seller_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSellerId {
+      get { return sellerId_ != null; }
+    }
+    /// <summary>Clears the value of the "seller_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSellerId() {
+      sellerId_ = null;
+    }
+
+    /// <summary>Field number for the "readiness_status" field.</summary>
+    public const int ReadinessStatusFieldNumber = 12;
+    private readonly static global::Google.Ads.AdManager.V1.McmReadinessStatusEnum.Types.McmReadinessStatus ReadinessStatusDefaultValue = global::Google.Ads.AdManager.V1.McmReadinessStatusEnum.Types.McmReadinessStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.McmReadinessStatusEnum.Types.McmReadinessStatus readinessStatus_;
+    /// <summary>
+    /// Output only. The overall onboarding readiness of the
+    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher].
+    ///
+    /// This status is correlated with ad serving, but does not include site-level
+    /// approval information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.McmReadinessStatusEnum.Types.McmReadinessStatus ReadinessStatus {
+      get { if ((_hasBits0 & 4) != 0) { return readinessStatus_; } else { return ReadinessStatusDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        readinessStatus_ = value;
+      }
+    }
+    /// <summary>Gets whether the "readiness_status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasReadinessStatus {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "readiness_status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReadinessStatus() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "invitation_status" field.</summary>
+    public const int InvitationStatusFieldNumber = 13;
+    private readonly static global::Google.Ads.AdManager.V1.DelegationInvitationStatusEnum.Types.DelegationInvitationStatus InvitationStatusDefaultValue = global::Google.Ads.AdManager.V1.DelegationInvitationStatusEnum.Types.DelegationInvitationStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.DelegationInvitationStatusEnum.Types.DelegationInvitationStatus invitationStatus_;
+    /// <summary>
+    /// Output only. The status of the invitation request to the
+    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.DelegationInvitationStatusEnum.Types.DelegationInvitationStatus InvitationStatus {
+      get { if ((_hasBits0 & 8) != 0) { return invitationStatus_; } else { return InvitationStatusDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        invitationStatus_ = value;
+      }
+    }
+    /// <summary>Gets whether the "invitation_status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInvitationStatus {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "invitation_status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInvitationStatus() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "approval_status" field.</summary>
+    public const int ApprovalStatusFieldNumber = 15;
+    private readonly static global::Google.Ads.AdManager.V1.DelegationApprovalStatusEnum.Types.DelegationApprovalStatus ApprovalStatusDefaultValue = global::Google.Ads.AdManager.V1.DelegationApprovalStatusEnum.Types.DelegationApprovalStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.DelegationApprovalStatusEnum.Types.DelegationApprovalStatus approvalStatus_;
+    /// <summary>
+    /// Output only. The approval status of the
+    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.DelegationApprovalStatusEnum.Types.DelegationApprovalStatus ApprovalStatus {
+      get { if ((_hasBits0 & 16) != 0) { return approvalStatus_; } else { return ApprovalStatusDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        approvalStatus_ = value;
+      }
+    }
+    /// <summary>Gets whether the "approval_status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasApprovalStatus {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "approval_status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearApprovalStatus() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "identity_verification_status" field.</summary>
+    public const int IdentityVerificationStatusFieldNumber = 17;
+    private readonly static global::Google.Ads.AdManager.V1.ChildPublisherIdentityVerificationStatusEnum.Types.ChildPublisherIdentityVerificationStatus IdentityVerificationStatusDefaultValue = global::Google.Ads.AdManager.V1.ChildPublisherIdentityVerificationStatusEnum.Types.ChildPublisherIdentityVerificationStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.ChildPublisherIdentityVerificationStatusEnum.Types.ChildPublisherIdentityVerificationStatus identityVerificationStatus_;
+    /// <summary>
+    /// Output only. The status of the
+    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]'s identity
+    /// verification.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ChildPublisherIdentityVerificationStatusEnum.Types.ChildPublisherIdentityVerificationStatus IdentityVerificationStatus {
+      get { if ((_hasBits0 & 32) != 0) { return identityVerificationStatus_; } else { return IdentityVerificationStatusDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        identityVerificationStatus_ = value;
+      }
+    }
+    /// <summary>Gets whether the "identity_verification_status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIdentityVerificationStatus {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "identity_verification_status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIdentityVerificationStatus() {
+      _hasBits0 &= ~32;
+    }
+
+    /// <summary>Field number for the "address_verification_status" field.</summary>
+    public const int AddressVerificationStatusFieldNumber = 19;
+    private readonly static global::Google.Ads.AdManager.V1.ChildPublisherAddressVerificationStatusEnum.Types.ChildPublisherAddressVerificationStatus AddressVerificationStatusDefaultValue = global::Google.Ads.AdManager.V1.ChildPublisherAddressVerificationStatusEnum.Types.ChildPublisherAddressVerificationStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.ChildPublisherAddressVerificationStatusEnum.Types.ChildPublisherAddressVerificationStatus addressVerificationStatus_;
+    /// <summary>
+    /// Output only. The status of the
+    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]'s address
+    /// verification (i.e., mail PIN).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ChildPublisherAddressVerificationStatusEnum.Types.ChildPublisherAddressVerificationStatus AddressVerificationStatus {
+      get { if ((_hasBits0 & 64) != 0) { return addressVerificationStatus_; } else { return AddressVerificationStatusDefaultValue; } }
+      set {
+        _hasBits0 |= 64;
+        addressVerificationStatus_ = value;
+      }
+    }
+    /// <summary>Gets whether the "address_verification_status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAddressVerificationStatus {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "address_verification_status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAddressVerificationStatus() {
+      _hasBits0 &= ~64;
+    }
+
+    /// <summary>Field number for the "pending_onboarding_tasks" field.</summary>
+    public const int PendingOnboardingTasksFieldNumber = 22;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.ChildPublisherOnboardingTaskEnum.Types.ChildPublisherOnboardingTask> _repeated_pendingOnboardingTasks_codec
+        = pb::FieldCodec.ForEnum(178, x => (int) x, x => (global::Google.Ads.AdManager.V1.ChildPublisherOnboardingTaskEnum.Types.ChildPublisherOnboardingTask) x);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.ChildPublisherOnboardingTaskEnum.Types.ChildPublisherOnboardingTask> pendingOnboardingTasks_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.ChildPublisherOnboardingTaskEnum.Types.ChildPublisherOnboardingTask>();
+    /// <summary>
+    /// Output only. The pending onboarding tasks that must be completed by the
+    /// child publisher before Google's policy compliance (i.e.
+    /// [DelegationApprovalStatus.PENDING_GOOGLE_APPROVAL][]) can be verified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.ChildPublisherOnboardingTaskEnum.Types.ChildPublisherOnboardingTask> PendingOnboardingTasks {
+      get { return pendingOnboardingTasks_; }
+    }
+
+    /// <summary>Field number for the "account_status" field.</summary>
+    public const int AccountStatusFieldNumber = 26;
+    private readonly static global::Google.Ads.AdManager.V1.DelegationAccountStatusEnum.Types.DelegationAccountStatus AccountStatusDefaultValue = global::Google.Ads.AdManager.V1.DelegationAccountStatusEnum.Types.DelegationAccountStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.DelegationAccountStatusEnum.Types.DelegationAccountStatus accountStatus_;
+    /// <summary>
+    /// Output only. The account status of the
+    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.DelegationAccountStatusEnum.Types.DelegationAccountStatus AccountStatus {
+      get { if ((_hasBits0 & 128) != 0) { return accountStatus_; } else { return AccountStatusDefaultValue; } }
+      set {
+        _hasBits0 |= 128;
+        accountStatus_ = value;
+      }
+    }
+    /// <summary>Gets whether the "account_status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAccountStatus {
+      get { return (_hasBits0 & 128) != 0; }
+    }
+    /// <summary>Clears the value of the "account_status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAccountStatus() {
+      _hasBits0 &= ~128;
+    }
+
+    /// <summary>Field number for the "approved_manage_account_revenue_share_millipercent" field.</summary>
+    public const int ApprovedManageAccountRevenueShareMillipercentFieldNumber = 29;
+    private readonly static long ApprovedManageAccountRevenueShareMillipercentDefaultValue = 0L;
+
+    private long approvedManageAccountRevenueShareMillipercent_;
+    /// <summary>
+    /// Output only. Provides the approved revenue share that the parent publisher
+    /// will receive in millipercent. For example, 15000 millipercent is 15%.
+    ///
+    /// This attribute is only set for Manage Account
+    /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s of non-reseller
+    /// parent publishers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ApprovedManageAccountRevenueShareMillipercent {
+      get { if ((_hasBits0 & 256) != 0) { return approvedManageAccountRevenueShareMillipercent_; } else { return ApprovedManageAccountRevenueShareMillipercentDefaultValue; } }
+      set {
+        _hasBits0 |= 256;
+        approvedManageAccountRevenueShareMillipercent_ = value;
+      }
+    }
+    /// <summary>Gets whether the "approved_manage_account_revenue_share_millipercent" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasApprovedManageAccountRevenueShareMillipercent {
+      get { return (_hasBits0 & 256) != 0; }
+    }
+    /// <summary>Clears the value of the "approved_manage_account_revenue_share_millipercent" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearApprovedManageAccountRevenueShareMillipercent() {
+      _hasBits0 &= ~256;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -127,6 +619,20 @@ namespace Google.Ads.AdManager.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (Email != other.Email) return false;
+      if (ChildNetwork != other.ChildNetwork) return false;
+      if (DelegationType != other.DelegationType) return false;
+      if (ParentRevenueShareMillipercent != other.ParentRevenueShareMillipercent) return false;
+      if (SellerId != other.SellerId) return false;
+      if (ReadinessStatus != other.ReadinessStatus) return false;
+      if (InvitationStatus != other.InvitationStatus) return false;
+      if (ApprovalStatus != other.ApprovalStatus) return false;
+      if (IdentityVerificationStatus != other.IdentityVerificationStatus) return false;
+      if (AddressVerificationStatus != other.AddressVerificationStatus) return false;
+      if(!pendingOnboardingTasks_.Equals(other.pendingOnboardingTasks_)) return false;
+      if (AccountStatus != other.AccountStatus) return false;
+      if (ApprovedManageAccountRevenueShareMillipercent != other.ApprovedManageAccountRevenueShareMillipercent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -135,6 +641,20 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasEmail) hash ^= Email.GetHashCode();
+      if (HasChildNetwork) hash ^= ChildNetwork.GetHashCode();
+      if (HasDelegationType) hash ^= DelegationType.GetHashCode();
+      if (HasParentRevenueShareMillipercent) hash ^= ParentRevenueShareMillipercent.GetHashCode();
+      if (HasSellerId) hash ^= SellerId.GetHashCode();
+      if (HasReadinessStatus) hash ^= ReadinessStatus.GetHashCode();
+      if (HasInvitationStatus) hash ^= InvitationStatus.GetHashCode();
+      if (HasApprovalStatus) hash ^= ApprovalStatus.GetHashCode();
+      if (HasIdentityVerificationStatus) hash ^= IdentityVerificationStatus.GetHashCode();
+      if (HasAddressVerificationStatus) hash ^= AddressVerificationStatus.GetHashCode();
+      hash ^= pendingOnboardingTasks_.GetHashCode();
+      if (HasAccountStatus) hash ^= AccountStatus.GetHashCode();
+      if (HasApprovedManageAccountRevenueShareMillipercent) hash ^= ApprovedManageAccountRevenueShareMillipercent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -157,6 +677,59 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (HasEmail) {
+        output.WriteRawTag(34);
+        output.WriteString(Email);
+      }
+      if (HasChildNetwork) {
+        output.WriteRawTag(42);
+        output.WriteString(ChildNetwork);
+      }
+      if (HasDelegationType) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) DelegationType);
+      }
+      if (HasParentRevenueShareMillipercent) {
+        output.WriteRawTag(80);
+        output.WriteInt64(ParentRevenueShareMillipercent);
+      }
+      if (HasSellerId) {
+        output.WriteRawTag(90);
+        output.WriteString(SellerId);
+      }
+      if (HasReadinessStatus) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) ReadinessStatus);
+      }
+      if (HasInvitationStatus) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) InvitationStatus);
+      }
+      if (HasApprovalStatus) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) ApprovalStatus);
+      }
+      if (HasIdentityVerificationStatus) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) IdentityVerificationStatus);
+      }
+      if (HasAddressVerificationStatus) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) AddressVerificationStatus);
+      }
+      pendingOnboardingTasks_.WriteTo(output, _repeated_pendingOnboardingTasks_codec);
+      if (HasAccountStatus) {
+        output.WriteRawTag(208, 1);
+        output.WriteEnum((int) AccountStatus);
+      }
+      if (HasApprovedManageAccountRevenueShareMillipercent) {
+        output.WriteRawTag(232, 1);
+        output.WriteInt64(ApprovedManageAccountRevenueShareMillipercent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -171,6 +744,59 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (HasEmail) {
+        output.WriteRawTag(34);
+        output.WriteString(Email);
+      }
+      if (HasChildNetwork) {
+        output.WriteRawTag(42);
+        output.WriteString(ChildNetwork);
+      }
+      if (HasDelegationType) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) DelegationType);
+      }
+      if (HasParentRevenueShareMillipercent) {
+        output.WriteRawTag(80);
+        output.WriteInt64(ParentRevenueShareMillipercent);
+      }
+      if (HasSellerId) {
+        output.WriteRawTag(90);
+        output.WriteString(SellerId);
+      }
+      if (HasReadinessStatus) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) ReadinessStatus);
+      }
+      if (HasInvitationStatus) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) InvitationStatus);
+      }
+      if (HasApprovalStatus) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) ApprovalStatus);
+      }
+      if (HasIdentityVerificationStatus) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) IdentityVerificationStatus);
+      }
+      if (HasAddressVerificationStatus) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) AddressVerificationStatus);
+      }
+      pendingOnboardingTasks_.WriteTo(ref output, _repeated_pendingOnboardingTasks_codec);
+      if (HasAccountStatus) {
+        output.WriteRawTag(208, 1);
+        output.WriteEnum((int) AccountStatus);
+      }
+      if (HasApprovedManageAccountRevenueShareMillipercent) {
+        output.WriteRawTag(232, 1);
+        output.WriteInt64(ApprovedManageAccountRevenueShareMillipercent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -183,6 +809,46 @@ namespace Google.Ads.AdManager.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (HasEmail) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Email);
+      }
+      if (HasChildNetwork) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ChildNetwork);
+      }
+      if (HasDelegationType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DelegationType);
+      }
+      if (HasParentRevenueShareMillipercent) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ParentRevenueShareMillipercent);
+      }
+      if (HasSellerId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SellerId);
+      }
+      if (HasReadinessStatus) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReadinessStatus);
+      }
+      if (HasInvitationStatus) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InvitationStatus);
+      }
+      if (HasApprovalStatus) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ApprovalStatus);
+      }
+      if (HasIdentityVerificationStatus) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) IdentityVerificationStatus);
+      }
+      if (HasAddressVerificationStatus) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) AddressVerificationStatus);
+      }
+      size += pendingOnboardingTasks_.CalculateSize(_repeated_pendingOnboardingTasks_codec);
+      if (HasAccountStatus) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) AccountStatus);
+      }
+      if (HasApprovedManageAccountRevenueShareMillipercent) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(ApprovedManageAccountRevenueShareMillipercent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -198,6 +864,46 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.HasDisplayName) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.HasEmail) {
+        Email = other.Email;
+      }
+      if (other.HasChildNetwork) {
+        ChildNetwork = other.ChildNetwork;
+      }
+      if (other.HasDelegationType) {
+        DelegationType = other.DelegationType;
+      }
+      if (other.HasParentRevenueShareMillipercent) {
+        ParentRevenueShareMillipercent = other.ParentRevenueShareMillipercent;
+      }
+      if (other.HasSellerId) {
+        SellerId = other.SellerId;
+      }
+      if (other.HasReadinessStatus) {
+        ReadinessStatus = other.ReadinessStatus;
+      }
+      if (other.HasInvitationStatus) {
+        InvitationStatus = other.InvitationStatus;
+      }
+      if (other.HasApprovalStatus) {
+        ApprovalStatus = other.ApprovalStatus;
+      }
+      if (other.HasIdentityVerificationStatus) {
+        IdentityVerificationStatus = other.IdentityVerificationStatus;
+      }
+      if (other.HasAddressVerificationStatus) {
+        AddressVerificationStatus = other.AddressVerificationStatus;
+      }
+      pendingOnboardingTasks_.Add(other.pendingOnboardingTasks_);
+      if (other.HasAccountStatus) {
+        AccountStatus = other.AccountStatus;
+      }
+      if (other.HasApprovedManageAccountRevenueShareMillipercent) {
+        ApprovedManageAccountRevenueShareMillipercent = other.ApprovedManageAccountRevenueShareMillipercent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -222,6 +928,63 @@ namespace Google.Ads.AdManager.V1 {
             Name = input.ReadString();
             break;
           }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            Email = input.ReadString();
+            break;
+          }
+          case 42: {
+            ChildNetwork = input.ReadString();
+            break;
+          }
+          case 72: {
+            DelegationType = (global::Google.Ads.AdManager.V1.DelegationTypeEnum.Types.DelegationType) input.ReadEnum();
+            break;
+          }
+          case 80: {
+            ParentRevenueShareMillipercent = input.ReadInt64();
+            break;
+          }
+          case 90: {
+            SellerId = input.ReadString();
+            break;
+          }
+          case 96: {
+            ReadinessStatus = (global::Google.Ads.AdManager.V1.McmReadinessStatusEnum.Types.McmReadinessStatus) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            InvitationStatus = (global::Google.Ads.AdManager.V1.DelegationInvitationStatusEnum.Types.DelegationInvitationStatus) input.ReadEnum();
+            break;
+          }
+          case 120: {
+            ApprovalStatus = (global::Google.Ads.AdManager.V1.DelegationApprovalStatusEnum.Types.DelegationApprovalStatus) input.ReadEnum();
+            break;
+          }
+          case 136: {
+            IdentityVerificationStatus = (global::Google.Ads.AdManager.V1.ChildPublisherIdentityVerificationStatusEnum.Types.ChildPublisherIdentityVerificationStatus) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            AddressVerificationStatus = (global::Google.Ads.AdManager.V1.ChildPublisherAddressVerificationStatusEnum.Types.ChildPublisherAddressVerificationStatus) input.ReadEnum();
+            break;
+          }
+          case 178:
+          case 176: {
+            pendingOnboardingTasks_.AddEntriesFrom(input, _repeated_pendingOnboardingTasks_codec);
+            break;
+          }
+          case 208: {
+            AccountStatus = (global::Google.Ads.AdManager.V1.DelegationAccountStatusEnum.Types.DelegationAccountStatus) input.ReadEnum();
+            break;
+          }
+          case 232: {
+            ApprovedManageAccountRevenueShareMillipercent = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -243,6 +1006,63 @@ namespace Google.Ads.AdManager.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            Email = input.ReadString();
+            break;
+          }
+          case 42: {
+            ChildNetwork = input.ReadString();
+            break;
+          }
+          case 72: {
+            DelegationType = (global::Google.Ads.AdManager.V1.DelegationTypeEnum.Types.DelegationType) input.ReadEnum();
+            break;
+          }
+          case 80: {
+            ParentRevenueShareMillipercent = input.ReadInt64();
+            break;
+          }
+          case 90: {
+            SellerId = input.ReadString();
+            break;
+          }
+          case 96: {
+            ReadinessStatus = (global::Google.Ads.AdManager.V1.McmReadinessStatusEnum.Types.McmReadinessStatus) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            InvitationStatus = (global::Google.Ads.AdManager.V1.DelegationInvitationStatusEnum.Types.DelegationInvitationStatus) input.ReadEnum();
+            break;
+          }
+          case 120: {
+            ApprovalStatus = (global::Google.Ads.AdManager.V1.DelegationApprovalStatusEnum.Types.DelegationApprovalStatus) input.ReadEnum();
+            break;
+          }
+          case 136: {
+            IdentityVerificationStatus = (global::Google.Ads.AdManager.V1.ChildPublisherIdentityVerificationStatusEnum.Types.ChildPublisherIdentityVerificationStatus) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            AddressVerificationStatus = (global::Google.Ads.AdManager.V1.ChildPublisherAddressVerificationStatusEnum.Types.ChildPublisherAddressVerificationStatus) input.ReadEnum();
+            break;
+          }
+          case 178:
+          case 176: {
+            pendingOnboardingTasks_.AddEntriesFrom(ref input, _repeated_pendingOnboardingTasks_codec);
+            break;
+          }
+          case 208: {
+            AccountStatus = (global::Google.Ads.AdManager.V1.DelegationAccountStatusEnum.Types.DelegationAccountStatus) input.ReadEnum();
+            break;
+          }
+          case 232: {
+            ApprovedManageAccountRevenueShareMillipercent = input.ReadInt64();
             break;
           }
         }

@@ -42,4 +42,40 @@ namespace Google.Ads.AdManager.V1
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateCompanyRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchCreateCompaniesRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchUpdateCompaniesRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

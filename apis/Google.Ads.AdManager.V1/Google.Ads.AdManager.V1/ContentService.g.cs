@@ -384,24 +384,23 @@ namespace Google.Ads.AdManager.V1 {
     ///  See syntax details at
     ///  https://developers.google.com/ad-manager/api/beta/filters
     ///
-    /// &lt;b>Filterable fields:&lt;/b>
-    /// &lt;ul style="list-style-type:none">
-    ///   &lt;li>&lt;code>cmsMetadataValues&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>cmsSources.contentSource&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>cmsSources.contentSourceDisplayName&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>contentBundles&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>contentStatusSource&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>dashIngestStatus&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>displayName&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>duration&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>hlsIngestStatus&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>importTime&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>lastDashIngestTime&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>lastHlsIngestTime&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>name&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>status&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>updateTime&lt;/code>&lt;/li>
-    /// &lt;/ul>
+    /// **Filterable fields:**
+    ///
+    /// * `cmsMetadataValues`
+    /// * `cmsSources.contentSource`
+    /// * `cmsSources.contentSourceDisplayName`
+    /// * `contentBundles`
+    /// * `contentStatusSource`
+    /// * `dashIngestStatus`
+    /// * `displayName`
+    /// * `duration`
+    /// * `hlsIngestStatus`
+    /// * `importTime`
+    /// * `lastDashIngestTime`
+    /// * `lastHlsIngestTime`
+    /// * `name`
+    /// * `status`
+    /// * `updateTime`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -441,16 +441,15 @@ namespace Google.Ads.AdManager.V1 {
     ///  See syntax details at
     ///  https://developers.google.com/ad-manager/api/beta/filters
     ///
-    /// &lt;b>Filterable fields:&lt;/b>
-    /// &lt;ul style="list-style-type:none">
-    ///   &lt;li>&lt;code>accessType&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>allCompaniesAccess&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>allInventoryAccess&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>description&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>displayName&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>name&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>status&lt;/code>&lt;/li>
-    /// &lt;/ul>
+    /// **Filterable fields:**
+    ///
+    /// * `accessType`
+    /// * `allCompaniesAccess`
+    /// * `allInventoryAccess`
+    /// * `description`
+    /// * `displayName`
+    /// * `name`
+    /// * `status`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

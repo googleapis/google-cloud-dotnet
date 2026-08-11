@@ -265,6 +265,22 @@ namespace Google.Ads.AdManager.V1
             set => Name = value?.ToString() ?? "";
         }
 
+        /// <summary><see cref="SlateName"/>-typed view over the <see cref="Slate"/> resource name property.</summary>
+        public SlateName SlateAsSlateName
+        {
+            get => string.IsNullOrEmpty(Slate) ? null : SlateName.Parse(Slate, allowUnparsed: true);
+            set => Slate = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="DaiAuthenticationKeyName"/>-typed view over the <see cref="DaiAuthenticationKeys"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<DaiAuthenticationKeyName> DaiAuthenticationKeysAsDaiAuthenticationKeyNames
+        {
+            get => new gax::ResourceNameList<DaiAuthenticationKeyName>(DaiAuthenticationKeys, s => string.IsNullOrEmpty(s) ? null : DaiAuthenticationKeyName.Parse(s, allowUnparsed: true));
+        }
+
         /// <summary>
         /// <see cref="CdnConfigName"/>-typed view over the <see cref="SourceContentConfigurations"/> resource name
         /// property.
@@ -281,6 +297,24 @@ namespace Google.Ads.AdManager.V1
         {
             get => string.IsNullOrEmpty(AdMediaDeliveryConfig) ? null : CdnConfigName.Parse(AdMediaDeliveryConfig, allowUnparsed: true);
             set => AdMediaDeliveryConfig = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="DaiEncodingProfileName"/>-typed view over the <see cref="DaiEncodingProfiles"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<DaiEncodingProfileName> DaiEncodingProfilesAsDaiEncodingProfileNames
+        {
+            get => new gax::ResourceNameList<DaiEncodingProfileName>(DaiEncodingProfiles, s => string.IsNullOrEmpty(s) ? null : DaiEncodingProfileName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="DaiAuthenticationKeyName"/>-typed view over the <see cref="SegmentUrlAuthenticationKeys"/>
+        /// resource name property.
+        /// </summary>
+        public gax::ResourceNameList<DaiAuthenticationKeyName> SegmentUrlAuthenticationKeysAsDaiAuthenticationKeyNames
+        {
+            get => new gax::ResourceNameList<DaiAuthenticationKeyName>(SegmentUrlAuthenticationKeys, s => string.IsNullOrEmpty(s) ? null : DaiAuthenticationKeyName.Parse(s, allowUnparsed: true));
         }
     }
 }

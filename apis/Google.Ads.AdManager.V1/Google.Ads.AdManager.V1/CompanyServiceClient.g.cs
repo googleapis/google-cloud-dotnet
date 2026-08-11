@@ -27,6 +27,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -47,6 +48,10 @@ namespace Google.Ads.AdManager.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetCompanySettings = existing.GetCompanySettings;
             ListCompaniesSettings = existing.ListCompaniesSettings;
+            CreateCompanySettings = existing.CreateCompanySettings;
+            BatchCreateCompaniesSettings = existing.BatchCreateCompaniesSettings;
+            UpdateCompanySettings = existing.UpdateCompanySettings;
+            BatchUpdateCompaniesSettings = existing.BatchUpdateCompaniesSettings;
             OnCopy(existing);
         }
 
@@ -75,6 +80,54 @@ namespace Google.Ads.AdManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListCompaniesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CompanyServiceClient.CreateCompany</c> and <c>CompanyServiceClient.CreateCompanyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateCompanySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CompanyServiceClient.BatchCreateCompanies</c> and <c>CompanyServiceClient.BatchCreateCompaniesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateCompaniesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CompanyServiceClient.UpdateCompany</c> and <c>CompanyServiceClient.UpdateCompanyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCompanySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CompanyServiceClient.BatchUpdateCompanies</c> and <c>CompanyServiceClient.BatchUpdateCompaniesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchUpdateCompaniesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CompanyServiceSettings"/> object.</returns>
@@ -135,7 +188,8 @@ namespace Google.Ads.AdManager.V1
 
     /// <summary>CompanyService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Provides methods for handling `Company` objects.
+    /// Provides methods for handling [Company][google.ads.admanager.v1.Company]
+    /// objects.
     /// </remarks>
     public abstract partial class CompanyServiceClient
     {
@@ -220,7 +274,7 @@ namespace Google.Ads.AdManager.V1
         public virtual CompanyService.CompanyServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a `Company` object.
+        /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -229,7 +283,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a `Company` object.
+        /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -238,7 +292,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a `Company` object.
+        /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -247,7 +301,7 @@ namespace Google.Ads.AdManager.V1
             GetCompanyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a `Company` object.
+        /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Company.
@@ -262,7 +316,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a `Company` object.
+        /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Company.
@@ -277,7 +331,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a `Company` object.
+        /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Company.
@@ -289,7 +343,7 @@ namespace Google.Ads.AdManager.V1
             GetCompanyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a `Company` object.
+        /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Company.
@@ -304,7 +358,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a `Company` object.
+        /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Company.
@@ -319,7 +373,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a `Company` object.
+        /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Company.
@@ -331,7 +385,7 @@ namespace Google.Ads.AdManager.V1
             GetCompanyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists `Company` objects.
+        /// Lists [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -340,7 +394,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists `Company` objects.
+        /// Lists [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -349,10 +403,10 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists `Company` objects.
+        /// Lists [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of Companies.
+        /// Required. The parent, which owns this collection of [Companies][].
         /// Format: `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
@@ -383,10 +437,10 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// Lists `Company` objects.
+        /// Lists [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of Companies.
+        /// Required. The parent, which owns this collection of [Companies][].
         /// Format: `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
@@ -417,10 +471,10 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// Lists `Company` objects.
+        /// Lists [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of Companies.
+        /// Required. The parent, which owns this collection of [Companies][].
         /// Format: `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
@@ -451,10 +505,10 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// Lists `Company` objects.
+        /// Lists [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of Companies.
+        /// Required. The parent, which owns this collection of [Companies][].
         /// Format: `networks/{network_code}`
         /// </param>
         /// <param name="pageToken">
@@ -483,17 +537,577 @@ namespace Google.Ads.AdManager.V1
             }
             return ListCompaniesAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Company CreateCompany(CreateCompanyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Company> CreateCompanyAsync(CreateCompanyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Company> CreateCompanyAsync(CreateCompanyRequest request, st::CancellationToken cancellationToken) =>
+            CreateCompanyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this
+        /// [Company][google.ads.admanager.v1.Company] will be created. Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="company">
+        /// Required. The [Company][google.ads.admanager.v1.Company] to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Company CreateCompany(string parent, Company company, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCompany(new CreateCompanyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Company = gax::GaxPreconditions.CheckNotNull(company, nameof(company)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this
+        /// [Company][google.ads.admanager.v1.Company] will be created. Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="company">
+        /// Required. The [Company][google.ads.admanager.v1.Company] to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Company> CreateCompanyAsync(string parent, Company company, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCompanyAsync(new CreateCompanyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Company = gax::GaxPreconditions.CheckNotNull(company, nameof(company)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this
+        /// [Company][google.ads.admanager.v1.Company] will be created. Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="company">
+        /// Required. The [Company][google.ads.admanager.v1.Company] to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Company> CreateCompanyAsync(string parent, Company company, st::CancellationToken cancellationToken) =>
+            CreateCompanyAsync(parent, company, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this
+        /// [Company][google.ads.admanager.v1.Company] will be created. Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="company">
+        /// Required. The [Company][google.ads.admanager.v1.Company] to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Company CreateCompany(NetworkName parent, Company company, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCompany(new CreateCompanyRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Company = gax::GaxPreconditions.CheckNotNull(company, nameof(company)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this
+        /// [Company][google.ads.admanager.v1.Company] will be created. Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="company">
+        /// Required. The [Company][google.ads.admanager.v1.Company] to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Company> CreateCompanyAsync(NetworkName parent, Company company, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCompanyAsync(new CreateCompanyRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Company = gax::GaxPreconditions.CheckNotNull(company, nameof(company)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this
+        /// [Company][google.ads.admanager.v1.Company] will be created. Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="company">
+        /// Required. The [Company][google.ads.admanager.v1.Company] to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Company> CreateCompanyAsync(NetworkName parent, Company company, st::CancellationToken cancellationToken) =>
+            CreateCompanyAsync(parent, company, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateCompaniesResponse BatchCreateCompanies(BatchCreateCompaniesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCompaniesResponse> BatchCreateCompaniesAsync(BatchCreateCompaniesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCompaniesResponse> BatchCreateCompaniesAsync(BatchCreateCompaniesRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateCompaniesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where [Companies][] will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCompanyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The [Company][google.ads.admanager.v1.Company] objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateCompaniesResponse BatchCreateCompanies(string parent, scg::IEnumerable<CreateCompanyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCompanies(new BatchCreateCompaniesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where [Companies][] will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCompanyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The [Company][google.ads.admanager.v1.Company] objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCompaniesResponse> BatchCreateCompaniesAsync(string parent, scg::IEnumerable<CreateCompanyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCompaniesAsync(new BatchCreateCompaniesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where [Companies][] will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCompanyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The [Company][google.ads.admanager.v1.Company] objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCompaniesResponse> BatchCreateCompaniesAsync(string parent, scg::IEnumerable<CreateCompanyRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateCompaniesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where [Companies][] will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCompanyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The [Company][google.ads.admanager.v1.Company] objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateCompaniesResponse BatchCreateCompanies(NetworkName parent, scg::IEnumerable<CreateCompanyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCompanies(new BatchCreateCompaniesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where [Companies][] will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCompanyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The [Company][google.ads.admanager.v1.Company] objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCompaniesResponse> BatchCreateCompaniesAsync(NetworkName parent, scg::IEnumerable<CreateCompanyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCompaniesAsync(new BatchCreateCompaniesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where [Companies][] will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCompanyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The [Company][google.ads.admanager.v1.Company] objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCompaniesResponse> BatchCreateCompaniesAsync(NetworkName parent, scg::IEnumerable<CreateCompanyRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateCompaniesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Company UpdateCompany(UpdateCompanyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Company> UpdateCompanyAsync(UpdateCompanyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Company> UpdateCompanyAsync(UpdateCompanyRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCompanyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="company">
+        /// Required. The [Company][google.ads.admanager.v1.Company] to update.
+        /// 
+        /// The [Company][google.ads.admanager.v1.Company]'s `name` is used to identify
+        /// the [Company][google.ads.admanager.v1.Company] to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Company UpdateCompany(Company company, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCompany(new UpdateCompanyRequest
+            {
+                Company = gax::GaxPreconditions.CheckNotNull(company, nameof(company)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="company">
+        /// Required. The [Company][google.ads.admanager.v1.Company] to update.
+        /// 
+        /// The [Company][google.ads.admanager.v1.Company]'s `name` is used to identify
+        /// the [Company][google.ads.admanager.v1.Company] to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Company> UpdateCompanyAsync(Company company, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCompanyAsync(new UpdateCompanyRequest
+            {
+                Company = gax::GaxPreconditions.CheckNotNull(company, nameof(company)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="company">
+        /// Required. The [Company][google.ads.admanager.v1.Company] to update.
+        /// 
+        /// The [Company][google.ads.admanager.v1.Company]'s `name` is used to identify
+        /// the [Company][google.ads.admanager.v1.Company] to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Company> UpdateCompanyAsync(Company company, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateCompanyAsync(company, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateCompaniesResponse BatchUpdateCompanies(BatchUpdateCompaniesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCompaniesResponse> BatchUpdateCompaniesAsync(BatchUpdateCompaniesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCompaniesResponse> BatchUpdateCompaniesAsync(BatchUpdateCompaniesRequest request, st::CancellationToken cancellationToken) =>
+            BatchUpdateCompaniesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where [Companies][] will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCompanyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The [Company][google.ads.admanager.v1.Company] objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateCompaniesResponse BatchUpdateCompanies(string parent, scg::IEnumerable<UpdateCompanyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCompanies(new BatchUpdateCompaniesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where [Companies][] will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCompanyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The [Company][google.ads.admanager.v1.Company] objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCompaniesResponse> BatchUpdateCompaniesAsync(string parent, scg::IEnumerable<UpdateCompanyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCompaniesAsync(new BatchUpdateCompaniesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where [Companies][] will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCompanyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The [Company][google.ads.admanager.v1.Company] objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCompaniesResponse> BatchUpdateCompaniesAsync(string parent, scg::IEnumerable<UpdateCompanyRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdateCompaniesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where [Companies][] will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCompanyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The [Company][google.ads.admanager.v1.Company] objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateCompaniesResponse BatchUpdateCompanies(NetworkName parent, scg::IEnumerable<UpdateCompanyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCompanies(new BatchUpdateCompaniesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where [Companies][] will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCompanyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The [Company][google.ads.admanager.v1.Company] objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCompaniesResponse> BatchUpdateCompaniesAsync(NetworkName parent, scg::IEnumerable<UpdateCompanyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCompaniesAsync(new BatchUpdateCompaniesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where [Companies][] will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCompanyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The [Company][google.ads.admanager.v1.Company] objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCompaniesResponse> BatchUpdateCompaniesAsync(NetworkName parent, scg::IEnumerable<UpdateCompanyRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdateCompaniesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CompanyService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Provides methods for handling `Company` objects.
+    /// Provides methods for handling [Company][google.ads.admanager.v1.Company]
+    /// objects.
     /// </remarks>
     public sealed partial class CompanyServiceClientImpl : CompanyServiceClient
     {
         private readonly gaxgrpc::ApiCall<GetCompanyRequest, Company> _callGetCompany;
 
         private readonly gaxgrpc::ApiCall<ListCompaniesRequest, ListCompaniesResponse> _callListCompanies;
+
+        private readonly gaxgrpc::ApiCall<CreateCompanyRequest, Company> _callCreateCompany;
+
+        private readonly gaxgrpc::ApiCall<BatchCreateCompaniesRequest, BatchCreateCompaniesResponse> _callBatchCreateCompanies;
+
+        private readonly gaxgrpc::ApiCall<UpdateCompanyRequest, Company> _callUpdateCompany;
+
+        private readonly gaxgrpc::ApiCall<BatchUpdateCompaniesRequest, BatchUpdateCompaniesResponse> _callBatchUpdateCompanies;
 
         /// <summary>
         /// Constructs a client wrapper for the CompanyService service, with the specified gRPC client and settings.
@@ -516,6 +1130,18 @@ namespace Google.Ads.AdManager.V1
             _callListCompanies = clientHelper.BuildApiCall<ListCompaniesRequest, ListCompaniesResponse>("ListCompanies", grpcClient.ListCompaniesAsync, grpcClient.ListCompanies, effectiveSettings.ListCompaniesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCompanies);
             Modify_ListCompaniesApiCall(ref _callListCompanies);
+            _callCreateCompany = clientHelper.BuildApiCall<CreateCompanyRequest, Company>("CreateCompany", grpcClient.CreateCompanyAsync, grpcClient.CreateCompany, effectiveSettings.CreateCompanySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateCompany);
+            Modify_CreateCompanyApiCall(ref _callCreateCompany);
+            _callBatchCreateCompanies = clientHelper.BuildApiCall<BatchCreateCompaniesRequest, BatchCreateCompaniesResponse>("BatchCreateCompanies", grpcClient.BatchCreateCompaniesAsync, grpcClient.BatchCreateCompanies, effectiveSettings.BatchCreateCompaniesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateCompanies);
+            Modify_BatchCreateCompaniesApiCall(ref _callBatchCreateCompanies);
+            _callUpdateCompany = clientHelper.BuildApiCall<UpdateCompanyRequest, Company>("UpdateCompany", grpcClient.UpdateCompanyAsync, grpcClient.UpdateCompany, effectiveSettings.UpdateCompanySettings).WithGoogleRequestParam("company.name", request => request.Company?.Name);
+            Modify_ApiCall(ref _callUpdateCompany);
+            Modify_UpdateCompanyApiCall(ref _callUpdateCompany);
+            _callBatchUpdateCompanies = clientHelper.BuildApiCall<BatchUpdateCompaniesRequest, BatchUpdateCompaniesResponse>("BatchUpdateCompanies", grpcClient.BatchUpdateCompaniesAsync, grpcClient.BatchUpdateCompanies, effectiveSettings.BatchUpdateCompaniesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchUpdateCompanies);
+            Modify_BatchUpdateCompaniesApiCall(ref _callBatchUpdateCompanies);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -524,6 +1150,14 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_GetCompanyApiCall(ref gaxgrpc::ApiCall<GetCompanyRequest, Company> call);
 
         partial void Modify_ListCompaniesApiCall(ref gaxgrpc::ApiCall<ListCompaniesRequest, ListCompaniesResponse> call);
+
+        partial void Modify_CreateCompanyApiCall(ref gaxgrpc::ApiCall<CreateCompanyRequest, Company> call);
+
+        partial void Modify_BatchCreateCompaniesApiCall(ref gaxgrpc::ApiCall<BatchCreateCompaniesRequest, BatchCreateCompaniesResponse> call);
+
+        partial void Modify_UpdateCompanyApiCall(ref gaxgrpc::ApiCall<UpdateCompanyRequest, Company> call);
+
+        partial void Modify_BatchUpdateCompaniesApiCall(ref gaxgrpc::ApiCall<BatchUpdateCompaniesRequest, BatchUpdateCompaniesResponse> call);
 
         partial void OnConstruction(CompanyService.CompanyServiceClient grpcClient, CompanyServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -534,8 +1168,16 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_ListCompaniesRequest(ref ListCompaniesRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateCompanyRequest(ref CreateCompanyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchCreateCompaniesRequest(ref BatchCreateCompaniesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateCompanyRequest(ref UpdateCompanyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchUpdateCompaniesRequest(ref BatchUpdateCompaniesRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
-        /// Retrieves a `Company` object.
+        /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -547,7 +1189,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// Retrieves a `Company` object.
+        /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -559,7 +1201,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// Lists `Company` objects.
+        /// Lists [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -571,7 +1213,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// Lists `Company` objects.
+        /// Lists [Company][google.ads.admanager.v1.Company] objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -580,6 +1222,102 @@ namespace Google.Ads.AdManager.V1
         {
             Modify_ListCompaniesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListCompaniesRequest, ListCompaniesResponse, Company>(_callListCompanies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Company CreateCompany(CreateCompanyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCompanyRequest(ref request, ref callSettings);
+            return _callCreateCompany.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Company> CreateCompanyAsync(CreateCompanyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCompanyRequest(ref request, ref callSettings);
+            return _callCreateCompany.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchCreateCompaniesResponse BatchCreateCompanies(BatchCreateCompaniesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateCompaniesRequest(ref request, ref callSettings);
+            return _callBatchCreateCompanies.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchCreateCompaniesResponse> BatchCreateCompaniesAsync(BatchCreateCompaniesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateCompaniesRequest(ref request, ref callSettings);
+            return _callBatchCreateCompanies.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Company UpdateCompany(UpdateCompanyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCompanyRequest(ref request, ref callSettings);
+            return _callUpdateCompany.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a [Company][google.ads.admanager.v1.Company] object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Company> UpdateCompanyAsync(UpdateCompanyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCompanyRequest(ref request, ref callSettings);
+            return _callUpdateCompany.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchUpdateCompaniesResponse BatchUpdateCompanies(BatchUpdateCompaniesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateCompaniesRequest(ref request, ref callSettings);
+            return _callBatchUpdateCompanies.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchUpdateCompaniesResponse> BatchUpdateCompaniesAsync(BatchUpdateCompaniesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateCompaniesRequest(ref request, ref callSettings);
+            return _callBatchUpdateCompanies.Async(request, callSettings);
         }
     }
 

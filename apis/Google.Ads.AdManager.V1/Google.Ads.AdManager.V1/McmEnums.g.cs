@@ -28,25 +28,70 @@ namespace Google.Ads.AdManager.V1 {
             "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxInEKEkRlbGVnYXRpb25UeXBlRW51bSJb",
             "Cg5EZWxlZ2F0aW9uVHlwZRIfChtERUxFR0FUSU9OX1RZUEVfVU5TUEVDSUZJ",
             "RUQQABISCg5NQU5BR0VfQUNDT1VOVBABEhQKEE1BTkFHRV9JTlZFTlRPUlkQ",
-            "AiKsAwoaTWNtRWFybmluZ3NQcm9kdWN0VHlwZUVudW0ijQMKFk1jbUVhcm5p",
-            "bmdzUHJvZHVjdFR5cGUSKQolTUNNX0VBUk5JTkdTX1BST0RVQ1RfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEhcKE0FEX0VYQ0hBTkdFX0NPTlRFTlQQARIcChhBRF9F",
-            "WENIQU5HRV9DT05URU5UX0hPU1QQAhIVChFBRF9FWENIQU5HRV9HQU1FUxAD",
-            "EhoKFkFEX0VYQ0hBTkdFX0dBTUVTX0hPU1QQBBIiCh5BRF9FWENIQU5HRV9N",
-            "T0JJTEVfQ09OVEVOVF9BUFAQBRInCiNBRF9FWENIQU5HRV9NT0JJTEVfQ09O",
-            "VEVOVF9BUFBfSE9TVBAGEhUKEUFEX0VYQ0hBTkdFX1ZJREVPEAcSGgoWQURf",
-            "RVhDSEFOR0VfVklERU9fSE9TVBAIEhwKGEFEX0VYQ0hBTkdFX1JFU0VSVkFU",
-            "SU9OUxAJEh8KG0FEX0VYQ0hBTkdFX1BSRUZFUlJFRF9ERUFMUxAKEg0KCU9G",
-            "RkVSV0FMTBALEhAKDEJVWUVSX0RJUkVDVBAMQsEBChtjb20uZ29vZ2xlLmFk",
-            "cy5hZG1hbmFnZXIudjFCDU1jbUVudW1zUHJvdG9QAVpAZ29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2Fk",
-            "bWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFk",
-            "c1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIG",
-            "cHJvdG8z"));
+            "AiJ8ChZNY21SZWFkaW5lc3NTdGF0dXNFbnVtImIKEk1jbVJlYWRpbmVzc1N0",
+            "YXR1cxIkCiBNQ01fUkVBRElORVNTX1NUQVRVU19VTlNQRUNJRklFRBAAEgwK",
+            "CElOQUNUSVZFEAESDQoJTk9UX1JFQURZEAISCQoFUkVBRFkQAyLRAQoeRGVs",
+            "ZWdhdGlvbkludml0YXRpb25TdGF0dXNFbnVtIq4BChpEZWxlZ2F0aW9uSW52",
+            "aXRhdGlvblN0YXR1cxIsCihERUxFR0FUSU9OX0lOVklUQVRJT05fU1RBVFVT",
+            "X1VOU1BFQ0lGSUVEEAASDAoIQUNDRVBURUQQARILCgdFWFBJUkVEEAISCwoH",
+            "UEVORElORxADEgwKCFJFSkVDVEVEEAQSDQoJV0lUSERSQVdOEAUSHQoZREVB",
+            "Q1RJVkFURURfQllfQURfTUFOQUdFUhAGIvYCChtEZWxlZ2F0aW9uQWNjb3Vu",
+            "dFN0YXR1c0VudW0i1gIKF0RlbGVnYXRpb25BY2NvdW50U3RhdHVzEikKJURF",
+            "TEVHQVRJT05fQUNDT1VOVF9TVEFUVVNfVU5TUEVDSUZJRUQQABILCgdJTlZJ",
+            "VEVEEAESDAoIREVDTElORUQQAhIMCghBUFBST1ZFRBADEhcKE0NMT1NFRF9C",
+            "WV9QVUJMSVNIRVIQBBIbChdDTE9TRURfSU5WQUxJRF9BQ1RJVklUWRAFEhsK",
+            "F0NMT1NFRF9QT0xJQ1lfVklPTEFUSU9OEAYSHQoZREVBQ1RJVkFURURfQllf",
+            "QURfTUFOQUdFUhAHEiEKHURJU0FQUFJPVkVEX0RVUExJQ0FURV9BQ0NPVU5U",
+            "EAgSGgoWRElTQVBQUk9WRURfSU5FTElHSUJMRRAJEhsKF1BFTkRJTkdfR09P",
+            "R0xFX0FQUFJPVkFMEAoSCwoHRVhQSVJFRBALEgwKCElOQUNUSVZFEAwiwwIK",
+            "HERlbGVnYXRpb25BcHByb3ZhbFN0YXR1c0VudW0iogIKGERlbGVnYXRpb25B",
+            "cHByb3ZhbFN0YXR1cxIqCiZERUxFR0FUSU9OX0FQUFJPVkFMX1NUQVRVU19V",
+            "TlNQRUNJRklFRBAAEgwKCEFQUFJPVkVEEAESFwoTQ0xPU0VEX0JZX1BVQkxJ",
+            "U0hFUhACEhsKF0NMT1NFRF9JTlZBTElEX0FDVElWSVRZEAMSGwoXQ0xPU0VE",
+            "X1BPTElDWV9WSU9MQVRJT04QBBIdChlERUFDVElWQVRFRF9CWV9BRF9NQU5B",
+            "R0VSEAUSIQodRElTQVBQUk9WRURfRFVQTElDQVRFX0FDQ09VTlQQBhIaChZE",
+            "SVNBUFBST1ZFRF9JTkVMSUdJQkxFEAcSGwoXUEVORElOR19HT09HTEVfQVBQ",
+            "Uk9WQUwQCCLrAQosQ2hpbGRQdWJsaXNoZXJJZGVudGl0eVZlcmlmaWNhdGlv",
+            "blN0YXR1c0VudW0iugEKKENoaWxkUHVibGlzaGVySWRlbnRpdHlWZXJpZmlj",
+            "YXRpb25TdGF0dXMSPAo4Q0hJTERfUFVCTElTSEVSX0lERU5USVRZX1ZFUklG",
+            "SUNBVElPTl9TVEFUVVNfVU5TUEVDSUZJRUQQABIKCgZFWEVNUFQQARILCgdF",
+            "WFBJUkVEEAISCgoGRkFJTEVEEAMSCwoHUEVORElORxAEEhAKDE5PVF9FTElH",
+            "SUJMRRAFEgwKCFZFUklGSUVEEAYi6AEKK0NoaWxkUHVibGlzaGVyQWRkcmVz",
+            "c1ZlcmlmaWNhdGlvblN0YXR1c0VudW0iuAEKJ0NoaWxkUHVibGlzaGVyQWRk",
+            "cmVzc1ZlcmlmaWNhdGlvblN0YXR1cxI7CjdDSElMRF9QVUJMSVNIRVJfQURE",
+            "UkVTU19WRVJJRklDQVRJT05fU1RBVFVTX1VOU1BFQ0lGSUVEEAASCgoGRVhF",
+            "TVBUEAESCwoHRVhQSVJFRBACEgoKBkZBSUxFRBADEgsKB1BFTkRJTkcQBBIQ",
+            "CgxOT1RfRUxJR0lCTEUQBRIMCghWRVJJRklFRBAGIswBCiBDaGlsZFB1Ymxp",
+            "c2hlck9uYm9hcmRpbmdUYXNrRW51bSKnAQocQ2hpbGRQdWJsaXNoZXJPbmJv",
+            "YXJkaW5nVGFzaxIvCitDSElMRF9QVUJMSVNIRVJfT05CT0FSRElOR19UQVNL",
+            "X1VOU1BFQ0lGSUVEEAASHAoYQklMTElOR19QUk9GSUxFX0NSRUFUSU9OEAES",
+            "GgoWUEhPTkVfUElOX1ZFUklGSUNBVElPThACEhwKGEFEX01BTkFHRVJfQUND",
+            "T1VOVF9TRVRVUBAEIqwDChpNY21FYXJuaW5nc1Byb2R1Y3RUeXBlRW51bSKN",
+            "AwoWTWNtRWFybmluZ3NQcm9kdWN0VHlwZRIpCiVNQ01fRUFSTklOR1NfUFJP",
+            "RFVDVF9UWVBFX1VOU1BFQ0lGSUVEEAASFwoTQURfRVhDSEFOR0VfQ09OVEVO",
+            "VBABEhwKGEFEX0VYQ0hBTkdFX0NPTlRFTlRfSE9TVBACEhUKEUFEX0VYQ0hB",
+            "TkdFX0dBTUVTEAMSGgoWQURfRVhDSEFOR0VfR0FNRVNfSE9TVBAEEiIKHkFE",
+            "X0VYQ0hBTkdFX01PQklMRV9DT05URU5UX0FQUBAFEicKI0FEX0VYQ0hBTkdF",
+            "X01PQklMRV9DT05URU5UX0FQUF9IT1NUEAYSFQoRQURfRVhDSEFOR0VfVklE",
+            "RU8QBxIaChZBRF9FWENIQU5HRV9WSURFT19IT1NUEAgSHAoYQURfRVhDSEFO",
+            "R0VfUkVTRVJWQVRJT05TEAkSHwobQURfRVhDSEFOR0VfUFJFRkVSUkVEX0RF",
+            "QUxTEAoSDQoJT0ZGRVJXQUxMEAsSEAoMQlVZRVJfRElSRUNUEAxCwQEKG2Nv",
+            "bS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUINTWNtRW51bXNQcm90b1ABWkBn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1h",
+            "bmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHK",
+            "AhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1h",
+            "bmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DelegationTypeEnum), global::Google.Ads.AdManager.V1.DelegationTypeEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.DelegationTypeEnum.Types.DelegationType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.McmReadinessStatusEnum), global::Google.Ads.AdManager.V1.McmReadinessStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.McmReadinessStatusEnum.Types.McmReadinessStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DelegationInvitationStatusEnum), global::Google.Ads.AdManager.V1.DelegationInvitationStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.DelegationInvitationStatusEnum.Types.DelegationInvitationStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DelegationAccountStatusEnum), global::Google.Ads.AdManager.V1.DelegationAccountStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.DelegationAccountStatusEnum.Types.DelegationAccountStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DelegationApprovalStatusEnum), global::Google.Ads.AdManager.V1.DelegationApprovalStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.DelegationApprovalStatusEnum.Types.DelegationApprovalStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ChildPublisherIdentityVerificationStatusEnum), global::Google.Ads.AdManager.V1.ChildPublisherIdentityVerificationStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.ChildPublisherIdentityVerificationStatusEnum.Types.ChildPublisherIdentityVerificationStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ChildPublisherAddressVerificationStatusEnum), global::Google.Ads.AdManager.V1.ChildPublisherAddressVerificationStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.ChildPublisherAddressVerificationStatusEnum.Types.ChildPublisherAddressVerificationStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ChildPublisherOnboardingTaskEnum), global::Google.Ads.AdManager.V1.ChildPublisherOnboardingTaskEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.ChildPublisherOnboardingTaskEnum.Types.ChildPublisherOnboardingTask) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.McmEarningsProductTypeEnum), global::Google.Ads.AdManager.V1.McmEarningsProductTypeEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.McmEarningsProductTypeEnum.Types.McmEarningsProductType) }, null, null)
           }));
     }
@@ -251,6 +296,1506 @@ namespace Google.Ads.AdManager.V1 {
 
   /// <summary>
   /// Wrapper for
+  /// [McmReadinessStatus][google.ads.admanager.v1.McmReadinessStatusEnum.McmReadinessStatus]
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class McmReadinessStatusEnum : pb::IMessage<McmReadinessStatusEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<McmReadinessStatusEnum> _parser = new pb::MessageParser<McmReadinessStatusEnum>(() => new McmReadinessStatusEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<McmReadinessStatusEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.McmEnumsReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public McmReadinessStatusEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public McmReadinessStatusEnum(McmReadinessStatusEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public McmReadinessStatusEnum Clone() {
+      return new McmReadinessStatusEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as McmReadinessStatusEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(McmReadinessStatusEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(McmReadinessStatusEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the McmReadinessStatusEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Status of the MCM child publisher's Ad Manager network onboarding readiness
+      /// status
+      /// </summary>
+      public enum McmReadinessStatus {
+        /// <summary>
+        /// No value specified
+        /// </summary>
+        [pbr::OriginalName("MCM_READINESS_STATUS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates the invitation to the child is declined or withdrawn.
+        /// </summary>
+        [pbr::OriginalName("INACTIVE")] Inactive = 1,
+        /// <summary>
+        /// Indicates the MCM setup has not yet completed. It could be child not yet
+        /// accepted the invitation, Google found noncompliance settings or child has
+        /// not yet completed identity or address verifications.
+        /// </summary>
+        [pbr::OriginalName("NOT_READY")] NotReady = 2,
+        /// <summary>
+        /// Indicates MCM setup has completed. Including the child publisher accepted
+        /// the invite, Google found it to be compliant with its policies, i.e. no
+        /// policy violations were found, related verifications have completed and
+        /// the child publisher can be served ads.
+        /// </summary>
+        [pbr::OriginalName("READY")] Ready = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Wrapper for
+  /// [DelegationInvitationStatus][google.ads.admanager.v1.DelegationInvitationStatusEnum.DelegationInvitationStatus]
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DelegationInvitationStatusEnum : pb::IMessage<DelegationInvitationStatusEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DelegationInvitationStatusEnum> _parser = new pb::MessageParser<DelegationInvitationStatusEnum>(() => new DelegationInvitationStatusEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DelegationInvitationStatusEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.McmEnumsReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DelegationInvitationStatusEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DelegationInvitationStatusEnum(DelegationInvitationStatusEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DelegationInvitationStatusEnum Clone() {
+      return new DelegationInvitationStatusEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DelegationInvitationStatusEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DelegationInvitationStatusEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DelegationInvitationStatusEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DelegationInvitationStatusEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Status of the association between networks. When a parent network requests
+      /// access, it is marked as pending. Once the child network accepts the
+      /// agreement, it is marked as accepted.
+      /// </summary>
+      public enum DelegationInvitationStatus {
+        /// <summary>
+        /// No value specified
+        /// </summary>
+        [pbr::OriginalName("DELEGATION_INVITATION_STATUS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates the association request from the parent network is accepted by
+        /// the child network.
+        /// </summary>
+        [pbr::OriginalName("ACCEPTED")] Accepted = 1,
+        /// <summary>
+        /// Indicates the invite was sent to the child publisher more than 90 days
+        /// ago, due to which it has been deactivated.
+        /// </summary>
+        [pbr::OriginalName("EXPIRED")] Expired = 2,
+        /// <summary>
+        /// Indicates the child publisher has not acted on the invite from the
+        /// parent.
+        /// </summary>
+        [pbr::OriginalName("PENDING")] Pending = 3,
+        /// <summary>
+        /// Indicates the child publisher has declined the invite.
+        /// </summary>
+        [pbr::OriginalName("REJECTED")] Rejected = 4,
+        /// <summary>
+        /// Indicates the parent network withdrew the invite.
+        /// </summary>
+        [pbr::OriginalName("WITHDRAWN")] Withdrawn = 5,
+        /// <summary>
+        /// Indicates the invitation was disapproved by Google.
+        /// </summary>
+        [pbr::OriginalName("DEACTIVATED_BY_AD_MANAGER")] DeactivatedByAdManager = 6,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Wrapper for
+  /// [DelegationAccountStatus][google.ads.admanager.v1.DelegationAccountStatusEnum.DelegationAccountStatus]
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DelegationAccountStatusEnum : pb::IMessage<DelegationAccountStatusEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DelegationAccountStatusEnum> _parser = new pb::MessageParser<DelegationAccountStatusEnum>(() => new DelegationAccountStatusEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DelegationAccountStatusEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.McmEnumsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DelegationAccountStatusEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DelegationAccountStatusEnum(DelegationAccountStatusEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DelegationAccountStatusEnum Clone() {
+      return new DelegationAccountStatusEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DelegationAccountStatusEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DelegationAccountStatusEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DelegationAccountStatusEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DelegationAccountStatusEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Status of the MCM child publisher's Ad Manager account with respect to
+      /// delegated serving. In order for the child network to be served ads for
+      /// MCM, it must have accepted the invite from the parent network, and must
+      /// have passed Google's policy compliance verifications.
+      /// </summary>
+      public enum DelegationAccountStatus {
+        /// <summary>
+        /// No value specified
+        /// </summary>
+        [pbr::OriginalName("DELEGATION_ACCOUNT_STATUS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates the child publisher has not acted on the invite from the
+        /// parent.
+        /// </summary>
+        [pbr::OriginalName("INVITED")] Invited = 1,
+        /// <summary>
+        /// Indicates the child publisher has declined the invite.
+        /// </summary>
+        [pbr::OriginalName("DECLINED")] Declined = 2,
+        /// <summary>
+        /// Indicates the child publisher accepted the invite, and Google found it to
+        /// be compliant with its policies, i.e. no policy violations were found,
+        /// and the child publisher can be served ads.
+        /// </summary>
+        [pbr::OriginalName("APPROVED")] Approved = 3,
+        /// <summary>
+        /// Indicates the child publisher has closed their own account.
+        /// </summary>
+        [pbr::OriginalName("CLOSED_BY_PUBLISHER")] ClosedByPublisher = 4,
+        /// <summary>
+        /// Indicates the child publisher accepted the invite, but was disapproved by
+        /// Google for invalid activity.
+        /// </summary>
+        [pbr::OriginalName("CLOSED_INVALID_ACTIVITY")] ClosedInvalidActivity = 5,
+        /// <summary>
+        /// Indicates the child publisher accepted the invite, but was disapproved by
+        /// Google for violating its policies.
+        /// </summary>
+        [pbr::OriginalName("CLOSED_POLICY_VIOLATION")] ClosedPolicyViolation = 6,
+        /// <summary>
+        /// Indicates the child publisher accepted the invite, but was disapproved by
+        /// a Googler.
+        /// </summary>
+        [pbr::OriginalName("DEACTIVATED_BY_AD_MANAGER")] DeactivatedByAdManager = 7,
+        /// <summary>
+        /// Indicates the child publisher accepted the invite, but was disapproved by
+        /// Google for being a duplicate of another account.
+        /// </summary>
+        [pbr::OriginalName("DISAPPROVED_DUPLICATE_ACCOUNT")] DisapprovedDuplicateAccount = 8,
+        /// <summary>
+        /// Indicates the child publisher accepted the invite, but was disapproved as
+        /// ineligible by Google.
+        /// </summary>
+        [pbr::OriginalName("DISAPPROVED_INELIGIBLE")] DisapprovedIneligible = 9,
+        /// <summary>
+        /// Indicates the child publisher has accepted the invite, and is awaiting
+        /// Google's policy compliance verifications.
+        /// </summary>
+        [pbr::OriginalName("PENDING_GOOGLE_APPROVAL")] PendingGoogleApproval = 10,
+        /// <summary>
+        /// Indicates the invite was sent to the child publisher more than 90 days
+        /// ago, due to which it has been deactivated.
+        /// </summary>
+        [pbr::OriginalName("EXPIRED")] Expired = 11,
+        /// <summary>
+        /// Indicates either the child publisher disconnected from the parent
+        /// network, or the parent network withdrew the invite.
+        /// </summary>
+        [pbr::OriginalName("INACTIVE")] Inactive = 12,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Wrapper for
+  /// [DelegationApprovalStatus][google.ads.admanager.v1.DelegationApprovalStatusEnum.DelegationApprovalStatus]
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DelegationApprovalStatusEnum : pb::IMessage<DelegationApprovalStatusEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DelegationApprovalStatusEnum> _parser = new pb::MessageParser<DelegationApprovalStatusEnum>(() => new DelegationApprovalStatusEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DelegationApprovalStatusEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.McmEnumsReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DelegationApprovalStatusEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DelegationApprovalStatusEnum(DelegationApprovalStatusEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DelegationApprovalStatusEnum Clone() {
+      return new DelegationApprovalStatusEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DelegationApprovalStatusEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DelegationApprovalStatusEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DelegationApprovalStatusEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DelegationApprovalStatusEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Status of the MCM child publisher's Ad Manager network with respect to
+      /// delegated serving. It is only valid when the invitation is accepted by the
+      /// child network. If the child has not yet accepted the parent's invite, this
+      /// will be null.
+      /// </summary>
+      public enum DelegationApprovalStatus {
+        /// <summary>
+        /// No value specified
+        /// </summary>
+        [pbr::OriginalName("DELEGATION_APPROVAL_STATUS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates the child publisher accepted the invite, and Google found it to
+        /// be compliant with its policies, i.e. no policy violations were found,
+        /// and the child publisher can be served ads.
+        /// </summary>
+        [pbr::OriginalName("APPROVED")] Approved = 1,
+        /// <summary>
+        /// Indicates the child publisher has closed their own account.
+        /// </summary>
+        [pbr::OriginalName("CLOSED_BY_PUBLISHER")] ClosedByPublisher = 2,
+        /// <summary>
+        /// Indicates the child publisher accepted the invite, but was disapproved by
+        /// Google for invalid activity.
+        /// </summary>
+        [pbr::OriginalName("CLOSED_INVALID_ACTIVITY")] ClosedInvalidActivity = 3,
+        /// <summary>
+        /// Indicates the child publisher accepted the invite, but was disapproved by
+        /// Google for violating its policies.
+        /// </summary>
+        [pbr::OriginalName("CLOSED_POLICY_VIOLATION")] ClosedPolicyViolation = 4,
+        /// <summary>
+        /// Indicates the child publisher accepted the invite, but was disapproved by
+        /// a Googler.
+        /// </summary>
+        [pbr::OriginalName("DEACTIVATED_BY_AD_MANAGER")] DeactivatedByAdManager = 5,
+        /// <summary>
+        /// Indicates the child publisher accepted the invite, but was disapproved by
+        /// Google for being a duplicate of another account.
+        /// </summary>
+        [pbr::OriginalName("DISAPPROVED_DUPLICATE_ACCOUNT")] DisapprovedDuplicateAccount = 6,
+        /// <summary>
+        /// Indicates the child publisher accepted the invite, but was disapproved as
+        /// ineligible by Google.
+        /// </summary>
+        [pbr::OriginalName("DISAPPROVED_INELIGIBLE")] DisapprovedIneligible = 7,
+        /// <summary>
+        /// Indicates the child publisher has accepted the invite, and is awaiting
+        /// Google's policy compliance verifications.
+        /// </summary>
+        [pbr::OriginalName("PENDING_GOOGLE_APPROVAL")] PendingGoogleApproval = 8,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Wrapper for
+  /// [ChildPublisherIdentityVerificationStatus][google.ads.admanager.v1.ChildPublisherIdentityVerificationStatusEnum.ChildPublisherIdentityVerificationStatus]
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ChildPublisherIdentityVerificationStatusEnum : pb::IMessage<ChildPublisherIdentityVerificationStatusEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ChildPublisherIdentityVerificationStatusEnum> _parser = new pb::MessageParser<ChildPublisherIdentityVerificationStatusEnum>(() => new ChildPublisherIdentityVerificationStatusEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ChildPublisherIdentityVerificationStatusEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.McmEnumsReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChildPublisherIdentityVerificationStatusEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChildPublisherIdentityVerificationStatusEnum(ChildPublisherIdentityVerificationStatusEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChildPublisherIdentityVerificationStatusEnum Clone() {
+      return new ChildPublisherIdentityVerificationStatusEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ChildPublisherIdentityVerificationStatusEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ChildPublisherIdentityVerificationStatusEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ChildPublisherIdentityVerificationStatusEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ChildPublisherIdentityVerificationStatusEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The status of the Mcm child identity verification.
+      /// </summary>
+      public enum ChildPublisherIdentityVerificationStatus {
+        /// <summary>
+        /// No value specified
+        /// </summary>
+        [pbr::OriginalName("CHILD_PUBLISHER_IDENTITY_VERIFICATION_STATUS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates publisher is exempt from identify verification.
+        /// </summary>
+        [pbr::OriginalName("EXEMPT")] Exempt = 1,
+        /// <summary>
+        /// Indicates publisher hasn't completed identity verification before the
+        /// expiration date.
+        /// </summary>
+        [pbr::OriginalName("EXPIRED")] Expired = 2,
+        /// <summary>
+        /// Indicates publisher failed identity verification.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 3,
+        /// <summary>
+        /// Indicates publisher is pending identity verification.
+        /// </summary>
+        [pbr::OriginalName("PENDING")] Pending = 4,
+        /// <summary>
+        /// Indicates publisher is not eligible for identity verification.
+        /// </summary>
+        [pbr::OriginalName("NOT_ELIGIBLE")] NotEligible = 5,
+        /// <summary>
+        /// Indicates publisher has completed identity verification.
+        /// </summary>
+        [pbr::OriginalName("VERIFIED")] Verified = 6,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Wrapper for
+  /// [ChildPublisherAddressVerificationStatus][google.ads.admanager.v1.ChildPublisherAddressVerificationStatusEnum.ChildPublisherAddressVerificationStatus]
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ChildPublisherAddressVerificationStatusEnum : pb::IMessage<ChildPublisherAddressVerificationStatusEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ChildPublisherAddressVerificationStatusEnum> _parser = new pb::MessageParser<ChildPublisherAddressVerificationStatusEnum>(() => new ChildPublisherAddressVerificationStatusEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ChildPublisherAddressVerificationStatusEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.McmEnumsReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChildPublisherAddressVerificationStatusEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChildPublisherAddressVerificationStatusEnum(ChildPublisherAddressVerificationStatusEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChildPublisherAddressVerificationStatusEnum Clone() {
+      return new ChildPublisherAddressVerificationStatusEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ChildPublisherAddressVerificationStatusEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ChildPublisherAddressVerificationStatusEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ChildPublisherAddressVerificationStatusEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ChildPublisherAddressVerificationStatusEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The status of the Mcm child address verification.
+      /// </summary>
+      public enum ChildPublisherAddressVerificationStatus {
+        /// <summary>
+        /// No value specified
+        /// </summary>
+        [pbr::OriginalName("CHILD_PUBLISHER_ADDRESS_VERIFICATION_STATUS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates publisher is exempt from address verification.
+        /// </summary>
+        [pbr::OriginalName("EXEMPT")] Exempt = 1,
+        /// <summary>
+        /// Indicates publisher hasn't completed address verification before the
+        /// expiration date.
+        /// </summary>
+        [pbr::OriginalName("EXPIRED")] Expired = 2,
+        /// <summary>
+        /// Indicates publisher failed address verification.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 3,
+        /// <summary>
+        /// Indicates publisher's address pin has been mailed and must be verified.
+        /// </summary>
+        [pbr::OriginalName("PENDING")] Pending = 4,
+        /// <summary>
+        /// Indicates publisher is not eligible for address verification.
+        /// </summary>
+        [pbr::OriginalName("NOT_ELIGIBLE")] NotEligible = 5,
+        /// <summary>
+        /// Indicates publisher's address is verified.
+        /// </summary>
+        [pbr::OriginalName("VERIFIED")] Verified = 6,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Wrapper for
+  /// [ChildPublisherOnboardingTask][google.ads.admanager.v1.ChildPublisherOnboardingTaskEnum.ChildPublisherOnboardingTask]
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ChildPublisherOnboardingTaskEnum : pb::IMessage<ChildPublisherOnboardingTaskEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ChildPublisherOnboardingTaskEnum> _parser = new pb::MessageParser<ChildPublisherOnboardingTaskEnum>(() => new ChildPublisherOnboardingTaskEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ChildPublisherOnboardingTaskEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.McmEnumsReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChildPublisherOnboardingTaskEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChildPublisherOnboardingTaskEnum(ChildPublisherOnboardingTaskEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChildPublisherOnboardingTaskEnum Clone() {
+      return new ChildPublisherOnboardingTaskEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ChildPublisherOnboardingTaskEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ChildPublisherOnboardingTaskEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ChildPublisherOnboardingTaskEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ChildPublisherOnboardingTaskEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The pending tasks that must be completed by the child publisher before
+      /// Google's policy complicance (i.e.,
+      /// [PENDING_GOOGLE_APPROVAL][google.ads.admanager.v1.DelegationApprovalStatusEnum.DelegationApprovalStatus.PENDING_GOOGLE_APPROVAL])
+      /// can be verified.
+      /// </summary>
+      public enum ChildPublisherOnboardingTask {
+        /// <summary>
+        /// No value specified
+        /// </summary>
+        [pbr::OriginalName("CHILD_PUBLISHER_ONBOARDING_TASK_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates the child publisher is required to create a payments billing
+        /// profile.
+        /// </summary>
+        [pbr::OriginalName("BILLING_PROFILE_CREATION")] BillingProfileCreation = 1,
+        /// <summary>
+        /// Indicates the child publisher is required to verify their phone number.
+        /// </summary>
+        [pbr::OriginalName("PHONE_PIN_VERIFICATION")] PhonePinVerification = 2,
+        /// <summary>
+        /// Indicates the child publisher is required to setup their Ad Manager
+        /// account.
+        /// </summary>
+        [pbr::OriginalName("AD_MANAGER_ACCOUNT_SETUP")] AdManagerAccountSetup = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Wrapper for
   /// [McmEarningsProductType][google.ads.admanager.v1.McmEarningsProductTypeEnum.McmEarningsProductType]
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -268,7 +1813,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.McmEnumsReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Ads.AdManager.V1.McmEnumsReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

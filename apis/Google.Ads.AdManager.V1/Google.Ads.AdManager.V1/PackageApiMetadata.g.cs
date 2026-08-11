@@ -84,6 +84,7 @@ namespace Google.Ads.AdManager.V1
             yield return CdnSecurityPolicyOriginForwardingEnumReflection.Descriptor;
             yield return ChildContentEligibilityEnumReflection.Descriptor;
             yield return ChildPublisherMessagesReflection.Descriptor;
+            yield return ChildPublisherServiceReflection.Descriptor;
             yield return CmsMetadataKeyEnumsReflection.Descriptor;
             yield return CmsMetadataKeyMessagesReflection.Descriptor;
             yield return CmsMetadataKeyServiceReflection.Descriptor;
@@ -104,6 +105,7 @@ namespace Google.Ads.AdManager.V1
             yield return ContentLabelServiceReflection.Descriptor;
             yield return ContentMessagesReflection.Descriptor;
             yield return ContentServiceReflection.Descriptor;
+            yield return ConversionEventEnumReflection.Descriptor;
             yield return CreativeMessagesReflection.Descriptor;
             yield return CreativePlaceholderReflection.Descriptor;
             yield return CreativeSetMessagesReflection.Descriptor;
@@ -113,6 +115,9 @@ namespace Google.Ads.AdManager.V1
             yield return CreativeTemplateMessagesReflection.Descriptor;
             yield return CreativeTemplateServiceReflection.Descriptor;
             yield return CreativeTemplateVariableUrlTypeEnumReflection.Descriptor;
+            yield return CreativeWrapperEnumsReflection.Descriptor;
+            yield return CreativeWrapperMessagesReflection.Descriptor;
+            yield return CreativeWrapperServiceReflection.Descriptor;
             yield return CustomFieldEnumsReflection.Descriptor;
             yield return CustomFieldMessagesReflection.Descriptor;
             yield return CustomFieldServiceReflection.Descriptor;
@@ -125,6 +130,12 @@ namespace Google.Ads.AdManager.V1
             yield return CustomTargetingValueEnumsReflection.Descriptor;
             yield return CustomTargetingValueMessagesReflection.Descriptor;
             yield return CustomTargetingValueServiceReflection.Descriptor;
+            yield return DaiAuthenticationKeyEnumsReflection.Descriptor;
+            yield return DaiAuthenticationKeyMessagesReflection.Descriptor;
+            yield return DaiAuthenticationKeyServiceReflection.Descriptor;
+            yield return DaiEncodingProfileEnumsReflection.Descriptor;
+            yield return DaiEncodingProfileMessagesReflection.Descriptor;
+            yield return DaiEncodingProfileServiceReflection.Descriptor;
             yield return DealBuyerPermissionTypeEnumReflection.Descriptor;
             yield return DealPriorityTierEnumReflection.Descriptor;
             yield return DeliveryEnumsReflection.Descriptor;
@@ -189,6 +200,8 @@ namespace Google.Ads.AdManager.V1
             yield return OrderMessagesReflection.Descriptor;
             yield return OrderServiceReflection.Descriptor;
             yield return PacingDeviceCategorizationEnumReflection.Descriptor;
+            yield return PartnerMessagesReflection.Descriptor;
+            yield return PartnerServiceReflection.Descriptor;
             yield return PlacementEnumsReflection.Descriptor;
             yield return PlacementMessagesReflection.Descriptor;
             yield return PlacementServiceReflection.Descriptor;
@@ -205,6 +218,7 @@ namespace Google.Ads.AdManager.V1
             yield return ReportMessagesReflection.Descriptor;
             yield return ReportServiceReflection.Descriptor;
             yield return ReportValueReflection.Descriptor;
+            yield return ReportVisibilityEnumReflection.Descriptor;
             yield return RequestPlatformEnumReflection.Descriptor;
             yield return RichMediaAdsCompanyEnumsReflection.Descriptor;
             yield return RichMediaAdsCompanyMessagesReflection.Descriptor;
@@ -237,13 +251,18 @@ namespace Google.Ads.AdManager.V1
             yield return ThirdPartyCompanyEnumsReflection.Descriptor;
             yield return ThirdPartyCompanyMessagesReflection.Descriptor;
             yield return ThirdPartyCompanyServiceReflection.Descriptor;
+            yield return ThirdPartyDataDeclarationReflection.Descriptor;
+            yield return ThirdPartyDataDeclarationTypeEnumReflection.Descriptor;
             yield return ThirdPartyMeasurementSettingsReflection.Descriptor;
             yield return TimeUnitEnumReflection.Descriptor;
             yield return UserMessagesReflection.Descriptor;
             yield return UserServiceReflection.Descriptor;
             yield return VideoPositionEnumReflection.Descriptor;
+            yield return VideoTrackingUrlReflection.Descriptor;
             yield return VideoTranscodeStatusEnumReflection.Descriptor;
             yield return ViewabilityPartnerEnumReflection.Descriptor;
+            yield return ViewabilityProviderMessagesReflection.Descriptor;
+            yield return ViewabilityProviderServiceReflection.Descriptor;
             yield return WebPropertyReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

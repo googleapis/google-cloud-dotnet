@@ -7152,31 +7152,30 @@ namespace Google.Ads.AdManager.V1 {
     ///  See syntax details at
     ///  https://developers.google.com/ad-manager/api/beta/filters
     ///
-    /// &lt;b>Filterable fields:&lt;/b>
-    /// &lt;ul style="list-style-type:none">
-    ///   &lt;li>&lt;code>advertiser&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>agency&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>appliedTeams&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>archived&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>creator&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>displayName&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>endTime&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>externalOrderId&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>impressionsDelivered&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>name&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>orderId&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>poNumber&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>programmatic&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>salesperson&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>secondarySalespeople&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>secondaryTraffickers&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>startTime&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>status&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>totalClicksDelivered&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>totalViewableImpressionsDelivered&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>trafficker&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>updateTime&lt;/code>&lt;/li>
-    /// &lt;/ul>
+    /// **Filterable fields:**
+    ///
+    /// * `advertiser`
+    /// * `agency`
+    /// * `appliedTeams`
+    /// * `archived`
+    /// * `creator`
+    /// * `displayName`
+    /// * `endTime`
+    /// * `externalOrderId`
+    /// * `impressionsDelivered`
+    /// * `name`
+    /// * `orderId`
+    /// * `poNumber`
+    /// * `programmatic`
+    /// * `salesperson`
+    /// * `secondarySalespeople`
+    /// * `secondaryTraffickers`
+    /// * `startTime`
+    /// * `status`
+    /// * `totalClicksDelivered`
+    /// * `totalViewableImpressionsDelivered`
+    /// * `trafficker`
+    /// * `updateTime`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

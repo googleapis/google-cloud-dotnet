@@ -29,7 +29,7 @@ namespace Google.Ads.AdManager.V1 {
             "YWRtYW5hZ2VyL3YxL2xpdmVfc3RyZWFtX2V2ZW50X2VudW1zLnByb3RvGh9n",
             "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jl",
             "c291cmNlLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i/BkKCkxpdmVTdHJl",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iqB0KCkxpdmVTdHJl",
             "YW0SEQoEbmFtZRgBIAEoCUID4EEIEh4KDGRpc3BsYXlfbmFtZRgCIAEoCUID",
             "4EECSACIAQESYgoGc3RhdHVzGAMgASgOMkguZ29vZ2xlLmFkcy5hZG1hbmFn",
             "ZXIudjEuTGl2ZVN0cmVhbUV2ZW50U3RhdHVzRW51bS5MaXZlU3RyZWFtRXZl",
@@ -40,99 +40,108 @@ namespace Google.Ads.AdManager.V1 {
             "MQoIZW5kX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
             "QgPgQQESJAoSZW5kX3RpbWVfdW5saW1pdGVkGAggASgIQgPgQQFIAogBARIZ",
             "Cgxjb250ZW50X3VybHMYCSADKAlCA+BBAhIUCgdhZF90YWdzGAogAygJQgPg",
-            "QQISGwoJYXNzZXRfa2V5GAsgASgJQgPgQQNIA4gBARIwCh5lbmFibGVfZGFp",
-            "X2F1dGhlbnRpY2F0aW9uX2tleXMYDiABKAhCA+BBAUgEiAEBEmIKEmFkX2Jy",
-            "ZWFrX2ZpbGxfdHlwZRgPIAEoDjI8Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYx",
-            "LkFkQnJlYWtGaWxsVHlwZUVudW0uQWRCcmVha0ZpbGxUeXBlQgPgQQFIBYgB",
-            "ARJsChx1bmRlcmZpbGxfYWRfYnJlYWtfZmlsbF90eXBlGBAgASgOMjwuZ29v",
-            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuQWRCcmVha0ZpbGxUeXBlRW51bS5BZEJy",
-            "ZWFrRmlsbFR5cGVCA+BBAUgGiAEBEkAKE2FkX2hvbGlkYXlfZHVyYXRpb24Y",
-            "ESABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAUgHiAEBEiwK",
-            "GmVuYWJsZV9tYXhfZmlsbGVyX2R1cmF0aW9uGBIgASgIQgPgQQFICIgBARJA",
-            "ChNtYXhfZmlsbGVyX2R1cmF0aW9uGBMgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uQgPgQQFICYgBARJJChxwb2Rfc2VydmluZ19zZWdtZW50X2R1",
-            "cmF0aW9uGBQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQFI",
-            "CogBARIvCh1lbmFibGVfZHVyYXRpb25sZXNzX2FkX2JyZWFrcxgVIAEoCEID",
-            "4EEBSAuIAQESRgoZZGVmYXVsdF9hZF9icmVha19kdXJhdGlvbhgWIAEoCzIZ",
-            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBSAyIAQESUQodc291cmNl",
-            "X2NvbnRlbnRfY29uZmlndXJhdGlvbnMYGiADKAlCKuBBAfpBJAoiYWRtYW5h",
-            "Z2VyLmdvb2dsZWFwaXMuY29tL0NkbkNvbmZpZxJRChhhZF9tZWRpYV9kZWxp",
-            "dmVyeV9jb25maWcYGyABKAlCKuBBAfpBJAoiYWRtYW5hZ2VyLmdvb2dsZWFw",
-            "aXMuY29tL0NkbkNvbmZpZ0gNiAEBEkcKEHByZXJvbGxfc2V0dGluZ3MYHCAB",
-            "KAsyKC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5QcmVyb2xsU2V0dGluZ3NC",
-            "A+BBARI/CgxobHNfc2V0dGluZ3MYHSABKAsyJC5nb29nbGUuYWRzLmFkbWFu",
-            "YWdlci52MS5IbHNTZXR0aW5nc0ID4EEBEikKF2FsbG93bGlzdGVkX2lwc19l",
-            "bmFibGVkGB4gASgIQgPgQQFIDogBARJ3ChlkeW5hbWljX2FkX2luc2VydGlv",
-            "bl90eXBlGB8gASgOMkouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuRHluYW1p",
-            "Y0FkSW5zZXJ0aW9uVHlwZUVudW0uRHluYW1pY0FkSW5zZXJ0aW9uVHlwZUID",
-            "4EEFSA+IAQESNAoicmVsYXRpdmVfcGxheWxpc3RfZGVsaXZlcnlfZW5hYmxl",
-            "ZBghIAEoCEID4EEBSBCIAQESfgoQc3RyZWFtaW5nX2Zvcm1hdBgiIAEoDjJa",
-            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkxpdmVTdHJlYW1FdmVudFN0cmVh",
-            "bWluZ0Zvcm1hdEVudW0uTGl2ZVN0cmVhbUV2ZW50U3RyZWFtaW5nRm9ybWF0",
-            "QgPgQQVIEYgBARIiChBwcmVmZXRjaF9lbmFibGVkGCMgASgIQgPgQQFIEogB",
-            "ARJJChFwcmVmZXRjaF9zZXR0aW5ncxgkIAEoCzIpLmdvb2dsZS5hZHMuYWRt",
-            "YW5hZ2VyLnYxLlByZWZldGNoU2V0dGluZ3NCA+BBARInChVmb3JjZWRfY3Vl",
-            "X2luX2VuYWJsZWQYJSABKAhCA+BBAUgTiAEBEjAKHnNob3J0X3NlZ21lbnRf",
-            "ZHJvcHBpbmdfZW5hYmxlZBgmIAEoCEID4EEBSBSIAQESIgoQY3VzdG9tX2Fz",
-            "c2V0X2tleRgnIAEoCUID4EEFSBWIAQESXwoQYWRfYnJlYWtfbWFya3Vwcxgq",
-            "IAMoDjJALmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkFkQnJlYWtNYXJrdXBU",
-            "eXBlRW51bS5BZEJyZWFrTWFya3VwVHlwZUID4EEBEi8KHWFkX2JyZWFrX21h",
-            "cmt1cF90eXBlc19lbmFibGVkGCsgASgIQgPgQQFIFogBARJWChhsaXZlX3N0",
-            "cmVhbV9jb25kaXRpb25pbmcYLiABKAsyLy5nb29nbGUuYWRzLmFkbWFuYWdl",
-            "ci52MS5MaXZlU3RyZWFtQ29uZGl0aW9uaW5nQgPgQQESSQo3ZWFybHlfYnJl",
-            "YWtfbm90aWZpY2F0aW9uX211bHRpX2JyZWFrX3NjaGVkdWxpbmdfZW5hYmxl",
-            "ZBg2IAEoCEID4EEBSBeIAQESPQoVYWRfcG9kX3RyaW1fdG9sZXJhbmNlGDcg",
-            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQESJQoTZWZmZWN0",
-            "aXZlX2Fzc2V0X2tleRg4IAEoCUID4EEDSBiIAQESUAoVYXV4aWxpYXJ5X2Fk",
-            "X3NldHRpbmdzGDkgASgLMiwuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQXV4",
-            "aWxpYXJ5QWRTZXR0aW5nc0ID4EEBOnTqQXEKI2FkbWFuYWdlci5nb29nbGVh",
-            "cGlzLmNvbS9MaXZlU3RyZWFtEjFuZXR3b3Jrcy97bmV0d29ya19jb2RlfS9s",
-            "aXZlU3RyZWFtcy97bGl2ZV9zdHJlYW19KgtsaXZlU3RyZWFtczIKbGl2ZVN0",
-            "cmVhbUIPCg1fZGlzcGxheV9uYW1lQgkKB19zdGF0dXNCFQoTX2VuZF90aW1l",
-            "X3VubGltaXRlZEIMCgpfYXNzZXRfa2V5QiEKH19lbmFibGVfZGFpX2F1dGhl",
-            "bnRpY2F0aW9uX2tleXNCFQoTX2FkX2JyZWFrX2ZpbGxfdHlwZUIfCh1fdW5k",
-            "ZXJmaWxsX2FkX2JyZWFrX2ZpbGxfdHlwZUIWChRfYWRfaG9saWRheV9kdXJh",
-            "dGlvbkIdChtfZW5hYmxlX21heF9maWxsZXJfZHVyYXRpb25CFgoUX21heF9m",
-            "aWxsZXJfZHVyYXRpb25CHwodX3BvZF9zZXJ2aW5nX3NlZ21lbnRfZHVyYXRp",
-            "b25CIAoeX2VuYWJsZV9kdXJhdGlvbmxlc3NfYWRfYnJlYWtzQhwKGl9kZWZh",
-            "dWx0X2FkX2JyZWFrX2R1cmF0aW9uQhsKGV9hZF9tZWRpYV9kZWxpdmVyeV9j",
-            "b25maWdCGgoYX2FsbG93bGlzdGVkX2lwc19lbmFibGVkQhwKGl9keW5hbWlj",
-            "X2FkX2luc2VydGlvbl90eXBlQiUKI19yZWxhdGl2ZV9wbGF5bGlzdF9kZWxp",
-            "dmVyeV9lbmFibGVkQhMKEV9zdHJlYW1pbmdfZm9ybWF0QhMKEV9wcmVmZXRj",
-            "aF9lbmFibGVkQhgKFl9mb3JjZWRfY3VlX2luX2VuYWJsZWRCIQofX3Nob3J0",
-            "X3NlZ21lbnRfZHJvcHBpbmdfZW5hYmxlZEITChFfY3VzdG9tX2Fzc2V0X2tl",
-            "eUIgCh5fYWRfYnJlYWtfbWFya3VwX3R5cGVzX2VuYWJsZWRCOgo4X2Vhcmx5",
-            "X2JyZWFrX25vdGlmaWNhdGlvbl9tdWx0aV9icmVha19zY2hlZHVsaW5nX2Vu",
-            "YWJsZWRCFgoUX2VmZmVjdGl2ZV9hc3NldF9rZXkigAEKEFByZWZldGNoU2V0",
-            "dGluZ3MSSgodc3RhZ2Vfb25lX2FkX3JlcXVlc3RfZHVyYXRpb24YASABKAsy",
-            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAUgAiAEBQiAKHl9zdGFn",
-            "ZV9vbmVfYWRfcmVxdWVzdF9kdXJhdGlvbiJXChZMaXZlU3RyZWFtQ29uZGl0",
-            "aW9uaW5nEj0KC2Rhc2hfYnJpZGdlGAEgASgLMiMuZ29vZ2xlLmFkcy5hZG1h",
-            "bmFnZXIudjEuRGFzaEJyaWRnZUID4EEBIuYBCgtIbHNTZXR0aW5ncxJtCg1w",
-            "bGF5bGlzdF90eXBlGAEgASgOMkwuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEu",
-            "SGxzU2V0dGluZ3NQbGF5bGlzdFR5cGVFbnVtLkhsc1NldHRpbmdzUGxheWxp",
-            "c3RUeXBlQgPgQQVIAIgBARJWChhtYXN0ZXJfcGxheWxpc3Rfc2V0dGluZ3MY",
-            "AiABKAsyLy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5NYXN0ZXJQbGF5bGlz",
-            "dFNldHRpbmdzQgPgQQFCEAoOX3BsYXlsaXN0X3R5cGUiMwoKRGFzaEJyaWRn",
-            "ZRIZCgdlbmFibGVkGAIgASgIQgPgQQFIAIgBAUIKCghfZW5hYmxlZCKQAQoP",
-            "UHJlcm9sbFNldHRpbmdzEhgKBmFkX3RhZxgBIAEoCUID4EECSACIAQESQAoT",
-            "bWF4X2FkX3BvZF9kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5E",
-            "dXJhdGlvbkID4EECSAGIAQFCCQoHX2FkX3RhZ0IWChRfbWF4X2FkX3BvZF9k",
-            "dXJhdGlvbiJCChNBdXhpbGlhcnlBZFNldHRpbmdzEhwKCmFkX3RhZ191cmwY",
-            "ASABKAlCA+BBAkgAiAEBQg0KC19hZF90YWdfdXJsIqEBChZNYXN0ZXJQbGF5",
-            "bGlzdFNldHRpbmdzEnYKDHJlZnJlc2hfdHlwZRgBIAEoDjJWLmdvb2dsZS5h",
-            "ZHMuYWRtYW5hZ2VyLnYxLkhsc01hc3RlclBsYXlsaXN0UmVmcmVzaFR5cGVF",
-            "bnVtLkhsc01hc3RlclBsYXlsaXN0UmVmcmVzaFR5cGVCA+BBAUgAiAEBQg8K",
-            "DV9yZWZyZXNoX3R5cGVCywEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52",
-            "MUIXTGl2ZVN0cmVhbU1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFu",
-            "YWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xB",
-            "ZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJv",
-            "dG8z"));
+            "QQISGwoJYXNzZXRfa2V5GAsgASgJQgPgQQNIA4gBARI6CgVzbGF0ZRgMIAEo",
+            "CUIm4EEB+kEgCh5hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2xhdGVIBIgB",
+            "ARJAChNkdnJfd2luZG93X2R1cmF0aW9uGDsgASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uQgPgQQFIBYgBARIwCh5lbmFibGVfZGFpX2F1dGhlbnRp",
+            "Y2F0aW9uX2tleXMYDiABKAhCA+BBAUgGiAEBEmIKEmFkX2JyZWFrX2ZpbGxf",
+            "dHlwZRgPIAEoDjI8Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkFkQnJlYWtG",
+            "aWxsVHlwZUVudW0uQWRCcmVha0ZpbGxUeXBlQgPgQQFIB4gBARJsChx1bmRl",
+            "cmZpbGxfYWRfYnJlYWtfZmlsbF90eXBlGBAgASgOMjwuZ29vZ2xlLmFkcy5h",
+            "ZG1hbmFnZXIudjEuQWRCcmVha0ZpbGxUeXBlRW51bS5BZEJyZWFrRmlsbFR5",
+            "cGVCA+BBAUgIiAEBEkAKE2FkX2hvbGlkYXlfZHVyYXRpb24YESABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAUgJiAEBEiwKGmVuYWJsZV9t",
+            "YXhfZmlsbGVyX2R1cmF0aW9uGBIgASgIQgPgQQFICogBARJAChNtYXhfZmls",
+            "bGVyX2R1cmF0aW9uGBMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "QgPgQQFIC4gBARJJChxwb2Rfc2VydmluZ19zZWdtZW50X2R1cmF0aW9uGBQg",
+            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQFIDIgBARIvCh1l",
+            "bmFibGVfZHVyYXRpb25sZXNzX2FkX2JyZWFrcxgVIAEoCEID4EEBSA2IAQES",
+            "RgoZZGVmYXVsdF9hZF9icmVha19kdXJhdGlvbhgWIAEoCzIZLmdvb2dsZS5w",
+            "cm90b2J1Zi5EdXJhdGlvbkID4EEBSA6IAQESVgoXZGFpX2F1dGhlbnRpY2F0",
+            "aW9uX2tleXMYGCADKAlCNeBBAfpBLwotYWRtYW5hZ2VyLmdvb2dsZWFwaXMu",
+            "Y29tL0RhaUF1dGhlbnRpY2F0aW9uS2V5ElEKHXNvdXJjZV9jb250ZW50X2Nv",
+            "bmZpZ3VyYXRpb25zGBogAygJQirgQQH6QSQKImFkbWFuYWdlci5nb29nbGVh",
+            "cGlzLmNvbS9DZG5Db25maWcSUQoYYWRfbWVkaWFfZGVsaXZlcnlfY29uZmln",
+            "GBsgASgJQirgQQH6QSQKImFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9DZG5D",
+            "b25maWdID4gBARJHChBwcmVyb2xsX3NldHRpbmdzGBwgASgLMiguZ29vZ2xl",
+            "LmFkcy5hZG1hbmFnZXIudjEuUHJlcm9sbFNldHRpbmdzQgPgQQESPwoMaGxz",
+            "X3NldHRpbmdzGB0gASgLMiQuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuSGxz",
+            "U2V0dGluZ3NCA+BBARIpChdhbGxvd2xpc3RlZF9pcHNfZW5hYmxlZBgeIAEo",
+            "CEID4EEBSBCIAQESdwoZZHluYW1pY19hZF9pbnNlcnRpb25fdHlwZRgfIAEo",
+            "DjJKLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkR5bmFtaWNBZEluc2VydGlv",
+            "blR5cGVFbnVtLkR5bmFtaWNBZEluc2VydGlvblR5cGVCA+BBBUgRiAEBEjQK",
+            "InJlbGF0aXZlX3BsYXlsaXN0X2RlbGl2ZXJ5X2VuYWJsZWQYISABKAhCA+BB",
+            "AUgSiAEBEn4KEHN0cmVhbWluZ19mb3JtYXQYIiABKA4yWi5nb29nbGUuYWRz",
+            "LmFkbWFuYWdlci52MS5MaXZlU3RyZWFtRXZlbnRTdHJlYW1pbmdGb3JtYXRF",
+            "bnVtLkxpdmVTdHJlYW1FdmVudFN0cmVhbWluZ0Zvcm1hdEID4EEFSBOIAQES",
+            "IgoQcHJlZmV0Y2hfZW5hYmxlZBgjIAEoCEID4EEBSBSIAQESSQoRcHJlZmV0",
+            "Y2hfc2V0dGluZ3MYJCABKAsyKS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Q",
+            "cmVmZXRjaFNldHRpbmdzQgPgQQESJwoVZm9yY2VkX2N1ZV9pbl9lbmFibGVk",
+            "GCUgASgIQgPgQQFIFYgBARIwCh5zaG9ydF9zZWdtZW50X2Ryb3BwaW5nX2Vu",
+            "YWJsZWQYJiABKAhCA+BBAUgWiAEBEiIKEGN1c3RvbV9hc3NldF9rZXkYJyAB",
+            "KAlCA+BBBUgXiAEBElIKFWRhaV9lbmNvZGluZ19wcm9maWxlcxgoIAMoCUIz",
+            "4EEB+kEtCithZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vRGFpRW5jb2RpbmdQ",
+            "cm9maWxlEl4KH3NlZ21lbnRfdXJsX2F1dGhlbnRpY2F0aW9uX2tleXMYKSAD",
+            "KAlCNeBBAfpBLwotYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0RhaUF1dGhl",
+            "bnRpY2F0aW9uS2V5El8KEGFkX2JyZWFrX21hcmt1cHMYKiADKA4yQC5nb29n",
+            "bGUuYWRzLmFkbWFuYWdlci52MS5BZEJyZWFrTWFya3VwVHlwZUVudW0uQWRC",
+            "cmVha01hcmt1cFR5cGVCA+BBARIvCh1hZF9icmVha19tYXJrdXBfdHlwZXNf",
+            "ZW5hYmxlZBgrIAEoCEID4EEBSBiIAQESVgoYbGl2ZV9zdHJlYW1fY29uZGl0",
+            "aW9uaW5nGC4gASgLMi8uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuTGl2ZVN0",
+            "cmVhbUNvbmRpdGlvbmluZ0ID4EEBEkkKN2Vhcmx5X2JyZWFrX25vdGlmaWNh",
+            "dGlvbl9tdWx0aV9icmVha19zY2hlZHVsaW5nX2VuYWJsZWQYNiABKAhCA+BB",
+            "AUgZiAEBEj0KFWFkX3BvZF90cmltX3RvbGVyYW5jZRg3IAEoCzIZLmdvb2ds",
+            "ZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEiUKE2VmZmVjdGl2ZV9hc3NldF9r",
+            "ZXkYOCABKAlCA+BBA0gaiAEBElAKFWF1eGlsaWFyeV9hZF9zZXR0aW5ncxg5",
+            "IAEoCzIsLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkF1eGlsaWFyeUFkU2V0",
+            "dGluZ3NCA+BBATp06kFxCiNhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vTGl2",
+            "ZVN0cmVhbRIxbmV0d29ya3Mve25ldHdvcmtfY29kZX0vbGl2ZVN0cmVhbXMv",
+            "e2xpdmVfc3RyZWFtfSoLbGl2ZVN0cmVhbXMyCmxpdmVTdHJlYW1CDwoNX2Rp",
+            "c3BsYXlfbmFtZUIJCgdfc3RhdHVzQhUKE19lbmRfdGltZV91bmxpbWl0ZWRC",
+            "DAoKX2Fzc2V0X2tleUIICgZfc2xhdGVCFgoUX2R2cl93aW5kb3dfZHVyYXRp",
+            "b25CIQofX2VuYWJsZV9kYWlfYXV0aGVudGljYXRpb25fa2V5c0IVChNfYWRf",
+            "YnJlYWtfZmlsbF90eXBlQh8KHV91bmRlcmZpbGxfYWRfYnJlYWtfZmlsbF90",
+            "eXBlQhYKFF9hZF9ob2xpZGF5X2R1cmF0aW9uQh0KG19lbmFibGVfbWF4X2Zp",
+            "bGxlcl9kdXJhdGlvbkIWChRfbWF4X2ZpbGxlcl9kdXJhdGlvbkIfCh1fcG9k",
+            "X3NlcnZpbmdfc2VnbWVudF9kdXJhdGlvbkIgCh5fZW5hYmxlX2R1cmF0aW9u",
+            "bGVzc19hZF9icmVha3NCHAoaX2RlZmF1bHRfYWRfYnJlYWtfZHVyYXRpb25C",
+            "GwoZX2FkX21lZGlhX2RlbGl2ZXJ5X2NvbmZpZ0IaChhfYWxsb3dsaXN0ZWRf",
+            "aXBzX2VuYWJsZWRCHAoaX2R5bmFtaWNfYWRfaW5zZXJ0aW9uX3R5cGVCJQoj",
+            "X3JlbGF0aXZlX3BsYXlsaXN0X2RlbGl2ZXJ5X2VuYWJsZWRCEwoRX3N0cmVh",
+            "bWluZ19mb3JtYXRCEwoRX3ByZWZldGNoX2VuYWJsZWRCGAoWX2ZvcmNlZF9j",
+            "dWVfaW5fZW5hYmxlZEIhCh9fc2hvcnRfc2VnbWVudF9kcm9wcGluZ19lbmFi",
+            "bGVkQhMKEV9jdXN0b21fYXNzZXRfa2V5QiAKHl9hZF9icmVha19tYXJrdXBf",
+            "dHlwZXNfZW5hYmxlZEI6CjhfZWFybHlfYnJlYWtfbm90aWZpY2F0aW9uX211",
+            "bHRpX2JyZWFrX3NjaGVkdWxpbmdfZW5hYmxlZEIWChRfZWZmZWN0aXZlX2Fz",
+            "c2V0X2tleSKAAQoQUHJlZmV0Y2hTZXR0aW5ncxJKCh1zdGFnZV9vbmVfYWRf",
+            "cmVxdWVzdF9kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbkID4EEBSACIAQFCIAoeX3N0YWdlX29uZV9hZF9yZXF1ZXN0X2R1cmF0",
+            "aW9uIlcKFkxpdmVTdHJlYW1Db25kaXRpb25pbmcSPQoLZGFzaF9icmlkZ2UY",
+            "ASABKAsyIy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5EYXNoQnJpZGdlQgPg",
+            "QQEi5gEKC0hsc1NldHRpbmdzEm0KDXBsYXlsaXN0X3R5cGUYASABKA4yTC5n",
+            "b29nbGUuYWRzLmFkbWFuYWdlci52MS5IbHNTZXR0aW5nc1BsYXlsaXN0VHlw",
+            "ZUVudW0uSGxzU2V0dGluZ3NQbGF5bGlzdFR5cGVCA+BBBUgAiAEBElYKGG1h",
+            "c3Rlcl9wbGF5bGlzdF9zZXR0aW5ncxgCIAEoCzIvLmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLk1hc3RlclBsYXlsaXN0U2V0dGluZ3NCA+BBAUIQCg5fcGxh",
+            "eWxpc3RfdHlwZSIzCgpEYXNoQnJpZGdlEhkKB2VuYWJsZWQYAiABKAhCA+BB",
+            "AUgAiAEBQgoKCF9lbmFibGVkIpABCg9QcmVyb2xsU2V0dGluZ3MSGAoGYWRf",
+            "dGFnGAEgASgJQgPgQQJIAIgBARJAChNtYXhfYWRfcG9kX2R1cmF0aW9uGAIg",
+            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQJIAYgBAUIJCgdf",
+            "YWRfdGFnQhYKFF9tYXhfYWRfcG9kX2R1cmF0aW9uIkIKE0F1eGlsaWFyeUFk",
+            "U2V0dGluZ3MSHAoKYWRfdGFnX3VybBgBIAEoCUID4EECSACIAQFCDQoLX2Fk",
+            "X3RhZ191cmwioQEKFk1hc3RlclBsYXlsaXN0U2V0dGluZ3MSdgoMcmVmcmVz",
+            "aF90eXBlGAEgASgOMlYuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuSGxzTWFz",
+            "dGVyUGxheWxpc3RSZWZyZXNoVHlwZUVudW0uSGxzTWFzdGVyUGxheWxpc3RS",
+            "ZWZyZXNoVHlwZUID4EEBSACIAQFCDwoNX3JlZnJlc2hfdHlwZULLAQobY29t",
+            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhdMaXZlU3RyZWFtTWVzc2FnZXNQ",
+            "cm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1h",
+            "bmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6",
+            "QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.LiveStreamEventEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LiveStream), global::Google.Ads.AdManager.V1.LiveStream.Parser, new[]{ "Name", "DisplayName", "Status", "CreateTime", "UpdateTime", "StartTime", "EndTime", "EndTimeUnlimited", "ContentUrls", "AdTags", "AssetKey", "EnableDaiAuthenticationKeys", "AdBreakFillType", "UnderfillAdBreakFillType", "AdHolidayDuration", "EnableMaxFillerDuration", "MaxFillerDuration", "PodServingSegmentDuration", "EnableDurationlessAdBreaks", "DefaultAdBreakDuration", "SourceContentConfigurations", "AdMediaDeliveryConfig", "PrerollSettings", "HlsSettings", "AllowlistedIpsEnabled", "DynamicAdInsertionType", "RelativePlaylistDeliveryEnabled", "StreamingFormat", "PrefetchEnabled", "PrefetchSettings", "ForcedCueInEnabled", "ShortSegmentDroppingEnabled", "CustomAssetKey", "AdBreakMarkups", "AdBreakMarkupTypesEnabled", "LiveStreamConditioning", "EarlyBreakNotificationMultiBreakSchedulingEnabled", "AdPodTrimTolerance", "EffectiveAssetKey", "AuxiliaryAdSettings" }, new[]{ "DisplayName", "Status", "EndTimeUnlimited", "AssetKey", "EnableDaiAuthenticationKeys", "AdBreakFillType", "UnderfillAdBreakFillType", "AdHolidayDuration", "EnableMaxFillerDuration", "MaxFillerDuration", "PodServingSegmentDuration", "EnableDurationlessAdBreaks", "DefaultAdBreakDuration", "AdMediaDeliveryConfig", "AllowlistedIpsEnabled", "DynamicAdInsertionType", "RelativePlaylistDeliveryEnabled", "StreamingFormat", "PrefetchEnabled", "ForcedCueInEnabled", "ShortSegmentDroppingEnabled", "CustomAssetKey", "AdBreakMarkupTypesEnabled", "EarlyBreakNotificationMultiBreakSchedulingEnabled", "EffectiveAssetKey" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LiveStream), global::Google.Ads.AdManager.V1.LiveStream.Parser, new[]{ "Name", "DisplayName", "Status", "CreateTime", "UpdateTime", "StartTime", "EndTime", "EndTimeUnlimited", "ContentUrls", "AdTags", "AssetKey", "Slate", "DvrWindowDuration", "EnableDaiAuthenticationKeys", "AdBreakFillType", "UnderfillAdBreakFillType", "AdHolidayDuration", "EnableMaxFillerDuration", "MaxFillerDuration", "PodServingSegmentDuration", "EnableDurationlessAdBreaks", "DefaultAdBreakDuration", "DaiAuthenticationKeys", "SourceContentConfigurations", "AdMediaDeliveryConfig", "PrerollSettings", "HlsSettings", "AllowlistedIpsEnabled", "DynamicAdInsertionType", "RelativePlaylistDeliveryEnabled", "StreamingFormat", "PrefetchEnabled", "PrefetchSettings", "ForcedCueInEnabled", "ShortSegmentDroppingEnabled", "CustomAssetKey", "DaiEncodingProfiles", "SegmentUrlAuthenticationKeys", "AdBreakMarkups", "AdBreakMarkupTypesEnabled", "LiveStreamConditioning", "EarlyBreakNotificationMultiBreakSchedulingEnabled", "AdPodTrimTolerance", "EffectiveAssetKey", "AuxiliaryAdSettings" }, new[]{ "DisplayName", "Status", "EndTimeUnlimited", "AssetKey", "Slate", "DvrWindowDuration", "EnableDaiAuthenticationKeys", "AdBreakFillType", "UnderfillAdBreakFillType", "AdHolidayDuration", "EnableMaxFillerDuration", "MaxFillerDuration", "PodServingSegmentDuration", "EnableDurationlessAdBreaks", "DefaultAdBreakDuration", "AdMediaDeliveryConfig", "AllowlistedIpsEnabled", "DynamicAdInsertionType", "RelativePlaylistDeliveryEnabled", "StreamingFormat", "PrefetchEnabled", "ForcedCueInEnabled", "ShortSegmentDroppingEnabled", "CustomAssetKey", "AdBreakMarkupTypesEnabled", "EarlyBreakNotificationMultiBreakSchedulingEnabled", "EffectiveAssetKey" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.PrefetchSettings), global::Google.Ads.AdManager.V1.PrefetchSettings.Parser, new[]{ "StageOneAdRequestDuration" }, new[]{ "StageOneAdRequestDuration" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LiveStreamConditioning), global::Google.Ads.AdManager.V1.LiveStreamConditioning.Parser, new[]{ "DashBridge" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.HlsSettings), global::Google.Ads.AdManager.V1.HlsSettings.Parser, new[]{ "PlaylistType", "MasterPlaylistSettings" }, new[]{ "PlaylistType" }, null, null, null),
@@ -201,6 +210,8 @@ namespace Google.Ads.AdManager.V1 {
       contentUrls_ = other.contentUrls_.Clone();
       adTags_ = other.adTags_.Clone();
       assetKey_ = other.assetKey_;
+      slate_ = other.slate_;
+      dvrWindowDuration_ = other.dvrWindowDuration_ != null ? other.dvrWindowDuration_.Clone() : null;
       enableDaiAuthenticationKeys_ = other.enableDaiAuthenticationKeys_;
       adBreakFillType_ = other.adBreakFillType_;
       underfillAdBreakFillType_ = other.underfillAdBreakFillType_;
@@ -210,6 +221,7 @@ namespace Google.Ads.AdManager.V1 {
       podServingSegmentDuration_ = other.podServingSegmentDuration_ != null ? other.podServingSegmentDuration_.Clone() : null;
       enableDurationlessAdBreaks_ = other.enableDurationlessAdBreaks_;
       defaultAdBreakDuration_ = other.defaultAdBreakDuration_ != null ? other.defaultAdBreakDuration_.Clone() : null;
+      daiAuthenticationKeys_ = other.daiAuthenticationKeys_.Clone();
       sourceContentConfigurations_ = other.sourceContentConfigurations_.Clone();
       adMediaDeliveryConfig_ = other.adMediaDeliveryConfig_;
       prerollSettings_ = other.prerollSettings_ != null ? other.prerollSettings_.Clone() : null;
@@ -223,6 +235,8 @@ namespace Google.Ads.AdManager.V1 {
       forcedCueInEnabled_ = other.forcedCueInEnabled_;
       shortSegmentDroppingEnabled_ = other.shortSegmentDroppingEnabled_;
       customAssetKey_ = other.customAssetKey_;
+      daiEncodingProfiles_ = other.daiEncodingProfiles_.Clone();
+      segmentUrlAuthenticationKeys_ = other.segmentUrlAuthenticationKeys_.Clone();
       adBreakMarkups_ = other.adBreakMarkups_.Clone();
       adBreakMarkupTypesEnabled_ = other.adBreakMarkupTypesEnabled_;
       liveStreamConditioning_ = other.liveStreamConditioning_ != null ? other.liveStreamConditioning_.Clone() : null;
@@ -476,6 +490,54 @@ namespace Google.Ads.AdManager.V1 {
       assetKey_ = null;
     }
 
+    /// <summary>Field number for the "slate" field.</summary>
+    public const int SlateFieldNumber = 12;
+    private readonly static string SlateDefaultValue = "";
+
+    private string slate_;
+    /// <summary>
+    /// Optional. The slate to use for this live stream. If not set, network
+    /// default slate will be used. Format:
+    /// "networks/{network_code}/slates/{slate_id}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Slate {
+      get { return slate_ ?? SlateDefaultValue; }
+      set {
+        slate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "slate" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSlate {
+      get { return slate_ != null; }
+    }
+    /// <summary>Clears the value of the "slate" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSlate() {
+      slate_ = null;
+    }
+
+    /// <summary>Field number for the "dvr_window_duration" field.</summary>
+    public const int DvrWindowDurationFieldNumber = 59;
+    private global::Google.Protobuf.WellKnownTypes.Duration dvrWindowDuration_;
+    /// <summary>
+    /// Optional. The duration of the DVR window. If unset the default window as
+    /// provided by the input encoder will be used. Modifying this value for an
+    /// active live stream can impact traffic.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration DvrWindowDuration {
+      get { return dvrWindowDuration_; }
+      set {
+        dvrWindowDuration_ = value;
+      }
+    }
+
     /// <summary>Field number for the "enable_dai_authentication_keys" field.</summary>
     public const int EnableDaiAuthenticationKeysFieldNumber = 14;
     private readonly static bool EnableDaiAuthenticationKeysDefaultValue = false;
@@ -703,6 +765,24 @@ namespace Google.Ads.AdManager.V1 {
       set {
         defaultAdBreakDuration_ = value;
       }
+    }
+
+    /// <summary>Field number for the "dai_authentication_keys" field.</summary>
+    public const int DaiAuthenticationKeysFieldNumber = 24;
+    private static readonly pb::FieldCodec<string> _repeated_daiAuthenticationKeys_codec
+        = pb::FieldCodec.ForString(194);
+    private readonly pbc::RepeatedField<string> daiAuthenticationKeys_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The list of DaiAuthenticationKey objects used to authenticate
+    /// stream create requests for this live stream. Modifying settings for an
+    /// active live stream may break the stream for some users. Exercise caution.
+    /// Format:
+    /// "networks/{network_code}/daiAuthenticationKeys/{dai_authentication_key_id}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> DaiAuthenticationKeys {
+      get { return daiAuthenticationKeys_; }
     }
 
     /// <summary>Field number for the "source_content_configurations" field.</summary>
@@ -1056,6 +1136,38 @@ namespace Google.Ads.AdManager.V1 {
       customAssetKey_ = null;
     }
 
+    /// <summary>Field number for the "dai_encoding_profiles" field.</summary>
+    public const int DaiEncodingProfilesFieldNumber = 40;
+    private static readonly pb::FieldCodec<string> _repeated_daiEncodingProfiles_codec
+        = pb::FieldCodec.ForString(322);
+    private readonly pbc::RepeatedField<string> daiEncodingProfiles_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The list of DaiEncodingProfiles that will be used for this live
+    /// stream event. Format:
+    /// "networks/{network_code}/daiEncodingProfiles/{dai_encoding_profile_id}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> DaiEncodingProfiles {
+      get { return daiEncodingProfiles_; }
+    }
+
+    /// <summary>Field number for the "segment_url_authentication_keys" field.</summary>
+    public const int SegmentUrlAuthenticationKeysFieldNumber = 41;
+    private static readonly pb::FieldCodec<string> _repeated_segmentUrlAuthenticationKeys_codec
+        = pb::FieldCodec.ForString(330);
+    private readonly pbc::RepeatedField<string> segmentUrlAuthenticationKeys_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The list of DaiAuthenticationKeys used to authenticate ad segment
+    /// url requests for this live stream. Format:
+    /// "networks/{network_code}/daiAuthenticationKeys/{dai_authentication_key_id}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> SegmentUrlAuthenticationKeys {
+      get { return segmentUrlAuthenticationKeys_; }
+    }
+
     /// <summary>Field number for the "ad_break_markups" field.</summary>
     public const int AdBreakMarkupsFieldNumber = 42;
     private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.AdBreakMarkupTypeEnum.Types.AdBreakMarkupType> _repeated_adBreakMarkups_codec
@@ -1237,6 +1349,8 @@ namespace Google.Ads.AdManager.V1 {
       if(!contentUrls_.Equals(other.contentUrls_)) return false;
       if(!adTags_.Equals(other.adTags_)) return false;
       if (AssetKey != other.AssetKey) return false;
+      if (Slate != other.Slate) return false;
+      if (!object.Equals(DvrWindowDuration, other.DvrWindowDuration)) return false;
       if (EnableDaiAuthenticationKeys != other.EnableDaiAuthenticationKeys) return false;
       if (AdBreakFillType != other.AdBreakFillType) return false;
       if (UnderfillAdBreakFillType != other.UnderfillAdBreakFillType) return false;
@@ -1246,6 +1360,7 @@ namespace Google.Ads.AdManager.V1 {
       if (!object.Equals(PodServingSegmentDuration, other.PodServingSegmentDuration)) return false;
       if (EnableDurationlessAdBreaks != other.EnableDurationlessAdBreaks) return false;
       if (!object.Equals(DefaultAdBreakDuration, other.DefaultAdBreakDuration)) return false;
+      if(!daiAuthenticationKeys_.Equals(other.daiAuthenticationKeys_)) return false;
       if(!sourceContentConfigurations_.Equals(other.sourceContentConfigurations_)) return false;
       if (AdMediaDeliveryConfig != other.AdMediaDeliveryConfig) return false;
       if (!object.Equals(PrerollSettings, other.PrerollSettings)) return false;
@@ -1259,6 +1374,8 @@ namespace Google.Ads.AdManager.V1 {
       if (ForcedCueInEnabled != other.ForcedCueInEnabled) return false;
       if (ShortSegmentDroppingEnabled != other.ShortSegmentDroppingEnabled) return false;
       if (CustomAssetKey != other.CustomAssetKey) return false;
+      if(!daiEncodingProfiles_.Equals(other.daiEncodingProfiles_)) return false;
+      if(!segmentUrlAuthenticationKeys_.Equals(other.segmentUrlAuthenticationKeys_)) return false;
       if(!adBreakMarkups_.Equals(other.adBreakMarkups_)) return false;
       if (AdBreakMarkupTypesEnabled != other.AdBreakMarkupTypesEnabled) return false;
       if (!object.Equals(LiveStreamConditioning, other.LiveStreamConditioning)) return false;
@@ -1284,6 +1401,8 @@ namespace Google.Ads.AdManager.V1 {
       hash ^= contentUrls_.GetHashCode();
       hash ^= adTags_.GetHashCode();
       if (HasAssetKey) hash ^= AssetKey.GetHashCode();
+      if (HasSlate) hash ^= Slate.GetHashCode();
+      if (dvrWindowDuration_ != null) hash ^= DvrWindowDuration.GetHashCode();
       if (HasEnableDaiAuthenticationKeys) hash ^= EnableDaiAuthenticationKeys.GetHashCode();
       if (HasAdBreakFillType) hash ^= AdBreakFillType.GetHashCode();
       if (HasUnderfillAdBreakFillType) hash ^= UnderfillAdBreakFillType.GetHashCode();
@@ -1293,6 +1412,7 @@ namespace Google.Ads.AdManager.V1 {
       if (podServingSegmentDuration_ != null) hash ^= PodServingSegmentDuration.GetHashCode();
       if (HasEnableDurationlessAdBreaks) hash ^= EnableDurationlessAdBreaks.GetHashCode();
       if (defaultAdBreakDuration_ != null) hash ^= DefaultAdBreakDuration.GetHashCode();
+      hash ^= daiAuthenticationKeys_.GetHashCode();
       hash ^= sourceContentConfigurations_.GetHashCode();
       if (HasAdMediaDeliveryConfig) hash ^= AdMediaDeliveryConfig.GetHashCode();
       if (prerollSettings_ != null) hash ^= PrerollSettings.GetHashCode();
@@ -1306,6 +1426,8 @@ namespace Google.Ads.AdManager.V1 {
       if (HasForcedCueInEnabled) hash ^= ForcedCueInEnabled.GetHashCode();
       if (HasShortSegmentDroppingEnabled) hash ^= ShortSegmentDroppingEnabled.GetHashCode();
       if (HasCustomAssetKey) hash ^= CustomAssetKey.GetHashCode();
+      hash ^= daiEncodingProfiles_.GetHashCode();
+      hash ^= segmentUrlAuthenticationKeys_.GetHashCode();
       hash ^= adBreakMarkups_.GetHashCode();
       if (HasAdBreakMarkupTypesEnabled) hash ^= AdBreakMarkupTypesEnabled.GetHashCode();
       if (liveStreamConditioning_ != null) hash ^= LiveStreamConditioning.GetHashCode();
@@ -1369,6 +1491,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(90);
         output.WriteString(AssetKey);
       }
+      if (HasSlate) {
+        output.WriteRawTag(98);
+        output.WriteString(Slate);
+      }
       if (HasEnableDaiAuthenticationKeys) {
         output.WriteRawTag(112);
         output.WriteBool(EnableDaiAuthenticationKeys);
@@ -1405,6 +1531,7 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(178, 1);
         output.WriteMessage(DefaultAdBreakDuration);
       }
+      daiAuthenticationKeys_.WriteTo(output, _repeated_daiAuthenticationKeys_codec);
       sourceContentConfigurations_.WriteTo(output, _repeated_sourceContentConfigurations_codec);
       if (HasAdMediaDeliveryConfig) {
         output.WriteRawTag(218, 1);
@@ -1454,6 +1581,8 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(186, 2);
         output.WriteString(CustomAssetKey);
       }
+      daiEncodingProfiles_.WriteTo(output, _repeated_daiEncodingProfiles_codec);
+      segmentUrlAuthenticationKeys_.WriteTo(output, _repeated_segmentUrlAuthenticationKeys_codec);
       adBreakMarkups_.WriteTo(output, _repeated_adBreakMarkups_codec);
       if (HasAdBreakMarkupTypesEnabled) {
         output.WriteRawTag(216, 2);
@@ -1478,6 +1607,10 @@ namespace Google.Ads.AdManager.V1 {
       if (auxiliaryAdSettings_ != null) {
         output.WriteRawTag(202, 3);
         output.WriteMessage(AuxiliaryAdSettings);
+      }
+      if (dvrWindowDuration_ != null) {
+        output.WriteRawTag(218, 3);
+        output.WriteMessage(DvrWindowDuration);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1527,6 +1660,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(90);
         output.WriteString(AssetKey);
       }
+      if (HasSlate) {
+        output.WriteRawTag(98);
+        output.WriteString(Slate);
+      }
       if (HasEnableDaiAuthenticationKeys) {
         output.WriteRawTag(112);
         output.WriteBool(EnableDaiAuthenticationKeys);
@@ -1563,6 +1700,7 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(178, 1);
         output.WriteMessage(DefaultAdBreakDuration);
       }
+      daiAuthenticationKeys_.WriteTo(ref output, _repeated_daiAuthenticationKeys_codec);
       sourceContentConfigurations_.WriteTo(ref output, _repeated_sourceContentConfigurations_codec);
       if (HasAdMediaDeliveryConfig) {
         output.WriteRawTag(218, 1);
@@ -1612,6 +1750,8 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(186, 2);
         output.WriteString(CustomAssetKey);
       }
+      daiEncodingProfiles_.WriteTo(ref output, _repeated_daiEncodingProfiles_codec);
+      segmentUrlAuthenticationKeys_.WriteTo(ref output, _repeated_segmentUrlAuthenticationKeys_codec);
       adBreakMarkups_.WriteTo(ref output, _repeated_adBreakMarkups_codec);
       if (HasAdBreakMarkupTypesEnabled) {
         output.WriteRawTag(216, 2);
@@ -1636,6 +1776,10 @@ namespace Google.Ads.AdManager.V1 {
       if (auxiliaryAdSettings_ != null) {
         output.WriteRawTag(202, 3);
         output.WriteMessage(AuxiliaryAdSettings);
+      }
+      if (dvrWindowDuration_ != null) {
+        output.WriteRawTag(218, 3);
+        output.WriteMessage(DvrWindowDuration);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1676,6 +1820,12 @@ namespace Google.Ads.AdManager.V1 {
       if (HasAssetKey) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AssetKey);
       }
+      if (HasSlate) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Slate);
+      }
+      if (dvrWindowDuration_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DvrWindowDuration);
+      }
       if (HasEnableDaiAuthenticationKeys) {
         size += 1 + 1;
       }
@@ -1703,6 +1853,7 @@ namespace Google.Ads.AdManager.V1 {
       if (defaultAdBreakDuration_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(DefaultAdBreakDuration);
       }
+      size += daiAuthenticationKeys_.CalculateSize(_repeated_daiAuthenticationKeys_codec);
       size += sourceContentConfigurations_.CalculateSize(_repeated_sourceContentConfigurations_codec);
       if (HasAdMediaDeliveryConfig) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(AdMediaDeliveryConfig);
@@ -1740,6 +1891,8 @@ namespace Google.Ads.AdManager.V1 {
       if (HasCustomAssetKey) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(CustomAssetKey);
       }
+      size += daiEncodingProfiles_.CalculateSize(_repeated_daiEncodingProfiles_codec);
+      size += segmentUrlAuthenticationKeys_.CalculateSize(_repeated_segmentUrlAuthenticationKeys_codec);
       size += adBreakMarkups_.CalculateSize(_repeated_adBreakMarkups_codec);
       if (HasAdBreakMarkupTypesEnabled) {
         size += 2 + 1;
@@ -1812,6 +1965,15 @@ namespace Google.Ads.AdManager.V1 {
       if (other.HasAssetKey) {
         AssetKey = other.AssetKey;
       }
+      if (other.HasSlate) {
+        Slate = other.Slate;
+      }
+      if (other.dvrWindowDuration_ != null) {
+        if (dvrWindowDuration_ == null) {
+          DvrWindowDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        DvrWindowDuration.MergeFrom(other.DvrWindowDuration);
+      }
       if (other.HasEnableDaiAuthenticationKeys) {
         EnableDaiAuthenticationKeys = other.EnableDaiAuthenticationKeys;
       }
@@ -1851,6 +2013,7 @@ namespace Google.Ads.AdManager.V1 {
         }
         DefaultAdBreakDuration.MergeFrom(other.DefaultAdBreakDuration);
       }
+      daiAuthenticationKeys_.Add(other.daiAuthenticationKeys_);
       sourceContentConfigurations_.Add(other.sourceContentConfigurations_);
       if (other.HasAdMediaDeliveryConfig) {
         AdMediaDeliveryConfig = other.AdMediaDeliveryConfig;
@@ -1897,6 +2060,8 @@ namespace Google.Ads.AdManager.V1 {
       if (other.HasCustomAssetKey) {
         CustomAssetKey = other.CustomAssetKey;
       }
+      daiEncodingProfiles_.Add(other.daiEncodingProfiles_);
+      segmentUrlAuthenticationKeys_.Add(other.segmentUrlAuthenticationKeys_);
       adBreakMarkups_.Add(other.adBreakMarkups_);
       if (other.HasAdBreakMarkupTypesEnabled) {
         AdBreakMarkupTypesEnabled = other.AdBreakMarkupTypesEnabled;
@@ -2000,6 +2165,10 @@ namespace Google.Ads.AdManager.V1 {
             AssetKey = input.ReadString();
             break;
           }
+          case 98: {
+            Slate = input.ReadString();
+            break;
+          }
           case 112: {
             EnableDaiAuthenticationKeys = input.ReadBool();
             break;
@@ -2046,6 +2215,10 @@ namespace Google.Ads.AdManager.V1 {
               DefaultAdBreakDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
             input.ReadMessage(DefaultAdBreakDuration);
+            break;
+          }
+          case 194: {
+            daiAuthenticationKeys_.AddEntriesFrom(input, _repeated_daiAuthenticationKeys_codec);
             break;
           }
           case 210: {
@@ -2109,6 +2282,14 @@ namespace Google.Ads.AdManager.V1 {
             CustomAssetKey = input.ReadString();
             break;
           }
+          case 322: {
+            daiEncodingProfiles_.AddEntriesFrom(input, _repeated_daiEncodingProfiles_codec);
+            break;
+          }
+          case 330: {
+            segmentUrlAuthenticationKeys_.AddEntriesFrom(input, _repeated_segmentUrlAuthenticationKeys_codec);
+            break;
+          }
           case 338:
           case 336: {
             adBreakMarkups_.AddEntriesFrom(input, _repeated_adBreakMarkups_codec);
@@ -2145,6 +2326,13 @@ namespace Google.Ads.AdManager.V1 {
               AuxiliaryAdSettings = new global::Google.Ads.AdManager.V1.AuxiliaryAdSettings();
             }
             input.ReadMessage(AuxiliaryAdSettings);
+            break;
+          }
+          case 474: {
+            if (dvrWindowDuration_ == null) {
+              DvrWindowDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(DvrWindowDuration);
             break;
           }
         }
@@ -2222,6 +2410,10 @@ namespace Google.Ads.AdManager.V1 {
             AssetKey = input.ReadString();
             break;
           }
+          case 98: {
+            Slate = input.ReadString();
+            break;
+          }
           case 112: {
             EnableDaiAuthenticationKeys = input.ReadBool();
             break;
@@ -2268,6 +2460,10 @@ namespace Google.Ads.AdManager.V1 {
               DefaultAdBreakDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
             input.ReadMessage(DefaultAdBreakDuration);
+            break;
+          }
+          case 194: {
+            daiAuthenticationKeys_.AddEntriesFrom(ref input, _repeated_daiAuthenticationKeys_codec);
             break;
           }
           case 210: {
@@ -2331,6 +2527,14 @@ namespace Google.Ads.AdManager.V1 {
             CustomAssetKey = input.ReadString();
             break;
           }
+          case 322: {
+            daiEncodingProfiles_.AddEntriesFrom(ref input, _repeated_daiEncodingProfiles_codec);
+            break;
+          }
+          case 330: {
+            segmentUrlAuthenticationKeys_.AddEntriesFrom(ref input, _repeated_segmentUrlAuthenticationKeys_codec);
+            break;
+          }
           case 338:
           case 336: {
             adBreakMarkups_.AddEntriesFrom(ref input, _repeated_adBreakMarkups_codec);
@@ -2367,6 +2571,13 @@ namespace Google.Ads.AdManager.V1 {
               AuxiliaryAdSettings = new global::Google.Ads.AdManager.V1.AuxiliaryAdSettings();
             }
             input.ReadMessage(AuxiliaryAdSettings);
+            break;
+          }
+          case 474: {
+            if (dvrWindowDuration_ == null) {
+              DvrWindowDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(DvrWindowDuration);
             break;
           }
         }

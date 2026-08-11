@@ -284,7 +284,7 @@ namespace Google.Ads.AdManager.V1
         public virtual EntitySignalsMappingService.EntitySignalsMappingServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `EntitySignalsMapping` object.
+        /// Retrieves a `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -293,7 +293,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `EntitySignalsMapping` object.
+        /// Retrieves a `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -302,7 +302,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `EntitySignalsMapping` object.
+        /// Retrieves a `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -311,7 +311,7 @@ namespace Google.Ads.AdManager.V1
             GetEntitySignalsMappingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `EntitySignalsMapping` object.
+        /// Retrieves a `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntitySignalsMapping.
@@ -327,7 +327,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `EntitySignalsMapping` object.
+        /// Retrieves a `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntitySignalsMapping.
@@ -343,7 +343,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `EntitySignalsMapping` object.
+        /// Retrieves a `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntitySignalsMapping.
@@ -356,7 +356,7 @@ namespace Google.Ads.AdManager.V1
             GetEntitySignalsMappingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `EntitySignalsMapping` object.
+        /// Retrieves a `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntitySignalsMapping.
@@ -372,7 +372,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `EntitySignalsMapping` object.
+        /// Retrieves a `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntitySignalsMapping.
@@ -388,7 +388,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `EntitySignalsMapping` object.
+        /// Retrieves a `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the EntitySignalsMapping.
@@ -401,7 +401,7 @@ namespace Google.Ads.AdManager.V1
             GetEntitySignalsMappingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `EntitySignalsMapping` objects.
+        /// Lists `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -410,7 +410,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `EntitySignalsMapping` objects.
+        /// Lists `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -419,7 +419,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `EntitySignalsMapping` objects.
+        /// Lists `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of EntitySignalsMappings.
@@ -453,7 +453,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `EntitySignalsMapping` objects.
+        /// Lists `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of EntitySignalsMappings.
@@ -487,7 +487,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `EntitySignalsMapping` objects.
+        /// Lists `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of EntitySignalsMappings.
@@ -521,7 +521,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `EntitySignalsMapping` objects.
+        /// Lists `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of EntitySignalsMappings.
@@ -555,7 +555,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create an `EntitySignalsMapping` object.
+        /// Creates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -564,7 +564,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create an `EntitySignalsMapping` object.
+        /// Creates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -573,7 +573,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create an `EntitySignalsMapping` object.
+        /// Creates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -582,7 +582,7 @@ namespace Google.Ads.AdManager.V1
             CreateEntitySignalsMappingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create an `EntitySignalsMapping` object.
+        /// Creates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this EntitySignalsMapping will be
@@ -601,7 +601,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create an `EntitySignalsMapping` object.
+        /// Creates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this EntitySignalsMapping will be
@@ -620,7 +620,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create an `EntitySignalsMapping` object.
+        /// Creates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this EntitySignalsMapping will be
@@ -635,7 +635,7 @@ namespace Google.Ads.AdManager.V1
             CreateEntitySignalsMappingAsync(parent, entitySignalsMapping, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create an `EntitySignalsMapping` object.
+        /// Creates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this EntitySignalsMapping will be
@@ -654,7 +654,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create an `EntitySignalsMapping` object.
+        /// Creates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this EntitySignalsMapping will be
@@ -673,7 +673,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create an `EntitySignalsMapping` object.
+        /// Creates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this EntitySignalsMapping will be
@@ -688,7 +688,7 @@ namespace Google.Ads.AdManager.V1
             CreateEntitySignalsMappingAsync(parent, entitySignalsMapping, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update an `EntitySignalsMapping` object.
+        /// Updates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -697,7 +697,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update an `EntitySignalsMapping` object.
+        /// Updates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -706,7 +706,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update an `EntitySignalsMapping` object.
+        /// Updates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -715,7 +715,7 @@ namespace Google.Ads.AdManager.V1
             UpdateEntitySignalsMappingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update an `EntitySignalsMapping` object.
+        /// Updates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="entitySignalsMapping">
         /// Required. The `EntitySignalsMapping` to update.
@@ -738,7 +738,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update an `EntitySignalsMapping` object.
+        /// Updates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="entitySignalsMapping">
         /// Required. The `EntitySignalsMapping` to update.
@@ -761,7 +761,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update an `EntitySignalsMapping` object.
+        /// Updates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="entitySignalsMapping">
         /// Required. The `EntitySignalsMapping` to update.
@@ -780,7 +780,7 @@ namespace Google.Ads.AdManager.V1
             UpdateEntitySignalsMappingAsync(entitySignalsMapping, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `EntitySignalsMapping` objects.
+        /// Creates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -789,7 +789,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch create `EntitySignalsMapping` objects.
+        /// Creates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -798,7 +798,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch create `EntitySignalsMapping` objects.
+        /// Creates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -807,7 +807,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateEntitySignalsMappingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `EntitySignalsMapping` objects.
+        /// Creates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `EntitySignalsMappings` will be
@@ -831,7 +831,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `EntitySignalsMapping` objects.
+        /// Creates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `EntitySignalsMappings` will be
@@ -855,7 +855,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `EntitySignalsMapping` objects.
+        /// Creates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `EntitySignalsMappings` will be
@@ -872,7 +872,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateEntitySignalsMappingsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `EntitySignalsMapping` objects.
+        /// Creates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `EntitySignalsMappings` will be
@@ -896,7 +896,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `EntitySignalsMapping` objects.
+        /// Creates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `EntitySignalsMappings` will be
@@ -920,7 +920,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `EntitySignalsMapping` objects.
+        /// Creates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `EntitySignalsMappings` will be
@@ -937,7 +937,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateEntitySignalsMappingsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `EntitySignalsMapping` objects.
+        /// Batch updates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -946,7 +946,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch update `EntitySignalsMapping` objects.
+        /// Batch updates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -955,7 +955,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch update `EntitySignalsMapping` objects.
+        /// Batch updates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -964,7 +964,7 @@ namespace Google.Ads.AdManager.V1
             BatchUpdateEntitySignalsMappingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `EntitySignalsMapping` objects.
+        /// Batch updates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `EntitySignalsMappings` will be
@@ -988,7 +988,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `EntitySignalsMapping` objects.
+        /// Batch updates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `EntitySignalsMappings` will be
@@ -1012,7 +1012,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `EntitySignalsMapping` objects.
+        /// Batch updates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `EntitySignalsMappings` will be
@@ -1029,7 +1029,7 @@ namespace Google.Ads.AdManager.V1
             BatchUpdateEntitySignalsMappingsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `EntitySignalsMapping` objects.
+        /// Batch updates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `EntitySignalsMappings` will be
@@ -1053,7 +1053,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `EntitySignalsMapping` objects.
+        /// Batch updates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `EntitySignalsMappings` will be
@@ -1077,7 +1077,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `EntitySignalsMapping` objects.
+        /// Batch updates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `EntitySignalsMappings` will be
@@ -1183,7 +1183,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_BatchUpdateEntitySignalsMappingsRequest(ref BatchUpdateEntitySignalsMappingsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a `EntitySignalsMapping` object.
+        /// Retrieves a `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1195,7 +1195,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `EntitySignalsMapping` object.
+        /// Retrieves a `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1207,7 +1207,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `EntitySignalsMapping` objects.
+        /// Lists `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1219,7 +1219,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `EntitySignalsMapping` objects.
+        /// Lists `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1231,7 +1231,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create an `EntitySignalsMapping` object.
+        /// Creates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1243,7 +1243,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create an `EntitySignalsMapping` object.
+        /// Creates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1255,7 +1255,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update an `EntitySignalsMapping` object.
+        /// Updates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1267,7 +1267,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update an `EntitySignalsMapping` object.
+        /// Updates an `EntitySignalsMapping` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1279,7 +1279,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch create `EntitySignalsMapping` objects.
+        /// Creates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1291,7 +1291,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch create `EntitySignalsMapping` objects.
+        /// Creates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1303,7 +1303,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch update `EntitySignalsMapping` objects.
+        /// Batch updates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1315,7 +1315,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch update `EntitySignalsMapping` objects.
+        /// Batch updates `EntitySignalsMapping` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
