@@ -39,7 +39,9 @@ namespace GoogleCSharpSnippets
             string complianceStandard = "";
             GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat reportFormat = GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat.Unspecified;
             // Make the request
+#pragma warning disable CS0612
             AuditScopeReport response = await auditManagerClient.GenerateAuditScopeReportAsync(scope, complianceStandard, reportFormat);
+#pragma warning restore CS0612
         }
     }
     // [END auditmanager_v1_generated_AuditManager_GenerateAuditScopeReport_async_flattened]

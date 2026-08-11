@@ -171,11 +171,11 @@ namespace Google.Cloud.AuditManager.V1 {
     public abstract partial class AuditManagerBase
     {
       /// <summary>
-      /// Enrolls the customer resource(folder/project/organization) to the audit
-      /// manager service by creating the audit managers Service Agent in customers
-      /// workload and granting required permissions to the Service Agent. Please
-      /// note that if enrollment request is made on the already enrolled workload
-      /// then enrollment is executed overriding the existing set of destinations.
+      /// Adds your project, folder, or organization to Audit
+      /// Manager. This method creates the Audit Manager service agent in your
+      /// workload and grants required permissions to the service agent.
+      /// If you make this request on a workload that's already enrolled,
+      /// then this method overrides the existing set of destinations.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -187,9 +187,14 @@ namespace Google.Cloud.AuditManager.V1 {
       }
 
       /// <summary>
-      /// Generates a demo report highlighting different responsibilities
-      /// (Google/Customer/ shared) required to be fulfilled for the customer's
-      /// workload to be compliant with the given standard.
+      /// Generates an audit scope report for the given standard.
+      ///
+      /// The report includes the following:
+      ///
+      /// * The technical attributes and constraints that Audit Manager uses to
+      ///   verify your compliance with a framework.
+      /// * A list of Google Cloud services and resources that are within the
+      ///   scope of the framework.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -201,8 +206,9 @@ namespace Google.Cloud.AuditManager.V1 {
       }
 
       /// <summary>
-      /// Register the Audit Report generation requests and returns the OperationId
-      /// using which the customer can track the report generation progress.
+      /// Registers audit report generation requests. This method returns the
+      /// operation identifier that you can use to track the report generation
+      /// progress.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -214,7 +220,8 @@ namespace Google.Cloud.AuditManager.V1 {
       }
 
       /// <summary>
-      /// Lists audit reports in the selected parent scope
+      /// Lists the audit reports for the organization, folder, or project that you
+      /// specify as the parent scope.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -226,7 +233,7 @@ namespace Google.Cloud.AuditManager.V1 {
       }
 
       /// <summary>
-      /// Get the overall audit report
+      /// Gets the full metadata and findings for an audit report.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -238,7 +245,7 @@ namespace Google.Cloud.AuditManager.V1 {
       }
 
       /// <summary>
-      /// Get a resource along with its enrollment status.
+      /// Gets a resource and its enrollment status.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -250,7 +257,8 @@ namespace Google.Cloud.AuditManager.V1 {
       }
 
       /// <summary>
-      /// Fetches all resources under the parent along with their enrollment.
+      /// Lists all the folders and projects in an organization or folder, along with
+      /// their enrollments.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -262,7 +270,8 @@ namespace Google.Cloud.AuditManager.V1 {
       }
 
       /// <summary>
-      /// Gets controls needed to be implemented to be compliant to a standard.
+      /// Lists the controls that you must implement to become compliant to a
+      /// regulatory standard.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -303,11 +312,11 @@ namespace Google.Cloud.AuditManager.V1 {
       }
 
       /// <summary>
-      /// Enrolls the customer resource(folder/project/organization) to the audit
-      /// manager service by creating the audit managers Service Agent in customers
-      /// workload and granting required permissions to the Service Agent. Please
-      /// note that if enrollment request is made on the already enrolled workload
-      /// then enrollment is executed overriding the existing set of destinations.
+      /// Adds your project, folder, or organization to Audit
+      /// Manager. This method creates the Audit Manager service agent in your
+      /// workload and grants required permissions to the service agent.
+      /// If you make this request on a workload that's already enrolled,
+      /// then this method overrides the existing set of destinations.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -320,11 +329,11 @@ namespace Google.Cloud.AuditManager.V1 {
         return EnrollResource(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Enrolls the customer resource(folder/project/organization) to the audit
-      /// manager service by creating the audit managers Service Agent in customers
-      /// workload and granting required permissions to the Service Agent. Please
-      /// note that if enrollment request is made on the already enrolled workload
-      /// then enrollment is executed overriding the existing set of destinations.
+      /// Adds your project, folder, or organization to Audit
+      /// Manager. This method creates the Audit Manager service agent in your
+      /// workload and grants required permissions to the service agent.
+      /// If you make this request on a workload that's already enrolled,
+      /// then this method overrides the existing set of destinations.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -335,11 +344,11 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_EnrollResource, null, options, request);
       }
       /// <summary>
-      /// Enrolls the customer resource(folder/project/organization) to the audit
-      /// manager service by creating the audit managers Service Agent in customers
-      /// workload and granting required permissions to the Service Agent. Please
-      /// note that if enrollment request is made on the already enrolled workload
-      /// then enrollment is executed overriding the existing set of destinations.
+      /// Adds your project, folder, or organization to Audit
+      /// Manager. This method creates the Audit Manager service agent in your
+      /// workload and grants required permissions to the service agent.
+      /// If you make this request on a workload that's already enrolled,
+      /// then this method overrides the existing set of destinations.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -352,11 +361,11 @@ namespace Google.Cloud.AuditManager.V1 {
         return EnrollResourceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Enrolls the customer resource(folder/project/organization) to the audit
-      /// manager service by creating the audit managers Service Agent in customers
-      /// workload and granting required permissions to the Service Agent. Please
-      /// note that if enrollment request is made on the already enrolled workload
-      /// then enrollment is executed overriding the existing set of destinations.
+      /// Adds your project, folder, or organization to Audit
+      /// Manager. This method creates the Audit Manager service agent in your
+      /// workload and grants required permissions to the service agent.
+      /// If you make this request on a workload that's already enrolled,
+      /// then this method overrides the existing set of destinations.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -367,9 +376,14 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_EnrollResource, null, options, request);
       }
       /// <summary>
-      /// Generates a demo report highlighting different responsibilities
-      /// (Google/Customer/ shared) required to be fulfilled for the customer's
-      /// workload to be compliant with the given standard.
+      /// Generates an audit scope report for the given standard.
+      ///
+      /// The report includes the following:
+      ///
+      /// * The technical attributes and constraints that Audit Manager uses to
+      ///   verify your compliance with a framework.
+      /// * A list of Google Cloud services and resources that are within the
+      ///   scope of the framework.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -382,9 +396,14 @@ namespace Google.Cloud.AuditManager.V1 {
         return GenerateAuditScopeReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Generates a demo report highlighting different responsibilities
-      /// (Google/Customer/ shared) required to be fulfilled for the customer's
-      /// workload to be compliant with the given standard.
+      /// Generates an audit scope report for the given standard.
+      ///
+      /// The report includes the following:
+      ///
+      /// * The technical attributes and constraints that Audit Manager uses to
+      ///   verify your compliance with a framework.
+      /// * A list of Google Cloud services and resources that are within the
+      ///   scope of the framework.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -395,9 +414,14 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GenerateAuditScopeReport, null, options, request);
       }
       /// <summary>
-      /// Generates a demo report highlighting different responsibilities
-      /// (Google/Customer/ shared) required to be fulfilled for the customer's
-      /// workload to be compliant with the given standard.
+      /// Generates an audit scope report for the given standard.
+      ///
+      /// The report includes the following:
+      ///
+      /// * The technical attributes and constraints that Audit Manager uses to
+      ///   verify your compliance with a framework.
+      /// * A list of Google Cloud services and resources that are within the
+      ///   scope of the framework.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -410,9 +434,14 @@ namespace Google.Cloud.AuditManager.V1 {
         return GenerateAuditScopeReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Generates a demo report highlighting different responsibilities
-      /// (Google/Customer/ shared) required to be fulfilled for the customer's
-      /// workload to be compliant with the given standard.
+      /// Generates an audit scope report for the given standard.
+      ///
+      /// The report includes the following:
+      ///
+      /// * The technical attributes and constraints that Audit Manager uses to
+      ///   verify your compliance with a framework.
+      /// * A list of Google Cloud services and resources that are within the
+      ///   scope of the framework.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -423,8 +452,9 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateAuditScopeReport, null, options, request);
       }
       /// <summary>
-      /// Register the Audit Report generation requests and returns the OperationId
-      /// using which the customer can track the report generation progress.
+      /// Registers audit report generation requests. This method returns the
+      /// operation identifier that you can use to track the report generation
+      /// progress.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -437,8 +467,9 @@ namespace Google.Cloud.AuditManager.V1 {
         return GenerateAuditReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Register the Audit Report generation requests and returns the OperationId
-      /// using which the customer can track the report generation progress.
+      /// Registers audit report generation requests. This method returns the
+      /// operation identifier that you can use to track the report generation
+      /// progress.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -449,8 +480,9 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GenerateAuditReport, null, options, request);
       }
       /// <summary>
-      /// Register the Audit Report generation requests and returns the OperationId
-      /// using which the customer can track the report generation progress.
+      /// Registers audit report generation requests. This method returns the
+      /// operation identifier that you can use to track the report generation
+      /// progress.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -463,8 +495,9 @@ namespace Google.Cloud.AuditManager.V1 {
         return GenerateAuditReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Register the Audit Report generation requests and returns the OperationId
-      /// using which the customer can track the report generation progress.
+      /// Registers audit report generation requests. This method returns the
+      /// operation identifier that you can use to track the report generation
+      /// progress.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -475,7 +508,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateAuditReport, null, options, request);
       }
       /// <summary>
-      /// Lists audit reports in the selected parent scope
+      /// Lists the audit reports for the organization, folder, or project that you
+      /// specify as the parent scope.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -488,7 +522,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return ListAuditReports(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists audit reports in the selected parent scope
+      /// Lists the audit reports for the organization, folder, or project that you
+      /// specify as the parent scope.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -499,7 +534,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListAuditReports, null, options, request);
       }
       /// <summary>
-      /// Lists audit reports in the selected parent scope
+      /// Lists the audit reports for the organization, folder, or project that you
+      /// specify as the parent scope.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -512,7 +548,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return ListAuditReportsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists audit reports in the selected parent scope
+      /// Lists the audit reports for the organization, folder, or project that you
+      /// specify as the parent scope.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -523,7 +560,7 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListAuditReports, null, options, request);
       }
       /// <summary>
-      /// Get the overall audit report
+      /// Gets the full metadata and findings for an audit report.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -536,7 +573,7 @@ namespace Google.Cloud.AuditManager.V1 {
         return GetAuditReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the overall audit report
+      /// Gets the full metadata and findings for an audit report.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -547,7 +584,7 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetAuditReport, null, options, request);
       }
       /// <summary>
-      /// Get the overall audit report
+      /// Gets the full metadata and findings for an audit report.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -560,7 +597,7 @@ namespace Google.Cloud.AuditManager.V1 {
         return GetAuditReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the overall audit report
+      /// Gets the full metadata and findings for an audit report.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -571,7 +608,7 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetAuditReport, null, options, request);
       }
       /// <summary>
-      /// Get a resource along with its enrollment status.
+      /// Gets a resource and its enrollment status.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -584,7 +621,7 @@ namespace Google.Cloud.AuditManager.V1 {
         return GetResourceEnrollmentStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get a resource along with its enrollment status.
+      /// Gets a resource and its enrollment status.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -595,7 +632,7 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetResourceEnrollmentStatus, null, options, request);
       }
       /// <summary>
-      /// Get a resource along with its enrollment status.
+      /// Gets a resource and its enrollment status.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -608,7 +645,7 @@ namespace Google.Cloud.AuditManager.V1 {
         return GetResourceEnrollmentStatusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get a resource along with its enrollment status.
+      /// Gets a resource and its enrollment status.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -619,7 +656,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetResourceEnrollmentStatus, null, options, request);
       }
       /// <summary>
-      /// Fetches all resources under the parent along with their enrollment.
+      /// Lists all the folders and projects in an organization or folder, along with
+      /// their enrollments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -632,7 +670,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return ListResourceEnrollmentStatuses(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Fetches all resources under the parent along with their enrollment.
+      /// Lists all the folders and projects in an organization or folder, along with
+      /// their enrollments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -643,7 +682,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListResourceEnrollmentStatuses, null, options, request);
       }
       /// <summary>
-      /// Fetches all resources under the parent along with their enrollment.
+      /// Lists all the folders and projects in an organization or folder, along with
+      /// their enrollments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -656,7 +696,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return ListResourceEnrollmentStatusesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Fetches all resources under the parent along with their enrollment.
+      /// Lists all the folders and projects in an organization or folder, along with
+      /// their enrollments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -667,7 +708,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListResourceEnrollmentStatuses, null, options, request);
       }
       /// <summary>
-      /// Gets controls needed to be implemented to be compliant to a standard.
+      /// Lists the controls that you must implement to become compliant to a
+      /// regulatory standard.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -680,7 +722,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return ListControls(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets controls needed to be implemented to be compliant to a standard.
+      /// Lists the controls that you must implement to become compliant to a
+      /// regulatory standard.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -691,7 +734,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListControls, null, options, request);
       }
       /// <summary>
-      /// Gets controls needed to be implemented to be compliant to a standard.
+      /// Lists the controls that you must implement to become compliant to a
+      /// regulatory standard.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -704,7 +748,8 @@ namespace Google.Cloud.AuditManager.V1 {
         return ListControlsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets controls needed to be implemented to be compliant to a standard.
+      /// Lists the controls that you must implement to become compliant to a
+      /// regulatory standard.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

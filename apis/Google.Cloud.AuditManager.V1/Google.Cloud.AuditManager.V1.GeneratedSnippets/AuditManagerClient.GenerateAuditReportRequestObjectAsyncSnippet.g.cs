@@ -40,9 +40,9 @@ namespace GoogleCSharpSnippets
             {
                 Scope = "",
                 GcsUri = "",
-                ComplianceStandard = "",
                 ReportFormat = GenerateAuditReportRequest.Types.AuditReportFormat.Unspecified,
                 ComplianceFramework = "",
+                ValidateOnly = false,
             };
             // Make the request
             Operation<AuditReport, OperationMetadata> response = await auditManagerClient.GenerateAuditReportAsync(request);

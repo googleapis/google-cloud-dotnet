@@ -113,7 +113,6 @@ namespace GoogleCSharpSnippets
             GenerateAuditScopeReportRequest request = new GenerateAuditScopeReportRequest
             {
                 Scope = "",
-                ComplianceStandard = "",
                 ReportFormat = GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat.Unspecified,
                 ComplianceFramework = "",
             };
@@ -133,7 +132,6 @@ namespace GoogleCSharpSnippets
             GenerateAuditScopeReportRequest request = new GenerateAuditScopeReportRequest
             {
                 Scope = "",
-                ComplianceStandard = "",
                 ReportFormat = GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat.Unspecified,
                 ComplianceFramework = "",
             };
@@ -153,7 +151,9 @@ namespace GoogleCSharpSnippets
             string complianceStandard = "";
             GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat reportFormat = GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat.Unspecified;
             // Make the request
+#pragma warning disable CS0612
             AuditScopeReport response = auditManagerClient.GenerateAuditScopeReport(scope, complianceStandard, reportFormat);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -169,7 +169,9 @@ namespace GoogleCSharpSnippets
             string complianceStandard = "";
             GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat reportFormat = GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat.Unspecified;
             // Make the request
+#pragma warning disable CS0612
             AuditScopeReport response = await auditManagerClient.GenerateAuditScopeReportAsync(scope, complianceStandard, reportFormat);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -184,9 +186,9 @@ namespace GoogleCSharpSnippets
             {
                 Scope = "",
                 GcsUri = "",
-                ComplianceStandard = "",
                 ReportFormat = GenerateAuditReportRequest.Types.AuditReportFormat.Unspecified,
                 ComplianceFramework = "",
+                ValidateOnly = false,
             };
             // Make the request
             Operation<AuditReport, OperationMetadata> response = auditManagerClient.GenerateAuditReport(request);
@@ -221,9 +223,9 @@ namespace GoogleCSharpSnippets
             {
                 Scope = "",
                 GcsUri = "",
-                ComplianceStandard = "",
                 ReportFormat = GenerateAuditReportRequest.Types.AuditReportFormat.Unspecified,
                 ComplianceFramework = "",
+                ValidateOnly = false,
             };
             // Make the request
             Operation<AuditReport, OperationMetadata> response = await auditManagerClient.GenerateAuditReportAsync(request);
@@ -258,7 +260,9 @@ namespace GoogleCSharpSnippets
             string complianceStandard = "";
             GenerateAuditReportRequest.Types.AuditReportFormat reportFormat = GenerateAuditReportRequest.Types.AuditReportFormat.Unspecified;
             // Make the request
+#pragma warning disable CS0612
             Operation<AuditReport, OperationMetadata> response = auditManagerClient.GenerateAuditReport(scope, gcsUri, complianceStandard, reportFormat);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AuditReport, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -291,7 +295,9 @@ namespace GoogleCSharpSnippets
             string complianceStandard = "";
             GenerateAuditReportRequest.Types.AuditReportFormat reportFormat = GenerateAuditReportRequest.Types.AuditReportFormat.Unspecified;
             // Make the request
+#pragma warning disable CS0612
             Operation<AuditReport, OperationMetadata> response = await auditManagerClient.GenerateAuditReportAsync(scope, gcsUri, complianceStandard, reportFormat);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AuditReport, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -640,6 +646,186 @@ namespace GoogleCSharpSnippets
             AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
             // Initialize request argument(s)
             FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAuditReportsResponse, AuditReport> response = auditManagerClient.ListAuditReportsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AuditReport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAuditReportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditReport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditReport> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditReport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditReports</summary>
+        public void ListAuditReportsResourceNames3()
+        {
+            // Snippet: ListAuditReports(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAuditReportsResponse, AuditReport> response = auditManagerClient.ListAuditReports(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AuditReport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAuditReportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditReport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditReport> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditReport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditReportsAsync</summary>
+        public async Task ListAuditReportsResourceNames3Async()
+        {
+            // Snippet: ListAuditReportsAsync(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAuditReportsResponse, AuditReport> response = auditManagerClient.ListAuditReportsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AuditReport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAuditReportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditReport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditReport> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditReport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditReports</summary>
+        public void ListAuditReportsResourceNames4()
+        {
+            // Snippet: ListAuditReports(EnrollmentStatusScopeName, string, int?, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            EnrollmentStatusScopeName parent = EnrollmentStatusScopeName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAuditReportsResponse, AuditReport> response = auditManagerClient.ListAuditReports(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AuditReport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAuditReportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditReport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditReport> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditReport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditReportsAsync</summary>
+        public async Task ListAuditReportsResourceNames4Async()
+        {
+            // Snippet: ListAuditReportsAsync(EnrollmentStatusScopeName, string, int?, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            EnrollmentStatusScopeName parent = EnrollmentStatusScopeName.FromFolderLocation("[FOLDER]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListAuditReportsResponse, AuditReport> response = auditManagerClient.ListAuditReportsAsync(parent);
 

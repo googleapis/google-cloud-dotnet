@@ -37,7 +37,6 @@ namespace GoogleCSharpSnippets
             GenerateAuditScopeReportRequest request = new GenerateAuditScopeReportRequest
             {
                 Scope = "",
-                ComplianceStandard = "",
                 ReportFormat = GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat.Unspecified,
                 ComplianceFramework = "",
             };
