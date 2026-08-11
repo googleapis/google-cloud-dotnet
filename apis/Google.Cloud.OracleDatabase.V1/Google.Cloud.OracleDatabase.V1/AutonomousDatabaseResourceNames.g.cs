@@ -371,6 +371,16 @@ namespace Google.Cloud.OracleDatabase.V1
             get => string.IsNullOrEmpty(AutonomousDatabase) ? null : AutonomousDatabaseName.Parse(AutonomousDatabase, allowUnparsed: true);
             set => AutonomousDatabase = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="AutonomousDatabaseBackupName"/>-typed view over the <see cref="AutonomousDatabaseBackup"/>
+        /// resource name property.
+        /// </summary>
+        public AutonomousDatabaseBackupName AutonomousDatabaseBackupAsAutonomousDatabaseBackupName
+        {
+            get => string.IsNullOrEmpty(AutonomousDatabaseBackup) ? null : AutonomousDatabaseBackupName.Parse(AutonomousDatabaseBackup, allowUnparsed: true);
+            set => AutonomousDatabaseBackup = value?.ToString() ?? "";
+        }
     }
 
     public partial class EncryptionKey
@@ -382,6 +392,18 @@ namespace Google.Cloud.OracleDatabase.V1
         {
             get => string.IsNullOrEmpty(KmsKey) ? null : CryptoKeyName.Parse(KmsKey, allowUnparsed: true);
             set => KmsKey = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AutonomousDatabaseRefreshableClone
+    {
+        /// <summary>
+        /// <see cref="gcov::AutonomousDatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcov::AutonomousDatabaseName AutonomousDatabaseName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcov::AutonomousDatabaseName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

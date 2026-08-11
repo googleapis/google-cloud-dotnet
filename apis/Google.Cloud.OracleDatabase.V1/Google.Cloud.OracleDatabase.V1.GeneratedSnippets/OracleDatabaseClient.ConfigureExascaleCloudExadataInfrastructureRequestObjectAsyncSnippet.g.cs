@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 CloudExadataInfrastructureName = CloudExadataInfrastructureName.FromProjectLocationCloudExadataInfrastructure("[PROJECT]", "[LOCATION]", "[CLOUD_EXADATA_INFRASTRUCTURE]"),
                 TotalStorageSizeGb = 0,
                 RequestId = "",
+                TotalVmStorageSizeGb = 0,
             };
             // Make the request
             Operation<CloudExadataInfrastructure, OperationMetadata> response = await oracleDatabaseClient.ConfigureExascaleCloudExadataInfrastructureAsync(request);

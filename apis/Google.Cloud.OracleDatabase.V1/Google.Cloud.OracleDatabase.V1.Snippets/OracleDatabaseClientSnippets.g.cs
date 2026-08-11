@@ -791,6 +791,7 @@ namespace GoogleCSharpSnippets
                 CloudExadataInfrastructureName = CloudExadataInfrastructureName.FromProjectLocationCloudExadataInfrastructure("[PROJECT]", "[LOCATION]", "[CLOUD_EXADATA_INFRASTRUCTURE]"),
                 TotalStorageSizeGb = 0,
                 RequestId = "",
+                TotalVmStorageSizeGb = 0,
             };
             // Make the request
             Operation<CloudExadataInfrastructure, OperationMetadata> response = oracleDatabaseClient.ConfigureExascaleCloudExadataInfrastructure(request);
@@ -826,6 +827,7 @@ namespace GoogleCSharpSnippets
                 CloudExadataInfrastructureName = CloudExadataInfrastructureName.FromProjectLocationCloudExadataInfrastructure("[PROJECT]", "[LOCATION]", "[CLOUD_EXADATA_INFRASTRUCTURE]"),
                 TotalStorageSizeGb = 0,
                 RequestId = "",
+                TotalVmStorageSizeGb = 0,
             };
             // Make the request
             Operation<CloudExadataInfrastructure, OperationMetadata> response = await oracleDatabaseClient.ConfigureExascaleCloudExadataInfrastructureAsync(request);
@@ -6400,6 +6402,282 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 AutonomousDatabase retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshAutonomousDatabase</summary>
+        public void RefreshAutonomousDatabaseRequestObject()
+        {
+            // Snippet: RefreshAutonomousDatabase(RefreshAutonomousDatabaseRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            RefreshAutonomousDatabaseRequest request = new RefreshAutonomousDatabaseRequest
+            {
+                AutonomousDatabaseName = AutonomousDatabaseName.FromProjectLocationAutonomousDatabase("[PROJECT]", "[LOCATION]", "[AUTONOMOUS_DATABASE]"),
+                RefreshCutoffTime = new Timestamp(),
+            };
+            // Make the request
+            Operation<AutonomousDatabase, OperationMetadata> response = oracleDatabaseClient.RefreshAutonomousDatabase(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutonomousDatabase, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutonomousDatabase result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutonomousDatabase, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceRefreshAutonomousDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutonomousDatabase retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshAutonomousDatabaseAsync</summary>
+        public async Task RefreshAutonomousDatabaseRequestObjectAsync()
+        {
+            // Snippet: RefreshAutonomousDatabaseAsync(RefreshAutonomousDatabaseRequest, CallSettings)
+            // Additional: RefreshAutonomousDatabaseAsync(RefreshAutonomousDatabaseRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            RefreshAutonomousDatabaseRequest request = new RefreshAutonomousDatabaseRequest
+            {
+                AutonomousDatabaseName = AutonomousDatabaseName.FromProjectLocationAutonomousDatabase("[PROJECT]", "[LOCATION]", "[AUTONOMOUS_DATABASE]"),
+                RefreshCutoffTime = new Timestamp(),
+            };
+            // Make the request
+            Operation<AutonomousDatabase, OperationMetadata> response = await oracleDatabaseClient.RefreshAutonomousDatabaseAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutonomousDatabase, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutonomousDatabase result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutonomousDatabase, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceRefreshAutonomousDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutonomousDatabase retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshAutonomousDatabase</summary>
+        public void RefreshAutonomousDatabase()
+        {
+            // Snippet: RefreshAutonomousDatabase(string, Timestamp, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autonomousDatabases/[AUTONOMOUS_DATABASE]";
+            Timestamp refreshCutoffTime = new Timestamp();
+            // Make the request
+            Operation<AutonomousDatabase, OperationMetadata> response = oracleDatabaseClient.RefreshAutonomousDatabase(name, refreshCutoffTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutonomousDatabase, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutonomousDatabase result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutonomousDatabase, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceRefreshAutonomousDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutonomousDatabase retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshAutonomousDatabaseAsync</summary>
+        public async Task RefreshAutonomousDatabaseAsync()
+        {
+            // Snippet: RefreshAutonomousDatabaseAsync(string, Timestamp, CallSettings)
+            // Additional: RefreshAutonomousDatabaseAsync(string, Timestamp, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autonomousDatabases/[AUTONOMOUS_DATABASE]";
+            Timestamp refreshCutoffTime = new Timestamp();
+            // Make the request
+            Operation<AutonomousDatabase, OperationMetadata> response = await oracleDatabaseClient.RefreshAutonomousDatabaseAsync(name, refreshCutoffTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutonomousDatabase, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutonomousDatabase result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutonomousDatabase, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceRefreshAutonomousDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutonomousDatabase retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshAutonomousDatabase</summary>
+        public void RefreshAutonomousDatabaseResourceNames()
+        {
+            // Snippet: RefreshAutonomousDatabase(AutonomousDatabaseName, Timestamp, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            AutonomousDatabaseName name = AutonomousDatabaseName.FromProjectLocationAutonomousDatabase("[PROJECT]", "[LOCATION]", "[AUTONOMOUS_DATABASE]");
+            Timestamp refreshCutoffTime = new Timestamp();
+            // Make the request
+            Operation<AutonomousDatabase, OperationMetadata> response = oracleDatabaseClient.RefreshAutonomousDatabase(name, refreshCutoffTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutonomousDatabase, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutonomousDatabase result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutonomousDatabase, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceRefreshAutonomousDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutonomousDatabase retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RefreshAutonomousDatabaseAsync</summary>
+        public async Task RefreshAutonomousDatabaseResourceNamesAsync()
+        {
+            // Snippet: RefreshAutonomousDatabaseAsync(AutonomousDatabaseName, Timestamp, CallSettings)
+            // Additional: RefreshAutonomousDatabaseAsync(AutonomousDatabaseName, Timestamp, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            AutonomousDatabaseName name = AutonomousDatabaseName.FromProjectLocationAutonomousDatabase("[PROJECT]", "[LOCATION]", "[AUTONOMOUS_DATABASE]");
+            Timestamp refreshCutoffTime = new Timestamp();
+            // Make the request
+            Operation<AutonomousDatabase, OperationMetadata> response = await oracleDatabaseClient.RefreshAutonomousDatabaseAsync(name, refreshCutoffTime);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutonomousDatabase, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutonomousDatabase result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutonomousDatabase, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceRefreshAutonomousDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutonomousDatabase retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutonomousDatabaseRefreshableClones</summary>
+        public void GetAutonomousDatabaseRefreshableClonesRequestObject()
+        {
+            // Snippet: GetAutonomousDatabaseRefreshableClones(GetAutonomousDatabaseRefreshableClonesRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GetAutonomousDatabaseRefreshableClonesRequest request = new GetAutonomousDatabaseRefreshableClonesRequest
+            {
+                AutonomousDatabaseName = AutonomousDatabaseName.FromProjectLocationAutonomousDatabase("[PROJECT]", "[LOCATION]", "[AUTONOMOUS_DATABASE]"),
+            };
+            // Make the request
+            AutonomousDatabaseRefreshableClones response = oracleDatabaseClient.GetAutonomousDatabaseRefreshableClones(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutonomousDatabaseRefreshableClonesAsync</summary>
+        public async Task GetAutonomousDatabaseRefreshableClonesRequestObjectAsync()
+        {
+            // Snippet: GetAutonomousDatabaseRefreshableClonesAsync(GetAutonomousDatabaseRefreshableClonesRequest, CallSettings)
+            // Additional: GetAutonomousDatabaseRefreshableClonesAsync(GetAutonomousDatabaseRefreshableClonesRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAutonomousDatabaseRefreshableClonesRequest request = new GetAutonomousDatabaseRefreshableClonesRequest
+            {
+                AutonomousDatabaseName = AutonomousDatabaseName.FromProjectLocationAutonomousDatabase("[PROJECT]", "[LOCATION]", "[AUTONOMOUS_DATABASE]"),
+            };
+            // Make the request
+            AutonomousDatabaseRefreshableClones response = await oracleDatabaseClient.GetAutonomousDatabaseRefreshableClonesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutonomousDatabaseRefreshableClones</summary>
+        public void GetAutonomousDatabaseRefreshableClones()
+        {
+            // Snippet: GetAutonomousDatabaseRefreshableClones(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autonomousDatabases/[AUTONOMOUS_DATABASE]";
+            // Make the request
+            AutonomousDatabaseRefreshableClones response = oracleDatabaseClient.GetAutonomousDatabaseRefreshableClones(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutonomousDatabaseRefreshableClonesAsync</summary>
+        public async Task GetAutonomousDatabaseRefreshableClonesAsync()
+        {
+            // Snippet: GetAutonomousDatabaseRefreshableClonesAsync(string, CallSettings)
+            // Additional: GetAutonomousDatabaseRefreshableClonesAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autonomousDatabases/[AUTONOMOUS_DATABASE]";
+            // Make the request
+            AutonomousDatabaseRefreshableClones response = await oracleDatabaseClient.GetAutonomousDatabaseRefreshableClonesAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutonomousDatabaseRefreshableClones</summary>
+        public void GetAutonomousDatabaseRefreshableClonesResourceNames()
+        {
+            // Snippet: GetAutonomousDatabaseRefreshableClones(AutonomousDatabaseName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            AutonomousDatabaseName name = AutonomousDatabaseName.FromProjectLocationAutonomousDatabase("[PROJECT]", "[LOCATION]", "[AUTONOMOUS_DATABASE]");
+            // Make the request
+            AutonomousDatabaseRefreshableClones response = oracleDatabaseClient.GetAutonomousDatabaseRefreshableClones(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutonomousDatabaseRefreshableClonesAsync</summary>
+        public async Task GetAutonomousDatabaseRefreshableClonesResourceNamesAsync()
+        {
+            // Snippet: GetAutonomousDatabaseRefreshableClonesAsync(AutonomousDatabaseName, CallSettings)
+            // Additional: GetAutonomousDatabaseRefreshableClonesAsync(AutonomousDatabaseName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            AutonomousDatabaseName name = AutonomousDatabaseName.FromProjectLocationAutonomousDatabase("[PROJECT]", "[LOCATION]", "[AUTONOMOUS_DATABASE]");
+            // Make the request
+            AutonomousDatabaseRefreshableClones response = await oracleDatabaseClient.GetAutonomousDatabaseRefreshableClonesAsync(name);
             // End snippet
         }
 

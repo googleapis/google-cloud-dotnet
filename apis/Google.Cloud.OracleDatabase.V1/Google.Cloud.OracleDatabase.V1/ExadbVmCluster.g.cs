@@ -29,7 +29,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jl",
             "c291cmNlLnByb3RvGitnb29nbGUvY2xvdWQvb3JhY2xlZGF0YWJhc2UvdjEv",
             "Y29tbW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "Ghpnb29nbGUvdHlwZS9kYXRldGltZS5wcm90byKLBgoORXhhZGJWbUNsdXN0",
+            "Ghpnb29nbGUvdHlwZS9kYXRldGltZS5wcm90byLfBgoORXhhZGJWbUNsdXN0",
             "ZXISEQoEbmFtZRgBIAEoCUID4EEIElEKCnByb3BlcnRpZXMYAiABKAsyOC5n",
             "b29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRXhhZGJWbUNsdXN0ZXJQ",
             "cm9wZXJ0aWVzQgPgQQISHwoPZ2NwX29yYWNsZV96b25lGAMgASgJQgbgQQPg",
@@ -42,55 +42,57 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "cmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9PZGJTdWJuZXQSHAoMZGlz",
             "cGxheV9uYW1lGAkgASgJQgbgQQLgQQUSNAoLY3JlYXRlX3RpbWUYCiABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGwoOZW50aXRsZW1l",
-            "bnRfaWQYCyABKAlCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBOp8B6kGbAQosb3JhY2xlZGF0YWJhc2UuZ29v",
-            "Z2xlYXBpcy5jb20vRXhhZGJWbUNsdXN0ZXISSnByb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9leGFkYlZtQ2x1c3RlcnMve2V4YWRi",
-            "X3ZtX2NsdXN0ZXJ9Kg9leGFkYlZtQ2x1c3RlcnMyDmV4YWRiVm1DbHVzdGVy",
-            "IkEKHEV4YWRiVm1DbHVzdGVyU3RvcmFnZURldGFpbHMSIQoUc2l6ZV9pbl9n",
-            "YnNfcGVyX25vZGUYAiABKAVCA+BBAiLHCwoYRXhhZGJWbUNsdXN0ZXJQcm9w",
-            "ZXJ0aWVzEhwKDGNsdXN0ZXJfbmFtZRgBIAEoCUIG4EEB4EEFEh0KDWdyaWRf",
-            "aW1hZ2VfaWQYAiABKAlCBuBBAuBBBRIXCgpub2RlX2NvdW50GAMgASgFQgPg",
-            "QQISKwobZW5hYmxlZF9lY3B1X2NvdW50X3Blcl9ub2RlGBQgASgFQgbgQQLg",
-            "QQUSLgoeYWRkaXRpb25hbF9lY3B1X2NvdW50X3Blcl9ub2RlGBUgASgFQgbg",
-            "QQHgQQUSZAoWdm1fZmlsZV9zeXN0ZW1fc3RvcmFnZRgGIAEoCzI8Lmdvb2ds",
-            "ZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5FeGFkYlZtQ2x1c3RlclN0b3Jh",
-            "Z2VEZXRhaWxzQgbgQQLgQQUSZAoNbGljZW5zZV9tb2RlbBgHIAEoDjJFLmdv",
-            "b2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5FeGFkYlZtQ2x1c3RlclBy",
-            "b3BlcnRpZXMuTGljZW5zZU1vZGVsQgbgQQHgQQUSYgoZZXhhc2NhbGVfZGJf",
-            "c3RvcmFnZV92YXVsdBgIIAEoCUI/4EEC4EEF+kE2CjRvcmFjbGVkYXRhYmFz",
-            "ZS5nb29nbGVhcGlzLmNvbS9FeGFzY2FsZURiU3RvcmFnZVZhdWx0Eh8KD2hv",
-            "c3RuYW1lX3ByZWZpeBgJIAEoCUIG4EEC4EEFEhUKCGhvc3RuYW1lGAogASgJ",
-            "QgPgQQMSHwoPc3NoX3B1YmxpY19rZXlzGAsgAygJQgbgQQLgQQUSZAoXZGF0",
-            "YV9jb2xsZWN0aW9uX29wdGlvbnMYDCABKAsyOy5nb29nbGUuY2xvdWQub3Jh",
-            "Y2xlZGF0YWJhc2UudjEuRGF0YUNvbGxlY3Rpb25PcHRpb25zQ29tbW9uQgbg",
-            "QQHgQQUSMAoJdGltZV96b25lGA0gASgLMhUuZ29vZ2xlLnR5cGUuVGltZVpv",
-            "bmVCBuBBAeBBBRJzCg9saWZlY3ljbGVfc3RhdGUYDiABKA4yVS5nb29nbGUu",
-            "Y2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRXhhZGJWbUNsdXN0ZXJQcm9wZXJ0",
-            "aWVzLkV4YWRiVm1DbHVzdGVyTGlmZWN5Y2xlU3RhdGVCA+BBAxJoCg9zaGFw",
-            "ZV9hdHRyaWJ1dGUYDyABKA4yRy5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJh",
-            "c2UudjEuRXhhZGJWbUNsdXN0ZXJQcm9wZXJ0aWVzLlNoYXBlQXR0cmlidXRl",
-            "QgbgQQLgQQUSGwoObWVtb3J5X3NpemVfZ2IYECABKAVCA+BBAxImChZzY2Fu",
-            "X2xpc3RlbmVyX3BvcnRfdGNwGBEgASgFQgbgQQHgQQUSFAoHb2NpX3VyaRgS",
-            "IAEoCUID4EEDEhcKCmdpX3ZlcnNpb24YEyABKAlCA+BBAyJfCgxMaWNlbnNl",
-            "TW9kZWwSHQoZTElDRU5TRV9NT0RFTF9VTlNQRUNJRklFRBAAEhQKEExJQ0VO",
-            "U0VfSU5DTFVERUQQARIaChZCUklOR19ZT1VSX09XTl9MSUNFTlNFEAIiyQEK",
-            "HEV4YWRiVm1DbHVzdGVyTGlmZWN5Y2xlU3RhdGUSMAosRVhBREJfVk1fQ0xV",
-            "U1RFUl9MSUZFQ1lDTEVfU1RBVEVfVU5TUEVDSUZJRUQQABIQCgxQUk9WSVNJ",
-            "T05JTkcQARINCglBVkFJTEFCTEUQAhIMCghVUERBVElORxADEg8KC1RFUk1J",
-            "TkFUSU5HEAQSDgoKVEVSTUlOQVRFRBAFEgoKBkZBSUxFRBAGEhsKF01BSU5U",
-            "RU5BTkNFX0lOX1BST0dSRVNTEAciVwoOU2hhcGVBdHRyaWJ1dGUSHwobU0hB",
-            "UEVfQVRUUklCVVRFX1VOU1BFQ0lGSUVEEAASEQoNU01BUlRfU1RPUkFHRRAB",
-            "EhEKDUJMT0NLX1NUT1JBR0UQAkLtAQoiY29tLmdvb2dsZS5jbG91ZC5vcmFj",
-            "bGVkYXRhYmFzZS52MUITRXhhZGJWbUNsdXN0ZXJQcm90b1ABWkpjbG91ZC5n",
-            "b29nbGUuY29tL2dvL29yYWNsZWRhdGFiYXNlL2FwaXYxL29yYWNsZWRhdGFi",
-            "YXNlcGI7b3JhY2xlZGF0YWJhc2VwYqoCHkdvb2dsZS5DbG91ZC5PcmFjbGVE",
-            "YXRhYmFzZS5WMcoCHkdvb2dsZVxDbG91ZFxPcmFjbGVEYXRhYmFzZVxWMeoC",
-            "IUdvb2dsZTo6Q2xvdWQ6Ok9yYWNsZURhdGFiYXNlOjpWMWIGcHJvdG8z"));
+            "bnRfaWQYCyABKAlCA+BBAxJSChJpZGVudGl0eV9jb25uZWN0b3IYDCABKAsy",
+            "MS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuSWRlbnRpdHlDb25u",
+            "ZWN0b3JCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
+            "dWUYAiABKAk6AjgBOp8B6kGbAQosb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBp",
+            "cy5jb20vRXhhZGJWbUNsdXN0ZXISSnByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9leGFkYlZtQ2x1c3RlcnMve2V4YWRiX3ZtX2Ns",
+            "dXN0ZXJ9Kg9leGFkYlZtQ2x1c3RlcnMyDmV4YWRiVm1DbHVzdGVyIkEKHEV4",
+            "YWRiVm1DbHVzdGVyU3RvcmFnZURldGFpbHMSIQoUc2l6ZV9pbl9nYnNfcGVy",
+            "X25vZGUYAiABKAVCA+BBAiLHCwoYRXhhZGJWbUNsdXN0ZXJQcm9wZXJ0aWVz",
+            "EhwKDGNsdXN0ZXJfbmFtZRgBIAEoCUIG4EEB4EEFEh0KDWdyaWRfaW1hZ2Vf",
+            "aWQYAiABKAlCBuBBAuBBBRIXCgpub2RlX2NvdW50GAMgASgFQgPgQQISKwob",
+            "ZW5hYmxlZF9lY3B1X2NvdW50X3Blcl9ub2RlGBQgASgFQgbgQQLgQQUSLgoe",
+            "YWRkaXRpb25hbF9lY3B1X2NvdW50X3Blcl9ub2RlGBUgASgFQgbgQQHgQQUS",
+            "ZAoWdm1fZmlsZV9zeXN0ZW1fc3RvcmFnZRgGIAEoCzI8Lmdvb2dsZS5jbG91",
+            "ZC5vcmFjbGVkYXRhYmFzZS52MS5FeGFkYlZtQ2x1c3RlclN0b3JhZ2VEZXRh",
+            "aWxzQgbgQQLgQQUSZAoNbGljZW5zZV9tb2RlbBgHIAEoDjJFLmdvb2dsZS5j",
+            "bG91ZC5vcmFjbGVkYXRhYmFzZS52MS5FeGFkYlZtQ2x1c3RlclByb3BlcnRp",
+            "ZXMuTGljZW5zZU1vZGVsQgbgQQHgQQUSYgoZZXhhc2NhbGVfZGJfc3RvcmFn",
+            "ZV92YXVsdBgIIAEoCUI/4EEC4EEF+kE2CjRvcmFjbGVkYXRhYmFzZS5nb29n",
+            "bGVhcGlzLmNvbS9FeGFzY2FsZURiU3RvcmFnZVZhdWx0Eh8KD2hvc3RuYW1l",
+            "X3ByZWZpeBgJIAEoCUIG4EEC4EEFEhUKCGhvc3RuYW1lGAogASgJQgPgQQMS",
+            "HwoPc3NoX3B1YmxpY19rZXlzGAsgAygJQgbgQQLgQQUSZAoXZGF0YV9jb2xs",
+            "ZWN0aW9uX29wdGlvbnMYDCABKAsyOy5nb29nbGUuY2xvdWQub3JhY2xlZGF0",
+            "YWJhc2UudjEuRGF0YUNvbGxlY3Rpb25PcHRpb25zQ29tbW9uQgbgQQHgQQUS",
+            "MAoJdGltZV96b25lGA0gASgLMhUuZ29vZ2xlLnR5cGUuVGltZVpvbmVCBuBB",
+            "AeBBBRJzCg9saWZlY3ljbGVfc3RhdGUYDiABKA4yVS5nb29nbGUuY2xvdWQu",
+            "b3JhY2xlZGF0YWJhc2UudjEuRXhhZGJWbUNsdXN0ZXJQcm9wZXJ0aWVzLkV4",
+            "YWRiVm1DbHVzdGVyTGlmZWN5Y2xlU3RhdGVCA+BBAxJoCg9zaGFwZV9hdHRy",
+            "aWJ1dGUYDyABKA4yRy5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEu",
+            "RXhhZGJWbUNsdXN0ZXJQcm9wZXJ0aWVzLlNoYXBlQXR0cmlidXRlQgbgQQLg",
+            "QQUSGwoObWVtb3J5X3NpemVfZ2IYECABKAVCA+BBAxImChZzY2FuX2xpc3Rl",
+            "bmVyX3BvcnRfdGNwGBEgASgFQgbgQQHgQQUSFAoHb2NpX3VyaRgSIAEoCUID",
+            "4EEDEhcKCmdpX3ZlcnNpb24YEyABKAlCA+BBAyJfCgxMaWNlbnNlTW9kZWwS",
+            "HQoZTElDRU5TRV9NT0RFTF9VTlNQRUNJRklFRBAAEhQKEExJQ0VOU0VfSU5D",
+            "TFVERUQQARIaChZCUklOR19ZT1VSX09XTl9MSUNFTlNFEAIiyQEKHEV4YWRi",
+            "Vm1DbHVzdGVyTGlmZWN5Y2xlU3RhdGUSMAosRVhBREJfVk1fQ0xVU1RFUl9M",
+            "SUZFQ1lDTEVfU1RBVEVfVU5TUEVDSUZJRUQQABIQCgxQUk9WSVNJT05JTkcQ",
+            "ARINCglBVkFJTEFCTEUQAhIMCghVUERBVElORxADEg8KC1RFUk1JTkFUSU5H",
+            "EAQSDgoKVEVSTUlOQVRFRBAFEgoKBkZBSUxFRBAGEhsKF01BSU5URU5BTkNF",
+            "X0lOX1BST0dSRVNTEAciVwoOU2hhcGVBdHRyaWJ1dGUSHwobU0hBUEVfQVRU",
+            "UklCVVRFX1VOU1BFQ0lGSUVEEAASEQoNU01BUlRfU1RPUkFHRRABEhEKDUJM",
+            "T0NLX1NUT1JBR0UQAkLtAQoiY29tLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRh",
+            "YmFzZS52MUITRXhhZGJWbUNsdXN0ZXJQcm90b1ABWkpjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL29yYWNsZWRhdGFiYXNlL2FwaXYxL29yYWNsZWRhdGFiYXNlcGI7",
+            "b3JhY2xlZGF0YWJhc2VwYqoCHkdvb2dsZS5DbG91ZC5PcmFjbGVEYXRhYmFz",
+            "ZS5WMcoCHkdvb2dsZVxDbG91ZFxPcmFjbGVEYXRhYmFzZVxWMeoCIUdvb2ds",
+            "ZTo6Q2xvdWQ6Ok9yYWNsZURhdGFiYXNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OracleDatabase.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ExadbVmCluster), global::Google.Cloud.OracleDatabase.V1.ExadbVmCluster.Parser, new[]{ "Name", "Properties", "GcpOracleZone", "Labels", "OdbNetwork", "OdbSubnet", "BackupOdbSubnet", "DisplayName", "CreateTime", "EntitlementId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ExadbVmCluster), global::Google.Cloud.OracleDatabase.V1.ExadbVmCluster.Parser, new[]{ "Name", "Properties", "GcpOracleZone", "Labels", "OdbNetwork", "OdbSubnet", "BackupOdbSubnet", "DisplayName", "CreateTime", "EntitlementId", "IdentityConnector" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ExadbVmClusterStorageDetails), global::Google.Cloud.OracleDatabase.V1.ExadbVmClusterStorageDetails.Parser, new[]{ "SizeInGbsPerNode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ExadbVmClusterProperties), global::Google.Cloud.OracleDatabase.V1.ExadbVmClusterProperties.Parser, new[]{ "ClusterName", "GridImageId", "NodeCount", "EnabledEcpuCountPerNode", "AdditionalEcpuCountPerNode", "VmFileSystemStorage", "LicenseModel", "ExascaleDbStorageVault", "HostnamePrefix", "Hostname", "SshPublicKeys", "DataCollectionOptions", "TimeZone", "LifecycleState", "ShapeAttribute", "MemorySizeGb", "ScanListenerPortTcp", "OciUri", "GiVersion" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.ExadbVmClusterProperties.Types.LicenseModel), typeof(global::Google.Cloud.OracleDatabase.V1.ExadbVmClusterProperties.Types.ExadbVmClusterLifecycleState), typeof(global::Google.Cloud.OracleDatabase.V1.ExadbVmClusterProperties.Types.ShapeAttribute) }, null, null)
           }));
@@ -149,6 +151,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       displayName_ = other.displayName_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       entitlementId_ = other.entitlementId_;
+      identityConnector_ = other.identityConnector_ != null ? other.identityConnector_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -322,6 +325,22 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
+    /// <summary>Field number for the "identity_connector" field.</summary>
+    public const int IdentityConnectorFieldNumber = 12;
+    private global::Google.Cloud.OracleDatabase.V1.IdentityConnector identityConnector_;
+    /// <summary>
+    /// Output only. The identity connector details which will allow OCI to
+    /// securely access the resources in the customer project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.IdentityConnector IdentityConnector {
+      get { return identityConnector_; }
+      set {
+        identityConnector_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -347,6 +366,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (DisplayName != other.DisplayName) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (EntitlementId != other.EntitlementId) return false;
+      if (!object.Equals(IdentityConnector, other.IdentityConnector)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -364,6 +384,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (EntitlementId.Length != 0) hash ^= EntitlementId.GetHashCode();
+      if (identityConnector_ != null) hash ^= IdentityConnector.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -419,6 +440,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(90);
         output.WriteString(EntitlementId);
       }
+      if (identityConnector_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(IdentityConnector);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -466,6 +491,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(90);
         output.WriteString(EntitlementId);
       }
+      if (identityConnector_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(IdentityConnector);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -503,6 +532,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (EntitlementId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EntitlementId);
+      }
+      if (identityConnector_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IdentityConnector);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -549,6 +581,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (other.EntitlementId.Length != 0) {
         EntitlementId = other.EntitlementId;
+      }
+      if (other.identityConnector_ != null) {
+        if (identityConnector_ == null) {
+          IdentityConnector = new global::Google.Cloud.OracleDatabase.V1.IdentityConnector();
+        }
+        IdentityConnector.MergeFrom(other.IdentityConnector);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -615,6 +653,13 @@ namespace Google.Cloud.OracleDatabase.V1 {
             EntitlementId = input.ReadString();
             break;
           }
+          case 98: {
+            if (identityConnector_ == null) {
+              IdentityConnector = new global::Google.Cloud.OracleDatabase.V1.IdentityConnector();
+            }
+            input.ReadMessage(IdentityConnector);
+            break;
+          }
         }
       }
     #endif
@@ -678,6 +723,13 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 90: {
             EntitlementId = input.ReadString();
+            break;
+          }
+          case 98: {
+            if (identityConnector_ == null) {
+              IdentityConnector = new global::Google.Cloud.OracleDatabase.V1.IdentityConnector();
+            }
+            input.ReadMessage(IdentityConnector);
             break;
           }
         }

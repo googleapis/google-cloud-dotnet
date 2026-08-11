@@ -93,6 +93,9 @@ namespace Google.Cloud.OracleDatabase.V1
             SwitchoverAutonomousDatabaseOperationsSettings = existing.SwitchoverAutonomousDatabaseOperationsSettings.Clone();
             FailoverAutonomousDatabaseSettings = existing.FailoverAutonomousDatabaseSettings;
             FailoverAutonomousDatabaseOperationsSettings = existing.FailoverAutonomousDatabaseOperationsSettings.Clone();
+            RefreshAutonomousDatabaseSettings = existing.RefreshAutonomousDatabaseSettings;
+            RefreshAutonomousDatabaseOperationsSettings = existing.RefreshAutonomousDatabaseOperationsSettings.Clone();
+            GetAutonomousDatabaseRefreshableClonesSettings = existing.GetAutonomousDatabaseRefreshableClonesSettings;
             ListOdbNetworksSettings = existing.ListOdbNetworksSettings;
             GetOdbNetworkSettings = existing.GetOdbNetworkSettings;
             CreateOdbNetworkSettings = existing.CreateOdbNetworkSettings;
@@ -934,6 +937,50 @@ namespace Google.Cloud.OracleDatabase.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.RefreshAutonomousDatabase</c> and
+        /// <c>OracleDatabaseClient.RefreshAutonomousDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RefreshAutonomousDatabaseSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.RefreshAutonomousDatabase</c> and
+        /// <c>OracleDatabaseClient.RefreshAutonomousDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RefreshAutonomousDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.GetAutonomousDatabaseRefreshableClones</c> and
+        /// <c>OracleDatabaseClient.GetAutonomousDatabaseRefreshableClonesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAutonomousDatabaseRefreshableClonesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -6997,6 +7044,301 @@ namespace Google.Cloud.OracleDatabase.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> FailoverAutonomousDatabaseAsync(AutonomousDatabaseName name, AutonomousDatabaseName peerAutonomousDatabase, st::CancellationToken cancellationToken) =>
             FailoverAutonomousDatabaseAsync(name, peerAutonomousDatabase, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Refreshes the refreshable clone of an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> RefreshAutonomousDatabase(RefreshAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Refreshes the refreshable clone of an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> RefreshAutonomousDatabaseAsync(RefreshAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Refreshes the refreshable clone of an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> RefreshAutonomousDatabaseAsync(RefreshAutonomousDatabaseRequest request, st::CancellationToken cancellationToken) =>
+            RefreshAutonomousDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RefreshAutonomousDatabase</c>.</summary>
+        public virtual lro::OperationsClient RefreshAutonomousDatabaseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RefreshAutonomousDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> PollOnceRefreshAutonomousDatabase(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutonomousDatabase, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RefreshAutonomousDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RefreshAutonomousDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> PollOnceRefreshAutonomousDatabaseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutonomousDatabase, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RefreshAutonomousDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Refreshes the refreshable clone of an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AutonomousDatabase resource.
+        /// Format:
+        /// projects/{project}/location/{location}/autonomousDatabases/{autonomous_database}
+        /// </param>
+        /// <param name="refreshCutoffTime">
+        /// Required. The timestamp to which the Autonomous Database refreshable clone
+        /// will be refreshed. Changes made in the primary database after this
+        /// timestamp are not part of the data refresh.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> RefreshAutonomousDatabase(string name, wkt::Timestamp refreshCutoffTime, gaxgrpc::CallSettings callSettings = null) =>
+            RefreshAutonomousDatabase(new RefreshAutonomousDatabaseRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RefreshCutoffTime = gax::GaxPreconditions.CheckNotNull(refreshCutoffTime, nameof(refreshCutoffTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Refreshes the refreshable clone of an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AutonomousDatabase resource.
+        /// Format:
+        /// projects/{project}/location/{location}/autonomousDatabases/{autonomous_database}
+        /// </param>
+        /// <param name="refreshCutoffTime">
+        /// Required. The timestamp to which the Autonomous Database refreshable clone
+        /// will be refreshed. Changes made in the primary database after this
+        /// timestamp are not part of the data refresh.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> RefreshAutonomousDatabaseAsync(string name, wkt::Timestamp refreshCutoffTime, gaxgrpc::CallSettings callSettings = null) =>
+            RefreshAutonomousDatabaseAsync(new RefreshAutonomousDatabaseRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RefreshCutoffTime = gax::GaxPreconditions.CheckNotNull(refreshCutoffTime, nameof(refreshCutoffTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Refreshes the refreshable clone of an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AutonomousDatabase resource.
+        /// Format:
+        /// projects/{project}/location/{location}/autonomousDatabases/{autonomous_database}
+        /// </param>
+        /// <param name="refreshCutoffTime">
+        /// Required. The timestamp to which the Autonomous Database refreshable clone
+        /// will be refreshed. Changes made in the primary database after this
+        /// timestamp are not part of the data refresh.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> RefreshAutonomousDatabaseAsync(string name, wkt::Timestamp refreshCutoffTime, st::CancellationToken cancellationToken) =>
+            RefreshAutonomousDatabaseAsync(name, refreshCutoffTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Refreshes the refreshable clone of an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AutonomousDatabase resource.
+        /// Format:
+        /// projects/{project}/location/{location}/autonomousDatabases/{autonomous_database}
+        /// </param>
+        /// <param name="refreshCutoffTime">
+        /// Required. The timestamp to which the Autonomous Database refreshable clone
+        /// will be refreshed. Changes made in the primary database after this
+        /// timestamp are not part of the data refresh.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> RefreshAutonomousDatabase(AutonomousDatabaseName name, wkt::Timestamp refreshCutoffTime, gaxgrpc::CallSettings callSettings = null) =>
+            RefreshAutonomousDatabase(new RefreshAutonomousDatabaseRequest
+            {
+                AutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RefreshCutoffTime = gax::GaxPreconditions.CheckNotNull(refreshCutoffTime, nameof(refreshCutoffTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Refreshes the refreshable clone of an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AutonomousDatabase resource.
+        /// Format:
+        /// projects/{project}/location/{location}/autonomousDatabases/{autonomous_database}
+        /// </param>
+        /// <param name="refreshCutoffTime">
+        /// Required. The timestamp to which the Autonomous Database refreshable clone
+        /// will be refreshed. Changes made in the primary database after this
+        /// timestamp are not part of the data refresh.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> RefreshAutonomousDatabaseAsync(AutonomousDatabaseName name, wkt::Timestamp refreshCutoffTime, gaxgrpc::CallSettings callSettings = null) =>
+            RefreshAutonomousDatabaseAsync(new RefreshAutonomousDatabaseRequest
+            {
+                AutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RefreshCutoffTime = gax::GaxPreconditions.CheckNotNull(refreshCutoffTime, nameof(refreshCutoffTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Refreshes the refreshable clone of an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AutonomousDatabase resource.
+        /// Format:
+        /// projects/{project}/location/{location}/autonomousDatabases/{autonomous_database}
+        /// </param>
+        /// <param name="refreshCutoffTime">
+        /// Required. The timestamp to which the Autonomous Database refreshable clone
+        /// will be refreshed. Changes made in the primary database after this
+        /// timestamp are not part of the data refresh.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> RefreshAutonomousDatabaseAsync(AutonomousDatabaseName name, wkt::Timestamp refreshCutoffTime, st::CancellationToken cancellationToken) =>
+            RefreshAutonomousDatabaseAsync(name, refreshCutoffTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the refreshable clones for a given Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutonomousDatabaseRefreshableClones GetAutonomousDatabaseRefreshableClones(GetAutonomousDatabaseRefreshableClonesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the refreshable clones for a given Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutonomousDatabaseRefreshableClones> GetAutonomousDatabaseRefreshableClonesAsync(GetAutonomousDatabaseRefreshableClonesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the refreshable clones for a given Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutonomousDatabaseRefreshableClones> GetAutonomousDatabaseRefreshableClonesAsync(GetAutonomousDatabaseRefreshableClonesRequest request, st::CancellationToken cancellationToken) =>
+            GetAutonomousDatabaseRefreshableClonesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the refreshable clones for a given Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Autonomous Database resource whose refreshable clones are to
+        /// be listed. Format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutonomousDatabaseRefreshableClones GetAutonomousDatabaseRefreshableClones(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutonomousDatabaseRefreshableClones(new GetAutonomousDatabaseRefreshableClonesRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the refreshable clones for a given Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Autonomous Database resource whose refreshable clones are to
+        /// be listed. Format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutonomousDatabaseRefreshableClones> GetAutonomousDatabaseRefreshableClonesAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutonomousDatabaseRefreshableClonesAsync(new GetAutonomousDatabaseRefreshableClonesRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the refreshable clones for a given Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Autonomous Database resource whose refreshable clones are to
+        /// be listed. Format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutonomousDatabaseRefreshableClones> GetAutonomousDatabaseRefreshableClonesAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAutonomousDatabaseRefreshableClonesAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the refreshable clones for a given Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Autonomous Database resource whose refreshable clones are to
+        /// be listed. Format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutonomousDatabaseRefreshableClones GetAutonomousDatabaseRefreshableClones(AutonomousDatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutonomousDatabaseRefreshableClones(new GetAutonomousDatabaseRefreshableClonesRequest
+            {
+                AutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the refreshable clones for a given Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Autonomous Database resource whose refreshable clones are to
+        /// be listed. Format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutonomousDatabaseRefreshableClones> GetAutonomousDatabaseRefreshableClonesAsync(AutonomousDatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAutonomousDatabaseRefreshableClonesAsync(new GetAutonomousDatabaseRefreshableClonesRequest
+            {
+                AutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the refreshable clones for a given Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Autonomous Database resource whose refreshable clones are to
+        /// be listed. Format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutonomousDatabaseRefreshableClones> GetAutonomousDatabaseRefreshableClonesAsync(AutonomousDatabaseName name, st::CancellationToken cancellationToken) =>
+            GetAutonomousDatabaseRefreshableClonesAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists the ODB Networks in a given project and location.
@@ -14221,6 +14563,10 @@ namespace Google.Cloud.OracleDatabase.V1
 
         private readonly gaxgrpc::ApiCall<FailoverAutonomousDatabaseRequest, lro::Operation> _callFailoverAutonomousDatabase;
 
+        private readonly gaxgrpc::ApiCall<RefreshAutonomousDatabaseRequest, lro::Operation> _callRefreshAutonomousDatabase;
+
+        private readonly gaxgrpc::ApiCall<GetAutonomousDatabaseRefreshableClonesRequest, AutonomousDatabaseRefreshableClones> _callGetAutonomousDatabaseRefreshableClones;
+
         private readonly gaxgrpc::ApiCall<ListOdbNetworksRequest, ListOdbNetworksResponse> _callListOdbNetworks;
 
         private readonly gaxgrpc::ApiCall<GetOdbNetworkRequest, OdbNetwork> _callGetOdbNetwork;
@@ -14346,6 +14692,7 @@ namespace Google.Cloud.OracleDatabase.V1
             RestartAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestartAutonomousDatabaseOperationsSettings, logger);
             SwitchoverAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SwitchoverAutonomousDatabaseOperationsSettings, logger);
             FailoverAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.FailoverAutonomousDatabaseOperationsSettings, logger);
+            RefreshAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RefreshAutonomousDatabaseOperationsSettings, logger);
             CreateOdbNetworkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateOdbNetworkOperationsSettings, logger);
             DeleteOdbNetworkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOdbNetworkOperationsSettings, logger);
             CreateOdbSubnetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateOdbSubnetOperationsSettings, logger);
@@ -14457,6 +14804,12 @@ namespace Google.Cloud.OracleDatabase.V1
             _callFailoverAutonomousDatabase = clientHelper.BuildApiCall<FailoverAutonomousDatabaseRequest, lro::Operation>("FailoverAutonomousDatabase", grpcClient.FailoverAutonomousDatabaseAsync, grpcClient.FailoverAutonomousDatabase, effectiveSettings.FailoverAutonomousDatabaseSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callFailoverAutonomousDatabase);
             Modify_FailoverAutonomousDatabaseApiCall(ref _callFailoverAutonomousDatabase);
+            _callRefreshAutonomousDatabase = clientHelper.BuildApiCall<RefreshAutonomousDatabaseRequest, lro::Operation>("RefreshAutonomousDatabase", grpcClient.RefreshAutonomousDatabaseAsync, grpcClient.RefreshAutonomousDatabase, effectiveSettings.RefreshAutonomousDatabaseSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRefreshAutonomousDatabase);
+            Modify_RefreshAutonomousDatabaseApiCall(ref _callRefreshAutonomousDatabase);
+            _callGetAutonomousDatabaseRefreshableClones = clientHelper.BuildApiCall<GetAutonomousDatabaseRefreshableClonesRequest, AutonomousDatabaseRefreshableClones>("GetAutonomousDatabaseRefreshableClones", grpcClient.GetAutonomousDatabaseRefreshableClonesAsync, grpcClient.GetAutonomousDatabaseRefreshableClones, effectiveSettings.GetAutonomousDatabaseRefreshableClonesSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAutonomousDatabaseRefreshableClones);
+            Modify_GetAutonomousDatabaseRefreshableClonesApiCall(ref _callGetAutonomousDatabaseRefreshableClones);
             _callListOdbNetworks = clientHelper.BuildApiCall<ListOdbNetworksRequest, ListOdbNetworksResponse>("ListOdbNetworks", grpcClient.ListOdbNetworksAsync, grpcClient.ListOdbNetworks, effectiveSettings.ListOdbNetworksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListOdbNetworks);
             Modify_ListOdbNetworksApiCall(ref _callListOdbNetworks);
@@ -14666,6 +15019,10 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_FailoverAutonomousDatabaseApiCall(ref gaxgrpc::ApiCall<FailoverAutonomousDatabaseRequest, lro::Operation> call);
 
+        partial void Modify_RefreshAutonomousDatabaseApiCall(ref gaxgrpc::ApiCall<RefreshAutonomousDatabaseRequest, lro::Operation> call);
+
+        partial void Modify_GetAutonomousDatabaseRefreshableClonesApiCall(ref gaxgrpc::ApiCall<GetAutonomousDatabaseRefreshableClonesRequest, AutonomousDatabaseRefreshableClones> call);
+
         partial void Modify_ListOdbNetworksApiCall(ref gaxgrpc::ApiCall<ListOdbNetworksRequest, ListOdbNetworksResponse> call);
 
         partial void Modify_GetOdbNetworkApiCall(ref gaxgrpc::ApiCall<GetOdbNetworkRequest, OdbNetwork> call);
@@ -14829,6 +15186,10 @@ namespace Google.Cloud.OracleDatabase.V1
         partial void Modify_SwitchoverAutonomousDatabaseRequest(ref SwitchoverAutonomousDatabaseRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FailoverAutonomousDatabaseRequest(ref FailoverAutonomousDatabaseRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RefreshAutonomousDatabaseRequest(ref RefreshAutonomousDatabaseRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAutonomousDatabaseRefreshableClonesRequest(ref GetAutonomousDatabaseRefreshableClonesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListOdbNetworksRequest(ref ListOdbNetworksRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -15700,6 +16061,57 @@ namespace Google.Cloud.OracleDatabase.V1
         {
             Modify_FailoverAutonomousDatabaseRequest(ref request, ref callSettings);
             return new lro::Operation<AutonomousDatabase, OperationMetadata>(await _callFailoverAutonomousDatabase.Async(request, callSettings).ConfigureAwait(false), FailoverAutonomousDatabaseOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RefreshAutonomousDatabase</c>.</summary>
+        public override lro::OperationsClient RefreshAutonomousDatabaseOperationsClient { get; }
+
+        /// <summary>
+        /// Refreshes the refreshable clone of an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AutonomousDatabase, OperationMetadata> RefreshAutonomousDatabase(RefreshAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RefreshAutonomousDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<AutonomousDatabase, OperationMetadata>(_callRefreshAutonomousDatabase.Sync(request, callSettings), RefreshAutonomousDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Refreshes the refreshable clone of an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> RefreshAutonomousDatabaseAsync(RefreshAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RefreshAutonomousDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<AutonomousDatabase, OperationMetadata>(await _callRefreshAutonomousDatabase.Async(request, callSettings).ConfigureAwait(false), RefreshAutonomousDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets the refreshable clones for a given Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AutonomousDatabaseRefreshableClones GetAutonomousDatabaseRefreshableClones(GetAutonomousDatabaseRefreshableClonesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAutonomousDatabaseRefreshableClonesRequest(ref request, ref callSettings);
+            return _callGetAutonomousDatabaseRefreshableClones.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the refreshable clones for a given Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AutonomousDatabaseRefreshableClones> GetAutonomousDatabaseRefreshableClonesAsync(GetAutonomousDatabaseRefreshableClonesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAutonomousDatabaseRefreshableClonesRequest(ref request, ref callSettings);
+            return _callGetAutonomousDatabaseRefreshableClones.Async(request, callSettings);
         }
 
         /// <summary>

@@ -16,13 +16,15 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START oracledatabase_v1_generated_OracleDatabase_ConfigureExascaleCloudExadataInfrastructure_sync]
+    // [START oracledatabase_v1_generated_OracleDatabase_RefreshAutonomousDatabase_async]
     using Google.Cloud.OracleDatabase.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedOracleDatabaseClientSnippets
     {
-        /// <summary>Snippet for ConfigureExascaleCloudExadataInfrastructure</summary>
+        /// <summary>Snippet for RefreshAutonomousDatabaseAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,37 +32,35 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ConfigureExascaleCloudExadataInfrastructureRequestObject()
+        public async Task RefreshAutonomousDatabaseRequestObjectAsync()
         {
             // Create client
-            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
             // Initialize request argument(s)
-            ConfigureExascaleCloudExadataInfrastructureRequest request = new ConfigureExascaleCloudExadataInfrastructureRequest
+            RefreshAutonomousDatabaseRequest request = new RefreshAutonomousDatabaseRequest
             {
-                CloudExadataInfrastructureName = CloudExadataInfrastructureName.FromProjectLocationCloudExadataInfrastructure("[PROJECT]", "[LOCATION]", "[CLOUD_EXADATA_INFRASTRUCTURE]"),
-                TotalStorageSizeGb = 0,
-                RequestId = "",
-                TotalVmStorageSizeGb = 0,
+                AutonomousDatabaseName = AutonomousDatabaseName.FromProjectLocationAutonomousDatabase("[PROJECT]", "[LOCATION]", "[AUTONOMOUS_DATABASE]"),
+                RefreshCutoffTime = new Timestamp(),
             };
             // Make the request
-            Operation<CloudExadataInfrastructure, OperationMetadata> response = oracleDatabaseClient.ConfigureExascaleCloudExadataInfrastructure(request);
+            Operation<AutonomousDatabase, OperationMetadata> response = await oracleDatabaseClient.RefreshAutonomousDatabaseAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<CloudExadataInfrastructure, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<AutonomousDatabase, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            CloudExadataInfrastructure result = completedResponse.Result;
+            AutonomousDatabase result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<CloudExadataInfrastructure, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceConfigureExascaleCloudExadataInfrastructure(operationName);
+            Operation<AutonomousDatabase, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceRefreshAutonomousDatabaseAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                CloudExadataInfrastructure retrievedResult = retrievedResponse.Result;
+                AutonomousDatabase retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END oracledatabase_v1_generated_OracleDatabase_ConfigureExascaleCloudExadataInfrastructure_sync]
+    // [END oracledatabase_v1_generated_OracleDatabase_RefreshAutonomousDatabase_async]
 }

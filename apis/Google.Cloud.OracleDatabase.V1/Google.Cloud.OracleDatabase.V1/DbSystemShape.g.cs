@@ -27,7 +27,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "CjRnb29nbGUvY2xvdWQvb3JhY2xlZGF0YWJhc2UvdjEvZGJfc3lzdGVtX3No",
             "YXBlLnByb3RvEh5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEaH2dv",
             "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
-            "b3VyY2UucHJvdG8ixQQKDURiU3lzdGVtU2hhcGUSEQoEbmFtZRgBIAEoCUID",
+            "b3VyY2UucHJvdG8irAUKDURiU3lzdGVtU2hhcGUSEQoEbmFtZRgBIAEoCUID",
             "4EEIEhIKBXNoYXBlGAIgASgJQgPgQQESGwoObWluX25vZGVfY291bnQYAyAB",
             "KAVCA+BBARIbCg5tYXhfbm9kZV9jb3VudBgEIAEoBUID4EEBEh4KEW1pbl9z",
             "dG9yYWdlX2NvdW50GAUgASgFQgPgQQESHgoRbWF4X3N0b3JhZ2VfY291bnQY",
@@ -36,20 +36,22 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "KAVCA+BBARImChlhdmFpbGFibGVfZGF0YV9zdG9yYWdlX3RiGAkgASgFQgPg",
             "QQESJAoXbWluX2NvcmVfY291bnRfcGVyX25vZGUYCiABKAVCA+BBARIjChZt",
             "aW5fbWVtb3J5X3Blcl9ub2RlX2diGAsgASgFQgPgQQESLAofbWluX2RiX25v",
-            "ZGVfc3RvcmFnZV9wZXJfbm9kZV9nYhgMIAEoBUID4EEBOpoB6kGWAQorb3Jh",
-            "Y2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vRGJTeXN0ZW1TaGFwZRJIcHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RiU3lzdGVt",
-            "U2hhcGVzL3tkYl9zeXN0ZW1fc2hhcGV9Kg5kYlN5c3RlbVNoYXBlczINZGJT",
-            "eXN0ZW1TaGFwZULsAQoiY29tLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFz",
-            "ZS52MUISRGJTeXN0ZW1TaGFwZVByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vb3JhY2xlZGF0YWJhc2UvYXBpdjEvb3JhY2xlZGF0YWJhc2VwYjtvcmFj",
-            "bGVkYXRhYmFzZXBiqgIeR29vZ2xlLkNsb3VkLk9yYWNsZURhdGFiYXNlLlYx",
-            "ygIeR29vZ2xlXENsb3VkXE9yYWNsZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpD",
-            "bG91ZDo6T3JhY2xlRGF0YWJhc2U6OlYxYgZwcm90bzM="));
+            "ZGVfc3RvcmFnZV9wZXJfbm9kZV9nYhgMIAEoBUID4EEBEh8KEm1pbmltdW1f",
+            "Y29yZV9jb3VudBgNIAEoBUID4EEBEiEKFGF2YWlsYWJsZV9jb3JlX2NvdW50",
+            "GA4gASgFQgPgQQESIQoUY29yZV9jb3VudF9pbmNyZW1lbnQYDyABKAVCA+BB",
+            "ATqaAepBlgEKK29yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL0RiU3lz",
+            "dGVtU2hhcGUSSHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9kYlN5c3RlbVNoYXBlcy97ZGJfc3lzdGVtX3NoYXBlfSoOZGJTeXN0",
+            "ZW1TaGFwZXMyDWRiU3lzdGVtU2hhcGVC7AEKImNvbS5nb29nbGUuY2xvdWQu",
+            "b3JhY2xlZGF0YWJhc2UudjFCEkRiU3lzdGVtU2hhcGVQcm90b1ABWkpjbG91",
+            "ZC5nb29nbGUuY29tL2dvL29yYWNsZWRhdGFiYXNlL2FwaXYxL29yYWNsZWRh",
+            "dGFiYXNlcGI7b3JhY2xlZGF0YWJhc2VwYqoCHkdvb2dsZS5DbG91ZC5PcmFj",
+            "bGVEYXRhYmFzZS5WMcoCHkdvb2dsZVxDbG91ZFxPcmFjbGVEYXRhYmFzZVxW",
+            "MeoCIUdvb2dsZTo6Q2xvdWQ6Ok9yYWNsZURhdGFiYXNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DbSystemShape), global::Google.Cloud.OracleDatabase.V1.DbSystemShape.Parser, new[]{ "Name", "Shape", "MinNodeCount", "MaxNodeCount", "MinStorageCount", "MaxStorageCount", "AvailableCoreCountPerNode", "AvailableMemoryPerNodeGb", "AvailableDataStorageTb", "MinCoreCountPerNode", "MinMemoryPerNodeGb", "MinDbNodeStoragePerNodeGb" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DbSystemShape), global::Google.Cloud.OracleDatabase.V1.DbSystemShape.Parser, new[]{ "Name", "Shape", "MinNodeCount", "MaxNodeCount", "MinStorageCount", "MaxStorageCount", "AvailableCoreCountPerNode", "AvailableMemoryPerNodeGb", "AvailableDataStorageTb", "MinCoreCountPerNode", "MinMemoryPerNodeGb", "MinDbNodeStoragePerNodeGb", "MinimumCoreCount", "AvailableCoreCount", "CoreCountIncrement" }, null, null, null, null)
           }));
     }
     #endregion
@@ -107,6 +109,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       minCoreCountPerNode_ = other.minCoreCountPerNode_;
       minMemoryPerNodeGb_ = other.minMemoryPerNodeGb_;
       minDbNodeStoragePerNodeGb_ = other.minDbNodeStoragePerNodeGb_;
+      minimumCoreCount_ = other.minimumCoreCount_;
+      availableCoreCount_ = other.availableCoreCount_;
+      coreCountIncrement_ = other.coreCountIncrement_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -297,6 +302,51 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
+    /// <summary>Field number for the "minimum_core_count" field.</summary>
+    public const int MinimumCoreCountFieldNumber = 13;
+    private int minimumCoreCount_;
+    /// <summary>
+    /// Optional. Minimum core count per node.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MinimumCoreCount {
+      get { return minimumCoreCount_; }
+      set {
+        minimumCoreCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "available_core_count" field.</summary>
+    public const int AvailableCoreCountFieldNumber = 14;
+    private int availableCoreCount_;
+    /// <summary>
+    /// Optional. Available core count.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int AvailableCoreCount {
+      get { return availableCoreCount_; }
+      set {
+        availableCoreCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "core_count_increment" field.</summary>
+    public const int CoreCountIncrementFieldNumber = 15;
+    private int coreCountIncrement_;
+    /// <summary>
+    /// Optional. Core count increment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CoreCountIncrement {
+      get { return coreCountIncrement_; }
+      set {
+        coreCountIncrement_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -324,6 +374,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (MinCoreCountPerNode != other.MinCoreCountPerNode) return false;
       if (MinMemoryPerNodeGb != other.MinMemoryPerNodeGb) return false;
       if (MinDbNodeStoragePerNodeGb != other.MinDbNodeStoragePerNodeGb) return false;
+      if (MinimumCoreCount != other.MinimumCoreCount) return false;
+      if (AvailableCoreCount != other.AvailableCoreCount) return false;
+      if (CoreCountIncrement != other.CoreCountIncrement) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -343,6 +396,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (MinCoreCountPerNode != 0) hash ^= MinCoreCountPerNode.GetHashCode();
       if (MinMemoryPerNodeGb != 0) hash ^= MinMemoryPerNodeGb.GetHashCode();
       if (MinDbNodeStoragePerNodeGb != 0) hash ^= MinDbNodeStoragePerNodeGb.GetHashCode();
+      if (MinimumCoreCount != 0) hash ^= MinimumCoreCount.GetHashCode();
+      if (AvailableCoreCount != 0) hash ^= AvailableCoreCount.GetHashCode();
+      if (CoreCountIncrement != 0) hash ^= CoreCountIncrement.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -409,6 +465,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(96);
         output.WriteInt32(MinDbNodeStoragePerNodeGb);
       }
+      if (MinimumCoreCount != 0) {
+        output.WriteRawTag(104);
+        output.WriteInt32(MinimumCoreCount);
+      }
+      if (AvailableCoreCount != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(AvailableCoreCount);
+      }
+      if (CoreCountIncrement != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(CoreCountIncrement);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -467,6 +535,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(96);
         output.WriteInt32(MinDbNodeStoragePerNodeGb);
       }
+      if (MinimumCoreCount != 0) {
+        output.WriteRawTag(104);
+        output.WriteInt32(MinimumCoreCount);
+      }
+      if (AvailableCoreCount != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(AvailableCoreCount);
+      }
+      if (CoreCountIncrement != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(CoreCountIncrement);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -512,6 +592,15 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (MinDbNodeStoragePerNodeGb != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinDbNodeStoragePerNodeGb);
+      }
+      if (MinimumCoreCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinimumCoreCount);
+      }
+      if (AvailableCoreCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AvailableCoreCount);
+      }
+      if (CoreCountIncrement != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CoreCountIncrement);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -560,6 +649,15 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (other.MinDbNodeStoragePerNodeGb != 0) {
         MinDbNodeStoragePerNodeGb = other.MinDbNodeStoragePerNodeGb;
+      }
+      if (other.MinimumCoreCount != 0) {
+        MinimumCoreCount = other.MinimumCoreCount;
+      }
+      if (other.AvailableCoreCount != 0) {
+        AvailableCoreCount = other.AvailableCoreCount;
+      }
+      if (other.CoreCountIncrement != 0) {
+        CoreCountIncrement = other.CoreCountIncrement;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -628,6 +726,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
             MinDbNodeStoragePerNodeGb = input.ReadInt32();
             break;
           }
+          case 104: {
+            MinimumCoreCount = input.ReadInt32();
+            break;
+          }
+          case 112: {
+            AvailableCoreCount = input.ReadInt32();
+            break;
+          }
+          case 120: {
+            CoreCountIncrement = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -693,6 +803,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 96: {
             MinDbNodeStoragePerNodeGb = input.ReadInt32();
+            break;
+          }
+          case 104: {
+            MinimumCoreCount = input.ReadInt32();
+            break;
+          }
+          case 112: {
+            AvailableCoreCount = input.ReadInt32();
+            break;
+          }
+          case 120: {
+            CoreCountIncrement = input.ReadInt32();
             break;
           }
         }

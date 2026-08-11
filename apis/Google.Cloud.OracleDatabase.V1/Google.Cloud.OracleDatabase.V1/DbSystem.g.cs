@@ -44,7 +44,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
             "On/qQXwKJm9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL0RiU3lzdGVt",
             "Ej1wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZGJT",
-            "eXN0ZW1zL3tkYl9zeXN0ZW19KglkYlN5c3RlbXMyCGRiU3lzdGVtIuQMChJE",
+            "eXN0ZW1zL3tkYl9zeXN0ZW19KglkYlN5c3RlbXMyCGRiU3lzdGVtIugMChJE",
             "YlN5c3RlbVByb3BlcnRpZXMSEgoFc2hhcGUYASABKAlCA+BBAhIaCg1jb21w",
             "dXRlX2NvdW50GAIgASgFQgPgQQISKQocaW5pdGlhbF9kYXRhX3N0b3JhZ2Vf",
             "c2l6ZV9nYhgDIAEoBUID4EECEmkKEGRhdGFiYXNlX2VkaXRpb24YBCABKA4y",
@@ -79,41 +79,41 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "EhAKDFBST1ZJU0lPTklORxABEg0KCUFWQUlMQUJMRRACEgwKCFVQREFUSU5H",
             "EAMSDwoLVEVSTUlOQVRJTkcQBBIOCgpURVJNSU5BVEVEEAUSCgoGRkFJTEVE",
             "EAYSDAoITUlHUkFURUQQBxIbChdNQUlOVEVOQU5DRV9JTl9QUk9HUkVTUxAI",
-            "EhMKD05FRURTX0FUVEVOVElPThAJEg0KCVVQR1JBRElORxAKIkEKDENvbXB1",
+            "EhMKD05FRURTX0FUVEVOVElPThAJEg0KCVVQR1JBRElORxAKIkUKDENvbXB1",
             "dGVNb2RlbBIdChlDT01QVVRFX01PREVMX1VOU1BFQ0lGSUVEEAASCAoERUNQ",
-            "VRABEggKBE9DUFUQAiJyCh1EYXRhQ29sbGVjdGlvbk9wdGlvbnNEYlN5c3Rl",
-            "bRIqCh1pc19kaWFnbm9zdGljc19ldmVudHNfZW5hYmxlZBgBIAEoCEID4EEB",
-            "EiUKGGlzX2luY2lkZW50X2xvZ3NfZW5hYmxlZBgCIAEoCEID4EEBIsABCg9E",
-            "YlN5c3RlbU9wdGlvbnMSYgoSc3RvcmFnZV9tYW5hZ2VtZW50GAEgASgOMkEu",
-            "Z29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkRiU3lzdGVtT3B0aW9u",
-            "cy5TdG9yYWdlTWFuYWdlbWVudEID4EEBIkkKEVN0b3JhZ2VNYW5hZ2VtZW50",
-            "EiIKHlNUT1JBR0VfTUFOQUdFTUVOVF9VTlNQRUNJRklFRBAAEgcKA0FTTRAB",
-            "EgcKA0xWTRACIqcBCgZEYkhvbWUSGQoMZGlzcGxheV9uYW1lGAEgASgJQgPg",
-            "QQESFwoKZGJfdmVyc2lvbhgCIAEoCUID4EECEj8KCGRhdGFiYXNlGAMgASgL",
-            "MiguZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkRhdGFiYXNlQgPg",
-            "QQISKAobaXNfdW5pZmllZF9hdWRpdGluZ19lbmFibGVkGAQgASgIQgPgQQEi",
-            "1QEKFUNyZWF0ZURiU3lzdGVtUmVxdWVzdBI+CgZwYXJlbnQYASABKAlCLuBB",
-            "AvpBKBImb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vRGJTeXN0ZW0S",
-            "GQoMZGJfc3lzdGVtX2lkGAIgASgJQgPgQQISQAoJZGJfc3lzdGVtGAMgASgL",
-            "MiguZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkRiU3lzdGVtQgPg",
-            "QQISHwoKcmVxdWVzdF9pZBgEIAEoCUIL4EEB4ozP1wgCCAEidgoVRGVsZXRl",
-            "RGJTeXN0ZW1SZXF1ZXN0EjwKBG5hbWUYASABKAlCLuBBAvpBKAomb3JhY2xl",
-            "ZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vRGJTeXN0ZW0SHwoKcmVxdWVzdF9p",
-            "ZBgCIAEoCUIL4EEB4ozP1wgCCAEiUgoSR2V0RGJTeXN0ZW1SZXF1ZXN0EjwK",
-            "BG5hbWUYASABKAlCLuBBAvpBKAomb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBp",
-            "cy5jb20vRGJTeXN0ZW0iswEKFExpc3REYlN5c3RlbXNSZXF1ZXN0Ej4KBnBh",
-            "cmVudBgBIAEoCUIu4EEC+kEoEiZvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlz",
-            "LmNvbS9EYlN5c3RlbRIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdl",
-            "X3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3Jk",
-            "ZXJfYnkYBSABKAlCA+BBASKDAQoVTGlzdERiU3lzdGVtc1Jlc3BvbnNlEjwK",
-            "CmRiX3N5c3RlbXMYASADKAsyKC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJh",
-            "c2UudjEuRGJTeXN0ZW0SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3Vu",
-            "cmVhY2hhYmxlGAMgAygJQucBCiJjb20uZ29vZ2xlLmNsb3VkLm9yYWNsZWRh",
-            "dGFiYXNlLnYxQg1EYlN5c3RlbVByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vb3JhY2xlZGF0YWJhc2UvYXBpdjEvb3JhY2xlZGF0YWJhc2VwYjtvcmFj",
-            "bGVkYXRhYmFzZXBiqgIeR29vZ2xlLkNsb3VkLk9yYWNsZURhdGFiYXNlLlYx",
-            "ygIeR29vZ2xlXENsb3VkXE9yYWNsZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpD",
-            "bG91ZDo6T3JhY2xlRGF0YWJhc2U6OlYxYgZwcm90bzM="));
+            "VRABEgwKBE9DUFUQAhoCCAEicgodRGF0YUNvbGxlY3Rpb25PcHRpb25zRGJT",
+            "eXN0ZW0SKgodaXNfZGlhZ25vc3RpY3NfZXZlbnRzX2VuYWJsZWQYASABKAhC",
+            "A+BBARIlChhpc19pbmNpZGVudF9sb2dzX2VuYWJsZWQYAiABKAhCA+BBASLA",
+            "AQoPRGJTeXN0ZW1PcHRpb25zEmIKEnN0b3JhZ2VfbWFuYWdlbWVudBgBIAEo",
+            "DjJBLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5EYlN5c3RlbU9w",
+            "dGlvbnMuU3RvcmFnZU1hbmFnZW1lbnRCA+BBASJJChFTdG9yYWdlTWFuYWdl",
+            "bWVudBIiCh5TVE9SQUdFX01BTkFHRU1FTlRfVU5TUEVDSUZJRUQQABIHCgNB",
+            "U00QARIHCgNMVk0QAiKnAQoGRGJIb21lEhkKDGRpc3BsYXlfbmFtZRgBIAEo",
+            "CUID4EEBEhcKCmRiX3ZlcnNpb24YAiABKAlCA+BBAhI/CghkYXRhYmFzZRgD",
+            "IAEoCzIoLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5EYXRhYmFz",
+            "ZUID4EECEigKG2lzX3VuaWZpZWRfYXVkaXRpbmdfZW5hYmxlZBgEIAEoCEID",
+            "4EEBItUBChVDcmVhdGVEYlN5c3RlbVJlcXVlc3QSPgoGcGFyZW50GAEgASgJ",
+            "Qi7gQQL6QSgSJm9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL0RiU3lz",
+            "dGVtEhkKDGRiX3N5c3RlbV9pZBgCIAEoCUID4EECEkAKCWRiX3N5c3RlbRgD",
+            "IAEoCzIoLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5EYlN5c3Rl",
+            "bUID4EECEh8KCnJlcXVlc3RfaWQYBCABKAlCC+BBAeKMz9cIAggBInYKFURl",
+            "bGV0ZURiU3lzdGVtUmVxdWVzdBI8CgRuYW1lGAEgASgJQi7gQQL6QSgKJm9y",
+            "YWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL0RiU3lzdGVtEh8KCnJlcXVl",
+            "c3RfaWQYAiABKAlCC+BBAeKMz9cIAggBIlIKEkdldERiU3lzdGVtUmVxdWVz",
+            "dBI8CgRuYW1lGAEgASgJQi7gQQL6QSgKJm9yYWNsZWRhdGFiYXNlLmdvb2ds",
+            "ZWFwaXMuY29tL0RiU3lzdGVtIrMBChRMaXN0RGJTeXN0ZW1zUmVxdWVzdBI+",
+            "CgZwYXJlbnQYASABKAlCLuBBAvpBKBImb3JhY2xlZGF0YWJhc2UuZ29vZ2xl",
+            "YXBpcy5jb20vRGJTeXN0ZW0SFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoK",
+            "cGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEBEhUK",
+            "CG9yZGVyX2J5GAUgASgJQgPgQQEigwEKFUxpc3REYlN5c3RlbXNSZXNwb25z",
+            "ZRI8CgpkYl9zeXN0ZW1zGAEgAygLMiguZ29vZ2xlLmNsb3VkLm9yYWNsZWRh",
+            "dGFiYXNlLnYxLkRiU3lzdGVtEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIT",
+            "Cgt1bnJlYWNoYWJsZRgDIAMoCULnAQoiY29tLmdvb2dsZS5jbG91ZC5vcmFj",
+            "bGVkYXRhYmFzZS52MUINRGJTeXN0ZW1Qcm90b1ABWkpjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL29yYWNsZWRhdGFiYXNlL2FwaXYxL29yYWNsZWRhdGFiYXNlcGI7",
+            "b3JhY2xlZGF0YWJhc2VwYqoCHkdvb2dsZS5DbG91ZC5PcmFjbGVEYXRhYmFz",
+            "ZS5WMcoCHkdvb2dsZVxDbG91ZFxPcmFjbGVEYXRhYmFzZVxWMeoCIUdvb2ds",
+            "ZTo6Q2xvdWQ6Ok9yYWNsZURhdGFiYXNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OracleDatabase.V1.DatabaseReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -997,7 +997,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int MemorySizeGbFieldNumber = 15;
     private int memorySizeGb_;
     /// <summary>
-    /// Optional. The memory size in GB.
+    /// Optional. The memory size in GB. This value can not be set and is
+    /// automatically calculated based on the number of ECPUs allocated to the
+    /// DbSystem.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1028,7 +1030,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     private int dataStorageSizeGb_;
     /// <summary>
     /// Optional. The data storage size in GB that is currently available to
-    /// DbSystems.
+    /// DbSystems. The value is same as initial_data_storage_size_gb. This can be
+    /// modified from OCI console.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1043,7 +1046,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int RecoStorageSizeGbFieldNumber = 18;
     private int recoStorageSizeGb_;
     /// <summary>
-    /// Optional. The reco/redo storage size in GB.
+    /// Optional. The reco/redo storage size in GB. The value for recovery storage
+    /// size is based on the available data storage size.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1073,7 +1077,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int NodeCountFieldNumber = 20;
     private int nodeCount_;
     /// <summary>
-    /// Optional. The number of nodes in the DbSystem.
+    /// Optional. The number of nodes to launch for a virtual machine DbSystem. By
+    /// default this will be set to 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1852,8 +1857,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         /// </summary>
         [pbr::OriginalName("ECPU")] Ecpu = 1,
         /// <summary>
+        /// Deprecated: This option is not supported. Please use ECPU instead.
         /// The compute model is physical.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("OCPU")] Ocpu = 2,
       }
 

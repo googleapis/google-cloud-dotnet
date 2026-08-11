@@ -1260,12 +1260,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 64,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 61,
+          "end": 62,
           "type": "SHORT"
         }
       ]
@@ -1309,12 +1309,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 62,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -9232,6 +9232,596 @@
         {
           "start": 36,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_RefreshAutonomousDatabase_sync",
+      "title": "RefreshAutonomousDatabaseRequestObject",
+      "description": "Snippet for RefreshAutonomousDatabase",
+      "file": "OracleDatabaseClient.RefreshAutonomousDatabaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshAutonomousDatabase",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.RefreshAutonomousDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.RefreshAutonomousDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "RefreshAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.RefreshAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_RefreshAutonomousDatabase_async",
+      "title": "RefreshAutonomousDatabaseRequestObjectAsync",
+      "description": "Snippet for RefreshAutonomousDatabaseAsync",
+      "file": "OracleDatabaseClient.RefreshAutonomousDatabaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshAutonomousDatabaseAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.RefreshAutonomousDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.RefreshAutonomousDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "RefreshAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.RefreshAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_RefreshAutonomousDatabase_sync_flattened",
+      "title": "RefreshAutonomousDatabase",
+      "description": "Snippet for RefreshAutonomousDatabase",
+      "file": "OracleDatabaseClient.RefreshAutonomousDatabaseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshAutonomousDatabase",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.RefreshAutonomousDatabase",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "refreshCutoffTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "RefreshAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.RefreshAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_RefreshAutonomousDatabase_async_flattened",
+      "title": "RefreshAutonomousDatabaseAsync",
+      "description": "Snippet for RefreshAutonomousDatabaseAsync",
+      "file": "OracleDatabaseClient.RefreshAutonomousDatabaseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshAutonomousDatabaseAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.RefreshAutonomousDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "refreshCutoffTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "RefreshAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.RefreshAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_RefreshAutonomousDatabase_sync_flattened_resourceNames",
+      "title": "RefreshAutonomousDatabaseResourceNames",
+      "description": "Snippet for RefreshAutonomousDatabase",
+      "file": "OracleDatabaseClient.RefreshAutonomousDatabaseResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshAutonomousDatabase",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.RefreshAutonomousDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.AutonomousDatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "refreshCutoffTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "RefreshAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.RefreshAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_RefreshAutonomousDatabase_async_flattened_resourceNames",
+      "title": "RefreshAutonomousDatabaseResourceNamesAsync",
+      "description": "Snippet for RefreshAutonomousDatabaseAsync",
+      "file": "OracleDatabaseClient.RefreshAutonomousDatabaseResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RefreshAutonomousDatabaseAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.RefreshAutonomousDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.AutonomousDatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Timestamp",
+            "name": "refreshCutoffTime"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "RefreshAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.RefreshAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_GetAutonomousDatabaseRefreshableClones_sync",
+      "title": "GetAutonomousDatabaseRefreshableClonesRequestObject",
+      "description": "Snippet for GetAutonomousDatabaseRefreshableClones",
+      "file": "OracleDatabaseClient.GetAutonomousDatabaseRefreshableClonesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutonomousDatabaseRefreshableClones",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.GetAutonomousDatabaseRefreshableClones",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.GetAutonomousDatabaseRefreshableClonesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "GetAutonomousDatabaseRefreshableClones",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.GetAutonomousDatabaseRefreshableClones",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_GetAutonomousDatabaseRefreshableClones_async",
+      "title": "GetAutonomousDatabaseRefreshableClonesRequestObjectAsync",
+      "description": "Snippet for GetAutonomousDatabaseRefreshableClonesAsync",
+      "file": "OracleDatabaseClient.GetAutonomousDatabaseRefreshableClonesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutonomousDatabaseRefreshableClonesAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.GetAutonomousDatabaseRefreshableClonesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.GetAutonomousDatabaseRefreshableClonesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "GetAutonomousDatabaseRefreshableClones",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.GetAutonomousDatabaseRefreshableClones",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_GetAutonomousDatabaseRefreshableClones_sync_flattened",
+      "title": "GetAutonomousDatabaseRefreshableClones",
+      "description": "Snippet for GetAutonomousDatabaseRefreshableClones",
+      "file": "OracleDatabaseClient.GetAutonomousDatabaseRefreshableClonesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutonomousDatabaseRefreshableClones",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.GetAutonomousDatabaseRefreshableClones",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "GetAutonomousDatabaseRefreshableClones",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.GetAutonomousDatabaseRefreshableClones",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_GetAutonomousDatabaseRefreshableClones_async_flattened",
+      "title": "GetAutonomousDatabaseRefreshableClonesAsync",
+      "description": "Snippet for GetAutonomousDatabaseRefreshableClonesAsync",
+      "file": "OracleDatabaseClient.GetAutonomousDatabaseRefreshableClonesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutonomousDatabaseRefreshableClonesAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.GetAutonomousDatabaseRefreshableClonesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "GetAutonomousDatabaseRefreshableClones",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.GetAutonomousDatabaseRefreshableClones",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_GetAutonomousDatabaseRefreshableClones_sync_flattened_resourceNames",
+      "title": "GetAutonomousDatabaseRefreshableClonesResourceNames",
+      "description": "Snippet for GetAutonomousDatabaseRefreshableClones",
+      "file": "OracleDatabaseClient.GetAutonomousDatabaseRefreshableClonesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutonomousDatabaseRefreshableClones",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.GetAutonomousDatabaseRefreshableClones",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.AutonomousDatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "GetAutonomousDatabaseRefreshableClones",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.GetAutonomousDatabaseRefreshableClones",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_GetAutonomousDatabaseRefreshableClones_async_flattened_resourceNames",
+      "title": "GetAutonomousDatabaseRefreshableClonesResourceNamesAsync",
+      "description": "Snippet for GetAutonomousDatabaseRefreshableClonesAsync",
+      "file": "OracleDatabaseClient.GetAutonomousDatabaseRefreshableClonesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutonomousDatabaseRefreshableClonesAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.GetAutonomousDatabaseRefreshableClonesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.AutonomousDatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.OracleDatabase.V1.AutonomousDatabaseRefreshableClones>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "GetAutonomousDatabaseRefreshableClones",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.GetAutonomousDatabaseRefreshableClones",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
