@@ -24,7 +24,8 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Ads.AdManager.V1 {
   /// <summary>
-  /// Provides methods for handling `Company` objects.
+  /// Provides methods for handling [Company][google.ads.admanager.v1.Company]
+  /// objects.
   /// </summary>
   public static partial class CompanyService
   {
@@ -71,6 +72,18 @@ namespace Google.Ads.AdManager.V1 {
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListCompaniesRequest> __Marshaller_google_ads_admanager_v1_ListCompaniesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListCompaniesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListCompaniesResponse> __Marshaller_google_ads_admanager_v1_ListCompaniesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListCompaniesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.CreateCompanyRequest> __Marshaller_google_ads_admanager_v1_CreateCompanyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.CreateCompanyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateCompaniesRequest> __Marshaller_google_ads_admanager_v1_BatchCreateCompaniesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateCompaniesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateCompaniesResponse> __Marshaller_google_ads_admanager_v1_BatchCreateCompaniesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateCompaniesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.UpdateCompanyRequest> __Marshaller_google_ads_admanager_v1_UpdateCompanyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.UpdateCompanyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateCompaniesRequest> __Marshaller_google_ads_admanager_v1_BatchUpdateCompaniesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateCompaniesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateCompaniesResponse> __Marshaller_google_ads_admanager_v1_BatchUpdateCompaniesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateCompaniesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.GetCompanyRequest, global::Google.Ads.AdManager.V1.Company> __Method_GetCompany = new grpc::Method<global::Google.Ads.AdManager.V1.GetCompanyRequest, global::Google.Ads.AdManager.V1.Company>(
@@ -88,6 +101,38 @@ namespace Google.Ads.AdManager.V1 {
         __Marshaller_google_ads_admanager_v1_ListCompaniesRequest,
         __Marshaller_google_ads_admanager_v1_ListCompaniesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.CreateCompanyRequest, global::Google.Ads.AdManager.V1.Company> __Method_CreateCompany = new grpc::Method<global::Google.Ads.AdManager.V1.CreateCompanyRequest, global::Google.Ads.AdManager.V1.Company>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCompany",
+        __Marshaller_google_ads_admanager_v1_CreateCompanyRequest,
+        __Marshaller_google_ads_admanager_v1_Company);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateCompaniesRequest, global::Google.Ads.AdManager.V1.BatchCreateCompaniesResponse> __Method_BatchCreateCompanies = new grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateCompaniesRequest, global::Google.Ads.AdManager.V1.BatchCreateCompaniesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateCompanies",
+        __Marshaller_google_ads_admanager_v1_BatchCreateCompaniesRequest,
+        __Marshaller_google_ads_admanager_v1_BatchCreateCompaniesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.UpdateCompanyRequest, global::Google.Ads.AdManager.V1.Company> __Method_UpdateCompany = new grpc::Method<global::Google.Ads.AdManager.V1.UpdateCompanyRequest, global::Google.Ads.AdManager.V1.Company>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCompany",
+        __Marshaller_google_ads_admanager_v1_UpdateCompanyRequest,
+        __Marshaller_google_ads_admanager_v1_Company);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateCompaniesRequest, global::Google.Ads.AdManager.V1.BatchUpdateCompaniesResponse> __Method_BatchUpdateCompanies = new grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateCompaniesRequest, global::Google.Ads.AdManager.V1.BatchUpdateCompaniesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdateCompanies",
+        __Marshaller_google_ads_admanager_v1_BatchUpdateCompaniesRequest,
+        __Marshaller_google_ads_admanager_v1_BatchUpdateCompaniesResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -99,7 +144,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class CompanyServiceBase
     {
       /// <summary>
-      /// Retrieves a `Company` object.
+      /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -111,13 +156,61 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// Lists `Company` objects.
+      /// Lists [Company][google.ads.admanager.v1.Company] objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.ListCompaniesResponse> ListCompanies(global::Google.Ads.AdManager.V1.ListCompaniesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a [Company][google.ads.admanager.v1.Company] object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.Company> CreateCompany(global::Google.Ads.AdManager.V1.CreateCompanyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates [Company][google.ads.admanager.v1.Company] objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchCreateCompaniesResponse> BatchCreateCompanies(global::Google.Ads.AdManager.V1.BatchCreateCompaniesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a [Company][google.ads.admanager.v1.Company] object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.Company> UpdateCompany(global::Google.Ads.AdManager.V1.UpdateCompanyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchUpdateCompaniesResponse> BatchUpdateCompanies(global::Google.Ads.AdManager.V1.BatchUpdateCompaniesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -152,7 +245,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// Retrieves a `Company` object.
+      /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -165,7 +258,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetCompany(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves a `Company` object.
+      /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -176,7 +269,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetCompany, null, options, request);
       }
       /// <summary>
-      /// Retrieves a `Company` object.
+      /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -189,7 +282,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetCompanyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves a `Company` object.
+      /// Retrieves a [Company][google.ads.admanager.v1.Company] object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -200,7 +293,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetCompany, null, options, request);
       }
       /// <summary>
-      /// Lists `Company` objects.
+      /// Lists [Company][google.ads.admanager.v1.Company] objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -213,7 +306,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListCompanies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists `Company` objects.
+      /// Lists [Company][google.ads.admanager.v1.Company] objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -224,7 +317,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListCompanies, null, options, request);
       }
       /// <summary>
-      /// Lists `Company` objects.
+      /// Lists [Company][google.ads.admanager.v1.Company] objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -237,7 +330,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListCompaniesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists `Company` objects.
+      /// Lists [Company][google.ads.admanager.v1.Company] objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -246,6 +339,198 @@ namespace Google.Ads.AdManager.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.ListCompaniesResponse> ListCompaniesAsync(global::Google.Ads.AdManager.V1.ListCompaniesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCompanies, null, options, request);
+      }
+      /// <summary>
+      /// Creates a [Company][google.ads.admanager.v1.Company] object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Company CreateCompany(global::Google.Ads.AdManager.V1.CreateCompanyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCompany(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a [Company][google.ads.admanager.v1.Company] object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Company CreateCompany(global::Google.Ads.AdManager.V1.CreateCompanyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCompany, null, options, request);
+      }
+      /// <summary>
+      /// Creates a [Company][google.ads.admanager.v1.Company] object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Company> CreateCompanyAsync(global::Google.Ads.AdManager.V1.CreateCompanyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCompanyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a [Company][google.ads.admanager.v1.Company] object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Company> CreateCompanyAsync(global::Google.Ads.AdManager.V1.CreateCompanyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCompany, null, options, request);
+      }
+      /// <summary>
+      /// Creates [Company][google.ads.admanager.v1.Company] objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateCompaniesResponse BatchCreateCompanies(global::Google.Ads.AdManager.V1.BatchCreateCompaniesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateCompanies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates [Company][google.ads.admanager.v1.Company] objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateCompaniesResponse BatchCreateCompanies(global::Google.Ads.AdManager.V1.BatchCreateCompaniesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateCompanies, null, options, request);
+      }
+      /// <summary>
+      /// Creates [Company][google.ads.admanager.v1.Company] objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateCompaniesResponse> BatchCreateCompaniesAsync(global::Google.Ads.AdManager.V1.BatchCreateCompaniesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateCompaniesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates [Company][google.ads.admanager.v1.Company] objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateCompaniesResponse> BatchCreateCompaniesAsync(global::Google.Ads.AdManager.V1.BatchCreateCompaniesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateCompanies, null, options, request);
+      }
+      /// <summary>
+      /// Updates a [Company][google.ads.admanager.v1.Company] object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Company UpdateCompany(global::Google.Ads.AdManager.V1.UpdateCompanyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCompany(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a [Company][google.ads.admanager.v1.Company] object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Company UpdateCompany(global::Google.Ads.AdManager.V1.UpdateCompanyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCompany, null, options, request);
+      }
+      /// <summary>
+      /// Updates a [Company][google.ads.admanager.v1.Company] object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Company> UpdateCompanyAsync(global::Google.Ads.AdManager.V1.UpdateCompanyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCompanyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a [Company][google.ads.admanager.v1.Company] object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Company> UpdateCompanyAsync(global::Google.Ads.AdManager.V1.UpdateCompanyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCompany, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateCompaniesResponse BatchUpdateCompanies(global::Google.Ads.AdManager.V1.BatchUpdateCompaniesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateCompanies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateCompaniesResponse BatchUpdateCompanies(global::Google.Ads.AdManager.V1.BatchUpdateCompaniesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateCompanies, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateCompaniesResponse> BatchUpdateCompaniesAsync(global::Google.Ads.AdManager.V1.BatchUpdateCompaniesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateCompaniesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates [Company][google.ads.admanager.v1.Company] objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateCompaniesResponse> BatchUpdateCompaniesAsync(global::Google.Ads.AdManager.V1.BatchUpdateCompaniesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateCompanies, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -262,7 +547,11 @@ namespace Google.Ads.AdManager.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetCompany, serviceImpl.GetCompany)
-          .AddMethod(__Method_ListCompanies, serviceImpl.ListCompanies).Build();
+          .AddMethod(__Method_ListCompanies, serviceImpl.ListCompanies)
+          .AddMethod(__Method_CreateCompany, serviceImpl.CreateCompany)
+          .AddMethod(__Method_BatchCreateCompanies, serviceImpl.BatchCreateCompanies)
+          .AddMethod(__Method_UpdateCompany, serviceImpl.UpdateCompany)
+          .AddMethod(__Method_BatchUpdateCompanies, serviceImpl.BatchUpdateCompanies).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -274,6 +563,10 @@ namespace Google.Ads.AdManager.V1 {
     {
       serviceBinder.AddMethod(__Method_GetCompany, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.GetCompanyRequest, global::Google.Ads.AdManager.V1.Company>(serviceImpl.GetCompany));
       serviceBinder.AddMethod(__Method_ListCompanies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListCompaniesRequest, global::Google.Ads.AdManager.V1.ListCompaniesResponse>(serviceImpl.ListCompanies));
+      serviceBinder.AddMethod(__Method_CreateCompany, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.CreateCompanyRequest, global::Google.Ads.AdManager.V1.Company>(serviceImpl.CreateCompany));
+      serviceBinder.AddMethod(__Method_BatchCreateCompanies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchCreateCompaniesRequest, global::Google.Ads.AdManager.V1.BatchCreateCompaniesResponse>(serviceImpl.BatchCreateCompanies));
+      serviceBinder.AddMethod(__Method_UpdateCompany, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.UpdateCompanyRequest, global::Google.Ads.AdManager.V1.Company>(serviceImpl.UpdateCompany));
+      serviceBinder.AddMethod(__Method_BatchUpdateCompanies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUpdateCompaniesRequest, global::Google.Ads.AdManager.V1.BatchUpdateCompaniesResponse>(serviceImpl.BatchUpdateCompanies));
     }
 
   }

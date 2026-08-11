@@ -413,22 +413,21 @@ namespace Google.Ads.AdManager.V1 {
     ///  See syntax details at
     ///  https://developers.google.com/ad-manager/api/beta/filters
     ///
-    /// &lt;b>Filterable fields:&lt;/b>
-    /// &lt;ul style="list-style-type:none">
-    ///   &lt;li>&lt;code>auctionPriorityEnabled&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>blockOverrideEnabled&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>buyerAccountId&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>buyerPermissionType&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>endTime&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>externalDealId&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>floorPrice&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>name&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>privateAuctionDealId&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>privateAuctionDisplayName&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>privateAuctionId&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>status&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>updateTime&lt;/code>&lt;/li>
-    /// &lt;/ul>
+    /// **Filterable fields:**
+    ///
+    /// * `auctionPriorityEnabled`
+    /// * `blockOverrideEnabled`
+    /// * `buyerAccountId`
+    /// * `buyerPermissionType`
+    /// * `endTime`
+    /// * `externalDealId`
+    /// * `floorPrice`
+    /// * `name`
+    /// * `privateAuctionDealId`
+    /// * `privateAuctionDisplayName`
+    /// * `privateAuctionId`
+    /// * `status`
+    /// * `updateTime`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

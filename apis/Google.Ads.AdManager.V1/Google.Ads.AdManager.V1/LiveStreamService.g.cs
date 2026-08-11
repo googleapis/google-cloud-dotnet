@@ -484,21 +484,24 @@ namespace Google.Ads.AdManager.V1 {
     ///  See syntax details at
     ///  https://developers.google.com/ad-manager/api/beta/filters
     ///
-    /// &lt;b>Filterable fields:&lt;/b>
-    /// &lt;ul style="list-style-type:none">
-    ///   &lt;li>&lt;code>assetKey&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>createTime&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>customAssetKey&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>displayName&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>dynamicAdInsertionType&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>effectiveAssetKey&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>endTime&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>sourceContentConfigurations&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>startTime&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>status&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>streamingFormat&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>updateTime&lt;/code>&lt;/li>
-    /// &lt;/ul>
+    /// **Filterable fields:**
+    ///
+    /// * `assetKey`
+    /// * `createTime`
+    /// * `customAssetKey`
+    /// * `daiAuthenticationKeys`
+    /// * `daiEncodingProfiles`
+    /// * `displayName`
+    /// * `dynamicAdInsertionType`
+    /// * `effectiveAssetKey`
+    /// * `endTime`
+    /// * `segmentUrlAuthenticationKeys`
+    /// * `slate`
+    /// * `sourceContentConfigurations`
+    /// * `startTime`
+    /// * `status`
+    /// * `streamingFormat`
+    /// * `updateTime`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -28,46 +28,46 @@ namespace Google.Ads.AdManager.V1 {
             "dG8SF2dvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxGi9nb29nbGUvYWRzL2FkbWFu",
             "YWdlci92MS9yZXBvcnRfZGVmaW5pdGlvbi5wcm90bxotZ29vZ2xlL2Fkcy9h",
             "ZG1hbmFnZXIvdjEvcmVwb3J0X2RlbGl2ZXJ5LnByb3RvGipnb29nbGUvYWRz",
-            "L2FkbWFuYWdlci92MS9yZXBvcnRfdmFsdWUucHJvdG8aH2dvb2dsZS9hcGkv",
-            "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
-            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8izgQKBlJlcG9y",
-            "dBIRCgRuYW1lGAEgASgJQgPgQQgSFgoJcmVwb3J0X2lkGAMgASgDQgPgQQMS",
-            "QwoKdmlzaWJpbGl0eRgCIAEoDjIqLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYx",
-            "LlJlcG9ydC5WaXNpYmlsaXR5QgPgQQESSQoRcmVwb3J0X2RlZmluaXRpb24Y",
-            "BCABKAsyKS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5SZXBvcnREZWZpbml0",
-            "aW9uQgPgQQISGQoMZGlzcGxheV9uYW1lGAUgASgJQgPgQQESNAoLdXBkYXRl",
-            "X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
-            "NAoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSEwoGbG9jYWxlGAggASgJQgPgQQMSRwoQc2NoZWR1bGVfb3B0",
-            "aW9ucxgJIAEoCzIoLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlNjaGVkdWxl",
-            "T3B0aW9uc0ID4EEBIkMKClZpc2liaWxpdHkSCgoGSElEREVOEAASCQoFRFJB",
-            "RlQQARILCgdWSVNJQkxFEAISDQoFU0FWRUQQAhoCCAEaAhABOl/qQVwKH2Fk",
-            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9SZXBvcnQSKG5ldHdvcmtzL3tuZXR3",
-            "b3JrX2NvZGV9L3JlcG9ydHMve3JlcG9ydH0qB3JlcG9ydHMyBnJlcG9ydCKH",
-            "BQoPUmVwb3J0RGF0YVRhYmxlGp0BCgNSb3cSPgoQZGltZW5zaW9uX3ZhbHVl",
-            "cxgBIAMoCzIkLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJlcG9ydFZhbHVl",
-            "ElYKE21ldHJpY192YWx1ZV9ncm91cHMYAiADKAsyOS5nb29nbGUuYWRzLmFk",
-            "bWFuYWdlci52MS5SZXBvcnREYXRhVGFibGUuTWV0cmljVmFsdWVHcm91cBrT",
-            "AwoQTWV0cmljVmFsdWVHcm91cBI8Cg5wcmltYXJ5X3ZhbHVlcxgBIAMoCzIk",
-            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJlcG9ydFZhbHVlEk0KH3ByaW1h",
-            "cnlfcGVyY2VudF9vZl90b3RhbF92YWx1ZXMYAiADKAsyJC5nb29nbGUuYWRz",
-            "LmFkbWFuYWdlci52MS5SZXBvcnRWYWx1ZRI/ChFjb21wYXJpc29uX3ZhbHVl",
-            "cxgDIAMoCzIkLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJlcG9ydFZhbHVl",
-            "ElAKImNvbXBhcmlzb25fcGVyY2VudF9vZl90b3RhbF92YWx1ZXMYBCADKAsy",
-            "JC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5SZXBvcnRWYWx1ZRJEChZhYnNv",
-            "bHV0ZV9jaGFuZ2VfdmFsdWVzGAUgAygLMiQuZ29vZ2xlLmFkcy5hZG1hbmFn",
-            "ZXIudjEuUmVwb3J0VmFsdWUSRAoWcmVsYXRpdmVfY2hhbmdlX3ZhbHVlcxgG",
-            "IAMoCzIkLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJlcG9ydFZhbHVlEhMK",
-            "C2ZsYWdfdmFsdWVzGAcgAygIQscBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFn",
-            "ZXIudjFCE1JlcG9ydE1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFu",
-            "YWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xB",
-            "ZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJv",
-            "dG8z"));
+            "L2FkbWFuYWdlci92MS9yZXBvcnRfdmFsdWUucHJvdG8aNGdvb2dsZS9hZHMv",
+            "YWRtYW5hZ2VyL3YxL3JlcG9ydF92aXNpYmlsaXR5X2VudW0ucHJvdG8aH2dv",
+            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
+            "b3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
+            "nQQKBlJlcG9ydBIRCgRuYW1lGAEgASgJQgPgQQgSFgoJcmVwb3J0X2lkGAMg",
+            "ASgDQgPgQQMSVwoKdmlzaWJpbGl0eRgCIAEoDjI+Lmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLlJlcG9ydFZpc2liaWxpdHlFbnVtLlJlcG9ydFZpc2liaWxp",
+            "dHlCA+BBARJJChFyZXBvcnRfZGVmaW5pdGlvbhgEIAEoCzIpLmdvb2dsZS5h",
+            "ZHMuYWRtYW5hZ2VyLnYxLlJlcG9ydERlZmluaXRpb25CA+BBAhIZCgxkaXNw",
+            "bGF5X25hbWUYBSABKAlCA+BBARI0Cgt1cGRhdGVfdGltZRgGIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtjcmVhdGVfdGltZRgH",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgZsb2Nh",
+            "bGUYCCABKAlCA+BBAxJHChBzY2hlZHVsZV9vcHRpb25zGAkgASgLMiguZ29v",
+            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuU2NoZWR1bGVPcHRpb25zQgPgQQE6X+pB",
+            "XAofYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1JlcG9ydBIobmV0d29ya3Mv",
+            "e25ldHdvcmtfY29kZX0vcmVwb3J0cy97cmVwb3J0fSoHcmVwb3J0czIGcmVw",
+            "b3J0IocFCg9SZXBvcnREYXRhVGFibGUanQEKA1JvdxI+ChBkaW1lbnNpb25f",
+            "dmFsdWVzGAEgAygLMiQuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuUmVwb3J0",
+            "VmFsdWUSVgoTbWV0cmljX3ZhbHVlX2dyb3VwcxgCIAMoCzI5Lmdvb2dsZS5h",
+            "ZHMuYWRtYW5hZ2VyLnYxLlJlcG9ydERhdGFUYWJsZS5NZXRyaWNWYWx1ZUdy",
+            "b3VwGtMDChBNZXRyaWNWYWx1ZUdyb3VwEjwKDnByaW1hcnlfdmFsdWVzGAEg",
+            "AygLMiQuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuUmVwb3J0VmFsdWUSTQof",
+            "cHJpbWFyeV9wZXJjZW50X29mX3RvdGFsX3ZhbHVlcxgCIAMoCzIkLmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLlJlcG9ydFZhbHVlEj8KEWNvbXBhcmlzb25f",
+            "dmFsdWVzGAMgAygLMiQuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuUmVwb3J0",
+            "VmFsdWUSUAoiY29tcGFyaXNvbl9wZXJjZW50X29mX3RvdGFsX3ZhbHVlcxgE",
+            "IAMoCzIkLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJlcG9ydFZhbHVlEkQK",
+            "FmFic29sdXRlX2NoYW5nZV92YWx1ZXMYBSADKAsyJC5nb29nbGUuYWRzLmFk",
+            "bWFuYWdlci52MS5SZXBvcnRWYWx1ZRJEChZyZWxhdGl2ZV9jaGFuZ2VfdmFs",
+            "dWVzGAYgAygLMiQuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuUmVwb3J0VmFs",
+            "dWUSEwoLZmxhZ192YWx1ZXMYByADKAhCxwEKG2NvbS5nb29nbGUuYWRzLmFk",
+            "bWFuYWdlci52MUITUmVwb3J0TWVzc2FnZXNQcm90b1ABWkBnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7",
+            "YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVc",
+            "QWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.ReportDefinitionReflection.Descriptor, global::Google.Ads.AdManager.V1.ReportDeliveryReflection.Descriptor, global::Google.Ads.AdManager.V1.ReportValueReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.ReportDefinitionReflection.Descriptor, global::Google.Ads.AdManager.V1.ReportDeliveryReflection.Descriptor, global::Google.Ads.AdManager.V1.ReportValueReflection.Descriptor, global::Google.Ads.AdManager.V1.ReportVisibilityEnumReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Report), global::Google.Ads.AdManager.V1.Report.Parser, new[]{ "Name", "ReportId", "Visibility", "ReportDefinition", "DisplayName", "UpdateTime", "CreateTime", "Locale", "ScheduleOptions" }, null, new[]{ typeof(global::Google.Ads.AdManager.V1.Report.Types.Visibility) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Report), global::Google.Ads.AdManager.V1.Report.Parser, new[]{ "Name", "ReportId", "Visibility", "ReportDefinition", "DisplayName", "UpdateTime", "CreateTime", "Locale", "ScheduleOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ReportDataTable), global::Google.Ads.AdManager.V1.ReportDataTable.Parser, null, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ReportDataTable.Types.Row), global::Google.Ads.AdManager.V1.ReportDataTable.Types.Row.Parser, new[]{ "DimensionValues", "MetricValueGroups" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ReportDataTable.Types.MetricValueGroup), global::Google.Ads.AdManager.V1.ReportDataTable.Types.MetricValueGroup.Parser, new[]{ "PrimaryValues", "PrimaryPercentOfTotalValues", "ComparisonValues", "ComparisonPercentOfTotalValues", "AbsoluteChangeValues", "RelativeChangeValues", "FlagValues" }, null, null, null, null)})
           }));
@@ -166,13 +166,13 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "visibility" field.</summary>
     public const int VisibilityFieldNumber = 2;
-    private global::Google.Ads.AdManager.V1.Report.Types.Visibility visibility_ = global::Google.Ads.AdManager.V1.Report.Types.Visibility.Hidden;
+    private global::Google.Ads.AdManager.V1.ReportVisibilityEnum.Types.ReportVisibility visibility_ = global::Google.Ads.AdManager.V1.ReportVisibilityEnum.Types.ReportVisibility.Hidden;
     /// <summary>
     /// Optional. The visibility of a report.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Ads.AdManager.V1.Report.Types.Visibility Visibility {
+    public global::Google.Ads.AdManager.V1.ReportVisibilityEnum.Types.ReportVisibility Visibility {
       get { return visibility_; }
       set {
         visibility_ = value;
@@ -303,7 +303,7 @@ namespace Google.Ads.AdManager.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (ReportId != 0L) hash ^= ReportId.GetHashCode();
-      if (Visibility != global::Google.Ads.AdManager.V1.Report.Types.Visibility.Hidden) hash ^= Visibility.GetHashCode();
+      if (Visibility != global::Google.Ads.AdManager.V1.ReportVisibilityEnum.Types.ReportVisibility.Hidden) hash ^= Visibility.GetHashCode();
       if (reportDefinition_ != null) hash ^= ReportDefinition.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
@@ -332,7 +332,7 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (Visibility != global::Google.Ads.AdManager.V1.Report.Types.Visibility.Hidden) {
+      if (Visibility != global::Google.Ads.AdManager.V1.ReportVisibilityEnum.Types.ReportVisibility.Hidden) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Visibility);
       }
@@ -378,7 +378,7 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (Visibility != global::Google.Ads.AdManager.V1.Report.Types.Visibility.Hidden) {
+      if (Visibility != global::Google.Ads.AdManager.V1.ReportVisibilityEnum.Types.ReportVisibility.Hidden) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Visibility);
       }
@@ -426,7 +426,7 @@ namespace Google.Ads.AdManager.V1 {
       if (ReportId != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ReportId);
       }
-      if (Visibility != global::Google.Ads.AdManager.V1.Report.Types.Visibility.Hidden) {
+      if (Visibility != global::Google.Ads.AdManager.V1.ReportVisibilityEnum.Types.ReportVisibility.Hidden) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Visibility);
       }
       if (reportDefinition_ != null) {
@@ -465,7 +465,7 @@ namespace Google.Ads.AdManager.V1 {
       if (other.ReportId != 0L) {
         ReportId = other.ReportId;
       }
-      if (other.Visibility != global::Google.Ads.AdManager.V1.Report.Types.Visibility.Hidden) {
+      if (other.Visibility != global::Google.Ads.AdManager.V1.ReportVisibilityEnum.Types.ReportVisibility.Hidden) {
         Visibility = other.Visibility;
       }
       if (other.reportDefinition_ != null) {
@@ -522,7 +522,7 @@ namespace Google.Ads.AdManager.V1 {
             break;
           }
           case 16: {
-            Visibility = (global::Google.Ads.AdManager.V1.Report.Types.Visibility) input.ReadEnum();
+            Visibility = (global::Google.Ads.AdManager.V1.ReportVisibilityEnum.Types.ReportVisibility) input.ReadEnum();
             break;
           }
           case 24: {
@@ -589,7 +589,7 @@ namespace Google.Ads.AdManager.V1 {
             break;
           }
           case 16: {
-            Visibility = (global::Google.Ads.AdManager.V1.Report.Types.Visibility) input.ReadEnum();
+            Visibility = (global::Google.Ads.AdManager.V1.ReportVisibilityEnum.Types.ReportVisibility) input.ReadEnum();
             break;
           }
           case 24: {
@@ -636,42 +636,6 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
     #endif
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the Report message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static partial class Types {
-      /// <summary>
-      /// The visibility of a report.
-      /// </summary>
-      public enum Visibility {
-        /// <summary>
-        /// Default value. Reports with hidden visibility won't appear in the Ad
-        /// Manager UI.
-        /// </summary>
-        [pbr::OriginalName("HIDDEN")] Hidden = 0,
-        /// <summary>
-        /// Reports with draft visibility will appear in the Ad Manager UI only if
-        /// the user has configured the UI to show them.
-        /// </summary>
-        [pbr::OriginalName("DRAFT")] Draft = 1,
-        /// <summary>
-        /// Reports with this visibility will appear in the Ad Manager UI.
-        /// </summary>
-        [pbr::OriginalName("VISIBLE")] Visible = 2,
-        /// <summary>
-        /// Deprecated: Use `VISIBLE`.
-        /// Reports with saved visibility will appear in the Ad Manager UI by
-        /// default. This is an alias for `VISIBLE` and will be removed in the
-        /// future.
-        /// </summary>
-        [global::System.ObsoleteAttribute]
-        [pbr::OriginalName("SAVED", PreferredAlias = false)] Saved = 2,
-      }
-
-    }
-    #endregion
 
   }
 

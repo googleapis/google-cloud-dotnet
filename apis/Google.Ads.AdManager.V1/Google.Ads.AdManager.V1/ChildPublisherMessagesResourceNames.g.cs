@@ -267,5 +267,14 @@ namespace Google.Ads.AdManager.V1
             get => string.IsNullOrEmpty(Name) ? null : gaav::ChildPublisherName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="ChildNetwork"/> resource name property.
+        /// </summary>
+        public NetworkName ChildNetworkAsNetworkName
+        {
+            get => string.IsNullOrEmpty(ChildNetwork) ? null : NetworkName.Parse(ChildNetwork, allowUnparsed: true);
+            set => ChildNetwork = value?.ToString() ?? "";
+        }
     }
 }

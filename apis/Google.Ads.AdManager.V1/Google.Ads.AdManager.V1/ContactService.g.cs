@@ -424,20 +424,19 @@ namespace Google.Ads.AdManager.V1 {
     ///  See syntax details at
     ///  https://developers.google.com/ad-manager/api/beta/filters
     ///
-    /// &lt;b>Filterable fields:&lt;/b>
-    /// &lt;ul style="list-style-type:none">
-    ///   &lt;li>&lt;code>address&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>cellPhone&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>comment&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>company&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>displayName&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>email&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>fax&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>name&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>status&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>title&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>workPhone&lt;/code>&lt;/li>
-    /// &lt;/ul>
+    /// **Filterable fields:**
+    ///
+    /// * `address`
+    /// * `cellPhone`
+    /// * `comment`
+    /// * `company`
+    /// * `displayName`
+    /// * `email`
+    /// * `fax`
+    /// * `name`
+    /// * `status`
+    /// * `title`
+    /// * `workPhone`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

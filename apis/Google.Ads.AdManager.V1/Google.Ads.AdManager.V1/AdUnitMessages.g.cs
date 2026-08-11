@@ -33,7 +33,7 @@ namespace Google.Ads.AdManager.V1 {
             "YWRzL2FkbWFuYWdlci92MS9zaXplLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxk",
             "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh5n",
             "b29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1",
-            "Zi90aW1lc3RhbXAucHJvdG8igg8KBkFkVW5pdBIRCgRuYW1lGAEgASgJQgPg",
+            "Zi90aW1lc3RhbXAucHJvdG8i/g8KBkFkVW5pdBIRCgRuYW1lGAEgASgJQgPg",
             "QQgSGQoKYWRfdW5pdF9pZBgPIAEoA0IFGAHgQQMSRwoOcGFyZW50X2FkX3Vu",
             "aXQYCiABKAlCKuBBAuBBBfpBIQofYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
             "L0FkVW5pdEgAiAEBEj8KC3BhcmVudF9wYXRoGAsgAygLMiUuZ29vZ2xlLmFk",
@@ -66,39 +66,42 @@ namespace Google.Ads.AdManager.V1 {
             "ZV9tb2RlGBkgASgOMjguZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuU21hcnRT",
             "aXplTW9kZUVudW0uU21hcnRTaXplTW9kZUIG4EEB4EEHSAyIAQESKQoXYXBw",
             "bGllZF9hZHNlbnNlX2VuYWJsZWQYGiABKAhCA+BBAUgNiAEBEisKGWVmZmVj",
-            "dGl2ZV9hZHNlbnNlX2VuYWJsZWQYGyABKAhCA+BBA0gOiAEBOmDqQV0KH2Fk",
-            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9BZFVuaXQSKW5ldHdvcmtzL3tuZXR3",
-            "b3JrX2NvZGV9L2FkVW5pdHMve2FkX3VuaXR9KgdhZFVuaXRzMgZhZFVuaXRC",
-            "EQoPX3BhcmVudF9hZF91bml0Qg8KDV9kaXNwbGF5X25hbWVCDwoNX2FkX3Vu",
-            "aXRfY29kZUIJCgdfc3RhdHVzQhgKFl9hcHBsaWVkX3RhcmdldF93aW5kb3dC",
-            "GgoYX2VmZmVjdGl2ZV90YXJnZXRfd2luZG93Qg4KDF9kZXNjcmlwdGlvbkIW",
-            "ChRfZXhwbGljaXRseV90YXJnZXRlZEIPCg1faGFzX2NoaWxkcmVuQg4KDF91",
-            "cGRhdGVfdGltZUIiCiBfZXh0ZXJuYWxfc2V0X3RvcF9ib3hfY2hhbm5lbF9p",
-            "ZEIQCg5fcmVmcmVzaF9kZWxheUISChBfc21hcnRfc2l6ZV9tb2RlQhoKGF9h",
-            "cHBsaWVkX2Fkc2Vuc2VfZW5hYmxlZEIcChpfZWZmZWN0aXZlX2Fkc2Vuc2Vf",
-            "ZW5hYmxlZCL2AQoKQWRVbml0U2l6ZRI1CgRzaXplGAEgASgLMh0uZ29vZ2xl",
-            "LmFkcy5hZG1hbmFnZXIudjEuU2l6ZUID4EECSACIAQESYAoQZW52aXJvbm1l",
-            "bnRfdHlwZRgCIAEoDjI8Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkVudmly",
-            "b25tZW50VHlwZUVudW0uRW52aXJvbm1lbnRUeXBlQgPgQQJIAYgBARIxCgpj",
-            "b21wYW5pb25zGAMgAygLMh0uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuU2l6",
-            "ZUIHCgVfc2l6ZUITChFfZW52aXJvbm1lbnRfdHlwZSLJAQoMQWRVbml0UGFy",
-            "ZW50EkQKDnBhcmVudF9hZF91bml0GAEgASgJQifgQQP6QSEKH2FkbWFuYWdl",
-            "ci5nb29nbGVhcGlzLmNvbS9BZFVuaXRIAIgBARIeCgxkaXNwbGF5X25hbWUY",
-            "AiABKAlCA+BBA0gBiAEBEh4KDGFkX3VuaXRfY29kZRgDIAEoCUID4EEDSAKI",
-            "AQFCEQoPX3BhcmVudF9hZF91bml0Qg8KDV9kaXNwbGF5X25hbWVCDwoNX2Fk",
-            "X3VuaXRfY29kZSKuAQoRTGFiZWxGcmVxdWVuY3lDYXASOgoFbGFiZWwYASAB",
-            "KAlCJuBBAvpBIAoeYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0xhYmVsSACI",
-            "AQESQQoNZnJlcXVlbmN5X2NhcBgCIAEoCzIlLmdvb2dsZS5hZHMuYWRtYW5h",
-            "Z2VyLnYxLkZyZXF1ZW5jeUNhcEgBiAEBQggKBl9sYWJlbEIQCg5fZnJlcXVl",
-            "bmN5X2NhcELHAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhNBZFVu",
-            "aXRNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdHb29n",
-            "bGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2VyXFYx",
-            "6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "dGl2ZV9hZHNlbnNlX2VuYWJsZWQYGyABKAhCA+BBA0gOiAEBEmQKEXJlZnJl",
+            "c2hfcmF0ZV90eXBlGE4gASgOMjwuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEu",
+            "UmVmcmVzaFJhdGVUeXBlRW51bS5SZWZyZXNoUmF0ZVR5cGVCBuBBAeBBB0gP",
+            "iAEBOmDqQV0KH2FkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9BZFVuaXQSKW5l",
+            "dHdvcmtzL3tuZXR3b3JrX2NvZGV9L2FkVW5pdHMve2FkX3VuaXR9KgdhZFVu",
+            "aXRzMgZhZFVuaXRCEQoPX3BhcmVudF9hZF91bml0Qg8KDV9kaXNwbGF5X25h",
+            "bWVCDwoNX2FkX3VuaXRfY29kZUIJCgdfc3RhdHVzQhgKFl9hcHBsaWVkX3Rh",
+            "cmdldF93aW5kb3dCGgoYX2VmZmVjdGl2ZV90YXJnZXRfd2luZG93Qg4KDF9k",
+            "ZXNjcmlwdGlvbkIWChRfZXhwbGljaXRseV90YXJnZXRlZEIPCg1faGFzX2No",
+            "aWxkcmVuQg4KDF91cGRhdGVfdGltZUIiCiBfZXh0ZXJuYWxfc2V0X3RvcF9i",
+            "b3hfY2hhbm5lbF9pZEIQCg5fcmVmcmVzaF9kZWxheUISChBfc21hcnRfc2l6",
+            "ZV9tb2RlQhoKGF9hcHBsaWVkX2Fkc2Vuc2VfZW5hYmxlZEIcChpfZWZmZWN0",
+            "aXZlX2Fkc2Vuc2VfZW5hYmxlZEIUChJfcmVmcmVzaF9yYXRlX3R5cGUi9gEK",
+            "CkFkVW5pdFNpemUSNQoEc2l6ZRgBIAEoCzIdLmdvb2dsZS5hZHMuYWRtYW5h",
+            "Z2VyLnYxLlNpemVCA+BBAkgAiAEBEmAKEGVudmlyb25tZW50X3R5cGUYAiAB",
+            "KA4yPC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5FbnZpcm9ubWVudFR5cGVF",
+            "bnVtLkVudmlyb25tZW50VHlwZUID4EECSAGIAQESMQoKY29tcGFuaW9ucxgD",
+            "IAMoCzIdLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlNpemVCBwoFX3NpemVC",
+            "EwoRX2Vudmlyb25tZW50X3R5cGUiyQEKDEFkVW5pdFBhcmVudBJECg5wYXJl",
+            "bnRfYWRfdW5pdBgBIAEoCUIn4EED+kEhCh9hZG1hbmFnZXIuZ29vZ2xlYXBp",
+            "cy5jb20vQWRVbml0SACIAQESHgoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQNI",
+            "AYgBARIeCgxhZF91bml0X2NvZGUYAyABKAlCA+BBA0gCiAEBQhEKD19wYXJl",
+            "bnRfYWRfdW5pdEIPCg1fZGlzcGxheV9uYW1lQg8KDV9hZF91bml0X2NvZGUi",
+            "rgEKEUxhYmVsRnJlcXVlbmN5Q2FwEjoKBWxhYmVsGAEgASgJQibgQQL6QSAK",
+            "HmFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9MYWJlbEgAiAEBEkEKDWZyZXF1",
+            "ZW5jeV9jYXAYAiABKAsyJS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5GcmVx",
+            "dWVuY3lDYXBIAYgBAUIICgZfbGFiZWxCEAoOX2ZyZXF1ZW5jeV9jYXBCxwEK",
+            "G2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUITQWRVbml0TWVzc2FnZXNQ",
+            "cm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1h",
+            "bmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6",
+            "QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AdUnitEnumsReflection.Descriptor, global::Google.Ads.AdManager.V1.AppliedLabelReflection.Descriptor, global::Google.Ads.AdManager.V1.EnvironmentTypeEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.FrequencyCapReflection.Descriptor, global::Google.Ads.AdManager.V1.SizeReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdUnit), global::Google.Ads.AdManager.V1.AdUnit.Parser, new[]{ "Name", "AdUnitId", "ParentAdUnit", "ParentPath", "DisplayName", "AdUnitCode", "Status", "AppliedTargetWindow", "EffectiveTargetWindow", "AppliedTeams", "Teams", "Description", "ExplicitlyTargeted", "HasChildren", "UpdateTime", "AdUnitSizes", "ExternalSetTopBoxChannelId", "RefreshDelay", "AppliedLabels", "EffectiveAppliedLabels", "AppliedLabelFrequencyCaps", "EffectiveLabelFrequencyCaps", "SmartSizeMode", "AppliedAdsenseEnabled", "EffectiveAdsenseEnabled" }, new[]{ "ParentAdUnit", "DisplayName", "AdUnitCode", "Status", "AppliedTargetWindow", "EffectiveTargetWindow", "Description", "ExplicitlyTargeted", "HasChildren", "UpdateTime", "ExternalSetTopBoxChannelId", "RefreshDelay", "SmartSizeMode", "AppliedAdsenseEnabled", "EffectiveAdsenseEnabled" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdUnit), global::Google.Ads.AdManager.V1.AdUnit.Parser, new[]{ "Name", "AdUnitId", "ParentAdUnit", "ParentPath", "DisplayName", "AdUnitCode", "Status", "AppliedTargetWindow", "EffectiveTargetWindow", "AppliedTeams", "Teams", "Description", "ExplicitlyTargeted", "HasChildren", "UpdateTime", "AdUnitSizes", "ExternalSetTopBoxChannelId", "RefreshDelay", "AppliedLabels", "EffectiveAppliedLabels", "AppliedLabelFrequencyCaps", "EffectiveLabelFrequencyCaps", "SmartSizeMode", "AppliedAdsenseEnabled", "EffectiveAdsenseEnabled", "RefreshRateType" }, new[]{ "ParentAdUnit", "DisplayName", "AdUnitCode", "Status", "AppliedTargetWindow", "EffectiveTargetWindow", "Description", "ExplicitlyTargeted", "HasChildren", "UpdateTime", "ExternalSetTopBoxChannelId", "RefreshDelay", "SmartSizeMode", "AppliedAdsenseEnabled", "EffectiveAdsenseEnabled", "RefreshRateType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdUnitSize), global::Google.Ads.AdManager.V1.AdUnitSize.Parser, new[]{ "Size", "EnvironmentType", "Companions" }, new[]{ "Size", "EnvironmentType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdUnitParent), global::Google.Ads.AdManager.V1.AdUnitParent.Parser, new[]{ "ParentAdUnit", "DisplayName", "AdUnitCode" }, new[]{ "ParentAdUnit", "DisplayName", "AdUnitCode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LabelFrequencyCap), global::Google.Ads.AdManager.V1.LabelFrequencyCap.Parser, new[]{ "Label", "FrequencyCap" }, new[]{ "Label", "FrequencyCap" }, null, null, null)
@@ -173,6 +176,7 @@ namespace Google.Ads.AdManager.V1 {
       smartSizeMode_ = other.smartSizeMode_;
       appliedAdsenseEnabled_ = other.appliedAdsenseEnabled_;
       effectiveAdsenseEnabled_ = other.effectiveAdsenseEnabled_;
+      refreshRateType_ = other.refreshRateType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -777,6 +781,37 @@ namespace Google.Ads.AdManager.V1 {
       _hasBits0 &= ~32;
     }
 
+    /// <summary>Field number for the "refresh_rate_type" field.</summary>
+    public const int RefreshRateTypeFieldNumber = 78;
+    private readonly static global::Google.Ads.AdManager.V1.RefreshRateTypeEnum.Types.RefreshRateType RefreshRateTypeDefaultValue = global::Google.Ads.AdManager.V1.RefreshRateTypeEnum.Types.RefreshRateType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.RefreshRateTypeEnum.Types.RefreshRateType refreshRateType_;
+    /// <summary>
+    /// Optional. Non-empty default. Defines the type of refresh rate control for
+    /// this ad unit. This field defaults to `DISABLED`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.RefreshRateTypeEnum.Types.RefreshRateType RefreshRateType {
+      get { if ((_hasBits0 & 256) != 0) { return refreshRateType_; } else { return RefreshRateTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 256;
+        refreshRateType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "refresh_rate_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRefreshRateType {
+      get { return (_hasBits0 & 256) != 0; }
+    }
+    /// <summary>Clears the value of the "refresh_rate_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRefreshRateType() {
+      _hasBits0 &= ~256;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -817,6 +852,7 @@ namespace Google.Ads.AdManager.V1 {
       if (SmartSizeMode != other.SmartSizeMode) return false;
       if (AppliedAdsenseEnabled != other.AppliedAdsenseEnabled) return false;
       if (EffectiveAdsenseEnabled != other.EffectiveAdsenseEnabled) return false;
+      if (RefreshRateType != other.RefreshRateType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -849,6 +885,7 @@ namespace Google.Ads.AdManager.V1 {
       if (HasSmartSizeMode) hash ^= SmartSizeMode.GetHashCode();
       if (HasAppliedAdsenseEnabled) hash ^= AppliedAdsenseEnabled.GetHashCode();
       if (HasEffectiveAdsenseEnabled) hash ^= EffectiveAdsenseEnabled.GetHashCode();
+      if (HasRefreshRateType) hash ^= RefreshRateType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -943,6 +980,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(232, 2);
         output.WriteEnum((int) EffectiveTargetWindow);
       }
+      if (HasRefreshRateType) {
+        output.WriteRawTag(240, 4);
+        output.WriteEnum((int) RefreshRateType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1029,6 +1070,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(232, 2);
         output.WriteEnum((int) EffectiveTargetWindow);
       }
+      if (HasRefreshRateType) {
+        output.WriteRawTag(240, 4);
+        output.WriteEnum((int) RefreshRateType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1097,6 +1142,9 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (HasEffectiveAdsenseEnabled) {
         size += 2 + 1;
+      }
+      if (HasRefreshRateType) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) RefreshRateType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1174,6 +1222,9 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (other.HasEffectiveAdsenseEnabled) {
         EffectiveAdsenseEnabled = other.EffectiveAdsenseEnabled;
+      }
+      if (other.HasRefreshRateType) {
+        RefreshRateType = other.RefreshRateType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1300,6 +1351,10 @@ namespace Google.Ads.AdManager.V1 {
             EffectiveTargetWindow = (global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow) input.ReadEnum();
             break;
           }
+          case 624: {
+            RefreshRateType = (global::Google.Ads.AdManager.V1.RefreshRateTypeEnum.Types.RefreshRateType) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -1423,6 +1478,10 @@ namespace Google.Ads.AdManager.V1 {
           }
           case 360: {
             EffectiveTargetWindow = (global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow) input.ReadEnum();
+            break;
+          }
+          case 624: {
+            RefreshRateType = (global::Google.Ads.AdManager.V1.RefreshRateTypeEnum.Types.RefreshRateType) input.ReadEnum();
             break;
           }
         }

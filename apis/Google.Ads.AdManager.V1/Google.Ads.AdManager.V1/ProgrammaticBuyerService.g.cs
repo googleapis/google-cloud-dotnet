@@ -389,17 +389,16 @@ namespace Google.Ads.AdManager.V1 {
     ///  See syntax details at
     ///  https://developers.google.com/ad-manager/api/beta/filters
     ///
-    /// &lt;b>Filterable fields:&lt;/b>
-    /// &lt;ul style="list-style-type:none">
-    ///   &lt;li>&lt;code>agency&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>buyerAccountId&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>displayName&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>name&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>parentAccountId&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>partnerClientId&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>preferredDealsEnabled&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>programmaticGuaranteedEnabled&lt;/code>&lt;/li>
-    /// &lt;/ul>
+    /// **Filterable fields:**
+    ///
+    /// * `agency`
+    /// * `buyerAccountId`
+    /// * `displayName`
+    /// * `name`
+    /// * `parentAccountId`
+    /// * `partnerClientId`
+    /// * `preferredDealsEnabled`
+    /// * `programmaticGuaranteedEnabled`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

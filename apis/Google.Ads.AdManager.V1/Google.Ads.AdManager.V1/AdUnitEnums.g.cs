@@ -32,18 +32,21 @@ namespace Google.Ads.AdManager.V1 {
             "X1NJWkVfTU9ERV9VTlNQRUNJRklFRBAAEggKBE5PTkUQARIQCgxTTUFSVF9C",
             "QU5ORVIQAhIQCgxEWU5BTUlDX1NJWkUQAyJVChBUYXJnZXRXaW5kb3dFbnVt",
             "IkEKDFRhcmdldFdpbmRvdxIdChlUQVJHRVRfV0lORE9XX1VOU1BFQ0lGSUVE",
-            "EAASBwoDVE9QEAESCQoFQkxBTksQAkLEAQobY29tLmdvb2dsZS5hZHMuYWRt",
-            "YW5hZ2VyLnYxQhBBZFVuaXRFbnVtc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1h",
-            "bmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNc",
-            "QWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnBy",
-            "b3RvMw=="));
+            "EAASBwoDVE9QEAESCQoFQkxBTksQAiJ8ChNSZWZyZXNoUmF0ZVR5cGVFbnVt",
+            "ImUKD1JlZnJlc2hSYXRlVHlwZRIhCh1SRUZSRVNIX1JBVEVfVFlQRV9VTlNQ",
+            "RUNJRklFRBAAEgwKCERJU0FCTEVEEAESDQoJT1BUSU1JWkVEEAISEgoORklY",
+            "RURfSU5URVJWQUwQA0LEAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYx",
+            "QhBBZFVuaXRFbnVtc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdH",
+            "b29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2Vy",
+            "XFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdUnitStatusEnum), global::Google.Ads.AdManager.V1.AdUnitStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.AdUnitStatusEnum.Types.AdUnitStatus) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.SmartSizeModeEnum), global::Google.Ads.AdManager.V1.SmartSizeModeEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.SmartSizeModeEnum.Types.SmartSizeMode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.TargetWindowEnum), global::Google.Ads.AdManager.V1.TargetWindowEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.TargetWindowEnum), global::Google.Ads.AdManager.V1.TargetWindowEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RefreshRateTypeEnum), global::Google.Ads.AdManager.V1.RefreshRateTypeEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.RefreshRateTypeEnum.Types.RefreshRateType) }, null, null)
           }));
     }
     #endregion
@@ -626,6 +629,202 @@ namespace Google.Ads.AdManager.V1 {
         /// Specifies that the link should open in a new window.
         /// </summary>
         [pbr::OriginalName("BLANK")] Blank = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Wrapper message for
+  /// [RefreshRateType][google.ads.admanager.v1.RefreshRateTypeEnum.RefreshRateType]
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RefreshRateTypeEnum : pb::IMessage<RefreshRateTypeEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RefreshRateTypeEnum> _parser = new pb::MessageParser<RefreshRateTypeEnum>(() => new RefreshRateTypeEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RefreshRateTypeEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.AdUnitEnumsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RefreshRateTypeEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RefreshRateTypeEnum(RefreshRateTypeEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RefreshRateTypeEnum Clone() {
+      return new RefreshRateTypeEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RefreshRateTypeEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RefreshRateTypeEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RefreshRateTypeEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RefreshRateTypeEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Represents the refresh rate control type for an ad unit.
+      /// New values may be added in the future.
+      /// </summary>
+      public enum RefreshRateType {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("REFRESH_RATE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates refresh is disabled.
+        /// </summary>
+        [pbr::OriginalName("DISABLED")] Disabled = 1,
+        /// <summary>
+        /// Represents the Google optimized refresh rate.
+        /// </summary>
+        [pbr::OriginalName("OPTIMIZED")] Optimized = 2,
+        /// <summary>
+        /// Represents a fixed interval refresh rate.
+        /// </summary>
+        [pbr::OriginalName("FIXED_INTERVAL")] FixedInterval = 3,
       }
 
     }

@@ -449,14 +449,13 @@ namespace Google.Ads.AdManager.V1 {
     ///  See syntax details at
     ///  https://developers.google.com/ad-manager/api/beta/filters
     ///
-    /// &lt;b>Filterable fields:&lt;/b>
-    /// &lt;ul style="list-style-type:none">
-    ///   &lt;li>&lt;code>cdnConfigStatus&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>cdnConfigType&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>displayName&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>name&lt;/code>&lt;/li>
-    ///   &lt;li>&lt;code>sourceContentConfig.ingestSettings.urlPrefix&lt;/code>&lt;/li>
-    /// &lt;/ul>
+    /// **Filterable fields:**
+    ///
+    /// * `cdnConfigStatus`
+    /// * `cdnConfigType`
+    /// * `displayName`
+    /// * `name`
+    /// * `sourceContentConfig.ingestSettings.urlPrefix`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

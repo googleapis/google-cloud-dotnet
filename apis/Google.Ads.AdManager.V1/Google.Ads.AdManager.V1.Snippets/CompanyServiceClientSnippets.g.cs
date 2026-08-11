@@ -18,7 +18,9 @@ namespace GoogleCSharpSnippets
 {
     using Google.Ads.AdManager.V1;
     using Google.Api.Gax;
+    using Google.Protobuf.WellKnownTypes;
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -390,6 +392,385 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCompany</summary>
+        public void CreateCompanyRequestObject()
+        {
+            // Snippet: CreateCompany(CreateCompanyRequest, CallSettings)
+            // Create client
+            CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
+            // Initialize request argument(s)
+            CreateCompanyRequest request = new CreateCompanyRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Company = new Company(),
+            };
+            // Make the request
+            Company response = companyServiceClient.CreateCompany(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCompanyAsync</summary>
+        public async Task CreateCompanyRequestObjectAsync()
+        {
+            // Snippet: CreateCompanyAsync(CreateCompanyRequest, CallSettings)
+            // Additional: CreateCompanyAsync(CreateCompanyRequest, CancellationToken)
+            // Create client
+            CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateCompanyRequest request = new CreateCompanyRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Company = new Company(),
+            };
+            // Make the request
+            Company response = await companyServiceClient.CreateCompanyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCompany</summary>
+        public void CreateCompany()
+        {
+            // Snippet: CreateCompany(string, Company, CallSettings)
+            // Create client
+            CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            Company company = new Company();
+            // Make the request
+            Company response = companyServiceClient.CreateCompany(parent, company);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCompanyAsync</summary>
+        public async Task CreateCompanyAsync()
+        {
+            // Snippet: CreateCompanyAsync(string, Company, CallSettings)
+            // Additional: CreateCompanyAsync(string, Company, CancellationToken)
+            // Create client
+            CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            Company company = new Company();
+            // Make the request
+            Company response = await companyServiceClient.CreateCompanyAsync(parent, company);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCompany</summary>
+        public void CreateCompanyResourceNames()
+        {
+            // Snippet: CreateCompany(NetworkName, Company, CallSettings)
+            // Create client
+            CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            Company company = new Company();
+            // Make the request
+            Company response = companyServiceClient.CreateCompany(parent, company);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCompanyAsync</summary>
+        public async Task CreateCompanyResourceNamesAsync()
+        {
+            // Snippet: CreateCompanyAsync(NetworkName, Company, CallSettings)
+            // Additional: CreateCompanyAsync(NetworkName, Company, CancellationToken)
+            // Create client
+            CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            Company company = new Company();
+            // Make the request
+            Company response = await companyServiceClient.CreateCompanyAsync(parent, company);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCompanies</summary>
+        public void BatchCreateCompaniesRequestObject()
+        {
+            // Snippet: BatchCreateCompanies(BatchCreateCompaniesRequest, CallSettings)
+            // Create client
+            CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
+            // Initialize request argument(s)
+            BatchCreateCompaniesRequest request = new BatchCreateCompaniesRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new CreateCompanyRequest(),
+                },
+            };
+            // Make the request
+            BatchCreateCompaniesResponse response = companyServiceClient.BatchCreateCompanies(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCompaniesAsync</summary>
+        public async Task BatchCreateCompaniesRequestObjectAsync()
+        {
+            // Snippet: BatchCreateCompaniesAsync(BatchCreateCompaniesRequest, CallSettings)
+            // Additional: BatchCreateCompaniesAsync(BatchCreateCompaniesRequest, CancellationToken)
+            // Create client
+            CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchCreateCompaniesRequest request = new BatchCreateCompaniesRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new CreateCompanyRequest(),
+                },
+            };
+            // Make the request
+            BatchCreateCompaniesResponse response = await companyServiceClient.BatchCreateCompaniesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCompanies</summary>
+        public void BatchCreateCompanies()
+        {
+            // Snippet: BatchCreateCompanies(string, IEnumerable<CreateCompanyRequest>, CallSettings)
+            // Create client
+            CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<CreateCompanyRequest> requests = new CreateCompanyRequest[]
+            {
+                new CreateCompanyRequest(),
+            };
+            // Make the request
+            BatchCreateCompaniesResponse response = companyServiceClient.BatchCreateCompanies(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCompaniesAsync</summary>
+        public async Task BatchCreateCompaniesAsync()
+        {
+            // Snippet: BatchCreateCompaniesAsync(string, IEnumerable<CreateCompanyRequest>, CallSettings)
+            // Additional: BatchCreateCompaniesAsync(string, IEnumerable<CreateCompanyRequest>, CancellationToken)
+            // Create client
+            CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<CreateCompanyRequest> requests = new CreateCompanyRequest[]
+            {
+                new CreateCompanyRequest(),
+            };
+            // Make the request
+            BatchCreateCompaniesResponse response = await companyServiceClient.BatchCreateCompaniesAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCompanies</summary>
+        public void BatchCreateCompaniesResourceNames()
+        {
+            // Snippet: BatchCreateCompanies(NetworkName, IEnumerable<CreateCompanyRequest>, CallSettings)
+            // Create client
+            CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CreateCompanyRequest> requests = new CreateCompanyRequest[]
+            {
+                new CreateCompanyRequest(),
+            };
+            // Make the request
+            BatchCreateCompaniesResponse response = companyServiceClient.BatchCreateCompanies(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCompaniesAsync</summary>
+        public async Task BatchCreateCompaniesResourceNamesAsync()
+        {
+            // Snippet: BatchCreateCompaniesAsync(NetworkName, IEnumerable<CreateCompanyRequest>, CallSettings)
+            // Additional: BatchCreateCompaniesAsync(NetworkName, IEnumerable<CreateCompanyRequest>, CancellationToken)
+            // Create client
+            CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CreateCompanyRequest> requests = new CreateCompanyRequest[]
+            {
+                new CreateCompanyRequest(),
+            };
+            // Make the request
+            BatchCreateCompaniesResponse response = await companyServiceClient.BatchCreateCompaniesAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCompany</summary>
+        public void UpdateCompanyRequestObject()
+        {
+            // Snippet: UpdateCompany(UpdateCompanyRequest, CallSettings)
+            // Create client
+            CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateCompanyRequest request = new UpdateCompanyRequest
+            {
+                Company = new Company(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Company response = companyServiceClient.UpdateCompany(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCompanyAsync</summary>
+        public async Task UpdateCompanyRequestObjectAsync()
+        {
+            // Snippet: UpdateCompanyAsync(UpdateCompanyRequest, CallSettings)
+            // Additional: UpdateCompanyAsync(UpdateCompanyRequest, CancellationToken)
+            // Create client
+            CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCompanyRequest request = new UpdateCompanyRequest
+            {
+                Company = new Company(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Company response = await companyServiceClient.UpdateCompanyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCompany</summary>
+        public void UpdateCompany()
+        {
+            // Snippet: UpdateCompany(Company, FieldMask, CallSettings)
+            // Create client
+            CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
+            // Initialize request argument(s)
+            Company company = new Company();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Company response = companyServiceClient.UpdateCompany(company, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCompanyAsync</summary>
+        public async Task UpdateCompanyAsync()
+        {
+            // Snippet: UpdateCompanyAsync(Company, FieldMask, CallSettings)
+            // Additional: UpdateCompanyAsync(Company, FieldMask, CancellationToken)
+            // Create client
+            CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Company company = new Company();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Company response = await companyServiceClient.UpdateCompanyAsync(company, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCompanies</summary>
+        public void BatchUpdateCompaniesRequestObject()
+        {
+            // Snippet: BatchUpdateCompanies(BatchUpdateCompaniesRequest, CallSettings)
+            // Create client
+            CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
+            // Initialize request argument(s)
+            BatchUpdateCompaniesRequest request = new BatchUpdateCompaniesRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new UpdateCompanyRequest(),
+                },
+            };
+            // Make the request
+            BatchUpdateCompaniesResponse response = companyServiceClient.BatchUpdateCompanies(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCompaniesAsync</summary>
+        public async Task BatchUpdateCompaniesRequestObjectAsync()
+        {
+            // Snippet: BatchUpdateCompaniesAsync(BatchUpdateCompaniesRequest, CallSettings)
+            // Additional: BatchUpdateCompaniesAsync(BatchUpdateCompaniesRequest, CancellationToken)
+            // Create client
+            CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchUpdateCompaniesRequest request = new BatchUpdateCompaniesRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new UpdateCompanyRequest(),
+                },
+            };
+            // Make the request
+            BatchUpdateCompaniesResponse response = await companyServiceClient.BatchUpdateCompaniesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCompanies</summary>
+        public void BatchUpdateCompanies()
+        {
+            // Snippet: BatchUpdateCompanies(string, IEnumerable<UpdateCompanyRequest>, CallSettings)
+            // Create client
+            CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<UpdateCompanyRequest> requests = new UpdateCompanyRequest[]
+            {
+                new UpdateCompanyRequest(),
+            };
+            // Make the request
+            BatchUpdateCompaniesResponse response = companyServiceClient.BatchUpdateCompanies(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCompaniesAsync</summary>
+        public async Task BatchUpdateCompaniesAsync()
+        {
+            // Snippet: BatchUpdateCompaniesAsync(string, IEnumerable<UpdateCompanyRequest>, CallSettings)
+            // Additional: BatchUpdateCompaniesAsync(string, IEnumerable<UpdateCompanyRequest>, CancellationToken)
+            // Create client
+            CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<UpdateCompanyRequest> requests = new UpdateCompanyRequest[]
+            {
+                new UpdateCompanyRequest(),
+            };
+            // Make the request
+            BatchUpdateCompaniesResponse response = await companyServiceClient.BatchUpdateCompaniesAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCompanies</summary>
+        public void BatchUpdateCompaniesResourceNames()
+        {
+            // Snippet: BatchUpdateCompanies(NetworkName, IEnumerable<UpdateCompanyRequest>, CallSettings)
+            // Create client
+            CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<UpdateCompanyRequest> requests = new UpdateCompanyRequest[]
+            {
+                new UpdateCompanyRequest(),
+            };
+            // Make the request
+            BatchUpdateCompaniesResponse response = companyServiceClient.BatchUpdateCompanies(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCompaniesAsync</summary>
+        public async Task BatchUpdateCompaniesResourceNamesAsync()
+        {
+            // Snippet: BatchUpdateCompaniesAsync(NetworkName, IEnumerable<UpdateCompanyRequest>, CallSettings)
+            // Additional: BatchUpdateCompaniesAsync(NetworkName, IEnumerable<UpdateCompanyRequest>, CancellationToken)
+            // Create client
+            CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<UpdateCompanyRequest> requests = new UpdateCompanyRequest[]
+            {
+                new UpdateCompanyRequest(),
+            };
+            // Make the request
+            BatchUpdateCompaniesResponse response = await companyServiceClient.BatchUpdateCompaniesAsync(parent, requests);
             // End snippet
         }
     }
