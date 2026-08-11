@@ -108,42 +108,49 @@ namespace Google.Cloud.VectorSearch.V1 {
             "bHRzT3B0aW9ucxI5CgZyYW5rZXIYASABKAsyJC5nb29nbGUuY2xvdWQudmVj",
             "dG9yc2VhcmNoLnYxLlJhbmtlckID4EECEkYKDW91dHB1dF9maWVsZHMYAiAB",
             "KAsyKi5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLk91dHB1dEZpZWxk",
-            "c0ID4EEBEhIKBXRvcF9rGAMgASgFQgPgQQEiVQoGUmFua2VyEkEKA3JyZhgB",
-            "IAEoCzIyLmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuUmVjaXByb2Nh",
-            "bFJhbmtGdXNpb25IAEIICgZyYW5rZXIiLAoUUmVjaXByb2NhbFJhbmtGdXNp",
-            "b24SFAoHd2VpZ2h0cxgBIAMoAUID4EECIm8KHkJhdGNoU2VhcmNoRGF0YU9i",
-            "amVjdHNSZXNwb25zZRJNCgdyZXN1bHRzGAEgAygLMjcuZ29vZ2xlLmNsb3Vk",
-            "LnZlY3RvcnNlYXJjaC52MS5TZWFyY2hEYXRhT2JqZWN0c1Jlc3BvbnNlQgPg",
-            "QQMqQgoRQWdncmVnYXRpb25NZXRob2QSIgoeQUdHUkVHQVRJT05fTUVUSE9E",
-            "X1VOU1BFQ0lGSUVEEAASCQoFQ09VTlQQATLmBwoXRGF0YU9iamVjdFNlYXJj",
-            "aFNlcnZpY2US1QEKEVNlYXJjaERhdGFPYmplY3RzEjYuZ29vZ2xlLmNsb3Vk",
-            "LnZlY3RvcnNlYXJjaC52MS5TZWFyY2hEYXRhT2JqZWN0c1JlcXVlc3QaNy5n",
-            "b29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLlNlYXJjaERhdGFPYmplY3Rz",
-            "UmVzcG9uc2UiT4LT5JMCSSJEL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9jb2xsZWN0aW9ucy8qfS9kYXRhT2JqZWN0czpzZWFyY2g6ASoS",
-            "0QEKEFF1ZXJ5RGF0YU9iamVjdHMSNS5nb29nbGUuY2xvdWQudmVjdG9yc2Vh",
-            "cmNoLnYxLlF1ZXJ5RGF0YU9iamVjdHNSZXF1ZXN0GjYuZ29vZ2xlLmNsb3Vk",
-            "LnZlY3RvcnNlYXJjaC52MS5RdWVyeURhdGFPYmplY3RzUmVzcG9uc2UiToLT",
-            "5JMCSCJDL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xs",
-            "ZWN0aW9ucy8qfS9kYXRhT2JqZWN0czpxdWVyeToBKhLhAQoUQWdncmVnYXRl",
-            "RGF0YU9iamVjdHMSOS5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLkFn",
-            "Z3JlZ2F0ZURhdGFPYmplY3RzUmVxdWVzdBo6Lmdvb2dsZS5jbG91ZC52ZWN0",
-            "b3JzZWFyY2gudjEuQWdncmVnYXRlRGF0YU9iamVjdHNSZXNwb25zZSJSgtPk",
-            "kwJMIkcvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxl",
-            "Y3Rpb25zLyp9L2RhdGFPYmplY3RzOmFnZ3JlZ2F0ZToBKhLpAQoWQmF0Y2hT",
-            "ZWFyY2hEYXRhT2JqZWN0cxI7Lmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gu",
-            "djEuQmF0Y2hTZWFyY2hEYXRhT2JqZWN0c1JlcXVlc3QaPC5nb29nbGUuY2xv",
-            "dWQudmVjdG9yc2VhcmNoLnYxLkJhdGNoU2VhcmNoRGF0YU9iamVjdHNSZXNw",
-            "b25zZSJUgtPkkwJOIkkvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2NvbGxlY3Rpb25zLyp9L2RhdGFPYmplY3RzOmJhdGNoU2VhcmNoOgEq",
-            "Gk/KQRt2ZWN0b3JzZWFyY2guZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQugBCiBjb20u",
-            "Z29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MUIcRGF0YU9iamVjdFNlYXJj",
-            "aFNlcnZpY2VQcm90b1ABWkRjbG91ZC5nb29nbGUuY29tL2dvL3ZlY3RvcnNl",
-            "YXJjaC9hcGl2MS92ZWN0b3JzZWFyY2hwYjt2ZWN0b3JzZWFyY2hwYqoCHEdv",
-            "b2dsZS5DbG91ZC5WZWN0b3JTZWFyY2guVjHKAhxHb29nbGVcQ2xvdWRcVmVj",
-            "dG9yU2VhcmNoXFYx6gIfR29vZ2xlOjpDbG91ZDo6VmVjdG9yU2VhcmNoOjpW",
-            "MWIGcHJvdG8z"));
+            "c0ID4EEBEhIKBXRvcF9rGAMgASgFQgPgQQEiqwEKBlJhbmtlchJBCgNycmYY",
+            "ASABKAsyMi5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYxLlJlY2lwcm9j",
+            "YWxSYW5rRnVzaW9uSAASSAoNdmVydGV4X3JhbmtlchgCIAEoCzIqLmdvb2ds",
+            "ZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuVmVydGV4UmFua2VyQgPgQQFIAUII",
+            "CgZyYW5rZXJCCgoIcmVyYW5rZXIiLAoUUmVjaXByb2NhbFJhbmtGdXNpb24S",
+            "FAoHd2VpZ2h0cxgBIAMoAUID4EECIv4BCgxWZXJ0ZXhSYW5rZXISVQoQdGV4",
+            "dF9yZWNvcmRfc3BlYxgGIAEoCzI5Lmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFy",
+            "Y2gudjEuVmVydGV4UmFua2VyLlRleHRSZWNvcmRTcGVjSAASEgoFbW9kZWwY",
+            "BCABKAlCA+BBAhISCgV0b3BfbhgFIAEoBUID4EECGmAKDlRleHRSZWNvcmRT",
+            "cGVjEhIKBXF1ZXJ5GAEgASgJQgPgQQISGwoOdGl0bGVfdGVtcGxhdGUYAiAB",
+            "KAlCA+BBARIdChBjb250ZW50X3RlbXBsYXRlGAMgASgJQgPgQQFCDQoLcmVj",
+            "b3JkX3NwZWMibwoeQmF0Y2hTZWFyY2hEYXRhT2JqZWN0c1Jlc3BvbnNlEk0K",
+            "B3Jlc3VsdHMYASADKAsyNy5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYx",
+            "LlNlYXJjaERhdGFPYmplY3RzUmVzcG9uc2VCA+BBAypCChFBZ2dyZWdhdGlv",
+            "bk1ldGhvZBIiCh5BR0dSRUdBVElPTl9NRVRIT0RfVU5TUEVDSUZJRUQQABIJ",
+            "CgVDT1VOVBABMuYHChdEYXRhT2JqZWN0U2VhcmNoU2VydmljZRLVAQoRU2Vh",
+            "cmNoRGF0YU9iamVjdHMSNi5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYx",
+            "LlNlYXJjaERhdGFPYmplY3RzUmVxdWVzdBo3Lmdvb2dsZS5jbG91ZC52ZWN0",
+            "b3JzZWFyY2gudjEuU2VhcmNoRGF0YU9iamVjdHNSZXNwb25zZSJPgtPkkwJJ",
+            "IkQvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rp",
+            "b25zLyp9L2RhdGFPYmplY3RzOnNlYXJjaDoBKhLRAQoQUXVlcnlEYXRhT2Jq",
+            "ZWN0cxI1Lmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuUXVlcnlEYXRh",
+            "T2JqZWN0c1JlcXVlc3QaNi5nb29nbGUuY2xvdWQudmVjdG9yc2VhcmNoLnYx",
+            "LlF1ZXJ5RGF0YU9iamVjdHNSZXNwb25zZSJOgtPkkwJIIkMvdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyp9L2RhdGFP",
+            "YmplY3RzOnF1ZXJ5OgEqEuEBChRBZ2dyZWdhdGVEYXRhT2JqZWN0cxI5Lmdv",
+            "b2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEuQWdncmVnYXRlRGF0YU9iamVj",
+            "dHNSZXF1ZXN0GjouZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5BZ2dy",
+            "ZWdhdGVEYXRhT2JqZWN0c1Jlc3BvbnNlIlKC0+STAkwiRy92MS97cGFyZW50",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMvKn0vZGF0YU9i",
+            "amVjdHM6YWdncmVnYXRlOgEqEukBChZCYXRjaFNlYXJjaERhdGFPYmplY3Rz",
+            "EjsuZ29vZ2xlLmNsb3VkLnZlY3RvcnNlYXJjaC52MS5CYXRjaFNlYXJjaERh",
+            "dGFPYmplY3RzUmVxdWVzdBo8Lmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gu",
+            "djEuQmF0Y2hTZWFyY2hEYXRhT2JqZWN0c1Jlc3BvbnNlIlSC0+STAk4iSS92",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovY29sbGVjdGlvbnMv",
+            "Kn0vZGF0YU9iamVjdHM6YmF0Y2hTZWFyY2g6ASoaT8pBG3ZlY3RvcnNlYXJj",
+            "aC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
+            "L2F1dGgvY2xvdWQtcGxhdGZvcm1C6AEKIGNvbS5nb29nbGUuY2xvdWQudmVj",
+            "dG9yc2VhcmNoLnYxQhxEYXRhT2JqZWN0U2VhcmNoU2VydmljZVByb3RvUAFa",
+            "RGNsb3VkLmdvb2dsZS5jb20vZ28vdmVjdG9yc2VhcmNoL2FwaXYxL3ZlY3Rv",
+            "cnNlYXJjaHBiO3ZlY3RvcnNlYXJjaHBiqgIcR29vZ2xlLkNsb3VkLlZlY3Rv",
+            "clNlYXJjaC5WMcoCHEdvb2dsZVxDbG91ZFxWZWN0b3JTZWFyY2hcVjHqAh9H",
+            "b29nbGU6OkNsb3VkOjpWZWN0b3JTZWFyY2g6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.VectorSearch.V1.CommonReflection.Descriptor, global::Google.Cloud.VectorSearch.V1.DataObjectReflection.Descriptor, global::Google.Cloud.VectorSearch.V1.EmbeddingConfigReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.VectorSearch.V1.AggregationMethod), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -162,8 +169,9 @@ namespace Google.Cloud.VectorSearch.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.QueryDataObjectsRequest), global::Google.Cloud.VectorSearch.V1.QueryDataObjectsRequest.Parser, new[]{ "Parent", "Filter", "OutputFields", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.QueryDataObjectsResponse), global::Google.Cloud.VectorSearch.V1.QueryDataObjectsResponse.Parser, new[]{ "DataObjects", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.BatchSearchDataObjectsRequest), global::Google.Cloud.VectorSearch.V1.BatchSearchDataObjectsRequest.Parser, new[]{ "Parent", "Searches", "Combine" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.BatchSearchDataObjectsRequest.Types.CombineResultsOptions), global::Google.Cloud.VectorSearch.V1.BatchSearchDataObjectsRequest.Types.CombineResultsOptions.Parser, new[]{ "Ranker", "OutputFields", "TopK" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.Ranker), global::Google.Cloud.VectorSearch.V1.Ranker.Parser, new[]{ "Rrf" }, new[]{ "Ranker" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.Ranker), global::Google.Cloud.VectorSearch.V1.Ranker.Parser, new[]{ "Rrf", "VertexRanker" }, new[]{ "Ranker", "Reranker" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.ReciprocalRankFusion), global::Google.Cloud.VectorSearch.V1.ReciprocalRankFusion.Parser, new[]{ "Weights" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.VertexRanker), global::Google.Cloud.VectorSearch.V1.VertexRanker.Parser, new[]{ "TextRecordSpec", "Model", "TopN" }, new[]{ "RecordSpec" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.VertexRanker.Types.TextRecordSpec), global::Google.Cloud.VectorSearch.V1.VertexRanker.Types.TextRecordSpec.Parser, new[]{ "Query", "TitleTemplate", "ContentTemplate" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VectorSearch.V1.BatchSearchDataObjectsResponse), global::Google.Cloud.VectorSearch.V1.BatchSearchDataObjectsResponse.Parser, new[]{ "Results" }, null, null, null, null)
           }));
     }
@@ -5703,6 +5711,12 @@ namespace Google.Cloud.VectorSearch.V1 {
           break;
       }
 
+      switch (other.RerankerCase) {
+        case RerankerOneofCase.VertexRanker:
+          VertexRanker = other.VertexRanker.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5727,6 +5741,21 @@ namespace Google.Cloud.VectorSearch.V1 {
       }
     }
 
+    /// <summary>Field number for the "vertex_ranker" field.</summary>
+    public const int VertexRankerFieldNumber = 2;
+    /// <summary>
+    /// Optional. Vertex AI ranking.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VectorSearch.V1.VertexRanker VertexRanker {
+      get { return rerankerCase_ == RerankerOneofCase.VertexRanker ? (global::Google.Cloud.VectorSearch.V1.VertexRanker) reranker_ : null; }
+      set {
+        reranker_ = value;
+        rerankerCase_ = value == null ? RerankerOneofCase.None : RerankerOneofCase.VertexRanker;
+      }
+    }
+
     private object ranker_;
     /// <summary>Enum of possible cases for the "ranker" oneof.</summary>
     public enum RankerOneofCase {
@@ -5747,6 +5776,26 @@ namespace Google.Cloud.VectorSearch.V1 {
       ranker_ = null;
     }
 
+    private object reranker_;
+    /// <summary>Enum of possible cases for the "reranker" oneof.</summary>
+    public enum RerankerOneofCase {
+      None = 0,
+      VertexRanker = 2,
+    }
+    private RerankerOneofCase rerankerCase_ = RerankerOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RerankerOneofCase RerankerCase {
+      get { return rerankerCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReranker() {
+      rerankerCase_ = RerankerOneofCase.None;
+      reranker_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5763,7 +5812,9 @@ namespace Google.Cloud.VectorSearch.V1 {
         return true;
       }
       if (!object.Equals(Rrf, other.Rrf)) return false;
+      if (!object.Equals(VertexRanker, other.VertexRanker)) return false;
       if (RankerCase != other.RankerCase) return false;
+      if (RerankerCase != other.RerankerCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5772,7 +5823,9 @@ namespace Google.Cloud.VectorSearch.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (rankerCase_ == RankerOneofCase.Rrf) hash ^= Rrf.GetHashCode();
+      if (rerankerCase_ == RerankerOneofCase.VertexRanker) hash ^= VertexRanker.GetHashCode();
       hash ^= (int) rankerCase_;
+      hash ^= (int) rerankerCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5795,6 +5848,10 @@ namespace Google.Cloud.VectorSearch.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Rrf);
       }
+      if (rerankerCase_ == RerankerOneofCase.VertexRanker) {
+        output.WriteRawTag(18);
+        output.WriteMessage(VertexRanker);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5809,6 +5866,10 @@ namespace Google.Cloud.VectorSearch.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Rrf);
       }
+      if (rerankerCase_ == RerankerOneofCase.VertexRanker) {
+        output.WriteRawTag(18);
+        output.WriteMessage(VertexRanker);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5821,6 +5882,9 @@ namespace Google.Cloud.VectorSearch.V1 {
       int size = 0;
       if (rankerCase_ == RankerOneofCase.Rrf) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rrf);
+      }
+      if (rerankerCase_ == RerankerOneofCase.VertexRanker) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VertexRanker);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5840,6 +5904,15 @@ namespace Google.Cloud.VectorSearch.V1 {
             Rrf = new global::Google.Cloud.VectorSearch.V1.ReciprocalRankFusion();
           }
           Rrf.MergeFrom(other.Rrf);
+          break;
+      }
+
+      switch (other.RerankerCase) {
+        case RerankerOneofCase.VertexRanker:
+          if (VertexRanker == null) {
+            VertexRanker = new global::Google.Cloud.VectorSearch.V1.VertexRanker();
+          }
+          VertexRanker.MergeFrom(other.VertexRanker);
           break;
       }
 
@@ -5871,6 +5944,15 @@ namespace Google.Cloud.VectorSearch.V1 {
             Rrf = subBuilder;
             break;
           }
+          case 18: {
+            global::Google.Cloud.VectorSearch.V1.VertexRanker subBuilder = new global::Google.Cloud.VectorSearch.V1.VertexRanker();
+            if (rerankerCase_ == RerankerOneofCase.VertexRanker) {
+              subBuilder.MergeFrom(VertexRanker);
+            }
+            input.ReadMessage(subBuilder);
+            VertexRanker = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -5897,6 +5979,15 @@ namespace Google.Cloud.VectorSearch.V1 {
             }
             input.ReadMessage(subBuilder);
             Rrf = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.VectorSearch.V1.VertexRanker subBuilder = new global::Google.Cloud.VectorSearch.V1.VertexRanker();
+            if (rerankerCase_ == RerankerOneofCase.VertexRanker) {
+              subBuilder.MergeFrom(VertexRanker);
+            }
+            input.ReadMessage(subBuilder);
+            VertexRanker = subBuilder;
             break;
           }
         }
@@ -6102,6 +6193,630 @@ namespace Google.Cloud.VectorSearch.V1 {
   }
 
   /// <summary>
+  /// Defines a ranker using the Vertex AI ranking service.
+  /// See https://cloud.google.com/generative-ai-app-builder/docs/ranking for
+  /// details.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VertexRanker : pb::IMessage<VertexRanker>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VertexRanker> _parser = new pb::MessageParser<VertexRanker>(() => new VertexRanker());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VertexRanker> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VertexRanker() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VertexRanker(VertexRanker other) : this() {
+      model_ = other.model_;
+      topN_ = other.topN_;
+      switch (other.RecordSpecCase) {
+        case RecordSpecOneofCase.TextRecordSpec:
+          TextRecordSpec = other.TextRecordSpec.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VertexRanker Clone() {
+      return new VertexRanker(this);
+    }
+
+    /// <summary>Field number for the "text_record_spec" field.</summary>
+    public const int TextRecordSpecFieldNumber = 6;
+    /// <summary>
+    /// The record spec for text search.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VectorSearch.V1.VertexRanker.Types.TextRecordSpec TextRecordSpec {
+      get { return recordSpecCase_ == RecordSpecOneofCase.TextRecordSpec ? (global::Google.Cloud.VectorSearch.V1.VertexRanker.Types.TextRecordSpec) recordSpec_ : null; }
+      set {
+        recordSpec_ = value;
+        recordSpecCase_ = value == null ? RecordSpecOneofCase.None : RecordSpecOneofCase.TextRecordSpec;
+      }
+    }
+
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 4;
+    private string model_ = "";
+    /// <summary>
+    /// Required. The model used for ranking documents. The list of available
+    /// models is described in
+    /// https://docs.cloud.google.com/generative-ai-app-builder/docs/ranking#models.
+    /// Currently, only `semantic-ranker-fast@latest` is supported.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Model {
+      get { return model_; }
+      set {
+        model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "top_n" field.</summary>
+    public const int TopNFieldNumber = 5;
+    private int topN_;
+    /// <summary>
+    /// Required. The number of documents to be processed for ranking.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TopN {
+      get { return topN_; }
+      set {
+        topN_ = value;
+      }
+    }
+
+    private object recordSpec_;
+    /// <summary>Enum of possible cases for the "record_spec" oneof.</summary>
+    public enum RecordSpecOneofCase {
+      None = 0,
+      TextRecordSpec = 6,
+    }
+    private RecordSpecOneofCase recordSpecCase_ = RecordSpecOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RecordSpecOneofCase RecordSpecCase {
+      get { return recordSpecCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRecordSpec() {
+      recordSpecCase_ = RecordSpecOneofCase.None;
+      recordSpec_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VertexRanker);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VertexRanker other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(TextRecordSpec, other.TextRecordSpec)) return false;
+      if (Model != other.Model) return false;
+      if (TopN != other.TopN) return false;
+      if (RecordSpecCase != other.RecordSpecCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (recordSpecCase_ == RecordSpecOneofCase.TextRecordSpec) hash ^= TextRecordSpec.GetHashCode();
+      if (Model.Length != 0) hash ^= Model.GetHashCode();
+      if (TopN != 0) hash ^= TopN.GetHashCode();
+      hash ^= (int) recordSpecCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Model.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Model);
+      }
+      if (TopN != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(TopN);
+      }
+      if (recordSpecCase_ == RecordSpecOneofCase.TextRecordSpec) {
+        output.WriteRawTag(50);
+        output.WriteMessage(TextRecordSpec);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Model.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Model);
+      }
+      if (TopN != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(TopN);
+      }
+      if (recordSpecCase_ == RecordSpecOneofCase.TextRecordSpec) {
+        output.WriteRawTag(50);
+        output.WriteMessage(TextRecordSpec);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (recordSpecCase_ == RecordSpecOneofCase.TextRecordSpec) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextRecordSpec);
+      }
+      if (Model.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
+      }
+      if (TopN != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TopN);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VertexRanker other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Model.Length != 0) {
+        Model = other.Model;
+      }
+      if (other.TopN != 0) {
+        TopN = other.TopN;
+      }
+      switch (other.RecordSpecCase) {
+        case RecordSpecOneofCase.TextRecordSpec:
+          if (TextRecordSpec == null) {
+            TextRecordSpec = new global::Google.Cloud.VectorSearch.V1.VertexRanker.Types.TextRecordSpec();
+          }
+          TextRecordSpec.MergeFrom(other.TextRecordSpec);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 34: {
+            Model = input.ReadString();
+            break;
+          }
+          case 40: {
+            TopN = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.VectorSearch.V1.VertexRanker.Types.TextRecordSpec subBuilder = new global::Google.Cloud.VectorSearch.V1.VertexRanker.Types.TextRecordSpec();
+            if (recordSpecCase_ == RecordSpecOneofCase.TextRecordSpec) {
+              subBuilder.MergeFrom(TextRecordSpec);
+            }
+            input.ReadMessage(subBuilder);
+            TextRecordSpec = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 34: {
+            Model = input.ReadString();
+            break;
+          }
+          case 40: {
+            TopN = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.VectorSearch.V1.VertexRanker.Types.TextRecordSpec subBuilder = new global::Google.Cloud.VectorSearch.V1.VertexRanker.Types.TextRecordSpec();
+            if (recordSpecCase_ == RecordSpecOneofCase.TextRecordSpec) {
+              subBuilder.MergeFrom(TextRecordSpec);
+            }
+            input.ReadMessage(subBuilder);
+            TextRecordSpec = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the VertexRanker message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The record spec for text search.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class TextRecordSpec : pb::IMessage<TextRecordSpec>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TextRecordSpec> _parser = new pb::MessageParser<TextRecordSpec>(() => new TextRecordSpec());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TextRecordSpec> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.VectorSearch.V1.VertexRanker.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TextRecordSpec() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TextRecordSpec(TextRecordSpec other) : this() {
+          query_ = other.query_;
+          titleTemplate_ = other.titleTemplate_;
+          contentTemplate_ = other.contentTemplate_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TextRecordSpec Clone() {
+          return new TextRecordSpec(this);
+        }
+
+        /// <summary>Field number for the "query" field.</summary>
+        public const int QueryFieldNumber = 1;
+        private string query_ = "";
+        /// <summary>
+        /// Required. The query against which the records are ranked and scored.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Query {
+          get { return query_; }
+          set {
+            query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "title_template" field.</summary>
+        public const int TitleTemplateFieldNumber = 2;
+        private string titleTemplate_ = "";
+        /// <summary>
+        /// Optional. The template used to generate the record's title.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string TitleTemplate {
+          get { return titleTemplate_; }
+          set {
+            titleTemplate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "content_template" field.</summary>
+        public const int ContentTemplateFieldNumber = 3;
+        private string contentTemplate_ = "";
+        /// <summary>
+        /// Optional. The template used to generate the record's content.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ContentTemplate {
+          get { return contentTemplate_; }
+          set {
+            contentTemplate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TextRecordSpec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TextRecordSpec other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Query != other.Query) return false;
+          if (TitleTemplate != other.TitleTemplate) return false;
+          if (ContentTemplate != other.ContentTemplate) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Query.Length != 0) hash ^= Query.GetHashCode();
+          if (TitleTemplate.Length != 0) hash ^= TitleTemplate.GetHashCode();
+          if (ContentTemplate.Length != 0) hash ^= ContentTemplate.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Query.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Query);
+          }
+          if (TitleTemplate.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(TitleTemplate);
+          }
+          if (ContentTemplate.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ContentTemplate);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Query.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Query);
+          }
+          if (TitleTemplate.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(TitleTemplate);
+          }
+          if (ContentTemplate.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ContentTemplate);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Query.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Query);
+          }
+          if (TitleTemplate.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(TitleTemplate);
+          }
+          if (ContentTemplate.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ContentTemplate);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TextRecordSpec other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Query.Length != 0) {
+            Query = other.Query;
+          }
+          if (other.TitleTemplate.Length != 0) {
+            TitleTemplate = other.TitleTemplate;
+          }
+          if (other.ContentTemplate.Length != 0) {
+            ContentTemplate = other.ContentTemplate;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Query = input.ReadString();
+                break;
+              }
+              case 18: {
+                TitleTemplate = input.ReadString();
+                break;
+              }
+              case 26: {
+                ContentTemplate = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Query = input.ReadString();
+                break;
+              }
+              case 18: {
+                TitleTemplate = input.ReadString();
+                break;
+              }
+              case 26: {
+                ContentTemplate = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// A response from a batch search operation.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -6119,7 +6834,7 @@ namespace Google.Cloud.VectorSearch.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.VectorSearch.V1.DataObjectSearchServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
