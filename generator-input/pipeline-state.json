@@ -4846,7 +4846,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-08-10T23:07:58.985954671Z",
-            "lastGeneratedCommit": "2ddfb88f3cbe772e170543f725d47a0476532e3b",
+            "lastGeneratedCommit": "a60f0aea57667baefb38c3f3f14079766bbd1bb2",
             "lastReleasedCommit": "2ddfb88f3cbe772e170543f725d47a0476532e3b",
             "apiPaths": [
                 "google/cloud/auditmanager/v1"

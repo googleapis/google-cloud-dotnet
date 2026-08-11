@@ -416,11 +416,19 @@ namespace Google.Cloud.AuditManager.V1
             /// <c>folders/{folder}/locations/{location}/auditScopeReports/{audit_scope_report}</c>.
             /// </summary>
             FolderLocationAuditScopeReport = 2,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>organizations/{organization}/locations/{location}/auditScopeReports/{audit_scope_report}</c>.
+            /// </summary>
+            OrganizationLocationAuditScopeReport = 3,
         }
 
         private static gax::PathTemplate s_projectLocationAuditScopeReport = new gax::PathTemplate("projects/{project}/locations/{location}/auditScopeReports/{audit_scope_report}");
 
         private static gax::PathTemplate s_folderLocationAuditScopeReport = new gax::PathTemplate("folders/{folder}/locations/{location}/auditScopeReports/{audit_scope_report}");
+
+        private static gax::PathTemplate s_organizationLocationAuditScopeReport = new gax::PathTemplate("organizations/{organization}/locations/{location}/auditScopeReports/{audit_scope_report}");
 
         /// <summary>Creates a <see cref="AuditScopeReportName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -452,6 +460,17 @@ namespace Google.Cloud.AuditManager.V1
         /// <returns>A new instance of <see cref="AuditScopeReportName"/> constructed from the provided ids.</returns>
         public static AuditScopeReportName FromFolderLocationAuditScopeReport(string folderId, string locationId, string auditScopeReportId) =>
             new AuditScopeReportName(ResourceNameType.FolderLocationAuditScopeReport, folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), auditScopeReportId: gax::GaxPreconditions.CheckNotNullOrEmpty(auditScopeReportId, nameof(auditScopeReportId)));
+
+        /// <summary>
+        /// Creates a <see cref="AuditScopeReportName"/> with the pattern
+        /// <c>organizations/{organization}/locations/{location}/auditScopeReports/{audit_scope_report}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="auditScopeReportId">The <c>AuditScopeReport</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AuditScopeReportName"/> constructed from the provided ids.</returns>
+        public static AuditScopeReportName FromOrganizationLocationAuditScopeReport(string organizationId, string locationId, string auditScopeReportId) =>
+            new AuditScopeReportName(ResourceNameType.OrganizationLocationAuditScopeReport, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), auditScopeReportId: gax::GaxPreconditions.CheckNotNullOrEmpty(auditScopeReportId, nameof(auditScopeReportId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="AuditScopeReportName"/> with pattern
@@ -496,6 +515,20 @@ namespace Google.Cloud.AuditManager.V1
             s_folderLocationAuditScopeReport.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(auditScopeReportId, nameof(auditScopeReportId)));
 
         /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AuditScopeReportName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/auditScopeReports/{audit_scope_report}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="auditScopeReportId">The <c>AuditScopeReport</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AuditScopeReportName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/auditScopeReports/{audit_scope_report}</c>.
+        /// </returns>
+        public static string FormatOrganizationLocationAuditScopeReport(string organizationId, string locationId, string auditScopeReportId) =>
+            s_organizationLocationAuditScopeReport.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(auditScopeReportId, nameof(auditScopeReportId)));
+
+        /// <summary>
         /// Parses the given resource name string into a new <see cref="AuditScopeReportName"/> instance.
         /// </summary>
         /// <remarks>
@@ -509,6 +542,11 @@ namespace Google.Cloud.AuditManager.V1
         /// <item>
         /// <description>
         /// <c>folders/{folder}/locations/{location}/auditScopeReports/{audit_scope_report}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/auditScopeReports/{audit_scope_report}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -532,6 +570,11 @@ namespace Google.Cloud.AuditManager.V1
         /// <item>
         /// <description>
         /// <c>folders/{folder}/locations/{location}/auditScopeReports/{audit_scope_report}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/auditScopeReports/{audit_scope_report}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -563,6 +606,11 @@ namespace Google.Cloud.AuditManager.V1
         /// <c>folders/{folder}/locations/{location}/auditScopeReports/{audit_scope_report}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/auditScopeReports/{audit_scope_report}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="auditScopeReportName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -588,6 +636,11 @@ namespace Google.Cloud.AuditManager.V1
         /// <item>
         /// <description>
         /// <c>folders/{folder}/locations/{location}/auditScopeReports/{audit_scope_report}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/auditScopeReports/{audit_scope_report}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -617,6 +670,11 @@ namespace Google.Cloud.AuditManager.V1
                 result = FromFolderLocationAuditScopeReport(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
+            if (s_organizationLocationAuditScopeReport.TryParseName(auditScopeReportName, out resourceName))
+            {
+                result = FromOrganizationLocationAuditScopeReport(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(auditScopeReportName, out gax::UnparsedResourceName unparsedResourceName))
@@ -629,13 +687,14 @@ namespace Google.Cloud.AuditManager.V1
             return false;
         }
 
-        private AuditScopeReportName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string auditScopeReportId = null, string folderId = null, string locationId = null, string projectId = null)
+        private AuditScopeReportName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string auditScopeReportId = null, string folderId = null, string locationId = null, string organizationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             AuditScopeReportId = auditScopeReportId;
             FolderId = folderId;
             LocationId = locationId;
+            OrganizationId = organizationId;
             ProjectId = projectId;
         }
 
@@ -676,6 +735,12 @@ namespace Google.Cloud.AuditManager.V1
         public string LocationId { get; }
 
         /// <summary>
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
         /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
@@ -692,6 +757,7 @@ namespace Google.Cloud.AuditManager.V1
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocationAuditScopeReport: return s_projectLocationAuditScopeReport.Expand(ProjectId, LocationId, AuditScopeReportId);
                 case ResourceNameType.FolderLocationAuditScopeReport: return s_folderLocationAuditScopeReport.Expand(FolderId, LocationId, AuditScopeReportId);
+                case ResourceNameType.OrganizationLocationAuditScopeReport: return s_organizationLocationAuditScopeReport.Expand(OrganizationId, LocationId, AuditScopeReportId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -1181,11 +1247,19 @@ namespace Google.Cloud.AuditManager.V1
             /// A resource name with pattern <c>folders/{folder}/locations/{location}/auditReports/{audit_report}</c>.
             /// </summary>
             FolderLocationAuditReport = 2,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>organizations/{organization}/locations/{location}/auditReports/{audit_report}</c>.
+            /// </summary>
+            OrganizationLocationAuditReport = 3,
         }
 
         private static gax::PathTemplate s_projectLocationAuditReport = new gax::PathTemplate("projects/{project}/locations/{location}/auditReports/{audit_report}");
 
         private static gax::PathTemplate s_folderLocationAuditReport = new gax::PathTemplate("folders/{folder}/locations/{location}/auditReports/{audit_report}");
+
+        private static gax::PathTemplate s_organizationLocationAuditReport = new gax::PathTemplate("organizations/{organization}/locations/{location}/auditReports/{audit_report}");
 
         /// <summary>Creates a <see cref="AuditReportName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -1217,6 +1291,17 @@ namespace Google.Cloud.AuditManager.V1
         /// <returns>A new instance of <see cref="AuditReportName"/> constructed from the provided ids.</returns>
         public static AuditReportName FromFolderLocationAuditReport(string folderId, string locationId, string auditReportId) =>
             new AuditReportName(ResourceNameType.FolderLocationAuditReport, folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), auditReportId: gax::GaxPreconditions.CheckNotNullOrEmpty(auditReportId, nameof(auditReportId)));
+
+        /// <summary>
+        /// Creates a <see cref="AuditReportName"/> with the pattern
+        /// <c>organizations/{organization}/locations/{location}/auditReports/{audit_report}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="auditReportId">The <c>AuditReport</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AuditReportName"/> constructed from the provided ids.</returns>
+        public static AuditReportName FromOrganizationLocationAuditReport(string organizationId, string locationId, string auditReportId) =>
+            new AuditReportName(ResourceNameType.OrganizationLocationAuditReport, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), auditReportId: gax::GaxPreconditions.CheckNotNullOrEmpty(auditReportId, nameof(auditReportId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="AuditReportName"/> with pattern
@@ -1260,6 +1345,20 @@ namespace Google.Cloud.AuditManager.V1
         public static string FormatFolderLocationAuditReport(string folderId, string locationId, string auditReportId) =>
             s_folderLocationAuditReport.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(auditReportId, nameof(auditReportId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AuditReportName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/auditReports/{audit_report}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="auditReportId">The <c>AuditReport</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AuditReportName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/auditReports/{audit_report}</c>.
+        /// </returns>
+        public static string FormatOrganizationLocationAuditReport(string organizationId, string locationId, string auditReportId) =>
+            s_organizationLocationAuditReport.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(auditReportId, nameof(auditReportId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="AuditReportName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -1269,6 +1368,11 @@ namespace Google.Cloud.AuditManager.V1
         /// </item>
         /// <item>
         /// <description><c>folders/{folder}/locations/{location}/auditReports/{audit_report}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/auditReports/{audit_report}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// </remarks>
@@ -1288,6 +1392,11 @@ namespace Google.Cloud.AuditManager.V1
         /// </item>
         /// <item>
         /// <description><c>folders/{folder}/locations/{location}/auditReports/{audit_report}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/auditReports/{audit_report}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -1314,6 +1423,11 @@ namespace Google.Cloud.AuditManager.V1
         /// <item>
         /// <description><c>folders/{folder}/locations/{location}/auditReports/{audit_report}</c></description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/auditReports/{audit_report}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="auditReportName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -1336,6 +1450,11 @@ namespace Google.Cloud.AuditManager.V1
         /// </item>
         /// <item>
         /// <description><c>folders/{folder}/locations/{location}/auditReports/{audit_report}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/auditReports/{audit_report}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -1364,6 +1483,11 @@ namespace Google.Cloud.AuditManager.V1
                 result = FromFolderLocationAuditReport(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
+            if (s_organizationLocationAuditReport.TryParseName(auditReportName, out resourceName))
+            {
+                result = FromOrganizationLocationAuditReport(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(auditReportName, out gax::UnparsedResourceName unparsedResourceName))
@@ -1376,13 +1500,14 @@ namespace Google.Cloud.AuditManager.V1
             return false;
         }
 
-        private AuditReportName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string auditReportId = null, string folderId = null, string locationId = null, string projectId = null)
+        private AuditReportName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string auditReportId = null, string folderId = null, string locationId = null, string organizationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             AuditReportId = auditReportId;
             FolderId = folderId;
             LocationId = locationId;
+            OrganizationId = organizationId;
             ProjectId = projectId;
         }
 
@@ -1423,6 +1548,12 @@ namespace Google.Cloud.AuditManager.V1
         public string LocationId { get; }
 
         /// <summary>
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
         /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
@@ -1439,6 +1570,7 @@ namespace Google.Cloud.AuditManager.V1
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocationAuditReport: return s_projectLocationAuditReport.Expand(ProjectId, LocationId, AuditReportId);
                 case ResourceNameType.FolderLocationAuditReport: return s_folderLocationAuditReport.Expand(FolderId, LocationId, AuditReportId);
+                case ResourceNameType.OrganizationLocationAuditReport: return s_organizationLocationAuditReport.Expand(OrganizationId, LocationId, AuditReportId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -2623,6 +2755,24 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
+        /// <see cref="OrganizationLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationLocationName ParentAsOrganizationLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="EnrollmentStatusScopeName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public EnrollmentStatusScopeName ParentAsEnrollmentStatusScopeName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : EnrollmentStatusScopeName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
         /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gax::IResourceName ParentAsResourceName
@@ -2640,6 +2790,14 @@ namespace Google.Cloud.AuditManager.V1
                 if (FolderLocationName.TryParse(Parent, out FolderLocationName folderLocation))
                 {
                     return folderLocation;
+                }
+                if (OrganizationLocationName.TryParse(Parent, out OrganizationLocationName organizationLocation))
+                {
+                    return organizationLocation;
+                }
+                if (EnrollmentStatusScopeName.TryParse(Parent, out EnrollmentStatusScopeName enrollmentStatusScope))
+                {
+                    return enrollmentStatusScope;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }

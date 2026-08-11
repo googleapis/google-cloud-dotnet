@@ -41,7 +41,9 @@ namespace GoogleCSharpSnippets
             string complianceStandard = "";
             GenerateAuditReportRequest.Types.AuditReportFormat reportFormat = GenerateAuditReportRequest.Types.AuditReportFormat.Unspecified;
             // Make the request
+#pragma warning disable CS0612
             Operation<AuditReport, OperationMetadata> response = await auditManagerClient.GenerateAuditReportAsync(scope, gcsUri, complianceStandard, reportFormat);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AuditReport, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();

@@ -287,11 +287,13 @@ namespace Google.Cloud.AuditManager.V1
         /// <remarks>
         /// The default AuditManager scopes are:
         /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/cloud-auditmanager</description></item>
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
+            "https://www.googleapis.com/auth/cloud-auditmanager",
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
@@ -359,11 +361,11 @@ namespace Google.Cloud.AuditManager.V1
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Enrolls the customer resource(folder/project/organization) to the audit
-        /// manager service by creating the audit managers Service Agent in customers
-        /// workload and granting required permissions to the Service Agent. Please
-        /// note that if enrollment request is made on the already enrolled workload
-        /// then enrollment is executed overriding the existing set of destinations.
+        /// Adds your project, folder, or organization to Audit
+        /// Manager. This method creates the Audit Manager service agent in your
+        /// workload and grants required permissions to the service agent.
+        /// If you make this request on a workload that's already enrolled,
+        /// then this method overrides the existing set of destinations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -372,11 +374,11 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Enrolls the customer resource(folder/project/organization) to the audit
-        /// manager service by creating the audit managers Service Agent in customers
-        /// workload and granting required permissions to the Service Agent. Please
-        /// note that if enrollment request is made on the already enrolled workload
-        /// then enrollment is executed overriding the existing set of destinations.
+        /// Adds your project, folder, or organization to Audit
+        /// Manager. This method creates the Audit Manager service agent in your
+        /// workload and grants required permissions to the service agent.
+        /// If you make this request on a workload that's already enrolled,
+        /// then this method overrides the existing set of destinations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -385,11 +387,11 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Enrolls the customer resource(folder/project/organization) to the audit
-        /// manager service by creating the audit managers Service Agent in customers
-        /// workload and granting required permissions to the Service Agent. Please
-        /// note that if enrollment request is made on the already enrolled workload
-        /// then enrollment is executed overriding the existing set of destinations.
+        /// Adds your project, folder, or organization to Audit
+        /// Manager. This method creates the Audit Manager service agent in your
+        /// workload and grants required permissions to the service agent.
+        /// If you make this request on a workload that's already enrolled,
+        /// then this method overrides the existing set of destinations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -398,27 +400,29 @@ namespace Google.Cloud.AuditManager.V1
             EnrollResourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Enrolls the customer resource(folder/project/organization) to the audit
-        /// manager service by creating the audit managers Service Agent in customers
-        /// workload and granting required permissions to the Service Agent. Please
-        /// note that if enrollment request is made on the already enrolled workload
-        /// then enrollment is executed overriding the existing set of destinations.
+        /// Adds your project, folder, or organization to Audit
+        /// Manager. This method creates the Audit Manager service agent in your
+        /// workload and grants required permissions to the service agent.
+        /// If you make this request on a workload that's already enrolled,
+        /// then this method overrides the existing set of destinations.
         /// </summary>
         /// <param name="scope">
-        /// Required. The resource to be enrolled to the audit manager. Scope format
-        /// should be resource_type/resource_identifier Eg:
-        /// projects/{project}/locations/{location},
-        /// folders/{folder}/locations/{location}
-        /// organizations/{organization}/locations/{location}
+        /// Required. Organization, folder, or project to enroll in Audit Manager, in
+        /// one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="destinations">
-        /// Required. List of destination among which customer can choose to upload
-        /// their reports during the audit process. While enrolling at a
-        /// organization/folder level, customer can choose Cloud storage bucket in any
-        /// project. If the audit is triggered at project level using the service agent
-        /// at organization/folder level, all the destination options associated with
-        /// respective organization/folder level service agent will be available to
-        /// auditing projects.
+        /// Required. Cloud Storage buckets that you can upload your audit reports to
+        /// during the audit process.
+        /// 
+        /// When you enroll an organization or folder, you can choose a Cloud Storage
+        /// bucket from any project in the organization or folder. If you run an audit
+        /// at the project level using the service agent at the organization or folder
+        /// level, all the buckets that are associated with the service agent are
+        /// available.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -433,27 +437,29 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Enrolls the customer resource(folder/project/organization) to the audit
-        /// manager service by creating the audit managers Service Agent in customers
-        /// workload and granting required permissions to the Service Agent. Please
-        /// note that if enrollment request is made on the already enrolled workload
-        /// then enrollment is executed overriding the existing set of destinations.
+        /// Adds your project, folder, or organization to Audit
+        /// Manager. This method creates the Audit Manager service agent in your
+        /// workload and grants required permissions to the service agent.
+        /// If you make this request on a workload that's already enrolled,
+        /// then this method overrides the existing set of destinations.
         /// </summary>
         /// <param name="scope">
-        /// Required. The resource to be enrolled to the audit manager. Scope format
-        /// should be resource_type/resource_identifier Eg:
-        /// projects/{project}/locations/{location},
-        /// folders/{folder}/locations/{location}
-        /// organizations/{organization}/locations/{location}
+        /// Required. Organization, folder, or project to enroll in Audit Manager, in
+        /// one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="destinations">
-        /// Required. List of destination among which customer can choose to upload
-        /// their reports during the audit process. While enrolling at a
-        /// organization/folder level, customer can choose Cloud storage bucket in any
-        /// project. If the audit is triggered at project level using the service agent
-        /// at organization/folder level, all the destination options associated with
-        /// respective organization/folder level service agent will be available to
-        /// auditing projects.
+        /// Required. Cloud Storage buckets that you can upload your audit reports to
+        /// during the audit process.
+        /// 
+        /// When you enroll an organization or folder, you can choose a Cloud Storage
+        /// bucket from any project in the organization or folder. If you run an audit
+        /// at the project level using the service agent at the organization or folder
+        /// level, all the buckets that are associated with the service agent are
+        /// available.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -468,27 +474,29 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Enrolls the customer resource(folder/project/organization) to the audit
-        /// manager service by creating the audit managers Service Agent in customers
-        /// workload and granting required permissions to the Service Agent. Please
-        /// note that if enrollment request is made on the already enrolled workload
-        /// then enrollment is executed overriding the existing set of destinations.
+        /// Adds your project, folder, or organization to Audit
+        /// Manager. This method creates the Audit Manager service agent in your
+        /// workload and grants required permissions to the service agent.
+        /// If you make this request on a workload that's already enrolled,
+        /// then this method overrides the existing set of destinations.
         /// </summary>
         /// <param name="scope">
-        /// Required. The resource to be enrolled to the audit manager. Scope format
-        /// should be resource_type/resource_identifier Eg:
-        /// projects/{project}/locations/{location},
-        /// folders/{folder}/locations/{location}
-        /// organizations/{organization}/locations/{location}
+        /// Required. Organization, folder, or project to enroll in Audit Manager, in
+        /// one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="destinations">
-        /// Required. List of destination among which customer can choose to upload
-        /// their reports during the audit process. While enrolling at a
-        /// organization/folder level, customer can choose Cloud storage bucket in any
-        /// project. If the audit is triggered at project level using the service agent
-        /// at organization/folder level, all the destination options associated with
-        /// respective organization/folder level service agent will be available to
-        /// auditing projects.
+        /// Required. Cloud Storage buckets that you can upload your audit reports to
+        /// during the audit process.
+        /// 
+        /// When you enroll an organization or folder, you can choose a Cloud Storage
+        /// bucket from any project in the organization or folder. If you run an audit
+        /// at the project level using the service agent at the organization or folder
+        /// level, all the buckets that are associated with the service agent are
+        /// available.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -496,9 +504,14 @@ namespace Google.Cloud.AuditManager.V1
             EnrollResourceAsync(scope, destinations, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Generates a demo report highlighting different responsibilities
-        /// (Google/Customer/ shared) required to be fulfilled for the customer's
-        /// workload to be compliant with the given standard.
+        /// Generates an audit scope report for the given standard.
+        /// 
+        /// The report includes the following:
+        /// 
+        /// * The technical attributes and constraints that Audit Manager uses to
+        /// verify your compliance with a framework.
+        /// * A list of Google Cloud services and resources that are within the
+        /// scope of the framework.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -507,9 +520,14 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Generates a demo report highlighting different responsibilities
-        /// (Google/Customer/ shared) required to be fulfilled for the customer's
-        /// workload to be compliant with the given standard.
+        /// Generates an audit scope report for the given standard.
+        /// 
+        /// The report includes the following:
+        /// 
+        /// * The technical attributes and constraints that Audit Manager uses to
+        /// verify your compliance with a framework.
+        /// * A list of Google Cloud services and resources that are within the
+        /// scope of the framework.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -518,9 +536,14 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Generates a demo report highlighting different responsibilities
-        /// (Google/Customer/ shared) required to be fulfilled for the customer's
-        /// workload to be compliant with the given standard.
+        /// Generates an audit scope report for the given standard.
+        /// 
+        /// The report includes the following:
+        /// 
+        /// * The technical attributes and constraints that Audit Manager uses to
+        /// verify your compliance with a framework.
+        /// * A list of Google Cloud services and resources that are within the
+        /// scope of the framework.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -529,87 +552,118 @@ namespace Google.Cloud.AuditManager.V1
             GenerateAuditScopeReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Generates a demo report highlighting different responsibilities
-        /// (Google/Customer/ shared) required to be fulfilled for the customer's
-        /// workload to be compliant with the given standard.
+        /// Generates an audit scope report for the given standard.
+        /// 
+        /// The report includes the following:
+        /// 
+        /// * The technical attributes and constraints that Audit Manager uses to
+        /// verify your compliance with a framework.
+        /// * A list of Google Cloud services and resources that are within the
+        /// scope of the framework.
         /// </summary>
         /// <param name="scope">
-        /// Required. Scope for which the AuditScopeReport is required. Must be of
-        /// format resource_type/resource_identifier Eg:
-        /// projects/{project}/locations/{location},
-        /// folders/{folder}/locations/{location}
+        /// Required. Project or folder that the audit scope report is generated for,
+        /// in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="complianceStandard">
-        /// Required. Compliance Standard against which the Scope Report must be
-        /// generated. Eg: FEDRAMP_MODERATE
+        /// Optional. Deprecated. The standard (industry or regulatory requirements)
+        /// that the audit scope report is run against.
+        /// 
+        /// Use the `compliance_framework` field instead.
         /// </param>
         /// <param name="reportFormat">
-        /// Required. The format in which the Scope report bytes should be returned.
+        /// Required. Format for the audit scope report.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual AuditScopeReport GenerateAuditScopeReport(string scope, string complianceStandard, GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat reportFormat, gaxgrpc::CallSettings callSettings = null) =>
             GenerateAuditScopeReport(new GenerateAuditScopeReportRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
-                ComplianceStandard = gax::GaxPreconditions.CheckNotNullOrEmpty(complianceStandard, nameof(complianceStandard)),
+                ComplianceStandard = complianceStandard ?? "",
                 ReportFormat = reportFormat,
             }, callSettings);
 
         /// <summary>
-        /// Generates a demo report highlighting different responsibilities
-        /// (Google/Customer/ shared) required to be fulfilled for the customer's
-        /// workload to be compliant with the given standard.
+        /// Generates an audit scope report for the given standard.
+        /// 
+        /// The report includes the following:
+        /// 
+        /// * The technical attributes and constraints that Audit Manager uses to
+        /// verify your compliance with a framework.
+        /// * A list of Google Cloud services and resources that are within the
+        /// scope of the framework.
         /// </summary>
         /// <param name="scope">
-        /// Required. Scope for which the AuditScopeReport is required. Must be of
-        /// format resource_type/resource_identifier Eg:
-        /// projects/{project}/locations/{location},
-        /// folders/{folder}/locations/{location}
+        /// Required. Project or folder that the audit scope report is generated for,
+        /// in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="complianceStandard">
-        /// Required. Compliance Standard against which the Scope Report must be
-        /// generated. Eg: FEDRAMP_MODERATE
+        /// Optional. Deprecated. The standard (industry or regulatory requirements)
+        /// that the audit scope report is run against.
+        /// 
+        /// Use the `compliance_framework` field instead.
         /// </param>
         /// <param name="reportFormat">
-        /// Required. The format in which the Scope report bytes should be returned.
+        /// Required. Format for the audit scope report.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<AuditScopeReport> GenerateAuditScopeReportAsync(string scope, string complianceStandard, GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat reportFormat, gaxgrpc::CallSettings callSettings = null) =>
             GenerateAuditScopeReportAsync(new GenerateAuditScopeReportRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
-                ComplianceStandard = gax::GaxPreconditions.CheckNotNullOrEmpty(complianceStandard, nameof(complianceStandard)),
+                ComplianceStandard = complianceStandard ?? "",
                 ReportFormat = reportFormat,
             }, callSettings);
 
         /// <summary>
-        /// Generates a demo report highlighting different responsibilities
-        /// (Google/Customer/ shared) required to be fulfilled for the customer's
-        /// workload to be compliant with the given standard.
+        /// Generates an audit scope report for the given standard.
+        /// 
+        /// The report includes the following:
+        /// 
+        /// * The technical attributes and constraints that Audit Manager uses to
+        /// verify your compliance with a framework.
+        /// * A list of Google Cloud services and resources that are within the
+        /// scope of the framework.
         /// </summary>
         /// <param name="scope">
-        /// Required. Scope for which the AuditScopeReport is required. Must be of
-        /// format resource_type/resource_identifier Eg:
-        /// projects/{project}/locations/{location},
-        /// folders/{folder}/locations/{location}
+        /// Required. Project or folder that the audit scope report is generated for,
+        /// in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="complianceStandard">
-        /// Required. Compliance Standard against which the Scope Report must be
-        /// generated. Eg: FEDRAMP_MODERATE
+        /// Optional. Deprecated. The standard (industry or regulatory requirements)
+        /// that the audit scope report is run against.
+        /// 
+        /// Use the `compliance_framework` field instead.
         /// </param>
         /// <param name="reportFormat">
-        /// Required. The format in which the Scope report bytes should be returned.
+        /// Required. Format for the audit scope report.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<AuditScopeReport> GenerateAuditScopeReportAsync(string scope, string complianceStandard, GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat reportFormat, st::CancellationToken cancellationToken) =>
             GenerateAuditScopeReportAsync(scope, complianceStandard, reportFormat, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Register the Audit Report generation requests and returns the OperationId
-        /// using which the customer can track the report generation progress.
+        /// Registers audit report generation requests. This method returns the
+        /// operation identifier that you can use to track the report generation
+        /// progress.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -618,8 +672,9 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Register the Audit Report generation requests and returns the OperationId
-        /// using which the customer can track the report generation progress.
+        /// Registers audit report generation requests. This method returns the
+        /// operation identifier that you can use to track the report generation
+        /// progress.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -628,8 +683,9 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Register the Audit Report generation requests and returns the OperationId
-        /// using which the customer can track the report generation progress.
+        /// Registers audit report generation requests. This method returns the
+        /// operation identifier that you can use to track the report generation
+        /// progress.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -665,100 +721,116 @@ namespace Google.Cloud.AuditManager.V1
             lro::Operation<AuditReport, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), GenerateAuditReportOperationsClient, callSettings);
 
         /// <summary>
-        /// Register the Audit Report generation requests and returns the OperationId
-        /// using which the customer can track the report generation progress.
+        /// Registers audit report generation requests. This method returns the
+        /// operation identifier that you can use to track the report generation
+        /// progress.
         /// </summary>
         /// <param name="scope">
-        /// Required. Scope for which the AuditScopeReport is required. Must be of
-        /// format resource_type/resource_identifier Eg:
-        /// projects/{project}/locations/{location},
-        /// folders/{folder}/locations/{location}
+        /// Required. Organization, folder, or project that the audit applies to, in
+        /// one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="gcsUri">
-        /// Destination Cloud storage bucket where report and evidence must be
-        /// uploaded. The Cloud storage bucket provided here must be selected among
-        /// the buckets entered during the enrollment process.
+        /// URL for the Cloud Storage bucket where the report and evidence is
+        /// uploaded. You must select a bucket that was provided during the
+        /// enrollment process.
         /// </param>
         /// <param name="complianceStandard">
-        /// Required. Compliance Standard against which the Scope Report must be
-        /// generated. Eg: FEDRAMP_MODERATE
+        /// Optional. Deprecated. Compliance standard for the audit report.
+        /// 
+        /// Use the `compliance_framework` field instead.
         /// </param>
         /// <param name="reportFormat">
-        /// Required. The format in which the audit report should be created.
+        /// Required. Format for the audit report.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<AuditReport, OperationMetadata> GenerateAuditReport(string scope, string gcsUri, string complianceStandard, GenerateAuditReportRequest.Types.AuditReportFormat reportFormat, gaxgrpc::CallSettings callSettings = null) =>
             GenerateAuditReport(new GenerateAuditReportRequest
             {
                 GcsUri = gcsUri ?? "",
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
-                ComplianceStandard = gax::GaxPreconditions.CheckNotNullOrEmpty(complianceStandard, nameof(complianceStandard)),
+                ComplianceStandard = complianceStandard ?? "",
                 ReportFormat = reportFormat,
             }, callSettings);
 
         /// <summary>
-        /// Register the Audit Report generation requests and returns the OperationId
-        /// using which the customer can track the report generation progress.
+        /// Registers audit report generation requests. This method returns the
+        /// operation identifier that you can use to track the report generation
+        /// progress.
         /// </summary>
         /// <param name="scope">
-        /// Required. Scope for which the AuditScopeReport is required. Must be of
-        /// format resource_type/resource_identifier Eg:
-        /// projects/{project}/locations/{location},
-        /// folders/{folder}/locations/{location}
+        /// Required. Organization, folder, or project that the audit applies to, in
+        /// one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="gcsUri">
-        /// Destination Cloud storage bucket where report and evidence must be
-        /// uploaded. The Cloud storage bucket provided here must be selected among
-        /// the buckets entered during the enrollment process.
+        /// URL for the Cloud Storage bucket where the report and evidence is
+        /// uploaded. You must select a bucket that was provided during the
+        /// enrollment process.
         /// </param>
         /// <param name="complianceStandard">
-        /// Required. Compliance Standard against which the Scope Report must be
-        /// generated. Eg: FEDRAMP_MODERATE
+        /// Optional. Deprecated. Compliance standard for the audit report.
+        /// 
+        /// Use the `compliance_framework` field instead.
         /// </param>
         /// <param name="reportFormat">
-        /// Required. The format in which the audit report should be created.
+        /// Required. Format for the audit report.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AuditReport, OperationMetadata>> GenerateAuditReportAsync(string scope, string gcsUri, string complianceStandard, GenerateAuditReportRequest.Types.AuditReportFormat reportFormat, gaxgrpc::CallSettings callSettings = null) =>
             GenerateAuditReportAsync(new GenerateAuditReportRequest
             {
                 GcsUri = gcsUri ?? "",
                 Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
-                ComplianceStandard = gax::GaxPreconditions.CheckNotNullOrEmpty(complianceStandard, nameof(complianceStandard)),
+                ComplianceStandard = complianceStandard ?? "",
                 ReportFormat = reportFormat,
             }, callSettings);
 
         /// <summary>
-        /// Register the Audit Report generation requests and returns the OperationId
-        /// using which the customer can track the report generation progress.
+        /// Registers audit report generation requests. This method returns the
+        /// operation identifier that you can use to track the report generation
+        /// progress.
         /// </summary>
         /// <param name="scope">
-        /// Required. Scope for which the AuditScopeReport is required. Must be of
-        /// format resource_type/resource_identifier Eg:
-        /// projects/{project}/locations/{location},
-        /// folders/{folder}/locations/{location}
+        /// Required. Organization, folder, or project that the audit applies to, in
+        /// one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="gcsUri">
-        /// Destination Cloud storage bucket where report and evidence must be
-        /// uploaded. The Cloud storage bucket provided here must be selected among
-        /// the buckets entered during the enrollment process.
+        /// URL for the Cloud Storage bucket where the report and evidence is
+        /// uploaded. You must select a bucket that was provided during the
+        /// enrollment process.
         /// </param>
         /// <param name="complianceStandard">
-        /// Required. Compliance Standard against which the Scope Report must be
-        /// generated. Eg: FEDRAMP_MODERATE
+        /// Optional. Deprecated. Compliance standard for the audit report.
+        /// 
+        /// Use the `compliance_framework` field instead.
         /// </param>
         /// <param name="reportFormat">
-        /// Required. The format in which the audit report should be created.
+        /// Required. Format for the audit report.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<AuditReport, OperationMetadata>> GenerateAuditReportAsync(string scope, string gcsUri, string complianceStandard, GenerateAuditReportRequest.Types.AuditReportFormat reportFormat, st::CancellationToken cancellationToken) =>
             GenerateAuditReportAsync(scope, gcsUri, complianceStandard, reportFormat, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists audit reports in the selected parent scope
+        /// Lists the audit reports for the organization, folder, or project that you
+        /// specify as the parent scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -767,7 +839,8 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists audit reports in the selected parent scope
+        /// Lists the audit reports for the organization, folder, or project that you
+        /// specify as the parent scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -776,10 +849,16 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists audit reports in the selected parent scope
+        /// Lists the audit reports for the organization, folder, or project that you
+        /// specify as the parent scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent scope for which to list the reports.
+        /// Required. Parent organization, folder, or project to list reports for,
+        /// in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -809,10 +888,16 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit reports in the selected parent scope
+        /// Lists the audit reports for the organization, folder, or project that you
+        /// specify as the parent scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent scope for which to list the reports.
+        /// Required. Parent organization, folder, or project to list reports for,
+        /// in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -842,10 +927,16 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit reports in the selected parent scope
+        /// Lists the audit reports for the organization, folder, or project that you
+        /// specify as the parent scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent scope for which to list the reports.
+        /// Required. Parent organization, folder, or project to list reports for,
+        /// in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -875,10 +966,16 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit reports in the selected parent scope
+        /// Lists the audit reports for the organization, folder, or project that you
+        /// specify as the parent scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent scope for which to list the reports.
+        /// Required. Parent organization, folder, or project to list reports for,
+        /// in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -908,10 +1005,16 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit reports in the selected parent scope
+        /// Lists the audit reports for the organization, folder, or project that you
+        /// specify as the parent scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent scope for which to list the reports.
+        /// Required. Parent organization, folder, or project to list reports for,
+        /// in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -941,10 +1044,16 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit reports in the selected parent scope
+        /// Lists the audit reports for the organization, folder, or project that you
+        /// specify as the parent scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent scope for which to list the reports.
+        /// Required. Parent organization, folder, or project to list reports for,
+        /// in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -974,7 +1083,163 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Get the overall audit report
+        /// Lists the audit reports for the organization, folder, or project that you
+        /// specify as the parent scope.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent organization, folder, or project to list reports for,
+        /// in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuditReport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuditReportsResponse, AuditReport> ListAuditReports(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuditReportsRequest request = new ListAuditReportsRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuditReports(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the audit reports for the organization, folder, or project that you
+        /// specify as the parent scope.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent organization, folder, or project to list reports for,
+        /// in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuditReport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuditReportsResponse, AuditReport> ListAuditReportsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuditReportsRequest request = new ListAuditReportsRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuditReportsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the audit reports for the organization, folder, or project that you
+        /// specify as the parent scope.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent organization, folder, or project to list reports for,
+        /// in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuditReport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuditReportsResponse, AuditReport> ListAuditReports(EnrollmentStatusScopeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuditReportsRequest request = new ListAuditReportsRequest
+            {
+                ParentAsEnrollmentStatusScopeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuditReports(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the audit reports for the organization, folder, or project that you
+        /// specify as the parent scope.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent organization, folder, or project to list reports for,
+        /// in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuditReport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuditReportsResponse, AuditReport> ListAuditReportsAsync(EnrollmentStatusScopeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuditReportsRequest request = new ListAuditReportsRequest
+            {
+                ParentAsEnrollmentStatusScopeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuditReportsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the full metadata and findings for an audit report.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -983,7 +1248,7 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get the overall audit report
+        /// Gets the full metadata and findings for an audit report.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -992,7 +1257,7 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get the overall audit report
+        /// Gets the full metadata and findings for an audit report.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1001,12 +1266,14 @@ namespace Google.Cloud.AuditManager.V1
             GetAuditReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get the overall audit report
+        /// Gets the full metadata and findings for an audit report.
         /// </summary>
         /// <param name="name">
-        /// Required. Format
-        /// projects/{project}/locations/{location}/auditReports/{audit_report},
-        /// folders/{folder}/locations/{location}/auditReports/{audit_report}
+        /// Required. Name of the audit report, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/auditReports/{audit_report}`
+        /// * `folders/{folder}/locations/{location}/auditReports/{audit_report}`
+        /// * `organizations/{organization}/locations/{location}/auditReports/{audit_report}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1017,12 +1284,14 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get the overall audit report
+        /// Gets the full metadata and findings for an audit report.
         /// </summary>
         /// <param name="name">
-        /// Required. Format
-        /// projects/{project}/locations/{location}/auditReports/{audit_report},
-        /// folders/{folder}/locations/{location}/auditReports/{audit_report}
+        /// Required. Name of the audit report, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/auditReports/{audit_report}`
+        /// * `folders/{folder}/locations/{location}/auditReports/{audit_report}`
+        /// * `organizations/{organization}/locations/{location}/auditReports/{audit_report}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1033,12 +1302,14 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get the overall audit report
+        /// Gets the full metadata and findings for an audit report.
         /// </summary>
         /// <param name="name">
-        /// Required. Format
-        /// projects/{project}/locations/{location}/auditReports/{audit_report},
-        /// folders/{folder}/locations/{location}/auditReports/{audit_report}
+        /// Required. Name of the audit report, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/auditReports/{audit_report}`
+        /// * `folders/{folder}/locations/{location}/auditReports/{audit_report}`
+        /// * `organizations/{organization}/locations/{location}/auditReports/{audit_report}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1046,12 +1317,14 @@ namespace Google.Cloud.AuditManager.V1
             GetAuditReportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get the overall audit report
+        /// Gets the full metadata and findings for an audit report.
         /// </summary>
         /// <param name="name">
-        /// Required. Format
-        /// projects/{project}/locations/{location}/auditReports/{audit_report},
-        /// folders/{folder}/locations/{location}/auditReports/{audit_report}
+        /// Required. Name of the audit report, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/auditReports/{audit_report}`
+        /// * `folders/{folder}/locations/{location}/auditReports/{audit_report}`
+        /// * `organizations/{organization}/locations/{location}/auditReports/{audit_report}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1062,12 +1335,14 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get the overall audit report
+        /// Gets the full metadata and findings for an audit report.
         /// </summary>
         /// <param name="name">
-        /// Required. Format
-        /// projects/{project}/locations/{location}/auditReports/{audit_report},
-        /// folders/{folder}/locations/{location}/auditReports/{audit_report}
+        /// Required. Name of the audit report, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/auditReports/{audit_report}`
+        /// * `folders/{folder}/locations/{location}/auditReports/{audit_report}`
+        /// * `organizations/{organization}/locations/{location}/auditReports/{audit_report}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1078,12 +1353,14 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get the overall audit report
+        /// Gets the full metadata and findings for an audit report.
         /// </summary>
         /// <param name="name">
-        /// Required. Format
-        /// projects/{project}/locations/{location}/auditReports/{audit_report},
-        /// folders/{folder}/locations/{location}/auditReports/{audit_report}
+        /// Required. Name of the audit report, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/auditReports/{audit_report}`
+        /// * `folders/{folder}/locations/{location}/auditReports/{audit_report}`
+        /// * `organizations/{organization}/locations/{location}/auditReports/{audit_report}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1091,7 +1368,7 @@ namespace Google.Cloud.AuditManager.V1
             GetAuditReportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get a resource along with its enrollment status.
+        /// Gets a resource and its enrollment status.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1100,7 +1377,7 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get a resource along with its enrollment status.
+        /// Gets a resource and its enrollment status.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1109,7 +1386,7 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get a resource along with its enrollment status.
+        /// Gets a resource and its enrollment status.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1118,13 +1395,15 @@ namespace Google.Cloud.AuditManager.V1
             GetResourceEnrollmentStatusAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get a resource along with its enrollment status.
+        /// Gets a resource and its enrollment status.
         /// </summary>
         /// <param name="name">
-        /// Required. Format
-        /// folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status},
-        /// projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status},
-        /// organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}
+        /// Required. Name of the resource enrollment status, in one of the following
+        /// formats:
+        /// 
+        /// * `folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+        /// * `projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+        /// * `organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1135,13 +1414,15 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a resource along with its enrollment status.
+        /// Gets a resource and its enrollment status.
         /// </summary>
         /// <param name="name">
-        /// Required. Format
-        /// folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status},
-        /// projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status},
-        /// organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}
+        /// Required. Name of the resource enrollment status, in one of the following
+        /// formats:
+        /// 
+        /// * `folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+        /// * `projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+        /// * `organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1152,13 +1433,15 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a resource along with its enrollment status.
+        /// Gets a resource and its enrollment status.
         /// </summary>
         /// <param name="name">
-        /// Required. Format
-        /// folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status},
-        /// projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status},
-        /// organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}
+        /// Required. Name of the resource enrollment status, in one of the following
+        /// formats:
+        /// 
+        /// * `folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+        /// * `projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+        /// * `organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1166,13 +1449,15 @@ namespace Google.Cloud.AuditManager.V1
             GetResourceEnrollmentStatusAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get a resource along with its enrollment status.
+        /// Gets a resource and its enrollment status.
         /// </summary>
         /// <param name="name">
-        /// Required. Format
-        /// folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status},
-        /// projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status},
-        /// organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}
+        /// Required. Name of the resource enrollment status, in one of the following
+        /// formats:
+        /// 
+        /// * `folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+        /// * `projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+        /// * `organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1183,13 +1468,15 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a resource along with its enrollment status.
+        /// Gets a resource and its enrollment status.
         /// </summary>
         /// <param name="name">
-        /// Required. Format
-        /// folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status},
-        /// projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status},
-        /// organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}
+        /// Required. Name of the resource enrollment status, in one of the following
+        /// formats:
+        /// 
+        /// * `folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+        /// * `projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+        /// * `organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1200,13 +1487,15 @@ namespace Google.Cloud.AuditManager.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a resource along with its enrollment status.
+        /// Gets a resource and its enrollment status.
         /// </summary>
         /// <param name="name">
-        /// Required. Format
-        /// folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status},
-        /// projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status},
-        /// organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}
+        /// Required. Name of the resource enrollment status, in one of the following
+        /// formats:
+        /// 
+        /// * `folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+        /// * `projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+        /// * `organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1214,7 +1503,8 @@ namespace Google.Cloud.AuditManager.V1
             GetResourceEnrollmentStatusAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Fetches all resources under the parent along with their enrollment.
+        /// Lists all the folders and projects in an organization or folder, along with
+        /// their enrollments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1223,7 +1513,8 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Fetches all resources under the parent along with their enrollment.
+        /// Lists all the folders and projects in an organization or folder, along with
+        /// their enrollments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1232,11 +1523,15 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Fetches all resources under the parent along with their enrollment.
+        /// Lists all the folders and projects in an organization or folder, along with
+        /// their enrollments.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent scope for which the list of resources with enrollments
-        /// are required.
+        /// Required. Parent organization or folder to list enrollment statuses for,
+        /// in one of the following formats:
+        /// 
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1266,11 +1561,15 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Fetches all resources under the parent along with their enrollment.
+        /// Lists all the folders and projects in an organization or folder, along with
+        /// their enrollments.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent scope for which the list of resources with enrollments
-        /// are required.
+        /// Required. Parent organization or folder to list enrollment statuses for,
+        /// in one of the following formats:
+        /// 
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1300,11 +1599,15 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Fetches all resources under the parent along with their enrollment.
+        /// Lists all the folders and projects in an organization or folder, along with
+        /// their enrollments.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent scope for which the list of resources with enrollments
-        /// are required.
+        /// Required. Parent organization or folder to list enrollment statuses for,
+        /// in one of the following formats:
+        /// 
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1334,11 +1637,15 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Fetches all resources under the parent along with their enrollment.
+        /// Lists all the folders and projects in an organization or folder, along with
+        /// their enrollments.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent scope for which the list of resources with enrollments
-        /// are required.
+        /// Required. Parent organization or folder to list enrollment statuses for,
+        /// in one of the following formats:
+        /// 
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1368,7 +1675,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Gets controls needed to be implemented to be compliant to a standard.
+        /// Lists the controls that you must implement to become compliant to a
+        /// regulatory standard.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1377,7 +1685,8 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets controls needed to be implemented to be compliant to a standard.
+        /// Lists the controls that you must implement to become compliant to a
+        /// regulatory standard.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1386,12 +1695,15 @@ namespace Google.Cloud.AuditManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets controls needed to be implemented to be compliant to a standard.
+        /// Lists the controls that you must implement to become compliant to a
+        /// regulatory standard.
         /// </summary>
         /// <param name="parent">
-        /// Required. Format
-        /// projects/{project}/locations/{location}/standards/{standard},
-        /// folders/{folder}/locations/{location}/standards/{standard}
+        /// Required. Standard to list controls for, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/standards/{standard}`
+        /// * `folders/{folder}/locations/{location}/standards/{standard}`
+        /// * `organizations/{organization}/locations/{location}/standards/{standard}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1421,12 +1733,15 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Gets controls needed to be implemented to be compliant to a standard.
+        /// Lists the controls that you must implement to become compliant to a
+        /// regulatory standard.
         /// </summary>
         /// <param name="parent">
-        /// Required. Format
-        /// projects/{project}/locations/{location}/standards/{standard},
-        /// folders/{folder}/locations/{location}/standards/{standard}
+        /// Required. Standard to list controls for, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/standards/{standard}`
+        /// * `folders/{folder}/locations/{location}/standards/{standard}`
+        /// * `organizations/{organization}/locations/{location}/standards/{standard}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1456,12 +1771,15 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Gets controls needed to be implemented to be compliant to a standard.
+        /// Lists the controls that you must implement to become compliant to a
+        /// regulatory standard.
         /// </summary>
         /// <param name="parent">
-        /// Required. Format
-        /// projects/{project}/locations/{location}/standards/{standard},
-        /// folders/{folder}/locations/{location}/standards/{standard}
+        /// Required. Standard to list controls for, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/standards/{standard}`
+        /// * `folders/{folder}/locations/{location}/standards/{standard}`
+        /// * `organizations/{organization}/locations/{location}/standards/{standard}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1491,12 +1809,15 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Gets controls needed to be implemented to be compliant to a standard.
+        /// Lists the controls that you must implement to become compliant to a
+        /// regulatory standard.
         /// </summary>
         /// <param name="parent">
-        /// Required. Format
-        /// projects/{project}/locations/{location}/standards/{standard},
-        /// folders/{folder}/locations/{location}/standards/{standard}
+        /// Required. Standard to list controls for, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/standards/{standard}`
+        /// * `folders/{folder}/locations/{location}/standards/{standard}`
+        /// * `organizations/{organization}/locations/{location}/standards/{standard}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1635,11 +1956,11 @@ namespace Google.Cloud.AuditManager.V1
         partial void Modify_ListControlsRequest(ref ListControlsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Enrolls the customer resource(folder/project/organization) to the audit
-        /// manager service by creating the audit managers Service Agent in customers
-        /// workload and granting required permissions to the Service Agent. Please
-        /// note that if enrollment request is made on the already enrolled workload
-        /// then enrollment is executed overriding the existing set of destinations.
+        /// Adds your project, folder, or organization to Audit
+        /// Manager. This method creates the Audit Manager service agent in your
+        /// workload and grants required permissions to the service agent.
+        /// If you make this request on a workload that's already enrolled,
+        /// then this method overrides the existing set of destinations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1651,11 +1972,11 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Enrolls the customer resource(folder/project/organization) to the audit
-        /// manager service by creating the audit managers Service Agent in customers
-        /// workload and granting required permissions to the Service Agent. Please
-        /// note that if enrollment request is made on the already enrolled workload
-        /// then enrollment is executed overriding the existing set of destinations.
+        /// Adds your project, folder, or organization to Audit
+        /// Manager. This method creates the Audit Manager service agent in your
+        /// workload and grants required permissions to the service agent.
+        /// If you make this request on a workload that's already enrolled,
+        /// then this method overrides the existing set of destinations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1667,9 +1988,14 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Generates a demo report highlighting different responsibilities
-        /// (Google/Customer/ shared) required to be fulfilled for the customer's
-        /// workload to be compliant with the given standard.
+        /// Generates an audit scope report for the given standard.
+        /// 
+        /// The report includes the following:
+        /// 
+        /// * The technical attributes and constraints that Audit Manager uses to
+        /// verify your compliance with a framework.
+        /// * A list of Google Cloud services and resources that are within the
+        /// scope of the framework.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1681,9 +2007,14 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Generates a demo report highlighting different responsibilities
-        /// (Google/Customer/ shared) required to be fulfilled for the customer's
-        /// workload to be compliant with the given standard.
+        /// Generates an audit scope report for the given standard.
+        /// 
+        /// The report includes the following:
+        /// 
+        /// * The technical attributes and constraints that Audit Manager uses to
+        /// verify your compliance with a framework.
+        /// * A list of Google Cloud services and resources that are within the
+        /// scope of the framework.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1698,8 +2029,9 @@ namespace Google.Cloud.AuditManager.V1
         public override lro::OperationsClient GenerateAuditReportOperationsClient { get; }
 
         /// <summary>
-        /// Register the Audit Report generation requests and returns the OperationId
-        /// using which the customer can track the report generation progress.
+        /// Registers audit report generation requests. This method returns the
+        /// operation identifier that you can use to track the report generation
+        /// progress.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1711,8 +2043,9 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Register the Audit Report generation requests and returns the OperationId
-        /// using which the customer can track the report generation progress.
+        /// Registers audit report generation requests. This method returns the
+        /// operation identifier that you can use to track the report generation
+        /// progress.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1724,7 +2057,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit reports in the selected parent scope
+        /// Lists the audit reports for the organization, folder, or project that you
+        /// specify as the parent scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1736,7 +2070,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Lists audit reports in the selected parent scope
+        /// Lists the audit reports for the organization, folder, or project that you
+        /// specify as the parent scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1748,7 +2083,7 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Get the overall audit report
+        /// Gets the full metadata and findings for an audit report.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1760,7 +2095,7 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Get the overall audit report
+        /// Gets the full metadata and findings for an audit report.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1772,7 +2107,7 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Get a resource along with its enrollment status.
+        /// Gets a resource and its enrollment status.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1784,7 +2119,7 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Get a resource along with its enrollment status.
+        /// Gets a resource and its enrollment status.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1796,7 +2131,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Fetches all resources under the parent along with their enrollment.
+        /// Lists all the folders and projects in an organization or folder, along with
+        /// their enrollments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1808,7 +2144,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Fetches all resources under the parent along with their enrollment.
+        /// Lists all the folders and projects in an organization or folder, along with
+        /// their enrollments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1820,7 +2157,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Gets controls needed to be implemented to be compliant to a standard.
+        /// Lists the controls that you must implement to become compliant to a
+        /// regulatory standard.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1832,7 +2170,8 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         /// <summary>
-        /// Gets controls needed to be implemented to be compliant to a standard.
+        /// Lists the controls that you must implement to become compliant to a
+        /// regulatory standard.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

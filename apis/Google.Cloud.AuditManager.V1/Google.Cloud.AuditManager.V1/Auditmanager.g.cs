@@ -34,233 +34,243 @@ namespace Google.Cloud.AuditManager.V1 {
             "ZXN0aW5hdGlvbnMYAiADKAsyRy5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2Vy",
             "LnYxLkVucm9sbFJlc291cmNlUmVxdWVzdC5FbGlnaWJsZURlc3RpbmF0aW9u",
             "QgPgQQIaTQoTRWxpZ2libGVEZXN0aW5hdGlvbhIdChNlbGlnaWJsZV9nY3Nf",
-            "YnVja2V0GAMgASgJSABCFwoVZWxpZ2libGVfZGVzdGluYXRpb25zItQCCh9H",
+            "YnVja2V0GAMgASgJSABCFwoVZWxpZ2libGVfZGVzdGluYXRpb25zItYCCh9H",
             "ZW5lcmF0ZUF1ZGl0U2NvcGVSZXBvcnRSZXF1ZXN0EhIKBXNjb3BlGAIgASgJ",
-            "QgPgQQISIAoTY29tcGxpYW5jZV9zdGFuZGFyZBgDIAEoCUID4EECEnAKDXJl",
-            "cG9ydF9mb3JtYXQYBCABKA4yVC5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2Vy",
-            "LnYxLkdlbmVyYXRlQXVkaXRTY29wZVJlcG9ydFJlcXVlc3QuQXVkaXRTY29w",
-            "ZVJlcG9ydEZvcm1hdEID4EECEiEKFGNvbXBsaWFuY2VfZnJhbWV3b3JrGAUg",
-            "ASgJQgPgQQIiZgoWQXVkaXRTY29wZVJlcG9ydEZvcm1hdBIpCiVBVURJVF9T",
-            "Q09QRV9SRVBPUlRfRk9STUFUX1VOU1BFQ0lGSUVEEAASIQodQVVESVRfU0NP",
-            "UEVfUkVQT1JUX0ZPUk1BVF9PREYQASLWAgoaR2VuZXJhdGVBdWRpdFJlcG9y",
-            "dFJlcXVlc3QSEQoHZ2NzX3VyaRgCIAEoCUgAEhIKBXNjb3BlGAEgASgJQgPg",
-            "QQISIAoTY29tcGxpYW5jZV9zdGFuZGFyZBgDIAEoCUID4EECEmYKDXJlcG9y",
-            "dF9mb3JtYXQYBCABKA4ySi5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYx",
-            "LkdlbmVyYXRlQXVkaXRSZXBvcnRSZXF1ZXN0LkF1ZGl0UmVwb3J0Rm9ybWF0",
-            "QgPgQQISIQoUY29tcGxpYW5jZV9mcmFtZXdvcmsYBSABKAlCA+BBAiJVChFB",
-            "dWRpdFJlcG9ydEZvcm1hdBIjCh9BVURJVF9SRVBPUlRfRk9STUFUX1VOU1BF",
-            "Q0lGSUVEEAASGwoXQVVESVRfUkVQT1JUX0ZPUk1BVF9PREYQAUINCgtkZXN0",
-            "aW5hdGlvbiJwCiJHZXRSZXNvdXJjZUVucm9sbG1lbnRTdGF0dXNSZXF1ZXN0",
-            "EkoKBG5hbWUYASABKAlCPOBBAvpBNgo0YXVkaXRtYW5hZ2VyLmdvb2dsZWFw",
-            "aXMuY29tL1Jlc291cmNlRW5yb2xsbWVudFN0YXR1cyKjAQolTGlzdFJlc291",
-            "cmNlRW5yb2xsbWVudFN0YXR1c2VzUmVxdWVzdBJJCgZwYXJlbnQYASABKAlC",
-            "OeBBAvpBMwoxYXVkaXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0Vucm9sbG1l",
-            "bnRTdGF0dXNTY29wZRIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdl",
-            "X3Rva2VuGAMgASgJQgPgQQEipAEKJkxpc3RSZXNvdXJjZUVucm9sbG1lbnRT",
-            "dGF0dXNlc1Jlc3BvbnNlElwKHHJlc291cmNlX2Vucm9sbG1lbnRfc3RhdHVz",
-            "ZXMYASADKAsyNi5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLlJlc291",
-            "cmNlRW5yb2xsbWVudFN0YXR1cxIcCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlC",
-            "A+BBAyKLAQoXTGlzdEF1ZGl0UmVwb3J0c1JlcXVlc3QSPwoGcGFyZW50GAEg",
-            "ASgJQi/gQQL6QSkSJ2F1ZGl0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9BdWRp",
-            "dFJlcG9ydBIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2Vu",
-            "GAMgASgJQgPgQQEifwoYTGlzdEF1ZGl0UmVwb3J0c1Jlc3BvbnNlEkUKDWF1",
-            "ZGl0X3JlcG9ydHMYASADKAsyKS5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2Vy",
-            "LnYxLkF1ZGl0UmVwb3J0QgPgQQMSHAoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
-            "QgPgQQMiVgoVR2V0QXVkaXRSZXBvcnRSZXF1ZXN0Ej0KBG5hbWUYASABKAlC",
-            "L+BBAvpBKQonYXVkaXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0F1ZGl0UmVw",
-            "b3J0IoQBChNMaXN0Q29udHJvbHNSZXF1ZXN0EjwKBnBhcmVudBgBIAEoCUIs",
-            "4EEC+kEmCiRhdWRpdG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU3RhbmRhcmQS",
-            "FgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID",
-            "4EEBInIKFExpc3RDb250cm9sc1Jlc3BvbnNlEjwKCGNvbnRyb2xzGAEgAygL",
-            "MiUuZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52MS5Db250cm9sQgPgQQMS",
-            "HAoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQgPgQQMi4QIKGFJlcG9ydEdlbmVy",
-            "YXRpb25Qcm9ncmVzcxJACgVzdGF0ZRgBIAEoDjIsLmdvb2dsZS5jbG91ZC5h",
-            "dWRpdG1hbmFnZXIudjEuT3BlcmF0aW9uU3RhdGVCA+BBAxIbCg5mYWlsdXJl",
-            "X3JlYXNvbhgCIAEoCUID4EEDEiMKG2V2YWx1YXRpb25fcGVyY2VudF9jb21w",
-            "bGV0ZRgUIAEoARIqCiJyZXBvcnRfZ2VuZXJhdGlvbl9wZXJjZW50X2NvbXBs",
-            "ZXRlGB4gASgBEikKIXJlcG9ydF91cGxvYWRpbmdfcGVyY2VudF9jb21wbGV0",
-            "ZRgoIAEoARIjChZkZXN0aW5hdGlvbl9nY3NfYnVja2V0GDIgASgJQgPgQQMS",
-            "RQoMYXVkaXRfcmVwb3J0GDMgASgJQi/gQQP6QSkKJ2F1ZGl0bWFuYWdlci5n",
-            "b29nbGVhcGlzLmNvbS9BdWRpdFJlcG9ydCKJAwoKRW5yb2xsbWVudBIRCgRu",
-            "YW1lGAEgASgJQgPgQQgSUgoTZGVzdGluYXRpb25fZGV0YWlscxgDIAMoCzIw",
-            "Lmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuRGVzdGluYXRpb25EZXRh",
-            "aWxzQgPgQQM6kwLqQY8CCiZhdWRpdG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20v",
-            "RW5yb2xsbWVudBJAcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L2Vucm9sbG1lbnRzL3tlbnJvbGxtZW50fRI+Zm9sZGVycy97Zm9s",
-            "ZGVyfS9sb2NhdGlvbnMve2xvY2F0aW9ufS9lbnJvbGxtZW50cy97ZW5yb2xs",
-            "bWVudH0SSm9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vZW5yb2xsbWVudHMve2Vucm9sbG1lbnR9KgtlbnJvbGxt",
-            "ZW50czIKZW5yb2xsbWVudCLOAgoQQXVkaXRTY29wZVJlcG9ydBIfChVzY29w",
-            "ZV9yZXBvcnRfY29udGVudHMYASABKAxIABIRCgRuYW1lGAIgASgJQgPgQQg6",
-            "9QHqQfEBCixhdWRpdG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQXVkaXRTY29w",
-            "ZVJlcG9ydBJOcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L2F1ZGl0U2NvcGVSZXBvcnRzL3thdWRpdF9zY29wZV9yZXBvcnR9Ekxm",
-            "b2xkZXJzL3tmb2xkZXJ9L2xvY2F0aW9ucy97bG9jYXRpb259L2F1ZGl0U2Nv",
-            "cGVSZXBvcnRzL3thdWRpdF9zY29wZV9yZXBvcnR9KhFhdWRpdFNjb3BlUmVw",
-            "b3J0czIQYXVkaXRTY29wZVJlcG9ydEIOCgxhdWRpdF9yZXBvcnQigAIKEU9w",
-            "ZXJhdGlvbk1ldGFkYXRhEjQKC2NyZWF0ZV90aW1lGAEgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhMKBnRhcmdldBgDIAEo",
-            "CUID4EEDEhEKBHZlcmIYBCABKAlCA+BBAxIbCg5zdGF0dXNfbWVzc2FnZRgF",
-            "IAEoCUID4EEDEiMKFnJlcXVlc3RlZF9jYW5jZWxsYXRpb24YBiABKAhCA+BB",
-            "AxIYCgthcGlfdmVyc2lvbhgHIAEoCUID4EEDIqYGChhSZXNvdXJjZUVucm9s",
-            "bG1lbnRTdGF0dXMSEQoEbmFtZRgBIAEoCUID4EEIEkEKCmVucm9sbG1lbnQY",
-            "AiABKAsyKC5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkVucm9sbG1l",
-            "bnRCA+BBAxIXCghlbnJvbGxlZBgDIAEoCEIFGAHgQQMSGQoMZGlzcGxheV9u",
-            "YW1lGAQgASgJQgPgQQMSbQoQZW5yb2xsbWVudF9zdGF0ZRgFIAEoDjJOLmdv",
+            "QgPgQQISIgoTY29tcGxpYW5jZV9zdGFuZGFyZBgDIAEoCUIFGAHgQQEScAoN",
+            "cmVwb3J0X2Zvcm1hdBgEIAEoDjJULmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFn",
+            "ZXIudjEuR2VuZXJhdGVBdWRpdFNjb3BlUmVwb3J0UmVxdWVzdC5BdWRpdFNj",
+            "b3BlUmVwb3J0Rm9ybWF0QgPgQQISIQoUY29tcGxpYW5jZV9mcmFtZXdvcmsY",
+            "BSABKAlCA+BBAiJmChZBdWRpdFNjb3BlUmVwb3J0Rm9ybWF0EikKJUFVRElU",
+            "X1NDT1BFX1JFUE9SVF9GT1JNQVRfVU5TUEVDSUZJRUQQABIhCh1BVURJVF9T",
+            "Q09QRV9SRVBPUlRfRk9STUFUX09ERhABIvQCChpHZW5lcmF0ZUF1ZGl0UmVw",
+            "b3J0UmVxdWVzdBIRCgdnY3NfdXJpGAIgASgJSAASEgoFc2NvcGUYASABKAlC",
+            "A+BBAhIiChNjb21wbGlhbmNlX3N0YW5kYXJkGAMgASgJQgUYAeBBARJmCg1y",
+            "ZXBvcnRfZm9ybWF0GAQgASgOMkouZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdl",
+            "ci52MS5HZW5lcmF0ZUF1ZGl0UmVwb3J0UmVxdWVzdC5BdWRpdFJlcG9ydEZv",
+            "cm1hdEID4EECEiEKFGNvbXBsaWFuY2VfZnJhbWV3b3JrGAUgASgJQgPgQQIS",
+            "GgoNdmFsaWRhdGVfb25seRgIIAEoCEID4EEBIlUKEUF1ZGl0UmVwb3J0Rm9y",
+            "bWF0EiMKH0FVRElUX1JFUE9SVF9GT1JNQVRfVU5TUEVDSUZJRUQQABIbChdB",
+            "VURJVF9SRVBPUlRfRk9STUFUX09ERhABQg0KC2Rlc3RpbmF0aW9uInAKIkdl",
+            "dFJlc291cmNlRW5yb2xsbWVudFN0YXR1c1JlcXVlc3QSSgoEbmFtZRgBIAEo",
+            "CUI84EEC+kE2CjRhdWRpdG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUmVzb3Vy",
+            "Y2VFbnJvbGxtZW50U3RhdHVzIqMBCiVMaXN0UmVzb3VyY2VFbnJvbGxtZW50",
+            "U3RhdHVzZXNSZXF1ZXN0EkkKBnBhcmVudBgBIAEoCUI54EEC+kEzCjFhdWRp",
+            "dG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vRW5yb2xsbWVudFN0YXR1c1Njb3Bl",
+            "EhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlC",
+            "A+BBASKkAQomTGlzdFJlc291cmNlRW5yb2xsbWVudFN0YXR1c2VzUmVzcG9u",
+            "c2USXAoccmVzb3VyY2VfZW5yb2xsbWVudF9zdGF0dXNlcxgBIAMoCzI2Lmdv",
             "b2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuUmVzb3VyY2VFbnJvbGxtZW50",
-            "U3RhdHVzLlJlc291cmNlRW5yb2xsbWVudFN0YXRlQgPgQQMicwoXUmVzb3Vy",
-            "Y2VFbnJvbGxtZW50U3RhdGUSKQolUkVTT1VSQ0VfRU5ST0xMTUVOVF9TVEFU",
-            "RV9VTlNQRUNJRklFRBAAEhAKDE5PVF9FTlJPTExFRBABEg0KCUlOSEVSSVRF",
-            "RBACEgwKCEVOUk9MTEVEEAM6mwPqQZcDCjRhdWRpdG1hbmFnZXIuZ29vZ2xl",
-            "YXBpcy5jb20vUmVzb3VyY2VFbnJvbGxtZW50U3RhdHVzEl1mb2xkZXJzL3tm",
-            "b2xkZXJ9L2xvY2F0aW9ucy97bG9jYXRpb259L3Jlc291cmNlRW5yb2xsbWVu",
-            "dFN0YXR1c2VzL3tyZXNvdXJjZV9lbnJvbGxtZW50X3N0YXR1c30SX3Byb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZXNvdXJjZUVu",
-            "cm9sbG1lbnRTdGF0dXNlcy97cmVzb3VyY2VfZW5yb2xsbWVudF9zdGF0dXN9",
-            "Emlvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L3Jlc291cmNlRW5yb2xsbWVudFN0YXR1c2VzL3tyZXNvdXJjZV9l",
-            "bnJvbGxtZW50X3N0YXR1c30qGnJlc291cmNlRW5yb2xsbWVudFN0YXR1c2Vz",
-            "MhhyZXNvdXJjZUVucm9sbG1lbnRTdGF0dXMiiQcKC0F1ZGl0UmVwb3J0EhEK",
-            "BG5hbWUYASABKAlCA+BBCBJICg5yZXBvcnRfc3VtbWFyeRgCIAEoCzIrLmdv",
-            "b2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuUmVwb3J0U3VtbWFyeUID4EED",
-            "EhkKDG9wZXJhdGlvbl9pZBgDIAEoCUID4EEDElIKE2Rlc3RpbmF0aW9uX2Rl",
-            "dGFpbHMYBCABKAsyMC5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkRl",
-            "c3RpbmF0aW9uRGV0YWlsc0ID4EEDEiAKE2NvbXBsaWFuY2Vfc3RhbmRhcmQY",
-            "BSABKAlCA+BBAxISCgVzY29wZRgGIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1l",
-            "GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkoKD2Nv",
-            "bnRyb2xfZGV0YWlscxgIIAMoCzIsLmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFn",
-            "ZXIudjEuQ29udHJvbERldGFpbHNCA+BBAxJlChdyZXBvcnRfZ2VuZXJhdGlv",
-            "bl9zdGF0ZRgJIAEoDjI/Lmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEu",
-            "QXVkaXRSZXBvcnQuUmVwb3J0R2VuZXJhdGlvblN0YXRlQgPgQQMSIQoUY29t",
-            "cGxpYW5jZV9mcmFtZXdvcmsYCiABKAlCA+BBAxIVCghzY29wZV9pZBgLIAEo",
-            "CUID4EEDIoEBChVSZXBvcnRHZW5lcmF0aW9uU3RhdGUSJwojUkVQT1JUX0dF",
-            "TkVSQVRJT05fU1RBVEVfVU5TUEVDSUZJRUQQABIPCgtJTl9QUk9HUkVTUxAB",
-            "Eg0KCUNPTVBMRVRFRBACEgoKBkZBSUxFRBADEhMKD1NVTU1BUllfVU5LTk9X",
-            "ThAEOtAB6kHMAQonYXVkaXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0F1ZGl0",
-            "UmVwb3J0EkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vYXVkaXRSZXBvcnRzL3thdWRpdF9yZXBvcnR9EkFmb2xkZXJzL3tmb2xk",
-            "ZXJ9L2xvY2F0aW9ucy97bG9jYXRpb259L2F1ZGl0UmVwb3J0cy97YXVkaXRf",
-            "cmVwb3J0fSoMYXVkaXRSZXBvcnRzMgthdWRpdFJlcG9ydCI4Cg1Db250cm9s",
-            "RmFtaWx5EhEKCWZhbWlseV9pZBgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiAB",
-            "KAki+wQKB0NvbnRyb2wSDwoCaWQYASABKAlCA+BBAxIZCgxkaXNwbGF5X25h",
-            "bWUYAiABKAlCA+BBAxJBCgZmYW1pbHkYAyABKA4yLC5nb29nbGUuY2xvdWQu",
-            "YXVkaXRtYW5hZ2VyLnYxLkNvbnRyb2wuRmFtaWx5QgPgQQMSSAoOY29udHJv",
-            "bF9mYW1pbHkYCiABKAsyKy5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYx",
-            "LkNvbnRyb2xGYW1pbHlCA+BBAxIYCgtkZXNjcmlwdGlvbhgEIAEoCUID4EED",
-            "EiAKE3Jlc3BvbnNpYmlsaXR5X3R5cGUYBSABKAlCA+BBAxIuCiFnb29nbGVf",
-            "cmVzcG9uc2liaWxpdHlfZGVzY3JpcHRpb24YBiABKAlCA+BBAxIxCiRnb29n",
-            "bGVfcmVzcG9uc2liaWxpdHlfaW1wbGVtZW50YXRpb24YByABKAlCA+BBAxIw",
-            "CiNjdXN0b21lcl9yZXNwb25zaWJpbGl0eV9kZXNjcmlwdGlvbhgIIAEoCUID",
-            "4EEDEjMKJmN1c3RvbWVyX3Jlc3BvbnNpYmlsaXR5X2ltcGxlbWVudGF0aW9u",
-            "GAkgASgJQgPgQQMisAEKBkZhbWlseRIWChJGQU1JTFlfVU5TUEVDSUZJRUQQ",
-            "ABIGCgJBQxABEgYKAkFUEAISBgoCQVUQAxIGCgJDQRAEEgYKAkNNEAUSBgoC",
-            "Q1AQBhIGCgJJQRAHEgYKAklSEAgSBgoCTUEQCRIGCgJNUBAKEgYKAlBFEAsS",
-            "BgoCUEwQDBIGCgJQUxANEgYKAlJBEA4SBgoCU0EQDxIGCgJTQxAQEgYKAlNJ",
-            "EBESBgoCU1IQEiI9ChJEZXN0aW5hdGlvbkRldGFpbHMSGAoOZ2NzX2J1Y2tl",
-            "dF91cmkYASABKAlIAEINCgtkZXN0aW5hdGlvbiKPAQoNUmVwb3J0U3VtbWFy",
-            "eRITCgt0b3RhbF9jb3VudBgBIAEoBRIXCg9jb21wbGlhbnRfY291bnQYAiAB",
-            "KAUSFwoPdmlvbGF0aW9uX2NvdW50GAMgASgFEiIKGm1hbnVhbF9yZXZpZXdf",
-            "bmVlZGVkX2NvdW50GAQgASgFEhMKC2Vycm9yX2NvdW50GAUgASgFIuMBCg5D",
-            "b250cm9sRGV0YWlscxI2Cgdjb250cm9sGAEgASgLMiUuZ29vZ2xlLmNsb3Vk",
-            "LmF1ZGl0bWFuYWdlci52MS5Db250cm9sEkwKEGNvbXBsaWFuY2Vfc3RhdGUY",
-            "AiABKA4yLS5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkNvbXBsaWFu",
-            "Y2VTdGF0ZUID4EEDEksKFmNvbnRyb2xfcmVwb3J0X3N1bW1hcnkYAyABKAsy",
-            "Ky5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLlJlcG9ydFN1bW1hcnkq",
-            "+wIKDk9wZXJhdGlvblN0YXRlEh8KG09QRVJBVElPTl9TVEFURV9VTlNQRUNJ",
-            "RklFRBAAEh8KG09QRVJBVElPTl9TVEFURV9OT1RfU1RBUlRFRBAKEioKJk9Q",
-            "RVJBVElPTl9TVEFURV9FVkFMVUFUSU9OX0lOX1BST0dSRVNTEBQSIwofT1BF",
-            "UkFUSU9OX1NUQVRFX0VWQUxVQVRJT05fRE9ORRAVEjoKNk9QRVJBVElPTl9T",
-            "VEFURV9FVklERU5DRV9SRVBPUlRfR0VORVJBVElPTl9JTl9QUk9HUkVTUxAe",
-            "EjMKL09QRVJBVElPTl9TVEFURV9FVklERU5DRV9SRVBPUlRfR0VORVJBVElP",
-            "Tl9ET05FEB8SLworT1BFUkFUSU9OX1NUQVRFX0VWSURFTkNFX1VQTE9BRF9J",
-            "Tl9QUk9HUkVTUxAoEhgKFE9QRVJBVElPTl9TVEFURV9ET05FEDISGgoWT1BF",
-            "UkFUSU9OX1NUQVRFX0ZBSUxFRBA8Ko8BCg9Db21wbGlhbmNlU3RhdGUSIAoc",
-            "Q09NUExJQU5DRV9TVEFURV9VTlNQRUNJRklFRBAAEg0KCUNPTVBMSUFOVBAB",
-            "Eg0KCVZJT0xBVElPThACEhgKFE1BTlVBTF9SRVZJRVdfTkVFREVEEAMSCQoF",
-            "RVJST1IQBBIXChNBVURJVF9OT1RfU1VQUE9SVEVEEAUywBQKDEF1ZGl0TWFu",
-            "YWdlchK4AgoORW5yb2xsUmVzb3VyY2USMy5nb29nbGUuY2xvdWQuYXVkaXRt",
-            "YW5hZ2VyLnYxLkVucm9sbFJlc291cmNlUmVxdWVzdBooLmdvb2dsZS5jbG91",
-            "ZC5hdWRpdG1hbmFnZXIudjEuRW5yb2xsbWVudCLGAdpBEnNjb3BlLGRlc3Rp",
-            "bmF0aW9uc4LT5JMCqgEiMC92MS97c2NvcGU9Zm9sZGVycy8qL2xvY2F0aW9u",
-            "cy8qfTplbnJvbGxSZXNvdXJjZToBKlo2IjEvdjEve3Njb3BlPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyp9OmVucm9sbFJlc291cmNlOgEqWjsiNi92MS97c2Nv",
-            "cGU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfTplbnJvbGxSZXNvdXJj",
-            "ZToBKhLCAgoYR2VuZXJhdGVBdWRpdFNjb3BlUmVwb3J0Ej0uZ29vZ2xlLmNs",
-            "b3VkLmF1ZGl0bWFuYWdlci52MS5HZW5lcmF0ZUF1ZGl0U2NvcGVSZXBvcnRS",
-            "ZXF1ZXN0Gi4uZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52MS5BdWRpdFNj",
-            "b3BlUmVwb3J0IrYB2kEnc2NvcGUsY29tcGxpYW5jZV9zdGFuZGFyZCxyZXBv",
-            "cnRfZm9ybWF0gtPkkwKFASI8L3YxL3tzY29wZT1mb2xkZXJzLyovbG9jYXRp",
-            "b25zLyp9L2F1ZGl0U2NvcGVSZXBvcnRzOmdlbmVyYXRlOgEqWkIiPS92MS97",
-            "c2NvcGU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vYXVkaXRTY29wZVJlcG9y",
-            "dHM6Z2VuZXJhdGU6ASoSxwIKE0dlbmVyYXRlQXVkaXRSZXBvcnQSOC5nb29n",
-            "bGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkdlbmVyYXRlQXVkaXRSZXBvcnRS",
-            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLWAcpBIAoL",
-            "QXVkaXRSZXBvcnQSEU9wZXJhdGlvbk1ldGFkYXRh2kEvc2NvcGUsZ2NzX3Vy",
-            "aSxjb21wbGlhbmNlX3N0YW5kYXJkLHJlcG9ydF9mb3JtYXSC0+STAnsiNy92",
-            "MS97c2NvcGU9Zm9sZGVycy8qL2xvY2F0aW9ucy8qfS9hdWRpdFJlcG9ydHM6",
-            "Z2VuZXJhdGU6ASpaPSI4L3YxL3tzY29wZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qfS9hdWRpdFJlcG9ydHM6Z2VuZXJhdGU6ASoSsgIKEExpc3RBdWRpdFJl",
-            "cG9ydHMSNS5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkxpc3RBdWRp",
-            "dFJlcG9ydHNSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52",
-            "MS5MaXN0QXVkaXRSZXBvcnRzUmVzcG9uc2UirgHaQQZwYXJlbnSC0+STAp4B",
-            "EjUvdjEve3BhcmVudD1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyp9L2F1",
-            "ZGl0UmVwb3J0c1oxEi8vdjEve3BhcmVudD1mb2xkZXJzLyovbG9jYXRpb25z",
-            "Lyp9L2F1ZGl0UmVwb3J0c1oyEjAvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS9hdWRpdFJlcG9ydHMS5AEKDkdldEF1ZGl0UmVwb3J0EjMu",
-            "Z29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52MS5HZXRBdWRpdFJlcG9ydFJl",
-            "cXVlc3QaKS5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkF1ZGl0UmVw",
-            "b3J0InLaQQRuYW1lgtPkkwJlEi8vdjEve25hbWU9Zm9sZGVycy8qL2xvY2F0",
-            "aW9ucy8qL2F1ZGl0UmVwb3J0cy8qfVoyEjAvdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9hdWRpdFJlcG9ydHMvKn0S8AIKG0dldFJlc291cmNl",
-            "RW5yb2xsbWVudFN0YXR1cxJALmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIu",
-            "djEuR2V0UmVzb3VyY2VFbnJvbGxtZW50U3RhdHVzUmVxdWVzdBo2Lmdvb2ds",
-            "ZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuUmVzb3VyY2VFbnJvbGxtZW50U3Rh",
-            "dHVzItYB2kEEbmFtZYLT5JMCyAESPi92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL3Jlc291cmNlRW5yb2xsbWVudFN0YXR1c2VzLyp9Wj8SPS92",
-            "MS97bmFtZT1mb2xkZXJzLyovbG9jYXRpb25zLyovcmVzb3VyY2VFbnJvbGxt",
-            "ZW50U3RhdHVzZXMvKn1aRRJDL3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9s",
-            "b2NhdGlvbnMvKi9yZXNvdXJjZUVucm9sbG1lbnRTdGF0dXNlcy8qfRLEAgoe",
-            "TGlzdFJlc291cmNlRW5yb2xsbWVudFN0YXR1c2VzEkMuZ29vZ2xlLmNsb3Vk",
-            "LmF1ZGl0bWFuYWdlci52MS5MaXN0UmVzb3VyY2VFbnJvbGxtZW50U3RhdHVz",
-            "ZXNSZXF1ZXN0GkQuZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52MS5MaXN0",
-            "UmVzb3VyY2VFbnJvbGxtZW50U3RhdHVzZXNSZXNwb25zZSKWAdpBBnBhcmVu",
-            "dILT5JMChgESQy92MS97cGFyZW50PW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlv",
-            "bnMvKn0vcmVzb3VyY2VFbnJvbGxtZW50U3RhdHVzZXNaPxI9L3YxL3twYXJl",
-            "bnQ9Zm9sZGVycy8qL2xvY2F0aW9ucy8qfS9yZXNvdXJjZUVucm9sbG1lbnRT",
-            "dGF0dXNlcxK+AgoMTGlzdENvbnRyb2xzEjEuZ29vZ2xlLmNsb3VkLmF1ZGl0",
-            "bWFuYWdlci52MS5MaXN0Q29udHJvbHNSZXF1ZXN0GjIuZ29vZ2xlLmNsb3Vk",
-            "LmF1ZGl0bWFuYWdlci52MS5MaXN0Q29udHJvbHNSZXNwb25zZSLGAdpBBnBh",
-            "cmVudILT5JMCtgESPS92MS97cGFyZW50PW9yZ2FuaXphdGlvbnMvKi9sb2Nh",
-            "dGlvbnMvKi9zdGFuZGFyZHMvKn0vY29udHJvbHNaORI3L3YxL3twYXJlbnQ9",
-            "Zm9sZGVycy8qL2xvY2F0aW9ucy8qL3N0YW5kYXJkcy8qfS9jb250cm9sc1o6",
-            "EjgvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3N0YW5kYXJk",
-            "cy8qfS9jb250cm9scxpPykEbYXVkaXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
-            "0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
-            "Zm9ybUKSBgogY29tLmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjFCC1Yx",
-            "bWFpblByb3RvUAFaRGNsb3VkLmdvb2dsZS5jb20vZ28vYXVkaXRtYW5hZ2Vy",
-            "L2FwaXYxL2F1ZGl0bWFuYWdlcnBiO2F1ZGl0bWFuYWdlcnBiqgIcR29vZ2xl",
-            "LkNsb3VkLkF1ZGl0TWFuYWdlci5WMcoCHEdvb2dsZVxDbG91ZFxBdWRpdE1h",
-            "bmFnZXJcVjHqAh9Hb29nbGU6OkNsb3VkOjpBdWRpdE1hbmFnZXI6OlYx6kFT",
-            "CiphdWRpdG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vRm9sZGVyTG9jYXRpb24S",
-            "JWZvbGRlcnMve2ZvbGRlcn0vbG9jYXRpb25zL3tsb2NhdGlvbn3qQWUKMGF1",
-            "ZGl0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Pcmdhbml6YXRpb25Mb2NhdGlv",
-            "bhIxb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufepB6AEKJGF1ZGl0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TdGFu",
-            "ZGFyZBI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L3N0YW5kYXJkcy97c3RhbmRhcmR9Ejpmb2xkZXJzL3tmb2xkZXJ9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L3N0YW5kYXJkcy97c3RhbmRhcmR9EkZvcmdhbml6",
-            "YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259L3N0",
-            "YW5kYXJkcy97c3RhbmRhcmR96kGNAQoxYXVkaXRtYW5hZ2VyLmdvb2dsZWFw",
-            "aXMuY29tL0Vucm9sbG1lbnRTdGF0dXNTY29wZRIlZm9sZGVycy97Zm9sZGVy",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufRIxb3JnYW5pemF0aW9ucy97b3JnYW5p",
-            "emF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9ufWIGcHJvdG8z"));
+            "U3RhdHVzEhwKD25leHRfcGFnZV90b2tlbhgCIAEoCUID4EEDIosBChdMaXN0",
+            "QXVkaXRSZXBvcnRzUmVxdWVzdBI/CgZwYXJlbnQYASABKAlCL+BBAvpBKRIn",
+            "YXVkaXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0F1ZGl0UmVwb3J0EhYKCXBh",
+            "Z2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBASJ/",
+            "ChhMaXN0QXVkaXRSZXBvcnRzUmVzcG9uc2USRQoNYXVkaXRfcmVwb3J0cxgB",
+            "IAMoCzIpLmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuQXVkaXRSZXBv",
+            "cnRCA+BBAxIcCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlCA+BBAyJWChVHZXRB",
+            "dWRpdFJlcG9ydFJlcXVlc3QSPQoEbmFtZRgBIAEoCUIv4EEC+kEpCidhdWRp",
+            "dG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQXVkaXRSZXBvcnQihAEKE0xpc3RD",
+            "b250cm9sc1JlcXVlc3QSPAoGcGFyZW50GAEgASgJQizgQQL6QSYKJGF1ZGl0",
+            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TdGFuZGFyZBIWCglwYWdlX3NpemUY",
+            "AiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQEicgoUTGlzdENv",
+            "bnRyb2xzUmVzcG9uc2USPAoIY29udHJvbHMYASADKAsyJS5nb29nbGUuY2xv",
+            "dWQuYXVkaXRtYW5hZ2VyLnYxLkNvbnRyb2xCA+BBAxIcCg9uZXh0X3BhZ2Vf",
+            "dG9rZW4YAiABKAlCA+BBAyLhAgoYUmVwb3J0R2VuZXJhdGlvblByb2dyZXNz",
+            "EkAKBXN0YXRlGAEgASgOMiwuZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52",
+            "MS5PcGVyYXRpb25TdGF0ZUID4EEDEhsKDmZhaWx1cmVfcmVhc29uGAIgASgJ",
+            "QgPgQQMSIwobZXZhbHVhdGlvbl9wZXJjZW50X2NvbXBsZXRlGBQgASgBEioK",
+            "InJlcG9ydF9nZW5lcmF0aW9uX3BlcmNlbnRfY29tcGxldGUYHiABKAESKQoh",
+            "cmVwb3J0X3VwbG9hZGluZ19wZXJjZW50X2NvbXBsZXRlGCggASgBEiMKFmRl",
+            "c3RpbmF0aW9uX2djc19idWNrZXQYMiABKAlCA+BBAxJFCgxhdWRpdF9yZXBv",
+            "cnQYMyABKAlCL+BBA/pBKQonYXVkaXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "L0F1ZGl0UmVwb3J0IokDCgpFbnJvbGxtZW50EhEKBG5hbWUYASABKAlCA+BB",
+            "CBJSChNkZXN0aW5hdGlvbl9kZXRhaWxzGAMgAygLMjAuZ29vZ2xlLmNsb3Vk",
+            "LmF1ZGl0bWFuYWdlci52MS5EZXN0aW5hdGlvbkRldGFpbHNCA+BBAzqTAupB",
+            "jwIKJmF1ZGl0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9FbnJvbGxtZW50EkBw",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZW5yb2xs",
+            "bWVudHMve2Vucm9sbG1lbnR9Ej5mb2xkZXJzL3tmb2xkZXJ9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L2Vucm9sbG1lbnRzL3tlbnJvbGxtZW50fRJKb3JnYW5p",
+            "emF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9ufS9l",
+            "bnJvbGxtZW50cy97ZW5yb2xsbWVudH0qC2Vucm9sbG1lbnRzMgplbnJvbGxt",
+            "ZW50IqgDChBBdWRpdFNjb3BlUmVwb3J0Eh8KFXNjb3BlX3JlcG9ydF9jb250",
+            "ZW50cxgBIAEoDEgAEhEKBG5hbWUYAiABKAlCA+BBCDrPAupBywIKLGF1ZGl0",
+            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9BdWRpdFNjb3BlUmVwb3J0Ek5wcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXVkaXRTY29w",
+            "ZVJlcG9ydHMve2F1ZGl0X3Njb3BlX3JlcG9ydH0STGZvbGRlcnMve2ZvbGRl",
+            "cn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXVkaXRTY29wZVJlcG9ydHMve2F1",
+            "ZGl0X3Njb3BlX3JlcG9ydH0SWG9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlv",
+            "bn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXVkaXRTY29wZVJlcG9ydHMve2F1",
+            "ZGl0X3Njb3BlX3JlcG9ydH0qEWF1ZGl0U2NvcGVSZXBvcnRzMhBhdWRpdFNj",
+            "b3BlUmVwb3J0Qg4KDGF1ZGl0X3JlcG9ydCKAAgoRT3BlcmF0aW9uTWV0YWRh",
+            "dGESNAoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSEwoGdGFyZ2V0GAMgASgJQgPgQQMSEQoEdmVy",
+            "YhgEIAEoCUID4EEDEhsKDnN0YXR1c19tZXNzYWdlGAUgASgJQgPgQQMSIwoW",
+            "cmVxdWVzdGVkX2NhbmNlbGxhdGlvbhgGIAEoCEID4EEDEhgKC2FwaV92ZXJz",
+            "aW9uGAcgASgJQgPgQQMipgYKGFJlc291cmNlRW5yb2xsbWVudFN0YXR1cxIR",
+            "CgRuYW1lGAEgASgJQgPgQQgSQQoKZW5yb2xsbWVudBgCIAEoCzIoLmdvb2ds",
+            "ZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuRW5yb2xsbWVudEID4EEDEhcKCGVu",
+            "cm9sbGVkGAMgASgIQgUYAeBBAxIZCgxkaXNwbGF5X25hbWUYBCABKAlCA+BB",
+            "AxJtChBlbnJvbGxtZW50X3N0YXRlGAUgASgOMk4uZ29vZ2xlLmNsb3VkLmF1",
+            "ZGl0bWFuYWdlci52MS5SZXNvdXJjZUVucm9sbG1lbnRTdGF0dXMuUmVzb3Vy",
+            "Y2VFbnJvbGxtZW50U3RhdGVCA+BBAyJzChdSZXNvdXJjZUVucm9sbG1lbnRT",
+            "dGF0ZRIpCiVSRVNPVVJDRV9FTlJPTExNRU5UX1NUQVRFX1VOU1BFQ0lGSUVE",
+            "EAASEAoMTk9UX0VOUk9MTEVEEAESDQoJSU5IRVJJVEVEEAISDAoIRU5ST0xM",
+            "RUQQAzqbA+pBlwMKNGF1ZGl0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9SZXNv",
+            "dXJjZUVucm9sbG1lbnRTdGF0dXMSXWZvbGRlcnMve2ZvbGRlcn0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vcmVzb3VyY2VFbnJvbGxtZW50U3RhdHVzZXMve3Jl",
+            "c291cmNlX2Vucm9sbG1lbnRfc3RhdHVzfRJfcHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L3Jlc291cmNlRW5yb2xsbWVudFN0YXR1",
+            "c2VzL3tyZXNvdXJjZV9lbnJvbGxtZW50X3N0YXR1c30SaW9yZ2FuaXphdGlv",
+            "bnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVzb3Vy",
+            "Y2VFbnJvbGxtZW50U3RhdHVzZXMve3Jlc291cmNlX2Vucm9sbG1lbnRfc3Rh",
+            "dHVzfSoacmVzb3VyY2VFbnJvbGxtZW50U3RhdHVzZXMyGHJlc291cmNlRW5y",
+            "b2xsbWVudFN0YXR1cyLaBwoLQXVkaXRSZXBvcnQSEQoEbmFtZRgBIAEoCUID",
+            "4EEIEkgKDnJlcG9ydF9zdW1tYXJ5GAIgASgLMisuZ29vZ2xlLmNsb3VkLmF1",
+            "ZGl0bWFuYWdlci52MS5SZXBvcnRTdW1tYXJ5QgPgQQMSGQoMb3BlcmF0aW9u",
+            "X2lkGAMgASgJQgPgQQMSUgoTZGVzdGluYXRpb25fZGV0YWlscxgEIAEoCzIw",
+            "Lmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuRGVzdGluYXRpb25EZXRh",
+            "aWxzQgPgQQMSIgoTY29tcGxpYW5jZV9zdGFuZGFyZBgFIAEoCUIFGAHgQQMS",
+            "EgoFc2NvcGUYBiABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgHIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJKCg9jb250cm9sX2RldGFp",
+            "bHMYCCADKAsyLC5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkNvbnRy",
+            "b2xEZXRhaWxzQgPgQQMSZQoXcmVwb3J0X2dlbmVyYXRpb25fc3RhdGUYCSAB",
+            "KA4yPy5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkF1ZGl0UmVwb3J0",
+            "LlJlcG9ydEdlbmVyYXRpb25TdGF0ZUID4EEDEiEKFGNvbXBsaWFuY2VfZnJh",
+            "bWV3b3JrGAogASgJQgPgQQMSFQoIc2NvcGVfaWQYCyABKAlCA+BBAyKBAQoV",
+            "UmVwb3J0R2VuZXJhdGlvblN0YXRlEicKI1JFUE9SVF9HRU5FUkFUSU9OX1NU",
+            "QVRFX1VOU1BFQ0lGSUVEEAASDwoLSU5fUFJPR1JFU1MQARINCglDT01QTEVU",
+            "RUQQAhIKCgZGQUlMRUQQAxITCg9TVU1NQVJZX1VOS05PV04QBDqfAupBmwIK",
+            "J2F1ZGl0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9BdWRpdFJlcG9ydBJDcHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2F1ZGl0UmVw",
+            "b3J0cy97YXVkaXRfcmVwb3J0fRJBZm9sZGVycy97Zm9sZGVyfS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9hdWRpdFJlcG9ydHMve2F1ZGl0X3JlcG9ydH0STW9y",
+            "Z2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vYXVkaXRSZXBvcnRzL3thdWRpdF9yZXBvcnR9KgxhdWRpdFJlcG9ydHMy",
+            "C2F1ZGl0UmVwb3J0IjgKDUNvbnRyb2xGYW1pbHkSEQoJZmFtaWx5X2lkGAEg",
+            "ASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCSL7BAoHQ29udHJvbBIPCgJpZBgB",
+            "IAEoCUID4EEDEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EEDEkEKBmZhbWls",
+            "eRgDIAEoDjIsLmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuQ29udHJv",
+            "bC5GYW1pbHlCA+BBAxJICg5jb250cm9sX2ZhbWlseRgKIAEoCzIrLmdvb2ds",
+            "ZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuQ29udHJvbEZhbWlseUID4EEDEhgK",
+            "C2Rlc2NyaXB0aW9uGAQgASgJQgPgQQMSIAoTcmVzcG9uc2liaWxpdHlfdHlw",
+            "ZRgFIAEoCUID4EEDEi4KIWdvb2dsZV9yZXNwb25zaWJpbGl0eV9kZXNjcmlw",
+            "dGlvbhgGIAEoCUID4EEDEjEKJGdvb2dsZV9yZXNwb25zaWJpbGl0eV9pbXBs",
+            "ZW1lbnRhdGlvbhgHIAEoCUID4EEDEjAKI2N1c3RvbWVyX3Jlc3BvbnNpYmls",
+            "aXR5X2Rlc2NyaXB0aW9uGAggASgJQgPgQQMSMwomY3VzdG9tZXJfcmVzcG9u",
+            "c2liaWxpdHlfaW1wbGVtZW50YXRpb24YCSABKAlCA+BBAyKwAQoGRmFtaWx5",
+            "EhYKEkZBTUlMWV9VTlNQRUNJRklFRBAAEgYKAkFDEAESBgoCQVQQAhIGCgJB",
+            "VRADEgYKAkNBEAQSBgoCQ00QBRIGCgJDUBAGEgYKAklBEAcSBgoCSVIQCBIG",
+            "CgJNQRAJEgYKAk1QEAoSBgoCUEUQCxIGCgJQTBAMEgYKAlBTEA0SBgoCUkEQ",
+            "DhIGCgJTQRAPEgYKAlNDEBASBgoCU0kQERIGCgJTUhASIj0KEkRlc3RpbmF0",
+            "aW9uRGV0YWlscxIYCg5nY3NfYnVja2V0X3VyaRgBIAEoCUgAQg0KC2Rlc3Rp",
+            "bmF0aW9uIo8BCg1SZXBvcnRTdW1tYXJ5EhMKC3RvdGFsX2NvdW50GAEgASgF",
+            "EhcKD2NvbXBsaWFudF9jb3VudBgCIAEoBRIXCg92aW9sYXRpb25fY291bnQY",
+            "AyABKAUSIgoabWFudWFsX3Jldmlld19uZWVkZWRfY291bnQYBCABKAUSEwoL",
+            "ZXJyb3JfY291bnQYBSABKAUi4wEKDkNvbnRyb2xEZXRhaWxzEjYKB2NvbnRy",
+            "b2wYASABKAsyJS5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkNvbnRy",
+            "b2wSTAoQY29tcGxpYW5jZV9zdGF0ZRgCIAEoDjItLmdvb2dsZS5jbG91ZC5h",
+            "dWRpdG1hbmFnZXIudjEuQ29tcGxpYW5jZVN0YXRlQgPgQQMSSwoWY29udHJv",
+            "bF9yZXBvcnRfc3VtbWFyeRgDIAEoCzIrLmdvb2dsZS5jbG91ZC5hdWRpdG1h",
+            "bmFnZXIudjEuUmVwb3J0U3VtbWFyeSr7AgoOT3BlcmF0aW9uU3RhdGUSHwob",
+            "T1BFUkFUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASHwobT1BFUkFUSU9OX1NU",
+            "QVRFX05PVF9TVEFSVEVEEAoSKgomT1BFUkFUSU9OX1NUQVRFX0VWQUxVQVRJ",
+            "T05fSU5fUFJPR1JFU1MQFBIjCh9PUEVSQVRJT05fU1RBVEVfRVZBTFVBVElP",
+            "Tl9ET05FEBUSOgo2T1BFUkFUSU9OX1NUQVRFX0VWSURFTkNFX1JFUE9SVF9H",
+            "RU5FUkFUSU9OX0lOX1BST0dSRVNTEB4SMwovT1BFUkFUSU9OX1NUQVRFX0VW",
+            "SURFTkNFX1JFUE9SVF9HRU5FUkFUSU9OX0RPTkUQHxIvCitPUEVSQVRJT05f",
+            "U1RBVEVfRVZJREVOQ0VfVVBMT0FEX0lOX1BST0dSRVNTECgSGAoUT1BFUkFU",
+            "SU9OX1NUQVRFX0RPTkUQMhIaChZPUEVSQVRJT05fU1RBVEVfRkFJTEVEEDwq",
+            "jwEKD0NvbXBsaWFuY2VTdGF0ZRIgChxDT01QTElBTkNFX1NUQVRFX1VOU1BF",
+            "Q0lGSUVEEAASDQoJQ09NUExJQU5UEAESDQoJVklPTEFUSU9OEAISGAoUTUFO",
+            "VUFMX1JFVklFV19ORUVERUQQAxIJCgVFUlJPUhAEEhcKE0FVRElUX05PVF9T",
+            "VVBQT1JURUQQBTK9FgoMQXVkaXRNYW5hZ2VyErgCCg5FbnJvbGxSZXNvdXJj",
+            "ZRIzLmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuRW5yb2xsUmVzb3Vy",
+            "Y2VSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52MS5FbnJv",
+            "bGxtZW50IsYB2kESc2NvcGUsZGVzdGluYXRpb25zgtPkkwKqASIwL3YxL3tz",
+            "Y29wZT1mb2xkZXJzLyovbG9jYXRpb25zLyp9OmVucm9sbFJlc291cmNlOgEq",
+            "WjYiMS92MS97c2NvcGU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn06ZW5yb2xs",
+            "UmVzb3VyY2U6ASpaOyI2L3YxL3tzY29wZT1vcmdhbml6YXRpb25zLyovbG9j",
+            "YXRpb25zLyp9OmVucm9sbFJlc291cmNlOgEqEosDChhHZW5lcmF0ZUF1ZGl0",
+            "U2NvcGVSZXBvcnQSPS5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkdl",
+            "bmVyYXRlQXVkaXRTY29wZVJlcG9ydFJlcXVlc3QaLi5nb29nbGUuY2xvdWQu",
+            "YXVkaXRtYW5hZ2VyLnYxLkF1ZGl0U2NvcGVSZXBvcnQi/wHaQSdzY29wZSxj",
+            "b21wbGlhbmNlX3N0YW5kYXJkLHJlcG9ydF9mb3JtYXSC0+STAs4BIjwvdjEv",
+            "e3Njb3BlPWZvbGRlcnMvKi9sb2NhdGlvbnMvKn0vYXVkaXRTY29wZVJlcG9y",
+            "dHM6Z2VuZXJhdGU6ASpaQiI9L3YxL3tzY29wZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qfS9hdWRpdFNjb3BlUmVwb3J0czpnZW5lcmF0ZToBKlpHIkIvdjEv",
+            "e3Njb3BlPW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKn0vYXVkaXRTY29w",
+            "ZVJlcG9ydHM6Z2VuZXJhdGU6ASoSjAMKE0dlbmVyYXRlQXVkaXRSZXBvcnQS",
+            "OC5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkdlbmVyYXRlQXVkaXRS",
+            "ZXBvcnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKb",
+            "AspBIAoLQXVkaXRSZXBvcnQSEU9wZXJhdGlvbk1ldGFkYXRh2kEvc2NvcGUs",
+            "Z2NzX3VyaSxjb21wbGlhbmNlX3N0YW5kYXJkLHJlcG9ydF9mb3JtYXSC0+ST",
+            "Ar8BIjcvdjEve3Njb3BlPWZvbGRlcnMvKi9sb2NhdGlvbnMvKn0vYXVkaXRS",
+            "ZXBvcnRzOmdlbmVyYXRlOgEqWj0iOC92MS97c2NvcGU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn0vYXVkaXRSZXBvcnRzOmdlbmVyYXRlOgEqWkIiPS92MS97",
+            "c2NvcGU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS9hdWRpdFJlcG9y",
+            "dHM6Z2VuZXJhdGU6ASoSsgIKEExpc3RBdWRpdFJlcG9ydHMSNS5nb29nbGUu",
+            "Y2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkxpc3RBdWRpdFJlcG9ydHNSZXF1ZXN0",
+            "GjYuZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52MS5MaXN0QXVkaXRSZXBv",
+            "cnRzUmVzcG9uc2UirgHaQQZwYXJlbnSC0+STAp4BEjUvdjEve3BhcmVudD1v",
+            "cmdhbml6YXRpb25zLyovbG9jYXRpb25zLyp9L2F1ZGl0UmVwb3J0c1oxEi8v",
+            "djEve3BhcmVudD1mb2xkZXJzLyovbG9jYXRpb25zLyp9L2F1ZGl0UmVwb3J0",
+            "c1oyEjAvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9hdWRp",
+            "dFJlcG9ydHMSnwIKDkdldEF1ZGl0UmVwb3J0EjMuZ29vZ2xlLmNsb3VkLmF1",
+            "ZGl0bWFuYWdlci52MS5HZXRBdWRpdFJlcG9ydFJlcXVlc3QaKS5nb29nbGUu",
+            "Y2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkF1ZGl0UmVwb3J0IqwB2kEEbmFtZYLT",
+            "5JMCngESLy92MS97bmFtZT1mb2xkZXJzLyovbG9jYXRpb25zLyovYXVkaXRS",
+            "ZXBvcnRzLyp9WjISMC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2F1ZGl0UmVwb3J0cy8qfVo3EjUvdjEve25hbWU9b3JnYW5pemF0aW9ucy8q",
+            "L2xvY2F0aW9ucy8qL2F1ZGl0UmVwb3J0cy8qfRLwAgobR2V0UmVzb3VyY2VF",
+            "bnJvbGxtZW50U3RhdHVzEkAuZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52",
+            "MS5HZXRSZXNvdXJjZUVucm9sbG1lbnRTdGF0dXNSZXF1ZXN0GjYuZ29vZ2xl",
+            "LmNsb3VkLmF1ZGl0bWFuYWdlci52MS5SZXNvdXJjZUVucm9sbG1lbnRTdGF0",
+            "dXMi1gHaQQRuYW1lgtPkkwLIARI+L3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovcmVzb3VyY2VFbnJvbGxtZW50U3RhdHVzZXMvKn1aPxI9L3Yx",
+            "L3tuYW1lPWZvbGRlcnMvKi9sb2NhdGlvbnMvKi9yZXNvdXJjZUVucm9sbG1l",
+            "bnRTdGF0dXNlcy8qfVpFEkMvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xv",
+            "Y2F0aW9ucy8qL3Jlc291cmNlRW5yb2xsbWVudFN0YXR1c2VzLyp9EsQCCh5M",
+            "aXN0UmVzb3VyY2VFbnJvbGxtZW50U3RhdHVzZXMSQy5nb29nbGUuY2xvdWQu",
+            "YXVkaXRtYW5hZ2VyLnYxLkxpc3RSZXNvdXJjZUVucm9sbG1lbnRTdGF0dXNl",
+            "c1JlcXVlc3QaRC5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkxpc3RS",
+            "ZXNvdXJjZUVucm9sbG1lbnRTdGF0dXNlc1Jlc3BvbnNlIpYB2kEGcGFyZW50",
+            "gtPkkwKGARJDL3YxL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9u",
+            "cy8qfS9yZXNvdXJjZUVucm9sbG1lbnRTdGF0dXNlc1o/Ej0vdjEve3BhcmVu",
+            "dD1mb2xkZXJzLyovbG9jYXRpb25zLyp9L3Jlc291cmNlRW5yb2xsbWVudFN0",
+            "YXR1c2VzEr4CCgxMaXN0Q29udHJvbHMSMS5nb29nbGUuY2xvdWQuYXVkaXRt",
+            "YW5hZ2VyLnYxLkxpc3RDb250cm9sc1JlcXVlc3QaMi5nb29nbGUuY2xvdWQu",
+            "YXVkaXRtYW5hZ2VyLnYxLkxpc3RDb250cm9sc1Jlc3BvbnNlIsYB2kEGcGFy",
+            "ZW50gtPkkwK2ARI9L3YxL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qL2xvY2F0",
+            "aW9ucy8qL3N0YW5kYXJkcy8qfS9jb250cm9sc1o5EjcvdjEve3BhcmVudD1m",
+            "b2xkZXJzLyovbG9jYXRpb25zLyovc3RhbmRhcmRzLyp9L2NvbnRyb2xzWjoS",
+            "OC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovc3RhbmRhcmRz",
+            "Lyp9L2NvbnRyb2xzGoIBykEbYXVkaXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "0kFhaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1hdWRp",
+            "dG1hbmFnZXIsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
+            "ZC1wbGF0Zm9ybUKSBgogY29tLmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIu",
+            "djFCC1YxbWFpblByb3RvUAFaRGNsb3VkLmdvb2dsZS5jb20vZ28vYXVkaXRt",
+            "YW5hZ2VyL2FwaXYxL2F1ZGl0bWFuYWdlcnBiO2F1ZGl0bWFuYWdlcnBiqgIc",
+            "R29vZ2xlLkNsb3VkLkF1ZGl0TWFuYWdlci5WMcoCHEdvb2dsZVxDbG91ZFxB",
+            "dWRpdE1hbmFnZXJcVjHqAh9Hb29nbGU6OkNsb3VkOjpBdWRpdE1hbmFnZXI6",
+            "OlYx6kFTCiphdWRpdG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vRm9sZGVyTG9j",
+            "YXRpb24SJWZvbGRlcnMve2ZvbGRlcn0vbG9jYXRpb25zL3tsb2NhdGlvbn3q",
+            "QWUKMGF1ZGl0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Pcmdhbml6YXRpb25M",
+            "b2NhdGlvbhIxb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufepB6AEKJGF1ZGl0bWFuYWdlci5nb29nbGVhcGlzLmNv",
+            "bS9TdGFuZGFyZBI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L3N0YW5kYXJkcy97c3RhbmRhcmR9Ejpmb2xkZXJzL3tmb2xkZXJ9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L3N0YW5kYXJkcy97c3RhbmRhcmR9EkZv",
+            "cmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L3N0YW5kYXJkcy97c3RhbmRhcmR96kGNAQoxYXVkaXRtYW5hZ2VyLmdv",
+            "b2dsZWFwaXMuY29tL0Vucm9sbG1lbnRTdGF0dXNTY29wZRIlZm9sZGVycy97",
+            "Zm9sZGVyfS9sb2NhdGlvbnMve2xvY2F0aW9ufRIxb3JnYW5pemF0aW9ucy97",
+            "b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AuditManager.V1.OperationState), typeof(global::Google.Cloud.AuditManager.V1.ComplianceState), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.EnrollResourceRequest), global::Google.Cloud.AuditManager.V1.EnrollResourceRequest.Parser, new[]{ "Scope", "Destinations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.EnrollResourceRequest.Types.EligibleDestination), global::Google.Cloud.AuditManager.V1.EnrollResourceRequest.Types.EligibleDestination.Parser, new[]{ "EligibleGcsBucket" }, new[]{ "EligibleDestinations" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest), global::Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest.Parser, new[]{ "Scope", "ComplianceStandard", "ReportFormat", "ComplianceFramework" }, null, new[]{ typeof(global::Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.GenerateAuditReportRequest), global::Google.Cloud.AuditManager.V1.GenerateAuditReportRequest.Parser, new[]{ "GcsUri", "Scope", "ComplianceStandard", "ReportFormat", "ComplianceFramework" }, new[]{ "Destination" }, new[]{ typeof(global::Google.Cloud.AuditManager.V1.GenerateAuditReportRequest.Types.AuditReportFormat) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.GenerateAuditReportRequest), global::Google.Cloud.AuditManager.V1.GenerateAuditReportRequest.Parser, new[]{ "GcsUri", "Scope", "ComplianceStandard", "ReportFormat", "ComplianceFramework", "ValidateOnly" }, new[]{ "Destination" }, new[]{ typeof(global::Google.Cloud.AuditManager.V1.GenerateAuditReportRequest.Types.AuditReportFormat) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.GetResourceEnrollmentStatusRequest), global::Google.Cloud.AuditManager.V1.GetResourceEnrollmentStatusRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.ListResourceEnrollmentStatusesRequest), global::Google.Cloud.AuditManager.V1.ListResourceEnrollmentStatusesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.ListResourceEnrollmentStatusesResponse), global::Google.Cloud.AuditManager.V1.ListResourceEnrollmentStatusesResponse.Parser, new[]{ "ResourceEnrollmentStatuses", "NextPageToken" }, null, null, null, null),
@@ -287,75 +297,74 @@ namespace Google.Cloud.AuditManager.V1 {
   }
   #region Enums
   /// <summary>
-  /// The different execution states of the Audit Manager service.
+  /// Different execution states of the Audit Manager service.
   /// </summary>
   public enum OperationState {
     /// <summary>
-    /// Unspecified. Invalid state.
+    /// Default value. This value is unused.
     /// </summary>
     [pbr::OriginalName("OPERATION_STATE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Audit report generation process has not started.
+    /// Audit generation process hasn't started.
     /// </summary>
     [pbr::OriginalName("OPERATION_STATE_NOT_STARTED")] NotStarted = 10,
     /// <summary>
-    /// Audit Manager is currently evaluating the workloads against specific
-    /// standard.
+    /// Evaluation process is in progress.
     /// </summary>
     [pbr::OriginalName("OPERATION_STATE_EVALUATION_IN_PROGRESS")] EvaluationInProgress = 20,
     /// <summary>
-    /// Audit Manager has completed Evaluation for the workload.
+    /// Evaluation process is completed.
     /// </summary>
     [pbr::OriginalName("OPERATION_STATE_EVALUATION_DONE")] EvaluationDone = 21,
     /// <summary>
-    /// Audit Manager is creating audit report from the evaluated data.
+    /// Report generation process is in progress.
     /// </summary>
     [pbr::OriginalName("OPERATION_STATE_EVIDENCE_REPORT_GENERATION_IN_PROGRESS")] EvidenceReportGenerationInProgress = 30,
     /// <summary>
-    /// Audit Manager has completed generation of the audit report.
+    /// Report generation process is completed.
     /// </summary>
     [pbr::OriginalName("OPERATION_STATE_EVIDENCE_REPORT_GENERATION_DONE")] EvidenceReportGenerationDone = 31,
     /// <summary>
-    /// Audit Manager is uploading the audit report and evidences to the customer
-    /// provided destination.
+    /// The audit report and evidence are being uploaded to your bucket.
     /// </summary>
     [pbr::OriginalName("OPERATION_STATE_EVIDENCE_UPLOAD_IN_PROGRESS")] EvidenceUploadInProgress = 40,
     /// <summary>
-    /// Audit report generation process is completed.
+    /// The audit report and evidence are uploaded to your bucket.
     /// </summary>
     [pbr::OriginalName("OPERATION_STATE_DONE")] Done = 50,
     /// <summary>
-    /// Audit report generation process has failed.
+    /// Audit report generation process failed.
     /// </summary>
     [pbr::OriginalName("OPERATION_STATE_FAILED")] Failed = 60,
   }
 
   /// <summary>
-  /// The compliance state after evaluation.
+  /// Compliance state after evaluation.
   /// </summary>
   public enum ComplianceState {
     /// <summary>
-    /// Unspecified. Invalid state.
+    /// Default value. This value is unused.
     /// </summary>
     [pbr::OriginalName("COMPLIANCE_STATE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Compliant.
+    /// The resource is compliant.
     /// </summary>
     [pbr::OriginalName("COMPLIANT")] Compliant = 1,
     /// <summary>
-    /// Violation.
+    /// The resource isn't compliant.
     /// </summary>
     [pbr::OriginalName("VIOLATION")] Violation = 2,
     /// <summary>
-    /// MANUAL_REVIEW_NEEDED, requires manual review
+    /// You must complete a manual review.
     /// </summary>
     [pbr::OriginalName("MANUAL_REVIEW_NEEDED")] ManualReviewNeeded = 3,
     /// <summary>
-    /// Error while computing status.
+    /// An error was encountered during the evaluation or evidence gathering
+    /// process.
     /// </summary>
     [pbr::OriginalName("ERROR")] Error = 4,
     /// <summary>
-    /// Cannot be audited
+    /// The resource can't be audited.
     /// </summary>
     [pbr::OriginalName("AUDIT_NOT_SUPPORTED")] AuditNotSupported = 5,
   }
@@ -364,7 +373,8 @@ namespace Google.Cloud.AuditManager.V1 {
 
   #region Messages
   /// <summary>
-  /// Request message to subscribe the Audit Manager service for given resource.
+  /// Request message for
+  /// [EnrollResource][google.cloud.auditmanager.v1.AuditManager.EnrollResource].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnrollResourceRequest : pb::IMessage<EnrollResourceRequest>
@@ -416,11 +426,12 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ScopeFieldNumber = 1;
     private string scope_ = "";
     /// <summary>
-    /// Required. The resource to be enrolled to the audit manager. Scope format
-    /// should be resource_type/resource_identifier Eg:
-    /// projects/{project}/locations/{location},
-    /// folders/{folder}/locations/{location}
-    /// organizations/{organization}/locations/{location}
+    /// Required. Organization, folder, or project to enroll in Audit Manager, in
+    /// one of the following formats:
+    ///
+    /// * `projects/{project}/locations/{location}`
+    /// * `folders/{folder}/locations/{location}`
+    /// * `organizations/{organization}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -437,13 +448,14 @@ namespace Google.Cloud.AuditManager.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.AuditManager.V1.EnrollResourceRequest.Types.EligibleDestination.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.EnrollResourceRequest.Types.EligibleDestination> destinations_ = new pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.EnrollResourceRequest.Types.EligibleDestination>();
     /// <summary>
-    /// Required. List of destination among which customer can choose to upload
-    /// their reports during the audit process. While enrolling at a
-    /// organization/folder level, customer can choose Cloud storage bucket in any
-    /// project. If the audit is triggered at project level using the service agent
-    /// at organization/folder level, all the destination options associated with
-    /// respective organization/folder level service agent will be available to
-    /// auditing projects.
+    /// Required. Cloud Storage buckets that you can upload your audit reports to
+    /// during the audit process.
+    ///
+    /// When you enroll an organization or folder, you can choose a Cloud Storage
+    /// bucket from any project in the organization or folder. If you run an audit
+    /// at the project level using the service agent at the organization or folder
+    /// level, all the buckets that are associated with the service agent are
+    /// available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -610,7 +622,7 @@ namespace Google.Cloud.AuditManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The destination details where the audit report must be uploaded.
+      /// Details about the bucket where you want to upload the audit report.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EligibleDestination : pb::IMessage<EligibleDestination>
@@ -665,8 +677,10 @@ namespace Google.Cloud.AuditManager.V1 {
         /// <summary>Field number for the "eligible_gcs_bucket" field.</summary>
         public const int EligibleGcsBucketFieldNumber = 3;
         /// <summary>
-        /// The Cloud Storage bucket location where the audit report and evidences
-        /// can be uploaded during the `GenerateAuditReport` API call.
+        /// The location of the Cloud Storage bucket where you want to upload the
+        /// audit report and evidence during the
+        /// [GenerateAuditReport][google.cloud.auditmanager.v1.AuditManager.GenerateAuditReport]
+        /// API call.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -864,7 +878,8 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// Message for requesting audit scope report.
+  /// Request message for
+  /// [GenerateAuditScopeReport][google.cloud.auditmanager.v1.AuditManager.GenerateAuditScopeReport].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateAuditScopeReportRequest : pb::IMessage<GenerateAuditScopeReportRequest>
@@ -918,10 +933,12 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ScopeFieldNumber = 2;
     private string scope_ = "";
     /// <summary>
-    /// Required. Scope for which the AuditScopeReport is required. Must be of
-    /// format resource_type/resource_identifier Eg:
-    /// projects/{project}/locations/{location},
-    /// folders/{folder}/locations/{location}
+    /// Required. Project or folder that the audit scope report is generated for,
+    /// in one of the following formats:
+    ///
+    /// * `projects/{project}/locations/{location}`
+    /// * `folders/{folder}/locations/{location}`
+    /// * `organizations/{organization}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -936,9 +953,12 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ComplianceStandardFieldNumber = 3;
     private string complianceStandard_ = "";
     /// <summary>
-    /// Required. Compliance Standard against which the Scope Report must be
-    /// generated. Eg: FEDRAMP_MODERATE
+    /// Optional. Deprecated. The standard (industry or regulatory requirements)
+    /// that the audit scope report is run against.
+    ///
+    /// Use the `compliance_framework` field instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ComplianceStandard {
@@ -952,7 +972,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ReportFormatFieldNumber = 4;
     private global::Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat reportFormat_ = global::Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat.Unspecified;
     /// <summary>
-    /// Required. The format in which the Scope report bytes should be returned.
+    /// Required. Format for the audit scope report.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -967,8 +987,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ComplianceFrameworkFieldNumber = 5;
     private string complianceFramework_ = "";
     /// <summary>
-    /// Required. Compliance framework against which the Scope Report must be
-    /// generated.
+    /// Required. Framework (set of controls) that the audit scope report is
+    /// generated against. For example, `NIST_800_53`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1196,15 +1216,15 @@ namespace Google.Cloud.AuditManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The options for the audit scope report format.
+      /// Format for the audit scope report.
       /// </summary>
       public enum AuditScopeReportFormat {
         /// <summary>
-        /// Unspecified. Invalid format.
+        /// Default value. This value is unused.
         /// </summary>
         [pbr::OriginalName("AUDIT_SCOPE_REPORT_FORMAT_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Audit Scope Report creation format is Open Document.
+        /// Open Document format.
         /// </summary>
         [pbr::OriginalName("AUDIT_SCOPE_REPORT_FORMAT_ODF")] Odf = 1,
       }
@@ -1215,7 +1235,8 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// Message for requesting the Audit Report.
+  /// Request message for
+  /// [GenerateAuditReport][google.cloud.auditmanager.v1.AuditManager.GenerateAuditReport].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateAuditReportRequest : pb::IMessage<GenerateAuditReportRequest>
@@ -1256,6 +1277,7 @@ namespace Google.Cloud.AuditManager.V1 {
       complianceStandard_ = other.complianceStandard_;
       reportFormat_ = other.reportFormat_;
       complianceFramework_ = other.complianceFramework_;
+      validateOnly_ = other.validateOnly_;
       switch (other.DestinationCase) {
         case DestinationOneofCase.GcsUri:
           GcsUri = other.GcsUri;
@@ -1274,9 +1296,9 @@ namespace Google.Cloud.AuditManager.V1 {
     /// <summary>Field number for the "gcs_uri" field.</summary>
     public const int GcsUriFieldNumber = 2;
     /// <summary>
-    /// Destination Cloud storage bucket where report and evidence must be
-    /// uploaded. The Cloud storage bucket provided here must be selected among
-    /// the buckets entered during the enrollment process.
+    /// URL for the Cloud Storage bucket where the report and evidence is
+    /// uploaded. You must select a bucket that was provided during the
+    /// enrollment process.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1306,10 +1328,12 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ScopeFieldNumber = 1;
     private string scope_ = "";
     /// <summary>
-    /// Required. Scope for which the AuditScopeReport is required. Must be of
-    /// format resource_type/resource_identifier Eg:
-    /// projects/{project}/locations/{location},
-    /// folders/{folder}/locations/{location}
+    /// Required. Organization, folder, or project that the audit applies to, in
+    /// one of the following formats:
+    ///
+    /// * `projects/{project}/locations/{location}`
+    /// * `folders/{folder}/locations/{location}`
+    /// * `organizations/{organization}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1324,9 +1348,11 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ComplianceStandardFieldNumber = 3;
     private string complianceStandard_ = "";
     /// <summary>
-    /// Required. Compliance Standard against which the Scope Report must be
-    /// generated. Eg: FEDRAMP_MODERATE
+    /// Optional. Deprecated. Compliance standard for the audit report.
+    ///
+    /// Use the `compliance_framework` field instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ComplianceStandard {
@@ -1340,7 +1366,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ReportFormatFieldNumber = 4;
     private global::Google.Cloud.AuditManager.V1.GenerateAuditReportRequest.Types.AuditReportFormat reportFormat_ = global::Google.Cloud.AuditManager.V1.GenerateAuditReportRequest.Types.AuditReportFormat.Unspecified;
     /// <summary>
-    /// Required. The format in which the audit report should be created.
+    /// Required. Format for the audit report.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1355,7 +1381,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ComplianceFrameworkFieldNumber = 5;
     private string complianceFramework_ = "";
     /// <summary>
-    /// Required. Compliance framework against which the Report must be generated.
+    /// Required. The framework that's used for the audit report. For example,
+    /// `NIST_800_53`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1363,6 +1390,22 @@ namespace Google.Cloud.AuditManager.V1 {
       get { return complianceFramework_; }
       set {
         complianceFramework_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 8;
+    private bool validateOnly_;
+    /// <summary>
+    /// Optional. If `true`, only validate the request and don't generate the audit
+    /// report.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
       }
     }
 
@@ -1406,6 +1449,7 @@ namespace Google.Cloud.AuditManager.V1 {
       if (ComplianceStandard != other.ComplianceStandard) return false;
       if (ReportFormat != other.ReportFormat) return false;
       if (ComplianceFramework != other.ComplianceFramework) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
       if (DestinationCase != other.DestinationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1419,6 +1463,7 @@ namespace Google.Cloud.AuditManager.V1 {
       if (ComplianceStandard.Length != 0) hash ^= ComplianceStandard.GetHashCode();
       if (ReportFormat != global::Google.Cloud.AuditManager.V1.GenerateAuditReportRequest.Types.AuditReportFormat.Unspecified) hash ^= ReportFormat.GetHashCode();
       if (ComplianceFramework.Length != 0) hash ^= ComplianceFramework.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1458,6 +1503,10 @@ namespace Google.Cloud.AuditManager.V1 {
         output.WriteRawTag(42);
         output.WriteString(ComplianceFramework);
       }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1488,6 +1537,10 @@ namespace Google.Cloud.AuditManager.V1 {
         output.WriteRawTag(42);
         output.WriteString(ComplianceFramework);
       }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1513,6 +1566,9 @@ namespace Google.Cloud.AuditManager.V1 {
       if (ComplianceFramework.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ComplianceFramework);
       }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1536,6 +1592,9 @@ namespace Google.Cloud.AuditManager.V1 {
       }
       if (other.ComplianceFramework.Length != 0) {
         ComplianceFramework = other.ComplianceFramework;
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
       }
       switch (other.DestinationCase) {
         case DestinationOneofCase.GcsUri:
@@ -1582,6 +1641,10 @@ namespace Google.Cloud.AuditManager.V1 {
             ComplianceFramework = input.ReadString();
             break;
           }
+          case 64: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1621,6 +1684,10 @@ namespace Google.Cloud.AuditManager.V1 {
             ComplianceFramework = input.ReadString();
             break;
           }
+          case 64: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -1632,15 +1699,15 @@ namespace Google.Cloud.AuditManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The options for the audit report format.
+      /// Format for the audit report.
       /// </summary>
       public enum AuditReportFormat {
         /// <summary>
-        /// Unspecified. Invalid state.
+        /// Default value. This value is unused.
         /// </summary>
         [pbr::OriginalName("AUDIT_REPORT_FORMAT_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Audit Report creation format is Open Document.
+        /// Open Document format.
         /// </summary>
         [pbr::OriginalName("AUDIT_REPORT_FORMAT_ODF")] Odf = 1,
       }
@@ -1651,7 +1718,8 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// Message for getting the enrollment status of a resource.
+  /// Request message for
+  /// [GetResourceEnrollmentStatus][google.cloud.auditmanager.v1.AuditManager.GetResourceEnrollmentStatus].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetResourceEnrollmentStatusRequest : pb::IMessage<GetResourceEnrollmentStatusRequest>
@@ -1702,10 +1770,12 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Format
-    /// folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status},
-    /// projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status},
-    /// organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}
+    /// Required. Name of the resource enrollment status, in one of the following
+    /// formats:
+    ///
+    /// * `folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+    /// * `projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+    /// * `organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1858,8 +1928,8 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// Message for listing all the descendent resources under parent with
-  /// enrollment.
+  /// Request message for
+  /// [ListResourceEnrollmentStatuses][google.cloud.auditmanager.v1.AuditManager.ListResourceEnrollmentStatuses].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListResourceEnrollmentStatusesRequest : pb::IMessage<ListResourceEnrollmentStatusesRequest>
@@ -1912,8 +1982,11 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent scope for which the list of resources with enrollments
-    /// are required.
+    /// Required. Parent organization or folder to list enrollment statuses for,
+    /// in one of the following formats:
+    ///
+    /// * `folders/{folder}/locations/{location}`
+    /// * `organizations/{organization}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1928,7 +2001,10 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of resources to return.
+    /// Optional. Maximum number of items to return in a single page. The service
+    /// might return fewer items than this value. If unspecified, the service picks
+    /// an appropriate default. The maximum value is 100; values above 100 are
+    /// reduced to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1943,8 +2019,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. The next_page_token value returned from a previous List request,
-    /// if any.
+    /// Optional. A page token, received from a previous call, to retrieve the next
+    /// page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2145,7 +2221,8 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// Response message with all the descendent resources with enrollment.
+  /// Response message for
+  /// [ListResourceEnrollmentStatuses][google.cloud.auditmanager.v1.AuditManager.ListResourceEnrollmentStatuses].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListResourceEnrollmentStatusesResponse : pb::IMessage<ListResourceEnrollmentStatusesResponse>
@@ -2199,7 +2276,7 @@ namespace Google.Cloud.AuditManager.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus> resourceEnrollmentStatuses_ = new pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus>();
     /// <summary>
-    /// The resources with their enrollment status.
+    /// Resources with their enrollment status.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2211,7 +2288,9 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Output only. The token to retrieve the next page of results.
+    /// Output only. A token that you can send as the `page_token` in a subsequent
+    /// request to retrieve the next page of results. If this field is empty, there
+    /// are no subsequent pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2378,7 +2457,8 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// Message for requesting to list the audit reports.
+  /// Request message for
+  /// [ListAuditReports][google.cloud.auditmanager.v1.AuditManager.ListAuditReports].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAuditReportsRequest : pb::IMessage<ListAuditReportsRequest>
@@ -2431,7 +2511,12 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent scope for which to list the reports.
+    /// Required. Parent organization, folder, or project to list reports for,
+    /// in one of the following formats:
+    ///
+    /// * `projects/{project}/locations/{location}`
+    /// * `folders/{folder}/locations/{location}`
+    /// * `organizations/{organization}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2446,7 +2531,10 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of resources to return.
+    /// Optional. Maximum number of items to return in a single page. The service
+    /// might return fewer items than this value. If unspecified, the service picks
+    /// an appropriate default. The maximum value is 100; values above 100 are
+    /// reduced to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2461,8 +2549,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. The next_page_token value returned from a previous List request,
-    /// if any.
+    /// Optional. A page token, received from a previous call, to retrieve the next
+    /// page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2663,7 +2751,8 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// Response message with all the audit reports.
+  /// Response message for
+  /// [ListAuditReports][google.cloud.auditmanager.v1.AuditManager.ListAuditReports].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAuditReportsResponse : pb::IMessage<ListAuditReportsResponse>
@@ -2717,7 +2806,7 @@ namespace Google.Cloud.AuditManager.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AuditManager.V1.AuditReport.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.AuditReport> auditReports_ = new pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.AuditReport>();
     /// <summary>
-    /// Output only. The audit reports.
+    /// Output only. Audit reports.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2729,7 +2818,9 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Output only. The token to retrieve the next page of results.
+    /// Output only. A token that you can send as the `page_token` in a subsequent
+    /// request to retrieve the next page of results. If this field is empty, there
+    /// are no subsequent pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2896,7 +2987,8 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// Message for requesting the overall audit report for an audit report name.
+  /// Request message for
+  /// [GetAuditReport][google.cloud.auditmanager.v1.AuditManager.GetAuditReport].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAuditReportRequest : pb::IMessage<GetAuditReportRequest>
@@ -2947,9 +3039,11 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Format
-    /// projects/{project}/locations/{location}/auditReports/{audit_report},
-    /// folders/{folder}/locations/{location}/auditReports/{audit_report}
+    /// Required. Name of the audit report, in one of the following formats:
+    ///
+    /// * `projects/{project}/locations/{location}/auditReports/{audit_report}`
+    /// * `folders/{folder}/locations/{location}/auditReports/{audit_report}`
+    /// * `organizations/{organization}/locations/{location}/auditReports/{audit_report}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3102,7 +3196,8 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// Message for requesting all the controls for a compliance standard.
+  /// Request message for
+  /// [ListControls][google.cloud.auditmanager.v1.AuditManager.ListControls].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListControlsRequest : pb::IMessage<ListControlsRequest>
@@ -3155,9 +3250,11 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Format
-    /// projects/{project}/locations/{location}/standards/{standard},
-    /// folders/{folder}/locations/{location}/standards/{standard}
+    /// Required. Standard to list controls for, in one of the following formats:
+    ///
+    /// * `projects/{project}/locations/{location}/standards/{standard}`
+    /// * `folders/{folder}/locations/{location}/standards/{standard}`
+    /// * `organizations/{organization}/locations/{location}/standards/{standard}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3172,7 +3269,10 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of resources to return.
+    /// Optional. Maximum number of items to return in a single page. The service
+    /// might return fewer items than this value. If unspecified, the service picks
+    /// an appropriate default. The maximum value is 100; values above 100 are
+    /// reduced to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3187,8 +3287,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. The next_page_token value returned from a previous List request,
-    /// if any.
+    /// Optional. A page token, received from a previous call, to retrieve the next
+    /// page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3389,7 +3489,8 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// Response message with all the controls for a compliance standard.
+  /// Response message for
+  /// [ListControls][google.cloud.auditmanager.v1.AuditManager.ListControls].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListControlsResponse : pb::IMessage<ListControlsResponse>
@@ -3443,7 +3544,7 @@ namespace Google.Cloud.AuditManager.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AuditManager.V1.Control.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.Control> controls_ = new pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.Control>();
     /// <summary>
-    /// Output only. The controls for the compliance standard.
+    /// Output only. Controls for a given regulatory standard.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3455,7 +3556,9 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Output only. The token to retrieve the next page of results.
+    /// Output only. A token that you can send as the `page_token` in a subsequent
+    /// request to retrieve the next page of results. If this field is empty, there
+    /// are no subsequent pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3622,9 +3725,7 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// The `ReportGenerationProgress` is part of
-  /// [google.longrunning.Operation][google.longrunning.Operation] returned to the
-  /// client for every `GetOperation` request.
+  /// Details about the current status of the report-generation process.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReportGenerationProgress : pb::IMessage<ReportGenerationProgress>
@@ -3681,7 +3782,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int StateFieldNumber = 1;
     private global::Google.Cloud.AuditManager.V1.OperationState state_ = global::Google.Cloud.AuditManager.V1.OperationState.Unspecified;
     /// <summary>
-    /// Output only. The current state of execution for report generation.
+    /// Output only. Current state of execution for report generation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3696,9 +3797,9 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int FailureReasonFieldNumber = 2;
     private string failureReason_ = "";
     /// <summary>
-    /// Output only. States the reason of failure during the audit report
-    /// generation process. This field is set only if the state attribute is
-    /// OPERATION_STATE_FAILED.
+    /// Output only. Reason for failure during the audit report generation process.
+    /// This field is set only if the `OperationState` attribute is
+    /// `OPERATION_STATE_FAILED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3713,9 +3814,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int EvaluationPercentCompleteFieldNumber = 20;
     private double evaluationPercentComplete_;
     /// <summary>
-    /// Shows the progress of the CESS service evaluation process. The progress is
-    /// defined in terms of percentage complete and is being fetched from the CESS
-    /// service.
+    /// Progress of the evaluation process. The progress is
+    /// defined in terms of percentage complete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3730,10 +3830,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ReportGenerationPercentCompleteFieldNumber = 30;
     private double reportGenerationPercentComplete_;
     /// <summary>
-    /// Shows the report generation progress of the CESS Result Processor Service.
-    /// The // progress is defined in terms of percentage complete and is being
-    /// fetched from the CESS service. If report_generation_in_progress is non zero
-    /// then evaluation_percent_complete will be 100%.
+    /// Report generation progress, defined in terms of percentage complete.
+    /// Until evaluation is complete, this value is always `0`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3748,11 +3846,9 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ReportUploadingPercentCompleteFieldNumber = 40;
     private double reportUploadingPercentComplete_;
     /// <summary>
-    /// Shows the report uploading progress of the CESS Result Processor Service.
-    /// The progress is defined in terms of percentage complete and is being
-    /// fetched from the CESS service. If report_uploading_in_progress is non zero
-    /// then evaluation_percent_complete and report_generation_percent_complete
-    /// will be 100%.
+    /// Report uploading progress, defined in terms of percentage complete.
+    /// Until evaluation and report generation are complete, this value is always
+    /// `0`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3767,8 +3863,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int DestinationGcsBucketFieldNumber = 50;
     private string destinationGcsBucket_ = "";
     /// <summary>
-    /// Output only. The Cloud Storage bucket where the audit report will be
-    /// uploaded once the evaluation process is completed.
+    /// Output only. Cloud Storage bucket where the audit report is uploaded to
+    /// after the evaluation process is completed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3783,7 +3879,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int AuditReportFieldNumber = 51;
     private string auditReport_ = "";
     /// <summary>
-    /// Output only. The name of the audit report.
+    /// Output only. Name of the audit report.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4080,7 +4176,7 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// The enrollment resource.
+  /// Organization, folder, or project to enroll for audit reports.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Enrollment : pb::IMessage<Enrollment>
@@ -4132,8 +4228,11 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. The name of this Enrollment, in the format of scope given in
-    /// request.
+    /// Identifier. Name of the enrollment, in one of the following formats:
+    ///
+    /// * `projects/{project}/locations/{location}/enrollments/{enrollment}`
+    /// * `folders/{folder}/locations/{location}/enrollments/{enrollment}`
+    /// * `organizations/{organization}/locations/{location}/enrollments/{enrollment}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4150,7 +4249,8 @@ namespace Google.Cloud.AuditManager.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.AuditManager.V1.DestinationDetails.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.DestinationDetails> destinationDetails_ = new pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.DestinationDetails>();
     /// <summary>
-    /// Output only. The locations where the generated reports can be uploaded.
+    /// Output only. Cloud Storage buckets where you want to upload the audit
+    /// reports.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4314,7 +4414,7 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// The audit scope report.
+  /// Audit scope report.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuditScopeReport : pb::IMessage<AuditScopeReport>
@@ -4370,7 +4470,7 @@ namespace Google.Cloud.AuditManager.V1 {
     /// <summary>Field number for the "scope_report_contents" field.</summary>
     public const int ScopeReportContentsFieldNumber = 1;
     /// <summary>
-    /// The audit scope report content in byte format.
+    /// Audit scope report content in byte format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4400,8 +4500,12 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int NameFieldNumber = 2;
     private string name_ = "";
     /// <summary>
-    /// Identifier. The name of this Audit Report, in the format of scope given in
-    /// request.
+    /// Identifier. Name for the audit scope report, in one of the following
+    /// formats:
+    ///
+    /// * `projects/{project}/locations/{location}/auditScopeReports/{audit_scope_report}`
+    /// * `folders/{folder}/locations/{location}/auditScopeReports/{audit_scope_report}`
+    /// * `organizations/{organization}/locations/{location}/auditScopeReports/{audit_scope_report}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4603,7 +4707,7 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// The metadata of the long-running operation.
+  /// Metadata for the long-running operation.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
@@ -4660,7 +4764,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int CreateTimeFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time the operation was created.
+    /// Output only. Time that the operation was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4675,7 +4779,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int EndTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// Output only. The time the operation finished running.
+    /// Output only. Time that the operation finished running.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4690,7 +4794,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int TargetFieldNumber = 3;
     private string target_ = "";
     /// <summary>
-    /// Output only. Server-defined resource path for the target of the operation.
+    /// Output only. A server-defined resource path for the target of the
+    /// operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4705,7 +4810,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int VerbFieldNumber = 4;
     private string verb_ = "";
     /// <summary>
-    /// Output only. Name of the verb executed by the operation.
+    /// Output only. The name of the verb that was executed by the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4720,7 +4825,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int StatusMessageFieldNumber = 5;
     private string statusMessage_ = "";
     /// <summary>
-    /// Output only. Human-readable status of the operation, if any.
+    /// Output only. A human-readable status of the operation, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4735,11 +4840,11 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int RequestedCancellationFieldNumber = 6;
     private bool requestedCancellation_;
     /// <summary>
-    /// Output only. Identifies whether the user has requested cancellation
-    /// of the operation. Operations that have been cancelled successfully
-    /// have [Operation.error][] value with a
-    /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
-    /// `Code.CANCELLED`.
+    /// Output only. Whether you requested that the operation be cancelled.
+    /// Operations that were cancelled successfully have an
+    /// [Operation.error][google.longrunning.Operation.error]
+    /// value with a status code
+    /// [Code.CANCELLED][google.rpc.Status.code.CANCELLED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4754,7 +4859,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ApiVersionFieldNumber = 7;
     private string apiVersion_ = "";
     /// <summary>
-    /// Output only. API version used to start the operation.
+    /// Output only. The API version used to start the operation. For example,
+    /// `v1`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5069,7 +5175,7 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// A resource with its enrollment status.
+  /// An organization, folder, or project with its enrollment status.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceEnrollmentStatus : pb::IMessage<ResourceEnrollmentStatus>
@@ -5124,7 +5230,12 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. The name of this resource.
+    /// Identifier. Name of the resource enrollment status, in one of the following
+    /// formats:
+    ///
+    /// * `folders/{folder}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+    /// * `projects/{project}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
+    /// * `organizations/{organization}/locations/{location}/resourceEnrollmentStatuses/{resource_enrollment_status}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5139,8 +5250,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int EnrollmentFieldNumber = 2;
     private global::Google.Cloud.AuditManager.V1.Enrollment enrollment_;
     /// <summary>
-    /// Output only. Enrollment which contains enrolled destination details for a
-    /// resource
+    /// Output only. Enrolled destination details for the organization, folder, or
+    /// project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5155,7 +5266,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int EnrolledFieldNumber = 3;
     private bool enrolled_;
     /// <summary>
-    /// Output only. Is resource enrolled.
+    /// Output only. Deprecated. Whether the organization, folder, or project is
+    /// enrolled. Use `enrollment_state` instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5171,7 +5283,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int DisplayNameFieldNumber = 4;
     private string displayName_ = "";
     /// <summary>
-    /// Output only. Display name of the project/folder/organization.
+    /// Output only. Display name for the organization, folder, or project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5186,7 +5298,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int EnrollmentStateFieldNumber = 5;
     private global::Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus.Types.ResourceEnrollmentState enrollmentState_ = global::Google.Cloud.AuditManager.V1.ResourceEnrollmentStatus.Types.ResourceEnrollmentState.Unspecified;
     /// <summary>
-    /// Output only. Enrollment state of the resource.
+    /// Output only. Enrollment state of the organization, folder, or project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5447,23 +5559,23 @@ namespace Google.Cloud.AuditManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The different enrollment states of a resource.
+      /// Different enrollment states of the resource and its parent.
       /// </summary>
       public enum ResourceEnrollmentState {
         /// <summary>
-        /// Unspecified. Invalid state.
+        /// Default value. This value is unused.
         /// </summary>
         [pbr::OriginalName("RESOURCE_ENROLLMENT_STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Not enrolled.
+        /// The resource isn't enrolled.
         /// </summary>
         [pbr::OriginalName("NOT_ENROLLED")] NotEnrolled = 1,
         /// <summary>
-        /// Resource is not enrolled but the parent is enrolled.
+        /// The resource isn't enrolled but the parent is enrolled.
         /// </summary>
         [pbr::OriginalName("INHERITED")] Inherited = 2,
         /// <summary>
-        /// Enrolled.
+        /// The resource is enrolled.
         /// </summary>
         [pbr::OriginalName("ENROLLED")] Enrolled = 3,
       }
@@ -5535,8 +5647,11 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. The name of this Audit Report, in the format of scope given in
-    /// request.
+    /// Identifier. Name of the audit report, in one of the following formats:
+    ///
+    /// * `projects/{project}/locations/{location}/auditReports/{audit_report}`
+    /// * `folders/{folder}/locations/{location}/auditReports/{audit_report}`
+    /// * `organizations/{organization}/locations/{location}/auditReports/{audit_report}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5551,7 +5666,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ReportSummaryFieldNumber = 2;
     private global::Google.Cloud.AuditManager.V1.ReportSummary reportSummary_;
     /// <summary>
-    /// Output only. Report summary with compliance, violation counts etc.
+    /// Output only. Report summary that includes information about compliance and
+    /// violation counts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5566,7 +5682,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int OperationIdFieldNumber = 3;
     private string operationId_ = "";
     /// <summary>
-    /// Output only. ClientOperationId
+    /// Output only. Client operation ID for the audit report.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5581,7 +5697,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int DestinationDetailsFieldNumber = 4;
     private global::Google.Cloud.AuditManager.V1.DestinationDetails destinationDetails_;
     /// <summary>
-    /// Output only. The location where the generated report will be uploaded.
+    /// Output only. Cloud Storage bucket where the audit report is uploaded to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5596,8 +5712,11 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ComplianceStandardFieldNumber = 5;
     private string complianceStandard_ = "";
     /// <summary>
-    /// Output only. Compliance Standard.
+    /// Output only. Deprecated. Compliance standard to be audited against.
+    ///
+    /// Use the `compliance_framework` field instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ComplianceStandard {
@@ -5611,7 +5730,12 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ScopeFieldNumber = 6;
     private string scope_ = "";
     /// <summary>
-    /// Output only. The parent scope on which the report was generated.
+    /// Output only. Organization, folder, or project that the report is generated
+    /// for, in one of the following formats:
+    ///
+    /// * `projects/{project}/locations/{location}`
+    /// * `folders/{folder}/locations/{location}`
+    /// * `organizations/{organization}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5643,7 +5767,7 @@ namespace Google.Cloud.AuditManager.V1 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.AuditManager.V1.ControlDetails.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.ControlDetails> controlDetails_ = new pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.ControlDetails>();
     /// <summary>
-    /// Output only. The overall status of controls
+    /// Output only. Overall status of the controls.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5655,7 +5779,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ReportGenerationStateFieldNumber = 9;
     private global::Google.Cloud.AuditManager.V1.AuditReport.Types.ReportGenerationState reportGenerationState_ = global::Google.Cloud.AuditManager.V1.AuditReport.Types.ReportGenerationState.Unspecified;
     /// <summary>
-    /// Output only. The state of Audit Report Generation.
+    /// Output only. State of audit report generation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5670,7 +5794,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ComplianceFrameworkFieldNumber = 10;
     private string complianceFramework_ = "";
     /// <summary>
-    /// Output only. Compliance Framework of Audit Report
+    /// Output only. Compliance framework to use for the audit report. For example,
+    /// `CIS_GCP_FOUNDATIONS_V1_2_0`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5685,8 +5810,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ScopeIdFieldNumber = 11;
     private string scopeId_ = "";
     /// <summary>
-    /// Output only. The ID/ Number for the scope on which the audit report was
-    /// generated.
+    /// Output only. Project number, folder ID, or organization ID that the audit
+    /// report was generated for.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6099,31 +6224,31 @@ namespace Google.Cloud.AuditManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The different states of the Audit Manager report generation.
+      /// Different states of report generation.
       /// </summary>
       public enum ReportGenerationState {
         /// <summary>
-        /// Unspecified. Invalid state.
+        /// Default value. This value is unused.
         /// </summary>
         [pbr::OriginalName("REPORT_GENERATION_STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Audit report generation process is in progress, ie. operation state is
-        /// neither OPERATION_STATE_DONE nor OPERATION_STATE_FAILED.
+        /// The process is in progress. The operation can have any state
+        /// except for `OPERATION_STATE_DONE` or `OPERATION_STATE_FAILED`.
         /// </summary>
         [pbr::OriginalName("IN_PROGRESS")] InProgress = 1,
         /// <summary>
-        /// Audit report generation process is completed. Operation state is
-        /// OPERATION_STATE_DONE.
+        /// The process is completed. The operation state is
+        /// `OPERATION_STATE_DONE`.
         /// </summary>
         [pbr::OriginalName("COMPLETED")] Completed = 2,
         /// <summary>
-        /// Audit report generation process has failed. Operation state is
-        /// OPERATION_STATE_FAILED.
+        /// The process has failed. The operation state is
+        /// `OPERATION_STATE_FAILED`.
         /// </summary>
         [pbr::OriginalName("FAILED")] Failed = 3,
         /// <summary>
-        /// Audit report generation process has completed. But report summary is
-        /// unknown. This is valid for older reports.
+        /// The process completed, but the report summary's status is unknown. This
+        /// state isn't used for new reports.
         /// </summary>
         [pbr::OriginalName("SUMMARY_UNKNOWN")] SummaryUnknown = 4,
       }
@@ -6134,7 +6259,7 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// The regulatory family of the control.
+  /// Regulatory family of the control.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ControlFamily : pb::IMessage<ControlFamily>
@@ -6186,7 +6311,10 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int FamilyIdFieldNumber = 1;
     private string familyId_ = "";
     /// <summary>
-    /// The ID of the regulatory control family.
+    /// ID of the regulatory control family. To find the list of supported
+    /// control families, use the
+    /// [ListControls][google.cloud.auditmanager.v1.AuditManager.ListControls]
+    /// method and review the `control_family` field in the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6201,7 +6329,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// The display name of the regulatory control family.
+    /// Display name of the regulatory control family.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6438,8 +6566,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     /// <summary>
-    /// Output only. The control identifier used to fetch the findings. This is
-    /// same as the control report name.
+    /// Output only. Control identifier that's used to fetch the findings. The
+    /// identifier is the same as the control report name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6469,7 +6597,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int FamilyFieldNumber = 3;
     private global::Google.Cloud.AuditManager.V1.Control.Types.Family family_ = global::Google.Cloud.AuditManager.V1.Control.Types.Family.Unspecified;
     /// <summary>
-    /// Output only. Group where the control belongs. E.g. Access Control.
+    /// Output only. Category that the control belongs to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6484,7 +6612,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ControlFamilyFieldNumber = 10;
     private global::Google.Cloud.AuditManager.V1.ControlFamily controlFamily_;
     /// <summary>
-    /// Output only. Regulatory Family of the control E.g. Access Control
+    /// Output only. Regulatory family of the control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6499,7 +6627,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int DescriptionFieldNumber = 4;
     private string description_ = "";
     /// <summary>
-    /// Output only. Regulatory control ask of the control
+    /// Output only. Description of the control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6514,8 +6642,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ResponsibilityTypeFieldNumber = 5;
     private string responsibilityType_ = "";
     /// <summary>
-    /// Output only. The type of responsibility for implementing this control. It
-    /// can be google, customer or shared.
+    /// Output only. Who is responsible for implementing this control. Set to one
+    /// of the following values: `GOOGLE`, `CUSTOMER`, or `SHARED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6530,8 +6658,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int GoogleResponsibilityDescriptionFieldNumber = 6;
     private string googleResponsibilityDescription_ = "";
     /// <summary>
-    /// Output only. Description of the google responsibility for implementing this
-    /// control.
+    /// Output only. A description of Google's responsibility for this control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6546,7 +6673,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int GoogleResponsibilityImplementationFieldNumber = 7;
     private string googleResponsibilityImplementation_ = "";
     /// <summary>
-    /// Output only. Implementation of the google responsibility for implementing
+    /// Output only. A description of how Google implements its responsibility for
     /// this control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6562,8 +6689,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int CustomerResponsibilityDescriptionFieldNumber = 8;
     private string customerResponsibilityDescription_ = "";
     /// <summary>
-    /// Output only. Description of the customer responsibility for implementing
-    /// this control.
+    /// Output only. A description of your responsibility for this control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6578,7 +6704,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int CustomerResponsibilityImplementationFieldNumber = 9;
     private string customerResponsibilityImplementation_ = "";
     /// <summary>
-    /// Output only. Implementation of the customer responsibility for implementing
+    /// Output only. A description of how you can implement your responsibility for
     /// this control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6960,83 +7086,83 @@ namespace Google.Cloud.AuditManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The family of the control. For example, Access Control.
+      /// Category of the control.
       /// </summary>
       public enum Family {
         /// <summary>
-        /// Unspecified. Invalid state.
+        /// Default value. This value is unused.
         /// </summary>
         [pbr::OriginalName("FAMILY_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Access Control
+        /// Access control.
         /// </summary>
         [pbr::OriginalName("AC")] Ac = 1,
         /// <summary>
-        /// Awareness and Training
+        /// Awareness and training.
         /// </summary>
         [pbr::OriginalName("AT")] At = 2,
         /// <summary>
-        /// Audit and Accountability
+        /// Audit and accountability.
         /// </summary>
         [pbr::OriginalName("AU")] Au = 3,
         /// <summary>
-        /// Certification, Accreditation and Security Assessments
+        /// Certification, accreditation and security assessments.
         /// </summary>
         [pbr::OriginalName("CA")] Ca = 4,
         /// <summary>
-        /// Configuration Management
+        /// Configuration management and change control.
         /// </summary>
         [pbr::OriginalName("CM")] Cm = 5,
         /// <summary>
-        /// Contingency Planning
+        /// Contingency planning and disaster recovery.
         /// </summary>
         [pbr::OriginalName("CP")] Cp = 6,
         /// <summary>
-        /// Identification and Authentication
+        /// Identification and authentication.
         /// </summary>
         [pbr::OriginalName("IA")] Ia = 7,
         /// <summary>
-        /// Incident Response
+        /// Incident response.
         /// </summary>
         [pbr::OriginalName("IR")] Ir = 8,
         /// <summary>
-        /// Maintenance
+        /// Maintenance.
         /// </summary>
         [pbr::OriginalName("MA")] Ma = 9,
         /// <summary>
-        /// Media Protection
+        /// Media protection.
         /// </summary>
         [pbr::OriginalName("MP")] Mp = 10,
         /// <summary>
-        /// Physical and Environmental Protection
+        /// Physical and environmental protection.
         /// </summary>
         [pbr::OriginalName("PE")] Pe = 11,
         /// <summary>
-        /// Security Planning
+        /// Security planning.
         /// </summary>
         [pbr::OriginalName("PL")] Pl = 12,
         /// <summary>
-        /// Personnel Security
+        /// Personnel security.
         /// </summary>
         [pbr::OriginalName("PS")] Ps = 13,
         /// <summary>
-        /// Risk Assessment
+        /// Risk assessment.
         /// </summary>
         [pbr::OriginalName("RA")] Ra = 14,
         /// <summary>
-        /// System Services and Acquisition
+        /// System services and acquisition.
         /// </summary>
         [pbr::OriginalName("SA")] Sa = 15,
         /// <summary>
-        /// System and Communications Protection
+        /// System and communications protection.
         /// </summary>
         [pbr::OriginalName("SC")] Sc = 16,
         /// <summary>
-        /// System and Information Integrity
+        /// System and information integrity.
         /// </summary>
         [pbr::OriginalName("SI")] Si = 17,
         /// <summary>
-        /// Supply Chain Risk Management
+        /// Supply chain risk management.
         /// </summary>
         [pbr::OriginalName("SR")] Sr = 18,
       }
@@ -7047,7 +7173,7 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// The locations where the generated reports are saved.
+  /// Cloud Storage bucket where the audit report is uploaded to.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DestinationDetails : pb::IMessage<DestinationDetails>
@@ -7102,7 +7228,8 @@ namespace Google.Cloud.AuditManager.V1 {
     /// <summary>Field number for the "gcs_bucket_uri" field.</summary>
     public const int GcsBucketUriFieldNumber = 1;
     /// <summary>
-    /// The Cloud Storage bucket where the audit report is/will be uploaded.
+    /// URI for the Cloud Storage bucket, in the format
+    /// `gs://{bucket_name}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7295,7 +7422,8 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// The additional information for an audit operation.
+  /// Additional information about the number of checks that were made during an
+  /// audit operation.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReportSummary : pb::IMessage<ReportSummary>
@@ -7350,7 +7478,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int TotalCountFieldNumber = 1;
     private int totalCount_;
     /// <summary>
-    /// Total number of checks.
+    /// Total number of evaluated checks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7395,7 +7523,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ManualReviewNeededCountFieldNumber = 4;
     private int manualReviewNeededCount_;
     /// <summary>
-    /// Number of checks with "manual review needed" status.
+    /// Number of checks that require a manual review.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7410,7 +7538,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ErrorCountFieldNumber = 5;
     private int errorCount_;
     /// <summary>
-    /// Number of checks that could not be performed due to errors.
+    /// Number of checks that can't be performed due to errors.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7659,7 +7787,7 @@ namespace Google.Cloud.AuditManager.V1 {
   }
 
   /// <summary>
-  /// The evaluation details for a control.
+  /// Evaluation details for a control.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ControlDetails : pb::IMessage<ControlDetails>
@@ -7712,7 +7840,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ControlFieldNumber = 1;
     private global::Google.Cloud.AuditManager.V1.Control control_;
     /// <summary>
-    /// The control for which the findings are being reported.
+    /// Control that the findings are being reported for.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7742,7 +7870,8 @@ namespace Google.Cloud.AuditManager.V1 {
     public const int ControlReportSummaryFieldNumber = 3;
     private global::Google.Cloud.AuditManager.V1.ReportSummary controlReportSummary_;
     /// <summary>
-    /// Report summary with compliance, violation counts etc.
+    /// A control report summary that provides a high-level overview of the
+    /// compliance controls and the assessment status.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
