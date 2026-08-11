@@ -62,6 +62,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             RemoveIpOverrideSettings = existing.RemoveIpOverrideSettings;
             ListIpOverridesSettings = existing.ListIpOverridesSettings;
             GetMetricsSettings = existing.GetMetricsSettings;
+            GetPolicySettings = existing.GetPolicySettings;
+            UpdatePolicySettings = existing.UpdatePolicySettings;
             CreateFirewallPolicySettings = existing.CreateFirewallPolicySettings;
             ListFirewallPoliciesSettings = existing.ListFirewallPoliciesSettings;
             GetFirewallPolicySettings = existing.GetFirewallPolicySettings;
@@ -242,6 +244,32 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetMetricsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.GetPolicy</c> and <c>RecaptchaEnterpriseServiceClient.GetPolicyAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.UpdatePolicy</c> and
+        /// <c>RecaptchaEnterpriseServiceClient.UpdatePolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdatePolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -2155,6 +2183,200 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             GetMetricsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Get the policy for a key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy GetPolicy(GetPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the policy for a key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetPolicyAsync(GetPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the policy for a key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetPolicyAsync(GetPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the policy for a key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to get, in the format
+        /// `projects/{project}/keys/{key}/policy`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy GetPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPolicy(new GetPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the policy for a key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to get, in the format
+        /// `projects/{project}/keys/{key}/policy`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPolicyAsync(new GetPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the policy for a key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to get, in the format
+        /// `projects/{project}/keys/{key}/policy`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            GetPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the policy for a key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to get, in the format
+        /// `projects/{project}/keys/{key}/policy`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy GetPolicy(PolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPolicy(new GetPolicyRequest
+            {
+                PolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the policy for a key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to get, in the format
+        /// `projects/{project}/keys/{key}/policy`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetPolicyAsync(PolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPolicyAsync(new GetPolicyRequest
+            {
+                PolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the policy for a key.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the policy to get, in the format
+        /// `projects/{project}/keys/{key}/policy`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetPolicyAsync(PolicyName name, st::CancellationToken cancellationToken) =>
+            GetPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the policy for a key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy UpdatePolicy(UpdatePolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the policy for a key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> UpdatePolicyAsync(UpdatePolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the policy for a key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> UpdatePolicyAsync(UpdatePolicyRequest request, st::CancellationToken cancellationToken) =>
+            UpdatePolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the policy for a key.
+        /// </summary>
+        /// <param name="policy">
+        /// Required. The Policy's name is used to identify the policy to update, in
+        /// the format `projects/{project}/keys/{key}/policy`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields of the policy get updated. If
+        /// the mask is not present, all fields are updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy UpdatePolicy(Policy policy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePolicy(new UpdatePolicyRequest
+            {
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the policy for a key.
+        /// </summary>
+        /// <param name="policy">
+        /// Required. The Policy's name is used to identify the policy to update, in
+        /// the format `projects/{project}/keys/{key}/policy`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields of the policy get updated. If
+        /// the mask is not present, all fields are updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> UpdatePolicyAsync(Policy policy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePolicyAsync(new UpdatePolicyRequest
+            {
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the policy for a key.
+        /// </summary>
+        /// <param name="policy">
+        /// Required. The Policy's name is used to identify the policy to update, in
+        /// the format `projects/{project}/keys/{key}/policy`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The mask to control which fields of the policy get updated. If
+        /// the mask is not present, all fields are updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> UpdatePolicyAsync(Policy policy, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdatePolicyAsync(policy, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA
         /// Enterprise actions can be executed.
         /// A project may have a maximum of 1000 policies.
@@ -3459,6 +3681,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         private readonly gaxgrpc::ApiCall<GetMetricsRequest, Metrics> _callGetMetrics;
 
+        private readonly gaxgrpc::ApiCall<GetPolicyRequest, Policy> _callGetPolicy;
+
+        private readonly gaxgrpc::ApiCall<UpdatePolicyRequest, Policy> _callUpdatePolicy;
+
         private readonly gaxgrpc::ApiCall<CreateFirewallPolicyRequest, FirewallPolicy> _callCreateFirewallPolicy;
 
         private readonly gaxgrpc::ApiCall<ListFirewallPoliciesRequest, ListFirewallPoliciesResponse> _callListFirewallPolicies;
@@ -3534,6 +3760,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             _callGetMetrics = clientHelper.BuildApiCall<GetMetricsRequest, Metrics>("GetMetrics", grpcClient.GetMetricsAsync, grpcClient.GetMetrics, effectiveSettings.GetMetricsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMetrics);
             Modify_GetMetricsApiCall(ref _callGetMetrics);
+            _callGetPolicy = clientHelper.BuildApiCall<GetPolicyRequest, Policy>("GetPolicy", grpcClient.GetPolicyAsync, grpcClient.GetPolicy, effectiveSettings.GetPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetPolicy);
+            Modify_GetPolicyApiCall(ref _callGetPolicy);
+            _callUpdatePolicy = clientHelper.BuildApiCall<UpdatePolicyRequest, Policy>("UpdatePolicy", grpcClient.UpdatePolicyAsync, grpcClient.UpdatePolicy, effectiveSettings.UpdatePolicySettings).WithGoogleRequestParam("policy.name", request => request.Policy?.Name);
+            Modify_ApiCall(ref _callUpdatePolicy);
+            Modify_UpdatePolicyApiCall(ref _callUpdatePolicy);
             _callCreateFirewallPolicy = clientHelper.BuildApiCall<CreateFirewallPolicyRequest, FirewallPolicy>("CreateFirewallPolicy", grpcClient.CreateFirewallPolicyAsync, grpcClient.CreateFirewallPolicy, effectiveSettings.CreateFirewallPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateFirewallPolicy);
             Modify_CreateFirewallPolicyApiCall(ref _callCreateFirewallPolicy);
@@ -3592,6 +3824,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         partial void Modify_GetMetricsApiCall(ref gaxgrpc::ApiCall<GetMetricsRequest, Metrics> call);
 
+        partial void Modify_GetPolicyApiCall(ref gaxgrpc::ApiCall<GetPolicyRequest, Policy> call);
+
+        partial void Modify_UpdatePolicyApiCall(ref gaxgrpc::ApiCall<UpdatePolicyRequest, Policy> call);
+
         partial void Modify_CreateFirewallPolicyApiCall(ref gaxgrpc::ApiCall<CreateFirewallPolicyRequest, FirewallPolicy> call);
 
         partial void Modify_ListFirewallPoliciesApiCall(ref gaxgrpc::ApiCall<ListFirewallPoliciesRequest, ListFirewallPoliciesResponse> call);
@@ -3640,6 +3876,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         partial void Modify_ListIpOverridesRequest(ref ListIpOverridesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetMetricsRequest(ref GetMetricsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetPolicyRequest(ref GetPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdatePolicyRequest(ref UpdatePolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateFirewallPolicyRequest(ref CreateFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4001,6 +4241,54 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         {
             Modify_GetMetricsRequest(ref request, ref callSettings);
             return _callGetMetrics.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get the policy for a key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Policy GetPolicy(GetPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPolicyRequest(ref request, ref callSettings);
+            return _callGetPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get the policy for a key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Policy> GetPolicyAsync(GetPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPolicyRequest(ref request, ref callSettings);
+            return _callGetPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the policy for a key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Policy UpdatePolicy(UpdatePolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePolicyRequest(ref request, ref callSettings);
+            return _callUpdatePolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the policy for a key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Policy> UpdatePolicyAsync(UpdatePolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePolicyRequest(ref request, ref callSettings);
+            return _callUpdatePolicy.Async(request, callSettings);
         }
 
         /// <summary>
