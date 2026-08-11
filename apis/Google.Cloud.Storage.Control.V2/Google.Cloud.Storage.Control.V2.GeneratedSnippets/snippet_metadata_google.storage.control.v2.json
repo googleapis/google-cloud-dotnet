@@ -10357,6 +10357,531 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ViewObjectFullContext_sync",
+      "title": "ViewObjectFullContextRequestObject",
+      "description": "Snippet for ViewObjectFullContext",
+      "file": "StorageControlClient.ViewObjectFullContextRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ViewObjectFullContext",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ViewObjectFullContext",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ViewObjectFullContextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.ObjectFullContext",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ViewObjectFullContext",
+          "fullName": "google.storage.control.v2.StorageControl.ViewObjectFullContext",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ViewObjectFullContext_async",
+      "title": "ViewObjectFullContextRequestObjectAsync",
+      "description": "Snippet for ViewObjectFullContextAsync",
+      "file": "StorageControlClient.ViewObjectFullContextRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ViewObjectFullContextAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ViewObjectFullContextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ViewObjectFullContextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.ObjectFullContext>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ViewObjectFullContext",
+          "fullName": "google.storage.control.v2.StorageControl.ViewObjectFullContext",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ViewObjectFullContext_sync_flattened1",
+      "title": "ViewObjectFullContext1",
+      "description": "Snippet for ViewObjectFullContext",
+      "file": "StorageControlClient.ViewObjectFullContext1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ViewObjectFullContext",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ViewObjectFullContext",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "contextKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.ObjectFullContext",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ViewObjectFullContext",
+          "fullName": "google.storage.control.v2.StorageControl.ViewObjectFullContext",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ViewObjectFullContext_async_flattened1",
+      "title": "ViewObjectFullContext1Async",
+      "description": "Snippet for ViewObjectFullContextAsync",
+      "file": "StorageControlClient.ViewObjectFullContext1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ViewObjectFullContextAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ViewObjectFullContextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "contextKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.ObjectFullContext>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ViewObjectFullContext",
+          "fullName": "google.storage.control.v2.StorageControl.ViewObjectFullContext",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ViewObjectFullContext_sync_flattened1_resourceNames",
+      "title": "ViewObjectFullContext1ResourceNames",
+      "description": "Snippet for ViewObjectFullContext",
+      "file": "StorageControlClient.ViewObjectFullContext1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ViewObjectFullContext",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ViewObjectFullContext",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ObjectName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "contextKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.ObjectFullContext",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ViewObjectFullContext",
+          "fullName": "google.storage.control.v2.StorageControl.ViewObjectFullContext",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ViewObjectFullContext_async_flattened1_resourceNames",
+      "title": "ViewObjectFullContext1ResourceNamesAsync",
+      "description": "Snippet for ViewObjectFullContextAsync",
+      "file": "StorageControlClient.ViewObjectFullContext1ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ViewObjectFullContextAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ViewObjectFullContextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ObjectName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "contextKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.ObjectFullContext>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ViewObjectFullContext",
+          "fullName": "google.storage.control.v2.StorageControl.ViewObjectFullContext",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ViewObjectFullContext_sync_flattened2",
+      "title": "ViewObjectFullContext2",
+      "description": "Snippet for ViewObjectFullContext",
+      "file": "StorageControlClient.ViewObjectFullContext2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ViewObjectFullContext",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ViewObjectFullContext",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Int64",
+            "name": "generation"
+          },
+          {
+            "type": "System.String",
+            "name": "contextKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.ObjectFullContext",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ViewObjectFullContext",
+          "fullName": "google.storage.control.v2.StorageControl.ViewObjectFullContext",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ViewObjectFullContext_async_flattened2",
+      "title": "ViewObjectFullContext2Async",
+      "description": "Snippet for ViewObjectFullContextAsync",
+      "file": "StorageControlClient.ViewObjectFullContext2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ViewObjectFullContextAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ViewObjectFullContextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Int64",
+            "name": "generation"
+          },
+          {
+            "type": "System.String",
+            "name": "contextKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.ObjectFullContext>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ViewObjectFullContext",
+          "fullName": "google.storage.control.v2.StorageControl.ViewObjectFullContext",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ViewObjectFullContext_sync_flattened2_resourceNames",
+      "title": "ViewObjectFullContext2ResourceNames",
+      "description": "Snippet for ViewObjectFullContext",
+      "file": "StorageControlClient.ViewObjectFullContext2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ViewObjectFullContext",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ViewObjectFullContext",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ObjectName",
+            "name": "name"
+          },
+          {
+            "type": "System.Int64",
+            "name": "generation"
+          },
+          {
+            "type": "System.String",
+            "name": "contextKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.ObjectFullContext",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ViewObjectFullContext",
+          "fullName": "google.storage.control.v2.StorageControl.ViewObjectFullContext",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ViewObjectFullContext_async_flattened2_resourceNames",
+      "title": "ViewObjectFullContext2ResourceNamesAsync",
+      "description": "Snippet for ViewObjectFullContextAsync",
+      "file": "StorageControlClient.ViewObjectFullContext2ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ViewObjectFullContextAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ViewObjectFullContextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ObjectName",
+            "name": "name"
+          },
+          {
+            "type": "System.Int64",
+            "name": "generation"
+          },
+          {
+            "type": "System.String",
+            "name": "contextKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.ObjectFullContext>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ViewObjectFullContext",
+          "fullName": "google.storage.control.v2.StorageControl.ViewObjectFullContext",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

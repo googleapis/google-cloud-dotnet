@@ -231,6 +231,12 @@
                 "UpdateRapidCache",
                 "UpdateRapidCacheAsync"
               ]
+            },
+            "ViewObjectFullContext": {
+              "methods": [
+                "ViewObjectFullContext",
+                "ViewObjectFullContextAsync"
+              ]
             }
           }
         }

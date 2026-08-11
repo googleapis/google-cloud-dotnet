@@ -92,6 +92,7 @@ namespace Google.Cloud.Storage.Control.V2
             SummarizeIntelligenceFindingsSettings = existing.SummarizeIntelligenceFindingsSettings;
             GetIntelligenceFindingRevisionSettings = existing.GetIntelligenceFindingRevisionSettings;
             ListIntelligenceFindingRevisionsSettings = existing.ListIntelligenceFindingRevisionsSettings;
+            ViewObjectFullContextSettings = existing.ViewObjectFullContextSettings;
             OnCopy(existing);
         }
 
@@ -920,6 +921,19 @@ namespace Google.Cloud.Storage.Control.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListIntelligenceFindingRevisionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.ViewObjectFullContext</c> and <c>StorageControlClient.ViewObjectFullContextAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ViewObjectFullContextSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="StorageControlSettings"/> object.</returns>
@@ -6109,6 +6123,393 @@ namespace Google.Cloud.Storage.Control.V2
             }
             return ListIntelligenceFindingRevisionsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ObjectFullContext ViewObjectFullContext(ViewObjectFullContextRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ObjectFullContext> ViewObjectFullContextAsync(ViewObjectFullContextRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ObjectFullContext> ViewObjectFullContextAsync(ViewObjectFullContextRequest request, st::CancellationToken cancellationToken) =>
+            ViewObjectFullContextAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the object.
+        /// Format: `projects/{project}/buckets/{bucket}/objects/{object}`
+        /// </param>
+        /// <param name="contextKey">
+        /// Required. The key of the object context to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ObjectFullContext ViewObjectFullContext(string name, string contextKey, gaxgrpc::CallSettings callSettings = null) =>
+            ViewObjectFullContext(new ViewObjectFullContextRequest
+            {
+                ContextKey = gax::GaxPreconditions.CheckNotNullOrEmpty(contextKey, nameof(contextKey)),
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the object.
+        /// Format: `projects/{project}/buckets/{bucket}/objects/{object}`
+        /// </param>
+        /// <param name="contextKey">
+        /// Required. The key of the object context to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ObjectFullContext> ViewObjectFullContextAsync(string name, string contextKey, gaxgrpc::CallSettings callSettings = null) =>
+            ViewObjectFullContextAsync(new ViewObjectFullContextRequest
+            {
+                ContextKey = gax::GaxPreconditions.CheckNotNullOrEmpty(contextKey, nameof(contextKey)),
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the object.
+        /// Format: `projects/{project}/buckets/{bucket}/objects/{object}`
+        /// </param>
+        /// <param name="contextKey">
+        /// Required. The key of the object context to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ObjectFullContext> ViewObjectFullContextAsync(string name, string contextKey, st::CancellationToken cancellationToken) =>
+            ViewObjectFullContextAsync(name, contextKey, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the object.
+        /// Format: `projects/{project}/buckets/{bucket}/objects/{object}`
+        /// </param>
+        /// <param name="contextKey">
+        /// Required. The key of the object context to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ObjectFullContext ViewObjectFullContext(ObjectName name, string contextKey, gaxgrpc::CallSettings callSettings = null) =>
+            ViewObjectFullContext(new ViewObjectFullContextRequest
+            {
+                ContextKey = gax::GaxPreconditions.CheckNotNullOrEmpty(contextKey, nameof(contextKey)),
+                ObjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the object.
+        /// Format: `projects/{project}/buckets/{bucket}/objects/{object}`
+        /// </param>
+        /// <param name="contextKey">
+        /// Required. The key of the object context to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ObjectFullContext> ViewObjectFullContextAsync(ObjectName name, string contextKey, gaxgrpc::CallSettings callSettings = null) =>
+            ViewObjectFullContextAsync(new ViewObjectFullContextRequest
+            {
+                ContextKey = gax::GaxPreconditions.CheckNotNullOrEmpty(contextKey, nameof(contextKey)),
+                ObjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the object.
+        /// Format: `projects/{project}/buckets/{bucket}/objects/{object}`
+        /// </param>
+        /// <param name="contextKey">
+        /// Required. The key of the object context to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ObjectFullContext> ViewObjectFullContextAsync(ObjectName name, string contextKey, st::CancellationToken cancellationToken) =>
+            ViewObjectFullContextAsync(name, contextKey, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the object.
+        /// Format: `projects/{project}/buckets/{bucket}/objects/{object}`
+        /// </param>
+        /// <param name="generation">
+        /// Optional. If present, selects a specific revision of this object (as
+        /// opposed to the latest version, the default).
+        /// </param>
+        /// <param name="contextKey">
+        /// Required. The key of the object context to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ObjectFullContext ViewObjectFullContext(string name, long generation, string contextKey, gaxgrpc::CallSettings callSettings = null) =>
+            ViewObjectFullContext(new ViewObjectFullContextRequest
+            {
+                Generation = generation,
+                ContextKey = gax::GaxPreconditions.CheckNotNullOrEmpty(contextKey, nameof(contextKey)),
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the object.
+        /// Format: `projects/{project}/buckets/{bucket}/objects/{object}`
+        /// </param>
+        /// <param name="generation">
+        /// Optional. If present, selects a specific revision of this object (as
+        /// opposed to the latest version, the default).
+        /// </param>
+        /// <param name="contextKey">
+        /// Required. The key of the object context to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ObjectFullContext> ViewObjectFullContextAsync(string name, long generation, string contextKey, gaxgrpc::CallSettings callSettings = null) =>
+            ViewObjectFullContextAsync(new ViewObjectFullContextRequest
+            {
+                Generation = generation,
+                ContextKey = gax::GaxPreconditions.CheckNotNullOrEmpty(contextKey, nameof(contextKey)),
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the object.
+        /// Format: `projects/{project}/buckets/{bucket}/objects/{object}`
+        /// </param>
+        /// <param name="generation">
+        /// Optional. If present, selects a specific revision of this object (as
+        /// opposed to the latest version, the default).
+        /// </param>
+        /// <param name="contextKey">
+        /// Required. The key of the object context to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ObjectFullContext> ViewObjectFullContextAsync(string name, long generation, string contextKey, st::CancellationToken cancellationToken) =>
+            ViewObjectFullContextAsync(name, generation, contextKey, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the object.
+        /// Format: `projects/{project}/buckets/{bucket}/objects/{object}`
+        /// </param>
+        /// <param name="generation">
+        /// Optional. If present, selects a specific revision of this object (as
+        /// opposed to the latest version, the default).
+        /// </param>
+        /// <param name="contextKey">
+        /// Required. The key of the object context to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ObjectFullContext ViewObjectFullContext(ObjectName name, long generation, string contextKey, gaxgrpc::CallSettings callSettings = null) =>
+            ViewObjectFullContext(new ViewObjectFullContextRequest
+            {
+                Generation = generation,
+                ContextKey = gax::GaxPreconditions.CheckNotNullOrEmpty(contextKey, nameof(contextKey)),
+                ObjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the object.
+        /// Format: `projects/{project}/buckets/{bucket}/objects/{object}`
+        /// </param>
+        /// <param name="generation">
+        /// Optional. If present, selects a specific revision of this object (as
+        /// opposed to the latest version, the default).
+        /// </param>
+        /// <param name="contextKey">
+        /// Required. The key of the object context to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ObjectFullContext> ViewObjectFullContextAsync(ObjectName name, long generation, string contextKey, gaxgrpc::CallSettings callSettings = null) =>
+            ViewObjectFullContextAsync(new ViewObjectFullContextRequest
+            {
+                Generation = generation,
+                ContextKey = gax::GaxPreconditions.CheckNotNullOrEmpty(contextKey, nameof(contextKey)),
+                ObjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the object.
+        /// Format: `projects/{project}/buckets/{bucket}/objects/{object}`
+        /// </param>
+        /// <param name="generation">
+        /// Optional. If present, selects a specific revision of this object (as
+        /// opposed to the latest version, the default).
+        /// </param>
+        /// <param name="contextKey">
+        /// Required. The key of the object context to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ObjectFullContext> ViewObjectFullContextAsync(ObjectName name, long generation, string contextKey, st::CancellationToken cancellationToken) =>
+            ViewObjectFullContextAsync(name, generation, contextKey, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>StorageControl client wrapper implementation, for convenient use.</summary>
@@ -6190,6 +6591,8 @@ namespace Google.Cloud.Storage.Control.V2
         private readonly gaxgrpc::ApiCall<GetIntelligenceFindingRevisionRequest, IntelligenceFindingRevision> _callGetIntelligenceFindingRevision;
 
         private readonly gaxgrpc::ApiCall<ListIntelligenceFindingRevisionsRequest, ListIntelligenceFindingRevisionsResponse> _callListIntelligenceFindingRevisions;
+
+        private readonly gaxgrpc::ApiCall<ViewObjectFullContextRequest, ObjectFullContext> _callViewObjectFullContext;
 
         /// <summary>
         /// Constructs a client wrapper for the StorageControl service, with the specified gRPC client and settings.
@@ -6323,6 +6726,9 @@ namespace Google.Cloud.Storage.Control.V2
             _callListIntelligenceFindingRevisions = clientHelper.BuildApiCall<ListIntelligenceFindingRevisionsRequest, ListIntelligenceFindingRevisionsResponse>("ListIntelligenceFindingRevisions", grpcClient.ListIntelligenceFindingRevisionsAsync, grpcClient.ListIntelligenceFindingRevisions, effectiveSettings.ListIntelligenceFindingRevisionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIntelligenceFindingRevisions);
             Modify_ListIntelligenceFindingRevisionsApiCall(ref _callListIntelligenceFindingRevisions);
+            _callViewObjectFullContext = clientHelper.BuildApiCall<ViewObjectFullContextRequest, ObjectFullContext>("ViewObjectFullContext", grpcClient.ViewObjectFullContextAsync, grpcClient.ViewObjectFullContext, effectiveSettings.ViewObjectFullContextSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ViewObjectFullContextRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
+            Modify_ApiCall(ref _callViewObjectFullContext);
+            Modify_ViewObjectFullContextApiCall(ref _callViewObjectFullContext);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -6402,6 +6808,8 @@ namespace Google.Cloud.Storage.Control.V2
 
         partial void Modify_ListIntelligenceFindingRevisionsApiCall(ref gaxgrpc::ApiCall<ListIntelligenceFindingRevisionsRequest, ListIntelligenceFindingRevisionsResponse> call);
 
+        partial void Modify_ViewObjectFullContextApiCall(ref gaxgrpc::ApiCall<ViewObjectFullContextRequest, ObjectFullContext> call);
+
         partial void OnConstruction(StorageControl.StorageControlClient grpcClient, StorageControlSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC StorageControl client</summary>
@@ -6480,6 +6888,8 @@ namespace Google.Cloud.Storage.Control.V2
         partial void Modify_GetIntelligenceFindingRevisionRequest(ref GetIntelligenceFindingRevisionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListIntelligenceFindingRevisionsRequest(ref ListIntelligenceFindingRevisionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ViewObjectFullContextRequest(ref ViewObjectFullContextRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
@@ -7611,6 +8021,46 @@ namespace Google.Cloud.Storage.Control.V2
         {
             Modify_ListIntelligenceFindingRevisionsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListIntelligenceFindingRevisionsRequest, ListIntelligenceFindingRevisionsResponse, IntelligenceFindingRevision>(_callListIntelligenceFindingRevisions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ObjectFullContext ViewObjectFullContext(ViewObjectFullContextRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ViewObjectFullContextRequest(ref request, ref callSettings);
+            return _callViewObjectFullContext.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the full content of an object context, including its key, value,
+        /// and any associated extended data for a given context key.
+        /// 
+        /// Object contexts can optionally contain extended data. If an object context
+        /// contains extended data, the metadata payload structure will contain only
+        /// its type URL. To retrieve the full extended data, call this method.
+        /// 
+        /// Returns the complete representation of the context as an
+        /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ObjectFullContext> ViewObjectFullContextAsync(ViewObjectFullContextRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ViewObjectFullContextRequest(ref request, ref callSettings);
+            return _callViewObjectFullContext.Async(request, callSettings);
         }
     }
 
