@@ -3606,6 +3606,493 @@
       ]
     },
     {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_GetPolicy_sync",
+      "title": "GetPolicyRequestObject",
+      "description": "Snippet for GetPolicy",
+      "file": "RecaptchaEnterpriseServiceClient.GetPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicy",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.GetPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.GetPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Policy",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "GetPolicy",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.GetPolicy",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_GetPolicy_async",
+      "title": "GetPolicyRequestObjectAsync",
+      "description": "Snippet for GetPolicyAsync",
+      "file": "RecaptchaEnterpriseServiceClient.GetPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyAsync",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.GetPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.GetPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Policy>",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "GetPolicy",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.GetPolicy",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_GetPolicy_sync_flattened",
+      "title": "GetPolicy",
+      "description": "Snippet for GetPolicy",
+      "file": "RecaptchaEnterpriseServiceClient.GetPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicy",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.GetPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Policy",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "GetPolicy",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.GetPolicy",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_GetPolicy_async_flattened",
+      "title": "GetPolicyAsync",
+      "description": "Snippet for GetPolicyAsync",
+      "file": "RecaptchaEnterpriseServiceClient.GetPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyAsync",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.GetPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Policy>",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "GetPolicy",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.GetPolicy",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_GetPolicy_sync_flattened_resourceNames",
+      "title": "GetPolicyResourceNames",
+      "description": "Snippet for GetPolicy",
+      "file": "RecaptchaEnterpriseServiceClient.GetPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicy",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.GetPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.PolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Policy",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "GetPolicy",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.GetPolicy",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_GetPolicy_async_flattened_resourceNames",
+      "title": "GetPolicyResourceNamesAsync",
+      "description": "Snippet for GetPolicyAsync",
+      "file": "RecaptchaEnterpriseServiceClient.GetPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyAsync",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.GetPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.PolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Policy>",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "GetPolicy",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.GetPolicy",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_UpdatePolicy_sync",
+      "title": "UpdatePolicyRequestObject",
+      "description": "Snippet for UpdatePolicy",
+      "file": "RecaptchaEnterpriseServiceClient.UpdatePolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePolicy",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.UpdatePolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.UpdatePolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Policy",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdatePolicy",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.UpdatePolicy",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_UpdatePolicy_async",
+      "title": "UpdatePolicyRequestObjectAsync",
+      "description": "Snippet for UpdatePolicyAsync",
+      "file": "RecaptchaEnterpriseServiceClient.UpdatePolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePolicyAsync",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.UpdatePolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.UpdatePolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Policy>",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdatePolicy",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.UpdatePolicy",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_UpdatePolicy_sync_flattened",
+      "title": "UpdatePolicy",
+      "description": "Snippet for UpdatePolicy",
+      "file": "RecaptchaEnterpriseServiceClient.UpdatePolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePolicy",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.UpdatePolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.RecaptchaEnterprise.V1.Policy",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdatePolicy",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.UpdatePolicy",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_UpdatePolicy_async_flattened",
+      "title": "UpdatePolicyAsync",
+      "description": "Snippet for UpdatePolicyAsync",
+      "file": "RecaptchaEnterpriseServiceClient.UpdatePolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePolicyAsync",
+        "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient.UpdatePolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.RecaptchaEnterprise.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.RecaptchaEnterprise.V1.Policy>",
+        "client": {
+          "shortName": "RecaptchaEnterpriseServiceClient",
+          "fullName": "Google.Cloud.RecaptchaEnterprise.V1.RecaptchaEnterpriseServiceClient"
+        },
+        "method": {
+          "shortName": "UpdatePolicy",
+          "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService.UpdatePolicy",
+          "service": {
+            "shortName": "RecaptchaEnterpriseService",
+            "fullName": "google.cloud.recaptchaenterprise.v1.RecaptchaEnterpriseService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_CreateFirewallPolicy_sync",
       "title": "CreateFirewallPolicyRequestObject",
       "description": "Snippet for CreateFirewallPolicy",

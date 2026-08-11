@@ -1508,6 +1508,157 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetPolicy</summary>
+        public void GetPolicyRequestObject()
+        {
+            // Snippet: GetPolicy(GetPolicyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            GetPolicyRequest request = new GetPolicyRequest
+            {
+                PolicyName = PolicyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            Policy response = recaptchaEnterpriseServiceClient.GetPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPolicyAsync</summary>
+        public async Task GetPolicyRequestObjectAsync()
+        {
+            // Snippet: GetPolicyAsync(GetPolicyRequest, CallSettings)
+            // Additional: GetPolicyAsync(GetPolicyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetPolicyRequest request = new GetPolicyRequest
+            {
+                PolicyName = PolicyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            Policy response = await recaptchaEnterpriseServiceClient.GetPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPolicy</summary>
+        public void GetPolicy()
+        {
+            // Snippet: GetPolicy(string, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/keys/[KEY]/policy";
+            // Make the request
+            Policy response = recaptchaEnterpriseServiceClient.GetPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPolicyAsync</summary>
+        public async Task GetPolicyAsync()
+        {
+            // Snippet: GetPolicyAsync(string, CallSettings)
+            // Additional: GetPolicyAsync(string, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/keys/[KEY]/policy";
+            // Make the request
+            Policy response = await recaptchaEnterpriseServiceClient.GetPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPolicy</summary>
+        public void GetPolicyResourceNames()
+        {
+            // Snippet: GetPolicy(PolicyName, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            PolicyName name = PolicyName.FromProjectKey("[PROJECT]", "[KEY]");
+            // Make the request
+            Policy response = recaptchaEnterpriseServiceClient.GetPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPolicyAsync</summary>
+        public async Task GetPolicyResourceNamesAsync()
+        {
+            // Snippet: GetPolicyAsync(PolicyName, CallSettings)
+            // Additional: GetPolicyAsync(PolicyName, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PolicyName name = PolicyName.FromProjectKey("[PROJECT]", "[KEY]");
+            // Make the request
+            Policy response = await recaptchaEnterpriseServiceClient.GetPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePolicy</summary>
+        public void UpdatePolicyRequestObject()
+        {
+            // Snippet: UpdatePolicy(UpdatePolicyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            UpdatePolicyRequest request = new UpdatePolicyRequest
+            {
+                Policy = new Policy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Policy response = recaptchaEnterpriseServiceClient.UpdatePolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePolicyAsync</summary>
+        public async Task UpdatePolicyRequestObjectAsync()
+        {
+            // Snippet: UpdatePolicyAsync(UpdatePolicyRequest, CallSettings)
+            // Additional: UpdatePolicyAsync(UpdatePolicyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdatePolicyRequest request = new UpdatePolicyRequest
+            {
+                Policy = new Policy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Policy response = await recaptchaEnterpriseServiceClient.UpdatePolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePolicy</summary>
+        public void UpdatePolicy()
+        {
+            // Snippet: UpdatePolicy(Policy, FieldMask, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            Policy policy = new Policy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Policy response = recaptchaEnterpriseServiceClient.UpdatePolicy(policy, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePolicyAsync</summary>
+        public async Task UpdatePolicyAsync()
+        {
+            // Snippet: UpdatePolicyAsync(Policy, FieldMask, CallSettings)
+            // Additional: UpdatePolicyAsync(Policy, FieldMask, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Policy policy = new Policy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Policy response = await recaptchaEnterpriseServiceClient.UpdatePolicyAsync(policy, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateFirewallPolicy</summary>
         public void CreateFirewallPolicyRequestObject()
         {

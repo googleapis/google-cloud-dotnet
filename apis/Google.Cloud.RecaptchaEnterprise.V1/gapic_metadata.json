@@ -70,6 +70,12 @@
                 "GetMetricsAsync"
               ]
             },
+            "GetPolicy": {
+              "methods": [
+                "GetPolicy",
+                "GetPolicyAsync"
+              ]
+            },
             "ListFirewallPolicies": {
               "methods": [
                 "ListFirewallPolicies",
@@ -140,6 +146,12 @@
               "methods": [
                 "UpdateKey",
                 "UpdateKeyAsync"
+              ]
+            },
+            "UpdatePolicy": {
+              "methods": [
+                "UpdatePolicy",
+                "UpdatePolicyAsync"
               ]
             }
           }
