@@ -5145,6 +5145,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "befe6dc01ccbe4fc0292c5966efca2ad1fafc2e6",
             "apiPaths": [
                 "google/cloud/ftp/v1"
             ],

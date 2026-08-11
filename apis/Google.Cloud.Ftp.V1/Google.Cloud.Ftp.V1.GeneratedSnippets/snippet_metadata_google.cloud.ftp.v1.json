@@ -1,0 +1,3412 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Ftp.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.ftp.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_ListServers_sync",
+      "title": "ListServersRequestObject",
+      "description": "Snippet for ListServers",
+      "file": "CloudFtpClient.ListServersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServers",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.ListServers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ListServersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Ftp.V1.ListServersResponse, Google.Cloud.Ftp.V1.Server>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "ListServers",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.ListServers",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_ListServers_async",
+      "title": "ListServersRequestObjectAsync",
+      "description": "Snippet for ListServersAsync",
+      "file": "CloudFtpClient.ListServersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServersAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.ListServersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ListServersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Ftp.V1.ListServersResponse, Google.Cloud.Ftp.V1.Server>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "ListServers",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.ListServers",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_ListServers_sync_flattened",
+      "title": "ListServers",
+      "description": "Snippet for ListServers",
+      "file": "CloudFtpClient.ListServersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServers",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.ListServers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Ftp.V1.ListServersResponse, Google.Cloud.Ftp.V1.Server>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "ListServers",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.ListServers",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_ListServers_async_flattened",
+      "title": "ListServersAsync",
+      "description": "Snippet for ListServersAsync",
+      "file": "CloudFtpClient.ListServersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServersAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.ListServersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Ftp.V1.ListServersResponse, Google.Cloud.Ftp.V1.Server>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "ListServers",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.ListServers",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_ListServers_sync_flattened_resourceNames",
+      "title": "ListServersResourceNames",
+      "description": "Snippet for ListServers",
+      "file": "CloudFtpClient.ListServersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServers",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.ListServers",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Ftp.V1.ListServersResponse, Google.Cloud.Ftp.V1.Server>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "ListServers",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.ListServers",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_ListServers_async_flattened_resourceNames",
+      "title": "ListServersResourceNamesAsync",
+      "description": "Snippet for ListServersAsync",
+      "file": "CloudFtpClient.ListServersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServersAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.ListServersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Ftp.V1.ListServersResponse, Google.Cloud.Ftp.V1.Server>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "ListServers",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.ListServers",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_GetServer_sync",
+      "title": "GetServerRequestObject",
+      "description": "Snippet for GetServer",
+      "file": "CloudFtpClient.GetServerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.GetServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.GetServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ftp.V1.Server",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "GetServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.GetServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_GetServer_async",
+      "title": "GetServerRequestObjectAsync",
+      "description": "Snippet for GetServerAsync",
+      "file": "CloudFtpClient.GetServerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.GetServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.GetServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ftp.V1.Server>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "GetServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.GetServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_GetServer_sync_flattened",
+      "title": "GetServer",
+      "description": "Snippet for GetServer",
+      "file": "CloudFtpClient.GetServerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.GetServer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ftp.V1.Server",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "GetServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.GetServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_GetServer_async_flattened",
+      "title": "GetServerAsync",
+      "description": "Snippet for GetServerAsync",
+      "file": "CloudFtpClient.GetServerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.GetServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ftp.V1.Server>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "GetServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.GetServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_GetServer_sync_flattened_resourceNames",
+      "title": "GetServerResourceNames",
+      "description": "Snippet for GetServer",
+      "file": "CloudFtpClient.GetServerResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.GetServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ServerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ftp.V1.Server",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "GetServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.GetServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_GetServer_async_flattened_resourceNames",
+      "title": "GetServerResourceNamesAsync",
+      "description": "Snippet for GetServerAsync",
+      "file": "CloudFtpClient.GetServerResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.GetServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ServerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ftp.V1.Server>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "GetServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.GetServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_CreateServer_sync",
+      "title": "CreateServerRequestObject",
+      "description": "Snippet for CreateServer",
+      "file": "CloudFtpClient.CreateServerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.CreateServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.CreateServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "CreateServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.CreateServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_CreateServer_async",
+      "title": "CreateServerRequestObjectAsync",
+      "description": "Snippet for CreateServerAsync",
+      "file": "CloudFtpClient.CreateServerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.CreateServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.CreateServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "CreateServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.CreateServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_CreateServer_sync_flattened",
+      "title": "CreateServer",
+      "description": "Snippet for CreateServer",
+      "file": "CloudFtpClient.CreateServerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.CreateServer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Ftp.V1.Server",
+            "name": "server"
+          },
+          {
+            "type": "System.String",
+            "name": "serverId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "CreateServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.CreateServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_CreateServer_async_flattened",
+      "title": "CreateServerAsync",
+      "description": "Snippet for CreateServerAsync",
+      "file": "CloudFtpClient.CreateServerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.CreateServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Ftp.V1.Server",
+            "name": "server"
+          },
+          {
+            "type": "System.String",
+            "name": "serverId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "CreateServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.CreateServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_CreateServer_sync_flattened_resourceNames",
+      "title": "CreateServerResourceNames",
+      "description": "Snippet for CreateServer",
+      "file": "CloudFtpClient.CreateServerResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.CreateServer",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Ftp.V1.Server",
+            "name": "server"
+          },
+          {
+            "type": "System.String",
+            "name": "serverId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "CreateServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.CreateServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_CreateServer_async_flattened_resourceNames",
+      "title": "CreateServerResourceNamesAsync",
+      "description": "Snippet for CreateServerAsync",
+      "file": "CloudFtpClient.CreateServerResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.CreateServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Ftp.V1.Server",
+            "name": "server"
+          },
+          {
+            "type": "System.String",
+            "name": "serverId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "CreateServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.CreateServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_UpdateServer_sync",
+      "title": "UpdateServerRequestObject",
+      "description": "Snippet for UpdateServer",
+      "file": "CloudFtpClient.UpdateServerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.UpdateServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.UpdateServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "UpdateServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.UpdateServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_UpdateServer_async",
+      "title": "UpdateServerRequestObjectAsync",
+      "description": "Snippet for UpdateServerAsync",
+      "file": "CloudFtpClient.UpdateServerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.UpdateServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.UpdateServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "UpdateServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.UpdateServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_UpdateServer_sync_flattened",
+      "title": "UpdateServer",
+      "description": "Snippet for UpdateServer",
+      "file": "CloudFtpClient.UpdateServerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.UpdateServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.Server",
+            "name": "server"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "UpdateServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.UpdateServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_UpdateServer_async_flattened",
+      "title": "UpdateServerAsync",
+      "description": "Snippet for UpdateServerAsync",
+      "file": "CloudFtpClient.UpdateServerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.UpdateServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.Server",
+            "name": "server"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "UpdateServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.UpdateServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_DeleteServer_sync",
+      "title": "DeleteServerRequestObject",
+      "description": "Snippet for DeleteServer",
+      "file": "CloudFtpClient.DeleteServerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.DeleteServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.DeleteServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "DeleteServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.DeleteServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_DeleteServer_async",
+      "title": "DeleteServerRequestObjectAsync",
+      "description": "Snippet for DeleteServerAsync",
+      "file": "CloudFtpClient.DeleteServerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.DeleteServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.DeleteServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "DeleteServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.DeleteServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_DeleteServer_sync_flattened",
+      "title": "DeleteServer",
+      "description": "Snippet for DeleteServer",
+      "file": "CloudFtpClient.DeleteServerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.DeleteServer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "DeleteServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.DeleteServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_DeleteServer_async_flattened",
+      "title": "DeleteServerAsync",
+      "description": "Snippet for DeleteServerAsync",
+      "file": "CloudFtpClient.DeleteServerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.DeleteServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "DeleteServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.DeleteServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_DeleteServer_sync_flattened_resourceNames",
+      "title": "DeleteServerResourceNames",
+      "description": "Snippet for DeleteServer",
+      "file": "CloudFtpClient.DeleteServerResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.DeleteServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ServerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "DeleteServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.DeleteServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_DeleteServer_async_flattened_resourceNames",
+      "title": "DeleteServerResourceNamesAsync",
+      "description": "Snippet for DeleteServerAsync",
+      "file": "CloudFtpClient.DeleteServerResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.DeleteServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ServerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "DeleteServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.DeleteServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_ListUsers_sync",
+      "title": "ListUsersRequestObject",
+      "description": "Snippet for ListUsers",
+      "file": "CloudFtpClient.ListUsersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsers",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.ListUsers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ListUsersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Ftp.V1.ListUsersResponse, Google.Cloud.Ftp.V1.User>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.ListUsers",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_ListUsers_async",
+      "title": "ListUsersRequestObjectAsync",
+      "description": "Snippet for ListUsersAsync",
+      "file": "CloudFtpClient.ListUsersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsersAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.ListUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ListUsersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Ftp.V1.ListUsersResponse, Google.Cloud.Ftp.V1.User>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.ListUsers",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_ListUsers_sync_flattened",
+      "title": "ListUsers",
+      "description": "Snippet for ListUsers",
+      "file": "CloudFtpClient.ListUsersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsers",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.ListUsers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Ftp.V1.ListUsersResponse, Google.Cloud.Ftp.V1.User>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.ListUsers",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_ListUsers_async_flattened",
+      "title": "ListUsersAsync",
+      "description": "Snippet for ListUsersAsync",
+      "file": "CloudFtpClient.ListUsersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsersAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.ListUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Ftp.V1.ListUsersResponse, Google.Cloud.Ftp.V1.User>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.ListUsers",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_ListUsers_sync_flattened_resourceNames",
+      "title": "ListUsersResourceNames",
+      "description": "Snippet for ListUsers",
+      "file": "CloudFtpClient.ListUsersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsers",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.ListUsers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ServerName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Ftp.V1.ListUsersResponse, Google.Cloud.Ftp.V1.User>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.ListUsers",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_ListUsers_async_flattened_resourceNames",
+      "title": "ListUsersResourceNamesAsync",
+      "description": "Snippet for ListUsersAsync",
+      "file": "CloudFtpClient.ListUsersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUsersAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.ListUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ServerName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Ftp.V1.ListUsersResponse, Google.Cloud.Ftp.V1.User>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "ListUsers",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.ListUsers",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_GetUser_sync",
+      "title": "GetUserRequestObject",
+      "description": "Snippet for GetUser",
+      "file": "CloudFtpClient.GetUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUser",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.GetUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.GetUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ftp.V1.User",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "GetUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.GetUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_GetUser_async",
+      "title": "GetUserRequestObjectAsync",
+      "description": "Snippet for GetUserAsync",
+      "file": "CloudFtpClient.GetUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.GetUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.GetUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ftp.V1.User>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "GetUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.GetUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_GetUser_sync_flattened",
+      "title": "GetUser",
+      "description": "Snippet for GetUser",
+      "file": "CloudFtpClient.GetUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUser",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.GetUser",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ftp.V1.User",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "GetUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.GetUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_GetUser_async_flattened",
+      "title": "GetUserAsync",
+      "description": "Snippet for GetUserAsync",
+      "file": "CloudFtpClient.GetUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.GetUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ftp.V1.User>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "GetUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.GetUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_GetUser_sync_flattened_resourceNames",
+      "title": "GetUserResourceNames",
+      "description": "Snippet for GetUser",
+      "file": "CloudFtpClient.GetUserResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUser",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.GetUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.UserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Ftp.V1.User",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "GetUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.GetUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_GetUser_async_flattened_resourceNames",
+      "title": "GetUserResourceNamesAsync",
+      "description": "Snippet for GetUserAsync",
+      "file": "CloudFtpClient.GetUserResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.GetUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.UserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Ftp.V1.User>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "GetUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.GetUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_CreateUser_sync",
+      "title": "CreateUserRequestObject",
+      "description": "Snippet for CreateUser",
+      "file": "CloudFtpClient.CreateUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUser",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.CreateUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.CreateUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.User, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "CreateUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.CreateUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_CreateUser_async",
+      "title": "CreateUserRequestObjectAsync",
+      "description": "Snippet for CreateUserAsync",
+      "file": "CloudFtpClient.CreateUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.CreateUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.CreateUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.User, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "CreateUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.CreateUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_CreateUser_sync_flattened",
+      "title": "CreateUser",
+      "description": "Snippet for CreateUser",
+      "file": "CloudFtpClient.CreateUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUser",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.CreateUser",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Ftp.V1.User",
+            "name": "user"
+          },
+          {
+            "type": "System.String",
+            "name": "userId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.User, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "CreateUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.CreateUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_CreateUser_async_flattened",
+      "title": "CreateUserAsync",
+      "description": "Snippet for CreateUserAsync",
+      "file": "CloudFtpClient.CreateUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.CreateUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Ftp.V1.User",
+            "name": "user"
+          },
+          {
+            "type": "System.String",
+            "name": "userId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.User, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "CreateUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.CreateUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_CreateUser_sync_flattened_resourceNames",
+      "title": "CreateUserResourceNames",
+      "description": "Snippet for CreateUser",
+      "file": "CloudFtpClient.CreateUserResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUser",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.CreateUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ServerName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Ftp.V1.User",
+            "name": "user"
+          },
+          {
+            "type": "System.String",
+            "name": "userId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.User, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "CreateUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.CreateUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_CreateUser_async_flattened_resourceNames",
+      "title": "CreateUserResourceNamesAsync",
+      "description": "Snippet for CreateUserAsync",
+      "file": "CloudFtpClient.CreateUserResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.CreateUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ServerName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Ftp.V1.User",
+            "name": "user"
+          },
+          {
+            "type": "System.String",
+            "name": "userId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.User, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "CreateUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.CreateUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_UpdateUser_sync",
+      "title": "UpdateUserRequestObject",
+      "description": "Snippet for UpdateUser",
+      "file": "CloudFtpClient.UpdateUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUser",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.UpdateUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.UpdateUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.User, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "UpdateUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.UpdateUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_UpdateUser_async",
+      "title": "UpdateUserRequestObjectAsync",
+      "description": "Snippet for UpdateUserAsync",
+      "file": "CloudFtpClient.UpdateUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.UpdateUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.UpdateUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.User, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "UpdateUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.UpdateUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_UpdateUser_sync_flattened",
+      "title": "UpdateUser",
+      "description": "Snippet for UpdateUser",
+      "file": "CloudFtpClient.UpdateUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUser",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.UpdateUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.User",
+            "name": "user"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.User, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "UpdateUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.UpdateUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_UpdateUser_async_flattened",
+      "title": "UpdateUserAsync",
+      "description": "Snippet for UpdateUserAsync",
+      "file": "CloudFtpClient.UpdateUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.UpdateUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.User",
+            "name": "user"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.User, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "UpdateUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.UpdateUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_DeleteUser_sync",
+      "title": "DeleteUserRequestObject",
+      "description": "Snippet for DeleteUser",
+      "file": "CloudFtpClient.DeleteUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUser",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.DeleteUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.DeleteUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.DeleteUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_DeleteUser_async",
+      "title": "DeleteUserRequestObjectAsync",
+      "description": "Snippet for DeleteUserAsync",
+      "file": "CloudFtpClient.DeleteUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.DeleteUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.DeleteUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.DeleteUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_DeleteUser_sync_flattened",
+      "title": "DeleteUser",
+      "description": "Snippet for DeleteUser",
+      "file": "CloudFtpClient.DeleteUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUser",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.DeleteUser",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.DeleteUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_DeleteUser_async_flattened",
+      "title": "DeleteUserAsync",
+      "description": "Snippet for DeleteUserAsync",
+      "file": "CloudFtpClient.DeleteUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.DeleteUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.DeleteUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_DeleteUser_sync_flattened_resourceNames",
+      "title": "DeleteUserResourceNames",
+      "description": "Snippet for DeleteUser",
+      "file": "CloudFtpClient.DeleteUserResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUser",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.DeleteUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.UserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.DeleteUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_DeleteUser_async_flattened_resourceNames",
+      "title": "DeleteUserResourceNamesAsync",
+      "description": "Snippet for DeleteUserAsync",
+      "file": "CloudFtpClient.DeleteUserResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.DeleteUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.UserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "DeleteUser",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.DeleteUser",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_StartServer_sync",
+      "title": "StartServerRequestObject",
+      "description": "Snippet for StartServer",
+      "file": "CloudFtpClient.StartServerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.StartServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.StartServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "StartServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.StartServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_StartServer_async",
+      "title": "StartServerRequestObjectAsync",
+      "description": "Snippet for StartServerAsync",
+      "file": "CloudFtpClient.StartServerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.StartServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.StartServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "StartServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.StartServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_StartServer_sync_flattened",
+      "title": "StartServer",
+      "description": "Snippet for StartServer",
+      "file": "CloudFtpClient.StartServerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.StartServer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "StartServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.StartServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_StartServer_async_flattened",
+      "title": "StartServerAsync",
+      "description": "Snippet for StartServerAsync",
+      "file": "CloudFtpClient.StartServerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.StartServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "StartServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.StartServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_StartServer_sync_flattened_resourceNames",
+      "title": "StartServerResourceNames",
+      "description": "Snippet for StartServer",
+      "file": "CloudFtpClient.StartServerResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.StartServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ServerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "StartServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.StartServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_StartServer_async_flattened_resourceNames",
+      "title": "StartServerResourceNamesAsync",
+      "description": "Snippet for StartServerAsync",
+      "file": "CloudFtpClient.StartServerResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.StartServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ServerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "StartServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.StartServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_StopServer_sync",
+      "title": "StopServerRequestObject",
+      "description": "Snippet for StopServer",
+      "file": "CloudFtpClient.StopServerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.StopServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.StopServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "StopServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.StopServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_StopServer_async",
+      "title": "StopServerRequestObjectAsync",
+      "description": "Snippet for StopServerAsync",
+      "file": "CloudFtpClient.StopServerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.StopServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.StopServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "StopServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.StopServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_StopServer_sync_flattened",
+      "title": "StopServer",
+      "description": "Snippet for StopServer",
+      "file": "CloudFtpClient.StopServerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.StopServer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "StopServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.StopServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_StopServer_async_flattened",
+      "title": "StopServerAsync",
+      "description": "Snippet for StopServerAsync",
+      "file": "CloudFtpClient.StopServerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.StopServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "StopServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.StopServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_StopServer_sync_flattened_resourceNames",
+      "title": "StopServerResourceNames",
+      "description": "Snippet for StopServer",
+      "file": "CloudFtpClient.StopServerResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopServer",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.StopServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ServerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "StopServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.StopServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ftp_v1_generated_CloudFtp_StopServer_async_flattened_resourceNames",
+      "title": "StopServerResourceNamesAsync",
+      "description": "Snippet for StopServerAsync",
+      "file": "CloudFtpClient.StopServerResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopServerAsync",
+        "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient.StopServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ftp.V1.ServerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ftp.V1.Server, Google.Cloud.Ftp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFtpClient",
+          "fullName": "Google.Cloud.Ftp.V1.CloudFtpClient"
+        },
+        "method": {
+          "shortName": "StopServer",
+          "fullName": "google.cloud.ftp.v1.CloudFtp.StopServer",
+          "service": {
+            "shortName": "CloudFtp",
+            "fullName": "google.cloud.ftp.v1.CloudFtp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
