@@ -1,0 +1,90 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.ftp.v1",
+  "libraryPackage": "Google.Cloud.Ftp.V1",
+  "services": {
+    "CloudFtp": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudFtpClient",
+          "rpcs": {
+            "CreateServer": {
+              "methods": [
+                "CreateServer",
+                "CreateServerAsync"
+              ]
+            },
+            "CreateUser": {
+              "methods": [
+                "CreateUser",
+                "CreateUserAsync"
+              ]
+            },
+            "DeleteServer": {
+              "methods": [
+                "DeleteServer",
+                "DeleteServerAsync"
+              ]
+            },
+            "DeleteUser": {
+              "methods": [
+                "DeleteUser",
+                "DeleteUserAsync"
+              ]
+            },
+            "GetServer": {
+              "methods": [
+                "GetServer",
+                "GetServerAsync"
+              ]
+            },
+            "GetUser": {
+              "methods": [
+                "GetUser",
+                "GetUserAsync"
+              ]
+            },
+            "ListServers": {
+              "methods": [
+                "ListServers",
+                "ListServersAsync"
+              ]
+            },
+            "ListUsers": {
+              "methods": [
+                "ListUsers",
+                "ListUsersAsync"
+              ]
+            },
+            "StartServer": {
+              "methods": [
+                "StartServer",
+                "StartServerAsync"
+              ]
+            },
+            "StopServer": {
+              "methods": [
+                "StopServer",
+                "StopServerAsync"
+              ]
+            },
+            "UpdateServer": {
+              "methods": [
+                "UpdateServer",
+                "UpdateServerAsync"
+              ]
+            },
+            "UpdateUser": {
+              "methods": [
+                "UpdateUser",
+                "UpdateUserAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
