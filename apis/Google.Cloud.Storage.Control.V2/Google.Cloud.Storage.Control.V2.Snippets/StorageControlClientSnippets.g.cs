@@ -4982,5 +4982,162 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for ViewObjectFullContext</summary>
+        public void ViewObjectFullContextRequestObject()
+        {
+            // Snippet: ViewObjectFullContext(ViewObjectFullContextRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::ViewObjectFullContextRequest request = new gcscv::ViewObjectFullContextRequest
+            {
+                Generation = 0L,
+                ContextKey = "",
+                ObjectName = gcscv::ObjectName.FromProjectBucketObject("[PROJECT]", "[BUCKET]", "[OBJECT]"),
+            };
+            // Make the request
+            gcscv::ObjectFullContext response = storageControlClient.ViewObjectFullContext(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ViewObjectFullContextAsync</summary>
+        public async Task ViewObjectFullContextRequestObjectAsync()
+        {
+            // Snippet: ViewObjectFullContextAsync(ViewObjectFullContextRequest, CallSettings)
+            // Additional: ViewObjectFullContextAsync(ViewObjectFullContextRequest, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::ViewObjectFullContextRequest request = new gcscv::ViewObjectFullContextRequest
+            {
+                Generation = 0L,
+                ContextKey = "",
+                ObjectName = gcscv::ObjectName.FromProjectBucketObject("[PROJECT]", "[BUCKET]", "[OBJECT]"),
+            };
+            // Make the request
+            gcscv::ObjectFullContext response = await storageControlClient.ViewObjectFullContextAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ViewObjectFullContext</summary>
+        public void ViewObjectFullContext1()
+        {
+            // Snippet: ViewObjectFullContext(string, string, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/objects/[OBJECT]";
+            string contextKey = "";
+            // Make the request
+            gcscv::ObjectFullContext response = storageControlClient.ViewObjectFullContext(name, contextKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ViewObjectFullContextAsync</summary>
+        public async Task ViewObjectFullContext1Async()
+        {
+            // Snippet: ViewObjectFullContextAsync(string, string, CallSettings)
+            // Additional: ViewObjectFullContextAsync(string, string, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/objects/[OBJECT]";
+            string contextKey = "";
+            // Make the request
+            gcscv::ObjectFullContext response = await storageControlClient.ViewObjectFullContextAsync(name, contextKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ViewObjectFullContext</summary>
+        public void ViewObjectFullContext1ResourceNames()
+        {
+            // Snippet: ViewObjectFullContext(ObjectName, string, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::ObjectName name = gcscv::ObjectName.FromProjectBucketObject("[PROJECT]", "[BUCKET]", "[OBJECT]");
+            string contextKey = "";
+            // Make the request
+            gcscv::ObjectFullContext response = storageControlClient.ViewObjectFullContext(name, contextKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ViewObjectFullContextAsync</summary>
+        public async Task ViewObjectFullContext1ResourceNamesAsync()
+        {
+            // Snippet: ViewObjectFullContextAsync(ObjectName, string, CallSettings)
+            // Additional: ViewObjectFullContextAsync(ObjectName, string, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::ObjectName name = gcscv::ObjectName.FromProjectBucketObject("[PROJECT]", "[BUCKET]", "[OBJECT]");
+            string contextKey = "";
+            // Make the request
+            gcscv::ObjectFullContext response = await storageControlClient.ViewObjectFullContextAsync(name, contextKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ViewObjectFullContext</summary>
+        public void ViewObjectFullContext2()
+        {
+            // Snippet: ViewObjectFullContext(string, long, string, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/objects/[OBJECT]";
+            long generation = 0L;
+            string contextKey = "";
+            // Make the request
+            gcscv::ObjectFullContext response = storageControlClient.ViewObjectFullContext(name, generation, contextKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ViewObjectFullContextAsync</summary>
+        public async Task ViewObjectFullContext2Async()
+        {
+            // Snippet: ViewObjectFullContextAsync(string, long, string, CallSettings)
+            // Additional: ViewObjectFullContextAsync(string, long, string, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/objects/[OBJECT]";
+            long generation = 0L;
+            string contextKey = "";
+            // Make the request
+            gcscv::ObjectFullContext response = await storageControlClient.ViewObjectFullContextAsync(name, generation, contextKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ViewObjectFullContext</summary>
+        public void ViewObjectFullContext2ResourceNames()
+        {
+            // Snippet: ViewObjectFullContext(ObjectName, long, string, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::ObjectName name = gcscv::ObjectName.FromProjectBucketObject("[PROJECT]", "[BUCKET]", "[OBJECT]");
+            long generation = 0L;
+            string contextKey = "";
+            // Make the request
+            gcscv::ObjectFullContext response = storageControlClient.ViewObjectFullContext(name, generation, contextKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ViewObjectFullContextAsync</summary>
+        public async Task ViewObjectFullContext2ResourceNamesAsync()
+        {
+            // Snippet: ViewObjectFullContextAsync(ObjectName, long, string, CallSettings)
+            // Additional: ViewObjectFullContextAsync(ObjectName, long, string, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::ObjectName name = gcscv::ObjectName.FromProjectBucketObject("[PROJECT]", "[BUCKET]", "[OBJECT]");
+            long generation = 0L;
+            string contextKey = "";
+            // Make the request
+            gcscv::ObjectFullContext response = await storageControlClient.ViewObjectFullContextAsync(name, generation, contextKey);
+            // End snippet
+        }
     }
 }

@@ -175,6 +175,10 @@ namespace Google.Cloud.Storage.Control.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest> __Marshaller_google_storage_control_v2_ListIntelligenceFindingRevisionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse> __Marshaller_google_storage_control_v2_ListIntelligenceFindingRevisionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ViewObjectFullContextRequest> __Marshaller_google_storage_control_v2_ViewObjectFullContextRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ViewObjectFullContextRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ObjectFullContext> __Marshaller_google_storage_control_v2_ObjectFullContext = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ObjectFullContext.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.CreateFolderRequest, global::Google.Cloud.Storage.Control.V2.Folder> __Method_CreateFolder = new grpc::Method<global::Google.Cloud.Storage.Control.V2.CreateFolderRequest, global::Google.Cloud.Storage.Control.V2.Folder>(
@@ -471,6 +475,14 @@ namespace Google.Cloud.Storage.Control.V2 {
         "ListIntelligenceFindingRevisions",
         __Marshaller_google_storage_control_v2_ListIntelligenceFindingRevisionsRequest,
         __Marshaller_google_storage_control_v2_ListIntelligenceFindingRevisionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.ViewObjectFullContextRequest, global::Google.Cloud.Storage.Control.V2.ObjectFullContext> __Method_ViewObjectFullContext = new grpc::Method<global::Google.Cloud.Storage.Control.V2.ViewObjectFullContextRequest, global::Google.Cloud.Storage.Control.V2.ObjectFullContext>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ViewObjectFullContext",
+        __Marshaller_google_storage_control_v2_ViewObjectFullContextRequest,
+        __Marshaller_google_storage_control_v2_ObjectFullContext);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -950,6 +962,26 @@ namespace Google.Cloud.Storage.Control.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse> ListIntelligenceFindingRevisions(global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves the full content of an object context, including its key, value,
+      /// and any associated extended data for a given context key.
+      ///
+      /// Object contexts can optionally contain extended data. If an object context
+      /// contains extended data, the metadata payload structure will contain only
+      /// its type URL. To retrieve the full extended data, call this method.
+      ///
+      /// Returns the complete representation of the context as an
+      /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.ObjectFullContext> ViewObjectFullContext(global::Google.Cloud.Storage.Control.V2.ViewObjectFullContextRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2871,6 +2903,86 @@ namespace Google.Cloud.Storage.Control.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListIntelligenceFindingRevisions, null, options, request);
       }
+      /// <summary>
+      /// Retrieves the full content of an object context, including its key, value,
+      /// and any associated extended data for a given context key.
+      ///
+      /// Object contexts can optionally contain extended data. If an object context
+      /// contains extended data, the metadata payload structure will contain only
+      /// its type URL. To retrieve the full extended data, call this method.
+      ///
+      /// Returns the complete representation of the context as an
+      /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.ObjectFullContext ViewObjectFullContext(global::Google.Cloud.Storage.Control.V2.ViewObjectFullContextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ViewObjectFullContext(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the full content of an object context, including its key, value,
+      /// and any associated extended data for a given context key.
+      ///
+      /// Object contexts can optionally contain extended data. If an object context
+      /// contains extended data, the metadata payload structure will contain only
+      /// its type URL. To retrieve the full extended data, call this method.
+      ///
+      /// Returns the complete representation of the context as an
+      /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.ObjectFullContext ViewObjectFullContext(global::Google.Cloud.Storage.Control.V2.ViewObjectFullContextRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ViewObjectFullContext, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the full content of an object context, including its key, value,
+      /// and any associated extended data for a given context key.
+      ///
+      /// Object contexts can optionally contain extended data. If an object context
+      /// contains extended data, the metadata payload structure will contain only
+      /// its type URL. To retrieve the full extended data, call this method.
+      ///
+      /// Returns the complete representation of the context as an
+      /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.ObjectFullContext> ViewObjectFullContextAsync(global::Google.Cloud.Storage.Control.V2.ViewObjectFullContextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ViewObjectFullContextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the full content of an object context, including its key, value,
+      /// and any associated extended data for a given context key.
+      ///
+      /// Object contexts can optionally contain extended data. If an object context
+      /// contains extended data, the metadata payload structure will contain only
+      /// its type URL. To retrieve the full extended data, call this method.
+      ///
+      /// Returns the complete representation of the context as an
+      /// [`ObjectFullContext`][google.storage.control.v2.ObjectFullContext].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.ObjectFullContext> ViewObjectFullContextAsync(global::Google.Cloud.Storage.Control.V2.ViewObjectFullContextRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ViewObjectFullContext, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override StorageControlClient NewInstance(ClientBaseConfiguration configuration)
@@ -2921,7 +3033,8 @@ namespace Google.Cloud.Storage.Control.V2 {
           .AddMethod(__Method_ListIntelligenceFindings, serviceImpl.ListIntelligenceFindings)
           .AddMethod(__Method_SummarizeIntelligenceFindings, serviceImpl.SummarizeIntelligenceFindings)
           .AddMethod(__Method_GetIntelligenceFindingRevision, serviceImpl.GetIntelligenceFindingRevision)
-          .AddMethod(__Method_ListIntelligenceFindingRevisions, serviceImpl.ListIntelligenceFindingRevisions).Build();
+          .AddMethod(__Method_ListIntelligenceFindingRevisions, serviceImpl.ListIntelligenceFindingRevisions)
+          .AddMethod(__Method_ViewObjectFullContext, serviceImpl.ViewObjectFullContext).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2968,6 +3081,7 @@ namespace Google.Cloud.Storage.Control.V2 {
       serviceBinder.AddMethod(__Method_SummarizeIntelligenceFindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest, global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse>(serviceImpl.SummarizeIntelligenceFindings));
       serviceBinder.AddMethod(__Method_GetIntelligenceFindingRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision>(serviceImpl.GetIntelligenceFindingRevision));
       serviceBinder.AddMethod(__Method_ListIntelligenceFindingRevisions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest, global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse>(serviceImpl.ListIntelligenceFindingRevisions));
+      serviceBinder.AddMethod(__Method_ViewObjectFullContext, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.ViewObjectFullContextRequest, global::Google.Cloud.Storage.Control.V2.ObjectFullContext>(serviceImpl.ViewObjectFullContext));
     }
 
   }

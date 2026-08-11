@@ -2392,6 +2392,247 @@ namespace Google.Cloud.Storage.Control.V2
         public static bool operator !=(BucketName a, BucketName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>Object</c> resource.</summary>
+    public sealed partial class ObjectName : gax::IResourceName, sys::IEquatable<ObjectName>
+    {
+        /// <summary>The possible contents of <see cref="ObjectName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/buckets/{bucket}/objects/{object}</c>.
+            /// </summary>
+            ProjectBucketObject = 1,
+        }
+
+        private static gax::PathTemplate s_projectBucketObject = new gax::PathTemplate("projects/{project}/buckets/{bucket}/objects/{object}");
+
+        /// <summary>Creates a <see cref="ObjectName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="ObjectName"/> containing the provided <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static ObjectName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new ObjectName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="ObjectName"/> with the pattern <c>projects/{project}/buckets/{bucket}/objects/{object}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="objectId">The <c>Object</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="ObjectName"/> constructed from the provided ids.</returns>
+        public static ObjectName FromProjectBucketObject(string projectId, string bucketId, string objectId) =>
+            new ObjectName(ResourceNameType.ProjectBucketObject, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), objectId: gax::GaxPreconditions.CheckNotNullOrEmpty(objectId, nameof(objectId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ObjectName"/> with pattern
+        /// <c>projects/{project}/buckets/{bucket}/objects/{object}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="objectId">The <c>Object</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ObjectName"/> with pattern
+        /// <c>projects/{project}/buckets/{bucket}/objects/{object}</c>.
+        /// </returns>
+        public static string Format(string projectId, string bucketId, string objectId) =>
+            FormatProjectBucketObject(projectId, bucketId, objectId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ObjectName"/> with pattern
+        /// <c>projects/{project}/buckets/{bucket}/objects/{object}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="objectId">The <c>Object</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ObjectName"/> with pattern
+        /// <c>projects/{project}/buckets/{bucket}/objects/{object}</c>.
+        /// </returns>
+        public static string FormatProjectBucketObject(string projectId, string bucketId, string objectId) =>
+            s_projectBucketObject.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), gax::GaxPreconditions.CheckNotNullOrEmpty(objectId, nameof(objectId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="ObjectName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/buckets/{bucket}/objects/{object}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="objectName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ObjectName"/> if successful.</returns>
+        public static ObjectName Parse(string objectName) => Parse(objectName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="ObjectName"/> instance; optionally allowing an
+        /// unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/buckets/{bucket}/objects/{object}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="objectName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="ObjectName"/> if successful.</returns>
+        public static ObjectName Parse(string objectName, bool allowUnparsed) =>
+            TryParse(objectName, allowUnparsed, out ObjectName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ObjectName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/buckets/{bucket}/objects/{object}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="objectName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ObjectName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string objectName, out ObjectName result) => TryParse(objectName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="ObjectName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/buckets/{bucket}/objects/{object}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="objectName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="ObjectName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string objectName, bool allowUnparsed, out ObjectName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(objectName, nameof(objectName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectBucketObject.TryParseName(objectName, out resourceName))
+            {
+                result = FromProjectBucketObject(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(objectName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private ObjectName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string bucketId = null, string objectId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            BucketId = bucketId;
+            ObjectId = objectId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="ObjectName"/> class from the component parts of pattern
+        /// <c>projects/{project}/buckets/{bucket}/objects/{object}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="objectId">The <c>Object</c> ID. Must not be <c>null</c> or empty.</param>
+        public ObjectName(string projectId, string bucketId, string objectId) : this(ResourceNameType.ProjectBucketObject, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), objectId: gax::GaxPreconditions.CheckNotNullOrEmpty(objectId, nameof(objectId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Bucket</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string BucketId { get; }
+
+        /// <summary>
+        /// The <c>Object</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ObjectId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectBucketObject: return s_projectBucketObject.Expand(ProjectId, BucketId, ObjectId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as ObjectName);
+
+        /// <inheritdoc/>
+        public bool Equals(ObjectName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(ObjectName a, ObjectName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(ObjectName a, ObjectName b) => !(a == b);
+    }
+
     public partial class Folder
     {
         /// <summary>
@@ -2870,6 +3111,18 @@ namespace Google.Cloud.Storage.Control.V2
         {
             get => string.IsNullOrEmpty(Parent) ? null : IntelligenceFindingName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ViewObjectFullContextRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::ObjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::ObjectName ObjectName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::ObjectName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }
