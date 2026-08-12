@@ -242,9 +242,12 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     // Presence/visibility changes.
                     if (inO && o.IsExported())
                     {
-                        yield return inN ?
-                            Diff.Major(C(Cause.MethodMadeNotExported, Cause.CtorMadeNotExported), $"{prefix} made non-public.") :
-                            Diff.Major(C(Cause.MethodRemoved, Cause.CtorRemoved), $"{prefix} removed.");
+                        if (!MethodImplementationExistsInAncestor(descendentType: _n, method: o))
+                        {
+                            yield return inN ?
+                                Diff.Major(C(Cause.MethodMadeNotExported, Cause.CtorMadeNotExported), $"{prefix} made non-public.") :
+                                Diff.Major(C(Cause.MethodRemoved, Cause.CtorRemoved), $"{prefix} removed.");
+                        }
                     }
                     else if (inN && n.IsExported())
                     {
@@ -257,6 +260,37 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             }
 
             Cause C(Cause methodCause, Cause ctorCause) => isCtor ? ctorCause : methodCause;
+
+            static bool MethodImplementationExistsInAncestor(TypeDefinition descendentType, MethodDefinition method) =>
+                GetMethodImplementationFromAncestor(descendentType, method) is not null;
+
+            static MethodDefinition GetMethodImplementationFromAncestor(TypeDefinition descendentType, MethodDefinition method)
+            {
+                // First check if the method itself is sealed or the root for this method slot.
+                if (!method.IsVirtual)
+                {
+                    return null;
+                }
+                if (method.IsNewSlot)
+                {
+                    return null;
+                }
+
+                // Look for the method definition in the base type.
+                var baseType = descendentType.BaseType?.Resolve();
+                while (baseType != null)
+                {
+                    if (MetadataResolver.GetMethod(baseType.Methods, method) is MethodDefinition baseTypeMethod)
+                    {
+                        return baseTypeMethod;
+                    }
+
+                    baseType = baseType.BaseType?.Resolve();
+                }
+
+                // Finally return null if we didn't find an implementation among the ancestors.
+                return null;
+            }
         }
 
         public IEnumerable<Diff> Ctors(TypeType typeType) => MethodsCtors(typeType, isCtor: true, t => t.InstanceCtors());
