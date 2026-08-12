@@ -5152,6 +5152,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Ftp.V1/Google.Cloud.Ftp.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.WorkloadIdentity.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/workloadidentity/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.WorkloadIdentity.V1/Google.Cloud.WorkloadIdentity.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
