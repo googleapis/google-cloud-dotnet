@@ -242,9 +242,14 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     // Presence/visibility changes.
                     if (inO && o.IsExported())
                     {
-                        yield return inN ?
-                            Diff.Major(C(Cause.MethodMadeNotExported, Cause.CtorMadeNotExported), $"{prefix} made non-public.") :
-                            Diff.Major(C(Cause.MethodRemoved, Cause.CtorRemoved), $"{prefix} removed.");
+                        // A removed constructor is considered a breaking change, but for methods
+                        // we first check if there's a like method inherited from up the tree.
+                        if (isCtor || !LikeMethodInheritedFromAncestor(descendentType: _n, referenceMethod: o))
+                        {
+                            yield return inN ?
+                                Diff.Major(C(Cause.MethodMadeNotExported, Cause.CtorMadeNotExported), $"{prefix} made non-public.") :
+                                Diff.Major(C(Cause.MethodRemoved, Cause.CtorRemoved), $"{prefix} removed.");
+                        }
                     }
                     else if (inN && n.IsExported())
                     {
@@ -257,6 +262,35 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             }
 
             Cause C(Cause methodCause, Cause ctorCause) => isCtor ? ctorCause : methodCause;
+
+            static bool LikeMethodInheritedFromAncestor(TypeDefinition descendentType, MethodDefinition referenceMethod)
+            {
+                // Look up the ancestor tree until we find a like implementation to this method
+                var baseType = descendentType.BaseType?.Resolve();
+                while (baseType != null)
+                {
+                    // GetMethod here only checks for a subset of the info we need, so
+                    // also check visibility, static, and more.
+                    if (MetadataResolver.GetMethod(baseType.Methods, referenceMethod) is MethodDefinition baseTypeMethod
+                        && AreLikeMethods(referenceMethod, baseTypeMethod))
+                    {
+                        return true;
+                    }
+
+                    baseType = baseType.BaseType?.Resolve();
+                }
+
+                return false;
+
+                // This only supplements what is missing from MetadataResolver.GetMethod to ascertain if
+                // the two methods are definitionally like, and should not be used separately.
+                static bool AreLikeMethods(MethodDefinition referenceMethod, MethodDefinition likeMethod)
+                    => referenceMethod.IsPublic == likeMethod.IsPublic
+                        && referenceMethod.IsFamily == likeMethod.IsFamily
+                        && referenceMethod.IsStatic == likeMethod.IsStatic
+                        // We only care that the like method is sealed if the reference method is too.
+                        && (referenceMethod.IsVirtual ? likeMethod.IsVirtual : true);
+            }
         }
 
         public IEnumerable<Diff> Ctors(TypeType typeType) => MethodsCtors(typeType, isCtor: true, t => t.InstanceCtors());
@@ -312,9 +346,12 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     // Presence/visibility changes.
                     if (inO && o.IsExported())
                     {
-                        yield return inN ?
-                            Diff.Major(Cause.PropertyMadeNotExported, $"{prefix} made non-public.") :
-                            Diff.Major(Cause.PropertyRemoved, $"{prefix} removed.");
+                        if (!LikePropertyInheritedFromAncestor(descendentType: _n, property: o))
+                        {
+                            yield return inN ?
+                                Diff.Major(Cause.PropertyMadeNotExported, $"{prefix} made non-public.") :
+                                Diff.Major(Cause.PropertyRemoved, $"{prefix} removed.");
+                        }
                     }
                     else if (inN && n.IsExported())
                     {
@@ -324,6 +361,51 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                             diff(Cause.PropertyAdded, $"{prefix} added.");
                     }
                 }
+            }
+
+            // Look up the ancestor tree of until we find a like implementation to this property.
+            // This involves individually checking both accessors if they are both exported.
+            static bool LikePropertyInheritedFromAncestor(TypeDefinition descendentType, PropertyDefinition property)
+            {
+                List<MethodDefinition> exportedAccessors = GetExportedAccessors(property);
+
+                var baseType = descendentType.BaseType?.Resolve();
+                while (baseType != null)
+                {
+                    int likeAccessorsFound = 0;
+
+                    foreach (var accessor in exportedAccessors)
+                    {
+                        // GetMethod here only checks for a subset of the info we need, so
+                        // also check visibility, static, and more.
+                        if (MetadataResolver.GetMethod(baseType.Methods, accessor) is MethodDefinition baseTypeMethod
+                            && AreLikeMethods(accessor, baseTypeMethod))
+                        {
+                            likeAccessorsFound++;
+                        }
+                    }
+
+                    if (likeAccessorsFound == exportedAccessors.Count)
+                    {
+                        return true;
+                    }
+
+                    baseType = baseType.BaseType?.Resolve();
+                }
+
+                return false;
+
+                // This only supplements what is missing from MetadataResolver.GetMethod to ascertain if
+                // the two methods are definitionally like, and should not be used separately.
+                static bool AreLikeMethods(MethodDefinition referenceMethod, MethodDefinition likeMethod)
+                    => referenceMethod.IsPublic == likeMethod.IsPublic
+                        && referenceMethod.IsFamily == likeMethod.IsFamily
+                        && referenceMethod.IsStatic == likeMethod.IsStatic
+                        // We only care that the like method is sealed if the reference method is too.
+                        && (referenceMethod.IsVirtual ? likeMethod.IsVirtual : true);
+
+                static List<MethodDefinition> GetExportedAccessors(PropertyDefinition property) =>
+                    [.. new[] { property.GetMethod, property.SetMethod }.Where(m => m?.IsExported() == true)];
             }
         }
 
