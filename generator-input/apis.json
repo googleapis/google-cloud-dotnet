@@ -6767,6 +6767,26 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.WorkloadIdentity.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Workload Identity",
+      "productUrl": "https://cloud.google.com/iam/docs/service-agents",
+      "description": "",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/workloadidentity/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "workloadidentity",
+      "serviceConfigFile": "workloadidentity_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.WorkloadManager.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
