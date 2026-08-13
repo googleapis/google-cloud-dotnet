@@ -5164,6 +5164,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.WorkloadIdentity.V1/Google.Cloud.WorkloadIdentity.V1"
             ]
+        },
+        {
+            "id": "Google.Maps.MapManagement.V2",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/maps/mapmanagement/v2"
+            ],
+            "sourcePaths": [
+                "apis/Google.Maps.MapManagement.V2/Google.Maps.MapManagement.V2"
+            ]
         }
     ],
     "ignoredApiPaths": [
