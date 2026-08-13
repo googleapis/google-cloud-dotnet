@@ -1,0 +1,301 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.WorkloadIdentity.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.workloadidentity.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "workloadidentity_v1_generated_WorkloadIdentity_GenerateServiceAgents_sync",
+      "title": "GenerateServiceAgentsRequestObject",
+      "description": "Snippet for GenerateServiceAgents",
+      "file": "WorkloadIdentityClient.GenerateServiceAgentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateServiceAgents",
+        "fullName": "Google.Cloud.WorkloadIdentity.V1.WorkloadIdentityClient.GenerateServiceAgents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadIdentity.V1.GenerateServiceAgentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.WorkloadIdentity.V1.GenerateServiceAgentsResponse, Google.Cloud.WorkloadIdentity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadIdentityClient",
+          "fullName": "Google.Cloud.WorkloadIdentity.V1.WorkloadIdentityClient"
+        },
+        "method": {
+          "shortName": "GenerateServiceAgents",
+          "fullName": "google.cloud.workloadidentity.v1.WorkloadIdentity.GenerateServiceAgents",
+          "service": {
+            "shortName": "WorkloadIdentity",
+            "fullName": "google.cloud.workloadidentity.v1.WorkloadIdentity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadidentity_v1_generated_WorkloadIdentity_GenerateServiceAgents_async",
+      "title": "GenerateServiceAgentsRequestObjectAsync",
+      "description": "Snippet for GenerateServiceAgentsAsync",
+      "file": "WorkloadIdentityClient.GenerateServiceAgentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateServiceAgentsAsync",
+        "fullName": "Google.Cloud.WorkloadIdentity.V1.WorkloadIdentityClient.GenerateServiceAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadIdentity.V1.GenerateServiceAgentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.WorkloadIdentity.V1.GenerateServiceAgentsResponse, Google.Cloud.WorkloadIdentity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadIdentityClient",
+          "fullName": "Google.Cloud.WorkloadIdentity.V1.WorkloadIdentityClient"
+        },
+        "method": {
+          "shortName": "GenerateServiceAgents",
+          "fullName": "google.cloud.workloadidentity.v1.WorkloadIdentity.GenerateServiceAgents",
+          "service": {
+            "shortName": "WorkloadIdentity",
+            "fullName": "google.cloud.workloadidentity.v1.WorkloadIdentity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadidentity_v1_generated_WorkloadIdentity_GenerateServiceAgents_sync_flattened",
+      "title": "GenerateServiceAgents",
+      "description": "Snippet for GenerateServiceAgents",
+      "file": "WorkloadIdentityClient.GenerateServiceAgentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateServiceAgents",
+        "fullName": "Google.Cloud.WorkloadIdentity.V1.WorkloadIdentityClient.GenerateServiceAgents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.WorkloadIdentity.V1.GenerateServiceAgentsResponse, Google.Cloud.WorkloadIdentity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadIdentityClient",
+          "fullName": "Google.Cloud.WorkloadIdentity.V1.WorkloadIdentityClient"
+        },
+        "method": {
+          "shortName": "GenerateServiceAgents",
+          "fullName": "google.cloud.workloadidentity.v1.WorkloadIdentity.GenerateServiceAgents",
+          "service": {
+            "shortName": "WorkloadIdentity",
+            "fullName": "google.cloud.workloadidentity.v1.WorkloadIdentity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadidentity_v1_generated_WorkloadIdentity_GenerateServiceAgents_async_flattened",
+      "title": "GenerateServiceAgentsAsync",
+      "description": "Snippet for GenerateServiceAgentsAsync",
+      "file": "WorkloadIdentityClient.GenerateServiceAgentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateServiceAgentsAsync",
+        "fullName": "Google.Cloud.WorkloadIdentity.V1.WorkloadIdentityClient.GenerateServiceAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.WorkloadIdentity.V1.GenerateServiceAgentsResponse, Google.Cloud.WorkloadIdentity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadIdentityClient",
+          "fullName": "Google.Cloud.WorkloadIdentity.V1.WorkloadIdentityClient"
+        },
+        "method": {
+          "shortName": "GenerateServiceAgents",
+          "fullName": "google.cloud.workloadidentity.v1.WorkloadIdentity.GenerateServiceAgents",
+          "service": {
+            "shortName": "WorkloadIdentity",
+            "fullName": "google.cloud.workloadidentity.v1.WorkloadIdentity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadidentity_v1_generated_WorkloadIdentity_GenerateServiceAgents_sync_flattened_resourceNames",
+      "title": "GenerateServiceAgentsResourceNames",
+      "description": "Snippet for GenerateServiceAgents",
+      "file": "WorkloadIdentityClient.GenerateServiceAgentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateServiceAgents",
+        "fullName": "Google.Cloud.WorkloadIdentity.V1.WorkloadIdentityClient.GenerateServiceAgents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadIdentity.V1.ServiceProducerName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.WorkloadIdentity.V1.GenerateServiceAgentsResponse, Google.Cloud.WorkloadIdentity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "WorkloadIdentityClient",
+          "fullName": "Google.Cloud.WorkloadIdentity.V1.WorkloadIdentityClient"
+        },
+        "method": {
+          "shortName": "GenerateServiceAgents",
+          "fullName": "google.cloud.workloadidentity.v1.WorkloadIdentity.GenerateServiceAgents",
+          "service": {
+            "shortName": "WorkloadIdentity",
+            "fullName": "google.cloud.workloadidentity.v1.WorkloadIdentity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workloadidentity_v1_generated_WorkloadIdentity_GenerateServiceAgents_async_flattened_resourceNames",
+      "title": "GenerateServiceAgentsResourceNamesAsync",
+      "description": "Snippet for GenerateServiceAgentsAsync",
+      "file": "WorkloadIdentityClient.GenerateServiceAgentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateServiceAgentsAsync",
+        "fullName": "Google.Cloud.WorkloadIdentity.V1.WorkloadIdentityClient.GenerateServiceAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.WorkloadIdentity.V1.ServiceProducerName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.WorkloadIdentity.V1.GenerateServiceAgentsResponse, Google.Cloud.WorkloadIdentity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "WorkloadIdentityClient",
+          "fullName": "Google.Cloud.WorkloadIdentity.V1.WorkloadIdentityClient"
+        },
+        "method": {
+          "shortName": "GenerateServiceAgents",
+          "fullName": "google.cloud.workloadidentity.v1.WorkloadIdentity.GenerateServiceAgents",
+          "service": {
+            "shortName": "WorkloadIdentity",
+            "fullName": "google.cloud.workloadidentity.v1.WorkloadIdentity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
