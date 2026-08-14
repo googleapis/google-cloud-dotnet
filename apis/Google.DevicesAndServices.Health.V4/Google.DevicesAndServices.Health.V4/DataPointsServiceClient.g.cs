@@ -348,20 +348,54 @@ namespace Google.DevicesAndServices.Health.V4
         /// <description>https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly</description>
         /// </item>
         /// <item>
+        /// <description>https://www.googleapis.com/auth/googlehealth.activity_and_fitness.writeonly</description>
+        /// </item>
+        /// <item>
         /// <description>
         /// https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.writeonly
+        /// </description>
+        /// </item>
         /// <item><description>https://www.googleapis.com/auth/googlehealth.location.readonly</description></item>
+        /// <item>
+        /// <description>https://www.googleapis.com/auth/googlehealth.logged_symptoms.readonly</description>
+        /// </item>
+        /// <item>
+        /// <description>https://www.googleapis.com/auth/googlehealth.logged_symptoms.writeonly</description>
+        /// </item>
+        /// <item><description>https://www.googleapis.com/auth/googlehealth.mindfulness.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/googlehealth.mindfulness.writeonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/googlehealth.nutrition.writeonly</description></item>
+        /// <item>
+        /// <description>https://www.googleapis.com/auth/googlehealth.reproductive_health.readonly</description>
+        /// </item>
+        /// <item>
+        /// <description>https://www.googleapis.com/auth/googlehealth.reproductive_health.writeonly</description>
+        /// </item>
         /// <item><description>https://www.googleapis.com/auth/googlehealth.sleep.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/googlehealth.sleep.writeonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly",
+            "https://www.googleapis.com/auth/googlehealth.activity_and_fitness.writeonly",
             "https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly",
+            "https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.writeonly",
             "https://www.googleapis.com/auth/googlehealth.location.readonly",
+            "https://www.googleapis.com/auth/googlehealth.logged_symptoms.readonly",
+            "https://www.googleapis.com/auth/googlehealth.logged_symptoms.writeonly",
+            "https://www.googleapis.com/auth/googlehealth.mindfulness.readonly",
+            "https://www.googleapis.com/auth/googlehealth.mindfulness.writeonly",
+            "https://www.googleapis.com/auth/googlehealth.nutrition.writeonly",
+            "https://www.googleapis.com/auth/googlehealth.reproductive_health.readonly",
+            "https://www.googleapis.com/auth/googlehealth.reproductive_health.writeonly",
             "https://www.googleapis.com/auth/googlehealth.sleep.readonly",
+            "https://www.googleapis.com/auth/googlehealth.sleep.writeonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>

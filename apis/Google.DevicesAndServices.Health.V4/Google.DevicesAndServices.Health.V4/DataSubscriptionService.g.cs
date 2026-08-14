@@ -146,13 +146,13 @@ namespace Google.DevicesAndServices.Health.V4 {
             "dHkiQtpBBG5hbWWC0+STAjUqMy92NC97bmFtZT1wcm9qZWN0cy8qL3N1YnNj",
             "cmliZXJzLyovc3Vic2NyaXB0aW9ucy8qfRpJykEVaGVhbHRoLmdvb2dsZWFw",
             "aXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
-            "ZC1wbGF0Zm9ybUKSAgonY29tLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
-            "aGVhbHRoLnY0QhxEYXRhU3Vic2NyaXB0aW9uU2VydmljZVByb3RvUAFaUmdv",
+            "ZC1wbGF0Zm9ybUKOAgonY29tLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
+            "aGVhbHRoLnY0QhxEYXRhU3Vic2NyaXB0aW9uU2VydmljZVByb3RvUAFaTmdv",
             "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGV2aWNlc2Fu",
-            "ZHNlcnZpY2VzL2hlYWx0aC9hcGl2NG1haW47aGVhbHRocGKqAiNHb29nbGUu",
-            "RGV2aWNlc0FuZFNlcnZpY2VzLkhlYWx0aC5WNMoCI0dvb2dsZVxEZXZpY2Vz",
-            "QW5kU2VydmljZXNcSGVhbHRoXFY06gImR29vZ2xlOjpEZXZpY2VzQW5kU2Vy",
-            "dmljZXM6OkhlYWx0aDo6VjRiBnByb3RvMw=="));
+            "ZHNlcnZpY2VzL2hlYWx0aC9hcGl2NDtoZWFsdGhwYqoCI0dvb2dsZS5EZXZp",
+            "Y2VzQW5kU2VydmljZXMuSGVhbHRoLlY0ygIjR29vZ2xlXERldmljZXNBbmRT",
+            "ZXJ2aWNlc1xIZWFsdGhcVjTqAiZHb29nbGU6OkRldmljZXNBbmRTZXJ2aWNl",
+            "czo6SGVhbHRoOjpWNGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -237,8 +237,8 @@ namespace Google.DevicesAndServices.Health.V4 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource where this subscriber will be created.
-    /// Format: projects/{project}
-    /// Example: projects/my-project-123
+    /// Format: projects/{project_number}
+    /// Example: projects/1234567890
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1949,7 +1949,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// - `data_type`
     ///
     /// The `user` identifier (e.g., `user1` in `users/user1`) refers to the public
-    /// `healthUserId`
+    /// `health_user_id`
     ///
     /// Example: user = "users/user1"
     /// Example: user = "users/user1" OR user = "users/user2"
@@ -3520,8 +3520,9 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// A subscriber will only receive notifications for data types that are
     /// declared here.
     /// A subscription can only subscribe to the data types of the subscriber.
-    /// Supported data types are: "altitude", "distance", "floors", "sleep",
-    /// "steps", "weight".
+    /// The values should be in the format
+    /// "users/{health_user_id}/dataTypes/{data_type}" where `{data_type}` is one
+    /// of "altitude", "distance", "floors", "sleep", "steps", "weight".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

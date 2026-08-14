@@ -58,13 +58,13 @@ namespace Google.DevicesAndServices.Health.V4 {
             "aW1lc3RhbXBCA+BBAhIyCgp1dGNfb2Zmc2V0GAIgASgLMhkuZ29vZ2xlLnBy",
             "b3RvYnVmLkR1cmF0aW9uQgPgQQISSwoKY2l2aWxfdGltZRgDIAEoCzIyLmdv",
             "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkNpdmlsRGF0ZVRp",
-            "bWVCA+BBA0KKAgonY29tLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0QhREYXRhQ29vcmRpbmF0ZXNQcm90b1ABWlJnb29nbGUuZ29sYW5n",
+            "bWVCA+BBA0KGAgonY29tLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
+            "bHRoLnY0QhREYXRhQ29vcmRpbmF0ZXNQcm90b1ABWk5nb29nbGUuZ29sYW5n",
             "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2RldmljZXNhbmRzZXJ2aWNlcy9o",
-            "ZWFsdGgvYXBpdjRtYWluO2hlYWx0aHBiqgIjR29vZ2xlLkRldmljZXNBbmRT",
-            "ZXJ2aWNlcy5IZWFsdGguVjTKAiNHb29nbGVcRGV2aWNlc0FuZFNlcnZpY2Vz",
-            "XEhlYWx0aFxWNOoCJkdvb2dsZTo6RGV2aWNlc0FuZFNlcnZpY2VzOjpIZWFs",
-            "dGg6OlY0YgZwcm90bzM="));
+            "ZWFsdGgvYXBpdjQ7aGVhbHRocGKqAiNHb29nbGUuRGV2aWNlc0FuZFNlcnZp",
+            "Y2VzLkhlYWx0aC5WNMoCI0dvb2dsZVxEZXZpY2VzQW5kU2VydmljZXNcSGVh",
+            "bHRoXFY06gImR29vZ2xlOjpEZXZpY2VzQW5kU2VydmljZXM6OkhlYWx0aDo6",
+            "VjRiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
