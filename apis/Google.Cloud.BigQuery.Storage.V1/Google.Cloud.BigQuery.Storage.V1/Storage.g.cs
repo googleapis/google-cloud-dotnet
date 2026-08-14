@@ -40,103 +40,130 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EkgKDHJlYWRfc2Vz",
             "c2lvbhgCIAEoCzItLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYx",
             "LlJlYWRTZXNzaW9uQgPgQQISGAoQbWF4X3N0cmVhbV9jb3VudBgDIAEoBRIi",
-            "ChpwcmVmZXJyZWRfbWluX3N0cmVhbV9jb3VudBgEIAEoBSJpCg9SZWFkUm93",
-            "c1JlcXVlc3QSRgoLcmVhZF9zdHJlYW0YASABKAlCMeBBAvpBKwopYmlncXVl",
-            "cnlzdG9yYWdlLmdvb2dsZWFwaXMuY29tL1JlYWRTdHJlYW0SDgoGb2Zmc2V0",
-            "GAIgASgDIikKDVRocm90dGxlU3RhdGUSGAoQdGhyb3R0bGVfcGVyY2VudBgB",
-            "IAEoBSKXAQoLU3RyZWFtU3RhdHMSSAoIcHJvZ3Jlc3MYAiABKAsyNi5nb29n",
-            "bGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5TdHJlYW1TdGF0cy5Qcm9n",
-            "cmVzcxo+CghQcm9ncmVzcxIZChFhdF9yZXNwb25zZV9zdGFydBgBIAEoARIX",
-            "Cg9hdF9yZXNwb25zZV9lbmQYAiABKAEirAQKEFJlYWRSb3dzUmVzcG9uc2US",
-            "PwoJYXZyb19yb3dzGAMgASgLMiouZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0",
-            "b3JhZ2UudjEuQXZyb1Jvd3NIABJQChJhcnJvd19yZWNvcmRfYmF0Y2gYBCAB",
-            "KAsyMi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5BcnJvd1Jl",
-            "Y29yZEJhdGNoSAASEQoJcm93X2NvdW50GAYgASgDEjwKBXN0YXRzGAIgASgL",
-            "Mi0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuU3RyZWFtU3Rh",
-            "dHMSRwoOdGhyb3R0bGVfc3RhdGUYBSABKAsyLy5nb29nbGUuY2xvdWQuYmln",
-            "cXVlcnkuc3RvcmFnZS52MS5UaHJvdHRsZVN0YXRlEkgKC2F2cm9fc2NoZW1h",
-            "GAcgASgLMiwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQXZy",
-            "b1NjaGVtYUID4EEDSAESSgoMYXJyb3dfc2NoZW1hGAggASgLMi0uZ29vZ2xl",
-            "LmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQXJyb3dTY2hlbWFCA+BBA0gB",
-            "EigKFnVuY29tcHJlc3NlZF9ieXRlX3NpemUYCSABKANCA+BBAUgCiAEBQgYK",
-            "BHJvd3NCCAoGc2NoZW1hQhkKF191bmNvbXByZXNzZWRfYnl0ZV9zaXplImsK",
-            "FlNwbGl0UmVhZFN0cmVhbVJlcXVlc3QSPwoEbmFtZRgBIAEoCUIx4EEC+kEr",
-            "CiliaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vUmVhZFN0cmVhbRIQ",
-            "CghmcmFjdGlvbhgCIAEoASKnAQoXU3BsaXRSZWFkU3RyZWFtUmVzcG9uc2US",
-            "RAoOcHJpbWFyeV9zdHJlYW0YASABKAsyLC5nb29nbGUuY2xvdWQuYmlncXVl",
-            "cnkuc3RvcmFnZS52MS5SZWFkU3RyZWFtEkYKEHJlbWFpbmRlcl9zdHJlYW0Y",
-            "AiABKAsyLC5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5SZWFk",
-            "U3RyZWFtIpsBChhDcmVhdGVXcml0ZVN0cmVhbVJlcXVlc3QSNQoGcGFyZW50",
-            "GAEgASgJQiXgQQL6QR8KHWJpZ3F1ZXJ5Lmdvb2dsZWFwaXMuY29tL1RhYmxl",
-            "EkgKDHdyaXRlX3N0cmVhbRgCIAEoCzItLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5zdG9yYWdlLnYxLldyaXRlU3RyZWFtQgPgQQIi+AgKEUFwcGVuZFJvd3NS",
-            "ZXF1ZXN0EkgKDHdyaXRlX3N0cmVhbRgBIAEoCUIy4EEC+kEsCipiaWdxdWVy",
-            "eXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vV3JpdGVTdHJlYW0SKwoGb2Zmc2V0",
-            "GAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWUSUwoKcHJvdG9f",
-            "cm93cxgEIAEoCzI9Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYx",
-            "LkFwcGVuZFJvd3NSZXF1ZXN0LlByb3RvRGF0YUgAElMKCmFycm93X3Jvd3MY",
-            "BSABKAsyPS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5BcHBl",
-            "bmRSb3dzUmVxdWVzdC5BcnJvd0RhdGFIABIQCgh0cmFjZV9pZBgGIAEoCRJ7",
-            "Ch1taXNzaW5nX3ZhbHVlX2ludGVycHJldGF0aW9ucxgHIAMoCzJULmdvb2ds",
-            "ZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkFwcGVuZFJvd3NSZXF1ZXN0",
-            "Lk1pc3NpbmdWYWx1ZUludGVycHJldGF0aW9uc0VudHJ5EoEBCiRkZWZhdWx0",
-            "X21pc3NpbmdfdmFsdWVfaW50ZXJwcmV0YXRpb24YCCABKA4yTi5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5BcHBlbmRSb3dzUmVxdWVzdC5N",
-            "aXNzaW5nVmFsdWVJbnRlcnByZXRhdGlvbkID4EEBGpMBCglBcnJvd0RhdGES",
-            "RAoNd3JpdGVyX3NjaGVtYRgBIAEoCzItLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5zdG9yYWdlLnYxLkFycm93U2NoZW1hEkAKBHJvd3MYAiABKAsyMi5nb29n",
-            "bGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5BcnJvd1JlY29yZEJhdGNo",
-            "GowBCglQcm90b0RhdGESRAoNd3JpdGVyX3NjaGVtYRgBIAEoCzItLmdvb2ds",
-            "ZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLlByb3RvU2NoZW1hEjkKBHJv",
-            "d3MYAiABKAsyKy5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5Q",
-            "cm90b1Jvd3MakgEKIE1pc3NpbmdWYWx1ZUludGVycHJldGF0aW9uc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRJdCgV2YWx1ZRgCIAEoDjJOLmdvb2dsZS5jbG91ZC5i",
-            "aWdxdWVyeS5zdG9yYWdlLnYxLkFwcGVuZFJvd3NSZXF1ZXN0Lk1pc3NpbmdW",
-            "YWx1ZUludGVycHJldGF0aW9uOgI4ASJtChpNaXNzaW5nVmFsdWVJbnRlcnBy",
-            "ZXRhdGlvbhIsCihNSVNTSU5HX1ZBTFVFX0lOVEVSUFJFVEFUSU9OX1VOU1BF",
-            "Q0lGSUVEEAASDgoKTlVMTF9WQUxVRRABEhEKDURFRkFVTFRfVkFMVUUQAkIG",
-            "CgRyb3dzIvsCChJBcHBlbmRSb3dzUmVzcG9uc2USWgoNYXBwZW5kX3Jlc3Vs",
-            "dBgBIAEoCzJBLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkFw",
-            "cGVuZFJvd3NSZXNwb25zZS5BcHBlbmRSZXN1bHRIABIjCgVlcnJvchgCIAEo",
-            "CzISLmdvb2dsZS5ycGMuU3RhdHVzSAASRQoOdXBkYXRlZF9zY2hlbWEYAyAB",
-            "KAsyLS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5UYWJsZVNj",
-            "aGVtYRI+Cgpyb3dfZXJyb3JzGAQgAygLMiouZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LnN0b3JhZ2UudjEuUm93RXJyb3ISFAoMd3JpdGVfc3RyZWFtGAUgASgJ",
-            "GjsKDEFwcGVuZFJlc3VsdBIrCgZvZmZzZXQYASABKAsyGy5nb29nbGUucHJv",
-            "dG9idWYuSW50NjRWYWx1ZUIKCghyZXNwb25zZSKaAQoVR2V0V3JpdGVTdHJl",
-            "YW1SZXF1ZXN0EkAKBG5hbWUYASABKAlCMuBBAvpBLAoqYmlncXVlcnlzdG9y",
-            "YWdlLmdvb2dsZWFwaXMuY29tL1dyaXRlU3RyZWFtEj8KBHZpZXcYAyABKA4y",
-            "MS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5Xcml0ZVN0cmVh",
-            "bVZpZXcicwoeQmF0Y2hDb21taXRXcml0ZVN0cmVhbXNSZXF1ZXN0EjUKBnBh",
-            "cmVudBgBIAEoCUIl4EEC+kEfCh1iaWdxdWVyeS5nb29nbGVhcGlzLmNvbS9U",
-            "YWJsZRIaCg13cml0ZV9zdHJlYW1zGAIgAygJQgPgQQIimQEKH0JhdGNoQ29t",
-            "bWl0V3JpdGVTdHJlYW1zUmVzcG9uc2USLwoLY29tbWl0X3RpbWUYASABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkUKDXN0cmVhbV9lcnJvcnMY",
-            "AiADKAsyLi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5TdG9y",
-            "YWdlRXJyb3IiXgoaRmluYWxpemVXcml0ZVN0cmVhbVJlcXVlc3QSQAoEbmFt",
-            "ZRgBIAEoCUIy4EEC+kEsCipiaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5j",
-            "b20vV3JpdGVTdHJlYW0iMAobRmluYWxpemVXcml0ZVN0cmVhbVJlc3BvbnNl",
-            "EhEKCXJvd19jb3VudBgBIAEoAyKJAQoQRmx1c2hSb3dzUmVxdWVzdBJICgx3",
-            "cml0ZV9zdHJlYW0YASABKAlCMuBBAvpBLAoqYmlncXVlcnlzdG9yYWdlLmdv",
-            "b2dsZWFwaXMuY29tL1dyaXRlU3RyZWFtEisKBm9mZnNldBgCIAEoCzIbLmdv",
-            "b2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlIiMKEUZsdXNoUm93c1Jlc3BvbnNl",
-            "Eg4KBm9mZnNldBgBIAEoAyKkBAoMU3RvcmFnZUVycm9yEk0KBGNvZGUYASAB",
-            "KA4yPy5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5TdG9yYWdl",
-            "RXJyb3IuU3RvcmFnZUVycm9yQ29kZRIOCgZlbnRpdHkYAiABKAkSFQoNZXJy",
-            "b3JfbWVzc2FnZRgDIAEoCSKdAwoQU3RvcmFnZUVycm9yQ29kZRIiCh5TVE9S",
-            "QUdFX0VSUk9SX0NPREVfVU5TUEVDSUZJRUQQABITCg9UQUJMRV9OT1RfRk9V",
-            "TkQQARIcChhTVFJFQU1fQUxSRUFEWV9DT01NSVRURUQQAhIUChBTVFJFQU1f",
-            "Tk9UX0ZPVU5EEAMSFwoTSU5WQUxJRF9TVFJFQU1fVFlQRRAEEhgKFElOVkFM",
-            "SURfU1RSRUFNX1NUQVRFEAUSFAoQU1RSRUFNX0ZJTkFMSVpFRBAGEiAKHFND",
-            "SEVNQV9NSVNNQVRDSF9FWFRSQV9GSUVMRFMQBxIZChVPRkZTRVRfQUxSRUFE",
-            "WV9FWElTVFMQCBIXChNPRkZTRVRfT1VUX09GX1JBTkdFEAkSFQoRQ01FS19O",
-            "T1RfUFJPVklERUQQChIZChVJTlZBTElEX0NNRUtfUFJPVklERUQQCxIZChVD",
-            "TUVLX0VOQ1JZUFRJT05fRVJST1IQDBIVChFLTVNfU0VSVklDRV9FUlJPUhAN",
-            "EhkKFUtNU19QRVJNSVNTSU9OX0RFTklFRBAOIrMBCghSb3dFcnJvchINCgVp",
-            "bmRleBgBIAEoAxJFCgRjb2RlGAIgASgOMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LnN0b3JhZ2UudjEuUm93RXJyb3IuUm93RXJyb3JDb2RlEg8KB21lc3Nh",
-            "Z2UYAyABKAkiQAoMUm93RXJyb3JDb2RlEh4KGlJPV19FUlJPUl9DT0RFX1VO",
-            "U1BFQ0lGSUVEEAASEAoMRklFTERTX0VSUk9SEAEykgYKDEJpZ1F1ZXJ5UmVh",
+            "ChpwcmVmZXJyZWRfbWluX3N0cmVhbV9jb3VudBgEIAEoBSL5AQoPUmVhZFJv",
+            "d3NSZXF1ZXN0EkYKC3JlYWRfc3RyZWFtGAEgASgJQjHgQQL6QSsKKWJpZ3F1",
+            "ZXJ5c3RvcmFnZS5nb29nbGVhcGlzLmNvbS9SZWFkU3RyZWFtEg4KBm9mZnNl",
+            "dBgCIAEoAxJnChthcnJvd19zZXJpYWxpemF0aW9uX29wdGlvbnMYBSABKAsy",
+            "Oy5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5BcnJvd1Nlcmlh",
+            "bGl6YXRpb25PcHRpb25zQgPgQQFIAEIlCiNvdXRwdXRfZm9ybWF0X3Nlcmlh",
+            "bGl6YXRpb25fb3B0aW9ucyIpCg1UaHJvdHRsZVN0YXRlEhgKEHRocm90dGxl",
+            "X3BlcmNlbnQYASABKAUilwEKC1N0cmVhbVN0YXRzEkgKCHByb2dyZXNzGAIg",
+            "ASgLMjYuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuU3RyZWFt",
+            "U3RhdHMuUHJvZ3Jlc3MaPgoIUHJvZ3Jlc3MSGQoRYXRfcmVzcG9uc2Vfc3Rh",
+            "cnQYASABKAESFwoPYXRfcmVzcG9uc2VfZW5kGAIgASgBIvcEChBSZWFkUm93",
+            "c1Jlc3BvbnNlEj8KCWF2cm9fcm93cxgDIAEoCzIqLmdvb2dsZS5jbG91ZC5i",
+            "aWdxdWVyeS5zdG9yYWdlLnYxLkF2cm9Sb3dzSAASUAoSYXJyb3dfcmVjb3Jk",
+            "X2JhdGNoGAQgASgLMjIuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2Uu",
+            "djEuQXJyb3dSZWNvcmRCYXRjaEgAEhEKCXJvd19jb3VudBgGIAEoAxI8CgVz",
+            "dGF0cxgCIAEoCzItLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYx",
+            "LlN0cmVhbVN0YXRzEkcKDnRocm90dGxlX3N0YXRlGAUgASgLMi8uZ29vZ2xl",
+            "LmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuVGhyb3R0bGVTdGF0ZRJICgth",
+            "dnJvX3NjaGVtYRgHIAEoCzIsLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9y",
+            "YWdlLnYxLkF2cm9TY2hlbWFCA+BBA0gBEkoKDGFycm93X3NjaGVtYRgIIAEo",
+            "CzItLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkFycm93U2No",
+            "ZW1hQgPgQQNIARIoChZ1bmNvbXByZXNzZWRfYnl0ZV9zaXplGAkgASgDQgPg",
+            "QQFIAogBARIrChl0b3RhbF9lc3RpbWF0ZWRfcm93X2NvdW50GAogASgDQgPg",
+            "QQNIA4gBAUIGCgRyb3dzQggKBnNjaGVtYUIZChdfdW5jb21wcmVzc2VkX2J5",
+            "dGVfc2l6ZUIcChpfdG90YWxfZXN0aW1hdGVkX3Jvd19jb3VudCJrChZTcGxp",
+            "dFJlYWRTdHJlYW1SZXF1ZXN0Ej8KBG5hbWUYASABKAlCMeBBAvpBKwopYmln",
+            "cXVlcnlzdG9yYWdlLmdvb2dsZWFwaXMuY29tL1JlYWRTdHJlYW0SEAoIZnJh",
+            "Y3Rpb24YAiABKAEipwEKF1NwbGl0UmVhZFN0cmVhbVJlc3BvbnNlEkQKDnBy",
+            "aW1hcnlfc3RyZWFtGAEgASgLMiwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0",
+            "b3JhZ2UudjEuUmVhZFN0cmVhbRJGChByZW1haW5kZXJfc3RyZWFtGAIgASgL",
+            "MiwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuUmVhZFN0cmVh",
+            "bSKbAQoYQ3JlYXRlV3JpdGVTdHJlYW1SZXF1ZXN0EjUKBnBhcmVudBgBIAEo",
+            "CUIl4EEC+kEfCh1iaWdxdWVyeS5nb29nbGVhcGlzLmNvbS9UYWJsZRJICgx3",
+            "cml0ZV9zdHJlYW0YAiABKAsyLS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3Rv",
+            "cmFnZS52MS5Xcml0ZVN0cmVhbUID4EECIsIJChFBcHBlbmRSb3dzUmVxdWVz",
+            "dBJICgx3cml0ZV9zdHJlYW0YASABKAlCMuBBAvpBLAoqYmlncXVlcnlzdG9y",
+            "YWdlLmdvb2dsZWFwaXMuY29tL1dyaXRlU3RyZWFtEisKBm9mZnNldBgCIAEo",
+            "CzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlElMKCnByb3RvX3Jvd3MY",
+            "BCABKAsyPS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5BcHBl",
+            "bmRSb3dzUmVxdWVzdC5Qcm90b0RhdGFIABJTCgphcnJvd19yb3dzGAUgASgL",
+            "Mj0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQXBwZW5kUm93",
+            "c1JlcXVlc3QuQXJyb3dEYXRhSAASEAoIdHJhY2VfaWQYBiABKAkSewodbWlz",
+            "c2luZ192YWx1ZV9pbnRlcnByZXRhdGlvbnMYByADKAsyVC5nb29nbGUuY2xv",
+            "dWQuYmlncXVlcnkuc3RvcmFnZS52MS5BcHBlbmRSb3dzUmVxdWVzdC5NaXNz",
+            "aW5nVmFsdWVJbnRlcnByZXRhdGlvbnNFbnRyeRKBAQokZGVmYXVsdF9taXNz",
+            "aW5nX3ZhbHVlX2ludGVycHJldGF0aW9uGAggASgOMk4uZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQXBwZW5kUm93c1JlcXVlc3QuTWlzc2lu",
+            "Z1ZhbHVlSW50ZXJwcmV0YXRpb25CA+BBARJICgxjbGllbnRfc3RhdHMYCSAB",
+            "KAsyLS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5DbGllbnRT",
+            "dGF0c0ID4EEBGpMBCglBcnJvd0RhdGESRAoNd3JpdGVyX3NjaGVtYRgBIAEo",
+            "CzItLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkFycm93U2No",
+            "ZW1hEkAKBHJvd3MYAiABKAsyMi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3Rv",
+            "cmFnZS52MS5BcnJvd1JlY29yZEJhdGNoGowBCglQcm90b0RhdGESRAoNd3Jp",
+            "dGVyX3NjaGVtYRgBIAEoCzItLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9y",
+            "YWdlLnYxLlByb3RvU2NoZW1hEjkKBHJvd3MYAiABKAsyKy5nb29nbGUuY2xv",
+            "dWQuYmlncXVlcnkuc3RvcmFnZS52MS5Qcm90b1Jvd3MakgEKIE1pc3NpbmdW",
+            "YWx1ZUludGVycHJldGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRJdCgV2YWx1",
+            "ZRgCIAEoDjJOLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkFw",
+            "cGVuZFJvd3NSZXF1ZXN0Lk1pc3NpbmdWYWx1ZUludGVycHJldGF0aW9uOgI4",
+            "ASJtChpNaXNzaW5nVmFsdWVJbnRlcnByZXRhdGlvbhIsCihNSVNTSU5HX1ZB",
+            "TFVFX0lOVEVSUFJFVEFUSU9OX1VOU1BFQ0lGSUVEEAASDgoKTlVMTF9WQUxV",
+            "RRABEhEKDURFRkFVTFRfVkFMVUUQAkIGCgRyb3dzIvsCChJBcHBlbmRSb3dz",
+            "UmVzcG9uc2USWgoNYXBwZW5kX3Jlc3VsdBgBIAEoCzJBLmdvb2dsZS5jbG91",
+            "ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkFwcGVuZFJvd3NSZXNwb25zZS5BcHBl",
+            "bmRSZXN1bHRIABIjCgVlcnJvchgCIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVz",
+            "SAASRQoOdXBkYXRlZF9zY2hlbWEYAyABKAsyLS5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkuc3RvcmFnZS52MS5UYWJsZVNjaGVtYRI+Cgpyb3dfZXJyb3JzGAQg",
+            "AygLMiouZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuUm93RXJy",
+            "b3ISFAoMd3JpdGVfc3RyZWFtGAUgASgJGjsKDEFwcGVuZFJlc3VsdBIrCgZv",
+            "ZmZzZXQYASABKAsyGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZUIKCghy",
+            "ZXNwb25zZSKaAQoVR2V0V3JpdGVTdHJlYW1SZXF1ZXN0EkAKBG5hbWUYASAB",
+            "KAlCMuBBAvpBLAoqYmlncXVlcnlzdG9yYWdlLmdvb2dsZWFwaXMuY29tL1dy",
+            "aXRlU3RyZWFtEj8KBHZpZXcYAyABKA4yMS5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkuc3RvcmFnZS52MS5Xcml0ZVN0cmVhbVZpZXcicwoeQmF0Y2hDb21taXRX",
+            "cml0ZVN0cmVhbXNSZXF1ZXN0EjUKBnBhcmVudBgBIAEoCUIl4EEC+kEfCh1i",
+            "aWdxdWVyeS5nb29nbGVhcGlzLmNvbS9UYWJsZRIaCg13cml0ZV9zdHJlYW1z",
+            "GAIgAygJQgPgQQIimQEKH0JhdGNoQ29tbWl0V3JpdGVTdHJlYW1zUmVzcG9u",
+            "c2USLwoLY29tbWl0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wEkUKDXN0cmVhbV9lcnJvcnMYAiADKAsyLi5nb29nbGUuY2xvdWQu",
+            "YmlncXVlcnkuc3RvcmFnZS52MS5TdG9yYWdlRXJyb3IiXgoaRmluYWxpemVX",
+            "cml0ZVN0cmVhbVJlcXVlc3QSQAoEbmFtZRgBIAEoCUIy4EEC+kEsCipiaWdx",
+            "dWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vV3JpdGVTdHJlYW0iMAobRmlu",
+            "YWxpemVXcml0ZVN0cmVhbVJlc3BvbnNlEhEKCXJvd19jb3VudBgBIAEoAyKJ",
+            "AQoQRmx1c2hSb3dzUmVxdWVzdBJICgx3cml0ZV9zdHJlYW0YASABKAlCMuBB",
+            "AvpBLAoqYmlncXVlcnlzdG9yYWdlLmdvb2dsZWFwaXMuY29tL1dyaXRlU3Ry",
+            "ZWFtEisKBm9mZnNldBgCIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZh",
+            "bHVlIiMKEUZsdXNoUm93c1Jlc3BvbnNlEg4KBm9mZnNldBgBIAEoAyKkBAoM",
+            "U3RvcmFnZUVycm9yEk0KBGNvZGUYASABKA4yPy5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkuc3RvcmFnZS52MS5TdG9yYWdlRXJyb3IuU3RvcmFnZUVycm9yQ29k",
+            "ZRIOCgZlbnRpdHkYAiABKAkSFQoNZXJyb3JfbWVzc2FnZRgDIAEoCSKdAwoQ",
+            "U3RvcmFnZUVycm9yQ29kZRIiCh5TVE9SQUdFX0VSUk9SX0NPREVfVU5TUEVD",
+            "SUZJRUQQABITCg9UQUJMRV9OT1RfRk9VTkQQARIcChhTVFJFQU1fQUxSRUFE",
+            "WV9DT01NSVRURUQQAhIUChBTVFJFQU1fTk9UX0ZPVU5EEAMSFwoTSU5WQUxJ",
+            "RF9TVFJFQU1fVFlQRRAEEhgKFElOVkFMSURfU1RSRUFNX1NUQVRFEAUSFAoQ",
+            "U1RSRUFNX0ZJTkFMSVpFRBAGEiAKHFNDSEVNQV9NSVNNQVRDSF9FWFRSQV9G",
+            "SUVMRFMQBxIZChVPRkZTRVRfQUxSRUFEWV9FWElTVFMQCBIXChNPRkZTRVRf",
+            "T1VUX09GX1JBTkdFEAkSFQoRQ01FS19OT1RfUFJPVklERUQQChIZChVJTlZB",
+            "TElEX0NNRUtfUFJPVklERUQQCxIZChVDTUVLX0VOQ1JZUFRJT05fRVJST1IQ",
+            "DBIVChFLTVNfU0VSVklDRV9FUlJPUhANEhkKFUtNU19QRVJNSVNTSU9OX0RF",
+            "TklFRBAOIrMBCghSb3dFcnJvchINCgVpbmRleBgBIAEoAxJFCgRjb2RlGAIg",
+            "ASgOMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuUm93RXJy",
+            "b3IuUm93RXJyb3JDb2RlEg8KB21lc3NhZ2UYAyABKAkiQAoMUm93RXJyb3JD",
+            "b2RlEh4KGlJPV19FUlJPUl9DT0RFX1VOU1BFQ0lGSUVEEAASEAoMRklFTERT",
+            "X0VSUk9SEAEilgcKC0NsaWVudFN0YXRzElYKDXJlcXVlc3Rfc3RhdHMYASAB",
+            "KAsyOi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5DbGllbnRT",
+            "dGF0cy5SZXF1ZXN0U3RhdHNCA+BBARJUCgx3aW5kb3dfc3RhdHMYAiABKAsy",
+            "OS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5DbGllbnRTdGF0",
+            "cy5XaW5kb3dTdGF0c0ID4EEBGooBCgxSZXF1ZXN0U3RhdHMSIgoQc2VuZF90",
+            "aW1lX21pbGxpcxgBIAEoA0ID4EEBSACIAQESJwoVcXVldWVkX3JlcXVlc3Rz",
+            "X2NvdW50GAIgASgDQgPgQQFIAYgBAUITChFfc2VuZF90aW1lX21pbGxpc0IY",
+            "ChZfcXVldWVkX3JlcXVlc3RzX2NvdW50GssECgtXaW5kb3dTdGF0cxItChtt",
+            "YXhfcmVzcG9uc2VfbGF0ZW5jeV9taWxsaXMYASABKANCA+BBAUgAiAEBEi0K",
+            "G2F2Z19yZXNwb25zZV9sYXRlbmN5X21pbGxpcxgCIAEoA0ID4EEBSAGIAQES",
+            "MQofbG9uZ2VzdF93YWl0X25vX3Jlc3BvbnNlX21pbGxpcxgDIAEoA0ID4EEB",
+            "SAKIAQESJQoTcmVxdWVzdHNfc2VudF9jb3VudBgEIAEoA0ID4EEBSAOIAQES",
+            "KgoYcmVzcG9uc2VzX3JlY2VpdmVkX2NvdW50GAUgASgDQgPgQQFIBIgBARIi",
+            "ChBieXRlc19zZW50X2NvdW50GAYgASgDQgPgQQFIBYgBARIwCh53aW5kb3df",
+            "c3RhcnRfdGltZV9lcG9jaF9taWxsaXMYByABKANCA+BBAUgGiAEBEh8KDXdp",
+            "bmRvd19taWxsaXMYCCABKANCA+BBAUgHiAEBQh4KHF9tYXhfcmVzcG9uc2Vf",
+            "bGF0ZW5jeV9taWxsaXNCHgocX2F2Z19yZXNwb25zZV9sYXRlbmN5X21pbGxp",
+            "c0IiCiBfbG9uZ2VzdF93YWl0X25vX3Jlc3BvbnNlX21pbGxpc0IWChRfcmVx",
+            "dWVzdHNfc2VudF9jb3VudEIbChlfcmVzcG9uc2VzX3JlY2VpdmVkX2NvdW50",
+            "QhMKEV9ieXRlc19zZW50X2NvdW50QiEKH193aW5kb3dfc3RhcnRfdGltZV9l",
+            "cG9jaF9taWxsaXNCEAoOX3dpbmRvd19taWxsaXMykgYKDEJpZ1F1ZXJ5UmVh",
             "ZBLpAQoRQ3JlYXRlUmVhZFNlc3Npb24SOi5nb29nbGUuY2xvdWQuYmlncXVl",
             "cnkuc3RvcmFnZS52MS5DcmVhdGVSZWFkU2Vzc2lvblJlcXVlc3QaLS5nb29n",
             "bGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5SZWFkU2Vzc2lvbiJp2kEk",
@@ -198,14 +225,14 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.ArrowReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.AvroReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.ProtobufReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.StreamReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.TableReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.CreateReadSessionRequest), global::Google.Cloud.BigQuery.Storage.V1.CreateReadSessionRequest.Parser, new[]{ "Parent", "ReadSession", "MaxStreamCount", "PreferredMinStreamCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadRowsRequest), global::Google.Cloud.BigQuery.Storage.V1.ReadRowsRequest.Parser, new[]{ "ReadStream", "Offset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadRowsRequest), global::Google.Cloud.BigQuery.Storage.V1.ReadRowsRequest.Parser, new[]{ "ReadStream", "Offset", "ArrowSerializationOptions" }, new[]{ "OutputFormatSerializationOptions" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ThrottleState), global::Google.Cloud.BigQuery.Storage.V1.ThrottleState.Parser, new[]{ "ThrottlePercent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.StreamStats), global::Google.Cloud.BigQuery.Storage.V1.StreamStats.Parser, new[]{ "Progress" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.StreamStats.Types.Progress), global::Google.Cloud.BigQuery.Storage.V1.StreamStats.Types.Progress.Parser, new[]{ "AtResponseStart", "AtResponseEnd" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadRowsResponse), global::Google.Cloud.BigQuery.Storage.V1.ReadRowsResponse.Parser, new[]{ "AvroRows", "ArrowRecordBatch", "RowCount", "Stats", "ThrottleState", "AvroSchema", "ArrowSchema", "UncompressedByteSize" }, new[]{ "Rows", "Schema", "UncompressedByteSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadRowsResponse), global::Google.Cloud.BigQuery.Storage.V1.ReadRowsResponse.Parser, new[]{ "AvroRows", "ArrowRecordBatch", "RowCount", "Stats", "ThrottleState", "AvroSchema", "ArrowSchema", "UncompressedByteSize", "TotalEstimatedRowCount" }, new[]{ "Rows", "Schema", "UncompressedByteSize", "TotalEstimatedRowCount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.SplitReadStreamRequest), global::Google.Cloud.BigQuery.Storage.V1.SplitReadStreamRequest.Parser, new[]{ "Name", "Fraction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.SplitReadStreamResponse), global::Google.Cloud.BigQuery.Storage.V1.SplitReadStreamResponse.Parser, new[]{ "PrimaryStream", "RemainderStream" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest), global::Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest.Parser, new[]{ "Parent", "WriteStream" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest), global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Parser, new[]{ "WriteStream", "Offset", "ProtoRows", "ArrowRows", "TraceId", "MissingValueInterpretations", "DefaultMissingValueInterpretation" }, new[]{ "Rows" }, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ArrowData), global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ArrowData.Parser, new[]{ "WriterSchema", "Rows" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest), global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Parser, new[]{ "WriteStream", "Offset", "ProtoRows", "ArrowRows", "TraceId", "MissingValueInterpretations", "DefaultMissingValueInterpretation", "ClientStats" }, new[]{ "Rows" }, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ArrowData), global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ArrowData.Parser, new[]{ "WriterSchema", "Rows" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ProtoData), global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ProtoData.Parser, new[]{ "WriterSchema", "Rows" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse), global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse.Parser, new[]{ "AppendResult", "Error", "UpdatedSchema", "RowErrors", "WriteStream" }, new[]{ "Response" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse.Types.AppendResult), global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse.Types.AppendResult.Parser, new[]{ "Offset" }, null, null, null, null)}),
@@ -217,7 +244,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.FlushRowsRequest), global::Google.Cloud.BigQuery.Storage.V1.FlushRowsRequest.Parser, new[]{ "WriteStream", "Offset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse), global::Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse.Parser, new[]{ "Offset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.StorageError), global::Google.Cloud.BigQuery.Storage.V1.StorageError.Parser, new[]{ "Code", "Entity", "ErrorMessage" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.StorageError.Types.StorageErrorCode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.RowError), global::Google.Cloud.BigQuery.Storage.V1.RowError.Parser, new[]{ "Index", "Code", "Message" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.RowError.Types.RowErrorCode) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.RowError), global::Google.Cloud.BigQuery.Storage.V1.RowError.Parser, new[]{ "Index", "Code", "Message" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.RowError.Types.RowErrorCode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ClientStats), global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Parser, new[]{ "RequestStats", "WindowStats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Types.RequestStats), global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Types.RequestStats.Parser, new[]{ "SendTimeMillis", "QueuedRequestsCount" }, new[]{ "SendTimeMillis", "QueuedRequestsCount" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Types.WindowStats), global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Types.WindowStats.Parser, new[]{ "MaxResponseLatencyMillis", "AvgResponseLatencyMillis", "LongestWaitNoResponseMillis", "RequestsSentCount", "ResponsesReceivedCount", "BytesSentCount", "WindowStartTimeEpochMillis", "WindowMillis" }, new[]{ "MaxResponseLatencyMillis", "AvgResponseLatencyMillis", "LongestWaitNoResponseMillis", "RequestsSentCount", "ResponsesReceivedCount", "BytesSentCount", "WindowStartTimeEpochMillis", "WindowMillis" }, null, null, null)})
           }));
     }
     #endregion
@@ -614,6 +643,12 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     public ReadRowsRequest(ReadRowsRequest other) : this() {
       readStream_ = other.readStream_;
       offset_ = other.offset_;
+      switch (other.OutputFormatSerializationOptionsCase) {
+        case OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions:
+          ArrowSerializationOptions = other.ArrowSerializationOptions.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -655,6 +690,43 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
     }
 
+    /// <summary>Field number for the "arrow_serialization_options" field.</summary>
+    public const int ArrowSerializationOptionsFieldNumber = 5;
+    /// <summary>
+    /// Optional. Options specific to the Apache Arrow output format.
+    ///
+    /// This feature is not yet available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions ArrowSerializationOptions {
+      get { return outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions ? (global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions) outputFormatSerializationOptions_ : null; }
+      set {
+        outputFormatSerializationOptions_ = value;
+        outputFormatSerializationOptionsCase_ = value == null ? OutputFormatSerializationOptionsOneofCase.None : OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions;
+      }
+    }
+
+    private object outputFormatSerializationOptions_;
+    /// <summary>Enum of possible cases for the "output_format_serialization_options" oneof.</summary>
+    public enum OutputFormatSerializationOptionsOneofCase {
+      None = 0,
+      ArrowSerializationOptions = 5,
+    }
+    private OutputFormatSerializationOptionsOneofCase outputFormatSerializationOptionsCase_ = OutputFormatSerializationOptionsOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OutputFormatSerializationOptionsOneofCase OutputFormatSerializationOptionsCase {
+      get { return outputFormatSerializationOptionsCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOutputFormatSerializationOptions() {
+      outputFormatSerializationOptionsCase_ = OutputFormatSerializationOptionsOneofCase.None;
+      outputFormatSerializationOptions_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -672,6 +744,8 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (ReadStream != other.ReadStream) return false;
       if (Offset != other.Offset) return false;
+      if (!object.Equals(ArrowSerializationOptions, other.ArrowSerializationOptions)) return false;
+      if (OutputFormatSerializationOptionsCase != other.OutputFormatSerializationOptionsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -681,6 +755,8 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       int hash = 1;
       if (ReadStream.Length != 0) hash ^= ReadStream.GetHashCode();
       if (Offset != 0L) hash ^= Offset.GetHashCode();
+      if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) hash ^= ArrowSerializationOptions.GetHashCode();
+      hash ^= (int) outputFormatSerializationOptionsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -707,6 +783,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(16);
         output.WriteInt64(Offset);
       }
+      if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ArrowSerializationOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -725,6 +805,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(16);
         output.WriteInt64(Offset);
       }
+      if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ArrowSerializationOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -740,6 +824,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (Offset != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Offset);
+      }
+      if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArrowSerializationOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -759,6 +846,15 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (other.Offset != 0L) {
         Offset = other.Offset;
       }
+      switch (other.OutputFormatSerializationOptionsCase) {
+        case OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions:
+          if (ArrowSerializationOptions == null) {
+            ArrowSerializationOptions = new global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions();
+          }
+          ArrowSerializationOptions.MergeFrom(other.ArrowSerializationOptions);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -786,6 +882,15 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             Offset = input.ReadInt64();
             break;
           }
+          case 42: {
+            global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions subBuilder = new global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions();
+            if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) {
+              subBuilder.MergeFrom(ArrowSerializationOptions);
+            }
+            input.ReadMessage(subBuilder);
+            ArrowSerializationOptions = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -811,6 +916,15 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
           case 16: {
             Offset = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions subBuilder = new global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions();
+            if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) {
+              subBuilder.MergeFrom(ArrowSerializationOptions);
+            }
+            input.ReadMessage(subBuilder);
+            ArrowSerializationOptions = subBuilder;
             break;
           }
         }
@@ -1544,6 +1658,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       throttleState_ = other.throttleState_ != null ? other.throttleState_.Clone() : null;
       uncompressedByteSize_ = other.uncompressedByteSize_;
+      totalEstimatedRowCount_ = other.totalEstimatedRowCount_;
       switch (other.RowsCase) {
         case RowsOneofCase.AvroRows:
           AvroRows = other.AvroRows.Clone();
@@ -1720,6 +1835,39 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "total_estimated_row_count" field.</summary>
+    public const int TotalEstimatedRowCountFieldNumber = 10;
+    private readonly static long TotalEstimatedRowCountDefaultValue = 0L;
+
+    private long totalEstimatedRowCount_;
+    /// <summary>
+    /// Output only. The total estimated number of rows in the query results.
+    /// Only populated when reading data from a BigQuery job.
+    ///
+    /// This feature is not yet available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long TotalEstimatedRowCount {
+      get { if ((_hasBits0 & 2) != 0) { return totalEstimatedRowCount_; } else { return TotalEstimatedRowCountDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        totalEstimatedRowCount_ = value;
+      }
+    }
+    /// <summary>Gets whether the "total_estimated_row_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTotalEstimatedRowCount {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "total_estimated_row_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTotalEstimatedRowCount() {
+      _hasBits0 &= ~2;
+    }
+
     private object rows_;
     /// <summary>Enum of possible cases for the "rows" oneof.</summary>
     public enum RowsOneofCase {
@@ -1785,6 +1933,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (!object.Equals(AvroSchema, other.AvroSchema)) return false;
       if (!object.Equals(ArrowSchema, other.ArrowSchema)) return false;
       if (UncompressedByteSize != other.UncompressedByteSize) return false;
+      if (TotalEstimatedRowCount != other.TotalEstimatedRowCount) return false;
       if (RowsCase != other.RowsCase) return false;
       if (SchemaCase != other.SchemaCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1802,6 +1951,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (schemaCase_ == SchemaOneofCase.AvroSchema) hash ^= AvroSchema.GetHashCode();
       if (schemaCase_ == SchemaOneofCase.ArrowSchema) hash ^= ArrowSchema.GetHashCode();
       if (HasUncompressedByteSize) hash ^= UncompressedByteSize.GetHashCode();
+      if (HasTotalEstimatedRowCount) hash ^= TotalEstimatedRowCount.GetHashCode();
       hash ^= (int) rowsCase_;
       hash ^= (int) schemaCase_;
       if (_unknownFields != null) {
@@ -1854,6 +2004,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(72);
         output.WriteInt64(UncompressedByteSize);
       }
+      if (HasTotalEstimatedRowCount) {
+        output.WriteRawTag(80);
+        output.WriteInt64(TotalEstimatedRowCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1896,6 +2050,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(72);
         output.WriteInt64(UncompressedByteSize);
       }
+      if (HasTotalEstimatedRowCount) {
+        output.WriteRawTag(80);
+        output.WriteInt64(TotalEstimatedRowCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1930,6 +2088,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (HasUncompressedByteSize) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(UncompressedByteSize);
       }
+      if (HasTotalEstimatedRowCount) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalEstimatedRowCount);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1959,6 +2120,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (other.HasUncompressedByteSize) {
         UncompressedByteSize = other.UncompressedByteSize;
+      }
+      if (other.HasTotalEstimatedRowCount) {
+        TotalEstimatedRowCount = other.TotalEstimatedRowCount;
       }
       switch (other.RowsCase) {
         case RowsOneofCase.AvroRows:
@@ -2067,6 +2231,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             UncompressedByteSize = input.ReadInt64();
             break;
           }
+          case 80: {
+            TotalEstimatedRowCount = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -2142,6 +2310,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
           case 72: {
             UncompressedByteSize = input.ReadInt64();
+            break;
+          }
+          case 80: {
+            TotalEstimatedRowCount = input.ReadInt64();
             break;
           }
         }
@@ -2928,7 +3100,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// switching table destinations. You can also switch table destinations within
   /// the same connection for the default stream.
   ///
-  /// The size of a single AppendRowsRequest must be less than 10 MB in size.
+  /// The size of a single AppendRowsRequest must be less than 20 MB in size.
   /// Requests larger than this return an error, typically `INVALID_ARGUMENT`.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -2971,6 +3143,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       traceId_ = other.traceId_;
       missingValueInterpretations_ = other.missingValueInterpretations_.Clone();
       defaultMissingValueInterpretation_ = other.defaultMissingValueInterpretation_;
+      clientStats_ = other.clientStats_ != null ? other.clientStats_.Clone() : null;
       switch (other.RowsCase) {
         case RowsOneofCase.ProtoRows:
           ProtoRows = other.ProtoRows.Clone();
@@ -3155,6 +3328,21 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
     }
 
+    /// <summary>Field number for the "client_stats" field.</summary>
+    public const int ClientStatsFieldNumber = 9;
+    private global::Google.Cloud.BigQuery.Storage.V1.ClientStats clientStats_;
+    /// <summary>
+    /// Optional. Stats and telemetry data gathered on the client side.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Storage.V1.ClientStats ClientStats {
+      get { return clientStats_; }
+      set {
+        clientStats_ = value;
+      }
+    }
+
     private object rows_;
     /// <summary>Enum of possible cases for the "rows" oneof.</summary>
     public enum RowsOneofCase {
@@ -3198,6 +3386,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (TraceId != other.TraceId) return false;
       if (!MissingValueInterpretations.Equals(other.MissingValueInterpretations)) return false;
       if (DefaultMissingValueInterpretation != other.DefaultMissingValueInterpretation) return false;
+      if (!object.Equals(ClientStats, other.ClientStats)) return false;
       if (RowsCase != other.RowsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3213,6 +3402,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (TraceId.Length != 0) hash ^= TraceId.GetHashCode();
       hash ^= MissingValueInterpretations.GetHashCode();
       if (DefaultMissingValueInterpretation != global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation.Unspecified) hash ^= DefaultMissingValueInterpretation.GetHashCode();
+      if (clientStats_ != null) hash ^= ClientStats.GetHashCode();
       hash ^= (int) rowsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3256,6 +3446,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(64);
         output.WriteEnum((int) DefaultMissingValueInterpretation);
       }
+      if (clientStats_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ClientStats);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3290,6 +3484,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(64);
         output.WriteEnum((int) DefaultMissingValueInterpretation);
       }
+      if (clientStats_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ClientStats);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3319,6 +3517,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (DefaultMissingValueInterpretation != global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DefaultMissingValueInterpretation);
       }
+      if (clientStats_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClientStats);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3345,6 +3546,12 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       missingValueInterpretations_.MergeFrom(other.missingValueInterpretations_);
       if (other.DefaultMissingValueInterpretation != global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation.Unspecified) {
         DefaultMissingValueInterpretation = other.DefaultMissingValueInterpretation;
+      }
+      if (other.clientStats_ != null) {
+        if (clientStats_ == null) {
+          ClientStats = new global::Google.Cloud.BigQuery.Storage.V1.ClientStats();
+        }
+        ClientStats.MergeFrom(other.ClientStats);
       }
       switch (other.RowsCase) {
         case RowsOneofCase.ProtoRows:
@@ -3421,6 +3628,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             DefaultMissingValueInterpretation = (global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation) input.ReadEnum();
             break;
           }
+          case 74: {
+            if (clientStats_ == null) {
+              ClientStats = new global::Google.Cloud.BigQuery.Storage.V1.ClientStats();
+            }
+            input.ReadMessage(ClientStats);
+            break;
+          }
         }
       }
     #endif
@@ -3479,6 +3693,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
           case 64: {
             DefaultMissingValueInterpretation = (global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            if (clientStats_ == null) {
+              ClientStats = new global::Google.Cloud.BigQuery.Storage.V1.ClientStats();
+            }
+            input.ReadMessage(ClientStats);
             break;
           }
         }
@@ -6979,6 +7200,1169 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         /// One or more fields in the row has errors.
         /// </summary>
         [pbr::OriginalName("FIELDS_ERROR")] FieldsError = 1,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Stats and telemetry data gathered on the client side about requests
+  /// being sent to the BigQuery Storage service, for internal use only.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ClientStats : pb::IMessage<ClientStats>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ClientStats> _parser = new pb::MessageParser<ClientStats>(() => new ClientStats());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ClientStats> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Storage.V1.StorageReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClientStats() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClientStats(ClientStats other) : this() {
+      requestStats_ = other.requestStats_ != null ? other.requestStats_.Clone() : null;
+      windowStats_ = other.windowStats_ != null ? other.windowStats_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClientStats Clone() {
+      return new ClientStats(this);
+    }
+
+    /// <summary>Field number for the "request_stats" field.</summary>
+    public const int RequestStatsFieldNumber = 1;
+    private global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Types.RequestStats requestStats_;
+    /// <summary>
+    /// Optional. Per-request stats.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Types.RequestStats RequestStats {
+      get { return requestStats_; }
+      set {
+        requestStats_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "window_stats" field.</summary>
+    public const int WindowStatsFieldNumber = 2;
+    private global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Types.WindowStats windowStats_;
+    /// <summary>
+    /// Optional. Windowed stats.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Types.WindowStats WindowStats {
+      get { return windowStats_; }
+      set {
+        windowStats_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ClientStats);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ClientStats other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(RequestStats, other.RequestStats)) return false;
+      if (!object.Equals(WindowStats, other.WindowStats)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (requestStats_ != null) hash ^= RequestStats.GetHashCode();
+      if (windowStats_ != null) hash ^= WindowStats.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (requestStats_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RequestStats);
+      }
+      if (windowStats_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(WindowStats);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (requestStats_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RequestStats);
+      }
+      if (windowStats_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(WindowStats);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (requestStats_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestStats);
+      }
+      if (windowStats_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(WindowStats);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ClientStats other) {
+      if (other == null) {
+        return;
+      }
+      if (other.requestStats_ != null) {
+        if (requestStats_ == null) {
+          RequestStats = new global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Types.RequestStats();
+        }
+        RequestStats.MergeFrom(other.RequestStats);
+      }
+      if (other.windowStats_ != null) {
+        if (windowStats_ == null) {
+          WindowStats = new global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Types.WindowStats();
+        }
+        WindowStats.MergeFrom(other.WindowStats);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (requestStats_ == null) {
+              RequestStats = new global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Types.RequestStats();
+            }
+            input.ReadMessage(RequestStats);
+            break;
+          }
+          case 18: {
+            if (windowStats_ == null) {
+              WindowStats = new global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Types.WindowStats();
+            }
+            input.ReadMessage(WindowStats);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (requestStats_ == null) {
+              RequestStats = new global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Types.RequestStats();
+            }
+            input.ReadMessage(RequestStats);
+            break;
+          }
+          case 18: {
+            if (windowStats_ == null) {
+              WindowStats = new global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Types.WindowStats();
+            }
+            input.ReadMessage(WindowStats);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ClientStats message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Stats and telemetry data gathered on the client side about a single
+      /// request.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RequestStats : pb::IMessage<RequestStats>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RequestStats> _parser = new pb::MessageParser<RequestStats>(() => new RequestStats());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RequestStats> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RequestStats() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RequestStats(RequestStats other) : this() {
+          _hasBits0 = other._hasBits0;
+          sendTimeMillis_ = other.sendTimeMillis_;
+          queuedRequestsCount_ = other.queuedRequestsCount_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RequestStats Clone() {
+          return new RequestStats(this);
+        }
+
+        /// <summary>Field number for the "send_time_millis" field.</summary>
+        public const int SendTimeMillisFieldNumber = 1;
+        private readonly static long SendTimeMillisDefaultValue = 0L;
+
+        private long sendTimeMillis_;
+        /// <summary>
+        /// Optional. Timestamp indicating when the request was sent over the
+        /// network, expressed in epoch milliseconds.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long SendTimeMillis {
+          get { if ((_hasBits0 & 1) != 0) { return sendTimeMillis_; } else { return SendTimeMillisDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            sendTimeMillis_ = value;
+          }
+        }
+        /// <summary>Gets whether the "send_time_millis" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSendTimeMillis {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "send_time_millis" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSendTimeMillis() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "queued_requests_count" field.</summary>
+        public const int QueuedRequestsCountFieldNumber = 2;
+        private readonly static long QueuedRequestsCountDefaultValue = 0L;
+
+        private long queuedRequestsCount_;
+        /// <summary>
+        /// Optional. Number of pending requests at the moment this request was sent.
+        /// This includes requests waiting to be sent, and those that are inflight.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long QueuedRequestsCount {
+          get { if ((_hasBits0 & 2) != 0) { return queuedRequestsCount_; } else { return QueuedRequestsCountDefaultValue; } }
+          set {
+            _hasBits0 |= 2;
+            queuedRequestsCount_ = value;
+          }
+        }
+        /// <summary>Gets whether the "queued_requests_count" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasQueuedRequestsCount {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "queued_requests_count" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearQueuedRequestsCount() {
+          _hasBits0 &= ~2;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RequestStats);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RequestStats other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (SendTimeMillis != other.SendTimeMillis) return false;
+          if (QueuedRequestsCount != other.QueuedRequestsCount) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasSendTimeMillis) hash ^= SendTimeMillis.GetHashCode();
+          if (HasQueuedRequestsCount) hash ^= QueuedRequestsCount.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasSendTimeMillis) {
+            output.WriteRawTag(8);
+            output.WriteInt64(SendTimeMillis);
+          }
+          if (HasQueuedRequestsCount) {
+            output.WriteRawTag(16);
+            output.WriteInt64(QueuedRequestsCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasSendTimeMillis) {
+            output.WriteRawTag(8);
+            output.WriteInt64(SendTimeMillis);
+          }
+          if (HasQueuedRequestsCount) {
+            output.WriteRawTag(16);
+            output.WriteInt64(QueuedRequestsCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasSendTimeMillis) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(SendTimeMillis);
+          }
+          if (HasQueuedRequestsCount) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(QueuedRequestsCount);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RequestStats other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasSendTimeMillis) {
+            SendTimeMillis = other.SendTimeMillis;
+          }
+          if (other.HasQueuedRequestsCount) {
+            QueuedRequestsCount = other.QueuedRequestsCount;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                SendTimeMillis = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                QueuedRequestsCount = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                SendTimeMillis = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                QueuedRequestsCount = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Aggregate connection metrics over a window interval.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class WindowStats : pb::IMessage<WindowStats>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<WindowStats> _parser = new pb::MessageParser<WindowStats>(() => new WindowStats());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<WindowStats> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.BigQuery.Storage.V1.ClientStats.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public WindowStats() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public WindowStats(WindowStats other) : this() {
+          _hasBits0 = other._hasBits0;
+          maxResponseLatencyMillis_ = other.maxResponseLatencyMillis_;
+          avgResponseLatencyMillis_ = other.avgResponseLatencyMillis_;
+          longestWaitNoResponseMillis_ = other.longestWaitNoResponseMillis_;
+          requestsSentCount_ = other.requestsSentCount_;
+          responsesReceivedCount_ = other.responsesReceivedCount_;
+          bytesSentCount_ = other.bytesSentCount_;
+          windowStartTimeEpochMillis_ = other.windowStartTimeEpochMillis_;
+          windowMillis_ = other.windowMillis_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public WindowStats Clone() {
+          return new WindowStats(this);
+        }
+
+        /// <summary>Field number for the "max_response_latency_millis" field.</summary>
+        public const int MaxResponseLatencyMillisFieldNumber = 1;
+        private readonly static long MaxResponseLatencyMillisDefaultValue = 0L;
+
+        private long maxResponseLatencyMillis_;
+        /// <summary>
+        /// Optional. The maximum response latency observed in the window, expressed
+        /// in milliseconds.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long MaxResponseLatencyMillis {
+          get { if ((_hasBits0 & 1) != 0) { return maxResponseLatencyMillis_; } else { return MaxResponseLatencyMillisDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            maxResponseLatencyMillis_ = value;
+          }
+        }
+        /// <summary>Gets whether the "max_response_latency_millis" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMaxResponseLatencyMillis {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "max_response_latency_millis" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMaxResponseLatencyMillis() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "avg_response_latency_millis" field.</summary>
+        public const int AvgResponseLatencyMillisFieldNumber = 2;
+        private readonly static long AvgResponseLatencyMillisDefaultValue = 0L;
+
+        private long avgResponseLatencyMillis_;
+        /// <summary>
+        /// Optional. The average response latency observed in the window, expressed
+        /// in milliseconds.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long AvgResponseLatencyMillis {
+          get { if ((_hasBits0 & 2) != 0) { return avgResponseLatencyMillis_; } else { return AvgResponseLatencyMillisDefaultValue; } }
+          set {
+            _hasBits0 |= 2;
+            avgResponseLatencyMillis_ = value;
+          }
+        }
+        /// <summary>Gets whether the "avg_response_latency_millis" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAvgResponseLatencyMillis {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "avg_response_latency_millis" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAvgResponseLatencyMillis() {
+          _hasBits0 &= ~2;
+        }
+
+        /// <summary>Field number for the "longest_wait_no_response_millis" field.</summary>
+        public const int LongestWaitNoResponseMillisFieldNumber = 3;
+        private readonly static long LongestWaitNoResponseMillisDefaultValue = 0L;
+
+        private long longestWaitNoResponseMillis_;
+        /// <summary>
+        /// Optional. The longest time spent waiting without receiving a response in
+        /// the window. This could exceed max_response_latency_millis because the
+        /// latter is evaluated only when a response is received. Expressed in
+        /// milliseconds.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long LongestWaitNoResponseMillis {
+          get { if ((_hasBits0 & 4) != 0) { return longestWaitNoResponseMillis_; } else { return LongestWaitNoResponseMillisDefaultValue; } }
+          set {
+            _hasBits0 |= 4;
+            longestWaitNoResponseMillis_ = value;
+          }
+        }
+        /// <summary>Gets whether the "longest_wait_no_response_millis" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasLongestWaitNoResponseMillis {
+          get { return (_hasBits0 & 4) != 0; }
+        }
+        /// <summary>Clears the value of the "longest_wait_no_response_millis" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearLongestWaitNoResponseMillis() {
+          _hasBits0 &= ~4;
+        }
+
+        /// <summary>Field number for the "requests_sent_count" field.</summary>
+        public const int RequestsSentCountFieldNumber = 4;
+        private readonly static long RequestsSentCountDefaultValue = 0L;
+
+        private long requestsSentCount_;
+        /// <summary>
+        /// Optional. How many requests were sent in the window.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long RequestsSentCount {
+          get { if ((_hasBits0 & 8) != 0) { return requestsSentCount_; } else { return RequestsSentCountDefaultValue; } }
+          set {
+            _hasBits0 |= 8;
+            requestsSentCount_ = value;
+          }
+        }
+        /// <summary>Gets whether the "requests_sent_count" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasRequestsSentCount {
+          get { return (_hasBits0 & 8) != 0; }
+        }
+        /// <summary>Clears the value of the "requests_sent_count" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearRequestsSentCount() {
+          _hasBits0 &= ~8;
+        }
+
+        /// <summary>Field number for the "responses_received_count" field.</summary>
+        public const int ResponsesReceivedCountFieldNumber = 5;
+        private readonly static long ResponsesReceivedCountDefaultValue = 0L;
+
+        private long responsesReceivedCount_;
+        /// <summary>
+        /// Optional. How many responses were received in the window.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long ResponsesReceivedCount {
+          get { if ((_hasBits0 & 16) != 0) { return responsesReceivedCount_; } else { return ResponsesReceivedCountDefaultValue; } }
+          set {
+            _hasBits0 |= 16;
+            responsesReceivedCount_ = value;
+          }
+        }
+        /// <summary>Gets whether the "responses_received_count" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasResponsesReceivedCount {
+          get { return (_hasBits0 & 16) != 0; }
+        }
+        /// <summary>Clears the value of the "responses_received_count" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearResponsesReceivedCount() {
+          _hasBits0 &= ~16;
+        }
+
+        /// <summary>Field number for the "bytes_sent_count" field.</summary>
+        public const int BytesSentCountFieldNumber = 6;
+        private readonly static long BytesSentCountDefaultValue = 0L;
+
+        private long bytesSentCount_;
+        /// <summary>
+        /// Optional. How many bytes were sent in the window.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long BytesSentCount {
+          get { if ((_hasBits0 & 32) != 0) { return bytesSentCount_; } else { return BytesSentCountDefaultValue; } }
+          set {
+            _hasBits0 |= 32;
+            bytesSentCount_ = value;
+          }
+        }
+        /// <summary>Gets whether the "bytes_sent_count" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasBytesSentCount {
+          get { return (_hasBits0 & 32) != 0; }
+        }
+        /// <summary>Clears the value of the "bytes_sent_count" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearBytesSentCount() {
+          _hasBits0 &= ~32;
+        }
+
+        /// <summary>Field number for the "window_start_time_epoch_millis" field.</summary>
+        public const int WindowStartTimeEpochMillisFieldNumber = 7;
+        private readonly static long WindowStartTimeEpochMillisDefaultValue = 0L;
+
+        private long windowStartTimeEpochMillis_;
+        /// <summary>
+        /// Optional. Start time of the window interval for which these stats are
+        /// aggregated, expressed in epoch milliseconds.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long WindowStartTimeEpochMillis {
+          get { if ((_hasBits0 & 64) != 0) { return windowStartTimeEpochMillis_; } else { return WindowStartTimeEpochMillisDefaultValue; } }
+          set {
+            _hasBits0 |= 64;
+            windowStartTimeEpochMillis_ = value;
+          }
+        }
+        /// <summary>Gets whether the "window_start_time_epoch_millis" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasWindowStartTimeEpochMillis {
+          get { return (_hasBits0 & 64) != 0; }
+        }
+        /// <summary>Clears the value of the "window_start_time_epoch_millis" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearWindowStartTimeEpochMillis() {
+          _hasBits0 &= ~64;
+        }
+
+        /// <summary>Field number for the "window_millis" field.</summary>
+        public const int WindowMillisFieldNumber = 8;
+        private readonly static long WindowMillisDefaultValue = 0L;
+
+        private long windowMillis_;
+        /// <summary>
+        /// Optional. Duration of the window interval for which these stats are
+        /// aggregated, expressed in milliseconds.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long WindowMillis {
+          get { if ((_hasBits0 & 128) != 0) { return windowMillis_; } else { return WindowMillisDefaultValue; } }
+          set {
+            _hasBits0 |= 128;
+            windowMillis_ = value;
+          }
+        }
+        /// <summary>Gets whether the "window_millis" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasWindowMillis {
+          get { return (_hasBits0 & 128) != 0; }
+        }
+        /// <summary>Clears the value of the "window_millis" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearWindowMillis() {
+          _hasBits0 &= ~128;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as WindowStats);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(WindowStats other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (MaxResponseLatencyMillis != other.MaxResponseLatencyMillis) return false;
+          if (AvgResponseLatencyMillis != other.AvgResponseLatencyMillis) return false;
+          if (LongestWaitNoResponseMillis != other.LongestWaitNoResponseMillis) return false;
+          if (RequestsSentCount != other.RequestsSentCount) return false;
+          if (ResponsesReceivedCount != other.ResponsesReceivedCount) return false;
+          if (BytesSentCount != other.BytesSentCount) return false;
+          if (WindowStartTimeEpochMillis != other.WindowStartTimeEpochMillis) return false;
+          if (WindowMillis != other.WindowMillis) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasMaxResponseLatencyMillis) hash ^= MaxResponseLatencyMillis.GetHashCode();
+          if (HasAvgResponseLatencyMillis) hash ^= AvgResponseLatencyMillis.GetHashCode();
+          if (HasLongestWaitNoResponseMillis) hash ^= LongestWaitNoResponseMillis.GetHashCode();
+          if (HasRequestsSentCount) hash ^= RequestsSentCount.GetHashCode();
+          if (HasResponsesReceivedCount) hash ^= ResponsesReceivedCount.GetHashCode();
+          if (HasBytesSentCount) hash ^= BytesSentCount.GetHashCode();
+          if (HasWindowStartTimeEpochMillis) hash ^= WindowStartTimeEpochMillis.GetHashCode();
+          if (HasWindowMillis) hash ^= WindowMillis.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasMaxResponseLatencyMillis) {
+            output.WriteRawTag(8);
+            output.WriteInt64(MaxResponseLatencyMillis);
+          }
+          if (HasAvgResponseLatencyMillis) {
+            output.WriteRawTag(16);
+            output.WriteInt64(AvgResponseLatencyMillis);
+          }
+          if (HasLongestWaitNoResponseMillis) {
+            output.WriteRawTag(24);
+            output.WriteInt64(LongestWaitNoResponseMillis);
+          }
+          if (HasRequestsSentCount) {
+            output.WriteRawTag(32);
+            output.WriteInt64(RequestsSentCount);
+          }
+          if (HasResponsesReceivedCount) {
+            output.WriteRawTag(40);
+            output.WriteInt64(ResponsesReceivedCount);
+          }
+          if (HasBytesSentCount) {
+            output.WriteRawTag(48);
+            output.WriteInt64(BytesSentCount);
+          }
+          if (HasWindowStartTimeEpochMillis) {
+            output.WriteRawTag(56);
+            output.WriteInt64(WindowStartTimeEpochMillis);
+          }
+          if (HasWindowMillis) {
+            output.WriteRawTag(64);
+            output.WriteInt64(WindowMillis);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasMaxResponseLatencyMillis) {
+            output.WriteRawTag(8);
+            output.WriteInt64(MaxResponseLatencyMillis);
+          }
+          if (HasAvgResponseLatencyMillis) {
+            output.WriteRawTag(16);
+            output.WriteInt64(AvgResponseLatencyMillis);
+          }
+          if (HasLongestWaitNoResponseMillis) {
+            output.WriteRawTag(24);
+            output.WriteInt64(LongestWaitNoResponseMillis);
+          }
+          if (HasRequestsSentCount) {
+            output.WriteRawTag(32);
+            output.WriteInt64(RequestsSentCount);
+          }
+          if (HasResponsesReceivedCount) {
+            output.WriteRawTag(40);
+            output.WriteInt64(ResponsesReceivedCount);
+          }
+          if (HasBytesSentCount) {
+            output.WriteRawTag(48);
+            output.WriteInt64(BytesSentCount);
+          }
+          if (HasWindowStartTimeEpochMillis) {
+            output.WriteRawTag(56);
+            output.WriteInt64(WindowStartTimeEpochMillis);
+          }
+          if (HasWindowMillis) {
+            output.WriteRawTag(64);
+            output.WriteInt64(WindowMillis);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasMaxResponseLatencyMillis) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxResponseLatencyMillis);
+          }
+          if (HasAvgResponseLatencyMillis) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(AvgResponseLatencyMillis);
+          }
+          if (HasLongestWaitNoResponseMillis) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(LongestWaitNoResponseMillis);
+          }
+          if (HasRequestsSentCount) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(RequestsSentCount);
+          }
+          if (HasResponsesReceivedCount) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(ResponsesReceivedCount);
+          }
+          if (HasBytesSentCount) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(BytesSentCount);
+          }
+          if (HasWindowStartTimeEpochMillis) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(WindowStartTimeEpochMillis);
+          }
+          if (HasWindowMillis) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(WindowMillis);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(WindowStats other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasMaxResponseLatencyMillis) {
+            MaxResponseLatencyMillis = other.MaxResponseLatencyMillis;
+          }
+          if (other.HasAvgResponseLatencyMillis) {
+            AvgResponseLatencyMillis = other.AvgResponseLatencyMillis;
+          }
+          if (other.HasLongestWaitNoResponseMillis) {
+            LongestWaitNoResponseMillis = other.LongestWaitNoResponseMillis;
+          }
+          if (other.HasRequestsSentCount) {
+            RequestsSentCount = other.RequestsSentCount;
+          }
+          if (other.HasResponsesReceivedCount) {
+            ResponsesReceivedCount = other.ResponsesReceivedCount;
+          }
+          if (other.HasBytesSentCount) {
+            BytesSentCount = other.BytesSentCount;
+          }
+          if (other.HasWindowStartTimeEpochMillis) {
+            WindowStartTimeEpochMillis = other.WindowStartTimeEpochMillis;
+          }
+          if (other.HasWindowMillis) {
+            WindowMillis = other.WindowMillis;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                MaxResponseLatencyMillis = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                AvgResponseLatencyMillis = input.ReadInt64();
+                break;
+              }
+              case 24: {
+                LongestWaitNoResponseMillis = input.ReadInt64();
+                break;
+              }
+              case 32: {
+                RequestsSentCount = input.ReadInt64();
+                break;
+              }
+              case 40: {
+                ResponsesReceivedCount = input.ReadInt64();
+                break;
+              }
+              case 48: {
+                BytesSentCount = input.ReadInt64();
+                break;
+              }
+              case 56: {
+                WindowStartTimeEpochMillis = input.ReadInt64();
+                break;
+              }
+              case 64: {
+                WindowMillis = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                MaxResponseLatencyMillis = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                AvgResponseLatencyMillis = input.ReadInt64();
+                break;
+              }
+              case 24: {
+                LongestWaitNoResponseMillis = input.ReadInt64();
+                break;
+              }
+              case 32: {
+                RequestsSentCount = input.ReadInt64();
+                break;
+              }
+              case 40: {
+                ResponsesReceivedCount = input.ReadInt64();
+                break;
+              }
+              case 48: {
+                BytesSentCount = input.ReadInt64();
+                break;
+              }
+              case 56: {
+                WindowStartTimeEpochMillis = input.ReadInt64();
+                break;
+              }
+              case 64: {
+                WindowMillis = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }
