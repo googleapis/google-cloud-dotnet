@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 ReadStreamAsReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
                 Offset = 0L,
+                ArrowSerializationOptions = new ArrowSerializationOptions(),
             };
             // Make the request, returning a streaming response
             using BigQueryReadClient.ReadRowsStream response = bigQueryReadClient.ReadRows(request);

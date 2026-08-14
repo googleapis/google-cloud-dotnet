@@ -73,6 +73,7 @@ namespace GoogleCSharpSnippets
                         },
                     },
                     DefaultMissingValueInterpretation = AppendRowsRequest.Types.MissingValueInterpretation.Unspecified,
+                    ClientStats = new ClientStats(),
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);
