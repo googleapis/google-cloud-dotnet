@@ -276,8 +276,17 @@ namespace Google.DevicesAndServices.Health.V4
         /// </description>
         /// </item>
         /// <item><description>https://www.googleapis.com/auth/googlehealth.irn.readonly</description></item>
+        /// <item>
+        /// <description>https://www.googleapis.com/auth/googlehealth.logged_symptoms.readonly</description>
+        /// </item>
+        /// <item><description>https://www.googleapis.com/auth/googlehealth.mindfulness.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/googlehealth.profile.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/googlehealth.profile.writeonly</description></item>
+        /// <item>
+        /// <description>https://www.googleapis.com/auth/googlehealth.reproductive_health.readonly</description>
+        /// </item>
         /// <item><description>https://www.googleapis.com/auth/googlehealth.settings.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/googlehealth.settings.writeonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/googlehealth.sleep.readonly</description></item>
         /// </list>
         /// </remarks>
@@ -287,8 +296,13 @@ namespace Google.DevicesAndServices.Health.V4
             "https://www.googleapis.com/auth/googlehealth.ecg.readonly",
             "https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly",
             "https://www.googleapis.com/auth/googlehealth.irn.readonly",
+            "https://www.googleapis.com/auth/googlehealth.logged_symptoms.readonly",
+            "https://www.googleapis.com/auth/googlehealth.mindfulness.readonly",
             "https://www.googleapis.com/auth/googlehealth.profile.readonly",
+            "https://www.googleapis.com/auth/googlehealth.profile.writeonly",
+            "https://www.googleapis.com/auth/googlehealth.reproductive_health.readonly",
             "https://www.googleapis.com/auth/googlehealth.settings.readonly",
+            "https://www.googleapis.com/auth/googlehealth.settings.writeonly",
             "https://www.googleapis.com/auth/googlehealth.sleep.readonly",
         });
 

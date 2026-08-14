@@ -553,8 +553,8 @@ namespace Google.DevicesAndServices.Health.V4
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this subscriber will be created.
-        /// Format: projects/{project}
-        /// Example: projects/my-project-123
+        /// Format: projects/{project_number}
+        /// Example: projects/1234567890
         /// </param>
         /// <param name="subscriber">
         /// Required. The subscriber to create.
@@ -606,8 +606,8 @@ namespace Google.DevicesAndServices.Health.V4
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this subscriber will be created.
-        /// Format: projects/{project}
-        /// Example: projects/my-project-123
+        /// Format: projects/{project_number}
+        /// Example: projects/1234567890
         /// </param>
         /// <param name="subscriber">
         /// Required. The subscriber to create.
@@ -659,8 +659,8 @@ namespace Google.DevicesAndServices.Health.V4
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this subscriber will be created.
-        /// Format: projects/{project}
-        /// Example: projects/my-project-123
+        /// Format: projects/{project_number}
+        /// Example: projects/1234567890
         /// </param>
         /// <param name="subscriber">
         /// Required. The subscriber to create.
@@ -707,8 +707,8 @@ namespace Google.DevicesAndServices.Health.V4
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this subscriber will be created.
-        /// Format: projects/{project}
-        /// Example: projects/my-project-123
+        /// Format: projects/{project_number}
+        /// Example: projects/1234567890
         /// </param>
         /// <param name="subscriber">
         /// Required. The subscriber to create.
@@ -760,8 +760,8 @@ namespace Google.DevicesAndServices.Health.V4
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this subscriber will be created.
-        /// Format: projects/{project}
-        /// Example: projects/my-project-123
+        /// Format: projects/{project_number}
+        /// Example: projects/1234567890
         /// </param>
         /// <param name="subscriber">
         /// Required. The subscriber to create.
@@ -813,8 +813,8 @@ namespace Google.DevicesAndServices.Health.V4
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this subscriber will be created.
-        /// Format: projects/{project}
-        /// Example: projects/my-project-123
+        /// Format: projects/{project_number}
+        /// Example: projects/1234567890
         /// </param>
         /// <param name="subscriber">
         /// Required. The subscriber to create.

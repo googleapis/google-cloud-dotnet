@@ -130,7 +130,7 @@ namespace Google.DevicesAndServices.Health.V4 {
             "4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBASJ/ChlMaXN0UGFpcmVkRGV2",
             "aWNlc1Jlc3BvbnNlEkkKDnBhaXJlZF9kZXZpY2VzGAEgAygLMjEuZ29vZ2xl",
             "LmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuUGFpcmVkRGV2aWNlEhcK",
-            "D25leHRfcGFnZV90b2tlbhgCIAEoCTKqDwoUSGVhbHRoUHJvZmlsZVNlcnZp",
+            "D25leHRfcGFnZV90b2tlbhgCIAEoCTL7EQoUSGVhbHRoUHJvZmlsZVNlcnZp",
             "Y2USnQEKCkdldFByb2ZpbGUSNi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
             "LmhlYWx0aC52NC5HZXRQcm9maWxlUmVxdWVzdBosLmdvb2dsZS5kZXZpY2Vz",
             "YW5kc2VydmljZXMuaGVhbHRoLnY0LlByb2ZpbGUiKdpBBG5hbWWC0+STAhwS",
@@ -163,7 +163,7 @@ namespace Google.DevicesAndServices.Health.V4 {
             "LnY0Lkxpc3RQYWlyZWREZXZpY2VzUmVxdWVzdBo+Lmdvb2dsZS5kZXZpY2Vz",
             "YW5kc2VydmljZXMuaGVhbHRoLnY0Lkxpc3RQYWlyZWREZXZpY2VzUmVzcG9u",
             "c2UiM9pBBnBhcmVudILT5JMCJBIiL3Y0L3twYXJlbnQ9dXNlcnMvKn0vcGFp",
-            "cmVkRGV2aWNlcxrpA8pBFWhlYWx0aC5nb29nbGVhcGlzLmNvbdJBzQNodHRw",
+            "cmVkRGV2aWNlcxq6BspBFWhlYWx0aC5nb29nbGVhcGlzLmNvbdJBngZodHRw",
             "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2dvb2dsZWhlYWx0aC5hY3Rp",
             "dml0eV9hbmRfZml0bmVzcy5yZWFkb25seSxodHRwczovL3d3dy5nb29nbGVh",
             "cGlzLmNvbS9hdXRoL2dvb2dsZWhlYWx0aC5lY2cucmVhZG9ubHksaHR0cHM6",
@@ -171,16 +171,23 @@ namespace Google.DevicesAndServices.Health.V4 {
             "X21ldHJpY3NfYW5kX21lYXN1cmVtZW50cy5yZWFkb25seSxodHRwczovL3d3",
             "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2dvb2dsZWhlYWx0aC5pcm4ucmVhZG9u",
             "bHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nb29nbGVoZWFs",
-            "dGgucHJvZmlsZS5yZWFkb25seSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL2dvb2dsZWhlYWx0aC5zZXR0aW5ncy5yZWFkb25seSxodHRwczov",
-            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2dvb2dsZWhlYWx0aC5zbGVlcC5y",
-            "ZWFkb25seUKIAgonY29tLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0QhJIZWFsdGhQcm9maWxlUHJvdG9QAVpSZ29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9kZXZpY2VzYW5kc2VydmljZXMvaGVh",
-            "bHRoL2FwaXY0bWFpbjtoZWFsdGhwYqoCI0dvb2dsZS5EZXZpY2VzQW5kU2Vy",
-            "dmljZXMuSGVhbHRoLlY0ygIjR29vZ2xlXERldmljZXNBbmRTZXJ2aWNlc1xI",
-            "ZWFsdGhcVjTqAiZHb29nbGU6OkRldmljZXNBbmRTZXJ2aWNlczo6SGVhbHRo",
-            "OjpWNGIGcHJvdG8z"));
+            "dGgubG9nZ2VkX3N5bXB0b21zLnJlYWRvbmx5LGh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvZ29vZ2xlaGVhbHRoLm1pbmRmdWxuZXNzLnJlYWRv",
+            "bmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZ29vZ2xlaGVh",
+            "bHRoLnByb2ZpbGUucmVhZG9ubHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
+            "b20vYXV0aC9nb29nbGVoZWFsdGgucHJvZmlsZS53cml0ZW9ubHksaHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nb29nbGVoZWFsdGgucmVwcm9k",
+            "dWN0aXZlX2hlYWx0aC5yZWFkb25seSxodHRwczovL3d3dy5nb29nbGVhcGlz",
+            "LmNvbS9hdXRoL2dvb2dsZWhlYWx0aC5zZXR0aW5ncy5yZWFkb25seSxodHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2dvb2dsZWhlYWx0aC5zZXR0",
+            "aW5ncy53cml0ZW9ubHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9nb29nbGVoZWFsdGguc2xlZXAucmVhZG9ubHlChAIKJ2NvbS5nb29nbGUu",
+            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NEISSGVhbHRoUHJvZmlsZVBy",
+            "b3RvUAFaTmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
+            "ZGV2aWNlc2FuZHNlcnZpY2VzL2hlYWx0aC9hcGl2NDtoZWFsdGhwYqoCI0dv",
+            "b2dsZS5EZXZpY2VzQW5kU2VydmljZXMuSGVhbHRoLlY0ygIjR29vZ2xlXERl",
+            "dmljZXNBbmRTZXJ2aWNlc1xIZWFsdGhcVjTqAiZHb29nbGU6OkRldmljZXNB",
+            "bmRTZXJ2aWNlczo6SGVhbHRoOjpWNGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -2060,8 +2067,6 @@ namespace Google.DevicesAndServices.Health.V4 {
     private global::Google.DevicesAndServices.Health.V4.Settings.Types.DistanceUnit distanceUnit_ = global::Google.DevicesAndServices.Health.V4.Settings.Types.DistanceUnit.Unspecified;
     /// <summary>
     /// Optional. The measurement unit defined in the user's account settings.
-    ///
-    /// Updates to this field are currently not supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
