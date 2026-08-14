@@ -25,23 +25,25 @@ namespace Google.Cloud.Bigtable.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvYmlndGFibGUvdjIvZmVhdHVyZV9mbGFncy5wcm90bxISZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyIukCCgxGZWF0dXJlRmxhZ3MSFQoNcmV2ZXJzZV9z",
-            "Y2FucxgBIAEoCBIeChZtdXRhdGVfcm93c19yYXRlX2xpbWl0GAMgASgIEh8K",
-            "F211dGF0ZV9yb3dzX3JhdGVfbGltaXQyGAUgASgIEiIKGmxhc3Rfc2Nhbm5l",
-            "ZF9yb3dfcmVzcG9uc2VzGAQgASgIEhYKDnJvdXRpbmdfY29va2llGAYgASgI",
-            "EhIKCnJldHJ5X2luZm8YByABKAgSIwobY2xpZW50X3NpZGVfbWV0cmljc19l",
-            "bmFibGVkGAggASgIEiAKGHRyYWZmaWNfZGlyZWN0b3JfZW5hYmxlZBgJIAEo",
-            "CBIfChdkaXJlY3RfYWNjZXNzX3JlcXVlc3RlZBgKIAEoCBIRCglwZWVyX2lu",
-            "Zm8YCyABKAgSGwoTc2Vzc2lvbnNfY29tcGF0aWJsZRgMIAEoCBIZChFzZXNz",
-            "aW9uc19yZXF1aXJlZBgNIAEoCEK7AQoWY29tLmdvb2dsZS5iaWd0YWJsZS52",
-            "MkIRRmVhdHVyZUZsYWdzUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9i",
-            "aWd0YWJsZS9hcGl2Mi9iaWd0YWJsZXBiO2JpZ3RhYmxlcGKqAhhHb29nbGUu",
-            "Q2xvdWQuQmlndGFibGUuVjLKAhhHb29nbGVcQ2xvdWRcQmlndGFibGVcVjLq",
-            "AhtHb29nbGU6OkNsb3VkOjpCaWd0YWJsZTo6VjJiBnByb3RvMw=="));
+            "Z2xlLmJpZ3RhYmxlLnYyGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnBy",
+            "b3RvIo0DCgxGZWF0dXJlRmxhZ3MSFQoNcmV2ZXJzZV9zY2FucxgBIAEoCBIe",
+            "ChZtdXRhdGVfcm93c19yYXRlX2xpbWl0GAMgASgIEh8KF211dGF0ZV9yb3dz",
+            "X3JhdGVfbGltaXQyGAUgASgIEiIKGmxhc3Rfc2Nhbm5lZF9yb3dfcmVzcG9u",
+            "c2VzGAQgASgIEhYKDnJvdXRpbmdfY29va2llGAYgASgIEhIKCnJldHJ5X2lu",
+            "Zm8YByABKAgSIwobY2xpZW50X3NpZGVfbWV0cmljc19lbmFibGVkGAggASgI",
+            "EiAKGHRyYWZmaWNfZGlyZWN0b3JfZW5hYmxlZBgJIAEoCBIfChdkaXJlY3Rf",
+            "YWNjZXNzX3JlcXVlc3RlZBgKIAEoCBIRCglwZWVyX2luZm8YCyABKAgSGwoT",
+            "c2Vzc2lvbnNfY29tcGF0aWJsZRgMIAEoCBIZChFzZXNzaW9uc19yZXF1aXJl",
+            "ZBgNIAEoCBIiChVtaWNyb3NlY29uZF90aW1lc3RhbXAYDiABKAhCA+BBAUK7",
+            "AQoWY29tLmdvb2dsZS5iaWd0YWJsZS52MkIRRmVhdHVyZUZsYWdzUHJvdG9Q",
+            "AVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9iaWd0YWJsZS9hcGl2Mi9iaWd0YWJs",
+            "ZXBiO2JpZ3RhYmxlcGKqAhhHb29nbGUuQ2xvdWQuQmlndGFibGUuVjLKAhhH",
+            "b29nbGVcQ2xvdWRcQmlndGFibGVcVjLqAhtHb29nbGU6OkNsb3VkOjpCaWd0",
+            "YWJsZTo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "MutateRowsRateLimit2", "LastScannedRowResponses", "RoutingCookie", "RetryInfo", "ClientSideMetricsEnabled", "TrafficDirectorEnabled", "DirectAccessRequested", "PeerInfo", "SessionsCompatible", "SessionsRequired" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "MutateRowsRateLimit2", "LastScannedRowResponses", "RoutingCookie", "RetryInfo", "ClientSideMetricsEnabled", "TrafficDirectorEnabled", "DirectAccessRequested", "PeerInfo", "SessionsCompatible", "SessionsRequired", "MicrosecondTimestamp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -105,6 +107,7 @@ namespace Google.Cloud.Bigtable.V2 {
       peerInfo_ = other.peerInfo_;
       sessionsCompatible_ = other.sessionsCompatible_;
       sessionsRequired_ = other.sessionsRequired_;
+      microsecondTimestamp_ = other.microsecondTimestamp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -302,6 +305,22 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "microsecond_timestamp" field.</summary>
+    public const int MicrosecondTimestampFieldNumber = 14;
+    private bool microsecondTimestamp_;
+    /// <summary>
+    /// Optional. Indicates whether the client supports microsecond precision
+    /// timestamps.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool MicrosecondTimestamp {
+      get { return microsecondTimestamp_; }
+      set {
+        microsecondTimestamp_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -329,6 +348,7 @@ namespace Google.Cloud.Bigtable.V2 {
       if (PeerInfo != other.PeerInfo) return false;
       if (SessionsCompatible != other.SessionsCompatible) return false;
       if (SessionsRequired != other.SessionsRequired) return false;
+      if (MicrosecondTimestamp != other.MicrosecondTimestamp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -348,6 +368,7 @@ namespace Google.Cloud.Bigtable.V2 {
       if (PeerInfo != false) hash ^= PeerInfo.GetHashCode();
       if (SessionsCompatible != false) hash ^= SessionsCompatible.GetHashCode();
       if (SessionsRequired != false) hash ^= SessionsRequired.GetHashCode();
+      if (MicrosecondTimestamp != false) hash ^= MicrosecondTimestamp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -414,6 +435,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(104);
         output.WriteBool(SessionsRequired);
       }
+      if (MicrosecondTimestamp != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(MicrosecondTimestamp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -472,6 +497,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(104);
         output.WriteBool(SessionsRequired);
       }
+      if (MicrosecondTimestamp != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(MicrosecondTimestamp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -516,6 +545,9 @@ namespace Google.Cloud.Bigtable.V2 {
         size += 1 + 1;
       }
       if (SessionsRequired != false) {
+        size += 1 + 1;
+      }
+      if (MicrosecondTimestamp != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -565,6 +597,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.SessionsRequired != false) {
         SessionsRequired = other.SessionsRequired;
+      }
+      if (other.MicrosecondTimestamp != false) {
+        MicrosecondTimestamp = other.MicrosecondTimestamp;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -633,6 +668,10 @@ namespace Google.Cloud.Bigtable.V2 {
             SessionsRequired = input.ReadBool();
             break;
           }
+          case 112: {
+            MicrosecondTimestamp = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -698,6 +737,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 104: {
             SessionsRequired = input.ReadBool();
+            break;
+          }
+          case 112: {
+            MicrosecondTimestamp = input.ReadBool();
             break;
           }
         }
