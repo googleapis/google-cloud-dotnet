@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.13.0-beta09, released 2026-08-17
+
+### New features
+
+- Add support for Protobuf Enums
+
 ## Version 5.13.0-beta08, released 2026-07-20
 
 ### New features
