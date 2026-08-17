@@ -1,5 +1,51 @@
 # Version history
 
+## Version 2.21.0, released 2026-08-17
+
+### New features
+
+- A new method `GetPolicy` is added to service `RecaptchaEnterpriseService`
+- A new method `UpdatePolicy` is added to service `RecaptchaEnterpriseService`
+- A new field `policy_evaluation` is added to message `.google.cloud.recaptchaenterprise.v1.Assessment`
+- A new field `last_challenge_type` is added to message `.google.cloud.recaptchaenterprise.v1.RiskAnalysis`
+- A new value `KEY_MISMATCH` is added to enum `InvalidReason`
+- A new value `DOMAIN_MISMATCH` is added to enum `InvalidReason`
+- A new message `AccountTakeoverVerdict` is added
+- A new message `AccountRiskReason` is added
+- A new message `AccountTrustReason` is added
+- A new field `account_takeover_verdict` is added to message `.google.cloud.recaptchaenterprise.v1.AccountDefenderAssessment`
+- A new field `universal_settings` is added to message `.google.cloud.recaptchaenterprise.v1.Key`
+- A new message `UniversalKeySettings` is added
+- A new message `PolicyEvaluation` is added
+- A new message `ChallengeRuleEvaluation` is added
+- A new message `GetPolicyRequest` is added
+- A new message `UpdatePolicyRequest` is added
+- A new message `Policy` is added
+- A new resource_definition `recaptchaenterprise.googleapis.com/Policy` is added
+- A new message `ChallengeRuleGroup` is added
+- A new message `ChallengeRule` is added
+- A new message `ClientSettings` is added
+- A new message `ProtectedEndpointGroup` is added
+- A new message `ProtectedEndpoint` is added
+- A new enum `ChallengeType` is added
+
+### Documentation improvements
+
+- A comment for field `account_defender_assessment` in message `.google.cloud.recaptchaenterprise.v1.Assessment` is changed
+- A comment for field `phone_fraud_assessment` in message `.google.cloud.recaptchaenterprise.v1.Assessment` is changed
+- A comment for field `expected_action` in message `.google.cloud.recaptchaenterprise.v1.Event` is changed
+- A comment for field `account_id` in message `.google.cloud.recaptchaenterprise.v1.TransactionData` is changed
+- A comment for enum value `SUSPECTED_CARDING` in enum `ClassificationReason` is changed
+- A comment for enum value `SUSPECTED_CHARGEBACK` in enum `ClassificationReason` is changed
+- A comment for enum `Challenge` is changed
+- A comment for field `extended_verdict_reasons` in message `.google.cloud.recaptchaenterprise.v1.RiskAnalysis` is changed
+- A comment for field `challenge` in message `.google.cloud.recaptchaenterprise.v1.RiskAnalysis` is changed
+- A comment for field `name` in message `.google.cloud.recaptchaenterprise.v1.Bot` is changed
+- A comment for field `valid` in message `.google.cloud.recaptchaenterprise.v1.TokenProperties` is changed
+- A comment for message `AccountDefenderAssessment` is changed
+- A comment for enum `AccountDefenderLabel` is changed
+- A comment for enum value `PROFILE_MATCH` in enum `AccountDefenderLabel` is changed
+
 ## Version 2.20.0, released 2025-12-15
 
 ### New features
