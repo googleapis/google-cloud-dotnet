@@ -1,5 +1,23 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2026-08-17
+
+### New features
+
+- Add menstrual cycle, symptoms, and mood data types to Health API v4
+- Expand ExerciseType enum with comprehensive activity categories
+- Add granular OAuth scopes and per-method authorization mappings
+
+### Bug fixes
+
+- An existing packaging option `google.golang.org/genproto/googleapis/devicesandservices/health/apiv4main;healthpb` for `go_package` is removed
+- A new packaging option `google.golang.org/genproto/googleapis/devicesandservices/health/apiv4;healthpb` for `go_package` is added
+
+### Documentation improvements
+
+- Improve documentation for data_source_family and window_size parameters
+- Update webhook signature header name to GOOGLE-HEALTH-API-SIGNATURE
+
 ## Version 1.0.0-beta02, released 2026-05-30
 
 ### New features
