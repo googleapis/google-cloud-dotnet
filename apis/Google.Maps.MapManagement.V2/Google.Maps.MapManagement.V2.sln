@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.MapManagement.V2", "Google.Maps.MapManagement.V2\Google.Maps.MapManagement.V2.csproj", "{8A5E2F9D-8ED4-D142-A7BE-6661DFA73617}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.MapManagement.V2.Snippets", "Google.Maps.MapManagement.V2.Snippets\Google.Maps.MapManagement.V2.Snippets.csproj", "{86BCC5B7-9A4A-28EF-B63B-696BBD82D2CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.MapManagement.V2.GeneratedSnippets", "Google.Maps.MapManagement.V2.GeneratedSnippets\Google.Maps.MapManagement.V2.GeneratedSnippets.csproj", "{FCF7AB5D-60CB-BA49-4393-F1296E8B3C81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A5E2F9D-8ED4-D142-A7BE-6661DFA73617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A5E2F9D-8ED4-D142-A7BE-6661DFA73617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A5E2F9D-8ED4-D142-A7BE-6661DFA73617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A5E2F9D-8ED4-D142-A7BE-6661DFA73617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86BCC5B7-9A4A-28EF-B63B-696BBD82D2CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86BCC5B7-9A4A-28EF-B63B-696BBD82D2CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86BCC5B7-9A4A-28EF-B63B-696BBD82D2CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86BCC5B7-9A4A-28EF-B63B-696BBD82D2CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCF7AB5D-60CB-BA49-4393-F1296E8B3C81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCF7AB5D-60CB-BA49-4393-F1296E8B3C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCF7AB5D-60CB-BA49-4393-F1296E8B3C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCF7AB5D-60CB-BA49-4393-F1296E8B3C81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
