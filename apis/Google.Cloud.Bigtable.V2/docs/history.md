@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.31.0, released 2026-08-17
+
+### New features
+
+- Add microsecond_timestamp feature flag
+
 ## Version 3.30.0, released 2026-08-10
 
 ### New features
