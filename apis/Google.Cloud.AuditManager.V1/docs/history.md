@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.2.0, released 2026-08-17
+
+### New features
+
+- Add organizations level support for GenerateAuditScopeReport, GenerateAuditReport and GetAuditReport
+- Add `validate_only` field to GenerateAuditReportRequest
+- Deprecated the old `compliance_standard` field in favour of `compliance_framework` for GenerateAuditScopeReport and GenerateAuditReport
+- Add `https://www.googleapis.com/auth/cloud-auditmanager` OAuth scope
+
+### Documentation improvements
+
+- Update documentation for validate_only
+- Clarify documentation for several RPCs, resource messages, and enumerations
+
 ## Version 1.1.0, released 2026-08-10
 
 ### New features

@@ -824,7 +824,7 @@
     },
     {
       "id": "Google.Cloud.AuditManager.V1",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "Audit Manager",
       "productUrl": "https://cloud.google.com/audit-manager/docs",
