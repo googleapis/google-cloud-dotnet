@@ -2358,12 +2358,12 @@
         },
         {
             "id": "Google.Cloud.OracleDatabase.V1",
-            "currentVersion": "1.7.0",
+            "currentVersion": "1.8.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-06-22T18:03:37.717459330Z",
+            "releaseTimestamp": "2026-08-17T19:27:55.820583823Z",
             "lastGeneratedCommit": "f4895f8d76c9268c67a60763249f180da52343fa",
-            "lastReleasedCommit": "9b2ca24272c06bd5bceee0549ba5c7a807d026c3",
+            "lastReleasedCommit": "f4895f8d76c9268c67a60763249f180da52343fa",
             "apiPaths": [
                 "google/cloud/oracledatabase/v1"
             ],
