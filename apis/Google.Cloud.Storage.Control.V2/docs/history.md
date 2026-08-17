@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.10.0, released 2026-08-17
+
+### New features
+
+- Add ViewObjectFullContext RPC and RapidCacheInfo in Storage Control v2
+
 ## Version 1.9.0, released 2026-07-28
 
 ### New features
