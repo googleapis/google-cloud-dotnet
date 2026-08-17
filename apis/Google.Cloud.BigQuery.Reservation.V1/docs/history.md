@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.13.0, released 2026-08-17
+
+### New features
+
+- Add a new field `precedence` to `bigqueryreservation.googleapis.com/Assignment`,  it specifies the priority precedence for this assignment. Used to resolve ambiguity when multiple assignments match a single job. Higher numerical values represent higher priority (e.g., 20 is higher than 10)
+- Add a new field `condition` to `bigqueryreservation.googleapis.com/Assignment`, it is Common Expression Language (CEL) condition that defines the matching criteria for this assignment.
+
 ## Version 2.12.0, released 2026-05-04
 
 ### New features
