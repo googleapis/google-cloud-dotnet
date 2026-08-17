@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta14, released 2026-08-17
+
+### New features
+
+- Add fields `original_branch`, `enable_branch_management`, `depth`, and `shallow` to message `.google.cloud.dataform.v1beta1.Workspace`
+- Add message `CheckoutWorkspaceBranchRequest` for Git branch checkout in Dataform Workspaces
+- Add messages `SyncWorkspaceRefsRequest` and `SyncWorkspaceRefsResponse` for syncing remote branch references
+- Add messages `DeleteBranchRequest` and `DeleteBranchResponse` for workspace branch deletion
+- Add messages `FetchWorkspaceBranchesRequest`, `BranchMetadata`, and `FetchWorkspaceBranchesResponse` for branch discovery and pagination
+- Add messages `FetchCurrentWorkspaceBranchRequest` and `FetchCurrentWorkspaceBranchResponse` for querying active workspace branch
+- Add field `lineage_enabled` to message `.google.cloud.dataform.v1beta1.WorkflowInvocation` for OpenLineage status
+
 ## Version 1.0.0-beta13, released 2026-08-07
 
 ### New features
