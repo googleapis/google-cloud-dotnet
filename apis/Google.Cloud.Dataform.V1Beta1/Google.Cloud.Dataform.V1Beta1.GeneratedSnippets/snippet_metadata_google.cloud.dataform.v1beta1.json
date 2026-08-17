@@ -8122,6 +8122,490 @@
       ]
     },
     {
+      "regionTag": "dataform_v1beta1_generated_Dataform_SyncWorkspaceRefs_sync",
+      "title": "SyncWorkspaceRefsRequestObject",
+      "description": "Snippet for SyncWorkspaceRefs",
+      "file": "DataformClient.SyncWorkspaceRefsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SyncWorkspaceRefs",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.SyncWorkspaceRefs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsResponse",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "SyncWorkspaceRefs",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.SyncWorkspaceRefs",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_SyncWorkspaceRefs_async",
+      "title": "SyncWorkspaceRefsRequestObjectAsync",
+      "description": "Snippet for SyncWorkspaceRefsAsync",
+      "file": "DataformClient.SyncWorkspaceRefsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SyncWorkspaceRefsAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.SyncWorkspaceRefsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsResponse>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "SyncWorkspaceRefs",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.SyncWorkspaceRefs",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_FetchWorkspaceBranches_sync",
+      "title": "FetchWorkspaceBranchesRequestObject",
+      "description": "Snippet for FetchWorkspaceBranches",
+      "file": "DataformClient.FetchWorkspaceBranchesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchWorkspaceBranches",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.FetchWorkspaceBranches",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesResponse, Google.Cloud.Dataform.V1Beta1.BranchMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "FetchWorkspaceBranches",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.FetchWorkspaceBranches",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_FetchWorkspaceBranches_async",
+      "title": "FetchWorkspaceBranchesRequestObjectAsync",
+      "description": "Snippet for FetchWorkspaceBranchesAsync",
+      "file": "DataformClient.FetchWorkspaceBranchesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchWorkspaceBranchesAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.FetchWorkspaceBranchesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesResponse, Google.Cloud.Dataform.V1Beta1.BranchMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "FetchWorkspaceBranches",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.FetchWorkspaceBranches",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteBranch_sync",
+      "title": "DeleteBranchRequestObject",
+      "description": "Snippet for DeleteBranch",
+      "file": "DataformClient.DeleteBranchRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBranch",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteBranch",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteBranchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.DeleteBranchResponse",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteBranch",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteBranch",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteBranch_async",
+      "title": "DeleteBranchRequestObjectAsync",
+      "description": "Snippet for DeleteBranchAsync",
+      "file": "DataformClient.DeleteBranchRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBranchAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteBranchAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteBranchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.DeleteBranchResponse>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteBranch",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteBranch",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CheckoutWorkspaceBranch_sync",
+      "title": "CheckoutWorkspaceBranchRequestObject",
+      "description": "Snippet for CheckoutWorkspaceBranch",
+      "file": "DataformClient.CheckoutWorkspaceBranchRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckoutWorkspaceBranch",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CheckoutWorkspaceBranch",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CheckoutWorkspaceBranchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CheckoutWorkspaceBranch",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CheckoutWorkspaceBranch",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_CheckoutWorkspaceBranch_async",
+      "title": "CheckoutWorkspaceBranchRequestObjectAsync",
+      "description": "Snippet for CheckoutWorkspaceBranchAsync",
+      "file": "DataformClient.CheckoutWorkspaceBranchRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckoutWorkspaceBranchAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.CheckoutWorkspaceBranchAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.CheckoutWorkspaceBranchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "CheckoutWorkspaceBranch",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.CheckoutWorkspaceBranch",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_FetchCurrentWorkspaceBranch_sync",
+      "title": "FetchCurrentWorkspaceBranchRequestObject",
+      "description": "Snippet for FetchCurrentWorkspaceBranch",
+      "file": "DataformClient.FetchCurrentWorkspaceBranchRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchCurrentWorkspaceBranch",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.FetchCurrentWorkspaceBranch",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchResponse",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "FetchCurrentWorkspaceBranch",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.FetchCurrentWorkspaceBranch",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_FetchCurrentWorkspaceBranch_async",
+      "title": "FetchCurrentWorkspaceBranchRequestObjectAsync",
+      "description": "Snippet for FetchCurrentWorkspaceBranchAsync",
+      "file": "DataformClient.FetchCurrentWorkspaceBranchRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchCurrentWorkspaceBranchAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.FetchCurrentWorkspaceBranchAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchResponse>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "FetchCurrentWorkspaceBranch",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.FetchCurrentWorkspaceBranch",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dataform_v1beta1_generated_Dataform_PushGitCommits_sync",
       "title": "PushGitCommitsRequestObject",
       "description": "Snippet for PushGitCommits",

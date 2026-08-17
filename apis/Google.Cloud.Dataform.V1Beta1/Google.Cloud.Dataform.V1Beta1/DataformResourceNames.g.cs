@@ -4329,6 +4329,42 @@ namespace Google.Cloud.Dataform.V1Beta1
         }
     }
 
+    public partial class CheckoutWorkspaceBranchRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::WorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::WorkspaceName WorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::WorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SyncWorkspaceRefsRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::WorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::WorkspaceName WorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::WorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteBranchRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::WorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::WorkspaceName WorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::WorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class PushGitCommitsRequest
     {
         /// <summary>
@@ -5116,6 +5152,30 @@ namespace Google.Cloud.Dataform.V1Beta1
         {
             get => string.IsNullOrEmpty(Target) ? null : RepositoryName.Parse(Target, allowUnparsed: true);
             set => Target = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FetchWorkspaceBranchesRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::WorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::WorkspaceName WorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::WorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FetchCurrentWorkspaceBranchRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::WorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::WorkspaceName WorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::WorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

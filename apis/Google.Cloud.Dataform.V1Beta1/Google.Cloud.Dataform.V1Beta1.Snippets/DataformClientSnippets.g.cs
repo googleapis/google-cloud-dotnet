@@ -4172,6 +4172,250 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for SyncWorkspaceRefs</summary>
+        public void SyncWorkspaceRefsRequestObject()
+        {
+            // Snippet: SyncWorkspaceRefs(SyncWorkspaceRefsRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::SyncWorkspaceRefsRequest request = new gcdv::SyncWorkspaceRefsRequest
+            {
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                RemoteBranchName = "",
+                Deepen = 0,
+            };
+            // Make the request
+            gcdv::SyncWorkspaceRefsResponse response = dataformClient.SyncWorkspaceRefs(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SyncWorkspaceRefsAsync</summary>
+        public async Task SyncWorkspaceRefsRequestObjectAsync()
+        {
+            // Snippet: SyncWorkspaceRefsAsync(SyncWorkspaceRefsRequest, CallSettings)
+            // Additional: SyncWorkspaceRefsAsync(SyncWorkspaceRefsRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::SyncWorkspaceRefsRequest request = new gcdv::SyncWorkspaceRefsRequest
+            {
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                RemoteBranchName = "",
+                Deepen = 0,
+            };
+            // Make the request
+            gcdv::SyncWorkspaceRefsResponse response = await dataformClient.SyncWorkspaceRefsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchWorkspaceBranches</summary>
+        public void FetchWorkspaceBranchesRequestObject()
+        {
+            // Snippet: FetchWorkspaceBranches(FetchWorkspaceBranchesRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::FetchWorkspaceBranchesRequest request = new gcdv::FetchWorkspaceBranchesRequest
+            {
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                Filter = gcdv::FetchWorkspaceBranchesRequest.Types.BranchFilter.Unspecified,
+            };
+            // Make the request
+            PagedEnumerable<gcdv::FetchWorkspaceBranchesResponse, gcdv::BranchMetadata> response = dataformClient.FetchWorkspaceBranches(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcdv::BranchMetadata item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcdv::FetchWorkspaceBranchesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::BranchMetadata item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::BranchMetadata> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::BranchMetadata item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchWorkspaceBranchesAsync</summary>
+        public async Task FetchWorkspaceBranchesRequestObjectAsync()
+        {
+            // Snippet: FetchWorkspaceBranchesAsync(FetchWorkspaceBranchesRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::FetchWorkspaceBranchesRequest request = new gcdv::FetchWorkspaceBranchesRequest
+            {
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                Filter = gcdv::FetchWorkspaceBranchesRequest.Types.BranchFilter.Unspecified,
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcdv::FetchWorkspaceBranchesResponse, gcdv::BranchMetadata> response = dataformClient.FetchWorkspaceBranchesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcdv::BranchMetadata item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcdv::FetchWorkspaceBranchesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcdv::BranchMetadata item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcdv::BranchMetadata> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcdv::BranchMetadata item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBranch</summary>
+        public void DeleteBranchRequestObject()
+        {
+            // Snippet: DeleteBranch(DeleteBranchRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::DeleteBranchRequest request = new gcdv::DeleteBranchRequest
+            {
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                Branch = "",
+                Force = false,
+            };
+            // Make the request
+            gcdv::DeleteBranchResponse response = dataformClient.DeleteBranch(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBranchAsync</summary>
+        public async Task DeleteBranchRequestObjectAsync()
+        {
+            // Snippet: DeleteBranchAsync(DeleteBranchRequest, CallSettings)
+            // Additional: DeleteBranchAsync(DeleteBranchRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::DeleteBranchRequest request = new gcdv::DeleteBranchRequest
+            {
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                Branch = "",
+                Force = false,
+            };
+            // Make the request
+            gcdv::DeleteBranchResponse response = await dataformClient.DeleteBranchAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CheckoutWorkspaceBranch</summary>
+        public void CheckoutWorkspaceBranchRequestObject()
+        {
+            // Snippet: CheckoutWorkspaceBranch(CheckoutWorkspaceBranchRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::CheckoutWorkspaceBranchRequest request = new gcdv::CheckoutWorkspaceBranchRequest
+            {
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                Branch = "",
+                CreateIfNotExists = false,
+                SourceBranch = "",
+            };
+            // Make the request
+            dataformClient.CheckoutWorkspaceBranch(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CheckoutWorkspaceBranchAsync</summary>
+        public async Task CheckoutWorkspaceBranchRequestObjectAsync()
+        {
+            // Snippet: CheckoutWorkspaceBranchAsync(CheckoutWorkspaceBranchRequest, CallSettings)
+            // Additional: CheckoutWorkspaceBranchAsync(CheckoutWorkspaceBranchRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::CheckoutWorkspaceBranchRequest request = new gcdv::CheckoutWorkspaceBranchRequest
+            {
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                Branch = "",
+                CreateIfNotExists = false,
+                SourceBranch = "",
+            };
+            // Make the request
+            await dataformClient.CheckoutWorkspaceBranchAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchCurrentWorkspaceBranch</summary>
+        public void FetchCurrentWorkspaceBranchRequestObject()
+        {
+            // Snippet: FetchCurrentWorkspaceBranch(FetchCurrentWorkspaceBranchRequest, CallSettings)
+            // Create client
+            gcdv::DataformClient dataformClient = gcdv::DataformClient.Create();
+            // Initialize request argument(s)
+            gcdv::FetchCurrentWorkspaceBranchRequest request = new gcdv::FetchCurrentWorkspaceBranchRequest
+            {
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+            };
+            // Make the request
+            gcdv::FetchCurrentWorkspaceBranchResponse response = dataformClient.FetchCurrentWorkspaceBranch(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchCurrentWorkspaceBranchAsync</summary>
+        public async Task FetchCurrentWorkspaceBranchRequestObjectAsync()
+        {
+            // Snippet: FetchCurrentWorkspaceBranchAsync(FetchCurrentWorkspaceBranchRequest, CallSettings)
+            // Additional: FetchCurrentWorkspaceBranchAsync(FetchCurrentWorkspaceBranchRequest, CancellationToken)
+            // Create client
+            gcdv::DataformClient dataformClient = await gcdv::DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::FetchCurrentWorkspaceBranchRequest request = new gcdv::FetchCurrentWorkspaceBranchRequest
+            {
+                WorkspaceName = gcdv::WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+            };
+            // Make the request
+            gcdv::FetchCurrentWorkspaceBranchResponse response = await dataformClient.FetchCurrentWorkspaceBranchAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for PushGitCommits</summary>
         public void PushGitCommitsRequestObject()
         {
