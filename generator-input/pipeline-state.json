@@ -228,12 +228,12 @@
         },
         {
             "id": "Google.Cloud.AlloyDb.V1Alpha",
-            "currentVersion": "1.0.0-alpha16",
+            "currentVersion": "1.0.0-alpha17",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-03-05T07:43:25.884957452Z",
+            "releaseTimestamp": "2026-08-17T19:08:20.014991588Z",
             "lastGeneratedCommit": "ca91093129b6744ee1dbb062381cdf63dcec669b",
-            "lastReleasedCommit": "938377b80d3444b91cd329164b0c10507f07f9e8",
+            "lastReleasedCommit": "ca91093129b6744ee1dbb062381cdf63dcec669b",
             "apiPaths": [
                 "google/cloud/alloydb/v1alpha"
             ],
