@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta84, released 2026-08-17
+
+### New features
+
+- Add build configuration support to Vertex AI Reasoning Engine
+
 ## Version 1.0.0-beta83, released 2026-08-10
 
 ### New features
