@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.34.0, released 2026-08-17
+
+### New features
+
+- Add microsecond timestamp precision support
+
 ## Version 3.33.0, released 2026-05-04
 
 ### New features
