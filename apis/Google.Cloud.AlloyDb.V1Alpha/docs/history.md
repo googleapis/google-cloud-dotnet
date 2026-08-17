@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-alpha17, released 2026-08-17
+
+### New features
+
+- Add support for PSC as default
+
 ## Version 1.0.0-alpha16, released 2026-03-05
 
 ### New features
