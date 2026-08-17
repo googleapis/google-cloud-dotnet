@@ -89,6 +89,11 @@ namespace Google.Cloud.Dataform.V1Beta1
             DeleteWorkspaceSettings = existing.DeleteWorkspaceSettings;
             InstallNpmPackagesSettings = existing.InstallNpmPackagesSettings;
             PullGitCommitsSettings = existing.PullGitCommitsSettings;
+            SyncWorkspaceRefsSettings = existing.SyncWorkspaceRefsSettings;
+            FetchWorkspaceBranchesSettings = existing.FetchWorkspaceBranchesSettings;
+            DeleteBranchSettings = existing.DeleteBranchSettings;
+            CheckoutWorkspaceBranchSettings = existing.CheckoutWorkspaceBranchSettings;
+            FetchCurrentWorkspaceBranchSettings = existing.FetchCurrentWorkspaceBranchSettings;
             PushGitCommitsSettings = existing.PushGitCommitsSettings;
             FetchFileGitStatusesSettings = existing.FetchFileGitStatusesSettings;
             FetchGitAheadBehindSettings = existing.FetchGitAheadBehindSettings;
@@ -636,6 +641,67 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings PullGitCommitsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.SyncWorkspaceRefs</c> and <c>DataformClient.SyncWorkspaceRefsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SyncWorkspaceRefsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.FetchWorkspaceBranches</c> and <c>DataformClient.FetchWorkspaceBranchesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchWorkspaceBranchesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataformClient.DeleteBranch</c>
+        ///  and <c>DataformClient.DeleteBranchAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBranchSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.CheckoutWorkspaceBranch</c> and <c>DataformClient.CheckoutWorkspaceBranchAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CheckoutWorkspaceBranchSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.FetchCurrentWorkspaceBranch</c> and <c>DataformClient.FetchCurrentWorkspaceBranchAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchCurrentWorkspaceBranchSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -4999,6 +5065,132 @@ namespace Google.Cloud.Dataform.V1Beta1
             PullGitCommitsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Syncs the refs of a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SyncWorkspaceRefsResponse SyncWorkspaceRefs(SyncWorkspaceRefsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Syncs the refs of a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SyncWorkspaceRefsResponse> SyncWorkspaceRefsAsync(SyncWorkspaceRefsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Syncs the refs of a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SyncWorkspaceRefsResponse> SyncWorkspaceRefsAsync(SyncWorkspaceRefsRequest request, st::CancellationToken cancellationToken) =>
+            SyncWorkspaceRefsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches branches in a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BranchMetadata"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchWorkspaceBranchesResponse, BranchMetadata> FetchWorkspaceBranches(FetchWorkspaceBranchesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches branches in a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BranchMetadata"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchWorkspaceBranchesResponse, BranchMetadata> FetchWorkspaceBranchesAsync(FetchWorkspaceBranchesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a branch in a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DeleteBranchResponse DeleteBranch(DeleteBranchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a branch in a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeleteBranchResponse> DeleteBranchAsync(DeleteBranchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a branch in a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DeleteBranchResponse> DeleteBranchAsync(DeleteBranchRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBranchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Checkout a branch in a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CheckoutWorkspaceBranch(CheckoutWorkspaceBranchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Checkout a branch in a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CheckoutWorkspaceBranchAsync(CheckoutWorkspaceBranchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Checkout a branch in a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CheckoutWorkspaceBranchAsync(CheckoutWorkspaceBranchRequest request, st::CancellationToken cancellationToken) =>
+            CheckoutWorkspaceBranchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches the current branch of a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchCurrentWorkspaceBranchResponse FetchCurrentWorkspaceBranch(FetchCurrentWorkspaceBranchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches the current branch of a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchCurrentWorkspaceBranchResponse> FetchCurrentWorkspaceBranchAsync(FetchCurrentWorkspaceBranchRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches the current branch of a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchCurrentWorkspaceBranchResponse> FetchCurrentWorkspaceBranchAsync(FetchCurrentWorkspaceBranchRequest request, st::CancellationToken cancellationToken) =>
+            FetchCurrentWorkspaceBranchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Pushes Git commits from a Workspace to the Repository's remote.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8108,6 +8300,16 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<PullGitCommitsRequest, PullGitCommitsResponse> _callPullGitCommits;
 
+        private readonly gaxgrpc::ApiCall<SyncWorkspaceRefsRequest, SyncWorkspaceRefsResponse> _callSyncWorkspaceRefs;
+
+        private readonly gaxgrpc::ApiCall<FetchWorkspaceBranchesRequest, FetchWorkspaceBranchesResponse> _callFetchWorkspaceBranches;
+
+        private readonly gaxgrpc::ApiCall<DeleteBranchRequest, DeleteBranchResponse> _callDeleteBranch;
+
+        private readonly gaxgrpc::ApiCall<CheckoutWorkspaceBranchRequest, wkt::Empty> _callCheckoutWorkspaceBranch;
+
+        private readonly gaxgrpc::ApiCall<FetchCurrentWorkspaceBranchRequest, FetchCurrentWorkspaceBranchResponse> _callFetchCurrentWorkspaceBranch;
+
         private readonly gaxgrpc::ApiCall<PushGitCommitsRequest, PushGitCommitsResponse> _callPushGitCommits;
 
         private readonly gaxgrpc::ApiCall<FetchFileGitStatusesRequest, FetchFileGitStatusesResponse> _callFetchFileGitStatuses;
@@ -8312,6 +8514,21 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callPullGitCommits = clientHelper.BuildApiCall<PullGitCommitsRequest, PullGitCommitsResponse>("PullGitCommits", grpcClient.PullGitCommitsAsync, grpcClient.PullGitCommits, effectiveSettings.PullGitCommitsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callPullGitCommits);
             Modify_PullGitCommitsApiCall(ref _callPullGitCommits);
+            _callSyncWorkspaceRefs = clientHelper.BuildApiCall<SyncWorkspaceRefsRequest, SyncWorkspaceRefsResponse>("SyncWorkspaceRefs", grpcClient.SyncWorkspaceRefsAsync, grpcClient.SyncWorkspaceRefs, effectiveSettings.SyncWorkspaceRefsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callSyncWorkspaceRefs);
+            Modify_SyncWorkspaceRefsApiCall(ref _callSyncWorkspaceRefs);
+            _callFetchWorkspaceBranches = clientHelper.BuildApiCall<FetchWorkspaceBranchesRequest, FetchWorkspaceBranchesResponse>("FetchWorkspaceBranches", grpcClient.FetchWorkspaceBranchesAsync, grpcClient.FetchWorkspaceBranches, effectiveSettings.FetchWorkspaceBranchesSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFetchWorkspaceBranches);
+            Modify_FetchWorkspaceBranchesApiCall(ref _callFetchWorkspaceBranches);
+            _callDeleteBranch = clientHelper.BuildApiCall<DeleteBranchRequest, DeleteBranchResponse>("DeleteBranch", grpcClient.DeleteBranchAsync, grpcClient.DeleteBranch, effectiveSettings.DeleteBranchSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBranch);
+            Modify_DeleteBranchApiCall(ref _callDeleteBranch);
+            _callCheckoutWorkspaceBranch = clientHelper.BuildApiCall<CheckoutWorkspaceBranchRequest, wkt::Empty>("CheckoutWorkspaceBranch", grpcClient.CheckoutWorkspaceBranchAsync, grpcClient.CheckoutWorkspaceBranch, effectiveSettings.CheckoutWorkspaceBranchSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCheckoutWorkspaceBranch);
+            Modify_CheckoutWorkspaceBranchApiCall(ref _callCheckoutWorkspaceBranch);
+            _callFetchCurrentWorkspaceBranch = clientHelper.BuildApiCall<FetchCurrentWorkspaceBranchRequest, FetchCurrentWorkspaceBranchResponse>("FetchCurrentWorkspaceBranch", grpcClient.FetchCurrentWorkspaceBranchAsync, grpcClient.FetchCurrentWorkspaceBranch, effectiveSettings.FetchCurrentWorkspaceBranchSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFetchCurrentWorkspaceBranch);
+            Modify_FetchCurrentWorkspaceBranchApiCall(ref _callFetchCurrentWorkspaceBranch);
             _callPushGitCommits = clientHelper.BuildApiCall<PushGitCommitsRequest, PushGitCommitsResponse>("PushGitCommits", grpcClient.PushGitCommitsAsync, grpcClient.PushGitCommits, effectiveSettings.PushGitCommitsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callPushGitCommits);
             Modify_PushGitCommitsApiCall(ref _callPushGitCommits);
@@ -8505,6 +8722,16 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         partial void Modify_PullGitCommitsApiCall(ref gaxgrpc::ApiCall<PullGitCommitsRequest, PullGitCommitsResponse> call);
 
+        partial void Modify_SyncWorkspaceRefsApiCall(ref gaxgrpc::ApiCall<SyncWorkspaceRefsRequest, SyncWorkspaceRefsResponse> call);
+
+        partial void Modify_FetchWorkspaceBranchesApiCall(ref gaxgrpc::ApiCall<FetchWorkspaceBranchesRequest, FetchWorkspaceBranchesResponse> call);
+
+        partial void Modify_DeleteBranchApiCall(ref gaxgrpc::ApiCall<DeleteBranchRequest, DeleteBranchResponse> call);
+
+        partial void Modify_CheckoutWorkspaceBranchApiCall(ref gaxgrpc::ApiCall<CheckoutWorkspaceBranchRequest, wkt::Empty> call);
+
+        partial void Modify_FetchCurrentWorkspaceBranchApiCall(ref gaxgrpc::ApiCall<FetchCurrentWorkspaceBranchRequest, FetchCurrentWorkspaceBranchResponse> call);
+
         partial void Modify_PushGitCommitsApiCall(ref gaxgrpc::ApiCall<PushGitCommitsRequest, PushGitCommitsResponse> call);
 
         partial void Modify_FetchFileGitStatusesApiCall(ref gaxgrpc::ApiCall<FetchFileGitStatusesRequest, FetchFileGitStatusesResponse> call);
@@ -8663,6 +8890,16 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_InstallNpmPackagesRequest(ref InstallNpmPackagesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PullGitCommitsRequest(ref PullGitCommitsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SyncWorkspaceRefsRequest(ref SyncWorkspaceRefsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchWorkspaceBranchesRequest(ref FetchWorkspaceBranchesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBranchRequest(ref DeleteBranchRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CheckoutWorkspaceBranchRequest(ref CheckoutWorkspaceBranchRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchCurrentWorkspaceBranchRequest(ref FetchCurrentWorkspaceBranchRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PushGitCommitsRequest(ref PushGitCommitsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -9628,6 +9865,126 @@ namespace Google.Cloud.Dataform.V1Beta1
         {
             Modify_PullGitCommitsRequest(ref request, ref callSettings);
             return _callPullGitCommits.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Syncs the refs of a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SyncWorkspaceRefsResponse SyncWorkspaceRefs(SyncWorkspaceRefsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SyncWorkspaceRefsRequest(ref request, ref callSettings);
+            return _callSyncWorkspaceRefs.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Syncs the refs of a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SyncWorkspaceRefsResponse> SyncWorkspaceRefsAsync(SyncWorkspaceRefsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SyncWorkspaceRefsRequest(ref request, ref callSettings);
+            return _callSyncWorkspaceRefs.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches branches in a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BranchMetadata"/> resources.</returns>
+        public override gax::PagedEnumerable<FetchWorkspaceBranchesResponse, BranchMetadata> FetchWorkspaceBranches(FetchWorkspaceBranchesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchWorkspaceBranchesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<FetchWorkspaceBranchesRequest, FetchWorkspaceBranchesResponse, BranchMetadata>(_callFetchWorkspaceBranches, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches branches in a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BranchMetadata"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<FetchWorkspaceBranchesResponse, BranchMetadata> FetchWorkspaceBranchesAsync(FetchWorkspaceBranchesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchWorkspaceBranchesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchWorkspaceBranchesRequest, FetchWorkspaceBranchesResponse, BranchMetadata>(_callFetchWorkspaceBranches, request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a branch in a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DeleteBranchResponse DeleteBranch(DeleteBranchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBranchRequest(ref request, ref callSettings);
+            return _callDeleteBranch.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a branch in a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DeleteBranchResponse> DeleteBranchAsync(DeleteBranchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBranchRequest(ref request, ref callSettings);
+            return _callDeleteBranch.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Checkout a branch in a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void CheckoutWorkspaceBranch(CheckoutWorkspaceBranchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CheckoutWorkspaceBranchRequest(ref request, ref callSettings);
+            _callCheckoutWorkspaceBranch.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Checkout a branch in a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task CheckoutWorkspaceBranchAsync(CheckoutWorkspaceBranchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CheckoutWorkspaceBranchRequest(ref request, ref callSettings);
+            return _callCheckoutWorkspaceBranch.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches the current branch of a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FetchCurrentWorkspaceBranchResponse FetchCurrentWorkspaceBranch(FetchCurrentWorkspaceBranchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchCurrentWorkspaceBranchRequest(ref request, ref callSettings);
+            return _callFetchCurrentWorkspaceBranch.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches the current branch of a Workspace.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FetchCurrentWorkspaceBranchResponse> FetchCurrentWorkspaceBranchAsync(FetchCurrentWorkspaceBranchRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchCurrentWorkspaceBranchRequest(ref request, ref callSettings);
+            return _callFetchCurrentWorkspaceBranch.Async(request, callSettings);
         }
 
         /// <summary>
@@ -10677,6 +11034,10 @@ namespace Google.Cloud.Dataform.V1Beta1
     {
     }
 
+    public partial class FetchWorkspaceBranchesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class QueryDirectoryContentsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -10769,6 +11130,14 @@ namespace Google.Cloud.Dataform.V1Beta1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Workspace> GetEnumerator() => Workspaces.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class FetchWorkspaceBranchesResponse : gaxgrpc::IPageResponse<BranchMetadata>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BranchMetadata> GetEnumerator() => Branches.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

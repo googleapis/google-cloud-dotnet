@@ -173,6 +173,24 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse> __Marshaller_google_cloud_dataform_v1beta1_PullGitCommitsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsRequest> __Marshaller_google_cloud_dataform_v1beta1_SyncWorkspaceRefsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsResponse> __Marshaller_google_cloud_dataform_v1beta1_SyncWorkspaceRefsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesRequest> __Marshaller_google_cloud_dataform_v1beta1_FetchWorkspaceBranchesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesResponse> __Marshaller_google_cloud_dataform_v1beta1_FetchWorkspaceBranchesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.DeleteBranchRequest> __Marshaller_google_cloud_dataform_v1beta1_DeleteBranchRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.DeleteBranchRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.DeleteBranchResponse> __Marshaller_google_cloud_dataform_v1beta1_DeleteBranchResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.DeleteBranchResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.CheckoutWorkspaceBranchRequest> __Marshaller_google_cloud_dataform_v1beta1_CheckoutWorkspaceBranchRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.CheckoutWorkspaceBranchRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchRequest> __Marshaller_google_cloud_dataform_v1beta1_FetchCurrentWorkspaceBranchRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchResponse> __Marshaller_google_cloud_dataform_v1beta1_FetchCurrentWorkspaceBranchResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest> __Marshaller_google_cloud_dataform_v1beta1_PushGitCommitsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse> __Marshaller_google_cloud_dataform_v1beta1_PushGitCommitsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse.Parser));
@@ -582,6 +600,46 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         "PullGitCommits",
         __Marshaller_google_cloud_dataform_v1beta1_PullGitCommitsRequest,
         __Marshaller_google_cloud_dataform_v1beta1_PullGitCommitsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsRequest, global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsResponse> __Method_SyncWorkspaceRefs = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsRequest, global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SyncWorkspaceRefs",
+        __Marshaller_google_cloud_dataform_v1beta1_SyncWorkspaceRefsRequest,
+        __Marshaller_google_cloud_dataform_v1beta1_SyncWorkspaceRefsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesRequest, global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesResponse> __Method_FetchWorkspaceBranches = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesRequest, global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchWorkspaceBranches",
+        __Marshaller_google_cloud_dataform_v1beta1_FetchWorkspaceBranchesRequest,
+        __Marshaller_google_cloud_dataform_v1beta1_FetchWorkspaceBranchesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.DeleteBranchRequest, global::Google.Cloud.Dataform.V1Beta1.DeleteBranchResponse> __Method_DeleteBranch = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.DeleteBranchRequest, global::Google.Cloud.Dataform.V1Beta1.DeleteBranchResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteBranch",
+        __Marshaller_google_cloud_dataform_v1beta1_DeleteBranchRequest,
+        __Marshaller_google_cloud_dataform_v1beta1_DeleteBranchResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CheckoutWorkspaceBranchRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CheckoutWorkspaceBranch = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CheckoutWorkspaceBranchRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CheckoutWorkspaceBranch",
+        __Marshaller_google_cloud_dataform_v1beta1_CheckoutWorkspaceBranchRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchRequest, global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchResponse> __Method_FetchCurrentWorkspaceBranch = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchRequest, global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchCurrentWorkspaceBranch",
+        __Marshaller_google_cloud_dataform_v1beta1_FetchCurrentWorkspaceBranchRequest,
+        __Marshaller_google_cloud_dataform_v1beta1_FetchCurrentWorkspaceBranchResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest, global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse> __Method_PushGitCommits = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest, global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse>(
@@ -1334,6 +1392,66 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse> PullGitCommits(global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Syncs the refs of a Workspace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsResponse> SyncWorkspaceRefs(global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches branches in a Workspace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesResponse> FetchWorkspaceBranches(global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a branch in a Workspace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.DeleteBranchResponse> DeleteBranch(global::Google.Cloud.Dataform.V1Beta1.DeleteBranchRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Checkout a branch in a Workspace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CheckoutWorkspaceBranch(global::Google.Cloud.Dataform.V1Beta1.CheckoutWorkspaceBranchRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches the current branch of a Workspace.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchResponse> FetchCurrentWorkspaceBranch(global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3575,6 +3693,246 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_PullGitCommits, null, options, request);
       }
       /// <summary>
+      /// Syncs the refs of a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsResponse SyncWorkspaceRefs(global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SyncWorkspaceRefs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Syncs the refs of a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsResponse SyncWorkspaceRefs(global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SyncWorkspaceRefs, null, options, request);
+      }
+      /// <summary>
+      /// Syncs the refs of a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsResponse> SyncWorkspaceRefsAsync(global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SyncWorkspaceRefsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Syncs the refs of a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsResponse> SyncWorkspaceRefsAsync(global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SyncWorkspaceRefs, null, options, request);
+      }
+      /// <summary>
+      /// Fetches branches in a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesResponse FetchWorkspaceBranches(global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchWorkspaceBranches(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches branches in a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesResponse FetchWorkspaceBranches(global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchWorkspaceBranches, null, options, request);
+      }
+      /// <summary>
+      /// Fetches branches in a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesResponse> FetchWorkspaceBranchesAsync(global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchWorkspaceBranchesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches branches in a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesResponse> FetchWorkspaceBranchesAsync(global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchWorkspaceBranches, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a branch in a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.DeleteBranchResponse DeleteBranch(global::Google.Cloud.Dataform.V1Beta1.DeleteBranchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBranch(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a branch in a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.DeleteBranchResponse DeleteBranch(global::Google.Cloud.Dataform.V1Beta1.DeleteBranchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteBranch, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a branch in a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.DeleteBranchResponse> DeleteBranchAsync(global::Google.Cloud.Dataform.V1Beta1.DeleteBranchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBranchAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a branch in a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.DeleteBranchResponse> DeleteBranchAsync(global::Google.Cloud.Dataform.V1Beta1.DeleteBranchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteBranch, null, options, request);
+      }
+      /// <summary>
+      /// Checkout a branch in a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CheckoutWorkspaceBranch(global::Google.Cloud.Dataform.V1Beta1.CheckoutWorkspaceBranchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CheckoutWorkspaceBranch(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Checkout a branch in a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CheckoutWorkspaceBranch(global::Google.Cloud.Dataform.V1Beta1.CheckoutWorkspaceBranchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CheckoutWorkspaceBranch, null, options, request);
+      }
+      /// <summary>
+      /// Checkout a branch in a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CheckoutWorkspaceBranchAsync(global::Google.Cloud.Dataform.V1Beta1.CheckoutWorkspaceBranchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CheckoutWorkspaceBranchAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Checkout a branch in a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CheckoutWorkspaceBranchAsync(global::Google.Cloud.Dataform.V1Beta1.CheckoutWorkspaceBranchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CheckoutWorkspaceBranch, null, options, request);
+      }
+      /// <summary>
+      /// Fetches the current branch of a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchResponse FetchCurrentWorkspaceBranch(global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchCurrentWorkspaceBranch(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches the current branch of a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchResponse FetchCurrentWorkspaceBranch(global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchCurrentWorkspaceBranch, null, options, request);
+      }
+      /// <summary>
+      /// Fetches the current branch of a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchResponse> FetchCurrentWorkspaceBranchAsync(global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchCurrentWorkspaceBranchAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches the current branch of a Workspace.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchResponse> FetchCurrentWorkspaceBranchAsync(global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchCurrentWorkspaceBranch, null, options, request);
+      }
+      /// <summary>
       /// Pushes Git commits from a Workspace to the Repository's remote.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -5650,6 +6008,11 @@ namespace Google.Cloud.Dataform.V1Beta1 {
           .AddMethod(__Method_DeleteWorkspace, serviceImpl.DeleteWorkspace)
           .AddMethod(__Method_InstallNpmPackages, serviceImpl.InstallNpmPackages)
           .AddMethod(__Method_PullGitCommits, serviceImpl.PullGitCommits)
+          .AddMethod(__Method_SyncWorkspaceRefs, serviceImpl.SyncWorkspaceRefs)
+          .AddMethod(__Method_FetchWorkspaceBranches, serviceImpl.FetchWorkspaceBranches)
+          .AddMethod(__Method_DeleteBranch, serviceImpl.DeleteBranch)
+          .AddMethod(__Method_CheckoutWorkspaceBranch, serviceImpl.CheckoutWorkspaceBranch)
+          .AddMethod(__Method_FetchCurrentWorkspaceBranch, serviceImpl.FetchCurrentWorkspaceBranch)
           .AddMethod(__Method_PushGitCommits, serviceImpl.PushGitCommits)
           .AddMethod(__Method_FetchFileGitStatuses, serviceImpl.FetchFileGitStatuses)
           .AddMethod(__Method_FetchGitAheadBehind, serviceImpl.FetchGitAheadBehind)
@@ -5733,6 +6096,11 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       serviceBinder.AddMethod(__Method_DeleteWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.DeleteWorkspaceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteWorkspace));
       serviceBinder.AddMethod(__Method_InstallNpmPackages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.InstallNpmPackagesRequest, global::Google.Cloud.Dataform.V1Beta1.InstallNpmPackagesResponse>(serviceImpl.InstallNpmPackages));
       serviceBinder.AddMethod(__Method_PullGitCommits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest, global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse>(serviceImpl.PullGitCommits));
+      serviceBinder.AddMethod(__Method_SyncWorkspaceRefs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsRequest, global::Google.Cloud.Dataform.V1Beta1.SyncWorkspaceRefsResponse>(serviceImpl.SyncWorkspaceRefs));
+      serviceBinder.AddMethod(__Method_FetchWorkspaceBranches, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesRequest, global::Google.Cloud.Dataform.V1Beta1.FetchWorkspaceBranchesResponse>(serviceImpl.FetchWorkspaceBranches));
+      serviceBinder.AddMethod(__Method_DeleteBranch, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.DeleteBranchRequest, global::Google.Cloud.Dataform.V1Beta1.DeleteBranchResponse>(serviceImpl.DeleteBranch));
+      serviceBinder.AddMethod(__Method_CheckoutWorkspaceBranch, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CheckoutWorkspaceBranchRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CheckoutWorkspaceBranch));
+      serviceBinder.AddMethod(__Method_FetchCurrentWorkspaceBranch, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchRequest, global::Google.Cloud.Dataform.V1Beta1.FetchCurrentWorkspaceBranchResponse>(serviceImpl.FetchCurrentWorkspaceBranch));
       serviceBinder.AddMethod(__Method_PushGitCommits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest, global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse>(serviceImpl.PushGitCommits));
       serviceBinder.AddMethod(__Method_FetchFileGitStatuses, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesRequest, global::Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesResponse>(serviceImpl.FetchFileGitStatuses));
       serviceBinder.AddMethod(__Method_FetchGitAheadBehind, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.FetchGitAheadBehindRequest, global::Google.Cloud.Dataform.V1Beta1.FetchGitAheadBehindResponse>(serviceImpl.FetchGitAheadBehind));
