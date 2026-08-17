@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.20.0, released 2026-08-17
+
+### New features
+
+- Add support for client-side metrics in AppendRowsRequest
+
+### Documentation improvements
+
+- Enable client to send operational metrics in AppendRowsRequest for internal consumption
+
 ## Version 3.19.0, released 2025-11-10
 
 ### New features
