@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.20.0, released 2026-08-17
+
+### New features
+
+- Add option to fetch remote change history (tags) for GitSource dependencies
+
 ## Version 2.19.0, released 2026-06-29
 
 ### New features
