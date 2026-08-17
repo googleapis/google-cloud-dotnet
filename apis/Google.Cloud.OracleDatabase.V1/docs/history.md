@@ -1,5 +1,24 @@
 # Version history
 
+## Version 1.8.0, released 2026-08-17
+
+### New features
+
+- Expand Oracle Database v1 API to add support for Exascale CMEK, VM Storage options
+
+### Documentation improvements
+
+- A comment for enum value `OCPU` in enum `ComputeModel` is changed
+- A comment for field `memory_size_gb` in message `.google.cloud.oracledatabase.v1.DbSystemProperties` is changed
+- A comment for field `data_storage_size_gb` in message `.google.cloud.oracledatabase.v1.DbSystemProperties` is changed
+- A comment for field `reco_storage_size_gb` in message `.google.cloud.oracledatabase.v1.DbSystemProperties` is changed
+- A comment for field `node_count` in message `.google.cloud.oracledatabase.v1.DbSystemProperties` is changed
+- A comment for field `database_server_type` in message `.google.cloud.oracledatabase.v1.CloudExadataInfrastructureProperties` is changed
+- A comment for field `storage_server_type` in message `.google.cloud.oracledatabase.v1.CloudExadataInfrastructureProperties` is changed
+- A comment for field `filter` in message `.google.cloud.oracledatabase.v1.ListMinorVersionsRequest` is changed
+- A comment for field `filter` in message `.google.cloud.oracledatabase.v1.ListGiVersionsRequest` is changed
+- A comment for field `filter` in message `.google.cloud.oracledatabase.v1.ListDbSystemShapesRequest` is changed
+
 ## Version 1.7.0, released 2026-06-22
 
 ### New features
