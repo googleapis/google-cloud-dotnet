@@ -5142,10 +5142,12 @@
         },
         {
             "id": "Google.Cloud.Ftp.V1",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-08-18T19:06:47.824872040Z",
             "lastGeneratedCommit": "befe6dc01ccbe4fc0292c5966efca2ad1fafc2e6",
+            "lastReleasedCommit": "befe6dc01ccbe4fc0292c5966efca2ad1fafc2e6",
             "apiPaths": [
                 "google/cloud/ftp/v1"
             ],

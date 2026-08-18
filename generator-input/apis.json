@@ -3024,7 +3024,7 @@
     },
     {
       "id": "Google.Cloud.Ftp.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Cloud FTP",
       "productUrl": "https://docs.cloud.google.com/cloud-ftp",
