@@ -6768,7 +6768,7 @@
     },
     {
       "id": "Google.Cloud.WorkloadIdentity.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Workload Identity",
       "productUrl": "https://cloud.google.com/iam/docs/service-agents",
