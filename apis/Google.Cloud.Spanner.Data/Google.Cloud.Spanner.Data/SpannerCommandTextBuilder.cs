@@ -32,6 +32,8 @@ namespace Google.Cloud.Spanner.Data
         private const string UpdateCommand = "UPDATE";
         private const string DeleteCommand = "DELETE";
         private const string SelectCommand = "SELECT";
+        private const string SendCommand = "SEND";
+        private const string AckCommand = "ACK";
         private const string WithCommand = "WITH"; // Queries may also start with a WITH clause.
         private const string AlterCommand = "ALTER";
         private const string CreateCommand = "CREATE";
@@ -183,6 +185,24 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Insert"/> Spanner command.</returns>
         public static SpannerCommandTextBuilder CreateInsertTextBuilder(string table) =>
             CreateBuilderForTableDml(InsertCommand, SpannerCommandType.Insert, table);
+
+        /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
+        /// for sending a message to a queue.
+        /// </summary>
+        /// <param name="queue">The name of the Spanner database queue for which messages will be sent. Must not be null.</param>
+        /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Send"/> Spanner command.</returns>
+        public static SpannerCommandTextBuilder CreateSendTextBuilder(string queue) =>
+            CreateBuilderForTableDml(SendCommand, SpannerCommandType.Send, queue);
+
+        /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
+        /// for acking a message to a queue.
+        /// </summary>
+        /// <param name="queue">The name of the Spanner database queue for which messages will be acked. Must not be null.</param>
+        /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Ack"/> Spanner command.</returns>
+        public static SpannerCommandTextBuilder CreateAckTextBuilder(string queue) =>
+            CreateBuilderForTableDml(AckCommand, SpannerCommandType.Ack, queue);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
