@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings>
+    <RunConfiguration>
+        <EnvironmentVariables>
+            <TEST_SPANNER_INSTANCE>hopefully-queues</TEST_SPANNER_INSTANCE>
+            <TEST_SPANNER_HOST>https://staging-wrenchworks.mtls.sandbox.googleapis.com</TEST_SPANNER_HOST>
+            <TEST_PROJECT>ericfevans-testing</TEST_PROJECT>
+        </EnvironmentVariables>
+    </RunConfiguration>
+</RunSettings>

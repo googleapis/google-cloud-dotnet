@@ -64,7 +64,10 @@ namespace Google.Cloud.Spanner.Data
 
             public ExecutableCommand(SpannerCommand command)
             {
-                GaxPreconditions.CheckState(!(command.KeySet != null && command.Parameters.Count > 0), "Command may not contain both a KeySet and Parameters");
+                GaxPreconditions.CheckState(!(command.KeySet != null
+                    && command.Parameters.Count > 0
+                    && command.SpannerCommandTextBuilder.SpannerCommandType != SpannerCommandType.Send),
+                    "Command may not contain both a KeySet and Parameters");
                 Connection = command.SpannerConnection;
                 CommandTextBuilder = command.SpannerCommandTextBuilder;
                 CommandTimeout = command.CommandTimeout;
@@ -180,6 +183,8 @@ namespace Google.Cloud.Spanner.Data
                     case SpannerCommandType.Insert:
                     case SpannerCommandType.InsertOrUpdate:
                     case SpannerCommandType.Update:
+                    case SpannerCommandType.Send:
+                    case SpannerCommandType.Ack:
                         return ExecuteMutationsAsync(cancellationToken);
                     case SpannerCommandType.Dml:
                         return ExecuteDmlAsync(cancellationToken);
@@ -368,7 +373,28 @@ namespace Google.Cloud.Spanner.Data
                     Values = { Parameters.Select(x => x.GetConfiguredSpannerDbType(conversionOptions).ToProtobufValue(x.GetValidatedValue())) }
                 };
 
-                if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Delete)
+                if (CommandTextBuilder.SpannerCommandType == SpannerCommandType.Send)
+                {
+                    var s = new Mutation.Types.Send
+                    {
+                        Queue = CommandTextBuilder.TargetTable,
+                    };
+
+                    var key = GaxPreconditions.CheckNotNull(KeySet?.Keys?.FirstOrDefault(),
+                            $"{SpannerCommandType.Send} must include exactly one key");
+                    s.Key = key.ToProtobuf(conversionOptions);
+
+                    GaxPreconditions.CheckState(Parameters.Count == 1 && Parameters.Select(p => p.SourceColumn ?? p.ParameterName).First() == "Payload",
+                        $"{SpannerCommandType.Send} must include exactly one non-key parameter named Payload");
+                    var payloadParameter = Parameters.First();
+
+                    s.Payload = payloadParameter
+                        .GetConfiguredSpannerDbType(conversionOptions)
+                        .ToProtobufValue(payloadParameter.GetValidatedValue());
+
+                    return new List<Mutation> { new Mutation { Send = s } };
+                }
+                else if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Delete)
                 {
                     var w = new Mutation.Types.Write
                     {
