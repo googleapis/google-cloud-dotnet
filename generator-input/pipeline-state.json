@@ -5157,10 +5157,12 @@
         },
         {
             "id": "Google.Cloud.WorkloadIdentity.V1",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-08-18T19:07:40.226218986Z",
             "lastGeneratedCommit": "894da490ec79810a70bccdb6570234882af3e520",
+            "lastReleasedCommit": "894da490ec79810a70bccdb6570234882af3e520",
             "apiPaths": [
                 "google/cloud/workloadidentity/v1"
             ],
