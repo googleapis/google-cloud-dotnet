@@ -279,7 +279,7 @@ namespace Google.Developers.DeveloperKnowledge.V1
         /// Searches for developer knowledge across Google's developer documentation.
         /// Returns [DocumentChunk][google.developers.knowledge.v1.DocumentChunk]s
         /// based on the user's query. There may be many chunks from the same
-        /// [Document][google.developers.knowledge.v1.Document].  To retrieve full
+        /// [Document][google.developers.knowledge.v1.Document]. To retrieve full
         /// documents, use
         /// [DeveloperKnowledge.GetDocument][google.developers.knowledge.v1.DeveloperKnowledge.GetDocument]
         /// or
@@ -299,7 +299,7 @@ namespace Google.Developers.DeveloperKnowledge.V1
         /// Searches for developer knowledge across Google's developer documentation.
         /// Returns [DocumentChunk][google.developers.knowledge.v1.DocumentChunk]s
         /// based on the user's query. There may be many chunks from the same
-        /// [Document][google.developers.knowledge.v1.Document].  To retrieve full
+        /// [Document][google.developers.knowledge.v1.Document]. To retrieve full
         /// documents, use
         /// [DeveloperKnowledge.GetDocument][google.developers.knowledge.v1.DeveloperKnowledge.GetDocument]
         /// or
@@ -573,7 +573,7 @@ namespace Google.Developers.DeveloperKnowledge.V1
         /// Searches for developer knowledge across Google's developer documentation.
         /// Returns [DocumentChunk][google.developers.knowledge.v1.DocumentChunk]s
         /// based on the user's query. There may be many chunks from the same
-        /// [Document][google.developers.knowledge.v1.Document].  To retrieve full
+        /// [Document][google.developers.knowledge.v1.Document]. To retrieve full
         /// documents, use
         /// [DeveloperKnowledge.GetDocument][google.developers.knowledge.v1.DeveloperKnowledge.GetDocument]
         /// or
@@ -596,7 +596,7 @@ namespace Google.Developers.DeveloperKnowledge.V1
         /// Searches for developer knowledge across Google's developer documentation.
         /// Returns [DocumentChunk][google.developers.knowledge.v1.DocumentChunk]s
         /// based on the user's query. There may be many chunks from the same
-        /// [Document][google.developers.knowledge.v1.Document].  To retrieve full
+        /// [Document][google.developers.knowledge.v1.Document]. To retrieve full
         /// documents, use
         /// [DeveloperKnowledge.GetDocument][google.developers.knowledge.v1.DeveloperKnowledge.GetDocument]
         /// or
