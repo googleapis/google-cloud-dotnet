@@ -5172,10 +5172,12 @@
         },
         {
             "id": "Google.Maps.MapManagement.V2",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-08-18T19:09:41.259718537Z",
             "lastGeneratedCommit": "29da218f022fcd6af34142e9128699ed04820a11",
+            "lastReleasedCommit": "29da218f022fcd6af34142e9128699ed04820a11",
             "apiPaths": [
                 "google/maps/mapmanagement/v2"
             ],
