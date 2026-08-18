@@ -165,6 +165,10 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Initializes a new instance of <see cref="SpannerCommand"/>
         /// </summary>
+        /// <remarks>
+        /// Note: "INSERT &lt;name&gt;" and "DELETE &lt;name&gt;" are always interpreted as
+        /// insert and delete mutations, and never as send or ack mutations.
+        /// </remarks>
         /// <param name="commandText">If this command is a SQL Query, then commandText is
         /// the SQL statement. If its an update, insert or delete command, then this text
         /// is "[operation] [table]" such as "UPDATE MYTABLE"</param>. Must not be null.
@@ -355,6 +359,24 @@ namespace Google.Cloud.Spanner.Data
         public SpannerTransactionOptions EphemeralTransactionOptions { get; }
 
         /// <summary>
+        /// Optional configurations for Send mutations.
+        /// </summary>
+        /// <remarks>
+        /// These options will only be applied to send commands.
+        /// They will be ignored for all other operations.
+        /// </remarks>
+        public SendOptions SendOptions { get; set; }
+
+        /// <summary>
+        /// Optional configurations for Ack mutations.
+        /// </summary>
+        /// <remarks>
+        /// These options will only be applied to ack commands.
+        /// They will be ignored for all other operations.
+        /// </remarks>
+        public AckOptions AckOptions { get; set; }
+
+        /// <summary>
         /// Returns a copy of this <see cref="SpannerCommand"/>.
         /// </summary>
         /// <returns>a copy of this <see cref="SpannerCommand"/>.</returns>
@@ -370,6 +392,8 @@ namespace Google.Cloud.Spanner.Data
             DirectedReadOptions = DirectedReadOptions?.Clone(),
             ClientContext = ClientContext?.Clone(),
             EphemeralTransactionCreationOptions = EphemeralTransactionCreationOptions,
+            SendOptions = SendOptions?.Clone(),
+            AckOptions = AckOptions?.Clone(),
         };
 
         /// <inheritdoc />

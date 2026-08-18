@@ -72,6 +72,12 @@ namespace Google.Cloud.Spanner.Data
         public string TargetTable { get; }
 
         /// <summary>
+        /// Returns the target Spanner database queue if the command is Send or Ack,
+        /// or null otherwise.
+        /// </summary>
+        public string TargetQueue { get; }
+
+        /// <summary>
         /// A set of additional statements to execute if supported by the command.
         /// </summary>
         public IReadOnlyList<string> ExtraStatements { get; }
@@ -89,11 +95,12 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Constructs an instance without performing any validation. (Callers must validate.)
         /// </summary>
-        private SpannerCommandTextBuilder(string commandText, SpannerCommandType type, string targetTable, string[] extraStatements, FileDescriptorSet protobufDescriptors, ReadOptions readOptions)
+        private SpannerCommandTextBuilder(string commandText, SpannerCommandType type, string targetTable, string targetQueue, string[] extraStatements, FileDescriptorSet protobufDescriptors, ReadOptions readOptions)
         {
             CommandText = commandText;
             SpannerCommandType = type;
             TargetTable = targetTable;
+            TargetQueue = targetQueue;
             ExtraStatements = extraStatements?.ToList().AsReadOnly();
             ProtobufDescriptors = protobufDescriptors;
             ReadOptions = readOptions;
@@ -142,7 +149,10 @@ namespace Google.Cloud.Spanner.Data
         }
 
         private static SpannerCommandTextBuilder CreateBuilderForTableDml(string command, SpannerCommandType type, string table) =>
-            new SpannerCommandTextBuilder($"{command} {table}", type, ValidateTableName(table, nameof(table)), extraStatements: null, protobufDescriptors: null, readOptions: null);
+            new SpannerCommandTextBuilder($"{command} {table}", type, ValidateTableName(table, nameof(table)), targetQueue: null, extraStatements: null, protobufDescriptors: null, readOptions: null);
+
+        private static SpannerCommandTextBuilder CreateBuilderForQueueMutation(SpannerCommandType type, string queue) =>
+            new("", type, targetTable: null, targetQueue: queue, extraStatements: null, protobufDescriptors: null, readOptions: null);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
@@ -153,7 +163,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="readOptions">The read options to use for the command. Must not be null.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Read"/> Spanner command.</returns>
         internal static SpannerCommandTextBuilder CreateReadTextBuilder(string table, ReadOptions readOptions) =>
-            new SpannerCommandTextBuilder(commandText: "", SpannerCommandType.Read, ValidateTableName(table, nameof(table)), extraStatements: null, protobufDescriptors: null, GaxPreconditions.CheckNotNull(readOptions, nameof(readOptions)));
+            new SpannerCommandTextBuilder(commandText: "", SpannerCommandType.Read, ValidateTableName(table, nameof(table)), targetQueue: null, extraStatements: null, protobufDescriptors: null, GaxPreconditions.CheckNotNull(readOptions, nameof(readOptions)));
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
@@ -186,12 +196,30 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
+        /// for sending a message to a queue.
+        /// </summary>
+        /// <param name="queue">The name of the Spanner database queue for which messages will be sent. Must not be null.</param>
+        /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Send"/> Spanner command.</returns>
+        public static SpannerCommandTextBuilder CreateSendTextBuilder(string queue) =>
+            CreateBuilderForQueueMutation(SpannerCommandType.Send, queue);
+
+        /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
+        /// for acking a message to a queue.
+        /// </summary>
+        /// <param name="queue">The name of the Spanner database queue for which messages will be acked. Must not be null.</param>
+        /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Ack"/> Spanner command.</returns>
+        public static SpannerCommandTextBuilder CreateAckTextBuilder(string queue) =>
+            CreateBuilderForQueueMutation(SpannerCommandType.Ack, queue);
+
+        /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
         /// for querying rows via a SQL query.
         /// </summary>
         /// <param name="sqlQuery">The full SQL query. Must not be null or empty.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Select"/> Spanner command.</returns>
         public static SpannerCommandTextBuilder CreateSelectTextBuilder(string sqlQuery) =>
-            new SpannerCommandTextBuilder(GaxPreconditions.CheckNotNullOrEmpty(sqlQuery, nameof(sqlQuery)), SpannerCommandType.Select, targetTable: null, extraStatements: null, protobufDescriptors: null, readOptions: null);
+            new SpannerCommandTextBuilder(GaxPreconditions.CheckNotNullOrEmpty(sqlQuery, nameof(sqlQuery)), SpannerCommandType.Select, targetTable: null, targetQueue: null, extraStatements: null, protobufDescriptors: null, readOptions: null);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
@@ -200,7 +228,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="dmlStatement">The full SQL query. Must not be null or empty.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Select"/> Spanner command.</returns>
         public static SpannerCommandTextBuilder CreateDmlTextBuilder(string dmlStatement) =>
-            new SpannerCommandTextBuilder(GaxPreconditions.CheckNotNullOrEmpty(dmlStatement, nameof(dmlStatement)), SpannerCommandType.Dml, targetTable: null, extraStatements: null, protobufDescriptors: null, readOptions: null);
+            new SpannerCommandTextBuilder(GaxPreconditions.CheckNotNullOrEmpty(dmlStatement, nameof(dmlStatement)), SpannerCommandType.Dml, targetTable: null, targetQueue: null, extraStatements: null, protobufDescriptors: null, readOptions: null);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
@@ -232,7 +260,7 @@ namespace Google.Cloud.Spanner.Data
         /// the first statement. Extra Ddl statements cannot be used to create additional databases.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Ddl"/> Spanner command.</returns>
         public static SpannerCommandTextBuilder CreateDdlTextBuilder(string ddlStatement, FileDescriptorSet protobufDescriptors, params string[] extraDdlStatements) =>
-            new SpannerCommandTextBuilder(GaxPreconditions.CheckNotNullOrEmpty(ddlStatement, nameof(ddlStatement)), SpannerCommandType.Ddl, targetTable: null, extraDdlStatements, protobufDescriptors: protobufDescriptors, readOptions: null);
+            new SpannerCommandTextBuilder(GaxPreconditions.CheckNotNullOrEmpty(ddlStatement, nameof(ddlStatement)), SpannerCommandType.Ddl, targetTable: null, targetQueue: null, extraDdlStatements, protobufDescriptors: protobufDescriptors, readOptions: null);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance by parsing existing command text.
@@ -245,6 +273,8 @@ namespace Google.Cloud.Spanner.Data
         /// If the intended <see cref="SpannerCommandType"/> is Update, Delete,
         /// InsertOrUpdate, or Insert, then the text should be '[spanner command type] [table name]'
         /// such as 'INSERT MYTABLE'.  Must not be null or empty.
+        /// Note: "INSERT &lt;name&gt;" and "DELETE &lt;name&gt;" are always interpreted as
+        /// insert and delete mutations, and never as send or ack mutations.
         /// </remarks>
         /// <param name="commandText">The full command text containing a query, DDL statement or insert/update/delete
         /// operation.  The given text will be parsed and validated. Must not be null.</param>
@@ -309,7 +339,7 @@ namespace Google.Cloud.Spanner.Data
                     }
                     break;
             }
-            return new SpannerCommandTextBuilder(commandText.Trim(), commandType, targetTable, extraStatements: null, protobufDescriptors: null, readOptions: null);
+            return new SpannerCommandTextBuilder(commandText.Trim(), commandType, targetTable, targetQueue: null, extraStatements: null, protobufDescriptors: null, readOptions: null);
         }
 
         private static string RemoveLeadingCommentsAndHints(string commandText, out bool removedCommentOrHint)

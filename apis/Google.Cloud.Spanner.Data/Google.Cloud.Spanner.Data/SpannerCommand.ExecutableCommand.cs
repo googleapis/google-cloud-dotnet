@@ -61,6 +61,8 @@ namespace Google.Cloud.Spanner.Data
             internal DirectedReadOptions DirectedReadOptions { get; }
             internal ClientContext ClientContext { get; }
             internal SpannerConversionOptions ConversionOptions => SpannerConversionOptions.ForConnection(Connection);
+            internal SendOptions SendOptions { get; }
+            internal AckOptions AckOptions { get; }
 
             public ExecutableCommand(SpannerCommand command)
             {
@@ -80,6 +82,8 @@ namespace Google.Cloud.Spanner.Data
                 EphemeralTransactionCreationOptions = command.EphemeralTransactionCreationOptions;
                 EphemeralTransactionOptions = new SpannerTransactionOptions(command.EphemeralTransactionOptions);
                 EphemeralTransactionOptions.CommitPriority ??= Priority;
+                SendOptions = command.SendOptions?.Clone();
+                AckOptions = command.AckOptions?.Clone();
             }
 
             // ExecuteScalar is simply implemented in terms of ExecuteReader.
@@ -180,6 +184,8 @@ namespace Google.Cloud.Spanner.Data
                     case SpannerCommandType.Insert:
                     case SpannerCommandType.InsertOrUpdate:
                     case SpannerCommandType.Update:
+                    case SpannerCommandType.Send:
+                    case SpannerCommandType.Ack:
                         return ExecuteMutationsAsync(cancellationToken);
                     case SpannerCommandType.Dml:
                         return ExecuteDmlAsync(cancellationToken);
@@ -368,7 +374,9 @@ namespace Google.Cloud.Spanner.Data
                     Values = { Parameters.Select(x => x.GetConfiguredSpannerDbType(conversionOptions).ToProtobufValue(x.GetValidatedValue())) }
                 };
 
-                if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Delete)
+                if (CommandTextBuilder.SpannerCommandType == SpannerCommandType.Insert ||
+                    CommandTextBuilder.SpannerCommandType == SpannerCommandType.Update ||
+                    CommandTextBuilder.SpannerCommandType == SpannerCommandType.InsertOrUpdate)
                 {
                     var w = new Mutation.Types.Write
                     {
@@ -394,6 +402,44 @@ namespace Google.Cloud.Spanner.Data
                             throw new ArgumentOutOfRangeException();
                     }
                 }
+                else if (CommandTextBuilder.SpannerCommandType == SpannerCommandType.Send)
+                {
+
+                    var payload = SeparatePayloadValue(Parameters, listValue);
+
+                    var sendMutation = new Mutation.Types.Send
+                    {
+                        Queue = CommandTextBuilder.TargetQueue,
+                        Key = listValue,
+                    };
+
+                    if (payload is Value payloadValue)
+                    {
+                        sendMutation.Payload = payloadValue;
+                    }
+
+                    if (SendOptions?.DeliverTime is DateTimeOffset deliverTime)
+                    {
+                        sendMutation.DeliverTime = SendOptions.DeliverTime.Value.ToTimestamp();
+                    }
+
+                    return new List<Mutation> { new Mutation { Send = sendMutation } };
+                }
+                else if (CommandTextBuilder.SpannerCommandType == SpannerCommandType.Ack)
+                {
+                    var ackMutation = new Mutation.Types.Ack
+                    {
+                        Queue = CommandTextBuilder.TargetQueue,
+                        Key = listValue,
+                    };
+
+                    if (AckOptions?.IgnoreNotFound is bool ignoreNotFound)
+                    {
+                        ackMutation.IgnoreNotFound = ignoreNotFound;
+                    }
+
+                    return new List<Mutation> { new Mutation { Ack = ackMutation } };
+                }
                 else // Is delete
                 {
                     // At most one of KeySet or Parameters must be set.
@@ -417,6 +463,29 @@ namespace Google.Cloud.Spanner.Data
                                 : new V1.KeySet { Keys = { listValue } })
                     };
                     return new List<Mutation> { new Mutation { Delete = d } };
+                }
+
+                static Value SeparatePayloadValue(SpannerParameterCollection parameters, ListValue listValue)
+                {
+                    int payloadIdx = -1;
+                    for (int i = 0; i < parameters.Count; i++)
+                    {
+                        var parameter = parameters[i];
+                        if ((parameter.SourceColumn ?? parameter.ParameterName).Equals(SpannerParameter.PayloadParameterName, StringComparison.OrdinalIgnoreCase))
+                        {
+                            payloadIdx = i;
+                            break;
+                        }
+                    }
+
+                    if (payloadIdx == -1)
+                    {
+                        return null;
+                    }
+
+                    var payload = listValue.Values[payloadIdx];
+                    listValue.Values.RemoveAt(payloadIdx);
+                    return payload;
                 }
             }
 
