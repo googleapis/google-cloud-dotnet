@@ -13,9 +13,7 @@
 // limitations under the License.
 
 using Mono.Cecil;
-using SharpCompress.Compressors.ZStandard.Unsafe;
 using System.Collections.Concurrent;
-using System.Linq;
 
 namespace Google.Cloud.Tools.VersionCompat.CecilUtils;
 internal class BaseTypeCache
