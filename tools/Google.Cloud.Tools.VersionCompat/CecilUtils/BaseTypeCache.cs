@@ -25,7 +25,14 @@ internal class BaseTypeCache
     private readonly ConcurrentDictionary<TypeDefinition, TypeDefinition> _baseTypes = new();
 
     public TypeDefinition GetBaseType(TypeDefinition type)
-        => _baseTypes.GetOrAdd(type, GetBaseTypeDefinitionUncached(type));
+    {
+        if (type.BaseType is null || type.BaseType.IsObject())
+        {
+            return null;
+        }
+
+        return _baseTypes.GetOrAdd(type, t => GetBaseTypeDefinitionUncached(type));
+    }
 
     private static TypeDefinition GetBaseTypeDefinitionUncached(TypeDefinition type) => type.BaseType?.Resolve();
 }
