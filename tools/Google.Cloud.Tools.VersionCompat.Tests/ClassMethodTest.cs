@@ -24,6 +24,11 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassMethod
     namespace MethodRemoved.A { public class C { public void A() { } } }
     namespace MethodRemoved.B { public class C { } }
 
+    namespace MethodRemovedFromAncestor.AParent { public class C { public void A() { } } }
+    namespace MethodRemovedFromAncestor.A { public class C : AParent.C { } }
+    namespace MethodRemovedFromAncestor.BParent { public class C { } }
+    namespace MethodRemovedFromAncestor.B { public class C : BParent.C { } }
+
     namespace MethodRemovedWithAncestorImplementation.Virtual { public class C { public virtual void A() { } } }
     namespace MethodRemovedWithAncestorImplementation.A { public class C : Virtual.C { public override void A() { } } }
     namespace MethodRemovedWithAncestorImplementation.B { public class C : Virtual.C { } }
@@ -127,6 +132,7 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassMethod
     {
         [Fact] public void MethodAdded() => TestMinor(Cause.MethodAdded);
         [Fact] public void MethodRemoved() => TestMajor(Cause.MethodRemoved);
+        [Fact] public void MethodRemovedFromAncestor() => TestMajor(Cause.ClassBaseClassChanged);
         [Fact] public void MethodRemovedWithAncestorImplementation() => TestNone();
         [Fact] public void MethodMovedToParent() => TestMinor(Cause.ClassBaseClassChanged);
         [Fact] public void MethodMadeExported() => TestMinor(Cause.MethodMadeExported);
