@@ -162,7 +162,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     if (obs.HasConstructorArguments && obs.ConstructorArguments.Count == 2)
                     {
                         // (string, bool) ctor
-                        return (bool)obs.ConstructorArguments[1].Value;
+                        return (bool) obs.ConstructorArguments[1].Value;
                     }
                 }
                 return false;
@@ -267,8 +267,8 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
 
         public IEnumerable<Diff> Properties(TypeType typeType)
         {
-            var oProps = _o.Properties.ToImmutableHashSet(SamePropertyComparer.Instance);
-            var nProps = _n.Properties.ToImmutableHashSet(SamePropertyComparer.Instance);
+            var oProps = _o.ExportedProperties().ToImmutableHashSet(SamePropertyComparer.Instance);
+            var nProps = _n.ExportedProperties().ToImmutableHashSet(SamePropertyComparer.Instance);
             foreach (var prop in oProps.Union(nProps).OrderBy(x => x.FullName))
             {
                 var inO = oProps.TryGetValue(prop, out var o);
@@ -311,68 +311,20 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 else
                 {
                     // Presence/visibility changes.
-                    if (inO && o.IsExported())
+                    if (inO && o.IsExported() && o.IsDefinedInType(_o))
                     {
-                        if (!LikePropertyInheritedFromAncestor(descendentType: _n, property: o))
-                        {
-                            yield return inN ?
-                                Diff.Major(Cause.PropertyMadeNotExported, $"{prefix} made non-public.") :
-                                Diff.Major(Cause.PropertyRemoved, $"{prefix} removed.");
-                        }
+                        yield return inN ?
+                            Diff.Major(Cause.PropertyMadeNotExported, $"{prefix} made non-public.") :
+                            Diff.Major(Cause.PropertyRemoved, $"{prefix} removed.");
                     }
-                    else if (inN && n.IsExported())
+                    else if (inN && n.IsExported() && o.IsDefinedInType(_n))
                     {
-                        var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, FormattableString, Diff>)Diff.Minor : Diff.Major;
+                        var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, FormattableString, Diff>) Diff.Minor : Diff.Major;
                         yield return inO ?
                             diff(Cause.PropertyMadeExported, $"{prefix} made public.") :
                             diff(Cause.PropertyAdded, $"{prefix} added.");
                     }
                 }
-            }
-
-            // Look up the ancestor tree of until we find a like implementation to this property.
-            // This involves individually checking both accessors if they are both exported.
-            static bool LikePropertyInheritedFromAncestor(TypeDefinition descendentType, PropertyDefinition property)
-            {
-                List<MethodDefinition> exportedAccessors = GetExportedAccessors(property);
-
-                var baseType = descendentType.BaseType?.Resolve();
-                while (baseType != null)
-                {
-                    int likeAccessorsFound = 0;
-
-                    foreach (var accessor in exportedAccessors)
-                    {
-                        // GetMethod here only checks for a subset of the info we need, so
-                        // also check visibility, static, and more.
-                        if (MetadataResolver.GetMethod(baseType.Methods, accessor) is MethodDefinition baseTypeMethod
-                            && AreLikeMethods(accessor, baseTypeMethod))
-                        {
-                            likeAccessorsFound++;
-                        }
-                    }
-
-                    if (likeAccessorsFound == exportedAccessors.Count)
-                    {
-                        return true;
-                    }
-
-                    baseType = baseType.BaseType?.Resolve();
-                }
-
-                return false;
-
-                // This only supplements what is missing from MetadataResolver.GetMethod to ascertain if
-                // the two methods are definitionally like, and should not be used separately.
-                static bool AreLikeMethods(MethodDefinition referenceMethod, MethodDefinition likeMethod)
-                    => referenceMethod.IsPublic == likeMethod.IsPublic
-                        && referenceMethod.IsFamily == likeMethod.IsFamily
-                        && referenceMethod.IsStatic == likeMethod.IsStatic
-                        // We only care that the like method is sealed if the reference method is too.
-                        && (referenceMethod.IsVirtual ? likeMethod.IsVirtual : true);
-
-                static List<MethodDefinition> GetExportedAccessors(PropertyDefinition property) =>
-                    [.. new[] { property.GetMethod, property.SetMethod }.Where(m => m?.IsExported() == true)];
             }
         }
 
