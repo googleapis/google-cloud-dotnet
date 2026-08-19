@@ -85,7 +85,7 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 
         public static TypeDefinition BaseTypeExt(this TypeDefinition type) => BaseTypeCache.Instance.GetBaseType(type);
 
-        public static IImmutableSet<MethodDefinition> ExportedMethods(this TypeDefinition type)
+        public static IEnumerable<MethodDefinition> ExportedMethods(this TypeDefinition type)
         {
             var methods = new HashSet<MethodDefinition>(SameMethodComparer.Instance);
 
@@ -107,7 +107,7 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
                 baseType = baseType.BaseTypeExt();
             }
 
-            return methods.ToImmutableHashSet();
+            return methods;
         }
     }
 }

@@ -22,10 +22,10 @@ internal class BaseTypeCache
 {
     public static BaseTypeCache Instance { get; } = new BaseTypeCache();
 
-    private readonly ConcurrentDictionary<string, TypeDefinition> _baseTypes = new();
+    private readonly ConcurrentDictionary<TypeDefinition, TypeDefinition> _baseTypes = new();
 
     public TypeDefinition GetBaseType(TypeDefinition type)
-        => _baseTypes.GetOrAdd(type.FullName, GetBaseTypeDefinitionUncached(type));
+        => _baseTypes.GetOrAdd(type, GetBaseTypeDefinitionUncached(type));
 
     private static TypeDefinition GetBaseTypeDefinitionUncached(TypeDefinition type) => type.BaseType?.Resolve();
 }
