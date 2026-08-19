@@ -15,6 +15,7 @@
 using Google.Cloud.Tools.VersionCompat.CecilUtils;
 using Mono.Cecil;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -240,20 +241,15 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 else
                 {
                     // Presence/visibility changes.
-                    if (inO && o.IsExported())
+                    if (inO && o.IsExported() && o.IsDefinedInType(_o))
                     {
-                        // A removed constructor is considered a breaking change, but for methods
-                        // we first check if there's a like method inherited from up the tree.
-                        if (isCtor || !LikeMethodInheritedFromAncestor(descendentType: _n, referenceMethod: o))
-                        {
-                            yield return inN ?
-                                Diff.Major(C(Cause.MethodMadeNotExported, Cause.CtorMadeNotExported), $"{prefix} made non-public.") :
-                                Diff.Major(C(Cause.MethodRemoved, Cause.CtorRemoved), $"{prefix} removed.");
-                        }
+                        yield return inN ?
+                            Diff.Major(C(Cause.MethodMadeNotExported, Cause.CtorMadeNotExported), $"{prefix} made non-public.") :
+                            Diff.Major(C(Cause.MethodRemoved, Cause.CtorRemoved), $"{prefix} removed.");
                     }
-                    else if (inN && n.IsExported())
+                    else if (inN && n.IsExported() && n.IsDefinedInType(_n))
                     {
-                        var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, FormattableString, Diff>)Diff.Minor : Diff.Major;
+                        var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, FormattableString, Diff>) Diff.Minor : Diff.Major;
                         yield return inO ?
                             diff(C(Cause.MethodMadeExported, Cause.CtorMadeExported), $"{prefix} made public.") :
                             diff(C(Cause.MethodAdded, Cause.CtorAdded), $"{prefix} added.");
@@ -262,41 +258,12 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             }
 
             Cause C(Cause methodCause, Cause ctorCause) => isCtor ? ctorCause : methodCause;
-
-            static bool LikeMethodInheritedFromAncestor(TypeDefinition descendentType, MethodDefinition referenceMethod)
-            {
-                // Look up the ancestor tree until we find a like implementation to this method
-                var baseType = descendentType.BaseType?.Resolve();
-                while (baseType != null)
-                {
-                    // GetMethod here only checks for a subset of the info we need, so
-                    // also check visibility, static, and more.
-                    if (MetadataResolver.GetMethod(baseType.Methods, referenceMethod) is MethodDefinition baseTypeMethod
-                        && AreLikeMethods(referenceMethod, baseTypeMethod))
-                    {
-                        return true;
-                    }
-
-                    baseType = baseType.BaseType?.Resolve();
-                }
-
-                return false;
-
-                // This only supplements what is missing from MetadataResolver.GetMethod to ascertain if
-                // the two methods are definitionally like, and should not be used separately.
-                static bool AreLikeMethods(MethodDefinition referenceMethod, MethodDefinition likeMethod)
-                    => referenceMethod.IsPublic == likeMethod.IsPublic
-                        && referenceMethod.IsFamily == likeMethod.IsFamily
-                        && referenceMethod.IsStatic == likeMethod.IsStatic
-                        // We only care that the like method is sealed if the reference method is too.
-                        && (referenceMethod.IsVirtual ? likeMethod.IsVirtual : true);
-            }
         }
 
         public IEnumerable<Diff> Ctors(TypeType typeType) => MethodsCtors(typeType, isCtor: true, t => t.InstanceCtors());
 
         public IEnumerable<Diff> Methods(TypeType typeType) =>
-            MethodsCtors(typeType, isCtor: false, t => t.Methods.Where(x => !x.IsGetter && !x.IsSetter && !x.IsConstructor));
+            MethodsCtors(typeType, isCtor: false, t => t.ExportedMethods());
 
         public IEnumerable<Diff> Properties(TypeType typeType)
         {

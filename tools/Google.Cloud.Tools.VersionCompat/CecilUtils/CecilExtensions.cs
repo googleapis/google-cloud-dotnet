@@ -15,6 +15,7 @@
 using Mono.Cecil;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 
 namespace Google.Cloud.Tools.VersionCompat.CecilUtils
@@ -33,6 +34,26 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 
         public static bool IsExported(this PropertyDefinition prop) =>
             (prop.GetMethod?.IsExported() ?? false) || (prop.SetMethod?.IsExported() ?? false);
+
+        public static IImmutableSet<MethodDefinition> ExportedMethods(this TypeDefinition type)
+        {
+            var methods = new HashSet<MethodDefinition>(SameMethodComparer.Instance);
+
+            var baseType = type;
+
+            // Exclude methods from object to avoid clutter
+            while (baseType is not null && !baseType.IsObject())
+            {
+                methods = [.. methods.Union(baseType.Methods.Where(x => !x.IsGetter && !x.IsSetter && !x.IsConstructor), SameMethodComparer.Instance)];
+
+                baseType = baseType?.BaseType?.Resolve();
+            }
+
+            return methods.ToImmutableHashSet();
+        }
+
+        public static bool IsDefinedInType(this MethodDefinition method, TypeDefinition type)
+            => method.DeclaringType.FullName == type.FullName;
 
         public static IEnumerable<TypeDefinition> WithNested(this IEnumerable<TypeDefinition> types) =>
             types.SelectMany(x => x.NestedTypes.WithNested().Prepend(x));
