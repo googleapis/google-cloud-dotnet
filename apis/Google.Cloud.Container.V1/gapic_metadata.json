@@ -22,6 +22,12 @@
                 "CheckAutopilotCompatibilityAsync"
               ]
             },
+            "CompleteControlPlaneUpgrade": {
+              "methods": [
+                "CompleteControlPlaneUpgrade",
+                "CompleteControlPlaneUpgradeAsync"
+              ]
+            },
             "CompleteIPRotation": {
               "methods": [
                 "CompleteIPRotation",

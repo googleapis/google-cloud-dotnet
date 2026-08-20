@@ -450,6 +450,7 @@ namespace GoogleCSharpSnippets
                 NodeDrainConfig = new NodePool.Types.NodeDrainConfig(),
                 ConsolidationDelay = new Duration(),
                 TaintConfig = new TaintConfig(),
+                MaintenancePolicy = new NodePool.Types.NodePoolMaintenancePolicy(),
             };
             // Make the request
             Operation response = clusterManagerClient.UpdateNodePool(request);
@@ -505,6 +506,7 @@ namespace GoogleCSharpSnippets
                 NodeDrainConfig = new NodePool.Types.NodeDrainConfig(),
                 ConsolidationDelay = new Duration(),
                 TaintConfig = new TaintConfig(),
+                MaintenancePolicy = new NodePool.Types.NodePoolMaintenancePolicy(),
             };
             // Make the request
             Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
@@ -2906,6 +2908,41 @@ namespace GoogleCSharpSnippets
             string name = "";
             // Make the request
             NodePoolUpgradeInfo response = await clusterManagerClient.FetchNodePoolUpgradeInfoAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CompleteControlPlaneUpgrade</summary>
+        public void CompleteControlPlaneUpgradeRequestObject()
+        {
+            // Snippet: CompleteControlPlaneUpgrade(CompleteControlPlaneUpgradeRequest, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            CompleteControlPlaneUpgradeRequest request = new CompleteControlPlaneUpgradeRequest
+            {
+                Name = "",
+                Version = "",
+            };
+            // Make the request
+            Operation response = clusterManagerClient.CompleteControlPlaneUpgrade(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CompleteControlPlaneUpgradeAsync</summary>
+        public async Task CompleteControlPlaneUpgradeRequestObjectAsync()
+        {
+            // Snippet: CompleteControlPlaneUpgradeAsync(CompleteControlPlaneUpgradeRequest, CallSettings)
+            // Additional: CompleteControlPlaneUpgradeAsync(CompleteControlPlaneUpgradeRequest, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            CompleteControlPlaneUpgradeRequest request = new CompleteControlPlaneUpgradeRequest
+            {
+                Name = "",
+                Version = "",
+            };
+            // Make the request
+            Operation response = await clusterManagerClient.CompleteControlPlaneUpgradeAsync(request);
             // End snippet
         }
     }

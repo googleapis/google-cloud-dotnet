@@ -82,6 +82,7 @@ namespace Google.Cloud.Container.V1
             CheckAutopilotCompatibilitySettings = existing.CheckAutopilotCompatibilitySettings;
             FetchClusterUpgradeInfoSettings = existing.FetchClusterUpgradeInfoSettings;
             FetchNodePoolUpgradeInfoSettings = existing.FetchNodePoolUpgradeInfoSettings;
+            CompleteControlPlaneUpgradeSettings = existing.CompleteControlPlaneUpgradeSettings;
             OnCopy(existing);
         }
 
@@ -607,6 +608,19 @@ namespace Google.Cloud.Container.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings FetchNodePoolUpgradeInfoSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ClusterManagerClient.CompleteControlPlaneUpgrade</c> and
+        /// <c>ClusterManagerClient.CompleteControlPlaneUpgradeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CompleteControlPlaneUpgradeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ClusterManagerSettings"/> object.</returns>
@@ -5444,6 +5458,36 @@ namespace Google.Cloud.Container.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<NodePoolUpgradeInfo> FetchNodePoolUpgradeInfoAsync(string name, st::CancellationToken cancellationToken) =>
             FetchNodePoolUpgradeInfoAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// CompleteControlPlaneUpgrade completes the rollback-safe upgrade by
+        /// performing the step two upgrade for a specific cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Operation CompleteControlPlaneUpgrade(CompleteControlPlaneUpgradeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// CompleteControlPlaneUpgrade completes the rollback-safe upgrade by
+        /// performing the step two upgrade for a specific cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> CompleteControlPlaneUpgradeAsync(CompleteControlPlaneUpgradeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// CompleteControlPlaneUpgrade completes the rollback-safe upgrade by
+        /// performing the step two upgrade for a specific cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Operation> CompleteControlPlaneUpgradeAsync(CompleteControlPlaneUpgradeRequest request, st::CancellationToken cancellationToken) =>
+            CompleteControlPlaneUpgradeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ClusterManager client wrapper implementation, for convenient use.</summary>
@@ -5523,6 +5567,8 @@ namespace Google.Cloud.Container.V1
         private readonly gaxgrpc::ApiCall<FetchClusterUpgradeInfoRequest, ClusterUpgradeInfo> _callFetchClusterUpgradeInfo;
 
         private readonly gaxgrpc::ApiCall<FetchNodePoolUpgradeInfoRequest, NodePoolUpgradeInfo> _callFetchNodePoolUpgradeInfo;
+
+        private readonly gaxgrpc::ApiCall<CompleteControlPlaneUpgradeRequest, Operation> _callCompleteControlPlaneUpgrade;
 
         /// <summary>
         /// Constructs a client wrapper for the ClusterManager service, with the specified gRPC client and settings.
@@ -5649,6 +5695,9 @@ namespace Google.Cloud.Container.V1
             _callFetchNodePoolUpgradeInfo = clientHelper.BuildApiCall<FetchNodePoolUpgradeInfoRequest, NodePoolUpgradeInfo>("FetchNodePoolUpgradeInfo", grpcClient.FetchNodePoolUpgradeInfoAsync, grpcClient.FetchNodePoolUpgradeInfo, effectiveSettings.FetchNodePoolUpgradeInfoSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callFetchNodePoolUpgradeInfo);
             Modify_FetchNodePoolUpgradeInfoApiCall(ref _callFetchNodePoolUpgradeInfo);
+            _callCompleteControlPlaneUpgrade = clientHelper.BuildApiCall<CompleteControlPlaneUpgradeRequest, Operation>("CompleteControlPlaneUpgrade", grpcClient.CompleteControlPlaneUpgradeAsync, grpcClient.CompleteControlPlaneUpgrade, effectiveSettings.CompleteControlPlaneUpgradeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCompleteControlPlaneUpgrade);
+            Modify_CompleteControlPlaneUpgradeApiCall(ref _callCompleteControlPlaneUpgrade);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5726,6 +5775,8 @@ namespace Google.Cloud.Container.V1
 
         partial void Modify_FetchNodePoolUpgradeInfoApiCall(ref gaxgrpc::ApiCall<FetchNodePoolUpgradeInfoRequest, NodePoolUpgradeInfo> call);
 
+        partial void Modify_CompleteControlPlaneUpgradeApiCall(ref gaxgrpc::ApiCall<CompleteControlPlaneUpgradeRequest, Operation> call);
+
         partial void OnConstruction(ClusterManager.ClusterManagerClient grpcClient, ClusterManagerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ClusterManager client</summary>
@@ -5802,6 +5853,8 @@ namespace Google.Cloud.Container.V1
         partial void Modify_FetchClusterUpgradeInfoRequest(ref FetchClusterUpgradeInfoRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FetchNodePoolUpgradeInfoRequest(ref FetchNodePoolUpgradeInfoRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CompleteControlPlaneUpgradeRequest(ref CompleteControlPlaneUpgradeRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists all clusters owned by a project in either the specified zone or all
@@ -6733,6 +6786,32 @@ namespace Google.Cloud.Container.V1
         {
             Modify_FetchNodePoolUpgradeInfoRequest(ref request, ref callSettings);
             return _callFetchNodePoolUpgradeInfo.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// CompleteControlPlaneUpgrade completes the rollback-safe upgrade by
+        /// performing the step two upgrade for a specific cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Operation CompleteControlPlaneUpgrade(CompleteControlPlaneUpgradeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CompleteControlPlaneUpgradeRequest(ref request, ref callSettings);
+            return _callCompleteControlPlaneUpgrade.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// CompleteControlPlaneUpgrade completes the rollback-safe upgrade by
+        /// performing the step two upgrade for a specific cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Operation> CompleteControlPlaneUpgradeAsync(CompleteControlPlaneUpgradeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CompleteControlPlaneUpgradeRequest(ref request, ref callSettings);
+            return _callCompleteControlPlaneUpgrade.Async(request, callSettings);
         }
     }
 
