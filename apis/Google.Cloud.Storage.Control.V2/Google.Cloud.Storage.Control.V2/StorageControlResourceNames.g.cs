@@ -2895,6 +2895,18 @@ namespace Google.Cloud.Storage.Control.V2
         }
     }
 
+    public partial class DisableRapidCacheRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::RapidCacheName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::RapidCacheName RapidCacheName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::RapidCacheName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetRapidCacheRequest
     {
         /// <summary>

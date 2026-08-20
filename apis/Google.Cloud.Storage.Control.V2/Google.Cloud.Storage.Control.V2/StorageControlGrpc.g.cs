@@ -124,6 +124,8 @@ namespace Google.Cloud.Storage.Control.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.UpdateRapidCacheRequest> __Marshaller_google_storage_control_v2_UpdateRapidCacheRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.UpdateRapidCacheRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.DisableRapidCacheRequest> __Marshaller_google_storage_control_v2_DisableRapidCacheRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.DisableRapidCacheRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.GetRapidCacheRequest> __Marshaller_google_storage_control_v2_GetRapidCacheRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.GetRapidCacheRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.RapidCache> __Marshaller_google_storage_control_v2_RapidCache = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.RapidCache.Parser));
@@ -346,6 +348,14 @@ namespace Google.Cloud.Storage.Control.V2 {
         __ServiceName,
         "UpdateRapidCache",
         __Marshaller_google_storage_control_v2_UpdateRapidCacheRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.DisableRapidCacheRequest, global::Google.LongRunning.Operation> __Method_DisableRapidCache = new grpc::Method<global::Google.Cloud.Storage.Control.V2.DisableRapidCacheRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DisableRapidCache",
+        __Marshaller_google_storage_control_v2_DisableRapidCacheRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -755,6 +765,18 @@ namespace Google.Cloud.Storage.Control.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateRapidCache(global::Google.Cloud.Storage.Control.V2.UpdateRapidCacheRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Disables a Rapid Cache instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DisableRapidCache(global::Google.Cloud.Storage.Control.V2.DisableRapidCacheRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2076,6 +2098,54 @@ namespace Google.Cloud.Storage.Control.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateRapidCache, null, options, request);
       }
       /// <summary>
+      /// Disables a Rapid Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DisableRapidCache(global::Google.Cloud.Storage.Control.V2.DisableRapidCacheRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisableRapidCache(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disables a Rapid Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DisableRapidCache(global::Google.Cloud.Storage.Control.V2.DisableRapidCacheRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DisableRapidCache, null, options, request);
+      }
+      /// <summary>
+      /// Disables a Rapid Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisableRapidCacheAsync(global::Google.Cloud.Storage.Control.V2.DisableRapidCacheRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisableRapidCacheAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disables a Rapid Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisableRapidCacheAsync(global::Google.Cloud.Storage.Control.V2.DisableRapidCacheRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DisableRapidCache, null, options, request);
+      }
+      /// <summary>
       /// Gets a Rapid Cache instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -3018,6 +3088,7 @@ namespace Google.Cloud.Storage.Control.V2 {
           .AddMethod(__Method_ListAnywhereCaches, serviceImpl.ListAnywhereCaches)
           .AddMethod(__Method_CreateRapidCache, serviceImpl.CreateRapidCache)
           .AddMethod(__Method_UpdateRapidCache, serviceImpl.UpdateRapidCache)
+          .AddMethod(__Method_DisableRapidCache, serviceImpl.DisableRapidCache)
           .AddMethod(__Method_GetRapidCache, serviceImpl.GetRapidCache)
           .AddMethod(__Method_ListRapidCaches, serviceImpl.ListRapidCaches)
           .AddMethod(__Method_GetProjectIntelligenceConfig, serviceImpl.GetProjectIntelligenceConfig)
@@ -3065,6 +3136,7 @@ namespace Google.Cloud.Storage.Control.V2 {
       serviceBinder.AddMethod(__Method_ListAnywhereCaches, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest, global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse>(serviceImpl.ListAnywhereCaches));
       serviceBinder.AddMethod(__Method_CreateRapidCache, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.CreateRapidCacheRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateRapidCache));
       serviceBinder.AddMethod(__Method_UpdateRapidCache, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.UpdateRapidCacheRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateRapidCache));
+      serviceBinder.AddMethod(__Method_DisableRapidCache, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.DisableRapidCacheRequest, global::Google.LongRunning.Operation>(serviceImpl.DisableRapidCache));
       serviceBinder.AddMethod(__Method_GetRapidCache, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetRapidCacheRequest, global::Google.Cloud.Storage.Control.V2.RapidCache>(serviceImpl.GetRapidCache));
       serviceBinder.AddMethod(__Method_ListRapidCaches, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.ListRapidCachesRequest, global::Google.Cloud.Storage.Control.V2.ListRapidCachesResponse>(serviceImpl.ListRapidCaches));
       serviceBinder.AddMethod(__Method_GetProjectIntelligenceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetProjectIntelligenceConfigRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceConfig>(serviceImpl.GetProjectIntelligenceConfig));

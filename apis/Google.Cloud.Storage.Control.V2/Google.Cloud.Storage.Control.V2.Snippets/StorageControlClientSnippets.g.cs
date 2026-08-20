@@ -2962,6 +2962,191 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for DisableRapidCache</summary>
+        public void DisableRapidCacheRequestObject()
+        {
+            // Snippet: DisableRapidCache(DisableRapidCacheRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::DisableRapidCacheRequest request = new gcscv::DisableRapidCacheRequest
+            {
+                RapidCacheName = gcscv::RapidCacheName.FromProjectBucketRapidCache("[PROJECT]", "[BUCKET]", "[RAPID_CACHE]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> response = storageControlClient.DisableRapidCache(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> retrievedResponse = storageControlClient.PollOnceDisableRapidCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableRapidCacheAsync</summary>
+        public async Task DisableRapidCacheRequestObjectAsync()
+        {
+            // Snippet: DisableRapidCacheAsync(DisableRapidCacheRequest, CallSettings)
+            // Additional: DisableRapidCacheAsync(DisableRapidCacheRequest, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::DisableRapidCacheRequest request = new gcscv::DisableRapidCacheRequest
+            {
+                RapidCacheName = gcscv::RapidCacheName.FromProjectBucketRapidCache("[PROJECT]", "[BUCKET]", "[RAPID_CACHE]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> response = await storageControlClient.DisableRapidCacheAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> retrievedResponse = await storageControlClient.PollOnceDisableRapidCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableRapidCache</summary>
+        public void DisableRapidCache()
+        {
+            // Snippet: DisableRapidCache(string, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/rapidCaches/[RAPID_CACHE]";
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> response = storageControlClient.DisableRapidCache(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> retrievedResponse = storageControlClient.PollOnceDisableRapidCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableRapidCacheAsync</summary>
+        public async Task DisableRapidCacheAsync()
+        {
+            // Snippet: DisableRapidCacheAsync(string, CallSettings)
+            // Additional: DisableRapidCacheAsync(string, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/rapidCaches/[RAPID_CACHE]";
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> response = await storageControlClient.DisableRapidCacheAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> retrievedResponse = await storageControlClient.PollOnceDisableRapidCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableRapidCache</summary>
+        public void DisableRapidCacheResourceNames()
+        {
+            // Snippet: DisableRapidCache(RapidCacheName, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::RapidCacheName name = gcscv::RapidCacheName.FromProjectBucketRapidCache("[PROJECT]", "[BUCKET]", "[RAPID_CACHE]");
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> response = storageControlClient.DisableRapidCache(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> retrievedResponse = storageControlClient.PollOnceDisableRapidCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableRapidCacheAsync</summary>
+        public async Task DisableRapidCacheResourceNamesAsync()
+        {
+            // Snippet: DisableRapidCacheAsync(RapidCacheName, CallSettings)
+            // Additional: DisableRapidCacheAsync(RapidCacheName, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::RapidCacheName name = gcscv::RapidCacheName.FromProjectBucketRapidCache("[PROJECT]", "[BUCKET]", "[RAPID_CACHE]");
+            // Make the request
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> response = await storageControlClient.DisableRapidCacheAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcscv::RapidCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcscv::RapidCache, gcscv::DisableRapidCacheMetadata> retrievedResponse = await storageControlClient.PollOnceDisableRapidCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcscv::RapidCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetRapidCache</summary>
         public void GetRapidCacheRequestObject()
         {

@@ -5979,6 +5979,293 @@
       ]
     },
     {
+      "regionTag": "storage_v2_generated_StorageControl_DisableRapidCache_sync",
+      "title": "DisableRapidCacheRequestObject",
+      "description": "Snippet for DisableRapidCache",
+      "file": "StorageControlClient.DisableRapidCacheRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableRapidCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DisableRapidCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.DisableRapidCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.DisableRapidCacheMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DisableRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.DisableRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DisableRapidCache_async",
+      "title": "DisableRapidCacheRequestObjectAsync",
+      "description": "Snippet for DisableRapidCacheAsync",
+      "file": "StorageControlClient.DisableRapidCacheRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableRapidCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DisableRapidCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.DisableRapidCacheRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.DisableRapidCacheMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DisableRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.DisableRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DisableRapidCache_sync_flattened",
+      "title": "DisableRapidCache",
+      "description": "Snippet for DisableRapidCache",
+      "file": "StorageControlClient.DisableRapidCacheSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableRapidCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DisableRapidCache",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.DisableRapidCacheMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DisableRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.DisableRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DisableRapidCache_async_flattened",
+      "title": "DisableRapidCacheAsync",
+      "description": "Snippet for DisableRapidCacheAsync",
+      "file": "StorageControlClient.DisableRapidCacheAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableRapidCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DisableRapidCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.DisableRapidCacheMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DisableRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.DisableRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DisableRapidCache_sync_flattened_resourceNames",
+      "title": "DisableRapidCacheResourceNames",
+      "description": "Snippet for DisableRapidCache",
+      "file": "StorageControlClient.DisableRapidCacheResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableRapidCache",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DisableRapidCache",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.RapidCacheName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.DisableRapidCacheMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DisableRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.DisableRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DisableRapidCache_async_flattened_resourceNames",
+      "title": "DisableRapidCacheResourceNamesAsync",
+      "description": "Snippet for DisableRapidCacheAsync",
+      "file": "StorageControlClient.DisableRapidCacheResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableRapidCacheAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DisableRapidCacheAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.RapidCacheName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.RapidCache, Google.Cloud.Storage.Control.V2.DisableRapidCacheMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DisableRapidCache",
+          "fullName": "google.storage.control.v2.StorageControl.DisableRapidCache",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "storage_v2_generated_StorageControl_GetRapidCache_sync",
       "title": "GetRapidCacheRequestObject",
       "description": "Snippet for GetRapidCache",

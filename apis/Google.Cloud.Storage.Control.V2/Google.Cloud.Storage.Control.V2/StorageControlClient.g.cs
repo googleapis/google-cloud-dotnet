@@ -76,6 +76,8 @@ namespace Google.Cloud.Storage.Control.V2
             CreateRapidCacheOperationsSettings = existing.CreateRapidCacheOperationsSettings.Clone();
             UpdateRapidCacheSettings = existing.UpdateRapidCacheSettings;
             UpdateRapidCacheOperationsSettings = existing.UpdateRapidCacheOperationsSettings.Clone();
+            DisableRapidCacheSettings = existing.DisableRapidCacheSettings;
+            DisableRapidCacheOperationsSettings = existing.DisableRapidCacheOperationsSettings.Clone();
             GetRapidCacheSettings = existing.GetRapidCacheSettings;
             ListRapidCachesSettings = existing.ListRapidCachesSettings;
             GetProjectIntelligenceConfigSettings = existing.GetProjectIntelligenceConfigSettings;
@@ -605,6 +607,36 @@ namespace Google.Cloud.Storage.Control.V2
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateRapidCacheOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.DisableRapidCache</c> and <c>StorageControlClient.DisableRapidCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DisableRapidCacheSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>StorageControlClient.DisableRapidCache</c> and
+        /// <c>StorageControlClient.DisableRapidCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DisableRapidCacheOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -4033,6 +4065,144 @@ namespace Google.Cloud.Storage.Control.V2
             UpdateRapidCacheAsync(rapidCache, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Disables a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RapidCache, DisableRapidCacheMetadata> DisableRapidCache(DisableRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Disables a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, DisableRapidCacheMetadata>> DisableRapidCacheAsync(DisableRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Disables a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, DisableRapidCacheMetadata>> DisableRapidCacheAsync(DisableRapidCacheRequest request, st::CancellationToken cancellationToken) =>
+            DisableRapidCacheAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DisableRapidCache</c>.</summary>
+        public virtual lro::OperationsClient DisableRapidCacheOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DisableRapidCache</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RapidCache, DisableRapidCacheMetadata> PollOnceDisableRapidCache(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RapidCache, DisableRapidCacheMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DisableRapidCacheOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DisableRapidCache</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, DisableRapidCacheMetadata>> PollOnceDisableRapidCacheAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RapidCache, DisableRapidCacheMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DisableRapidCacheOperationsClient, callSettings);
+
+        /// <summary>
+        /// Disables a Rapid Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RapidCache, DisableRapidCacheMetadata> DisableRapidCache(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableRapidCache(new DisableRapidCacheRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables a Rapid Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, DisableRapidCacheMetadata>> DisableRapidCacheAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableRapidCacheAsync(new DisableRapidCacheRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables a Rapid Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, DisableRapidCacheMetadata>> DisableRapidCacheAsync(string name, st::CancellationToken cancellationToken) =>
+            DisableRapidCacheAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Disables a Rapid Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RapidCache, DisableRapidCacheMetadata> DisableRapidCache(RapidCacheName name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableRapidCache(new DisableRapidCacheRequest
+            {
+                RapidCacheName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables a Rapid Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, DisableRapidCacheMetadata>> DisableRapidCacheAsync(RapidCacheName name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableRapidCacheAsync(new DisableRapidCacheRequest
+            {
+                RapidCacheName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables a Rapid Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/rapidCaches/{rapid_cache}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RapidCache, DisableRapidCacheMetadata>> DisableRapidCacheAsync(RapidCacheName name, st::CancellationToken cancellationToken) =>
+            DisableRapidCacheAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets a Rapid Cache instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6560,6 +6730,8 @@ namespace Google.Cloud.Storage.Control.V2
 
         private readonly gaxgrpc::ApiCall<UpdateRapidCacheRequest, lro::Operation> _callUpdateRapidCache;
 
+        private readonly gaxgrpc::ApiCall<DisableRapidCacheRequest, lro::Operation> _callDisableRapidCache;
+
         private readonly gaxgrpc::ApiCall<GetRapidCacheRequest, RapidCache> _callGetRapidCache;
 
         private readonly gaxgrpc::ApiCall<ListRapidCachesRequest, ListRapidCachesResponse> _callListRapidCaches;
@@ -6615,6 +6787,7 @@ namespace Google.Cloud.Storage.Control.V2
             UpdateAnywhereCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAnywhereCacheOperationsSettings, logger);
             CreateRapidCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRapidCacheOperationsSettings, logger);
             UpdateRapidCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRapidCacheOperationsSettings, logger);
+            DisableRapidCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DisableRapidCacheOperationsSettings, logger);
             _callCreateFolder = clientHelper.BuildApiCall<CreateFolderRequest, Folder>("CreateFolder", grpcClient.CreateFolderAsync, grpcClient.CreateFolder, effectiveSettings.CreateFolderSettings).WithGoogleRequestParam("bucket", request => request.Parent);
             Modify_ApiCall(ref _callCreateFolder);
             Modify_CreateFolderApiCall(ref _callCreateFolder);
@@ -6678,6 +6851,9 @@ namespace Google.Cloud.Storage.Control.V2
             _callUpdateRapidCache = clientHelper.BuildApiCall<UpdateRapidCacheRequest, lro::Operation>("UpdateRapidCache", grpcClient.UpdateRapidCacheAsync, grpcClient.UpdateRapidCache, effectiveSettings.UpdateRapidCacheSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateRapidCacheRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.RapidCache?.Name));
             Modify_ApiCall(ref _callUpdateRapidCache);
             Modify_UpdateRapidCacheApiCall(ref _callUpdateRapidCache);
+            _callDisableRapidCache = clientHelper.BuildApiCall<DisableRapidCacheRequest, lro::Operation>("DisableRapidCache", grpcClient.DisableRapidCacheAsync, grpcClient.DisableRapidCache, effectiveSettings.DisableRapidCacheSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<DisableRapidCacheRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
+            Modify_ApiCall(ref _callDisableRapidCache);
+            Modify_DisableRapidCacheApiCall(ref _callDisableRapidCache);
             _callGetRapidCache = clientHelper.BuildApiCall<GetRapidCacheRequest, RapidCache>("GetRapidCache", grpcClient.GetRapidCacheAsync, grpcClient.GetRapidCache, effectiveSettings.GetRapidCacheSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetRapidCacheRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
             Modify_ApiCall(ref _callGetRapidCache);
             Modify_GetRapidCacheApiCall(ref _callGetRapidCache);
@@ -6776,6 +6952,8 @@ namespace Google.Cloud.Storage.Control.V2
 
         partial void Modify_UpdateRapidCacheApiCall(ref gaxgrpc::ApiCall<UpdateRapidCacheRequest, lro::Operation> call);
 
+        partial void Modify_DisableRapidCacheApiCall(ref gaxgrpc::ApiCall<DisableRapidCacheRequest, lro::Operation> call);
+
         partial void Modify_GetRapidCacheApiCall(ref gaxgrpc::ApiCall<GetRapidCacheRequest, RapidCache> call);
 
         partial void Modify_ListRapidCachesApiCall(ref gaxgrpc::ApiCall<ListRapidCachesRequest, ListRapidCachesResponse> call);
@@ -6856,6 +7034,8 @@ namespace Google.Cloud.Storage.Control.V2
         partial void Modify_CreateRapidCacheRequest(ref CreateRapidCacheRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateRapidCacheRequest(ref UpdateRapidCacheRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DisableRapidCacheRequest(ref DisableRapidCacheRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRapidCacheRequest(ref GetRapidCacheRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -7607,6 +7787,33 @@ namespace Google.Cloud.Storage.Control.V2
         {
             Modify_UpdateRapidCacheRequest(ref request, ref callSettings);
             return new lro::Operation<RapidCache, UpdateRapidCacheMetadata>(await _callUpdateRapidCache.Async(request, callSettings).ConfigureAwait(false), UpdateRapidCacheOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DisableRapidCache</c>.</summary>
+        public override lro::OperationsClient DisableRapidCacheOperationsClient { get; }
+
+        /// <summary>
+        /// Disables a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RapidCache, DisableRapidCacheMetadata> DisableRapidCache(DisableRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DisableRapidCacheRequest(ref request, ref callSettings);
+            return new lro::Operation<RapidCache, DisableRapidCacheMetadata>(_callDisableRapidCache.Sync(request, callSettings), DisableRapidCacheOperationsClient);
+        }
+
+        /// <summary>
+        /// Disables a Rapid Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RapidCache, DisableRapidCacheMetadata>> DisableRapidCacheAsync(DisableRapidCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DisableRapidCacheRequest(ref request, ref callSettings);
+            return new lro::Operation<RapidCache, DisableRapidCacheMetadata>(await _callDisableRapidCache.Async(request, callSettings).ConfigureAwait(false), DisableRapidCacheOperationsClient);
         }
 
         /// <summary>
