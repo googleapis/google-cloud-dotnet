@@ -349,6 +349,9 @@ namespace Google.Developers.DeveloperKnowledge.V1
         /// Required. Specifies the name of the document to retrieve.
         /// Format: `documents/{uri_without_scheme}`
         /// Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+        /// 
+        /// The name must not exceed 500 characters; values longer than 500 characters
+        /// will result in an `INVALID_ARGUMENT` error.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -365,6 +368,9 @@ namespace Google.Developers.DeveloperKnowledge.V1
         /// Required. Specifies the name of the document to retrieve.
         /// Format: `documents/{uri_without_scheme}`
         /// Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+        /// 
+        /// The name must not exceed 500 characters; values longer than 500 characters
+        /// will result in an `INVALID_ARGUMENT` error.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -381,6 +387,9 @@ namespace Google.Developers.DeveloperKnowledge.V1
         /// Required. Specifies the name of the document to retrieve.
         /// Format: `documents/{uri_without_scheme}`
         /// Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+        /// 
+        /// The name must not exceed 500 characters; values longer than 500 characters
+        /// will result in an `INVALID_ARGUMENT` error.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -394,6 +403,9 @@ namespace Google.Developers.DeveloperKnowledge.V1
         /// Required. Specifies the name of the document to retrieve.
         /// Format: `documents/{uri_without_scheme}`
         /// Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+        /// 
+        /// The name must not exceed 500 characters; values longer than 500 characters
+        /// will result in an `INVALID_ARGUMENT` error.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -410,6 +422,9 @@ namespace Google.Developers.DeveloperKnowledge.V1
         /// Required. Specifies the name of the document to retrieve.
         /// Format: `documents/{uri_without_scheme}`
         /// Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+        /// 
+        /// The name must not exceed 500 characters; values longer than 500 characters
+        /// will result in an `INVALID_ARGUMENT` error.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -426,6 +441,9 @@ namespace Google.Developers.DeveloperKnowledge.V1
         /// Required. Specifies the name of the document to retrieve.
         /// Format: `documents/{uri_without_scheme}`
         /// Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+        /// 
+        /// The name must not exceed 500 characters; values longer than 500 characters
+        /// will result in an `INVALID_ARGUMENT` error.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

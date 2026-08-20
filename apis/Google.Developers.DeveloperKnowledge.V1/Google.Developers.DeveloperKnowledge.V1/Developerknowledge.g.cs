@@ -40,65 +40,65 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
             "FGRvY3VtZW50cy97ZG9jdW1lbnR9Kglkb2N1bWVudHMyCGRvY3VtZW50IncK",
             "G1NlYXJjaERvY3VtZW50Q2h1bmtzUmVxdWVzdBISCgVxdWVyeRgBIAEoCUID",
             "4EECEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyAB",
-            "KAlCA+BBARITCgZmaWx0ZXIYBCABKAlCA+BBASJ8ChxTZWFyY2hEb2N1bWVu",
+            "KAlCA+BBARITCgZmaWx0ZXIYBCABKAlCA+BBASJ3ChxTZWFyY2hEb2N1bWVu",
             "dENodW5rc1Jlc3BvbnNlEj4KB3Jlc3VsdHMYASADKAsyLS5nb29nbGUuZGV2",
-            "ZWxvcGVycy5rbm93bGVkZ2UudjEuRG9jdW1lbnRDaHVuaxIcCg9uZXh0X3Bh",
-            "Z2VfdG9rZW4YAiABKAlCA+BBASKXAQoSR2V0RG9jdW1lbnRSZXF1ZXN0EkAK",
-            "BG5hbWUYASABKAlCMuBBAvpBLAoqZGV2ZWxvcGVya25vd2xlZGdlLmdvb2ds",
-            "ZWFwaXMuY29tL0RvY3VtZW50Ej8KBHZpZXcYAiABKA4yLC5nb29nbGUuZGV2",
-            "ZWxvcGVycy5rbm93bGVkZ2UudjEuRG9jdW1lbnRWaWV3QgPgQQEingEKGEJh",
-            "dGNoR2V0RG9jdW1lbnRzUmVxdWVzdBJBCgVuYW1lcxgBIAMoCUIy4EEC+kEs",
-            "CipkZXZlbG9wZXJrbm93bGVkZ2UuZ29vZ2xlYXBpcy5jb20vRG9jdW1lbnQS",
-            "PwoEdmlldxgCIAEoDjIsLmdvb2dsZS5kZXZlbG9wZXJzLmtub3dsZWRnZS52",
-            "MS5Eb2N1bWVudFZpZXdCA+BBASJYChlCYXRjaEdldERvY3VtZW50c1Jlc3Bv",
-            "bnNlEjsKCWRvY3VtZW50cxgBIAMoCzIoLmdvb2dsZS5kZXZlbG9wZXJzLmtu",
-            "b3dsZWRnZS52MS5Eb2N1bWVudCIoChJBbnN3ZXJRdWVyeVJlcXVlc3QSEgoF",
-            "cXVlcnkYASABKAlCA+BBAiJNChNBbnN3ZXJRdWVyeVJlc3BvbnNlEjYKBmFu",
-            "c3dlchgBIAEoCzImLmdvb2dsZS5kZXZlbG9wZXJzLmtub3dsZWRnZS52MS5B",
-            "bnN3ZXIi2wQKBkFuc3dlchITCgthbnN3ZXJfdGV4dBgBIAEoCRJNCgljaXRh",
-            "dGlvbnMYAiADKAsyNS5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEu",
-            "QW5zd2VyLkFuc3dlckNpdGF0aW9uQgPgQQMSTwoKcmVmZXJlbmNlcxgDIAMo",
-            "CzI2Lmdvb2dsZS5kZXZlbG9wZXJzLmtub3dsZWRnZS52MS5BbnN3ZXIuQW5z",
-            "d2VyUmVmZXJlbmNlQgPgQQMajwEKDkFuc3dlckNpdGF0aW9uEhgKC3N0YXJ0",
-            "X2luZGV4GAEgASgFQgPgQQMSFgoJZW5kX2luZGV4GAIgASgFQgPgQQMSSwoH",
-            "c291cmNlcxgDIAMoCzI1Lmdvb2dsZS5kZXZlbG9wZXJzLmtub3dsZWRnZS52",
-            "MS5BbnN3ZXIuQ2l0YXRpb25Tb3VyY2VCA+BBAxouCg5DaXRhdGlvblNvdXJj",
-            "ZRIcCg9yZWZlcmVuY2VfaW5kZXgYASABKAVCA+BBAxp5Cg9BbnN3ZXJSZWZl",
-            "cmVuY2USWwoSZG9jdW1lbnRfcmVmZXJlbmNlGAEgASgLMjguZ29vZ2xlLmRl",
-            "dmVsb3BlcnMua25vd2xlZGdlLnYxLkFuc3dlci5Eb2N1bWVudFJlZmVyZW5j",
-            "ZUID4EEDSABCCQoHY29udGVudBpfChFEb2N1bWVudFJlZmVyZW5jZRJKCg5k",
-            "b2N1bWVudF9jaHVuaxgBIAEoCzItLmdvb2dsZS5kZXZlbG9wZXJzLmtub3ds",
-            "ZWRnZS52MS5Eb2N1bWVudENodW5rQgPgQQMiuwEKDURvY3VtZW50Q2h1bmsS",
-            "QgoGcGFyZW50GAEgASgJQjLgQQP6QSwKKmRldmVsb3Blcmtub3dsZWRnZS5n",
-            "b29nbGVhcGlzLmNvbS9Eb2N1bWVudBIPCgJpZBgCIAEoCUID4EEDEhQKB2Nv",
-            "bnRlbnQYAyABKAlCA+BBAxI/Cghkb2N1bWVudBgEIAEoCzIoLmdvb2dsZS5k",
-            "ZXZlbG9wZXJzLmtub3dsZWRnZS52MS5Eb2N1bWVudEID4EEDKnkKDERvY3Vt",
-            "ZW50VmlldxIdChlET0NVTUVOVF9WSUVXX1VOU1BFQ0lGSUVEEAASFwoTRE9D",
-            "VU1FTlRfVklFV19CQVNJQxABEhYKEkRPQ1VNRU5UX1ZJRVdfRlVMTBACEhkK",
-            "FURPQ1VNRU5UX1ZJRVdfQ09OVEVOVBADMoEGChJEZXZlbG9wZXJLbm93bGVk",
-            "Z2USvQEKFFNlYXJjaERvY3VtZW50Q2h1bmtzEjsuZ29vZ2xlLmRldmVsb3Bl",
-            "cnMua25vd2xlZGdlLnYxLlNlYXJjaERvY3VtZW50Q2h1bmtzUmVxdWVzdBo8",
-            "Lmdvb2dsZS5kZXZlbG9wZXJzLmtub3dsZWRnZS52MS5TZWFyY2hEb2N1bWVu",
-            "dENodW5rc1Jlc3BvbnNlIiqC0+STAiQSIi92MS9kb2N1bWVudHM6c2VhcmNo",
-            "RG9jdW1lbnRDaHVua3MSkwEKC0dldERvY3VtZW50EjIuZ29vZ2xlLmRldmVs",
-            "b3BlcnMua25vd2xlZGdlLnYxLkdldERvY3VtZW50UmVxdWVzdBooLmdvb2ds",
-            "ZS5kZXZlbG9wZXJzLmtub3dsZWRnZS52MS5Eb2N1bWVudCIm2kEEbmFtZYLT",
-            "5JMCGRIXL3YxL3tuYW1lPWRvY3VtZW50cy8qKn0SqAEKEUJhdGNoR2V0RG9j",
-            "dW1lbnRzEjguZ29vZ2xlLmRldmVsb3BlcnMua25vd2xlZGdlLnYxLkJhdGNo",
-            "R2V0RG9jdW1lbnRzUmVxdWVzdBo5Lmdvb2dsZS5kZXZlbG9wZXJzLmtub3ds",
-            "ZWRnZS52MS5CYXRjaEdldERvY3VtZW50c1Jlc3BvbnNlIh6C0+STAhgSFi92",
-            "MS9kb2N1bWVudHM6YmF0Y2hHZXQSkgEKC0Fuc3dlclF1ZXJ5EjIuZ29vZ2xl",
-            "LmRldmVsb3BlcnMua25vd2xlZGdlLnYxLkFuc3dlclF1ZXJ5UmVxdWVzdBoz",
-            "Lmdvb2dsZS5kZXZlbG9wZXJzLmtub3dsZWRnZS52MS5BbnN3ZXJRdWVyeVJl",
-            "c3BvbnNlIhqC0+STAhQiDy92MTphbnN3ZXJRdWVyeToBKhpVykEhZGV2ZWxv",
-            "cGVya25vd2xlZGdlLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKDAgoiY29tLmdvb2ds",
-            "ZS5kZXZlbG9wZXJzLmtub3dsZWRnZS52MUIXRGV2ZWxvcGVyS25vd2xlZGdl",
-            "UHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kZXZlbG9wZXJrbm93bGVk",
-            "Z2UvYXBpdjEvZGV2ZWxvcGVya25vd2xlZGdlcGKqAidHb29nbGUuRGV2ZWxv",
-            "cGVycy5EZXZlbG9wZXJLbm93bGVkZ2UuVjHKAidHb29nbGVcRGV2ZWxvcGVy",
-            "c1xEZXZlbG9wZXJLbm93bGVkZ2VcVjHqAipHb29nbGU6OkRldmVsb3BlcnM6",
-            "OkRldmVsb3Blcktub3dsZWRnZTo6VjFiBnByb3RvMw=="));
+            "ZWxvcGVycy5rbm93bGVkZ2UudjEuRG9jdW1lbnRDaHVuaxIXCg9uZXh0X3Bh",
+            "Z2VfdG9rZW4YAiABKAkilwEKEkdldERvY3VtZW50UmVxdWVzdBJACgRuYW1l",
+            "GAEgASgJQjLgQQL6QSwKKmRldmVsb3Blcmtub3dsZWRnZS5nb29nbGVhcGlz",
+            "LmNvbS9Eb2N1bWVudBI/CgR2aWV3GAIgASgOMiwuZ29vZ2xlLmRldmVsb3Bl",
+            "cnMua25vd2xlZGdlLnYxLkRvY3VtZW50Vmlld0ID4EEBIp4BChhCYXRjaEdl",
+            "dERvY3VtZW50c1JlcXVlc3QSQQoFbmFtZXMYASADKAlCMuBBAvpBLAoqZGV2",
+            "ZWxvcGVya25vd2xlZGdlLmdvb2dsZWFwaXMuY29tL0RvY3VtZW50Ej8KBHZp",
+            "ZXcYAiABKA4yLC5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuRG9j",
+            "dW1lbnRWaWV3QgPgQQEiWAoZQmF0Y2hHZXREb2N1bWVudHNSZXNwb25zZRI7",
+            "Cglkb2N1bWVudHMYASADKAsyKC5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVk",
+            "Z2UudjEuRG9jdW1lbnQiKAoSQW5zd2VyUXVlcnlSZXF1ZXN0EhIKBXF1ZXJ5",
+            "GAEgASgJQgPgQQIiTQoTQW5zd2VyUXVlcnlSZXNwb25zZRI2CgZhbnN3ZXIY",
+            "ASABKAsyJi5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuQW5zd2Vy",
+            "ItsECgZBbnN3ZXISEwoLYW5zd2VyX3RleHQYASABKAkSTQoJY2l0YXRpb25z",
+            "GAIgAygLMjUuZ29vZ2xlLmRldmVsb3BlcnMua25vd2xlZGdlLnYxLkFuc3dl",
+            "ci5BbnN3ZXJDaXRhdGlvbkID4EEDEk8KCnJlZmVyZW5jZXMYAyADKAsyNi5n",
+            "b29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuQW5zd2VyLkFuc3dlclJl",
+            "ZmVyZW5jZUID4EEDGo8BCg5BbnN3ZXJDaXRhdGlvbhIYCgtzdGFydF9pbmRl",
+            "eBgBIAEoBUID4EEDEhYKCWVuZF9pbmRleBgCIAEoBUID4EEDEksKB3NvdXJj",
+            "ZXMYAyADKAsyNS5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuQW5z",
+            "d2VyLkNpdGF0aW9uU291cmNlQgPgQQMaLgoOQ2l0YXRpb25Tb3VyY2USHAoP",
+            "cmVmZXJlbmNlX2luZGV4GAEgASgFQgPgQQMaeQoPQW5zd2VyUmVmZXJlbmNl",
+            "ElsKEmRvY3VtZW50X3JlZmVyZW5jZRgBIAEoCzI4Lmdvb2dsZS5kZXZlbG9w",
+            "ZXJzLmtub3dsZWRnZS52MS5BbnN3ZXIuRG9jdW1lbnRSZWZlcmVuY2VCA+BB",
+            "A0gAQgkKB2NvbnRlbnQaXwoRRG9jdW1lbnRSZWZlcmVuY2USSgoOZG9jdW1l",
+            "bnRfY2h1bmsYASABKAsyLS5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2Uu",
+            "djEuRG9jdW1lbnRDaHVua0ID4EEDIrsBCg1Eb2N1bWVudENodW5rEkIKBnBh",
+            "cmVudBgBIAEoCUIy4EED+kEsCipkZXZlbG9wZXJrbm93bGVkZ2UuZ29vZ2xl",
+            "YXBpcy5jb20vRG9jdW1lbnQSDwoCaWQYAiABKAlCA+BBAxIUCgdjb250ZW50",
+            "GAMgASgJQgPgQQMSPwoIZG9jdW1lbnQYBCABKAsyKC5nb29nbGUuZGV2ZWxv",
+            "cGVycy5rbm93bGVkZ2UudjEuRG9jdW1lbnRCA+BBAyp5CgxEb2N1bWVudFZp",
+            "ZXcSHQoZRE9DVU1FTlRfVklFV19VTlNQRUNJRklFRBAAEhcKE0RPQ1VNRU5U",
+            "X1ZJRVdfQkFTSUMQARIWChJET0NVTUVOVF9WSUVXX0ZVTEwQAhIZChVET0NV",
+            "TUVOVF9WSUVXX0NPTlRFTlQQAzKBBgoSRGV2ZWxvcGVyS25vd2xlZGdlEr0B",
+            "ChRTZWFyY2hEb2N1bWVudENodW5rcxI7Lmdvb2dsZS5kZXZlbG9wZXJzLmtu",
+            "b3dsZWRnZS52MS5TZWFyY2hEb2N1bWVudENodW5rc1JlcXVlc3QaPC5nb29n",
+            "bGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuU2VhcmNoRG9jdW1lbnRDaHVu",
+            "a3NSZXNwb25zZSIqgtPkkwIkEiIvdjEvZG9jdW1lbnRzOnNlYXJjaERvY3Vt",
+            "ZW50Q2h1bmtzEpMBCgtHZXREb2N1bWVudBIyLmdvb2dsZS5kZXZlbG9wZXJz",
+            "Lmtub3dsZWRnZS52MS5HZXREb2N1bWVudFJlcXVlc3QaKC5nb29nbGUuZGV2",
+            "ZWxvcGVycy5rbm93bGVkZ2UudjEuRG9jdW1lbnQiJtpBBG5hbWWC0+STAhkS",
+            "Fy92MS97bmFtZT1kb2N1bWVudHMvKip9EqgBChFCYXRjaEdldERvY3VtZW50",
+            "cxI4Lmdvb2dsZS5kZXZlbG9wZXJzLmtub3dsZWRnZS52MS5CYXRjaEdldERv",
+            "Y3VtZW50c1JlcXVlc3QaOS5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2Uu",
+            "djEuQmF0Y2hHZXREb2N1bWVudHNSZXNwb25zZSIegtPkkwIYEhYvdjEvZG9j",
+            "dW1lbnRzOmJhdGNoR2V0EpIBCgtBbnN3ZXJRdWVyeRIyLmdvb2dsZS5kZXZl",
+            "bG9wZXJzLmtub3dsZWRnZS52MS5BbnN3ZXJRdWVyeVJlcXVlc3QaMy5nb29n",
+            "bGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuQW5zd2VyUXVlcnlSZXNwb25z",
+            "ZSIagtPkkwIUIg8vdjE6YW5zd2VyUXVlcnk6ASoaVcpBIWRldmVsb3Blcmtu",
+            "b3dsZWRnZS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CgwIKImNvbS5nb29nbGUuZGV2",
+            "ZWxvcGVycy5rbm93bGVkZ2UudjFCF0RldmVsb3Blcktub3dsZWRnZVByb3Rv",
+            "UAFaQWNsb3VkLmdvb2dsZS5jb20vZ28vZGV2ZWxvcGVya25vd2xlZGdlL2Fw",
+            "aXYxL2RldmVsb3Blcmtub3dsZWRnZXBiqgInR29vZ2xlLkRldmVsb3BlcnMu",
+            "RGV2ZWxvcGVyS25vd2xlZGdlLlYxygInR29vZ2xlXERldmVsb3BlcnNcRGV2",
+            "ZWxvcGVyS25vd2xlZGdlXFYx6gIqR29vZ2xlOjpEZXZlbG9wZXJzOjpEZXZl",
+            "bG9wZXJLbm93bGVkZ2U6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Developers.DeveloperKnowledge.V1.DocumentView), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -167,7 +167,9 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
 
   #region Messages
   /// <summary>
-  /// A Document represents a piece of content from the Developer Knowledge corpus.
+  /// A Document represents a page of documentation in the Developer Knowledge
+  /// corpus, like the page at
+  /// https://docs.cloud.google.com/storage/docs/creating-buckets.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Document : pb::IMessage<Document>
@@ -763,7 +765,9 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
     private string query_ = "";
     /// <summary>
     /// Required. Provides the raw query string provided by the user, such as "How
-    /// to create a Cloud Storage bucket?".
+    /// to create a Cloud Storage bucket?". The query must not exceed 500
+    /// characters; values longer than 500 characters will result in an
+    /// `INVALID_ARGUMENT` error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -823,6 +827,8 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
     ///
     /// Supported fields for filtering:
     ///
+    /// * `content_length_bytes` (INTEGER): The length of the `Document.content`
+    ///   field in bytes.
     /// * `data_source` (STRING): The source of the document, e.g.
     ///   `docs.cloud.google.com`. See
     ///   https://developers.google.com/knowledge/reference/corpus-reference for
@@ -832,6 +838,8 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
     ///   markdown content or metadata.
     /// * `uri` (STRING): The document URI, e.g.
     ///   `https://docs.cloud.google.com/bigquery/docs/tables`.
+    ///
+    /// INTEGER fields support `=`, `&lt;`, `&lt;=`, `>`, and `>=` operators.
     ///
     /// STRING fields support `=` (equals) and `!=` (not equals) operators for
     /// **exact match** on the whole string. Partial match, prefix match, and
@@ -850,6 +858,8 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
     ///
     /// Examples:
     ///
+    /// * Filter by `Document.content_length_bytes`:
+    ///   `content_length_bytes &lt; 50000`
     /// * `data_source = "docs.cloud.google.com" OR data_source =
     ///   "firebase.google.com"`
     /// * `data_source != "firebase.google.com"`
@@ -1159,8 +1169,9 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Optional. Provides a token that can be sent as `page_token` to retrieve the
-    /// next page. If this field is omitted, there are no subsequent pages.
+    /// Provides a token that can be sent as `page_token` to retrieve the next
+    /// page.
+    /// If this field is omitted, there are no subsequent pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1383,6 +1394,9 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
     /// Required. Specifies the name of the document to retrieve.
     /// Format: `documents/{uri_without_scheme}`
     /// Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+    ///
+    /// The name must not exceed 500 characters; values longer than 500 characters
+    /// will result in an `INVALID_ARGUMENT` error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1639,6 +1653,9 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
     ///
     /// Format: `documents/{uri_without_scheme}`
     /// Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+    ///
+    /// Each name must not exceed 500 characters; values longer than 500 characters
+    /// will result in an `INVALID_ARGUMENT` error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
