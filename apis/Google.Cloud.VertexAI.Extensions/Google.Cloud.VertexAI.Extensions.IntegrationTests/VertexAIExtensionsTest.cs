@@ -71,7 +71,7 @@ public class VertexAIExtensionsTest
     public async Task AsIImageGenerator_GenerateImage()
     {
         IImageGenerator generator = await new PredictionServiceClientBuilder()
-            .BuildIImageGeneratorAsync(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "imagen-4.0-fast-generate-001"));
+            .BuildIImageGeneratorAsync(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "gemini-2.5-flash-image"));
         Assert.NotNull(generator);
 
         ImageGenerationResponse response = await generator.GenerateImagesAsync("A cute baby sea otter");
