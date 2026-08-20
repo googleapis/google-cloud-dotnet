@@ -161,6 +161,8 @@ namespace Google.Cloud.Container.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.FetchNodePoolUpgradeInfoRequest> __Marshaller_google_container_v1_FetchNodePoolUpgradeInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Container.V1.FetchNodePoolUpgradeInfoRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.NodePoolUpgradeInfo> __Marshaller_google_container_v1_NodePoolUpgradeInfo = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Container.V1.NodePoolUpgradeInfo.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.CompleteControlPlaneUpgradeRequest> __Marshaller_google_container_v1_CompleteControlPlaneUpgradeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Container.V1.CompleteControlPlaneUpgradeRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Container.V1.ListClustersRequest, global::Google.Cloud.Container.V1.ListClustersResponse> __Method_ListClusters = new grpc::Method<global::Google.Cloud.Container.V1.ListClustersRequest, global::Google.Cloud.Container.V1.ListClustersResponse>(
@@ -449,6 +451,14 @@ namespace Google.Cloud.Container.V1 {
         "FetchNodePoolUpgradeInfo",
         __Marshaller_google_container_v1_FetchNodePoolUpgradeInfoRequest,
         __Marshaller_google_container_v1_NodePoolUpgradeInfo);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Container.V1.CompleteControlPlaneUpgradeRequest, global::Google.Cloud.Container.V1.Operation> __Method_CompleteControlPlaneUpgrade = new grpc::Method<global::Google.Cloud.Container.V1.CompleteControlPlaneUpgradeRequest, global::Google.Cloud.Container.V1.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CompleteControlPlaneUpgrade",
+        __Marshaller_google_container_v1_CompleteControlPlaneUpgradeRequest,
+        __Marshaller_google_container_v1_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -922,6 +932,19 @@ namespace Google.Cloud.Container.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Container.V1.NodePoolUpgradeInfo> FetchNodePoolUpgradeInfo(global::Google.Cloud.Container.V1.FetchNodePoolUpgradeInfoRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// CompleteControlPlaneUpgrade completes the rollback-safe upgrade by
+      /// performing the step two upgrade for a specific cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Container.V1.Operation> CompleteControlPlaneUpgrade(global::Google.Cloud.Container.V1.CompleteControlPlaneUpgradeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2819,6 +2842,58 @@ namespace Google.Cloud.Container.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_FetchNodePoolUpgradeInfo, null, options, request);
       }
+      /// <summary>
+      /// CompleteControlPlaneUpgrade completes the rollback-safe upgrade by
+      /// performing the step two upgrade for a specific cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Container.V1.Operation CompleteControlPlaneUpgrade(global::Google.Cloud.Container.V1.CompleteControlPlaneUpgradeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CompleteControlPlaneUpgrade(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// CompleteControlPlaneUpgrade completes the rollback-safe upgrade by
+      /// performing the step two upgrade for a specific cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Container.V1.Operation CompleteControlPlaneUpgrade(global::Google.Cloud.Container.V1.CompleteControlPlaneUpgradeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CompleteControlPlaneUpgrade, null, options, request);
+      }
+      /// <summary>
+      /// CompleteControlPlaneUpgrade completes the rollback-safe upgrade by
+      /// performing the step two upgrade for a specific cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> CompleteControlPlaneUpgradeAsync(global::Google.Cloud.Container.V1.CompleteControlPlaneUpgradeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CompleteControlPlaneUpgradeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// CompleteControlPlaneUpgrade completes the rollback-safe upgrade by
+      /// performing the step two upgrade for a specific cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.Operation> CompleteControlPlaneUpgradeAsync(global::Google.Cloud.Container.V1.CompleteControlPlaneUpgradeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CompleteControlPlaneUpgrade, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ClusterManagerClient NewInstance(ClientBaseConfiguration configuration)
@@ -2868,7 +2943,8 @@ namespace Google.Cloud.Container.V1 {
           .AddMethod(__Method_ListUsableSubnetworks, serviceImpl.ListUsableSubnetworks)
           .AddMethod(__Method_CheckAutopilotCompatibility, serviceImpl.CheckAutopilotCompatibility)
           .AddMethod(__Method_FetchClusterUpgradeInfo, serviceImpl.FetchClusterUpgradeInfo)
-          .AddMethod(__Method_FetchNodePoolUpgradeInfo, serviceImpl.FetchNodePoolUpgradeInfo).Build();
+          .AddMethod(__Method_FetchNodePoolUpgradeInfo, serviceImpl.FetchNodePoolUpgradeInfo)
+          .AddMethod(__Method_CompleteControlPlaneUpgrade, serviceImpl.CompleteControlPlaneUpgrade).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2914,6 +2990,7 @@ namespace Google.Cloud.Container.V1 {
       serviceBinder.AddMethod(__Method_CheckAutopilotCompatibility, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityRequest, global::Google.Cloud.Container.V1.CheckAutopilotCompatibilityResponse>(serviceImpl.CheckAutopilotCompatibility));
       serviceBinder.AddMethod(__Method_FetchClusterUpgradeInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.FetchClusterUpgradeInfoRequest, global::Google.Cloud.Container.V1.ClusterUpgradeInfo>(serviceImpl.FetchClusterUpgradeInfo));
       serviceBinder.AddMethod(__Method_FetchNodePoolUpgradeInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.FetchNodePoolUpgradeInfoRequest, global::Google.Cloud.Container.V1.NodePoolUpgradeInfo>(serviceImpl.FetchNodePoolUpgradeInfo));
+      serviceBinder.AddMethod(__Method_CompleteControlPlaneUpgrade, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.CompleteControlPlaneUpgradeRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.CompleteControlPlaneUpgrade));
     }
 
   }

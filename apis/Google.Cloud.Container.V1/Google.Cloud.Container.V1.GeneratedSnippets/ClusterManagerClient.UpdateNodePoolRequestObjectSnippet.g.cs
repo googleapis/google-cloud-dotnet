@@ -76,6 +76,7 @@ namespace GoogleCSharpSnippets
                 NodeDrainConfig = new NodePool.Types.NodeDrainConfig(),
                 ConsolidationDelay = new Duration(),
                 TaintConfig = new TaintConfig(),
+                MaintenancePolicy = new NodePool.Types.NodePoolMaintenancePolicy(),
             };
             // Make the request
             Operation response = clusterManagerClient.UpdateNodePool(request);
