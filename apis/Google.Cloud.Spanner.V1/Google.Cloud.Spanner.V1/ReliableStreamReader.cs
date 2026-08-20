@@ -33,6 +33,8 @@ namespace Google.Cloud.Spanner.V1
         private readonly IAsyncStreamReader<PartialResultSet> _resultStream;
         private readonly Logger _logger;
 
+        private SpannerBuiltInMetrics.StreamTracer Tracer => (_resultStream as ResultStream)?.Tracer;
+
         private bool _initialized = false;
         private PartialResultSet _currentResultSet;
         private ResultSetMetadata _metadata;
@@ -76,6 +78,8 @@ namespace Google.Cloud.Spanner.V1
             {
                 return;
             }
+
+            Tracer?.RecordOperationPrematureClose();
 
             if (_resultStream is IDisposable disposable)
             {
@@ -130,33 +134,45 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>A task which, when completed, will provide the next value read from the stream.</returns>
         public async Task<Value> NextAsync(CancellationToken cancellationToken)
         {
-            await EnsureInitializedAsync(cancellationToken).ConfigureAwait(false);
-
-            // If we previously cached a value in HasDataAsync, return it now (and clear the cache).
-            if (_cachedValueIsValid)
+            try
             {
-                var ret = _cachedValue;
-                _cachedValue = null;
-                _cachedValueIsValid = false;
-                return ret;
-            }
+                await EnsureInitializedAsync(cancellationToken).ConfigureAwait(false);
 
-            Value result = await NextChunkAsync(cancellationToken).ConfigureAwait(false);
-            // If we have a chunk, and it's the last value within the current response, and it's marked as a chunked
-            // value, we need to merge it with the first value in the next response. We may need to do this multiple
-            // times, if a single value is split across multiple responses.
-            while (result != null &&
-                   _nextIndex >= _currentResultSet.Values.Count &&
-                   _currentResultSet.ChunkedValue)
-            {
-                Value nextChunk = await NextChunkAsync(cancellationToken).ConfigureAwait(false);
-                if (nextChunk == null)
+                // If we previously cached a value in HasDataAsync, return it now (and clear the cache).
+                if (_cachedValueIsValid)
                 {
-                    throw new IOException("Reached end of stream when expecting to merge another chunk");
+                    var ret = _cachedValue;
+                    _cachedValue = null;
+                    _cachedValueIsValid = false;
+                    return ret;
                 }
-                MergeChunk(result, nextChunk);
+
+                Value result = await NextChunkAsync(cancellationToken).ConfigureAwait(false);
+                // If we have a chunk, and it's the last value within the current response, and it's marked as a chunked
+                // value, we need to merge it with the first value in the next response. We may need to do this multiple
+                // times, if a single value is split across multiple responses.
+                while (result != null &&
+                       _nextIndex >= _currentResultSet.Values.Count &&
+                       _currentResultSet.ChunkedValue)
+                {
+                    Value nextChunk = await NextChunkAsync(cancellationToken).ConfigureAwait(false);
+                    if (nextChunk == null)
+                    {
+                        throw new IOException("Reached end of stream when expecting to merge another chunk");
+                    }
+                    MergeChunk(result, nextChunk);
+                }
+                if (result == null)
+                {
+                    Tracer?.RecordOperationSuccess();
+                }
+                return result;
             }
-            return result;
+            catch (Exception ex)
+            {
+                Tracer?.RecordOperationError(ex);
+                throw;
+            }
 
             async Task<Value> NextChunkAsync(CancellationToken innerCancellationToken)
             {
@@ -185,9 +201,18 @@ namespace Google.Cloud.Spanner.V1
             {
                 return;
             }
-            await MoveNextAsync(cancellationToken).ConfigureAwait(false);
-            _metadata = _currentResultSet?.Metadata;
-            _initialized = true;
+            Tracer?.StartOperation();
+            try
+            {
+                await MoveNextAsync(cancellationToken).ConfigureAwait(false);
+                _metadata = _currentResultSet?.Metadata;
+                _initialized = true;
+            }
+            catch (Exception ex)
+            {
+                Tracer?.RecordOperationError(ex);
+                throw;
+            }
         }
 
         private async Task MoveNextAsync(CancellationToken cancellationToken)
