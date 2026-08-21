@@ -25,6 +25,15 @@ Example:
 
 - CredentialFile=/path/to/credentials.json
 
+## CredentialType
+
+The expected type of the credential provided via `CredentialFile`.
+Defaults to `service_account`.
+
+Example:
+
+- CredentialType=authorized_user
+
 ## EnableGetSchemaTable
 
 When set to true (and when targeting .NET 4.5 or .NET Standard 2.0;
