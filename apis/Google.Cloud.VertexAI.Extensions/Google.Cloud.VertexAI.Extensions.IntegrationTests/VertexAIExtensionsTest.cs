@@ -67,7 +67,7 @@ public class VertexAIExtensionsTest
         }
     }
 
-    [Fact(Skip = "Image generation no longer available for Prediction API b/549774591")]
+    [Fact(Skip = "b/549774591")]
     public async Task AsIImageGenerator_GenerateImage()
     {
         IImageGenerator generator = await new PredictionServiceClientBuilder()
