@@ -32,7 +32,7 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public const int MinimumChunkSize = ResumableUpload<Object>.MinimumChunkSize;
 
-        internal static UploadValidationMode DefaultValidationMode { get; } = V1.UploadValidationMode.DeleteAndThrow;
+        internal static UploadValidationMode DefaultValidationMode { get; } = V1.UploadValidationMode.RejectAndThrow;
 
         /// <summary>
         /// Precondition for upload: the object is only uploaded if the existing object's
