@@ -140,3 +140,10 @@ public partial class FetchCacheUpdateRequest : IDatabaseNameProvider
     string IDatabaseNameProvider.InstanceId => DatabaseAsDatabaseName?.InstanceId;
     string IDatabaseNameProvider.DatabaseId => DatabaseAsDatabaseName?.DatabaseId;
 }
+
+public partial class ReadOrQueryRequest : IDatabaseNameProvider
+{
+    string IDatabaseNameProvider.ProjectId => (UnderlyingRequest as IDatabaseNameProvider)?.ProjectId;
+    string IDatabaseNameProvider.InstanceId => (UnderlyingRequest as IDatabaseNameProvider)?.InstanceId;
+    string IDatabaseNameProvider.DatabaseId => (UnderlyingRequest as IDatabaseNameProvider)?.DatabaseId;
+}
