@@ -742,7 +742,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-08-17T19:16:15.334142813Z",
-            "lastGeneratedCommit": "240b58fe7058f6fff77cba02f51d600170b6c421",
+            "lastGeneratedCommit": "c3e3d8a2031ec31f0f81fa42454ba55c7b40f284",
             "lastReleasedCommit": "240b58fe7058f6fff77cba02f51d600170b6c421",
             "apiPaths": [
                 "google/cloud/bigquery/reservation/v1"
