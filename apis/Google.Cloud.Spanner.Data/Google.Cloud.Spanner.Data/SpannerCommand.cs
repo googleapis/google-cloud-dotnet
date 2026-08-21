@@ -128,11 +128,20 @@ namespace Google.Cloud.Spanner.Data
             : this(connection, transaction, parameters: null, commandPartition: null, ephemeralTransactionOptions: null)
         {
             GaxPreconditions.CheckArgument(
-                commandTextBuilder.SpannerCommandType == SpannerCommandType.Read || commandTextBuilder.SpannerCommandType == SpannerCommandType.Delete,
-                nameof(commandTextBuilder.SpannerCommandType), "KeySet is only allowed for Read and Delete commands");
+                commandTextBuilder.SpannerCommandType == SpannerCommandType.Read || commandTextBuilder.SpannerCommandType == SpannerCommandType.Delete ||
+                  commandTextBuilder.SpannerCommandType == SpannerCommandType.Send || commandTextBuilder.SpannerCommandType == SpannerCommandType.Ack,
+                nameof(commandTextBuilder.SpannerCommandType), "KeySet is only allowed for Read, Delete, Send, and Ack commands");
             SpannerCommandTextBuilder = GaxPreconditions.CheckNotNull(commandTextBuilder, nameof(commandTextBuilder));
             KeySet = GaxPreconditions.CheckNotNull(keySet, nameof(keySet));
         }
+
+        internal SpannerCommand(
+            SpannerCommandTextBuilder commandTextBuilder,
+            SpannerConnection connection,
+            Key key,
+            SpannerParameter payload,
+            SpannerTransaction transaction = null)
+            : this(commandTextBuilder, connection, KeySet.FromKeys(key), transaction) => Parameters = [payload];
 
         /// <summary>
         /// Initializes a new instance of <see cref="SpannerCommand"/>.

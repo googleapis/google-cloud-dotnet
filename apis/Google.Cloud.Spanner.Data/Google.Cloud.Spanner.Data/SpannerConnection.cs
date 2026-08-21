@@ -893,6 +893,28 @@ namespace Google.Cloud.Spanner.Data
             null, insertUpdateColumns);
 
         /// <summary>
+        /// Creates a new <see cref="SpannerCommand" /> to ack a message to a Spanner database queue.
+        /// This method is thread safe.
+        /// </summary>
+        /// <param name="databaseQueue">The name of the queue to send a message to. Must not be null.</param>
+        /// <param name="key"></param>
+        /// <param name="payload"></param>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
+        public SpannerCommand CreateSendCommand(string databaseQueue, Key key, SpannerParameter payload) => new(SpannerCommandTextBuilder.CreateSendTextBuilder(databaseQueue), connection: this, key, payload);
+
+        /// <summary>
+        /// Creates a new <see cref="SpannerCommand" /> to ack a message in a Spanner database queue.
+        /// This method is thread safe.
+        /// </summary>
+        /// <param name="databaseQueue">The name of the queue containing the messages. Must not be null.</param>
+        /// <param name="parameters">
+        /// A collection of <see cref="SpannerParameter" />
+        /// TODO: What is the public surface for this? Separate key, payload, and options (deliverat)?
+        /// </param>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
+        public SpannerCommand CreateAckCommand(string databaseQueue, SpannerParameterCollection parameters) => new(SpannerCommandTextBuilder.CreateAckTextBuilder(databaseQueue), this, null, parameters);
+
+        /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to select rows using a SQL query statement.
         /// This method is thread safe.
         /// </summary>
