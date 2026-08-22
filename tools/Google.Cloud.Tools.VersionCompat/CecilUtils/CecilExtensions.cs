@@ -15,6 +15,7 @@
 using Mono.Cecil;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 
 namespace Google.Cloud.Tools.VersionCompat.CecilUtils
@@ -33,6 +34,12 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 
         public static bool IsExported(this PropertyDefinition prop) =>
             (prop.GetMethod?.IsExported() ?? false) || (prop.SetMethod?.IsExported() ?? false);
+
+        public static bool IsDefinedInType(this MethodDefinition method, TypeDefinition type)
+            => method.DeclaringType.FullName == type.FullName;
+
+        public static bool IsDefinedInType(this PropertyDefinition method, TypeDefinition type)
+            => method.DeclaringType.FullName == type.FullName;
 
         public static IEnumerable<TypeDefinition> WithNested(this IEnumerable<TypeDefinition> types) =>
             types.SelectMany(x => x.NestedTypes.WithNested().Prepend(x));
@@ -78,5 +85,68 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
         }
 
         public static bool IsStatic(this PropertyDefinition prop) => (prop.GetMethod ?? prop.SetMethod).IsStatic;
+
+        public static TypeDefinition BaseTypeExt(this TypeDefinition type) => BaseTypeCache.Instance.GetBaseType(type);
+
+        public static IEnumerable<MethodDefinition> ExportedMethods(this TypeDefinition type)
+        {
+            var methods = new HashSet<MethodDefinition>(SameMethodComparer.Instance);
+
+            var baseType = type;
+
+            while (baseType is not null && !baseType.IsObject())
+            {
+                foreach (var method in baseType.Methods)
+                {
+                    if (!(method.IsGetter || method.IsSetter || method.IsConstructor))
+                    {
+                        methods.Add(method);
+                    }
+                }
+
+                baseType = baseType.BaseTypeExt();
+            }
+
+            return methods;
+        }
+
+        /// <summary>
+        /// Gets the PropertyDefinition with the most possible accessors. Because decendent types can
+        /// choose to only override a single accessor even if the base class defined both a getter and setter,
+        /// we look up the ancestry tree for the most acccessible property definition. Decendent types
+        /// cannot implement an accessor that was not present in the base definition, so if we reach the base
+        /// class definition, it is guaranteed to contain all accessors for this property.
+        /// </summary>
+        /// <param name="type">Type to start looking from.</param>
+        /// <returns>List of exported properties for this type.</returns>
+        public static IEnumerable<PropertyDefinition> ExportedProperties(this TypeDefinition type)
+        {
+            var properties = new HashSet<PropertyDefinition>(SamePropertyComparer.Instance);
+
+            var baseType = type;
+
+            while (baseType is not null && !baseType.IsObject())
+            {
+                foreach (var property in baseType.Properties)
+                {
+                    if (!properties.TryGetValue(property, out PropertyDefinition currProperty) ||
+                        SecondPropertyHasMoreAccessors(first: currProperty, second: property))
+                    {
+                        // We need to explicity remove the property before adding the new one to
+                        // ensure that the Hashset gets the most up-to-date property definition
+                        properties.Remove(property);
+                        properties.Add(property);
+                    }
+                }
+
+                baseType = baseType.BaseTypeExt();
+            }
+
+            return properties;
+
+            static bool SecondPropertyHasMoreAccessors(PropertyDefinition first, PropertyDefinition second)
+                => (first.SetMethod is not null ? 1 : 0) + (first.GetMethod is not null ? 1 : 0) <
+                    (second.SetMethod is not null ? 1 : 0) + (second.GetMethod is not null ? 1 : 0);
+        }
     }
 }

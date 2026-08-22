@@ -15,6 +15,7 @@
 using Google.Cloud.Tools.VersionCompat.CecilUtils;
 using Mono.Cecil;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -161,7 +162,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     if (obs.HasConstructorArguments && obs.ConstructorArguments.Count == 2)
                     {
                         // (string, bool) ctor
-                        return (bool)obs.ConstructorArguments[1].Value;
+                        return (bool) obs.ConstructorArguments[1].Value;
                     }
                 }
                 return false;
@@ -240,15 +241,15 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 else
                 {
                     // Presence/visibility changes.
-                    if (inO && o.IsExported())
+                    if (inO && o.IsExported() && o.IsDefinedInType(_o))
                     {
                         yield return inN ?
                             Diff.Major(C(Cause.MethodMadeNotExported, Cause.CtorMadeNotExported), $"{prefix} made non-public.") :
                             Diff.Major(C(Cause.MethodRemoved, Cause.CtorRemoved), $"{prefix} removed.");
                     }
-                    else if (inN && n.IsExported())
+                    else if (inN && n.IsExported() && n.IsDefinedInType(_n))
                     {
-                        var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, FormattableString, Diff>)Diff.Minor : Diff.Major;
+                        var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, FormattableString, Diff>) Diff.Minor : Diff.Major;
                         yield return inO ?
                             diff(C(Cause.MethodMadeExported, Cause.CtorMadeExported), $"{prefix} made public.") :
                             diff(C(Cause.MethodAdded, Cause.CtorAdded), $"{prefix} added.");
@@ -262,12 +263,12 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
         public IEnumerable<Diff> Ctors(TypeType typeType) => MethodsCtors(typeType, isCtor: true, t => t.InstanceCtors());
 
         public IEnumerable<Diff> Methods(TypeType typeType) =>
-            MethodsCtors(typeType, isCtor: false, t => t.Methods.Where(x => !x.IsGetter && !x.IsSetter && !x.IsConstructor));
+            MethodsCtors(typeType, isCtor: false, t => t.ExportedMethods());
 
         public IEnumerable<Diff> Properties(TypeType typeType)
         {
-            var oProps = _o.Properties.ToImmutableHashSet(SamePropertyComparer.Instance);
-            var nProps = _n.Properties.ToImmutableHashSet(SamePropertyComparer.Instance);
+            var oProps = _o.ExportedProperties().ToImmutableHashSet(SamePropertyComparer.Instance);
+            var nProps = _n.ExportedProperties().ToImmutableHashSet(SamePropertyComparer.Instance);
             foreach (var prop in oProps.Union(nProps).OrderBy(x => x.FullName))
             {
                 var inO = oProps.TryGetValue(prop, out var o);
@@ -310,15 +311,15 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 else
                 {
                     // Presence/visibility changes.
-                    if (inO && o.IsExported())
+                    if (inO && o.IsExported() && o.IsDefinedInType(_o))
                     {
                         yield return inN ?
                             Diff.Major(Cause.PropertyMadeNotExported, $"{prefix} made non-public.") :
                             Diff.Major(Cause.PropertyRemoved, $"{prefix} removed.");
                     }
-                    else if (inN && n.IsExported())
+                    else if (inN && n.IsExported() && o.IsDefinedInType(_n))
                     {
-                        var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, FormattableString, Diff>)Diff.Minor : Diff.Major;
+                        var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, FormattableString, Diff>) Diff.Minor : Diff.Major;
                         yield return inO ?
                             diff(Cause.PropertyMadeExported, $"{prefix} made public.") :
                             diff(Cause.PropertyAdded, $"{prefix} added.");
