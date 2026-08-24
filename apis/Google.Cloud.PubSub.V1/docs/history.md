@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.37.0, released 2026-08-24
+
+### New features
+
+- Add compiled_proto_schema to Schema for schema imports
+- Add Compression message transform
+- Add Regional Access Boundary (RAB) error states for ingestion sources
+
+### Documentation improvements
+
+- Update Bigtable comments for subscriptions and resource tags
+
 ## Version 3.36.0, released 2026-06-15
 
 ### New features
