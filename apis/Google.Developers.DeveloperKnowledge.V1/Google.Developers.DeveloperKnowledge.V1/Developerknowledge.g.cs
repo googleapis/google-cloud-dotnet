@@ -68,37 +68,38 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
             "ZXJzLmtub3dsZWRnZS52MS5BbnN3ZXIuRG9jdW1lbnRSZWZlcmVuY2VCA+BB",
             "A0gAQgkKB2NvbnRlbnQaXwoRRG9jdW1lbnRSZWZlcmVuY2USSgoOZG9jdW1l",
             "bnRfY2h1bmsYASABKAsyLS5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2Uu",
-            "djEuRG9jdW1lbnRDaHVua0ID4EEDIrsBCg1Eb2N1bWVudENodW5rEkIKBnBh",
+            "djEuRG9jdW1lbnRDaHVua0ID4EEDIvIBCg1Eb2N1bWVudENodW5rEkIKBnBh",
             "cmVudBgBIAEoCUIy4EED+kEsCipkZXZlbG9wZXJrbm93bGVkZ2UuZ29vZ2xl",
             "YXBpcy5jb20vRG9jdW1lbnQSDwoCaWQYAiABKAlCA+BBAxIUCgdjb250ZW50",
             "GAMgASgJQgPgQQMSPwoIZG9jdW1lbnQYBCABKAsyKC5nb29nbGUuZGV2ZWxv",
-            "cGVycy5rbm93bGVkZ2UudjEuRG9jdW1lbnRCA+BBAyp5CgxEb2N1bWVudFZp",
-            "ZXcSHQoZRE9DVU1FTlRfVklFV19VTlNQRUNJRklFRBAAEhcKE0RPQ1VNRU5U",
-            "X1ZJRVdfQkFTSUMQARIWChJET0NVTUVOVF9WSUVXX0ZVTEwQAhIZChVET0NV",
-            "TUVOVF9WSUVXX0NPTlRFTlQQAzKBBgoSRGV2ZWxvcGVyS25vd2xlZGdlEr0B",
-            "ChRTZWFyY2hEb2N1bWVudENodW5rcxI7Lmdvb2dsZS5kZXZlbG9wZXJzLmtu",
-            "b3dsZWRnZS52MS5TZWFyY2hEb2N1bWVudENodW5rc1JlcXVlc3QaPC5nb29n",
-            "bGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuU2VhcmNoRG9jdW1lbnRDaHVu",
-            "a3NSZXNwb25zZSIqgtPkkwIkEiIvdjEvZG9jdW1lbnRzOnNlYXJjaERvY3Vt",
-            "ZW50Q2h1bmtzEpMBCgtHZXREb2N1bWVudBIyLmdvb2dsZS5kZXZlbG9wZXJz",
-            "Lmtub3dsZWRnZS52MS5HZXREb2N1bWVudFJlcXVlc3QaKC5nb29nbGUuZGV2",
-            "ZWxvcGVycy5rbm93bGVkZ2UudjEuRG9jdW1lbnQiJtpBBG5hbWWC0+STAhkS",
-            "Fy92MS97bmFtZT1kb2N1bWVudHMvKip9EqgBChFCYXRjaEdldERvY3VtZW50",
-            "cxI4Lmdvb2dsZS5kZXZlbG9wZXJzLmtub3dsZWRnZS52MS5CYXRjaEdldERv",
-            "Y3VtZW50c1JlcXVlc3QaOS5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2Uu",
-            "djEuQmF0Y2hHZXREb2N1bWVudHNSZXNwb25zZSIegtPkkwIYEhYvdjEvZG9j",
-            "dW1lbnRzOmJhdGNoR2V0EpIBCgtBbnN3ZXJRdWVyeRIyLmdvb2dsZS5kZXZl",
-            "bG9wZXJzLmtub3dsZWRnZS52MS5BbnN3ZXJRdWVyeVJlcXVlc3QaMy5nb29n",
-            "bGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuQW5zd2VyUXVlcnlSZXNwb25z",
-            "ZSIagtPkkwIUIg8vdjE6YW5zd2VyUXVlcnk6ASoaVcpBIWRldmVsb3Blcmtu",
-            "b3dsZWRnZS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CgwIKImNvbS5nb29nbGUuZGV2",
-            "ZWxvcGVycy5rbm93bGVkZ2UudjFCF0RldmVsb3Blcktub3dsZWRnZVByb3Rv",
-            "UAFaQWNsb3VkLmdvb2dsZS5jb20vZ28vZGV2ZWxvcGVya25vd2xlZGdlL2Fw",
-            "aXYxL2RldmVsb3Blcmtub3dsZWRnZXBiqgInR29vZ2xlLkRldmVsb3BlcnMu",
-            "RGV2ZWxvcGVyS25vd2xlZGdlLlYxygInR29vZ2xlXERldmVsb3BlcnNcRGV2",
-            "ZWxvcGVyS25vd2xlZGdlXFYx6gIqR29vZ2xlOjpEZXZlbG9wZXJzOjpEZXZl",
-            "bG9wZXJLbm93bGVkZ2U6OlYxYgZwcm90bzM="));
+            "cGVycy5rbm93bGVkZ2UudjEuRG9jdW1lbnRCA+BBAxIhCg9yZWxldmFuY2Vf",
+            "c2NvcmUYBSABKAFCA+BBA0gAiAEBQhIKEF9yZWxldmFuY2Vfc2NvcmUqeQoM",
+            "RG9jdW1lbnRWaWV3Eh0KGURPQ1VNRU5UX1ZJRVdfVU5TUEVDSUZJRUQQABIX",
+            "ChNET0NVTUVOVF9WSUVXX0JBU0lDEAESFgoSRE9DVU1FTlRfVklFV19GVUxM",
+            "EAISGQoVRE9DVU1FTlRfVklFV19DT05URU5UEAMygQYKEkRldmVsb3Blcktu",
+            "b3dsZWRnZRK9AQoUU2VhcmNoRG9jdW1lbnRDaHVua3MSOy5nb29nbGUuZGV2",
+            "ZWxvcGVycy5rbm93bGVkZ2UudjEuU2VhcmNoRG9jdW1lbnRDaHVua3NSZXF1",
+            "ZXN0GjwuZ29vZ2xlLmRldmVsb3BlcnMua25vd2xlZGdlLnYxLlNlYXJjaERv",
+            "Y3VtZW50Q2h1bmtzUmVzcG9uc2UiKoLT5JMCJBIiL3YxL2RvY3VtZW50czpz",
+            "ZWFyY2hEb2N1bWVudENodW5rcxKTAQoLR2V0RG9jdW1lbnQSMi5nb29nbGUu",
+            "ZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuR2V0RG9jdW1lbnRSZXF1ZXN0Gigu",
+            "Z29vZ2xlLmRldmVsb3BlcnMua25vd2xlZGdlLnYxLkRvY3VtZW50IibaQQRu",
+            "YW1lgtPkkwIZEhcvdjEve25hbWU9ZG9jdW1lbnRzLyoqfRKoAQoRQmF0Y2hH",
+            "ZXREb2N1bWVudHMSOC5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEu",
+            "QmF0Y2hHZXREb2N1bWVudHNSZXF1ZXN0GjkuZ29vZ2xlLmRldmVsb3BlcnMu",
+            "a25vd2xlZGdlLnYxLkJhdGNoR2V0RG9jdW1lbnRzUmVzcG9uc2UiHoLT5JMC",
+            "GBIWL3YxL2RvY3VtZW50czpiYXRjaEdldBKSAQoLQW5zd2VyUXVlcnkSMi5n",
+            "b29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuQW5zd2VyUXVlcnlSZXF1",
+            "ZXN0GjMuZ29vZ2xlLmRldmVsb3BlcnMua25vd2xlZGdlLnYxLkFuc3dlclF1",
+            "ZXJ5UmVzcG9uc2UiGoLT5JMCFCIPL3YxOmFuc3dlclF1ZXJ5OgEqGlXKQSFk",
+            "ZXZlbG9wZXJrbm93bGVkZ2UuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3",
+            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQoMCCiJjb20u",
+            "Z29vZ2xlLmRldmVsb3BlcnMua25vd2xlZGdlLnYxQhdEZXZlbG9wZXJLbm93",
+            "bGVkZ2VQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RldmVsb3Blcmtu",
+            "b3dsZWRnZS9hcGl2MS9kZXZlbG9wZXJrbm93bGVkZ2VwYqoCJ0dvb2dsZS5E",
+            "ZXZlbG9wZXJzLkRldmVsb3Blcktub3dsZWRnZS5WMcoCJ0dvb2dsZVxEZXZl",
+            "bG9wZXJzXERldmVsb3Blcktub3dsZWRnZVxWMeoCKkdvb2dsZTo6RGV2ZWxv",
+            "cGVyczo6RGV2ZWxvcGVyS25vd2xlZGdlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Developers.DeveloperKnowledge.V1.DocumentView), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -114,7 +115,7 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.Answer.Types.CitationSource), global::Google.Developers.DeveloperKnowledge.V1.Answer.Types.CitationSource.Parser, new[]{ "ReferenceIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.Answer.Types.AnswerReference), global::Google.Developers.DeveloperKnowledge.V1.Answer.Types.AnswerReference.Parser, new[]{ "DocumentReference" }, new[]{ "Content" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.Answer.Types.DocumentReference), global::Google.Developers.DeveloperKnowledge.V1.Answer.Types.DocumentReference.Parser, new[]{ "DocumentChunk" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.DocumentChunk), global::Google.Developers.DeveloperKnowledge.V1.DocumentChunk.Parser, new[]{ "Parent", "Id", "Content", "Document" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.DocumentChunk), global::Google.Developers.DeveloperKnowledge.V1.DocumentChunk.Parser, new[]{ "Parent", "Id", "Content", "Document", "RelevanceScore" }, new[]{ "RelevanceScore" }, null, null, null)
           }));
     }
     #endregion
@@ -3682,6 +3683,7 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
   {
     private static readonly pb::MessageParser<DocumentChunk> _parser = new pb::MessageParser<DocumentChunk>(() => new DocumentChunk());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DocumentChunk> Parser { get { return _parser; } }
@@ -3709,10 +3711,12 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DocumentChunk(DocumentChunk other) : this() {
+      _hasBits0 = other._hasBits0;
       parent_ = other.parent_;
       id_ = other.id_;
       content_ = other.content_;
       document_ = other.document_ != null ? other.document_.Clone() : null;
+      relevanceScore_ = other.relevanceScore_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3799,6 +3803,38 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
       }
     }
 
+    /// <summary>Field number for the "relevance_score" field.</summary>
+    public const int RelevanceScoreFieldNumber = 5;
+    private readonly static double RelevanceScoreDefaultValue = 0D;
+
+    private double relevanceScore_;
+    /// <summary>
+    /// Output only. Represents the relevance score of the chunk to the search
+    /// query. Higher score indicates higher chunk relevance. The score is in range
+    /// [0.0, 1.0].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double RelevanceScore {
+      get { if ((_hasBits0 & 1) != 0) { return relevanceScore_; } else { return RelevanceScoreDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        relevanceScore_ = value;
+      }
+    }
+    /// <summary>Gets whether the "relevance_score" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRelevanceScore {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "relevance_score" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRelevanceScore() {
+      _hasBits0 &= ~1;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3818,6 +3854,7 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
       if (Id != other.Id) return false;
       if (Content != other.Content) return false;
       if (!object.Equals(Document, other.Document)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(RelevanceScore, other.RelevanceScore)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3829,6 +3866,7 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Content.Length != 0) hash ^= Content.GetHashCode();
       if (document_ != null) hash ^= Document.GetHashCode();
+      if (HasRelevanceScore) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RelevanceScore);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3863,6 +3901,10 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(Document);
       }
+      if (HasRelevanceScore) {
+        output.WriteRawTag(41);
+        output.WriteDouble(RelevanceScore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3889,6 +3931,10 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(Document);
       }
+      if (HasRelevanceScore) {
+        output.WriteRawTag(41);
+        output.WriteDouble(RelevanceScore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3910,6 +3956,9 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
       }
       if (document_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Document);
+      }
+      if (HasRelevanceScore) {
+        size += 1 + 8;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3937,6 +3986,9 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
           Document = new global::Google.Developers.DeveloperKnowledge.V1.Document();
         }
         Document.MergeFrom(other.Document);
+      }
+      if (other.HasRelevanceScore) {
+        RelevanceScore = other.RelevanceScore;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3976,6 +4028,10 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
             input.ReadMessage(Document);
             break;
           }
+          case 41: {
+            RelevanceScore = input.ReadDouble();
+            break;
+          }
         }
       }
     #endif
@@ -4012,6 +4068,10 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
               Document = new global::Google.Developers.DeveloperKnowledge.V1.Document();
             }
             input.ReadMessage(Document);
+            break;
+          }
+          case 41: {
+            RelevanceScore = input.ReadDouble();
             break;
           }
         }
