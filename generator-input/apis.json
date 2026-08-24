@@ -686,6 +686,26 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.AppTopology.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "App Topology",
+      "productUrl": "https://docs.cloud.google.com/app-topology",
+      "description": "",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/apptopology/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "apptopology",
+      "serviceConfigFile": "apptopology_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.ArtifactRegistry.V1",
       "version": "2.15.0",
       "type": "grpc",
