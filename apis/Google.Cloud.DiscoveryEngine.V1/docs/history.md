@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.15.0, released 2026-08-24
+
+### New features
+
+- Expose StreamAssistRequest agents_spec and agent_id
+
 ## Version 1.14.0, released 2026-07-13
 
 ### New features
