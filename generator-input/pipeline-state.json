@@ -5184,6 +5184,18 @@
             "sourcePaths": [
                 "apis/Google.Maps.MapManagement.V2/Google.Maps.MapManagement.V2"
             ]
+        },
+        {
+            "id": "Google.Cloud.AppTopology.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/apptopology/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.AppTopology.V1/Google.Cloud.AppTopology.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
