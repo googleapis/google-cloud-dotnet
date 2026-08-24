@@ -29,7 +29,6 @@ namespace Google.Cloud.Storage.V1
     /// </summary>
     internal sealed class CustomMediaUpload : InsertMediaUpload
     {
-        private readonly HashingStream _hashingStream;
         private const string GoogleHashHeader = "x-goog-hash";
 
         public CustomMediaUpload(IClientService service, Apis.Storage.v1.Data.Object body, string bucket,
@@ -40,12 +39,12 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckEnumValue(validationMode, nameof(UploadObjectOptions.UploadValidationMode));
             if (validationMode != UploadValidationMode.None)
             {
-                _hashingStream = ContentStream as HashingStream;
+                var hashingStream = ContentStream as HashingStream;
                 LastRequestExecuting += (HttpRequestMessage request) =>
                 {
-                    if (_hashingStream != null)
+                    if (hashingStream != null)
                     {
-                        if (_hashingStream.HasGaps)
+                        if (hashingStream.HasGaps)
                         {
                             throw new ArgumentException(
                                 "Cannot perform hash validation when resuming an upload from a non-zero offset, " +
@@ -53,9 +52,9 @@ namespace Google.Cloud.Storage.V1
                                 "To resume this upload, disable validation by setting UploadValidationMode to None.",
                                 nameof(stream));
                         }
-                        if (_hashingStream.IsHashComplete)
+                        if (hashingStream.IsHashComplete)
                         {
-                            var calculatedHash = _hashingStream.GetBase64Hash();
+                            var calculatedHash = hashingStream.GetBase64Hash();
                             bool hasCrc32c = false;
                             if (request.Headers.TryGetValues(GoogleHashHeader, out var values))
                             {

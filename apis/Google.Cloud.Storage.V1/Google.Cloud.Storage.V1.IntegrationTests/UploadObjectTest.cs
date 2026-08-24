@@ -514,8 +514,10 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var eventField = typeof(ResumableUpload).GetField(
                 "LastRequestExecuting",
                 System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+            Assert.NotNull(eventField);
             var handler = (Action<HttpRequestMessage>) eventField.GetValue(uploader);
-            var exception = Assert.Throws<ArgumentException>(() => handler?.Invoke(request));
+            Assert.NotNull(handler);
+            var exception = Assert.Throws<ArgumentException>(() => handler.Invoke(request));
             Assert.Contains("Cannot perform hash validation when resuming", exception.Message);
             Assert.Equal("stream", exception.ParamName);
         }
@@ -550,8 +552,10 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var eventField = typeof(ResumableUpload).GetField(
                 "LastRequestExecuting",
                 System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+            Assert.NotNull(eventField);
             var handler = (Action<HttpRequestMessage>) eventField.GetValue(uploader);
-            handler?.Invoke(request);
+            Assert.NotNull(handler);
+            handler.Invoke(request);
             Assert.True(request.Headers.Contains("x-goog-hash"));
             Assert.Equal(expectedHash, finalHash);
         }
