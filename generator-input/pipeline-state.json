@@ -1413,12 +1413,12 @@
         },
         {
             "id": "Google.Cloud.DiscoveryEngine.V1",
-            "currentVersion": "1.14.0",
+            "currentVersion": "1.15.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-07-13T19:18:24.923771299Z",
+            "releaseTimestamp": "2026-08-24T19:20:43.296025680Z",
             "lastGeneratedCommit": "d21c3ffd9f95f12fb0d1fc54ae5eed85544d55be",
-            "lastReleasedCommit": "71573e67671246bdd4239c0cf42c5c1e03e89f29",
+            "lastReleasedCommit": "d21c3ffd9f95f12fb0d1fc54ae5eed85544d55be",
             "apiPaths": [
                 "google/cloud/discoveryengine/v1"
             ],
