@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.11.0, released 2026-08-24
+
+### New features
+
+- Add disable rapid cache operation
+
 ## Version 1.10.0, released 2026-08-17
 
 ### New features
