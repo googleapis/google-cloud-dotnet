@@ -78,6 +78,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             GetReservationGroupSettings = existing.GetReservationGroupSettings;
             DeleteReservationGroupSettings = existing.DeleteReservationGroupSettings;
             ListReservationGroupsSettings = existing.ListReservationGroupsSettings;
+            UpdateReservationGroupSettings = existing.UpdateReservationGroupSettings;
             OnCopy(existing);
         }
 
@@ -539,6 +540,19 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListReservationGroupsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationServiceClient.UpdateReservationGroup</c> and
+        /// <c>ReservationServiceClient.UpdateReservationGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateReservationGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ReservationServiceSettings"/> object.</returns>
@@ -5488,6 +5502,83 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             }
             return ListReservationGroupsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Updates an existing reservation group resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReservationGroup UpdateReservationGroup(UpdateReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing reservation group resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReservationGroup> UpdateReservationGroupAsync(UpdateReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing reservation group resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReservationGroup> UpdateReservationGroupAsync(UpdateReservationGroupRequest request, st::CancellationToken cancellationToken) =>
+            UpdateReservationGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing reservation group resource.
+        /// </summary>
+        /// <param name="reservationGroup">
+        /// Required. Content of the reservation group to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Standard field mask for the set of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReservationGroup UpdateReservationGroup(ReservationGroup reservationGroup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateReservationGroup(new UpdateReservationGroupRequest
+            {
+                ReservationGroup = gax::GaxPreconditions.CheckNotNull(reservationGroup, nameof(reservationGroup)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing reservation group resource.
+        /// </summary>
+        /// <param name="reservationGroup">
+        /// Required. Content of the reservation group to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Standard field mask for the set of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReservationGroup> UpdateReservationGroupAsync(ReservationGroup reservationGroup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateReservationGroupAsync(new UpdateReservationGroupRequest
+            {
+                ReservationGroup = gax::GaxPreconditions.CheckNotNull(reservationGroup, nameof(reservationGroup)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing reservation group resource.
+        /// </summary>
+        /// <param name="reservationGroup">
+        /// Required. Content of the reservation group to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Standard field mask for the set of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReservationGroup> UpdateReservationGroupAsync(ReservationGroup reservationGroup, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateReservationGroupAsync(reservationGroup, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ReservationService client wrapper implementation, for convenient use.</summary>
@@ -5567,6 +5658,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         private readonly gaxgrpc::ApiCall<DeleteReservationGroupRequest, wkt::Empty> _callDeleteReservationGroup;
 
         private readonly gaxgrpc::ApiCall<ListReservationGroupsRequest, ListReservationGroupsResponse> _callListReservationGroups;
+
+        private readonly gaxgrpc::ApiCall<UpdateReservationGroupRequest, ReservationGroup> _callUpdateReservationGroup;
 
         /// <summary>
         /// Constructs a client wrapper for the ReservationService service, with the specified gRPC client and settings.
@@ -5672,6 +5765,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             _callListReservationGroups = clientHelper.BuildApiCall<ListReservationGroupsRequest, ListReservationGroupsResponse>("ListReservationGroups", grpcClient.ListReservationGroupsAsync, grpcClient.ListReservationGroups, effectiveSettings.ListReservationGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListReservationGroups);
             Modify_ListReservationGroupsApiCall(ref _callListReservationGroups);
+            _callUpdateReservationGroup = clientHelper.BuildApiCall<UpdateReservationGroupRequest, ReservationGroup>("UpdateReservationGroup", grpcClient.UpdateReservationGroupAsync, grpcClient.UpdateReservationGroup, effectiveSettings.UpdateReservationGroupSettings).WithGoogleRequestParam("reservation_group.name", request => request.ReservationGroup?.Name);
+            Modify_ApiCall(ref _callUpdateReservationGroup);
+            Modify_UpdateReservationGroupApiCall(ref _callUpdateReservationGroup);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5735,6 +5831,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         partial void Modify_ListReservationGroupsApiCall(ref gaxgrpc::ApiCall<ListReservationGroupsRequest, ListReservationGroupsResponse> call);
 
+        partial void Modify_UpdateReservationGroupApiCall(ref gaxgrpc::ApiCall<UpdateReservationGroupRequest, ReservationGroup> call);
+
         partial void OnConstruction(ReservationService.ReservationServiceClient grpcClient, ReservationServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ReservationService client</summary>
@@ -5797,6 +5895,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         partial void Modify_DeleteReservationGroupRequest(ref DeleteReservationGroupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListReservationGroupsRequest(ref ListReservationGroupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateReservationGroupRequest(ref UpdateReservationGroupRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new reservation resource.
@@ -6854,6 +6954,30 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         {
             Modify_ListReservationGroupsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListReservationGroupsRequest, ListReservationGroupsResponse, ReservationGroup>(_callListReservationGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing reservation group resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReservationGroup UpdateReservationGroup(UpdateReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateReservationGroupRequest(ref request, ref callSettings);
+            return _callUpdateReservationGroup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing reservation group resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReservationGroup> UpdateReservationGroupAsync(UpdateReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateReservationGroupRequest(ref request, ref callSettings);
+            return _callUpdateReservationGroup.Async(request, callSettings);
         }
     }
 
