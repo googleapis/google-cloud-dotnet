@@ -436,7 +436,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 return String;
             }
-            if (ProtobufCache.GetProtobufMessageDescriptor(type) is MessageDescriptor descriptor)
+            if (ProtobufMessageCache.GetProtobufMessageDescriptor(type) is MessageDescriptor descriptor)
             {
                 return new SpannerDbType(TypeCode.Proto, descriptor.FullName);
             }
