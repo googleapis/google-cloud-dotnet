@@ -488,6 +488,102 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         }
 
         [Fact]
+        public async Task CustomMediaUpload_ResumeAsync_WithStreamGap_FailsWithArgumentException()
+        {
+            var client = _fixture.Client;
+            var bucket = _fixture.MultiVersionBucket;
+            var name = IdGenerator.FromGuid();
+
+            int chunk1Size = 256 * 1024;
+            int chunk2Size = 100;
+            int totalSize = chunk1Size + chunk2Size;
+
+            var fullData = GenerateData(totalSize);
+            byte[] fullBytes = fullData.ToArray();
+
+            var uploadUri = await client.InitiateUploadSessionAsync(bucket, name, "application/octet-stream", totalSize);
+
+            // 2. Upload the first 256 KiB chunk directly using HTTP PUT so GCS contains bytes 0..262143
+            var chunk1Content = new ByteArrayContent(fullBytes, 0, chunk1Size);
+            chunk1Content.Headers.Add("Content-Range", $"bytes 0-{chunk1Size - 1}/{totalSize}");
+            chunk1Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+
+            var chunk1Request = new HttpRequestMessage(HttpMethod.Put, uploadUri)
+            {
+                Content = chunk1Content
+            };
+            var chunk1Response = await client.Service.HttpClient.SendAsync(chunk1Request);
+            Assert.Equal((HttpStatusCode) 308, chunk1Response.StatusCode);
+
+            // Resume the session using a new CustomMediaUpload instance with validation enabled
+            var fullStream = new MemoryStream(fullBytes);
+            var destination = new Object { Bucket = bucket, Name = name, ContentType = "application/octet-stream" };
+            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.RejectAndThrow };
+
+            var uploader = (CustomMediaUpload) client.CreateObjectUploader(destination, fullStream, options);
+
+            // Execute ResumeAsync via the Google.Apis ResumableUpload
+            var progress = await uploader.ResumeAsync(uploadUri);
+
+            // Verify failure and exception
+            Assert.Equal(UploadStatus.Failed, progress.Status);
+            var exception = Assert.IsType<ArgumentException>(progress.Exception);
+            Assert.Contains("Cannot perform hash validation when resuming", exception.Message);
+            Assert.Equal("stream", exception.ParamName);
+
+            // Verify ThrowOnFailure() unwraps and rethrows the ArgumentException
+            var thrown = Assert.Throws<ArgumentException>(() => progress.ThrowOnFailure());
+            Assert.Same(exception, thrown);
+        }
+
+        [Fact]
+        public async Task CustomMediaUpload_ResumeSync_WithStreamGap_FailsWithArgumentException()
+        {
+            var client = _fixture.Client;
+            var bucket = _fixture.MultiVersionBucket;
+            var name = IdGenerator.FromGuid();
+
+            int chunk1Size = 256 * 1024;
+            int chunk2Size = 100;
+            int totalSize = chunk1Size + chunk2Size;
+
+            var fullData = GenerateData(totalSize);
+            byte[] fullBytes = fullData.ToArray();
+
+            var uploadUri = await client.InitiateUploadSessionAsync(bucket, name, "application/octet-stream", totalSize);
+
+            // Upload first 256 KiB chunk directly via HTTP
+            var chunk1Content = new ByteArrayContent(fullBytes, 0, chunk1Size);
+            chunk1Content.Headers.Add("Content-Range", $"bytes 0-{chunk1Size - 1}/{totalSize}");
+            chunk1Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+
+            var chunk1Request = new HttpRequestMessage(HttpMethod.Put, uploadUri)
+            {
+                Content = chunk1Content
+            };
+            var chunk1Response = await client.Service.HttpClient.SendAsync(chunk1Request);
+            Assert.Equal((HttpStatusCode) 308, chunk1Response.StatusCode);
+
+            // Resume synchronously with CustomMediaUpload
+            var fullStream = new MemoryStream(fullBytes);
+            var destination = new Object { Bucket = bucket, Name = name, ContentType = "application/octet-stream" };
+            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.RejectAndThrow };
+
+            var uploader = (CustomMediaUpload) client.CreateObjectUploader(destination, fullStream, options);
+
+            var progress = uploader.Resume(uploadUri);
+
+            Assert.Equal(UploadStatus.Failed, progress.Status);
+            var exception = Assert.IsType<ArgumentException>(progress.Exception);
+            Assert.Contains("Cannot perform hash validation when resuming", exception.Message);
+            Assert.Equal("stream", exception.ParamName);
+
+            // Verify ThrowOnFailure() unwraps and rethrows the ArgumentException
+            var thrown = Assert.Throws<ArgumentException>(() => progress.ThrowOnFailure());
+            Assert.Same(exception, thrown);
+        }
+
+        [Fact]
         public void CustomMediaUpload_ShouldThrowArgumentException_WhenResumingFromIntermediateOffset()
         {
             var data = Encoding.UTF8.GetBytes("The quick brown fox jumps over the lazy dog");
