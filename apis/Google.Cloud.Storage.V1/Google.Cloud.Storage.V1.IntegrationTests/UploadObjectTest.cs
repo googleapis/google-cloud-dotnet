@@ -503,7 +503,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
             var uploadUri = await client.InitiateUploadSessionAsync(bucket, name, "application/octet-stream", totalSize);
 
-            // 2. Upload the first 256 KiB chunk directly using HTTP PUT so GCS contains bytes 0..262143
+            // Upload the first 256 KiB chunk directly using HTTP PUT so GCS contains bytes 0..262143
             var chunk1Content = new ByteArrayContent(fullBytes, 0, chunk1Size);
             chunk1Content.Headers.Add("Content-Range", $"bytes 0-{chunk1Size - 1}/{totalSize}");
             chunk1Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
