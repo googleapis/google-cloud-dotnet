@@ -110,12 +110,18 @@ namespace Google.Cloud.Spanner.Data
                     spannerDbType = new SpannerDbType(fields);
                     return true;
                 case TypeCode.Proto:
+                    if (string.IsNullOrEmpty(remainder))
+                    {
+                        return false;
+                    }
+                    spannerDbType = ForProtobufMessage(remainder);
+                    return true;
                 case TypeCode.Enum:
                     if (string.IsNullOrEmpty(remainder))
                     {
                         return false;
                     }
-                    spannerDbType = new SpannerDbType(type.Code, remainder);
+                    spannerDbType = ForProtobufEnum(remainder);
                     return true;
                 default:
                     return false;
