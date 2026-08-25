@@ -754,7 +754,7 @@ namespace Google.Cloud.Spanner.Data
             // Protobuf:
             if (TypeCode == TypeCode.Proto
                 && wireValue.KindCase == Value.KindOneofCase.StringValue
-                && ProtobufCache.GetProtobufMessageParser(targetClrType) is MessageParser parser)
+                && ProtobufMessageCache.GetProtobufMessageParser(targetClrType) is MessageParser parser)
             {
                 var messageBytes = Convert.FromBase64String(wireValue.StringValue);
                 return parser.ParseFrom(messageBytes);
