@@ -1361,6 +1361,15 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             get => string.IsNullOrEmpty(Name) ? null : gcbrv::ReservationGroupName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="ParentGroup"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentGroupAsLocationName
+        {
+            get => string.IsNullOrEmpty(ParentGroup) ? null : gagr::LocationName.Parse(ParentGroup, allowUnparsed: true);
+            set => ParentGroup = value?.ToString() ?? "";
+        }
     }
 
     public partial class CapacityCommitment

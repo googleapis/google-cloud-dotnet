@@ -7754,6 +7754,206 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_UpdateReservationGroup_sync",
+      "title": "UpdateReservationGroupRequestObject",
+      "description": "Snippet for UpdateReservationGroup",
+      "file": "ReservationServiceClient.UpdateReservationGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateReservationGroup",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateReservationGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.UpdateReservationGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Reservation.V1.ReservationGroup",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.UpdateReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_UpdateReservationGroup_async",
+      "title": "UpdateReservationGroupRequestObjectAsync",
+      "description": "Snippet for UpdateReservationGroupAsync",
+      "file": "ReservationServiceClient.UpdateReservationGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateReservationGroupAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateReservationGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.UpdateReservationGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.UpdateReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_UpdateReservationGroup_sync_flattened",
+      "title": "UpdateReservationGroup",
+      "description": "Snippet for UpdateReservationGroup",
+      "file": "ReservationServiceClient.UpdateReservationGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateReservationGroup",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateReservationGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationGroup",
+            "name": "reservationGroup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Reservation.V1.ReservationGroup",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.UpdateReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_UpdateReservationGroup_async_flattened",
+      "title": "UpdateReservationGroupAsync",
+      "description": "Snippet for UpdateReservationGroupAsync",
+      "file": "ReservationServiceClient.UpdateReservationGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateReservationGroupAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.UpdateReservationGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationGroup",
+            "name": "reservationGroup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.UpdateReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
