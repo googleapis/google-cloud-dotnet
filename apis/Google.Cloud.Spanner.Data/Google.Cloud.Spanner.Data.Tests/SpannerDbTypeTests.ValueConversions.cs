@@ -594,7 +594,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[]
             {   // The value is serialized/deserialized by calling code.
                 duration10sWire,
-                SpannerDbType.ForProtobuf(Duration.Descriptor.FullName),
+                SpannerDbType.ForProtobufMessage(Duration.Descriptor.FullName),
                 duration10sWire.ToString(),
             };
             yield return new object[]
@@ -613,7 +613,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[]
             {   // The values is serialized/deserialized by calling code.
                 new List<Value> { duration10sWire, duration20sWire },
-                SpannerDbType.ArrayOf(SpannerDbType.ForProtobuf(Duration.Descriptor.FullName)),
+                SpannerDbType.ArrayOf(SpannerDbType.ForProtobufMessage(Duration.Descriptor.FullName)),
                 $"[ {duration10sWire}, {duration20sWire} ]",
             };
             yield return new object[]
@@ -632,7 +632,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[]
             {   // The value is serialized/deserialized by calling code.
                 testRectangle1,
-                SpannerDbType.ForProtobuf(Rectangle.Descriptor.FullName),
+                SpannerDbType.ForProtobufMessage(Rectangle.Descriptor.FullName),
                 testRectangle1Wire.ToString(),
             };
             yield return new object[]
@@ -651,7 +651,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[]
             {   // The value is serialized/deserialized by calling code.
                 testPerson1,
-                SpannerDbType.ForProtobuf(Person.Descriptor.FullName),
+                SpannerDbType.ForProtobufMessage(Person.Descriptor.FullName),
                 testPerson1Wire.ToString(),
             };
             yield return new object[]
@@ -670,7 +670,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[]
             {   // The value is serialized/deserialized by calling code.
                 testValueWrapper1,
-                SpannerDbType.ForProtobuf(ValueWrapper.Descriptor.FullName),
+                SpannerDbType.ForProtobufMessage(ValueWrapper.Descriptor.FullName),
                 testValueWrapper1Wire.ToString(),
             };
             yield return new object[]

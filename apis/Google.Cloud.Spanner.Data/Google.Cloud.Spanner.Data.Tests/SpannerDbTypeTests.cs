@@ -55,15 +55,15 @@ namespace Google.Cloud.Spanner.Data.Tests
                 }.GetSpannerDbType()
             };
             yield return new object[]
-                {SpannerDbType.FromClrType(typeof(Duration)), SpannerDbType.ForProtobuf(Duration.Descriptor.FullName)};
+                {SpannerDbType.FromClrType(typeof(Duration)), SpannerDbType.ForProtobufMessage(Duration.Descriptor.FullName)};
             yield return new object[]
-                {SpannerDbType.FromClrType(typeof(Rectangle)), SpannerDbType.ForProtobuf(Rectangle.Descriptor.FullName)};
+                {SpannerDbType.FromClrType(typeof(Rectangle)), SpannerDbType.ForProtobufMessage(Rectangle.Descriptor.FullName)};
             // Top Level Enum
             yield return new object[]
-                {SpannerDbType.FromClrType(typeof(Color)), SpannerDbType.ForEnum(ColorReflection.Descriptor.EnumTypes.Single().FullName)};
+                {SpannerDbType.FromClrType(typeof(Color)), SpannerDbType.ForProtobufEnum(ColorReflection.Descriptor.EnumTypes.Single().FullName)};
             // Nested Enum
             yield return new object[]
-                {SpannerDbType.FromClrType(typeof(Pet.Types.Species)), SpannerDbType.ForEnum(Pet.Descriptor.EnumTypes.Single().FullName)};
+                {SpannerDbType.FromClrType(typeof(Pet.Types.Species)), SpannerDbType.ForProtobufEnum(Pet.Descriptor.EnumTypes.Single().FullName)};
         }
 
         [Theory]

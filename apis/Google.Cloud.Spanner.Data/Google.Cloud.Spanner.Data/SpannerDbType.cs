@@ -322,8 +322,9 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Struct:
                     return new SpannerDbType(type.StructType.Fields.Select(f => new StructField(f.Name, FromProtobufType(f.Type))).ToList());
                 case TypeCode.Proto:
+                    return ForProtobufMessage(type.ProtoTypeFqn);
                 case TypeCode.Enum:
-                    return new SpannerDbType(type.Code, type.ProtoTypeFqn);
+                    return ForProtobufEnum(type.ProtoTypeFqn);
                 default:
                     return FromType(type);
             }
@@ -381,11 +382,11 @@ namespace Google.Cloud.Spanner.Data
             new SpannerDbType(spannerStruct.Select(f => new StructField(f.Name, f.Type)).ToList());
 
         // Internal for testing, and to continue with the practice of not exposing constructors even internally.
-        internal static SpannerDbType ForProtobuf(string protobufTypeName) =>
+        internal static SpannerDbType ForProtobufMessage(string protobufTypeName) =>
             new SpannerDbType(TypeCode.Proto, protobufTypeName);
 
-        // Internal for testing
-        internal static SpannerDbType ForEnum(string enumTypeName) => new(TypeCode.Enum, enumTypeName);
+        // Internal for testing, and to continue with the practice of not exposing constructors even internally.
+        internal static SpannerDbType ForProtobufEnum(string enumTypeName) => new(TypeCode.Enum, enumTypeName);
 
         /// <summary>
         /// Returns a SpannerDbType given a ClrType.
@@ -438,11 +439,11 @@ namespace Google.Cloud.Spanner.Data
             }
             if (ProtobufCache.GetProtobufMessageDescriptor(type) is MessageDescriptor descriptor)
             {
-                return new SpannerDbType(TypeCode.Proto, descriptor.FullName);
+                return ForProtobufMessage(descriptor.FullName);
             }
             if (ProtobufEnumCache.GetEnumDescriptor(type) is EnumDescriptor enumDescriptor)
             {
-                return new SpannerDbType(TypeCode.Enum, enumDescriptor.FullName);
+                return ForProtobufEnum(enumDescriptor.FullName);
             }
             if (type == typeof(Interval))
             {
