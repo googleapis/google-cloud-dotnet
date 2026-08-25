@@ -2979,6 +2979,24 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.NetworkOptimizedU4C"/>.
+                /// </summary>
+                public const string NetworkOptimizedU4C = "NETWORK_OPTIMIZED_U4C";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.NetworkOptimizedU4P"/>.
+                /// </summary>
+                public const string NetworkOptimizedU4P = "NETWORK_OPTIMIZED_U4P";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.NetworkOptimizedU4S"/>.
+                /// </summary>
+                public const string NetworkOptimizedU4S = "NETWORK_OPTIMIZED_U4S";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.StorageOptimizedZ3"/>.
                 /// </summary>
                 public const string StorageOptimizedZ3 = "STORAGE_OPTIMIZED_Z3";
@@ -18839,6 +18857,13 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.Asn"/>
+                /// .
+                /// </summary>
+                public const string Asn = "ASN";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.HttpCookie"/>
                 /// .
                 /// </summary>
@@ -18935,6 +18960,13 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string All = "ALL";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.Asn"/>
+                /// .
+                /// </summary>
+                public const string Asn = "ASN";
 
                 /// <summary>
                 /// Wire representation of
