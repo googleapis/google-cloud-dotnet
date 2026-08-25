@@ -3754,7 +3754,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T21:36:43.882024237Z",
-            "lastGeneratedCommit": "3fb120eb5c474ec18cddd88f8365e3c2c99289e5",
+            "lastGeneratedCommit": "81757350d1a909f72d461822b8c6b72e42528d7b",
             "lastReleasedCommit": "3fb120eb5c474ec18cddd88f8365e3c2c99289e5",
             "apiPaths": [
                 "google/maps/areainsights/v1"
