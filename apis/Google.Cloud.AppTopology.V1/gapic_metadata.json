@@ -1,0 +1,42 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.apptopology.v1",
+  "libraryPackage": "Google.Cloud.AppTopology.V1",
+  "services": {
+    "AppTopology": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AppTopologyClient",
+          "rpcs": {
+            "GenerateDiscoveredResourcesTopology": {
+              "methods": [
+                "GenerateDiscoveredResourcesTopology",
+                "GenerateDiscoveredResourcesTopologyAsync"
+              ]
+            },
+            "GetDomain": {
+              "methods": [
+                "GetDomain",
+                "GetDomainAsync"
+              ]
+            },
+            "GetSchema": {
+              "methods": [
+                "GetSchema",
+                "GetSchemaAsync"
+              ]
+            },
+            "ListDomains": {
+              "methods": [
+                "ListDomains",
+                "ListDomainsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
