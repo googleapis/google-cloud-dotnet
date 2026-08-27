@@ -49,6 +49,7 @@ public class SpannerBuiltInMetricsInterceptorTests
 
     private static readonly FakeRequest s_fakeRequest = new();
     private static readonly ClientInterceptorContext<FakeRequest, string> s_unaryContext = CreateContext(MethodType.Unary);
+    private static readonly ClientInterceptorContext<FakeRequest, string> s_streamingContext = CreateContext(MethodType.ServerStreaming);
 
     private static readonly Exception s_exception = new RpcException(new Status(StatusCode.DeadlineExceeded, "Test"));
     private static readonly Metadata s_metadataWithGfe = new Metadata { { "server-timing", "gfet4t7; dur=12.5" } };
@@ -77,6 +78,20 @@ public class SpannerBuiltInMetricsInterceptorTests
                 (req, ctx) => "1");
             return Task.CompletedTask;
         },
+
+        () =>
+        {
+            var call = s_interceptor.AsyncServerStreamingCall(
+                s_fakeRequest,
+                s_streamingContext,
+                (req, ctx) => new AsyncServerStreamingCall<string>(
+                    new FakeAsyncStreamReader<string>(new[] { "1", "2" }),
+                    Task.FromResult(s_metadataWithGfe),
+                    () => Status.DefaultSuccess,
+                    () => new Metadata(),
+                    () => { }));
+            return ConsumeStreamAsync(call.ResponseStream);
+        },
     };
 
     public static TheoryData<Func<Task>> ExceptionCalls => new TheoryData<Func<Task>>
@@ -100,6 +115,20 @@ public class SpannerBuiltInMetricsInterceptorTests
             s_interceptor.BlockingUnaryCall(
                 s_fakeRequest, s_unaryContext, (req, ctx) => throw s_exception);
             return Task.CompletedTask;
+        },
+
+        () =>
+        {
+            var call = s_interceptor.AsyncServerStreamingCall(
+                s_fakeRequest,
+                s_streamingContext,
+                (req, ctx) => new AsyncServerStreamingCall<string>(
+                    new FakeAsyncStreamReader<string>(Array.Empty<string>(), s_exception),
+                    Task.FromResult(s_metadataWithGfe),
+                    () => ((RpcException)s_exception).Status,
+                    () => new Metadata(),
+                    () => { }));
+            return ConsumeStreamAsync(call.ResponseStream);
         },
     };
 
@@ -195,6 +224,111 @@ public class SpannerBuiltInMetricsInterceptorTests
         });
 
         ValidateServerTimingMeasurements(measurements, expectedGfeLatency);
+    }
+
+    [Theory]
+    [MemberData(nameof(ServerTimingTestCases))]
+    public async Task RecordsMetrics_AsyncServerStreamingCall_ExtractsServerTiming(
+        string serverTimingHeader,
+        double? expectedGfeLatency)
+    {
+        var metadata = new Metadata { { "server-timing", serverTimingHeader } };
+
+        var measurements = await RunWithMeterListenerAsync(async () =>
+        {
+            var call = s_interceptor.AsyncServerStreamingCall(
+                s_fakeRequest,
+                s_streamingContext,
+                (req, ctx) => new AsyncServerStreamingCall<string>(
+                    new FakeAsyncStreamReader<string>(new[] { "1" }),
+                    Task.FromResult(metadata),
+                    () => Status.DefaultSuccess,
+                    () => new Metadata(),
+                    () => { }));
+            await ConsumeStreamAsync(call.ResponseStream);
+        });
+
+        ValidateServerTimingMeasurements(measurements, expectedGfeLatency);
+    }
+
+    [Fact]
+    public async Task RecordsMetrics_AsyncServerStreamingCall_EarlyDisposal()
+    {
+        var call = s_interceptor.AsyncServerStreamingCall(
+            s_fakeRequest,
+            s_streamingContext,
+            (req, ctx) => new AsyncServerStreamingCall<string>(
+                new FakeAsyncStreamReader<string>(new[] { "1", "2" }),
+                Task.FromResult(s_metadataWithGfe),
+                () => Status.DefaultCancelled,
+                () => new Metadata(),
+                () => { }));
+
+        var measurements = await RunWithMeterListenerAsync(async () =>
+        {
+            await call.ResponseStream.MoveNext(System.Threading.CancellationToken.None);
+            call.Dispose();
+        });
+
+        ValidateEmittedMetrics(measurements, StatusCode.Cancelled);
+    }
+
+    [Fact]
+    public async Task RecordsMetrics_AsyncServerStreamingCall_BatchWrite_EmitsOperationMetrics()
+    {
+        var batchWriteContext = CreateContext(MethodType.ServerStreaming, "BatchWrite");
+        var call = s_interceptor.AsyncServerStreamingCall(
+            s_fakeRequest,
+            batchWriteContext,
+            (req, ctx) => new AsyncServerStreamingCall<string>(
+                new FakeAsyncStreamReader<string>(new[] { "1" }),
+                Task.FromResult(s_metadataWithGfe),
+                () => Status.DefaultSuccess,
+                () => new Metadata(),
+                () => { }));
+
+        var measurements = await RunWithMeterListenerAsync(async () =>
+        {
+            await ConsumeStreamAsync(call.ResponseStream);
+        });
+
+        var methodMeasurements = measurements
+            .Where(m => m.Tags.Any(t => t.Key == "method" && (string)t.Value == "BatchWrite"))
+            .ToList();
+
+        Assert.Contains(methodMeasurements, m => m.Name == "attempt_count");
+        Assert.Contains(methodMeasurements, m => m.Name == "attempt_latencies");
+        Assert.Contains(methodMeasurements, m => m.Name == "operation_count");
+        Assert.Contains(methodMeasurements, m => m.Name == "operation_latencies");
+    }
+
+    [Fact]
+    public async Task RecordsMetrics_AsyncServerStreamingCall_ExecuteStreamingSql_SkipsOperationMetrics()
+    {
+        var sqlContext = CreateContext(MethodType.ServerStreaming, "ExecuteStreamingSql");
+        var call = s_interceptor.AsyncServerStreamingCall(
+            s_fakeRequest,
+            sqlContext,
+            (req, ctx) => new AsyncServerStreamingCall<string>(
+                new FakeAsyncStreamReader<string>(new[] { "1" }),
+                Task.FromResult(s_metadataWithGfe),
+                () => Status.DefaultSuccess,
+                () => new Metadata(),
+                () => { }));
+
+        var measurements = await RunWithMeterListenerAsync(async () =>
+        {
+            await ConsumeStreamAsync(call.ResponseStream);
+        });
+
+        var methodMeasurements = measurements
+            .Where(m => m.Tags.Any(t => t.Key == "method" && (string)t.Value == "ExecuteStreamingSql"))
+            .ToList();
+
+        Assert.Contains(methodMeasurements, m => m.Name == "attempt_count");
+        Assert.Contains(methodMeasurements, m => m.Name == "attempt_latencies");
+        Assert.DoesNotContain(methodMeasurements, m => m.Name == "operation_count");
+        Assert.DoesNotContain(methodMeasurements, m => m.Name == "operation_latencies");
     }
 
     private static void ValidateServerTimingMeasurements(
@@ -309,15 +443,37 @@ public class SpannerBuiltInMetricsInterceptorTests
         public string DatabaseId => TestDatabaseId;
     }
 
-    private static ClientInterceptorContext<FakeRequest, string> CreateContext(MethodType methodType) =>
+    private static ClientInterceptorContext<FakeRequest, string> CreateContext(MethodType methodType, string methodName = TestMethodName) =>
         new ClientInterceptorContext<FakeRequest, string>(
             new Method<FakeRequest, string>(
                 methodType,
                 "SomeSession",
-                TestMethodName,
+                methodName,
                 Marshallers.Create(req => Array.Empty<byte>(), bytes => new FakeRequest()),
                 Marshallers.StringMarshaller),
             null,
             new CallOptions());
 
+    private class FakeAsyncStreamReader<T>(IEnumerable<T> items, Exception exception = null) : IAsyncStreamReader<T>
+    {
+        private readonly IEnumerator<T> _enumerator = items.GetEnumerator();
+
+        public T Current => _enumerator.Current;
+
+        public Task<bool> MoveNext(System.Threading.CancellationToken cancellationToken)
+        {
+            if (exception != null)
+            {
+                throw exception;
+            }
+            return Task.FromResult(_enumerator.MoveNext());
+        }
+    }
+
+    private static async Task ConsumeStreamAsync<T>(IAsyncStreamReader<T> stream)
+    {
+        while (await stream.MoveNext(System.Threading.CancellationToken.None).ConfigureAwait(false))
+        {
+        }
+    }
 }

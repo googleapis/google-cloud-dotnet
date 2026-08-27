@@ -721,7 +721,22 @@ public sealed class ManagedTransaction : IAsyncDisposable
         MaybeApplyDirectedReadOptions(request.UnderlyingRequest);
 
         ResultStream stream = new ResultStream(_client, request, this, callSettings);
-        return new ReliableStreamReader(stream, _client.Settings.Logger);
+
+        // Wrap ResultStream in an instrumented reader to track overarching operation metrics across
+        // any internal resumes or retries executed by ResultStream.
+        var instrumentedStream = new SpannerBuiltInMetrics.InstrumentedAsyncStreamReader<PartialResultSet>(
+            stream,
+            SpannerBuiltInMetrics.DefaultStopwatchProvider.Instance,
+            (elapsedMs, status) =>
+            {
+                var labels = SpannerBuiltInMetrics.Labeler.GetLabels(
+                    request.IsQuery ? "ExecuteStreamingSql" : "StreamingRead",
+                    request,
+                    status,
+                    _client.ClientIdentity);
+                SpannerBuiltInMetrics.RecordOperationMetrics(elapsedMs, labels);
+            });
+        return new ReliableStreamReader(instrumentedStream, _client.Settings.Logger);
     }
 
     /// <summary>

@@ -121,7 +121,69 @@ internal static partial class SpannerBuiltInMetrics
             }
         }
 
-        // TODO: Add instrumentation for server streaming calls
+        /// <summary>
+        /// Methods whose overarching operation metrics are tracked by the high-level <see cref="ResultStream"/>
+        /// wrapper across transparent resumes and retries, rather than at the individual RPC attempt layer.
+        /// </summary>
+        private static readonly HashSet<string> s_resultStreamTrackedMethods = new HashSet<string>(StringComparer.Ordinal)
+        {
+            "ExecuteStreamingSql",
+            "StreamingRead"
+        };
+
+        /// <inheritdoc/>
+        public override AsyncServerStreamingCall<TResponse> AsyncServerStreamingCall<TRequest, TResponse>(
+            TRequest request,
+            ClientInterceptorContext<TRequest, TResponse> context,
+            AsyncServerStreamingCallContinuation<TRequest, TResponse> continuation)
+        {
+            if (request is not IDatabaseNameProvider dbNameProvider)
+            {
+                return continuation(request, context);
+            }
+
+            IStopwatch stopwatch = _stopwatchProvider.StartNew();
+            AsyncServerStreamingCall<TResponse> call;
+            try
+            {
+                call = continuation(request, context);
+            }
+            catch (Exception ex)
+            {
+                double elapsedMs = stopwatch.ElapsedMilliseconds;
+                string status = ex is RpcException rpcEx ? rpcEx.StatusCode.ToString() : s_statusUnknown;
+                RecordAttemptMetrics(elapsedMs, context.Method.Name, dbNameProvider, status, _clientIdentity);
+                throw;
+            }
+
+            var instrumentedStreamReader = new InstrumentedAsyncStreamReader<TResponse>(
+                call.ResponseStream,
+                stopwatch,
+                (elapsedMs, status) =>
+                {
+                    var labels = Labeler.GetLabels(context.Method.Name, dbNameProvider, status, _clientIdentity);
+                    RecordAttemptMetrics(elapsedMs, labels);
+
+                    // Single-shot streaming calls (e.g. BatchWrite, FetchCacheUpdate) do not use ResultStream retry
+                    // logic, so their operation metrics map directly 1:1 to their single RPC attempt.
+                    if (!s_resultStreamTrackedMethods.Contains(context.Method.Name))
+                    {
+                        RecordOperationMetrics(elapsedMs, labels);
+                    }
+                    _ = RecordServerTimingMetricsAsync(call.ResponseHeadersAsync, labels);
+                });
+
+            return new AsyncServerStreamingCall<TResponse>(
+                instrumentedStreamReader,
+                call.ResponseHeadersAsync,
+                call.GetStatus,
+                call.GetTrailers,
+                () =>
+                {
+                    instrumentedStreamReader.OnDispose(call.GetStatus);
+                    call.Dispose();
+                });
+        }
 
         internal static async Task RecordServerTimingMetricsAsync(Task<Metadata> headersTask, KeyValuePair<string, object>[] labels)
         {
