@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaav = Google.Ads.AdManager.V1;
+using gax = Google.Api.Gax;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -40,6 +41,106 @@ namespace Google.Ads.AdManager.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchActivateAudienceSegmentsRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="AudienceSegmentName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<AudienceSegmentName> AudienceSegmentNames
+        {
+            get => new gax::ResourceNameList<AudienceSegmentName>(Names, s => string.IsNullOrEmpty(s) ? null : AudienceSegmentName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class BatchDeactivateAudienceSegmentsRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="AudienceSegmentName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<AudienceSegmentName> AudienceSegmentNames
+        {
+            get => new gax::ResourceNameList<AudienceSegmentName>(Names, s => string.IsNullOrEmpty(s) ? null : AudienceSegmentName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class BatchApproveAudienceSegmentsRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="AudienceSegmentName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<AudienceSegmentName> AudienceSegmentNames
+        {
+            get => new gax::ResourceNameList<AudienceSegmentName>(Names, s => string.IsNullOrEmpty(s) ? null : AudienceSegmentName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class BatchRejectAudienceSegmentsRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="AudienceSegmentName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<AudienceSegmentName> AudienceSegmentNames
+        {
+            get => new gax::ResourceNameList<AudienceSegmentName>(Names, s => string.IsNullOrEmpty(s) ? null : AudienceSegmentName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class BatchPopulateAudienceSegmentsRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="AudienceSegmentName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<AudienceSegmentName> AudienceSegmentNames
+        {
+            get => new gax::ResourceNameList<AudienceSegmentName>(Names, s => string.IsNullOrEmpty(s) ? null : AudienceSegmentName.Parse(s, allowUnparsed: true));
         }
     }
 }

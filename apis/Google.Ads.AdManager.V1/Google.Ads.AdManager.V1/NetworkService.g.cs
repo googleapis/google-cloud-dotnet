@@ -29,39 +29,326 @@ namespace Google.Ads.AdManager.V1 {
             "YWdlci92MS9uZXR3b3JrX21lc3NhZ2VzLnByb3RvGhxnb29nbGUvYXBpL2Fu",
             "bm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29v",
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
-            "dXJjZS5wcm90byJLChFHZXROZXR3b3JrUmVxdWVzdBI2CgRuYW1lGAEgASgJ",
-            "QijgQQL6QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrIlkK",
-            "E0xpc3ROZXR3b3Jrc1JlcXVlc3QSFgoJcGFnZV9zaXplGAMgASgFQgPgQQES",
-            "FwoKcGFnZV90b2tlbhgEIAEoCUID4EEBEhEKBHNraXAYBSABKAVCA+BBASJ3",
-            "ChRMaXN0TmV0d29ya3NSZXNwb25zZRIyCghuZXR3b3JrcxgBIAMoCzIgLmdv",
-            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxLk5ldHdvcmsSFwoPbmV4dF9wYWdlX3Rv",
-            "a2VuGAIgASgJEhIKCnRvdGFsX3NpemUYAyABKAUykwMKDk5ldHdvcmtTZXJ2",
-            "aWNlEoABCgpHZXROZXR3b3JrEiouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEu",
-            "R2V0TmV0d29ya1JlcXVlc3QaIC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5O",
-            "ZXR3b3JrIiTaQQRuYW1lgtPkkwIXEhUvdjEve25hbWU9bmV0d29ya3MvKn0S",
-            "gQEKDExpc3ROZXR3b3JrcxIsLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkxp",
-            "c3ROZXR3b3Jrc1JlcXVlc3QaLS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5M",
-            "aXN0TmV0d29ya3NSZXNwb25zZSIUgtPkkwIOEgwvdjEvbmV0d29ya3MaespB",
-            "GGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbdJBXGh0dHBzOi8vd3d3Lmdvb2ds",
-            "ZWFwaXMuY29tL2F1dGgvYWRtYW5hZ2VyLGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvYWRtYW5hZ2VyLnJlYWRvbmx5QscBChtjb20uZ29vZ2xl",
-            "LmFkcy5hZG1hbmFnZXIudjFCE05ldHdvcmtTZXJ2aWNlUHJvdG9QAVpAZ29v",
-            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5h",
-            "Z2VyL3YxO2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIX",
-            "R29vZ2xlXEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5h",
-            "Z2VyOjpWMWIGcHJvdG8z"));
+            "dXJjZS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8i",
+            "hAEKFFVwZGF0ZU5ldHdvcmtSZXF1ZXN0EjYKB25ldHdvcmsYASABKAsyIC5n",
+            "b29nbGUuYWRzLmFkbWFuYWdlci52MS5OZXR3b3JrQgPgQQISNAoLdXBkYXRl",
+            "X21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQEi",
+            "SwoRR2V0TmV0d29ya1JlcXVlc3QSNgoEbmFtZRgBIAEoCUIo4EEC+kEiCiBh",
+            "ZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vTmV0d29yayJZChNMaXN0TmV0d29y",
+            "a3NSZXF1ZXN0EhYKCXBhZ2Vfc2l6ZRgDIAEoBUID4EEBEhcKCnBhZ2VfdG9r",
+            "ZW4YBCABKAlCA+BBARIRCgRza2lwGAUgASgFQgPgQQEidwoUTGlzdE5ldHdv",
+            "cmtzUmVzcG9uc2USMgoIbmV0d29ya3MYASADKAsyIC5nb29nbGUuYWRzLmFk",
+            "bWFuYWdlci52MS5OZXR3b3JrEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIS",
+            "Cgp0b3RhbF9zaXplGAMgASgFIh0KG1Byb3Zpc2lvblRlc3ROZXR3b3JrUmVx",
+            "dWVzdCJ9CipHZXREZWZhdWx0VGhpcmRQYXJ0eURhdGFEZWNsYXJhdGlvblJl",
+            "cXVlc3QSTwoEbmFtZRgBIAEoCUJB4EEC+kE7CjlhZG1hbmFnZXIuZ29vZ2xl",
+            "YXBpcy5jb20vRGVmYXVsdFRoaXJkUGFydHlEYXRhRGVjbGFyYXRpb24yygcK",
+            "Dk5ldHdvcmtTZXJ2aWNlEoABCgpHZXROZXR3b3JrEiouZ29vZ2xlLmFkcy5h",
+            "ZG1hbmFnZXIudjEuR2V0TmV0d29ya1JlcXVlc3QaIC5nb29nbGUuYWRzLmFk",
+            "bWFuYWdlci52MS5OZXR3b3JrIiTaQQRuYW1lgtPkkwIXEhUvdjEve25hbWU9",
+            "bmV0d29ya3MvKn0SgQEKDExpc3ROZXR3b3JrcxIsLmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLkxpc3ROZXR3b3Jrc1JlcXVlc3QaLS5nb29nbGUuYWRzLmFk",
+            "bWFuYWdlci52MS5MaXN0TmV0d29ya3NSZXNwb25zZSIUgtPkkwIOEgwvdjEv",
+            "bmV0d29ya3MSpgEKDVVwZGF0ZU5ldHdvcmsSLS5nb29nbGUuYWRzLmFkbWFu",
+            "YWdlci52MS5VcGRhdGVOZXR3b3JrUmVxdWVzdBogLmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLk5ldHdvcmsiRNpBE25ldHdvcmssdXBkYXRlX21hc2uC0+ST",
+            "AigyHS92MS97bmV0d29yay5uYW1lPW5ldHdvcmtzLyp9OgduZXR3b3JrEpwB",
+            "ChRQcm92aXNpb25UZXN0TmV0d29yaxI0Lmdvb2dsZS5hZHMuYWRtYW5hZ2Vy",
+            "LnYxLlByb3Zpc2lvblRlc3ROZXR3b3JrUmVxdWVzdBogLmdvb2dsZS5hZHMu",
+            "YWRtYW5hZ2VyLnYxLk5ldHdvcmsiLILT5JMCJiIhL3YxL25ldHdvcmtzOnBy",
+            "b3Zpc2lvblRlc3ROZXR3b3JrOgEqEuwBCiNHZXREZWZhdWx0VGhpcmRQYXJ0",
+            "eURhdGFEZWNsYXJhdGlvbhJDLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkdl",
+            "dERlZmF1bHRUaGlyZFBhcnR5RGF0YURlY2xhcmF0aW9uUmVxdWVzdBo5Lmdv",
+            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkRlZmF1bHRUaGlyZFBhcnR5RGF0YURl",
+            "Y2xhcmF0aW9uIkXaQQRuYW1lgtPkkwI4EjYvdjEve25hbWU9bmV0d29ya3Mv",
+            "Ki9kZWZhdWx0VGhpcmRQYXJ0eURhdGFEZWNsYXJhdGlvbn0aespBGGFkbWFu",
+            "YWdlci5nb29nbGVhcGlzLmNvbdJBXGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvYWRtYW5hZ2VyLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
+            "L2F1dGgvYWRtYW5hZ2VyLnJlYWRvbmx5QscBChtjb20uZ29vZ2xlLmFkcy5h",
+            "ZG1hbmFnZXIudjFCE05ldHdvcmtTZXJ2aWNlUHJvdG9QAVpAZ29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3Yx",
+            "O2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xl",
+            "XEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.NetworkMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.NetworkMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.UpdateNetworkRequest), global::Google.Ads.AdManager.V1.UpdateNetworkRequest.Parser, new[]{ "Network", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.GetNetworkRequest), global::Google.Ads.AdManager.V1.GetNetworkRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ListNetworksRequest), global::Google.Ads.AdManager.V1.ListNetworksRequest.Parser, new[]{ "PageSize", "PageToken", "Skip" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ListNetworksResponse), global::Google.Ads.AdManager.V1.ListNetworksResponse.Parser, new[]{ "Networks", "NextPageToken", "TotalSize" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ListNetworksResponse), global::Google.Ads.AdManager.V1.ListNetworksResponse.Parser, new[]{ "Networks", "NextPageToken", "TotalSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ProvisionTestNetworkRequest), global::Google.Ads.AdManager.V1.ProvisionTestNetworkRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.GetDefaultThirdPartyDataDeclarationRequest), global::Google.Ads.AdManager.V1.GetDefaultThirdPartyDataDeclarationRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
+  /// <summary>
+  /// Request for the `UpdateNetwork` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateNetworkRequest : pb::IMessage<UpdateNetworkRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateNetworkRequest> _parser = new pb::MessageParser<UpdateNetworkRequest>(() => new UpdateNetworkRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateNetworkRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.NetworkServiceReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateNetworkRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateNetworkRequest(UpdateNetworkRequest other) : this() {
+      network_ = other.network_ != null ? other.network_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateNetworkRequest Clone() {
+      return new UpdateNetworkRequest(this);
+    }
+
+    /// <summary>Field number for the "network" field.</summary>
+    public const int NetworkFieldNumber = 1;
+    private global::Google.Ads.AdManager.V1.Network network_;
+    /// <summary>
+    /// Required. The `Network` to update.
+    ///
+    /// The `Network`'s `name` is used to identify the `Network` to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.Network Network {
+      get { return network_; }
+      set {
+        network_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. The list of fields to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateNetworkRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateNetworkRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Network, other.Network)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (network_ != null) hash ^= Network.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (network_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Network);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (network_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Network);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (network_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Network);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateNetworkRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.network_ != null) {
+        if (network_ == null) {
+          Network = new global::Google.Ads.AdManager.V1.Network();
+        }
+        Network.MergeFrom(other.Network);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (network_ == null) {
+              Network = new global::Google.Ads.AdManager.V1.Network();
+            }
+            input.ReadMessage(Network);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (network_ == null) {
+              Network = new global::Google.Ads.AdManager.V1.Network();
+            }
+            input.ReadMessage(Network);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   /// <summary>
   /// Request to get Network
   /// </summary>
@@ -80,7 +367,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.NetworkServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Ads.AdManager.V1.NetworkServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -285,7 +572,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.NetworkServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Ads.AdManager.V1.NetworkServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -576,7 +863,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.NetworkServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Ads.AdManager.V1.NetworkServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -831,6 +1118,375 @@ namespace Google.Ads.AdManager.V1 {
           }
           case 24: {
             TotalSize = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for the `ProvisionTestNetwork` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ProvisionTestNetworkRequest : pb::IMessage<ProvisionTestNetworkRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProvisionTestNetworkRequest> _parser = new pb::MessageParser<ProvisionTestNetworkRequest>(() => new ProvisionTestNetworkRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ProvisionTestNetworkRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.NetworkServiceReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProvisionTestNetworkRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProvisionTestNetworkRequest(ProvisionTestNetworkRequest other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProvisionTestNetworkRequest Clone() {
+      return new ProvisionTestNetworkRequest(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ProvisionTestNetworkRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ProvisionTestNetworkRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ProvisionTestNetworkRequest other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for the `GetDefaultThirdPartyDataDeclaration` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetDefaultThirdPartyDataDeclarationRequest : pb::IMessage<GetDefaultThirdPartyDataDeclarationRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetDefaultThirdPartyDataDeclarationRequest> _parser = new pb::MessageParser<GetDefaultThirdPartyDataDeclarationRequest>(() => new GetDefaultThirdPartyDataDeclarationRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetDefaultThirdPartyDataDeclarationRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.NetworkServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetDefaultThirdPartyDataDeclarationRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetDefaultThirdPartyDataDeclarationRequest(GetDefaultThirdPartyDataDeclarationRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetDefaultThirdPartyDataDeclarationRequest Clone() {
+      return new GetDefaultThirdPartyDataDeclarationRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Resource name of DefaultThirdPartyDataDeclaration.
+    /// Format: networks/{network_code}/defaultThirdPartyDataDeclaration
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetDefaultThirdPartyDataDeclarationRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetDefaultThirdPartyDataDeclarationRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetDefaultThirdPartyDataDeclarationRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
             break;
           }
         }

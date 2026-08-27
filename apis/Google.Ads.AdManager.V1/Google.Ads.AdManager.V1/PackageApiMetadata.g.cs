@@ -67,6 +67,7 @@ namespace Google.Ads.AdManager.V1
             yield return ApplicationMessagesReflection.Descriptor;
             yield return ApplicationServiceReflection.Descriptor;
             yield return AppliedLabelReflection.Descriptor;
+            yield return AudienceSegmentEnumsReflection.Descriptor;
             yield return AudienceSegmentMessagesReflection.Descriptor;
             yield return AudienceSegmentServiceReflection.Descriptor;
             yield return BandwidthGroupMessagesReflection.Descriptor;
@@ -188,6 +189,9 @@ namespace Google.Ads.AdManager.V1
             yield return MobileDeviceServiceReflection.Descriptor;
             yield return MobileDeviceSubmodelMessagesReflection.Descriptor;
             yield return MobileDeviceSubmodelServiceReflection.Descriptor;
+            yield return NativeStyleEnumsReflection.Descriptor;
+            yield return NativeStyleMessagesReflection.Descriptor;
+            yield return NativeStyleServiceReflection.Descriptor;
             yield return NetworkMessagesReflection.Descriptor;
             yield return NetworkServiceReflection.Descriptor;
             yield return NielsenCtvPacingEnumReflection.Descriptor;

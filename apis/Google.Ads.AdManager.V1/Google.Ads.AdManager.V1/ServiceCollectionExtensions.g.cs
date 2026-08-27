@@ -1432,6 +1432,42 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gaav::NativeStyleServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddNativeStyleServiceClient(this IServiceCollection services, sys::Action<gaav::NativeStyleServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gaav::NativeStyleServiceClientBuilder builder = new gaav::NativeStyleServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gaav::NativeStyleServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddNativeStyleServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gaav::NativeStyleServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gaav::NativeStyleServiceClientBuilder builder = new gaav::NativeStyleServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gaav::NetworkServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.

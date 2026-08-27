@@ -773,5 +773,449 @@ namespace GoogleCSharpSnippets
             BatchUpdateChildPublishersResponse response = await childPublisherServiceClient.BatchUpdateChildPublishersAsync(parent, requests);
             // End snippet
         }
+
+        /// <summary>Snippet for BatchResendChildPublisherInvitationEmails</summary>
+        public void BatchResendChildPublisherInvitationEmailsRequestObject()
+        {
+            // Snippet: BatchResendChildPublisherInvitationEmails(BatchResendChildPublisherInvitationEmailsRequest, CallSettings)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = ChildPublisherServiceClient.Create();
+            // Initialize request argument(s)
+            BatchResendChildPublisherInvitationEmailsRequest request = new BatchResendChildPublisherInvitationEmailsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                ChildPublisherNames =
+                {
+                    ChildPublisherName.FromNetworkCodeChildPublisher("[NETWORK_CODE]", "[CHILD_PUBLISHER]"),
+                },
+            };
+            // Make the request
+            BatchResendChildPublisherInvitationEmailsResponse response = childPublisherServiceClient.BatchResendChildPublisherInvitationEmails(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchResendChildPublisherInvitationEmailsAsync</summary>
+        public async Task BatchResendChildPublisherInvitationEmailsRequestObjectAsync()
+        {
+            // Snippet: BatchResendChildPublisherInvitationEmailsAsync(BatchResendChildPublisherInvitationEmailsRequest, CallSettings)
+            // Additional: BatchResendChildPublisherInvitationEmailsAsync(BatchResendChildPublisherInvitationEmailsRequest, CancellationToken)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = await ChildPublisherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchResendChildPublisherInvitationEmailsRequest request = new BatchResendChildPublisherInvitationEmailsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                ChildPublisherNames =
+                {
+                    ChildPublisherName.FromNetworkCodeChildPublisher("[NETWORK_CODE]", "[CHILD_PUBLISHER]"),
+                },
+            };
+            // Make the request
+            BatchResendChildPublisherInvitationEmailsResponse response = await childPublisherServiceClient.BatchResendChildPublisherInvitationEmailsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchResendChildPublisherInvitationEmails</summary>
+        public void BatchResendChildPublisherInvitationEmails()
+        {
+            // Snippet: BatchResendChildPublisherInvitationEmails(string, IEnumerable<string>, CallSettings)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = ChildPublisherServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/childPublishers/[CHILD_PUBLISHER]",
+            };
+            // Make the request
+            BatchResendChildPublisherInvitationEmailsResponse response = childPublisherServiceClient.BatchResendChildPublisherInvitationEmails(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchResendChildPublisherInvitationEmailsAsync</summary>
+        public async Task BatchResendChildPublisherInvitationEmailsAsync()
+        {
+            // Snippet: BatchResendChildPublisherInvitationEmailsAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchResendChildPublisherInvitationEmailsAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = await ChildPublisherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/childPublishers/[CHILD_PUBLISHER]",
+            };
+            // Make the request
+            BatchResendChildPublisherInvitationEmailsResponse response = await childPublisherServiceClient.BatchResendChildPublisherInvitationEmailsAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchResendChildPublisherInvitationEmails</summary>
+        public void BatchResendChildPublisherInvitationEmailsResourceNames()
+        {
+            // Snippet: BatchResendChildPublisherInvitationEmails(NetworkName, IEnumerable<ChildPublisherName>, CallSettings)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = ChildPublisherServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<ChildPublisherName> names = new ChildPublisherName[]
+            {
+                ChildPublisherName.FromNetworkCodeChildPublisher("[NETWORK_CODE]", "[CHILD_PUBLISHER]"),
+            };
+            // Make the request
+            BatchResendChildPublisherInvitationEmailsResponse response = childPublisherServiceClient.BatchResendChildPublisherInvitationEmails(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchResendChildPublisherInvitationEmailsAsync</summary>
+        public async Task BatchResendChildPublisherInvitationEmailsResourceNamesAsync()
+        {
+            // Snippet: BatchResendChildPublisherInvitationEmailsAsync(NetworkName, IEnumerable<ChildPublisherName>, CallSettings)
+            // Additional: BatchResendChildPublisherInvitationEmailsAsync(NetworkName, IEnumerable<ChildPublisherName>, CancellationToken)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = await ChildPublisherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<ChildPublisherName> names = new ChildPublisherName[]
+            {
+                ChildPublisherName.FromNetworkCodeChildPublisher("[NETWORK_CODE]", "[CHILD_PUBLISHER]"),
+            };
+            // Make the request
+            BatchResendChildPublisherInvitationEmailsResponse response = await childPublisherServiceClient.BatchResendChildPublisherInvitationEmailsAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchRenegotiateChildPublisherAgreements</summary>
+        public void BatchRenegotiateChildPublisherAgreementsRequestObject()
+        {
+            // Snippet: BatchRenegotiateChildPublisherAgreements(BatchRenegotiateChildPublisherAgreementsRequest, CallSettings)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = ChildPublisherServiceClient.Create();
+            // Initialize request argument(s)
+            BatchRenegotiateChildPublisherAgreementsRequest request = new BatchRenegotiateChildPublisherAgreementsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new RenegotiateChildPublisherAgreementRequest(),
+                },
+            };
+            // Make the request
+            BatchRenegotiateChildPublisherAgreementsResponse response = childPublisherServiceClient.BatchRenegotiateChildPublisherAgreements(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchRenegotiateChildPublisherAgreementsAsync</summary>
+        public async Task BatchRenegotiateChildPublisherAgreementsRequestObjectAsync()
+        {
+            // Snippet: BatchRenegotiateChildPublisherAgreementsAsync(BatchRenegotiateChildPublisherAgreementsRequest, CallSettings)
+            // Additional: BatchRenegotiateChildPublisherAgreementsAsync(BatchRenegotiateChildPublisherAgreementsRequest, CancellationToken)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = await ChildPublisherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchRenegotiateChildPublisherAgreementsRequest request = new BatchRenegotiateChildPublisherAgreementsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new RenegotiateChildPublisherAgreementRequest(),
+                },
+            };
+            // Make the request
+            BatchRenegotiateChildPublisherAgreementsResponse response = await childPublisherServiceClient.BatchRenegotiateChildPublisherAgreementsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchRenegotiateChildPublisherAgreements</summary>
+        public void BatchRenegotiateChildPublisherAgreements()
+        {
+            // Snippet: BatchRenegotiateChildPublisherAgreements(string, IEnumerable<RenegotiateChildPublisherAgreementRequest>, CallSettings)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = ChildPublisherServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<RenegotiateChildPublisherAgreementRequest> requests = new RenegotiateChildPublisherAgreementRequest[]
+            {
+                new RenegotiateChildPublisherAgreementRequest(),
+            };
+            // Make the request
+            BatchRenegotiateChildPublisherAgreementsResponse response = childPublisherServiceClient.BatchRenegotiateChildPublisherAgreements(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchRenegotiateChildPublisherAgreementsAsync</summary>
+        public async Task BatchRenegotiateChildPublisherAgreementsAsync()
+        {
+            // Snippet: BatchRenegotiateChildPublisherAgreementsAsync(string, IEnumerable<RenegotiateChildPublisherAgreementRequest>, CallSettings)
+            // Additional: BatchRenegotiateChildPublisherAgreementsAsync(string, IEnumerable<RenegotiateChildPublisherAgreementRequest>, CancellationToken)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = await ChildPublisherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<RenegotiateChildPublisherAgreementRequest> requests = new RenegotiateChildPublisherAgreementRequest[]
+            {
+                new RenegotiateChildPublisherAgreementRequest(),
+            };
+            // Make the request
+            BatchRenegotiateChildPublisherAgreementsResponse response = await childPublisherServiceClient.BatchRenegotiateChildPublisherAgreementsAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchRenegotiateChildPublisherAgreements</summary>
+        public void BatchRenegotiateChildPublisherAgreementsResourceNames()
+        {
+            // Snippet: BatchRenegotiateChildPublisherAgreements(NetworkName, IEnumerable<RenegotiateChildPublisherAgreementRequest>, CallSettings)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = ChildPublisherServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<RenegotiateChildPublisherAgreementRequest> requests = new RenegotiateChildPublisherAgreementRequest[]
+            {
+                new RenegotiateChildPublisherAgreementRequest(),
+            };
+            // Make the request
+            BatchRenegotiateChildPublisherAgreementsResponse response = childPublisherServiceClient.BatchRenegotiateChildPublisherAgreements(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchRenegotiateChildPublisherAgreementsAsync</summary>
+        public async Task BatchRenegotiateChildPublisherAgreementsResourceNamesAsync()
+        {
+            // Snippet: BatchRenegotiateChildPublisherAgreementsAsync(NetworkName, IEnumerable<RenegotiateChildPublisherAgreementRequest>, CallSettings)
+            // Additional: BatchRenegotiateChildPublisherAgreementsAsync(NetworkName, IEnumerable<RenegotiateChildPublisherAgreementRequest>, CancellationToken)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = await ChildPublisherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<RenegotiateChildPublisherAgreementRequest> requests = new RenegotiateChildPublisherAgreementRequest[]
+            {
+                new RenegotiateChildPublisherAgreementRequest(),
+            };
+            // Make the request
+            BatchRenegotiateChildPublisherAgreementsResponse response = await childPublisherServiceClient.BatchRenegotiateChildPublisherAgreementsAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchRejectChildPublishers</summary>
+        public void BatchRejectChildPublishersRequestObject()
+        {
+            // Snippet: BatchRejectChildPublishers(BatchRejectChildPublishersRequest, CallSettings)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = ChildPublisherServiceClient.Create();
+            // Initialize request argument(s)
+            BatchRejectChildPublishersRequest request = new BatchRejectChildPublishersRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                ChildPublisherNames =
+                {
+                    ChildPublisherName.FromNetworkCodeChildPublisher("[NETWORK_CODE]", "[CHILD_PUBLISHER]"),
+                },
+            };
+            // Make the request
+            BatchRejectChildPublishersResponse response = childPublisherServiceClient.BatchRejectChildPublishers(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchRejectChildPublishersAsync</summary>
+        public async Task BatchRejectChildPublishersRequestObjectAsync()
+        {
+            // Snippet: BatchRejectChildPublishersAsync(BatchRejectChildPublishersRequest, CallSettings)
+            // Additional: BatchRejectChildPublishersAsync(BatchRejectChildPublishersRequest, CancellationToken)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = await ChildPublisherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchRejectChildPublishersRequest request = new BatchRejectChildPublishersRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                ChildPublisherNames =
+                {
+                    ChildPublisherName.FromNetworkCodeChildPublisher("[NETWORK_CODE]", "[CHILD_PUBLISHER]"),
+                },
+            };
+            // Make the request
+            BatchRejectChildPublishersResponse response = await childPublisherServiceClient.BatchRejectChildPublishersAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchRejectChildPublishers</summary>
+        public void BatchRejectChildPublishers()
+        {
+            // Snippet: BatchRejectChildPublishers(string, IEnumerable<string>, CallSettings)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = ChildPublisherServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/childPublishers/[CHILD_PUBLISHER]",
+            };
+            // Make the request
+            BatchRejectChildPublishersResponse response = childPublisherServiceClient.BatchRejectChildPublishers(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchRejectChildPublishersAsync</summary>
+        public async Task BatchRejectChildPublishersAsync()
+        {
+            // Snippet: BatchRejectChildPublishersAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchRejectChildPublishersAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = await ChildPublisherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/childPublishers/[CHILD_PUBLISHER]",
+            };
+            // Make the request
+            BatchRejectChildPublishersResponse response = await childPublisherServiceClient.BatchRejectChildPublishersAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchRejectChildPublishers</summary>
+        public void BatchRejectChildPublishersResourceNames()
+        {
+            // Snippet: BatchRejectChildPublishers(NetworkName, IEnumerable<ChildPublisherName>, CallSettings)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = ChildPublisherServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<ChildPublisherName> names = new ChildPublisherName[]
+            {
+                ChildPublisherName.FromNetworkCodeChildPublisher("[NETWORK_CODE]", "[CHILD_PUBLISHER]"),
+            };
+            // Make the request
+            BatchRejectChildPublishersResponse response = childPublisherServiceClient.BatchRejectChildPublishers(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchRejectChildPublishersAsync</summary>
+        public async Task BatchRejectChildPublishersResourceNamesAsync()
+        {
+            // Snippet: BatchRejectChildPublishersAsync(NetworkName, IEnumerable<ChildPublisherName>, CallSettings)
+            // Additional: BatchRejectChildPublishersAsync(NetworkName, IEnumerable<ChildPublisherName>, CancellationToken)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = await ChildPublisherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<ChildPublisherName> names = new ChildPublisherName[]
+            {
+                ChildPublisherName.FromNetworkCodeChildPublisher("[NETWORK_CODE]", "[CHILD_PUBLISHER]"),
+            };
+            // Make the request
+            BatchRejectChildPublishersResponse response = await childPublisherServiceClient.BatchRejectChildPublishersAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchWithdrawChildPublishers</summary>
+        public void BatchWithdrawChildPublishersRequestObject()
+        {
+            // Snippet: BatchWithdrawChildPublishers(BatchWithdrawChildPublishersRequest, CallSettings)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = ChildPublisherServiceClient.Create();
+            // Initialize request argument(s)
+            BatchWithdrawChildPublishersRequest request = new BatchWithdrawChildPublishersRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                ChildPublisherNames =
+                {
+                    ChildPublisherName.FromNetworkCodeChildPublisher("[NETWORK_CODE]", "[CHILD_PUBLISHER]"),
+                },
+            };
+            // Make the request
+            BatchWithdrawChildPublishersResponse response = childPublisherServiceClient.BatchWithdrawChildPublishers(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchWithdrawChildPublishersAsync</summary>
+        public async Task BatchWithdrawChildPublishersRequestObjectAsync()
+        {
+            // Snippet: BatchWithdrawChildPublishersAsync(BatchWithdrawChildPublishersRequest, CallSettings)
+            // Additional: BatchWithdrawChildPublishersAsync(BatchWithdrawChildPublishersRequest, CancellationToken)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = await ChildPublisherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchWithdrawChildPublishersRequest request = new BatchWithdrawChildPublishersRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                ChildPublisherNames =
+                {
+                    ChildPublisherName.FromNetworkCodeChildPublisher("[NETWORK_CODE]", "[CHILD_PUBLISHER]"),
+                },
+            };
+            // Make the request
+            BatchWithdrawChildPublishersResponse response = await childPublisherServiceClient.BatchWithdrawChildPublishersAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchWithdrawChildPublishers</summary>
+        public void BatchWithdrawChildPublishers()
+        {
+            // Snippet: BatchWithdrawChildPublishers(string, IEnumerable<string>, CallSettings)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = ChildPublisherServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/childPublishers/[CHILD_PUBLISHER]",
+            };
+            // Make the request
+            BatchWithdrawChildPublishersResponse response = childPublisherServiceClient.BatchWithdrawChildPublishers(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchWithdrawChildPublishersAsync</summary>
+        public async Task BatchWithdrawChildPublishersAsync()
+        {
+            // Snippet: BatchWithdrawChildPublishersAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchWithdrawChildPublishersAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = await ChildPublisherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/childPublishers/[CHILD_PUBLISHER]",
+            };
+            // Make the request
+            BatchWithdrawChildPublishersResponse response = await childPublisherServiceClient.BatchWithdrawChildPublishersAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchWithdrawChildPublishers</summary>
+        public void BatchWithdrawChildPublishersResourceNames()
+        {
+            // Snippet: BatchWithdrawChildPublishers(NetworkName, IEnumerable<ChildPublisherName>, CallSettings)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = ChildPublisherServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<ChildPublisherName> names = new ChildPublisherName[]
+            {
+                ChildPublisherName.FromNetworkCodeChildPublisher("[NETWORK_CODE]", "[CHILD_PUBLISHER]"),
+            };
+            // Make the request
+            BatchWithdrawChildPublishersResponse response = childPublisherServiceClient.BatchWithdrawChildPublishers(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchWithdrawChildPublishersAsync</summary>
+        public async Task BatchWithdrawChildPublishersResourceNamesAsync()
+        {
+            // Snippet: BatchWithdrawChildPublishersAsync(NetworkName, IEnumerable<ChildPublisherName>, CallSettings)
+            // Additional: BatchWithdrawChildPublishersAsync(NetworkName, IEnumerable<ChildPublisherName>, CancellationToken)
+            // Create client
+            ChildPublisherServiceClient childPublisherServiceClient = await ChildPublisherServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<ChildPublisherName> names = new ChildPublisherName[]
+            {
+                ChildPublisherName.FromNetworkCodeChildPublisher("[NETWORK_CODE]", "[CHILD_PUBLISHER]"),
+            };
+            // Make the request
+            BatchWithdrawChildPublishersResponse response = await childPublisherServiceClient.BatchWithdrawChildPublishersAsync(parent, names);
+            // End snippet
+        }
     }
 }

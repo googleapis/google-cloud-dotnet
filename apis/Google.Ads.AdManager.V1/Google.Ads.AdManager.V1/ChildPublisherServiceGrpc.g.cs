@@ -84,6 +84,22 @@ namespace Google.Ads.AdManager.V1 {
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateChildPublishersRequest> __Marshaller_google_ads_admanager_v1_BatchUpdateChildPublishersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateChildPublishersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateChildPublishersResponse> __Marshaller_google_ads_admanager_v1_BatchUpdateChildPublishersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateChildPublishersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsRequest> __Marshaller_google_ads_admanager_v1_BatchResendChildPublisherInvitationEmailsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse> __Marshaller_google_ads_admanager_v1_BatchResendChildPublisherInvitationEmailsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsRequest> __Marshaller_google_ads_admanager_v1_BatchRenegotiateChildPublisherAgreementsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse> __Marshaller_google_ads_admanager_v1_BatchRenegotiateChildPublisherAgreementsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchRejectChildPublishersRequest> __Marshaller_google_ads_admanager_v1_BatchRejectChildPublishersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchRejectChildPublishersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse> __Marshaller_google_ads_admanager_v1_BatchRejectChildPublishersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersRequest> __Marshaller_google_ads_admanager_v1_BatchWithdrawChildPublishersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse> __Marshaller_google_ads_admanager_v1_BatchWithdrawChildPublishersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.GetChildPublisherRequest, global::Google.Ads.AdManager.V1.ChildPublisher> __Method_GetChildPublisher = new grpc::Method<global::Google.Ads.AdManager.V1.GetChildPublisherRequest, global::Google.Ads.AdManager.V1.ChildPublisher>(
@@ -132,6 +148,38 @@ namespace Google.Ads.AdManager.V1 {
         "BatchUpdateChildPublishers",
         __Marshaller_google_ads_admanager_v1_BatchUpdateChildPublishersRequest,
         __Marshaller_google_ads_admanager_v1_BatchUpdateChildPublishersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsRequest, global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse> __Method_BatchResendChildPublisherInvitationEmails = new grpc::Method<global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsRequest, global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchResendChildPublisherInvitationEmails",
+        __Marshaller_google_ads_admanager_v1_BatchResendChildPublisherInvitationEmailsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchResendChildPublisherInvitationEmailsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsRequest, global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse> __Method_BatchRenegotiateChildPublisherAgreements = new grpc::Method<global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsRequest, global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchRenegotiateChildPublisherAgreements",
+        __Marshaller_google_ads_admanager_v1_BatchRenegotiateChildPublisherAgreementsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchRenegotiateChildPublisherAgreementsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchRejectChildPublishersRequest, global::Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse> __Method_BatchRejectChildPublishers = new grpc::Method<global::Google.Ads.AdManager.V1.BatchRejectChildPublishersRequest, global::Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchRejectChildPublishers",
+        __Marshaller_google_ads_admanager_v1_BatchRejectChildPublishersRequest,
+        __Marshaller_google_ads_admanager_v1_BatchRejectChildPublishersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersRequest, global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse> __Method_BatchWithdrawChildPublishers = new grpc::Method<global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersRequest, global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchWithdrawChildPublishers",
+        __Marshaller_google_ads_admanager_v1_BatchWithdrawChildPublishersRequest,
+        __Marshaller_google_ads_admanager_v1_BatchWithdrawChildPublishersResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -213,6 +261,84 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchUpdateChildPublishersResponse> BatchUpdateChildPublishers(global::Google.Ads.AdManager.V1.BatchUpdateChildPublishersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch resends invitation emails to
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only expired and pending
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+      /// invitation emails. Rejected, withdrawn, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse> BatchResendChildPublisherInvitationEmails(global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+      /// agreements (i.e., invite with updated terms).
+      ///
+      /// Only the agreements of rejected or withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+      /// renegotiated. Expired, pending, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse> BatchRenegotiateChildPublisherAgreements(global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only pending or active
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+      /// Expired, rejected, and withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      ///
+      /// This method is only intended to be called in response to a child user
+      /// rejecting an invitation and exists to support the rejection of
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+      /// associated with an Ad Manager network.
+      ///
+      /// To sever the relationship from the parent publisher's side, use
+      /// [BatchWithdrawChildPublisher][].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse> BatchRejectChildPublishers(global::Google.Ads.AdManager.V1.BatchRejectChildPublishersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only expired, pending, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+      /// Rejected or withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse> BatchWithdrawChildPublishers(global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -542,6 +668,318 @@ namespace Google.Ads.AdManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateChildPublishers, null, options, request);
       }
+      /// <summary>
+      /// Batch resends invitation emails to
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only expired and pending
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+      /// invitation emails. Rejected, withdrawn, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse BatchResendChildPublisherInvitationEmails(global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchResendChildPublisherInvitationEmails(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch resends invitation emails to
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only expired and pending
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+      /// invitation emails. Rejected, withdrawn, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse BatchResendChildPublisherInvitationEmails(global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchResendChildPublisherInvitationEmails, null, options, request);
+      }
+      /// <summary>
+      /// Batch resends invitation emails to
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only expired and pending
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+      /// invitation emails. Rejected, withdrawn, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse> BatchResendChildPublisherInvitationEmailsAsync(global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchResendChildPublisherInvitationEmailsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch resends invitation emails to
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only expired and pending
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+      /// invitation emails. Rejected, withdrawn, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse> BatchResendChildPublisherInvitationEmailsAsync(global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchResendChildPublisherInvitationEmails, null, options, request);
+      }
+      /// <summary>
+      /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+      /// agreements (i.e., invite with updated terms).
+      ///
+      /// Only the agreements of rejected or withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+      /// renegotiated. Expired, pending, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse BatchRenegotiateChildPublisherAgreements(global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchRenegotiateChildPublisherAgreements(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+      /// agreements (i.e., invite with updated terms).
+      ///
+      /// Only the agreements of rejected or withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+      /// renegotiated. Expired, pending, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse BatchRenegotiateChildPublisherAgreements(global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchRenegotiateChildPublisherAgreements, null, options, request);
+      }
+      /// <summary>
+      /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+      /// agreements (i.e., invite with updated terms).
+      ///
+      /// Only the agreements of rejected or withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+      /// renegotiated. Expired, pending, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse> BatchRenegotiateChildPublisherAgreementsAsync(global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchRenegotiateChildPublisherAgreementsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+      /// agreements (i.e., invite with updated terms).
+      ///
+      /// Only the agreements of rejected or withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+      /// renegotiated. Expired, pending, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse> BatchRenegotiateChildPublisherAgreementsAsync(global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchRenegotiateChildPublisherAgreements, null, options, request);
+      }
+      /// <summary>
+      /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only pending or active
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+      /// Expired, rejected, and withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      ///
+      /// This method is only intended to be called in response to a child user
+      /// rejecting an invitation and exists to support the rejection of
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+      /// associated with an Ad Manager network.
+      ///
+      /// To sever the relationship from the parent publisher's side, use
+      /// [BatchWithdrawChildPublisher][].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse BatchRejectChildPublishers(global::Google.Ads.AdManager.V1.BatchRejectChildPublishersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchRejectChildPublishers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only pending or active
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+      /// Expired, rejected, and withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      ///
+      /// This method is only intended to be called in response to a child user
+      /// rejecting an invitation and exists to support the rejection of
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+      /// associated with an Ad Manager network.
+      ///
+      /// To sever the relationship from the parent publisher's side, use
+      /// [BatchWithdrawChildPublisher][].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse BatchRejectChildPublishers(global::Google.Ads.AdManager.V1.BatchRejectChildPublishersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchRejectChildPublishers, null, options, request);
+      }
+      /// <summary>
+      /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only pending or active
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+      /// Expired, rejected, and withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      ///
+      /// This method is only intended to be called in response to a child user
+      /// rejecting an invitation and exists to support the rejection of
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+      /// associated with an Ad Manager network.
+      ///
+      /// To sever the relationship from the parent publisher's side, use
+      /// [BatchWithdrawChildPublisher][].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse> BatchRejectChildPublishersAsync(global::Google.Ads.AdManager.V1.BatchRejectChildPublishersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchRejectChildPublishersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only pending or active
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+      /// Expired, rejected, and withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      ///
+      /// This method is only intended to be called in response to a child user
+      /// rejecting an invitation and exists to support the rejection of
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+      /// associated with an Ad Manager network.
+      ///
+      /// To sever the relationship from the parent publisher's side, use
+      /// [BatchWithdrawChildPublisher][].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse> BatchRejectChildPublishersAsync(global::Google.Ads.AdManager.V1.BatchRejectChildPublishersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchRejectChildPublishers, null, options, request);
+      }
+      /// <summary>
+      /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only expired, pending, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+      /// Rejected or withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse BatchWithdrawChildPublishers(global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchWithdrawChildPublishers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only expired, pending, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+      /// Rejected or withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse BatchWithdrawChildPublishers(global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchWithdrawChildPublishers, null, options, request);
+      }
+      /// <summary>
+      /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only expired, pending, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+      /// Rejected or withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse> BatchWithdrawChildPublishersAsync(global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchWithdrawChildPublishersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+      ///
+      /// Only expired, pending, and accepted
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+      /// Rejected or withdrawn
+      /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse> BatchWithdrawChildPublishersAsync(global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchWithdrawChildPublishers, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ChildPublisherServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -561,7 +999,11 @@ namespace Google.Ads.AdManager.V1 {
           .AddMethod(__Method_CreateChildPublisher, serviceImpl.CreateChildPublisher)
           .AddMethod(__Method_BatchCreateChildPublishers, serviceImpl.BatchCreateChildPublishers)
           .AddMethod(__Method_UpdateChildPublisher, serviceImpl.UpdateChildPublisher)
-          .AddMethod(__Method_BatchUpdateChildPublishers, serviceImpl.BatchUpdateChildPublishers).Build();
+          .AddMethod(__Method_BatchUpdateChildPublishers, serviceImpl.BatchUpdateChildPublishers)
+          .AddMethod(__Method_BatchResendChildPublisherInvitationEmails, serviceImpl.BatchResendChildPublisherInvitationEmails)
+          .AddMethod(__Method_BatchRenegotiateChildPublisherAgreements, serviceImpl.BatchRenegotiateChildPublisherAgreements)
+          .AddMethod(__Method_BatchRejectChildPublishers, serviceImpl.BatchRejectChildPublishers)
+          .AddMethod(__Method_BatchWithdrawChildPublishers, serviceImpl.BatchWithdrawChildPublishers).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -577,6 +1019,10 @@ namespace Google.Ads.AdManager.V1 {
       serviceBinder.AddMethod(__Method_BatchCreateChildPublishers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchCreateChildPublishersRequest, global::Google.Ads.AdManager.V1.BatchCreateChildPublishersResponse>(serviceImpl.BatchCreateChildPublishers));
       serviceBinder.AddMethod(__Method_UpdateChildPublisher, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.UpdateChildPublisherRequest, global::Google.Ads.AdManager.V1.ChildPublisher>(serviceImpl.UpdateChildPublisher));
       serviceBinder.AddMethod(__Method_BatchUpdateChildPublishers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUpdateChildPublishersRequest, global::Google.Ads.AdManager.V1.BatchUpdateChildPublishersResponse>(serviceImpl.BatchUpdateChildPublishers));
+      serviceBinder.AddMethod(__Method_BatchResendChildPublisherInvitationEmails, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsRequest, global::Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse>(serviceImpl.BatchResendChildPublisherInvitationEmails));
+      serviceBinder.AddMethod(__Method_BatchRenegotiateChildPublisherAgreements, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsRequest, global::Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse>(serviceImpl.BatchRenegotiateChildPublisherAgreements));
+      serviceBinder.AddMethod(__Method_BatchRejectChildPublishers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchRejectChildPublishersRequest, global::Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse>(serviceImpl.BatchRejectChildPublishers));
+      serviceBinder.AddMethod(__Method_BatchWithdrawChildPublishers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersRequest, global::Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse>(serviceImpl.BatchWithdrawChildPublishers));
     }
 
   }
