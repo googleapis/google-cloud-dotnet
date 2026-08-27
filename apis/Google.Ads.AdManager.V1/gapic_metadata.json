@@ -310,6 +310,36 @@
         "grpc": {
           "libraryClient": "AudienceSegmentServiceClient",
           "rpcs": {
+            "BatchActivateAudienceSegments": {
+              "methods": [
+                "BatchActivateAudienceSegments",
+                "BatchActivateAudienceSegmentsAsync"
+              ]
+            },
+            "BatchApproveAudienceSegments": {
+              "methods": [
+                "BatchApproveAudienceSegments",
+                "BatchApproveAudienceSegmentsAsync"
+              ]
+            },
+            "BatchDeactivateAudienceSegments": {
+              "methods": [
+                "BatchDeactivateAudienceSegments",
+                "BatchDeactivateAudienceSegmentsAsync"
+              ]
+            },
+            "BatchPopulateAudienceSegments": {
+              "methods": [
+                "BatchPopulateAudienceSegments",
+                "BatchPopulateAudienceSegmentsAsync"
+              ]
+            },
+            "BatchRejectAudienceSegments": {
+              "methods": [
+                "BatchRejectAudienceSegments",
+                "BatchRejectAudienceSegmentsAsync"
+              ]
+            },
             "GetAudienceSegment": {
               "methods": [
                 "GetAudienceSegment",
@@ -457,10 +487,34 @@
                 "BatchCreateChildPublishersAsync"
               ]
             },
+            "BatchRejectChildPublishers": {
+              "methods": [
+                "BatchRejectChildPublishers",
+                "BatchRejectChildPublishersAsync"
+              ]
+            },
+            "BatchRenegotiateChildPublisherAgreements": {
+              "methods": [
+                "BatchRenegotiateChildPublisherAgreements",
+                "BatchRenegotiateChildPublisherAgreementsAsync"
+              ]
+            },
+            "BatchResendChildPublisherInvitationEmails": {
+              "methods": [
+                "BatchResendChildPublisherInvitationEmails",
+                "BatchResendChildPublisherInvitationEmailsAsync"
+              ]
+            },
             "BatchUpdateChildPublishers": {
               "methods": [
                 "BatchUpdateChildPublishers",
                 "BatchUpdateChildPublishersAsync"
+              ]
+            },
+            "BatchWithdrawChildPublishers": {
+              "methods": [
+                "BatchWithdrawChildPublishers",
+                "BatchWithdrawChildPublishersAsync"
               ]
             },
             "CreateChildPublisher": {
@@ -1499,11 +1553,68 @@
         }
       }
     },
+    "NativeStyleService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "NativeStyleServiceClient",
+          "rpcs": {
+            "BatchActivateNativeStyles": {
+              "methods": [
+                "BatchActivateNativeStyles",
+                "BatchActivateNativeStylesAsync"
+              ]
+            },
+            "BatchArchiveNativeStyles": {
+              "methods": [
+                "BatchArchiveNativeStyles",
+                "BatchArchiveNativeStylesAsync"
+              ]
+            },
+            "BatchCreateNativeStyles": {
+              "methods": [
+                "BatchCreateNativeStyles",
+                "BatchCreateNativeStylesAsync"
+              ]
+            },
+            "BatchDeactivateNativeStyles": {
+              "methods": [
+                "BatchDeactivateNativeStyles",
+                "BatchDeactivateNativeStylesAsync"
+              ]
+            },
+            "BatchUpdateNativeStyles": {
+              "methods": [
+                "BatchUpdateNativeStyles",
+                "BatchUpdateNativeStylesAsync"
+              ]
+            },
+            "GetNativeStyle": {
+              "methods": [
+                "GetNativeStyle",
+                "GetNativeStyleAsync"
+              ]
+            },
+            "ListNativeStyles": {
+              "methods": [
+                "ListNativeStyles",
+                "ListNativeStylesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "NetworkService": {
       "clients": {
         "grpc": {
           "libraryClient": "NetworkServiceClient",
           "rpcs": {
+            "GetDefaultThirdPartyDataDeclaration": {
+              "methods": [
+                "GetDefaultThirdPartyDataDeclaration",
+                "GetDefaultThirdPartyDataDeclarationAsync"
+              ]
+            },
             "GetNetwork": {
               "methods": [
                 "GetNetwork",
@@ -1514,6 +1625,18 @@
               "methods": [
                 "ListNetworks",
                 "ListNetworksAsync"
+              ]
+            },
+            "ProvisionTestNetwork": {
+              "methods": [
+                "ProvisionTestNetwork",
+                "ProvisionTestNetworkAsync"
+              ]
+            },
+            "UpdateNetwork": {
+              "methods": [
+                "UpdateNetwork",
+                "UpdateNetworkAsync"
               ]
             }
           }

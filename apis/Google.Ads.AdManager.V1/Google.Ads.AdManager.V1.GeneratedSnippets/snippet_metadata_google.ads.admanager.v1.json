@@ -12503,6 +12503,1521 @@
       ]
     },
     {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchActivateAudienceSegments_sync",
+      "title": "BatchActivateAudienceSegmentsRequestObject",
+      "description": "Snippet for BatchActivateAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchActivateAudienceSegmentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchActivateAudienceSegments",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchActivateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchActivateAudienceSegments_async",
+      "title": "BatchActivateAudienceSegmentsRequestObjectAsync",
+      "description": "Snippet for BatchActivateAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchActivateAudienceSegmentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchActivateAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchActivateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchActivateAudienceSegments_sync_flattened",
+      "title": "BatchActivateAudienceSegments",
+      "description": "Snippet for BatchActivateAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchActivateAudienceSegmentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchActivateAudienceSegments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchActivateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchActivateAudienceSegments_async_flattened",
+      "title": "BatchActivateAudienceSegmentsAsync",
+      "description": "Snippet for BatchActivateAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchActivateAudienceSegmentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchActivateAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchActivateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchActivateAudienceSegments_sync_flattened_resourceNames",
+      "title": "BatchActivateAudienceSegmentsResourceNames",
+      "description": "Snippet for BatchActivateAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchActivateAudienceSegmentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchActivateAudienceSegments",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AudienceSegmentName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchActivateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchActivateAudienceSegments_async_flattened_resourceNames",
+      "title": "BatchActivateAudienceSegmentsResourceNamesAsync",
+      "description": "Snippet for BatchActivateAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchActivateAudienceSegmentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchActivateAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AudienceSegmentName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchActivateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchDeactivateAudienceSegments_sync",
+      "title": "BatchDeactivateAudienceSegmentsRequestObject",
+      "description": "Snippet for BatchDeactivateAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchDeactivateAudienceSegmentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchDeactivateAudienceSegments",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchDeactivateAudienceSegmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchDeactivateAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchDeactivateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchDeactivateAudienceSegments_async",
+      "title": "BatchDeactivateAudienceSegmentsRequestObjectAsync",
+      "description": "Snippet for BatchDeactivateAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchDeactivateAudienceSegmentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchDeactivateAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchDeactivateAudienceSegmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchDeactivateAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchDeactivateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchDeactivateAudienceSegments_sync_flattened",
+      "title": "BatchDeactivateAudienceSegments",
+      "description": "Snippet for BatchDeactivateAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchDeactivateAudienceSegmentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchDeactivateAudienceSegments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchDeactivateAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchDeactivateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchDeactivateAudienceSegments_async_flattened",
+      "title": "BatchDeactivateAudienceSegmentsAsync",
+      "description": "Snippet for BatchDeactivateAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchDeactivateAudienceSegmentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchDeactivateAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchDeactivateAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchDeactivateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchDeactivateAudienceSegments_sync_flattened_resourceNames",
+      "title": "BatchDeactivateAudienceSegmentsResourceNames",
+      "description": "Snippet for BatchDeactivateAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchDeactivateAudienceSegmentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchDeactivateAudienceSegments",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AudienceSegmentName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchDeactivateAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchDeactivateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchDeactivateAudienceSegments_async_flattened_resourceNames",
+      "title": "BatchDeactivateAudienceSegmentsResourceNamesAsync",
+      "description": "Snippet for BatchDeactivateAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchDeactivateAudienceSegmentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchDeactivateAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AudienceSegmentName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchDeactivateAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchDeactivateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchApproveAudienceSegments_sync",
+      "title": "BatchApproveAudienceSegmentsRequestObject",
+      "description": "Snippet for BatchApproveAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchApproveAudienceSegmentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchApproveAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchApproveAudienceSegments",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchApproveAudienceSegmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchApproveAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchApproveAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchApproveAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchApproveAudienceSegments_async",
+      "title": "BatchApproveAudienceSegmentsRequestObjectAsync",
+      "description": "Snippet for BatchApproveAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchApproveAudienceSegmentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchApproveAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchApproveAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchApproveAudienceSegmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchApproveAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchApproveAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchApproveAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchApproveAudienceSegments_sync_flattened",
+      "title": "BatchApproveAudienceSegments",
+      "description": "Snippet for BatchApproveAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchApproveAudienceSegmentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchApproveAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchApproveAudienceSegments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchApproveAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchApproveAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchApproveAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchApproveAudienceSegments_async_flattened",
+      "title": "BatchApproveAudienceSegmentsAsync",
+      "description": "Snippet for BatchApproveAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchApproveAudienceSegmentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchApproveAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchApproveAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchApproveAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchApproveAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchApproveAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchApproveAudienceSegments_sync_flattened_resourceNames",
+      "title": "BatchApproveAudienceSegmentsResourceNames",
+      "description": "Snippet for BatchApproveAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchApproveAudienceSegmentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchApproveAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchApproveAudienceSegments",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AudienceSegmentName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchApproveAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchApproveAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchApproveAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchApproveAudienceSegments_async_flattened_resourceNames",
+      "title": "BatchApproveAudienceSegmentsResourceNamesAsync",
+      "description": "Snippet for BatchApproveAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchApproveAudienceSegmentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchApproveAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchApproveAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AudienceSegmentName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchApproveAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchApproveAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchApproveAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchRejectAudienceSegments_sync",
+      "title": "BatchRejectAudienceSegmentsRequestObject",
+      "description": "Snippet for BatchRejectAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchRejectAudienceSegmentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRejectAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchRejectAudienceSegments",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchRejectAudienceSegmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchRejectAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRejectAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchRejectAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchRejectAudienceSegments_async",
+      "title": "BatchRejectAudienceSegmentsRequestObjectAsync",
+      "description": "Snippet for BatchRejectAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchRejectAudienceSegmentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRejectAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchRejectAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchRejectAudienceSegmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchRejectAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRejectAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchRejectAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchRejectAudienceSegments_sync_flattened",
+      "title": "BatchRejectAudienceSegments",
+      "description": "Snippet for BatchRejectAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchRejectAudienceSegmentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRejectAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchRejectAudienceSegments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchRejectAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRejectAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchRejectAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchRejectAudienceSegments_async_flattened",
+      "title": "BatchRejectAudienceSegmentsAsync",
+      "description": "Snippet for BatchRejectAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchRejectAudienceSegmentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRejectAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchRejectAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchRejectAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRejectAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchRejectAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchRejectAudienceSegments_sync_flattened_resourceNames",
+      "title": "BatchRejectAudienceSegmentsResourceNames",
+      "description": "Snippet for BatchRejectAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchRejectAudienceSegmentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRejectAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchRejectAudienceSegments",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AudienceSegmentName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchRejectAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRejectAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchRejectAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchRejectAudienceSegments_async_flattened_resourceNames",
+      "title": "BatchRejectAudienceSegmentsResourceNamesAsync",
+      "description": "Snippet for BatchRejectAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchRejectAudienceSegmentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRejectAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchRejectAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AudienceSegmentName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchRejectAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRejectAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchRejectAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchPopulateAudienceSegments_sync",
+      "title": "BatchPopulateAudienceSegmentsRequestObject",
+      "description": "Snippet for BatchPopulateAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchPopulateAudienceSegmentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPopulateAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchPopulateAudienceSegments",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchPopulateAudienceSegmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchPopulateAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPopulateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchPopulateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchPopulateAudienceSegments_async",
+      "title": "BatchPopulateAudienceSegmentsRequestObjectAsync",
+      "description": "Snippet for BatchPopulateAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchPopulateAudienceSegmentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPopulateAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchPopulateAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchPopulateAudienceSegmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchPopulateAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPopulateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchPopulateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchPopulateAudienceSegments_sync_flattened",
+      "title": "BatchPopulateAudienceSegments",
+      "description": "Snippet for BatchPopulateAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchPopulateAudienceSegmentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPopulateAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchPopulateAudienceSegments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchPopulateAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPopulateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchPopulateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchPopulateAudienceSegments_async_flattened",
+      "title": "BatchPopulateAudienceSegmentsAsync",
+      "description": "Snippet for BatchPopulateAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchPopulateAudienceSegmentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPopulateAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchPopulateAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchPopulateAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPopulateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchPopulateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchPopulateAudienceSegments_sync_flattened_resourceNames",
+      "title": "BatchPopulateAudienceSegmentsResourceNames",
+      "description": "Snippet for BatchPopulateAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchPopulateAudienceSegmentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPopulateAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchPopulateAudienceSegments",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AudienceSegmentName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchPopulateAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPopulateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchPopulateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchPopulateAudienceSegments_async_flattened_resourceNames",
+      "title": "BatchPopulateAudienceSegmentsResourceNamesAsync",
+      "description": "Snippet for BatchPopulateAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchPopulateAudienceSegmentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPopulateAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchPopulateAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AudienceSegmentName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchPopulateAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPopulateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchPopulateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "admanager_v1_generated_BandwidthGroupService_GetBandwidthGroup_sync",
       "title": "GetBandwidthGroupRequestObject",
       "description": "Snippet for GetBandwidthGroup",
@@ -18336,6 +19851,1218 @@
         "method": {
           "shortName": "BatchUpdateChildPublishers",
           "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchUpdateChildPublishers",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchResendChildPublisherInvitationEmails_sync",
+      "title": "BatchResendChildPublisherInvitationEmailsRequestObject",
+      "description": "Snippet for BatchResendChildPublisherInvitationEmails",
+      "file": "ChildPublisherServiceClient.BatchResendChildPublisherInvitationEmailsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchResendChildPublisherInvitationEmails",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchResendChildPublisherInvitationEmails",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchResendChildPublisherInvitationEmails",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchResendChildPublisherInvitationEmails",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchResendChildPublisherInvitationEmails_async",
+      "title": "BatchResendChildPublisherInvitationEmailsRequestObjectAsync",
+      "description": "Snippet for BatchResendChildPublisherInvitationEmailsAsync",
+      "file": "ChildPublisherServiceClient.BatchResendChildPublisherInvitationEmailsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchResendChildPublisherInvitationEmailsAsync",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchResendChildPublisherInvitationEmailsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse>",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchResendChildPublisherInvitationEmails",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchResendChildPublisherInvitationEmails",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchResendChildPublisherInvitationEmails_sync_flattened",
+      "title": "BatchResendChildPublisherInvitationEmails",
+      "description": "Snippet for BatchResendChildPublisherInvitationEmails",
+      "file": "ChildPublisherServiceClient.BatchResendChildPublisherInvitationEmailsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchResendChildPublisherInvitationEmails",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchResendChildPublisherInvitationEmails",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchResendChildPublisherInvitationEmails",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchResendChildPublisherInvitationEmails",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchResendChildPublisherInvitationEmails_async_flattened",
+      "title": "BatchResendChildPublisherInvitationEmailsAsync",
+      "description": "Snippet for BatchResendChildPublisherInvitationEmailsAsync",
+      "file": "ChildPublisherServiceClient.BatchResendChildPublisherInvitationEmailsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchResendChildPublisherInvitationEmailsAsync",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchResendChildPublisherInvitationEmailsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse>",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchResendChildPublisherInvitationEmails",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchResendChildPublisherInvitationEmails",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchResendChildPublisherInvitationEmails_sync_flattened_resourceNames",
+      "title": "BatchResendChildPublisherInvitationEmailsResourceNames",
+      "description": "Snippet for BatchResendChildPublisherInvitationEmails",
+      "file": "ChildPublisherServiceClient.BatchResendChildPublisherInvitationEmailsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchResendChildPublisherInvitationEmails",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchResendChildPublisherInvitationEmails",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.ChildPublisherName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchResendChildPublisherInvitationEmails",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchResendChildPublisherInvitationEmails",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchResendChildPublisherInvitationEmails_async_flattened_resourceNames",
+      "title": "BatchResendChildPublisherInvitationEmailsResourceNamesAsync",
+      "description": "Snippet for BatchResendChildPublisherInvitationEmailsAsync",
+      "file": "ChildPublisherServiceClient.BatchResendChildPublisherInvitationEmailsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchResendChildPublisherInvitationEmailsAsync",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchResendChildPublisherInvitationEmailsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.ChildPublisherName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchResendChildPublisherInvitationEmailsResponse>",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchResendChildPublisherInvitationEmails",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchResendChildPublisherInvitationEmails",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchRenegotiateChildPublisherAgreements_sync",
+      "title": "BatchRenegotiateChildPublisherAgreementsRequestObject",
+      "description": "Snippet for BatchRenegotiateChildPublisherAgreements",
+      "file": "ChildPublisherServiceClient.BatchRenegotiateChildPublisherAgreementsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRenegotiateChildPublisherAgreements",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchRenegotiateChildPublisherAgreements",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRenegotiateChildPublisherAgreements",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchRenegotiateChildPublisherAgreements",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchRenegotiateChildPublisherAgreements_async",
+      "title": "BatchRenegotiateChildPublisherAgreementsRequestObjectAsync",
+      "description": "Snippet for BatchRenegotiateChildPublisherAgreementsAsync",
+      "file": "ChildPublisherServiceClient.BatchRenegotiateChildPublisherAgreementsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRenegotiateChildPublisherAgreementsAsync",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchRenegotiateChildPublisherAgreementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse>",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRenegotiateChildPublisherAgreements",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchRenegotiateChildPublisherAgreements",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchRenegotiateChildPublisherAgreements_sync_flattened",
+      "title": "BatchRenegotiateChildPublisherAgreements",
+      "description": "Snippet for BatchRenegotiateChildPublisherAgreements",
+      "file": "ChildPublisherServiceClient.BatchRenegotiateChildPublisherAgreementsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRenegotiateChildPublisherAgreements",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchRenegotiateChildPublisherAgreements",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.RenegotiateChildPublisherAgreementRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRenegotiateChildPublisherAgreements",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchRenegotiateChildPublisherAgreements",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchRenegotiateChildPublisherAgreements_async_flattened",
+      "title": "BatchRenegotiateChildPublisherAgreementsAsync",
+      "description": "Snippet for BatchRenegotiateChildPublisherAgreementsAsync",
+      "file": "ChildPublisherServiceClient.BatchRenegotiateChildPublisherAgreementsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRenegotiateChildPublisherAgreementsAsync",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchRenegotiateChildPublisherAgreementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.RenegotiateChildPublisherAgreementRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse>",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRenegotiateChildPublisherAgreements",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchRenegotiateChildPublisherAgreements",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchRenegotiateChildPublisherAgreements_sync_flattened_resourceNames",
+      "title": "BatchRenegotiateChildPublisherAgreementsResourceNames",
+      "description": "Snippet for BatchRenegotiateChildPublisherAgreements",
+      "file": "ChildPublisherServiceClient.BatchRenegotiateChildPublisherAgreementsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRenegotiateChildPublisherAgreements",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchRenegotiateChildPublisherAgreements",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.RenegotiateChildPublisherAgreementRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRenegotiateChildPublisherAgreements",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchRenegotiateChildPublisherAgreements",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchRenegotiateChildPublisherAgreements_async_flattened_resourceNames",
+      "title": "BatchRenegotiateChildPublisherAgreementsResourceNamesAsync",
+      "description": "Snippet for BatchRenegotiateChildPublisherAgreementsAsync",
+      "file": "ChildPublisherServiceClient.BatchRenegotiateChildPublisherAgreementsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRenegotiateChildPublisherAgreementsAsync",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchRenegotiateChildPublisherAgreementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.RenegotiateChildPublisherAgreementRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchRenegotiateChildPublisherAgreementsResponse>",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRenegotiateChildPublisherAgreements",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchRenegotiateChildPublisherAgreements",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchRejectChildPublishers_sync",
+      "title": "BatchRejectChildPublishersRequestObject",
+      "description": "Snippet for BatchRejectChildPublishers",
+      "file": "ChildPublisherServiceClient.BatchRejectChildPublishersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRejectChildPublishers",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchRejectChildPublishers",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchRejectChildPublishersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRejectChildPublishers",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchRejectChildPublishers",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchRejectChildPublishers_async",
+      "title": "BatchRejectChildPublishersRequestObjectAsync",
+      "description": "Snippet for BatchRejectChildPublishersAsync",
+      "file": "ChildPublisherServiceClient.BatchRejectChildPublishersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRejectChildPublishersAsync",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchRejectChildPublishersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchRejectChildPublishersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse>",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRejectChildPublishers",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchRejectChildPublishers",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchRejectChildPublishers_sync_flattened",
+      "title": "BatchRejectChildPublishers",
+      "description": "Snippet for BatchRejectChildPublishers",
+      "file": "ChildPublisherServiceClient.BatchRejectChildPublishersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRejectChildPublishers",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchRejectChildPublishers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRejectChildPublishers",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchRejectChildPublishers",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchRejectChildPublishers_async_flattened",
+      "title": "BatchRejectChildPublishersAsync",
+      "description": "Snippet for BatchRejectChildPublishersAsync",
+      "file": "ChildPublisherServiceClient.BatchRejectChildPublishersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRejectChildPublishersAsync",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchRejectChildPublishersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse>",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRejectChildPublishers",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchRejectChildPublishers",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchRejectChildPublishers_sync_flattened_resourceNames",
+      "title": "BatchRejectChildPublishersResourceNames",
+      "description": "Snippet for BatchRejectChildPublishers",
+      "file": "ChildPublisherServiceClient.BatchRejectChildPublishersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRejectChildPublishers",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchRejectChildPublishers",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.ChildPublisherName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRejectChildPublishers",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchRejectChildPublishers",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchRejectChildPublishers_async_flattened_resourceNames",
+      "title": "BatchRejectChildPublishersResourceNamesAsync",
+      "description": "Snippet for BatchRejectChildPublishersAsync",
+      "file": "ChildPublisherServiceClient.BatchRejectChildPublishersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRejectChildPublishersAsync",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchRejectChildPublishersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.ChildPublisherName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchRejectChildPublishersResponse>",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchRejectChildPublishers",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchRejectChildPublishers",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchWithdrawChildPublishers_sync",
+      "title": "BatchWithdrawChildPublishersRequestObject",
+      "description": "Snippet for BatchWithdrawChildPublishers",
+      "file": "ChildPublisherServiceClient.BatchWithdrawChildPublishersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWithdrawChildPublishers",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchWithdrawChildPublishers",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchWithdrawChildPublishersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchWithdrawChildPublishers",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchWithdrawChildPublishers",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchWithdrawChildPublishers_async",
+      "title": "BatchWithdrawChildPublishersRequestObjectAsync",
+      "description": "Snippet for BatchWithdrawChildPublishersAsync",
+      "file": "ChildPublisherServiceClient.BatchWithdrawChildPublishersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWithdrawChildPublishersAsync",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchWithdrawChildPublishersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchWithdrawChildPublishersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse>",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchWithdrawChildPublishers",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchWithdrawChildPublishers",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchWithdrawChildPublishers_sync_flattened",
+      "title": "BatchWithdrawChildPublishers",
+      "description": "Snippet for BatchWithdrawChildPublishers",
+      "file": "ChildPublisherServiceClient.BatchWithdrawChildPublishersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWithdrawChildPublishers",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchWithdrawChildPublishers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchWithdrawChildPublishers",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchWithdrawChildPublishers",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchWithdrawChildPublishers_async_flattened",
+      "title": "BatchWithdrawChildPublishersAsync",
+      "description": "Snippet for BatchWithdrawChildPublishersAsync",
+      "file": "ChildPublisherServiceClient.BatchWithdrawChildPublishersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWithdrawChildPublishersAsync",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchWithdrawChildPublishersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse>",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchWithdrawChildPublishers",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchWithdrawChildPublishers",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchWithdrawChildPublishers_sync_flattened_resourceNames",
+      "title": "BatchWithdrawChildPublishersResourceNames",
+      "description": "Snippet for BatchWithdrawChildPublishers",
+      "file": "ChildPublisherServiceClient.BatchWithdrawChildPublishersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWithdrawChildPublishers",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchWithdrawChildPublishers",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.ChildPublisherName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchWithdrawChildPublishers",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchWithdrawChildPublishers",
+          "service": {
+            "shortName": "ChildPublisherService",
+            "fullName": "google.ads.admanager.v1.ChildPublisherService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_ChildPublisherService_BatchWithdrawChildPublishers_async_flattened_resourceNames",
+      "title": "BatchWithdrawChildPublishersResourceNamesAsync",
+      "description": "Snippet for BatchWithdrawChildPublishersAsync",
+      "file": "ChildPublisherServiceClient.BatchWithdrawChildPublishersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWithdrawChildPublishersAsync",
+        "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient.BatchWithdrawChildPublishersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.ChildPublisherName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchWithdrawChildPublishersResponse>",
+        "client": {
+          "shortName": "ChildPublisherServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.ChildPublisherServiceClient"
+        },
+        "method": {
+          "shortName": "BatchWithdrawChildPublishers",
+          "fullName": "google.ads.admanager.v1.ChildPublisherService.BatchWithdrawChildPublishers",
           "service": {
             "shortName": "ChildPublisherService",
             "fullName": "google.ads.admanager.v1.ChildPublisherService"
@@ -55315,6 +58042,2127 @@
       ]
     },
     {
+      "regionTag": "admanager_v1_generated_NativeStyleService_GetNativeStyle_sync",
+      "title": "GetNativeStyleRequestObject",
+      "description": "Snippet for GetNativeStyle",
+      "file": "NativeStyleServiceClient.GetNativeStyleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNativeStyle",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.GetNativeStyle",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.GetNativeStyleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.NativeStyle",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "GetNativeStyle",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.GetNativeStyle",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_GetNativeStyle_async",
+      "title": "GetNativeStyleRequestObjectAsync",
+      "description": "Snippet for GetNativeStyleAsync",
+      "file": "NativeStyleServiceClient.GetNativeStyleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNativeStyleAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.GetNativeStyleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.GetNativeStyleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.NativeStyle>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "GetNativeStyle",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.GetNativeStyle",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_GetNativeStyle_sync_flattened",
+      "title": "GetNativeStyle",
+      "description": "Snippet for GetNativeStyle",
+      "file": "NativeStyleServiceClient.GetNativeStyleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNativeStyle",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.GetNativeStyle",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.NativeStyle",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "GetNativeStyle",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.GetNativeStyle",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_GetNativeStyle_async_flattened",
+      "title": "GetNativeStyleAsync",
+      "description": "Snippet for GetNativeStyleAsync",
+      "file": "NativeStyleServiceClient.GetNativeStyleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNativeStyleAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.GetNativeStyleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.NativeStyle>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "GetNativeStyle",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.GetNativeStyle",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_GetNativeStyle_sync_flattened_resourceNames",
+      "title": "GetNativeStyleResourceNames",
+      "description": "Snippet for GetNativeStyle",
+      "file": "NativeStyleServiceClient.GetNativeStyleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNativeStyle",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.GetNativeStyle",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NativeStyleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.NativeStyle",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "GetNativeStyle",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.GetNativeStyle",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_GetNativeStyle_async_flattened_resourceNames",
+      "title": "GetNativeStyleResourceNamesAsync",
+      "description": "Snippet for GetNativeStyleAsync",
+      "file": "NativeStyleServiceClient.GetNativeStyleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNativeStyleAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.GetNativeStyleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NativeStyleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.NativeStyle>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "GetNativeStyle",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.GetNativeStyle",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_ListNativeStyles_sync",
+      "title": "ListNativeStylesRequestObject",
+      "description": "Snippet for ListNativeStyles",
+      "file": "NativeStyleServiceClient.ListNativeStylesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.ListNativeStyles",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.ListNativeStylesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.AdManager.V1.ListNativeStylesResponse, Google.Ads.AdManager.V1.NativeStyle>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "ListNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.ListNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_ListNativeStyles_async",
+      "title": "ListNativeStylesRequestObjectAsync",
+      "description": "Snippet for ListNativeStylesAsync",
+      "file": "NativeStyleServiceClient.ListNativeStylesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.ListNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.ListNativeStylesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.AdManager.V1.ListNativeStylesResponse, Google.Ads.AdManager.V1.NativeStyle>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "ListNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.ListNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_ListNativeStyles_sync_flattened",
+      "title": "ListNativeStyles",
+      "description": "Snippet for ListNativeStyles",
+      "file": "NativeStyleServiceClient.ListNativeStylesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.ListNativeStyles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.AdManager.V1.ListNativeStylesResponse, Google.Ads.AdManager.V1.NativeStyle>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "ListNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.ListNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_ListNativeStyles_async_flattened",
+      "title": "ListNativeStylesAsync",
+      "description": "Snippet for ListNativeStylesAsync",
+      "file": "NativeStyleServiceClient.ListNativeStylesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.ListNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.AdManager.V1.ListNativeStylesResponse, Google.Ads.AdManager.V1.NativeStyle>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "ListNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.ListNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_ListNativeStyles_sync_flattened_resourceNames",
+      "title": "ListNativeStylesResourceNames",
+      "description": "Snippet for ListNativeStyles",
+      "file": "NativeStyleServiceClient.ListNativeStylesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.ListNativeStyles",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.AdManager.V1.ListNativeStylesResponse, Google.Ads.AdManager.V1.NativeStyle>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "ListNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.ListNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_ListNativeStyles_async_flattened_resourceNames",
+      "title": "ListNativeStylesResourceNamesAsync",
+      "description": "Snippet for ListNativeStylesAsync",
+      "file": "NativeStyleServiceClient.ListNativeStylesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.ListNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.AdManager.V1.ListNativeStylesResponse, Google.Ads.AdManager.V1.NativeStyle>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "ListNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.ListNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchCreateNativeStyles_sync",
+      "title": "BatchCreateNativeStylesRequestObject",
+      "description": "Snippet for BatchCreateNativeStyles",
+      "file": "NativeStyleServiceClient.BatchCreateNativeStylesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchCreateNativeStyles",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchCreateNativeStylesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchCreateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchCreateNativeStyles_async",
+      "title": "BatchCreateNativeStylesRequestObjectAsync",
+      "description": "Snippet for BatchCreateNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchCreateNativeStylesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchCreateNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchCreateNativeStylesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchCreateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchCreateNativeStyles_sync_flattened",
+      "title": "BatchCreateNativeStyles",
+      "description": "Snippet for BatchCreateNativeStyles",
+      "file": "NativeStyleServiceClient.BatchCreateNativeStylesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchCreateNativeStyles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateNativeStyleRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchCreateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchCreateNativeStyles_async_flattened",
+      "title": "BatchCreateNativeStylesAsync",
+      "description": "Snippet for BatchCreateNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchCreateNativeStylesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchCreateNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateNativeStyleRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchCreateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchCreateNativeStyles_sync_flattened_resourceNames",
+      "title": "BatchCreateNativeStylesResourceNames",
+      "description": "Snippet for BatchCreateNativeStyles",
+      "file": "NativeStyleServiceClient.BatchCreateNativeStylesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchCreateNativeStyles",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateNativeStyleRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchCreateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchCreateNativeStyles_async_flattened_resourceNames",
+      "title": "BatchCreateNativeStylesResourceNamesAsync",
+      "description": "Snippet for BatchCreateNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchCreateNativeStylesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchCreateNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateNativeStyleRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchCreateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchUpdateNativeStyles_sync",
+      "title": "BatchUpdateNativeStylesRequestObject",
+      "description": "Snippet for BatchUpdateNativeStyles",
+      "file": "NativeStyleServiceClient.BatchUpdateNativeStylesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchUpdateNativeStyles",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchUpdateNativeStylesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchUpdateNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchUpdateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchUpdateNativeStyles_async",
+      "title": "BatchUpdateNativeStylesRequestObjectAsync",
+      "description": "Snippet for BatchUpdateNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchUpdateNativeStylesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchUpdateNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchUpdateNativeStylesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchUpdateNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchUpdateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchUpdateNativeStyles_sync_flattened",
+      "title": "BatchUpdateNativeStyles",
+      "description": "Snippet for BatchUpdateNativeStyles",
+      "file": "NativeStyleServiceClient.BatchUpdateNativeStylesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchUpdateNativeStyles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateNativeStyleRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchUpdateNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchUpdateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchUpdateNativeStyles_async_flattened",
+      "title": "BatchUpdateNativeStylesAsync",
+      "description": "Snippet for BatchUpdateNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchUpdateNativeStylesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchUpdateNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateNativeStyleRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchUpdateNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchUpdateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchUpdateNativeStyles_sync_flattened_resourceNames",
+      "title": "BatchUpdateNativeStylesResourceNames",
+      "description": "Snippet for BatchUpdateNativeStyles",
+      "file": "NativeStyleServiceClient.BatchUpdateNativeStylesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchUpdateNativeStyles",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateNativeStyleRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchUpdateNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchUpdateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchUpdateNativeStyles_async_flattened_resourceNames",
+      "title": "BatchUpdateNativeStylesResourceNamesAsync",
+      "description": "Snippet for BatchUpdateNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchUpdateNativeStylesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchUpdateNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateNativeStyleRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchUpdateNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchUpdateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchActivateNativeStyles_sync",
+      "title": "BatchActivateNativeStylesRequestObject",
+      "description": "Snippet for BatchActivateNativeStyles",
+      "file": "NativeStyleServiceClient.BatchActivateNativeStylesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchActivateNativeStyles",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchActivateNativeStylesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchActivateNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchActivateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchActivateNativeStyles_async",
+      "title": "BatchActivateNativeStylesRequestObjectAsync",
+      "description": "Snippet for BatchActivateNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchActivateNativeStylesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchActivateNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchActivateNativeStylesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchActivateNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchActivateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchActivateNativeStyles_sync_flattened",
+      "title": "BatchActivateNativeStyles",
+      "description": "Snippet for BatchActivateNativeStyles",
+      "file": "NativeStyleServiceClient.BatchActivateNativeStylesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchActivateNativeStyles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchActivateNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchActivateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchActivateNativeStyles_async_flattened",
+      "title": "BatchActivateNativeStylesAsync",
+      "description": "Snippet for BatchActivateNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchActivateNativeStylesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchActivateNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchActivateNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchActivateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchActivateNativeStyles_sync_flattened_resourceNames",
+      "title": "BatchActivateNativeStylesResourceNames",
+      "description": "Snippet for BatchActivateNativeStyles",
+      "file": "NativeStyleServiceClient.BatchActivateNativeStylesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchActivateNativeStyles",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.NativeStyleName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchActivateNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchActivateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchActivateNativeStyles_async_flattened_resourceNames",
+      "title": "BatchActivateNativeStylesResourceNamesAsync",
+      "description": "Snippet for BatchActivateNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchActivateNativeStylesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchActivateNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.NativeStyleName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchActivateNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchActivateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchDeactivateNativeStyles_sync",
+      "title": "BatchDeactivateNativeStylesRequestObject",
+      "description": "Snippet for BatchDeactivateNativeStyles",
+      "file": "NativeStyleServiceClient.BatchDeactivateNativeStylesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchDeactivateNativeStyles",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchDeactivateNativeStylesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchDeactivateNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchDeactivateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchDeactivateNativeStyles_async",
+      "title": "BatchDeactivateNativeStylesRequestObjectAsync",
+      "description": "Snippet for BatchDeactivateNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchDeactivateNativeStylesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchDeactivateNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchDeactivateNativeStylesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchDeactivateNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchDeactivateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchDeactivateNativeStyles_sync_flattened",
+      "title": "BatchDeactivateNativeStyles",
+      "description": "Snippet for BatchDeactivateNativeStyles",
+      "file": "NativeStyleServiceClient.BatchDeactivateNativeStylesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchDeactivateNativeStyles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchDeactivateNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchDeactivateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchDeactivateNativeStyles_async_flattened",
+      "title": "BatchDeactivateNativeStylesAsync",
+      "description": "Snippet for BatchDeactivateNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchDeactivateNativeStylesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchDeactivateNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchDeactivateNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchDeactivateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchDeactivateNativeStyles_sync_flattened_resourceNames",
+      "title": "BatchDeactivateNativeStylesResourceNames",
+      "description": "Snippet for BatchDeactivateNativeStyles",
+      "file": "NativeStyleServiceClient.BatchDeactivateNativeStylesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchDeactivateNativeStyles",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.NativeStyleName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchDeactivateNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchDeactivateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchDeactivateNativeStyles_async_flattened_resourceNames",
+      "title": "BatchDeactivateNativeStylesResourceNamesAsync",
+      "description": "Snippet for BatchDeactivateNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchDeactivateNativeStylesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchDeactivateNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.NativeStyleName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchDeactivateNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchDeactivateNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchArchiveNativeStyles_sync",
+      "title": "BatchArchiveNativeStylesRequestObject",
+      "description": "Snippet for BatchArchiveNativeStyles",
+      "file": "NativeStyleServiceClient.BatchArchiveNativeStylesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchArchiveNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchArchiveNativeStyles",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchArchiveNativeStylesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchArchiveNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchArchiveNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchArchiveNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchArchiveNativeStyles_async",
+      "title": "BatchArchiveNativeStylesRequestObjectAsync",
+      "description": "Snippet for BatchArchiveNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchArchiveNativeStylesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchArchiveNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchArchiveNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchArchiveNativeStylesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchArchiveNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchArchiveNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchArchiveNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchArchiveNativeStyles_sync_flattened",
+      "title": "BatchArchiveNativeStyles",
+      "description": "Snippet for BatchArchiveNativeStyles",
+      "file": "NativeStyleServiceClient.BatchArchiveNativeStylesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchArchiveNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchArchiveNativeStyles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchArchiveNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchArchiveNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchArchiveNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchArchiveNativeStyles_async_flattened",
+      "title": "BatchArchiveNativeStylesAsync",
+      "description": "Snippet for BatchArchiveNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchArchiveNativeStylesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchArchiveNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchArchiveNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchArchiveNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchArchiveNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchArchiveNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchArchiveNativeStyles_sync_flattened_resourceNames",
+      "title": "BatchArchiveNativeStylesResourceNames",
+      "description": "Snippet for BatchArchiveNativeStyles",
+      "file": "NativeStyleServiceClient.BatchArchiveNativeStylesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchArchiveNativeStyles",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchArchiveNativeStyles",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.NativeStyleName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchArchiveNativeStylesResponse",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchArchiveNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchArchiveNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NativeStyleService_BatchArchiveNativeStyles_async_flattened_resourceNames",
+      "title": "BatchArchiveNativeStylesResourceNamesAsync",
+      "description": "Snippet for BatchArchiveNativeStylesAsync",
+      "file": "NativeStyleServiceClient.BatchArchiveNativeStylesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchArchiveNativeStylesAsync",
+        "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient.BatchArchiveNativeStylesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.NativeStyleName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchArchiveNativeStylesResponse>",
+        "client": {
+          "shortName": "NativeStyleServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NativeStyleServiceClient"
+        },
+        "method": {
+          "shortName": "BatchArchiveNativeStyles",
+          "fullName": "google.ads.admanager.v1.NativeStyleService.BatchArchiveNativeStyles",
+          "service": {
+            "shortName": "NativeStyleService",
+            "fullName": "google.ads.admanager.v1.NativeStyleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "admanager_v1_generated_NetworkService_GetNetwork_sync",
       "title": "GetNetworkRequestObject",
       "description": "Snippet for GetNetwork",
@@ -55694,6 +60542,590 @@
         {
           "start": 37,
           "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NetworkService_UpdateNetwork_sync",
+      "title": "UpdateNetworkRequestObject",
+      "description": "Snippet for UpdateNetwork",
+      "file": "NetworkServiceClient.UpdateNetworkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateNetwork",
+        "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient.UpdateNetwork",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.UpdateNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.Network",
+        "client": {
+          "shortName": "NetworkServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateNetwork",
+          "fullName": "google.ads.admanager.v1.NetworkService.UpdateNetwork",
+          "service": {
+            "shortName": "NetworkService",
+            "fullName": "google.ads.admanager.v1.NetworkService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NetworkService_UpdateNetwork_async",
+      "title": "UpdateNetworkRequestObjectAsync",
+      "description": "Snippet for UpdateNetworkAsync",
+      "file": "NetworkServiceClient.UpdateNetworkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateNetworkAsync",
+        "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient.UpdateNetworkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.UpdateNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.Network>",
+        "client": {
+          "shortName": "NetworkServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateNetwork",
+          "fullName": "google.ads.admanager.v1.NetworkService.UpdateNetwork",
+          "service": {
+            "shortName": "NetworkService",
+            "fullName": "google.ads.admanager.v1.NetworkService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NetworkService_UpdateNetwork_sync_flattened",
+      "title": "UpdateNetwork",
+      "description": "Snippet for UpdateNetwork",
+      "file": "NetworkServiceClient.UpdateNetworkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateNetwork",
+        "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient.UpdateNetwork",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.Network",
+            "name": "network"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.Network",
+        "client": {
+          "shortName": "NetworkServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateNetwork",
+          "fullName": "google.ads.admanager.v1.NetworkService.UpdateNetwork",
+          "service": {
+            "shortName": "NetworkService",
+            "fullName": "google.ads.admanager.v1.NetworkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NetworkService_UpdateNetwork_async_flattened",
+      "title": "UpdateNetworkAsync",
+      "description": "Snippet for UpdateNetworkAsync",
+      "file": "NetworkServiceClient.UpdateNetworkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateNetworkAsync",
+        "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient.UpdateNetworkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.Network",
+            "name": "network"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.Network>",
+        "client": {
+          "shortName": "NetworkServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateNetwork",
+          "fullName": "google.ads.admanager.v1.NetworkService.UpdateNetwork",
+          "service": {
+            "shortName": "NetworkService",
+            "fullName": "google.ads.admanager.v1.NetworkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NetworkService_ProvisionTestNetwork_sync",
+      "title": "ProvisionTestNetworkRequestObject",
+      "description": "Snippet for ProvisionTestNetwork",
+      "file": "NetworkServiceClient.ProvisionTestNetworkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionTestNetwork",
+        "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient.ProvisionTestNetwork",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.ProvisionTestNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.Network",
+        "client": {
+          "shortName": "NetworkServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionTestNetwork",
+          "fullName": "google.ads.admanager.v1.NetworkService.ProvisionTestNetwork",
+          "service": {
+            "shortName": "NetworkService",
+            "fullName": "google.ads.admanager.v1.NetworkService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NetworkService_ProvisionTestNetwork_async",
+      "title": "ProvisionTestNetworkRequestObjectAsync",
+      "description": "Snippet for ProvisionTestNetworkAsync",
+      "file": "NetworkServiceClient.ProvisionTestNetworkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionTestNetworkAsync",
+        "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient.ProvisionTestNetworkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.ProvisionTestNetworkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.Network>",
+        "client": {
+          "shortName": "NetworkServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionTestNetwork",
+          "fullName": "google.ads.admanager.v1.NetworkService.ProvisionTestNetwork",
+          "service": {
+            "shortName": "NetworkService",
+            "fullName": "google.ads.admanager.v1.NetworkService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NetworkService_GetDefaultThirdPartyDataDeclaration_sync",
+      "title": "GetDefaultThirdPartyDataDeclarationRequestObject",
+      "description": "Snippet for GetDefaultThirdPartyDataDeclaration",
+      "file": "NetworkServiceClient.GetDefaultThirdPartyDataDeclarationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDefaultThirdPartyDataDeclaration",
+        "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient.GetDefaultThirdPartyDataDeclaration",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.GetDefaultThirdPartyDataDeclarationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration",
+        "client": {
+          "shortName": "NetworkServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient"
+        },
+        "method": {
+          "shortName": "GetDefaultThirdPartyDataDeclaration",
+          "fullName": "google.ads.admanager.v1.NetworkService.GetDefaultThirdPartyDataDeclaration",
+          "service": {
+            "shortName": "NetworkService",
+            "fullName": "google.ads.admanager.v1.NetworkService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NetworkService_GetDefaultThirdPartyDataDeclaration_async",
+      "title": "GetDefaultThirdPartyDataDeclarationRequestObjectAsync",
+      "description": "Snippet for GetDefaultThirdPartyDataDeclarationAsync",
+      "file": "NetworkServiceClient.GetDefaultThirdPartyDataDeclarationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDefaultThirdPartyDataDeclarationAsync",
+        "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient.GetDefaultThirdPartyDataDeclarationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.GetDefaultThirdPartyDataDeclarationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration>",
+        "client": {
+          "shortName": "NetworkServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient"
+        },
+        "method": {
+          "shortName": "GetDefaultThirdPartyDataDeclaration",
+          "fullName": "google.ads.admanager.v1.NetworkService.GetDefaultThirdPartyDataDeclaration",
+          "service": {
+            "shortName": "NetworkService",
+            "fullName": "google.ads.admanager.v1.NetworkService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NetworkService_GetDefaultThirdPartyDataDeclaration_sync_flattened",
+      "title": "GetDefaultThirdPartyDataDeclaration",
+      "description": "Snippet for GetDefaultThirdPartyDataDeclaration",
+      "file": "NetworkServiceClient.GetDefaultThirdPartyDataDeclarationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDefaultThirdPartyDataDeclaration",
+        "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient.GetDefaultThirdPartyDataDeclaration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration",
+        "client": {
+          "shortName": "NetworkServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient"
+        },
+        "method": {
+          "shortName": "GetDefaultThirdPartyDataDeclaration",
+          "fullName": "google.ads.admanager.v1.NetworkService.GetDefaultThirdPartyDataDeclaration",
+          "service": {
+            "shortName": "NetworkService",
+            "fullName": "google.ads.admanager.v1.NetworkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NetworkService_GetDefaultThirdPartyDataDeclaration_async_flattened",
+      "title": "GetDefaultThirdPartyDataDeclarationAsync",
+      "description": "Snippet for GetDefaultThirdPartyDataDeclarationAsync",
+      "file": "NetworkServiceClient.GetDefaultThirdPartyDataDeclarationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDefaultThirdPartyDataDeclarationAsync",
+        "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient.GetDefaultThirdPartyDataDeclarationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration>",
+        "client": {
+          "shortName": "NetworkServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient"
+        },
+        "method": {
+          "shortName": "GetDefaultThirdPartyDataDeclaration",
+          "fullName": "google.ads.admanager.v1.NetworkService.GetDefaultThirdPartyDataDeclaration",
+          "service": {
+            "shortName": "NetworkService",
+            "fullName": "google.ads.admanager.v1.NetworkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NetworkService_GetDefaultThirdPartyDataDeclaration_sync_flattened_resourceNames",
+      "title": "GetDefaultThirdPartyDataDeclarationResourceNames",
+      "description": "Snippet for GetDefaultThirdPartyDataDeclaration",
+      "file": "NetworkServiceClient.GetDefaultThirdPartyDataDeclarationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDefaultThirdPartyDataDeclaration",
+        "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient.GetDefaultThirdPartyDataDeclaration",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclarationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration",
+        "client": {
+          "shortName": "NetworkServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient"
+        },
+        "method": {
+          "shortName": "GetDefaultThirdPartyDataDeclaration",
+          "fullName": "google.ads.admanager.v1.NetworkService.GetDefaultThirdPartyDataDeclaration",
+          "service": {
+            "shortName": "NetworkService",
+            "fullName": "google.ads.admanager.v1.NetworkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_NetworkService_GetDefaultThirdPartyDataDeclaration_async_flattened_resourceNames",
+      "title": "GetDefaultThirdPartyDataDeclarationResourceNamesAsync",
+      "description": "Snippet for GetDefaultThirdPartyDataDeclarationAsync",
+      "file": "NetworkServiceClient.GetDefaultThirdPartyDataDeclarationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDefaultThirdPartyDataDeclarationAsync",
+        "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient.GetDefaultThirdPartyDataDeclarationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclarationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration>",
+        "client": {
+          "shortName": "NetworkServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient"
+        },
+        "method": {
+          "shortName": "GetDefaultThirdPartyDataDeclaration",
+          "fullName": "google.ads.admanager.v1.NetworkService.GetDefaultThirdPartyDataDeclaration",
+          "service": {
+            "shortName": "NetworkService",
+            "fullName": "google.ads.admanager.v1.NetworkService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
