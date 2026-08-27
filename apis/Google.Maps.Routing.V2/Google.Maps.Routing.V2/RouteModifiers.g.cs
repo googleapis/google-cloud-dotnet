@@ -25,23 +25,24 @@ namespace Google.Maps.Routing.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cixnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3JvdXRlX21vZGlmaWVycy5wcm90",
-            "bxIWZ29vZ2xlLm1hcHMucm91dGluZy52MhooZ29vZ2xlL21hcHMvcm91dGlu",
-            "Zy92Mi90b2xsX3Bhc3Nlcy5wcm90bxopZ29vZ2xlL21hcHMvcm91dGluZy92",
-            "Mi92ZWhpY2xlX2luZm8ucHJvdG8i3AEKDlJvdXRlTW9kaWZpZXJzEhMKC2F2",
-            "b2lkX3RvbGxzGAEgASgIEhYKDmF2b2lkX2hpZ2h3YXlzGAIgASgIEhUKDWF2",
-            "b2lkX2ZlcnJpZXMYAyABKAgSFAoMYXZvaWRfaW5kb29yGAQgASgIEjkKDHZl",
-            "aGljbGVfaW5mbxgFIAEoCzIjLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuVmVo",
-            "aWNsZUluZm8SNQoLdG9sbF9wYXNzZXMYBiADKA4yIC5nb29nbGUubWFwcy5y",
-            "b3V0aW5nLnYyLlRvbGxQYXNzQsUBChpjb20uZ29vZ2xlLm1hcHMucm91dGlu",
-            "Zy52MkITUm91dGVNb2RpZmllcnNQcm90b1ABWjpjbG91ZC5nb29nbGUuY29t",
-            "L2dvL21hcHMvcm91dGluZy9hcGl2Mi9yb3V0aW5ncGI7cm91dGluZ3BiogIF",
-            "R01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYyygIWR29vZ2xlXE1hcHNc",
-            "Um91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91dGluZzo6VjJiBnByb3Rv",
-            "Mw=="));
+            "bxIWZ29vZ2xlLm1hcHMucm91dGluZy52MhofZ29vZ2xlL2FwaS9maWVsZF9i",
+            "ZWhhdmlvci5wcm90bxooZ29vZ2xlL21hcHMvcm91dGluZy92Mi90b2xsX3Bh",
+            "c3Nlcy5wcm90bxopZ29vZ2xlL21hcHMvcm91dGluZy92Mi92ZWhpY2xlX2lu",
+            "Zm8ucHJvdG8i+AEKDlJvdXRlTW9kaWZpZXJzEhMKC2F2b2lkX3RvbGxzGAEg",
+            "ASgIEhYKDmF2b2lkX2hpZ2h3YXlzGAIgASgIEhUKDWF2b2lkX2ZlcnJpZXMY",
+            "AyABKAgSFAoMYXZvaWRfaW5kb29yGAQgASgIEjkKDHZlaGljbGVfaW5mbxgF",
+            "IAEoCzIjLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuVmVoaWNsZUluZm8SNQoL",
+            "dG9sbF9wYXNzZXMYBiADKA4yIC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlRv",
+            "bGxQYXNzEhoKDWF2b2lkX3R1bm5lbHMYByABKAhCA+BBAULFAQoaY29tLmdv",
+            "b2dsZS5tYXBzLnJvdXRpbmcudjJCE1JvdXRlTW9kaWZpZXJzUHJvdG9QAVo6",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL3JvdXRpbmcvYXBpdjIvcm91dGlu",
+            "Z3BiO3JvdXRpbmdwYqICBUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91dGluZy5W",
+            "MsoCFkdvb2dsZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1hcHM6OlJv",
+            "dXRpbmc6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Maps.Routing.V2.TollPassesReflection.Descriptor, global::Google.Maps.Routing.V2.VehicleInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Maps.Routing.V2.TollPassesReflection.Descriptor, global::Google.Maps.Routing.V2.VehicleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteModifiers), global::Google.Maps.Routing.V2.RouteModifiers.Parser, new[]{ "AvoidTolls", "AvoidHighways", "AvoidFerries", "AvoidIndoor", "VehicleInfo", "TollPasses" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteModifiers), global::Google.Maps.Routing.V2.RouteModifiers.Parser, new[]{ "AvoidTolls", "AvoidHighways", "AvoidFerries", "AvoidIndoor", "VehicleInfo", "TollPasses", "AvoidTunnels" }, null, null, null, null)
           }));
     }
     #endregion
@@ -93,6 +94,7 @@ namespace Google.Maps.Routing.V2 {
       avoidIndoor_ = other.avoidIndoor_;
       vehicleInfo_ = other.vehicleInfo_ != null ? other.vehicleInfo_.Clone() : null;
       tollPasses_ = other.tollPasses_.Clone();
+      avoidTunnels_ = other.avoidTunnels_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -204,6 +206,27 @@ namespace Google.Maps.Routing.V2 {
       get { return tollPasses_; }
     }
 
+    /// <summary>Field number for the "avoid_tunnels" field.</summary>
+    public const int AvoidTunnelsFieldNumber = 7;
+    private bool avoidTunnels_;
+    /// <summary>
+    /// Optional. When set to true, avoids tunnels where reasonable, giving
+    /// preference to routes not containing tunnels. Applies only to the `DRIVE`
+    /// and `TWO_WHEELER`
+    /// [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode].
+    /// [`RoutingPreference`][google.maps.routing.v2.RoutingPreference]
+    /// must be set to `TRAFFIC_AWARE_OPTIMAL`.
+    /// This field is not supported in ComputeRouteMatrix.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AvoidTunnels {
+      get { return avoidTunnels_; }
+      set {
+        avoidTunnels_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -225,6 +248,7 @@ namespace Google.Maps.Routing.V2 {
       if (AvoidIndoor != other.AvoidIndoor) return false;
       if (!object.Equals(VehicleInfo, other.VehicleInfo)) return false;
       if(!tollPasses_.Equals(other.tollPasses_)) return false;
+      if (AvoidTunnels != other.AvoidTunnels) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -238,6 +262,7 @@ namespace Google.Maps.Routing.V2 {
       if (AvoidIndoor != false) hash ^= AvoidIndoor.GetHashCode();
       if (vehicleInfo_ != null) hash ^= VehicleInfo.GetHashCode();
       hash ^= tollPasses_.GetHashCode();
+      if (AvoidTunnels != false) hash ^= AvoidTunnels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -277,6 +302,10 @@ namespace Google.Maps.Routing.V2 {
         output.WriteMessage(VehicleInfo);
       }
       tollPasses_.WriteTo(output, _repeated_tollPasses_codec);
+      if (AvoidTunnels != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(AvoidTunnels);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -308,6 +337,10 @@ namespace Google.Maps.Routing.V2 {
         output.WriteMessage(VehicleInfo);
       }
       tollPasses_.WriteTo(ref output, _repeated_tollPasses_codec);
+      if (AvoidTunnels != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(AvoidTunnels);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -334,6 +367,9 @@ namespace Google.Maps.Routing.V2 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(VehicleInfo);
       }
       size += tollPasses_.CalculateSize(_repeated_tollPasses_codec);
+      if (AvoidTunnels != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -365,6 +401,9 @@ namespace Google.Maps.Routing.V2 {
         VehicleInfo.MergeFrom(other.VehicleInfo);
       }
       tollPasses_.Add(other.tollPasses_);
+      if (other.AvoidTunnels != false) {
+        AvoidTunnels = other.AvoidTunnels;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -412,6 +451,10 @@ namespace Google.Maps.Routing.V2 {
             tollPasses_.AddEntriesFrom(input, _repeated_tollPasses_codec);
             break;
           }
+          case 56: {
+            AvoidTunnels = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -457,6 +500,10 @@ namespace Google.Maps.Routing.V2 {
           case 50:
           case 48: {
             tollPasses_.AddEntriesFrom(ref input, _repeated_tollPasses_codec);
+            break;
+          }
+          case 56: {
+            AvoidTunnels = input.ReadBool();
             break;
           }
         }
