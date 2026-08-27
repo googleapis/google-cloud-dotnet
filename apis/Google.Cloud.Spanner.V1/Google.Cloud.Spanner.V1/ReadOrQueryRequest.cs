@@ -116,7 +116,7 @@ namespace Google.Cloud.Spanner.V1
     /// <summary>
     /// Class for common properties of <see cref="ReadRequest"/> and <see cref="ExecuteSqlRequest"/>.
     /// </summary>
-    public sealed class ReadOrQueryRequest
+    public sealed partial class ReadOrQueryRequest
     {
         internal IReadOrQueryRequest UnderlyingRequest { get; }
 
