@@ -1447,7 +1447,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-06-08T14:24:30.469935996Z",
-            "lastGeneratedCommit": "ee4a3e1ce4e8d16661fcc624322000ad792ffb8a",
+            "lastGeneratedCommit": "905b23950f49a62332b1884d11765e9d9c503e00",
             "lastReleasedCommit": "ee4a3e1ce4e8d16661fcc624322000ad792ffb8a",
             "apiPaths": [
                 "google/privacy/dlp/v2"

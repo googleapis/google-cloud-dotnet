@@ -8878,5 +8878,649 @@ namespace GoogleCSharpSnippets
             Connection response = await dlpServiceClient.UpdateConnectionAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for CreateContentPolicy</summary>
+        public void CreateContentPolicyRequestObject()
+        {
+            // Snippet: CreateContentPolicy(CreateContentPolicyRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            CreateContentPolicyRequest request = new CreateContentPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ContentPolicy = new ContentPolicy(),
+                ContentPolicyId = "",
+            };
+            // Make the request
+            ContentPolicy response = dlpServiceClient.CreateContentPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateContentPolicyAsync</summary>
+        public async Task CreateContentPolicyRequestObjectAsync()
+        {
+            // Snippet: CreateContentPolicyAsync(CreateContentPolicyRequest, CallSettings)
+            // Additional: CreateContentPolicyAsync(CreateContentPolicyRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateContentPolicyRequest request = new CreateContentPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ContentPolicy = new ContentPolicy(),
+                ContentPolicyId = "",
+            };
+            // Make the request
+            ContentPolicy response = await dlpServiceClient.CreateContentPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateContentPolicy</summary>
+        public void CreateContentPolicy()
+        {
+            // Snippet: CreateContentPolicy(string, ContentPolicy, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ContentPolicy contentPolicy = new ContentPolicy();
+            // Make the request
+            ContentPolicy response = dlpServiceClient.CreateContentPolicy(parent, contentPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateContentPolicyAsync</summary>
+        public async Task CreateContentPolicyAsync()
+        {
+            // Snippet: CreateContentPolicyAsync(string, ContentPolicy, CallSettings)
+            // Additional: CreateContentPolicyAsync(string, ContentPolicy, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ContentPolicy contentPolicy = new ContentPolicy();
+            // Make the request
+            ContentPolicy response = await dlpServiceClient.CreateContentPolicyAsync(parent, contentPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateContentPolicy</summary>
+        public void CreateContentPolicyResourceNames()
+        {
+            // Snippet: CreateContentPolicy(LocationName, ContentPolicy, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ContentPolicy contentPolicy = new ContentPolicy();
+            // Make the request
+            ContentPolicy response = dlpServiceClient.CreateContentPolicy(parent, contentPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateContentPolicyAsync</summary>
+        public async Task CreateContentPolicyResourceNamesAsync()
+        {
+            // Snippet: CreateContentPolicyAsync(LocationName, ContentPolicy, CallSettings)
+            // Additional: CreateContentPolicyAsync(LocationName, ContentPolicy, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ContentPolicy contentPolicy = new ContentPolicy();
+            // Make the request
+            ContentPolicy response = await dlpServiceClient.CreateContentPolicyAsync(parent, contentPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateContentPolicy</summary>
+        public void UpdateContentPolicyRequestObject()
+        {
+            // Snippet: UpdateContentPolicy(UpdateContentPolicyRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateContentPolicyRequest request = new UpdateContentPolicyRequest
+            {
+                ContentPolicyName = ContentPolicyName.FromProjectLocationContentPolicy("[PROJECT]", "[LOCATION]", "[CONTENT_POLICY]"),
+                ContentPolicy = new ContentPolicy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ContentPolicy response = dlpServiceClient.UpdateContentPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateContentPolicyAsync</summary>
+        public async Task UpdateContentPolicyRequestObjectAsync()
+        {
+            // Snippet: UpdateContentPolicyAsync(UpdateContentPolicyRequest, CallSettings)
+            // Additional: UpdateContentPolicyAsync(UpdateContentPolicyRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateContentPolicyRequest request = new UpdateContentPolicyRequest
+            {
+                ContentPolicyName = ContentPolicyName.FromProjectLocationContentPolicy("[PROJECT]", "[LOCATION]", "[CONTENT_POLICY]"),
+                ContentPolicy = new ContentPolicy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ContentPolicy response = await dlpServiceClient.UpdateContentPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateContentPolicy</summary>
+        public void UpdateContentPolicy()
+        {
+            // Snippet: UpdateContentPolicy(string, ContentPolicy, FieldMask, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/contentPolicies/[CONTENT_POLICY]";
+            ContentPolicy contentPolicy = new ContentPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ContentPolicy response = dlpServiceClient.UpdateContentPolicy(name, contentPolicy, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateContentPolicyAsync</summary>
+        public async Task UpdateContentPolicyAsync()
+        {
+            // Snippet: UpdateContentPolicyAsync(string, ContentPolicy, FieldMask, CallSettings)
+            // Additional: UpdateContentPolicyAsync(string, ContentPolicy, FieldMask, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/contentPolicies/[CONTENT_POLICY]";
+            ContentPolicy contentPolicy = new ContentPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ContentPolicy response = await dlpServiceClient.UpdateContentPolicyAsync(name, contentPolicy, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateContentPolicy</summary>
+        public void UpdateContentPolicyResourceNames()
+        {
+            // Snippet: UpdateContentPolicy(ContentPolicyName, ContentPolicy, FieldMask, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ContentPolicyName name = ContentPolicyName.FromProjectLocationContentPolicy("[PROJECT]", "[LOCATION]", "[CONTENT_POLICY]");
+            ContentPolicy contentPolicy = new ContentPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ContentPolicy response = dlpServiceClient.UpdateContentPolicy(name, contentPolicy, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateContentPolicyAsync</summary>
+        public async Task UpdateContentPolicyResourceNamesAsync()
+        {
+            // Snippet: UpdateContentPolicyAsync(ContentPolicyName, ContentPolicy, FieldMask, CallSettings)
+            // Additional: UpdateContentPolicyAsync(ContentPolicyName, ContentPolicy, FieldMask, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ContentPolicyName name = ContentPolicyName.FromProjectLocationContentPolicy("[PROJECT]", "[LOCATION]", "[CONTENT_POLICY]");
+            ContentPolicy contentPolicy = new ContentPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ContentPolicy response = await dlpServiceClient.UpdateContentPolicyAsync(name, contentPolicy, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetContentPolicy</summary>
+        public void GetContentPolicyRequestObject()
+        {
+            // Snippet: GetContentPolicy(GetContentPolicyRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            GetContentPolicyRequest request = new GetContentPolicyRequest
+            {
+                ContentPolicyName = ContentPolicyName.FromProjectLocationContentPolicy("[PROJECT]", "[LOCATION]", "[CONTENT_POLICY]"),
+            };
+            // Make the request
+            ContentPolicy response = dlpServiceClient.GetContentPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetContentPolicyAsync</summary>
+        public async Task GetContentPolicyRequestObjectAsync()
+        {
+            // Snippet: GetContentPolicyAsync(GetContentPolicyRequest, CallSettings)
+            // Additional: GetContentPolicyAsync(GetContentPolicyRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetContentPolicyRequest request = new GetContentPolicyRequest
+            {
+                ContentPolicyName = ContentPolicyName.FromProjectLocationContentPolicy("[PROJECT]", "[LOCATION]", "[CONTENT_POLICY]"),
+            };
+            // Make the request
+            ContentPolicy response = await dlpServiceClient.GetContentPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetContentPolicy</summary>
+        public void GetContentPolicy()
+        {
+            // Snippet: GetContentPolicy(string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/contentPolicies/[CONTENT_POLICY]";
+            // Make the request
+            ContentPolicy response = dlpServiceClient.GetContentPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetContentPolicyAsync</summary>
+        public async Task GetContentPolicyAsync()
+        {
+            // Snippet: GetContentPolicyAsync(string, CallSettings)
+            // Additional: GetContentPolicyAsync(string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/contentPolicies/[CONTENT_POLICY]";
+            // Make the request
+            ContentPolicy response = await dlpServiceClient.GetContentPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetContentPolicy</summary>
+        public void GetContentPolicyResourceNames()
+        {
+            // Snippet: GetContentPolicy(ContentPolicyName, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ContentPolicyName name = ContentPolicyName.FromProjectLocationContentPolicy("[PROJECT]", "[LOCATION]", "[CONTENT_POLICY]");
+            // Make the request
+            ContentPolicy response = dlpServiceClient.GetContentPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetContentPolicyAsync</summary>
+        public async Task GetContentPolicyResourceNamesAsync()
+        {
+            // Snippet: GetContentPolicyAsync(ContentPolicyName, CallSettings)
+            // Additional: GetContentPolicyAsync(ContentPolicyName, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ContentPolicyName name = ContentPolicyName.FromProjectLocationContentPolicy("[PROJECT]", "[LOCATION]", "[CONTENT_POLICY]");
+            // Make the request
+            ContentPolicy response = await dlpServiceClient.GetContentPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListContentPolicies</summary>
+        public void ListContentPoliciesRequestObject()
+        {
+            // Snippet: ListContentPolicies(ListContentPoliciesRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ListContentPoliciesRequest request = new ListContentPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListContentPoliciesResponse, ContentPolicy> response = dlpServiceClient.ListContentPolicies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ContentPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListContentPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ContentPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ContentPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ContentPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListContentPoliciesAsync</summary>
+        public async Task ListContentPoliciesRequestObjectAsync()
+        {
+            // Snippet: ListContentPoliciesAsync(ListContentPoliciesRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListContentPoliciesRequest request = new ListContentPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListContentPoliciesResponse, ContentPolicy> response = dlpServiceClient.ListContentPoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (ContentPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListContentPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ContentPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ContentPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ContentPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListContentPolicies</summary>
+        public void ListContentPolicies()
+        {
+            // Snippet: ListContentPolicies(string, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListContentPoliciesResponse, ContentPolicy> response = dlpServiceClient.ListContentPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ContentPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListContentPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ContentPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ContentPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ContentPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListContentPoliciesAsync</summary>
+        public async Task ListContentPoliciesAsync()
+        {
+            // Snippet: ListContentPoliciesAsync(string, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListContentPoliciesResponse, ContentPolicy> response = dlpServiceClient.ListContentPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (ContentPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListContentPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ContentPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ContentPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ContentPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListContentPolicies</summary>
+        public void ListContentPoliciesResourceNames()
+        {
+            // Snippet: ListContentPolicies(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListContentPoliciesResponse, ContentPolicy> response = dlpServiceClient.ListContentPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ContentPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListContentPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ContentPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ContentPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ContentPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListContentPoliciesAsync</summary>
+        public async Task ListContentPoliciesResourceNamesAsync()
+        {
+            // Snippet: ListContentPoliciesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListContentPoliciesResponse, ContentPolicy> response = dlpServiceClient.ListContentPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (ContentPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListContentPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ContentPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ContentPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ContentPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteContentPolicy</summary>
+        public void DeleteContentPolicyRequestObject()
+        {
+            // Snippet: DeleteContentPolicy(DeleteContentPolicyRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteContentPolicyRequest request = new DeleteContentPolicyRequest
+            {
+                ContentPolicyName = ContentPolicyName.FromProjectLocationContentPolicy("[PROJECT]", "[LOCATION]", "[CONTENT_POLICY]"),
+            };
+            // Make the request
+            dlpServiceClient.DeleteContentPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteContentPolicyAsync</summary>
+        public async Task DeleteContentPolicyRequestObjectAsync()
+        {
+            // Snippet: DeleteContentPolicyAsync(DeleteContentPolicyRequest, CallSettings)
+            // Additional: DeleteContentPolicyAsync(DeleteContentPolicyRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteContentPolicyRequest request = new DeleteContentPolicyRequest
+            {
+                ContentPolicyName = ContentPolicyName.FromProjectLocationContentPolicy("[PROJECT]", "[LOCATION]", "[CONTENT_POLICY]"),
+            };
+            // Make the request
+            await dlpServiceClient.DeleteContentPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteContentPolicy</summary>
+        public void DeleteContentPolicy()
+        {
+            // Snippet: DeleteContentPolicy(string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/contentPolicies/[CONTENT_POLICY]";
+            // Make the request
+            dlpServiceClient.DeleteContentPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteContentPolicyAsync</summary>
+        public async Task DeleteContentPolicyAsync()
+        {
+            // Snippet: DeleteContentPolicyAsync(string, CallSettings)
+            // Additional: DeleteContentPolicyAsync(string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/contentPolicies/[CONTENT_POLICY]";
+            // Make the request
+            await dlpServiceClient.DeleteContentPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteContentPolicy</summary>
+        public void DeleteContentPolicyResourceNames()
+        {
+            // Snippet: DeleteContentPolicy(ContentPolicyName, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ContentPolicyName name = ContentPolicyName.FromProjectLocationContentPolicy("[PROJECT]", "[LOCATION]", "[CONTENT_POLICY]");
+            // Make the request
+            dlpServiceClient.DeleteContentPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteContentPolicyAsync</summary>
+        public async Task DeleteContentPolicyResourceNamesAsync()
+        {
+            // Snippet: DeleteContentPolicyAsync(ContentPolicyName, CallSettings)
+            // Additional: DeleteContentPolicyAsync(ContentPolicyName, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ContentPolicyName name = ContentPolicyName.FromProjectLocationContentPolicy("[PROJECT]", "[LOCATION]", "[CONTENT_POLICY]");
+            // Make the request
+            await dlpServiceClient.DeleteContentPolicyAsync(name);
+            // End snippet
+        }
     }
 }
