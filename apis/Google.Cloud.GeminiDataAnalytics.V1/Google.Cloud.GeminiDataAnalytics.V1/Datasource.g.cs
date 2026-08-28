@@ -33,69 +33,72 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             "CzI/Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLlN0dWRp",
             "b0RhdGFzb3VyY2VSZWZlcmVuY2VzSAASTgoGbG9va2VyGAMgASgLMjwuZ29v",
             "Z2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuTG9va2VyRXhwbG9y",
-            "ZVJlZmVyZW5jZXNIAEIMCgpyZWZlcmVuY2VzInUKF0JpZ1F1ZXJ5VGFibGVS",
-            "ZWZlcmVuY2VzEloKEHRhYmxlX3JlZmVyZW5jZXMYASADKAsyOy5nb29nbGUu",
-            "Y2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5CaWdRdWVyeVRhYmxlUmVm",
-            "ZXJlbmNlQgPgQQEiowEKFkJpZ1F1ZXJ5VGFibGVSZWZlcmVuY2USFwoKcHJv",
-            "amVjdF9pZBgBIAEoCUID4EECEhcKCmRhdGFzZXRfaWQYAyABKAlCA+BBAhIV",
-            "Cgh0YWJsZV9pZBgEIAEoCUID4EECEkAKBnNjaGVtYRgGIAEoCzIrLmdvb2ds",
-            "ZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLlNjaGVtYUID4EEBInwK",
-            "GlN0dWRpb0RhdGFzb3VyY2VSZWZlcmVuY2VzEl4KEXN0dWRpb19yZWZlcmVu",
-            "Y2VzGAIgAygLMj4uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3Mu",
-            "djEuU3R1ZGlvRGF0YXNvdXJjZVJlZmVyZW5jZUID4EEBIjcKGVN0dWRpb0Rh",
-            "dGFzb3VyY2VSZWZlcmVuY2USGgoNZGF0YXNvdXJjZV9pZBgBIAEoCUID4EEC",
-            "IncKF0xvb2tlckV4cGxvcmVSZWZlcmVuY2VzElwKEmV4cGxvcmVfcmVmZXJl",
-            "bmNlcxgBIAMoCzI7Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNz",
-            "LnYxLkxvb2tlckV4cGxvcmVSZWZlcmVuY2VCA+BBAiKeAgoWTG9va2VyRXhw",
-            "bG9yZVJlZmVyZW5jZRIdChNsb29rZXJfaW5zdGFuY2VfdXJpGAkgASgJSAAS",
-            "ZgoccHJpdmF0ZV9sb29rZXJfaW5zdGFuY2VfaW5mbxgKIAEoCzI+Lmdvb2ds",
-            "ZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLlByaXZhdGVMb29rZXJJ",
-            "bnN0YW5jZUluZm9IABIZCgxsb29rbWxfbW9kZWwYBCABKAlCA+BBAhIUCgdl",
-            "eHBsb3JlGAUgASgJQgPgQQISQAoGc2NoZW1hGAggASgLMisuZ29vZ2xlLmNs",
-            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuU2NoZW1hQgPgQQFCCgoIaW5z",
-            "dGFuY2UicgoeQmlnUXVlcnlQcm9wZXJ0eUdyYXBoUmVmZXJlbmNlEhcKCnBy",
-            "b2plY3RfaWQYASABKAlCA+BBAhIXCgpkYXRhc2V0X2lkGAIgASgJQgPgQQIS",
-            "HgoRcHJvcGVydHlfZ3JhcGhfaWQYAyABKAlCA+BBAiJXChlQcml2YXRlTG9v",
-            "a2VySW5zdGFuY2VJbmZvEhoKEmxvb2tlcl9pbnN0YW5jZV9pZBgBIAEoCRIe",
-            "ChZzZXJ2aWNlX2RpcmVjdG9yeV9uYW1lGAIgASgJIuQDCgpEYXRhc291cmNl",
-            "El8KGGJpZ3F1ZXJ5X3RhYmxlX3JlZmVyZW5jZRgBIAEoCzI7Lmdvb2dsZS5j",
-            "bG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkJpZ1F1ZXJ5VGFibGVSZWZl",
-            "cmVuY2VIABIeChRzdHVkaW9fZGF0YXNvdXJjZV9pZBgCIAEoCUgAEl8KGGxv",
-            "b2tlcl9leHBsb3JlX3JlZmVyZW5jZRgEIAEoCzI7Lmdvb2dsZS5jbG91ZC5n",
-            "ZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkxvb2tlckV4cGxvcmVSZWZlcmVuY2VI",
-            "ABJwCiFiaWdxdWVyeV9wcm9wZXJ0eV9ncmFwaF9yZWZlcmVuY2UYECABKAsy",
-            "Qy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5CaWdRdWVy",
-            "eVByb3BlcnR5R3JhcGhSZWZlcmVuY2VIABJACgZzY2hlbWEYByABKAsyKy5n",
-            "b29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5TY2hlbWFCA+BB",
-            "ARIzCg1zdHJ1Y3Rfc2NoZW1hGAogASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0",
-            "cnVjdEID4EEBQgsKCXJlZmVyZW5jZSLvAQoGU2NoZW1hEj8KBmZpZWxkcxgB",
-            "IAMoCzIqLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkZp",
-            "ZWxkQgPgQQESGAoLZGVzY3JpcHRpb24YAiABKAlCA+BBARIVCghzeW5vbnlt",
-            "cxgDIAMoCUID4EEBEhEKBHRhZ3MYBCADKAlCA+BBARIZCgxkaXNwbGF5X25h",
-            "bWUYBSABKAlCA+BBARJFCgdmaWx0ZXJzGAYgAygLMi8uZ29vZ2xlLmNsb3Vk",
-            "LmdlbWluaWRhdGFhbmFseXRpY3MudjEuRGF0YUZpbHRlckID4EEBIpUCCgVG",
-            "aWVsZBIRCgRuYW1lGAEgASgJQgPgQQESEQoEdHlwZRgCIAEoCUID4EEBEhgK",
-            "C2Rlc2NyaXB0aW9uGAMgASgJQgPgQQESEQoEbW9kZRgEIAEoCUID4EEBEhUK",
-            "CHN5bm9ueW1zGAYgAygJQgPgQQESEQoEdGFncxgHIAMoCUID4EEBEhkKDGRp",
-            "c3BsYXlfbmFtZRgIIAEoCUID4EEBEkIKCXN1YmZpZWxkcxgJIAMoCzIqLmdv",
-            "b2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkZpZWxkQgPgQQES",
-            "FQoIY2F0ZWdvcnkYCiABKAlCA+BBARIZCgx2YWx1ZV9mb3JtYXQYCyABKAlC",
-            "A+BBASJ8CgpEYXRhRmlsdGVyEhIKBWZpZWxkGAEgASgJQgPgQQESEgoFdmFs",
-            "dWUYAiABKAlCA+BBARJGCgR0eXBlGAMgASgOMjMuZ29vZ2xlLmNsb3VkLmdl",
-            "bWluaWRhdGFhbmFseXRpY3MudjEuRGF0YUZpbHRlclR5cGVCA+BBASpFCg5E",
-            "YXRhRmlsdGVyVHlwZRIgChxEQVRBX0ZJTFRFUl9UWVBFX1VOU1BFQ0lGSUVE",
-            "EAASEQoNQUxXQVlTX0ZJTFRFUhABQowCCidjb20uZ29vZ2xlLmNsb3VkLmdl",
-            "bWluaWRhdGFhbmFseXRpY3MudjFCD0RhdGFzb3VyY2VQcm90b1ABWlljbG91",
-            "ZC5nb29nbGUuY29tL2dvL2dlbWluaWRhdGFhbmFseXRpY3MvYXBpdjEvZ2Vt",
-            "aW5pZGF0YWFuYWx5dGljc3BiO2dlbWluaWRhdGFhbmFseXRpY3NwYqoCI0dv",
-            "b2dsZS5DbG91ZC5HZW1pbmlEYXRhQW5hbHl0aWNzLlYxygIjR29vZ2xlXENs",
-            "b3VkXEdlbWluaURhdGFBbmFseXRpY3NcVjHqAiZHb29nbGU6OkNsb3VkOjpH",
-            "ZW1pbmlEYXRhQW5hbHl0aWNzOjpWMWIGcHJvdG8z"));
+            "ZVJlZmVyZW5jZXNIAEIMCgpyZWZlcmVuY2VzIuIBChdCaWdRdWVyeVRhYmxl",
+            "UmVmZXJlbmNlcxJaChB0YWJsZV9yZWZlcmVuY2VzGAEgAygLMjsuZ29vZ2xl",
+            "LmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuQmlnUXVlcnlUYWJsZVJl",
+            "ZmVyZW5jZUID4EEBEmsKGXByb3BlcnR5X2dyYXBoX3JlZmVyZW5jZXMYAiAD",
+            "KAsyQy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5CaWdR",
+            "dWVyeVByb3BlcnR5R3JhcGhSZWZlcmVuY2VCA+BBASKjAQoWQmlnUXVlcnlU",
+            "YWJsZVJlZmVyZW5jZRIXCgpwcm9qZWN0X2lkGAEgASgJQgPgQQISFwoKZGF0",
+            "YXNldF9pZBgDIAEoCUID4EECEhUKCHRhYmxlX2lkGAQgASgJQgPgQQISQAoG",
+            "c2NoZW1hGAYgASgLMisuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRp",
+            "Y3MudjEuU2NoZW1hQgPgQQEifAoaU3R1ZGlvRGF0YXNvdXJjZVJlZmVyZW5j",
+            "ZXMSXgoRc3R1ZGlvX3JlZmVyZW5jZXMYAiADKAsyPi5nb29nbGUuY2xvdWQu",
+            "Z2VtaW5pZGF0YWFuYWx5dGljcy52MS5TdHVkaW9EYXRhc291cmNlUmVmZXJl",
+            "bmNlQgPgQQEiNwoZU3R1ZGlvRGF0YXNvdXJjZVJlZmVyZW5jZRIaCg1kYXRh",
+            "c291cmNlX2lkGAEgASgJQgPgQQIidwoXTG9va2VyRXhwbG9yZVJlZmVyZW5j",
+            "ZXMSXAoSZXhwbG9yZV9yZWZlcmVuY2VzGAEgAygLMjsuZ29vZ2xlLmNsb3Vk",
+            "LmdlbWluaWRhdGFhbmFseXRpY3MudjEuTG9va2VyRXhwbG9yZVJlZmVyZW5j",
+            "ZUID4EECIp4CChZMb29rZXJFeHBsb3JlUmVmZXJlbmNlEh0KE2xvb2tlcl9p",
+            "bnN0YW5jZV91cmkYCSABKAlIABJmChxwcml2YXRlX2xvb2tlcl9pbnN0YW5j",
+            "ZV9pbmZvGAogASgLMj4uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRp",
+            "Y3MudjEuUHJpdmF0ZUxvb2tlckluc3RhbmNlSW5mb0gAEhkKDGxvb2ttbF9t",
+            "b2RlbBgEIAEoCUID4EECEhQKB2V4cGxvcmUYBSABKAlCA+BBAhJACgZzY2hl",
+            "bWEYCCABKAsyKy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52",
+            "MS5TY2hlbWFCA+BBAUIKCghpbnN0YW5jZSJyCh5CaWdRdWVyeVByb3BlcnR5",
+            "R3JhcGhSZWZlcmVuY2USFwoKcHJvamVjdF9pZBgBIAEoCUID4EECEhcKCmRh",
+            "dGFzZXRfaWQYAiABKAlCA+BBAhIeChFwcm9wZXJ0eV9ncmFwaF9pZBgDIAEo",
+            "CUID4EECIlcKGVByaXZhdGVMb29rZXJJbnN0YW5jZUluZm8SGgoSbG9va2Vy",
+            "X2luc3RhbmNlX2lkGAEgASgJEh4KFnNlcnZpY2VfZGlyZWN0b3J5X25hbWUY",
+            "AiABKAki5AMKCkRhdGFzb3VyY2USXwoYYmlncXVlcnlfdGFibGVfcmVmZXJl",
+            "bmNlGAEgASgLMjsuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3Mu",
+            "djEuQmlnUXVlcnlUYWJsZVJlZmVyZW5jZUgAEh4KFHN0dWRpb19kYXRhc291",
+            "cmNlX2lkGAIgASgJSAASXwoYbG9va2VyX2V4cGxvcmVfcmVmZXJlbmNlGAQg",
+            "ASgLMjsuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuTG9v",
+            "a2VyRXhwbG9yZVJlZmVyZW5jZUgAEnAKIWJpZ3F1ZXJ5X3Byb3BlcnR5X2dy",
+            "YXBoX3JlZmVyZW5jZRgQIAEoCzJDLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRh",
+            "YW5hbHl0aWNzLnYxLkJpZ1F1ZXJ5UHJvcGVydHlHcmFwaFJlZmVyZW5jZUgA",
+            "EkAKBnNjaGVtYRgHIAEoCzIrLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5h",
+            "bHl0aWNzLnYxLlNjaGVtYUID4EEBEjMKDXN0cnVjdF9zY2hlbWEYCiABKAsy",
+            "Fy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQFCCwoJcmVmZXJlbmNlIu8B",
+            "CgZTY2hlbWESPwoGZmllbGRzGAEgAygLMiouZ29vZ2xlLmNsb3VkLmdlbWlu",
+            "aWRhdGFhbmFseXRpY3MudjEuRmllbGRCA+BBARIYCgtkZXNjcmlwdGlvbhgC",
+            "IAEoCUID4EEBEhUKCHN5bm9ueW1zGAMgAygJQgPgQQESEQoEdGFncxgEIAMo",
+            "CUID4EEBEhkKDGRpc3BsYXlfbmFtZRgFIAEoCUID4EEBEkUKB2ZpbHRlcnMY",
+            "BiADKAsyLy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5E",
+            "YXRhRmlsdGVyQgPgQQEilQIKBUZpZWxkEhEKBG5hbWUYASABKAlCA+BBARIR",
+            "CgR0eXBlGAIgASgJQgPgQQESGAoLZGVzY3JpcHRpb24YAyABKAlCA+BBARIR",
+            "CgRtb2RlGAQgASgJQgPgQQESFQoIc3lub255bXMYBiADKAlCA+BBARIRCgR0",
+            "YWdzGAcgAygJQgPgQQESGQoMZGlzcGxheV9uYW1lGAggASgJQgPgQQESQgoJ",
+            "c3ViZmllbGRzGAkgAygLMiouZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFs",
+            "eXRpY3MudjEuRmllbGRCA+BBARIVCghjYXRlZ29yeRgKIAEoCUID4EEBEhkK",
+            "DHZhbHVlX2Zvcm1hdBgLIAEoCUID4EEBInwKCkRhdGFGaWx0ZXISEgoFZmll",
+            "bGQYASABKAlCA+BBARISCgV2YWx1ZRgCIAEoCUID4EEBEkYKBHR5cGUYAyAB",
+            "KA4yMy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5EYXRh",
+            "RmlsdGVyVHlwZUID4EEBKkUKDkRhdGFGaWx0ZXJUeXBlEiAKHERBVEFfRklM",
+            "VEVSX1RZUEVfVU5TUEVDSUZJRUQQABIRCg1BTFdBWVNfRklMVEVSEAFCjAIK",
+            "J2NvbS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MUIPRGF0",
+            "YXNvdXJjZVByb3RvUAFaWWNsb3VkLmdvb2dsZS5jb20vZ28vZ2VtaW5pZGF0",
+            "YWFuYWx5dGljcy9hcGl2MS9nZW1pbmlkYXRhYW5hbHl0aWNzcGI7Z2VtaW5p",
+            "ZGF0YWFuYWx5dGljc3BiqgIjR29vZ2xlLkNsb3VkLkdlbWluaURhdGFBbmFs",
+            "eXRpY3MuVjHKAiNHb29nbGVcQ2xvdWRcR2VtaW5pRGF0YUFuYWx5dGljc1xW",
+            "MeoCJkdvb2dsZTo6Q2xvdWQ6OkdlbWluaURhdGFBbmFseXRpY3M6OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.GeminiDataAnalytics.V1.DataFilterType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.DatasourceReferences), global::Google.Cloud.GeminiDataAnalytics.V1.DatasourceReferences.Parser, new[]{ "Bq", "Studio", "Looker" }, new[]{ "References" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReferences), global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReferences.Parser, new[]{ "TableReferences" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReferences), global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReferences.Parser, new[]{ "TableReferences", "PropertyGraphReferences" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReference), global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReference.Parser, new[]{ "ProjectId", "DatasetId", "TableId", "Schema" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.StudioDatasourceReferences), global::Google.Cloud.GeminiDataAnalytics.V1.StudioDatasourceReferences.Parser, new[]{ "StudioReferences" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.StudioDatasourceReference), global::Google.Cloud.GeminiDataAnalytics.V1.StudioDatasourceReference.Parser, new[]{ "DatasourceId" }, null, null, null, null),
@@ -532,6 +535,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BigQueryTableReferences(BigQueryTableReferences other) : this() {
       tableReferences_ = other.tableReferences_.Clone();
+      propertyGraphReferences_ = other.propertyGraphReferences_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -555,6 +559,24 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       get { return tableReferences_; }
     }
 
+    /// <summary>Field number for the "property_graph_references" field.</summary>
+    public const int PropertyGraphReferencesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryPropertyGraphReference> _repeated_propertyGraphReferences_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryPropertyGraphReference.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryPropertyGraphReference> propertyGraphReferences_ = new pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryPropertyGraphReference>();
+    /// <summary>
+    /// Optional. References to BigQuery graphs.
+    ///
+    /// Note: "property graph" is the former name for BigQuery Graph. The field and
+    /// message names retain the original term for backward compatibility; both
+    /// refer to the same resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryPropertyGraphReference> PropertyGraphReferences {
+      get { return propertyGraphReferences_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -571,6 +593,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         return true;
       }
       if(!tableReferences_.Equals(other.tableReferences_)) return false;
+      if(!propertyGraphReferences_.Equals(other.propertyGraphReferences_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -579,6 +602,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= tableReferences_.GetHashCode();
+      hash ^= propertyGraphReferences_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -598,6 +622,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       output.WriteRawMessage(this);
     #else
       tableReferences_.WriteTo(output, _repeated_tableReferences_codec);
+      propertyGraphReferences_.WriteTo(output, _repeated_propertyGraphReferences_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -609,6 +634,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       tableReferences_.WriteTo(ref output, _repeated_tableReferences_codec);
+      propertyGraphReferences_.WriteTo(ref output, _repeated_propertyGraphReferences_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -620,6 +646,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     public int CalculateSize() {
       int size = 0;
       size += tableReferences_.CalculateSize(_repeated_tableReferences_codec);
+      size += propertyGraphReferences_.CalculateSize(_repeated_propertyGraphReferences_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -633,6 +660,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         return;
       }
       tableReferences_.Add(other.tableReferences_);
+      propertyGraphReferences_.Add(other.propertyGraphReferences_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -656,6 +684,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             tableReferences_.AddEntriesFrom(input, _repeated_tableReferences_codec);
             break;
           }
+          case 18: {
+            propertyGraphReferences_.AddEntriesFrom(input, _repeated_propertyGraphReferences_codec);
+            break;
+          }
         }
       }
     #endif
@@ -677,6 +709,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             break;
           case 10: {
             tableReferences_.AddEntriesFrom(ref input, _repeated_tableReferences_codec);
+            break;
+          }
+          case 18: {
+            propertyGraphReferences_.AddEntriesFrom(ref input, _repeated_propertyGraphReferences_codec);
             break;
           }
         }
