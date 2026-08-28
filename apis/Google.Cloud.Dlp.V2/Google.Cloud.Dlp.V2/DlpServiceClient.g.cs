@@ -103,6 +103,11 @@ namespace Google.Cloud.Dlp.V2
             SearchConnectionsSettings = existing.SearchConnectionsSettings;
             DeleteConnectionSettings = existing.DeleteConnectionSettings;
             UpdateConnectionSettings = existing.UpdateConnectionSettings;
+            CreateContentPolicySettings = existing.CreateContentPolicySettings;
+            UpdateContentPolicySettings = existing.UpdateContentPolicySettings;
+            GetContentPolicySettings = existing.GetContentPolicySettings;
+            ListContentPoliciesSettings = existing.ListContentPoliciesSettings;
+            DeleteContentPolicySettings = existing.DeleteContentPolicySettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -1060,6 +1065,66 @@ namespace Google.Cloud.Dlp.V2
         public gaxgrpc::CallSettings UpdateConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.CreateContentPolicy</c> and <c>DlpServiceClient.CreateContentPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateContentPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.UpdateContentPolicy</c> and <c>DlpServiceClient.UpdateContentPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateContentPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.GetContentPolicy</c> and <c>DlpServiceClient.GetContentPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetContentPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.ListContentPolicies</c> and <c>DlpServiceClient.ListContentPoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListContentPoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.DeleteContentPolicy</c> and <c>DlpServiceClient.DeleteContentPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteContentPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -1126,7 +1191,7 @@ namespace Google.Cloud.Dlp.V2
     /// inspection, classification, and de-identification platform that works
     /// on text, images, and Google Cloud storage repositories.
     /// To learn more about concepts and find how-to guides see
-    /// https://cloud.google.com/sensitive-data-protection/docs/.
+    /// https://docs.cloud.google.com/sensitive-data-protection/docs/.
     /// </remarks>
     public abstract partial class DlpServiceClient
     {
@@ -1219,9 +1284,9 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// 
         /// For how to guides, see
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-images
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-images
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-text,
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-text,
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1238,9 +1303,9 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// 
         /// For how to guides, see
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-images
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-images
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-text,
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-text,
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1257,9 +1322,9 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// 
         /// For how to guides, see
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-images
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-images
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-text,
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-text,
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1271,7 +1336,7 @@ namespace Google.Cloud.Dlp.V2
         /// Redacts potentially sensitive info from an image.
         /// This method has limits on input size, processing time, and output size.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
@@ -1291,7 +1356,7 @@ namespace Google.Cloud.Dlp.V2
         /// Redacts potentially sensitive info from an image.
         /// This method has limits on input size, processing time, and output size.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
@@ -1311,7 +1376,7 @@ namespace Google.Cloud.Dlp.V2
         /// Redacts potentially sensitive info from an image.
         /// This method has limits on input size, processing time, and output size.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
@@ -1331,7 +1396,7 @@ namespace Google.Cloud.Dlp.V2
         /// De-identifies potentially sensitive info from a ContentItem.
         /// This method has limits on input size and output size.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
@@ -1348,7 +1413,7 @@ namespace Google.Cloud.Dlp.V2
         /// De-identifies potentially sensitive info from a ContentItem.
         /// This method has limits on input size and output size.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
@@ -1365,7 +1430,7 @@ namespace Google.Cloud.Dlp.V2
         /// De-identifies potentially sensitive info from a ContentItem.
         /// This method has limits on input size and output size.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
@@ -1381,7 +1446,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Re-identifies content that has been de-identified.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1393,7 +1458,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Re-identifies content that has been de-identified.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1405,7 +1470,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Re-identifies content that has been de-identified.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1417,7 +1482,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
-        /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1429,7 +1494,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
-        /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1441,7 +1506,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
-        /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1453,7 +1518,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
-        /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1471,7 +1536,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
-        /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1489,7 +1554,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
-        /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1508,7 +1573,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1521,7 +1586,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1534,7 +1599,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1547,7 +1612,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1555,7 +1620,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -1588,7 +1653,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1596,7 +1661,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -1629,7 +1694,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1637,7 +1702,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -1666,7 +1731,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1674,7 +1739,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -1707,7 +1772,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1715,7 +1780,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -1748,7 +1813,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1756,7 +1821,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -1785,7 +1850,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1793,7 +1858,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -1826,7 +1891,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1834,7 +1899,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -1867,7 +1932,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1875,7 +1940,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -1904,7 +1969,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1912,7 +1977,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -1945,7 +2010,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1953,7 +2018,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -1986,7 +2051,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -1994,7 +2059,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -2023,7 +2088,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -2031,7 +2096,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -2064,7 +2129,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -2072,7 +2137,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -2105,7 +2170,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -2113,7 +2178,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -2141,7 +2206,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2153,7 +2218,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2165,7 +2230,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2177,7 +2242,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -2204,7 +2269,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -2231,7 +2296,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -2253,7 +2318,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -2280,7 +2345,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -2307,7 +2372,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -2329,7 +2394,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2341,7 +2406,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2353,7 +2418,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2365,7 +2430,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -2384,7 +2449,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -2403,7 +2468,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -2419,7 +2484,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -2438,7 +2503,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -2457,7 +2522,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -2473,7 +2538,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists InspectTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2485,7 +2550,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists InspectTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2497,7 +2562,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists InspectTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -2505,7 +2570,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -2552,7 +2617,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists InspectTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -2560,7 +2625,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -2607,7 +2672,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists InspectTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -2615,7 +2680,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -2662,7 +2727,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists InspectTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -2670,7 +2735,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -2717,7 +2782,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists InspectTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -2725,7 +2790,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -2772,7 +2837,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists InspectTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -2780,7 +2845,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -2827,7 +2892,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists InspectTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -2835,7 +2900,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -2882,7 +2947,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists InspectTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -2890,7 +2955,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -2937,7 +3002,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists InspectTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -2945,7 +3010,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -2992,7 +3057,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists InspectTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3000,7 +3065,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3047,7 +3112,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3059,7 +3124,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3071,7 +3136,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3083,7 +3148,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -3102,7 +3167,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -3121,7 +3186,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -3137,7 +3202,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -3156,7 +3221,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -3175,7 +3240,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -3192,7 +3257,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3205,7 +3270,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3218,7 +3283,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3231,7 +3296,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3239,7 +3304,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3272,7 +3337,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3280,7 +3345,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3313,7 +3378,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3321,7 +3386,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3350,7 +3415,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3358,7 +3423,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3391,7 +3456,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3399,7 +3464,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3432,7 +3497,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3440,7 +3505,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3469,7 +3534,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3477,7 +3542,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3510,7 +3575,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3518,7 +3583,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3551,7 +3616,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3559,7 +3624,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3588,7 +3653,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3596,7 +3661,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3629,7 +3694,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3637,7 +3702,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3670,7 +3735,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3678,7 +3743,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3707,7 +3772,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3715,7 +3780,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3748,7 +3813,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3756,7 +3821,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3789,7 +3854,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -3797,7 +3862,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -3825,7 +3890,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3837,7 +3902,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3849,7 +3914,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3861,7 +3926,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -3889,7 +3954,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -3917,7 +3982,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -3940,7 +4005,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -3968,7 +4033,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -3996,7 +4061,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -4019,7 +4084,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4031,7 +4096,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4043,7 +4108,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4055,7 +4120,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -4074,7 +4139,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -4093,7 +4158,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -4109,7 +4174,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -4128,7 +4193,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -4147,7 +4212,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -4163,7 +4228,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DeidentifyTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4175,7 +4240,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DeidentifyTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4187,7 +4252,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DeidentifyTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -4195,7 +4260,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -4242,7 +4307,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DeidentifyTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -4250,7 +4315,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -4297,7 +4362,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DeidentifyTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -4305,7 +4370,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -4352,7 +4417,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DeidentifyTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -4360,7 +4425,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -4407,7 +4472,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DeidentifyTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -4415,7 +4480,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -4462,7 +4527,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DeidentifyTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -4470,7 +4535,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -4517,7 +4582,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DeidentifyTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -4525,7 +4590,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -4572,7 +4637,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DeidentifyTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -4580,7 +4645,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -4627,7 +4692,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DeidentifyTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -4635,7 +4700,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -4682,7 +4747,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DeidentifyTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -4690,7 +4755,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -4737,7 +4802,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4749,7 +4814,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4761,7 +4826,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4773,7 +4838,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -4793,7 +4858,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -4813,7 +4878,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -4830,7 +4895,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -4850,7 +4915,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -4870,7 +4935,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -4888,7 +4953,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4901,7 +4966,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4914,7 +4979,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4927,7 +4992,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -4935,7 +5000,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -4964,7 +5029,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -4972,7 +5037,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -5001,7 +5066,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -5009,7 +5074,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -5034,7 +5099,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -5042,7 +5107,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -5071,7 +5136,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -5079,7 +5144,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -5108,7 +5173,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -5116,7 +5181,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -5141,7 +5206,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -5149,7 +5214,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -5178,7 +5243,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -5186,7 +5251,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -5215,7 +5280,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -5223,7 +5288,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -5247,7 +5312,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5259,7 +5324,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5271,7 +5336,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5283,7 +5348,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -5309,7 +5374,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -5335,7 +5400,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -5356,7 +5421,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -5382,7 +5447,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -5408,7 +5473,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -5558,7 +5623,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5570,7 +5635,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5582,7 +5647,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5594,7 +5659,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -5612,7 +5677,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -5630,7 +5695,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -5645,7 +5710,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -5663,7 +5728,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -5681,7 +5746,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -5696,7 +5761,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists job triggers.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5708,7 +5773,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists job triggers.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5720,7 +5785,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists job triggers.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -5728,7 +5793,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -5771,7 +5836,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists job triggers.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -5779,7 +5844,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -5822,7 +5887,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists job triggers.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -5830,7 +5895,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -5873,7 +5938,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists job triggers.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -5881,7 +5946,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -5924,7 +5989,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists job triggers.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -5932,7 +5997,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -5975,7 +6040,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists job triggers.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -5983,7 +6048,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -6026,7 +6091,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6038,7 +6103,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6050,7 +6115,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6062,7 +6127,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -6080,7 +6145,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -6098,7 +6163,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -6113,7 +6178,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -6131,7 +6196,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -6149,7 +6214,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -6968,9 +7033,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -6986,9 +7051,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7004,9 +7069,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7022,9 +7087,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7036,7 +7101,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7064,9 +7129,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7078,7 +7143,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7106,9 +7171,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7120,7 +7185,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7144,9 +7209,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7158,7 +7223,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7186,9 +7251,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7200,7 +7265,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7228,9 +7293,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7242,7 +7307,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7266,9 +7331,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7280,7 +7345,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7308,9 +7373,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7322,7 +7387,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7350,9 +7415,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7364,7 +7429,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7388,9 +7453,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7402,7 +7467,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7431,9 +7496,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7445,7 +7510,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7474,9 +7539,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7488,7 +7553,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7513,9 +7578,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7527,7 +7592,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7556,9 +7621,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7570,7 +7635,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7599,9 +7664,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7613,7 +7678,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7638,9 +7703,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7652,7 +7717,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7681,9 +7746,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7695,7 +7760,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7724,9 +7789,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -7738,7 +7803,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7763,9 +7828,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -7777,9 +7842,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -7791,9 +7856,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -7801,7 +7866,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7844,9 +7909,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -7854,7 +7919,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7897,9 +7962,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -7907,7 +7972,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -7950,9 +8015,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -7960,7 +8025,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8003,9 +8068,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8013,7 +8078,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8056,9 +8121,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8066,7 +8131,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on whether you have [specified a
         /// processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8109,9 +8174,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8123,9 +8188,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8137,9 +8202,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8151,9 +8216,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -8170,9 +8235,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -8189,9 +8254,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -8205,9 +8270,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -8224,9 +8289,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -8243,9 +8308,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -8261,9 +8326,9 @@ namespace Google.Cloud.Dlp.V2
         /// no longer interested in the DlpJob result. The job will be canceled if
         /// possible.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8277,9 +8342,9 @@ namespace Google.Cloud.Dlp.V2
         /// no longer interested in the DlpJob result. The job will be canceled if
         /// possible.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8293,9 +8358,9 @@ namespace Google.Cloud.Dlp.V2
         /// no longer interested in the DlpJob result. The job will be canceled if
         /// possible.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8309,9 +8374,9 @@ namespace Google.Cloud.Dlp.V2
         /// no longer interested in the DlpJob result. The job will be canceled if
         /// possible.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -8330,9 +8395,9 @@ namespace Google.Cloud.Dlp.V2
         /// no longer interested in the DlpJob result. The job will be canceled if
         /// possible.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -8351,9 +8416,9 @@ namespace Google.Cloud.Dlp.V2
         /// no longer interested in the DlpJob result. The job will be canceled if
         /// possible.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -8369,9 +8434,9 @@ namespace Google.Cloud.Dlp.V2
         /// no longer interested in the DlpJob result. The job will be canceled if
         /// possible.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -8390,9 +8455,9 @@ namespace Google.Cloud.Dlp.V2
         /// no longer interested in the DlpJob result. The job will be canceled if
         /// possible.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -8411,9 +8476,9 @@ namespace Google.Cloud.Dlp.V2
         /// no longer interested in the DlpJob result. The job will be canceled if
         /// possible.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -8429,9 +8494,9 @@ namespace Google.Cloud.Dlp.V2
         /// makes a best effort to cancel the DlpJob, but success is not
         /// guaranteed.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8445,9 +8510,9 @@ namespace Google.Cloud.Dlp.V2
         /// makes a best effort to cancel the DlpJob, but success is not
         /// guaranteed.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8461,9 +8526,9 @@ namespace Google.Cloud.Dlp.V2
         /// makes a best effort to cancel the DlpJob, but success is not
         /// guaranteed.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8475,7 +8540,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8487,7 +8552,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8499,7 +8564,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8511,7 +8576,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8519,7 +8584,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8551,7 +8616,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8559,7 +8624,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8591,7 +8656,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8599,7 +8664,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8627,7 +8692,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8635,7 +8700,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8667,7 +8732,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8675,7 +8740,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8707,7 +8772,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8715,7 +8780,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8743,7 +8808,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8751,7 +8816,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8783,7 +8848,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8791,7 +8856,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8823,7 +8888,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8831,7 +8896,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8859,7 +8924,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8867,7 +8932,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8899,7 +8964,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8907,7 +8972,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8939,7 +9004,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8947,7 +9012,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -8975,7 +9040,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -8983,7 +9048,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -9015,7 +9080,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -9023,7 +9088,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -9055,7 +9120,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -9063,7 +9128,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -9092,7 +9157,7 @@ namespace Google.Cloud.Dlp.V2
         /// Updates the stored infoType by creating a new version. The existing version
         /// will continue to be used until the new version is ready.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -9105,7 +9170,7 @@ namespace Google.Cloud.Dlp.V2
         /// Updates the stored infoType by creating a new version. The existing version
         /// will continue to be used until the new version is ready.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -9118,7 +9183,7 @@ namespace Google.Cloud.Dlp.V2
         /// Updates the stored infoType by creating a new version. The existing version
         /// will continue to be used until the new version is ready.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -9131,7 +9196,7 @@ namespace Google.Cloud.Dlp.V2
         /// Updates the stored infoType by creating a new version. The existing version
         /// will continue to be used until the new version is ready.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -9161,7 +9226,7 @@ namespace Google.Cloud.Dlp.V2
         /// Updates the stored infoType by creating a new version. The existing version
         /// will continue to be used until the new version is ready.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -9191,7 +9256,7 @@ namespace Google.Cloud.Dlp.V2
         /// Updates the stored infoType by creating a new version. The existing version
         /// will continue to be used until the new version is ready.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -9216,7 +9281,7 @@ namespace Google.Cloud.Dlp.V2
         /// Updates the stored infoType by creating a new version. The existing version
         /// will continue to be used until the new version is ready.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -9246,7 +9311,7 @@ namespace Google.Cloud.Dlp.V2
         /// Updates the stored infoType by creating a new version. The existing version
         /// will continue to be used until the new version is ready.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -9276,7 +9341,7 @@ namespace Google.Cloud.Dlp.V2
         /// Updates the stored infoType by creating a new version. The existing version
         /// will continue to be used until the new version is ready.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -9300,7 +9365,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -9312,7 +9377,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -9324,7 +9389,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -9336,7 +9401,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -9355,7 +9420,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -9374,7 +9439,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -9390,7 +9455,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -9409,7 +9474,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -9428,7 +9493,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -9444,7 +9509,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists stored infoTypes.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -9456,7 +9521,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists stored infoTypes.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -9468,7 +9533,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists stored infoTypes.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -9476,7 +9541,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -9519,7 +9584,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists stored infoTypes.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -9527,7 +9592,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -9570,7 +9635,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists stored infoTypes.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -9578,7 +9643,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -9621,7 +9686,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists stored infoTypes.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -9629,7 +9694,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -9672,7 +9737,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists stored infoTypes.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -9680,7 +9745,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -9723,7 +9788,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists stored infoTypes.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -9731,7 +9796,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -9774,7 +9839,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists stored infoTypes.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -9782,7 +9847,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -9825,7 +9890,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists stored infoTypes.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -9833,7 +9898,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -9876,7 +9941,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists stored infoTypes.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -9884,7 +9949,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -9927,7 +9992,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists stored infoTypes.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="parent">
@@ -9935,7 +10000,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+        /// location](https://docs.cloud.google.com/sensitive-data-protection/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:
         /// `projects/{project_id}/locations/{location_id}`
@@ -9978,7 +10043,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -9990,7 +10055,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10002,7 +10067,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10014,7 +10079,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -10033,7 +10098,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -10052,7 +10117,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -10068,7 +10133,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -10087,7 +10152,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -10106,7 +10171,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="name">
@@ -12895,6 +12960,700 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Connection> UpdateConnectionAsync(ConnectionName name, st::CancellationToken cancellationToken) =>
             UpdateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ContentPolicy CreateContentPolicy(CreateContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> CreateContentPolicyAsync(CreateContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> CreateContentPolicyAsync(CreateContentPolicyRequest request, st::CancellationToken cancellationToken) =>
+            CreateContentPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a ContentPolicy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project):
+        /// 
+        /// + Projects scope:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// </param>
+        /// <param name="contentPolicy">
+        /// Required. The content_policy resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ContentPolicy CreateContentPolicy(string parent, ContentPolicy contentPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            CreateContentPolicy(new CreateContentPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ContentPolicy = gax::GaxPreconditions.CheckNotNull(contentPolicy, nameof(contentPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a ContentPolicy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project):
+        /// 
+        /// + Projects scope:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// </param>
+        /// <param name="contentPolicy">
+        /// Required. The content_policy resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> CreateContentPolicyAsync(string parent, ContentPolicy contentPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            CreateContentPolicyAsync(new CreateContentPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ContentPolicy = gax::GaxPreconditions.CheckNotNull(contentPolicy, nameof(contentPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a ContentPolicy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project):
+        /// 
+        /// + Projects scope:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// </param>
+        /// <param name="contentPolicy">
+        /// Required. The content_policy resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> CreateContentPolicyAsync(string parent, ContentPolicy contentPolicy, st::CancellationToken cancellationToken) =>
+            CreateContentPolicyAsync(parent, contentPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a ContentPolicy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project):
+        /// 
+        /// + Projects scope:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// </param>
+        /// <param name="contentPolicy">
+        /// Required. The content_policy resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ContentPolicy CreateContentPolicy(gagr::LocationName parent, ContentPolicy contentPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            CreateContentPolicy(new CreateContentPolicyRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ContentPolicy = gax::GaxPreconditions.CheckNotNull(contentPolicy, nameof(contentPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a ContentPolicy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project):
+        /// 
+        /// + Projects scope:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// </param>
+        /// <param name="contentPolicy">
+        /// Required. The content_policy resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> CreateContentPolicyAsync(gagr::LocationName parent, ContentPolicy contentPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            CreateContentPolicyAsync(new CreateContentPolicyRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ContentPolicy = gax::GaxPreconditions.CheckNotNull(contentPolicy, nameof(contentPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a ContentPolicy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// 
+        /// The format of this value varies depending on the scope of the request
+        /// (project):
+        /// 
+        /// + Projects scope:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// </param>
+        /// <param name="contentPolicy">
+        /// Required. The content_policy resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> CreateContentPolicyAsync(gagr::LocationName parent, ContentPolicy contentPolicy, st::CancellationToken cancellationToken) =>
+            CreateContentPolicyAsync(parent, contentPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ContentPolicy UpdateContentPolicy(UpdateContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> UpdateContentPolicyAsync(UpdateContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> UpdateContentPolicyAsync(UpdateContentPolicyRequest request, st::CancellationToken cancellationToken) =>
+            UpdateContentPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="contentPolicy">
+        /// Required. The content_policy with new values for the relevant fields.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask to control which fields get updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ContentPolicy UpdateContentPolicy(string name, ContentPolicy contentPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateContentPolicy(new UpdateContentPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                ContentPolicy = gax::GaxPreconditions.CheckNotNull(contentPolicy, nameof(contentPolicy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="contentPolicy">
+        /// Required. The content_policy with new values for the relevant fields.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask to control which fields get updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> UpdateContentPolicyAsync(string name, ContentPolicy contentPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateContentPolicyAsync(new UpdateContentPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                ContentPolicy = gax::GaxPreconditions.CheckNotNull(contentPolicy, nameof(contentPolicy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="contentPolicy">
+        /// Required. The content_policy with new values for the relevant fields.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask to control which fields get updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> UpdateContentPolicyAsync(string name, ContentPolicy contentPolicy, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateContentPolicyAsync(name, contentPolicy, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="contentPolicy">
+        /// Required. The content_policy with new values for the relevant fields.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask to control which fields get updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ContentPolicy UpdateContentPolicy(ContentPolicyName name, ContentPolicy contentPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateContentPolicy(new UpdateContentPolicyRequest
+            {
+                ContentPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                ContentPolicy = gax::GaxPreconditions.CheckNotNull(contentPolicy, nameof(contentPolicy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="contentPolicy">
+        /// Required. The content_policy with new values for the relevant fields.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask to control which fields get updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> UpdateContentPolicyAsync(ContentPolicyName name, ContentPolicy contentPolicy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateContentPolicyAsync(new UpdateContentPolicyRequest
+            {
+                ContentPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                ContentPolicy = gax::GaxPreconditions.CheckNotNull(contentPolicy, nameof(contentPolicy)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="contentPolicy">
+        /// Required. The content_policy with new values for the relevant fields.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Mask to control which fields get updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> UpdateContentPolicyAsync(ContentPolicyName name, ContentPolicy contentPolicy, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateContentPolicyAsync(name, contentPolicy, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ContentPolicy GetContentPolicy(GetContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> GetContentPolicyAsync(GetContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> GetContentPolicyAsync(GetContentPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetContentPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ContentPolicy GetContentPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetContentPolicy(new GetContentPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> GetContentPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetContentPolicyAsync(new GetContentPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> GetContentPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            GetContentPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ContentPolicy GetContentPolicy(ContentPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetContentPolicy(new GetContentPolicyRequest
+            {
+                ContentPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> GetContentPolicyAsync(ContentPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetContentPolicyAsync(new GetContentPolicyRequest
+            {
+                ContentPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ContentPolicy> GetContentPolicyAsync(ContentPolicyName name, st::CancellationToken cancellationToken) =>
+            GetContentPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists ContentPolicies in a parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ContentPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListContentPoliciesResponse, ContentPolicy> ListContentPolicies(ListContentPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ContentPolicies in a parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ContentPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListContentPoliciesResponse, ContentPolicy> ListContentPoliciesAsync(ListContentPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ContentPolicies in a parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the project,
+        /// for example, `projects/project-id/locations/asia`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ContentPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListContentPoliciesResponse, ContentPolicy> ListContentPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContentPoliciesRequest request = new ListContentPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContentPolicies(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ContentPolicies in a parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the project,
+        /// for example, `projects/project-id/locations/asia`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ContentPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListContentPoliciesResponse, ContentPolicy> ListContentPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContentPoliciesRequest request = new ListContentPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContentPoliciesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ContentPolicies in a parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the project,
+        /// for example, `projects/project-id/locations/asia`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ContentPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListContentPoliciesResponse, ContentPolicy> ListContentPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContentPoliciesRequest request = new ListContentPoliciesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContentPolicies(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ContentPolicies in a parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the project,
+        /// for example, `projects/project-id/locations/asia`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ContentPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListContentPoliciesResponse, ContentPolicy> ListContentPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContentPoliciesRequest request = new ListContentPoliciesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContentPoliciesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteContentPolicy(DeleteContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteContentPolicyAsync(DeleteContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteContentPolicyAsync(DeleteContentPolicyRequest request, st::CancellationToken cancellationToken) =>
+            DeleteContentPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the ContentPolicy to be deleted, in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteContentPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteContentPolicy(new DeleteContentPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the ContentPolicy to be deleted, in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteContentPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteContentPolicyAsync(new DeleteContentPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the ContentPolicy to be deleted, in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteContentPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteContentPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the ContentPolicy to be deleted, in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteContentPolicy(ContentPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteContentPolicy(new DeleteContentPolicyRequest
+            {
+                ContentPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the ContentPolicy to be deleted, in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteContentPolicyAsync(ContentPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteContentPolicyAsync(new DeleteContentPolicyRequest
+            {
+                ContentPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a ContentPolicy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the ContentPolicy to be deleted, in the format:
+        /// `projects/{project}/locations/{location}/contentPolicies/{content_policy}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteContentPolicyAsync(ContentPolicyName name, st::CancellationToken cancellationToken) =>
+            DeleteContentPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DlpService client wrapper implementation, for convenient use.</summary>
@@ -12903,7 +13662,7 @@ namespace Google.Cloud.Dlp.V2
     /// inspection, classification, and de-identification platform that works
     /// on text, images, and Google Cloud storage repositories.
     /// To learn more about concepts and find how-to guides see
-    /// https://cloud.google.com/sensitive-data-protection/docs/.
+    /// https://docs.cloud.google.com/sensitive-data-protection/docs/.
     /// </remarks>
     public sealed partial class DlpServiceClientImpl : DlpServiceClient
     {
@@ -13016,6 +13775,16 @@ namespace Google.Cloud.Dlp.V2
         private readonly gaxgrpc::ApiCall<DeleteConnectionRequest, wkt::Empty> _callDeleteConnection;
 
         private readonly gaxgrpc::ApiCall<UpdateConnectionRequest, Connection> _callUpdateConnection;
+
+        private readonly gaxgrpc::ApiCall<CreateContentPolicyRequest, ContentPolicy> _callCreateContentPolicy;
+
+        private readonly gaxgrpc::ApiCall<UpdateContentPolicyRequest, ContentPolicy> _callUpdateContentPolicy;
+
+        private readonly gaxgrpc::ApiCall<GetContentPolicyRequest, ContentPolicy> _callGetContentPolicy;
+
+        private readonly gaxgrpc::ApiCall<ListContentPoliciesRequest, ListContentPoliciesResponse> _callListContentPolicies;
+
+        private readonly gaxgrpc::ApiCall<DeleteContentPolicyRequest, wkt::Empty> _callDeleteContentPolicy;
 
         /// <summary>
         /// Constructs a client wrapper for the DlpService service, with the specified gRPC client and settings.
@@ -13198,6 +13967,21 @@ namespace Google.Cloud.Dlp.V2
             _callUpdateConnection = clientHelper.BuildApiCall<UpdateConnectionRequest, Connection>("UpdateConnection", grpcClient.UpdateConnectionAsync, grpcClient.UpdateConnection, effectiveSettings.UpdateConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateConnection);
             Modify_UpdateConnectionApiCall(ref _callUpdateConnection);
+            _callCreateContentPolicy = clientHelper.BuildApiCall<CreateContentPolicyRequest, ContentPolicy>("CreateContentPolicy", grpcClient.CreateContentPolicyAsync, grpcClient.CreateContentPolicy, effectiveSettings.CreateContentPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateContentPolicy);
+            Modify_CreateContentPolicyApiCall(ref _callCreateContentPolicy);
+            _callUpdateContentPolicy = clientHelper.BuildApiCall<UpdateContentPolicyRequest, ContentPolicy>("UpdateContentPolicy", grpcClient.UpdateContentPolicyAsync, grpcClient.UpdateContentPolicy, effectiveSettings.UpdateContentPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUpdateContentPolicy);
+            Modify_UpdateContentPolicyApiCall(ref _callUpdateContentPolicy);
+            _callGetContentPolicy = clientHelper.BuildApiCall<GetContentPolicyRequest, ContentPolicy>("GetContentPolicy", grpcClient.GetContentPolicyAsync, grpcClient.GetContentPolicy, effectiveSettings.GetContentPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetContentPolicy);
+            Modify_GetContentPolicyApiCall(ref _callGetContentPolicy);
+            _callListContentPolicies = clientHelper.BuildApiCall<ListContentPoliciesRequest, ListContentPoliciesResponse>("ListContentPolicies", grpcClient.ListContentPoliciesAsync, grpcClient.ListContentPolicies, effectiveSettings.ListContentPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListContentPolicies);
+            Modify_ListContentPoliciesApiCall(ref _callListContentPolicies);
+            _callDeleteContentPolicy = clientHelper.BuildApiCall<DeleteContentPolicyRequest, wkt::Empty>("DeleteContentPolicy", grpcClient.DeleteContentPolicyAsync, grpcClient.DeleteContentPolicy, effectiveSettings.DeleteContentPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteContentPolicy);
+            Modify_DeleteContentPolicyApiCall(ref _callDeleteContentPolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -13312,6 +14096,16 @@ namespace Google.Cloud.Dlp.V2
         partial void Modify_DeleteConnectionApiCall(ref gaxgrpc::ApiCall<DeleteConnectionRequest, wkt::Empty> call);
 
         partial void Modify_UpdateConnectionApiCall(ref gaxgrpc::ApiCall<UpdateConnectionRequest, Connection> call);
+
+        partial void Modify_CreateContentPolicyApiCall(ref gaxgrpc::ApiCall<CreateContentPolicyRequest, ContentPolicy> call);
+
+        partial void Modify_UpdateContentPolicyApiCall(ref gaxgrpc::ApiCall<UpdateContentPolicyRequest, ContentPolicy> call);
+
+        partial void Modify_GetContentPolicyApiCall(ref gaxgrpc::ApiCall<GetContentPolicyRequest, ContentPolicy> call);
+
+        partial void Modify_ListContentPoliciesApiCall(ref gaxgrpc::ApiCall<ListContentPoliciesRequest, ListContentPoliciesResponse> call);
+
+        partial void Modify_DeleteContentPolicyApiCall(ref gaxgrpc::ApiCall<DeleteContentPolicyRequest, wkt::Empty> call);
 
         partial void OnConstruction(DlpService.DlpServiceClient grpcClient, DlpServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -13431,6 +14225,16 @@ namespace Google.Cloud.Dlp.V2
 
         partial void Modify_UpdateConnectionRequest(ref UpdateConnectionRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateContentPolicyRequest(ref CreateContentPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateContentPolicyRequest(ref UpdateContentPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetContentPolicyRequest(ref GetContentPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListContentPoliciesRequest(ref ListContentPoliciesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteContentPolicyRequest(ref DeleteContentPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
         /// Finds potentially sensitive info in content.
         /// This method has limits on input size, processing time, and output size.
@@ -13440,9 +14244,9 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// 
         /// For how to guides, see
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-images
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-images
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-text,
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-text,
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -13462,9 +14266,9 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// 
         /// For how to guides, see
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-images
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-images
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-text,
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-text,
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -13479,7 +14283,7 @@ namespace Google.Cloud.Dlp.V2
         /// Redacts potentially sensitive info from an image.
         /// This method has limits on input size, processing time, and output size.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
@@ -13502,7 +14306,7 @@ namespace Google.Cloud.Dlp.V2
         /// Redacts potentially sensitive info from an image.
         /// This method has limits on input size, processing time, and output size.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
@@ -13525,7 +14329,7 @@ namespace Google.Cloud.Dlp.V2
         /// De-identifies potentially sensitive info from a ContentItem.
         /// This method has limits on input size and output size.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
@@ -13545,7 +14349,7 @@ namespace Google.Cloud.Dlp.V2
         /// De-identifies potentially sensitive info from a ContentItem.
         /// This method has limits on input size and output size.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
@@ -13564,7 +14368,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Re-identifies content that has been de-identified.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13579,7 +14383,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Re-identifies content that has been de-identified.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13594,7 +14398,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
-        /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13609,7 +14413,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
-        /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13625,7 +14429,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13641,7 +14445,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates an InspectTemplate for reusing frequently used configuration
         /// for inspecting content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13656,7 +14460,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13671,7 +14475,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13686,7 +14490,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13701,7 +14505,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13716,7 +14520,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists InspectTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13731,7 +14535,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists InspectTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13746,7 +14550,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13761,7 +14565,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes an InspectTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13777,7 +14581,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13793,7 +14597,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a DeidentifyTemplate for reusing frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13808,7 +14612,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13823,7 +14627,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates the DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13838,7 +14642,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13853,7 +14657,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13868,7 +14672,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DeidentifyTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13883,7 +14687,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DeidentifyTemplates.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13898,7 +14702,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13913,7 +14717,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a DeidentifyTemplate.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13929,7 +14733,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13945,7 +14749,7 @@ namespace Google.Cloud.Dlp.V2
         /// Creates a job trigger to run DLP actions such as scanning storage for
         /// sensitive information on a set schedule.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13960,7 +14764,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -13975,7 +14779,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Updates a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14018,7 +14822,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14033,7 +14837,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14048,7 +14852,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists job triggers.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14063,7 +14867,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists job triggers.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14078,7 +14882,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14093,7 +14897,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a job trigger.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14254,9 +15058,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -14275,9 +15079,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a new job to inspect storage or calculate risk metrics.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// 
         /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
@@ -14296,9 +15100,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14313,9 +15117,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14330,9 +15134,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14347,9 +15151,9 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets the latest state of a long-running DlpJob.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14366,9 +15170,9 @@ namespace Google.Cloud.Dlp.V2
         /// no longer interested in the DlpJob result. The job will be canceled if
         /// possible.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14385,9 +15189,9 @@ namespace Google.Cloud.Dlp.V2
         /// no longer interested in the DlpJob result. The job will be canceled if
         /// possible.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14404,9 +15208,9 @@ namespace Google.Cloud.Dlp.V2
         /// makes a best effort to cancel the DlpJob, but success is not
         /// guaranteed.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14423,9 +15227,9 @@ namespace Google.Cloud.Dlp.V2
         /// makes a best effort to cancel the DlpJob, but success is not
         /// guaranteed.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-storage
         /// and
-        /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14440,7 +15244,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14455,7 +15259,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Creates a pre-built stored infoType to be used for inspection.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14471,7 +15275,7 @@ namespace Google.Cloud.Dlp.V2
         /// Updates the stored infoType by creating a new version. The existing version
         /// will continue to be used until the new version is ready.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14487,7 +15291,7 @@ namespace Google.Cloud.Dlp.V2
         /// Updates the stored infoType by creating a new version. The existing version
         /// will continue to be used until the new version is ready.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14502,7 +15306,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14517,7 +15321,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Gets a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14532,7 +15336,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists stored infoTypes.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14547,7 +15351,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Lists stored infoTypes.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14562,7 +15366,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -14577,7 +15381,7 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Deletes a stored infoType.
         /// See
-        /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+        /// https://docs.cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
         /// to learn more.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -15032,6 +15836,126 @@ namespace Google.Cloud.Dlp.V2
             Modify_UpdateConnectionRequest(ref request, ref callSettings);
             return _callUpdateConnection.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Create a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ContentPolicy CreateContentPolicy(CreateContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateContentPolicyRequest(ref request, ref callSettings);
+            return _callCreateContentPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ContentPolicy> CreateContentPolicyAsync(CreateContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateContentPolicyRequest(ref request, ref callSettings);
+            return _callCreateContentPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ContentPolicy UpdateContentPolicy(UpdateContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateContentPolicyRequest(ref request, ref callSettings);
+            return _callUpdateContentPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ContentPolicy> UpdateContentPolicyAsync(UpdateContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateContentPolicyRequest(ref request, ref callSettings);
+            return _callUpdateContentPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ContentPolicy GetContentPolicy(GetContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetContentPolicyRequest(ref request, ref callSettings);
+            return _callGetContentPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ContentPolicy> GetContentPolicyAsync(GetContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetContentPolicyRequest(ref request, ref callSettings);
+            return _callGetContentPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ContentPolicies in a parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ContentPolicy"/> resources.</returns>
+        public override gax::PagedEnumerable<ListContentPoliciesResponse, ContentPolicy> ListContentPolicies(ListContentPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListContentPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListContentPoliciesRequest, ListContentPoliciesResponse, ContentPolicy>(_callListContentPolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ContentPolicies in a parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ContentPolicy"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListContentPoliciesResponse, ContentPolicy> ListContentPoliciesAsync(ListContentPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListContentPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListContentPoliciesRequest, ListContentPoliciesResponse, ContentPolicy>(_callListContentPolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteContentPolicy(DeleteContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteContentPolicyRequest(ref request, ref callSettings);
+            _callDeleteContentPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete a ContentPolicy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteContentPolicyAsync(DeleteContentPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteContentPolicyRequest(ref request, ref callSettings);
+            return _callDeleteContentPolicy.Async(request, callSettings);
+        }
     }
 
     public partial class ListInspectTemplatesRequest : gaxgrpc::IPageRequest
@@ -15079,6 +16003,10 @@ namespace Google.Cloud.Dlp.V2
     }
 
     public partial class SearchConnectionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListContentPoliciesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -15174,6 +16102,14 @@ namespace Google.Cloud.Dlp.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Connection> GetEnumerator() => Connections.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListContentPoliciesResponse : gaxgrpc::IPageResponse<ContentPolicy>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ContentPolicy> GetEnumerator() => ContentPolicies.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
