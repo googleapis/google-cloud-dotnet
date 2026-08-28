@@ -52,54 +52,55 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
             "ZXcYAiABKA4yLC5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuRG9j",
             "dW1lbnRWaWV3QgPgQQEiWAoZQmF0Y2hHZXREb2N1bWVudHNSZXNwb25zZRI7",
             "Cglkb2N1bWVudHMYASADKAsyKC5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVk",
-            "Z2UudjEuRG9jdW1lbnQiKAoSQW5zd2VyUXVlcnlSZXF1ZXN0EhIKBXF1ZXJ5",
-            "GAEgASgJQgPgQQIiTQoTQW5zd2VyUXVlcnlSZXNwb25zZRI2CgZhbnN3ZXIY",
-            "ASABKAsyJi5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuQW5zd2Vy",
-            "ItsECgZBbnN3ZXISEwoLYW5zd2VyX3RleHQYASABKAkSTQoJY2l0YXRpb25z",
-            "GAIgAygLMjUuZ29vZ2xlLmRldmVsb3BlcnMua25vd2xlZGdlLnYxLkFuc3dl",
-            "ci5BbnN3ZXJDaXRhdGlvbkID4EEDEk8KCnJlZmVyZW5jZXMYAyADKAsyNi5n",
-            "b29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuQW5zd2VyLkFuc3dlclJl",
-            "ZmVyZW5jZUID4EEDGo8BCg5BbnN3ZXJDaXRhdGlvbhIYCgtzdGFydF9pbmRl",
-            "eBgBIAEoBUID4EEDEhYKCWVuZF9pbmRleBgCIAEoBUID4EEDEksKB3NvdXJj",
-            "ZXMYAyADKAsyNS5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuQW5z",
-            "d2VyLkNpdGF0aW9uU291cmNlQgPgQQMaLgoOQ2l0YXRpb25Tb3VyY2USHAoP",
-            "cmVmZXJlbmNlX2luZGV4GAEgASgFQgPgQQMaeQoPQW5zd2VyUmVmZXJlbmNl",
-            "ElsKEmRvY3VtZW50X3JlZmVyZW5jZRgBIAEoCzI4Lmdvb2dsZS5kZXZlbG9w",
-            "ZXJzLmtub3dsZWRnZS52MS5BbnN3ZXIuRG9jdW1lbnRSZWZlcmVuY2VCA+BB",
-            "A0gAQgkKB2NvbnRlbnQaXwoRRG9jdW1lbnRSZWZlcmVuY2USSgoOZG9jdW1l",
-            "bnRfY2h1bmsYASABKAsyLS5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2Uu",
-            "djEuRG9jdW1lbnRDaHVua0ID4EEDIvIBCg1Eb2N1bWVudENodW5rEkIKBnBh",
-            "cmVudBgBIAEoCUIy4EED+kEsCipkZXZlbG9wZXJrbm93bGVkZ2UuZ29vZ2xl",
-            "YXBpcy5jb20vRG9jdW1lbnQSDwoCaWQYAiABKAlCA+BBAxIUCgdjb250ZW50",
-            "GAMgASgJQgPgQQMSPwoIZG9jdW1lbnQYBCABKAsyKC5nb29nbGUuZGV2ZWxv",
-            "cGVycy5rbm93bGVkZ2UudjEuRG9jdW1lbnRCA+BBAxIhCg9yZWxldmFuY2Vf",
-            "c2NvcmUYBSABKAFCA+BBA0gAiAEBQhIKEF9yZWxldmFuY2Vfc2NvcmUqeQoM",
-            "RG9jdW1lbnRWaWV3Eh0KGURPQ1VNRU5UX1ZJRVdfVU5TUEVDSUZJRUQQABIX",
-            "ChNET0NVTUVOVF9WSUVXX0JBU0lDEAESFgoSRE9DVU1FTlRfVklFV19GVUxM",
-            "EAISGQoVRE9DVU1FTlRfVklFV19DT05URU5UEAMygQYKEkRldmVsb3Blcktu",
-            "b3dsZWRnZRK9AQoUU2VhcmNoRG9jdW1lbnRDaHVua3MSOy5nb29nbGUuZGV2",
-            "ZWxvcGVycy5rbm93bGVkZ2UudjEuU2VhcmNoRG9jdW1lbnRDaHVua3NSZXF1",
-            "ZXN0GjwuZ29vZ2xlLmRldmVsb3BlcnMua25vd2xlZGdlLnYxLlNlYXJjaERv",
-            "Y3VtZW50Q2h1bmtzUmVzcG9uc2UiKoLT5JMCJBIiL3YxL2RvY3VtZW50czpz",
-            "ZWFyY2hEb2N1bWVudENodW5rcxKTAQoLR2V0RG9jdW1lbnQSMi5nb29nbGUu",
-            "ZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuR2V0RG9jdW1lbnRSZXF1ZXN0Gigu",
-            "Z29vZ2xlLmRldmVsb3BlcnMua25vd2xlZGdlLnYxLkRvY3VtZW50IibaQQRu",
-            "YW1lgtPkkwIZEhcvdjEve25hbWU9ZG9jdW1lbnRzLyoqfRKoAQoRQmF0Y2hH",
-            "ZXREb2N1bWVudHMSOC5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEu",
-            "QmF0Y2hHZXREb2N1bWVudHNSZXF1ZXN0GjkuZ29vZ2xlLmRldmVsb3BlcnMu",
-            "a25vd2xlZGdlLnYxLkJhdGNoR2V0RG9jdW1lbnRzUmVzcG9uc2UiHoLT5JMC",
-            "GBIWL3YxL2RvY3VtZW50czpiYXRjaEdldBKSAQoLQW5zd2VyUXVlcnkSMi5n",
-            "b29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuQW5zd2VyUXVlcnlSZXF1",
-            "ZXN0GjMuZ29vZ2xlLmRldmVsb3BlcnMua25vd2xlZGdlLnYxLkFuc3dlclF1",
-            "ZXJ5UmVzcG9uc2UiGoLT5JMCFCIPL3YxOmFuc3dlclF1ZXJ5OgEqGlXKQSFk",
-            "ZXZlbG9wZXJrbm93bGVkZ2UuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQoMCCiJjb20u",
-            "Z29vZ2xlLmRldmVsb3BlcnMua25vd2xlZGdlLnYxQhdEZXZlbG9wZXJLbm93",
-            "bGVkZ2VQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RldmVsb3Blcmtu",
-            "b3dsZWRnZS9hcGl2MS9kZXZlbG9wZXJrbm93bGVkZ2VwYqoCJ0dvb2dsZS5E",
-            "ZXZlbG9wZXJzLkRldmVsb3Blcktub3dsZWRnZS5WMcoCJ0dvb2dsZVxEZXZl",
-            "bG9wZXJzXERldmVsb3Blcktub3dsZWRnZVxWMeoCKkdvb2dsZTo6RGV2ZWxv",
-            "cGVyczo6RGV2ZWxvcGVyS25vd2xlZGdlOjpWMWIGcHJvdG8z"));
+            "Z2UudjEuRG9jdW1lbnQiPQoSQW5zd2VyUXVlcnlSZXF1ZXN0EhIKBXF1ZXJ5",
+            "GAEgASgJQgPgQQISEwoGZmlsdGVyGAIgASgJQgPgQQEiTQoTQW5zd2VyUXVl",
+            "cnlSZXNwb25zZRI2CgZhbnN3ZXIYASABKAsyJi5nb29nbGUuZGV2ZWxvcGVy",
+            "cy5rbm93bGVkZ2UudjEuQW5zd2VyItsECgZBbnN3ZXISEwoLYW5zd2VyX3Rl",
+            "eHQYASABKAkSTQoJY2l0YXRpb25zGAIgAygLMjUuZ29vZ2xlLmRldmVsb3Bl",
+            "cnMua25vd2xlZGdlLnYxLkFuc3dlci5BbnN3ZXJDaXRhdGlvbkID4EEDEk8K",
+            "CnJlZmVyZW5jZXMYAyADKAsyNi5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVk",
+            "Z2UudjEuQW5zd2VyLkFuc3dlclJlZmVyZW5jZUID4EEDGo8BCg5BbnN3ZXJD",
+            "aXRhdGlvbhIYCgtzdGFydF9pbmRleBgBIAEoBUID4EEDEhYKCWVuZF9pbmRl",
+            "eBgCIAEoBUID4EEDEksKB3NvdXJjZXMYAyADKAsyNS5nb29nbGUuZGV2ZWxv",
+            "cGVycy5rbm93bGVkZ2UudjEuQW5zd2VyLkNpdGF0aW9uU291cmNlQgPgQQMa",
+            "LgoOQ2l0YXRpb25Tb3VyY2USHAoPcmVmZXJlbmNlX2luZGV4GAEgASgFQgPg",
+            "QQMaeQoPQW5zd2VyUmVmZXJlbmNlElsKEmRvY3VtZW50X3JlZmVyZW5jZRgB",
+            "IAEoCzI4Lmdvb2dsZS5kZXZlbG9wZXJzLmtub3dsZWRnZS52MS5BbnN3ZXIu",
+            "RG9jdW1lbnRSZWZlcmVuY2VCA+BBA0gAQgkKB2NvbnRlbnQaXwoRRG9jdW1l",
+            "bnRSZWZlcmVuY2USSgoOZG9jdW1lbnRfY2h1bmsYASABKAsyLS5nb29nbGUu",
+            "ZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuRG9jdW1lbnRDaHVua0ID4EEDIvIB",
+            "Cg1Eb2N1bWVudENodW5rEkIKBnBhcmVudBgBIAEoCUIy4EED+kEsCipkZXZl",
+            "bG9wZXJrbm93bGVkZ2UuZ29vZ2xlYXBpcy5jb20vRG9jdW1lbnQSDwoCaWQY",
+            "AiABKAlCA+BBAxIUCgdjb250ZW50GAMgASgJQgPgQQMSPwoIZG9jdW1lbnQY",
+            "BCABKAsyKC5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuRG9jdW1l",
+            "bnRCA+BBAxIhCg9yZWxldmFuY2Vfc2NvcmUYBSABKAFCA+BBA0gAiAEBQhIK",
+            "EF9yZWxldmFuY2Vfc2NvcmUqeQoMRG9jdW1lbnRWaWV3Eh0KGURPQ1VNRU5U",
+            "X1ZJRVdfVU5TUEVDSUZJRUQQABIXChNET0NVTUVOVF9WSUVXX0JBU0lDEAES",
+            "FgoSRE9DVU1FTlRfVklFV19GVUxMEAISGQoVRE9DVU1FTlRfVklFV19DT05U",
+            "RU5UEAMygQYKEkRldmVsb3Blcktub3dsZWRnZRK9AQoUU2VhcmNoRG9jdW1l",
+            "bnRDaHVua3MSOy5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEuU2Vh",
+            "cmNoRG9jdW1lbnRDaHVua3NSZXF1ZXN0GjwuZ29vZ2xlLmRldmVsb3BlcnMu",
+            "a25vd2xlZGdlLnYxLlNlYXJjaERvY3VtZW50Q2h1bmtzUmVzcG9uc2UiKoLT",
+            "5JMCJBIiL3YxL2RvY3VtZW50czpzZWFyY2hEb2N1bWVudENodW5rcxKTAQoL",
+            "R2V0RG9jdW1lbnQSMi5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVkZ2UudjEu",
+            "R2V0RG9jdW1lbnRSZXF1ZXN0GiguZ29vZ2xlLmRldmVsb3BlcnMua25vd2xl",
+            "ZGdlLnYxLkRvY3VtZW50IibaQQRuYW1lgtPkkwIZEhcvdjEve25hbWU9ZG9j",
+            "dW1lbnRzLyoqfRKoAQoRQmF0Y2hHZXREb2N1bWVudHMSOC5nb29nbGUuZGV2",
+            "ZWxvcGVycy5rbm93bGVkZ2UudjEuQmF0Y2hHZXREb2N1bWVudHNSZXF1ZXN0",
+            "GjkuZ29vZ2xlLmRldmVsb3BlcnMua25vd2xlZGdlLnYxLkJhdGNoR2V0RG9j",
+            "dW1lbnRzUmVzcG9uc2UiHoLT5JMCGBIWL3YxL2RvY3VtZW50czpiYXRjaEdl",
+            "dBKSAQoLQW5zd2VyUXVlcnkSMi5nb29nbGUuZGV2ZWxvcGVycy5rbm93bGVk",
+            "Z2UudjEuQW5zd2VyUXVlcnlSZXF1ZXN0GjMuZ29vZ2xlLmRldmVsb3BlcnMu",
+            "a25vd2xlZGdlLnYxLkFuc3dlclF1ZXJ5UmVzcG9uc2UiGoLT5JMCFCIPL3Yx",
+            "OmFuc3dlclF1ZXJ5OgEqGlXKQSFkZXZlbG9wZXJrbm93bGVkZ2UuZ29vZ2xl",
+            "YXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Ns",
+            "b3VkLXBsYXRmb3JtQoMCCiJjb20uZ29vZ2xlLmRldmVsb3BlcnMua25vd2xl",
+            "ZGdlLnYxQhdEZXZlbG9wZXJLbm93bGVkZ2VQcm90b1ABWkFjbG91ZC5nb29n",
+            "bGUuY29tL2dvL2RldmVsb3Blcmtub3dsZWRnZS9hcGl2MS9kZXZlbG9wZXJr",
+            "bm93bGVkZ2VwYqoCJ0dvb2dsZS5EZXZlbG9wZXJzLkRldmVsb3Blcktub3ds",
+            "ZWRnZS5WMcoCJ0dvb2dsZVxEZXZlbG9wZXJzXERldmVsb3Blcktub3dsZWRn",
+            "ZVxWMeoCKkdvb2dsZTo6RGV2ZWxvcGVyczo6RGV2ZWxvcGVyS25vd2xlZGdl",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Developers.DeveloperKnowledge.V1.DocumentView), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -109,7 +110,7 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest), global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest.Parser, new[]{ "Name", "View" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest), global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest.Parser, new[]{ "Names", "View" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse), global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse.Parser, new[]{ "Documents" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest), global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest.Parser, new[]{ "Query" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest), global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest.Parser, new[]{ "Query", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryResponse), global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryResponse.Parser, new[]{ "Answer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.Answer), global::Google.Developers.DeveloperKnowledge.V1.Answer.Parser, new[]{ "AnswerText", "Citations", "References" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.Answer.Types.AnswerCitation), global::Google.Developers.DeveloperKnowledge.V1.Answer.Types.AnswerCitation.Parser, new[]{ "StartIndex", "EndIndex", "Sources" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.Answer.Types.CitationSource), global::Google.Developers.DeveloperKnowledge.V1.Answer.Types.CitationSource.Parser, new[]{ "ReferenceIndex" }, null, null, null, null),
@@ -2072,6 +2073,7 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnswerQueryRequest(AnswerQueryRequest other) : this() {
       query_ = other.query_;
+      filter_ = other.filter_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2096,6 +2098,65 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
       }
     }
 
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 2;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. Applies a strict filter to the search results used to ground the
+    /// answer. The expression supports a subset of the syntax described at
+    /// https://google.aip.dev/160.
+    ///
+    /// Supported fields for filtering:
+    ///
+    /// * `content_length_bytes` (INTEGER): The length of the `Document.content`
+    ///   field in bytes.
+    /// * `data_source` (STRING): The source of the document, e.g.
+    ///   `docs.cloud.google.com`. See
+    ///   https://developers.google.com/knowledge/reference/corpus-reference for
+    ///   the complete list of data sources in the corpus.
+    /// * `update_time` (TIMESTAMP): The timestamp of when the document was last
+    ///   meaningfully updated. A meaningful update is one that changes document's
+    ///   markdown content or metadata.
+    /// * `uri` (STRING): The document URI, e.g.
+    ///   `https://docs.cloud.google.com/bigquery/docs/tables`.
+    ///
+    /// INTEGER fields support `=`, `&lt;`, `&lt;=`, `>`, and `>=` operators.
+    ///
+    /// STRING fields support `=` (equals) and `!=` (not equals) operators for
+    /// **exact match** on the whole string. Partial match, prefix match, and
+    /// regexp match are not supported.
+    ///
+    /// TIMESTAMP fields support `=`, `&lt;`, `&lt;=`, `>`, and `>=` operators.
+    /// Timestamps must be in RFC-3339 format, e.g., `"2025-01-01T00:00:00Z"`.
+    ///
+    /// You can combine expressions using `AND`, `OR`, and `NOT` (or `-`) logical
+    /// operators. `OR` has higher precedence than `AND`. Use parentheses for
+    /// explicit precedence grouping.
+    ///
+    /// Examples:
+    ///
+    /// * Filter by `Document.content_length_bytes`:
+    ///   `content_length_bytes &lt; 50000`
+    /// * `data_source = "docs.cloud.google.com" OR data_source =
+    ///   "firebase.google.com"`
+    /// * `data_source != "firebase.google.com"`
+    /// * `update_time &lt; "2024-01-01T00:00:00Z"`
+    /// * `update_time >= "2025-01-22T00:00:00Z" AND (data_source =
+    ///   "developer.chrome.com" OR data_source = "web.dev")`
+    /// * `uri = "https://docs.cloud.google.com/release-notes"`
+    ///
+    /// The `filter` string must not exceed 500 characters; values longer than 500
+    /// characters will result in an `INVALID_ARGUMENT` error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2112,6 +2173,7 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
         return true;
       }
       if (Query != other.Query) return false;
+      if (Filter != other.Filter) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2120,6 +2182,7 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Query.Length != 0) hash ^= Query.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2142,6 +2205,10 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
         output.WriteRawTag(10);
         output.WriteString(Query);
       }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2156,6 +2223,10 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
         output.WriteRawTag(10);
         output.WriteString(Query);
       }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2168,6 +2239,9 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
       int size = 0;
       if (Query.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Query);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2183,6 +2257,9 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
       }
       if (other.Query.Length != 0) {
         Query = other.Query;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2207,6 +2284,10 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
             Query = input.ReadString();
             break;
           }
+          case 18: {
+            Filter = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2228,6 +2309,10 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
             break;
           case 10: {
             Query = input.ReadString();
+            break;
+          }
+          case 18: {
+            Filter = input.ReadString();
             break;
           }
         }
