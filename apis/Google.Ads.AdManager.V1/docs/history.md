@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.0.0-beta10, released 2026-08-31
+
+### New features
+
+- Added methods for activation, deactivation, approval, rejection, and population of audience segments
+- Added `HIGH_ENGAGEMENT_ADS_ALLOWED` report dimension
+- Added `WEB_INTERSTITIAL_TRIGGER_TYPE` report dimension
+- Added `WEB_INTERSTITIAL_TRIGGER_TYPE_NAME` report dimension
+- Added `UpdateNetwork`, `ProvisionTestNetwork`, and `GetDefaultThirdPartyDataDeclaration` to NetworkService
+- Added additional AudienceSegment fields
+
+### Documentation improvements
+
+- Updated documentation for AudienceSegmentService endpoints
+- Additional columns are now filterable in `ListAudienceSegmentsRequest`
+
 ## Version 1.0.0-beta09, released 2026-08-17
 
 ### New features
