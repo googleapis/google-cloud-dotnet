@@ -180,6 +180,17 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             {
                 var inO = oMethods.TryGetValue(method, out var o);
                 var inN = nMethods.TryGetValue(method, out var n);
+
+                // If the method was not found in either the old or new types, try to get it from their ancestry
+                if (!inN)
+                {
+                    inN = _n.TryGetLikeMethodFromAncestor(method, out n);
+                }
+                else if (!inO)
+                {
+                    inO = _o.TryGetLikeMethodFromAncestor(method, out o);
+                }
+
                 FormattableString prefix = $"{_o.TypeType()} '{_o}'; {prefixType} '{o}'";
                 if (inO && inN && o.IsExported() && n.IsExported())
                 {
@@ -263,7 +274,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
         public IEnumerable<Diff> Ctors(TypeType typeType) => MethodsCtors(typeType, isCtor: true, t => t.InstanceCtors());
 
         public IEnumerable<Diff> Methods(TypeType typeType) =>
-            MethodsCtors(typeType, isCtor: false, t => t.ExportedMethods());
+            MethodsCtors(typeType, isCtor: false, t => t.Methods.Where(x => !x.IsGetter && !x.IsSetter && !x.IsConstructor));
 
         public IEnumerable<Diff> Properties(TypeType typeType)
         {
@@ -273,6 +284,20 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             {
                 var inO = oProps.TryGetValue(prop, out var o);
                 var inN = nProps.TryGetValue(prop, out var n);
+
+                if (inO && !inN)
+                {
+                    // get definition for n from _n's ancestor if it exists
+                    // There's not a great way to do this without looking up both ancestry trees.
+                    // The current type definition will only include properties it defines itself or
+                    // that it overrides.
+                    // We might be able to do by-accessor for each property
+                }
+                else if (!inO && inN)
+                {
+                    // get definition for o from _o's ancestor if it exists
+                }
+
                 FormattableString prefix = $"{_o.TypeType()} '{_o}'; property '{o}'";
                 if (inO && inN && o.IsExported() && n.IsExported())
                 {

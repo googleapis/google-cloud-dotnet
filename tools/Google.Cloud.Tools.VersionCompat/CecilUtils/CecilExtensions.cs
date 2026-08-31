@@ -86,29 +86,39 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 
         public static bool IsStatic(this PropertyDefinition prop) => (prop.GetMethod ?? prop.SetMethod).IsStatic;
 
-        public static TypeDefinition BaseTypeExt(this TypeDefinition type) => BaseTypeCache.Instance.GetBaseType(type);
-
-        public static IEnumerable<MethodDefinition> ExportedMethods(this TypeDefinition type)
+        public static bool TryGetLikeMethodFromAncestor(this TypeDefinition descendentType, MethodDefinition referenceMethod, out MethodDefinition methodFromAncestor)
         {
-            var methods = new HashSet<MethodDefinition>(SameMethodComparer.Instance);
+            methodFromAncestor = null;
 
-            var baseType = type;
-
-            while (baseType is not null && !baseType.IsObject())
+            // Look up the ancestor tree until we find a like implementation to this method
+            var baseType = descendentType.BaseType?.Resolve();
+            while (baseType != null)
             {
-                foreach (var method in baseType.Methods)
+                // GetMethod here only checks for a subset of the info we need, so
+                // also check visibility, static, and more.
+                if (MetadataResolver.GetMethod(baseType.Methods, referenceMethod) is MethodDefinition baseTypeMethod
+                    && AreLikeMethods(referenceMethod, baseTypeMethod))
                 {
-                    if (!(method.IsGetter || method.IsSetter || method.IsConstructor))
-                    {
-                        methods.Add(method);
-                    }
+                    methodFromAncestor = baseTypeMethod;
+                    return true;
                 }
 
-                baseType = baseType.BaseTypeExt();
+                baseType = baseType.BaseType?.Resolve();
             }
 
-            return methods;
+            return false;
+
+            // This only supplements what is missing from MetadataResolver.GetMethod to ascertain if
+            // the two methods are definitionally like, and should not be used separately.
+            static bool AreLikeMethods(MethodDefinition referenceMethod, MethodDefinition likeMethod)
+                => referenceMethod.IsPublic == likeMethod.IsPublic
+                    && referenceMethod.IsFamily == likeMethod.IsFamily
+                    && referenceMethod.IsStatic == likeMethod.IsStatic
+                    // We only care that the like method is sealed if the reference method is too.
+                    && (referenceMethod.IsVirtual ? likeMethod.IsVirtual : true);
         }
+
+        public static TypeDefinition BaseTypeExt(this TypeDefinition type) => BaseTypeCache.Instance.GetBaseType(type);
 
         /// <summary>
         /// Gets the PropertyDefinition with the most possible accessors. Because decendent types can
