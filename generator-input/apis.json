@@ -687,7 +687,7 @@
     },
     {
       "id": "Google.Cloud.AppTopology.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "App Topology",
       "productUrl": "https://docs.cloud.google.com/app-topology",
