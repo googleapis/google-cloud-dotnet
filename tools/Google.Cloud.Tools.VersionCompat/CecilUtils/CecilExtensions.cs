@@ -117,5 +117,25 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
                     // We only care that the like method is sealed if the reference method is too.
                     && (referenceMethod.IsVirtual ? likeMethod.IsVirtual : true);
         }
+
+        public static bool TryGetAccessorsFromAncestry(this TypeDefinition typeDefinition, PropertyDefinition propertyDefinition, out MethodDefinition getMethod, out MethodDefinition setMethod)
+        {
+            var baseType = typeDefinition;
+            getMethod = null;
+            setMethod = null;
+
+            while (baseType is not null)
+            {
+                if (baseType.Properties.Where(p => SamePropertyComparer.Instance.Equals(p, propertyDefinition)).FirstOrDefault() is PropertyDefinition matchingProperty)
+                {
+                    getMethod ??= matchingProperty.GetMethod;
+                    setMethod ??= matchingProperty.SetMethod;
+                }
+
+                baseType = baseType?.BaseType?.Resolve();
+            }
+
+            return getMethod is not null || setMethod is not null;
+        }
     }
 }

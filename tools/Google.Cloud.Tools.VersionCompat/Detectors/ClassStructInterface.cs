@@ -293,8 +293,8 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
 
                 if (PropertiesLackAccessorParity(o, n))
                 {
-                    (inO, oGetter, oSetter) = TryGetAccessorsFromAncestry(_o, prop);
-                    (inN, nGetter, nSetter) = TryGetAccessorsFromAncestry(_n, prop);
+                    inO = _o.TryGetAccessorsFromAncestry(prop, out oGetter, out oSetter);
+                    inN = _n.TryGetAccessorsFromAncestry(prop, out nGetter, out nSetter);
                 }
 
                 FormattableString prefix = $"{_o.TypeType()} '{_o}'; property '{o}'";
@@ -370,26 +370,6 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     return false;
                 }
                 return true;
-            }
-
-            static (bool, MethodDefinition, MethodDefinition) TryGetAccessorsFromAncestry(TypeDefinition typeDefinition, PropertyDefinition propertyDefinition)
-            {
-                var baseType = typeDefinition;
-                MethodDefinition getMethod = null;
-                MethodDefinition setMethod = null;
-
-                while (baseType is not null)
-                {
-                    if (baseType.Properties.Where(p => SamePropertyComparer.Instance.Equals(p, propertyDefinition)).FirstOrDefault() is PropertyDefinition matchingProperty)
-                    {
-                        getMethod ??= matchingProperty.GetMethod;
-                        setMethod ??= matchingProperty.SetMethod;
-                    }
-
-                    baseType = baseType?.BaseType?.Resolve();
-                }
-
-                return ((getMethod is not null || setMethod is not null), getMethod, setMethod);
             }
         }
 
