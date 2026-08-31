@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.77.0, released 2026-08-31
+
+### New features
+
+- Add enable_zero_data_retention to Tool.ParallelAiSearch
+
 ## Version 3.76.0, released 2026-08-17
 
 ### New features
