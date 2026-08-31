@@ -423,6 +423,12 @@
       "allowedVersions": "<0.14.0"
     },
     {
+      "matchPackageNames": [
+        "Microsoft.CodeAnalysis*"
+      ],
+      "allowedVersions": "<5.9.0"
+    },
+    {
       "matchFileNames": [
         "Dockerfile.generator"
       ],
