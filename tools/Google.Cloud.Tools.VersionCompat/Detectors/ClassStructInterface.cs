@@ -162,7 +162,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     if (obs.HasConstructorArguments && obs.ConstructorArguments.Count == 2)
                     {
                         // (string, bool) ctor
-                        return (bool) obs.ConstructorArguments[1].Value;
+                        return (bool)obs.ConstructorArguments[1].Value;
                     }
                 }
                 return false;
@@ -278,24 +278,23 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
 
         public IEnumerable<Diff> Properties(TypeType typeType)
         {
-            var oProps = _o.ExportedProperties().ToImmutableHashSet(SamePropertyComparer.Instance);
-            var nProps = _n.ExportedProperties().ToImmutableHashSet(SamePropertyComparer.Instance);
+            var oProps = _o.Properties.ToImmutableHashSet(SamePropertyComparer.Instance);
+            var nProps = _n.Properties.ToImmutableHashSet(SamePropertyComparer.Instance);
             foreach (var prop in oProps.Union(nProps).OrderBy(x => x.FullName))
             {
                 var inO = oProps.TryGetValue(prop, out var o);
                 var inN = nProps.TryGetValue(prop, out var n);
 
-                if (inO && !inN)
+                var oGetter = o.GetMethod;
+                var nGetter = n.GetMethod;
+
+                var oSetter = o.SetMethod;
+                var nSetter = n.SetMethod;
+
+                if (PropertiesLackAccessorParity(o, n))
                 {
-                    // get definition for n from _n's ancestor if it exists
-                    // There's not a great way to do this without looking up both ancestry trees.
-                    // The current type definition will only include properties it defines itself or
-                    // that it overrides.
-                    // We might be able to do by-accessor for each property
-                }
-                else if (!inO && inN)
-                {
-                    // get definition for o from _o's ancestor if it exists
+                    (inO, oGetter, oSetter) = TryGetAccessorsFromAncestry(_o, prop);
+                    (inN, nGetter, nSetter) = TryGetAccessorsFromAncestry(_n, prop);
                 }
 
                 FormattableString prefix = $"{_o.TypeType()} '{_o}'; property '{o}'";
@@ -314,9 +313,9 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                         }
                         else
                         {
-                            var diffs = MethodModifiers(o.GetMethod ?? o.SetMethod, n.GetMethod ?? n.SetMethod, Cause.PropertyModifierChanged, prefix)
-                                .Concat(MethodAccessModifiers(o.GetMethod, n.GetMethod, Cause.PropertyAccessModifierChanged, $"{prefix} getter"))
-                                .Concat(MethodAccessModifiers(o.SetMethod, n.SetMethod, Cause.PropertyAccessModifierChanged, $"{prefix} setter"));
+                            var diffs = MethodModifiers(oGetter ?? oSetter, n.GetMethod ?? n.SetMethod, Cause.PropertyModifierChanged, prefix)
+                                .Concat(MethodAccessModifiers(oGetter, nGetter, Cause.PropertyAccessModifierChanged, $"{prefix} getter"))
+                                .Concat(MethodAccessModifiers(oSetter, nSetter, Cause.PropertyAccessModifierChanged, $"{prefix} setter"));
                             foreach (var diff in diffs)
                             {
                                 yield return diff;
@@ -336,13 +335,13 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 else
                 {
                     // Presence/visibility changes.
-                    if (inO && o.IsExported() && o.IsDefinedInType(_o))
+                    if (inO && o.IsExported())
                     {
                         yield return inN ?
                             Diff.Major(Cause.PropertyMadeNotExported, $"{prefix} made non-public.") :
                             Diff.Major(Cause.PropertyRemoved, $"{prefix} removed.");
                     }
-                    else if (inN && n.IsExported() && o.IsDefinedInType(_n))
+                    else if (inN && n.IsExported())
                     {
                         var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, FormattableString, Diff>) Diff.Minor : Diff.Major;
                         yield return inO ?
@@ -350,6 +349,47 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                             diff(Cause.PropertyAdded, $"{prefix} added.");
                     }
                 }
+            }
+
+            static bool PropertiesLackAccessorParity(PropertyDefinition p1,  PropertyDefinition p2)
+            {
+                if (p1 == null && p2 == null)
+                {
+                    return true;
+                }
+                if (p1 == null ||  p2 == null)
+                {
+                    return false;
+                }
+                if ((p1.GetMethod is null) != (p2.GetMethod is null))
+                {
+                    return false;
+                }
+                if ((p1.SetMethod is null) != (p2.SetMethod is null))
+                {
+                    return false;
+                }
+                return true;
+            }
+
+            static (bool, MethodDefinition, MethodDefinition) TryGetAccessorsFromAncestry(TypeDefinition typeDefinition, PropertyDefinition propertyDefinition)
+            {
+                var baseType = typeDefinition;
+                MethodDefinition getMethod = null;
+                MethodDefinition setMethod = null;
+
+                while (baseType is not null)
+                {
+                    if (baseType.Properties.Where(p => SamePropertyComparer.Instance.Equals(p, propertyDefinition)).FirstOrDefault() is PropertyDefinition matchingProperty)
+                    {
+                        getMethod ??= matchingProperty.GetMethod;
+                        setMethod ??= matchingProperty.SetMethod;
+                    }
+
+                    baseType = baseType?.BaseType?.Resolve();
+                }
+
+                return ((getMethod is not null || setMethod is not null), getMethod, setMethod);
             }
         }
 

@@ -117,46 +117,5 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
                     // We only care that the like method is sealed if the reference method is too.
                     && (referenceMethod.IsVirtual ? likeMethod.IsVirtual : true);
         }
-
-        public static TypeDefinition BaseTypeExt(this TypeDefinition type) => BaseTypeCache.Instance.GetBaseType(type);
-
-        /// <summary>
-        /// Gets the PropertyDefinition with the most possible accessors. Because decendent types can
-        /// choose to only override a single accessor even if the base class defined both a getter and setter,
-        /// we look up the ancestry tree for the most acccessible property definition. Decendent types
-        /// cannot implement an accessor that was not present in the base definition, so if we reach the base
-        /// class definition, it is guaranteed to contain all accessors for this property.
-        /// </summary>
-        /// <param name="type">Type to start looking from.</param>
-        /// <returns>List of exported properties for this type.</returns>
-        public static IEnumerable<PropertyDefinition> ExportedProperties(this TypeDefinition type)
-        {
-            var properties = new HashSet<PropertyDefinition>(SamePropertyComparer.Instance);
-
-            var baseType = type;
-
-            while (baseType is not null && !baseType.IsObject())
-            {
-                foreach (var property in baseType.Properties)
-                {
-                    if (!properties.TryGetValue(property, out PropertyDefinition currProperty) ||
-                        SecondPropertyHasMoreAccessors(first: currProperty, second: property))
-                    {
-                        // We need to explicity remove the property before adding the new one to
-                        // ensure that the Hashset gets the most up-to-date property definition
-                        properties.Remove(property);
-                        properties.Add(property);
-                    }
-                }
-
-                baseType = baseType.BaseTypeExt();
-            }
-
-            return properties;
-
-            static bool SecondPropertyHasMoreAccessors(PropertyDefinition first, PropertyDefinition second)
-                => (first.SetMethod is not null ? 1 : 0) + (first.GetMethod is not null ? 1 : 0) <
-                    (second.SetMethod is not null ? 1 : 0) + (second.GetMethod is not null ? 1 : 0);
-        }
     }
 }
