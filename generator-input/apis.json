@@ -1468,6 +1468,32 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.BuiltInMetrics",
+      "version": "1.0.0-alpha00",
+      "type": "other",
+      "metadataType": "INTEGRATION",
+      "description": "Collects built-in metrics from Google Cloud client libraries and exports them to Cloud Monitoring.",
+      "tags": [
+        "OpenTelemetry",
+        "Metrics"
+      ],
+      "dependencies": {
+        "Google.Api.Gax": "default",
+        "Google.Apis.Auth": "default",
+        "OpenTelemetry": "default",
+        "OpenTelemetry.Exporter.OpenTelemetryProtocol": "default"
+      },
+      "testDependencies": {
+        "Google.Api.Gax.Testing": "default",
+        "Google.Cloud.Monitoring.V3": "3.16.0",
+        "Google.Cloud.Spanner.V1": "project"
+      },
+      "projects": [
+        "IntegrationTests",
+        "Tests"
+      ]
+    },
+    {
       "id": "Google.Cloud.CapacityPlanner.V1Beta",
       "version": "1.0.0-beta02",
       "type": "grpc",

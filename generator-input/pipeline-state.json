@@ -5075,6 +5075,15 @@
             "sourcePaths": [
                 "apis/Google.Cloud.SaasPlatform.SaasServiceMgmt.V1/Google.Cloud.SaasPlatform.SaasServiceMgmt.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.BuiltInMetrics",
+            "nextVersion": "1.0.0-alpha01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "sourcePaths": [
+                "apis/Google.Cloud.BuiltInMetrics/Google.Cloud.BuiltInMetrics"
+            ]
         }
     ],
     "ignoredApiPaths": [
