@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.8.0, released 2026-08-31
+
+### New features
+
+- Promote lineage outputs to v2
+
 ## Version 1.7.0, released 2026-05-29
 
 ### New features
