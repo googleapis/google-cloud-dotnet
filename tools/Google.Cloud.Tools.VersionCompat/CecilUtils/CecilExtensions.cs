@@ -49,6 +49,8 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 
         public static bool IsObject(this TypeReference type) => type.FullName == typeof(object).FullName;
 
+        public static string SafeFullName(this TypeReference type) => type?.FullName ?? "<none>";
+
         public static TypeDefinition Def(this TypeReference type) => type as TypeDefinition;
 
         public static TypeType TypeType(this TypeDefinition type)
