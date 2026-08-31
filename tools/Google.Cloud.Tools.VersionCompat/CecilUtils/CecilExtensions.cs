@@ -35,12 +35,6 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
         public static bool IsExported(this PropertyDefinition prop) =>
             (prop.GetMethod?.IsExported() ?? false) || (prop.SetMethod?.IsExported() ?? false);
 
-        public static bool IsDefinedInType(this MethodDefinition method, TypeDefinition type)
-            => method.DeclaringType.FullName == type.FullName;
-
-        public static bool IsDefinedInType(this PropertyDefinition method, TypeDefinition type)
-            => method.DeclaringType.FullName == type.FullName;
-
         public static IEnumerable<TypeDefinition> WithNested(this IEnumerable<TypeDefinition> types) =>
             types.SelectMany(x => x.NestedTypes.WithNested().Prepend(x));
 
@@ -54,8 +48,6 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
         public static bool IsSealedOnly(this TypeDefinition type) => type.IsSealed && !type.IsAbstract;
 
         public static bool IsObject(this TypeReference type) => type.FullName == typeof(object).FullName;
-
-        public static string SafeFullName(this TypeReference type) => type?.FullName ?? "<none>";
 
         public static TypeDefinition Def(this TypeReference type) => type as TypeDefinition;
 
