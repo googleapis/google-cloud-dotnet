@@ -1,5 +1,12 @@
 # Version history
 
+## Version 5.13.0-beta10, released 2026-08-31
+
+### New features
+
+- Standardize Protobuf Message and Enum naming conventions
+- Refactor SpannerDbType to use ForX methods for protobuf initialization
+
 ## Version 5.13.0-beta09, released 2026-08-17
 
 ### New features
