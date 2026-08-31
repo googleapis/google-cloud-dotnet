@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.14.0, released 2026-08-31
+
+### New features
+
+- Add new `AUTOMATIC_MATERIALIZED_VIEW_REFRESH` reservation assignment job type
+- Allow for reservation groups to be updated and expose new `parent_group`, `creation_time`, and `update_time` fields on the group resource
+
+### Documentation improvements
+
+- Mark `FLEX` commitment plan for capacity commitments as deprecated
+- A comment for field `principal` in message `.google.cloud.bigquery.reservation.v1.Assignment` is changed
+
 ## Version 2.13.0, released 2026-08-17
 
 ### New features
