@@ -528,12 +528,12 @@
         },
         {
             "id": "Google.Cloud.Batch.V1",
-            "currentVersion": "2.15.0",
+            "currentVersion": "2.16.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-12-03T08:48:09.426039160Z",
+            "releaseTimestamp": "2026-08-31T19:09:45.293369363Z",
             "lastGeneratedCommit": "8468dce73cf4a39a12c5576a5801e9f4d708a8c3",
-            "lastReleasedCommit": "e48d9994008bcebaa2f3a6f334e6a8de0dd1d994",
+            "lastReleasedCommit": "8468dce73cf4a39a12c5576a5801e9f4d708a8c3",
             "apiPaths": [
                 "google/cloud/batch/v1"
             ],
