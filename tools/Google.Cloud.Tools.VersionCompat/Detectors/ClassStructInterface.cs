@@ -252,13 +252,13 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 else
                 {
                     // Presence/visibility changes.
-                    if (inO && o.IsExported() && o.IsDefinedInType(_o))
+                    if (inO && o.IsExported())
                     {
                         yield return inN ?
                             Diff.Major(C(Cause.MethodMadeNotExported, Cause.CtorMadeNotExported), $"{prefix} made non-public.") :
                             Diff.Major(C(Cause.MethodRemoved, Cause.CtorRemoved), $"{prefix} removed.");
                     }
-                    else if (inN && n.IsExported() && n.IsDefinedInType(_n))
+                    else if (inN && n.IsExported())
                     {
                         var diff = typeType == TypeType.Class || typeType == TypeType.Struct ? (Func<Cause, FormattableString, Diff>) Diff.Minor : Diff.Major;
                         yield return inO ?
