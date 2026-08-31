@@ -3840,12 +3840,12 @@
         },
         {
             "id": "Google.Maps.Routing.V2",
-            "currentVersion": "1.2.0",
+            "currentVersion": "1.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-03-09T14:22:20.618773473Z",
+            "releaseTimestamp": "2026-08-31T19:22:56.283485469Z",
             "lastGeneratedCommit": "63425cf2c0ad42419f704d89ea3477e0ef0b548f",
-            "lastReleasedCommit": "67b1168230d46351fa05aaf11a20b32872339f92",
+            "lastReleasedCommit": "63425cf2c0ad42419f704d89ea3477e0ef0b548f",
             "apiPaths": [
                 "google/maps/routing/v2"
             ],

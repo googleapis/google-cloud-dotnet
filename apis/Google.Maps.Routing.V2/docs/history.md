@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.3.0, released 2026-08-31
+
+### New features
+
+- Publish tunnel, bridge, and skyway fields in Routes API v2
+- Add US_MI_BREAKAWAY toll pass to Routes API v2
+
+### Documentation improvements
+
+- A comment for enum `ExtraComputation` is changed
+- A comment for enum value `HTML_FORMATTED_NAVIGATION_INSTRUCTIONS` in enum `ExtraComputation` is changed
+- A comment for enum value `FLYOVER_INFO_ON_POLYLINE` in enum `ExtraComputation` is changed
+- A comment for enum value `NARROW_ROAD_INFO_ON_POLYLINE` in enum `ExtraComputation` is changed
+- A comment for field `optimize_waypoint_order` in message `.google.maps.routing.v2.ComputeRoutesRequest` is changed
+- A comment for field `navigation_point_token` in message `.google.maps.routing.v2.Waypoint` is changed
+
 ## Version 1.2.0, released 2026-03-09
 
 ### New features
