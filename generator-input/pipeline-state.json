@@ -738,12 +738,12 @@
         },
         {
             "id": "Google.Cloud.BigQuery.Reservation.V1",
-            "currentVersion": "2.13.0",
+            "currentVersion": "2.14.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-08-17T19:16:15.334142813Z",
+            "releaseTimestamp": "2026-08-31T19:13:28.174056574Z",
             "lastGeneratedCommit": "7fe1a59f2e5e875d19a220d5dd07294261e419f8",
-            "lastReleasedCommit": "240b58fe7058f6fff77cba02f51d600170b6c421",
+            "lastReleasedCommit": "7fe1a59f2e5e875d19a220d5dd07294261e419f8",
             "apiPaths": [
                 "google/cloud/bigquery/reservation/v1"
             ],
