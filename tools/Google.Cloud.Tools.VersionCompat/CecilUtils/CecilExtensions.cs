@@ -80,7 +80,42 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 
         public static bool IsStatic(this PropertyDefinition prop) => (prop.GetMethod ?? prop.SetMethod).IsStatic;
 
-        public static bool TryGetLikeMethodFromAncestor(this TypeDefinition descendentType, MethodDefinition referenceMethod, out MethodDefinition methodFromAncestor)
+        public static bool IsBreakableDefintion(this MethodDefinition method)
+        {
+            if (!method.IsVirtual)
+            {
+                return true;
+            }
+
+            return method.IsNewSlot || method.IsFinal;
+        }
+
+        public static bool IsBreakableDefinition(this PropertyDefinition property)
+        {
+            var methodDefinition = property.GetMethod ?? property.SetMethod;
+
+            if (methodDefinition is null)
+            {
+                return false;
+            }
+
+            if (!methodDefinition.IsVirtual)
+            {
+                return true;
+            }
+
+            return methodDefinition.IsNewSlot || methodDefinition.IsFinal;
+        }
+
+        /// <summary>
+        /// Looks up the family tree starting from <paramref name="typeDefinition"/>, and gets the first occurence of <paramref name="referenceMethod"/>
+        /// from it finds, or nothing if no like method is found.
+        /// </summary>
+        /// <param name="descendentType">Type to start from.</param>
+        /// <param name="referenceMethod">Like method to check for</param>
+        /// <param name="methodFromAncestor">Out method to be filled with the found method reference, if one is found.</param>
+        /// <returns></returns>
+        public static bool TryGetMethodFromAncestor(this TypeDefinition descendentType, MethodDefinition referenceMethod, out MethodDefinition methodFromAncestor)
         {
             methodFromAncestor = null;
 
@@ -112,9 +147,20 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
                     && (referenceMethod.IsVirtual ? likeMethod.IsVirtual : true);
         }
 
-        public static bool TryGetAccessorsFromAncestry(this TypeDefinition typeDefinition, PropertyDefinition propertyDefinition, out MethodDefinition getMethod, out MethodDefinition setMethod)
+        /// <summary>
+        /// Looks up the family tree starting from <paramref name="descendentType"/>, and tries to get one of both get and set accessors.
+        ///
+        /// Note: The accessors intentionally may be from separate classes in the family tree, as we want to ensure we are keeping any accessors
+        /// from <paramref name="descendentType"/> itself, if they exist.
+        /// </summary>
+        /// <param name="descendentType">Type to start from.</param>
+        /// <param name="propertyDefinition">Property of the accessors.</param>
+        /// <param name="getMethod">Out get accessor of the property, if one is found.</param>
+        /// <param name="setMethod">Out set accessor of the property, if one is found.</param>
+        /// <returns></returns>
+        public static bool TryGetAccessorsFromAncestry(this TypeDefinition descendentType, PropertyDefinition propertyDefinition, out MethodDefinition getMethod, out MethodDefinition setMethod)
         {
-            var baseType = typeDefinition;
+            var baseType = descendentType;
             getMethod = null;
             setMethod = null;
 
@@ -124,6 +170,11 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
                 {
                     getMethod ??= matchingProperty.GetMethod;
                     setMethod ??= matchingProperty.SetMethod;
+
+                    if (getMethod is not null && setMethod is not null)
+                    {
+                        return true;
+                    }
                 }
 
                 baseType = baseType?.BaseType?.Resolve();

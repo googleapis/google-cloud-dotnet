@@ -160,6 +160,6 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassProperty
         [Fact] public void PropertyGetRemovedWithAncestorImplementation2() => TestNone();
         [Fact] public void PropertySetRemoved() => TestMajor(Cause.PropertyAccessModifierChanged);
         [Fact] public void PropertySetRemovedWithAncestorImplementation() => TestNone();
-        [Fact] public void PropertySetRemovedWithAncestorImplementation2() => TestMinor(Cause.PropertyModifierChanged);
+        [Fact] public void PropertySetRemovedWithAncestorImplementation2() => TestNone();
     }
 }
