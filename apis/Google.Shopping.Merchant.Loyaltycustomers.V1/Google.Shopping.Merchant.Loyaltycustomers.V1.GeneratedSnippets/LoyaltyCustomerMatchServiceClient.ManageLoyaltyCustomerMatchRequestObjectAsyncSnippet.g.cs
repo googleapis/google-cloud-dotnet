@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START confidentialcomputing_v1_generated_ConfidentialComputing_VerifyConfidentialGke_sync]
-    using Google.Cloud.ConfidentialComputing.V1;
+    // [START merchantapi_v1_generated_LoyaltyCustomerMatchService_ManageLoyaltyCustomerMatch_async]
+    using Google.Shopping.Merchant.Loyaltycustomers.V1;
+    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedConfidentialComputingClientSnippets
+    public sealed partial class GeneratedLoyaltyCustomerMatchServiceClientSnippets
     {
-        /// <summary>Snippet for VerifyConfidentialGke</summary>
+        /// <summary>Snippet for ManageLoyaltyCustomerMatchAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,21 +30,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void VerifyConfidentialGkeRequestObject()
+        public async Task ManageLoyaltyCustomerMatchRequestObjectAsync()
         {
             // Create client
-            ConfidentialComputingClient confidentialComputingClient = ConfidentialComputingClient.Create();
+            LoyaltyCustomerMatchServiceClient loyaltyCustomerMatchServiceClient = await LoyaltyCustomerMatchServiceClient.CreateAsync();
             // Initialize request argument(s)
-            VerifyConfidentialGkeRequest request = new VerifyConfidentialGkeRequest
+            ManageLoyaltyCustomerMatchRequest request = new ManageLoyaltyCustomerMatchRequest
             {
-                ChallengeAsChallengeName = ChallengeName.FromProjectLocationUuid("[PROJECT]", "[LOCATION]", "[UUID]"),
-                TpmAttestation = new TpmAttestation(),
-                Options = new VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions(),
-                PlatformType = VerifyConfidentialGkeRequest.Types.PlatformType.Unspecified,
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                LoyaltyCustomer = new LoyaltyCustomer(),
             };
             // Make the request
-            VerifyConfidentialGkeResponse response = confidentialComputingClient.VerifyConfidentialGke(request);
+            ManageLoyaltyCustomerMatchResponse response = await loyaltyCustomerMatchServiceClient.ManageLoyaltyCustomerMatchAsync(request);
         }
     }
-    // [END confidentialcomputing_v1_generated_ConfidentialComputing_VerifyConfidentialGke_sync]
+    // [END merchantapi_v1_generated_LoyaltyCustomerMatchService_ManageLoyaltyCustomerMatch_async]
 }

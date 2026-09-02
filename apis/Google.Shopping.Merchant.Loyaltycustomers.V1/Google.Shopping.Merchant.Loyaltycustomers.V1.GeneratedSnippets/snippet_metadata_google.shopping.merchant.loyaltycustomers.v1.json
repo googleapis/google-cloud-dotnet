@@ -1,0 +1,111 @@
+{
+  "clientLibrary": {
+    "name": "Google.Shopping.Merchant.Loyaltycustomers.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.shopping.merchant.loyaltycustomers.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "merchantapi_v1_generated_LoyaltyCustomerMatchService_ManageLoyaltyCustomerMatch_sync",
+      "title": "ManageLoyaltyCustomerMatchRequestObject",
+      "description": "Snippet for ManageLoyaltyCustomerMatch",
+      "file": "LoyaltyCustomerMatchServiceClient.ManageLoyaltyCustomerMatchRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ManageLoyaltyCustomerMatch",
+        "fullName": "Google.Shopping.Merchant.Loyaltycustomers.V1.LoyaltyCustomerMatchServiceClient.ManageLoyaltyCustomerMatch",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Loyaltycustomers.V1.ManageLoyaltyCustomerMatchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Loyaltycustomers.V1.ManageLoyaltyCustomerMatchResponse",
+        "client": {
+          "shortName": "LoyaltyCustomerMatchServiceClient",
+          "fullName": "Google.Shopping.Merchant.Loyaltycustomers.V1.LoyaltyCustomerMatchServiceClient"
+        },
+        "method": {
+          "shortName": "ManageLoyaltyCustomerMatch",
+          "fullName": "google.shopping.merchant.loyaltycustomers.v1.LoyaltyCustomerMatchService.ManageLoyaltyCustomerMatch",
+          "service": {
+            "shortName": "LoyaltyCustomerMatchService",
+            "fullName": "google.shopping.merchant.loyaltycustomers.v1.LoyaltyCustomerMatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_LoyaltyCustomerMatchService_ManageLoyaltyCustomerMatch_async",
+      "title": "ManageLoyaltyCustomerMatchRequestObjectAsync",
+      "description": "Snippet for ManageLoyaltyCustomerMatchAsync",
+      "file": "LoyaltyCustomerMatchServiceClient.ManageLoyaltyCustomerMatchRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ManageLoyaltyCustomerMatchAsync",
+        "fullName": "Google.Shopping.Merchant.Loyaltycustomers.V1.LoyaltyCustomerMatchServiceClient.ManageLoyaltyCustomerMatchAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Loyaltycustomers.V1.ManageLoyaltyCustomerMatchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Loyaltycustomers.V1.ManageLoyaltyCustomerMatchResponse>",
+        "client": {
+          "shortName": "LoyaltyCustomerMatchServiceClient",
+          "fullName": "Google.Shopping.Merchant.Loyaltycustomers.V1.LoyaltyCustomerMatchServiceClient"
+        },
+        "method": {
+          "shortName": "ManageLoyaltyCustomerMatch",
+          "fullName": "google.shopping.merchant.loyaltycustomers.v1.LoyaltyCustomerMatchService.ManageLoyaltyCustomerMatch",
+          "service": {
+            "shortName": "LoyaltyCustomerMatchService",
+            "fullName": "google.shopping.merchant.loyaltycustomers.v1.LoyaltyCustomerMatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
