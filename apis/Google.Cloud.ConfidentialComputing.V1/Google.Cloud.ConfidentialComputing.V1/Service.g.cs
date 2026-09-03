@@ -158,62 +158,67 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             "cnQYASABKAxCA+BBARIaCg1ha19jZXJ0X2NoYWluGAIgAygMQgPgQQEicgof",
             "VmVyaWZ5Q29uZmlkZW50aWFsU3BhY2VSZXNwb25zZRIeChFhdHRlc3RhdGlv",
             "bl90b2tlbhgBIAEoCUID4EEDEi8KDnBhcnRpYWxfZXJyb3JzGAIgAygLMhIu",
-            "Z29vZ2xlLnJwYy5TdGF0dXNCA+BBAyLZAwocVmVyaWZ5Q29uZmlkZW50aWFs",
+            "Z29vZ2xlLnJwYy5TdGF0dXNCA+BBAyKgBQocVmVyaWZ5Q29uZmlkZW50aWFs",
             "R2tlUmVxdWVzdBJQCg90cG1fYXR0ZXN0YXRpb24YAiABKAsyNS5nb29nbGUu",
             "Y2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlRwbUF0dGVzdGF0aW9u",
             "SAASSQoJY2hhbGxlbmdlGAEgASgJQjbgQQL6QTAKLmNvbmZpZGVudGlhbGNv",
             "bXB1dGluZy5nb29nbGVhcGlzLmNvbS9DaGFsbGVuZ2UScAoHb3B0aW9ucxgD",
             "IAEoCzJaLmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEu",
             "VmVyaWZ5Q29uZmlkZW50aWFsR2tlUmVxdWVzdC5Db25maWRlbnRpYWxHa2VP",
-            "cHRpb25zQgPgQQEalgEKFkNvbmZpZGVudGlhbEdrZU9wdGlvbnMSFQoIYXVk",
-            "aWVuY2UYASABKAlCA+BBARISCgVub25jZRgDIAMoCUID4EEBElEKDnNpZ25h",
-            "dHVyZV90eXBlGAQgASgOMjQuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNv",
-            "bXB1dGluZy52MS5TaWduYXR1cmVUeXBlQgPgQQFCEQoPdGVlX2F0dGVzdGF0",
-            "aW9uIj8KHVZlcmlmeUNvbmZpZGVudGlhbEdrZVJlc3BvbnNlEh4KEWF0dGVz",
-            "dGF0aW9uX3Rva2VuGAEgASgJQgPgQQMqfwoQU2lnbmluZ0FsZ29yaXRobRIh",
-            "Ch1TSUdOSU5HX0FMR09SSVRITV9VTlNQRUNJRklFRBAAEhUKEVJTQVNTQV9Q",
-            "U1NfU0hBMjU2EAESGgoWUlNBU1NBX1BLQ1MxVjE1X1NIQTI1NhACEhUKEUVD",
-            "RFNBX1AyNTZfU0hBMjU2EAMqjgEKCVRva2VuVHlwZRIaChZUT0tFTl9UWVBF",
-            "X1VOU1BFQ0lGSUVEEAASEwoPVE9LRU5fVFlQRV9PSURDEAESEgoOVE9LRU5f",
-            "VFlQRV9QS0kQAhIaChZUT0tFTl9UWVBFX0xJTUlURURfQVdTEAMSIAocVE9L",
-            "RU5fVFlQRV9BV1NfUFJJTkNJUEFMVEFHUxAEKmAKDVNpZ25hdHVyZVR5cGUS",
-            "HgoaU0lHTkFUVVJFX1RZUEVfVU5TUEVDSUZJRUQQABIXChNTSUdOQVRVUkVf",
-            "VFlQRV9PSURDEAESFgoSU0lHTkFUVVJFX1RZUEVfUEtJEAIqYwoMVG9rZW5Q",
-            "cm9maWxlEh0KGVRPS0VOX1BST0ZJTEVfVU5TUEVDSUZJRUQQABIdChlUT0tF",
-            "Tl9QUk9GSUxFX0RFRkFVTFRfRUFUEAESFQoRVE9LRU5fUFJPRklMRV9BV1MQ",
-            "AjK1CAoVQ29uZmlkZW50aWFsQ29tcHV0aW5nEtgBCg9DcmVhdGVDaGFsbGVu",
-            "Z2USPS5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLkNy",
-            "ZWF0ZUNoYWxsZW5nZVJlcXVlc3QaMC5nb29nbGUuY2xvdWQuY29uZmlkZW50",
-            "aWFsY29tcHV0aW5nLnYxLkNoYWxsZW5nZSJU2kEQcGFyZW50LGNoYWxsZW5n",
-            "ZYLT5JMCOyIuL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
-            "Y2hhbGxlbmdlczoJY2hhbGxlbmdlEugBChFWZXJpZnlBdHRlc3RhdGlvbhI/",
-            "Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuVmVyaWZ5",
-            "QXR0ZXN0YXRpb25SZXF1ZXN0GkAuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlh",
-            "bGNvbXB1dGluZy52MS5WZXJpZnlBdHRlc3RhdGlvblJlc3BvbnNlIlCC0+ST",
-            "AkoiRS92MS97Y2hhbGxlbmdlPXByb2plY3RzLyovbG9jYXRpb25zLyovY2hh",
-            "bGxlbmdlcy8qfTp2ZXJpZnlBdHRlc3RhdGlvbjoBKhKAAgoXVmVyaWZ5Q29u",
-            "ZmlkZW50aWFsU3BhY2USRS5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29t",
-            "cHV0aW5nLnYxLlZlcmlmeUNvbmZpZGVudGlhbFNwYWNlUmVxdWVzdBpGLmdv",
-            "b2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuVmVyaWZ5Q29u",
-            "ZmlkZW50aWFsU3BhY2VSZXNwb25zZSJWgtPkkwJQIksvdjEve2NoYWxsZW5n",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NoYWxsZW5nZXMvKn06dmVyaWZ5",
-            "Q29uZmlkZW50aWFsU3BhY2U6ASoS+AEKFVZlcmlmeUNvbmZpZGVudGlhbEdr",
-            "ZRJDLmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuVmVy",
-            "aWZ5Q29uZmlkZW50aWFsR2tlUmVxdWVzdBpELmdvb2dsZS5jbG91ZC5jb25m",
-            "aWRlbnRpYWxjb21wdXRpbmcudjEuVmVyaWZ5Q29uZmlkZW50aWFsR2tlUmVz",
-            "cG9uc2UiVILT5JMCTiJJL3YxL3tjaGFsbGVuZ2U9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9jaGFsbGVuZ2VzLyp9OnZlcmlmeUNvbmZpZGVudGlhbEdrZToB",
-            "KhpYykEkY29uZmlkZW50aWFsY29tcHV0aW5nLmdvb2dsZWFwaXMuY29t0kEu",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
-            "bUKGAwopY29tLmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcu",
-            "djFCDFNlcnZpY2VQcm90b1ABWl9jbG91ZC5nb29nbGUuY29tL2dvL2NvbmZp",
-            "ZGVudGlhbGNvbXB1dGluZy9hcGl2MS9jb25maWRlbnRpYWxjb21wdXRpbmdw",
-            "Yjtjb25maWRlbnRpYWxjb21wdXRpbmdwYqoCJUdvb2dsZS5DbG91ZC5Db25m",
-            "aWRlbnRpYWxDb21wdXRpbmcuVjHKAiVHb29nbGVcQ2xvdWRcQ29uZmlkZW50",
-            "aWFsQ29tcHV0aW5nXFYx6gIoR29vZ2xlOjpDbG91ZDo6Q29uZmlkZW50aWFs",
-            "Q29tcHV0aW5nOjpWMepBbAofY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9JbnN0",
-            "YW5jZRI0cHJvamVjdHMve3Byb2plY3R9L3pvbmVzL3t6b25lfS9pbnN0YW5j",
-            "ZXMve2luc3RhbmNlfSoJaW5zdGFuY2VzMghpbnN0YW5jZWIGcHJvdG8z"));
+            "cHRpb25zQgPgQQESbAoNcGxhdGZvcm1fdHlwZRgEIAEoDjJQLmdvb2dsZS5j",
+            "bG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuVmVyaWZ5Q29uZmlkZW50",
+            "aWFsR2tlUmVxdWVzdC5QbGF0Zm9ybVR5cGVCA+BBARqWAQoWQ29uZmlkZW50",
+            "aWFsR2tlT3B0aW9ucxIVCghhdWRpZW5jZRgBIAEoCUID4EEBEhIKBW5vbmNl",
+            "GAMgAygJQgPgQQESUQoOc2lnbmF0dXJlX3R5cGUYBCABKA4yNC5nb29nbGUu",
+            "Y2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlNpZ25hdHVyZVR5cGVC",
+            "A+BBASJXCgxQbGF0Zm9ybVR5cGUSHQoZUExBVEZPUk1fVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEhMKD1ZJUlRVQUxJWkVEX0NWTRABEhMKD0JBUkVfTUVUQUxfVlRQ",
+            "TRACQhEKD3RlZV9hdHRlc3RhdGlvbiI/Ch1WZXJpZnlDb25maWRlbnRpYWxH",
+            "a2VSZXNwb25zZRIeChFhdHRlc3RhdGlvbl90b2tlbhgBIAEoCUID4EEDKn8K",
+            "EFNpZ25pbmdBbGdvcml0aG0SIQodU0lHTklOR19BTEdPUklUSE1fVU5TUEVD",
+            "SUZJRUQQABIVChFSU0FTU0FfUFNTX1NIQTI1NhABEhoKFlJTQVNTQV9QS0NT",
+            "MVYxNV9TSEEyNTYQAhIVChFFQ0RTQV9QMjU2X1NIQTI1NhADKo4BCglUb2tl",
+            "blR5cGUSGgoWVE9LRU5fVFlQRV9VTlNQRUNJRklFRBAAEhMKD1RPS0VOX1RZ",
+            "UEVfT0lEQxABEhIKDlRPS0VOX1RZUEVfUEtJEAISGgoWVE9LRU5fVFlQRV9M",
+            "SU1JVEVEX0FXUxADEiAKHFRPS0VOX1RZUEVfQVdTX1BSSU5DSVBBTFRBR1MQ",
+            "BCpgCg1TaWduYXR1cmVUeXBlEh4KGlNJR05BVFVSRV9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASFwoTU0lHTkFUVVJFX1RZUEVfT0lEQxABEhYKElNJR05BVFVSRV9U",
+            "WVBFX1BLSRACKmMKDFRva2VuUHJvZmlsZRIdChlUT0tFTl9QUk9GSUxFX1VO",
+            "U1BFQ0lGSUVEEAASHQoZVE9LRU5fUFJPRklMRV9ERUZBVUxUX0VBVBABEhUK",
+            "EVRPS0VOX1BST0ZJTEVfQVdTEAIytQgKFUNvbmZpZGVudGlhbENvbXB1dGlu",
+            "ZxLYAQoPQ3JlYXRlQ2hhbGxlbmdlEj0uZ29vZ2xlLmNsb3VkLmNvbmZpZGVu",
+            "dGlhbGNvbXB1dGluZy52MS5DcmVhdGVDaGFsbGVuZ2VSZXF1ZXN0GjAuZ29v",
+            "Z2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5DaGFsbGVuZ2Ui",
+            "VNpBEHBhcmVudCxjaGFsbGVuZ2WC0+STAjsiLi92MS97cGFyZW50PXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyp9L2NoYWxsZW5nZXM6CWNoYWxsZW5nZRLoAQoR",
+            "VmVyaWZ5QXR0ZXN0YXRpb24SPy5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFs",
+            "Y29tcHV0aW5nLnYxLlZlcmlmeUF0dGVzdGF0aW9uUmVxdWVzdBpALmdvb2ds",
+            "ZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuVmVyaWZ5QXR0ZXN0",
+            "YXRpb25SZXNwb25zZSJQgtPkkwJKIkUvdjEve2NoYWxsZW5nZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2NoYWxsZW5nZXMvKn06dmVyaWZ5QXR0ZXN0YXRp",
+            "b246ASoSgAIKF1ZlcmlmeUNvbmZpZGVudGlhbFNwYWNlEkUuZ29vZ2xlLmNs",
+            "b3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5WZXJpZnlDb25maWRlbnRp",
+            "YWxTcGFjZVJlcXVlc3QaRi5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29t",
+            "cHV0aW5nLnYxLlZlcmlmeUNvbmZpZGVudGlhbFNwYWNlUmVzcG9uc2UiVoLT",
+            "5JMCUCJLL3YxL3tjaGFsbGVuZ2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9j",
+            "aGFsbGVuZ2VzLyp9OnZlcmlmeUNvbmZpZGVudGlhbFNwYWNlOgEqEvgBChVW",
+            "ZXJpZnlDb25maWRlbnRpYWxHa2USQy5nb29nbGUuY2xvdWQuY29uZmlkZW50",
+            "aWFsY29tcHV0aW5nLnYxLlZlcmlmeUNvbmZpZGVudGlhbEdrZVJlcXVlc3Qa",
+            "RC5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlZlcmlm",
+            "eUNvbmZpZGVudGlhbEdrZVJlc3BvbnNlIlSC0+STAk4iSS92MS97Y2hhbGxl",
+            "bmdlPXByb2plY3RzLyovbG9jYXRpb25zLyovY2hhbGxlbmdlcy8qfTp2ZXJp",
+            "ZnlDb25maWRlbnRpYWxHa2U6ASoaWMpBJGNvbmZpZGVudGlhbGNvbXB1dGlu",
+            "Zy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
+            "L2F1dGgvY2xvdWQtcGxhdGZvcm1ChgMKKWNvbS5nb29nbGUuY2xvdWQuY29u",
+            "ZmlkZW50aWFsY29tcHV0aW5nLnYxQgxTZXJ2aWNlUHJvdG9QAVpfY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9jb25maWRlbnRpYWxjb21wdXRpbmcvYXBpdjEvY29u",
+            "ZmlkZW50aWFsY29tcHV0aW5ncGI7Y29uZmlkZW50aWFsY29tcHV0aW5ncGKq",
+            "AiVHb29nbGUuQ2xvdWQuQ29uZmlkZW50aWFsQ29tcHV0aW5nLlYxygIlR29v",
+            "Z2xlXENsb3VkXENvbmZpZGVudGlhbENvbXB1dGluZ1xWMeoCKEdvb2dsZTo6",
+            "Q2xvdWQ6OkNvbmZpZGVudGlhbENvbXB1dGluZzo6VjHqQWwKH2NvbXB1dGUu",
+            "Z29vZ2xlYXBpcy5jb20vSW5zdGFuY2USNHByb2plY3RzL3twcm9qZWN0fS96",
+            "b25lcy97em9uZX0vaW5zdGFuY2VzL3tpbnN0YW5jZX0qCWluc3RhbmNlczII",
+            "aW5zdGFuY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm), typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenType), typeof(global::Google.Cloud.ConfidentialComputing.V1.SignatureType), typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenProfile), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -238,7 +243,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Parser, new[]{ "TdCcel", "TpmAttestation", "Challenge", "GcpCredentials", "SignedEntities", "GceShieldedIdentity", "Options", "NvidiaAttestation" }, new[]{ "TeeAttestation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions.Parser, new[]{ "AwsPrincipalTagsOptions", "Audience", "TokenProfile", "Nonce", "SignatureType" }, new[]{ "TokenProfileOptions" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.GceShieldedIdentity), global::Google.Cloud.ConfidentialComputing.V1.GceShieldedIdentity.Parser, new[]{ "AkCert", "AkCertChain" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse.Parser, new[]{ "AttestationToken", "PartialErrors" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Parser, new[]{ "TpmAttestation", "Challenge", "Options" }, new[]{ "TeeAttestation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions.Parser, new[]{ "Audience", "Nonce", "SignatureType" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Parser, new[]{ "TpmAttestation", "Challenge", "Options", "PlatformType" }, new[]{ "TeeAttestation" }, new[]{ typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.PlatformType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions.Parser, new[]{ "Audience", "Nonce", "SignatureType" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse.Parser, new[]{ "AttestationToken" }, null, null, null, null)
           }));
     }
@@ -8296,6 +8301,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     public VerifyConfidentialGkeRequest(VerifyConfidentialGkeRequest other) : this() {
       challenge_ = other.challenge_;
       options_ = other.options_ != null ? other.options_.Clone() : null;
+      platformType_ = other.platformType_;
       switch (other.TeeAttestationCase) {
         case TeeAttestationOneofCase.TpmAttestation:
           TpmAttestation = other.TpmAttestation.Clone();
@@ -8359,6 +8365,22 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
     }
 
+    /// <summary>Field number for the "platform_type" field.</summary>
+    public const int PlatformTypeFieldNumber = 4;
+    private global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.PlatformType platformType_ = global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.PlatformType.Unspecified;
+    /// <summary>
+    /// Optional. Optional platform security architecture hint for the verifier
+    /// engine. Defaults to `VIRTUALIZED_CVM` behavior if unspecified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.PlatformType PlatformType {
+      get { return platformType_; }
+      set {
+        platformType_ = value;
+      }
+    }
+
     private object teeAttestation_;
     /// <summary>Enum of possible cases for the "tee_attestation" oneof.</summary>
     public enum TeeAttestationOneofCase {
@@ -8397,6 +8419,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       if (!object.Equals(TpmAttestation, other.TpmAttestation)) return false;
       if (Challenge != other.Challenge) return false;
       if (!object.Equals(Options, other.Options)) return false;
+      if (PlatformType != other.PlatformType) return false;
       if (TeeAttestationCase != other.TeeAttestationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -8408,6 +8431,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       if (teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation) hash ^= TpmAttestation.GetHashCode();
       if (Challenge.Length != 0) hash ^= Challenge.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
+      if (PlatformType != global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.PlatformType.Unspecified) hash ^= PlatformType.GetHashCode();
       hash ^= (int) teeAttestationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -8439,6 +8463,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Options);
       }
+      if (PlatformType != global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.PlatformType.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) PlatformType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8461,6 +8489,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Options);
       }
+      if (PlatformType != global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.PlatformType.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) PlatformType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8479,6 +8511,9 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
       if (options_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
+      }
+      if (PlatformType != global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.PlatformType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PlatformType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8500,6 +8535,9 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
           Options = new global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.ConfidentialGkeOptions();
         }
         Options.MergeFrom(other.Options);
+      }
+      if (other.PlatformType != global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.PlatformType.Unspecified) {
+        PlatformType = other.PlatformType;
       }
       switch (other.TeeAttestationCase) {
         case TeeAttestationOneofCase.TpmAttestation:
@@ -8549,6 +8587,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             input.ReadMessage(Options);
             break;
           }
+          case 32: {
+            PlatformType = (global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.PlatformType) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -8588,6 +8630,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             input.ReadMessage(Options);
             break;
           }
+          case 32: {
+            PlatformType = (global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Types.PlatformType) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -8598,6 +8644,25 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Platform types supported by Confidential GKE.
+      /// This enum is not frozen, and new values may be added in the future.
+      /// </summary>
+      public enum PlatformType {
+        /// <summary>
+        /// Unspecified platform type, defaults to `VIRTUALIZED_CVM`.
+        /// </summary>
+        [pbr::OriginalName("PLATFORM_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Standard virtualized Confidential GKE VM.
+        /// </summary>
+        [pbr::OriginalName("VIRTUALIZED_CVM")] VirtualizedCvm = 1,
+        /// <summary>
+        /// Bare Metal host using a vTPM.
+        /// </summary>
+        [pbr::OriginalName("BARE_METAL_VTPM")] BareMetalVtpm = 2,
+      }
+
       /// <summary>
       /// Token options for Confidential GKE attestation.
       /// </summary>
