@@ -54,7 +54,7 @@ namespace Google.Cloud.Spanner.Data
             internal SpannerTransactionOptions EphemeralTransactionOptions { get; }
             internal CommandPartition Partition { get; }
             internal SpannerParameterCollection Parameters { get; }
-            internal SpannerParameter Payload { get; }
+            internal Payload Payload { get; }
             internal KeySet KeySet { get; }
             internal QueryOptions QueryOptions { get; }
             internal Priority Priority { get; }
@@ -409,6 +409,7 @@ namespace Google.Cloud.Spanner.Data
                     var sendMutation = new Mutation.Types.Send
                     {
                         Queue = CommandTextBuilder.TargetTable,
+                        Payload = Payload.Value,
                         DeliverTime = DeliverAt.HasValue ? Timestamp.FromDateTime(DeliverAt.Value.ToUniversalTime()) : null,
                     };
 
@@ -416,15 +417,6 @@ namespace Google.Cloud.Spanner.Data
                     GaxPreconditions.CheckState((KeySet?.Keys?.Count() ?? 0) == 1,
                             $"{SpannerCommandType.Send} must include exactly one key");
                     sendMutation.Key = KeySet.Keys.First().ToProtobuf(conversionOptions);
-
-                    // Payload
-                    var payload = GaxPreconditions.CheckNotNull(Payload, nameof(Payload));
-                    SpannerDbType payloadType = payload.GetConfiguredSpannerDbType(conversionOptions);
-                    GaxPreconditions.CheckState(
-                        payloadType.TypeCode is V1.TypeCode.Bytes or V1.TypeCode.Proto or
-                        V1.TypeCode.Json or V1.TypeCode.String,
-                        $"{nameof(sendMutation.Payload)} must be one of type Bytes, String, Json, or Protobuf message");
-                    sendMutation.Payload = payloadType.ToProtobufValue(Payload.GetValidatedValue());
 
                     return [new() { Send = sendMutation }];
                 }
