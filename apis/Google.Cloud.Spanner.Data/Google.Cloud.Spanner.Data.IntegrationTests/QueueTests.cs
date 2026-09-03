@@ -34,8 +34,14 @@ public class QueueTests
     {
         using var connection = _queueFixture.GetConnection();
         var key = KeyFromLongPair(1, 1);
-
-        var payload = new SpannerParameter("Payload", SpannerDbType.Bytes, Encoding.UTF8.GetBytes("hello"));
+        var payload = Payload.FromProtobufMessage(new Rectangle
+        {
+            TopRight = new Point { X = 1, Y = 1 },
+            Width = 10,
+            Height = 5,
+        });
+        //var payload = Payload.FromJson("{\"Hello\": \"World\"}");
+        //var payload = Payload.FromString("Hello, World");
 
         // Send Message
         using var sendCommand = connection.CreateSendCommand(_queueFixture.QueueName, key, payload);
@@ -59,7 +65,7 @@ public class QueueTests
     {
         using var connection = _queueFixture.GetConnection();
         var key = KeyFromLongPair(1, 1);
-        var payload = new SpannerParameter("Payload", SpannerDbType.Bytes, Encoding.UTF8.GetBytes("hello"));
+        var payload = Payload.FromString("Hello, World");
         int deliveryDelay = 10;
 
         // Send Message
@@ -86,9 +92,9 @@ public class QueueTests
         for (long i = 0; i < 10; i++)
         {
             var key = KeyFromLongPair(1L, i);
-            var payloadAsBytes = new SpannerParameter("Payload", SpannerDbType.Bytes, Encoding.UTF8.GetBytes("hello"));
+            var payload = Payload.FromBytes(Encoding.UTF8.GetBytes("Hello, World"));
 
-            using var sendCommand = connection.CreateSendCommand(_queueFixture.QueueName, key, payloadAsBytes);
+            using var sendCommand = connection.CreateSendCommand(_queueFixture.QueueName, key, payload);
             await sendCommand.ExecuteNonQueryAsync();
         }
 
