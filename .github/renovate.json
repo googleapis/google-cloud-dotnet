@@ -346,6 +346,7 @@
     "apis/Google.Shopping.Merchant.IssueResolution.V1Beta/Google.Shopping.Merchant.IssueResolution.V1Beta/**",
     "apis/Google.Shopping.Merchant.Lfp.V1/Google.Shopping.Merchant.Lfp.V1/**",
     "apis/Google.Shopping.Merchant.Lfp.V1Beta/Google.Shopping.Merchant.Lfp.V1Beta/**",
+    "apis/Google.Shopping.Merchant.Loyaltycustomers.V1/Google.Shopping.Merchant.Loyaltycustomers.V1/**",
     "apis/Google.Shopping.Merchant.Notifications.V1/Google.Shopping.Merchant.Notifications.V1/**",
     "apis/Google.Shopping.Merchant.Notifications.V1Beta/Google.Shopping.Merchant.Notifications.V1Beta/**",
     "apis/Google.Shopping.Merchant.OrderTracking.V1/Google.Shopping.Merchant.OrderTracking.V1/**",
