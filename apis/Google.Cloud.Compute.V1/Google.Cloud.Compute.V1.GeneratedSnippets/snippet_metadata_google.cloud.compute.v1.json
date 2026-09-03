@@ -156483,6 +156483,222 @@
       ]
     },
     {
+      "regionTag": "compute_v1_generated_ReservationSlots_GetHealth_sync",
+      "title": "GetHealthRequestObject",
+      "description": "Snippet for GetHealth",
+      "file": "ReservationSlotsClient.GetHealthRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetHealth",
+        "fullName": "Google.Cloud.Compute.V1.ReservationSlotsClient.GetHealth",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetHealthReservationSlotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "ReservationSlotsClient",
+          "fullName": "Google.Cloud.Compute.V1.ReservationSlotsClient"
+        },
+        "method": {
+          "shortName": "GetHealth",
+          "fullName": "google.cloud.compute.v1.ReservationSlots.GetHealth",
+          "service": {
+            "shortName": "ReservationSlots",
+            "fullName": "google.cloud.compute.v1.ReservationSlots"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ReservationSlots_GetHealth_async",
+      "title": "GetHealthRequestObjectAsync",
+      "description": "Snippet for GetHealthAsync",
+      "file": "ReservationSlotsClient.GetHealthRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetHealthAsync",
+        "fullName": "Google.Cloud.Compute.V1.ReservationSlotsClient.GetHealthAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Compute.V1.GetHealthReservationSlotRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "ReservationSlotsClient",
+          "fullName": "Google.Cloud.Compute.V1.ReservationSlotsClient"
+        },
+        "method": {
+          "shortName": "GetHealth",
+          "fullName": "google.cloud.compute.v1.ReservationSlots.GetHealth",
+          "service": {
+            "shortName": "ReservationSlots",
+            "fullName": "google.cloud.compute.v1.ReservationSlots"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ReservationSlots_GetHealth_sync_flattened",
+      "title": "GetHealth",
+      "description": "Snippet for GetHealth",
+      "file": "ReservationSlotsClient.GetHealthSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetHealth",
+        "fullName": "Google.Cloud.Compute.V1.ReservationSlotsClient.GetHealth",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "parentName"
+          },
+          {
+            "type": "System.String",
+            "name": "reservationSlot"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>",
+        "client": {
+          "shortName": "ReservationSlotsClient",
+          "fullName": "Google.Cloud.Compute.V1.ReservationSlotsClient"
+        },
+        "method": {
+          "shortName": "GetHealth",
+          "fullName": "google.cloud.compute.v1.ReservationSlots.GetHealth",
+          "service": {
+            "shortName": "ReservationSlots",
+            "fullName": "google.cloud.compute.v1.ReservationSlots"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "compute_v1_generated_ReservationSlots_GetHealth_async_flattened",
+      "title": "GetHealthAsync",
+      "description": "Snippet for GetHealthAsync",
+      "file": "ReservationSlotsClient.GetHealthAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetHealthAsync",
+        "fullName": "Google.Cloud.Compute.V1.ReservationSlotsClient.GetHealthAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "zone"
+          },
+          {
+            "type": "System.String",
+            "name": "parentName"
+          },
+          {
+            "type": "System.String",
+            "name": "reservationSlot"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Compute.V1.Operation, Google.Cloud.Compute.V1.Operation>>",
+        "client": {
+          "shortName": "ReservationSlotsClient",
+          "fullName": "Google.Cloud.Compute.V1.ReservationSlotsClient"
+        },
+        "method": {
+          "shortName": "GetHealth",
+          "fullName": "google.cloud.compute.v1.ReservationSlots.GetHealth",
+          "service": {
+            "shortName": "ReservationSlots",
+            "fullName": "google.cloud.compute.v1.ReservationSlots"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "compute_v1_generated_ReservationSlots_GetVersion_sync",
       "title": "GetVersionRequestObject",
       "description": "Snippet for GetVersion",
