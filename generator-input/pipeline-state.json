@@ -232,7 +232,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-08-17T19:08:20.014991588Z",
-            "lastGeneratedCommit": "ca91093129b6744ee1dbb062381cdf63dcec669b",
+            "lastGeneratedCommit": "2da94cf0b29c2d16707915d07f47714fc46d1423",
             "lastReleasedCommit": "ca91093129b6744ee1dbb062381cdf63dcec669b",
             "apiPaths": [
                 "google/cloud/alloydb/v1alpha"
@@ -247,7 +247,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-08-17T19:10:25.329651764Z",
-            "lastGeneratedCommit": "37c83e244b70c6bfa1a527be976950226b2ee5b2",
+            "lastGeneratedCommit": "da1f35d9096888cca86cb2c59fab46c9ea08b39e",
             "lastReleasedCommit": "37c83e244b70c6bfa1a527be976950226b2ee5b2",
             "apiPaths": [
                 "google/cloud/alloydb/v1beta"
@@ -1062,7 +1062,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-08-31T19:15:48.862274296Z",
-            "lastGeneratedCommit": "97a7f42b53391689a71a2e30c5ddbb11e402e6c7",
+            "lastGeneratedCommit": "31daafc7af507fab68f0317a5b15a382ba2c3fda",
             "lastReleasedCommit": "97a7f42b53391689a71a2e30c5ddbb11e402e6c7",
             "apiPaths": [
                 "google/cloud/compute/v1"
@@ -1077,7 +1077,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-06-15T14:16:54.177663226Z",
-            "lastGeneratedCommit": "00bb3db8a8cc88f0755e872856462b902d6dd8c4",
+            "lastGeneratedCommit": "02fc2b28bc702c8bb45735631ea0ad66893067fb",
             "lastReleasedCommit": "00bb3db8a8cc88f0755e872856462b902d6dd8c4",
             "apiPaths": [
                 "google/cloud/confidentialcomputing/v1"
@@ -1092,7 +1092,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T09:10:13.213829362Z",
-            "lastGeneratedCommit": "4e434c1c1fc79b51fd68d576b337fa0ed387f54c",
+            "lastGeneratedCommit": "02fc2b28bc702c8bb45735631ea0ad66893067fb",
             "lastReleasedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/confidentialcomputing/v1alpha1"
@@ -2227,7 +2227,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-01-26T14:10:54.053721846Z",
-            "lastGeneratedCommit": "6a884cdff865c7b92ec43918680bf711685f1447",
+            "lastGeneratedCommit": "2bc8a1bed3f793b50c71efb6ebd0b31086e0113d",
             "lastReleasedCommit": "cb268fbea71671755aa2df8db5ced13084fabf6a",
             "apiPaths": [
                 "google/cloud/networkconnectivity/v1"
@@ -4936,7 +4936,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-07-28T23:30:32.012443145Z",
-            "lastGeneratedCommit": "6a884cdff865c7b92ec43918680bf711685f1447",
+            "lastGeneratedCommit": "2bc8a1bed3f793b50c71efb6ebd0b31086e0113d",
             "lastReleasedCommit": "6a884cdff865c7b92ec43918680bf711685f1447",
             "apiPaths": [
                 "google/cloud/networkconnectivity/v1beta"
@@ -5205,6 +5205,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "a0cd3979560fe756f652608469ef23a09b3fdb10",
             "apiPaths": [
                 "google/shopping/merchant/loyaltycustomers/v1"
             ],

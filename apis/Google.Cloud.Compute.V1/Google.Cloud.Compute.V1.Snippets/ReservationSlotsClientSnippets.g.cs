@@ -99,6 +99,144 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetHealth</summary>
+        public void GetHealthRequestObject()
+        {
+            // Snippet: GetHealth(GetHealthReservationSlotRequest, CallSettings)
+            // Create client
+            ReservationSlotsClient reservationSlotsClient = ReservationSlotsClient.Create();
+            // Initialize request argument(s)
+            GetHealthReservationSlotRequest request = new GetHealthReservationSlotRequest
+            {
+                Zone = "",
+                RequestId = "",
+                Project = "",
+                ReservationSlot = "",
+                ParentName = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = reservationSlotsClient.GetHealth(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = reservationSlotsClient.PollOnceGetHealth(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHealthAsync</summary>
+        public async Task GetHealthRequestObjectAsync()
+        {
+            // Snippet: GetHealthAsync(GetHealthReservationSlotRequest, CallSettings)
+            // Additional: GetHealthAsync(GetHealthReservationSlotRequest, CancellationToken)
+            // Create client
+            ReservationSlotsClient reservationSlotsClient = await ReservationSlotsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetHealthReservationSlotRequest request = new GetHealthReservationSlotRequest
+            {
+                Zone = "",
+                RequestId = "",
+                Project = "",
+                ReservationSlot = "",
+                ParentName = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await reservationSlotsClient.GetHealthAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await reservationSlotsClient.PollOnceGetHealthAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHealth</summary>
+        public void GetHealth()
+        {
+            // Snippet: GetHealth(string, string, string, string, CallSettings)
+            // Create client
+            ReservationSlotsClient reservationSlotsClient = ReservationSlotsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentName = "";
+            string reservationSlot = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = reservationSlotsClient.GetHealth(project, zone, parentName, reservationSlot);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = reservationSlotsClient.PollOnceGetHealth(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHealthAsync</summary>
+        public async Task GetHealthAsync()
+        {
+            // Snippet: GetHealthAsync(string, string, string, string, CallSettings)
+            // Additional: GetHealthAsync(string, string, string, string, CancellationToken)
+            // Create client
+            ReservationSlotsClient reservationSlotsClient = await ReservationSlotsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentName = "";
+            string reservationSlot = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await reservationSlotsClient.GetHealthAsync(project, zone, parentName, reservationSlot);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await reservationSlotsClient.PollOnceGetHealthAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetVersion</summary>
         public void GetVersionRequestObject()
         {

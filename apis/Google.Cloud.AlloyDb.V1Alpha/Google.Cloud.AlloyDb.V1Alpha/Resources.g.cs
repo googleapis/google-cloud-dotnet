@@ -414,28 +414,28 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
             "U0lDEAESFgoSSU5TVEFOQ0VfVklFV19GVUxMEAIqZwoLQ2x1c3RlclZpZXcS",
             "HAoYQ0xVU1RFUl9WSUVXX1VOU1BFQ0lGSUVEEAASFgoSQ0xVU1RFUl9WSUVX",
             "X0JBU0lDEAESIgoeQ0xVU1RFUl9WSUVXX0NPTlRJTlVPVVNfQkFDS1VQEAIq",
-            "nQEKD0RhdGFiYXNlVmVyc2lvbhIgChxEQVRBQkFTRV9WRVJTSU9OX1VOU1BF",
+            "rgEKD0RhdGFiYXNlVmVyc2lvbhIgChxEQVRBQkFTRV9WRVJTSU9OX1VOU1BF",
             "Q0lGSUVEEAASEwoLUE9TVEdSRVNfMTMQARoCCAESDwoLUE9TVEdSRVNfMTQQ",
             "AhIPCgtQT1NUR1JFU18xNRADEg8KC1BPU1RHUkVTXzE2EAQSDwoLUE9TVEdS",
-            "RVNfMTcQBRIPCgtQT1NUR1JFU18xOBAGKk4KEFN1YnNjcmlwdGlvblR5cGUS",
-            "IQodU1VCU0NSSVBUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIMCghTVEFOREFS",
-            "RBABEgkKBVRSSUFMEAJCwAUKIGNvbS5nb29nbGUuY2xvdWQuYWxsb3lkYi52",
-            "MWFscGhhQg5SZXNvdXJjZXNQcm90b1ABWjpjbG91ZC5nb29nbGUuY29tL2dv",
-            "L2FsbG95ZGIvYXBpdjFhbHBoYS9hbGxveWRicGI7YWxsb3lkYnBiqgIcR29v",
-            "Z2xlLkNsb3VkLkFsbG95RGIuVjFBbHBoYcoCHEdvb2dsZVxDbG91ZFxBbGxv",
-            "eURiXFYxYWxwaGHqAh9Hb29nbGU6OkNsb3VkOjpBbGxveURCOjpWMWFscGhh",
-            "6kGmAQooY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5VmVyc2lv",
-            "bhJ6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tl",
-            "eVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tleX0vY3J5",
-            "cHRvS2V5VmVyc2lvbnMve2NyeXB0b19rZXlfdmVyc2lvbn3qQU4KHmNvbXB1",
-            "dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29yaxIscHJvamVjdHMve3Byb2plY3R9",
-            "L2dsb2JhbC9uZXR3b3Jrcy97bmV0d29ya33qQXgKIWNsb3Vka21zLmdvb2ds",
-            "ZWFwaXMuY29tL0NyeXB0b0tleRJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L2tleVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5",
-            "cy97Y3J5cHRvX2tleX3qQXcKKGNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vU2Vy",
-            "dmljZUF0dGFjaG1lbnQSS3Byb2plY3RzL3twcm9qZWN0fS9yZWdpb25zL3ty",
-            "ZWdpb259L3NlcnZpY2VBdHRhY2htZW50cy97c2VydmljZV9hdHRhY2htZW50",
-            "fWIGcHJvdG8z"));
+            "RVNfMTcQBRIPCgtQT1NUR1JFU18xOBAGEg8KC1BPU1RHUkVTXzE5EAcqTgoQ",
+            "U3Vic2NyaXB0aW9uVHlwZRIhCh1TVUJTQ1JJUFRJT05fVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEgwKCFNUQU5EQVJEEAESCQoFVFJJQUwQAkLABQogY29tLmdvb2ds",
+            "ZS5jbG91ZC5hbGxveWRiLnYxYWxwaGFCDlJlc291cmNlc1Byb3RvUAFaOmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vYWxsb3lkYi9hcGl2MWFscGhhL2FsbG95ZGJw",
+            "YjthbGxveWRicGKqAhxHb29nbGUuQ2xvdWQuQWxsb3lEYi5WMUFscGhhygIc",
+            "R29vZ2xlXENsb3VkXEFsbG95RGJcVjFhbHBoYeoCH0dvb2dsZTo6Q2xvdWQ6",
+            "OkFsbG95REI6OlYxYWxwaGHqQaYBCihjbG91ZGttcy5nb29nbGVhcGlzLmNv",
+            "bS9DcnlwdG9LZXlWZXJzaW9uEnpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlz",
+            "L3tjcnlwdG9fa2V5fS9jcnlwdG9LZXlWZXJzaW9ucy97Y3J5cHRvX2tleV92",
+            "ZXJzaW9ufepBTgoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEixw",
+            "cm9qZWN0cy97cHJvamVjdH0vZ2xvYmFsL25ldHdvcmtzL3tuZXR3b3JrfepB",
+            "eAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5ElNwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tl",
+            "eV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fepBdwooY29tcHV0ZS5n",
+            "b29nbGVhcGlzLmNvbS9TZXJ2aWNlQXR0YWNobWVudBJLcHJvamVjdHMve3By",
+            "b2plY3R9L3JlZ2lvbnMve3JlZ2lvbn0vc2VydmljZUF0dGFjaG1lbnRzL3tz",
+            "ZXJ2aWNlX2F0dGFjaG1lbnR9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AlloyDb.V1Alpha.CsqlResourcesReflection.Descriptor, global::Google.Cloud.AlloyDb.V1Alpha.GeminiReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AlloyDb.V1Alpha.InstanceView), typeof(global::Google.Cloud.AlloyDb.V1Alpha.ClusterView), typeof(global::Google.Cloud.AlloyDb.V1Alpha.DatabaseVersion), typeof(global::Google.Cloud.AlloyDb.V1Alpha.SubscriptionType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -567,6 +567,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
     /// The database version is Postgres 18.
     /// </summary>
     [pbr::OriginalName("POSTGRES_18")] Postgres18 = 6,
+    /// <summary>
+    /// The database version is Postgres 19.
+    /// </summary>
+    [pbr::OriginalName("POSTGRES_19")] Postgres19 = 7,
   }
 
   /// <summary>
