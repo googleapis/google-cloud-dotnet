@@ -54,6 +54,7 @@ namespace Google.Cloud.Spanner.Data
             internal SpannerTransactionOptions EphemeralTransactionOptions { get; }
             internal CommandPartition Partition { get; }
             internal SpannerParameterCollection Parameters { get; }
+            internal SpannerParameter Payload { get; }
             internal KeySet KeySet { get; }
             internal QueryOptions QueryOptions { get; }
             internal Priority Priority { get; }
@@ -61,6 +62,8 @@ namespace Google.Cloud.Spanner.Data
             internal DirectedReadOptions DirectedReadOptions { get; }
             internal ClientContext ClientContext { get; }
             internal SpannerConversionOptions ConversionOptions => SpannerConversionOptions.ForConnection(Connection);
+            internal DateTime? DeliverAt { get; }
+            internal bool? IgnoreNotFound { get; }
 
             public ExecutableCommand(SpannerCommand command)
             {
@@ -70,6 +73,7 @@ namespace Google.Cloud.Spanner.Data
                 CommandTimeout = command.CommandTimeout;
                 Partition = command.Partition;
                 Parameters = command.Parameters;
+                Payload = command.Payload;
                 KeySet = command.KeySet;
                 Transaction = command._transaction;
                 QueryOptions = command.QueryOptions;
@@ -80,6 +84,8 @@ namespace Google.Cloud.Spanner.Data
                 EphemeralTransactionCreationOptions = command.EphemeralTransactionCreationOptions;
                 EphemeralTransactionOptions = new SpannerTransactionOptions(command.EphemeralTransactionOptions);
                 EphemeralTransactionOptions.CommitPriority ??= Priority;
+                DeliverAt = command.DeliverAt;
+                IgnoreNotFound = command.IgnoreNotFound;
             }
 
             // ExecuteScalar is simply implemented in terms of ExecuteReader.
@@ -180,6 +186,8 @@ namespace Google.Cloud.Spanner.Data
                     case SpannerCommandType.Insert:
                     case SpannerCommandType.InsertOrUpdate:
                     case SpannerCommandType.Update:
+                    case SpannerCommandType.Send:
+                    case SpannerCommandType.Ack:
                         return ExecuteMutationsAsync(cancellationToken);
                     case SpannerCommandType.Dml:
                         return ExecuteDmlAsync(cancellationToken);
@@ -368,7 +376,9 @@ namespace Google.Cloud.Spanner.Data
                     Values = { Parameters.Select(x => x.GetConfiguredSpannerDbType(conversionOptions).ToProtobufValue(x.GetValidatedValue())) }
                 };
 
-                if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Delete)
+                if (CommandTextBuilder.SpannerCommandType == SpannerCommandType.Insert ||
+                    CommandTextBuilder.SpannerCommandType == SpannerCommandType.Update ||
+                    CommandTextBuilder.SpannerCommandType == SpannerCommandType.InsertOrUpdate)
                 {
                     var w = new Mutation.Types.Write
                     {
@@ -393,6 +403,45 @@ namespace Google.Cloud.Spanner.Data
                         default:
                             throw new ArgumentOutOfRangeException();
                     }
+                }
+                else if (CommandTextBuilder.SpannerCommandType == SpannerCommandType.Send)
+                {
+                    var sendMutation = new Mutation.Types.Send
+                    {
+                        Queue = CommandTextBuilder.TargetTable,
+                        DeliverTime = DeliverAt.HasValue ? Timestamp.FromDateTime(DeliverAt.Value.ToUniversalTime()) : null,
+                    };
+
+                    // Key
+                    GaxPreconditions.CheckState((KeySet?.Keys?.Count() ?? 0) == 1,
+                            $"{SpannerCommandType.Send} must include exactly one key");
+                    sendMutation.Key = KeySet.Keys.First().ToProtobuf(conversionOptions);
+
+                    // Payload
+                    var payload = GaxPreconditions.CheckNotNull(Payload, nameof(Payload));
+                    SpannerDbType payloadType = payload.GetConfiguredSpannerDbType(conversionOptions);
+                    GaxPreconditions.CheckState(
+                        payloadType.TypeCode is V1.TypeCode.Bytes or V1.TypeCode.Proto or
+                        V1.TypeCode.Json or V1.TypeCode.String,
+                        $"{nameof(sendMutation.Payload)} must be one of type Bytes, String, Json, or Protobuf message");
+                    sendMutation.Payload = payloadType.ToProtobufValue(Payload.GetValidatedValue());
+
+                    return [new() { Send = sendMutation }];
+                }
+                else if (CommandTextBuilder.SpannerCommandType == SpannerCommandType.Ack)
+                {
+                    var ackMutation = new Mutation.Types.Ack
+                    {
+                        Queue = CommandTextBuilder.TargetTable,
+                        IgnoreNotFound = IgnoreNotFound ?? false,
+                    };
+
+                    // Key
+                    GaxPreconditions.CheckState((KeySet?.Keys?.Count() ?? 0) == 1,
+                            $"{SpannerCommandType.Ack} must include exactly one key");
+                    ackMutation.Key = KeySet.Keys.First().ToProtobuf(conversionOptions);
+
+                    return [new() { Ack = ackMutation }];
                 }
                 else // Is delete
                 {
