@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -11,6 +11,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+using System;
 
 namespace Google.Cloud.Storage.V1
 {
@@ -25,19 +27,17 @@ namespace Google.Cloud.Storage.V1
         None = 0,
 
         /// <summary>
-        /// The hash of the data is computed while uploading, and
-        /// if the resulting object has a different hash, an <see cref="UploadValidationException"/>
-        /// is thrown, but the object remains present in Storage.
+        /// Obsolete. Use <see cref="RejectAndThrow"/> instead.
+        /// Previously, the object was uploaded and then deleted if the hash mismatched. 
+        /// The server now rejects mismatched objects automatically before creation.
         /// </summary>
-        ThrowOnly = 1,
+        [Obsolete("DeleteAndThrow is deprecated. Use RejectAndThrow instead, as the server now rejects the object before creation.")]
+        DeleteAndThrow = 2,
 
         /// <summary>
-        /// The hash of the data is computed while uploading, and
-        /// if the resulting object has a different hash, an attempt is made to delete the object.
-        /// Whether the deletion fails or not, an <see cref="UploadValidationException"/>
-        /// is thrown. If the deletion fails, that failure can be examined via
-        /// <see cref="UploadValidationException.AdditionalFailures"/>
+        /// The server validates the object hash during upload. If a hash mismatch is detected, 
+        /// the server rejects the upload entirely, preventing the object from being created. 
         /// </summary>
-        DeleteAndThrow = 2
+        RejectAndThrow = 3
     }
 }

@@ -24,6 +24,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -299,7 +300,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         }
 
         [Fact]
-        public void UploadObject_InvalidHash_ThrowOnly()
+        public void UploadObject_InvalidHash_RejectAndThrow()
         {
             var client = StorageClient.Create();
             var interceptor = new BreakUploadInterceptor();
@@ -307,42 +308,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var stream = GenerateData(50);
             var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
-            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.ThrowOnly };
-            Assert.Throws<UploadValidationException>(() => client.UploadObject(bucket, name, null, stream, options));
-            // We don't delete the object, so it's still present.
-            ValidateData(bucket, name, new MemoryStream(interceptor.UploadedBytes));
-        }
-
-        [Fact]
-        public void UploadObject_InvalidHash_DeleteAndThrow()
-        {
-            var client = StorageClient.Create();
-            var interceptor = new BreakUploadInterceptor();
-            client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
-            var stream = GenerateData(50);
-            var name = IdGenerator.FromGuid();
-            var bucket = _fixture.MultiVersionBucket;
-            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.DeleteAndThrow };
-            Assert.Throws<UploadValidationException>(() => client.UploadObject(bucket, name, null, stream, options));
+            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.RejectAndThrow };
+            var exception = Assert.Throws<GoogleApiException>(() => client.UploadObject(bucket, name, null, stream, options));
+            Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
             var notFound = Assert.Throws<GoogleApiException>(() => _fixture.Client.GetObject(bucket, name));
             Assert.Equal(HttpStatusCode.NotFound, notFound.HttpStatusCode);
-        }
-
-        [Fact]
-        public void UploadObject_InvalidHash_DeleteAndThrow_DeleteFails()
-        {
-            var client = StorageClient.Create();
-            var interceptor = new BreakUploadInterceptor();
-            client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
-            client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(new BreakDeleteInterceptor());
-            var stream = GenerateData(50);
-            var name = IdGenerator.FromGuid();
-            var bucket = _fixture.MultiVersionBucket;
-            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.DeleteAndThrow };
-            var ex = Assert.Throws<UploadValidationException>(() => client.UploadObject(bucket, name, null, stream, options));
-            Assert.NotNull(ex.AdditionalFailures);
-            // The deletion failed, so the uploaded object still exists.
-            ValidateData(bucket, name, new MemoryStream(interceptor.UploadedBytes));
         }
 
         [Fact]
@@ -362,7 +332,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         }
 
         [Fact]
-        public async Task UploadObjectAsync_InvalidHash_ThrowOnly()
+        public async Task UploadObjectAsync_InvalidHash_RejectAndThrow()
         {
             var client = StorageClient.Create();
             var interceptor = new BreakUploadInterceptor();
@@ -370,43 +340,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var stream = GenerateData(50);
             var name = IdGenerator.FromGuid();
             var bucket = _fixture.MultiVersionBucket;
-            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.ThrowOnly };
-            await Assert.ThrowsAsync<UploadValidationException>(() => client.UploadObjectAsync(bucket, name, null, stream, options));
-            // We don't delete the object, so it's still present.
-            ValidateData(bucket, name, new MemoryStream(interceptor.UploadedBytes));
-        }
-
-        [Fact]
-        public async Task UploadObjectAsync_InvalidHash_DeleteAndThrow()
-        {
-            var client = StorageClient.Create();
-            var interceptor = new BreakUploadInterceptor();
-            client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
-
-            var stream = GenerateData(50);
-            var name = IdGenerator.FromGuid();
-            var bucket = _fixture.MultiVersionBucket;
-            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.DeleteAndThrow };
-            await Assert.ThrowsAsync<UploadValidationException>(() => client.UploadObjectAsync(bucket, name, null, stream, options));
+            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.RejectAndThrow };
+            var exception = await Assert.ThrowsAsync<GoogleApiException>(() => client.UploadObjectAsync(bucket, name, null, stream, options));
+            Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
             var notFound = await Assert.ThrowsAsync<GoogleApiException>(() => _fixture.Client.GetObjectAsync(bucket, name));
             Assert.Equal(HttpStatusCode.NotFound, notFound.HttpStatusCode);
-        }
-
-        [Fact]
-        public async Task UploadObjectAsync_InvalidHash_DeleteAndThrow_DeleteFails()
-        {
-            var client = StorageClient.Create();
-            var interceptor = new BreakUploadInterceptor();
-            client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
-            client.Service.HttpClient.MessageHandler.AddExecuteInterceptor(new BreakDeleteInterceptor());
-            var stream = GenerateData(50);
-            var name = IdGenerator.FromGuid();
-            var bucket = _fixture.MultiVersionBucket;
-            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.DeleteAndThrow };
-            var ex = await Assert.ThrowsAsync<UploadValidationException>(() => client.UploadObjectAsync(bucket, name, null, stream, options));
-            Assert.NotNull(ex.AdditionalFailures);
-            // The deletion failed, so the uploaded object still exists.
-            ValidateData(bucket, name, new MemoryStream(interceptor.UploadedBytes));
         }
 
         [Fact]
@@ -488,19 +426,234 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             }
         }
 
-        private class BreakDeleteInterceptor : IHttpExecuteInterceptor
+        [Fact]
+        public void HashingStream_ShouldHandleRetries_WhenRestartedFromBeginning()
         {
-            public Task InterceptAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+            var data = Encoding.UTF8.GetBytes("The quick brown fox jumps over the lazy dog");
+            var baseStream = new MemoryStream(data);
+            var hashingStream = new CustomMediaUpload.HashingStream(baseStream);
+            var buffer = new byte[data.Length];
+
+            hashingStream.Read(buffer, 0, 10);
+
+            // Simulate the Retry logic: Seek back to the beginning
+            hashingStream.Position = 0;
+
+            hashingStream.Read(buffer, 0, data.Length);
+            var finalHash = hashingStream.GetBase64Hash();
+
+            var expectedHasher = new Crc32c();
+            expectedHasher.UpdateHash(data, 0, data.Length);
+            var expectedHash = Convert.ToBase64String(expectedHasher.GetHash());
+            Assert.Equal(expectedHash, finalHash);
+        }
+
+        [Fact]
+        public void HashingStream_ShouldHandleRetries_WhenSeekingBackwardsToIntermediatePoint()
+        {
+            var data = Encoding.UTF8.GetBytes("The quick brown fox jumps over the lazy dog");
+            var baseStream = new MemoryStream(data);
+            var hashingStream = new CustomMediaUpload.HashingStream(baseStream);
+            var buffer = new byte[data.Length];
+
+            hashingStream.Read(buffer, 0, 10);
+
+            // Simulate the Retry logic: Seek back to the intermediate point.
+            hashingStream.Position = 5;
+
+            hashingStream.Read(buffer, 0, data.Length);
+            var finalHash = hashingStream.GetBase64Hash();
+
+            var expectedHasher = new Crc32c();
+            expectedHasher.UpdateHash(data, 0, data.Length);
+            var expectedHash = Convert.ToBase64String(expectedHasher.GetHash());
+            Assert.Equal(expectedHash, finalHash);
+        }
+
+        [Fact]
+        public void HashingStream_ShouldDetectGaps_WhenResumingFromIntermediateOffset()
+        {
+            var data = Encoding.UTF8.GetBytes("The quick brown fox jumps over the lazy dog");
+            var baseStream = new MemoryStream(data);
+            var hashingStream = new CustomMediaUpload.HashingStream(baseStream);
+            var buffer = new byte[data.Length];
+
+            // Simulate resuming an upload from a new process starting at intermediate offset 10
+            hashingStream.Position = 10;
+            int bytesRead = hashingStream.Read(buffer, 0, data.Length - 10);
+
+            Assert.Equal(data.Length - 10, bytesRead);
+            // Because bytes 0-9 were never hashed, IsHashComplete must be false
+            Assert.False(hashingStream.IsHashComplete);
+        }
+
+        [Fact]
+        public async Task CustomMediaUpload_ResumeAsync_WithStreamGap_FailsWithArgumentException()
+        {
+            var client = _fixture.Client;
+            var bucket = _fixture.MultiVersionBucket;
+            var name = IdGenerator.FromGuid();
+
+            int chunk1Size = 256 * 1024;
+            int chunk2Size = 100;
+            int totalSize = chunk1Size + chunk2Size;
+
+            var fullData = GenerateData(totalSize);
+            byte[] fullBytes = fullData.ToArray();
+
+            var uploadUri = await client.InitiateUploadSessionAsync(bucket, name, "application/octet-stream", totalSize);
+
+            // Upload the first 256 KiB chunk directly using HTTP PUT so GCS contains bytes 0..262143
+            var chunk1Content = new ByteArrayContent(fullBytes, 0, chunk1Size);
+            chunk1Content.Headers.Add("Content-Range", $"bytes 0-{chunk1Size - 1}/{totalSize}");
+            chunk1Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+
+            var chunk1Request = new HttpRequestMessage(HttpMethod.Put, uploadUri)
             {
-                // We only care about Delete requests
-                if (request.Method == HttpMethod.Delete)
-                {
-                    // Ugly but effective hack: replace the generation URL parameter so that we add a leading 9,
-                    // so the generation we try to delete is the wrong one.
-                    request.RequestUri = new Uri(request.RequestUri.ToString().Replace("generation=", "generation=9"));
-                }
-                return Task.FromResult(0);
-            }
+                Content = chunk1Content
+            };
+            var chunk1Response = await client.Service.HttpClient.SendAsync(chunk1Request);
+            Assert.Equal((HttpStatusCode) 308, chunk1Response.StatusCode);
+
+            // Resume the session using a new CustomMediaUpload instance with validation enabled
+            var fullStream = new MemoryStream(fullBytes);
+            var destination = new Object { Bucket = bucket, Name = name, ContentType = "application/octet-stream" };
+            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.RejectAndThrow };
+
+            var uploader = (CustomMediaUpload) client.CreateObjectUploader(destination, fullStream, options);
+
+            // Execute ResumeAsync via the Google.Apis ResumableUpload
+            var progress = await uploader.ResumeAsync(uploadUri);
+
+            // Verify failure and exception
+            Assert.Equal(UploadStatus.Failed, progress.Status);
+            var exception = Assert.IsType<ArgumentException>(progress.Exception);
+            Assert.Contains("Cannot perform hash validation when resuming", exception.Message);
+            Assert.Equal("stream", exception.ParamName);
+
+            // Verify ThrowOnFailure() unwraps and rethrows the ArgumentException
+            var thrown = Assert.Throws<ArgumentException>(() => progress.ThrowOnFailure());
+            Assert.Same(exception, thrown);
+        }
+
+        [Fact]
+        public async Task CustomMediaUpload_ResumeSync_WithStreamGap_FailsWithArgumentException()
+        {
+            var client = _fixture.Client;
+            var bucket = _fixture.MultiVersionBucket;
+            var name = IdGenerator.FromGuid();
+
+            int chunk1Size = 256 * 1024;
+            int chunk2Size = 100;
+            int totalSize = chunk1Size + chunk2Size;
+
+            var fullData = GenerateData(totalSize);
+            byte[] fullBytes = fullData.ToArray();
+
+            var uploadUri = await client.InitiateUploadSessionAsync(bucket, name, "application/octet-stream", totalSize);
+
+            // Upload first 256 KiB chunk directly via HTTP
+            var chunk1Content = new ByteArrayContent(fullBytes, 0, chunk1Size);
+            chunk1Content.Headers.Add("Content-Range", $"bytes 0-{chunk1Size - 1}/{totalSize}");
+            chunk1Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+
+            var chunk1Request = new HttpRequestMessage(HttpMethod.Put, uploadUri)
+            {
+                Content = chunk1Content
+            };
+            var chunk1Response = await client.Service.HttpClient.SendAsync(chunk1Request);
+            Assert.Equal((HttpStatusCode) 308, chunk1Response.StatusCode);
+
+            // Resume synchronously with CustomMediaUpload
+            var fullStream = new MemoryStream(fullBytes);
+            var destination = new Object { Bucket = bucket, Name = name, ContentType = "application/octet-stream" };
+            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.RejectAndThrow };
+
+            var uploader = (CustomMediaUpload) client.CreateObjectUploader(destination, fullStream, options);
+
+            var progress = uploader.Resume(uploadUri);
+
+            Assert.Equal(UploadStatus.Failed, progress.Status);
+            var exception = Assert.IsType<ArgumentException>(progress.Exception);
+            Assert.Contains("Cannot perform hash validation when resuming", exception.Message);
+            Assert.Equal("stream", exception.ParamName);
+
+            // Verify ThrowOnFailure() unwraps and rethrows the ArgumentException
+            var thrown = Assert.Throws<ArgumentException>(() => progress.ThrowOnFailure());
+            Assert.Same(exception, thrown);
+        }
+
+        [Fact]
+        public void CustomMediaUpload_ShouldThrowArgumentException_WhenResumingFromIntermediateOffset()
+        {
+            var data = Encoding.UTF8.GetBytes("The quick brown fox jumps over the lazy dog");
+            var baseStream = new MemoryStream(data);
+            var client = _fixture.Client;
+            var service = client.Service;
+            var obj = new Object { Bucket = _fixture.MultiVersionBucket, Name = IdGenerator.FromGuid() };
+            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.RejectAndThrow };
+
+            var uploader = new CustomMediaUpload(service, obj, _fixture.MultiVersionBucket, baseStream, "text/plain", options);
+            var hashingStream = uploader.ContentStream as CustomMediaUpload.HashingStream;
+            Assert.NotNull(hashingStream);
+
+            // Simulate resuming from offset 10
+            hashingStream.Position = 10;
+            var buffer = new byte[data.Length];
+            hashingStream.Read(buffer, 0, data.Length - 10);
+
+            // Verify IsHashComplete is false due to unhashed prefix
+            Assert.False(hashingStream.IsHashComplete);
+
+            // Simulate final request execution
+            var request = new HttpRequestMessage(HttpMethod.Put, "https://example.com/upload");
+            var eventField = typeof(ResumableUpload).GetField(
+                "LastRequestExecuting",
+                System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+            Assert.NotNull(eventField);
+            var handler = (Action<HttpRequestMessage>) eventField.GetValue(uploader);
+            Assert.NotNull(handler);
+            var exception = Assert.Throws<ArgumentException>(() => handler.Invoke(request));
+            Assert.Contains("Cannot perform hash validation when resuming", exception.Message);
+            Assert.Equal("stream", exception.ParamName);
+        }
+
+        [Fact]
+        public void CustomMediaUpload_ShouldContainHashHeaderAndCorrectHash_WhenRetriedFromIntermediateOffset()
+        {
+            var data = Encoding.UTF8.GetBytes("The quick brown fox jumps over the lazy dog");
+            var baseStream = new MemoryStream(data);
+            var client = _fixture.Client;
+            var service = client.Service;
+            var obj = new Object { Bucket = _fixture.MultiVersionBucket, Name = IdGenerator.FromGuid() };
+            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.RejectAndThrow };
+
+            var uploader = new CustomMediaUpload(service, obj, _fixture.MultiVersionBucket, baseStream, "text/plain", options);
+            var hashingStream = uploader.ContentStream as CustomMediaUpload.HashingStream;
+            Assert.NotNull(hashingStream);
+
+            var buffer = new byte[data.Length];
+            hashingStream.Read(buffer, 0, 10);
+           // Simulate the Retry logic: Seek back to the intermediate point.
+            hashingStream.Position = 5;
+            hashingStream.Read(buffer, 0, data.Length);
+            var finalHash = hashingStream.GetBase64Hash();
+            var expectedHasher = new Crc32c();
+            expectedHasher.UpdateHash(data, 0, data.Length);
+            var expectedHash = Convert.ToBase64String(expectedHasher.GetHash());
+            Assert.True(hashingStream.IsHashComplete);
+
+            // Simulate final request execution
+            var request = new HttpRequestMessage(HttpMethod.Put, "https://example.com/upload");
+            var eventField = typeof(ResumableUpload).GetField(
+                "LastRequestExecuting",
+                System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+            Assert.NotNull(eventField);
+            var handler = (Action<HttpRequestMessage>) eventField.GetValue(uploader);
+            Assert.NotNull(handler);
+            handler.Invoke(request);
+            Assert.True(request.Headers.Contains("x-goog-hash"));
+            Assert.Equal(expectedHash, finalHash);
         }
 
         private Object GetExistingObject()
