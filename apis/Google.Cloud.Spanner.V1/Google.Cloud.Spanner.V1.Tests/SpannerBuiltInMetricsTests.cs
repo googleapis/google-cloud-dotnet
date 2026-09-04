@@ -13,7 +13,12 @@
 // limitations under the License.
 
 using Google.Cloud.Spanner.Common.V1;
+using Grpc.Core;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Spanner.V1.Tests;
@@ -109,5 +114,105 @@ public class SpannerBuiltInMetricsTests
         var clientHash = (string) clientHashLabel.Value;
         Assert.Equal(6, clientHash.Length);
         Assert.True(int.TryParse(clientHash, System.Globalization.NumberStyles.HexNumber, null, out int _));
+    }
+
+    [Fact]
+    public async Task InstrumentedAsyncStreamReader_CleanCompletion_InvokesCallbackWithOk()
+    {
+        double recordedDuration = -1;
+        string recordedStatus = null;
+        var reader = new SpannerBuiltInMetrics.InstrumentedAsyncStreamReader<int>(
+            new FakeAsyncStreamReader<int>([1, 2, 3]),
+            SpannerBuiltInMetrics.DefaultStopwatchProvider.Instance,
+            (duration, status) =>
+            {
+                recordedDuration = duration;
+                recordedStatus = status;
+            });
+
+        while (await reader.MoveNext(CancellationToken.None))
+        {
+        }
+
+        Assert.Equal("OK", recordedStatus);
+        Assert.True(recordedDuration >= 0);
+    }
+
+    [Fact]
+    public async Task InstrumentedAsyncStreamReader_RpcException_InvokesCallbackWithStatusCode()
+    {
+        double recordedDuration = -1;
+        string recordedStatus = null;
+        var ex = new RpcException(new Status(StatusCode.NotFound, "Not found"));
+        var reader = new SpannerBuiltInMetrics.InstrumentedAsyncStreamReader<int>(
+            new FakeAsyncStreamReader<int>([], ex),
+            SpannerBuiltInMetrics.DefaultStopwatchProvider.Instance,
+            (duration, status) =>
+            {
+                recordedDuration = duration;
+                recordedStatus = status;
+            });
+
+        await Assert.ThrowsAsync<RpcException>(() => reader.MoveNext(CancellationToken.None));
+
+        Assert.Equal("NotFound", recordedStatus);
+        Assert.True(recordedDuration >= 0);
+    }
+
+    [Fact]
+    public async Task InstrumentedAsyncStreamReader_EarlyDispose_InvokesCallbackWithCancelled()
+    {
+        double recordedDuration = -1;
+        string recordedStatus = null;
+        var reader = new SpannerBuiltInMetrics.InstrumentedAsyncStreamReader<int>(
+            new FakeAsyncStreamReader<int>([1, 2, 3]),
+            SpannerBuiltInMetrics.DefaultStopwatchProvider.Instance,
+            (duration, status) =>
+            {
+                recordedDuration = duration;
+                recordedStatus = status;
+            });
+
+        await reader.MoveNext(CancellationToken.None);
+        reader.Dispose();
+
+        Assert.Equal("Cancelled", recordedStatus);
+        Assert.True(recordedDuration >= 0);
+    }
+
+    [Fact]
+    public async Task InstrumentedAsyncStreamReader_OperationCanceledException_InvokesCallbackWithUnknown()
+    {
+        double recordedDuration = -1;
+        string recordedStatus = null;
+        var reader = new SpannerBuiltInMetrics.InstrumentedAsyncStreamReader<int>(
+            new FakeAsyncStreamReader<int>([], new OperationCanceledException()),
+            SpannerBuiltInMetrics.DefaultStopwatchProvider.Instance,
+            (duration, status) =>
+            {
+                recordedDuration = duration;
+                recordedStatus = status;
+            });
+
+        await Assert.ThrowsAsync<OperationCanceledException>(() => reader.MoveNext(CancellationToken.None));
+
+        Assert.Equal("Unknown", recordedStatus);
+        Assert.True(recordedDuration >= 0);
+    }
+
+    private class FakeAsyncStreamReader<T>(IEnumerable<T> items, Exception exception = null) : IAsyncStreamReader<T>
+    {
+        private readonly IEnumerator<T> _enumerator = items.GetEnumerator();
+
+        public T Current => _enumerator.Current;
+
+        public Task<bool> MoveNext(CancellationToken cancellationToken)
+        {
+            if (exception != null)
+            {
+                throw exception;
+            }
+            return Task.FromResult(_enumerator.MoveNext());
+        }
     }
 }
