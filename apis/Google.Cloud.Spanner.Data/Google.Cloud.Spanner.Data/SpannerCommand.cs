@@ -142,7 +142,7 @@ namespace Google.Cloud.Spanner.Data
             SpannerCommandTextBuilder commandTextBuilder,
             SpannerConnection connection,
             Key key,
-            Payload payload,
+            SpannerParameter payload,
             DateTime? deliverAt,
             SpannerTransaction transaction = null)
             : this(commandTextBuilder, connection, KeySet.FromKeys(key), transaction)
@@ -223,7 +223,7 @@ namespace Google.Cloud.Spanner.Data
             SpannerCommandTextBuilder commandTextBuilder,
             SpannerConnection connection,
             Key key,
-            Payload payload,
+            SpannerParameter payload,
             DateTime? deliverAt,
             SpannerTransaction transaction = null) => new(commandTextBuilder, connection, key, payload, deliverAt, transaction);
 
@@ -286,7 +286,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The payload for a Send command to a queue.
         /// </summary>
-        public Payload Payload { get; set; }
+        public SpannerParameter Payload { get; set; }
 
         /// <summary>
         /// The keys of the rows to read or delete from the target table if the command is Read or Delete.
@@ -432,7 +432,7 @@ namespace Google.Cloud.Spanner.Data
             DirectedReadOptions = DirectedReadOptions?.Clone(),
             ClientContext = ClientContext?.Clone(),
             EphemeralTransactionCreationOptions = EphemeralTransactionCreationOptions,
-            Payload = (Payload) Payload?.Clone(),
+            Payload = (SpannerParameter) Payload?.Clone(),
             DeliverAt = DeliverAt,
             IgnoreNotFound = IgnoreNotFound,
         };

@@ -901,7 +901,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="payload">Message Payload.</param>
         /// <param name="deliverAt">Time when the message may begin being delivered</param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
-        public SpannerCommand CreateSendCommand(string databaseQueue, Key key, Payload payload, DateTime? deliverAt = null) =>
+        public SpannerCommand CreateSendCommand(string databaseQueue, Key key, SpannerParameter payload, DateTime? deliverAt = null) =>
             SpannerCommand.ForSendCommand(SpannerCommandTextBuilder.CreateSendTextBuilder(databaseQueue), this, key, payload, deliverAt);
 
         /// <summary>
