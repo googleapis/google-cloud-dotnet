@@ -506,6 +506,7 @@ namespace Google.Cloud.Spanner.Data
         internal GoogleCredential GoogleCredential { get; }
 
         private SessionPoolManager _sessionPoolManager = SessionPoolManager.Default;
+        private SessionManager _sessionManager = SessionManager.Default;
 
         /// <summary>
         /// The <see cref="SessionPoolManager"/> to use for server interactions.
@@ -518,11 +519,58 @@ namespace Google.Cloud.Spanner.Data
         public SessionPoolManager SessionPoolManager
         {
             get => _sessionPoolManager;
-            set => _sessionPoolManager = GaxPreconditions.CheckNotNull(value, nameof(value));
+            set
+            {
+                _sessionPoolManager = GaxPreconditions.CheckNotNull(value, nameof(value));
+                _sessionManager = _sessionPoolManager.SessionManager;
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="SessionManager"/> to use for server interactions.
+        /// </summary>
+        /// <remarks>
+        /// This property defaults to <see cref="SessionManager.Default"/>, and
+        /// most code will not need to change this. It can be convenient for isolation purposes,
+        /// particularly in testing.
+        /// </remarks>
+        public SessionManager SessionManager
+        {
+            get => _sessionManager;
+            set => _sessionManager = GaxPreconditions.CheckNotNull(value, nameof(value));
         }
 
         internal Task<SessionPool> AcquireSessionPoolAsync() =>
             SessionPoolManager.AcquireSessionPoolAsync(new SpannerClientCreationOptions(this));
+
+        private bool CanAcquireSession => DatabaseName is not null;
+
+        internal void AssertCanAcquireSession() => GaxPreconditions.CheckState(CanAcquireSession, $"The operation being attempted requires a Database name.");
+
+        internal async Task<ManagedSession> MaybeAcquireSessionAsync(bool requireSessionAcquisition)
+        {
+            if (requireSessionAcquisition)
+            {
+                AssertCanAcquireSession();
+            }
+
+            var clientOptions = new SpannerClientCreationOptions(this);
+            if (CanAcquireSession)
+            {
+                var sessionOptions = new SessionAcquisitionOptions(
+                    clientOptions,
+                    DatabaseName,
+                    DatabaseRole,
+                    Timeout == 0 && AllowImmediateTimeouts ? null : TimeSpan.FromSeconds(Timeout));
+                return await SessionManager.AcquireSessionAsync(sessionOptions).ConfigureAwait(false);
+            }
+            // If we can't acquire a session, let's make sure we acquire (and cache) the SpannerClient.
+            // Acquiring a session would have used the right cached SpannerClinet or would have created a new on if there was none cached.
+            await SessionManager.AcquireClientAsync(clientOptions).ConfigureAwait(false);
+            return null;
+        }
+
+      
 
         /// <summary>
         /// Copy constructor, used for cloning. (This allows for the use of object initializers, unlike
@@ -534,6 +582,7 @@ namespace Google.Cloud.Spanner.Data
             CredentialOverride = other.CredentialOverride;
             GoogleCredential = other.GoogleCredential;
             SessionPoolManager = other.SessionPoolManager;
+            SessionManager = other.SessionManager;
             EnvironmentVariableProvider = other.EnvironmentVariableProvider;
             DirectedReadOptions = other.DirectedReadOptions?.Clone();
             // Note: ConversionOptions is populated by the connection string.
