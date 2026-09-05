@@ -18,6 +18,7 @@
 
     <!-- Support libraries (rarely referenced directly) -->
     <PackageVersion Include="Google.Apis" Version="[1.73.0, 2.0.0)" />
+    <PackageVersion Include="Google.Apis.Auth" Version="[1.73.0, 2.0.0)" />
 
     <!--
       - The Google.Protobuf version should usually be the one that
@@ -69,5 +70,7 @@
     <PackageVersion Include="NLog" Version="5.5.1" />
     <PackageVersion Include="Grpc.AspNetCore" Version="2.83.0" />
     <PackageVersion Include="Microsoft.AspNetCore.Server.Kestrel.Core" Version="2.3.12" />
+    <PackageVersion Include="OpenTelemetry" Version="1.17.0" />
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.17.0" />
   </ItemGroup>
 </Project>
