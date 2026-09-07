@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.35.0, released 2026-09-07
+
+### New features
+
+- Publish AvroSchema to CBT admin API
+
+### Documentation improvements
+
+- Modify ProtoSchema description
+- Add AvroSchema description
+
 ## Version 3.34.0, released 2026-08-17
 
 ### New features
