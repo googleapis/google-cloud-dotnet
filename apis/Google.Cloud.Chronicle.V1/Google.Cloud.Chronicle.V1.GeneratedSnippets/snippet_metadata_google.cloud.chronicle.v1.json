@@ -11418,6 +11418,4078 @@
       ]
     },
     {
+      "regionTag": "chronicle_v1_generated_FeedsService_FetchServiceAccountForCustomer_sync",
+      "title": "FetchServiceAccountForCustomerRequestObject",
+      "description": "Snippet for FetchServiceAccountForCustomer",
+      "file": "FeedsServiceClient.FetchServiceAccountForCustomerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchServiceAccountForCustomer",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.FetchServiceAccountForCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FetchServiceAccountForCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FeedServiceAccount",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "FetchServiceAccountForCustomer",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.FetchServiceAccountForCustomer",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_FetchServiceAccountForCustomer_async",
+      "title": "FetchServiceAccountForCustomerRequestObjectAsync",
+      "description": "Snippet for FetchServiceAccountForCustomerAsync",
+      "file": "FeedsServiceClient.FetchServiceAccountForCustomerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchServiceAccountForCustomerAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.FetchServiceAccountForCustomerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FetchServiceAccountForCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FeedServiceAccount>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "FetchServiceAccountForCustomer",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.FetchServiceAccountForCustomer",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_FetchServiceAccountForCustomer_sync_flattened",
+      "title": "FetchServiceAccountForCustomer",
+      "description": "Snippet for FetchServiceAccountForCustomer",
+      "file": "FeedsServiceClient.FetchServiceAccountForCustomerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchServiceAccountForCustomer",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.FetchServiceAccountForCustomer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FeedServiceAccount",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "FetchServiceAccountForCustomer",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.FetchServiceAccountForCustomer",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_FetchServiceAccountForCustomer_async_flattened",
+      "title": "FetchServiceAccountForCustomerAsync",
+      "description": "Snippet for FetchServiceAccountForCustomerAsync",
+      "file": "FeedsServiceClient.FetchServiceAccountForCustomerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchServiceAccountForCustomerAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.FetchServiceAccountForCustomerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FeedServiceAccount>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "FetchServiceAccountForCustomer",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.FetchServiceAccountForCustomer",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_FetchServiceAccountForCustomer_sync_flattened_resourceNames",
+      "title": "FetchServiceAccountForCustomerResourceNames",
+      "description": "Snippet for FetchServiceAccountForCustomer",
+      "file": "FeedsServiceClient.FetchServiceAccountForCustomerResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchServiceAccountForCustomer",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.FetchServiceAccountForCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FeedServiceAccount",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "FetchServiceAccountForCustomer",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.FetchServiceAccountForCustomer",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_FetchServiceAccountForCustomer_async_flattened_resourceNames",
+      "title": "FetchServiceAccountForCustomerResourceNamesAsync",
+      "description": "Snippet for FetchServiceAccountForCustomerAsync",
+      "file": "FeedsServiceClient.FetchServiceAccountForCustomerResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchServiceAccountForCustomerAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.FetchServiceAccountForCustomerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FeedServiceAccount>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "FetchServiceAccountForCustomer",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.FetchServiceAccountForCustomer",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_CreateFeed_sync",
+      "title": "CreateFeedRequestObject",
+      "description": "Snippet for CreateFeed",
+      "file": "FeedsServiceClient.CreateFeedRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.CreateFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.CreateFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.Feed",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.CreateFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_CreateFeed_async",
+      "title": "CreateFeedRequestObjectAsync",
+      "description": "Snippet for CreateFeedAsync",
+      "file": "FeedsServiceClient.CreateFeedRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.CreateFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.CreateFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.CreateFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_CreateFeed_sync_flattened",
+      "title": "CreateFeed",
+      "description": "Snippet for CreateFeed",
+      "file": "FeedsServiceClient.CreateFeedSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.CreateFeed",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.Feed",
+            "name": "feed"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.Feed",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.CreateFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_CreateFeed_async_flattened",
+      "title": "CreateFeedAsync",
+      "description": "Snippet for CreateFeedAsync",
+      "file": "FeedsServiceClient.CreateFeedAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.CreateFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.Feed",
+            "name": "feed"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.CreateFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_CreateFeed_sync_flattened_resourceNames",
+      "title": "CreateFeedResourceNames",
+      "description": "Snippet for CreateFeed",
+      "file": "FeedsServiceClient.CreateFeedResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.CreateFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.Feed",
+            "name": "feed"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.Feed",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.CreateFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_CreateFeed_async_flattened_resourceNames",
+      "title": "CreateFeedResourceNamesAsync",
+      "description": "Snippet for CreateFeedAsync",
+      "file": "FeedsServiceClient.CreateFeedResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.CreateFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.Feed",
+            "name": "feed"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.CreateFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GetFeed_sync",
+      "title": "GetFeedRequestObject",
+      "description": "Snippet for GetFeed",
+      "file": "FeedsServiceClient.GetFeedRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GetFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.Feed",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GetFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GetFeed_async",
+      "title": "GetFeedRequestObjectAsync",
+      "description": "Snippet for GetFeedAsync",
+      "file": "FeedsServiceClient.GetFeedRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GetFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GetFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GetFeed_sync_flattened",
+      "title": "GetFeed",
+      "description": "Snippet for GetFeed",
+      "file": "FeedsServiceClient.GetFeedSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GetFeed",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.Feed",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GetFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GetFeed_async_flattened",
+      "title": "GetFeedAsync",
+      "description": "Snippet for GetFeedAsync",
+      "file": "FeedsServiceClient.GetFeedAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GetFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GetFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GetFeed_sync_flattened_resourceNames",
+      "title": "GetFeedResourceNames",
+      "description": "Snippet for GetFeed",
+      "file": "FeedsServiceClient.GetFeedResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GetFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.Feed",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GetFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GetFeed_async_flattened_resourceNames",
+      "title": "GetFeedResourceNamesAsync",
+      "description": "Snippet for GetFeedAsync",
+      "file": "FeedsServiceClient.GetFeedResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GetFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GetFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_DeleteFeed_sync",
+      "title": "DeleteFeedRequestObject",
+      "description": "Snippet for DeleteFeed",
+      "file": "FeedsServiceClient.DeleteFeedRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.DeleteFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DeleteFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.DeleteFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_DeleteFeed_async",
+      "title": "DeleteFeedRequestObjectAsync",
+      "description": "Snippet for DeleteFeedAsync",
+      "file": "FeedsServiceClient.DeleteFeedRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.DeleteFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DeleteFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.DeleteFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_DeleteFeed_sync_flattened",
+      "title": "DeleteFeed",
+      "description": "Snippet for DeleteFeed",
+      "file": "FeedsServiceClient.DeleteFeedSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.DeleteFeed",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.DeleteFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_DeleteFeed_async_flattened",
+      "title": "DeleteFeedAsync",
+      "description": "Snippet for DeleteFeedAsync",
+      "file": "FeedsServiceClient.DeleteFeedAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.DeleteFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.DeleteFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_DeleteFeed_sync_flattened_resourceNames",
+      "title": "DeleteFeedResourceNames",
+      "description": "Snippet for DeleteFeed",
+      "file": "FeedsServiceClient.DeleteFeedResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.DeleteFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.DeleteFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_DeleteFeed_async_flattened_resourceNames",
+      "title": "DeleteFeedResourceNamesAsync",
+      "description": "Snippet for DeleteFeedAsync",
+      "file": "FeedsServiceClient.DeleteFeedResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.DeleteFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.DeleteFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_EnableFeed_sync",
+      "title": "EnableFeedRequestObject",
+      "description": "Snippet for EnableFeed",
+      "file": "FeedsServiceClient.EnableFeedRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.EnableFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.EnableFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.Feed",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "EnableFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.EnableFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_EnableFeed_async",
+      "title": "EnableFeedRequestObjectAsync",
+      "description": "Snippet for EnableFeedAsync",
+      "file": "FeedsServiceClient.EnableFeedRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.EnableFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.EnableFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "EnableFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.EnableFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_EnableFeed_sync_flattened",
+      "title": "EnableFeed",
+      "description": "Snippet for EnableFeed",
+      "file": "FeedsServiceClient.EnableFeedSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.EnableFeed",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.Feed",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "EnableFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.EnableFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_EnableFeed_async_flattened",
+      "title": "EnableFeedAsync",
+      "description": "Snippet for EnableFeedAsync",
+      "file": "FeedsServiceClient.EnableFeedAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.EnableFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "EnableFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.EnableFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_EnableFeed_sync_flattened_resourceNames",
+      "title": "EnableFeedResourceNames",
+      "description": "Snippet for EnableFeed",
+      "file": "FeedsServiceClient.EnableFeedResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.EnableFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.Feed",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "EnableFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.EnableFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_EnableFeed_async_flattened_resourceNames",
+      "title": "EnableFeedResourceNamesAsync",
+      "description": "Snippet for EnableFeedAsync",
+      "file": "FeedsServiceClient.EnableFeedResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.EnableFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "EnableFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.EnableFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_DisableFeed_sync",
+      "title": "DisableFeedRequestObject",
+      "description": "Snippet for DisableFeed",
+      "file": "FeedsServiceClient.DisableFeedRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.DisableFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DisableFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.Feed",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "DisableFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.DisableFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_DisableFeed_async",
+      "title": "DisableFeedRequestObjectAsync",
+      "description": "Snippet for DisableFeedAsync",
+      "file": "FeedsServiceClient.DisableFeedRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.DisableFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.DisableFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "DisableFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.DisableFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_DisableFeed_sync_flattened",
+      "title": "DisableFeed",
+      "description": "Snippet for DisableFeed",
+      "file": "FeedsServiceClient.DisableFeedSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.DisableFeed",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.Feed",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "DisableFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.DisableFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_DisableFeed_async_flattened",
+      "title": "DisableFeedAsync",
+      "description": "Snippet for DisableFeedAsync",
+      "file": "FeedsServiceClient.DisableFeedAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.DisableFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "DisableFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.DisableFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_DisableFeed_sync_flattened_resourceNames",
+      "title": "DisableFeedResourceNames",
+      "description": "Snippet for DisableFeed",
+      "file": "FeedsServiceClient.DisableFeedResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.DisableFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.Feed",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "DisableFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.DisableFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_DisableFeed_async_flattened_resourceNames",
+      "title": "DisableFeedResourceNamesAsync",
+      "description": "Snippet for DisableFeedAsync",
+      "file": "FeedsServiceClient.DisableFeedResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.DisableFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "DisableFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.DisableFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeeds_sync",
+      "title": "ListFeedsRequestObject",
+      "description": "Snippet for ListFeeds",
+      "file": "FeedsServiceClient.ListFeedsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeeds",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeeds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListFeedsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListFeedsResponse, Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeeds",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeeds",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeeds_async",
+      "title": "ListFeedsRequestObjectAsync",
+      "description": "Snippet for ListFeedsAsync",
+      "file": "FeedsServiceClient.ListFeedsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListFeedsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListFeedsResponse, Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeeds",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeeds",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeeds_sync_flattened",
+      "title": "ListFeeds",
+      "description": "Snippet for ListFeeds",
+      "file": "FeedsServiceClient.ListFeedsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeeds",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeeds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListFeedsResponse, Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeeds",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeeds",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeeds_async_flattened",
+      "title": "ListFeedsAsync",
+      "description": "Snippet for ListFeedsAsync",
+      "file": "FeedsServiceClient.ListFeedsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListFeedsResponse, Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeeds",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeeds",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeeds_sync_flattened_resourceNames",
+      "title": "ListFeedsResourceNames",
+      "description": "Snippet for ListFeeds",
+      "file": "FeedsServiceClient.ListFeedsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeeds",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeeds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListFeedsResponse, Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeeds",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeeds",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeeds_async_flattened_resourceNames",
+      "title": "ListFeedsResourceNamesAsync",
+      "description": "Snippet for ListFeedsAsync",
+      "file": "FeedsServiceClient.ListFeedsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListFeedsResponse, Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeeds",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeeds",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeedPacks_sync",
+      "title": "ListFeedPacksRequestObject",
+      "description": "Snippet for ListFeedPacks",
+      "file": "FeedsServiceClient.ListFeedPacksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedPacks",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedPacks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListFeedPacksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListFeedPacksResponse, Google.Cloud.Chronicle.V1.FeedPack>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeedPacks",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeedPacks",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeedPacks_async",
+      "title": "ListFeedPacksRequestObjectAsync",
+      "description": "Snippet for ListFeedPacksAsync",
+      "file": "FeedsServiceClient.ListFeedPacksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedPacksAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedPacksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListFeedPacksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListFeedPacksResponse, Google.Cloud.Chronicle.V1.FeedPack>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeedPacks",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeedPacks",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeedPacks_sync_flattened",
+      "title": "ListFeedPacks",
+      "description": "Snippet for ListFeedPacks",
+      "file": "FeedsServiceClient.ListFeedPacksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedPacks",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedPacks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListFeedPacksResponse, Google.Cloud.Chronicle.V1.FeedPack>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeedPacks",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeedPacks",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeedPacks_async_flattened",
+      "title": "ListFeedPacksAsync",
+      "description": "Snippet for ListFeedPacksAsync",
+      "file": "FeedsServiceClient.ListFeedPacksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedPacksAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedPacksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListFeedPacksResponse, Google.Cloud.Chronicle.V1.FeedPack>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeedPacks",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeedPacks",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeedPacks_sync_flattened_resourceNames",
+      "title": "ListFeedPacksResourceNames",
+      "description": "Snippet for ListFeedPacks",
+      "file": "FeedsServiceClient.ListFeedPacksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedPacks",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedPacks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListFeedPacksResponse, Google.Cloud.Chronicle.V1.FeedPack>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeedPacks",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeedPacks",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeedPacks_async_flattened_resourceNames",
+      "title": "ListFeedPacksResourceNamesAsync",
+      "description": "Snippet for ListFeedPacksAsync",
+      "file": "FeedsServiceClient.ListFeedPacksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedPacksAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedPacksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListFeedPacksResponse, Google.Cloud.Chronicle.V1.FeedPack>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeedPacks",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeedPacks",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GetFeedPack_sync",
+      "title": "GetFeedPackRequestObject",
+      "description": "Snippet for GetFeedPack",
+      "file": "FeedsServiceClient.GetFeedPackRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeedPack",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GetFeedPack",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetFeedPackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FeedPack",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFeedPack",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GetFeedPack",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GetFeedPack_async",
+      "title": "GetFeedPackRequestObjectAsync",
+      "description": "Snippet for GetFeedPackAsync",
+      "file": "FeedsServiceClient.GetFeedPackRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeedPackAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GetFeedPackAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetFeedPackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FeedPack>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFeedPack",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GetFeedPack",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GetFeedPack_sync_flattened",
+      "title": "GetFeedPack",
+      "description": "Snippet for GetFeedPack",
+      "file": "FeedsServiceClient.GetFeedPackSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeedPack",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GetFeedPack",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FeedPack",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFeedPack",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GetFeedPack",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GetFeedPack_async_flattened",
+      "title": "GetFeedPackAsync",
+      "description": "Snippet for GetFeedPackAsync",
+      "file": "FeedsServiceClient.GetFeedPackAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeedPackAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GetFeedPackAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FeedPack>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFeedPack",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GetFeedPack",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GetFeedPack_sync_flattened_resourceNames",
+      "title": "GetFeedPackResourceNames",
+      "description": "Snippet for GetFeedPack",
+      "file": "FeedsServiceClient.GetFeedPackResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeedPack",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GetFeedPack",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedPackName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FeedPack",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFeedPack",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GetFeedPack",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GetFeedPack_async_flattened_resourceNames",
+      "title": "GetFeedPackResourceNamesAsync",
+      "description": "Snippet for GetFeedPackAsync",
+      "file": "FeedsServiceClient.GetFeedPackResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFeedPackAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GetFeedPackAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedPackName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FeedPack>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GetFeedPack",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GetFeedPack",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_UpdateFeed_sync",
+      "title": "UpdateFeedRequestObject",
+      "description": "Snippet for UpdateFeed",
+      "file": "FeedsServiceClient.UpdateFeedRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.UpdateFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.UpdateFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.Feed",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.UpdateFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_UpdateFeed_async",
+      "title": "UpdateFeedRequestObjectAsync",
+      "description": "Snippet for UpdateFeedAsync",
+      "file": "FeedsServiceClient.UpdateFeedRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.UpdateFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.UpdateFeedRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.UpdateFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_UpdateFeed_sync_flattened",
+      "title": "UpdateFeed",
+      "description": "Snippet for UpdateFeed",
+      "file": "FeedsServiceClient.UpdateFeedSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFeed",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.UpdateFeed",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.Feed",
+            "name": "feed"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.Feed",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.UpdateFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_UpdateFeed_async_flattened",
+      "title": "UpdateFeedAsync",
+      "description": "Snippet for UpdateFeedAsync",
+      "file": "FeedsServiceClient.UpdateFeedAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFeedAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.UpdateFeedAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.Feed",
+            "name": "feed"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.Feed>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFeed",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.UpdateFeed",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeedSourceTypeSchemas_sync",
+      "title": "ListFeedSourceTypeSchemasRequestObject",
+      "description": "Snippet for ListFeedSourceTypeSchemas",
+      "file": "FeedsServiceClient.ListFeedSourceTypeSchemasRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedSourceTypeSchemas",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedSourceTypeSchemas",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListFeedSourceTypeSchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListFeedSourceTypeSchemasResponse, Google.Cloud.Chronicle.V1.FeedSourceTypeSchema>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeedSourceTypeSchemas",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeedSourceTypeSchemas",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeedSourceTypeSchemas_async",
+      "title": "ListFeedSourceTypeSchemasRequestObjectAsync",
+      "description": "Snippet for ListFeedSourceTypeSchemasAsync",
+      "file": "FeedsServiceClient.ListFeedSourceTypeSchemasRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedSourceTypeSchemasAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedSourceTypeSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListFeedSourceTypeSchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListFeedSourceTypeSchemasResponse, Google.Cloud.Chronicle.V1.FeedSourceTypeSchema>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeedSourceTypeSchemas",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeedSourceTypeSchemas",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeedSourceTypeSchemas_sync_flattened",
+      "title": "ListFeedSourceTypeSchemas",
+      "description": "Snippet for ListFeedSourceTypeSchemas",
+      "file": "FeedsServiceClient.ListFeedSourceTypeSchemasSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedSourceTypeSchemas",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedSourceTypeSchemas",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListFeedSourceTypeSchemasResponse, Google.Cloud.Chronicle.V1.FeedSourceTypeSchema>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeedSourceTypeSchemas",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeedSourceTypeSchemas",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeedSourceTypeSchemas_async_flattened",
+      "title": "ListFeedSourceTypeSchemasAsync",
+      "description": "Snippet for ListFeedSourceTypeSchemasAsync",
+      "file": "FeedsServiceClient.ListFeedSourceTypeSchemasAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedSourceTypeSchemasAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedSourceTypeSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListFeedSourceTypeSchemasResponse, Google.Cloud.Chronicle.V1.FeedSourceTypeSchema>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeedSourceTypeSchemas",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeedSourceTypeSchemas",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeedSourceTypeSchemas_sync_flattened_resourceNames",
+      "title": "ListFeedSourceTypeSchemasResourceNames",
+      "description": "Snippet for ListFeedSourceTypeSchemas",
+      "file": "FeedsServiceClient.ListFeedSourceTypeSchemasResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedSourceTypeSchemas",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedSourceTypeSchemas",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListFeedSourceTypeSchemasResponse, Google.Cloud.Chronicle.V1.FeedSourceTypeSchema>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeedSourceTypeSchemas",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeedSourceTypeSchemas",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListFeedSourceTypeSchemas_async_flattened_resourceNames",
+      "title": "ListFeedSourceTypeSchemasResourceNamesAsync",
+      "description": "Snippet for ListFeedSourceTypeSchemasAsync",
+      "file": "FeedsServiceClient.ListFeedSourceTypeSchemasResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFeedSourceTypeSchemasAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListFeedSourceTypeSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListFeedSourceTypeSchemasResponse, Google.Cloud.Chronicle.V1.FeedSourceTypeSchema>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListFeedSourceTypeSchemas",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListFeedSourceTypeSchemas",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListLogTypeSchemas_sync",
+      "title": "ListLogTypeSchemasRequestObject",
+      "description": "Snippet for ListLogTypeSchemas",
+      "file": "FeedsServiceClient.ListLogTypeSchemasRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogTypeSchemas",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListLogTypeSchemas",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListLogTypeSchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListLogTypeSchemasResponse, Google.Cloud.Chronicle.V1.LogTypeSchema>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListLogTypeSchemas",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListLogTypeSchemas",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListLogTypeSchemas_async",
+      "title": "ListLogTypeSchemasRequestObjectAsync",
+      "description": "Snippet for ListLogTypeSchemasAsync",
+      "file": "FeedsServiceClient.ListLogTypeSchemasRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogTypeSchemasAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListLogTypeSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListLogTypeSchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListLogTypeSchemasResponse, Google.Cloud.Chronicle.V1.LogTypeSchema>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListLogTypeSchemas",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListLogTypeSchemas",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListLogTypeSchemas_sync_flattened",
+      "title": "ListLogTypeSchemas",
+      "description": "Snippet for ListLogTypeSchemas",
+      "file": "FeedsServiceClient.ListLogTypeSchemasSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogTypeSchemas",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListLogTypeSchemas",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListLogTypeSchemasResponse, Google.Cloud.Chronicle.V1.LogTypeSchema>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListLogTypeSchemas",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListLogTypeSchemas",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListLogTypeSchemas_async_flattened",
+      "title": "ListLogTypeSchemasAsync",
+      "description": "Snippet for ListLogTypeSchemasAsync",
+      "file": "FeedsServiceClient.ListLogTypeSchemasAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogTypeSchemasAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListLogTypeSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListLogTypeSchemasResponse, Google.Cloud.Chronicle.V1.LogTypeSchema>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListLogTypeSchemas",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListLogTypeSchemas",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListLogTypeSchemas_sync_flattened_resourceNames",
+      "title": "ListLogTypeSchemasResourceNames",
+      "description": "Snippet for ListLogTypeSchemas",
+      "file": "FeedsServiceClient.ListLogTypeSchemasResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogTypeSchemas",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListLogTypeSchemas",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedSourceTypeSchemaName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListLogTypeSchemasResponse, Google.Cloud.Chronicle.V1.LogTypeSchema>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListLogTypeSchemas",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListLogTypeSchemas",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ListLogTypeSchemas_async_flattened_resourceNames",
+      "title": "ListLogTypeSchemasResourceNamesAsync",
+      "description": "Snippet for ListLogTypeSchemasAsync",
+      "file": "FeedsServiceClient.ListLogTypeSchemasResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogTypeSchemasAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ListLogTypeSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedSourceTypeSchemaName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListLogTypeSchemasResponse, Google.Cloud.Chronicle.V1.LogTypeSchema>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ListLogTypeSchemas",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ListLogTypeSchemas",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ImportPushLogs_sync",
+      "title": "ImportPushLogsRequestObject",
+      "description": "Snippet for ImportPushLogs",
+      "file": "FeedsServiceClient.ImportPushLogsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportPushLogs",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ImportPushLogs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ImportPushLogsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.HttpBody",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ImportPushLogs",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ImportPushLogs",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ImportPushLogs_async",
+      "title": "ImportPushLogsRequestObjectAsync",
+      "description": "Snippet for ImportPushLogsAsync",
+      "file": "FeedsServiceClient.ImportPushLogsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportPushLogsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ImportPushLogsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ImportPushLogsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ImportPushLogs",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ImportPushLogs",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ImportPushLogs_sync_flattened",
+      "title": "ImportPushLogs",
+      "description": "Snippet for ImportPushLogs",
+      "file": "FeedsServiceClient.ImportPushLogsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportPushLogs",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ImportPushLogs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.HttpBody",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ImportPushLogs",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ImportPushLogs",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ImportPushLogs_async_flattened",
+      "title": "ImportPushLogsAsync",
+      "description": "Snippet for ImportPushLogsAsync",
+      "file": "FeedsServiceClient.ImportPushLogsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportPushLogsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ImportPushLogsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ImportPushLogs",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ImportPushLogs",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ImportPushLogs_sync_flattened_resourceNames",
+      "title": "ImportPushLogsResourceNames",
+      "description": "Snippet for ImportPushLogs",
+      "file": "FeedsServiceClient.ImportPushLogsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportPushLogs",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ImportPushLogs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.HttpBody",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ImportPushLogs",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ImportPushLogs",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_ImportPushLogs_async_flattened_resourceNames",
+      "title": "ImportPushLogsResourceNamesAsync",
+      "description": "Snippet for ImportPushLogsAsync",
+      "file": "FeedsServiceClient.ImportPushLogsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportPushLogsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.ImportPushLogsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Api.HttpBody>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "ImportPushLogs",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.ImportPushLogs",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GenerateSecret_sync",
+      "title": "GenerateSecretRequestObject",
+      "description": "Snippet for GenerateSecret",
+      "file": "FeedsServiceClient.GenerateSecretRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateSecret",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GenerateSecret",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GenerateSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.GenerateSecretResponse",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateSecret",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GenerateSecret",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GenerateSecret_async",
+      "title": "GenerateSecretRequestObjectAsync",
+      "description": "Snippet for GenerateSecretAsync",
+      "file": "FeedsServiceClient.GenerateSecretRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateSecretAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GenerateSecretAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GenerateSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.GenerateSecretResponse>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateSecret",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GenerateSecret",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GenerateSecret_sync_flattened",
+      "title": "GenerateSecret",
+      "description": "Snippet for GenerateSecret",
+      "file": "FeedsServiceClient.GenerateSecretSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateSecret",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GenerateSecret",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.GenerateSecretResponse",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateSecret",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GenerateSecret",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GenerateSecret_async_flattened",
+      "title": "GenerateSecretAsync",
+      "description": "Snippet for GenerateSecretAsync",
+      "file": "FeedsServiceClient.GenerateSecretAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateSecretAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GenerateSecretAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.GenerateSecretResponse>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateSecret",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GenerateSecret",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GenerateSecret_sync_flattened_resourceNames",
+      "title": "GenerateSecretResourceNames",
+      "description": "Snippet for GenerateSecret",
+      "file": "FeedsServiceClient.GenerateSecretResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateSecret",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GenerateSecret",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.GenerateSecretResponse",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateSecret",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GenerateSecret",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FeedsService_GenerateSecret_async_flattened_resourceNames",
+      "title": "GenerateSecretResourceNamesAsync",
+      "description": "Snippet for GenerateSecretAsync",
+      "file": "FeedsServiceClient.GenerateSecretResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateSecretAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient.GenerateSecretAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FeedName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.GenerateSecretResponse>",
+        "client": {
+          "shortName": "FeedsServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FeedsServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateSecret",
+          "fullName": "google.cloud.chronicle.v1.FeedsService.GenerateSecret",
+          "service": {
+            "shortName": "FeedsService",
+            "fullName": "google.cloud.chronicle.v1.FeedsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "chronicle_v1_generated_FindingsRefinementService_GetFindingsRefinement_sync",
       "title": "GetFindingsRefinementRequestObject",
       "description": "Snippet for GetFindingsRefinement",
