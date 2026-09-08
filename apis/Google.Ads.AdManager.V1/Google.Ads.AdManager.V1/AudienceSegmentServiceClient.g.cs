@@ -49,6 +49,8 @@ namespace Google.Ads.AdManager.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetAudienceSegmentSettings = existing.GetAudienceSegmentSettings;
             ListAudienceSegmentsSettings = existing.ListAudienceSegmentsSettings;
+            CreateAudienceSegmentSettings = existing.CreateAudienceSegmentSettings;
+            BatchCreateAudienceSegmentsSettings = existing.BatchCreateAudienceSegmentsSettings;
             BatchActivateAudienceSegmentsSettings = existing.BatchActivateAudienceSegmentsSettings;
             BatchDeactivateAudienceSegmentsSettings = existing.BatchDeactivateAudienceSegmentsSettings;
             BatchApproveAudienceSegmentsSettings = existing.BatchApproveAudienceSegmentsSettings;
@@ -84,6 +86,32 @@ namespace Google.Ads.AdManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListAudienceSegmentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AudienceSegmentServiceClient.CreateAudienceSegment</c> and
+        /// <c>AudienceSegmentServiceClient.CreateAudienceSegmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAudienceSegmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AudienceSegmentServiceClient.BatchCreateAudienceSegments</c> and
+        /// <c>AudienceSegmentServiceClient.BatchCreateAudienceSegmentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateAudienceSegmentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -560,6 +588,308 @@ namespace Google.Ads.AdManager.V1
             }
             return ListAudienceSegmentsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates an `AudienceSegment` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AudienceSegment CreateAudienceSegment(CreateAudienceSegmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an `AudienceSegment` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AudienceSegment> CreateAudienceSegmentAsync(CreateAudienceSegmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an `AudienceSegment` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AudienceSegment> CreateAudienceSegmentAsync(CreateAudienceSegmentRequest request, st::CancellationToken cancellationToken) =>
+            CreateAudienceSegmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an `AudienceSegment` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `AudienceSegment` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="audienceSegment">
+        /// Required. The `AudienceSegment` to create. Only first-party segments can be
+        /// created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AudienceSegment CreateAudienceSegment(string parent, AudienceSegment audienceSegment, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAudienceSegment(new CreateAudienceSegmentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AudienceSegment = gax::GaxPreconditions.CheckNotNull(audienceSegment, nameof(audienceSegment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an `AudienceSegment` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `AudienceSegment` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="audienceSegment">
+        /// Required. The `AudienceSegment` to create. Only first-party segments can be
+        /// created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AudienceSegment> CreateAudienceSegmentAsync(string parent, AudienceSegment audienceSegment, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAudienceSegmentAsync(new CreateAudienceSegmentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AudienceSegment = gax::GaxPreconditions.CheckNotNull(audienceSegment, nameof(audienceSegment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an `AudienceSegment` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `AudienceSegment` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="audienceSegment">
+        /// Required. The `AudienceSegment` to create. Only first-party segments can be
+        /// created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AudienceSegment> CreateAudienceSegmentAsync(string parent, AudienceSegment audienceSegment, st::CancellationToken cancellationToken) =>
+            CreateAudienceSegmentAsync(parent, audienceSegment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an `AudienceSegment` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `AudienceSegment` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="audienceSegment">
+        /// Required. The `AudienceSegment` to create. Only first-party segments can be
+        /// created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AudienceSegment CreateAudienceSegment(NetworkName parent, AudienceSegment audienceSegment, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAudienceSegment(new CreateAudienceSegmentRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AudienceSegment = gax::GaxPreconditions.CheckNotNull(audienceSegment, nameof(audienceSegment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an `AudienceSegment` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `AudienceSegment` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="audienceSegment">
+        /// Required. The `AudienceSegment` to create. Only first-party segments can be
+        /// created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AudienceSegment> CreateAudienceSegmentAsync(NetworkName parent, AudienceSegment audienceSegment, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAudienceSegmentAsync(new CreateAudienceSegmentRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AudienceSegment = gax::GaxPreconditions.CheckNotNull(audienceSegment, nameof(audienceSegment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an `AudienceSegment` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `AudienceSegment` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="audienceSegment">
+        /// Required. The `AudienceSegment` to create. Only first-party segments can be
+        /// created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AudienceSegment> CreateAudienceSegmentAsync(NetworkName parent, AudienceSegment audienceSegment, st::CancellationToken cancellationToken) =>
+            CreateAudienceSegmentAsync(parent, audienceSegment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates `AudienceSegment` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateAudienceSegmentsResponse BatchCreateAudienceSegments(BatchCreateAudienceSegmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates `AudienceSegment` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateAudienceSegmentsResponse> BatchCreateAudienceSegmentsAsync(BatchCreateAudienceSegmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates `AudienceSegment` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateAudienceSegmentsResponse> BatchCreateAudienceSegmentsAsync(BatchCreateAudienceSegmentsRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateAudienceSegmentsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates `AudienceSegment` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `AudienceSegments` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateAudienceSegmentRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `AudienceSegment` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateAudienceSegmentsResponse BatchCreateAudienceSegments(string parent, scg::IEnumerable<CreateAudienceSegmentRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateAudienceSegments(new BatchCreateAudienceSegmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `AudienceSegment` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `AudienceSegments` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateAudienceSegmentRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `AudienceSegment` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateAudienceSegmentsResponse> BatchCreateAudienceSegmentsAsync(string parent, scg::IEnumerable<CreateAudienceSegmentRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateAudienceSegmentsAsync(new BatchCreateAudienceSegmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `AudienceSegment` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `AudienceSegments` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateAudienceSegmentRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `AudienceSegment` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateAudienceSegmentsResponse> BatchCreateAudienceSegmentsAsync(string parent, scg::IEnumerable<CreateAudienceSegmentRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateAudienceSegmentsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates `AudienceSegment` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `AudienceSegments` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateAudienceSegmentRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `AudienceSegment` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateAudienceSegmentsResponse BatchCreateAudienceSegments(NetworkName parent, scg::IEnumerable<CreateAudienceSegmentRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateAudienceSegments(new BatchCreateAudienceSegmentsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `AudienceSegment` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `AudienceSegments` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateAudienceSegmentRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `AudienceSegment` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateAudienceSegmentsResponse> BatchCreateAudienceSegmentsAsync(NetworkName parent, scg::IEnumerable<CreateAudienceSegmentRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateAudienceSegmentsAsync(new BatchCreateAudienceSegmentsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `AudienceSegment` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `AudienceSegments` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateAudienceSegmentRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `AudienceSegment` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateAudienceSegmentsResponse> BatchCreateAudienceSegmentsAsync(NetworkName parent, scg::IEnumerable<CreateAudienceSegmentRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateAudienceSegmentsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Activates `AudienceSegment` objects.
@@ -1297,6 +1627,10 @@ namespace Google.Ads.AdManager.V1
 
         private readonly gaxgrpc::ApiCall<ListAudienceSegmentsRequest, ListAudienceSegmentsResponse> _callListAudienceSegments;
 
+        private readonly gaxgrpc::ApiCall<CreateAudienceSegmentRequest, AudienceSegment> _callCreateAudienceSegment;
+
+        private readonly gaxgrpc::ApiCall<BatchCreateAudienceSegmentsRequest, BatchCreateAudienceSegmentsResponse> _callBatchCreateAudienceSegments;
+
         private readonly gaxgrpc::ApiCall<BatchActivateAudienceSegmentsRequest, BatchActivateAudienceSegmentsResponse> _callBatchActivateAudienceSegments;
 
         private readonly gaxgrpc::ApiCall<BatchDeactivateAudienceSegmentsRequest, BatchDeactivateAudienceSegmentsResponse> _callBatchDeactivateAudienceSegments;
@@ -1331,6 +1665,12 @@ namespace Google.Ads.AdManager.V1
             _callListAudienceSegments = clientHelper.BuildApiCall<ListAudienceSegmentsRequest, ListAudienceSegmentsResponse>("ListAudienceSegments", grpcClient.ListAudienceSegmentsAsync, grpcClient.ListAudienceSegments, effectiveSettings.ListAudienceSegmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAudienceSegments);
             Modify_ListAudienceSegmentsApiCall(ref _callListAudienceSegments);
+            _callCreateAudienceSegment = clientHelper.BuildApiCall<CreateAudienceSegmentRequest, AudienceSegment>("CreateAudienceSegment", grpcClient.CreateAudienceSegmentAsync, grpcClient.CreateAudienceSegment, effectiveSettings.CreateAudienceSegmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAudienceSegment);
+            Modify_CreateAudienceSegmentApiCall(ref _callCreateAudienceSegment);
+            _callBatchCreateAudienceSegments = clientHelper.BuildApiCall<BatchCreateAudienceSegmentsRequest, BatchCreateAudienceSegmentsResponse>("BatchCreateAudienceSegments", grpcClient.BatchCreateAudienceSegmentsAsync, grpcClient.BatchCreateAudienceSegments, effectiveSettings.BatchCreateAudienceSegmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateAudienceSegments);
+            Modify_BatchCreateAudienceSegmentsApiCall(ref _callBatchCreateAudienceSegments);
             _callBatchActivateAudienceSegments = clientHelper.BuildApiCall<BatchActivateAudienceSegmentsRequest, BatchActivateAudienceSegmentsResponse>("BatchActivateAudienceSegments", grpcClient.BatchActivateAudienceSegmentsAsync, grpcClient.BatchActivateAudienceSegments, effectiveSettings.BatchActivateAudienceSegmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchActivateAudienceSegments);
             Modify_BatchActivateAudienceSegmentsApiCall(ref _callBatchActivateAudienceSegments);
@@ -1355,6 +1695,10 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_ListAudienceSegmentsApiCall(ref gaxgrpc::ApiCall<ListAudienceSegmentsRequest, ListAudienceSegmentsResponse> call);
 
+        partial void Modify_CreateAudienceSegmentApiCall(ref gaxgrpc::ApiCall<CreateAudienceSegmentRequest, AudienceSegment> call);
+
+        partial void Modify_BatchCreateAudienceSegmentsApiCall(ref gaxgrpc::ApiCall<BatchCreateAudienceSegmentsRequest, BatchCreateAudienceSegmentsResponse> call);
+
         partial void Modify_BatchActivateAudienceSegmentsApiCall(ref gaxgrpc::ApiCall<BatchActivateAudienceSegmentsRequest, BatchActivateAudienceSegmentsResponse> call);
 
         partial void Modify_BatchDeactivateAudienceSegmentsApiCall(ref gaxgrpc::ApiCall<BatchDeactivateAudienceSegmentsRequest, BatchDeactivateAudienceSegmentsResponse> call);
@@ -1373,6 +1717,10 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_GetAudienceSegmentRequest(ref GetAudienceSegmentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListAudienceSegmentsRequest(ref ListAudienceSegmentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAudienceSegmentRequest(ref CreateAudienceSegmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchCreateAudienceSegmentsRequest(ref BatchCreateAudienceSegmentsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchActivateAudienceSegmentsRequest(ref BatchActivateAudienceSegmentsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1430,6 +1778,54 @@ namespace Google.Ads.AdManager.V1
         {
             Modify_ListAudienceSegmentsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAudienceSegmentsRequest, ListAudienceSegmentsResponse, AudienceSegment>(_callListAudienceSegments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an `AudienceSegment` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AudienceSegment CreateAudienceSegment(CreateAudienceSegmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAudienceSegmentRequest(ref request, ref callSettings);
+            return _callCreateAudienceSegment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an `AudienceSegment` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AudienceSegment> CreateAudienceSegmentAsync(CreateAudienceSegmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAudienceSegmentRequest(ref request, ref callSettings);
+            return _callCreateAudienceSegment.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates `AudienceSegment` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchCreateAudienceSegmentsResponse BatchCreateAudienceSegments(BatchCreateAudienceSegmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateAudienceSegmentsRequest(ref request, ref callSettings);
+            return _callBatchCreateAudienceSegments.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates `AudienceSegment` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchCreateAudienceSegmentsResponse> BatchCreateAudienceSegmentsAsync(BatchCreateAudienceSegmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateAudienceSegmentsRequest(ref request, ref callSettings);
+            return _callBatchCreateAudienceSegments.Async(request, callSettings);
         }
 
         /// <summary>

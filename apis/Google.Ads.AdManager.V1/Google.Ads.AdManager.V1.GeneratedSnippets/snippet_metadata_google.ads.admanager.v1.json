@@ -12503,6 +12503,612 @@
       ]
     },
     {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_CreateAudienceSegment_sync",
+      "title": "CreateAudienceSegmentRequestObject",
+      "description": "Snippet for CreateAudienceSegment",
+      "file": "AudienceSegmentServiceClient.CreateAudienceSegmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceSegment",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.CreateAudienceSegment",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.CreateAudienceSegmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.AudienceSegment",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAudienceSegment",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.CreateAudienceSegment",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_CreateAudienceSegment_async",
+      "title": "CreateAudienceSegmentRequestObjectAsync",
+      "description": "Snippet for CreateAudienceSegmentAsync",
+      "file": "AudienceSegmentServiceClient.CreateAudienceSegmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceSegmentAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.CreateAudienceSegmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.CreateAudienceSegmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.AudienceSegment>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAudienceSegment",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.CreateAudienceSegment",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_CreateAudienceSegment_sync_flattened",
+      "title": "CreateAudienceSegment",
+      "description": "Snippet for CreateAudienceSegment",
+      "file": "AudienceSegmentServiceClient.CreateAudienceSegmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceSegment",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.CreateAudienceSegment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AudienceSegment",
+            "name": "audienceSegment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.AudienceSegment",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAudienceSegment",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.CreateAudienceSegment",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_CreateAudienceSegment_async_flattened",
+      "title": "CreateAudienceSegmentAsync",
+      "description": "Snippet for CreateAudienceSegmentAsync",
+      "file": "AudienceSegmentServiceClient.CreateAudienceSegmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceSegmentAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.CreateAudienceSegmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AudienceSegment",
+            "name": "audienceSegment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.AudienceSegment>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAudienceSegment",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.CreateAudienceSegment",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_CreateAudienceSegment_sync_flattened_resourceNames",
+      "title": "CreateAudienceSegmentResourceNames",
+      "description": "Snippet for CreateAudienceSegment",
+      "file": "AudienceSegmentServiceClient.CreateAudienceSegmentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceSegment",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.CreateAudienceSegment",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AudienceSegment",
+            "name": "audienceSegment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.AudienceSegment",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAudienceSegment",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.CreateAudienceSegment",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_CreateAudienceSegment_async_flattened_resourceNames",
+      "title": "CreateAudienceSegmentResourceNamesAsync",
+      "description": "Snippet for CreateAudienceSegmentAsync",
+      "file": "AudienceSegmentServiceClient.CreateAudienceSegmentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceSegmentAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.CreateAudienceSegmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AudienceSegment",
+            "name": "audienceSegment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.AudienceSegment>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAudienceSegment",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.CreateAudienceSegment",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchCreateAudienceSegments_sync",
+      "title": "BatchCreateAudienceSegmentsRequestObject",
+      "description": "Snippet for BatchCreateAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchCreateAudienceSegmentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchCreateAudienceSegments",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchCreateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchCreateAudienceSegments_async",
+      "title": "BatchCreateAudienceSegmentsRequestObjectAsync",
+      "description": "Snippet for BatchCreateAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchCreateAudienceSegmentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchCreateAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchCreateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchCreateAudienceSegments_sync_flattened",
+      "title": "BatchCreateAudienceSegments",
+      "description": "Snippet for BatchCreateAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchCreateAudienceSegmentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchCreateAudienceSegments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateAudienceSegmentRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchCreateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchCreateAudienceSegments_async_flattened",
+      "title": "BatchCreateAudienceSegmentsAsync",
+      "description": "Snippet for BatchCreateAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchCreateAudienceSegmentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchCreateAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateAudienceSegmentRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchCreateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchCreateAudienceSegments_sync_flattened_resourceNames",
+      "title": "BatchCreateAudienceSegmentsResourceNames",
+      "description": "Snippet for BatchCreateAudienceSegments",
+      "file": "AudienceSegmentServiceClient.BatchCreateAudienceSegmentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateAudienceSegments",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchCreateAudienceSegments",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateAudienceSegmentRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsResponse",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchCreateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchCreateAudienceSegments_async_flattened_resourceNames",
+      "title": "BatchCreateAudienceSegmentsResourceNamesAsync",
+      "description": "Snippet for BatchCreateAudienceSegmentsAsync",
+      "file": "AudienceSegmentServiceClient.BatchCreateAudienceSegmentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateAudienceSegmentsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient.BatchCreateAudienceSegmentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateAudienceSegmentRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsResponse>",
+        "client": {
+          "shortName": "AudienceSegmentServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AudienceSegmentServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateAudienceSegments",
+          "fullName": "google.ads.admanager.v1.AudienceSegmentService.BatchCreateAudienceSegments",
+          "service": {
+            "shortName": "AudienceSegmentService",
+            "fullName": "google.ads.admanager.v1.AudienceSegmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "admanager_v1_generated_AudienceSegmentService_BatchActivateAudienceSegments_sync",
       "title": "BatchActivateAudienceSegmentsRequestObject",
       "description": "Snippet for BatchActivateAudienceSegments",
@@ -14619,6 +15225,1721 @@
         {
           "start": 37,
           "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_GetBreakTemplate_sync",
+      "title": "GetBreakTemplateRequestObject",
+      "description": "Snippet for GetBreakTemplate",
+      "file": "BreakTemplateServiceClient.GetBreakTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBreakTemplate",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.GetBreakTemplate",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.GetBreakTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BreakTemplate",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "GetBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.GetBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_GetBreakTemplate_async",
+      "title": "GetBreakTemplateRequestObjectAsync",
+      "description": "Snippet for GetBreakTemplateAsync",
+      "file": "BreakTemplateServiceClient.GetBreakTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBreakTemplateAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.GetBreakTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.GetBreakTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BreakTemplate>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "GetBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.GetBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_GetBreakTemplate_sync_flattened",
+      "title": "GetBreakTemplate",
+      "description": "Snippet for GetBreakTemplate",
+      "file": "BreakTemplateServiceClient.GetBreakTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBreakTemplate",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.GetBreakTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BreakTemplate",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "GetBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.GetBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_GetBreakTemplate_async_flattened",
+      "title": "GetBreakTemplateAsync",
+      "description": "Snippet for GetBreakTemplateAsync",
+      "file": "BreakTemplateServiceClient.GetBreakTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBreakTemplateAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.GetBreakTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BreakTemplate>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "GetBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.GetBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_GetBreakTemplate_sync_flattened_resourceNames",
+      "title": "GetBreakTemplateResourceNames",
+      "description": "Snippet for GetBreakTemplate",
+      "file": "BreakTemplateServiceClient.GetBreakTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBreakTemplate",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.GetBreakTemplate",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BreakTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BreakTemplate",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "GetBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.GetBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_GetBreakTemplate_async_flattened_resourceNames",
+      "title": "GetBreakTemplateResourceNamesAsync",
+      "description": "Snippet for GetBreakTemplateAsync",
+      "file": "BreakTemplateServiceClient.GetBreakTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBreakTemplateAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.GetBreakTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BreakTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BreakTemplate>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "GetBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.GetBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_ListBreakTemplates_sync",
+      "title": "ListBreakTemplatesRequestObject",
+      "description": "Snippet for ListBreakTemplates",
+      "file": "BreakTemplateServiceClient.ListBreakTemplatesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBreakTemplates",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.ListBreakTemplates",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.ListBreakTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.AdManager.V1.ListBreakTemplatesResponse, Google.Ads.AdManager.V1.BreakTemplate>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "ListBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.ListBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_ListBreakTemplates_async",
+      "title": "ListBreakTemplatesRequestObjectAsync",
+      "description": "Snippet for ListBreakTemplatesAsync",
+      "file": "BreakTemplateServiceClient.ListBreakTemplatesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBreakTemplatesAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.ListBreakTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.ListBreakTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.AdManager.V1.ListBreakTemplatesResponse, Google.Ads.AdManager.V1.BreakTemplate>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "ListBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.ListBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_ListBreakTemplates_sync_flattened",
+      "title": "ListBreakTemplates",
+      "description": "Snippet for ListBreakTemplates",
+      "file": "BreakTemplateServiceClient.ListBreakTemplatesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBreakTemplates",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.ListBreakTemplates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.AdManager.V1.ListBreakTemplatesResponse, Google.Ads.AdManager.V1.BreakTemplate>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "ListBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.ListBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_ListBreakTemplates_async_flattened",
+      "title": "ListBreakTemplatesAsync",
+      "description": "Snippet for ListBreakTemplatesAsync",
+      "file": "BreakTemplateServiceClient.ListBreakTemplatesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBreakTemplatesAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.ListBreakTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.AdManager.V1.ListBreakTemplatesResponse, Google.Ads.AdManager.V1.BreakTemplate>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "ListBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.ListBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_ListBreakTemplates_sync_flattened_resourceNames",
+      "title": "ListBreakTemplatesResourceNames",
+      "description": "Snippet for ListBreakTemplates",
+      "file": "BreakTemplateServiceClient.ListBreakTemplatesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBreakTemplates",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.ListBreakTemplates",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.AdManager.V1.ListBreakTemplatesResponse, Google.Ads.AdManager.V1.BreakTemplate>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "ListBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.ListBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_ListBreakTemplates_async_flattened_resourceNames",
+      "title": "ListBreakTemplatesResourceNamesAsync",
+      "description": "Snippet for ListBreakTemplatesAsync",
+      "file": "BreakTemplateServiceClient.ListBreakTemplatesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBreakTemplatesAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.ListBreakTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.AdManager.V1.ListBreakTemplatesResponse, Google.Ads.AdManager.V1.BreakTemplate>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "ListBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.ListBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_CreateBreakTemplate_sync",
+      "title": "CreateBreakTemplateRequestObject",
+      "description": "Snippet for CreateBreakTemplate",
+      "file": "BreakTemplateServiceClient.CreateBreakTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBreakTemplate",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.CreateBreakTemplate",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.CreateBreakTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BreakTemplate",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "CreateBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.CreateBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_CreateBreakTemplate_async",
+      "title": "CreateBreakTemplateRequestObjectAsync",
+      "description": "Snippet for CreateBreakTemplateAsync",
+      "file": "BreakTemplateServiceClient.CreateBreakTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBreakTemplateAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.CreateBreakTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.CreateBreakTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BreakTemplate>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "CreateBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.CreateBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_CreateBreakTemplate_sync_flattened",
+      "title": "CreateBreakTemplate",
+      "description": "Snippet for CreateBreakTemplate",
+      "file": "BreakTemplateServiceClient.CreateBreakTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBreakTemplate",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.CreateBreakTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.BreakTemplate",
+            "name": "breakTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BreakTemplate",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "CreateBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.CreateBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_CreateBreakTemplate_async_flattened",
+      "title": "CreateBreakTemplateAsync",
+      "description": "Snippet for CreateBreakTemplateAsync",
+      "file": "BreakTemplateServiceClient.CreateBreakTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBreakTemplateAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.CreateBreakTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.BreakTemplate",
+            "name": "breakTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BreakTemplate>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "CreateBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.CreateBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_CreateBreakTemplate_sync_flattened_resourceNames",
+      "title": "CreateBreakTemplateResourceNames",
+      "description": "Snippet for CreateBreakTemplate",
+      "file": "BreakTemplateServiceClient.CreateBreakTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBreakTemplate",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.CreateBreakTemplate",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.BreakTemplate",
+            "name": "breakTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BreakTemplate",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "CreateBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.CreateBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_CreateBreakTemplate_async_flattened_resourceNames",
+      "title": "CreateBreakTemplateResourceNamesAsync",
+      "description": "Snippet for CreateBreakTemplateAsync",
+      "file": "BreakTemplateServiceClient.CreateBreakTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBreakTemplateAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.CreateBreakTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.BreakTemplate",
+            "name": "breakTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BreakTemplate>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "CreateBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.CreateBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_BatchCreateBreakTemplates_sync",
+      "title": "BatchCreateBreakTemplatesRequestObject",
+      "description": "Snippet for BatchCreateBreakTemplates",
+      "file": "BreakTemplateServiceClient.BatchCreateBreakTemplatesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateBreakTemplates",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.BatchCreateBreakTemplates",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchCreateBreakTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateBreakTemplatesResponse",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.BatchCreateBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_BatchCreateBreakTemplates_async",
+      "title": "BatchCreateBreakTemplatesRequestObjectAsync",
+      "description": "Snippet for BatchCreateBreakTemplatesAsync",
+      "file": "BreakTemplateServiceClient.BatchCreateBreakTemplatesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateBreakTemplatesAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.BatchCreateBreakTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchCreateBreakTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateBreakTemplatesResponse>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.BatchCreateBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_BatchCreateBreakTemplates_sync_flattened",
+      "title": "BatchCreateBreakTemplates",
+      "description": "Snippet for BatchCreateBreakTemplates",
+      "file": "BreakTemplateServiceClient.BatchCreateBreakTemplatesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateBreakTemplates",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.BatchCreateBreakTemplates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateBreakTemplateRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateBreakTemplatesResponse",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.BatchCreateBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_BatchCreateBreakTemplates_async_flattened",
+      "title": "BatchCreateBreakTemplatesAsync",
+      "description": "Snippet for BatchCreateBreakTemplatesAsync",
+      "file": "BreakTemplateServiceClient.BatchCreateBreakTemplatesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateBreakTemplatesAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.BatchCreateBreakTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateBreakTemplateRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateBreakTemplatesResponse>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.BatchCreateBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_BatchCreateBreakTemplates_sync_flattened_resourceNames",
+      "title": "BatchCreateBreakTemplatesResourceNames",
+      "description": "Snippet for BatchCreateBreakTemplates",
+      "file": "BreakTemplateServiceClient.BatchCreateBreakTemplatesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateBreakTemplates",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.BatchCreateBreakTemplates",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateBreakTemplateRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateBreakTemplatesResponse",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.BatchCreateBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_BatchCreateBreakTemplates_async_flattened_resourceNames",
+      "title": "BatchCreateBreakTemplatesResourceNamesAsync",
+      "description": "Snippet for BatchCreateBreakTemplatesAsync",
+      "file": "BreakTemplateServiceClient.BatchCreateBreakTemplatesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateBreakTemplatesAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.BatchCreateBreakTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateBreakTemplateRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateBreakTemplatesResponse>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.BatchCreateBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_UpdateBreakTemplate_sync",
+      "title": "UpdateBreakTemplateRequestObject",
+      "description": "Snippet for UpdateBreakTemplate",
+      "file": "BreakTemplateServiceClient.UpdateBreakTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBreakTemplate",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.UpdateBreakTemplate",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.UpdateBreakTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BreakTemplate",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.UpdateBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_UpdateBreakTemplate_async",
+      "title": "UpdateBreakTemplateRequestObjectAsync",
+      "description": "Snippet for UpdateBreakTemplateAsync",
+      "file": "BreakTemplateServiceClient.UpdateBreakTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBreakTemplateAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.UpdateBreakTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.UpdateBreakTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BreakTemplate>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.UpdateBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_UpdateBreakTemplate_sync_flattened",
+      "title": "UpdateBreakTemplate",
+      "description": "Snippet for UpdateBreakTemplate",
+      "file": "BreakTemplateServiceClient.UpdateBreakTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBreakTemplate",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.UpdateBreakTemplate",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BreakTemplate",
+            "name": "breakTemplate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BreakTemplate",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.UpdateBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_UpdateBreakTemplate_async_flattened",
+      "title": "UpdateBreakTemplateAsync",
+      "description": "Snippet for UpdateBreakTemplateAsync",
+      "file": "BreakTemplateServiceClient.UpdateBreakTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBreakTemplateAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.UpdateBreakTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BreakTemplate",
+            "name": "breakTemplate"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BreakTemplate>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateBreakTemplate",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.UpdateBreakTemplate",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_BatchUpdateBreakTemplates_sync",
+      "title": "BatchUpdateBreakTemplatesRequestObject",
+      "description": "Snippet for BatchUpdateBreakTemplates",
+      "file": "BreakTemplateServiceClient.BatchUpdateBreakTemplatesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateBreakTemplates",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.BatchUpdateBreakTemplates",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchUpdateBreakTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchUpdateBreakTemplatesResponse",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.BatchUpdateBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_BatchUpdateBreakTemplates_async",
+      "title": "BatchUpdateBreakTemplatesRequestObjectAsync",
+      "description": "Snippet for BatchUpdateBreakTemplatesAsync",
+      "file": "BreakTemplateServiceClient.BatchUpdateBreakTemplatesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateBreakTemplatesAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.BatchUpdateBreakTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchUpdateBreakTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchUpdateBreakTemplatesResponse>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.BatchUpdateBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_BatchUpdateBreakTemplates_sync_flattened",
+      "title": "BatchUpdateBreakTemplates",
+      "description": "Snippet for BatchUpdateBreakTemplates",
+      "file": "BreakTemplateServiceClient.BatchUpdateBreakTemplatesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateBreakTemplates",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.BatchUpdateBreakTemplates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateBreakTemplateRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchUpdateBreakTemplatesResponse",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.BatchUpdateBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_BatchUpdateBreakTemplates_async_flattened",
+      "title": "BatchUpdateBreakTemplatesAsync",
+      "description": "Snippet for BatchUpdateBreakTemplatesAsync",
+      "file": "BreakTemplateServiceClient.BatchUpdateBreakTemplatesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateBreakTemplatesAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.BatchUpdateBreakTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateBreakTemplateRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchUpdateBreakTemplatesResponse>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.BatchUpdateBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_BatchUpdateBreakTemplates_sync_flattened_resourceNames",
+      "title": "BatchUpdateBreakTemplatesResourceNames",
+      "description": "Snippet for BatchUpdateBreakTemplates",
+      "file": "BreakTemplateServiceClient.BatchUpdateBreakTemplatesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateBreakTemplates",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.BatchUpdateBreakTemplates",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateBreakTemplateRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchUpdateBreakTemplatesResponse",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.BatchUpdateBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_BreakTemplateService_BatchUpdateBreakTemplates_async_flattened_resourceNames",
+      "title": "BatchUpdateBreakTemplatesResourceNamesAsync",
+      "description": "Snippet for BatchUpdateBreakTemplatesAsync",
+      "file": "BreakTemplateServiceClient.BatchUpdateBreakTemplatesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateBreakTemplatesAsync",
+        "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient.BatchUpdateBreakTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateBreakTemplateRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchUpdateBreakTemplatesResponse>",
+        "client": {
+          "shortName": "BreakTemplateServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.BreakTemplateServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateBreakTemplates",
+          "fullName": "google.ads.admanager.v1.BreakTemplateService.BatchUpdateBreakTemplates",
+          "service": {
+            "shortName": "BreakTemplateService",
+            "fullName": "google.ads.admanager.v1.BreakTemplateService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
           "type": "SHORT"
         }
       ]

@@ -394,6 +394,210 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateAudienceSegment</summary>
+        public void CreateAudienceSegmentRequestObject()
+        {
+            // Snippet: CreateAudienceSegment(CreateAudienceSegmentRequest, CallSettings)
+            // Create client
+            AudienceSegmentServiceClient audienceSegmentServiceClient = AudienceSegmentServiceClient.Create();
+            // Initialize request argument(s)
+            CreateAudienceSegmentRequest request = new CreateAudienceSegmentRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                AudienceSegment = new AudienceSegment(),
+            };
+            // Make the request
+            AudienceSegment response = audienceSegmentServiceClient.CreateAudienceSegment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAudienceSegmentAsync</summary>
+        public async Task CreateAudienceSegmentRequestObjectAsync()
+        {
+            // Snippet: CreateAudienceSegmentAsync(CreateAudienceSegmentRequest, CallSettings)
+            // Additional: CreateAudienceSegmentAsync(CreateAudienceSegmentRequest, CancellationToken)
+            // Create client
+            AudienceSegmentServiceClient audienceSegmentServiceClient = await AudienceSegmentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAudienceSegmentRequest request = new CreateAudienceSegmentRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                AudienceSegment = new AudienceSegment(),
+            };
+            // Make the request
+            AudienceSegment response = await audienceSegmentServiceClient.CreateAudienceSegmentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAudienceSegment</summary>
+        public void CreateAudienceSegment()
+        {
+            // Snippet: CreateAudienceSegment(string, AudienceSegment, CallSettings)
+            // Create client
+            AudienceSegmentServiceClient audienceSegmentServiceClient = AudienceSegmentServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            AudienceSegment audienceSegment = new AudienceSegment();
+            // Make the request
+            AudienceSegment response = audienceSegmentServiceClient.CreateAudienceSegment(parent, audienceSegment);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAudienceSegmentAsync</summary>
+        public async Task CreateAudienceSegmentAsync()
+        {
+            // Snippet: CreateAudienceSegmentAsync(string, AudienceSegment, CallSettings)
+            // Additional: CreateAudienceSegmentAsync(string, AudienceSegment, CancellationToken)
+            // Create client
+            AudienceSegmentServiceClient audienceSegmentServiceClient = await AudienceSegmentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            AudienceSegment audienceSegment = new AudienceSegment();
+            // Make the request
+            AudienceSegment response = await audienceSegmentServiceClient.CreateAudienceSegmentAsync(parent, audienceSegment);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAudienceSegment</summary>
+        public void CreateAudienceSegmentResourceNames()
+        {
+            // Snippet: CreateAudienceSegment(NetworkName, AudienceSegment, CallSettings)
+            // Create client
+            AudienceSegmentServiceClient audienceSegmentServiceClient = AudienceSegmentServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            AudienceSegment audienceSegment = new AudienceSegment();
+            // Make the request
+            AudienceSegment response = audienceSegmentServiceClient.CreateAudienceSegment(parent, audienceSegment);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAudienceSegmentAsync</summary>
+        public async Task CreateAudienceSegmentResourceNamesAsync()
+        {
+            // Snippet: CreateAudienceSegmentAsync(NetworkName, AudienceSegment, CallSettings)
+            // Additional: CreateAudienceSegmentAsync(NetworkName, AudienceSegment, CancellationToken)
+            // Create client
+            AudienceSegmentServiceClient audienceSegmentServiceClient = await AudienceSegmentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            AudienceSegment audienceSegment = new AudienceSegment();
+            // Make the request
+            AudienceSegment response = await audienceSegmentServiceClient.CreateAudienceSegmentAsync(parent, audienceSegment);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateAudienceSegments</summary>
+        public void BatchCreateAudienceSegmentsRequestObject()
+        {
+            // Snippet: BatchCreateAudienceSegments(BatchCreateAudienceSegmentsRequest, CallSettings)
+            // Create client
+            AudienceSegmentServiceClient audienceSegmentServiceClient = AudienceSegmentServiceClient.Create();
+            // Initialize request argument(s)
+            BatchCreateAudienceSegmentsRequest request = new BatchCreateAudienceSegmentsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new CreateAudienceSegmentRequest(),
+                },
+            };
+            // Make the request
+            BatchCreateAudienceSegmentsResponse response = audienceSegmentServiceClient.BatchCreateAudienceSegments(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateAudienceSegmentsAsync</summary>
+        public async Task BatchCreateAudienceSegmentsRequestObjectAsync()
+        {
+            // Snippet: BatchCreateAudienceSegmentsAsync(BatchCreateAudienceSegmentsRequest, CallSettings)
+            // Additional: BatchCreateAudienceSegmentsAsync(BatchCreateAudienceSegmentsRequest, CancellationToken)
+            // Create client
+            AudienceSegmentServiceClient audienceSegmentServiceClient = await AudienceSegmentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchCreateAudienceSegmentsRequest request = new BatchCreateAudienceSegmentsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new CreateAudienceSegmentRequest(),
+                },
+            };
+            // Make the request
+            BatchCreateAudienceSegmentsResponse response = await audienceSegmentServiceClient.BatchCreateAudienceSegmentsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateAudienceSegments</summary>
+        public void BatchCreateAudienceSegments()
+        {
+            // Snippet: BatchCreateAudienceSegments(string, IEnumerable<CreateAudienceSegmentRequest>, CallSettings)
+            // Create client
+            AudienceSegmentServiceClient audienceSegmentServiceClient = AudienceSegmentServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<CreateAudienceSegmentRequest> requests = new CreateAudienceSegmentRequest[]
+            {
+                new CreateAudienceSegmentRequest(),
+            };
+            // Make the request
+            BatchCreateAudienceSegmentsResponse response = audienceSegmentServiceClient.BatchCreateAudienceSegments(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateAudienceSegmentsAsync</summary>
+        public async Task BatchCreateAudienceSegmentsAsync()
+        {
+            // Snippet: BatchCreateAudienceSegmentsAsync(string, IEnumerable<CreateAudienceSegmentRequest>, CallSettings)
+            // Additional: BatchCreateAudienceSegmentsAsync(string, IEnumerable<CreateAudienceSegmentRequest>, CancellationToken)
+            // Create client
+            AudienceSegmentServiceClient audienceSegmentServiceClient = await AudienceSegmentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<CreateAudienceSegmentRequest> requests = new CreateAudienceSegmentRequest[]
+            {
+                new CreateAudienceSegmentRequest(),
+            };
+            // Make the request
+            BatchCreateAudienceSegmentsResponse response = await audienceSegmentServiceClient.BatchCreateAudienceSegmentsAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateAudienceSegments</summary>
+        public void BatchCreateAudienceSegmentsResourceNames()
+        {
+            // Snippet: BatchCreateAudienceSegments(NetworkName, IEnumerable<CreateAudienceSegmentRequest>, CallSettings)
+            // Create client
+            AudienceSegmentServiceClient audienceSegmentServiceClient = AudienceSegmentServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CreateAudienceSegmentRequest> requests = new CreateAudienceSegmentRequest[]
+            {
+                new CreateAudienceSegmentRequest(),
+            };
+            // Make the request
+            BatchCreateAudienceSegmentsResponse response = audienceSegmentServiceClient.BatchCreateAudienceSegments(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateAudienceSegmentsAsync</summary>
+        public async Task BatchCreateAudienceSegmentsResourceNamesAsync()
+        {
+            // Snippet: BatchCreateAudienceSegmentsAsync(NetworkName, IEnumerable<CreateAudienceSegmentRequest>, CallSettings)
+            // Additional: BatchCreateAudienceSegmentsAsync(NetworkName, IEnumerable<CreateAudienceSegmentRequest>, CancellationToken)
+            // Create client
+            AudienceSegmentServiceClient audienceSegmentServiceClient = await AudienceSegmentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CreateAudienceSegmentRequest> requests = new CreateAudienceSegmentRequest[]
+            {
+                new CreateAudienceSegmentRequest(),
+            };
+            // Make the request
+            BatchCreateAudienceSegmentsResponse response = await audienceSegmentServiceClient.BatchCreateAudienceSegmentsAsync(parent, requests);
+            // End snippet
+        }
+
         /// <summary>Snippet for BatchActivateAudienceSegments</summary>
         public void BatchActivateAudienceSegmentsRequestObject()
         {

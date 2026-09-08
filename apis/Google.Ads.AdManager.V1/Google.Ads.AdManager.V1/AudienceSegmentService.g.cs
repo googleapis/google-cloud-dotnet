@@ -39,81 +39,104 @@ namespace Google.Ads.AdManager.V1 {
             "ASgFQgPgQQEikAEKHExpc3RBdWRpZW5jZVNlZ21lbnRzUmVzcG9uc2USQwoR",
             "YXVkaWVuY2Vfc2VnbWVudHMYASADKAsyKC5nb29nbGUuYWRzLmFkbWFuYWdl",
             "ci52MS5BdWRpZW5jZVNlZ21lbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
-            "EhIKCnRvdGFsX3NpemUYAyABKAUioQEKJEJhdGNoQWN0aXZhdGVBdWRpZW5j",
-            "ZVNlZ21lbnRzUmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKOBBAvpBIgogYWRt",
-            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSPwoFbmFtZXMYAiADKAlC",
-            "MOBBAvpBKgooYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0F1ZGllbmNlU2Vn",
-            "bWVudCI9CiVCYXRjaEFjdGl2YXRlQXVkaWVuY2VTZWdtZW50c1Jlc3BvbnNl",
-            "EhQKDGNoYW5nZV9jb3VudBgBIAEoAyKjAQomQmF0Y2hEZWFjdGl2YXRlQXVk",
+            "EhIKCnRvdGFsX3NpemUYAyABKAUioQEKHENyZWF0ZUF1ZGllbmNlU2VnbWVu",
+            "dFJlcXVlc3QSOAoGcGFyZW50GAEgASgJQijgQQL6QSIKIGFkbWFuYWdlci5n",
+            "b29nbGVhcGlzLmNvbS9OZXR3b3JrEkcKEGF1ZGllbmNlX3NlZ21lbnQYAiAB",
+            "KAsyKC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5BdWRpZW5jZVNlZ21lbnRC",
+            "A+BBAiKsAQoiQmF0Y2hDcmVhdGVBdWRpZW5jZVNlZ21lbnRzUmVxdWVzdBI4",
+            "CgZwYXJlbnQYASABKAlCKOBBAvpBIgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMu",
+            "Y29tL05ldHdvcmsSTAoIcmVxdWVzdHMYAiADKAsyNS5nb29nbGUuYWRzLmFk",
+            "bWFuYWdlci52MS5DcmVhdGVBdWRpZW5jZVNlZ21lbnRSZXF1ZXN0QgPgQQIi",
+            "agojQmF0Y2hDcmVhdGVBdWRpZW5jZVNlZ21lbnRzUmVzcG9uc2USQwoRYXVk",
+            "aWVuY2Vfc2VnbWVudHMYASADKAsyKC5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MS5BdWRpZW5jZVNlZ21lbnQioQEKJEJhdGNoQWN0aXZhdGVBdWRpZW5jZVNl",
+            "Z21lbnRzUmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKOBBAvpBIgogYWRtYW5h",
+            "Z2VyLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSPwoFbmFtZXMYAiADKAlCMOBB",
+            "AvpBKgooYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0F1ZGllbmNlU2VnbWVu",
+            "dCI9CiVCYXRjaEFjdGl2YXRlQXVkaWVuY2VTZWdtZW50c1Jlc3BvbnNlEhQK",
+            "DGNoYW5nZV9jb3VudBgBIAEoAyKjAQomQmF0Y2hEZWFjdGl2YXRlQXVkaWVu",
+            "Y2VTZWdtZW50c1JlcXVlc3QSOAoGcGFyZW50GAEgASgJQijgQQL6QSIKIGFk",
+            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEj8KBW5hbWVzGAIgAygJ",
+            "QjDgQQL6QSoKKGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9BdWRpZW5jZVNl",
+            "Z21lbnQiPwonQmF0Y2hEZWFjdGl2YXRlQXVkaWVuY2VTZWdtZW50c1Jlc3Bv",
+            "bnNlEhQKDGNoYW5nZV9jb3VudBgBIAEoAyKgAQojQmF0Y2hBcHByb3ZlQXVk",
             "aWVuY2VTZWdtZW50c1JlcXVlc3QSOAoGcGFyZW50GAEgASgJQijgQQL6QSIK",
             "IGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEj8KBW5hbWVzGAIg",
             "AygJQjDgQQL6QSoKKGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9BdWRpZW5j",
-            "ZVNlZ21lbnQiPwonQmF0Y2hEZWFjdGl2YXRlQXVkaWVuY2VTZWdtZW50c1Jl",
-            "c3BvbnNlEhQKDGNoYW5nZV9jb3VudBgBIAEoAyKgAQojQmF0Y2hBcHByb3Zl",
-            "QXVkaWVuY2VTZWdtZW50c1JlcXVlc3QSOAoGcGFyZW50GAEgASgJQijgQQL6",
-            "QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEj8KBW5hbWVz",
-            "GAIgAygJQjDgQQL6QSoKKGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9BdWRp",
-            "ZW5jZVNlZ21lbnQiPAokQmF0Y2hBcHByb3ZlQXVkaWVuY2VTZWdtZW50c1Jl",
-            "c3BvbnNlEhQKDGNoYW5nZV9jb3VudBgBIAEoAyKfAQoiQmF0Y2hSZWplY3RB",
-            "dWRpZW5jZVNlZ21lbnRzUmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKOBBAvpB",
-            "IgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSPwoFbmFtZXMY",
-            "AiADKAlCMOBBAvpBKgooYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0F1ZGll",
-            "bmNlU2VnbWVudCI7CiNCYXRjaFJlamVjdEF1ZGllbmNlU2VnbWVudHNSZXNw",
-            "b25zZRIUCgxjaGFuZ2VfY291bnQYASABKAMioQEKJEJhdGNoUG9wdWxhdGVB",
-            "dWRpZW5jZVNlZ21lbnRzUmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKOBBAvpB",
-            "IgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSPwoFbmFtZXMY",
-            "AiADKAlCMOBBAvpBKgooYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0F1ZGll",
-            "bmNlU2VnbWVudCI9CiVCYXRjaFBvcHVsYXRlQXVkaWVuY2VTZWdtZW50c1Jl",
-            "c3BvbnNlEhQKDGNoYW5nZV9jb3VudBgBIAEoAzK+DQoWQXVkaWVuY2VTZWdt",
-            "ZW50U2VydmljZRKrAQoSR2V0QXVkaWVuY2VTZWdtZW50EjIuZ29vZ2xlLmFk",
-            "cy5hZG1hbmFnZXIudjEuR2V0QXVkaWVuY2VTZWdtZW50UmVxdWVzdBooLmdv",
-            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkF1ZGllbmNlU2VnbWVudCI32kEEbmFt",
-            "ZYLT5JMCKhIoL3YxL3tuYW1lPW5ldHdvcmtzLyovYXVkaWVuY2VTZWdtZW50",
-            "cy8qfRK+AQoUTGlzdEF1ZGllbmNlU2VnbWVudHMSNC5nb29nbGUuYWRzLmFk",
-            "bWFuYWdlci52MS5MaXN0QXVkaWVuY2VTZWdtZW50c1JlcXVlc3QaNS5nb29n",
-            "bGUuYWRzLmFkbWFuYWdlci52MS5MaXN0QXVkaWVuY2VTZWdtZW50c1Jlc3Bv",
-            "bnNlIjnaQQZwYXJlbnSC0+STAioSKC92MS97cGFyZW50PW5ldHdvcmtzLyp9",
-            "L2F1ZGllbmNlU2VnbWVudHMS8AEKHUJhdGNoQWN0aXZhdGVBdWRpZW5jZVNl",
-            "Z21lbnRzEj0uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQmF0Y2hBY3RpdmF0",
-            "ZUF1ZGllbmNlU2VnbWVudHNSZXF1ZXN0Gj4uZ29vZ2xlLmFkcy5hZG1hbmFn",
-            "ZXIudjEuQmF0Y2hBY3RpdmF0ZUF1ZGllbmNlU2VnbWVudHNSZXNwb25zZSJQ",
-            "2kEMcGFyZW50LG5hbWVzgtPkkwI7IjYvdjEve3BhcmVudD1uZXR3b3Jrcy8q",
-            "fS9hdWRpZW5jZVNlZ21lbnRzOmJhdGNoQWN0aXZhdGU6ASoS+AEKH0JhdGNo",
-            "RGVhY3RpdmF0ZUF1ZGllbmNlU2VnbWVudHMSPy5nb29nbGUuYWRzLmFkbWFu",
-            "YWdlci52MS5CYXRjaERlYWN0aXZhdGVBdWRpZW5jZVNlZ21lbnRzUmVxdWVz",
-            "dBpALmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkJhdGNoRGVhY3RpdmF0ZUF1",
-            "ZGllbmNlU2VnbWVudHNSZXNwb25zZSJS2kEMcGFyZW50LG5hbWVzgtPkkwI9",
-            "IjgvdjEve3BhcmVudD1uZXR3b3Jrcy8qfS9hdWRpZW5jZVNlZ21lbnRzOmJh",
-            "dGNoRGVhY3RpdmF0ZToBKhLsAQocQmF0Y2hBcHByb3ZlQXVkaWVuY2VTZWdt",
-            "ZW50cxI8Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkJhdGNoQXBwcm92ZUF1",
-            "ZGllbmNlU2VnbWVudHNSZXF1ZXN0Gj0uZ29vZ2xlLmFkcy5hZG1hbmFnZXIu",
-            "djEuQmF0Y2hBcHByb3ZlQXVkaWVuY2VTZWdtZW50c1Jlc3BvbnNlIk/aQQxw",
-            "YXJlbnQsbmFtZXOC0+STAjoiNS92MS97cGFyZW50PW5ldHdvcmtzLyp9L2F1",
-            "ZGllbmNlU2VnbWVudHM6YmF0Y2hBcHByb3ZlOgEqEugBChtCYXRjaFJlamVj",
-            "dEF1ZGllbmNlU2VnbWVudHMSOy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5C",
-            "YXRjaFJlamVjdEF1ZGllbmNlU2VnbWVudHNSZXF1ZXN0GjwuZ29vZ2xlLmFk",
-            "cy5hZG1hbmFnZXIudjEuQmF0Y2hSZWplY3RBdWRpZW5jZVNlZ21lbnRzUmVz",
-            "cG9uc2UiTtpBDHBhcmVudCxuYW1lc4LT5JMCOSI0L3YxL3twYXJlbnQ9bmV0",
-            "d29ya3MvKn0vYXVkaWVuY2VTZWdtZW50czpiYXRjaFJlamVjdDoBKhLwAQod",
-            "QmF0Y2hQb3B1bGF0ZUF1ZGllbmNlU2VnbWVudHMSPS5nb29nbGUuYWRzLmFk",
-            "bWFuYWdlci52MS5CYXRjaFBvcHVsYXRlQXVkaWVuY2VTZWdtZW50c1JlcXVl",
-            "c3QaPi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5CYXRjaFBvcHVsYXRlQXVk",
-            "aWVuY2VTZWdtZW50c1Jlc3BvbnNlIlDaQQxwYXJlbnQsbmFtZXOC0+STAjsi",
-            "Ni92MS97cGFyZW50PW5ldHdvcmtzLyp9L2F1ZGllbmNlU2VnbWVudHM6YmF0",
-            "Y2hQb3B1bGF0ZToBKhp6ykEYYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t0kFc",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9hZG1hbmFnZXIsaHR0",
-            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9hZG1hbmFnZXIucmVhZG9u",
-            "bHlCzwEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIbQXVkaWVuY2VT",
-            "ZWdtZW50U2VydmljZVByb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdH",
-            "b29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2Vy",
-            "XFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "ZVNlZ21lbnQiPAokQmF0Y2hBcHByb3ZlQXVkaWVuY2VTZWdtZW50c1Jlc3Bv",
+            "bnNlEhQKDGNoYW5nZV9jb3VudBgBIAEoAyKfAQoiQmF0Y2hSZWplY3RBdWRp",
+            "ZW5jZVNlZ21lbnRzUmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKOBBAvpBIgog",
+            "YWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSPwoFbmFtZXMYAiAD",
+            "KAlCMOBBAvpBKgooYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0F1ZGllbmNl",
+            "U2VnbWVudCI7CiNCYXRjaFJlamVjdEF1ZGllbmNlU2VnbWVudHNSZXNwb25z",
+            "ZRIUCgxjaGFuZ2VfY291bnQYASABKAMioQEKJEJhdGNoUG9wdWxhdGVBdWRp",
+            "ZW5jZVNlZ21lbnRzUmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKOBBAvpBIgog",
+            "YWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSPwoFbmFtZXMYAiAD",
+            "KAlCMOBBAvpBKgooYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0F1ZGllbmNl",
+            "U2VnbWVudCI9CiVCYXRjaFBvcHVsYXRlQXVkaWVuY2VTZWdtZW50c1Jlc3Bv",
+            "bnNlEhQKDGNoYW5nZV9jb3VudBgBIAEoAzKFEQoWQXVkaWVuY2VTZWdtZW50",
+            "U2VydmljZRKrAQoSR2V0QXVkaWVuY2VTZWdtZW50EjIuZ29vZ2xlLmFkcy5h",
+            "ZG1hbmFnZXIudjEuR2V0QXVkaWVuY2VTZWdtZW50UmVxdWVzdBooLmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkF1ZGllbmNlU2VnbWVudCI32kEEbmFtZYLT",
+            "5JMCKhIoL3YxL3tuYW1lPW5ldHdvcmtzLyovYXVkaWVuY2VTZWdtZW50cy8q",
+            "fRK+AQoUTGlzdEF1ZGllbmNlU2VnbWVudHMSNC5nb29nbGUuYWRzLmFkbWFu",
+            "YWdlci52MS5MaXN0QXVkaWVuY2VTZWdtZW50c1JlcXVlc3QaNS5nb29nbGUu",
+            "YWRzLmFkbWFuYWdlci52MS5MaXN0QXVkaWVuY2VTZWdtZW50c1Jlc3BvbnNl",
+            "IjnaQQZwYXJlbnSC0+STAioSKC92MS97cGFyZW50PW5ldHdvcmtzLyp9L2F1",
+            "ZGllbmNlU2VnbWVudHMS1gEKFUNyZWF0ZUF1ZGllbmNlU2VnbWVudBI1Lmdv",
+            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNyZWF0ZUF1ZGllbmNlU2VnbWVudFJl",
+            "cXVlc3QaKC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5BdWRpZW5jZVNlZ21l",
+            "bnQiXNpBF3BhcmVudCxhdWRpZW5jZV9zZWdtZW50gtPkkwI8IigvdjEve3Bh",
+            "cmVudD1uZXR3b3Jrcy8qfS9hdWRpZW5jZVNlZ21lbnRzOhBhdWRpZW5jZV9z",
+            "ZWdtZW50EusBChtCYXRjaENyZWF0ZUF1ZGllbmNlU2VnbWVudHMSOy5nb29n",
+            "bGUuYWRzLmFkbWFuYWdlci52MS5CYXRjaENyZWF0ZUF1ZGllbmNlU2VnbWVu",
+            "dHNSZXF1ZXN0GjwuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQmF0Y2hDcmVh",
+            "dGVBdWRpZW5jZVNlZ21lbnRzUmVzcG9uc2UiUdpBD3BhcmVudCxyZXF1ZXN0",
+            "c4LT5JMCOSI0L3YxL3twYXJlbnQ9bmV0d29ya3MvKn0vYXVkaWVuY2VTZWdt",
+            "ZW50czpiYXRjaENyZWF0ZToBKhLwAQodQmF0Y2hBY3RpdmF0ZUF1ZGllbmNl",
+            "U2VnbWVudHMSPS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5CYXRjaEFjdGl2",
+            "YXRlQXVkaWVuY2VTZWdtZW50c1JlcXVlc3QaPi5nb29nbGUuYWRzLmFkbWFu",
+            "YWdlci52MS5CYXRjaEFjdGl2YXRlQXVkaWVuY2VTZWdtZW50c1Jlc3BvbnNl",
+            "IlDaQQxwYXJlbnQsbmFtZXOC0+STAjsiNi92MS97cGFyZW50PW5ldHdvcmtz",
+            "Lyp9L2F1ZGllbmNlU2VnbWVudHM6YmF0Y2hBY3RpdmF0ZToBKhL4AQofQmF0",
+            "Y2hEZWFjdGl2YXRlQXVkaWVuY2VTZWdtZW50cxI/Lmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLkJhdGNoRGVhY3RpdmF0ZUF1ZGllbmNlU2VnbWVudHNSZXF1",
+            "ZXN0GkAuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQmF0Y2hEZWFjdGl2YXRl",
+            "QXVkaWVuY2VTZWdtZW50c1Jlc3BvbnNlIlLaQQxwYXJlbnQsbmFtZXOC0+ST",
+            "Aj0iOC92MS97cGFyZW50PW5ldHdvcmtzLyp9L2F1ZGllbmNlU2VnbWVudHM6",
+            "YmF0Y2hEZWFjdGl2YXRlOgEqEuwBChxCYXRjaEFwcHJvdmVBdWRpZW5jZVNl",
+            "Z21lbnRzEjwuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQmF0Y2hBcHByb3Zl",
+            "QXVkaWVuY2VTZWdtZW50c1JlcXVlc3QaPS5nb29nbGUuYWRzLmFkbWFuYWdl",
+            "ci52MS5CYXRjaEFwcHJvdmVBdWRpZW5jZVNlZ21lbnRzUmVzcG9uc2UiT9pB",
+            "DHBhcmVudCxuYW1lc4LT5JMCOiI1L3YxL3twYXJlbnQ9bmV0d29ya3MvKn0v",
+            "YXVkaWVuY2VTZWdtZW50czpiYXRjaEFwcHJvdmU6ASoS6AEKG0JhdGNoUmVq",
+            "ZWN0QXVkaWVuY2VTZWdtZW50cxI7Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYx",
+            "LkJhdGNoUmVqZWN0QXVkaWVuY2VTZWdtZW50c1JlcXVlc3QaPC5nb29nbGUu",
+            "YWRzLmFkbWFuYWdlci52MS5CYXRjaFJlamVjdEF1ZGllbmNlU2VnbWVudHNS",
+            "ZXNwb25zZSJO2kEMcGFyZW50LG5hbWVzgtPkkwI5IjQvdjEve3BhcmVudD1u",
+            "ZXR3b3Jrcy8qfS9hdWRpZW5jZVNlZ21lbnRzOmJhdGNoUmVqZWN0OgEqEvAB",
+            "Ch1CYXRjaFBvcHVsYXRlQXVkaWVuY2VTZWdtZW50cxI9Lmdvb2dsZS5hZHMu",
+            "YWRtYW5hZ2VyLnYxLkJhdGNoUG9wdWxhdGVBdWRpZW5jZVNlZ21lbnRzUmVx",
+            "dWVzdBo+Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkJhdGNoUG9wdWxhdGVB",
+            "dWRpZW5jZVNlZ21lbnRzUmVzcG9uc2UiUNpBDHBhcmVudCxuYW1lc4LT5JMC",
+            "OyI2L3YxL3twYXJlbnQ9bmV0d29ya3MvKn0vYXVkaWVuY2VTZWdtZW50czpi",
+            "YXRjaFBvcHVsYXRlOgEqGnrKQRhhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb23S",
+            "QVxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2FkbWFuYWdlcixo",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2FkbWFuYWdlci5yZWFk",
+            "b25seULPAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhtBdWRpZW5j",
+            "ZVNlZ21lbnRTZXJ2aWNlUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoC",
+            "F0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFn",
+            "ZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AudienceSegmentMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.GetAudienceSegmentRequest), global::Google.Ads.AdManager.V1.GetAudienceSegmentRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ListAudienceSegmentsRequest), global::Google.Ads.AdManager.V1.ListAudienceSegmentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy", "Skip" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ListAudienceSegmentsResponse), global::Google.Ads.AdManager.V1.ListAudienceSegmentsResponse.Parser, new[]{ "AudienceSegments", "NextPageToken", "TotalSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CreateAudienceSegmentRequest), global::Google.Ads.AdManager.V1.CreateAudienceSegmentRequest.Parser, new[]{ "Parent", "AudienceSegment" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsRequest), global::Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsRequest.Parser, new[]{ "Parent", "Requests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsResponse), global::Google.Ads.AdManager.V1.BatchCreateAudienceSegmentsResponse.Parser, new[]{ "AudienceSegments" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsRequest), global::Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsRequest.Parser, new[]{ "Parent", "Names" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsResponse), global::Google.Ads.AdManager.V1.BatchActivateAudienceSegmentsResponse.Parser, new[]{ "ChangeCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchDeactivateAudienceSegmentsRequest), global::Google.Ads.AdManager.V1.BatchDeactivateAudienceSegmentsRequest.Parser, new[]{ "Parent", "Names" }, null, null, null, null),
@@ -1055,6 +1078,691 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
+  /// Request object for `CreateAudienceSegment` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateAudienceSegmentRequest : pb::IMessage<CreateAudienceSegmentRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateAudienceSegmentRequest> _parser = new pb::MessageParser<CreateAudienceSegmentRequest>(() => new CreateAudienceSegmentRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateAudienceSegmentRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateAudienceSegmentRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateAudienceSegmentRequest(CreateAudienceSegmentRequest other) : this() {
+      parent_ = other.parent_;
+      audienceSegment_ = other.audienceSegment_ != null ? other.audienceSegment_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateAudienceSegmentRequest Clone() {
+      return new CreateAudienceSegmentRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent resource where this `AudienceSegment` will be created.
+    /// Format: `networks/{network_code}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "audience_segment" field.</summary>
+    public const int AudienceSegmentFieldNumber = 2;
+    private global::Google.Ads.AdManager.V1.AudienceSegment audienceSegment_;
+    /// <summary>
+    /// Required. The `AudienceSegment` to create. Only first-party segments can be
+    /// created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.AudienceSegment AudienceSegment {
+      get { return audienceSegment_; }
+      set {
+        audienceSegment_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateAudienceSegmentRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateAudienceSegmentRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(AudienceSegment, other.AudienceSegment)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (audienceSegment_ != null) hash ^= AudienceSegment.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (audienceSegment_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AudienceSegment);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (audienceSegment_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AudienceSegment);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (audienceSegment_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AudienceSegment);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateAudienceSegmentRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.audienceSegment_ != null) {
+        if (audienceSegment_ == null) {
+          AudienceSegment = new global::Google.Ads.AdManager.V1.AudienceSegment();
+        }
+        AudienceSegment.MergeFrom(other.AudienceSegment);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (audienceSegment_ == null) {
+              AudienceSegment = new global::Google.Ads.AdManager.V1.AudienceSegment();
+            }
+            input.ReadMessage(AudienceSegment);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (audienceSegment_ == null) {
+              AudienceSegment = new global::Google.Ads.AdManager.V1.AudienceSegment();
+            }
+            input.ReadMessage(AudienceSegment);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request object for `BatchCreateAudienceSegments` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchCreateAudienceSegmentsRequest : pb::IMessage<BatchCreateAudienceSegmentsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchCreateAudienceSegmentsRequest> _parser = new pb::MessageParser<BatchCreateAudienceSegmentsRequest>(() => new BatchCreateAudienceSegmentsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchCreateAudienceSegmentsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateAudienceSegmentsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateAudienceSegmentsRequest(BatchCreateAudienceSegmentsRequest other) : this() {
+      parent_ = other.parent_;
+      requests_ = other.requests_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateAudienceSegmentsRequest Clone() {
+      return new BatchCreateAudienceSegmentsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent resource where `AudienceSegments` will be created.
+    /// Format: `networks/{network_code}`
+    /// The parent field in the CreateAudienceSegmentRequest must match this
+    /// field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "requests" field.</summary>
+    public const int RequestsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CreateAudienceSegmentRequest> _repeated_requests_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Ads.AdManager.V1.CreateAudienceSegmentRequest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreateAudienceSegmentRequest> requests_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreateAudienceSegmentRequest>();
+    /// <summary>
+    /// Required. The `AudienceSegment` objects to create.
+    /// A maximum of 100 objects can be created in a batch.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreateAudienceSegmentRequest> Requests {
+      get { return requests_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchCreateAudienceSegmentsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchCreateAudienceSegmentsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!requests_.Equals(other.requests_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= requests_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(ref output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += requests_.CalculateSize(_repeated_requests_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchCreateAudienceSegmentsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      requests_.Add(other.requests_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(ref input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response object for `BatchCreateAudienceSegments` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchCreateAudienceSegmentsResponse : pb::IMessage<BatchCreateAudienceSegmentsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchCreateAudienceSegmentsResponse> _parser = new pb::MessageParser<BatchCreateAudienceSegmentsResponse>(() => new BatchCreateAudienceSegmentsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchCreateAudienceSegmentsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateAudienceSegmentsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateAudienceSegmentsResponse(BatchCreateAudienceSegmentsResponse other) : this() {
+      audienceSegments_ = other.audienceSegments_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateAudienceSegmentsResponse Clone() {
+      return new BatchCreateAudienceSegmentsResponse(this);
+    }
+
+    /// <summary>Field number for the "audience_segments" field.</summary>
+    public const int AudienceSegmentsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.AudienceSegment> _repeated_audienceSegments_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Ads.AdManager.V1.AudienceSegment.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.AudienceSegment> audienceSegments_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.AudienceSegment>();
+    /// <summary>
+    /// The `AudienceSegment` objects created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.AudienceSegment> AudienceSegments {
+      get { return audienceSegments_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchCreateAudienceSegmentsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchCreateAudienceSegmentsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!audienceSegments_.Equals(other.audienceSegments_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= audienceSegments_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      audienceSegments_.WriteTo(output, _repeated_audienceSegments_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      audienceSegments_.WriteTo(ref output, _repeated_audienceSegments_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += audienceSegments_.CalculateSize(_repeated_audienceSegments_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchCreateAudienceSegmentsResponse other) {
+      if (other == null) {
+        return;
+      }
+      audienceSegments_.Add(other.audienceSegments_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            audienceSegments_.AddEntriesFrom(input, _repeated_audienceSegments_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            audienceSegments_.AddEntriesFrom(ref input, _repeated_audienceSegments_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request message for `BatchActivateAudienceSegments` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1072,7 +1780,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1306,7 +2014,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1510,7 +2218,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1744,7 +2452,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1948,7 +2656,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2182,7 +2890,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2386,7 +3094,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2620,7 +3328,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2824,7 +3532,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3058,7 +3766,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Ads.AdManager.V1.AudienceSegmentServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

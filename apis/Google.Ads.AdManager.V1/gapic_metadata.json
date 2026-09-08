@@ -322,6 +322,12 @@
                 "BatchApproveAudienceSegmentsAsync"
               ]
             },
+            "BatchCreateAudienceSegments": {
+              "methods": [
+                "BatchCreateAudienceSegments",
+                "BatchCreateAudienceSegmentsAsync"
+              ]
+            },
             "BatchDeactivateAudienceSegments": {
               "methods": [
                 "BatchDeactivateAudienceSegments",
@@ -338,6 +344,12 @@
               "methods": [
                 "BatchRejectAudienceSegments",
                 "BatchRejectAudienceSegmentsAsync"
+              ]
+            },
+            "CreateAudienceSegment": {
+              "methods": [
+                "CreateAudienceSegment",
+                "CreateAudienceSegmentAsync"
               ]
             },
             "GetAudienceSegment": {
@@ -371,6 +383,51 @@
               "methods": [
                 "ListBandwidthGroups",
                 "ListBandwidthGroupsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "BreakTemplateService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "BreakTemplateServiceClient",
+          "rpcs": {
+            "BatchCreateBreakTemplates": {
+              "methods": [
+                "BatchCreateBreakTemplates",
+                "BatchCreateBreakTemplatesAsync"
+              ]
+            },
+            "BatchUpdateBreakTemplates": {
+              "methods": [
+                "BatchUpdateBreakTemplates",
+                "BatchUpdateBreakTemplatesAsync"
+              ]
+            },
+            "CreateBreakTemplate": {
+              "methods": [
+                "CreateBreakTemplate",
+                "CreateBreakTemplateAsync"
+              ]
+            },
+            "GetBreakTemplate": {
+              "methods": [
+                "GetBreakTemplate",
+                "GetBreakTemplateAsync"
+              ]
+            },
+            "ListBreakTemplates": {
+              "methods": [
+                "ListBreakTemplates",
+                "ListBreakTemplatesAsync"
+              ]
+            },
+            "UpdateBreakTemplate": {
+              "methods": [
+                "UpdateBreakTemplate",
+                "UpdateBreakTemplateAsync"
               ]
             }
           }

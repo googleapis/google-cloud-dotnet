@@ -46,16 +46,19 @@ namespace Google.Ads.AdManager.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AdBreakMessagesReflection.Descriptor;
+            yield return AdBreakOptimizationTypeEnumReflection.Descriptor;
             yield return AdBreakServiceReflection.Descriptor;
             yield return AdReviewCenterAdEnumsReflection.Descriptor;
             yield return AdReviewCenterAdMessagesReflection.Descriptor;
             yield return AdReviewCenterAdServiceReflection.Descriptor;
             yield return AdRuleEnumsReflection.Descriptor;
+            yield return AdRuleFillOrderDirectionEnumReflection.Descriptor;
             yield return AdRuleMessagesReflection.Descriptor;
             yield return AdRuleServiceReflection.Descriptor;
             yield return AdRuleSlotBehaviorEnumReflection.Descriptor;
             yield return AdRuleSlotBumperEnumReflection.Descriptor;
             yield return AdRuleSlotMidrollFrequencyTypeEnumReflection.Descriptor;
+            yield return AdSpotFillTypeEnumReflection.Descriptor;
             yield return AdSpotMessagesReflection.Descriptor;
             yield return AdSpotServiceReflection.Descriptor;
             yield return AdSpotTargetingTypeEnumReflection.Descriptor;
@@ -73,6 +76,8 @@ namespace Google.Ads.AdManager.V1
             yield return BandwidthGroupMessagesReflection.Descriptor;
             yield return BandwidthGroupServiceReflection.Descriptor;
             yield return BrandLiftPartnerEnumReflection.Descriptor;
+            yield return BreakTemplateMessagesReflection.Descriptor;
+            yield return BreakTemplateServiceReflection.Descriptor;
             yield return BrowserLanguageMessagesReflection.Descriptor;
             yield return BrowserLanguageServiceReflection.Descriptor;
             yield return BrowserMessagesReflection.Descriptor;

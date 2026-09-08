@@ -201,8 +201,8 @@ namespace Google.Ads.AdManager.V1 {
     private string previewUrl_;
     /// <summary>
     /// Output only. The preview URL that can be embedded or accessed directly
-    /// which will present the rendered contents of the ad. (This URL expires 72
-    /// hours after being retrieved.).
+    /// which will present the rendered contents of the ad. This URL expires 72
+    /// hours after being retrieved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
