@@ -34,14 +34,7 @@ public class QueueTests
     {
         using var connection = _queueFixture.GetConnection();
         var key = KeyFromLongPair(1, 1);
-        var payload = Payload.FromProtobufMessage(new Rectangle
-        {
-            TopRight = new Point { X = 1, Y = 1 },
-            Width = 10,
-            Height = 5,
-        });
-        //var payload = Payload.FromJson("{\"Hello\": \"World\"}");
-        //var payload = Payload.FromString("Hello, World");
+        var payload = Payload.FromBytes(Encoding.UTF8.GetBytes("Hello, World"));
 
         // Send Message
         using var sendCommand = connection.CreateSendCommand(_queueFixture.QueueName, key, payload);
@@ -65,7 +58,7 @@ public class QueueTests
     {
         using var connection = _queueFixture.GetConnection();
         var key = KeyFromLongPair(1, 1);
-        var payload = Payload.FromString("Hello, World");
+        var payload = Payload.FromBytes(Encoding.UTF8.GetBytes("Hello, World"));
         int deliveryDelay = 10;
 
         // Send Message
