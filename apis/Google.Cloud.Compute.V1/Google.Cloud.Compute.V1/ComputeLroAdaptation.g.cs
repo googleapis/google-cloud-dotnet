@@ -2987,6 +2987,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class GetHealthReservationSlotRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class GetVersionReservationSlotRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
