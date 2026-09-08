@@ -1696,14 +1696,14 @@ namespace Google.Cloud.Spanner.Data.Tests
                         new SpannerParameter("UserId", SpannerDbType.Int64, value: 1)
                     ])
                 ),
-                new SpannerParameter("Payload", SpannerDbType.String, "Hello, World"),
+                Payload.FromString("Hello, World"),
                 DateTime.UtcNow
             };
         }
 
         [Theory]
         [MemberData(nameof(CreateSendCommandParameters))]
-        public void CreateSendCommand_PopulatesProperties(string queue, Key key, SpannerParameter payload, DateTime deliverAt)
+        public void CreateSendCommand_PopulatesProperties(string queue, Key key, Payload payload, DateTime deliverAt)
         {
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
 
@@ -1747,15 +1747,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 "QueueA",
                 new Key(1L),
-                new SpannerParameter("Payload", SpannerDbType.String, "hello"),
+                Payload.FromString("Hello, World"),
                 (DateTime?) new DateTime(2026, 9, 1, 12, 0, 0, DateTimeKind.Utc),
-                Value.ForString("hello")
+                Value.ForString("Hello, World")
             };
             yield return new object[]
             {
                 "QueueB",
                 new Key("user-99", 42L),
-                new SpannerParameter("Payload", SpannerDbType.Bytes, new byte[] { 1, 2, 3 }),
+                Payload.FromBytes(new byte[] { 1, 2, 3 }),
                 (DateTime?) null,
                 Value.ForString(Convert.ToBase64String(new byte[] { 1, 2, 3 }))
             };
@@ -1763,7 +1763,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 "QueueC",
                 new Key("key1"),
-                new SpannerParameter("Payload", SpannerDbType.Json, "{\"foo\":\"bar\"}"),
+                Payload.FromJson("{\"foo\":\"bar\"}"),
                 (DateTime?) new DateTime(2026, 10, 15, 8, 30, 0, DateTimeKind.Utc),
                 Value.ForString("{\"foo\":\"bar\"}")
             };
@@ -1772,7 +1772,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 "QueueProto",
                 new Key(101L),
-                new SpannerParameter("Payload", SpannerDbType.FromClrType(typeof(Duration)), duration),
+                Payload.FromProtobufMessage(duration),
                 (DateTime?) new DateTime(2026, 11, 1, 0, 0, 0, DateTimeKind.Utc),
                 Value.ForString(Convert.ToBase64String(duration.ToByteArray()))
             };
@@ -1780,7 +1780,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         [Theory]
         [MemberData(nameof(SendCommandProtobufMappingData))]
-        public void SendCommand_GetMutation_MapsProtobufCorrectly(string queue, Key key, SpannerParameter payload, DateTime? deliverAt, Value expectedPayloadValue)
+        public void SendCommand_GetMutation_MapsProtobufCorrectly(string queue, Key key, Payload payload, DateTime? deliverAt, Value expectedPayloadValue)
         {
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
             using var command = connection.CreateSendCommand(queue, key, payload, deliverAt);
@@ -1830,7 +1830,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         [Theory]
         [MemberData(nameof(InvalidSendPayloadData))]
-        public void SendCommand_InvalidPayload_Throws(SpannerParameter invalidPayload, System.Type expectedExceptionType)
+        public void SendCommand_InvalidPayload_Throws(Payload invalidPayload, System.Type expectedExceptionType)
         {
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
             var key = new Key(1L);
@@ -1852,7 +1852,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
             var builder = SpannerCommandTextBuilder.CreateSendTextBuilder("MyQueue");
-            var payload = new SpannerParameter("Payload", SpannerDbType.String, "hello");
+            var payload = Payload.FromString("Hello");
             using var command = invalidKeySet is null
                 ? new SpannerCommand(builder, connection) { Payload = payload }
                 : new SpannerCommand(builder, connection, invalidKeySet) { Payload = payload };
