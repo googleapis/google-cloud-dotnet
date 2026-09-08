@@ -1506,6 +1506,35 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.BuiltInMetrics",
+      "version": "1.0.0-alpha01",
+      "type": "other",
+      "targetFrameworks": "netstandard2.0;net462",
+      "description": "OpenTelemetry exporter and setup for Google Cloud client built-in metrics.",
+      "tags": [
+        "OpenTelemetry",
+        "Metrics",
+        "Google",
+        "Cloud"
+      ],
+      "dependencies": {
+        "Google.Api.Gax": "default",
+        "Google.Apis.Auth": "default",
+        "OpenTelemetry": "default",
+        "OpenTelemetry.Exporter.OpenTelemetryProtocol": "default"
+      },
+      "testDependencies": {
+        "Google.Api.Gax.Testing": "default",
+        "Google.Cloud.Monitoring.V3": "3.10.0",
+        "Google.Cloud.Spanner.Common.V1": "project",
+        "Google.Cloud.Spanner.V1": "project"
+      },
+      "projects": [
+        "IntegrationTests",
+        "Tests"
+      ]
+    },
+    {
       "id": "Google.Cloud.CertificateManager.V1",
       "version": "2.9.0",
       "type": "grpc",
