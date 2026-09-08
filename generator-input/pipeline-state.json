@@ -4936,7 +4936,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-07-28T23:30:32.012443145Z",
-            "lastGeneratedCommit": "6a884cdff865c7b92ec43918680bf711685f1447",
+            "lastGeneratedCommit": "2bc8a1bed3f793b50c71efb6ebd0b31086e0113d",
             "lastReleasedCommit": "6a884cdff865c7b92ec43918680bf711685f1447",
             "apiPaths": [
                 "google/cloud/networkconnectivity/v1beta"
