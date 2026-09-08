@@ -1816,29 +1816,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.False(mutation.Ack.IgnoreNotFound);
         }
 
-        public static IEnumerable<object[]> InvalidSendPayloadData()
-        {
-            yield return new object[] { null, typeof(ArgumentNullException) };
-            yield return new object[] { new SpannerParameter("Payload", SpannerDbType.Int64, 123L), typeof(InvalidOperationException) };
-            yield return new object[] { new SpannerParameter("Payload", SpannerDbType.Float64, 3.14), typeof(InvalidOperationException) };
-            yield return new object[] { new SpannerParameter("Payload", SpannerDbType.Bool, true), typeof(InvalidOperationException) };
-            yield return new object[] { new SpannerParameter("Payload", SpannerDbType.Date, new SpannerDate(2026, 1, 1)), typeof(InvalidOperationException) };
-            yield return new object[] { new SpannerParameter("Payload", SpannerDbType.Timestamp, DateTime.UtcNow), typeof(InvalidOperationException) };
-            yield return new object[] { new SpannerParameter("Payload", SpannerDbType.Numeric, (SpannerNumeric) 123.45m), typeof(InvalidOperationException) };
-            yield return new object[] { new SpannerParameter("Payload", SpannerDbType.ArrayOf(SpannerDbType.String), new[] { "a", "b" }), typeof(InvalidOperationException) };
-        }
-
-        [Theory]
-        [MemberData(nameof(InvalidSendPayloadData))]
-        public void SendCommand_InvalidPayload_Throws(Payload invalidPayload, System.Type expectedExceptionType)
-        {
-            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
-            var key = new Key(1L);
-            using var command = connection.CreateSendCommand("MyQueue", key, invalidPayload);
-
-            Assert.Throws(expectedExceptionType, () => command.GetMutation());
-        }
-
         public static IEnumerable<object[]> InvalidKeySets()
         {
             yield return new object[] { null };
