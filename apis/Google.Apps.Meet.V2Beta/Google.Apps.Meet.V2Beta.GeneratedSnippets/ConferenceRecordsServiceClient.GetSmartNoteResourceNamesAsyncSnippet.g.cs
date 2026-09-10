@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START meet_v2beta_generated_SpacesService_ConnectActiveConference_sync]
+    // [START meet_v2beta_generated_ConferenceRecordsService_GetSmartNote_async_flattened_resourceNames]
     using Google.Apps.Meet.V2Beta;
+    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedSpacesServiceClientSnippets
+    public sealed partial class GeneratedConferenceRecordsServiceClientSnippets
     {
-        /// <summary>Snippet for ConnectActiveConference</summary>
+        /// <summary>Snippet for GetSmartNoteAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,20 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ConnectActiveConferenceRequestObject()
+        public async Task GetSmartNoteResourceNamesAsync()
         {
             // Create client
-            SpacesServiceClient spacesServiceClient = SpacesServiceClient.Create();
+            ConferenceRecordsServiceClient conferenceRecordsServiceClient = await ConferenceRecordsServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ConnectActiveConferenceRequest request = new ConnectActiveConferenceRequest
-            {
-                SpaceName = SpaceName.FromSpace("[SPACE]"),
-                Offer = "",
-                Config = new ConnectActiveConferenceRequest.Types.ConnectionConfig(),
-            };
+            SmartNoteName name = SmartNoteName.FromConferenceRecordSmartNote("[CONFERENCE_RECORD]", "[SMART_NOTE]");
             // Make the request
-            ConnectActiveConferenceResponse response = spacesServiceClient.ConnectActiveConference(request);
+            SmartNote response = await conferenceRecordsServiceClient.GetSmartNoteAsync(name);
         }
     }
-    // [END meet_v2beta_generated_SpacesService_ConnectActiveConference_sync]
+    // [END meet_v2beta_generated_ConferenceRecordsService_GetSmartNote_async_flattened_resourceNames]
 }

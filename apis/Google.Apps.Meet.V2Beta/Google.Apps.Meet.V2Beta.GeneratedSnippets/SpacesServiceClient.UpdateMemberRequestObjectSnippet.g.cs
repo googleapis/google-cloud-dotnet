@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START meet_v2beta_generated_SpacesService_ConnectActiveConference_sync]
+    // [START meet_v2beta_generated_SpacesService_UpdateMember_sync]
     using Google.Apps.Meet.V2Beta;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedSpacesServiceClientSnippets
     {
-        /// <summary>Snippet for ConnectActiveConference</summary>
+        /// <summary>Snippet for UpdateMember</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,20 +30,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ConnectActiveConferenceRequestObject()
+        public void UpdateMemberRequestObject()
         {
             // Create client
             SpacesServiceClient spacesServiceClient = SpacesServiceClient.Create();
             // Initialize request argument(s)
-            ConnectActiveConferenceRequest request = new ConnectActiveConferenceRequest
+            UpdateMemberRequest request = new UpdateMemberRequest
             {
-                SpaceName = SpaceName.FromSpace("[SPACE]"),
-                Offer = "",
-                Config = new ConnectActiveConferenceRequest.Types.ConnectionConfig(),
+                Member = new Member(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
-            ConnectActiveConferenceResponse response = spacesServiceClient.ConnectActiveConference(request);
+            Member response = spacesServiceClient.UpdateMember(request);
         }
     }
-    // [END meet_v2beta_generated_SpacesService_ConnectActiveConference_sync]
+    // [END meet_v2beta_generated_SpacesService_UpdateMember_sync]
 }

@@ -2019,5 +2019,368 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for GetSmartNote</summary>
+        public void GetSmartNoteRequestObject()
+        {
+            // Snippet: GetSmartNote(GetSmartNoteRequest, CallSettings)
+            // Create client
+            ConferenceRecordsServiceClient conferenceRecordsServiceClient = ConferenceRecordsServiceClient.Create();
+            // Initialize request argument(s)
+            GetSmartNoteRequest request = new GetSmartNoteRequest
+            {
+                SmartNoteName = SmartNoteName.FromConferenceRecordSmartNote("[CONFERENCE_RECORD]", "[SMART_NOTE]"),
+            };
+            // Make the request
+            SmartNote response = conferenceRecordsServiceClient.GetSmartNote(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSmartNoteAsync</summary>
+        public async Task GetSmartNoteRequestObjectAsync()
+        {
+            // Snippet: GetSmartNoteAsync(GetSmartNoteRequest, CallSettings)
+            // Additional: GetSmartNoteAsync(GetSmartNoteRequest, CancellationToken)
+            // Create client
+            ConferenceRecordsServiceClient conferenceRecordsServiceClient = await ConferenceRecordsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSmartNoteRequest request = new GetSmartNoteRequest
+            {
+                SmartNoteName = SmartNoteName.FromConferenceRecordSmartNote("[CONFERENCE_RECORD]", "[SMART_NOTE]"),
+            };
+            // Make the request
+            SmartNote response = await conferenceRecordsServiceClient.GetSmartNoteAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSmartNote</summary>
+        public void GetSmartNote()
+        {
+            // Snippet: GetSmartNote(string, CallSettings)
+            // Create client
+            ConferenceRecordsServiceClient conferenceRecordsServiceClient = ConferenceRecordsServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "conferenceRecords/[CONFERENCE_RECORD]/smartNotes/[SMART_NOTE]";
+            // Make the request
+            SmartNote response = conferenceRecordsServiceClient.GetSmartNote(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSmartNoteAsync</summary>
+        public async Task GetSmartNoteAsync()
+        {
+            // Snippet: GetSmartNoteAsync(string, CallSettings)
+            // Additional: GetSmartNoteAsync(string, CancellationToken)
+            // Create client
+            ConferenceRecordsServiceClient conferenceRecordsServiceClient = await ConferenceRecordsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "conferenceRecords/[CONFERENCE_RECORD]/smartNotes/[SMART_NOTE]";
+            // Make the request
+            SmartNote response = await conferenceRecordsServiceClient.GetSmartNoteAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSmartNote</summary>
+        public void GetSmartNoteResourceNames()
+        {
+            // Snippet: GetSmartNote(SmartNoteName, CallSettings)
+            // Create client
+            ConferenceRecordsServiceClient conferenceRecordsServiceClient = ConferenceRecordsServiceClient.Create();
+            // Initialize request argument(s)
+            SmartNoteName name = SmartNoteName.FromConferenceRecordSmartNote("[CONFERENCE_RECORD]", "[SMART_NOTE]");
+            // Make the request
+            SmartNote response = conferenceRecordsServiceClient.GetSmartNote(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSmartNoteAsync</summary>
+        public async Task GetSmartNoteResourceNamesAsync()
+        {
+            // Snippet: GetSmartNoteAsync(SmartNoteName, CallSettings)
+            // Additional: GetSmartNoteAsync(SmartNoteName, CancellationToken)
+            // Create client
+            ConferenceRecordsServiceClient conferenceRecordsServiceClient = await ConferenceRecordsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SmartNoteName name = SmartNoteName.FromConferenceRecordSmartNote("[CONFERENCE_RECORD]", "[SMART_NOTE]");
+            // Make the request
+            SmartNote response = await conferenceRecordsServiceClient.GetSmartNoteAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSmartNotes</summary>
+        public void ListSmartNotesRequestObject()
+        {
+            // Snippet: ListSmartNotes(ListSmartNotesRequest, CallSettings)
+            // Create client
+            ConferenceRecordsServiceClient conferenceRecordsServiceClient = ConferenceRecordsServiceClient.Create();
+            // Initialize request argument(s)
+            ListSmartNotesRequest request = new ListSmartNotesRequest
+            {
+                ParentAsConferenceRecordName = ConferenceRecordName.FromConferenceRecord("[CONFERENCE_RECORD]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSmartNotesResponse, SmartNote> response = conferenceRecordsServiceClient.ListSmartNotes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SmartNote item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSmartNotesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SmartNote item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SmartNote> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SmartNote item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSmartNotesAsync</summary>
+        public async Task ListSmartNotesRequestObjectAsync()
+        {
+            // Snippet: ListSmartNotesAsync(ListSmartNotesRequest, CallSettings)
+            // Create client
+            ConferenceRecordsServiceClient conferenceRecordsServiceClient = await ConferenceRecordsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSmartNotesRequest request = new ListSmartNotesRequest
+            {
+                ParentAsConferenceRecordName = ConferenceRecordName.FromConferenceRecord("[CONFERENCE_RECORD]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSmartNotesResponse, SmartNote> response = conferenceRecordsServiceClient.ListSmartNotesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (SmartNote item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListSmartNotesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SmartNote item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SmartNote> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SmartNote item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSmartNotes</summary>
+        public void ListSmartNotes()
+        {
+            // Snippet: ListSmartNotes(string, string, int?, CallSettings)
+            // Create client
+            ConferenceRecordsServiceClient conferenceRecordsServiceClient = ConferenceRecordsServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "conferenceRecords/[CONFERENCE_RECORD]";
+            // Make the request
+            PagedEnumerable<ListSmartNotesResponse, SmartNote> response = conferenceRecordsServiceClient.ListSmartNotes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SmartNote item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSmartNotesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SmartNote item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SmartNote> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SmartNote item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSmartNotesAsync</summary>
+        public async Task ListSmartNotesAsync()
+        {
+            // Snippet: ListSmartNotesAsync(string, string, int?, CallSettings)
+            // Create client
+            ConferenceRecordsServiceClient conferenceRecordsServiceClient = await ConferenceRecordsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "conferenceRecords/[CONFERENCE_RECORD]";
+            // Make the request
+            PagedAsyncEnumerable<ListSmartNotesResponse, SmartNote> response = conferenceRecordsServiceClient.ListSmartNotesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (SmartNote item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListSmartNotesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SmartNote item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SmartNote> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SmartNote item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSmartNotes</summary>
+        public void ListSmartNotesResourceNames()
+        {
+            // Snippet: ListSmartNotes(ConferenceRecordName, string, int?, CallSettings)
+            // Create client
+            ConferenceRecordsServiceClient conferenceRecordsServiceClient = ConferenceRecordsServiceClient.Create();
+            // Initialize request argument(s)
+            ConferenceRecordName parent = ConferenceRecordName.FromConferenceRecord("[CONFERENCE_RECORD]");
+            // Make the request
+            PagedEnumerable<ListSmartNotesResponse, SmartNote> response = conferenceRecordsServiceClient.ListSmartNotes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SmartNote item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSmartNotesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SmartNote item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SmartNote> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SmartNote item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSmartNotesAsync</summary>
+        public async Task ListSmartNotesResourceNamesAsync()
+        {
+            // Snippet: ListSmartNotesAsync(ConferenceRecordName, string, int?, CallSettings)
+            // Create client
+            ConferenceRecordsServiceClient conferenceRecordsServiceClient = await ConferenceRecordsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ConferenceRecordName parent = ConferenceRecordName.FromConferenceRecord("[CONFERENCE_RECORD]");
+            // Make the request
+            PagedAsyncEnumerable<ListSmartNotesResponse, SmartNote> response = conferenceRecordsServiceClient.ListSmartNotesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (SmartNote item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListSmartNotesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SmartNote item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SmartNote> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SmartNote item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }

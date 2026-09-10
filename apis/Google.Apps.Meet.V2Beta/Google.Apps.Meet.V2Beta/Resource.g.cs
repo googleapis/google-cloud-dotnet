@@ -26,145 +26,165 @@ namespace Google.Apps.Meet.V2Beta {
           string.Concat(
             "CiZnb29nbGUvYXBwcy9tZWV0L3YyYmV0YS9yZXNvdXJjZS5wcm90bxIXZ29v",
             "Z2xlLmFwcHMubWVldC52MmJldGEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZp",
-            "b3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8i+wEKBVNwYWNlEhEKBG5hbWUYASAB",
-            "KAlCA+BBBRIYCgttZWV0aW5nX3VyaRgCIAEoCUID4EEDEhkKDG1lZXRpbmdf",
-            "Y29kZRgDIAEoCUID4EEDEjQKBmNvbmZpZxgFIAEoCzIkLmdvb2dsZS5hcHBz",
-            "Lm1lZXQudjJiZXRhLlNwYWNlQ29uZmlnEkQKEWFjdGl2ZV9jb25mZXJlbmNl",
-            "GAYgASgLMikuZ29vZ2xlLmFwcHMubWVldC52MmJldGEuQWN0aXZlQ29uZmVy",
-            "ZW5jZTou6kErChltZWV0Lmdvb2dsZWFwaXMuY29tL1NwYWNlEg5zcGFjZXMv",
-            "e3NwYWNlfSJbChBBY3RpdmVDb25mZXJlbmNlEkcKEWNvbmZlcmVuY2VfcmVj",
-            "b3JkGAEgASgJQizgQQP6QSYKJG1lZXQuZ29vZ2xlYXBpcy5jb20vQ29uZmVy",
-            "ZW5jZVJlY29yZCL7EQoLU3BhY2VDb25maWcSRAoLYWNjZXNzX3R5cGUYASAB",
-            "KA4yLy5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFjZUNvbmZpZy5BY2Nl",
-            "c3NUeXBlElEKEmVudHJ5X3BvaW50X2FjY2VzcxgCIAEoDjI1Lmdvb2dsZS5h",
-            "cHBzLm1lZXQudjJiZXRhLlNwYWNlQ29uZmlnLkVudHJ5UG9pbnRBY2Nlc3MS",
-            "QwoKbW9kZXJhdGlvbhgDIAEoDjIvLmdvb2dsZS5hcHBzLm1lZXQudjJiZXRh",
-            "LlNwYWNlQ29uZmlnLk1vZGVyYXRpb24SXAoXbW9kZXJhdGlvbl9yZXN0cmlj",
-            "dGlvbnMYBCABKAsyOy5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFjZUNv",
-            "bmZpZy5Nb2RlcmF0aW9uUmVzdHJpY3Rpb25zEm4KIWF0dGVuZGFuY2VfcmVw",
-            "b3J0X2dlbmVyYXRpb25fdHlwZRgGIAEoDjJDLmdvb2dsZS5hcHBzLm1lZXQu",
-            "djJiZXRhLlNwYWNlQ29uZmlnLkF0dGVuZGFuY2VSZXBvcnRHZW5lcmF0aW9u",
-            "VHlwZRJMCg9hcnRpZmFjdF9jb25maWcYByABKAsyMy5nb29nbGUuYXBwcy5t",
-            "ZWV0LnYyYmV0YS5TcGFjZUNvbmZpZy5BcnRpZmFjdENvbmZpZxqABQoWTW9k",
-            "ZXJhdGlvblJlc3RyaWN0aW9ucxJlChBjaGF0X3Jlc3RyaWN0aW9uGAEgASgO",
-            "MksuZ29vZ2xlLmFwcHMubWVldC52MmJldGEuU3BhY2VDb25maWcuTW9kZXJh",
-            "dGlvblJlc3RyaWN0aW9ucy5SZXN0cmljdGlvblR5cGUSaQoUcmVhY3Rpb25f",
-            "cmVzdHJpY3Rpb24YAiABKA4ySy5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5T",
+            "b3IucHJvdG8aG2dvb2dsZS9hcGkvZmllbGRfaW5mby5wcm90bxoZZ29vZ2xl",
+            "L2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
+            "cC5wcm90byKsBAoFU3BhY2USEQoEbmFtZRgBIAEoCUID4EEFEhgKC21lZXRp",
+            "bmdfdXJpGAIgASgJQgPgQQMSGQoMbWVldGluZ19jb2RlGAMgASgJQgPgQQMS",
+            "NAoGY29uZmlnGAUgASgLMiQuZ29vZ2xlLmFwcHMubWVldC52MmJldGEuU3Bh",
+            "Y2VDb25maWcSRAoRYWN0aXZlX2NvbmZlcmVuY2UYBiABKAsyKS5nb29nbGUu",
+            "YXBwcy5tZWV0LnYyYmV0YS5BY3RpdmVDb25mZXJlbmNlEkUKDHBob25lX2Fj",
+            "Y2VzcxgHIAMoCzIqLmdvb2dsZS5hcHBzLm1lZXQudjJiZXRhLlNwYWNlLlBo",
+            "b25lQWNjZXNzQgPgQQMSUAoSZ2F0ZXdheV9zaXBfYWNjZXNzGAggAygLMi8u",
+            "Z29vZ2xlLmFwcHMubWVldC52MmJldGEuU3BhY2UuR2F0ZXdheVNpcEFjY2Vz",
+            "c0ID4EEDGlwKC1Bob25lQWNjZXNzEhQKDHBob25lX251bWJlchgBIAEoCRIL",
+            "CgNwaW4YAiABKAkSEwoLcmVnaW9uX2NvZGUYAyABKAkSFQoNbGFuZ3VhZ2Vf",
+            "Y29kZRgEIAEoCRo4ChBHYXRld2F5U2lwQWNjZXNzEgsKA3VyaRgBIAEoCRIX",
+            "Cg9zaXBfYWNjZXNzX2NvZGUYAiABKAk6LupBKwoZbWVldC5nb29nbGVhcGlz",
+            "LmNvbS9TcGFjZRIOc3BhY2VzL3tzcGFjZX0ihQEKEEFjdGl2ZUNvbmZlcmVu",
+            "Y2USRwoRY29uZmVyZW5jZV9yZWNvcmQYASABKAlCLOBBA/pBJgokbWVldC5n",
+            "b29nbGVhcGlzLmNvbS9Db25mZXJlbmNlUmVjb3JkEigKG21lZGlhX2FwaV9j",
+            "b25zZW50ZXJfcHJlc2VudBgCIAEoCEID4EEDIvsRCgtTcGFjZUNvbmZpZxJE",
+            "CgthY2Nlc3NfdHlwZRgBIAEoDjIvLmdvb2dsZS5hcHBzLm1lZXQudjJiZXRh",
+            "LlNwYWNlQ29uZmlnLkFjY2Vzc1R5cGUSUQoSZW50cnlfcG9pbnRfYWNjZXNz",
+            "GAIgASgOMjUuZ29vZ2xlLmFwcHMubWVldC52MmJldGEuU3BhY2VDb25maWcu",
+            "RW50cnlQb2ludEFjY2VzcxJDCgptb2RlcmF0aW9uGAMgASgOMi8uZ29vZ2xl",
+            "LmFwcHMubWVldC52MmJldGEuU3BhY2VDb25maWcuTW9kZXJhdGlvbhJcChdt",
+            "b2RlcmF0aW9uX3Jlc3RyaWN0aW9ucxgEIAEoCzI7Lmdvb2dsZS5hcHBzLm1l",
+            "ZXQudjJiZXRhLlNwYWNlQ29uZmlnLk1vZGVyYXRpb25SZXN0cmljdGlvbnMS",
+            "bgohYXR0ZW5kYW5jZV9yZXBvcnRfZ2VuZXJhdGlvbl90eXBlGAYgASgOMkMu",
+            "Z29vZ2xlLmFwcHMubWVldC52MmJldGEuU3BhY2VDb25maWcuQXR0ZW5kYW5j",
+            "ZVJlcG9ydEdlbmVyYXRpb25UeXBlEkwKD2FydGlmYWN0X2NvbmZpZxgHIAEo",
+            "CzIzLmdvb2dsZS5hcHBzLm1lZXQudjJiZXRhLlNwYWNlQ29uZmlnLkFydGlm",
+            "YWN0Q29uZmlnGoAFChZNb2RlcmF0aW9uUmVzdHJpY3Rpb25zEmUKEGNoYXRf",
+            "cmVzdHJpY3Rpb24YASABKA4ySy5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5T",
             "cGFjZUNvbmZpZy5Nb2RlcmF0aW9uUmVzdHJpY3Rpb25zLlJlc3RyaWN0aW9u",
-            "VHlwZRJoChNwcmVzZW50X3Jlc3RyaWN0aW9uGAMgASgOMksuZ29vZ2xlLmFw",
-            "cHMubWVldC52MmJldGEuU3BhY2VDb25maWcuTW9kZXJhdGlvblJlc3RyaWN0",
-            "aW9ucy5SZXN0cmljdGlvblR5cGUSeAobZGVmYXVsdF9qb2luX2FzX3ZpZXdl",
-            "cl90eXBlGAQgASgOMlMuZ29vZ2xlLmFwcHMubWVldC52MmJldGEuU3BhY2VD",
-            "b25maWcuTW9kZXJhdGlvblJlc3RyaWN0aW9ucy5EZWZhdWx0Sm9pbkFzVmll",
-            "d2VyVHlwZSJXCg9SZXN0cmljdGlvblR5cGUSIAocUkVTVFJJQ1RJT05fVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEg4KCkhPU1RTX09OTFkQARISCg5OT19SRVNUUklD",
-            "VElPThACIlcKF0RlZmF1bHRKb2luQXNWaWV3ZXJUeXBlEisKJ0RFRkFVTFRf",
-            "Sk9JTl9BU19WSUVXRVJfVFlQRV9VTlNQRUNJRklFRBAAEgYKAk9OEAESBwoD",
-            "T0ZGEAIaiwYKDkFydGlmYWN0Q29uZmlnEl0KEHJlY29yZGluZ19jb25maWcY",
-            "ASABKAsyQy5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFjZUNvbmZpZy5B",
-            "cnRpZmFjdENvbmZpZy5SZWNvcmRpbmdDb25maWcSZQoUdHJhbnNjcmlwdGlv",
-            "bl9jb25maWcYAiABKAsyRy5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFj",
-            "ZUNvbmZpZy5BcnRpZmFjdENvbmZpZy5UcmFuc2NyaXB0aW9uQ29uZmlnEmAK",
-            "EnNtYXJ0X25vdGVzX2NvbmZpZxgDIAEoCzJELmdvb2dsZS5hcHBzLm1lZXQu",
-            "djJiZXRhLlNwYWNlQ29uZmlnLkFydGlmYWN0Q29uZmlnLlNtYXJ0Tm90ZXND",
-            "b25maWcafAoPUmVjb3JkaW5nQ29uZmlnEmkKGWF1dG9fcmVjb3JkaW5nX2dl",
-            "bmVyYXRpb24YAiABKA4yRi5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFj",
-            "ZUNvbmZpZy5BcnRpZmFjdENvbmZpZy5BdXRvR2VuZXJhdGlvblR5cGUahAEK",
-            "E1RyYW5zY3JpcHRpb25Db25maWcSbQodYXV0b190cmFuc2NyaXB0aW9uX2dl",
-            "bmVyYXRpb24YAiABKA4yRi5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFj",
-            "ZUNvbmZpZy5BcnRpZmFjdENvbmZpZy5BdXRvR2VuZXJhdGlvblR5cGUafwoQ",
-            "U21hcnROb3Rlc0NvbmZpZxJrChthdXRvX3NtYXJ0X25vdGVzX2dlbmVyYXRp",
-            "b24YAiABKA4yRi5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFjZUNvbmZp",
-            "Zy5BcnRpZmFjdENvbmZpZy5BdXRvR2VuZXJhdGlvblR5cGUiSwoSQXV0b0dl",
-            "bmVyYXRpb25UeXBlEiQKIEFVVE9fR0VORVJBVElPTl9UWVBFX1VOU1BFQ0lG",
-            "SUVEEAASBgoCT04QARIHCgNPRkYQAiJQCgpBY2Nlc3NUeXBlEhsKF0FDQ0VT",
-            "U19UWVBFX1VOU1BFQ0lGSUVEEAASCAoET1BFThABEgsKB1RSVVNURUQQAhIO",
-            "CgpSRVNUUklDVEVEEAMiVQoQRW50cnlQb2ludEFjY2VzcxIiCh5FTlRSWV9Q",
-            "T0lOVF9BQ0NFU1NfVU5TUEVDSUZJRUQQABIHCgNBTEwQARIUChBDUkVBVE9S",
-            "X0FQUF9PTkxZEAIiOQoKTW9kZXJhdGlvbhIaChZNT0RFUkFUSU9OX1VOU1BF",
-            "Q0lGSUVEEAASBwoDT0ZGEAESBgoCT04QAiJ9Ch5BdHRlbmRhbmNlUmVwb3J0",
-            "R2VuZXJhdGlvblR5cGUSMQotQVRURU5EQU5DRV9SRVBPUlRfR0VORVJBVElP",
-            "Tl9UWVBFX1VOU1BFQ0lGSUVEEAASEwoPR0VORVJBVEVfUkVQT1JUEAESEwoP",
-            "RE9fTk9UX0dFTkVSQVRFEAIi6QEKBk1lbWJlchIRCgRuYW1lGAEgASgJQgPg",
-            "QQgSDQoFZW1haWwYAiABKAkSMgoEcm9sZRgDIAEoDjIkLmdvb2dsZS5hcHBz",
-            "Lm1lZXQudjJiZXRhLk1lbWJlci5Sb2xlEgwKBHVzZXIYBCABKAkiKAoEUm9s",
-            "ZRIUChBST0xFX1VOU1BFQ0lGSUVEEAASCgoGQ09IT1NUEAE6UepBTgoabWVl",
-            "dC5nb29nbGVhcGlzLmNvbS9NZW1iZXISH3NwYWNlcy97c3BhY2V9L21lbWJl",
-            "cnMve21lbWJlcn0qB21lbWJlcnMyBm1lbWJlciLsAgoQQ29uZmVyZW5jZVJl",
-            "Y29yZBIRCgRuYW1lGAEgASgJQgPgQQgSMwoKc3RhcnRfdGltZRgCIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgD",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtleHBp",
-            "cmVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxIwCgVzcGFjZRgFIAEoCUIh4EED+kEbChltZWV0Lmdvb2dsZWFwaXMuY29t",
-            "L1NwYWNlOnXqQXIKJG1lZXQuZ29vZ2xlYXBpcy5jb20vQ29uZmVyZW5jZVJl",
-            "Y29yZBIlY29uZmVyZW5jZVJlY29yZHMve2NvbmZlcmVuY2VfcmVjb3JkfSoR",
-            "Y29uZmVyZW5jZVJlY29yZHMyEGNvbmZlcmVuY2VSZWNvcmQi4AMKC1BhcnRp",
-            "Y2lwYW50Ej4KDXNpZ25lZGluX3VzZXIYBCABKAsyJS5nb29nbGUuYXBwcy5t",
-            "ZWV0LnYyYmV0YS5TaWduZWRpblVzZXJIABJACg5hbm9ueW1vdXNfdXNlchgF",
-            "IAEoCzImLmdvb2dsZS5hcHBzLm1lZXQudjJiZXRhLkFub255bW91c1VzZXJI",
-            "ABI4CgpwaG9uZV91c2VyGAYgASgLMiIuZ29vZ2xlLmFwcHMubWVldC52MmJl",
-            "dGEuUGhvbmVVc2VySAASEQoEbmFtZRgBIAEoCUID4EEDEjwKE2VhcmxpZXN0",
-            "X3N0YXJ0X3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSOAoPbGF0ZXN0X2VuZF90aW1lGAggASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDOoEB6kF+Ch9tZWV0Lmdvb2dsZWFwaXMuY29t",
-            "L1BhcnRpY2lwYW50EkBjb25mZXJlbmNlUmVjb3Jkcy97Y29uZmVyZW5jZV9y",
-            "ZWNvcmR9L3BhcnRpY2lwYW50cy97cGFydGljaXBhbnR9KgxwYXJ0aWNpcGFu",
-            "dHMyC3BhcnRpY2lwYW50QgYKBHVzZXIi0wIKElBhcnRpY2lwYW50U2Vzc2lv",
-            "bhIRCgRuYW1lGAEgASgJQgPgQQgSMwoKc3RhcnRfdGltZRgCIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgDIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAzrBAepBvQEKJm1l",
-            "ZXQuZ29vZ2xlYXBpcy5jb20vUGFydGljaXBhbnRTZXNzaW9uEmpjb25mZXJl",
-            "bmNlUmVjb3Jkcy97Y29uZmVyZW5jZV9yZWNvcmR9L3BhcnRpY2lwYW50cy97",
-            "cGFydGljaXBhbnR9L3BhcnRpY2lwYW50U2Vzc2lvbnMve3BhcnRpY2lwYW50",
-            "X3Nlc3Npb259KhNwYXJ0aWNpcGFudFNlc3Npb25zMhJwYXJ0aWNpcGFudFNl",
-            "c3Npb24iPAoMU2lnbmVkaW5Vc2VyEhEKBHVzZXIYASABKAlCA+BBAxIZCgxk",
-            "aXNwbGF5X25hbWUYAiABKAlCA+BBAyIqCg1Bbm9ueW1vdXNVc2VyEhkKDGRp",
-            "c3BsYXlfbmFtZRgBIAEoCUID4EEDIiYKCVBob25lVXNlchIZCgxkaXNwbGF5",
-            "X25hbWUYASABKAlCA+BBAyLlAwoJUmVjb3JkaW5nEksKEWRyaXZlX2Rlc3Rp",
-            "bmF0aW9uGAYgASgLMikuZ29vZ2xlLmFwcHMubWVldC52MmJldGEuRHJpdmVE",
-            "ZXN0aW5hdGlvbkID4EEDSAASEQoEbmFtZRgBIAEoCUID4EEDEjwKBXN0YXRl",
-            "GAMgASgOMiguZ29vZ2xlLmFwcHMubWVldC52MmJldGEuUmVjb3JkaW5nLlN0",
-            "YXRlQgPgQQMSMwoKc3RhcnRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgFIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAyJKCgVTdGF0ZRIVChFTVEFURV9VTlNQ",
-            "RUNJRklFRBAAEgsKB1NUQVJURUQQARIJCgVFTkRFRBACEhIKDkZJTEVfR0VO",
-            "RVJBVEVEEAM6d+pBdAodbWVldC5nb29nbGVhcGlzLmNvbS9SZWNvcmRpbmcS",
-            "PGNvbmZlcmVuY2VSZWNvcmRzL3tjb25mZXJlbmNlX3JlY29yZH0vcmVjb3Jk",
-            "aW5ncy97cmVjb3JkaW5nfSoKcmVjb3JkaW5nczIJcmVjb3JkaW5nQg0KC2Rl",
-            "c3RpbmF0aW9uIj4KEERyaXZlRGVzdGluYXRpb24SEQoEZmlsZRgBIAEoCUID",
-            "4EEDEhcKCmV4cG9ydF91cmkYAiABKAlCA+BBAyLqAwoKVHJhbnNjcmlwdBJJ",
-            "ChBkb2NzX2Rlc3RpbmF0aW9uGAYgASgLMiguZ29vZ2xlLmFwcHMubWVldC52",
-            "MmJldGEuRG9jc0Rlc3RpbmF0aW9uQgPgQQNIABIRCgRuYW1lGAEgASgJQgPg",
-            "QQMSPQoFc3RhdGUYAyABKA4yKS5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5U",
-            "cmFuc2NyaXB0LlN0YXRlQgPgQQMSMwoKc3RhcnRfdGltZRgEIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgFIAEo",
+            "VHlwZRJpChRyZWFjdGlvbl9yZXN0cmljdGlvbhgCIAEoDjJLLmdvb2dsZS5h",
+            "cHBzLm1lZXQudjJiZXRhLlNwYWNlQ29uZmlnLk1vZGVyYXRpb25SZXN0cmlj",
+            "dGlvbnMuUmVzdHJpY3Rpb25UeXBlEmgKE3ByZXNlbnRfcmVzdHJpY3Rpb24Y",
+            "AyABKA4ySy5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFjZUNvbmZpZy5N",
+            "b2RlcmF0aW9uUmVzdHJpY3Rpb25zLlJlc3RyaWN0aW9uVHlwZRJ4ChtkZWZh",
+            "dWx0X2pvaW5fYXNfdmlld2VyX3R5cGUYBCABKA4yUy5nb29nbGUuYXBwcy5t",
+            "ZWV0LnYyYmV0YS5TcGFjZUNvbmZpZy5Nb2RlcmF0aW9uUmVzdHJpY3Rpb25z",
+            "LkRlZmF1bHRKb2luQXNWaWV3ZXJUeXBlIlcKD1Jlc3RyaWN0aW9uVHlwZRIg",
+            "ChxSRVNUUklDVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASDgoKSE9TVFNfT05M",
+            "WRABEhIKDk5PX1JFU1RSSUNUSU9OEAIiVwoXRGVmYXVsdEpvaW5Bc1ZpZXdl",
+            "clR5cGUSKwonREVGQVVMVF9KT0lOX0FTX1ZJRVdFUl9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASBgoCT04QARIHCgNPRkYQAhqLBgoOQXJ0aWZhY3RDb25maWcSXQoQ",
+            "cmVjb3JkaW5nX2NvbmZpZxgBIAEoCzJDLmdvb2dsZS5hcHBzLm1lZXQudjJi",
+            "ZXRhLlNwYWNlQ29uZmlnLkFydGlmYWN0Q29uZmlnLlJlY29yZGluZ0NvbmZp",
+            "ZxJlChR0cmFuc2NyaXB0aW9uX2NvbmZpZxgCIAEoCzJHLmdvb2dsZS5hcHBz",
+            "Lm1lZXQudjJiZXRhLlNwYWNlQ29uZmlnLkFydGlmYWN0Q29uZmlnLlRyYW5z",
+            "Y3JpcHRpb25Db25maWcSYAoSc21hcnRfbm90ZXNfY29uZmlnGAMgASgLMkQu",
+            "Z29vZ2xlLmFwcHMubWVldC52MmJldGEuU3BhY2VDb25maWcuQXJ0aWZhY3RD",
+            "b25maWcuU21hcnROb3Rlc0NvbmZpZxp8Cg9SZWNvcmRpbmdDb25maWcSaQoZ",
+            "YXV0b19yZWNvcmRpbmdfZ2VuZXJhdGlvbhgCIAEoDjJGLmdvb2dsZS5hcHBz",
+            "Lm1lZXQudjJiZXRhLlNwYWNlQ29uZmlnLkFydGlmYWN0Q29uZmlnLkF1dG9H",
+            "ZW5lcmF0aW9uVHlwZRqEAQoTVHJhbnNjcmlwdGlvbkNvbmZpZxJtCh1hdXRv",
+            "X3RyYW5zY3JpcHRpb25fZ2VuZXJhdGlvbhgCIAEoDjJGLmdvb2dsZS5hcHBz",
+            "Lm1lZXQudjJiZXRhLlNwYWNlQ29uZmlnLkFydGlmYWN0Q29uZmlnLkF1dG9H",
+            "ZW5lcmF0aW9uVHlwZRp/ChBTbWFydE5vdGVzQ29uZmlnEmsKG2F1dG9fc21h",
+            "cnRfbm90ZXNfZ2VuZXJhdGlvbhgCIAEoDjJGLmdvb2dsZS5hcHBzLm1lZXQu",
+            "djJiZXRhLlNwYWNlQ29uZmlnLkFydGlmYWN0Q29uZmlnLkF1dG9HZW5lcmF0",
+            "aW9uVHlwZSJLChJBdXRvR2VuZXJhdGlvblR5cGUSJAogQVVUT19HRU5FUkFU",
+            "SU9OX1RZUEVfVU5TUEVDSUZJRUQQABIGCgJPThABEgcKA09GRhACIlAKCkFj",
+            "Y2Vzc1R5cGUSGwoXQUNDRVNTX1RZUEVfVU5TUEVDSUZJRUQQABIICgRPUEVO",
+            "EAESCwoHVFJVU1RFRBACEg4KClJFU1RSSUNURUQQAyJVChBFbnRyeVBvaW50",
+            "QWNjZXNzEiIKHkVOVFJZX1BPSU5UX0FDQ0VTU19VTlNQRUNJRklFRBAAEgcK",
+            "A0FMTBABEhQKEENSRUFUT1JfQVBQX09OTFkQAiI5CgpNb2RlcmF0aW9uEhoK",
+            "Fk1PREVSQVRJT05fVU5TUEVDSUZJRUQQABIHCgNPRkYQARIGCgJPThACIn0K",
+            "HkF0dGVuZGFuY2VSZXBvcnRHZW5lcmF0aW9uVHlwZRIxCi1BVFRFTkRBTkNF",
+            "X1JFUE9SVF9HRU5FUkFUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABITCg9HRU5F",
+            "UkFURV9SRVBPUlQQARITCg9ET19OT1RfR0VORVJBVEUQAiLpAQoGTWVtYmVy",
+            "EhEKBG5hbWUYASABKAlCA+BBCBINCgVlbWFpbBgCIAEoCRIyCgRyb2xlGAMg",
+            "ASgOMiQuZ29vZ2xlLmFwcHMubWVldC52MmJldGEuTWVtYmVyLlJvbGUSDAoE",
+            "dXNlchgEIAEoCSIoCgRSb2xlEhQKEFJPTEVfVU5TUEVDSUZJRUQQABIKCgZD",
+            "T0hPU1QQATpR6kFOChptZWV0Lmdvb2dsZWFwaXMuY29tL01lbWJlchIfc3Bh",
+            "Y2VzL3tzcGFjZX0vbWVtYmVycy97bWVtYmVyfSoHbWVtYmVyczIGbWVtYmVy",
+            "IuwCChBDb25mZXJlbmNlUmVjb3JkEhEKBG5hbWUYASABKAlCA+BBCBIzCgpz",
+            "dGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDEjEKCGVuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEjQKC2V4cGlyZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjAKBXNwYWNlGAUgASgJQiHgQQP6QRsKGW1l",
+            "ZXQuZ29vZ2xlYXBpcy5jb20vU3BhY2U6depBcgokbWVldC5nb29nbGVhcGlz",
+            "LmNvbS9Db25mZXJlbmNlUmVjb3JkEiVjb25mZXJlbmNlUmVjb3Jkcy97Y29u",
+            "ZmVyZW5jZV9yZWNvcmR9KhFjb25mZXJlbmNlUmVjb3JkczIQY29uZmVyZW5j",
+            "ZVJlY29yZCLgAwoLUGFydGljaXBhbnQSPgoNc2lnbmVkaW5fdXNlchgEIAEo",
+            "CzIlLmdvb2dsZS5hcHBzLm1lZXQudjJiZXRhLlNpZ25lZGluVXNlckgAEkAK",
+            "DmFub255bW91c191c2VyGAUgASgLMiYuZ29vZ2xlLmFwcHMubWVldC52MmJl",
+            "dGEuQW5vbnltb3VzVXNlckgAEjgKCnBob25lX3VzZXIYBiABKAsyIi5nb29n",
+            "bGUuYXBwcy5tZWV0LnYyYmV0YS5QaG9uZVVzZXJIABIRCgRuYW1lGAEgASgJ",
+            "QgPgQQMSPAoTZWFybGllc3Rfc3RhcnRfdGltZRgHIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI4Cg9sYXRlc3RfZW5kX3RpbWUYCCAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQM6gQHqQX4KH21l",
+            "ZXQuZ29vZ2xlYXBpcy5jb20vUGFydGljaXBhbnQSQGNvbmZlcmVuY2VSZWNv",
+            "cmRzL3tjb25mZXJlbmNlX3JlY29yZH0vcGFydGljaXBhbnRzL3twYXJ0aWNp",
+            "cGFudH0qDHBhcnRpY2lwYW50czILcGFydGljaXBhbnRCBgoEdXNlciLTAgoS",
+            "UGFydGljaXBhbnRTZXNzaW9uEhEKBG5hbWUYASABKAlCA+BBCBIzCgpzdGFy",
+            "dF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "EjEKCGVuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDOsEB6kG9AQombWVldC5nb29nbGVhcGlzLmNvbS9QYXJ0aWNpcGFu",
+            "dFNlc3Npb24SamNvbmZlcmVuY2VSZWNvcmRzL3tjb25mZXJlbmNlX3JlY29y",
+            "ZH0vcGFydGljaXBhbnRzL3twYXJ0aWNpcGFudH0vcGFydGljaXBhbnRTZXNz",
+            "aW9ucy97cGFydGljaXBhbnRfc2Vzc2lvbn0qE3BhcnRpY2lwYW50U2Vzc2lv",
+            "bnMyEnBhcnRpY2lwYW50U2Vzc2lvbiI8CgxTaWduZWRpblVzZXISEQoEdXNl",
+            "chgBIAEoCUID4EEDEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EEDIioKDUFu",
+            "b255bW91c1VzZXISGQoMZGlzcGxheV9uYW1lGAEgASgJQgPgQQMiJgoJUGhv",
+            "bmVVc2VyEhkKDGRpc3BsYXlfbmFtZRgBIAEoCUID4EEDIuUDCglSZWNvcmRp",
+            "bmcSSwoRZHJpdmVfZGVzdGluYXRpb24YBiABKAsyKS5nb29nbGUuYXBwcy5t",
+            "ZWV0LnYyYmV0YS5Ecml2ZURlc3RpbmF0aW9uQgPgQQNIABIRCgRuYW1lGAEg",
+            "ASgJQgPgQQMSPAoFc3RhdGUYAyABKA4yKC5nb29nbGUuYXBwcy5tZWV0LnYy",
+            "YmV0YS5SZWNvcmRpbmcuU3RhdGVCA+BBAxIzCgpzdGFydF90aW1lGAQgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1l",
+            "GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIkoKBVN0",
+            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHU1RBUlRFRBABEgkKBUVO",
+            "REVEEAISEgoORklMRV9HRU5FUkFURUQQAzp36kF0Ch1tZWV0Lmdvb2dsZWFw",
+            "aXMuY29tL1JlY29yZGluZxI8Y29uZmVyZW5jZVJlY29yZHMve2NvbmZlcmVu",
+            "Y2VfcmVjb3JkfS9yZWNvcmRpbmdzL3tyZWNvcmRpbmd9KgpyZWNvcmRpbmdz",
+            "MglyZWNvcmRpbmdCDQoLZGVzdGluYXRpb24iPgoQRHJpdmVEZXN0aW5hdGlv",
+            "bhIRCgRmaWxlGAEgASgJQgPgQQMSFwoKZXhwb3J0X3VyaRgCIAEoCUID4EED",
+            "IuoDCgpUcmFuc2NyaXB0EkkKEGRvY3NfZGVzdGluYXRpb24YBiABKAsyKC5n",
+            "b29nbGUuYXBwcy5tZWV0LnYyYmV0YS5Eb2NzRGVzdGluYXRpb25CA+BBA0gA",
+            "EhEKBG5hbWUYASABKAlCA+BBAxI9CgVzdGF0ZRgDIAEoDjIpLmdvb2dsZS5h",
+            "cHBzLm1lZXQudjJiZXRhLlRyYW5zY3JpcHQuU3RhdGVCA+BBAxIzCgpzdGFy",
+            "dF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "EjEKCGVuZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDIkoKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHU1RB",
+            "UlRFRBABEgkKBUVOREVEEAISEgoORklMRV9HRU5FUkFURUQQAzp86kF5Ch5t",
+            "ZWV0Lmdvb2dsZWFwaXMuY29tL1RyYW5zY3JpcHQSPmNvbmZlcmVuY2VSZWNv",
+            "cmRzL3tjb25mZXJlbmNlX3JlY29yZH0vdHJhbnNjcmlwdHMve3RyYW5zY3Jp",
+            "cHR9Kgt0cmFuc2NyaXB0czIKdHJhbnNjcmlwdEINCgtkZXN0aW5hdGlvbiJB",
+            "Cg9Eb2NzRGVzdGluYXRpb24SFQoIZG9jdW1lbnQYASABKAlCA+BBAxIXCgpl",
+            "eHBvcnRfdXJpGAIgASgJQgPgQQMimQMKD1RyYW5zY3JpcHRFbnRyeRIRCgRu",
+            "YW1lGAEgASgJQgPgQQMSPAoLcGFydGljaXBhbnQYAiABKAlCJ+BBA/pBIQof",
+            "bWVldC5nb29nbGVhcGlzLmNvbS9QYXJ0aWNpcGFudBIRCgR0ZXh0GAMgASgJ",
+            "QgPgQQMSGgoNbGFuZ3VhZ2VfY29kZRgEIAEoCUID4EEDEjMKCnN0YXJ0X3Rp",
+            "bWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoI",
+            "ZW5kX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQM6nQHqQZkBCiNtZWV0Lmdvb2dsZWFwaXMuY29tL1RyYW5zY3JpcHRFbnRy",
+            "eRJOY29uZmVyZW5jZVJlY29yZHMve2NvbmZlcmVuY2VfcmVjb3JkfS90cmFu",
+            "c2NyaXB0cy97dHJhbnNjcmlwdH0vZW50cmllcy97ZW50cnl9KhF0cmFuc2Ny",
+            "aXB0RW50cmllczIPdHJhbnNjcmlwdEVudHJ5IucDCglTbWFydE5vdGUSSQoQ",
+            "ZG9jc19kZXN0aW5hdGlvbhgFIAEoCzIoLmdvb2dsZS5hcHBzLm1lZXQudjJi",
+            "ZXRhLkRvY3NEZXN0aW5hdGlvbkID4EEDSAASFAoEbmFtZRgBIAEoCUIG4EEI",
+            "4EEDEjwKBXN0YXRlGAIgASgOMiguZ29vZ2xlLmFwcHMubWVldC52MmJldGEu",
+            "U21hcnROb3RlLlN0YXRlQgPgQQMSMwoKc3RhcnRfdGltZRgDIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgEIAEo",
             "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyJKCgVTdGF0ZRIV",
             "ChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1NUQVJURUQQARIJCgVFTkRFRBAC",
-            "EhIKDkZJTEVfR0VORVJBVEVEEAM6fOpBeQoebWVldC5nb29nbGVhcGlzLmNv",
-            "bS9UcmFuc2NyaXB0Ej5jb25mZXJlbmNlUmVjb3Jkcy97Y29uZmVyZW5jZV9y",
-            "ZWNvcmR9L3RyYW5zY3JpcHRzL3t0cmFuc2NyaXB0fSoLdHJhbnNjcmlwdHMy",
-            "CnRyYW5zY3JpcHRCDQoLZGVzdGluYXRpb24iQQoPRG9jc0Rlc3RpbmF0aW9u",
-            "EhUKCGRvY3VtZW50GAEgASgJQgPgQQMSFwoKZXhwb3J0X3VyaRgCIAEoCUID",
-            "4EEDIpkDCg9UcmFuc2NyaXB0RW50cnkSEQoEbmFtZRgBIAEoCUID4EEDEjwK",
-            "C3BhcnRpY2lwYW50GAIgASgJQifgQQP6QSEKH21lZXQuZ29vZ2xlYXBpcy5j",
-            "b20vUGFydGljaXBhbnQSEQoEdGV4dBgDIAEoCUID4EEDEhoKDWxhbmd1YWdl",
-            "X2NvZGUYBCABKAlCA+BBAxIzCgpzdGFydF90aW1lGAUgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAYgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDOp0B6kGZAQojbWVldC5n",
-            "b29nbGVhcGlzLmNvbS9UcmFuc2NyaXB0RW50cnkSTmNvbmZlcmVuY2VSZWNv",
-            "cmRzL3tjb25mZXJlbmNlX3JlY29yZH0vdHJhbnNjcmlwdHMve3RyYW5zY3Jp",
-            "cHR9L2VudHJpZXMve2VudHJ5fSoRdHJhbnNjcmlwdEVudHJpZXMyD3RyYW5z",
-            "Y3JpcHRFbnRyeUK2AQobY29tLmdvb2dsZS5hcHBzLm1lZXQudjJiZXRhQg1S",
-            "ZXNvdXJjZVByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vYXBwcy9tZWV0",
-            "L2FwaXYyYmV0YS9tZWV0cGI7bWVldHBiqgIXR29vZ2xlLkFwcHMuTWVldC5W",
-            "MkJldGHKAhdHb29nbGVcQXBwc1xNZWV0XFYyYmV0YeoCGkdvb2dsZTo6QXBw",
-            "czo6TWVldDo6VjJiZXRhYgZwcm90bzM="));
+            "EhIKDkZJTEVfR0VORVJBVEVEEAM6eOpBdQodbWVldC5nb29nbGVhcGlzLmNv",
+            "bS9TbWFydE5vdGUSPWNvbmZlcmVuY2VSZWNvcmRzL3tjb25mZXJlbmNlX3Jl",
+            "Y29yZH0vc21hcnROb3Rlcy97c21hcnRfbm90ZX0qCnNtYXJ0Tm90ZXMyCXNt",
+            "YXJ0Tm90ZUINCgtkZXN0aW5hdGlvbkK2AQobY29tLmdvb2dsZS5hcHBzLm1l",
+            "ZXQudjJiZXRhQg1SZXNvdXJjZVByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vYXBwcy9tZWV0L2FwaXYyYmV0YS9tZWV0cGI7bWVldHBiqgIXR29vZ2xl",
+            "LkFwcHMuTWVldC5WMkJldGHKAhdHb29nbGVcQXBwc1xNZWV0XFYyYmV0YeoC",
+            "Gkdvb2dsZTo6QXBwczo6TWVldDo6VjJiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.Space), global::Google.Apps.Meet.V2Beta.Space.Parser, new[]{ "Name", "MeetingUri", "MeetingCode", "Config", "ActiveConference" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.ActiveConference), global::Google.Apps.Meet.V2Beta.ActiveConference.Parser, new[]{ "ConferenceRecord" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.Space), global::Google.Apps.Meet.V2Beta.Space.Parser, new[]{ "Name", "MeetingUri", "MeetingCode", "Config", "ActiveConference", "PhoneAccess", "GatewaySipAccess" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.Space.Types.PhoneAccess), global::Google.Apps.Meet.V2Beta.Space.Types.PhoneAccess.Parser, new[]{ "PhoneNumber", "Pin", "RegionCode", "LanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.Space.Types.GatewaySipAccess), global::Google.Apps.Meet.V2Beta.Space.Types.GatewaySipAccess.Parser, new[]{ "Uri", "SipAccessCode" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.ActiveConference), global::Google.Apps.Meet.V2Beta.ActiveConference.Parser, new[]{ "ConferenceRecord", "MediaApiConsenterPresent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig), global::Google.Apps.Meet.V2Beta.SpaceConfig.Parser, new[]{ "AccessType", "EntryPointAccess", "Moderation", "ModerationRestrictions", "AttendanceReportGenerationType", "ArtifactConfig" }, null, new[]{ typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AccessType), typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.EntryPointAccess), typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.Moderation), typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AttendanceReportGenerationType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions), global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Parser, new[]{ "ChatRestriction", "ReactionRestriction", "PresentRestriction", "DefaultJoinAsViewerType" }, null, new[]{ typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType), typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.DefaultJoinAsViewerType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig), global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Parser, new[]{ "RecordingConfig", "TranscriptionConfig", "SmartNotesConfig" }, null, new[]{ typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.RecordingConfig), global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.RecordingConfig.Parser, new[]{ "AutoRecordingGeneration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.TranscriptionConfig), global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.TranscriptionConfig.Parser, new[]{ "AutoTranscriptionGeneration" }, null, null, null, null),
@@ -180,7 +200,8 @@ namespace Google.Apps.Meet.V2Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.DriveDestination), global::Google.Apps.Meet.V2Beta.DriveDestination.Parser, new[]{ "File", "ExportUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.Transcript), global::Google.Apps.Meet.V2Beta.Transcript.Parser, new[]{ "DocsDestination", "Name", "State", "StartTime", "EndTime" }, new[]{ "Destination" }, new[]{ typeof(global::Google.Apps.Meet.V2Beta.Transcript.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.DocsDestination), global::Google.Apps.Meet.V2Beta.DocsDestination.Parser, new[]{ "Document", "ExportUri" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.TranscriptEntry), global::Google.Apps.Meet.V2Beta.TranscriptEntry.Parser, new[]{ "Name", "Participant", "Text", "LanguageCode", "StartTime", "EndTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.TranscriptEntry), global::Google.Apps.Meet.V2Beta.TranscriptEntry.Parser, new[]{ "Name", "Participant", "Text", "LanguageCode", "StartTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.SmartNote), global::Google.Apps.Meet.V2Beta.SmartNote.Parser, new[]{ "DocsDestination", "Name", "State", "StartTime", "EndTime" }, new[]{ "Destination" }, new[]{ typeof(global::Google.Apps.Meet.V2Beta.SmartNote.Types.State) }, null, null)
           }));
     }
     #endregion
@@ -231,6 +252,8 @@ namespace Google.Apps.Meet.V2Beta {
       meetingCode_ = other.meetingCode_;
       config_ = other.config_ != null ? other.config_.Clone() : null;
       activeConference_ = other.activeConference_ != null ? other.activeConference_.Clone() : null;
+      phoneAccess_ = other.phoneAccess_.Clone();
+      gatewaySipAccess_ = other.gatewaySipAccess_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -252,7 +275,7 @@ namespace Google.Apps.Meet.V2Beta {
     /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
     ///
     /// For more information, see [How Meet identifies a meeting
-    /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+    /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-space).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -331,6 +354,36 @@ namespace Google.Apps.Meet.V2Beta {
       }
     }
 
+    /// <summary>Field number for the "phone_access" field.</summary>
+    public const int PhoneAccessFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Google.Apps.Meet.V2Beta.Space.Types.PhoneAccess> _repeated_phoneAccess_codec
+        = pb::FieldCodec.ForMessage(58, global::Google.Apps.Meet.V2Beta.Space.Types.PhoneAccess.Parser);
+    private readonly pbc::RepeatedField<global::Google.Apps.Meet.V2Beta.Space.Types.PhoneAccess> phoneAccess_ = new pbc::RepeatedField<global::Google.Apps.Meet.V2Beta.Space.Types.PhoneAccess>();
+    /// <summary>
+    /// Output only. All regional phone access methods for this meeting space. Can
+    /// be empty.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Apps.Meet.V2Beta.Space.Types.PhoneAccess> PhoneAccess {
+      get { return phoneAccess_; }
+    }
+
+    /// <summary>Field number for the "gateway_sip_access" field.</summary>
+    public const int GatewaySipAccessFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Google.Apps.Meet.V2Beta.Space.Types.GatewaySipAccess> _repeated_gatewaySipAccess_codec
+        = pb::FieldCodec.ForMessage(66, global::Google.Apps.Meet.V2Beta.Space.Types.GatewaySipAccess.Parser);
+    private readonly pbc::RepeatedField<global::Google.Apps.Meet.V2Beta.Space.Types.GatewaySipAccess> gatewaySipAccess_ = new pbc::RepeatedField<global::Google.Apps.Meet.V2Beta.Space.Types.GatewaySipAccess>();
+    /// <summary>
+    /// Output only. The SIP-based access methods that can be used to join the
+    /// conference. Can be empty.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Apps.Meet.V2Beta.Space.Types.GatewaySipAccess> GatewaySipAccess {
+      get { return gatewaySipAccess_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -351,6 +404,8 @@ namespace Google.Apps.Meet.V2Beta {
       if (MeetingCode != other.MeetingCode) return false;
       if (!object.Equals(Config, other.Config)) return false;
       if (!object.Equals(ActiveConference, other.ActiveConference)) return false;
+      if(!phoneAccess_.Equals(other.phoneAccess_)) return false;
+      if(!gatewaySipAccess_.Equals(other.gatewaySipAccess_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -363,6 +418,8 @@ namespace Google.Apps.Meet.V2Beta {
       if (MeetingCode.Length != 0) hash ^= MeetingCode.GetHashCode();
       if (config_ != null) hash ^= Config.GetHashCode();
       if (activeConference_ != null) hash ^= ActiveConference.GetHashCode();
+      hash ^= phoneAccess_.GetHashCode();
+      hash ^= gatewaySipAccess_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -401,6 +458,8 @@ namespace Google.Apps.Meet.V2Beta {
         output.WriteRawTag(50);
         output.WriteMessage(ActiveConference);
       }
+      phoneAccess_.WriteTo(output, _repeated_phoneAccess_codec);
+      gatewaySipAccess_.WriteTo(output, _repeated_gatewaySipAccess_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -431,6 +490,8 @@ namespace Google.Apps.Meet.V2Beta {
         output.WriteRawTag(50);
         output.WriteMessage(ActiveConference);
       }
+      phoneAccess_.WriteTo(ref output, _repeated_phoneAccess_codec);
+      gatewaySipAccess_.WriteTo(ref output, _repeated_gatewaySipAccess_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -456,6 +517,8 @@ namespace Google.Apps.Meet.V2Beta {
       if (activeConference_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ActiveConference);
       }
+      size += phoneAccess_.CalculateSize(_repeated_phoneAccess_codec);
+      size += gatewaySipAccess_.CalculateSize(_repeated_gatewaySipAccess_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -489,6 +552,8 @@ namespace Google.Apps.Meet.V2Beta {
         }
         ActiveConference.MergeFrom(other.ActiveConference);
       }
+      phoneAccess_.Add(other.phoneAccess_);
+      gatewaySipAccess_.Add(other.gatewaySipAccess_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -532,6 +597,14 @@ namespace Google.Apps.Meet.V2Beta {
               ActiveConference = new global::Google.Apps.Meet.V2Beta.ActiveConference();
             }
             input.ReadMessage(ActiveConference);
+            break;
+          }
+          case 58: {
+            phoneAccess_.AddEntriesFrom(input, _repeated_phoneAccess_codec);
+            break;
+          }
+          case 66: {
+            gatewaySipAccess_.AddEntriesFrom(input, _repeated_gatewaySipAccess_codec);
             break;
           }
         }
@@ -579,10 +652,612 @@ namespace Google.Apps.Meet.V2Beta {
             input.ReadMessage(ActiveConference);
             break;
           }
+          case 58: {
+            phoneAccess_.AddEntriesFrom(ref input, _repeated_phoneAccess_codec);
+            break;
+          }
+          case 66: {
+            gatewaySipAccess_.AddEntriesFrom(ref input, _repeated_gatewaySipAccess_codec);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Space message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Phone access contains information required to dial into a conference using
+      /// a regional phone number and a PIN that is specific to that phone number.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class PhoneAccess : pb::IMessage<PhoneAccess>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PhoneAccess> _parser = new pb::MessageParser<PhoneAccess>(() => new PhoneAccess());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PhoneAccess> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Apps.Meet.V2Beta.Space.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PhoneAccess() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PhoneAccess(PhoneAccess other) : this() {
+          phoneNumber_ = other.phoneNumber_;
+          pin_ = other.pin_;
+          regionCode_ = other.regionCode_;
+          languageCode_ = other.languageCode_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PhoneAccess Clone() {
+          return new PhoneAccess(this);
+        }
+
+        /// <summary>Field number for the "phone_number" field.</summary>
+        public const int PhoneNumberFieldNumber = 1;
+        private string phoneNumber_ = "";
+        /// <summary>
+        /// The phone number to dial for this meeting space in E.164 format.
+        /// Full phone number with a leading '+' character.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PhoneNumber {
+          get { return phoneNumber_; }
+          set {
+            phoneNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "pin" field.</summary>
+        public const int PinFieldNumber = 2;
+        private string pin_ = "";
+        /// <summary>
+        /// The PIN that users must enter after dialing the given number. The PIN
+        /// consists of only decimal digits and the length may vary.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Pin {
+          get { return pin_; }
+          set {
+            pin_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "region_code" field.</summary>
+        public const int RegionCodeFieldNumber = 3;
+        private string regionCode_ = "";
+        /// <summary>
+        /// The CLDR/ISO 3166 region code for the country associated with this phone
+        /// access. To be parsed by the i18n RegionCode utility. Example: "SE" for
+        /// Sweden.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string RegionCode {
+          get { return regionCode_; }
+          set {
+            regionCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "language_code" field.</summary>
+        public const int LanguageCodeFieldNumber = 4;
+        private string languageCode_ = "";
+        /// <summary>
+        /// The BCP 47/LDML language code for the language associated with this phone
+        /// access. To be parsed by the i18n LanguageCode utility. Examples: "es-419"
+        /// for Latin American Spanish, "fr-CA" for Canadian French.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string LanguageCode {
+          get { return languageCode_; }
+          set {
+            languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PhoneAccess);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PhoneAccess other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (PhoneNumber != other.PhoneNumber) return false;
+          if (Pin != other.Pin) return false;
+          if (RegionCode != other.RegionCode) return false;
+          if (LanguageCode != other.LanguageCode) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (PhoneNumber.Length != 0) hash ^= PhoneNumber.GetHashCode();
+          if (Pin.Length != 0) hash ^= Pin.GetHashCode();
+          if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
+          if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (PhoneNumber.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(PhoneNumber);
+          }
+          if (Pin.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Pin);
+          }
+          if (RegionCode.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(RegionCode);
+          }
+          if (LanguageCode.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(LanguageCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (PhoneNumber.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(PhoneNumber);
+          }
+          if (Pin.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Pin);
+          }
+          if (RegionCode.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(RegionCode);
+          }
+          if (LanguageCode.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(LanguageCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (PhoneNumber.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PhoneNumber);
+          }
+          if (Pin.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Pin);
+          }
+          if (RegionCode.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(RegionCode);
+          }
+          if (LanguageCode.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PhoneAccess other) {
+          if (other == null) {
+            return;
+          }
+          if (other.PhoneNumber.Length != 0) {
+            PhoneNumber = other.PhoneNumber;
+          }
+          if (other.Pin.Length != 0) {
+            Pin = other.Pin;
+          }
+          if (other.RegionCode.Length != 0) {
+            RegionCode = other.RegionCode;
+          }
+          if (other.LanguageCode.Length != 0) {
+            LanguageCode = other.LanguageCode;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                PhoneNumber = input.ReadString();
+                break;
+              }
+              case 18: {
+                Pin = input.ReadString();
+                break;
+              }
+              case 26: {
+                RegionCode = input.ReadString();
+                break;
+              }
+              case 34: {
+                LanguageCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                PhoneNumber = input.ReadString();
+                break;
+              }
+              case 18: {
+                Pin = input.ReadString();
+                break;
+              }
+              case 26: {
+                RegionCode = input.ReadString();
+                break;
+              }
+              case 34: {
+                LanguageCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Details how to join the conference through a SIP gateway.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class GatewaySipAccess : pb::IMessage<GatewaySipAccess>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GatewaySipAccess> _parser = new pb::MessageParser<GatewaySipAccess>(() => new GatewaySipAccess());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GatewaySipAccess> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Apps.Meet.V2Beta.Space.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GatewaySipAccess() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GatewaySipAccess(GatewaySipAccess other) : this() {
+          uri_ = other.uri_;
+          sipAccessCode_ = other.sipAccessCode_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GatewaySipAccess Clone() {
+          return new GatewaySipAccess(this);
+        }
+
+        /// <summary>Field number for the "uri" field.</summary>
+        public const int UriFieldNumber = 1;
+        private string uri_ = "";
+        /// <summary>
+        /// The Session Initiation Protocol (SIP) URI the conference can be reached
+        /// through.
+        ///
+        /// The string is in one of these formats:
+        ///
+        /// * "sip:USER_ID@GATEWAY_ADDRESS"
+        /// * "sips:USER_ID@GATEWAY_ADDRESS"
+        ///
+        /// where USER_ID is the 13-digit universal pin (with the future option to
+        /// support using a Meet meeting code as well), and GATEWAY_ADDRESS is a
+        /// valid address to be resolved using a DNS SRV lookup, or a dotted quad.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Uri {
+          get { return uri_; }
+          set {
+            uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "sip_access_code" field.</summary>
+        public const int SipAccessCodeFieldNumber = 2;
+        private string sipAccessCode_ = "";
+        /// <summary>
+        /// The permanent numeric code for manual entry on specially configured
+        /// devices.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string SipAccessCode {
+          get { return sipAccessCode_; }
+          set {
+            sipAccessCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GatewaySipAccess);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GatewaySipAccess other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Uri != other.Uri) return false;
+          if (SipAccessCode != other.SipAccessCode) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+          if (SipAccessCode.Length != 0) hash ^= SipAccessCode.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Uri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (SipAccessCode.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(SipAccessCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Uri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (SipAccessCode.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(SipAccessCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Uri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+          }
+          if (SipAccessCode.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(SipAccessCode);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GatewaySipAccess other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Uri.Length != 0) {
+            Uri = other.Uri;
+          }
+          if (other.SipAccessCode.Length != 0) {
+            SipAccessCode = other.SipAccessCode;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+              case 18: {
+                SipAccessCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+              case 18: {
+                SipAccessCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -625,6 +1300,7 @@ namespace Google.Apps.Meet.V2Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ActiveConference(ActiveConference other) : this() {
       conferenceRecord_ = other.conferenceRecord_;
+      mediaApiConsenterPresent_ = other.mediaApiConsenterPresent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -651,6 +1327,22 @@ namespace Google.Apps.Meet.V2Beta {
       }
     }
 
+    /// <summary>Field number for the "media_api_consenter_present" field.</summary>
+    public const int MediaApiConsenterPresentFieldNumber = 2;
+    private bool mediaApiConsenterPresent_;
+    /// <summary>
+    /// Output only. Indicates whether a media api consenter is present in the
+    /// conference.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool MediaApiConsenterPresent {
+      get { return mediaApiConsenterPresent_; }
+      set {
+        mediaApiConsenterPresent_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -667,6 +1359,7 @@ namespace Google.Apps.Meet.V2Beta {
         return true;
       }
       if (ConferenceRecord != other.ConferenceRecord) return false;
+      if (MediaApiConsenterPresent != other.MediaApiConsenterPresent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -675,6 +1368,7 @@ namespace Google.Apps.Meet.V2Beta {
     public override int GetHashCode() {
       int hash = 1;
       if (ConferenceRecord.Length != 0) hash ^= ConferenceRecord.GetHashCode();
+      if (MediaApiConsenterPresent != false) hash ^= MediaApiConsenterPresent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -697,6 +1391,10 @@ namespace Google.Apps.Meet.V2Beta {
         output.WriteRawTag(10);
         output.WriteString(ConferenceRecord);
       }
+      if (MediaApiConsenterPresent != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(MediaApiConsenterPresent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -711,6 +1409,10 @@ namespace Google.Apps.Meet.V2Beta {
         output.WriteRawTag(10);
         output.WriteString(ConferenceRecord);
       }
+      if (MediaApiConsenterPresent != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(MediaApiConsenterPresent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -723,6 +1425,9 @@ namespace Google.Apps.Meet.V2Beta {
       int size = 0;
       if (ConferenceRecord.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ConferenceRecord);
+      }
+      if (MediaApiConsenterPresent != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -738,6 +1443,9 @@ namespace Google.Apps.Meet.V2Beta {
       }
       if (other.ConferenceRecord.Length != 0) {
         ConferenceRecord = other.ConferenceRecord;
+      }
+      if (other.MediaApiConsenterPresent != false) {
+        MediaApiConsenterPresent = other.MediaApiConsenterPresent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -762,6 +1470,10 @@ namespace Google.Apps.Meet.V2Beta {
             ConferenceRecord = input.ReadString();
             break;
           }
+          case 16: {
+            MediaApiConsenterPresent = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -783,6 +1495,10 @@ namespace Google.Apps.Meet.V2Beta {
             break;
           case 10: {
             ConferenceRecord = input.ReadString();
+            break;
+          }
+          case 16: {
+            MediaApiConsenterPresent = input.ReadBool();
             break;
           }
         }
@@ -883,7 +1599,6 @@ namespace Google.Apps.Meet.V2Beta {
     public const int ModerationFieldNumber = 3;
     private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.Moderation moderation_ = global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.Moderation.Unspecified;
     /// <summary>
-    /// [Developer Preview](https://developers.google.com/workspace/preview):
     /// The pre-configured moderation mode for the Meeting.
     /// Default: Controlled by the user's policies.
     /// </summary>
@@ -900,7 +1615,6 @@ namespace Google.Apps.Meet.V2Beta {
     public const int ModerationRestrictionsFieldNumber = 4;
     private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions moderationRestrictions_;
     /// <summary>
-    /// [Developer Preview](https://developers.google.com/workspace/preview):
     /// When moderation.ON, these restrictions go into effect for the meeting.
     /// When moderation.OFF, will be reset to default ModerationRestrictions.
     /// </summary>
@@ -917,7 +1631,6 @@ namespace Google.Apps.Meet.V2Beta {
     public const int AttendanceReportGenerationTypeFieldNumber = 6;
     private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AttendanceReportGenerationType attendanceReportGenerationType_ = global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AttendanceReportGenerationType.Unspecified;
     /// <summary>
-    /// [Developer Preview](https://developers.google.com/workspace/preview):
     /// Whether attendance report is enabled for the meeting space.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -933,7 +1646,6 @@ namespace Google.Apps.Meet.V2Beta {
     public const int ArtifactConfigFieldNumber = 7;
     private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig artifactConfig_;
     /// <summary>
-    /// [Developer Preview](https://developers.google.com/workspace/preview):
     /// Configuration pertaining to the auto-generated artifacts that the meeting
     /// supports.
     /// </summary>
@@ -2437,9 +3149,9 @@ namespace Google.Apps.Meet.V2Beta {
           }
 
           /// <summary>
-          /// Configuration related to smart notes in a meeting space. More
-          /// details about smart notes
-          /// https://support.google.com/meet/answer/14754931?hl=en.
+          /// Configuration related to smart notes in a meeting space. For
+          /// more information about smart notes, see ["Take notes for me" in Google
+          /// Meet](https://support.google.com/meet/answer/14754931).
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class SmartNotesConfig : pb::IMessage<SmartNotesConfig>
@@ -2993,9 +3705,9 @@ namespace Google.Apps.Meet.V2Beta {
         /// <summary>
         /// This is used to indicate the user hasn't specified any value and the
         /// user’s role will be determined upon joining the meetings between
-        /// 'contributor' and 'viewer' role depending on meeting configuration. More
-        /// details about viewer role
-        /// https://support.google.com/meet/answer/13658394?hl=en.
+        /// 'contributor' and 'viewer' role depending on meeting configuration. For
+        /// more information about the viewer role, see [Assign View only roles in
+        /// Google Meet](https://support.google.com/meet/answer/13658394).
         /// </summary>
         [pbr::OriginalName("ROLE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -6712,6 +7424,466 @@ namespace Google.Apps.Meet.V2Beta {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Metadata for a smart note generated from a conference. It refers to the notes
+  /// generated from Take Notes with Gemini during the conference.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SmartNote : pb::IMessage<SmartNote>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SmartNote> _parser = new pb::MessageParser<SmartNote>(() => new SmartNote());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SmartNote> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SmartNote() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SmartNote(SmartNote other) : this() {
+      name_ = other.name_;
+      state_ = other.state_;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.DocsDestination:
+          DocsDestination = other.DocsDestination.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SmartNote Clone() {
+      return new SmartNote(this);
+    }
+
+    /// <summary>Field number for the "docs_destination" field.</summary>
+    public const int DocsDestinationFieldNumber = 5;
+    /// <summary>
+    /// Output only. The Google Doc destination where the smart notes are saved.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Meet.V2Beta.DocsDestination DocsDestination {
+      get { return destinationCase_ == DestinationOneofCase.DocsDestination ? (global::Google.Apps.Meet.V2Beta.DocsDestination) destination_ : null; }
+      set {
+        destination_ = value;
+        destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.DocsDestination;
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Identifier. Resource name of the smart notes.
+    /// Format: `conferenceRecords/{conference_record}/smartNotes/{smart_note}`,
+    /// where `{smart_note}` is a 1:1 mapping to each unique smart notes session
+    /// of the conference.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 2;
+    private global::Google.Apps.Meet.V2Beta.SmartNote.Types.State state_ = global::Google.Apps.Meet.V2Beta.SmartNote.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. Current state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Meet.V2Beta.SmartNote.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Output only. Timestamp when the smart notes started.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// Output only. Timestamp when the smart notes stopped.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    private object destination_;
+    /// <summary>Enum of possible cases for the "destination" oneof.</summary>
+    public enum DestinationOneofCase {
+      None = 0,
+      DocsDestination = 5,
+    }
+    private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DestinationOneofCase DestinationCase {
+      get { return destinationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestination() {
+      destinationCase_ = DestinationOneofCase.None;
+      destination_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SmartNote);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SmartNote other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(DocsDestination, other.DocsDestination)) return false;
+      if (Name != other.Name) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (DestinationCase != other.DestinationCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (destinationCase_ == DestinationOneofCase.DocsDestination) hash ^= DocsDestination.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (State != global::Google.Apps.Meet.V2Beta.SmartNote.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      hash ^= (int) destinationCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (State != global::Google.Apps.Meet.V2Beta.SmartNote.Types.State.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) State);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EndTime);
+      }
+      if (destinationCase_ == DestinationOneofCase.DocsDestination) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DocsDestination);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (State != global::Google.Apps.Meet.V2Beta.SmartNote.Types.State.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) State);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EndTime);
+      }
+      if (destinationCase_ == DestinationOneofCase.DocsDestination) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DocsDestination);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (destinationCase_ == DestinationOneofCase.DocsDestination) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DocsDestination);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (State != global::Google.Apps.Meet.V2Beta.SmartNote.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SmartNote other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.State != global::Google.Apps.Meet.V2Beta.SmartNote.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.DocsDestination:
+          if (DocsDestination == null) {
+            DocsDestination = new global::Google.Apps.Meet.V2Beta.DocsDestination();
+          }
+          DocsDestination.MergeFrom(other.DocsDestination);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            State = (global::Google.Apps.Meet.V2Beta.SmartNote.Types.State) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 34: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 42: {
+            global::Google.Apps.Meet.V2Beta.DocsDestination subBuilder = new global::Google.Apps.Meet.V2Beta.DocsDestination();
+            if (destinationCase_ == DestinationOneofCase.DocsDestination) {
+              subBuilder.MergeFrom(DocsDestination);
+            }
+            input.ReadMessage(subBuilder);
+            DocsDestination = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            State = (global::Google.Apps.Meet.V2Beta.SmartNote.Types.State) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 34: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 42: {
+            global::Google.Apps.Meet.V2Beta.DocsDestination subBuilder = new global::Google.Apps.Meet.V2Beta.DocsDestination();
+            if (destinationCase_ == DestinationOneofCase.DocsDestination) {
+              subBuilder.MergeFrom(DocsDestination);
+            }
+            input.ReadMessage(subBuilder);
+            DocsDestination = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SmartNote message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Current state of the smart notes session.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Default, never used.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// An active smart notes session has started.
+        /// </summary>
+        [pbr::OriginalName("STARTED")] Started = 1,
+        /// <summary>
+        /// This smart notes session has ended, but the smart notes file hasn't been
+        /// generated yet.
+        /// </summary>
+        [pbr::OriginalName("ENDED")] Ended = 2,
+        /// <summary>
+        /// Smart notes file is generated and ready to download.
+        /// </summary>
+        [pbr::OriginalName("FILE_GENERATED")] FileGenerated = 3,
+      }
+
+    }
+    #endregion
 
   }
 

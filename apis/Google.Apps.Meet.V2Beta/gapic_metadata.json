@@ -34,6 +34,12 @@
                 "GetRecordingAsync"
               ]
             },
+            "GetSmartNote": {
+              "methods": [
+                "GetSmartNote",
+                "GetSmartNoteAsync"
+              ]
+            },
             "GetTranscript": {
               "methods": [
                 "GetTranscript",
@@ -70,6 +76,12 @@
                 "ListRecordingsAsync"
               ]
             },
+            "ListSmartNotes": {
+              "methods": [
+                "ListSmartNotes",
+                "ListSmartNotesAsync"
+              ]
+            },
             "ListTranscriptEntries": {
               "methods": [
                 "ListTranscriptEntries",
@@ -91,6 +103,12 @@
         "grpc": {
           "libraryClient": "SpacesServiceClient",
           "rpcs": {
+            "BatchUpdateMembers": {
+              "methods": [
+                "BatchUpdateMembers",
+                "BatchUpdateMembersAsync"
+              ]
+            },
             "ConnectActiveConference": {
               "methods": [
                 "ConnectActiveConference",
@@ -137,6 +155,12 @@
               "methods": [
                 "ListMembers",
                 "ListMembersAsync"
+              ]
+            },
+            "UpdateMember": {
+              "methods": [
+                "UpdateMember",
+                "UpdateMemberAsync"
               ]
             },
             "UpdateSpace": {

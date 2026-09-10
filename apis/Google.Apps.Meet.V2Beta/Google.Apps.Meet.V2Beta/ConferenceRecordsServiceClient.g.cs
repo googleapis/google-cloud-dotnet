@@ -59,6 +59,8 @@ namespace Google.Apps.Meet.V2Beta
             ListTranscriptsSettings = existing.ListTranscriptsSettings;
             GetTranscriptEntrySettings = existing.GetTranscriptEntrySettings;
             ListTranscriptEntriesSettings = existing.ListTranscriptEntriesSettings;
+            GetSmartNoteSettings = existing.GetSmartNoteSettings;
+            ListSmartNotesSettings = existing.ListSmartNotesSettings;
             OnCopy(existing);
         }
 
@@ -291,6 +293,44 @@ namespace Google.Apps.Meet.V2Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListTranscriptEntriesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConferenceRecordsServiceClient.GetSmartNote</c> and <c>ConferenceRecordsServiceClient.GetSmartNoteAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSmartNoteSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConferenceRecordsServiceClient.ListSmartNotes</c> and
+        /// <c>ConferenceRecordsServiceClient.ListSmartNotesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSmartNotesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ConferenceRecordsServiceSettings"/> object.</returns>
@@ -1652,7 +1692,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1665,7 +1706,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1678,7 +1720,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1691,7 +1734,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the `TranscriptEntry`.
@@ -1709,7 +1753,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the `TranscriptEntry`.
@@ -1727,7 +1772,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the `TranscriptEntry`.
@@ -1742,7 +1788,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the `TranscriptEntry`.
@@ -1760,7 +1807,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the `TranscriptEntry`.
@@ -1778,7 +1826,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the `TranscriptEntry`.
@@ -1794,7 +1843,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1808,7 +1858,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1822,7 +1873,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -1861,7 +1913,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -1900,7 +1953,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -1939,7 +1993,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="parent">
         /// Required. Format:
@@ -1970,6 +2025,273 @@ namespace Google.Apps.Meet.V2Beta
                 request.PageSize = pageSize.Value;
             }
             return ListTranscriptEntriesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets smart notes by smart note ID.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SmartNote GetSmartNote(GetSmartNoteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets smart notes by smart note ID.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SmartNote> GetSmartNoteAsync(GetSmartNoteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets smart notes by smart note ID.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SmartNote> GetSmartNoteAsync(GetSmartNoteRequest request, st::CancellationToken cancellationToken) =>
+            GetSmartNoteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets smart notes by smart note ID.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the smart note.
+        /// Format: conferenceRecords/{conference_record}/smartNotes/{smart_note}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SmartNote GetSmartNote(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSmartNote(new GetSmartNoteRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets smart notes by smart note ID.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the smart note.
+        /// Format: conferenceRecords/{conference_record}/smartNotes/{smart_note}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SmartNote> GetSmartNoteAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSmartNoteAsync(new GetSmartNoteRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets smart notes by smart note ID.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the smart note.
+        /// Format: conferenceRecords/{conference_record}/smartNotes/{smart_note}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SmartNote> GetSmartNoteAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSmartNoteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets smart notes by smart note ID.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the smart note.
+        /// Format: conferenceRecords/{conference_record}/smartNotes/{smart_note}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SmartNote GetSmartNote(SmartNoteName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSmartNote(new GetSmartNoteRequest
+            {
+                SmartNoteName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets smart notes by smart note ID.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the smart note.
+        /// Format: conferenceRecords/{conference_record}/smartNotes/{smart_note}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SmartNote> GetSmartNoteAsync(SmartNoteName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSmartNoteAsync(new GetSmartNoteRequest
+            {
+                SmartNoteName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets smart notes by smart note ID.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the smart note.
+        /// Format: conferenceRecords/{conference_record}/smartNotes/{smart_note}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SmartNote> GetSmartNoteAsync(SmartNoteName name, st::CancellationToken cancellationToken) =>
+            GetSmartNoteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists the set of smart notes from the conference record. By default,
+        /// ordered by start time and in ascending order.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SmartNote"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSmartNotesResponse, SmartNote> ListSmartNotes(ListSmartNotesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the set of smart notes from the conference record. By default,
+        /// ordered by start time and in ascending order.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SmartNote"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSmartNotesResponse, SmartNote> ListSmartNotesAsync(ListSmartNotesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the set of smart notes from the conference record. By default,
+        /// ordered by start time and in ascending order.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `conferenceRecords/{conference_record}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SmartNote"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSmartNotesResponse, SmartNote> ListSmartNotes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSmartNotesRequest request = new ListSmartNotesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSmartNotes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the set of smart notes from the conference record. By default,
+        /// ordered by start time and in ascending order.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `conferenceRecords/{conference_record}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SmartNote"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSmartNotesResponse, SmartNote> ListSmartNotesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSmartNotesRequest request = new ListSmartNotesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSmartNotesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the set of smart notes from the conference record. By default,
+        /// ordered by start time and in ascending order.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `conferenceRecords/{conference_record}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SmartNote"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSmartNotesResponse, SmartNote> ListSmartNotes(ConferenceRecordName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSmartNotesRequest request = new ListSmartNotesRequest
+            {
+                ParentAsConferenceRecordName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSmartNotes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the set of smart notes from the conference record. By default,
+        /// ordered by start time and in ascending order.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `conferenceRecords/{conference_record}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SmartNote"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSmartNotesResponse, SmartNote> ListSmartNotesAsync(ConferenceRecordName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSmartNotesRequest request = new ListSmartNotesRequest
+            {
+                ParentAsConferenceRecordName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSmartNotesAsync(request, callSettings);
         }
     }
 
@@ -2002,6 +2324,10 @@ namespace Google.Apps.Meet.V2Beta
         private readonly gaxgrpc::ApiCall<GetTranscriptEntryRequest, TranscriptEntry> _callGetTranscriptEntry;
 
         private readonly gaxgrpc::ApiCall<ListTranscriptEntriesRequest, ListTranscriptEntriesResponse> _callListTranscriptEntries;
+
+        private readonly gaxgrpc::ApiCall<GetSmartNoteRequest, SmartNote> _callGetSmartNote;
+
+        private readonly gaxgrpc::ApiCall<ListSmartNotesRequest, ListSmartNotesResponse> _callListSmartNotes;
 
         /// <summary>
         /// Constructs a client wrapper for the ConferenceRecordsService service, with the specified gRPC client and
@@ -2057,6 +2383,12 @@ namespace Google.Apps.Meet.V2Beta
             _callListTranscriptEntries = clientHelper.BuildApiCall<ListTranscriptEntriesRequest, ListTranscriptEntriesResponse>("ListTranscriptEntries", grpcClient.ListTranscriptEntriesAsync, grpcClient.ListTranscriptEntries, effectiveSettings.ListTranscriptEntriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTranscriptEntries);
             Modify_ListTranscriptEntriesApiCall(ref _callListTranscriptEntries);
+            _callGetSmartNote = clientHelper.BuildApiCall<GetSmartNoteRequest, SmartNote>("GetSmartNote", grpcClient.GetSmartNoteAsync, grpcClient.GetSmartNote, effectiveSettings.GetSmartNoteSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSmartNote);
+            Modify_GetSmartNoteApiCall(ref _callGetSmartNote);
+            _callListSmartNotes = clientHelper.BuildApiCall<ListSmartNotesRequest, ListSmartNotesResponse>("ListSmartNotes", grpcClient.ListSmartNotesAsync, grpcClient.ListSmartNotes, effectiveSettings.ListSmartNotesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSmartNotes);
+            Modify_ListSmartNotesApiCall(ref _callListSmartNotes);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2086,6 +2418,10 @@ namespace Google.Apps.Meet.V2Beta
 
         partial void Modify_ListTranscriptEntriesApiCall(ref gaxgrpc::ApiCall<ListTranscriptEntriesRequest, ListTranscriptEntriesResponse> call);
 
+        partial void Modify_GetSmartNoteApiCall(ref gaxgrpc::ApiCall<GetSmartNoteRequest, SmartNote> call);
+
+        partial void Modify_ListSmartNotesApiCall(ref gaxgrpc::ApiCall<ListSmartNotesRequest, ListSmartNotesResponse> call);
+
         partial void OnConstruction(ConferenceRecordsService.ConferenceRecordsServiceClient grpcClient, ConferenceRecordsServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ConferenceRecordsService client</summary>
@@ -2114,6 +2450,10 @@ namespace Google.Apps.Meet.V2Beta
         partial void Modify_GetTranscriptEntryRequest(ref GetTranscriptEntryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListTranscriptEntriesRequest(ref ListTranscriptEntriesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSmartNoteRequest(ref GetSmartNoteRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSmartNotesRequest(ref ListSmartNotesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets a conference record by conference ID.
@@ -2382,7 +2722,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2398,7 +2739,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2415,7 +2757,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2432,7 +2775,8 @@ namespace Google.Apps.Meet.V2Beta
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
         /// match the transcription found in the Google Docs transcript file. This can
-        /// occur when the Google Docs transcript file is modified after generation.
+        /// occur when 1) we have interleaved speakers within milliseconds, or
+        /// 2) the Google Docs transcript file is modified after generation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2441,6 +2785,56 @@ namespace Google.Apps.Meet.V2Beta
         {
             Modify_ListTranscriptEntriesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTranscriptEntriesRequest, ListTranscriptEntriesResponse, TranscriptEntry>(_callListTranscriptEntries, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets smart notes by smart note ID.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SmartNote GetSmartNote(GetSmartNoteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSmartNoteRequest(ref request, ref callSettings);
+            return _callGetSmartNote.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets smart notes by smart note ID.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SmartNote> GetSmartNoteAsync(GetSmartNoteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSmartNoteRequest(ref request, ref callSettings);
+            return _callGetSmartNote.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the set of smart notes from the conference record. By default,
+        /// ordered by start time and in ascending order.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SmartNote"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSmartNotesResponse, SmartNote> ListSmartNotes(ListSmartNotesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSmartNotesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSmartNotesRequest, ListSmartNotesResponse, SmartNote>(_callListSmartNotes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the set of smart notes from the conference record. By default,
+        /// ordered by start time and in ascending order.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SmartNote"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSmartNotesResponse, SmartNote> ListSmartNotesAsync(ListSmartNotesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSmartNotesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSmartNotesRequest, ListSmartNotesResponse, SmartNote>(_callListSmartNotes, request, callSettings);
         }
     }
 
@@ -2465,6 +2859,10 @@ namespace Google.Apps.Meet.V2Beta
     }
 
     public partial class ListTranscriptEntriesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSmartNotesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -2512,6 +2910,14 @@ namespace Google.Apps.Meet.V2Beta
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<TranscriptEntry> GetEnumerator() => TranscriptEntries.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSmartNotesResponse : gaxgrpc::IPageResponse<SmartNote>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SmartNote> GetEnumerator() => SmartNotes.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

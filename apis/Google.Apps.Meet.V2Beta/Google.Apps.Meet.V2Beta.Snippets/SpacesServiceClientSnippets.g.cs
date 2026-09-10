@@ -241,6 +241,7 @@ namespace GoogleCSharpSnippets
             {
                 SpaceName = SpaceName.FromSpace("[SPACE]"),
                 Offer = "",
+                Config = new ConnectActiveConferenceRequest.Types.ConnectionConfig(),
             };
             // Make the request
             ConnectActiveConferenceResponse response = spacesServiceClient.ConnectActiveConference(request);
@@ -259,6 +260,7 @@ namespace GoogleCSharpSnippets
             {
                 SpaceName = SpaceName.FromSpace("[SPACE]"),
                 Offer = "",
+                Config = new ConnectActiveConferenceRequest.Types.ConnectionConfig(),
             };
             // Make the request
             ConnectActiveConferenceResponse response = await spacesServiceClient.ConnectActiveConferenceAsync(request);
@@ -946,6 +948,113 @@ namespace GoogleCSharpSnippets
             MemberName name = MemberName.FromSpaceMember("[SPACE]", "[MEMBER]");
             // Make the request
             await spacesServiceClient.DeleteMemberAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMember</summary>
+        public void UpdateMemberRequestObject()
+        {
+            // Snippet: UpdateMember(UpdateMemberRequest, CallSettings)
+            // Create client
+            SpacesServiceClient spacesServiceClient = SpacesServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateMemberRequest request = new UpdateMemberRequest
+            {
+                Member = new Member(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Member response = spacesServiceClient.UpdateMember(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMemberAsync</summary>
+        public async Task UpdateMemberRequestObjectAsync()
+        {
+            // Snippet: UpdateMemberAsync(UpdateMemberRequest, CallSettings)
+            // Additional: UpdateMemberAsync(UpdateMemberRequest, CancellationToken)
+            // Create client
+            SpacesServiceClient spacesServiceClient = await SpacesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateMemberRequest request = new UpdateMemberRequest
+            {
+                Member = new Member(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Member response = await spacesServiceClient.UpdateMemberAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMember</summary>
+        public void UpdateMember()
+        {
+            // Snippet: UpdateMember(Member, FieldMask, CallSettings)
+            // Create client
+            SpacesServiceClient spacesServiceClient = SpacesServiceClient.Create();
+            // Initialize request argument(s)
+            Member member = new Member();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Member response = spacesServiceClient.UpdateMember(member, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMemberAsync</summary>
+        public async Task UpdateMemberAsync()
+        {
+            // Snippet: UpdateMemberAsync(Member, FieldMask, CallSettings)
+            // Additional: UpdateMemberAsync(Member, FieldMask, CancellationToken)
+            // Create client
+            SpacesServiceClient spacesServiceClient = await SpacesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Member member = new Member();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Member response = await spacesServiceClient.UpdateMemberAsync(member, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateMembers</summary>
+        public void BatchUpdateMembersRequestObject()
+        {
+            // Snippet: BatchUpdateMembers(BatchUpdateMembersRequest, CallSettings)
+            // Create client
+            SpacesServiceClient spacesServiceClient = SpacesServiceClient.Create();
+            // Initialize request argument(s)
+            BatchUpdateMembersRequest request = new BatchUpdateMembersRequest
+            {
+                ParentAsSpaceName = SpaceName.FromSpace("[SPACE]"),
+                Requests =
+                {
+                    new UpdateMemberRequest(),
+                },
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            BatchUpdateMembersResponse response = spacesServiceClient.BatchUpdateMembers(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateMembersAsync</summary>
+        public async Task BatchUpdateMembersRequestObjectAsync()
+        {
+            // Snippet: BatchUpdateMembersAsync(BatchUpdateMembersRequest, CallSettings)
+            // Additional: BatchUpdateMembersAsync(BatchUpdateMembersRequest, CancellationToken)
+            // Create client
+            SpacesServiceClient spacesServiceClient = await SpacesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchUpdateMembersRequest request = new BatchUpdateMembersRequest
+            {
+                ParentAsSpaceName = SpaceName.FromSpace("[SPACE]"),
+                Requests =
+                {
+                    new UpdateMemberRequest(),
+                },
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            BatchUpdateMembersResponse response = await spacesServiceClient.BatchUpdateMembersAsync(request);
             // End snippet
         }
     }

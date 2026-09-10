@@ -1937,6 +1937,247 @@ namespace Google.Apps.Meet.V2Beta
         public static bool operator !=(TranscriptEntryName a, TranscriptEntryName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>SmartNote</c> resource.</summary>
+    public sealed partial class SmartNoteName : gax::IResourceName, sys::IEquatable<SmartNoteName>
+    {
+        /// <summary>The possible contents of <see cref="SmartNoteName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>conferenceRecords/{conference_record}/smartNotes/{smart_note}</c>.
+            /// </summary>
+            ConferenceRecordSmartNote = 1,
+        }
+
+        private static gax::PathTemplate s_conferenceRecordSmartNote = new gax::PathTemplate("conferenceRecords/{conference_record}/smartNotes/{smart_note}");
+
+        /// <summary>Creates a <see cref="SmartNoteName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="SmartNoteName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static SmartNoteName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new SmartNoteName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="SmartNoteName"/> with the pattern
+        /// <c>conferenceRecords/{conference_record}/smartNotes/{smart_note}</c>.
+        /// </summary>
+        /// <param name="conferenceRecordId">The <c>ConferenceRecord</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="smartNoteId">The <c>SmartNote</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SmartNoteName"/> constructed from the provided ids.</returns>
+        public static SmartNoteName FromConferenceRecordSmartNote(string conferenceRecordId, string smartNoteId) =>
+            new SmartNoteName(ResourceNameType.ConferenceRecordSmartNote, conferenceRecordId: gax::GaxPreconditions.CheckNotNullOrEmpty(conferenceRecordId, nameof(conferenceRecordId)), smartNoteId: gax::GaxPreconditions.CheckNotNullOrEmpty(smartNoteId, nameof(smartNoteId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SmartNoteName"/> with pattern
+        /// <c>conferenceRecords/{conference_record}/smartNotes/{smart_note}</c>.
+        /// </summary>
+        /// <param name="conferenceRecordId">The <c>ConferenceRecord</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="smartNoteId">The <c>SmartNote</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SmartNoteName"/> with pattern
+        /// <c>conferenceRecords/{conference_record}/smartNotes/{smart_note}</c>.
+        /// </returns>
+        public static string Format(string conferenceRecordId, string smartNoteId) =>
+            FormatConferenceRecordSmartNote(conferenceRecordId, smartNoteId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SmartNoteName"/> with pattern
+        /// <c>conferenceRecords/{conference_record}/smartNotes/{smart_note}</c>.
+        /// </summary>
+        /// <param name="conferenceRecordId">The <c>ConferenceRecord</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="smartNoteId">The <c>SmartNote</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SmartNoteName"/> with pattern
+        /// <c>conferenceRecords/{conference_record}/smartNotes/{smart_note}</c>.
+        /// </returns>
+        public static string FormatConferenceRecordSmartNote(string conferenceRecordId, string smartNoteId) =>
+            s_conferenceRecordSmartNote.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(conferenceRecordId, nameof(conferenceRecordId)), gax::GaxPreconditions.CheckNotNullOrEmpty(smartNoteId, nameof(smartNoteId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="SmartNoteName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>conferenceRecords/{conference_record}/smartNotes/{smart_note}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="smartNoteName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="SmartNoteName"/> if successful.</returns>
+        public static SmartNoteName Parse(string smartNoteName) => Parse(smartNoteName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="SmartNoteName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>conferenceRecords/{conference_record}/smartNotes/{smart_note}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="smartNoteName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="SmartNoteName"/> if successful.</returns>
+        public static SmartNoteName Parse(string smartNoteName, bool allowUnparsed) =>
+            TryParse(smartNoteName, allowUnparsed, out SmartNoteName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SmartNoteName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>conferenceRecords/{conference_record}/smartNotes/{smart_note}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="smartNoteName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SmartNoteName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string smartNoteName, out SmartNoteName result) => TryParse(smartNoteName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SmartNoteName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>conferenceRecords/{conference_record}/smartNotes/{smart_note}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="smartNoteName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SmartNoteName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string smartNoteName, bool allowUnparsed, out SmartNoteName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(smartNoteName, nameof(smartNoteName));
+            gax::TemplatedResourceName resourceName;
+            if (s_conferenceRecordSmartNote.TryParseName(smartNoteName, out resourceName))
+            {
+                result = FromConferenceRecordSmartNote(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(smartNoteName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private SmartNoteName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string conferenceRecordId = null, string smartNoteId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            ConferenceRecordId = conferenceRecordId;
+            SmartNoteId = smartNoteId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="SmartNoteName"/> class from the component parts of pattern
+        /// <c>conferenceRecords/{conference_record}/smartNotes/{smart_note}</c>
+        /// </summary>
+        /// <param name="conferenceRecordId">The <c>ConferenceRecord</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="smartNoteId">The <c>SmartNote</c> ID. Must not be <c>null</c> or empty.</param>
+        public SmartNoteName(string conferenceRecordId, string smartNoteId) : this(ResourceNameType.ConferenceRecordSmartNote, conferenceRecordId: gax::GaxPreconditions.CheckNotNullOrEmpty(conferenceRecordId, nameof(conferenceRecordId)), smartNoteId: gax::GaxPreconditions.CheckNotNullOrEmpty(smartNoteId, nameof(smartNoteId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>ConferenceRecord</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string ConferenceRecordId { get; }
+
+        /// <summary>
+        /// The <c>SmartNote</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string SmartNoteId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ConferenceRecordSmartNote: return s_conferenceRecordSmartNote.Expand(ConferenceRecordId, SmartNoteId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as SmartNoteName);
+
+        /// <inheritdoc/>
+        public bool Equals(SmartNoteName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(SmartNoteName a, SmartNoteName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(SmartNoteName a, SmartNoteName b) => !(a == b);
+    }
+
     public partial class Space
     {
         /// <summary>
@@ -2059,6 +2300,18 @@ namespace Google.Apps.Meet.V2Beta
         {
             get => string.IsNullOrEmpty(Participant) ? null : ParticipantName.Parse(Participant, allowUnparsed: true);
             set => Participant = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SmartNote
+    {
+        /// <summary>
+        /// <see cref="gamv::SmartNoteName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamv::SmartNoteName SmartNoteName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamv::SmartNoteName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }
