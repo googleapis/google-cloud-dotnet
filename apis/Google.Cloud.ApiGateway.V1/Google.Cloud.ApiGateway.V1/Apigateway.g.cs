@@ -825,8 +825,8 @@ namespace Google.Cloud.ApiGateway.V1 {
     public const int GatewayServiceAccountFieldNumber = 14;
     private string gatewayServiceAccount_ = "";
     /// <summary>
-    /// Immutable. The Google Cloud IAM Service Account that Gateways serving this config
-    /// should use to authenticate to other services. This may either be the
+    /// Immutable. The Google Cloud IAM Service Account that Gateways serving this
+    /// config should use to authenticate to other services. This may either be the
     /// Service Account's email
     /// (`{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`) or its full resource
     /// name (`projects/{PROJECT}/accounts/{UNIQUE_ID}`). This is most often used
@@ -894,8 +894,8 @@ namespace Google.Cloud.ApiGateway.V1 {
         = pb::FieldCodec.ForMessage(82, global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.GrpcServiceDefinition.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.GrpcServiceDefinition> grpcServices_ = new pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.GrpcServiceDefinition>();
     /// <summary>
-    /// Optional. gRPC service definition files. If specified, openapi_documents must
-    /// not be included.
+    /// Optional. gRPC service definition files. If specified, openapi_documents
+    /// must not be included.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -909,8 +909,8 @@ namespace Google.Cloud.ApiGateway.V1 {
         = pb::FieldCodec.ForMessage(90, global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.File.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.File> managedServiceConfigs_ = new pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.File>();
     /// <summary>
-    /// Optional. Service Configuration files. At least one must be included when using gRPC
-    /// service definitions. See
+    /// Optional. Service Configuration files. At least one must be included when
+    /// using gRPC service definitions. See
     /// https://cloud.google.com/endpoints/docs/grpc/grpc-service-config#service_configuration_overview
     /// for the expected file contents.
     ///
@@ -1859,8 +1859,8 @@ namespace Google.Cloud.ApiGateway.V1 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.File.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.File> source_ = new pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.File>();
         /// <summary>
-        /// Optional. Uncompiled proto files associated with the descriptor set, used for
-        /// display purposes (server-side compilation is not supported). These
+        /// Optional. Uncompiled proto files associated with the descriptor set, used
+        /// for display purposes (server-side compilation is not supported). These
         /// should match the inputs to 'protoc' command used to generate
         /// file_descriptor_set.
         /// </summary>
@@ -3477,8 +3477,8 @@ namespace Google.Cloud.ApiGateway.V1 {
     public const int GatewayIdFieldNumber = 2;
     private string gatewayId_ = "";
     /// <summary>
-    /// Required. Identifier to assign to the Gateway. Must be unique within scope of
-    /// the parent resource.
+    /// Required. Identifier to assign to the Gateway. Must be unique within scope
+    /// of the parent resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6737,8 +6737,8 @@ namespace Google.Cloud.ApiGateway.V1 {
     public const int ApiConfigIdFieldNumber = 2;
     private string apiConfigId_ = "";
     /// <summary>
-    /// Required. Identifier to assign to the API Config. Must be unique within scope of
-    /// the parent resource.
+    /// Required. Identifier to assign to the API Config. Must be unique within
+    /// scope of the parent resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7569,7 +7569,9 @@ namespace Google.Cloud.ApiGateway.V1 {
     /// <summary>
     /// Output only. Identifies whether the user has requested cancellation
     /// of the operation. Operations that have successfully been cancelled
-    /// have [Operation.error][] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+    /// have
+    /// [google.longrunning.Operation.error][google.longrunning.Operation.error]
+    /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
     /// corresponding to `Code.CANCELLED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7602,7 +7604,8 @@ namespace Google.Cloud.ApiGateway.V1 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.ApiGateway.V1.OperationMetadata.Types.Diagnostic.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.OperationMetadata.Types.Diagnostic> diagnostics_ = new pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.OperationMetadata.Types.Diagnostic>();
     /// <summary>
-    /// Output only. Diagnostics generated during processing of configuration source files.
+    /// Output only. Diagnostics generated during processing of configuration
+    /// source files.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
