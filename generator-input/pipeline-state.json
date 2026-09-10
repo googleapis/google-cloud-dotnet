@@ -3169,6 +3169,7 @@
         {
             "id": "Google.Cloud.Storage.V1",
             "currentVersion": "4.15.0",
+            "nextVersion": "5.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-06-08T14:40:23.502153417Z",
