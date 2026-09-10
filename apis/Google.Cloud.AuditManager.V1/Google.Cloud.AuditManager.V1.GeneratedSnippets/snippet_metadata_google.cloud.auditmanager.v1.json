@@ -11,6 +11,1797 @@
   },
   "snippets": [
     {
+      "regionTag": "auditmanager_v1_generated_AuditManager_CreateAuditSchedule_sync",
+      "title": "CreateAuditScheduleRequestObject",
+      "description": "Snippet for CreateAuditSchedule",
+      "file": "AuditManagerClient.CreateAuditScheduleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuditSchedule",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.CreateAuditSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.CreateAuditScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditSchedule",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "CreateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.CreateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_CreateAuditSchedule_async",
+      "title": "CreateAuditScheduleRequestObjectAsync",
+      "description": "Snippet for CreateAuditScheduleAsync",
+      "file": "AuditManagerClient.CreateAuditScheduleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuditScheduleAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.CreateAuditScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.CreateAuditScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "CreateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.CreateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_CreateAuditSchedule_sync_flattened",
+      "title": "CreateAuditSchedule",
+      "description": "Snippet for CreateAuditSchedule",
+      "file": "AuditManagerClient.CreateAuditScheduleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuditSchedule",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.CreateAuditSchedule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditSchedule",
+            "name": "auditSchedule"
+          },
+          {
+            "type": "System.String",
+            "name": "auditScheduleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditSchedule",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "CreateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.CreateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_CreateAuditSchedule_async_flattened",
+      "title": "CreateAuditScheduleAsync",
+      "description": "Snippet for CreateAuditScheduleAsync",
+      "file": "AuditManagerClient.CreateAuditScheduleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuditScheduleAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.CreateAuditScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditSchedule",
+            "name": "auditSchedule"
+          },
+          {
+            "type": "System.String",
+            "name": "auditScheduleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "CreateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.CreateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_CreateAuditSchedule_sync_flattened_resourceNames1",
+      "title": "CreateAuditScheduleResourceNames1",
+      "description": "Snippet for CreateAuditSchedule",
+      "file": "AuditManagerClient.CreateAuditScheduleResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuditSchedule",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.CreateAuditSchedule",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditSchedule",
+            "name": "auditSchedule"
+          },
+          {
+            "type": "System.String",
+            "name": "auditScheduleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditSchedule",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "CreateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.CreateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_CreateAuditSchedule_async_flattened_resourceNames1",
+      "title": "CreateAuditScheduleResourceNames1Async",
+      "description": "Snippet for CreateAuditScheduleAsync",
+      "file": "AuditManagerClient.CreateAuditScheduleResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuditScheduleAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.CreateAuditScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditSchedule",
+            "name": "auditSchedule"
+          },
+          {
+            "type": "System.String",
+            "name": "auditScheduleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "CreateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.CreateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_CreateAuditSchedule_sync_flattened_resourceNames2",
+      "title": "CreateAuditScheduleResourceNames2",
+      "description": "Snippet for CreateAuditSchedule",
+      "file": "AuditManagerClient.CreateAuditScheduleResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuditSchedule",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.CreateAuditSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditSchedule",
+            "name": "auditSchedule"
+          },
+          {
+            "type": "System.String",
+            "name": "auditScheduleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditSchedule",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "CreateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.CreateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_CreateAuditSchedule_async_flattened_resourceNames2",
+      "title": "CreateAuditScheduleResourceNames2Async",
+      "description": "Snippet for CreateAuditScheduleAsync",
+      "file": "AuditManagerClient.CreateAuditScheduleResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuditScheduleAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.CreateAuditScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditSchedule",
+            "name": "auditSchedule"
+          },
+          {
+            "type": "System.String",
+            "name": "auditScheduleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "CreateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.CreateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_CreateAuditSchedule_sync_flattened_resourceNames3",
+      "title": "CreateAuditScheduleResourceNames3",
+      "description": "Snippet for CreateAuditSchedule",
+      "file": "AuditManagerClient.CreateAuditScheduleResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuditSchedule",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.CreateAuditSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditSchedule",
+            "name": "auditSchedule"
+          },
+          {
+            "type": "System.String",
+            "name": "auditScheduleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditSchedule",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "CreateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.CreateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_CreateAuditSchedule_async_flattened_resourceNames3",
+      "title": "CreateAuditScheduleResourceNames3Async",
+      "description": "Snippet for CreateAuditScheduleAsync",
+      "file": "AuditManagerClient.CreateAuditScheduleResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuditScheduleAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.CreateAuditScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditSchedule",
+            "name": "auditSchedule"
+          },
+          {
+            "type": "System.String",
+            "name": "auditScheduleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "CreateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.CreateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_CreateAuditSchedule_sync_flattened_resourceNames4",
+      "title": "CreateAuditScheduleResourceNames4",
+      "description": "Snippet for CreateAuditSchedule",
+      "file": "AuditManagerClient.CreateAuditScheduleResourceNames4Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuditSchedule",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.CreateAuditSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.EnrollmentStatusScopeName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditSchedule",
+            "name": "auditSchedule"
+          },
+          {
+            "type": "System.String",
+            "name": "auditScheduleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditSchedule",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "CreateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.CreateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_CreateAuditSchedule_async_flattened_resourceNames4",
+      "title": "CreateAuditScheduleResourceNames4Async",
+      "description": "Snippet for CreateAuditScheduleAsync",
+      "file": "AuditManagerClient.CreateAuditScheduleResourceNames4AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuditScheduleAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.CreateAuditScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.EnrollmentStatusScopeName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditSchedule",
+            "name": "auditSchedule"
+          },
+          {
+            "type": "System.String",
+            "name": "auditScheduleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "CreateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.CreateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_UpdateAuditSchedule_sync",
+      "title": "UpdateAuditScheduleRequestObject",
+      "description": "Snippet for UpdateAuditSchedule",
+      "file": "AuditManagerClient.UpdateAuditScheduleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAuditSchedule",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.UpdateAuditSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.UpdateAuditScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditSchedule",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.UpdateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_UpdateAuditSchedule_async",
+      "title": "UpdateAuditScheduleRequestObjectAsync",
+      "description": "Snippet for UpdateAuditScheduleAsync",
+      "file": "AuditManagerClient.UpdateAuditScheduleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAuditScheduleAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.UpdateAuditScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.UpdateAuditScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.UpdateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_UpdateAuditSchedule_sync_flattened",
+      "title": "UpdateAuditSchedule",
+      "description": "Snippet for UpdateAuditSchedule",
+      "file": "AuditManagerClient.UpdateAuditScheduleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAuditSchedule",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.UpdateAuditSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditSchedule",
+            "name": "auditSchedule"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditSchedule",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.UpdateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_UpdateAuditSchedule_async_flattened",
+      "title": "UpdateAuditScheduleAsync",
+      "description": "Snippet for UpdateAuditScheduleAsync",
+      "file": "AuditManagerClient.UpdateAuditScheduleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAuditScheduleAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.UpdateAuditScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditSchedule",
+            "name": "auditSchedule"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.UpdateAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetAuditSchedule_sync",
+      "title": "GetAuditScheduleRequestObject",
+      "description": "Snippet for GetAuditSchedule",
+      "file": "AuditManagerClient.GetAuditScheduleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuditSchedule",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetAuditSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.GetAuditScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditSchedule",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetAuditSchedule_async",
+      "title": "GetAuditScheduleRequestObjectAsync",
+      "description": "Snippet for GetAuditScheduleAsync",
+      "file": "AuditManagerClient.GetAuditScheduleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuditScheduleAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetAuditScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.GetAuditScheduleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetAuditSchedule_sync_flattened",
+      "title": "GetAuditSchedule",
+      "description": "Snippet for GetAuditSchedule",
+      "file": "AuditManagerClient.GetAuditScheduleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuditSchedule",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetAuditSchedule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditSchedule",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetAuditSchedule_async_flattened",
+      "title": "GetAuditScheduleAsync",
+      "description": "Snippet for GetAuditScheduleAsync",
+      "file": "AuditManagerClient.GetAuditScheduleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuditScheduleAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetAuditScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetAuditSchedule_sync_flattened_resourceNames",
+      "title": "GetAuditScheduleResourceNames",
+      "description": "Snippet for GetAuditSchedule",
+      "file": "AuditManagerClient.GetAuditScheduleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuditSchedule",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetAuditSchedule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AuditManager.V1.AuditSchedule",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_GetAuditSchedule_async_flattened_resourceNames",
+      "title": "GetAuditScheduleResourceNamesAsync",
+      "description": "Snippet for GetAuditScheduleAsync",
+      "file": "AuditManagerClient.GetAuditScheduleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuditScheduleAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.GetAuditScheduleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.AuditScheduleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "GetAuditSchedule",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.GetAuditSchedule",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditSchedules_sync",
+      "title": "ListAuditSchedulesRequestObject",
+      "description": "Snippet for ListAuditSchedules",
+      "file": "AuditManagerClient.ListAuditSchedulesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditSchedules",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditSchedules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.ListAuditSchedulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse, Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditSchedules",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditSchedules",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditSchedules_async",
+      "title": "ListAuditSchedulesRequestObjectAsync",
+      "description": "Snippet for ListAuditSchedulesAsync",
+      "file": "AuditManagerClient.ListAuditSchedulesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditSchedulesAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditSchedulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.ListAuditSchedulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse, Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditSchedules",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditSchedules",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditSchedules_sync_flattened",
+      "title": "ListAuditSchedules",
+      "description": "Snippet for ListAuditSchedules",
+      "file": "AuditManagerClient.ListAuditSchedulesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditSchedules",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditSchedules",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse, Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditSchedules",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditSchedules",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditSchedules_async_flattened",
+      "title": "ListAuditSchedulesAsync",
+      "description": "Snippet for ListAuditSchedulesAsync",
+      "file": "AuditManagerClient.ListAuditSchedulesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditSchedulesAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditSchedulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse, Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditSchedules",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditSchedules",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditSchedules_sync_flattened_resourceNames1",
+      "title": "ListAuditSchedulesResourceNames1",
+      "description": "Snippet for ListAuditSchedules",
+      "file": "AuditManagerClient.ListAuditSchedulesResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditSchedules",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditSchedules",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse, Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditSchedules",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditSchedules",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditSchedules_async_flattened_resourceNames1",
+      "title": "ListAuditSchedulesResourceNames1Async",
+      "description": "Snippet for ListAuditSchedulesAsync",
+      "file": "AuditManagerClient.ListAuditSchedulesResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditSchedulesAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditSchedulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse, Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditSchedules",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditSchedules",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditSchedules_sync_flattened_resourceNames2",
+      "title": "ListAuditSchedulesResourceNames2",
+      "description": "Snippet for ListAuditSchedules",
+      "file": "AuditManagerClient.ListAuditSchedulesResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditSchedules",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditSchedules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse, Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditSchedules",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditSchedules",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditSchedules_async_flattened_resourceNames2",
+      "title": "ListAuditSchedulesResourceNames2Async",
+      "description": "Snippet for ListAuditSchedulesAsync",
+      "file": "AuditManagerClient.ListAuditSchedulesResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditSchedulesAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditSchedulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse, Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditSchedules",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditSchedules",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditSchedules_sync_flattened_resourceNames3",
+      "title": "ListAuditSchedulesResourceNames3",
+      "description": "Snippet for ListAuditSchedules",
+      "file": "AuditManagerClient.ListAuditSchedulesResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditSchedules",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditSchedules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse, Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditSchedules",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditSchedules",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditSchedules_async_flattened_resourceNames3",
+      "title": "ListAuditSchedulesResourceNames3Async",
+      "description": "Snippet for ListAuditSchedulesAsync",
+      "file": "AuditManagerClient.ListAuditSchedulesResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditSchedulesAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditSchedulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse, Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditSchedules",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditSchedules",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditSchedules_sync_flattened_resourceNames4",
+      "title": "ListAuditSchedulesResourceNames4",
+      "description": "Snippet for ListAuditSchedules",
+      "file": "AuditManagerClient.ListAuditSchedulesResourceNames4Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditSchedules",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditSchedules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.EnrollmentStatusScopeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse, Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditSchedules",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditSchedules",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "auditmanager_v1_generated_AuditManager_ListAuditSchedules_async_flattened_resourceNames4",
+      "title": "ListAuditSchedulesResourceNames4Async",
+      "description": "Snippet for ListAuditSchedulesAsync",
+      "file": "AuditManagerClient.ListAuditSchedulesResourceNames4AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuditSchedulesAsync",
+        "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient.ListAuditSchedulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AuditManager.V1.EnrollmentStatusScopeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse, Google.Cloud.AuditManager.V1.AuditSchedule>",
+        "client": {
+          "shortName": "AuditManagerClient",
+          "fullName": "Google.Cloud.AuditManager.V1.AuditManagerClient"
+        },
+        "method": {
+          "shortName": "ListAuditSchedules",
+          "fullName": "google.cloud.auditmanager.v1.AuditManager.ListAuditSchedules",
+          "service": {
+            "shortName": "AuditManager",
+            "fullName": "google.cloud.auditmanager.v1.AuditManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "auditmanager_v1_generated_AuditManager_EnrollResource_sync",
       "title": "EnrollResourceRequestObject",
       "description": "Snippet for EnrollResource",
@@ -48,12 +1839,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 48,
+          "end": 49,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 46,
+          "end": 47,
           "type": "SHORT"
         }
       ]
@@ -97,12 +1888,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 49,
+          "end": 50,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 47,
+          "end": 48,
           "type": "SHORT"
         }
       ]
@@ -248,12 +2039,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -297,12 +2088,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 45,
+          "end": 46,
           "type": "SHORT"
         }
       ]

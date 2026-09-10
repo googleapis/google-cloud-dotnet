@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START auditmanager_v1_generated_AuditManager_GenerateAuditScopeReport_async]
+    // [START auditmanager_v1_generated_AuditManager_CreateAuditSchedule_async]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AuditManager.V1;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedAuditManagerClientSnippets
     {
-        /// <summary>Snippet for GenerateAuditScopeReportAsync</summary>
+        /// <summary>Snippet for CreateAuditScheduleAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,21 +31,21 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GenerateAuditScopeReportRequestObjectAsync()
+        public async Task CreateAuditScheduleRequestObjectAsync()
         {
             // Create client
             AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
             // Initialize request argument(s)
-            GenerateAuditScopeReportRequest request = new GenerateAuditScopeReportRequest
+            CreateAuditScheduleRequest request = new CreateAuditScheduleRequest
             {
-                Scope = "",
-                ReportFormat = GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat.Unspecified,
-                ComplianceFramework = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AuditSchedule = new AuditSchedule(),
+                AuditScheduleId = "",
                 ValidateOnly = false,
             };
             // Make the request
-            AuditScopeReport response = await auditManagerClient.GenerateAuditScopeReportAsync(request);
+            AuditSchedule response = await auditManagerClient.CreateAuditScheduleAsync(request);
         }
     }
-    // [END auditmanager_v1_generated_AuditManager_GenerateAuditScopeReport_async]
+    // [END auditmanager_v1_generated_AuditManager_CreateAuditSchedule_async]
 }

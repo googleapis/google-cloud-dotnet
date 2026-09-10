@@ -30,6 +30,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.AuditManager.V1
 {
@@ -48,6 +49,10 @@ namespace Google.Cloud.AuditManager.V1
         private AuditManagerSettings(AuditManagerSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            CreateAuditScheduleSettings = existing.CreateAuditScheduleSettings;
+            UpdateAuditScheduleSettings = existing.UpdateAuditScheduleSettings;
+            GetAuditScheduleSettings = existing.GetAuditScheduleSettings;
+            ListAuditSchedulesSettings = existing.ListAuditSchedulesSettings;
             EnrollResourceSettings = existing.EnrollResourceSettings;
             GenerateAuditScopeReportSettings = existing.GenerateAuditScopeReportSettings;
             GenerateAuditReportSettings = existing.GenerateAuditReportSettings;
@@ -62,6 +67,60 @@ namespace Google.Cloud.AuditManager.V1
         }
 
         partial void OnCopy(AuditManagerSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AuditManagerClient.CreateAuditSchedule</c> and <c>AuditManagerClient.CreateAuditScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAuditScheduleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AuditManagerClient.UpdateAuditSchedule</c> and <c>AuditManagerClient.UpdateAuditScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAuditScheduleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AuditManagerClient.GetAuditSchedule</c> and <c>AuditManagerClient.GetAuditScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAuditScheduleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AuditManagerClient.ListAuditSchedules</c> and <c>AuditManagerClient.ListAuditSchedulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAuditSchedulesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -359,6 +418,1013 @@ namespace Google.Cloud.AuditManager.V1
 
         /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuditSchedule CreateAuditSchedule(CreateAuditScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> CreateAuditScheduleAsync(CreateAuditScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> CreateAuditScheduleAsync(CreateAuditScheduleRequest request, st::CancellationToken cancellationToken) =>
+            CreateAuditScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuditSchedule CreateAuditSchedule(string parent, AuditSchedule auditSchedule, string auditScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuditSchedule(new CreateAuditScheduleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AuditSchedule = gax::GaxPreconditions.CheckNotNull(auditSchedule, nameof(auditSchedule)),
+                AuditScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> CreateAuditScheduleAsync(string parent, AuditSchedule auditSchedule, string auditScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuditScheduleAsync(new CreateAuditScheduleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AuditSchedule = gax::GaxPreconditions.CheckNotNull(auditSchedule, nameof(auditSchedule)),
+                AuditScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> CreateAuditScheduleAsync(string parent, AuditSchedule auditSchedule, string auditScheduleId, st::CancellationToken cancellationToken) =>
+            CreateAuditScheduleAsync(parent, auditSchedule, auditScheduleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuditSchedule CreateAuditSchedule(gagr::LocationName parent, AuditSchedule auditSchedule, string auditScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuditSchedule(new CreateAuditScheduleRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AuditSchedule = gax::GaxPreconditions.CheckNotNull(auditSchedule, nameof(auditSchedule)),
+                AuditScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> CreateAuditScheduleAsync(gagr::LocationName parent, AuditSchedule auditSchedule, string auditScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuditScheduleAsync(new CreateAuditScheduleRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AuditSchedule = gax::GaxPreconditions.CheckNotNull(auditSchedule, nameof(auditSchedule)),
+                AuditScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> CreateAuditScheduleAsync(gagr::LocationName parent, AuditSchedule auditSchedule, string auditScheduleId, st::CancellationToken cancellationToken) =>
+            CreateAuditScheduleAsync(parent, auditSchedule, auditScheduleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuditSchedule CreateAuditSchedule(FolderLocationName parent, AuditSchedule auditSchedule, string auditScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuditSchedule(new CreateAuditScheduleRequest
+            {
+                ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AuditSchedule = gax::GaxPreconditions.CheckNotNull(auditSchedule, nameof(auditSchedule)),
+                AuditScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> CreateAuditScheduleAsync(FolderLocationName parent, AuditSchedule auditSchedule, string auditScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuditScheduleAsync(new CreateAuditScheduleRequest
+            {
+                ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AuditSchedule = gax::GaxPreconditions.CheckNotNull(auditSchedule, nameof(auditSchedule)),
+                AuditScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> CreateAuditScheduleAsync(FolderLocationName parent, AuditSchedule auditSchedule, string auditScheduleId, st::CancellationToken cancellationToken) =>
+            CreateAuditScheduleAsync(parent, auditSchedule, auditScheduleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuditSchedule CreateAuditSchedule(OrganizationLocationName parent, AuditSchedule auditSchedule, string auditScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuditSchedule(new CreateAuditScheduleRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AuditSchedule = gax::GaxPreconditions.CheckNotNull(auditSchedule, nameof(auditSchedule)),
+                AuditScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> CreateAuditScheduleAsync(OrganizationLocationName parent, AuditSchedule auditSchedule, string auditScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuditScheduleAsync(new CreateAuditScheduleRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AuditSchedule = gax::GaxPreconditions.CheckNotNull(auditSchedule, nameof(auditSchedule)),
+                AuditScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> CreateAuditScheduleAsync(OrganizationLocationName parent, AuditSchedule auditSchedule, string auditScheduleId, st::CancellationToken cancellationToken) =>
+            CreateAuditScheduleAsync(parent, auditSchedule, auditScheduleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuditSchedule CreateAuditSchedule(EnrollmentStatusScopeName parent, AuditSchedule auditSchedule, string auditScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuditSchedule(new CreateAuditScheduleRequest
+            {
+                ParentAsEnrollmentStatusScopeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AuditSchedule = gax::GaxPreconditions.CheckNotNull(auditSchedule, nameof(auditSchedule)),
+                AuditScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> CreateAuditScheduleAsync(EnrollmentStatusScopeName parent, AuditSchedule auditSchedule, string auditScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuditScheduleAsync(new CreateAuditScheduleRequest
+            {
+                ParentAsEnrollmentStatusScopeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AuditSchedule = gax::GaxPreconditions.CheckNotNull(auditSchedule, nameof(auditSchedule)),
+                AuditScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project or folder that this audit schedule is for, in one of the
+        /// following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// </param>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to create.
+        /// </param>
+        /// <param name="auditScheduleId">
+        /// Required. ID to use for the audit schedule, which becomes the final
+        /// component of the audit schedule's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> CreateAuditScheduleAsync(EnrollmentStatusScopeName parent, AuditSchedule auditSchedule, string auditScheduleId, st::CancellationToken cancellationToken) =>
+            CreateAuditScheduleAsync(parent, auditSchedule, auditScheduleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing audit schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuditSchedule UpdateAuditSchedule(UpdateAuditScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing audit schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> UpdateAuditScheduleAsync(UpdateAuditScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing audit schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> UpdateAuditScheduleAsync(UpdateAuditScheduleRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAuditScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing audit schedule.
+        /// </summary>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. List of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuditSchedule UpdateAuditSchedule(AuditSchedule auditSchedule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAuditSchedule(new UpdateAuditScheduleRequest
+            {
+                AuditSchedule = gax::GaxPreconditions.CheckNotNull(auditSchedule, nameof(auditSchedule)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing audit schedule.
+        /// </summary>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. List of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> UpdateAuditScheduleAsync(AuditSchedule auditSchedule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAuditScheduleAsync(new UpdateAuditScheduleRequest
+            {
+                AuditSchedule = gax::GaxPreconditions.CheckNotNull(auditSchedule, nameof(auditSchedule)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing audit schedule.
+        /// </summary>
+        /// <param name="auditSchedule">
+        /// Required. Audit schedule to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. List of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> UpdateAuditScheduleAsync(AuditSchedule auditSchedule, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAuditScheduleAsync(auditSchedule, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single audit schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuditSchedule GetAuditSchedule(GetAuditScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single audit schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> GetAuditScheduleAsync(GetAuditScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single audit schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> GetAuditScheduleAsync(GetAuditScheduleRequest request, st::CancellationToken cancellationToken) =>
+            GetAuditScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single audit schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the audit schedule to retrieve, in one of the following
+        /// formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// * `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// * `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuditSchedule GetAuditSchedule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuditSchedule(new GetAuditScheduleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single audit schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the audit schedule to retrieve, in one of the following
+        /// formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// * `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// * `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> GetAuditScheduleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuditScheduleAsync(new GetAuditScheduleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single audit schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the audit schedule to retrieve, in one of the following
+        /// formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// * `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// * `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> GetAuditScheduleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAuditScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single audit schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the audit schedule to retrieve, in one of the following
+        /// formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// * `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// * `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuditSchedule GetAuditSchedule(AuditScheduleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuditSchedule(new GetAuditScheduleRequest
+            {
+                AuditScheduleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single audit schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the audit schedule to retrieve, in one of the following
+        /// formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// * `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// * `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> GetAuditScheduleAsync(AuditScheduleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuditScheduleAsync(new GetAuditScheduleRequest
+            {
+                AuditScheduleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single audit schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the audit schedule to retrieve, in one of the following
+        /// formats:
+        /// 
+        /// * `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// * `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// * `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuditSchedule> GetAuditScheduleAsync(AuditScheduleName name, st::CancellationToken cancellationToken) =>
+            GetAuditScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists audit schedules in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuditSchedule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuditSchedulesResponse, AuditSchedule> ListAuditSchedules(ListAuditSchedulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists audit schedules in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuditSchedule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuditSchedulesResponse, AuditSchedule> ListAuditSchedulesAsync(ListAuditSchedulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists audit schedules in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent for the audit schedule, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuditSchedule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuditSchedulesResponse, AuditSchedule> ListAuditSchedules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuditSchedulesRequest request = new ListAuditSchedulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuditSchedules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists audit schedules in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent for the audit schedule, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuditSchedule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuditSchedulesResponse, AuditSchedule> ListAuditSchedulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuditSchedulesRequest request = new ListAuditSchedulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuditSchedulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists audit schedules in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent for the audit schedule, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuditSchedule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuditSchedulesResponse, AuditSchedule> ListAuditSchedules(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuditSchedulesRequest request = new ListAuditSchedulesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuditSchedules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists audit schedules in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent for the audit schedule, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuditSchedule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuditSchedulesResponse, AuditSchedule> ListAuditSchedulesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuditSchedulesRequest request = new ListAuditSchedulesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuditSchedulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists audit schedules in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent for the audit schedule, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuditSchedule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuditSchedulesResponse, AuditSchedule> ListAuditSchedules(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuditSchedulesRequest request = new ListAuditSchedulesRequest
+            {
+                ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuditSchedules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists audit schedules in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent for the audit schedule, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuditSchedule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuditSchedulesResponse, AuditSchedule> ListAuditSchedulesAsync(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuditSchedulesRequest request = new ListAuditSchedulesRequest
+            {
+                ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuditSchedulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists audit schedules in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent for the audit schedule, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuditSchedule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuditSchedulesResponse, AuditSchedule> ListAuditSchedules(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuditSchedulesRequest request = new ListAuditSchedulesRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuditSchedules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists audit schedules in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent for the audit schedule, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuditSchedule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuditSchedulesResponse, AuditSchedule> ListAuditSchedulesAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuditSchedulesRequest request = new ListAuditSchedulesRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuditSchedulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists audit schedules in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent for the audit schedule, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuditSchedule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuditSchedulesResponse, AuditSchedule> ListAuditSchedules(EnrollmentStatusScopeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuditSchedulesRequest request = new ListAuditSchedulesRequest
+            {
+                ParentAsEnrollmentStatusScopeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuditSchedules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists audit schedules in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent for the audit schedule, in one of the following formats:
+        /// 
+        /// * `projects/{project}/locations/{location}`
+        /// * `folders/{folder}/locations/{location}`
+        /// * `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuditSchedule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuditSchedulesResponse, AuditSchedule> ListAuditSchedulesAsync(EnrollmentStatusScopeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuditSchedulesRequest request = new ListAuditSchedulesRequest
+            {
+                ParentAsEnrollmentStatusScopeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuditSchedulesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Adds your project, folder, or organization to Audit
@@ -1853,6 +2919,14 @@ namespace Google.Cloud.AuditManager.V1
     /// </remarks>
     public sealed partial class AuditManagerClientImpl : AuditManagerClient
     {
+        private readonly gaxgrpc::ApiCall<CreateAuditScheduleRequest, AuditSchedule> _callCreateAuditSchedule;
+
+        private readonly gaxgrpc::ApiCall<UpdateAuditScheduleRequest, AuditSchedule> _callUpdateAuditSchedule;
+
+        private readonly gaxgrpc::ApiCall<GetAuditScheduleRequest, AuditSchedule> _callGetAuditSchedule;
+
+        private readonly gaxgrpc::ApiCall<ListAuditSchedulesRequest, ListAuditSchedulesResponse> _callListAuditSchedules;
+
         private readonly gaxgrpc::ApiCall<EnrollResourceRequest, Enrollment> _callEnrollResource;
 
         private readonly gaxgrpc::ApiCall<GenerateAuditScopeReportRequest, AuditScopeReport> _callGenerateAuditScopeReport;
@@ -1886,6 +2960,18 @@ namespace Google.Cloud.AuditManager.V1
             });
             GenerateAuditReportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.GenerateAuditReportOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            _callCreateAuditSchedule = clientHelper.BuildApiCall<CreateAuditScheduleRequest, AuditSchedule>("CreateAuditSchedule", grpcClient.CreateAuditScheduleAsync, grpcClient.CreateAuditSchedule, effectiveSettings.CreateAuditScheduleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAuditSchedule);
+            Modify_CreateAuditScheduleApiCall(ref _callCreateAuditSchedule);
+            _callUpdateAuditSchedule = clientHelper.BuildApiCall<UpdateAuditScheduleRequest, AuditSchedule>("UpdateAuditSchedule", grpcClient.UpdateAuditScheduleAsync, grpcClient.UpdateAuditSchedule, effectiveSettings.UpdateAuditScheduleSettings).WithGoogleRequestParam("audit_schedule.name", request => request.AuditSchedule?.Name);
+            Modify_ApiCall(ref _callUpdateAuditSchedule);
+            Modify_UpdateAuditScheduleApiCall(ref _callUpdateAuditSchedule);
+            _callGetAuditSchedule = clientHelper.BuildApiCall<GetAuditScheduleRequest, AuditSchedule>("GetAuditSchedule", grpcClient.GetAuditScheduleAsync, grpcClient.GetAuditSchedule, effectiveSettings.GetAuditScheduleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAuditSchedule);
+            Modify_GetAuditScheduleApiCall(ref _callGetAuditSchedule);
+            _callListAuditSchedules = clientHelper.BuildApiCall<ListAuditSchedulesRequest, ListAuditSchedulesResponse>("ListAuditSchedules", grpcClient.ListAuditSchedulesAsync, grpcClient.ListAuditSchedules, effectiveSettings.ListAuditSchedulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAuditSchedules);
+            Modify_ListAuditSchedulesApiCall(ref _callListAuditSchedules);
             _callEnrollResource = clientHelper.BuildApiCall<EnrollResourceRequest, Enrollment>("EnrollResource", grpcClient.EnrollResourceAsync, grpcClient.EnrollResource, effectiveSettings.EnrollResourceSettings).WithGoogleRequestParam("scope", request => request.Scope);
             Modify_ApiCall(ref _callEnrollResource);
             Modify_EnrollResourceApiCall(ref _callEnrollResource);
@@ -1915,6 +3001,14 @@ namespace Google.Cloud.AuditManager.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_CreateAuditScheduleApiCall(ref gaxgrpc::ApiCall<CreateAuditScheduleRequest, AuditSchedule> call);
+
+        partial void Modify_UpdateAuditScheduleApiCall(ref gaxgrpc::ApiCall<UpdateAuditScheduleRequest, AuditSchedule> call);
+
+        partial void Modify_GetAuditScheduleApiCall(ref gaxgrpc::ApiCall<GetAuditScheduleRequest, AuditSchedule> call);
+
+        partial void Modify_ListAuditSchedulesApiCall(ref gaxgrpc::ApiCall<ListAuditSchedulesRequest, ListAuditSchedulesResponse> call);
+
         partial void Modify_EnrollResourceApiCall(ref gaxgrpc::ApiCall<EnrollResourceRequest, Enrollment> call);
 
         partial void Modify_GenerateAuditScopeReportApiCall(ref gaxgrpc::ApiCall<GenerateAuditScopeReportRequest, AuditScopeReport> call);
@@ -1939,6 +3033,14 @@ namespace Google.Cloud.AuditManager.V1
         /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
         public override gcl::LocationsClient LocationsClient { get; }
 
+        partial void Modify_CreateAuditScheduleRequest(ref CreateAuditScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAuditScheduleRequest(ref UpdateAuditScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAuditScheduleRequest(ref GetAuditScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAuditSchedulesRequest(ref ListAuditSchedulesRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_EnrollResourceRequest(ref EnrollResourceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GenerateAuditScopeReportRequest(ref GenerateAuditScopeReportRequest request, ref gaxgrpc::CallSettings settings);
@@ -1954,6 +3056,102 @@ namespace Google.Cloud.AuditManager.V1
         partial void Modify_ListResourceEnrollmentStatusesRequest(ref ListResourceEnrollmentStatusesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListControlsRequest(ref ListControlsRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AuditSchedule CreateAuditSchedule(CreateAuditScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAuditScheduleRequest(ref request, ref callSettings);
+            return _callCreateAuditSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new audit schedule in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AuditSchedule> CreateAuditScheduleAsync(CreateAuditScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAuditScheduleRequest(ref request, ref callSettings);
+            return _callCreateAuditSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing audit schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AuditSchedule UpdateAuditSchedule(UpdateAuditScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAuditScheduleRequest(ref request, ref callSettings);
+            return _callUpdateAuditSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing audit schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AuditSchedule> UpdateAuditScheduleAsync(UpdateAuditScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAuditScheduleRequest(ref request, ref callSettings);
+            return _callUpdateAuditSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single audit schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AuditSchedule GetAuditSchedule(GetAuditScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAuditScheduleRequest(ref request, ref callSettings);
+            return _callGetAuditSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single audit schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AuditSchedule> GetAuditScheduleAsync(GetAuditScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAuditScheduleRequest(ref request, ref callSettings);
+            return _callGetAuditSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists audit schedules in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuditSchedule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAuditSchedulesResponse, AuditSchedule> ListAuditSchedules(ListAuditSchedulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAuditSchedulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAuditSchedulesRequest, ListAuditSchedulesResponse, AuditSchedule>(_callListAuditSchedules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists audit schedules in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuditSchedule"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAuditSchedulesResponse, AuditSchedule> ListAuditSchedulesAsync(ListAuditSchedulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAuditSchedulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAuditSchedulesRequest, ListAuditSchedulesResponse, AuditSchedule>(_callListAuditSchedules, request, callSettings);
+        }
 
         /// <summary>
         /// Adds your project, folder, or organization to Audit
@@ -2183,6 +3381,10 @@ namespace Google.Cloud.AuditManager.V1
         }
     }
 
+    public partial class ListAuditSchedulesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListAuditReportsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -2193,6 +3395,14 @@ namespace Google.Cloud.AuditManager.V1
 
     public partial class ListControlsRequest : gaxgrpc::IPageRequest
     {
+    }
+
+    public partial class ListAuditSchedulesResponse : gaxgrpc::IPageResponse<AuditSchedule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AuditSchedule> GetEnumerator() => AuditSchedules.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class ListAuditReportsResponse : gaxgrpc::IPageResponse<AuditReport>

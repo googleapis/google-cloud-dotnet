@@ -1603,6 +1603,384 @@ namespace Google.Cloud.AuditManager.V1
         public static bool operator !=(AuditReportName a, AuditReportName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>AuditSchedule</c> resource.</summary>
+    public sealed partial class AuditScheduleName : gax::IResourceName, sys::IEquatable<AuditScheduleName>
+    {
+        /// <summary>The possible contents of <see cref="AuditScheduleName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/auditSchedules/{audit_schedule}</c>
+            /// .
+            /// </summary>
+            ProjectLocationAuditSchedule = 1,
+
+            /// <summary>
+            /// A resource name with pattern <c>folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}</c>
+            /// .
+            /// </summary>
+            FolderLocationAuditSchedule = 2,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}</c>.
+            /// </summary>
+            OrganizationLocationAuditSchedule = 3,
+        }
+
+        private static gax::PathTemplate s_projectLocationAuditSchedule = new gax::PathTemplate("projects/{project}/locations/{location}/auditSchedules/{audit_schedule}");
+
+        private static gax::PathTemplate s_folderLocationAuditSchedule = new gax::PathTemplate("folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}");
+
+        private static gax::PathTemplate s_organizationLocationAuditSchedule = new gax::PathTemplate("organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}");
+
+        /// <summary>Creates a <see cref="AuditScheduleName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="AuditScheduleName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static AuditScheduleName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new AuditScheduleName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="AuditScheduleName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/auditSchedules/{audit_schedule}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="auditScheduleId">The <c>AuditSchedule</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AuditScheduleName"/> constructed from the provided ids.</returns>
+        public static AuditScheduleName FromProjectLocationAuditSchedule(string projectId, string locationId, string auditScheduleId) =>
+            new AuditScheduleName(ResourceNameType.ProjectLocationAuditSchedule, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), auditScheduleId: gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)));
+
+        /// <summary>
+        /// Creates a <see cref="AuditScheduleName"/> with the pattern
+        /// <c>folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="auditScheduleId">The <c>AuditSchedule</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AuditScheduleName"/> constructed from the provided ids.</returns>
+        public static AuditScheduleName FromFolderLocationAuditSchedule(string folderId, string locationId, string auditScheduleId) =>
+            new AuditScheduleName(ResourceNameType.FolderLocationAuditSchedule, folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), auditScheduleId: gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)));
+
+        /// <summary>
+        /// Creates a <see cref="AuditScheduleName"/> with the pattern
+        /// <c>organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="auditScheduleId">The <c>AuditSchedule</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AuditScheduleName"/> constructed from the provided ids.</returns>
+        public static AuditScheduleName FromOrganizationLocationAuditSchedule(string organizationId, string locationId, string auditScheduleId) =>
+            new AuditScheduleName(ResourceNameType.OrganizationLocationAuditSchedule, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), auditScheduleId: gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AuditScheduleName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/auditSchedules/{audit_schedule}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="auditScheduleId">The <c>AuditSchedule</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AuditScheduleName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/auditSchedules/{audit_schedule}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string auditScheduleId) =>
+            FormatProjectLocationAuditSchedule(projectId, locationId, auditScheduleId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AuditScheduleName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/auditSchedules/{audit_schedule}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="auditScheduleId">The <c>AuditSchedule</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AuditScheduleName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/auditSchedules/{audit_schedule}</c>.
+        /// </returns>
+        public static string FormatProjectLocationAuditSchedule(string projectId, string locationId, string auditScheduleId) =>
+            s_projectLocationAuditSchedule.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AuditScheduleName"/> with pattern
+        /// <c>folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="auditScheduleId">The <c>AuditSchedule</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AuditScheduleName"/> with pattern
+        /// <c>folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}</c>.
+        /// </returns>
+        public static string FormatFolderLocationAuditSchedule(string folderId, string locationId, string auditScheduleId) =>
+            s_folderLocationAuditSchedule.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AuditScheduleName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="auditScheduleId">The <c>AuditSchedule</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AuditScheduleName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}</c>.
+        /// </returns>
+        public static string FormatOrganizationLocationAuditSchedule(string organizationId, string locationId, string auditScheduleId) =>
+            s_organizationLocationAuditSchedule.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AuditScheduleName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/auditSchedules/{audit_schedule}</c></description>
+        /// </item>
+        /// <item>
+        /// <description><c>folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="auditScheduleName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AuditScheduleName"/> if successful.</returns>
+        public static AuditScheduleName Parse(string auditScheduleName) => Parse(auditScheduleName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AuditScheduleName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/auditSchedules/{audit_schedule}</c></description>
+        /// </item>
+        /// <item>
+        /// <description><c>folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="auditScheduleName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="AuditScheduleName"/> if successful.</returns>
+        public static AuditScheduleName Parse(string auditScheduleName, bool allowUnparsed) =>
+            TryParse(auditScheduleName, allowUnparsed, out AuditScheduleName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AuditScheduleName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/auditSchedules/{audit_schedule}</c></description>
+        /// </item>
+        /// <item>
+        /// <description><c>folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="auditScheduleName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AuditScheduleName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string auditScheduleName, out AuditScheduleName result) =>
+            TryParse(auditScheduleName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AuditScheduleName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/auditSchedules/{audit_schedule}</c></description>
+        /// </item>
+        /// <item>
+        /// <description><c>folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="auditScheduleName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AuditScheduleName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string auditScheduleName, bool allowUnparsed, out AuditScheduleName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(auditScheduleName, nameof(auditScheduleName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationAuditSchedule.TryParseName(auditScheduleName, out resourceName))
+            {
+                result = FromProjectLocationAuditSchedule(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (s_folderLocationAuditSchedule.TryParseName(auditScheduleName, out resourceName))
+            {
+                result = FromFolderLocationAuditSchedule(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (s_organizationLocationAuditSchedule.TryParseName(auditScheduleName, out resourceName))
+            {
+                result = FromOrganizationLocationAuditSchedule(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(auditScheduleName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private AuditScheduleName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string auditScheduleId = null, string folderId = null, string locationId = null, string organizationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            AuditScheduleId = auditScheduleId;
+            FolderId = folderId;
+            LocationId = locationId;
+            OrganizationId = organizationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="AuditScheduleName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/auditSchedules/{audit_schedule}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="auditScheduleId">The <c>AuditSchedule</c> ID. Must not be <c>null</c> or empty.</param>
+        public AuditScheduleName(string projectId, string locationId, string auditScheduleId) : this(ResourceNameType.ProjectLocationAuditSchedule, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), auditScheduleId: gax::GaxPreconditions.CheckNotNullOrEmpty(auditScheduleId, nameof(auditScheduleId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>AuditSchedule</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string AuditScheduleId { get; }
+
+        /// <summary>
+        /// The <c>Folder</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationAuditSchedule: return s_projectLocationAuditSchedule.Expand(ProjectId, LocationId, AuditScheduleId);
+                case ResourceNameType.FolderLocationAuditSchedule: return s_folderLocationAuditSchedule.Expand(FolderId, LocationId, AuditScheduleId);
+                case ResourceNameType.OrganizationLocationAuditSchedule: return s_organizationLocationAuditSchedule.Expand(OrganizationId, LocationId, AuditScheduleId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as AuditScheduleName);
+
+        /// <inheritdoc/>
+        public bool Equals(AuditScheduleName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(AuditScheduleName a, AuditScheduleName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(AuditScheduleName a, AuditScheduleName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>FolderLocation</c> resource.</summary>
     public sealed partial class FolderLocationName : gax::IResourceName, sys::IEquatable<FolderLocationName>
     {
@@ -2886,6 +3264,172 @@ namespace Google.Cloud.AuditManager.V1
         public gcav::AuditReportName AuditReportName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcav::AuditReportName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateAuditScheduleRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="FolderLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public FolderLocationName ParentAsFolderLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : FolderLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="OrganizationLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationLocationName ParentAsOrganizationLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="EnrollmentStatusScopeName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public EnrollmentStatusScopeName ParentAsEnrollmentStatusScopeName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : EnrollmentStatusScopeName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                if (FolderLocationName.TryParse(Parent, out FolderLocationName folderLocation))
+                {
+                    return folderLocation;
+                }
+                if (OrganizationLocationName.TryParse(Parent, out OrganizationLocationName organizationLocation))
+                {
+                    return organizationLocation;
+                }
+                if (EnrollmentStatusScopeName.TryParse(Parent, out EnrollmentStatusScopeName enrollmentStatusScope))
+                {
+                    return enrollmentStatusScope;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAuditScheduleRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::AuditScheduleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::AuditScheduleName AuditScheduleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::AuditScheduleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListAuditSchedulesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="FolderLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public FolderLocationName ParentAsFolderLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : FolderLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="OrganizationLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationLocationName ParentAsOrganizationLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="EnrollmentStatusScopeName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public EnrollmentStatusScopeName ParentAsEnrollmentStatusScopeName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : EnrollmentStatusScopeName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                if (FolderLocationName.TryParse(Parent, out FolderLocationName folderLocation))
+                {
+                    return folderLocation;
+                }
+                if (OrganizationLocationName.TryParse(Parent, out OrganizationLocationName organizationLocation))
+                {
+                    return organizationLocation;
+                }
+                if (EnrollmentStatusScopeName.TryParse(Parent, out EnrollmentStatusScopeName enrollmentStatusScope))
+                {
+                    return enrollmentStatusScope;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AuditSchedule
+    {
+        /// <summary>
+        /// <see cref="gcav::AuditScheduleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::AuditScheduleName AuditScheduleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::AuditScheduleName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

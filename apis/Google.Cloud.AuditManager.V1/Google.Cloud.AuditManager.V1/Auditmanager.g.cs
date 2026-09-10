@@ -29,18 +29,20 @@ namespace Google.Cloud.AuditManager.V1 {
             "aS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8a",
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
             "cmVzb3VyY2UucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25z",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIt4BChVF",
-            "bnJvbGxSZXNvdXJjZVJlcXVlc3QSEgoFc2NvcGUYASABKAlCA+BBAhJiCgxk",
-            "ZXN0aW5hdGlvbnMYAiADKAsyRy5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2Vy",
-            "LnYxLkVucm9sbFJlc291cmNlUmVxdWVzdC5FbGlnaWJsZURlc3RpbmF0aW9u",
-            "QgPgQQIaTQoTRWxpZ2libGVEZXN0aW5hdGlvbhIdChNlbGlnaWJsZV9nY3Nf",
-            "YnVja2V0GAMgASgJSABCFwoVZWxpZ2libGVfZGVzdGluYXRpb25zItYCCh9H",
-            "ZW5lcmF0ZUF1ZGl0U2NvcGVSZXBvcnRSZXF1ZXN0EhIKBXNjb3BlGAIgASgJ",
-            "QgPgQQISIgoTY29tcGxpYW5jZV9zdGFuZGFyZBgDIAEoCUIFGAHgQQEScAoN",
-            "cmVwb3J0X2Zvcm1hdBgEIAEoDjJULmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFn",
-            "ZXIudjEuR2VuZXJhdGVBdWRpdFNjb3BlUmVwb3J0UmVxdWVzdC5BdWRpdFNj",
-            "b3BlUmVwb3J0Rm9ybWF0QgPgQQISIQoUY29tcGxpYW5jZV9mcmFtZXdvcmsY",
-            "BSABKAlCA+BBAiJmChZBdWRpdFNjb3BlUmVwb3J0Rm9ybWF0EikKJUFVRElU",
+            "LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29v",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byL6AQoVRW5yb2xsUmVzb3Vy",
+            "Y2VSZXF1ZXN0EhIKBXNjb3BlGAEgASgJQgPgQQISYgoMZGVzdGluYXRpb25z",
+            "GAIgAygLMkcuZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52MS5FbnJvbGxS",
+            "ZXNvdXJjZVJlcXVlc3QuRWxpZ2libGVEZXN0aW5hdGlvbkID4EECEhoKDXZh",
+            "bGlkYXRlX29ubHkYBCABKAhCA+BBARpNChNFbGlnaWJsZURlc3RpbmF0aW9u",
+            "Eh0KE2VsaWdpYmxlX2djc19idWNrZXQYAyABKAlIAEIXChVlbGlnaWJsZV9k",
+            "ZXN0aW5hdGlvbnMi8gIKH0dlbmVyYXRlQXVkaXRTY29wZVJlcG9ydFJlcXVl",
+            "c3QSEgoFc2NvcGUYAiABKAlCA+BBAhIiChNjb21wbGlhbmNlX3N0YW5kYXJk",
+            "GAMgASgJQgUYAeBBARJwCg1yZXBvcnRfZm9ybWF0GAQgASgOMlQuZ29vZ2xl",
+            "LmNsb3VkLmF1ZGl0bWFuYWdlci52MS5HZW5lcmF0ZUF1ZGl0U2NvcGVSZXBv",
+            "cnRSZXF1ZXN0LkF1ZGl0U2NvcGVSZXBvcnRGb3JtYXRCA+BBAhIhChRjb21w",
+            "bGlhbmNlX2ZyYW1ld29yaxgFIAEoCUID4EECEhoKDXZhbGlkYXRlX29ubHkY",
+            "BiABKAhCA+BBASJmChZBdWRpdFNjb3BlUmVwb3J0Rm9ybWF0EikKJUFVRElU",
             "X1NDT1BFX1JFUE9SVF9GT1JNQVRfVU5TUEVDSUZJRUQQABIhCh1BVURJVF9T",
             "Q09QRV9SRVBPUlRfRk9STUFUX09ERhABIvQCChpHZW5lcmF0ZUF1ZGl0UmVw",
             "b3J0UmVxdWVzdBIRCgdnY3NfdXJpGAIgASgJSAASEgoFc2NvcGUYASABKAlC",
@@ -171,105 +173,190 @@ namespace Google.Cloud.AuditManager.V1 {
             "b2wSTAoQY29tcGxpYW5jZV9zdGF0ZRgCIAEoDjItLmdvb2dsZS5jbG91ZC5h",
             "dWRpdG1hbmFnZXIudjEuQ29tcGxpYW5jZVN0YXRlQgPgQQMSSwoWY29udHJv",
             "bF9yZXBvcnRfc3VtbWFyeRgDIAEoCzIrLmdvb2dsZS5jbG91ZC5hdWRpdG1h",
-            "bmFnZXIudjEuUmVwb3J0U3VtbWFyeSr7AgoOT3BlcmF0aW9uU3RhdGUSHwob",
-            "T1BFUkFUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASHwobT1BFUkFUSU9OX1NU",
-            "QVRFX05PVF9TVEFSVEVEEAoSKgomT1BFUkFUSU9OX1NUQVRFX0VWQUxVQVRJ",
-            "T05fSU5fUFJPR1JFU1MQFBIjCh9PUEVSQVRJT05fU1RBVEVfRVZBTFVBVElP",
-            "Tl9ET05FEBUSOgo2T1BFUkFUSU9OX1NUQVRFX0VWSURFTkNFX1JFUE9SVF9H",
-            "RU5FUkFUSU9OX0lOX1BST0dSRVNTEB4SMwovT1BFUkFUSU9OX1NUQVRFX0VW",
-            "SURFTkNFX1JFUE9SVF9HRU5FUkFUSU9OX0RPTkUQHxIvCitPUEVSQVRJT05f",
-            "U1RBVEVfRVZJREVOQ0VfVVBMT0FEX0lOX1BST0dSRVNTECgSGAoUT1BFUkFU",
-            "SU9OX1NUQVRFX0RPTkUQMhIaChZPUEVSQVRJT05fU1RBVEVfRkFJTEVEEDwq",
-            "jwEKD0NvbXBsaWFuY2VTdGF0ZRIgChxDT01QTElBTkNFX1NUQVRFX1VOU1BF",
-            "Q0lGSUVEEAASDQoJQ09NUExJQU5UEAESDQoJVklPTEFUSU9OEAISGAoUTUFO",
-            "VUFMX1JFVklFV19ORUVERUQQAxIJCgVFUlJPUhAEEhcKE0FVRElUX05PVF9T",
-            "VVBQT1JURUQQBTK9FgoMQXVkaXRNYW5hZ2VyErgCCg5FbnJvbGxSZXNvdXJj",
-            "ZRIzLmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuRW5yb2xsUmVzb3Vy",
-            "Y2VSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52MS5FbnJv",
-            "bGxtZW50IsYB2kESc2NvcGUsZGVzdGluYXRpb25zgtPkkwKqASIwL3YxL3tz",
-            "Y29wZT1mb2xkZXJzLyovbG9jYXRpb25zLyp9OmVucm9sbFJlc291cmNlOgEq",
-            "WjYiMS92MS97c2NvcGU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn06ZW5yb2xs",
-            "UmVzb3VyY2U6ASpaOyI2L3YxL3tzY29wZT1vcmdhbml6YXRpb25zLyovbG9j",
-            "YXRpb25zLyp9OmVucm9sbFJlc291cmNlOgEqEosDChhHZW5lcmF0ZUF1ZGl0",
-            "U2NvcGVSZXBvcnQSPS5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkdl",
-            "bmVyYXRlQXVkaXRTY29wZVJlcG9ydFJlcXVlc3QaLi5nb29nbGUuY2xvdWQu",
-            "YXVkaXRtYW5hZ2VyLnYxLkF1ZGl0U2NvcGVSZXBvcnQi/wHaQSdzY29wZSxj",
-            "b21wbGlhbmNlX3N0YW5kYXJkLHJlcG9ydF9mb3JtYXSC0+STAs4BIjwvdjEv",
-            "e3Njb3BlPWZvbGRlcnMvKi9sb2NhdGlvbnMvKn0vYXVkaXRTY29wZVJlcG9y",
-            "dHM6Z2VuZXJhdGU6ASpaQiI9L3YxL3tzY29wZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qfS9hdWRpdFNjb3BlUmVwb3J0czpnZW5lcmF0ZToBKlpHIkIvdjEv",
-            "e3Njb3BlPW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKn0vYXVkaXRTY29w",
-            "ZVJlcG9ydHM6Z2VuZXJhdGU6ASoSjAMKE0dlbmVyYXRlQXVkaXRSZXBvcnQS",
-            "OC5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkdlbmVyYXRlQXVkaXRS",
-            "ZXBvcnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKb",
-            "AspBIAoLQXVkaXRSZXBvcnQSEU9wZXJhdGlvbk1ldGFkYXRh2kEvc2NvcGUs",
-            "Z2NzX3VyaSxjb21wbGlhbmNlX3N0YW5kYXJkLHJlcG9ydF9mb3JtYXSC0+ST",
-            "Ar8BIjcvdjEve3Njb3BlPWZvbGRlcnMvKi9sb2NhdGlvbnMvKn0vYXVkaXRS",
-            "ZXBvcnRzOmdlbmVyYXRlOgEqWj0iOC92MS97c2NvcGU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn0vYXVkaXRSZXBvcnRzOmdlbmVyYXRlOgEqWkIiPS92MS97",
-            "c2NvcGU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS9hdWRpdFJlcG9y",
-            "dHM6Z2VuZXJhdGU6ASoSsgIKEExpc3RBdWRpdFJlcG9ydHMSNS5nb29nbGUu",
-            "Y2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkxpc3RBdWRpdFJlcG9ydHNSZXF1ZXN0",
-            "GjYuZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52MS5MaXN0QXVkaXRSZXBv",
-            "cnRzUmVzcG9uc2UirgHaQQZwYXJlbnSC0+STAp4BEjUvdjEve3BhcmVudD1v",
-            "cmdhbml6YXRpb25zLyovbG9jYXRpb25zLyp9L2F1ZGl0UmVwb3J0c1oxEi8v",
-            "djEve3BhcmVudD1mb2xkZXJzLyovbG9jYXRpb25zLyp9L2F1ZGl0UmVwb3J0",
-            "c1oyEjAvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9hdWRp",
-            "dFJlcG9ydHMSnwIKDkdldEF1ZGl0UmVwb3J0EjMuZ29vZ2xlLmNsb3VkLmF1",
-            "ZGl0bWFuYWdlci52MS5HZXRBdWRpdFJlcG9ydFJlcXVlc3QaKS5nb29nbGUu",
-            "Y2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkF1ZGl0UmVwb3J0IqwB2kEEbmFtZYLT",
-            "5JMCngESLy92MS97bmFtZT1mb2xkZXJzLyovbG9jYXRpb25zLyovYXVkaXRS",
-            "ZXBvcnRzLyp9WjISMC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2F1ZGl0UmVwb3J0cy8qfVo3EjUvdjEve25hbWU9b3JnYW5pemF0aW9ucy8q",
-            "L2xvY2F0aW9ucy8qL2F1ZGl0UmVwb3J0cy8qfRLwAgobR2V0UmVzb3VyY2VF",
-            "bnJvbGxtZW50U3RhdHVzEkAuZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52",
-            "MS5HZXRSZXNvdXJjZUVucm9sbG1lbnRTdGF0dXNSZXF1ZXN0GjYuZ29vZ2xl",
-            "LmNsb3VkLmF1ZGl0bWFuYWdlci52MS5SZXNvdXJjZUVucm9sbG1lbnRTdGF0",
-            "dXMi1gHaQQRuYW1lgtPkkwLIARI+L3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovcmVzb3VyY2VFbnJvbGxtZW50U3RhdHVzZXMvKn1aPxI9L3Yx",
-            "L3tuYW1lPWZvbGRlcnMvKi9sb2NhdGlvbnMvKi9yZXNvdXJjZUVucm9sbG1l",
-            "bnRTdGF0dXNlcy8qfVpFEkMvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xv",
-            "Y2F0aW9ucy8qL3Jlc291cmNlRW5yb2xsbWVudFN0YXR1c2VzLyp9EsQCCh5M",
-            "aXN0UmVzb3VyY2VFbnJvbGxtZW50U3RhdHVzZXMSQy5nb29nbGUuY2xvdWQu",
-            "YXVkaXRtYW5hZ2VyLnYxLkxpc3RSZXNvdXJjZUVucm9sbG1lbnRTdGF0dXNl",
-            "c1JlcXVlc3QaRC5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkxpc3RS",
-            "ZXNvdXJjZUVucm9sbG1lbnRTdGF0dXNlc1Jlc3BvbnNlIpYB2kEGcGFyZW50",
-            "gtPkkwKGARJDL3YxL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9u",
-            "cy8qfS9yZXNvdXJjZUVucm9sbG1lbnRTdGF0dXNlc1o/Ej0vdjEve3BhcmVu",
-            "dD1mb2xkZXJzLyovbG9jYXRpb25zLyp9L3Jlc291cmNlRW5yb2xsbWVudFN0",
-            "YXR1c2VzEr4CCgxMaXN0Q29udHJvbHMSMS5nb29nbGUuY2xvdWQuYXVkaXRt",
-            "YW5hZ2VyLnYxLkxpc3RDb250cm9sc1JlcXVlc3QaMi5nb29nbGUuY2xvdWQu",
-            "YXVkaXRtYW5hZ2VyLnYxLkxpc3RDb250cm9sc1Jlc3BvbnNlIsYB2kEGcGFy",
-            "ZW50gtPkkwK2ARI9L3YxL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qL2xvY2F0",
-            "aW9ucy8qL3N0YW5kYXJkcy8qfS9jb250cm9sc1o5EjcvdjEve3BhcmVudD1m",
-            "b2xkZXJzLyovbG9jYXRpb25zLyovc3RhbmRhcmRzLyp9L2NvbnRyb2xzWjoS",
-            "OC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovc3RhbmRhcmRz",
-            "Lyp9L2NvbnRyb2xzGoIBykEbYXVkaXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
-            "0kFhaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1hdWRp",
-            "dG1hbmFnZXIsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
-            "ZC1wbGF0Zm9ybUKSBgogY29tLmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIu",
-            "djFCC1YxbWFpblByb3RvUAFaRGNsb3VkLmdvb2dsZS5jb20vZ28vYXVkaXRt",
-            "YW5hZ2VyL2FwaXYxL2F1ZGl0bWFuYWdlcnBiO2F1ZGl0bWFuYWdlcnBiqgIc",
-            "R29vZ2xlLkNsb3VkLkF1ZGl0TWFuYWdlci5WMcoCHEdvb2dsZVxDbG91ZFxB",
-            "dWRpdE1hbmFnZXJcVjHqAh9Hb29nbGU6OkNsb3VkOjpBdWRpdE1hbmFnZXI6",
-            "OlYx6kFTCiphdWRpdG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vRm9sZGVyTG9j",
-            "YXRpb24SJWZvbGRlcnMve2ZvbGRlcn0vbG9jYXRpb25zL3tsb2NhdGlvbn3q",
-            "QWUKMGF1ZGl0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Pcmdhbml6YXRpb25M",
-            "b2NhdGlvbhIxb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufepB6AEKJGF1ZGl0bWFuYWdlci5nb29nbGVhcGlzLmNv",
-            "bS9TdGFuZGFyZBI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L3N0YW5kYXJkcy97c3RhbmRhcmR9Ejpmb2xkZXJzL3tmb2xkZXJ9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L3N0YW5kYXJkcy97c3RhbmRhcmR9EkZv",
+            "bmFnZXIudjEuUmVwb3J0U3VtbWFyeSLlAQoaQ3JlYXRlQXVkaXRTY2hlZHVs",
+            "ZVJlcXVlc3QSQQoGcGFyZW50GAEgASgJQjHgQQL6QSsSKWF1ZGl0bWFuYWdl",
+            "ci5nb29nbGVhcGlzLmNvbS9BdWRpdFNjaGVkdWxlEkgKDmF1ZGl0X3NjaGVk",
+            "dWxlGAIgASgLMisuZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52MS5BdWRp",
+            "dFNjaGVkdWxlQgPgQQISHgoRYXVkaXRfc2NoZWR1bGVfaWQYAyABKAlCA+BB",
+            "AhIaCg12YWxpZGF0ZV9vbmx5GAQgASgIQgPgQQEiuAEKGlVwZGF0ZUF1ZGl0",
+            "U2NoZWR1bGVSZXF1ZXN0EkgKDmF1ZGl0X3NjaGVkdWxlGAEgASgLMisuZ29v",
+            "Z2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52MS5BdWRpdFNjaGVkdWxlQgPgQQIS",
+            "NAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
+            "YXNrQgPgQQESGgoNdmFsaWRhdGVfb25seRgDIAEoCEID4EEBIloKF0dldEF1",
+            "ZGl0U2NoZWR1bGVSZXF1ZXN0Ej8KBG5hbWUYASABKAlCMeBBAvpBKwopYXVk",
+            "aXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0F1ZGl0U2NoZWR1bGUijwEKGUxp",
+            "c3RBdWRpdFNjaGVkdWxlc1JlcXVlc3QSQQoGcGFyZW50GAEgASgJQjHgQQL6",
+            "QSsSKWF1ZGl0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9BdWRpdFNjaGVkdWxl",
+            "EhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlC",
+            "A+BBASKQAQoaTGlzdEF1ZGl0U2NoZWR1bGVzUmVzcG9uc2USRAoPYXVkaXRf",
+            "c2NoZWR1bGVzGAEgAygLMisuZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52",
+            "MS5BdWRpdFNjaGVkdWxlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1",
+            "bnJlYWNoYWJsZRgDIAMoCSLlBwoNQXVkaXRTY2hlZHVsZRIRCgRuYW1lGAEg",
+            "ASgJQgPgQQgSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQESFAoHZ2NzX3Vy",
+            "aRgDIAEoCUID4EECEiEKFGNvbXBsaWFuY2VfZnJhbWV3b3JrGAQgASgJQgPg",
+            "QQISWQoNcmVwb3J0X2Zvcm1hdBgFIAEoDjI9Lmdvb2dsZS5jbG91ZC5hdWRp",
+            "dG1hbmFnZXIudjEuQXVkaXRTY2hlZHVsZS5BdWRpdFJlcG9ydEZvcm1hdEID",
+            "4EECEkoKD3NjaGVkdWxlX2NvbmZpZxgGIAEoCzIsLmdvb2dsZS5jbG91ZC5h",
+            "dWRpdG1hbmFnZXIudjEuU2NoZWR1bGVDb25maWdCA+BBAhI/CgVzdGF0ZRgH",
+            "IAEoDjIrLmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuU2NoZWR1bGVT",
+            "dGF0ZUID4EEBEjQKC2NyZWF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAkgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjYKDW5leHRfcnVuX3RpbWUY",
+            "CiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSOgoRbGFz",
+            "dF90cmlnZ2VyX3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSGgoNZXJyb3JfbWVzc2FnZRgNIAEoCUID4EEDIlUKEUF1ZGl0",
+            "UmVwb3J0Rm9ybWF0EiMKH0FVRElUX1JFUE9SVF9GT1JNQVRfVU5TUEVDSUZJ",
+            "RUQQABIbChdBVURJVF9SRVBPUlRfRk9STUFUX09ERhABOrEC6kGtAgopYXVk",
+            "aXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0F1ZGl0U2NoZWR1bGUSR3Byb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9hdWRpdFNjaGVk",
+            "dWxlcy97YXVkaXRfc2NoZWR1bGV9EkVmb2xkZXJzL3tmb2xkZXJ9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2F1ZGl0U2NoZWR1bGVzL3thdWRpdF9zY2hlZHVs",
+            "ZX0SUW9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vYXVkaXRTY2hlZHVsZXMve2F1ZGl0X3NjaGVkdWxlfSoOYXVk",
+            "aXRTY2hlZHVsZXMyDWF1ZGl0U2NoZWR1bGUiyQIKDlNjaGVkdWxlQ29uZmln",
+            "EjMKCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQISMQoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQESTgoJZnJlcXVlbmN5GAMgASgOMjYuZ29vZ2xlLmNs",
+            "b3VkLmF1ZGl0bWFuYWdlci52MS5TY2hlZHVsZUNvbmZpZy5GcmVxdWVuY3lC",
+            "A+BBAhIWCgl0aW1lX3pvbmUYBCABKAlCA+BBASJnCglGcmVxdWVuY3kSGQoV",
+            "RlJFUVVFTkNZX1VOU1BFQ0lGSUVEEAASCQoFREFJTFkQARIKCgZXRUVLTFkQ",
+            "AhILCgdNT05USExZEAMSDQoJUVVBUlRFUkxZEAQSDAoIQU5OVUFMTFkQBSr7",
+            "AgoOT3BlcmF0aW9uU3RhdGUSHwobT1BFUkFUSU9OX1NUQVRFX1VOU1BFQ0lG",
+            "SUVEEAASHwobT1BFUkFUSU9OX1NUQVRFX05PVF9TVEFSVEVEEAoSKgomT1BF",
+            "UkFUSU9OX1NUQVRFX0VWQUxVQVRJT05fSU5fUFJPR1JFU1MQFBIjCh9PUEVS",
+            "QVRJT05fU1RBVEVfRVZBTFVBVElPTl9ET05FEBUSOgo2T1BFUkFUSU9OX1NU",
+            "QVRFX0VWSURFTkNFX1JFUE9SVF9HRU5FUkFUSU9OX0lOX1BST0dSRVNTEB4S",
+            "MwovT1BFUkFUSU9OX1NUQVRFX0VWSURFTkNFX1JFUE9SVF9HRU5FUkFUSU9O",
+            "X0RPTkUQHxIvCitPUEVSQVRJT05fU1RBVEVfRVZJREVOQ0VfVVBMT0FEX0lO",
+            "X1BST0dSRVNTECgSGAoUT1BFUkFUSU9OX1NUQVRFX0RPTkUQMhIaChZPUEVS",
+            "QVRJT05fU1RBVEVfRkFJTEVEEDwqjwEKD0NvbXBsaWFuY2VTdGF0ZRIgChxD",
+            "T01QTElBTkNFX1NUQVRFX1VOU1BFQ0lGSUVEEAASDQoJQ09NUExJQU5UEAES",
+            "DQoJVklPTEFUSU9OEAISGAoUTUFOVUFMX1JFVklFV19ORUVERUQQAxIJCgVF",
+            "UlJPUhAEEhcKE0FVRElUX05PVF9TVVBQT1JURUQQBSraAQoNU2NoZWR1bGVT",
+            "dGF0ZRIeChpTQ0hFRFVMRV9TVEFURV9VTlNQRUNJRklFRBAAEhkKFVNDSEVE",
+            "VUxFX1NUQVRFX0FDVElWRRABEhkKFVNDSEVEVUxFX1NUQVRFX1BBVVNFRBAC",
+            "EhwKGFNDSEVEVUxFX1NUQVRFX0NPTVBMRVRFRBADEh8KG1NDSEVEVUxFX1NU",
+            "QVRFX0ZBSUxFRF9TRVRVUBAEEhgKFFNDSEVEVUxFX1NUQVRFX0VSUk9SEAUS",
+            "GgoWU0NIRURVTEVfU1RBVEVfREVMRVRFRBAGMtohCgxBdWRpdE1hbmFnZXIS",
+            "hAMKE0NyZWF0ZUF1ZGl0U2NoZWR1bGUSOC5nb29nbGUuY2xvdWQuYXVkaXRt",
+            "YW5hZ2VyLnYxLkNyZWF0ZUF1ZGl0U2NoZWR1bGVSZXF1ZXN0GisuZ29vZ2xl",
+            "LmNsb3VkLmF1ZGl0bWFuYWdlci52MS5BdWRpdFNjaGVkdWxlIoUC2kEncGFy",
+            "ZW50LGF1ZGl0X3NjaGVkdWxlLGF1ZGl0X3NjaGVkdWxlX2lkgtPkkwLUASIy",
+            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vYXVkaXRTY2hl",
+            "ZHVsZXM6DmF1ZGl0X3NjaGVkdWxlWkMiMS92MS97cGFyZW50PWZvbGRlcnMv",
+            "Ki9sb2NhdGlvbnMvKn0vYXVkaXRTY2hlZHVsZXM6DmF1ZGl0X3NjaGVkdWxl",
+            "WkkiNy92MS97cGFyZW50PW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKn0v",
+            "YXVkaXRTY2hlZHVsZXM6DmF1ZGl0X3NjaGVkdWxlEqQDChNVcGRhdGVBdWRp",
+            "dFNjaGVkdWxlEjguZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52MS5VcGRh",
+            "dGVBdWRpdFNjaGVkdWxlUmVxdWVzdBorLmdvb2dsZS5jbG91ZC5hdWRpdG1h",
+            "bmFnZXIudjEuQXVkaXRTY2hlZHVsZSKlAtpBGmF1ZGl0X3NjaGVkdWxlLHVw",
+            "ZGF0ZV9tYXNrgtPkkwKBAjJBL3YxL3thdWRpdF9zY2hlZHVsZS5uYW1lPXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovYXVkaXRTY2hlZHVsZXMvKn06DmF1ZGl0",
+            "X3NjaGVkdWxlWlIyQC92MS97YXVkaXRfc2NoZWR1bGUubmFtZT1mb2xkZXJz",
+            "LyovbG9jYXRpb25zLyovYXVkaXRTY2hlZHVsZXMvKn06DmF1ZGl0X3NjaGVk",
+            "dWxlWlgyRi92MS97YXVkaXRfc2NoZWR1bGUubmFtZT1vcmdhbml6YXRpb25z",
+            "LyovbG9jYXRpb25zLyovYXVkaXRTY2hlZHVsZXMvKn06DmF1ZGl0X3NjaGVk",
+            "dWxlEqsCChBHZXRBdWRpdFNjaGVkdWxlEjUuZ29vZ2xlLmNsb3VkLmF1ZGl0",
+            "bWFuYWdlci52MS5HZXRBdWRpdFNjaGVkdWxlUmVxdWVzdBorLmdvb2dsZS5j",
+            "bG91ZC5hdWRpdG1hbmFnZXIudjEuQXVkaXRTY2hlZHVsZSKyAdpBBG5hbWWC",
+            "0+STAqQBEjIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hdWRp",
+            "dFNjaGVkdWxlcy8qfVozEjEvdjEve25hbWU9Zm9sZGVycy8qL2xvY2F0aW9u",
+            "cy8qL2F1ZGl0U2NoZWR1bGVzLyp9WjkSNy92MS97bmFtZT1vcmdhbml6YXRp",
+            "b25zLyovbG9jYXRpb25zLyovYXVkaXRTY2hlZHVsZXMvKn0SvgIKEkxpc3RB",
+            "dWRpdFNjaGVkdWxlcxI3Lmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEu",
+            "TGlzdEF1ZGl0U2NoZWR1bGVzUmVxdWVzdBo4Lmdvb2dsZS5jbG91ZC5hdWRp",
+            "dG1hbmFnZXIudjEuTGlzdEF1ZGl0U2NoZWR1bGVzUmVzcG9uc2UitAHaQQZw",
+            "YXJlbnSC0+STAqQBEjIvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qfS9hdWRpdFNjaGVkdWxlc1ozEjEvdjEve3BhcmVudD1mb2xkZXJzLyov",
+            "bG9jYXRpb25zLyp9L2F1ZGl0U2NoZWR1bGVzWjkSNy92MS97cGFyZW50PW9y",
+            "Z2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKn0vYXVkaXRTY2hlZHVsZXMSuAIK",
+            "DkVucm9sbFJlc291cmNlEjMuZ29vZ2xlLmNsb3VkLmF1ZGl0bWFuYWdlci52",
+            "MS5FbnJvbGxSZXNvdXJjZVJlcXVlc3QaKC5nb29nbGUuY2xvdWQuYXVkaXRt",
+            "YW5hZ2VyLnYxLkVucm9sbG1lbnQixgHaQRJzY29wZSxkZXN0aW5hdGlvbnOC",
+            "0+STAqoBIjAvdjEve3Njb3BlPWZvbGRlcnMvKi9sb2NhdGlvbnMvKn06ZW5y",
+            "b2xsUmVzb3VyY2U6ASpaNiIxL3YxL3tzY29wZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qfTplbnJvbGxSZXNvdXJjZToBKlo7IjYvdjEve3Njb3BlPW9yZ2Fu",
+            "aXphdGlvbnMvKi9sb2NhdGlvbnMvKn06ZW5yb2xsUmVzb3VyY2U6ASoSiwMK",
+            "GEdlbmVyYXRlQXVkaXRTY29wZVJlcG9ydBI9Lmdvb2dsZS5jbG91ZC5hdWRp",
+            "dG1hbmFnZXIudjEuR2VuZXJhdGVBdWRpdFNjb3BlUmVwb3J0UmVxdWVzdBou",
+            "Lmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuQXVkaXRTY29wZVJlcG9y",
+            "dCL/AdpBJ3Njb3BlLGNvbXBsaWFuY2Vfc3RhbmRhcmQscmVwb3J0X2Zvcm1h",
+            "dILT5JMCzgEiPC92MS97c2NvcGU9Zm9sZGVycy8qL2xvY2F0aW9ucy8qfS9h",
+            "dWRpdFNjb3BlUmVwb3J0czpnZW5lcmF0ZToBKlpCIj0vdjEve3Njb3BlPXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyp9L2F1ZGl0U2NvcGVSZXBvcnRzOmdlbmVy",
+            "YXRlOgEqWkciQi92MS97c2NvcGU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9u",
+            "cy8qfS9hdWRpdFNjb3BlUmVwb3J0czpnZW5lcmF0ZToBKhKMAwoTR2VuZXJh",
+            "dGVBdWRpdFJlcG9ydBI4Lmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEu",
+            "R2VuZXJhdGVBdWRpdFJlcG9ydFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
+            "bmcuT3BlcmF0aW9uIpsCykEgCgtBdWRpdFJlcG9ydBIRT3BlcmF0aW9uTWV0",
+            "YWRhdGHaQS9zY29wZSxnY3NfdXJpLGNvbXBsaWFuY2Vfc3RhbmRhcmQscmVw",
+            "b3J0X2Zvcm1hdILT5JMCvwEiNy92MS97c2NvcGU9Zm9sZGVycy8qL2xvY2F0",
+            "aW9ucy8qfS9hdWRpdFJlcG9ydHM6Z2VuZXJhdGU6ASpaPSI4L3YxL3tzY29w",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9hdWRpdFJlcG9ydHM6Z2VuZXJh",
+            "dGU6ASpaQiI9L3YxL3tzY29wZT1vcmdhbml6YXRpb25zLyovbG9jYXRpb25z",
+            "Lyp9L2F1ZGl0UmVwb3J0czpnZW5lcmF0ZToBKhKyAgoQTGlzdEF1ZGl0UmVw",
+            "b3J0cxI1Lmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuTGlzdEF1ZGl0",
+            "UmVwb3J0c1JlcXVlc3QaNi5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYx",
+            "Lkxpc3RBdWRpdFJlcG9ydHNSZXNwb25zZSKuAdpBBnBhcmVudILT5JMCngES",
+            "NS92MS97cGFyZW50PW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKn0vYXVk",
+            "aXRSZXBvcnRzWjESLy92MS97cGFyZW50PWZvbGRlcnMvKi9sb2NhdGlvbnMv",
+            "Kn0vYXVkaXRSZXBvcnRzWjISMC92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyp9L2F1ZGl0UmVwb3J0cxKfAgoOR2V0QXVkaXRSZXBvcnQSMy5n",
+            "b29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLkdldEF1ZGl0UmVwb3J0UmVx",
+            "dWVzdBopLmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuQXVkaXRSZXBv",
+            "cnQirAHaQQRuYW1lgtPkkwKeARIvL3YxL3tuYW1lPWZvbGRlcnMvKi9sb2Nh",
+            "dGlvbnMvKi9hdWRpdFJlcG9ydHMvKn1aMhIwL3YxL3tuYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovYXVkaXRSZXBvcnRzLyp9WjcSNS92MS97bmFtZT1v",
+            "cmdhbml6YXRpb25zLyovbG9jYXRpb25zLyovYXVkaXRSZXBvcnRzLyp9EvAC",
+            "ChtHZXRSZXNvdXJjZUVucm9sbG1lbnRTdGF0dXMSQC5nb29nbGUuY2xvdWQu",
+            "YXVkaXRtYW5hZ2VyLnYxLkdldFJlc291cmNlRW5yb2xsbWVudFN0YXR1c1Jl",
+            "cXVlc3QaNi5nb29nbGUuY2xvdWQuYXVkaXRtYW5hZ2VyLnYxLlJlc291cmNl",
+            "RW5yb2xsbWVudFN0YXR1cyLWAdpBBG5hbWWC0+STAsgBEj4vdjEve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZXNvdXJjZUVucm9sbG1lbnRTdGF0",
+            "dXNlcy8qfVo/Ej0vdjEve25hbWU9Zm9sZGVycy8qL2xvY2F0aW9ucy8qL3Jl",
+            "c291cmNlRW5yb2xsbWVudFN0YXR1c2VzLyp9WkUSQy92MS97bmFtZT1vcmdh",
+            "bml6YXRpb25zLyovbG9jYXRpb25zLyovcmVzb3VyY2VFbnJvbGxtZW50U3Rh",
+            "dHVzZXMvKn0SxAIKHkxpc3RSZXNvdXJjZUVucm9sbG1lbnRTdGF0dXNlcxJD",
+            "Lmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuTGlzdFJlc291cmNlRW5y",
+            "b2xsbWVudFN0YXR1c2VzUmVxdWVzdBpELmdvb2dsZS5jbG91ZC5hdWRpdG1h",
+            "bmFnZXIudjEuTGlzdFJlc291cmNlRW5yb2xsbWVudFN0YXR1c2VzUmVzcG9u",
+            "c2UilgHaQQZwYXJlbnSC0+STAoYBEkMvdjEve3BhcmVudD1vcmdhbml6YXRp",
+            "b25zLyovbG9jYXRpb25zLyp9L3Jlc291cmNlRW5yb2xsbWVudFN0YXR1c2Vz",
+            "Wj8SPS92MS97cGFyZW50PWZvbGRlcnMvKi9sb2NhdGlvbnMvKn0vcmVzb3Vy",
+            "Y2VFbnJvbGxtZW50U3RhdHVzZXMSvgIKDExpc3RDb250cm9scxIxLmdvb2ds",
+            "ZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuTGlzdENvbnRyb2xzUmVxdWVzdBoy",
+            "Lmdvb2dsZS5jbG91ZC5hdWRpdG1hbmFnZXIudjEuTGlzdENvbnRyb2xzUmVz",
+            "cG9uc2UixgHaQQZwYXJlbnSC0+STArYBEj0vdjEve3BhcmVudD1vcmdhbml6",
+            "YXRpb25zLyovbG9jYXRpb25zLyovc3RhbmRhcmRzLyp9L2NvbnRyb2xzWjkS",
+            "Ny92MS97cGFyZW50PWZvbGRlcnMvKi9sb2NhdGlvbnMvKi9zdGFuZGFyZHMv",
+            "Kn0vY29udHJvbHNaOhI4L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9zdGFuZGFyZHMvKn0vY29udHJvbHMaggHKQRthdWRpdG1hbmFnZXIu",
+            "Z29vZ2xlYXBpcy5jb23SQWFodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2Nsb3VkLWF1ZGl0bWFuYWdlcixodHRwczovL3d3dy5nb29nbGVhcGlz",
+            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQpIGCiBjb20uZ29vZ2xlLmNsb3Vk",
+            "LmF1ZGl0bWFuYWdlci52MUILVjFtYWluUHJvdG9QAVpEY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9hdWRpdG1hbmFnZXIvYXBpdjEvYXVkaXRtYW5hZ2VycGI7YXVk",
+            "aXRtYW5hZ2VycGKqAhxHb29nbGUuQ2xvdWQuQXVkaXRNYW5hZ2VyLlYxygIc",
+            "R29vZ2xlXENsb3VkXEF1ZGl0TWFuYWdlclxWMeoCH0dvb2dsZTo6Q2xvdWQ6",
+            "OkF1ZGl0TWFuYWdlcjo6VjHqQVMKKmF1ZGl0bWFuYWdlci5nb29nbGVhcGlz",
+            "LmNvbS9Gb2xkZXJMb2NhdGlvbhIlZm9sZGVycy97Zm9sZGVyfS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufepBZQowYXVkaXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "L09yZ2FuaXphdGlvbkxvY2F0aW9uEjFvcmdhbml6YXRpb25zL3tvcmdhbml6",
+            "YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb2596kHoAQokYXVkaXRtYW5hZ2Vy",
+            "Lmdvb2dsZWFwaXMuY29tL1N0YW5kYXJkEjxwcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vc3RhbmRhcmRzL3tzdGFuZGFyZH0SOmZv",
+            "bGRlcnMve2ZvbGRlcn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc3RhbmRhcmRz",
+            "L3tzdGFuZGFyZH0SRm9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vc3RhbmRhcmRzL3tzdGFuZGFyZH3qQY0BCjFh",
+            "dWRpdG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vRW5yb2xsbWVudFN0YXR1c1Nj",
+            "b3BlEiVmb2xkZXJzL3tmb2xkZXJ9L2xvY2F0aW9ucy97bG9jYXRpb259EjFv",
             "cmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L3N0YW5kYXJkcy97c3RhbmRhcmR96kGNAQoxYXVkaXRtYW5hZ2VyLmdv",
-            "b2dsZWFwaXMuY29tL0Vucm9sbG1lbnRTdGF0dXNTY29wZRIlZm9sZGVycy97",
-            "Zm9sZGVyfS9sb2NhdGlvbnMve2xvY2F0aW9ufRIxb3JnYW5pemF0aW9ucy97",
-            "b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9ufWIGcHJvdG8z"));
+            "b259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AuditManager.V1.OperationState), typeof(global::Google.Cloud.AuditManager.V1.ComplianceState), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.EnrollResourceRequest), global::Google.Cloud.AuditManager.V1.EnrollResourceRequest.Parser, new[]{ "Scope", "Destinations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.EnrollResourceRequest.Types.EligibleDestination), global::Google.Cloud.AuditManager.V1.EnrollResourceRequest.Types.EligibleDestination.Parser, new[]{ "EligibleGcsBucket" }, new[]{ "EligibleDestinations" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest), global::Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest.Parser, new[]{ "Scope", "ComplianceStandard", "ReportFormat", "ComplianceFramework" }, null, new[]{ typeof(global::Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat) }, null, null),
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AuditManager.V1.OperationState), typeof(global::Google.Cloud.AuditManager.V1.ComplianceState), typeof(global::Google.Cloud.AuditManager.V1.ScheduleState), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.EnrollResourceRequest), global::Google.Cloud.AuditManager.V1.EnrollResourceRequest.Parser, new[]{ "Scope", "Destinations", "ValidateOnly" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.EnrollResourceRequest.Types.EligibleDestination), global::Google.Cloud.AuditManager.V1.EnrollResourceRequest.Types.EligibleDestination.Parser, new[]{ "EligibleGcsBucket" }, new[]{ "EligibleDestinations" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest), global::Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest.Parser, new[]{ "Scope", "ComplianceStandard", "ReportFormat", "ComplianceFramework", "ValidateOnly" }, null, new[]{ typeof(global::Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.GenerateAuditReportRequest), global::Google.Cloud.AuditManager.V1.GenerateAuditReportRequest.Parser, new[]{ "GcsUri", "Scope", "ComplianceStandard", "ReportFormat", "ComplianceFramework", "ValidateOnly" }, new[]{ "Destination" }, new[]{ typeof(global::Google.Cloud.AuditManager.V1.GenerateAuditReportRequest.Types.AuditReportFormat) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.GetResourceEnrollmentStatusRequest), global::Google.Cloud.AuditManager.V1.GetResourceEnrollmentStatusRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.ListResourceEnrollmentStatusesRequest), global::Google.Cloud.AuditManager.V1.ListResourceEnrollmentStatusesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
@@ -289,7 +376,14 @@ namespace Google.Cloud.AuditManager.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.Control), global::Google.Cloud.AuditManager.V1.Control.Parser, new[]{ "Id", "DisplayName", "Family", "ControlFamily", "Description", "ResponsibilityType", "GoogleResponsibilityDescription", "GoogleResponsibilityImplementation", "CustomerResponsibilityDescription", "CustomerResponsibilityImplementation" }, null, new[]{ typeof(global::Google.Cloud.AuditManager.V1.Control.Types.Family) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.DestinationDetails), global::Google.Cloud.AuditManager.V1.DestinationDetails.Parser, new[]{ "GcsBucketUri" }, new[]{ "Destination" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.ReportSummary), global::Google.Cloud.AuditManager.V1.ReportSummary.Parser, new[]{ "TotalCount", "CompliantCount", "ViolationCount", "ManualReviewNeededCount", "ErrorCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.ControlDetails), global::Google.Cloud.AuditManager.V1.ControlDetails.Parser, new[]{ "Control", "ComplianceState", "ControlReportSummary" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.ControlDetails), global::Google.Cloud.AuditManager.V1.ControlDetails.Parser, new[]{ "Control", "ComplianceState", "ControlReportSummary" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.CreateAuditScheduleRequest), global::Google.Cloud.AuditManager.V1.CreateAuditScheduleRequest.Parser, new[]{ "Parent", "AuditSchedule", "AuditScheduleId", "ValidateOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.UpdateAuditScheduleRequest), global::Google.Cloud.AuditManager.V1.UpdateAuditScheduleRequest.Parser, new[]{ "AuditSchedule", "UpdateMask", "ValidateOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.GetAuditScheduleRequest), global::Google.Cloud.AuditManager.V1.GetAuditScheduleRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.ListAuditSchedulesRequest), global::Google.Cloud.AuditManager.V1.ListAuditSchedulesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse), global::Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse.Parser, new[]{ "AuditSchedules", "NextPageToken", "Unreachable" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.AuditSchedule), global::Google.Cloud.AuditManager.V1.AuditSchedule.Parser, new[]{ "Name", "DisplayName", "GcsUri", "ComplianceFramework", "ReportFormat", "ScheduleConfig", "State", "CreateTime", "UpdateTime", "NextRunTime", "LastTriggerTime", "ErrorMessage" }, null, new[]{ typeof(global::Google.Cloud.AuditManager.V1.AuditSchedule.Types.AuditReportFormat) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AuditManager.V1.ScheduleConfig), global::Google.Cloud.AuditManager.V1.ScheduleConfig.Parser, new[]{ "StartTime", "EndTime", "Frequency", "TimeZone" }, null, new[]{ typeof(global::Google.Cloud.AuditManager.V1.ScheduleConfig.Types.Frequency) }, null, null)
           }));
     }
     #endregion
@@ -369,6 +463,41 @@ namespace Google.Cloud.AuditManager.V1 {
     [pbr::OriginalName("AUDIT_NOT_SUPPORTED")] AuditNotSupported = 5,
   }
 
+  /// <summary>
+  /// State of an audit schedule.
+  /// </summary>
+  public enum ScheduleState {
+    /// <summary>
+    /// Default value. This value is unused.
+    /// </summary>
+    [pbr::OriginalName("SCHEDULE_STATE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Schedule is active and will trigger runs.
+    /// </summary>
+    [pbr::OriginalName("SCHEDULE_STATE_ACTIVE")] Active = 1,
+    /// <summary>
+    /// Schedule is paused and will not trigger runs.
+    /// </summary>
+    [pbr::OriginalName("SCHEDULE_STATE_PAUSED")] Paused = 2,
+    /// <summary>
+    /// Schedule end time has passed.
+    /// </summary>
+    [pbr::OriginalName("SCHEDULE_STATE_COMPLETED")] Completed = 3,
+    /// <summary>
+    /// Schedule setup failed during creation or update.
+    /// </summary>
+    [pbr::OriginalName("SCHEDULE_STATE_FAILED_SETUP")] FailedSetup = 4,
+    /// <summary>
+    /// Schedule is in an error state due to persistent failure to trigger an
+    /// audit. Manual intervention is required.
+    /// </summary>
+    [pbr::OriginalName("SCHEDULE_STATE_ERROR")] Error = 5,
+    /// <summary>
+    /// Schedule has been marked for deletion by the user.
+    /// </summary>
+    [pbr::OriginalName("SCHEDULE_STATE_DELETED")] Deleted = 6,
+  }
+
   #endregion
 
   #region Messages
@@ -413,6 +542,7 @@ namespace Google.Cloud.AuditManager.V1 {
     public EnrollResourceRequest(EnrollResourceRequest other) : this() {
       scope_ = other.scope_;
       destinations_ = other.destinations_.Clone();
+      validateOnly_ = other.validateOnly_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -463,6 +593,32 @@ namespace Google.Cloud.AuditManager.V1 {
       get { return destinations_; }
     }
 
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 4;
+    private bool validateOnly_;
+    /// <summary>
+    /// Optional. If `true`, only validates the request and does not enroll the
+    /// resource. This executes standard request validation (such as schema, IAM,
+    /// and destination checks) and skips the apply phase.
+    ///
+    /// Use this field for the following purposes:
+    /// * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run
+    ///   dry-run mutations (e.g., `terraform plan`) without creating real
+    ///   resources or incurring costs.
+    /// * **User Interface Validation**: Enable real-time form and permission
+    ///   validation in custom UIs before submitting requests.
+    /// * **CI/CD &amp; Automation**: Test your scripts, permissions, and parameters
+    ///   safely without consuming resource quotas.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -480,6 +636,7 @@ namespace Google.Cloud.AuditManager.V1 {
       }
       if (Scope != other.Scope) return false;
       if(!destinations_.Equals(other.destinations_)) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -489,6 +646,7 @@ namespace Google.Cloud.AuditManager.V1 {
       int hash = 1;
       if (Scope.Length != 0) hash ^= Scope.GetHashCode();
       hash ^= destinations_.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -512,6 +670,10 @@ namespace Google.Cloud.AuditManager.V1 {
         output.WriteString(Scope);
       }
       destinations_.WriteTo(output, _repeated_destinations_codec);
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -527,6 +689,10 @@ namespace Google.Cloud.AuditManager.V1 {
         output.WriteString(Scope);
       }
       destinations_.WriteTo(ref output, _repeated_destinations_codec);
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -541,6 +707,9 @@ namespace Google.Cloud.AuditManager.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Scope);
       }
       size += destinations_.CalculateSize(_repeated_destinations_codec);
+      if (ValidateOnly != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -557,6 +726,9 @@ namespace Google.Cloud.AuditManager.V1 {
         Scope = other.Scope;
       }
       destinations_.Add(other.destinations_);
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -584,6 +756,10 @@ namespace Google.Cloud.AuditManager.V1 {
             destinations_.AddEntriesFrom(input, _repeated_destinations_codec);
             break;
           }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -609,6 +785,10 @@ namespace Google.Cloud.AuditManager.V1 {
           }
           case 18: {
             destinations_.AddEntriesFrom(ref input, _repeated_destinations_codec);
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
             break;
           }
         }
@@ -920,6 +1100,7 @@ namespace Google.Cloud.AuditManager.V1 {
       complianceStandard_ = other.complianceStandard_;
       reportFormat_ = other.reportFormat_;
       complianceFramework_ = other.complianceFramework_;
+      validateOnly_ = other.validateOnly_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -999,6 +1180,33 @@ namespace Google.Cloud.AuditManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 6;
+    private bool validateOnly_;
+    /// <summary>
+    /// Optional. If `true`, only validates the request and does not generate the
+    /// audit scope report. This executes standard request validation (such as
+    /// schema, framework existence, scope, and IAM checks) and skips the apply
+    /// phase.
+    ///
+    /// Use this field for the following purposes:
+    /// * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run
+    ///   dry-run mutations (e.g., `terraform plan`) without creating real
+    ///   resources or incurring costs.
+    /// * **User Interface Validation**: Enable real-time form and permission
+    ///   validation in custom UIs before submitting requests.
+    /// * **CI/CD &amp; Automation**: Test your scripts, permissions, and parameters
+    ///   safely without consuming resource quotas.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1018,6 +1226,7 @@ namespace Google.Cloud.AuditManager.V1 {
       if (ComplianceStandard != other.ComplianceStandard) return false;
       if (ReportFormat != other.ReportFormat) return false;
       if (ComplianceFramework != other.ComplianceFramework) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1029,6 +1238,7 @@ namespace Google.Cloud.AuditManager.V1 {
       if (ComplianceStandard.Length != 0) hash ^= ComplianceStandard.GetHashCode();
       if (ReportFormat != global::Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat.Unspecified) hash ^= ReportFormat.GetHashCode();
       if (ComplianceFramework.Length != 0) hash ^= ComplianceFramework.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1063,6 +1273,10 @@ namespace Google.Cloud.AuditManager.V1 {
         output.WriteRawTag(42);
         output.WriteString(ComplianceFramework);
       }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1089,6 +1303,10 @@ namespace Google.Cloud.AuditManager.V1 {
         output.WriteRawTag(42);
         output.WriteString(ComplianceFramework);
       }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1110,6 +1328,9 @@ namespace Google.Cloud.AuditManager.V1 {
       }
       if (ComplianceFramework.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ComplianceFramework);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1134,6 +1355,9 @@ namespace Google.Cloud.AuditManager.V1 {
       }
       if (other.ComplianceFramework.Length != 0) {
         ComplianceFramework = other.ComplianceFramework;
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1170,6 +1394,10 @@ namespace Google.Cloud.AuditManager.V1 {
             ComplianceFramework = input.ReadString();
             break;
           }
+          case 48: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1203,6 +1431,10 @@ namespace Google.Cloud.AuditManager.V1 {
           }
           case 42: {
             ComplianceFramework = input.ReadString();
+            break;
+          }
+          case 48: {
+            ValidateOnly = input.ReadBool();
             break;
           }
         }
@@ -8097,6 +8329,2549 @@ namespace Google.Cloud.AuditManager.V1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [CreateAuditSchedule][google.cloud.auditmanager.v1.AuditManager.CreateAuditSchedule].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateAuditScheduleRequest : pb::IMessage<CreateAuditScheduleRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateAuditScheduleRequest> _parser = new pb::MessageParser<CreateAuditScheduleRequest>(() => new CreateAuditScheduleRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateAuditScheduleRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AuditManager.V1.AuditmanagerReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateAuditScheduleRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateAuditScheduleRequest(CreateAuditScheduleRequest other) : this() {
+      parent_ = other.parent_;
+      auditSchedule_ = other.auditSchedule_ != null ? other.auditSchedule_.Clone() : null;
+      auditScheduleId_ = other.auditScheduleId_;
+      validateOnly_ = other.validateOnly_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateAuditScheduleRequest Clone() {
+      return new CreateAuditScheduleRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. Project or folder that this audit schedule is for, in one of the
+    /// following formats:
+    ///
+    /// * `projects/{project}/locations/{location}`
+    /// * `folders/{folder}/locations/{location}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "audit_schedule" field.</summary>
+    public const int AuditScheduleFieldNumber = 2;
+    private global::Google.Cloud.AuditManager.V1.AuditSchedule auditSchedule_;
+    /// <summary>
+    /// Required. Audit schedule to create.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AuditManager.V1.AuditSchedule AuditSchedule {
+      get { return auditSchedule_; }
+      set {
+        auditSchedule_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "audit_schedule_id" field.</summary>
+    public const int AuditScheduleIdFieldNumber = 3;
+    private string auditScheduleId_ = "";
+    /// <summary>
+    /// Required. ID to use for the audit schedule, which becomes the final
+    /// component of the audit schedule's resource name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AuditScheduleId {
+      get { return auditScheduleId_; }
+      set {
+        auditScheduleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 4;
+    private bool validateOnly_;
+    /// <summary>
+    /// Optional. If `true`, only validates the request and does not create the
+    /// audit schedule. This executes standard request validation (such as schema,
+    /// framework existence, scope, and IAM checks) and skips the apply phase.
+    ///
+    /// Use this field for the following purposes:
+    /// * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run
+    ///   dry-run mutations (e.g., `terraform plan`) without creating real
+    ///   resources or incurring costs.
+    /// * **User Interface Validation**: Enable real-time form and permission
+    ///   validation in custom UIs before submitting requests.
+    /// * **CI/CD &amp; Automation**: Test your scripts, permissions, and parameters
+    ///   safely without consuming resource quotas.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateAuditScheduleRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateAuditScheduleRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(AuditSchedule, other.AuditSchedule)) return false;
+      if (AuditScheduleId != other.AuditScheduleId) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (auditSchedule_ != null) hash ^= AuditSchedule.GetHashCode();
+      if (AuditScheduleId.Length != 0) hash ^= AuditScheduleId.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (auditSchedule_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AuditSchedule);
+      }
+      if (AuditScheduleId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(AuditScheduleId);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (auditSchedule_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AuditSchedule);
+      }
+      if (AuditScheduleId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(AuditScheduleId);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (auditSchedule_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AuditSchedule);
+      }
+      if (AuditScheduleId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AuditScheduleId);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateAuditScheduleRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.auditSchedule_ != null) {
+        if (auditSchedule_ == null) {
+          AuditSchedule = new global::Google.Cloud.AuditManager.V1.AuditSchedule();
+        }
+        AuditSchedule.MergeFrom(other.AuditSchedule);
+      }
+      if (other.AuditScheduleId.Length != 0) {
+        AuditScheduleId = other.AuditScheduleId;
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (auditSchedule_ == null) {
+              AuditSchedule = new global::Google.Cloud.AuditManager.V1.AuditSchedule();
+            }
+            input.ReadMessage(AuditSchedule);
+            break;
+          }
+          case 26: {
+            AuditScheduleId = input.ReadString();
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (auditSchedule_ == null) {
+              AuditSchedule = new global::Google.Cloud.AuditManager.V1.AuditSchedule();
+            }
+            input.ReadMessage(AuditSchedule);
+            break;
+          }
+          case 26: {
+            AuditScheduleId = input.ReadString();
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [UpdateAuditSchedule][google.cloud.auditmanager.v1.AuditManager.UpdateAuditSchedule].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateAuditScheduleRequest : pb::IMessage<UpdateAuditScheduleRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateAuditScheduleRequest> _parser = new pb::MessageParser<UpdateAuditScheduleRequest>(() => new UpdateAuditScheduleRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateAuditScheduleRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AuditManager.V1.AuditmanagerReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateAuditScheduleRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateAuditScheduleRequest(UpdateAuditScheduleRequest other) : this() {
+      auditSchedule_ = other.auditSchedule_ != null ? other.auditSchedule_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      validateOnly_ = other.validateOnly_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateAuditScheduleRequest Clone() {
+      return new UpdateAuditScheduleRequest(this);
+    }
+
+    /// <summary>Field number for the "audit_schedule" field.</summary>
+    public const int AuditScheduleFieldNumber = 1;
+    private global::Google.Cloud.AuditManager.V1.AuditSchedule auditSchedule_;
+    /// <summary>
+    /// Required. Audit schedule to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AuditManager.V1.AuditSchedule AuditSchedule {
+      get { return auditSchedule_; }
+      set {
+        auditSchedule_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. List of fields to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 3;
+    private bool validateOnly_;
+    /// <summary>
+    /// Optional. If `true`, only validates the request and does not update the
+    /// audit schedule. This executes standard request validation (such as
+    /// schema, framework existence, scope, and IAM checks) and skips the apply
+    /// phase.
+    ///
+    /// Use this field for the following purposes:
+    /// * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run
+    ///   dry-run mutations (e.g., `terraform plan`) without creating real
+    ///   resources or incurring costs.
+    /// * **User Interface Validation**: Enable real-time form and permission
+    ///   validation in custom UIs before submitting requests.
+    /// * **CI/CD &amp; Automation**: Test your scripts, permissions, and parameters
+    ///   safely without consuming resource quotas.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateAuditScheduleRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateAuditScheduleRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(AuditSchedule, other.AuditSchedule)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (auditSchedule_ != null) hash ^= AuditSchedule.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (auditSchedule_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AuditSchedule);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ValidateOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (auditSchedule_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AuditSchedule);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ValidateOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (auditSchedule_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AuditSchedule);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateAuditScheduleRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.auditSchedule_ != null) {
+        if (auditSchedule_ == null) {
+          AuditSchedule = new global::Google.Cloud.AuditManager.V1.AuditSchedule();
+        }
+        AuditSchedule.MergeFrom(other.AuditSchedule);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (auditSchedule_ == null) {
+              AuditSchedule = new global::Google.Cloud.AuditManager.V1.AuditSchedule();
+            }
+            input.ReadMessage(AuditSchedule);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 24: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (auditSchedule_ == null) {
+              AuditSchedule = new global::Google.Cloud.AuditManager.V1.AuditSchedule();
+            }
+            input.ReadMessage(AuditSchedule);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 24: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [GetAuditSchedule][google.cloud.auditmanager.v1.AuditManager.GetAuditSchedule].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetAuditScheduleRequest : pb::IMessage<GetAuditScheduleRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetAuditScheduleRequest> _parser = new pb::MessageParser<GetAuditScheduleRequest>(() => new GetAuditScheduleRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetAuditScheduleRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AuditManager.V1.AuditmanagerReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAuditScheduleRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAuditScheduleRequest(GetAuditScheduleRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAuditScheduleRequest Clone() {
+      return new GetAuditScheduleRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Name of the audit schedule to retrieve, in one of the following
+    /// formats:
+    ///
+    /// * `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}`
+    /// * `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}`
+    /// * `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetAuditScheduleRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetAuditScheduleRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetAuditScheduleRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [ListAuditSchedules][google.cloud.auditmanager.v1.AuditManager.ListAuditSchedules].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListAuditSchedulesRequest : pb::IMessage<ListAuditSchedulesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListAuditSchedulesRequest> _parser = new pb::MessageParser<ListAuditSchedulesRequest>(() => new ListAuditSchedulesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListAuditSchedulesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AuditManager.V1.AuditmanagerReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListAuditSchedulesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListAuditSchedulesRequest(ListAuditSchedulesRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListAuditSchedulesRequest Clone() {
+      return new ListAuditSchedulesRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. Parent for the audit schedule, in one of the following formats:
+    ///
+    /// * `projects/{project}/locations/{location}`
+    /// * `folders/{folder}/locations/{location}`
+    /// * `organizations/{organization}/locations/{location}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. Maximum number of items to return in a single page. The service
+    /// might return fewer items than this value. If unspecified, the service picks
+    /// an appropriate default. The maximum value is 100; values above 100 are
+    /// reduced to 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. A page token, received from a previous call, to retrieve the next
+    /// page of results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListAuditSchedulesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListAuditSchedulesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListAuditSchedulesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for
+  /// [ListAuditSchedules][google.cloud.auditmanager.v1.AuditManager.ListAuditSchedules].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListAuditSchedulesResponse : pb::IMessage<ListAuditSchedulesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListAuditSchedulesResponse> _parser = new pb::MessageParser<ListAuditSchedulesResponse>(() => new ListAuditSchedulesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListAuditSchedulesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AuditManager.V1.AuditmanagerReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListAuditSchedulesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListAuditSchedulesResponse(ListAuditSchedulesResponse other) : this() {
+      auditSchedules_ = other.auditSchedules_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListAuditSchedulesResponse Clone() {
+      return new ListAuditSchedulesResponse(this);
+    }
+
+    /// <summary>Field number for the "audit_schedules" field.</summary>
+    public const int AuditSchedulesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AuditManager.V1.AuditSchedule> _repeated_auditSchedules_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AuditManager.V1.AuditSchedule.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.AuditSchedule> auditSchedules_ = new pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.AuditSchedule>();
+    /// <summary>
+    /// List of audit schedules.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AuditManager.V1.AuditSchedule> AuditSchedules {
+      get { return auditSchedules_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token that you can send as the `page_token` in a subsequent request to
+    /// retrieve the next page of results. If this field is empty, there are no
+    /// subsequent pages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Locations that can't be reached.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListAuditSchedulesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListAuditSchedulesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!auditSchedules_.Equals(other.auditSchedules_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= auditSchedules_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      auditSchedules_.WriteTo(output, _repeated_auditSchedules_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      auditSchedules_.WriteTo(ref output, _repeated_auditSchedules_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += auditSchedules_.CalculateSize(_repeated_auditSchedules_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListAuditSchedulesResponse other) {
+      if (other == null) {
+        return;
+      }
+      auditSchedules_.Add(other.auditSchedules_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      unreachable_.Add(other.unreachable_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            auditSchedules_.AddEntriesFrom(input, _repeated_auditSchedules_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            auditSchedules_.AddEntriesFrom(ref input, _repeated_auditSchedules_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// An audit schedule, in one of the following formats:
+  ///
+  /// * `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}`
+  /// * `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}`
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AuditSchedule : pb::IMessage<AuditSchedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AuditSchedule> _parser = new pb::MessageParser<AuditSchedule>(() => new AuditSchedule());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AuditSchedule> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AuditManager.V1.AuditmanagerReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AuditSchedule() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AuditSchedule(AuditSchedule other) : this() {
+      name_ = other.name_;
+      displayName_ = other.displayName_;
+      gcsUri_ = other.gcsUri_;
+      complianceFramework_ = other.complianceFramework_;
+      reportFormat_ = other.reportFormat_;
+      scheduleConfig_ = other.scheduleConfig_ != null ? other.scheduleConfig_.Clone() : null;
+      state_ = other.state_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      nextRunTime_ = other.nextRunTime_ != null ? other.nextRunTime_.Clone() : null;
+      lastTriggerTime_ = other.lastTriggerTime_ != null ? other.lastTriggerTime_.Clone() : null;
+      errorMessage_ = other.errorMessage_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AuditSchedule Clone() {
+      return new AuditSchedule(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Identifier. Unique identifier for the audit schedule.
+    /// Format:
+    /// projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+    /// folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+    /// organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 2;
+    private string displayName_ = "";
+    /// <summary>
+    /// Optional. Display name for the audit schedule.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "gcs_uri" field.</summary>
+    public const int GcsUriFieldNumber = 3;
+    private string gcsUri_ = "";
+    /// <summary>
+    /// Required. Cloud Storage bucket where Audit Manager can upload the audit
+    /// report and evidence. The format is `gs://{bucket_name}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GcsUri {
+      get { return gcsUri_; }
+      set {
+        gcsUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "compliance_framework" field.</summary>
+    public const int ComplianceFrameworkFieldNumber = 4;
+    private string complianceFramework_ = "";
+    /// <summary>
+    /// Required. Framework (set of controls) that the audit scope report is
+    /// generated against. For example, `NIST_800_53`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ComplianceFramework {
+      get { return complianceFramework_; }
+      set {
+        complianceFramework_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "report_format" field.</summary>
+    public const int ReportFormatFieldNumber = 5;
+    private global::Google.Cloud.AuditManager.V1.AuditSchedule.Types.AuditReportFormat reportFormat_ = global::Google.Cloud.AuditManager.V1.AuditSchedule.Types.AuditReportFormat.Unspecified;
+    /// <summary>
+    /// Required. Format for the audit report.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AuditManager.V1.AuditSchedule.Types.AuditReportFormat ReportFormat {
+      get { return reportFormat_; }
+      set {
+        reportFormat_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "schedule_config" field.</summary>
+    public const int ScheduleConfigFieldNumber = 6;
+    private global::Google.Cloud.AuditManager.V1.ScheduleConfig scheduleConfig_;
+    /// <summary>
+    /// Required. Configuration that defines when and how often audit runs are
+    /// automatically triggered for this schedule.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AuditManager.V1.ScheduleConfig ScheduleConfig {
+      get { return scheduleConfig_; }
+      set {
+        scheduleConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 7;
+    private global::Google.Cloud.AuditManager.V1.ScheduleState state_ = global::Google.Cloud.AuditManager.V1.ScheduleState.Unspecified;
+    /// <summary>
+    /// Optional. State of the audit schedule. While most states are managed by the
+    /// system, you can use
+    /// [UpdateAuditSchedule][google.cloud.auditmanager.v1.AuditManager.UpdateAuditSchedule]
+    /// to start, pause, or delete the schedule.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AuditManager.V1.ScheduleState State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. Timestamp when the schedule was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. Timestamp when the schedule was last updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "next_run_time" field.</summary>
+    public const int NextRunTimeFieldNumber = 10;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp nextRunTime_;
+    /// <summary>
+    /// Output only. Calculated timestamp for the next scheduled run.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp NextRunTime {
+      get { return nextRunTime_; }
+      set {
+        nextRunTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_trigger_time" field.</summary>
+    public const int LastTriggerTimeFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp lastTriggerTime_;
+    /// <summary>
+    /// Output only. Timestamp when the audit run was last triggered.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp LastTriggerTime {
+      get { return lastTriggerTime_; }
+      set {
+        lastTriggerTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error_message" field.</summary>
+    public const int ErrorMessageFieldNumber = 13;
+    private string errorMessage_ = "";
+    /// <summary>
+    /// Output only. Describes the error if the schedule is in an error state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AuditSchedule);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AuditSchedule other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (GcsUri != other.GcsUri) return false;
+      if (ComplianceFramework != other.ComplianceFramework) return false;
+      if (ReportFormat != other.ReportFormat) return false;
+      if (!object.Equals(ScheduleConfig, other.ScheduleConfig)) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (!object.Equals(NextRunTime, other.NextRunTime)) return false;
+      if (!object.Equals(LastTriggerTime, other.LastTriggerTime)) return false;
+      if (ErrorMessage != other.ErrorMessage) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (GcsUri.Length != 0) hash ^= GcsUri.GetHashCode();
+      if (ComplianceFramework.Length != 0) hash ^= ComplianceFramework.GetHashCode();
+      if (ReportFormat != global::Google.Cloud.AuditManager.V1.AuditSchedule.Types.AuditReportFormat.Unspecified) hash ^= ReportFormat.GetHashCode();
+      if (scheduleConfig_ != null) hash ^= ScheduleConfig.GetHashCode();
+      if (State != global::Google.Cloud.AuditManager.V1.ScheduleState.Unspecified) hash ^= State.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (nextRunTime_ != null) hash ^= NextRunTime.GetHashCode();
+      if (lastTriggerTime_ != null) hash ^= LastTriggerTime.GetHashCode();
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (GcsUri.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(GcsUri);
+      }
+      if (ComplianceFramework.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ComplianceFramework);
+      }
+      if (ReportFormat != global::Google.Cloud.AuditManager.V1.AuditSchedule.Types.AuditReportFormat.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ReportFormat);
+      }
+      if (scheduleConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ScheduleConfig);
+      }
+      if (State != global::Google.Cloud.AuditManager.V1.ScheduleState.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) State);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(UpdateTime);
+      }
+      if (nextRunTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(NextRunTime);
+      }
+      if (lastTriggerTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(LastTriggerTime);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (GcsUri.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(GcsUri);
+      }
+      if (ComplianceFramework.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ComplianceFramework);
+      }
+      if (ReportFormat != global::Google.Cloud.AuditManager.V1.AuditSchedule.Types.AuditReportFormat.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ReportFormat);
+      }
+      if (scheduleConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ScheduleConfig);
+      }
+      if (State != global::Google.Cloud.AuditManager.V1.ScheduleState.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) State);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(UpdateTime);
+      }
+      if (nextRunTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(NextRunTime);
+      }
+      if (lastTriggerTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(LastTriggerTime);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (GcsUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsUri);
+      }
+      if (ComplianceFramework.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ComplianceFramework);
+      }
+      if (ReportFormat != global::Google.Cloud.AuditManager.V1.AuditSchedule.Types.AuditReportFormat.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReportFormat);
+      }
+      if (scheduleConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ScheduleConfig);
+      }
+      if (State != global::Google.Cloud.AuditManager.V1.ScheduleState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (nextRunTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NextRunTime);
+      }
+      if (lastTriggerTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastTriggerTime);
+      }
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AuditSchedule other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.GcsUri.Length != 0) {
+        GcsUri = other.GcsUri;
+      }
+      if (other.ComplianceFramework.Length != 0) {
+        ComplianceFramework = other.ComplianceFramework;
+      }
+      if (other.ReportFormat != global::Google.Cloud.AuditManager.V1.AuditSchedule.Types.AuditReportFormat.Unspecified) {
+        ReportFormat = other.ReportFormat;
+      }
+      if (other.scheduleConfig_ != null) {
+        if (scheduleConfig_ == null) {
+          ScheduleConfig = new global::Google.Cloud.AuditManager.V1.ScheduleConfig();
+        }
+        ScheduleConfig.MergeFrom(other.ScheduleConfig);
+      }
+      if (other.State != global::Google.Cloud.AuditManager.V1.ScheduleState.Unspecified) {
+        State = other.State;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.nextRunTime_ != null) {
+        if (nextRunTime_ == null) {
+          NextRunTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        NextRunTime.MergeFrom(other.NextRunTime);
+      }
+      if (other.lastTriggerTime_ != null) {
+        if (lastTriggerTime_ == null) {
+          LastTriggerTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        LastTriggerTime.MergeFrom(other.LastTriggerTime);
+      }
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            GcsUri = input.ReadString();
+            break;
+          }
+          case 34: {
+            ComplianceFramework = input.ReadString();
+            break;
+          }
+          case 40: {
+            ReportFormat = (global::Google.Cloud.AuditManager.V1.AuditSchedule.Types.AuditReportFormat) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (scheduleConfig_ == null) {
+              ScheduleConfig = new global::Google.Cloud.AuditManager.V1.ScheduleConfig();
+            }
+            input.ReadMessage(ScheduleConfig);
+            break;
+          }
+          case 56: {
+            State = (global::Google.Cloud.AuditManager.V1.ScheduleState) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 74: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 82: {
+            if (nextRunTime_ == null) {
+              NextRunTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(NextRunTime);
+            break;
+          }
+          case 90: {
+            if (lastTriggerTime_ == null) {
+              LastTriggerTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastTriggerTime);
+            break;
+          }
+          case 106: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            GcsUri = input.ReadString();
+            break;
+          }
+          case 34: {
+            ComplianceFramework = input.ReadString();
+            break;
+          }
+          case 40: {
+            ReportFormat = (global::Google.Cloud.AuditManager.V1.AuditSchedule.Types.AuditReportFormat) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (scheduleConfig_ == null) {
+              ScheduleConfig = new global::Google.Cloud.AuditManager.V1.ScheduleConfig();
+            }
+            input.ReadMessage(ScheduleConfig);
+            break;
+          }
+          case 56: {
+            State = (global::Google.Cloud.AuditManager.V1.ScheduleState) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 74: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 82: {
+            if (nextRunTime_ == null) {
+              NextRunTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(NextRunTime);
+            break;
+          }
+          case 90: {
+            if (lastTriggerTime_ == null) {
+              LastTriggerTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastTriggerTime);
+            break;
+          }
+          case 106: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AuditSchedule message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Format for the audit report.
+      /// </summary>
+      public enum AuditReportFormat {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("AUDIT_REPORT_FORMAT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Open Document Format (ODF).
+        /// </summary>
+        [pbr::OriginalName("AUDIT_REPORT_FORMAT_ODF")] Odf = 1,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Timing and frequency parameters for recurring audit runs.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ScheduleConfig : pb::IMessage<ScheduleConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ScheduleConfig> _parser = new pb::MessageParser<ScheduleConfig>(() => new ScheduleConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ScheduleConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AuditManager.V1.AuditmanagerReflection.Descriptor.MessageTypes[28]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ScheduleConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ScheduleConfig(ScheduleConfig other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      frequency_ = other.frequency_;
+      timeZone_ = other.timeZone_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ScheduleConfig Clone() {
+      return new ScheduleConfig(this);
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Required. Date and time when the first audit run is triggered.
+    /// Subsequent runs are based on this time and the chosen frequency.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// Optional. Date that the schedule stops.
+    /// If not specified, the schedule runs indefinitely.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "frequency" field.</summary>
+    public const int FrequencyFieldNumber = 3;
+    private global::Google.Cloud.AuditManager.V1.ScheduleConfig.Types.Frequency frequency_ = global::Google.Cloud.AuditManager.V1.ScheduleConfig.Types.Frequency.Unspecified;
+    /// <summary>
+    /// Required. Frequency of audit runs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AuditManager.V1.ScheduleConfig.Types.Frequency Frequency {
+      get { return frequency_; }
+      set {
+        frequency_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "time_zone" field.</summary>
+    public const int TimeZoneFieldNumber = 4;
+    private string timeZone_ = "";
+    /// <summary>
+    /// Optional. Time zone for the audit schedule in IANA format (for example,
+    /// `America/New_York`). The time zone is used to interpret the `start_time`
+    /// and the `end_time`, and to calculate subsequent run dates.
+    /// If not specified, the time zone default is UTC.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TimeZone {
+      get { return timeZone_; }
+      set {
+        timeZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ScheduleConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ScheduleConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (Frequency != other.Frequency) return false;
+      if (TimeZone != other.TimeZone) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (Frequency != global::Google.Cloud.AuditManager.V1.ScheduleConfig.Types.Frequency.Unspecified) hash ^= Frequency.GetHashCode();
+      if (TimeZone.Length != 0) hash ^= TimeZone.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (Frequency != global::Google.Cloud.AuditManager.V1.ScheduleConfig.Types.Frequency.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Frequency);
+      }
+      if (TimeZone.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(TimeZone);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (Frequency != global::Google.Cloud.AuditManager.V1.ScheduleConfig.Types.Frequency.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Frequency);
+      }
+      if (TimeZone.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(TimeZone);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (Frequency != global::Google.Cloud.AuditManager.V1.ScheduleConfig.Types.Frequency.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Frequency);
+      }
+      if (TimeZone.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TimeZone);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ScheduleConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.Frequency != global::Google.Cloud.AuditManager.V1.ScheduleConfig.Types.Frequency.Unspecified) {
+        Frequency = other.Frequency;
+      }
+      if (other.TimeZone.Length != 0) {
+        TimeZone = other.TimeZone;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 24: {
+            Frequency = (global::Google.Cloud.AuditManager.V1.ScheduleConfig.Types.Frequency) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            TimeZone = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 24: {
+            Frequency = (global::Google.Cloud.AuditManager.V1.ScheduleConfig.Types.Frequency) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            TimeZone = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ScheduleConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Frequency of audit runs.
+      /// </summary>
+      public enum Frequency {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("FREQUENCY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The audit runs every day.
+        /// </summary>
+        [pbr::OriginalName("DAILY")] Daily = 1,
+        /// <summary>
+        /// The audit runs weekly on the same day of the week as `start_time`.
+        /// </summary>
+        [pbr::OriginalName("WEEKLY")] Weekly = 2,
+        /// <summary>
+        /// The audit runs monthly on the same day of the month as `start_time`.
+        /// </summary>
+        [pbr::OriginalName("MONTHLY")] Monthly = 3,
+        /// <summary>
+        /// The audit runs quarterly (every 3 months) on the same
+        /// day of the month as `start_time`.
+        /// </summary>
+        [pbr::OriginalName("QUARTERLY")] Quarterly = 4,
+        /// <summary>
+        /// The audit runs annually on the same month and day as `start_time`.
+        /// </summary>
+        [pbr::OriginalName("ANNUALLY")] Annually = 5,
+      }
+
+    }
+    #endregion
 
   }
 

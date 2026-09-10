@@ -64,6 +64,18 @@ namespace Google.Cloud.AuditManager.V1 {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AuditManager.V1.CreateAuditScheduleRequest> __Marshaller_google_cloud_auditmanager_v1_CreateAuditScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AuditManager.V1.CreateAuditScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AuditManager.V1.AuditSchedule> __Marshaller_google_cloud_auditmanager_v1_AuditSchedule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AuditManager.V1.AuditSchedule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AuditManager.V1.UpdateAuditScheduleRequest> __Marshaller_google_cloud_auditmanager_v1_UpdateAuditScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AuditManager.V1.UpdateAuditScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AuditManager.V1.GetAuditScheduleRequest> __Marshaller_google_cloud_auditmanager_v1_GetAuditScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AuditManager.V1.GetAuditScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AuditManager.V1.ListAuditSchedulesRequest> __Marshaller_google_cloud_auditmanager_v1_ListAuditSchedulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AuditManager.V1.ListAuditSchedulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse> __Marshaller_google_cloud_auditmanager_v1_ListAuditSchedulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AuditManager.V1.EnrollResourceRequest> __Marshaller_google_cloud_auditmanager_v1_EnrollResourceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AuditManager.V1.EnrollResourceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AuditManager.V1.Enrollment> __Marshaller_google_cloud_auditmanager_v1_Enrollment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AuditManager.V1.Enrollment.Parser));
@@ -95,6 +107,38 @@ namespace Google.Cloud.AuditManager.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AuditManager.V1.ListControlsRequest> __Marshaller_google_cloud_auditmanager_v1_ListControlsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AuditManager.V1.ListControlsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AuditManager.V1.ListControlsResponse> __Marshaller_google_cloud_auditmanager_v1_ListControlsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AuditManager.V1.ListControlsResponse.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AuditManager.V1.CreateAuditScheduleRequest, global::Google.Cloud.AuditManager.V1.AuditSchedule> __Method_CreateAuditSchedule = new grpc::Method<global::Google.Cloud.AuditManager.V1.CreateAuditScheduleRequest, global::Google.Cloud.AuditManager.V1.AuditSchedule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAuditSchedule",
+        __Marshaller_google_cloud_auditmanager_v1_CreateAuditScheduleRequest,
+        __Marshaller_google_cloud_auditmanager_v1_AuditSchedule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AuditManager.V1.UpdateAuditScheduleRequest, global::Google.Cloud.AuditManager.V1.AuditSchedule> __Method_UpdateAuditSchedule = new grpc::Method<global::Google.Cloud.AuditManager.V1.UpdateAuditScheduleRequest, global::Google.Cloud.AuditManager.V1.AuditSchedule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAuditSchedule",
+        __Marshaller_google_cloud_auditmanager_v1_UpdateAuditScheduleRequest,
+        __Marshaller_google_cloud_auditmanager_v1_AuditSchedule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AuditManager.V1.GetAuditScheduleRequest, global::Google.Cloud.AuditManager.V1.AuditSchedule> __Method_GetAuditSchedule = new grpc::Method<global::Google.Cloud.AuditManager.V1.GetAuditScheduleRequest, global::Google.Cloud.AuditManager.V1.AuditSchedule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAuditSchedule",
+        __Marshaller_google_cloud_auditmanager_v1_GetAuditScheduleRequest,
+        __Marshaller_google_cloud_auditmanager_v1_AuditSchedule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AuditManager.V1.ListAuditSchedulesRequest, global::Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse> __Method_ListAuditSchedules = new grpc::Method<global::Google.Cloud.AuditManager.V1.ListAuditSchedulesRequest, global::Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAuditSchedules",
+        __Marshaller_google_cloud_auditmanager_v1_ListAuditSchedulesRequest,
+        __Marshaller_google_cloud_auditmanager_v1_ListAuditSchedulesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AuditManager.V1.EnrollResourceRequest, global::Google.Cloud.AuditManager.V1.Enrollment> __Method_EnrollResource = new grpc::Method<global::Google.Cloud.AuditManager.V1.EnrollResourceRequest, global::Google.Cloud.AuditManager.V1.Enrollment>(
@@ -170,6 +214,54 @@ namespace Google.Cloud.AuditManager.V1 {
     [grpc::BindServiceMethod(typeof(AuditManager), "BindService")]
     public abstract partial class AuditManagerBase
     {
+      /// <summary>
+      /// Creates a new audit schedule in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AuditManager.V1.AuditSchedule> CreateAuditSchedule(global::Google.Cloud.AuditManager.V1.CreateAuditScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an existing audit schedule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AuditManager.V1.AuditSchedule> UpdateAuditSchedule(global::Google.Cloud.AuditManager.V1.UpdateAuditScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single audit schedule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AuditManager.V1.AuditSchedule> GetAuditSchedule(global::Google.Cloud.AuditManager.V1.GetAuditScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists audit schedules in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse> ListAuditSchedules(global::Google.Cloud.AuditManager.V1.ListAuditSchedulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
       /// <summary>
       /// Adds your project, folder, or organization to Audit
       /// Manager. This method creates the Audit Manager service agent in your
@@ -311,6 +403,198 @@ namespace Google.Cloud.AuditManager.V1 {
       {
       }
 
+      /// <summary>
+      /// Creates a new audit schedule in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AuditManager.V1.AuditSchedule CreateAuditSchedule(global::Google.Cloud.AuditManager.V1.CreateAuditScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAuditSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new audit schedule in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AuditManager.V1.AuditSchedule CreateAuditSchedule(global::Google.Cloud.AuditManager.V1.CreateAuditScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAuditSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new audit schedule in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AuditManager.V1.AuditSchedule> CreateAuditScheduleAsync(global::Google.Cloud.AuditManager.V1.CreateAuditScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAuditScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new audit schedule in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AuditManager.V1.AuditSchedule> CreateAuditScheduleAsync(global::Google.Cloud.AuditManager.V1.CreateAuditScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAuditSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing audit schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AuditManager.V1.AuditSchedule UpdateAuditSchedule(global::Google.Cloud.AuditManager.V1.UpdateAuditScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAuditSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing audit schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AuditManager.V1.AuditSchedule UpdateAuditSchedule(global::Google.Cloud.AuditManager.V1.UpdateAuditScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAuditSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing audit schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AuditManager.V1.AuditSchedule> UpdateAuditScheduleAsync(global::Google.Cloud.AuditManager.V1.UpdateAuditScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAuditScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing audit schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AuditManager.V1.AuditSchedule> UpdateAuditScheduleAsync(global::Google.Cloud.AuditManager.V1.UpdateAuditScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAuditSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single audit schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AuditManager.V1.AuditSchedule GetAuditSchedule(global::Google.Cloud.AuditManager.V1.GetAuditScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAuditSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single audit schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AuditManager.V1.AuditSchedule GetAuditSchedule(global::Google.Cloud.AuditManager.V1.GetAuditScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAuditSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single audit schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AuditManager.V1.AuditSchedule> GetAuditScheduleAsync(global::Google.Cloud.AuditManager.V1.GetAuditScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAuditScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single audit schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AuditManager.V1.AuditSchedule> GetAuditScheduleAsync(global::Google.Cloud.AuditManager.V1.GetAuditScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAuditSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Lists audit schedules in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse ListAuditSchedules(global::Google.Cloud.AuditManager.V1.ListAuditSchedulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAuditSchedules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists audit schedules in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse ListAuditSchedules(global::Google.Cloud.AuditManager.V1.ListAuditSchedulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAuditSchedules, null, options, request);
+      }
+      /// <summary>
+      /// Lists audit schedules in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse> ListAuditSchedulesAsync(global::Google.Cloud.AuditManager.V1.ListAuditSchedulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAuditSchedulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists audit schedules in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse> ListAuditSchedulesAsync(global::Google.Cloud.AuditManager.V1.ListAuditSchedulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAuditSchedules, null, options, request);
+      }
       /// <summary>
       /// Adds your project, folder, or organization to Audit
       /// Manager. This method creates the Audit Manager service agent in your
@@ -773,6 +1057,10 @@ namespace Google.Cloud.AuditManager.V1 {
     public static grpc::ServerServiceDefinition BindService(AuditManagerBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_CreateAuditSchedule, serviceImpl.CreateAuditSchedule)
+          .AddMethod(__Method_UpdateAuditSchedule, serviceImpl.UpdateAuditSchedule)
+          .AddMethod(__Method_GetAuditSchedule, serviceImpl.GetAuditSchedule)
+          .AddMethod(__Method_ListAuditSchedules, serviceImpl.ListAuditSchedules)
           .AddMethod(__Method_EnrollResource, serviceImpl.EnrollResource)
           .AddMethod(__Method_GenerateAuditScopeReport, serviceImpl.GenerateAuditScopeReport)
           .AddMethod(__Method_GenerateAuditReport, serviceImpl.GenerateAuditReport)
@@ -790,6 +1078,10 @@ namespace Google.Cloud.AuditManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AuditManagerBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_CreateAuditSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AuditManager.V1.CreateAuditScheduleRequest, global::Google.Cloud.AuditManager.V1.AuditSchedule>(serviceImpl.CreateAuditSchedule));
+      serviceBinder.AddMethod(__Method_UpdateAuditSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AuditManager.V1.UpdateAuditScheduleRequest, global::Google.Cloud.AuditManager.V1.AuditSchedule>(serviceImpl.UpdateAuditSchedule));
+      serviceBinder.AddMethod(__Method_GetAuditSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AuditManager.V1.GetAuditScheduleRequest, global::Google.Cloud.AuditManager.V1.AuditSchedule>(serviceImpl.GetAuditSchedule));
+      serviceBinder.AddMethod(__Method_ListAuditSchedules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AuditManager.V1.ListAuditSchedulesRequest, global::Google.Cloud.AuditManager.V1.ListAuditSchedulesResponse>(serviceImpl.ListAuditSchedules));
       serviceBinder.AddMethod(__Method_EnrollResource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AuditManager.V1.EnrollResourceRequest, global::Google.Cloud.AuditManager.V1.Enrollment>(serviceImpl.EnrollResource));
       serviceBinder.AddMethod(__Method_GenerateAuditScopeReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AuditManager.V1.GenerateAuditScopeReportRequest, global::Google.Cloud.AuditManager.V1.AuditScopeReport>(serviceImpl.GenerateAuditScopeReport));
       serviceBinder.AddMethod(__Method_GenerateAuditReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AuditManager.V1.GenerateAuditReportRequest, global::Google.LongRunning.Operation>(serviceImpl.GenerateAuditReport));
