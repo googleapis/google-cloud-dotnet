@@ -34,6 +34,12 @@
                 "GetRecordingAsync"
               ]
             },
+            "GetSmartNote": {
+              "methods": [
+                "GetSmartNote",
+                "GetSmartNoteAsync"
+              ]
+            },
             "GetTranscript": {
               "methods": [
                 "GetTranscript",
@@ -70,6 +76,12 @@
                 "ListRecordingsAsync"
               ]
             },
+            "ListSmartNotes": {
+              "methods": [
+                "ListSmartNotes",
+                "ListSmartNotesAsync"
+              ]
+            },
             "ListTranscriptEntries": {
               "methods": [
                 "ListTranscriptEntries",
@@ -91,10 +103,28 @@
         "grpc": {
           "libraryClient": "SpacesServiceClient",
           "rpcs": {
+            "BatchUpdateMembers": {
+              "methods": [
+                "BatchUpdateMembers",
+                "BatchUpdateMembersAsync"
+              ]
+            },
+            "CreateMember": {
+              "methods": [
+                "CreateMember",
+                "CreateMemberAsync"
+              ]
+            },
             "CreateSpace": {
               "methods": [
                 "CreateSpace",
                 "CreateSpaceAsync"
+              ]
+            },
+            "DeleteMember": {
+              "methods": [
+                "DeleteMember",
+                "DeleteMemberAsync"
               ]
             },
             "EndActiveConference": {
@@ -103,10 +133,28 @@
                 "EndActiveConferenceAsync"
               ]
             },
+            "GetMember": {
+              "methods": [
+                "GetMember",
+                "GetMemberAsync"
+              ]
+            },
             "GetSpace": {
               "methods": [
                 "GetSpace",
                 "GetSpaceAsync"
+              ]
+            },
+            "ListMembers": {
+              "methods": [
+                "ListMembers",
+                "ListMembersAsync"
+              ]
+            },
+            "UpdateMember": {
+              "methods": [
+                "UpdateMember",
+                "UpdateMemberAsync"
               ]
             },
             "UpdateSpace": {

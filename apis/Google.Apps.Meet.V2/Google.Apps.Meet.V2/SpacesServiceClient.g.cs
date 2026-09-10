@@ -21,6 +21,7 @@ using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -49,6 +50,12 @@ namespace Google.Apps.Meet.V2
             GetSpaceSettings = existing.GetSpaceSettings;
             UpdateSpaceSettings = existing.UpdateSpaceSettings;
             EndActiveConferenceSettings = existing.EndActiveConferenceSettings;
+            CreateMemberSettings = existing.CreateMemberSettings;
+            GetMemberSettings = existing.GetMemberSettings;
+            ListMembersSettings = existing.ListMembersSettings;
+            DeleteMemberSettings = existing.DeleteMemberSettings;
+            UpdateMemberSettings = existing.UpdateMemberSettings;
+            BatchUpdateMembersSettings = existing.BatchUpdateMembersSettings;
             OnCopy(existing);
         }
 
@@ -107,6 +114,78 @@ namespace Google.Apps.Meet.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings EndActiveConferenceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SpacesServiceClient.CreateMember</c> and <c>SpacesServiceClient.CreateMemberAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 80 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateMemberSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(80000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SpacesServiceClient.GetMember</c> and <c>SpacesServiceClient.GetMemberAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetMemberSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SpacesServiceClient.ListMembers</c> and <c>SpacesServiceClient.ListMembersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListMembersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SpacesServiceClient.DeleteMember</c> and <c>SpacesServiceClient.DeleteMemberAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteMemberSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SpacesServiceClient.UpdateMember</c> and <c>SpacesServiceClient.UpdateMemberAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateMemberSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SpacesServiceClient.BatchUpdateMembers</c> and <c>SpacesServiceClient.BatchUpdateMembersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchUpdateMembersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SpacesServiceSettings"/> object.</returns>
@@ -320,7 +399,7 @@ namespace Google.Apps.Meet.V2
         /// Gets details about a meeting space.
         /// 
         /// For an example, see [Get a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -332,7 +411,7 @@ namespace Google.Apps.Meet.V2
         /// Gets details about a meeting space.
         /// 
         /// For an example, see [Get a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -344,7 +423,7 @@ namespace Google.Apps.Meet.V2
         /// Gets details about a meeting space.
         /// 
         /// For an example, see [Get a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -356,7 +435,7 @@ namespace Google.Apps.Meet.V2
         /// Gets details about a meeting space.
         /// 
         /// For an example, see [Get a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
@@ -377,7 +456,7 @@ namespace Google.Apps.Meet.V2
         /// Meet](https://support.google.com/meet/answer/10710509).
         /// 
         /// For more information, see [How Meet identifies a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -391,7 +470,7 @@ namespace Google.Apps.Meet.V2
         /// Gets details about a meeting space.
         /// 
         /// For an example, see [Get a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
@@ -412,7 +491,7 @@ namespace Google.Apps.Meet.V2
         /// Meet](https://support.google.com/meet/answer/10710509).
         /// 
         /// For more information, see [How Meet identifies a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -426,7 +505,7 @@ namespace Google.Apps.Meet.V2
         /// Gets details about a meeting space.
         /// 
         /// For an example, see [Get a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
@@ -447,7 +526,7 @@ namespace Google.Apps.Meet.V2
         /// Meet](https://support.google.com/meet/answer/10710509).
         /// 
         /// For more information, see [How Meet identifies a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -458,7 +537,7 @@ namespace Google.Apps.Meet.V2
         /// Gets details about a meeting space.
         /// 
         /// For an example, see [Get a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
@@ -479,7 +558,7 @@ namespace Google.Apps.Meet.V2
         /// Meet](https://support.google.com/meet/answer/10710509).
         /// 
         /// For more information, see [How Meet identifies a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -493,7 +572,7 @@ namespace Google.Apps.Meet.V2
         /// Gets details about a meeting space.
         /// 
         /// For an example, see [Get a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
@@ -514,7 +593,7 @@ namespace Google.Apps.Meet.V2
         /// Meet](https://support.google.com/meet/answer/10710509).
         /// 
         /// For more information, see [How Meet identifies a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -528,7 +607,7 @@ namespace Google.Apps.Meet.V2
         /// Gets details about a meeting space.
         /// 
         /// For an example, see [Get a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
@@ -549,7 +628,7 @@ namespace Google.Apps.Meet.V2
         /// Meet](https://support.google.com/meet/answer/10710509).
         /// 
         /// For more information, see [How Meet identifies a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -560,7 +639,7 @@ namespace Google.Apps.Meet.V2
         /// Updates details about a meeting space.
         /// 
         /// For an example, see [Update a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -572,7 +651,7 @@ namespace Google.Apps.Meet.V2
         /// Updates details about a meeting space.
         /// 
         /// For an example, see [Update a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -584,7 +663,7 @@ namespace Google.Apps.Meet.V2
         /// Updates details about a meeting space.
         /// 
         /// For an example, see [Update a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -596,7 +675,7 @@ namespace Google.Apps.Meet.V2
         /// Updates details about a meeting space.
         /// 
         /// For an example, see [Update a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="space">
         /// Required. Space to be updated.
@@ -622,7 +701,7 @@ namespace Google.Apps.Meet.V2
         /// Updates details about a meeting space.
         /// 
         /// For an example, see [Update a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="space">
         /// Required. Space to be updated.
@@ -648,7 +727,7 @@ namespace Google.Apps.Meet.V2
         /// Updates details about a meeting space.
         /// 
         /// For an example, see [Update a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="space">
         /// Required. Space to be updated.
@@ -670,7 +749,7 @@ namespace Google.Apps.Meet.V2
         /// Ends an active conference (if there's one).
         /// 
         /// For an example, see [End active
-        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+        /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -682,7 +761,7 @@ namespace Google.Apps.Meet.V2
         /// Ends an active conference (if there's one).
         /// 
         /// For an example, see [End active
-        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+        /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -694,7 +773,7 @@ namespace Google.Apps.Meet.V2
         /// Ends an active conference (if there's one).
         /// 
         /// For an example, see [End active
-        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+        /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -706,7 +785,7 @@ namespace Google.Apps.Meet.V2
         /// Ends an active conference (if there's one).
         /// 
         /// For an example, see [End active
-        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+        /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
@@ -717,7 +796,7 @@ namespace Google.Apps.Meet.V2
         /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
         /// 
         /// For more information, see [How Meet identifies a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -731,7 +810,7 @@ namespace Google.Apps.Meet.V2
         /// Ends an active conference (if there's one).
         /// 
         /// For an example, see [End active
-        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+        /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
@@ -742,7 +821,7 @@ namespace Google.Apps.Meet.V2
         /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
         /// 
         /// For more information, see [How Meet identifies a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -756,7 +835,7 @@ namespace Google.Apps.Meet.V2
         /// Ends an active conference (if there's one).
         /// 
         /// For an example, see [End active
-        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+        /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
@@ -767,7 +846,7 @@ namespace Google.Apps.Meet.V2
         /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
         /// 
         /// For more information, see [How Meet identifies a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -778,7 +857,7 @@ namespace Google.Apps.Meet.V2
         /// Ends an active conference (if there's one).
         /// 
         /// For an example, see [End active
-        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+        /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
@@ -789,7 +868,7 @@ namespace Google.Apps.Meet.V2
         /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
         /// 
         /// For more information, see [How Meet identifies a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -803,7 +882,7 @@ namespace Google.Apps.Meet.V2
         /// Ends an active conference (if there's one).
         /// 
         /// For an example, see [End active
-        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+        /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
@@ -814,7 +893,7 @@ namespace Google.Apps.Meet.V2
         /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
         /// 
         /// For more information, see [How Meet identifies a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -828,7 +907,7 @@ namespace Google.Apps.Meet.V2
         /// Ends an active conference (if there's one).
         /// 
         /// For an example, see [End active
-        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+        /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
@@ -839,12 +918,747 @@ namespace Google.Apps.Meet.V2
         /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
         /// 
         /// For more information, see [How Meet identifies a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task EndActiveConferenceAsync(SpaceName name, st::CancellationToken cancellationToken) =>
             EndActiveConferenceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Member CreateMember(CreateMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> CreateMemberAsync(CreateMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> CreateMemberAsync(CreateMemberRequest request, st::CancellationToken cancellationToken) =>
+            CreateMemberAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: spaces/{space}
+        /// </param>
+        /// <param name="member">
+        /// Required. The member to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Member CreateMember(string parent, Member member, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMember(new CreateMemberRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Member = gax::GaxPreconditions.CheckNotNull(member, nameof(member)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: spaces/{space}
+        /// </param>
+        /// <param name="member">
+        /// Required. The member to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> CreateMemberAsync(string parent, Member member, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMemberAsync(new CreateMemberRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Member = gax::GaxPreconditions.CheckNotNull(member, nameof(member)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: spaces/{space}
+        /// </param>
+        /// <param name="member">
+        /// Required. The member to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> CreateMemberAsync(string parent, Member member, st::CancellationToken cancellationToken) =>
+            CreateMemberAsync(parent, member, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: spaces/{space}
+        /// </param>
+        /// <param name="member">
+        /// Required. The member to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Member CreateMember(SpaceName parent, Member member, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMember(new CreateMemberRequest
+            {
+                ParentAsSpaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Member = gax::GaxPreconditions.CheckNotNull(member, nameof(member)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: spaces/{space}
+        /// </param>
+        /// <param name="member">
+        /// Required. The member to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> CreateMemberAsync(SpaceName parent, Member member, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMemberAsync(new CreateMemberRequest
+            {
+                ParentAsSpaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Member = gax::GaxPreconditions.CheckNotNull(member, nameof(member)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: spaces/{space}
+        /// </param>
+        /// <param name="member">
+        /// Required. The member to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> CreateMemberAsync(SpaceName parent, Member member, st::CancellationToken cancellationToken) =>
+            CreateMemberAsync(parent, member, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Member GetMember(GetMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> GetMemberAsync(GetMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> GetMemberAsync(GetMemberRequest request, st::CancellationToken cancellationToken) =>
+            GetMemberAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: “spaces/{space}/members/{member}”
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Member GetMember(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMember(new GetMemberRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: “spaces/{space}/members/{member}”
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> GetMemberAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMemberAsync(new GetMemberRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: “spaces/{space}/members/{member}”
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> GetMemberAsync(string name, st::CancellationToken cancellationToken) =>
+            GetMemberAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: “spaces/{space}/members/{member}”
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Member GetMember(MemberName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMember(new GetMemberRequest
+            {
+                MemberName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: “spaces/{space}/members/{member}”
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> GetMemberAsync(MemberName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMemberAsync(new GetMemberRequest
+            {
+                MemberName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: “spaces/{space}/members/{member}”
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> GetMemberAsync(MemberName name, st::CancellationToken cancellationToken) =>
+            GetMemberAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists members.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Member"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMembersResponse, Member> ListMembers(ListMembersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists members.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Member"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMembersResponse, Member> ListMembersAsync(ListMembersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists members.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: spaces/{space}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Member"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMembersResponse, Member> ListMembers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMembersRequest request = new ListMembersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMembers(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists members.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: spaces/{space}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Member"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMembersResponse, Member> ListMembersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMembersRequest request = new ListMembersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMembersAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists members.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: spaces/{space}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Member"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMembersResponse, Member> ListMembers(SpaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMembersRequest request = new ListMembersRequest
+            {
+                ParentAsSpaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMembers(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists members.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: spaces/{space}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Member"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMembersResponse, Member> ListMembersAsync(SpaceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMembersRequest request = new ListMembersRequest
+            {
+                ParentAsSpaceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMembersAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the member who was previously assigned roles in the space.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteMember(DeleteMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the member who was previously assigned roles in the space.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMemberAsync(DeleteMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the member who was previously assigned roles in the space.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMemberAsync(DeleteMemberRequest request, st::CancellationToken cancellationToken) =>
+            DeleteMemberAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the member who was previously assigned roles in the space.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: “spaces/{space}/members/{member}”
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteMember(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMember(new DeleteMemberRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the member who was previously assigned roles in the space.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: “spaces/{space}/members/{member}”
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMemberAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMemberAsync(new DeleteMemberRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the member who was previously assigned roles in the space.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: “spaces/{space}/members/{member}”
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMemberAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteMemberAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the member who was previously assigned roles in the space.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: “spaces/{space}/members/{member}”
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteMember(MemberName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMember(new DeleteMemberRequest
+            {
+                MemberName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the member who was previously assigned roles in the space.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: “spaces/{space}/members/{member}”
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMemberAsync(MemberName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMemberAsync(new DeleteMemberRequest
+            {
+                MemberName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the member who was previously assigned roles in the space.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: “spaces/{space}/members/{member}”
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMemberAsync(MemberName name, st::CancellationToken cancellationToken) =>
+            DeleteMemberAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a member.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Member UpdateMember(UpdateMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a member.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> UpdateMemberAsync(UpdateMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a member.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> UpdateMemberAsync(UpdateMemberRequest request, st::CancellationToken cancellationToken) =>
+            UpdateMemberAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a member.
+        /// </summary>
+        /// <param name="member">
+        /// Required. The Member to update.
+        /// Format: spaces/{space}/members/{member}
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask used to specify the fields to be updated in the
+        /// member. If update_mask isn't provided(not set, set with empty paths, or
+        /// only has "" as paths), it defaults to update all fields provided with
+        /// values in the request. Using "*" as update_mask will update all fields,
+        /// including deleting fields not set in the request. In case of BatchUpdate,
+        /// it must be absent or the same as the update_mask in
+        /// BatchUpdateMembersRequest when UpdateMemberRequest is built as a child
+        /// request of BatchUpdateMembersRequest.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Member UpdateMember(Member member, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMember(new UpdateMemberRequest
+            {
+                Member = gax::GaxPreconditions.CheckNotNull(member, nameof(member)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a member.
+        /// </summary>
+        /// <param name="member">
+        /// Required. The Member to update.
+        /// Format: spaces/{space}/members/{member}
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask used to specify the fields to be updated in the
+        /// member. If update_mask isn't provided(not set, set with empty paths, or
+        /// only has "" as paths), it defaults to update all fields provided with
+        /// values in the request. Using "*" as update_mask will update all fields,
+        /// including deleting fields not set in the request. In case of BatchUpdate,
+        /// it must be absent or the same as the update_mask in
+        /// BatchUpdateMembersRequest when UpdateMemberRequest is built as a child
+        /// request of BatchUpdateMembersRequest.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> UpdateMemberAsync(Member member, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMemberAsync(new UpdateMemberRequest
+            {
+                Member = gax::GaxPreconditions.CheckNotNull(member, nameof(member)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a member.
+        /// </summary>
+        /// <param name="member">
+        /// Required. The Member to update.
+        /// Format: spaces/{space}/members/{member}
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask used to specify the fields to be updated in the
+        /// member. If update_mask isn't provided(not set, set with empty paths, or
+        /// only has "" as paths), it defaults to update all fields provided with
+        /// values in the request. Using "*" as update_mask will update all fields,
+        /// including deleting fields not set in the request. In case of BatchUpdate,
+        /// it must be absent or the same as the update_mask in
+        /// BatchUpdateMembersRequest when UpdateMemberRequest is built as a child
+        /// request of BatchUpdateMembersRequest.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Member> UpdateMemberAsync(Member member, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateMemberAsync(member, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates members of one space within a batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateMembersResponse BatchUpdateMembers(BatchUpdateMembersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates members of one space within a batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateMembersResponse> BatchUpdateMembersAsync(BatchUpdateMembersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates members of one space within a batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateMembersResponse> BatchUpdateMembersAsync(BatchUpdateMembersRequest request, st::CancellationToken cancellationToken) =>
+            BatchUpdateMembersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>SpacesService client wrapper implementation, for convenient use.</summary>
@@ -860,6 +1674,18 @@ namespace Google.Apps.Meet.V2
         private readonly gaxgrpc::ApiCall<UpdateSpaceRequest, Space> _callUpdateSpace;
 
         private readonly gaxgrpc::ApiCall<EndActiveConferenceRequest, wkt::Empty> _callEndActiveConference;
+
+        private readonly gaxgrpc::ApiCall<CreateMemberRequest, Member> _callCreateMember;
+
+        private readonly gaxgrpc::ApiCall<GetMemberRequest, Member> _callGetMember;
+
+        private readonly gaxgrpc::ApiCall<ListMembersRequest, ListMembersResponse> _callListMembers;
+
+        private readonly gaxgrpc::ApiCall<DeleteMemberRequest, wkt::Empty> _callDeleteMember;
+
+        private readonly gaxgrpc::ApiCall<UpdateMemberRequest, Member> _callUpdateMember;
+
+        private readonly gaxgrpc::ApiCall<BatchUpdateMembersRequest, BatchUpdateMembersResponse> _callBatchUpdateMembers;
 
         /// <summary>
         /// Constructs a client wrapper for the SpacesService service, with the specified gRPC client and settings.
@@ -888,6 +1714,24 @@ namespace Google.Apps.Meet.V2
             _callEndActiveConference = clientHelper.BuildApiCall<EndActiveConferenceRequest, wkt::Empty>("EndActiveConference", grpcClient.EndActiveConferenceAsync, grpcClient.EndActiveConference, effectiveSettings.EndActiveConferenceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callEndActiveConference);
             Modify_EndActiveConferenceApiCall(ref _callEndActiveConference);
+            _callCreateMember = clientHelper.BuildApiCall<CreateMemberRequest, Member>("CreateMember", grpcClient.CreateMemberAsync, grpcClient.CreateMember, effectiveSettings.CreateMemberSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateMember);
+            Modify_CreateMemberApiCall(ref _callCreateMember);
+            _callGetMember = clientHelper.BuildApiCall<GetMemberRequest, Member>("GetMember", grpcClient.GetMemberAsync, grpcClient.GetMember, effectiveSettings.GetMemberSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetMember);
+            Modify_GetMemberApiCall(ref _callGetMember);
+            _callListMembers = clientHelper.BuildApiCall<ListMembersRequest, ListMembersResponse>("ListMembers", grpcClient.ListMembersAsync, grpcClient.ListMembers, effectiveSettings.ListMembersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListMembers);
+            Modify_ListMembersApiCall(ref _callListMembers);
+            _callDeleteMember = clientHelper.BuildApiCall<DeleteMemberRequest, wkt::Empty>("DeleteMember", grpcClient.DeleteMemberAsync, grpcClient.DeleteMember, effectiveSettings.DeleteMemberSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteMember);
+            Modify_DeleteMemberApiCall(ref _callDeleteMember);
+            _callUpdateMember = clientHelper.BuildApiCall<UpdateMemberRequest, Member>("UpdateMember", grpcClient.UpdateMemberAsync, grpcClient.UpdateMember, effectiveSettings.UpdateMemberSettings).WithGoogleRequestParam("member.name", request => request.Member?.Name);
+            Modify_ApiCall(ref _callUpdateMember);
+            Modify_UpdateMemberApiCall(ref _callUpdateMember);
+            _callBatchUpdateMembers = clientHelper.BuildApiCall<BatchUpdateMembersRequest, BatchUpdateMembersResponse>("BatchUpdateMembers", grpcClient.BatchUpdateMembersAsync, grpcClient.BatchUpdateMembers, effectiveSettings.BatchUpdateMembersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchUpdateMembers);
+            Modify_BatchUpdateMembersApiCall(ref _callBatchUpdateMembers);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -901,6 +1745,18 @@ namespace Google.Apps.Meet.V2
 
         partial void Modify_EndActiveConferenceApiCall(ref gaxgrpc::ApiCall<EndActiveConferenceRequest, wkt::Empty> call);
 
+        partial void Modify_CreateMemberApiCall(ref gaxgrpc::ApiCall<CreateMemberRequest, Member> call);
+
+        partial void Modify_GetMemberApiCall(ref gaxgrpc::ApiCall<GetMemberRequest, Member> call);
+
+        partial void Modify_ListMembersApiCall(ref gaxgrpc::ApiCall<ListMembersRequest, ListMembersResponse> call);
+
+        partial void Modify_DeleteMemberApiCall(ref gaxgrpc::ApiCall<DeleteMemberRequest, wkt::Empty> call);
+
+        partial void Modify_UpdateMemberApiCall(ref gaxgrpc::ApiCall<UpdateMemberRequest, Member> call);
+
+        partial void Modify_BatchUpdateMembersApiCall(ref gaxgrpc::ApiCall<BatchUpdateMembersRequest, BatchUpdateMembersResponse> call);
+
         partial void OnConstruction(SpacesService.SpacesServiceClient grpcClient, SpacesServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC SpacesService client</summary>
@@ -913,6 +1769,18 @@ namespace Google.Apps.Meet.V2
         partial void Modify_UpdateSpaceRequest(ref UpdateSpaceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_EndActiveConferenceRequest(ref EndActiveConferenceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateMemberRequest(ref CreateMemberRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetMemberRequest(ref GetMemberRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListMembersRequest(ref ListMembersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteMemberRequest(ref DeleteMemberRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateMemberRequest(ref UpdateMemberRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchUpdateMembersRequest(ref BatchUpdateMembersRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a space.
@@ -942,7 +1810,7 @@ namespace Google.Apps.Meet.V2
         /// Gets details about a meeting space.
         /// 
         /// For an example, see [Get a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -957,7 +1825,7 @@ namespace Google.Apps.Meet.V2
         /// Gets details about a meeting space.
         /// 
         /// For an example, see [Get a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -972,7 +1840,7 @@ namespace Google.Apps.Meet.V2
         /// Updates details about a meeting space.
         /// 
         /// For an example, see [Update a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -987,7 +1855,7 @@ namespace Google.Apps.Meet.V2
         /// Updates details about a meeting space.
         /// 
         /// For an example, see [Update a meeting
-        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
+        /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1002,7 +1870,7 @@ namespace Google.Apps.Meet.V2
         /// Ends an active conference (if there's one).
         /// 
         /// For an example, see [End active
-        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+        /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1017,7 +1885,7 @@ namespace Google.Apps.Meet.V2
         /// Ends an active conference (if there's one).
         /// 
         /// For an example, see [End active
-        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+        /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1027,5 +1895,191 @@ namespace Google.Apps.Meet.V2
             Modify_EndActiveConferenceRequest(ref request, ref callSettings);
             return _callEndActiveConference.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Member CreateMember(CreateMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateMemberRequest(ref request, ref callSettings);
+            return _callCreateMember.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Member> CreateMemberAsync(CreateMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateMemberRequest(ref request, ref callSettings);
+            return _callCreateMember.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Member GetMember(GetMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMemberRequest(ref request, ref callSettings);
+            return _callGetMember.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a member.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted, this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Member> GetMemberAsync(GetMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMemberRequest(ref request, ref callSettings);
+            return _callGetMember.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists members.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Member"/> resources.</returns>
+        public override gax::PagedEnumerable<ListMembersResponse, Member> ListMembers(ListMembersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMembersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMembersRequest, ListMembersResponse, Member>(_callListMembers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists members.
+        /// 
+        /// This API supports the `fields` parameter in
+        /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+        /// When the `fields` parameter is omitted this API response will default to
+        /// "name,email,role".
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Member"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListMembersResponse, Member> ListMembersAsync(ListMembersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMembersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMembersRequest, ListMembersResponse, Member>(_callListMembers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the member who was previously assigned roles in the space.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteMember(DeleteMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteMemberRequest(ref request, ref callSettings);
+            _callDeleteMember.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the member who was previously assigned roles in the space.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteMemberAsync(DeleteMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteMemberRequest(ref request, ref callSettings);
+            return _callDeleteMember.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a member.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Member UpdateMember(UpdateMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateMemberRequest(ref request, ref callSettings);
+            return _callUpdateMember.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a member.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Member> UpdateMemberAsync(UpdateMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateMemberRequest(ref request, ref callSettings);
+            return _callUpdateMember.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates members of one space within a batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchUpdateMembersResponse BatchUpdateMembers(BatchUpdateMembersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateMembersRequest(ref request, ref callSettings);
+            return _callBatchUpdateMembers.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates members of one space within a batch.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchUpdateMembersResponse> BatchUpdateMembersAsync(BatchUpdateMembersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateMembersRequest(ref request, ref callSettings);
+            return _callBatchUpdateMembers.Async(request, callSettings);
+        }
+    }
+
+    public partial class ListMembersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListMembersResponse : gaxgrpc::IPageResponse<Member>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Member> GetEnumerator() => Members.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

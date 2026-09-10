@@ -3,7 +3,7 @@
 //     source: google/apps/meet/v2/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -75,6 +75,24 @@ namespace Google.Apps.Meet.V2 {
     static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.EndActiveConferenceRequest> __Marshaller_google_apps_meet_v2_EndActiveConferenceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.EndActiveConferenceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.CreateMemberRequest> __Marshaller_google_apps_meet_v2_CreateMemberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.CreateMemberRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.Member> __Marshaller_google_apps_meet_v2_Member = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.Member.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.GetMemberRequest> __Marshaller_google_apps_meet_v2_GetMemberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.GetMemberRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.ListMembersRequest> __Marshaller_google_apps_meet_v2_ListMembersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.ListMembersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.ListMembersResponse> __Marshaller_google_apps_meet_v2_ListMembersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.ListMembersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.DeleteMemberRequest> __Marshaller_google_apps_meet_v2_DeleteMemberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.DeleteMemberRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.UpdateMemberRequest> __Marshaller_google_apps_meet_v2_UpdateMemberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.UpdateMemberRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.BatchUpdateMembersRequest> __Marshaller_google_apps_meet_v2_BatchUpdateMembersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.BatchUpdateMembersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.BatchUpdateMembersResponse> __Marshaller_google_apps_meet_v2_BatchUpdateMembersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.BatchUpdateMembersResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Apps.Meet.V2.CreateSpaceRequest, global::Google.Apps.Meet.V2.Space> __Method_CreateSpace = new grpc::Method<global::Google.Apps.Meet.V2.CreateSpaceRequest, global::Google.Apps.Meet.V2.Space>(
@@ -108,6 +126,54 @@ namespace Google.Apps.Meet.V2 {
         __Marshaller_google_apps_meet_v2_EndActiveConferenceRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Meet.V2.CreateMemberRequest, global::Google.Apps.Meet.V2.Member> __Method_CreateMember = new grpc::Method<global::Google.Apps.Meet.V2.CreateMemberRequest, global::Google.Apps.Meet.V2.Member>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateMember",
+        __Marshaller_google_apps_meet_v2_CreateMemberRequest,
+        __Marshaller_google_apps_meet_v2_Member);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Meet.V2.GetMemberRequest, global::Google.Apps.Meet.V2.Member> __Method_GetMember = new grpc::Method<global::Google.Apps.Meet.V2.GetMemberRequest, global::Google.Apps.Meet.V2.Member>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMember",
+        __Marshaller_google_apps_meet_v2_GetMemberRequest,
+        __Marshaller_google_apps_meet_v2_Member);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Meet.V2.ListMembersRequest, global::Google.Apps.Meet.V2.ListMembersResponse> __Method_ListMembers = new grpc::Method<global::Google.Apps.Meet.V2.ListMembersRequest, global::Google.Apps.Meet.V2.ListMembersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListMembers",
+        __Marshaller_google_apps_meet_v2_ListMembersRequest,
+        __Marshaller_google_apps_meet_v2_ListMembersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Meet.V2.DeleteMemberRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteMember = new grpc::Method<global::Google.Apps.Meet.V2.DeleteMemberRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteMember",
+        __Marshaller_google_apps_meet_v2_DeleteMemberRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Meet.V2.UpdateMemberRequest, global::Google.Apps.Meet.V2.Member> __Method_UpdateMember = new grpc::Method<global::Google.Apps.Meet.V2.UpdateMemberRequest, global::Google.Apps.Meet.V2.Member>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateMember",
+        __Marshaller_google_apps_meet_v2_UpdateMemberRequest,
+        __Marshaller_google_apps_meet_v2_Member);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Meet.V2.BatchUpdateMembersRequest, global::Google.Apps.Meet.V2.BatchUpdateMembersResponse> __Method_BatchUpdateMembers = new grpc::Method<global::Google.Apps.Meet.V2.BatchUpdateMembersRequest, global::Google.Apps.Meet.V2.BatchUpdateMembersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdateMembers",
+        __Marshaller_google_apps_meet_v2_BatchUpdateMembersRequest,
+        __Marshaller_google_apps_meet_v2_BatchUpdateMembersResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -134,7 +200,7 @@ namespace Google.Apps.Meet.V2 {
       /// Gets details about a meeting space.
       ///
       /// For an example, see [Get a meeting
-      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+      /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -149,7 +215,7 @@ namespace Google.Apps.Meet.V2 {
       /// Updates details about a meeting space.
       ///
       /// For an example, see [Update a meeting
-      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
+      /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -164,13 +230,100 @@ namespace Google.Apps.Meet.V2 {
       /// Ends an active conference (if there's one).
       ///
       /// For an example, see [End active
-      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+      /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> EndActiveConference(global::Google.Apps.Meet.V2.EndActiveConferenceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Meet.V2.Member> CreateMember(global::Google.Apps.Meet.V2.CreateMemberRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Meet.V2.Member> GetMember(global::Google.Apps.Meet.V2.GetMemberRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists members.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Meet.V2.ListMembersResponse> ListMembers(global::Google.Apps.Meet.V2.ListMembersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the member who was previously assigned roles in the space.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMember(global::Google.Apps.Meet.V2.DeleteMemberRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a member.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Meet.V2.Member> UpdateMember(global::Google.Apps.Meet.V2.UpdateMemberRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates members of one space within a batch.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Meet.V2.BatchUpdateMembersResponse> BatchUpdateMembers(global::Google.Apps.Meet.V2.BatchUpdateMembersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -256,7 +409,7 @@ namespace Google.Apps.Meet.V2 {
       /// Gets details about a meeting space.
       ///
       /// For an example, see [Get a meeting
-      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+      /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -272,7 +425,7 @@ namespace Google.Apps.Meet.V2 {
       /// Gets details about a meeting space.
       ///
       /// For an example, see [Get a meeting
-      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+      /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -286,7 +439,7 @@ namespace Google.Apps.Meet.V2 {
       /// Gets details about a meeting space.
       ///
       /// For an example, see [Get a meeting
-      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+      /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -302,7 +455,7 @@ namespace Google.Apps.Meet.V2 {
       /// Gets details about a meeting space.
       ///
       /// For an example, see [Get a meeting
-      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
+      /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -316,7 +469,7 @@ namespace Google.Apps.Meet.V2 {
       /// Updates details about a meeting space.
       ///
       /// For an example, see [Update a meeting
-      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
+      /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -332,7 +485,7 @@ namespace Google.Apps.Meet.V2 {
       /// Updates details about a meeting space.
       ///
       /// For an example, see [Update a meeting
-      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
+      /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -346,7 +499,7 @@ namespace Google.Apps.Meet.V2 {
       /// Updates details about a meeting space.
       ///
       /// For an example, see [Update a meeting
-      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
+      /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -362,7 +515,7 @@ namespace Google.Apps.Meet.V2 {
       /// Updates details about a meeting space.
       ///
       /// For an example, see [Update a meeting
-      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
+      /// space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -376,7 +529,7 @@ namespace Google.Apps.Meet.V2 {
       /// Ends an active conference (if there's one).
       ///
       /// For an example, see [End active
-      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+      /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -392,7 +545,7 @@ namespace Google.Apps.Meet.V2 {
       /// Ends an active conference (if there's one).
       ///
       /// For an example, see [End active
-      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+      /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -406,7 +559,7 @@ namespace Google.Apps.Meet.V2 {
       /// Ends an active conference (if there's one).
       ///
       /// For an example, see [End active
-      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+      /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -422,7 +575,7 @@ namespace Google.Apps.Meet.V2 {
       /// Ends an active conference (if there's one).
       ///
       /// For an example, see [End active
-      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
+      /// conference](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -431,6 +584,354 @@ namespace Google.Apps.Meet.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> EndActiveConferenceAsync(global::Google.Apps.Meet.V2.EndActiveConferenceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_EndActiveConference, null, options, request);
+      }
+      /// <summary>
+      /// Creates a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2.Member CreateMember(global::Google.Apps.Meet.V2.CreateMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMember(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2.Member CreateMember(global::Google.Apps.Meet.V2.CreateMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateMember, null, options, request);
+      }
+      /// <summary>
+      /// Creates a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.Member> CreateMemberAsync(global::Google.Apps.Meet.V2.CreateMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMemberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.Member> CreateMemberAsync(global::Google.Apps.Meet.V2.CreateMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateMember, null, options, request);
+      }
+      /// <summary>
+      /// Gets a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2.Member GetMember(global::Google.Apps.Meet.V2.GetMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMember(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2.Member GetMember(global::Google.Apps.Meet.V2.GetMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMember, null, options, request);
+      }
+      /// <summary>
+      /// Gets a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.Member> GetMemberAsync(global::Google.Apps.Meet.V2.GetMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMemberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.Member> GetMemberAsync(global::Google.Apps.Meet.V2.GetMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMember, null, options, request);
+      }
+      /// <summary>
+      /// Lists members.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2.ListMembersResponse ListMembers(global::Google.Apps.Meet.V2.ListMembersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMembers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists members.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2.ListMembersResponse ListMembers(global::Google.Apps.Meet.V2.ListMembersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListMembers, null, options, request);
+      }
+      /// <summary>
+      /// Lists members.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.ListMembersResponse> ListMembersAsync(global::Google.Apps.Meet.V2.ListMembersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMembersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists members.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted this API response will default to
+      /// "name,email,role".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.ListMembersResponse> ListMembersAsync(global::Google.Apps.Meet.V2.ListMembersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListMembers, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the member who was previously assigned roles in the space.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMember(global::Google.Apps.Meet.V2.DeleteMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMember(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the member who was previously assigned roles in the space.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMember(global::Google.Apps.Meet.V2.DeleteMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteMember, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the member who was previously assigned roles in the space.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMemberAsync(global::Google.Apps.Meet.V2.DeleteMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMemberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the member who was previously assigned roles in the space.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMemberAsync(global::Google.Apps.Meet.V2.DeleteMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteMember, null, options, request);
+      }
+      /// <summary>
+      /// Updates a member.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2.Member UpdateMember(global::Google.Apps.Meet.V2.UpdateMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateMember(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a member.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2.Member UpdateMember(global::Google.Apps.Meet.V2.UpdateMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateMember, null, options, request);
+      }
+      /// <summary>
+      /// Updates a member.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.Member> UpdateMemberAsync(global::Google.Apps.Meet.V2.UpdateMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateMemberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a member.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.Member> UpdateMemberAsync(global::Google.Apps.Meet.V2.UpdateMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateMember, null, options, request);
+      }
+      /// <summary>
+      /// Updates members of one space within a batch.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2.BatchUpdateMembersResponse BatchUpdateMembers(global::Google.Apps.Meet.V2.BatchUpdateMembersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateMembers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates members of one space within a batch.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2.BatchUpdateMembersResponse BatchUpdateMembers(global::Google.Apps.Meet.V2.BatchUpdateMembersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateMembers, null, options, request);
+      }
+      /// <summary>
+      /// Updates members of one space within a batch.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.BatchUpdateMembersResponse> BatchUpdateMembersAsync(global::Google.Apps.Meet.V2.BatchUpdateMembersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateMembersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates members of one space within a batch.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.BatchUpdateMembersResponse> BatchUpdateMembersAsync(global::Google.Apps.Meet.V2.BatchUpdateMembersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateMembers, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -449,7 +950,13 @@ namespace Google.Apps.Meet.V2 {
           .AddMethod(__Method_CreateSpace, serviceImpl.CreateSpace)
           .AddMethod(__Method_GetSpace, serviceImpl.GetSpace)
           .AddMethod(__Method_UpdateSpace, serviceImpl.UpdateSpace)
-          .AddMethod(__Method_EndActiveConference, serviceImpl.EndActiveConference).Build();
+          .AddMethod(__Method_EndActiveConference, serviceImpl.EndActiveConference)
+          .AddMethod(__Method_CreateMember, serviceImpl.CreateMember)
+          .AddMethod(__Method_GetMember, serviceImpl.GetMember)
+          .AddMethod(__Method_ListMembers, serviceImpl.ListMembers)
+          .AddMethod(__Method_DeleteMember, serviceImpl.DeleteMember)
+          .AddMethod(__Method_UpdateMember, serviceImpl.UpdateMember)
+          .AddMethod(__Method_BatchUpdateMembers, serviceImpl.BatchUpdateMembers).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -463,6 +970,12 @@ namespace Google.Apps.Meet.V2 {
       serviceBinder.AddMethod(__Method_GetSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2.GetSpaceRequest, global::Google.Apps.Meet.V2.Space>(serviceImpl.GetSpace));
       serviceBinder.AddMethod(__Method_UpdateSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2.UpdateSpaceRequest, global::Google.Apps.Meet.V2.Space>(serviceImpl.UpdateSpace));
       serviceBinder.AddMethod(__Method_EndActiveConference, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2.EndActiveConferenceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.EndActiveConference));
+      serviceBinder.AddMethod(__Method_CreateMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2.CreateMemberRequest, global::Google.Apps.Meet.V2.Member>(serviceImpl.CreateMember));
+      serviceBinder.AddMethod(__Method_GetMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2.GetMemberRequest, global::Google.Apps.Meet.V2.Member>(serviceImpl.GetMember));
+      serviceBinder.AddMethod(__Method_ListMembers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2.ListMembersRequest, global::Google.Apps.Meet.V2.ListMembersResponse>(serviceImpl.ListMembers));
+      serviceBinder.AddMethod(__Method_DeleteMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2.DeleteMemberRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteMember));
+      serviceBinder.AddMethod(__Method_UpdateMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2.UpdateMemberRequest, global::Google.Apps.Meet.V2.Member>(serviceImpl.UpdateMember));
+      serviceBinder.AddMethod(__Method_BatchUpdateMembers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2.BatchUpdateMembersRequest, global::Google.Apps.Meet.V2.BatchUpdateMembersResponse>(serviceImpl.BatchUpdateMembers));
     }
 
   }
@@ -554,6 +1067,14 @@ namespace Google.Apps.Meet.V2 {
     static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.ListTranscriptEntriesRequest> __Marshaller_google_apps_meet_v2_ListTranscriptEntriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.ListTranscriptEntriesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.ListTranscriptEntriesResponse> __Marshaller_google_apps_meet_v2_ListTranscriptEntriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.ListTranscriptEntriesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.GetSmartNoteRequest> __Marshaller_google_apps_meet_v2_GetSmartNoteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.GetSmartNoteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.SmartNote> __Marshaller_google_apps_meet_v2_SmartNote = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.SmartNote.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.ListSmartNotesRequest> __Marshaller_google_apps_meet_v2_ListSmartNotesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.ListSmartNotesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2.ListSmartNotesResponse> __Marshaller_google_apps_meet_v2_ListSmartNotesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2.ListSmartNotesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Apps.Meet.V2.GetConferenceRecordRequest, global::Google.Apps.Meet.V2.ConferenceRecord> __Method_GetConferenceRecord = new grpc::Method<global::Google.Apps.Meet.V2.GetConferenceRecordRequest, global::Google.Apps.Meet.V2.ConferenceRecord>(
@@ -650,6 +1171,22 @@ namespace Google.Apps.Meet.V2 {
         "ListTranscriptEntries",
         __Marshaller_google_apps_meet_v2_ListTranscriptEntriesRequest,
         __Marshaller_google_apps_meet_v2_ListTranscriptEntriesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Meet.V2.GetSmartNoteRequest, global::Google.Apps.Meet.V2.SmartNote> __Method_GetSmartNote = new grpc::Method<global::Google.Apps.Meet.V2.GetSmartNoteRequest, global::Google.Apps.Meet.V2.SmartNote>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSmartNote",
+        __Marshaller_google_apps_meet_v2_GetSmartNoteRequest,
+        __Marshaller_google_apps_meet_v2_SmartNote);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Meet.V2.ListSmartNotesRequest, global::Google.Apps.Meet.V2.ListSmartNotesResponse> __Method_ListSmartNotes = new grpc::Method<global::Google.Apps.Meet.V2.ListSmartNotesRequest, global::Google.Apps.Meet.V2.ListSmartNotesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSmartNotes",
+        __Marshaller_google_apps_meet_v2_ListSmartNotesRequest,
+        __Marshaller_google_apps_meet_v2_ListSmartNotesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -797,7 +1334,8 @@ namespace Google.Apps.Meet.V2 {
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
       /// match the transcription found in the Google Docs transcript file. This can
-      /// occur when the Google Docs transcript file is modified after generation.
+      /// occur when 1) we have interleaved speakers within milliseconds, or
+      /// 2) the Google Docs transcript file is modified after generation.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -814,13 +1352,39 @@ namespace Google.Apps.Meet.V2 {
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
       /// match the transcription found in the Google Docs transcript file. This can
-      /// occur when the Google Docs transcript file is modified after generation.
+      /// occur when 1) we have interleaved speakers within milliseconds, or
+      /// 2) the Google Docs transcript file is modified after generation.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Meet.V2.ListTranscriptEntriesResponse> ListTranscriptEntries(global::Google.Apps.Meet.V2.ListTranscriptEntriesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets smart notes by smart note ID.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Meet.V2.SmartNote> GetSmartNote(global::Google.Apps.Meet.V2.GetSmartNoteRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the set of smart notes from the conference record. By default,
+      /// ordered by start time and in ascending order.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Meet.V2.ListSmartNotesResponse> ListSmartNotes(global::Google.Apps.Meet.V2.ListSmartNotesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1383,7 +1947,8 @@ namespace Google.Apps.Meet.V2 {
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
       /// match the transcription found in the Google Docs transcript file. This can
-      /// occur when the Google Docs transcript file is modified after generation.
+      /// occur when 1) we have interleaved speakers within milliseconds, or
+      /// 2) the Google Docs transcript file is modified after generation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1400,7 +1965,8 @@ namespace Google.Apps.Meet.V2 {
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
       /// match the transcription found in the Google Docs transcript file. This can
-      /// occur when the Google Docs transcript file is modified after generation.
+      /// occur when 1) we have interleaved speakers within milliseconds, or
+      /// 2) the Google Docs transcript file is modified after generation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1415,7 +1981,8 @@ namespace Google.Apps.Meet.V2 {
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
       /// match the transcription found in the Google Docs transcript file. This can
-      /// occur when the Google Docs transcript file is modified after generation.
+      /// occur when 1) we have interleaved speakers within milliseconds, or
+      /// 2) the Google Docs transcript file is modified after generation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1432,7 +1999,8 @@ namespace Google.Apps.Meet.V2 {
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
       /// match the transcription found in the Google Docs transcript file. This can
-      /// occur when the Google Docs transcript file is modified after generation.
+      /// occur when 1) we have interleaved speakers within milliseconds, or
+      /// 2) the Google Docs transcript file is modified after generation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1448,7 +2016,8 @@ namespace Google.Apps.Meet.V2 {
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
       /// match the transcription found in the Google Docs transcript file. This can
-      /// occur when the Google Docs transcript file is modified after generation.
+      /// occur when 1) we have interleaved speakers within milliseconds, or
+      /// 2) the Google Docs transcript file is modified after generation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1466,7 +2035,8 @@ namespace Google.Apps.Meet.V2 {
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
       /// match the transcription found in the Google Docs transcript file. This can
-      /// occur when the Google Docs transcript file is modified after generation.
+      /// occur when 1) we have interleaved speakers within milliseconds, or
+      /// 2) the Google Docs transcript file is modified after generation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1482,7 +2052,8 @@ namespace Google.Apps.Meet.V2 {
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
       /// match the transcription found in the Google Docs transcript file. This can
-      /// occur when the Google Docs transcript file is modified after generation.
+      /// occur when 1) we have interleaved speakers within milliseconds, or
+      /// 2) the Google Docs transcript file is modified after generation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1500,7 +2071,8 @@ namespace Google.Apps.Meet.V2 {
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
       /// match the transcription found in the Google Docs transcript file. This can
-      /// occur when the Google Docs transcript file is modified after generation.
+      /// occur when 1) we have interleaved speakers within milliseconds, or
+      /// 2) the Google Docs transcript file is modified after generation.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1509,6 +2081,106 @@ namespace Google.Apps.Meet.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.ListTranscriptEntriesResponse> ListTranscriptEntriesAsync(global::Google.Apps.Meet.V2.ListTranscriptEntriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTranscriptEntries, null, options, request);
+      }
+      /// <summary>
+      /// Gets smart notes by smart note ID.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2.SmartNote GetSmartNote(global::Google.Apps.Meet.V2.GetSmartNoteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSmartNote(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets smart notes by smart note ID.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2.SmartNote GetSmartNote(global::Google.Apps.Meet.V2.GetSmartNoteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSmartNote, null, options, request);
+      }
+      /// <summary>
+      /// Gets smart notes by smart note ID.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.SmartNote> GetSmartNoteAsync(global::Google.Apps.Meet.V2.GetSmartNoteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSmartNoteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets smart notes by smart note ID.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.SmartNote> GetSmartNoteAsync(global::Google.Apps.Meet.V2.GetSmartNoteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSmartNote, null, options, request);
+      }
+      /// <summary>
+      /// Lists the set of smart notes from the conference record. By default,
+      /// ordered by start time and in ascending order.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2.ListSmartNotesResponse ListSmartNotes(global::Google.Apps.Meet.V2.ListSmartNotesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSmartNotes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the set of smart notes from the conference record. By default,
+      /// ordered by start time and in ascending order.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2.ListSmartNotesResponse ListSmartNotes(global::Google.Apps.Meet.V2.ListSmartNotesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSmartNotes, null, options, request);
+      }
+      /// <summary>
+      /// Lists the set of smart notes from the conference record. By default,
+      /// ordered by start time and in ascending order.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.ListSmartNotesResponse> ListSmartNotesAsync(global::Google.Apps.Meet.V2.ListSmartNotesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSmartNotesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the set of smart notes from the conference record. By default,
+      /// ordered by start time and in ascending order.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2.ListSmartNotesResponse> ListSmartNotesAsync(global::Google.Apps.Meet.V2.ListSmartNotesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSmartNotes, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -1535,7 +2207,9 @@ namespace Google.Apps.Meet.V2 {
           .AddMethod(__Method_GetTranscript, serviceImpl.GetTranscript)
           .AddMethod(__Method_ListTranscripts, serviceImpl.ListTranscripts)
           .AddMethod(__Method_GetTranscriptEntry, serviceImpl.GetTranscriptEntry)
-          .AddMethod(__Method_ListTranscriptEntries, serviceImpl.ListTranscriptEntries).Build();
+          .AddMethod(__Method_ListTranscriptEntries, serviceImpl.ListTranscriptEntries)
+          .AddMethod(__Method_GetSmartNote, serviceImpl.GetSmartNote)
+          .AddMethod(__Method_ListSmartNotes, serviceImpl.ListSmartNotes).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1557,6 +2231,8 @@ namespace Google.Apps.Meet.V2 {
       serviceBinder.AddMethod(__Method_ListTranscripts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2.ListTranscriptsRequest, global::Google.Apps.Meet.V2.ListTranscriptsResponse>(serviceImpl.ListTranscripts));
       serviceBinder.AddMethod(__Method_GetTranscriptEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2.GetTranscriptEntryRequest, global::Google.Apps.Meet.V2.TranscriptEntry>(serviceImpl.GetTranscriptEntry));
       serviceBinder.AddMethod(__Method_ListTranscriptEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2.ListTranscriptEntriesRequest, global::Google.Apps.Meet.V2.ListTranscriptEntriesResponse>(serviceImpl.ListTranscriptEntries));
+      serviceBinder.AddMethod(__Method_GetSmartNote, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2.GetSmartNoteRequest, global::Google.Apps.Meet.V2.SmartNote>(serviceImpl.GetSmartNote));
+      serviceBinder.AddMethod(__Method_ListSmartNotes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2.ListSmartNotesRequest, global::Google.Apps.Meet.V2.ListSmartNotesResponse>(serviceImpl.ListSmartNotes));
     }
 
   }
