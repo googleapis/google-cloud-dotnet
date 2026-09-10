@@ -40109,7 +40109,7 @@ namespace Google.Cloud.VisionAI.V1 {
     private string corpus_ = "";
     /// <summary>
     /// Required. The parent corpus to search.
-    /// Format: `projects/{project_id}/locations/{location_id}/corpora/{corpus_id}'
+    /// Format: `projects/{project_id}/locations/{location_id}/corpora/{corpus_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -40695,7 +40695,7 @@ namespace Google.Cloud.VisionAI.V1 {
     /// <summary>
     /// Required. The index endpoint to search.
     /// Format:
-    /// `projects/{project_id}/locations/{location_id}/indexEndpoints/{index_endpoint_id}'
+    /// `projects/{project_id}/locations/{location_id}/indexEndpoints/{index_endpoint_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
