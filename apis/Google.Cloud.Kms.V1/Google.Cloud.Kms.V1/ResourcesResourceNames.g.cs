@@ -1738,6 +1738,19 @@ namespace Google.Cloud.Kms.V1
         }
     }
 
+    public partial class ExternalProtectionLevelOptions
+    {
+        /// <summary>
+        /// <see cref="EkmConnectionName"/>-typed view over the <see cref="EkmConnectionBackendOverride"/> resource name
+        /// property.
+        /// </summary>
+        public EkmConnectionName EkmConnectionBackendOverrideAsEkmConnectionName
+        {
+            get => string.IsNullOrEmpty(EkmConnectionBackendOverride) ? null : EkmConnectionName.Parse(EkmConnectionBackendOverride, allowUnparsed: true);
+            set => EkmConnectionBackendOverride = value?.ToString() ?? "";
+        }
+    }
+
     public partial class RetiredResource
     {
         /// <summary>
