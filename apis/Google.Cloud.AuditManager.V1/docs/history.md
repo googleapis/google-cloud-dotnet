@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.3.0, released 2026-09-11
+
+### New features
+
+- Add support for managing audit schedules in Audit Manager
+- Add `validate_only` field to GenerateAuditScopeReportRequest and EnrollResourceRequest
+
 ## Version 1.2.0, released 2026-08-17
 
 ### New features
