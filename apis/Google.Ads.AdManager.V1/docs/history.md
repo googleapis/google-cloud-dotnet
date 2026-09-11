@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta11, released 2026-09-11
+
+### New features
+
+- Added `PAYMENT_PROFILE_ID` and `PAYMENT_PROFILE_NAME` report dimensions
+- Added `AD_EXCHANGE_RENDER_RATE` report metric
+- Added create methods for `AudienceSegmentService`
+- Added `BreakTemplateService`
+
+### Documentation improvements
+
+- A comment for field `preview_url` in message `.google.ads.admanager.v1.AdReviewCenterAd` is changed
+
 ## Version 1.0.0-beta10, released 2026-08-31
 
 ### New features
