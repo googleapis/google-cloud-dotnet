@@ -1,5 +1,25 @@
 # Version history
 
+## Version 3.32.0, released 2026-09-11
+
+### New features
+
+- Update Compute Engine v1 API artifacts to revision 20260821
+- Add GetHealth RPC to ReservationSlots service
+- Add GetHealthOperationMetadata and GetHealthOperationMetadataHealthInfo message definitions
+- Add GetHealthReservationSlotRequest message definition
+- Add BMSAI confidential instance and compute types
+- Add SUSPEND_SAFE_FPR guest OS feature
+- Add self_link_with_id field to Interconnect
+- Add max_dynamic_path_bandwidth_gbps and max_fixed_path_bandwidth_gbps fields to InterconnectLocation
+- Add TargetStatus enum and target_status field to ManagedInstance
+- Add GCE_VM_IP_DEDICATED_BACKEND network endpoint type
+- Add ARP broadcast primary range options to Subnetwork
+
+### Documentation improvements
+
+- Update documentation in proto definitions
+
 ## Version 3.31.0, released 2026-08-31
 
 ### New features
