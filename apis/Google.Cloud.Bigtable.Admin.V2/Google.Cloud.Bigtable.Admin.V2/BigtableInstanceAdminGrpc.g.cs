@@ -98,6 +98,16 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest> __Marshaller_google_bigtable_admin_v2_DeleteClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerRequest> __Marshaller_google_bigtable_admin_v2_UpdateMemoryLayerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersRequest> __Marshaller_google_bigtable_admin_v2_ListMemoryLayersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse> __Marshaller_google_bigtable_admin_v2_ListMemoryLayersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetMemoryLayerRequest> __Marshaller_google_bigtable_admin_v2_GetMemoryLayerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.GetMemoryLayerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer> __Marshaller_google_bigtable_admin_v2_MemoryLayer = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest> __Marshaller_google_bigtable_admin_v2_CreateAppProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.AppProfile> __Marshaller_google_bigtable_admin_v2_AppProfile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser));
@@ -249,6 +259,30 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         "DeleteCluster",
         __Marshaller_google_bigtable_admin_v2_DeleteClusterRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerRequest, global::Google.LongRunning.Operation> __Method_UpdateMemoryLayer = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateMemoryLayer",
+        __Marshaller_google_bigtable_admin_v2_UpdateMemoryLayerRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersRequest, global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse> __Method_ListMemoryLayers = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersRequest, global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListMemoryLayers",
+        __Marshaller_google_bigtable_admin_v2_ListMemoryLayersRequest,
+        __Marshaller_google_bigtable_admin_v2_ListMemoryLayersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetMemoryLayerRequest, global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer> __Method_GetMemoryLayer = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetMemoryLayerRequest, global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMemoryLayer",
+        __Marshaller_google_bigtable_admin_v2_GetMemoryLayerRequest,
+        __Marshaller_google_bigtable_admin_v2_MemoryLayer);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile> __Method_CreateAppProfile = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile>(
@@ -582,6 +616,45 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCluster(global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the memory layer of a cluster.
+      ///
+      /// To enable the memory layer, set the memory_config.
+      /// To disable the memory layer, unset the memory_config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateMemoryLayer(global::Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists information about memory layers.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse> ListMemoryLayers(global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets information about the memory layer of a cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer> GetMemoryLayer(global::Google.Cloud.Bigtable.Admin.V2.GetMemoryLayerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1543,6 +1616,162 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCluster, null, options, request);
       }
       /// <summary>
+      /// Updates the memory layer of a cluster.
+      ///
+      /// To enable the memory layer, set the memory_config.
+      /// To disable the memory layer, unset the memory_config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateMemoryLayer(global::Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateMemoryLayer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the memory layer of a cluster.
+      ///
+      /// To enable the memory layer, set the memory_config.
+      /// To disable the memory layer, unset the memory_config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateMemoryLayer(global::Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateMemoryLayer, null, options, request);
+      }
+      /// <summary>
+      /// Updates the memory layer of a cluster.
+      ///
+      /// To enable the memory layer, set the memory_config.
+      /// To disable the memory layer, unset the memory_config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateMemoryLayerAsync(global::Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateMemoryLayerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the memory layer of a cluster.
+      ///
+      /// To enable the memory layer, set the memory_config.
+      /// To disable the memory layer, unset the memory_config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateMemoryLayerAsync(global::Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateMemoryLayer, null, options, request);
+      }
+      /// <summary>
+      /// Lists information about memory layers.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse ListMemoryLayers(global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMemoryLayers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists information about memory layers.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse ListMemoryLayers(global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListMemoryLayers, null, options, request);
+      }
+      /// <summary>
+      /// Lists information about memory layers.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse> ListMemoryLayersAsync(global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMemoryLayersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists information about memory layers.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse> ListMemoryLayersAsync(global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListMemoryLayers, null, options, request);
+      }
+      /// <summary>
+      /// Gets information about the memory layer of a cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer GetMemoryLayer(global::Google.Cloud.Bigtable.Admin.V2.GetMemoryLayerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMemoryLayer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about the memory layer of a cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer GetMemoryLayer(global::Google.Cloud.Bigtable.Admin.V2.GetMemoryLayerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMemoryLayer, null, options, request);
+      }
+      /// <summary>
+      /// Gets information about the memory layer of a cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer> GetMemoryLayerAsync(global::Google.Cloud.Bigtable.Admin.V2.GetMemoryLayerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMemoryLayerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about the memory layer of a cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer> GetMemoryLayerAsync(global::Google.Cloud.Bigtable.Admin.V2.GetMemoryLayerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMemoryLayer, null, options, request);
+      }
+      /// <summary>
       /// Creates an app profile within an instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2492,6 +2721,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           .AddMethod(__Method_UpdateCluster, serviceImpl.UpdateCluster)
           .AddMethod(__Method_PartialUpdateCluster, serviceImpl.PartialUpdateCluster)
           .AddMethod(__Method_DeleteCluster, serviceImpl.DeleteCluster)
+          .AddMethod(__Method_UpdateMemoryLayer, serviceImpl.UpdateMemoryLayer)
+          .AddMethod(__Method_ListMemoryLayers, serviceImpl.ListMemoryLayers)
+          .AddMethod(__Method_GetMemoryLayer, serviceImpl.GetMemoryLayer)
           .AddMethod(__Method_CreateAppProfile, serviceImpl.CreateAppProfile)
           .AddMethod(__Method_GetAppProfile, serviceImpl.GetAppProfile)
           .AddMethod(__Method_ListAppProfiles, serviceImpl.ListAppProfiles)
@@ -2532,6 +2764,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       serviceBinder.AddMethod(__Method_UpdateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.Cluster, global::Google.LongRunning.Operation>(serviceImpl.UpdateCluster));
       serviceBinder.AddMethod(__Method_PartialUpdateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.PartialUpdateCluster));
       serviceBinder.AddMethod(__Method_DeleteCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCluster));
+      serviceBinder.AddMethod(__Method_UpdateMemoryLayer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateMemoryLayer));
+      serviceBinder.AddMethod(__Method_ListMemoryLayers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersRequest, global::Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse>(serviceImpl.ListMemoryLayers));
+      serviceBinder.AddMethod(__Method_GetMemoryLayer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.GetMemoryLayerRequest, global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer>(serviceImpl.GetMemoryLayer));
       serviceBinder.AddMethod(__Method_CreateAppProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile>(serviceImpl.CreateAppProfile));
       serviceBinder.AddMethod(__Method_GetAppProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile>(serviceImpl.GetAppProfile));
       serviceBinder.AddMethod(__Method_ListAppProfiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse>(serviceImpl.ListAppProfiles));

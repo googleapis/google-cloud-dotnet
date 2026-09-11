@@ -69,6 +69,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
             PartialUpdateClusterSettings = existing.PartialUpdateClusterSettings;
             PartialUpdateClusterOperationsSettings = existing.PartialUpdateClusterOperationsSettings.Clone();
             DeleteClusterSettings = existing.DeleteClusterSettings;
+            UpdateMemoryLayerSettings = existing.UpdateMemoryLayerSettings;
+            UpdateMemoryLayerOperationsSettings = existing.UpdateMemoryLayerOperationsSettings.Clone();
+            ListMemoryLayersSettings = existing.ListMemoryLayersSettings;
+            GetMemoryLayerSettings = existing.GetMemoryLayerSettings;
             CreateAppProfileSettings = existing.CreateAppProfileSettings;
             GetAppProfileSettings = existing.GetAppProfileSettings;
             ListAppProfilesSettings = existing.ListAppProfilesSettings;
@@ -399,6 +403,63 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.UpdateMemoryLayer</c> and
+        /// <c>BigtableInstanceAdminClient.UpdateMemoryLayerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateMemoryLayerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableInstanceAdminClient.UpdateMemoryLayer</c> and
+        /// <c>BigtableInstanceAdminClient.UpdateMemoryLayerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateMemoryLayerOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.ListMemoryLayers</c> and <c>BigtableInstanceAdminClient.ListMemoryLayersAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListMemoryLayersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.GetMemoryLayer</c> and <c>BigtableInstanceAdminClient.GetMemoryLayerAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetMemoryLayerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -2571,6 +2632,420 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteClusterAsync(ClusterName name, st::CancellationToken cancellationToken) =>
             DeleteClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the memory layer of a cluster.
+        /// 
+        /// To enable the memory layer, set the memory_config.
+        /// To disable the memory layer, unset the memory_config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MemoryLayer, UpdateMemoryLayerMetadata> UpdateMemoryLayer(UpdateMemoryLayerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the memory layer of a cluster.
+        /// 
+        /// To enable the memory layer, set the memory_config.
+        /// To disable the memory layer, unset the memory_config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MemoryLayer, UpdateMemoryLayerMetadata>> UpdateMemoryLayerAsync(UpdateMemoryLayerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the memory layer of a cluster.
+        /// 
+        /// To enable the memory layer, set the memory_config.
+        /// To disable the memory layer, unset the memory_config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MemoryLayer, UpdateMemoryLayerMetadata>> UpdateMemoryLayerAsync(UpdateMemoryLayerRequest request, st::CancellationToken cancellationToken) =>
+            UpdateMemoryLayerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateMemoryLayer</c>.</summary>
+        public virtual lro::OperationsClient UpdateMemoryLayerOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateMemoryLayer</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MemoryLayer, UpdateMemoryLayerMetadata> PollOnceUpdateMemoryLayer(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MemoryLayer, UpdateMemoryLayerMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateMemoryLayerOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateMemoryLayer</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MemoryLayer, UpdateMemoryLayerMetadata>> PollOnceUpdateMemoryLayerAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MemoryLayer, UpdateMemoryLayerMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateMemoryLayerOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the memory layer of a cluster.
+        /// 
+        /// To enable the memory layer, set the memory_config.
+        /// To disable the memory layer, unset the memory_config.
+        /// </summary>
+        /// <param name="memoryLayer">
+        /// Required. The memory layer to update.
+        /// 
+        /// The memory layer's `name` format is as follows:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MemoryLayer, UpdateMemoryLayerMetadata> UpdateMemoryLayer(MemoryLayer memoryLayer, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMemoryLayer(new UpdateMemoryLayerRequest
+            {
+                MemoryLayer = gax::GaxPreconditions.CheckNotNull(memoryLayer, nameof(memoryLayer)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the memory layer of a cluster.
+        /// 
+        /// To enable the memory layer, set the memory_config.
+        /// To disable the memory layer, unset the memory_config.
+        /// </summary>
+        /// <param name="memoryLayer">
+        /// Required. The memory layer to update.
+        /// 
+        /// The memory layer's `name` format is as follows:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MemoryLayer, UpdateMemoryLayerMetadata>> UpdateMemoryLayerAsync(MemoryLayer memoryLayer, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMemoryLayerAsync(new UpdateMemoryLayerRequest
+            {
+                MemoryLayer = gax::GaxPreconditions.CheckNotNull(memoryLayer, nameof(memoryLayer)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the memory layer of a cluster.
+        /// 
+        /// To enable the memory layer, set the memory_config.
+        /// To disable the memory layer, unset the memory_config.
+        /// </summary>
+        /// <param name="memoryLayer">
+        /// Required. The memory layer to update.
+        /// 
+        /// The memory layer's `name` format is as follows:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MemoryLayer, UpdateMemoryLayerMetadata>> UpdateMemoryLayerAsync(MemoryLayer memoryLayer, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateMemoryLayerAsync(memoryLayer, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists information about memory layers.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MemoryLayer"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMemoryLayersResponse, MemoryLayer> ListMemoryLayers(ListMemoryLayersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists information about memory layers.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MemoryLayer"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMemoryLayersResponse, MemoryLayer> ListMemoryLayersAsync(ListMemoryLayersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists information about memory layers.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the cluster for which a list of memory layers
+        /// is requested. Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// Use `{cluster} = '-'` to list MemoryLayers for all Clusters in an instance,
+        /// e.g., `projects/myproject/instances/myinstance/clusters/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MemoryLayer"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMemoryLayersResponse, MemoryLayer> ListMemoryLayers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMemoryLayersRequest request = new ListMemoryLayersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMemoryLayers(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about memory layers.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the cluster for which a list of memory layers
+        /// is requested. Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// Use `{cluster} = '-'` to list MemoryLayers for all Clusters in an instance,
+        /// e.g., `projects/myproject/instances/myinstance/clusters/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MemoryLayer"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMemoryLayersResponse, MemoryLayer> ListMemoryLayersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMemoryLayersRequest request = new ListMemoryLayersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMemoryLayersAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about memory layers.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the cluster for which a list of memory layers
+        /// is requested. Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// Use `{cluster} = '-'` to list MemoryLayers for all Clusters in an instance,
+        /// e.g., `projects/myproject/instances/myinstance/clusters/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MemoryLayer"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMemoryLayersResponse, MemoryLayer> ListMemoryLayers(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMemoryLayersRequest request = new ListMemoryLayersRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMemoryLayers(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about memory layers.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the cluster for which a list of memory layers
+        /// is requested. Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// Use `{cluster} = '-'` to list MemoryLayers for all Clusters in an instance,
+        /// e.g., `projects/myproject/instances/myinstance/clusters/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MemoryLayer"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMemoryLayersResponse, MemoryLayer> ListMemoryLayersAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMemoryLayersRequest request = new ListMemoryLayersRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMemoryLayersAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about the memory layer of a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MemoryLayer GetMemoryLayer(GetMemoryLayerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about the memory layer of a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MemoryLayer> GetMemoryLayerAsync(GetMemoryLayerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about the memory layer of a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MemoryLayer> GetMemoryLayerAsync(GetMemoryLayerRequest request, st::CancellationToken cancellationToken) =>
+            GetMemoryLayerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about the memory layer of a cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested cluster's memory layer. Values
+        /// are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MemoryLayer GetMemoryLayer(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMemoryLayer(new GetMemoryLayerRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about the memory layer of a cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested cluster's memory layer. Values
+        /// are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MemoryLayer> GetMemoryLayerAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMemoryLayerAsync(new GetMemoryLayerRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about the memory layer of a cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested cluster's memory layer. Values
+        /// are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MemoryLayer> GetMemoryLayerAsync(string name, st::CancellationToken cancellationToken) =>
+            GetMemoryLayerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about the memory layer of a cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested cluster's memory layer. Values
+        /// are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MemoryLayer GetMemoryLayer(MemoryLayerName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMemoryLayer(new GetMemoryLayerRequest
+            {
+                MemoryLayerName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about the memory layer of a cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested cluster's memory layer. Values
+        /// are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MemoryLayer> GetMemoryLayerAsync(MemoryLayerName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMemoryLayerAsync(new GetMemoryLayerRequest
+            {
+                MemoryLayerName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about the memory layer of a cluster.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested cluster's memory layer. Values
+        /// are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MemoryLayer> GetMemoryLayerAsync(MemoryLayerName name, st::CancellationToken cancellationToken) =>
+            GetMemoryLayerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates an app profile within an instance.
@@ -5383,6 +5858,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private readonly gaxgrpc::ApiCall<DeleteClusterRequest, wkt::Empty> _callDeleteCluster;
 
+        private readonly gaxgrpc::ApiCall<UpdateMemoryLayerRequest, lro::Operation> _callUpdateMemoryLayer;
+
+        private readonly gaxgrpc::ApiCall<ListMemoryLayersRequest, ListMemoryLayersResponse> _callListMemoryLayers;
+
+        private readonly gaxgrpc::ApiCall<GetMemoryLayerRequest, MemoryLayer> _callGetMemoryLayer;
+
         private readonly gaxgrpc::ApiCall<CreateAppProfileRequest, AppProfile> _callCreateAppProfile;
 
         private readonly gaxgrpc::ApiCall<GetAppProfileRequest, AppProfile> _callGetAppProfile;
@@ -5442,6 +5923,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings, logger);
             UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings, logger);
             PartialUpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PartialUpdateClusterOperationsSettings, logger);
+            UpdateMemoryLayerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMemoryLayerOperationsSettings, logger);
             UpdateAppProfileOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAppProfileOperationsSettings, logger);
             CreateLogicalViewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateLogicalViewOperationsSettings, logger);
             UpdateLogicalViewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateLogicalViewOperationsSettings, logger);
@@ -5483,6 +5965,15 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, wkt::Empty>("DeleteCluster", grpcClient.DeleteClusterAsync, grpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCluster);
             Modify_DeleteClusterApiCall(ref _callDeleteCluster);
+            _callUpdateMemoryLayer = clientHelper.BuildApiCall<UpdateMemoryLayerRequest, lro::Operation>("UpdateMemoryLayer", grpcClient.UpdateMemoryLayerAsync, grpcClient.UpdateMemoryLayer, effectiveSettings.UpdateMemoryLayerSettings).WithGoogleRequestParam("memory_layer.name", request => request.MemoryLayer?.Name);
+            Modify_ApiCall(ref _callUpdateMemoryLayer);
+            Modify_UpdateMemoryLayerApiCall(ref _callUpdateMemoryLayer);
+            _callListMemoryLayers = clientHelper.BuildApiCall<ListMemoryLayersRequest, ListMemoryLayersResponse>("ListMemoryLayers", grpcClient.ListMemoryLayersAsync, grpcClient.ListMemoryLayers, effectiveSettings.ListMemoryLayersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListMemoryLayers);
+            Modify_ListMemoryLayersApiCall(ref _callListMemoryLayers);
+            _callGetMemoryLayer = clientHelper.BuildApiCall<GetMemoryLayerRequest, MemoryLayer>("GetMemoryLayer", grpcClient.GetMemoryLayerAsync, grpcClient.GetMemoryLayer, effectiveSettings.GetMemoryLayerSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetMemoryLayer);
+            Modify_GetMemoryLayerApiCall(ref _callGetMemoryLayer);
             _callCreateAppProfile = clientHelper.BuildApiCall<CreateAppProfileRequest, AppProfile>("CreateAppProfile", grpcClient.CreateAppProfileAsync, grpcClient.CreateAppProfile, effectiveSettings.CreateAppProfileSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAppProfile);
             Modify_CreateAppProfileApiCall(ref _callCreateAppProfile);
@@ -5569,6 +6060,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         partial void Modify_DeleteClusterApiCall(ref gaxgrpc::ApiCall<DeleteClusterRequest, wkt::Empty> call);
 
+        partial void Modify_UpdateMemoryLayerApiCall(ref gaxgrpc::ApiCall<UpdateMemoryLayerRequest, lro::Operation> call);
+
+        partial void Modify_ListMemoryLayersApiCall(ref gaxgrpc::ApiCall<ListMemoryLayersRequest, ListMemoryLayersResponse> call);
+
+        partial void Modify_GetMemoryLayerApiCall(ref gaxgrpc::ApiCall<GetMemoryLayerRequest, MemoryLayer> call);
+
         partial void Modify_CreateAppProfileApiCall(ref gaxgrpc::ApiCall<CreateAppProfileRequest, AppProfile> call);
 
         partial void Modify_GetAppProfileApiCall(ref gaxgrpc::ApiCall<GetAppProfileRequest, AppProfile> call);
@@ -5635,6 +6132,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_PartialUpdateClusterRequest(ref PartialUpdateClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateMemoryLayerRequest(ref UpdateMemoryLayerRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListMemoryLayersRequest(ref ListMemoryLayersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetMemoryLayerRequest(ref GetMemoryLayerRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateAppProfileRequest(ref CreateAppProfileRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6035,6 +6538,87 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Modify_DeleteClusterRequest(ref request, ref callSettings);
             return _callDeleteCluster.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateMemoryLayer</c>.</summary>
+        public override lro::OperationsClient UpdateMemoryLayerOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the memory layer of a cluster.
+        /// 
+        /// To enable the memory layer, set the memory_config.
+        /// To disable the memory layer, unset the memory_config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MemoryLayer, UpdateMemoryLayerMetadata> UpdateMemoryLayer(UpdateMemoryLayerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateMemoryLayerRequest(ref request, ref callSettings);
+            return new lro::Operation<MemoryLayer, UpdateMemoryLayerMetadata>(_callUpdateMemoryLayer.Sync(request, callSettings), UpdateMemoryLayerOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the memory layer of a cluster.
+        /// 
+        /// To enable the memory layer, set the memory_config.
+        /// To disable the memory layer, unset the memory_config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MemoryLayer, UpdateMemoryLayerMetadata>> UpdateMemoryLayerAsync(UpdateMemoryLayerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateMemoryLayerRequest(ref request, ref callSettings);
+            return new lro::Operation<MemoryLayer, UpdateMemoryLayerMetadata>(await _callUpdateMemoryLayer.Async(request, callSettings).ConfigureAwait(false), UpdateMemoryLayerOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists information about memory layers.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MemoryLayer"/> resources.</returns>
+        public override gax::PagedEnumerable<ListMemoryLayersResponse, MemoryLayer> ListMemoryLayers(ListMemoryLayersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMemoryLayersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMemoryLayersRequest, ListMemoryLayersResponse, MemoryLayer>(_callListMemoryLayers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about memory layers.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MemoryLayer"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListMemoryLayersResponse, MemoryLayer> ListMemoryLayersAsync(ListMemoryLayersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMemoryLayersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMemoryLayersRequest, ListMemoryLayersResponse, MemoryLayer>(_callListMemoryLayers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about the memory layer of a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override MemoryLayer GetMemoryLayer(GetMemoryLayerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMemoryLayerRequest(ref request, ref callSettings);
+            return _callGetMemoryLayer.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about the memory layer of a cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<MemoryLayer> GetMemoryLayerAsync(GetMemoryLayerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMemoryLayerRequest(ref request, ref callSettings);
+            return _callGetMemoryLayer.Async(request, callSettings);
         }
 
         /// <summary>
@@ -6515,6 +7099,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
     }
 
+    public partial class ListMemoryLayersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListAppProfilesRequest : gaxgrpc::IPageRequest
     {
     }
@@ -6529,6 +7117,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
     public partial class ListMaterializedViewsRequest : gaxgrpc::IPageRequest
     {
+    }
+
+    public partial class ListMemoryLayersResponse : gaxgrpc::IPageResponse<MemoryLayer>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<MemoryLayer> GetEnumerator() => MemoryLayers.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class ListAppProfilesResponse : gaxgrpc::IPageResponse<AppProfile>

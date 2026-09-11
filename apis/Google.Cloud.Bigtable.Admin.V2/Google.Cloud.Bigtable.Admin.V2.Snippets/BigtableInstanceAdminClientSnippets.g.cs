@@ -1338,6 +1338,497 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateMemoryLayer</summary>
+        public void UpdateMemoryLayerRequestObject()
+        {
+            // Snippet: UpdateMemoryLayer(UpdateMemoryLayerRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateMemoryLayerRequest request = new UpdateMemoryLayerRequest
+            {
+                MemoryLayer = new MemoryLayer(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<MemoryLayer, UpdateMemoryLayerMetadata> response = bigtableInstanceAdminClient.UpdateMemoryLayer(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MemoryLayer, UpdateMemoryLayerMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MemoryLayer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MemoryLayer, UpdateMemoryLayerMetadata> retrievedResponse = bigtableInstanceAdminClient.PollOnceUpdateMemoryLayer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MemoryLayer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMemoryLayerAsync</summary>
+        public async Task UpdateMemoryLayerRequestObjectAsync()
+        {
+            // Snippet: UpdateMemoryLayerAsync(UpdateMemoryLayerRequest, CallSettings)
+            // Additional: UpdateMemoryLayerAsync(UpdateMemoryLayerRequest, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateMemoryLayerRequest request = new UpdateMemoryLayerRequest
+            {
+                MemoryLayer = new MemoryLayer(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<MemoryLayer, UpdateMemoryLayerMetadata> response = await bigtableInstanceAdminClient.UpdateMemoryLayerAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MemoryLayer, UpdateMemoryLayerMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MemoryLayer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MemoryLayer, UpdateMemoryLayerMetadata> retrievedResponse = await bigtableInstanceAdminClient.PollOnceUpdateMemoryLayerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MemoryLayer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMemoryLayer</summary>
+        public void UpdateMemoryLayer()
+        {
+            // Snippet: UpdateMemoryLayer(MemoryLayer, FieldMask, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            MemoryLayer memoryLayer = new MemoryLayer();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<MemoryLayer, UpdateMemoryLayerMetadata> response = bigtableInstanceAdminClient.UpdateMemoryLayer(memoryLayer, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MemoryLayer, UpdateMemoryLayerMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MemoryLayer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MemoryLayer, UpdateMemoryLayerMetadata> retrievedResponse = bigtableInstanceAdminClient.PollOnceUpdateMemoryLayer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MemoryLayer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMemoryLayerAsync</summary>
+        public async Task UpdateMemoryLayerAsync()
+        {
+            // Snippet: UpdateMemoryLayerAsync(MemoryLayer, FieldMask, CallSettings)
+            // Additional: UpdateMemoryLayerAsync(MemoryLayer, FieldMask, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            MemoryLayer memoryLayer = new MemoryLayer();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<MemoryLayer, UpdateMemoryLayerMetadata> response = await bigtableInstanceAdminClient.UpdateMemoryLayerAsync(memoryLayer, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MemoryLayer, UpdateMemoryLayerMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MemoryLayer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MemoryLayer, UpdateMemoryLayerMetadata> retrievedResponse = await bigtableInstanceAdminClient.PollOnceUpdateMemoryLayerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MemoryLayer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMemoryLayers</summary>
+        public void ListMemoryLayersRequestObject()
+        {
+            // Snippet: ListMemoryLayers(ListMemoryLayersRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            ListMemoryLayersRequest request = new ListMemoryLayersRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+            };
+            // Make the request
+            PagedEnumerable<ListMemoryLayersResponse, MemoryLayer> response = bigtableInstanceAdminClient.ListMemoryLayers(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MemoryLayer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMemoryLayersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MemoryLayer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MemoryLayer> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MemoryLayer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMemoryLayersAsync</summary>
+        public async Task ListMemoryLayersRequestObjectAsync()
+        {
+            // Snippet: ListMemoryLayersAsync(ListMemoryLayersRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListMemoryLayersRequest request = new ListMemoryLayersRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListMemoryLayersResponse, MemoryLayer> response = bigtableInstanceAdminClient.ListMemoryLayersAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (MemoryLayer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListMemoryLayersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MemoryLayer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MemoryLayer> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MemoryLayer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMemoryLayers</summary>
+        public void ListMemoryLayers()
+        {
+            // Snippet: ListMemoryLayers(string, string, int?, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/clusters/[CLUSTER]";
+            // Make the request
+            PagedEnumerable<ListMemoryLayersResponse, MemoryLayer> response = bigtableInstanceAdminClient.ListMemoryLayers(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MemoryLayer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMemoryLayersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MemoryLayer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MemoryLayer> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MemoryLayer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMemoryLayersAsync</summary>
+        public async Task ListMemoryLayersAsync()
+        {
+            // Snippet: ListMemoryLayersAsync(string, string, int?, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/clusters/[CLUSTER]";
+            // Make the request
+            PagedAsyncEnumerable<ListMemoryLayersResponse, MemoryLayer> response = bigtableInstanceAdminClient.ListMemoryLayersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (MemoryLayer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListMemoryLayersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MemoryLayer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MemoryLayer> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MemoryLayer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMemoryLayers</summary>
+        public void ListMemoryLayersResourceNames()
+        {
+            // Snippet: ListMemoryLayers(ClusterName, string, int?, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
+            // Make the request
+            PagedEnumerable<ListMemoryLayersResponse, MemoryLayer> response = bigtableInstanceAdminClient.ListMemoryLayers(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MemoryLayer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMemoryLayersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MemoryLayer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MemoryLayer> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MemoryLayer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMemoryLayersAsync</summary>
+        public async Task ListMemoryLayersResourceNamesAsync()
+        {
+            // Snippet: ListMemoryLayersAsync(ClusterName, string, int?, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
+            // Make the request
+            PagedAsyncEnumerable<ListMemoryLayersResponse, MemoryLayer> response = bigtableInstanceAdminClient.ListMemoryLayersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (MemoryLayer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListMemoryLayersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MemoryLayer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MemoryLayer> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MemoryLayer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMemoryLayer</summary>
+        public void GetMemoryLayerRequestObject()
+        {
+            // Snippet: GetMemoryLayer(GetMemoryLayerRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            GetMemoryLayerRequest request = new GetMemoryLayerRequest
+            {
+                MemoryLayerName = MemoryLayerName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+            };
+            // Make the request
+            MemoryLayer response = bigtableInstanceAdminClient.GetMemoryLayer(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMemoryLayerAsync</summary>
+        public async Task GetMemoryLayerRequestObjectAsync()
+        {
+            // Snippet: GetMemoryLayerAsync(GetMemoryLayerRequest, CallSettings)
+            // Additional: GetMemoryLayerAsync(GetMemoryLayerRequest, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GetMemoryLayerRequest request = new GetMemoryLayerRequest
+            {
+                MemoryLayerName = MemoryLayerName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]"),
+            };
+            // Make the request
+            MemoryLayer response = await bigtableInstanceAdminClient.GetMemoryLayerAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMemoryLayer</summary>
+        public void GetMemoryLayer()
+        {
+            // Snippet: GetMemoryLayer(string, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/clusters/[CLUSTER]/memoryLayer";
+            // Make the request
+            MemoryLayer response = bigtableInstanceAdminClient.GetMemoryLayer(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMemoryLayerAsync</summary>
+        public async Task GetMemoryLayerAsync()
+        {
+            // Snippet: GetMemoryLayerAsync(string, CallSettings)
+            // Additional: GetMemoryLayerAsync(string, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/clusters/[CLUSTER]/memoryLayer";
+            // Make the request
+            MemoryLayer response = await bigtableInstanceAdminClient.GetMemoryLayerAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMemoryLayer</summary>
+        public void GetMemoryLayerResourceNames()
+        {
+            // Snippet: GetMemoryLayer(MemoryLayerName, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            MemoryLayerName name = MemoryLayerName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
+            // Make the request
+            MemoryLayer response = bigtableInstanceAdminClient.GetMemoryLayer(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMemoryLayerAsync</summary>
+        public async Task GetMemoryLayerResourceNamesAsync()
+        {
+            // Snippet: GetMemoryLayerAsync(MemoryLayerName, CallSettings)
+            // Additional: GetMemoryLayerAsync(MemoryLayerName, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            MemoryLayerName name = MemoryLayerName.FromProjectInstanceCluster("[PROJECT]", "[INSTANCE]", "[CLUSTER]");
+            // Make the request
+            MemoryLayer response = await bigtableInstanceAdminClient.GetMemoryLayerAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateAppProfile</summary>
         public void CreateAppProfileRequestObject()
         {
