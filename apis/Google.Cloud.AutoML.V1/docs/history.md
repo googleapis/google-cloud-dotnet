@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.6.0, released 2026-09-11
+
+### New features
+
+- Add index.md for AutoML.V1
+
 ## Version 3.5.0, released 2025-11-03
 
 ### New features
