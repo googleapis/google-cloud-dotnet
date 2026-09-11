@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.35.0, released 2026-09-11
+
+### New features
+
+- Add Bigtable in-memory (MemoryLayer) APIs and configuration
+- Publish AvroSchema to CBT admin API
+
+### Documentation improvements
+
+- Modify ProtoSchema description
+- Add AvroSchema description
+
 ## Version 3.34.0, released 2026-08-17
 
 ### New features
