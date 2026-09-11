@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.38.0, released 2026-09-11
+
+### New features
+
+- Add PubsubClientTelemetry proto definition
+
 ## Version 3.37.0, released 2026-08-24
 
 ### New features
