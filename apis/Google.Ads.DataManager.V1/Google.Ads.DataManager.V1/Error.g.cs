@@ -25,7 +25,7 @@ namespace Google.Ads.DataManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2Vycm9yLnByb3RvEhlnb29n",
-            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxKsIiCgtFcnJvclJlYXNvbhIcChhFUlJP",
+            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxKoMjCgtFcnJvclJlYXNvbhIcChhFUlJP",
             "Ul9SRUFTT05fVU5TUEVDSUZJRUQQABISCg5JTlRFUk5BTF9FUlJPUhABEhUK",
             "EURFQURMSU5FX0VYQ0VFREVEEAISFgoSUkVTT1VSQ0VfRVhIQVVTVEVEEAMS",
             "DQoJTk9UX0ZPVU5EEAQSFQoRUEVSTUlTU0lPTl9ERU5JRUQQBRIUChBJTlZB",
@@ -123,12 +123,13 @@ namespace Google.Ads.DataManager.V1 {
             "QkxFX05PVF9GT1VORBB4EisKJ0JBU0VMSU5FX0xPQ0FUSU9OX0FVVE9fREVU",
             "RUNUSU9OX0ZBSUxFRBB6EiIKHklOU0lHSFRTX01JU1NJTkdfRk9SX0RJTUVO",
             "U0lPThB7EiYKIlJFUVVJUkVEX1BSRVJFUVVJU0lURV9MSU5LX01JU1NJTkcQ",
-            "fBIdChlJTlZBTElEX1JFTU9WRV9BU19PRl9USU1FEH1CxwEKHWNvbS5nb29n",
-            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxQgpFcnJvclByb3RvUAFaQWNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vZGF0YW1hbmFnZXIvYXBpdjEvZGF0YW1hbmFnZXJwYjtk",
-            "YXRhbWFuYWdlcnBiqgIZR29vZ2xlLkFkcy5EYXRhTWFuYWdlci5WMcoCGUdv",
-            "b2dsZVxBZHNcRGF0YU1hbmFnZXJcVjHqAhxHb29nbGU6OkFkczo6RGF0YU1h",
-            "bmFnZXI6OlYxYgZwcm90bzM="));
+            "fBIdChlJTlZBTElEX1JFTU9WRV9BU19PRl9USU1FEH0SEwoPUkVRVUVTVF9U",
+            "T09fT0xEEH4SKgomQ09OVkVSU0lPTl9BQ1RJT05fVE9PX1JFQ0VOVExZX0NS",
+            "RUFURUQQf0LHAQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCCkVy",
+            "cm9yUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhbWFuYWdlci9h",
+            "cGl2MS9kYXRhbWFuYWdlcnBiO2RhdGFtYW5hZ2VycGKqAhlHb29nbGUuQWRz",
+            "LkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdlclxWMeoC",
+            "HEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.ErrorReason), }, null, null));
@@ -666,6 +667,15 @@ namespace Google.Ads.DataManager.V1 {
     /// not permitted for removing audience members.
     /// </summary>
     [pbr::OriginalName("INVALID_REMOVE_AS_OF_TIME")] InvalidRemoveAsOfTime = 125,
+    /// <summary>
+    /// Request status is only available for approximately 50 days after the API
+    /// receives a request.
+    /// </summary>
+    [pbr::OriginalName("REQUEST_TOO_OLD")] RequestTooOld = 126,
+    /// <summary>
+    /// The conversion action was created too recently.
+    /// </summary>
+    [pbr::OriginalName("CONVERSION_ACTION_TOO_RECENTLY_CREATED")] ConversionActionTooRecentlyCreated = 127,
   }
 
   #endregion
