@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.0.0-beta11, released 2026-09-14
+
+### New features
+
+- Add the `DataTruncationReason` message
+- Add the `data_truncation_reasons` field to `ResponseMetaData`
+
 ## Version 2.0.0-beta10, released 2025-11-03
 
 ### New features
