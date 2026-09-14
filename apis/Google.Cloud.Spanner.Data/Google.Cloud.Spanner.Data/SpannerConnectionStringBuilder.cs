@@ -51,6 +51,7 @@ namespace Google.Cloud.Spanner.Data
         internal const int DefaultMaxConcurrentStreamsLowWatermark = 20;
 
         private const string CredentialFileKeyword = "CredentialFile";
+        private const string CredentialTypeKeyword = "CredentialType";
         private const string DataSourceKeyword = "Data Source";
         private const string UseClrDefaultForNullKeyword = "UseClrDefaultForNull";
         private const string EnableGetSchemaTableKeyword = "EnableGetSchemaTable";
@@ -92,6 +93,17 @@ namespace Google.Cloud.Spanner.Data
         {
             get => GetValueOrDefault(CredentialFileKeyword);
             set => this[CredentialFileKeyword] = value;
+        }
+
+        /// <summary>
+        /// The expected type of the credential provided via <see cref="CredentialFile"/>.
+        /// Accepted values can be found in <see cref="JsonCredentialParameters"/>.
+        /// Defaults to <see cref="JsonCredentialParameters.ServiceAccountCredentialType"/>.
+        /// </summary>
+        public string CredentialType
+        {
+            get => GetValueOrDefault(CredentialTypeKeyword, JsonCredentialParameters.ServiceAccountCredentialType);
+            set => this[CredentialTypeKeyword] = value;
         }
 
         /// <summary>
