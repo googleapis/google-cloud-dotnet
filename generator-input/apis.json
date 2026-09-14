@@ -7497,7 +7497,7 @@
       "restNumericEnums": true
     },
     {
-      "id": "Google.Shopping.Merchant.Loyaltycustomers.V1",
+      "id": "Google.Shopping.Merchant.LoyaltyCustomers.V1",
       "version": "1.0.0-beta00",
       "type": "grpc",
       "productName": "Merchant",
