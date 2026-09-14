@@ -74,7 +74,11 @@ namespace GoogleCSharpSnippets
                 OneBoxPageSize = 0,
                 RelevanceScoreSpec = new SearchRequest.Types.RelevanceScoreSpec(),
                 RankingExpressionBackend = SearchRequest.Types.RankingExpressionBackend.Unspecified,
+                SearchAddonSpec = new SearchRequest.Types.SearchAddonSpec(),
                 PageCategories = { "", },
+                CustomRankingParams = new SearchRequest.Types.CustomRankingParams(),
+                NumResultsPerDataStore = 0,
+                Entity = "",
                 RelevanceFilterSpec = new SearchRequest.Types.RelevanceFilterSpec(),
             };
             // Make the request
@@ -163,7 +167,11 @@ namespace GoogleCSharpSnippets
                 OneBoxPageSize = 0,
                 RelevanceScoreSpec = new SearchRequest.Types.RelevanceScoreSpec(),
                 RankingExpressionBackend = SearchRequest.Types.RankingExpressionBackend.Unspecified,
+                SearchAddonSpec = new SearchRequest.Types.SearchAddonSpec(),
                 PageCategories = { "", },
+                CustomRankingParams = new SearchRequest.Types.CustomRankingParams(),
+                NumResultsPerDataStore = 0,
+                Entity = "",
                 RelevanceFilterSpec = new SearchRequest.Types.RelevanceFilterSpec(),
             };
             // Make the request
@@ -252,7 +260,11 @@ namespace GoogleCSharpSnippets
                 OneBoxPageSize = 0,
                 RelevanceScoreSpec = new SearchRequest.Types.RelevanceScoreSpec(),
                 RankingExpressionBackend = SearchRequest.Types.RankingExpressionBackend.Unspecified,
+                SearchAddonSpec = new SearchRequest.Types.SearchAddonSpec(),
                 PageCategories = { "", },
+                CustomRankingParams = new SearchRequest.Types.CustomRankingParams(),
+                NumResultsPerDataStore = 0,
+                Entity = "",
                 RelevanceFilterSpec = new SearchRequest.Types.RelevanceFilterSpec(),
             };
             // Make the request
@@ -341,7 +353,11 @@ namespace GoogleCSharpSnippets
                 OneBoxPageSize = 0,
                 RelevanceScoreSpec = new SearchRequest.Types.RelevanceScoreSpec(),
                 RankingExpressionBackend = SearchRequest.Types.RankingExpressionBackend.Unspecified,
+                SearchAddonSpec = new SearchRequest.Types.SearchAddonSpec(),
                 PageCategories = { "", },
+                CustomRankingParams = new SearchRequest.Types.CustomRankingParams(),
+                NumResultsPerDataStore = 0,
+                Entity = "",
                 RelevanceFilterSpec = new SearchRequest.Types.RelevanceFilterSpec(),
             };
             // Make the request
