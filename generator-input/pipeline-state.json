@@ -482,21 +482,6 @@
             ]
         },
         {
-            "id": "Google.Cloud.AutoML.V1",
-            "currentVersion": "3.6.0",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-09-11T18:30:41.981923928Z",
-            "lastGeneratedCommit": "222764e0853283787ba2203de6b3f57bf05b6bc5",
-            "lastReleasedCommit": "222764e0853283787ba2203de6b3f57bf05b6bc5",
-            "apiPaths": [
-                "google/cloud/automl/v1"
-            ],
-            "sourcePaths": [
-                "apis/Google.Cloud.AutoML.V1/Google.Cloud.AutoML.V1"
-            ]
-        },
-        {
             "id": "Google.Cloud.BackupDR.V1",
             "currentVersion": "2.9.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
