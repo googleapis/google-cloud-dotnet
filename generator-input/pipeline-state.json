@@ -67,7 +67,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-03T18:25:54.293312894Z",
-            "lastGeneratedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
+            "lastGeneratedCommit": "ed6832a8b8254885e1ddc352bb1dc30b7f26f950",
             "lastReleasedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
             "apiPaths": [
                 "google/analytics/data/v1beta"
