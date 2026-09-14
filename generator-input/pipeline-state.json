@@ -1417,7 +1417,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-08-24T19:20:43.296025680Z",
-            "lastGeneratedCommit": "d21c3ffd9f95f12fb0d1fc54ae5eed85544d55be",
+            "lastGeneratedCommit": "d3e4b45d316b4fb8ad120d04882cd7b1065fc333",
             "lastReleasedCommit": "d21c3ffd9f95f12fb0d1fc54ae5eed85544d55be",
             "apiPaths": [
                 "google/cloud/discoveryengine/v1"
