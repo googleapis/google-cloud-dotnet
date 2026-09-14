@@ -15,6 +15,7 @@
 using Mono.Cecil;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 
 namespace Google.Cloud.Tools.VersionCompat.CecilUtils
@@ -78,5 +79,108 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
         }
 
         public static bool IsStatic(this PropertyDefinition prop) => (prop.GetMethod ?? prop.SetMethod).IsStatic;
+
+        public static bool IsBreakableDefintion(this MethodDefinition method)
+        {
+            if (!method.IsVirtual)
+            {
+                return true;
+            }
+
+            return method.IsNewSlot || method.IsFinal;
+        }
+
+        public static bool IsBreakableDefinition(this PropertyDefinition property)
+        {
+            var methodDefinition = property.GetMethod ?? property.SetMethod;
+
+            if (methodDefinition is null)
+            {
+                return false;
+            }
+
+            if (!methodDefinition.IsVirtual)
+            {
+                return true;
+            }
+
+            return methodDefinition.IsNewSlot || methodDefinition.IsFinal;
+        }
+
+        /// <summary>
+        /// Looks up the family tree starting from <paramref name="typeDefinition"/>, and gets the first occurence of <paramref name="referenceMethod"/>
+        /// from it finds, or nothing if no like method is found.
+        /// </summary>
+        /// <param name="descendentType">Type to start from.</param>
+        /// <param name="referenceMethod">Like method to check for</param>
+        /// <param name="methodFromAncestor">Out method to be filled with the found method reference, if one is found.</param>
+        /// <returns></returns>
+        public static bool TryGetMethodFromAncestor(this TypeDefinition descendentType, MethodDefinition referenceMethod, out MethodDefinition methodFromAncestor)
+        {
+            methodFromAncestor = null;
+
+            // Look up the ancestor tree until we find a like implementation to this method
+            var baseType = descendentType.BaseType?.Resolve();
+            while (baseType != null)
+            {
+                // GetMethod here only checks for a subset of the info we need, so
+                // also check visibility, static, and more.
+                if (MetadataResolver.GetMethod(baseType.Methods, referenceMethod) is MethodDefinition baseTypeMethod
+                    && AreLikeMethods(referenceMethod, baseTypeMethod))
+                {
+                    methodFromAncestor = baseTypeMethod;
+                    return true;
+                }
+
+                baseType = baseType.BaseType?.Resolve();
+            }
+
+            return false;
+
+            // This only supplements what is missing from MetadataResolver.GetMethod to ascertain if
+            // the two methods are definitionally like, and should not be used separately.
+            static bool AreLikeMethods(MethodDefinition referenceMethod, MethodDefinition likeMethod)
+                => referenceMethod.IsPublic == likeMethod.IsPublic
+                    && referenceMethod.IsFamily == likeMethod.IsFamily
+                    && referenceMethod.IsStatic == likeMethod.IsStatic
+                    // We only care that the like method is sealed if the reference method is too.
+                    && (referenceMethod.IsVirtual ? likeMethod.IsVirtual : true);
+        }
+
+        /// <summary>
+        /// Looks up the family tree starting from <paramref name="descendentType"/>, and tries to get one of both get and set accessors.
+        ///
+        /// Note: The accessors intentionally may be from separate classes in the family tree, as we want to ensure we are keeping any accessors
+        /// from <paramref name="descendentType"/> itself, if they exist.
+        /// </summary>
+        /// <param name="descendentType">Type to start from.</param>
+        /// <param name="propertyDefinition">Property of the accessors.</param>
+        /// <param name="getMethod">Out get accessor of the property, if one is found.</param>
+        /// <param name="setMethod">Out set accessor of the property, if one is found.</param>
+        /// <returns></returns>
+        public static bool TryGetAccessorsFromAncestry(this TypeDefinition descendentType, PropertyDefinition propertyDefinition, out MethodDefinition getMethod, out MethodDefinition setMethod)
+        {
+            var baseType = descendentType;
+            getMethod = null;
+            setMethod = null;
+
+            while (baseType is not null)
+            {
+                if (baseType.Properties.Where(p => SamePropertyComparer.Instance.Equals(p, propertyDefinition)).FirstOrDefault() is PropertyDefinition matchingProperty)
+                {
+                    getMethod ??= matchingProperty.GetMethod;
+                    setMethod ??= matchingProperty.SetMethod;
+
+                    if (getMethod is not null && setMethod is not null)
+                    {
+                        return true;
+                    }
+                }
+
+                baseType = baseType?.BaseType?.Resolve();
+            }
+
+            return getMethod is not null || setMethod is not null;
+        }
     }
 }
