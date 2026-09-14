@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.13.0-beta11, released 2026-09-14
+
+### New features
+
+- Add interceptor for Built-In metrics.
+
 ## Version 5.13.0-beta10, released 2026-08-31
 
 ### New features
