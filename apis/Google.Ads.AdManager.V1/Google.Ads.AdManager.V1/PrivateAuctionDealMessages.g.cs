@@ -34,51 +34,56 @@ namespace Google.Ads.AdManager.V1 {
             "YWRtYW5hZ2VyL3YxL3RhcmdldGluZy5wcm90bxofZ29vZ2xlL2FwaS9maWVs",
             "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxof",
             "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3R5cGUv",
-            "bW9uZXkucHJvdG8iyQwKElByaXZhdGVBdWN0aW9uRGVhbBIRCgRuYW1lGAEg",
+            "bW9uZXkucHJvdG8igw4KElByaXZhdGVBdWN0aW9uRGVhbBIRCgRuYW1lGAEg",
             "ASgJQgPgQQgSKwoXcHJpdmF0ZV9hdWN0aW9uX2RlYWxfaWQYAiABKANCBRgB",
             "4EEDSACIAQESJAoScHJpdmF0ZV9hdWN0aW9uX2lkGAMgASgDQgPgQQVIAYgB",
             "ARIuChxwcml2YXRlX2F1Y3Rpb25fZGlzcGxheV9uYW1lGBQgASgJQgPgQQNI",
             "AogBARIiChBidXllcl9hY2NvdW50X2lkGAQgASgDQgPgQQVIA4gBARIiChBl",
             "eHRlcm5hbF9kZWFsX2lkGAUgASgDQgPgQQNIBIgBARI/Cgl0YXJnZXRpbmcY",
             "BiABKAsyIi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5UYXJnZXRpbmdCA+BB",
-            "AUgFiAEBEjYKCGVuZF90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEBSAaIAQESMQoLZmxvb3JfcHJpY2UYCSABKAsyEi5nb29n",
-            "bGUudHlwZS5Nb25leUID4EECSAeIAQESOgoOY3JlYXRpdmVfc2l6ZXMYEiAD",
-            "KAsyHS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5TaXplQgPgQQEScAoGc3Rh",
-            "dHVzGAogASgOMlYuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuUHJpdmF0ZU1h",
-            "cmtldHBsYWNlRGVhbFN0YXR1c0VudW0uUHJpdmF0ZU1hcmtldHBsYWNlRGVh",
-            "bFN0YXR1c0ID4EEDSAiIAQESKgoYYXVjdGlvbl9wcmlvcml0eV9lbmFibGVk",
-            "GAsgASgIQgPgQQFICYgBARIoChZibG9ja19vdmVycmlkZV9lbmFibGVkGAwg",
-            "ASgIQgPgQQFICogBARJ1ChVidXllcl9wZXJtaXNzaW9uX3R5cGUYDSABKA4y",
-            "TC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5EZWFsQnV5ZXJQZXJtaXNzaW9u",
-            "VHlwZUVudW0uRGVhbEJ1eWVyUGVybWlzc2lvblR5cGVCA+BBAUgLiAEBElMK",
-            "CmJ1eWVyX2RhdGEYDiABKAsyNS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Q",
-            "cml2YXRlQXVjdGlvbkRlYWwuQnV5ZXJEYXRhQgPgQQFIDIgBARJTCg1kZWFs",
-            "X3ByaW9yaXR5GBYgASgLMjIuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuTm9u",
-            "R3VhcmFudGVlZERlYWxQcmlvcml0eUID4EEBSA2IAQESOQoLY3JlYXRlX3Rp",
-            "bWUYDyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNIDogB",
-            "ARI5Cgt1cGRhdGVfdGltZRgQIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBA0gPiAEBGiYKCUJ1eWVyRGF0YRIZCgxidXllcl9lbWFpbHMY",
-            "ASADKAlCA+BBATqeAepBmgEKK2FkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Q",
-            "cml2YXRlQXVjdGlvbkRlYWwSQm5ldHdvcmtzL3tuZXR3b3JrX2NvZGV9L3By",
-            "aXZhdGVBdWN0aW9uRGVhbHMve3ByaXZhdGVfYXVjdGlvbl9kZWFsfSoTcHJp",
-            "dmF0ZUF1Y3Rpb25EZWFsczIScHJpdmF0ZUF1Y3Rpb25EZWFsQhoKGF9wcml2",
-            "YXRlX2F1Y3Rpb25fZGVhbF9pZEIVChNfcHJpdmF0ZV9hdWN0aW9uX2lkQh8K",
-            "HV9wcml2YXRlX2F1Y3Rpb25fZGlzcGxheV9uYW1lQhMKEV9idXllcl9hY2Nv",
-            "dW50X2lkQhMKEV9leHRlcm5hbF9kZWFsX2lkQgwKCl90YXJnZXRpbmdCCwoJ",
-            "X2VuZF90aW1lQg4KDF9mbG9vcl9wcmljZUIJCgdfc3RhdHVzQhsKGV9hdWN0",
-            "aW9uX3ByaW9yaXR5X2VuYWJsZWRCGQoXX2Jsb2NrX292ZXJyaWRlX2VuYWJs",
-            "ZWRCGAoWX2J1eWVyX3Blcm1pc3Npb25fdHlwZUINCgtfYnV5ZXJfZGF0YUIQ",
-            "Cg5fZGVhbF9wcmlvcml0eUIOCgxfY3JlYXRlX3RpbWVCDgoMX3VwZGF0ZV90",
-            "aW1lQtMBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCH1ByaXZhdGVB",
-            "dWN0aW9uRGVhbE1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcv",
-            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdl",
-            "cqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1h",
-            "bmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "AUgFiAEBEjsKCnN0YXJ0X3RpbWUYGiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgbgQQHgQQdIBogBARI2CghlbmRfdGltZRgIIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAUgHiAEBEjEKC2Zsb29yX3By",
+            "aWNlGAkgASgLMhIuZ29vZ2xlLnR5cGUuTW9uZXlCA+BBAkgIiAEBEjoKDmNy",
+            "ZWF0aXZlX3NpemVzGBIgAygLMh0uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEu",
+            "U2l6ZUID4EEBEnAKBnN0YXR1cxgKIAEoDjJWLmdvb2dsZS5hZHMuYWRtYW5h",
+            "Z2VyLnYxLlByaXZhdGVNYXJrZXRwbGFjZURlYWxTdGF0dXNFbnVtLlByaXZh",
+            "dGVNYXJrZXRwbGFjZURlYWxTdGF0dXNCA+BBA0gJiAEBEioKGGF1Y3Rpb25f",
+            "cHJpb3JpdHlfZW5hYmxlZBgLIAEoCEID4EEBSAqIAQESKAoWYmxvY2tfb3Zl",
+            "cnJpZGVfZW5hYmxlZBgMIAEoCEID4EEBSAuIAQESKAoWcHVibGlzaGVyX2Zs",
+            "b29yX2V4ZW1wdBgYIAEoCEID4EEBSAyIAQESdQoVYnV5ZXJfcGVybWlzc2lv",
+            "bl90eXBlGA0gASgOMkwuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuRGVhbEJ1",
+            "eWVyUGVybWlzc2lvblR5cGVFbnVtLkRlYWxCdXllclBlcm1pc3Npb25UeXBl",
+            "QgPgQQFIDYgBARJTCgpidXllcl9kYXRhGA4gASgLMjUuZ29vZ2xlLmFkcy5h",
+            "ZG1hbmFnZXIudjEuUHJpdmF0ZUF1Y3Rpb25EZWFsLkJ1eWVyRGF0YUID4EEB",
+            "SA6IAQESUwoNZGVhbF9wcmlvcml0eRgWIAEoCzIyLmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLk5vbkd1YXJhbnRlZWREZWFsUHJpb3JpdHlCA+BBAUgPiAEB",
+            "EhoKCGFyY2hpdmVkGBcgASgIQgPgQQNIEIgBARI5CgtjcmVhdGVfdGltZRgP",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA0gRiAEBEjkK",
+            "C3VwZGF0ZV90aW1lGBAgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDSBKIAQEaJgoJQnV5ZXJEYXRhEhkKDGJ1eWVyX2VtYWlscxgBIAMo",
+            "CUID4EEBOp4B6kGaAQorYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1ByaXZh",
+            "dGVBdWN0aW9uRGVhbBJCbmV0d29ya3Mve25ldHdvcmtfY29kZX0vcHJpdmF0",
+            "ZUF1Y3Rpb25EZWFscy97cHJpdmF0ZV9hdWN0aW9uX2RlYWx9KhNwcml2YXRl",
+            "QXVjdGlvbkRlYWxzMhJwcml2YXRlQXVjdGlvbkRlYWxCGgoYX3ByaXZhdGVf",
+            "YXVjdGlvbl9kZWFsX2lkQhUKE19wcml2YXRlX2F1Y3Rpb25faWRCHwodX3By",
+            "aXZhdGVfYXVjdGlvbl9kaXNwbGF5X25hbWVCEwoRX2J1eWVyX2FjY291bnRf",
+            "aWRCEwoRX2V4dGVybmFsX2RlYWxfaWRCDAoKX3RhcmdldGluZ0INCgtfc3Rh",
+            "cnRfdGltZUILCglfZW5kX3RpbWVCDgoMX2Zsb29yX3ByaWNlQgkKB19zdGF0",
+            "dXNCGwoZX2F1Y3Rpb25fcHJpb3JpdHlfZW5hYmxlZEIZChdfYmxvY2tfb3Zl",
+            "cnJpZGVfZW5hYmxlZEIZChdfcHVibGlzaGVyX2Zsb29yX2V4ZW1wdEIYChZf",
+            "YnV5ZXJfcGVybWlzc2lvbl90eXBlQg0KC19idXllcl9kYXRhQhAKDl9kZWFs",
+            "X3ByaW9yaXR5QgsKCV9hcmNoaXZlZEIOCgxfY3JlYXRlX3RpbWVCDgoMX3Vw",
+            "ZGF0ZV90aW1lQtMBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCH1By",
+            "aXZhdGVBdWN0aW9uRGVhbE1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2Fk",
+            "bWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFk",
+            "c1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.DealBuyerPermissionTypeEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.NonGuaranteedDealPriorityReflection.Descriptor, global::Google.Ads.AdManager.V1.PrivateMarketplaceEnumsReflection.Descriptor, global::Google.Ads.AdManager.V1.SizeReflection.Descriptor, global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.PrivateAuctionDeal), global::Google.Ads.AdManager.V1.PrivateAuctionDeal.Parser, new[]{ "Name", "PrivateAuctionDealId", "PrivateAuctionId", "PrivateAuctionDisplayName", "BuyerAccountId", "ExternalDealId", "Targeting", "EndTime", "FloorPrice", "CreativeSizes", "Status", "AuctionPriorityEnabled", "BlockOverrideEnabled", "BuyerPermissionType", "BuyerData", "DealPriority", "CreateTime", "UpdateTime" }, new[]{ "PrivateAuctionDealId", "PrivateAuctionId", "PrivateAuctionDisplayName", "BuyerAccountId", "ExternalDealId", "Targeting", "EndTime", "FloorPrice", "Status", "AuctionPriorityEnabled", "BlockOverrideEnabled", "BuyerPermissionType", "BuyerData", "DealPriority", "CreateTime", "UpdateTime" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.PrivateAuctionDeal.Types.BuyerData), global::Google.Ads.AdManager.V1.PrivateAuctionDeal.Types.BuyerData.Parser, new[]{ "BuyerEmails" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.PrivateAuctionDeal), global::Google.Ads.AdManager.V1.PrivateAuctionDeal.Parser, new[]{ "Name", "PrivateAuctionDealId", "PrivateAuctionId", "PrivateAuctionDisplayName", "BuyerAccountId", "ExternalDealId", "Targeting", "StartTime", "EndTime", "FloorPrice", "CreativeSizes", "Status", "AuctionPriorityEnabled", "BlockOverrideEnabled", "PublisherFloorExempt", "BuyerPermissionType", "BuyerData", "DealPriority", "Archived", "CreateTime", "UpdateTime" }, new[]{ "PrivateAuctionDealId", "PrivateAuctionId", "PrivateAuctionDisplayName", "BuyerAccountId", "ExternalDealId", "Targeting", "StartTime", "EndTime", "FloorPrice", "Status", "AuctionPriorityEnabled", "BlockOverrideEnabled", "PublisherFloorExempt", "BuyerPermissionType", "BuyerData", "DealPriority", "Archived", "CreateTime", "UpdateTime" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.PrivateAuctionDeal.Types.BuyerData), global::Google.Ads.AdManager.V1.PrivateAuctionDeal.Types.BuyerData.Parser, new[]{ "BuyerEmails" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -132,15 +137,18 @@ namespace Google.Ads.AdManager.V1 {
       buyerAccountId_ = other.buyerAccountId_;
       externalDealId_ = other.externalDealId_;
       targeting_ = other.targeting_ != null ? other.targeting_.Clone() : null;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       floorPrice_ = other.floorPrice_ != null ? other.floorPrice_.Clone() : null;
       creativeSizes_ = other.creativeSizes_.Clone();
       status_ = other.status_;
       auctionPriorityEnabled_ = other.auctionPriorityEnabled_;
       blockOverrideEnabled_ = other.blockOverrideEnabled_;
+      publisherFloorExempt_ = other.publisherFloorExempt_;
       buyerPermissionType_ = other.buyerPermissionType_;
       buyerData_ = other.buyerData_ != null ? other.buyerData_.Clone() : null;
       dealPriority_ = other.dealPriority_ != null ? other.dealPriority_.Clone() : null;
+      archived_ = other.archived_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -338,6 +346,24 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 26;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Optional. Non-empty default. The start time of the `PrivateAuctionDeal`.
+    /// If unset, the `startTime` will default as follows:
+    /// On create: To the deal's `create_time`.
+    /// On update: To the deal's existing `start_time`, which can be null.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "end_time" field.</summary>
     public const int EndTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
@@ -472,6 +498,36 @@ namespace Google.Ads.AdManager.V1 {
       _hasBits0 &= ~64;
     }
 
+    /// <summary>Field number for the "publisher_floor_exempt" field.</summary>
+    public const int PublisherFloorExemptFieldNumber = 24;
+    private readonly static bool PublisherFloorExemptDefaultValue = false;
+
+    private bool publisherFloorExempt_;
+    /// <summary>
+    /// Optional. Whether the deal is exempt from publisher floor price.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PublisherFloorExempt {
+      get { if ((_hasBits0 & 512) != 0) { return publisherFloorExempt_; } else { return PublisherFloorExemptDefaultValue; } }
+      set {
+        _hasBits0 |= 512;
+        publisherFloorExempt_ = value;
+      }
+    }
+    /// <summary>Gets whether the "publisher_floor_exempt" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPublisherFloorExempt {
+      get { return (_hasBits0 & 512) != 0; }
+    }
+    /// <summary>Clears the value of the "publisher_floor_exempt" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPublisherFloorExempt() {
+      _hasBits0 &= ~512;
+    }
+
     /// <summary>Field number for the "buyer_permission_type" field.</summary>
     public const int BuyerPermissionTypeFieldNumber = 13;
     private readonly static global::Google.Ads.AdManager.V1.DealBuyerPermissionTypeEnum.Types.DealBuyerPermissionType BuyerPermissionTypeDefaultValue = global::Google.Ads.AdManager.V1.DealBuyerPermissionTypeEnum.Types.DealBuyerPermissionType.Unspecified;
@@ -533,6 +589,36 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "archived" field.</summary>
+    public const int ArchivedFieldNumber = 23;
+    private readonly static bool ArchivedDefaultValue = false;
+
+    private bool archived_;
+    /// <summary>
+    /// Output only. Whether the deal is archived.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Archived {
+      get { if ((_hasBits0 & 256) != 0) { return archived_; } else { return ArchivedDefaultValue; } }
+      set {
+        _hasBits0 |= 256;
+        archived_ = value;
+      }
+    }
+    /// <summary>Gets whether the "archived" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasArchived {
+      get { return (_hasBits0 & 256) != 0; }
+    }
+    /// <summary>Clears the value of the "archived" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearArchived() {
+      _hasBits0 &= ~256;
+    }
+
     /// <summary>Field number for the "create_time" field.</summary>
     public const int CreateTimeFieldNumber = 15;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
@@ -586,15 +672,18 @@ namespace Google.Ads.AdManager.V1 {
       if (BuyerAccountId != other.BuyerAccountId) return false;
       if (ExternalDealId != other.ExternalDealId) return false;
       if (!object.Equals(Targeting, other.Targeting)) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
       if (!object.Equals(FloorPrice, other.FloorPrice)) return false;
       if(!creativeSizes_.Equals(other.creativeSizes_)) return false;
       if (Status != other.Status) return false;
       if (AuctionPriorityEnabled != other.AuctionPriorityEnabled) return false;
       if (BlockOverrideEnabled != other.BlockOverrideEnabled) return false;
+      if (PublisherFloorExempt != other.PublisherFloorExempt) return false;
       if (BuyerPermissionType != other.BuyerPermissionType) return false;
       if (!object.Equals(BuyerData, other.BuyerData)) return false;
       if (!object.Equals(DealPriority, other.DealPriority)) return false;
+      if (Archived != other.Archived) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -611,15 +700,18 @@ namespace Google.Ads.AdManager.V1 {
       if (HasBuyerAccountId) hash ^= BuyerAccountId.GetHashCode();
       if (HasExternalDealId) hash ^= ExternalDealId.GetHashCode();
       if (targeting_ != null) hash ^= Targeting.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
       if (floorPrice_ != null) hash ^= FloorPrice.GetHashCode();
       hash ^= creativeSizes_.GetHashCode();
       if (HasStatus) hash ^= Status.GetHashCode();
       if (HasAuctionPriorityEnabled) hash ^= AuctionPriorityEnabled.GetHashCode();
       if (HasBlockOverrideEnabled) hash ^= BlockOverrideEnabled.GetHashCode();
+      if (HasPublisherFloorExempt) hash ^= PublisherFloorExempt.GetHashCode();
       if (HasBuyerPermissionType) hash ^= BuyerPermissionType.GetHashCode();
       if (buyerData_ != null) hash ^= BuyerData.GetHashCode();
       if (dealPriority_ != null) hash ^= DealPriority.GetHashCode();
+      if (HasArchived) hash ^= Archived.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (_unknownFields != null) {
@@ -709,6 +801,18 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(178, 1);
         output.WriteMessage(DealPriority);
       }
+      if (HasArchived) {
+        output.WriteRawTag(184, 1);
+        output.WriteBool(Archived);
+      }
+      if (HasPublisherFloorExempt) {
+        output.WriteRawTag(192, 1);
+        output.WriteBool(PublisherFloorExempt);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(StartTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -788,6 +892,18 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(178, 1);
         output.WriteMessage(DealPriority);
       }
+      if (HasArchived) {
+        output.WriteRawTag(184, 1);
+        output.WriteBool(Archived);
+      }
+      if (HasPublisherFloorExempt) {
+        output.WriteRawTag(192, 1);
+        output.WriteBool(PublisherFloorExempt);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(StartTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -819,6 +935,9 @@ namespace Google.Ads.AdManager.V1 {
       if (targeting_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Targeting);
       }
+      if (startTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
       }
@@ -835,6 +954,9 @@ namespace Google.Ads.AdManager.V1 {
       if (HasBlockOverrideEnabled) {
         size += 1 + 1;
       }
+      if (HasPublisherFloorExempt) {
+        size += 2 + 1;
+      }
       if (HasBuyerPermissionType) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BuyerPermissionType);
       }
@@ -843,6 +965,9 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (dealPriority_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(DealPriority);
+      }
+      if (HasArchived) {
+        size += 2 + 1;
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
@@ -886,6 +1011,12 @@ namespace Google.Ads.AdManager.V1 {
         }
         Targeting.MergeFrom(other.Targeting);
       }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
           EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -908,6 +1039,9 @@ namespace Google.Ads.AdManager.V1 {
       if (other.HasBlockOverrideEnabled) {
         BlockOverrideEnabled = other.BlockOverrideEnabled;
       }
+      if (other.HasPublisherFloorExempt) {
+        PublisherFloorExempt = other.PublisherFloorExempt;
+      }
       if (other.HasBuyerPermissionType) {
         BuyerPermissionType = other.BuyerPermissionType;
       }
@@ -922,6 +1056,9 @@ namespace Google.Ads.AdManager.V1 {
           DealPriority = new global::Google.Ads.AdManager.V1.NonGuaranteedDealPriority();
         }
         DealPriority.MergeFrom(other.DealPriority);
+      }
+      if (other.HasArchived) {
+        Archived = other.Archived;
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
@@ -1047,6 +1184,21 @@ namespace Google.Ads.AdManager.V1 {
             input.ReadMessage(DealPriority);
             break;
           }
+          case 184: {
+            Archived = input.ReadBool();
+            break;
+          }
+          case 192: {
+            PublisherFloorExempt = input.ReadBool();
+            break;
+          }
+          case 210: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
         }
       }
     #endif
@@ -1157,6 +1309,21 @@ namespace Google.Ads.AdManager.V1 {
               DealPriority = new global::Google.Ads.AdManager.V1.NonGuaranteedDealPriority();
             }
             input.ReadMessage(DealPriority);
+            break;
+          }
+          case 184: {
+            Archived = input.ReadBool();
+            break;
+          }
+          case 192: {
+            PublisherFloorExempt = input.ReadBool();
+            break;
+          }
+          case 210: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
             break;
           }
         }
