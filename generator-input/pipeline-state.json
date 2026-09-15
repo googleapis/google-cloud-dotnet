@@ -5196,6 +5196,18 @@
             "sourcePaths": [
                 "apis/Google.Shopping.Merchant.LoyaltyCustomers.V1/Google.Shopping.Merchant.LoyaltyCustomers.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.BackupDR.V1Beta",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/backupdr/v1beta"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.BackupDR.V1Beta/Google.Cloud.BackupDR.V1Beta"
+            ]
         }
     ],
     "ignoredApiPaths": [

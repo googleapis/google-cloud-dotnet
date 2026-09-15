@@ -887,6 +887,27 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.BackupDR.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Backup and DR Service",
+      "productUrl": "https://cloud.google.com/backup-disaster-recovery/docs/reference/rpc",
+      "description": "",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/backupdr/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "backupdr",
+      "serviceConfigFile": "backupdr_v1beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.BareMetalSolution.V2",
       "version": "1.8.0",
       "type": "grpc",
