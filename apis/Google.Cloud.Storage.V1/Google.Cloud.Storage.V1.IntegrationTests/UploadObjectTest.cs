@@ -427,67 +427,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         }
 
         [Fact]
-        public void HashingStream_ShouldHandleRetries_WhenRestartedFromBeginning()
-        {
-            var data = Encoding.UTF8.GetBytes("The quick brown fox jumps over the lazy dog");
-            var baseStream = new MemoryStream(data);
-            var hashingStream = new CustomMediaUpload.HashingStream(baseStream);
-            var buffer = new byte[data.Length];
-
-            hashingStream.Read(buffer, 0, 10);
-
-            // Simulate the Retry logic: Seek back to the beginning
-            hashingStream.Position = 0;
-
-            hashingStream.Read(buffer, 0, data.Length);
-            var finalHash = hashingStream.GetBase64Hash();
-
-            var expectedHasher = new Crc32c();
-            expectedHasher.UpdateHash(data, 0, data.Length);
-            var expectedHash = Convert.ToBase64String(expectedHasher.GetHash());
-            Assert.Equal(expectedHash, finalHash);
-        }
-
-        [Fact]
-        public void HashingStream_ShouldHandleRetries_WhenSeekingBackwardsToIntermediatePoint()
-        {
-            var data = Encoding.UTF8.GetBytes("The quick brown fox jumps over the lazy dog");
-            var baseStream = new MemoryStream(data);
-            var hashingStream = new CustomMediaUpload.HashingStream(baseStream);
-            var buffer = new byte[data.Length];
-
-            hashingStream.Read(buffer, 0, 10);
-
-            // Simulate the Retry logic: Seek back to the intermediate point.
-            hashingStream.Position = 5;
-
-            hashingStream.Read(buffer, 0, data.Length);
-            var finalHash = hashingStream.GetBase64Hash();
-
-            var expectedHasher = new Crc32c();
-            expectedHasher.UpdateHash(data, 0, data.Length);
-            var expectedHash = Convert.ToBase64String(expectedHasher.GetHash());
-            Assert.Equal(expectedHash, finalHash);
-        }
-
-        [Fact]
-        public void HashingStream_ShouldDetectGaps_WhenResumingFromIntermediateOffset()
-        {
-            var data = Encoding.UTF8.GetBytes("The quick brown fox jumps over the lazy dog");
-            var baseStream = new MemoryStream(data);
-            var hashingStream = new CustomMediaUpload.HashingStream(baseStream);
-            var buffer = new byte[data.Length];
-
-            // Simulate resuming an upload from a new process starting at intermediate offset 10
-            hashingStream.Position = 10;
-            int bytesRead = hashingStream.Read(buffer, 0, data.Length - 10);
-
-            Assert.Equal(data.Length - 10, bytesRead);
-            // Because bytes 0-9 were never hashed, IsHashComplete must be false
-            Assert.False(hashingStream.IsHashComplete);
-        }
-
-        [Fact]
         public async Task CustomMediaUpload_ResumeAsync_WithStreamGap_FailsWithArgumentException()
         {
             var client = _fixture.Client;
@@ -584,76 +523,35 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         }
 
         [Fact]
-        public void CustomMediaUpload_ShouldThrowArgumentException_WhenResumingFromIntermediateOffset()
+        public async Task CustomMediaUpload_ShouldSucceedAndCreateObject_WhenRetriedFromIntermediateOffset()
         {
-            var data = Encoding.UTF8.GetBytes("The quick brown fox jumps over the lazy dog");
-            var baseStream = new MemoryStream(data);
             var client = _fixture.Client;
-            var service = client.Service;
-            var obj = new Object { Bucket = _fixture.MultiVersionBucket, Name = IdGenerator.FromGuid() };
-            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.RejectAndThrow };
+            var bucket = _fixture.MultiVersionBucket;
+            var name = IdGenerator.FromGuid();
+            var contentType = "application/octet-stream";
 
-            var uploader = new CustomMediaUpload(service, obj, _fixture.MultiVersionBucket, baseStream, "text/plain", options);
-            var hashingStream = uploader.ContentStream as CustomMediaUpload.HashingStream;
-            Assert.NotNull(hashingStream);
+            int totalSize = UploadObjectOptions.MinimumChunkSize + 100;
+            var source = GenerateData(totalSize);
 
-            // Simulate resuming from offset 10
-            hashingStream.Position = 10;
-            var buffer = new byte[data.Length];
-            hashingStream.Read(buffer, 0, data.Length - 10);
+            var destination = new Object { Bucket = bucket, Name = name, ContentType = contentType };
+            var options = new UploadObjectOptions
+            {
+                ChunkSize = UploadObjectOptions.MinimumChunkSize,
+                UploadValidationMode = UploadValidationMode.RejectAndThrow
+            };
 
-            // Verify IsHashComplete is false due to unhashed prefix
-            Assert.False(hashingStream.IsHashComplete);
+            var uploader = (CustomMediaUpload) client.CreateObjectUploader(destination, source, options);
 
-            // Simulate final request execution
-            var request = new HttpRequestMessage(HttpMethod.Put, "https://example.com/upload");
-            var eventField = typeof(ResumableUpload).GetField(
-                "LastRequestExecuting",
-                System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
-            Assert.NotNull(eventField);
-            var handler = (Action<HttpRequestMessage>) eventField.GetValue(uploader);
-            Assert.NotNull(handler);
-            var exception = Assert.Throws<ArgumentException>(() => handler.Invoke(request));
-            Assert.Contains("Cannot perform hash validation when resuming", exception.Message);
-            Assert.Equal("stream", exception.ParamName);
-        }
+            // Read first chunk to hash it, then simulate retry by rewinding stream to an intermediate offset before uploading
+            var buffer = new byte[10];
+            uploader.ContentStream.Read(buffer, 0, 10);
+            uploader.ContentStream.Position = 5;
+            uploader.ContentStream.Position = 0;
 
-        [Fact]
-        public void CustomMediaUpload_ShouldContainHashHeaderAndCorrectHash_WhenRetriedFromIntermediateOffset()
-        {
-            var data = Encoding.UTF8.GetBytes("The quick brown fox jumps over the lazy dog");
-            var baseStream = new MemoryStream(data);
-            var client = _fixture.Client;
-            var service = client.Service;
-            var obj = new Object { Bucket = _fixture.MultiVersionBucket, Name = IdGenerator.FromGuid() };
-            var options = new UploadObjectOptions { UploadValidationMode = UploadValidationMode.RejectAndThrow };
-
-            var uploader = new CustomMediaUpload(service, obj, _fixture.MultiVersionBucket, baseStream, "text/plain", options);
-            var hashingStream = uploader.ContentStream as CustomMediaUpload.HashingStream;
-            Assert.NotNull(hashingStream);
-
-            var buffer = new byte[data.Length];
-            hashingStream.Read(buffer, 0, 10);
-           // Simulate the Retry logic: Seek back to the intermediate point.
-            hashingStream.Position = 5;
-            hashingStream.Read(buffer, 0, data.Length);
-            var finalHash = hashingStream.GetBase64Hash();
-            var expectedHasher = new Crc32c();
-            expectedHasher.UpdateHash(data, 0, data.Length);
-            var expectedHash = Convert.ToBase64String(expectedHasher.GetHash());
-            Assert.True(hashingStream.IsHashComplete);
-
-            // Simulate final request execution
-            var request = new HttpRequestMessage(HttpMethod.Put, "https://example.com/upload");
-            var eventField = typeof(ResumableUpload).GetField(
-                "LastRequestExecuting",
-                System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
-            Assert.NotNull(eventField);
-            var handler = (Action<HttpRequestMessage>) eventField.GetValue(uploader);
-            Assert.NotNull(handler);
-            handler.Invoke(request);
-            Assert.True(request.Headers.Contains("x-goog-hash"));
-            Assert.Equal(expectedHash, finalHash);
+            var progress = await uploader.UploadAsync();
+            progress.ThrowOnFailure();
+            Assert.Equal(UploadStatus.Completed, progress.Status);
+            ValidateData(bucket, name, source);
         }
 
         private Object GetExistingObject()

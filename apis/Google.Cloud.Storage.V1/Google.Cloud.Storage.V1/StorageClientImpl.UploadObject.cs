@@ -48,7 +48,8 @@ namespace Google.Cloud.Storage.V1
         {
             ValidateObject(destination, nameof(destination));
             GaxPreconditions.CheckNotNull(source, nameof(source));
-            var mediaUpload = new CustomMediaUpload(Service, destination, destination.Bucket, source, destination.ContentType, options);
+            var maybeHashingSource = UploadObjectOptions.GetWrappedSourceStream(source, options);
+            var mediaUpload = new CustomMediaUpload(Service, destination, destination.Bucket, maybeHashingSource, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
             ApplyEncryptionKey(options?.EncryptionKey, options?.KmsKeyName, mediaUpload);
             return mediaUpload;
@@ -189,7 +190,7 @@ namespace Google.Cloud.Storage.V1
 
             public override long Position
             {
-                get => throw new NotImplementedException();
+                get => 0;
                 set => throw new NotImplementedException();
             }
 

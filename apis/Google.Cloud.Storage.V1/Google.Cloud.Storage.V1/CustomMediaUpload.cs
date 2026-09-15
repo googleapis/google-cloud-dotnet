@@ -32,26 +32,15 @@ namespace Google.Cloud.Storage.V1
         private const string GoogleHashHeader = "x-goog-hash";
 
         public CustomMediaUpload(IClientService service, Apis.Storage.v1.Data.Object body, string bucket,
-            Stream stream, string contentType, UploadObjectOptions options)
-            : base(service, body, bucket, (options?.UploadValidationMode ?? UploadObjectOptions.DefaultValidationMode) != UploadValidationMode.None ? new HashingStream(stream) : stream, contentType)
+            Stream stream, string contentType)
+            : base(service, body, bucket, stream, contentType)
         {
-            var validationMode = options?.UploadValidationMode ?? UploadObjectOptions.DefaultValidationMode;
-            GaxPreconditions.CheckEnumValue(validationMode, nameof(UploadObjectOptions.UploadValidationMode));
-            if (validationMode != UploadValidationMode.None)
+            if (stream is HashingStream hashingStream)
             {
-                var hashingStream = ContentStream as HashingStream;
                 LastRequestExecuting += (HttpRequestMessage request) =>
                 {
                     if (hashingStream != null)
                     {
-                        if (hashingStream.HasGaps)
-                        {
-                            throw new ArgumentException(
-                                "Cannot perform hash validation when resuming an upload from a non-zero offset, " +
-                                "as the complete stream contents are required to compute the hash. " +
-                                "To resume this upload, disable validation by setting UploadValidationMode to None.",
-                                nameof(stream));
-                        }
                         if (hashingStream.IsHashComplete)
                         {
                             var calculatedHash = hashingStream.GetBase64Hash();
@@ -84,7 +73,7 @@ namespace Google.Cloud.Storage.V1
             private readonly Stream _stream;
             private readonly Crc32c _hasher;
             private long _maxPositionHashed = 0;
-            private long _position = 0;
+            private long _position;
             private bool _hasGaps = false;
             private bool _reachedEof = false;
             public bool HasGaps => _hasGaps;
@@ -93,51 +82,50 @@ namespace Google.Cloud.Storage.V1
             {
                 _stream = stream;
                 _hasher = new Crc32c();
+                _position = stream.CanSeek ? stream.Position : 0;
             }
 
             public bool IsHashComplete => !_hasGaps && (_stream.CanSeek ? _maxPositionHashed == _stream.Length : _reachedEof);
 
             public override int Read(byte[] buffer, int offset, int count)
             {
-                long startingPos = _stream.CanSeek ? _stream.Position : _position;
+                long startingPos = _position;
                 int bytesRead = _stream.Read(buffer, offset, count);
                 if (count > 0 && bytesRead == 0)
                 {
                     _reachedEof = true;
                 }
                 ProcessBytes(buffer, offset, bytesRead, startingPos);
-                if (!_stream.CanSeek)
-                {
-                    _position += bytesRead;
-                }
+                _position += bytesRead;
                 return bytesRead;
             }
 
             public override async Task<int> ReadAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken)
             {
-                long startingPos = _stream.CanSeek ? _stream.Position : _position;
+                long startingPos = _position;
                 int bytesRead = await _stream.ReadAsync(buffer, offset, count, cancellationToken).ConfigureAwait(false);
                 if (count > 0 && bytesRead == 0)
                 {
                     _reachedEof = true;
                 }
                 ProcessBytes(buffer, offset, bytesRead, startingPos);
-                if (!_stream.CanSeek)
-                {
-                    _position += bytesRead;
-                }
+                _position += bytesRead;
                 return bytesRead;
             }
 
             private void ProcessBytes(byte[] buffer, int offset, int bytesRead, long startingPos)
             {
-                if (bytesRead <= 0) return;
-
                 if (startingPos > _maxPositionHashed)
                 {
                     _hasGaps = true;
-                    return;
+                    throw new ArgumentException(
+                        "Cannot perform hash validation when resuming an upload from a non-zero offset, " +
+                        "as the complete stream contents are required to compute the hash. " +
+                        "To resume this upload, disable validation by setting UploadValidationMode to None.",
+                        "stream");
                 }
+
+                if (bytesRead <= 0) return;
 
                 // Only hash bytes that are beyond the furthest point we've already hashed.
                 // This handles the rewind and re-read scenario during retries.
@@ -154,12 +142,13 @@ namespace Google.Cloud.Storage.V1
 
             public override long Position
             {
-                get => _stream.CanSeek ? _stream.Position : _position;
+                get => _position;
                 set
                 {
                     if (_stream.CanSeek)
                     {
                         _stream.Position = value;
+                        _position = value;
                     }
                     else
                     {
@@ -172,7 +161,7 @@ namespace Google.Cloud.Storage.V1
             {
                 if (_stream.CanSeek)
                 {
-                    return _stream.Seek(offset, origin);
+                    return _position = _stream.Seek(offset, origin);
                 }
                 throw new NotSupportedException();
             }
