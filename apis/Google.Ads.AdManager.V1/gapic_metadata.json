@@ -1229,6 +1229,21 @@
         }
       }
     },
+    "DaiSessionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DaiSessionServiceClient",
+          "rpcs": {
+            "GetDaiSession": {
+              "methods": [
+                "GetDaiSession",
+                "GetDaiSessionAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "DeviceCapabilityService": {
       "clients": {
         "grpc": {

@@ -415,6 +415,7 @@ namespace Google.Ads.AdManager.V1 {
     ///
     /// **Filterable fields:**
     ///
+    /// * `archived`
     /// * `auctionPriorityEnabled`
     /// * `blockOverrideEnabled`
     /// * `buyerAccountId`
@@ -426,6 +427,7 @@ namespace Google.Ads.AdManager.V1 {
     /// * `privateAuctionDealId`
     /// * `privateAuctionDisplayName`
     /// * `privateAuctionId`
+    /// * `publisherFloorExempt`
     /// * `status`
     /// * `updateTime`
     /// </summary>
