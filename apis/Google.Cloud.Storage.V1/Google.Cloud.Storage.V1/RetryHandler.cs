@@ -35,6 +35,7 @@ namespace Google.Cloud.Storage.V1
         // For testing
         internal const string InvocationIdHeaderPart = "gccl-invocation-id";
         internal const string AttemptCountHeaderPart = "gccl-attempt-count";
+        internal const string IdempotencyTokenHeader = "x-goog-gcs-idempotency-token";
 
         private readonly RetryOptions _retryOptions;
         private readonly IScheduler _scheduler;
@@ -60,6 +61,7 @@ namespace Google.Cloud.Storage.V1
             // Note: we can't use ModifyRequest, as the x-goog-api-client header is added later by ConfigurableMessageHandler.
             // Additionally, that's only called once, and we may want to record the attempt number as well.
             request.AddExecuteInterceptor(InvocationIdInterceptor.Instance);
+            request.AddExecuteInterceptor(IdempotencyTokenInterceptor.Instance);
             request.AddUnsuccessfulResponseHandler(retryHandler);
         }
 
@@ -135,8 +137,26 @@ namespace Google.Cloud.Storage.V1
 
                 request.Headers.Remove(VersionHeaderBuilder.HeaderName);
                 request.Headers.Add(VersionHeaderBuilder.HeaderName, string.Join(" ", parts));
+                return Task.CompletedTask;
+            }
+        }
 
+        /// <summary>
+        /// Interceptor that automatically attaches a unique idempotency token 
+        /// to the x-goog-gcs-idempotency-token header.
+        /// </summary>
+        private sealed class IdempotencyTokenInterceptor : IHttpExecuteInterceptor
+        {
+            internal static IdempotencyTokenInterceptor Instance { get; } = new IdempotencyTokenInterceptor();
 
+            private IdempotencyTokenInterceptor() { }
+
+            public Task InterceptAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+            {
+                if (!request.Headers.Contains(IdempotencyTokenHeader))
+                {
+                    request.Headers.TryAddWithoutValidation(IdempotencyTokenHeader, Guid.NewGuid().ToString());
+                }
                 return Task.CompletedTask;
             }
         }
