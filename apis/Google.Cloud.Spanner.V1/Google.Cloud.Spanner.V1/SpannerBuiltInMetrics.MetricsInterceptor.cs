@@ -15,7 +15,6 @@
 using Grpc.Core;
 using Grpc.Core.Interceptors;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -64,13 +63,13 @@ internal static partial class SpannerBuiltInMetrics
                 // No headers are available if continuation fails, but we can record status (if RpcException) and latency.
                 // An RpcException here is unexpected but defensively handled in case a previous interceptor throws it.
                 StatusCode status = GetStatus(ex);
-                RecordAttemptMetrics(elapsedMs, context.Method.Name, dbNameProvider, status, _clientIdentity);
+                var labels = Labeler.GetLabels(context.Method.Name, dbNameProvider, status, _clientIdentity);
+                RecordAttemptMetrics(elapsedMs, labels);
                 throw;
             }
 
             async Task<TResponse> InstrumentCallAsync()
             {
-                double elapsedMs = 0;
                 try
                 {
                     return await call.ResponseAsync.ConfigureAwait(false);
@@ -78,7 +77,7 @@ internal static partial class SpannerBuiltInMetrics
                 finally
                 {
                     stopwatch.Stop();
-                    elapsedMs = stopwatch.ElapsedMilliseconds;
+                    double elapsedMs = stopwatch.ElapsedMilliseconds;
                     var labels = Labeler.GetLabels(context.Method.Name, dbNameProvider, call.GetStatus().StatusCode, _clientIdentity);
                     var recordTimingTask = RecordServerTimingMetricsAsync(call.ResponseHeadersAsync, labels).ConfigureAwait(false);
                     RecordAttemptMetrics(elapsedMs, labels);
@@ -90,6 +89,52 @@ internal static partial class SpannerBuiltInMetrics
         // NOTE: We do not need to intercept blocking unary calls. All such calls resolve through the async
         // pipeline because each call now has a response metadata handler.
 
-        // TODO: Add instrumentation for server streaming calls
+        /// <inheritdoc/>
+        public override AsyncServerStreamingCall<TResponse> AsyncServerStreamingCall<TRequest, TResponse>(
+            TRequest request,
+            ClientInterceptorContext<TRequest, TResponse> context,
+            AsyncServerStreamingCallContinuation<TRequest, TResponse> continuation)
+        {
+            if (request is not IDatabaseNameProvider dbNameProvider)
+            {
+                return continuation(request, context);
+            }
+
+            IStopwatch stopwatch = _stopwatchProvider.StartNew();
+            AsyncServerStreamingCall<TResponse> call;
+            try
+            {
+                call = continuation(request, context);
+
+                var instrumentedStreamReader = new InstrumentedAttemptStreamReader<TResponse>(
+                    call.ResponseStream,
+                    stopwatch,
+                    context.Method.Name,
+                    dbNameProvider,
+                    _clientIdentity,
+                    call.ResponseHeadersAsync);
+
+                return new AsyncServerStreamingCall<TResponse>(
+                    instrumentedStreamReader,
+                    call.ResponseHeadersAsync,
+                    call.GetStatus,
+                    call.GetTrailers,
+                    disposeAction: () =>
+                    {
+                        // In the case the call was disposed before reading to completion we still record attempt metrics.
+                        _ = instrumentedStreamReader.EmitMetricsAsync();
+                        call.Dispose();
+                    });
+            }
+            catch (Exception ex)
+            {
+                stopwatch.Stop();
+                double elapsedMs = stopwatch.ElapsedMilliseconds;
+                StatusCode status = GetStatus(ex);
+                var labels = Labeler.GetLabels(context.Method.Name, dbNameProvider, status, _clientIdentity);
+                RecordAttemptMetrics(elapsedMs, labels);
+                throw;
+            }
+        }
     }
 }
