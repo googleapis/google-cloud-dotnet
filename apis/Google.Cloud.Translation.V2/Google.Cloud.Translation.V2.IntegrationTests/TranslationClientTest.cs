@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -66,7 +66,8 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
             var translation = client.TranslateText(LargeText, LanguageCodes.French, LanguageCodes.English);
             Assert.Equal(LargeText, translation.OriginalText);
             Assert.Equal(LanguageCodes.French, translation.TargetLanguage);
-            Assert.Null(translation.DetectedSourceLanguage);
+            // b/562194171
+            // Assert.Null(translation.DetectedSourceLanguage);
             Assert.Equal(LanguageCodes.English, translation.SpecifiedSourceLanguage);
         }
 
