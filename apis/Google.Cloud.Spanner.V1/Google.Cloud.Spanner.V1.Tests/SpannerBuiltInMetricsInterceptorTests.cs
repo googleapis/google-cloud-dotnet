@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
 using Grpc.Core;
 using Grpc.Core.Interceptors;
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Diagnostics.Metrics;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Spanner.V1.Tests.MetricsCapture;
@@ -134,7 +134,119 @@ public class SpannerBuiltInMetricsInterceptorTests
         ValidateEmittedMetrics(measurements, expectedStatus, methodName: expectedMethod);
     }
 
+    public static TheoryData<Func<SpannerClient, Task>, string> SpannerClientStreamingSuccessCases => new()
+    {
+        { client => ConsumeStreamAsync(client.ExecuteStreamingSql(new ExecuteSqlRequest { SessionAsSessionName = s_sessionName })), "ExecuteStreamingSql" },
+        { client => ConsumeStreamAsync(client.StreamingRead(new ReadRequest { SessionAsSessionName = s_sessionName })), "StreamingRead" },
+        { client => ConsumeStreamAsync(client.BatchWrite(new BatchWriteRequest { SessionAsSessionName = s_sessionName })), "BatchWrite" },
+    };
 
+    [Theory]
+    [MemberData(nameof(SpannerClientStreamingSuccessCases))]
+    public async Task SpannerClient_RecordsMetrics_Streaming_Success(
+        Func<SpannerClient, Task> callStreaming,
+        string expectedMethod)
+    {
+        var client = CreateClient(new FakeCallInvoker(s_serverTimingMetadata));
+
+        var measurements = await RunWithMeterListenerAsync(() => callStreaming(client));
+
+        ValidateEmittedMetrics(measurements, StatusCode.OK, methodName: expectedMethod);
+    }
+
+    public static TheoryData<Func<SpannerClient, Task>, StatusCode, string> SpannerClientStreamingFailureCases => new()
+    {
+        { client => ConsumeStreamAsync(client.ExecuteStreamingSql(new ExecuteSqlRequest { SessionAsSessionName = s_sessionName })), StatusCode.Unknown, "ExecuteStreamingSql" },
+        { client => ConsumeStreamAsync(client.ExecuteStreamingSql(new ExecuteSqlRequest { SessionAsSessionName = s_sessionName })), StatusCode.DeadlineExceeded, "ExecuteStreamingSql" },
+        { client => ConsumeStreamAsync(client.StreamingRead(new ReadRequest { SessionAsSessionName = s_sessionName })), StatusCode.Unknown, "StreamingRead" },
+        { client => ConsumeStreamAsync(client.StreamingRead(new ReadRequest { SessionAsSessionName = s_sessionName })), StatusCode.DeadlineExceeded, "StreamingRead" },
+        { client => ConsumeStreamAsync(client.BatchWrite(new BatchWriteRequest { SessionAsSessionName = s_sessionName })), StatusCode.Unknown, "BatchWrite" },
+        { client => ConsumeStreamAsync(client.BatchWrite(new BatchWriteRequest { SessionAsSessionName = s_sessionName })), StatusCode.DeadlineExceeded, "BatchWrite" },
+    };
+
+    [Theory]
+    [MemberData(nameof(SpannerClientStreamingFailureCases))]
+    public async Task SpannerClient_RecordsMetrics_Streaming_Failure(
+        Func<SpannerClient, Task> callStreaming,
+        StatusCode expectedStatus,
+        string expectedMethod)
+    {
+        var client = CreateClient(new FakeCallInvoker(s_serverTimingMetadata, expectedStatus));
+
+        var measurements = await RunWithMeterListenerAsync(() => Assert.ThrowsAnyAsync<RpcException>(() => callStreaming(client)));
+
+        ValidateEmittedMetrics(measurements, expectedStatus, methodName: expectedMethod);
+    }
+
+    public static TheoryData<Func<ManagedTransaction, ReliableStreamReader>, string> ReliableStreamSuccessCases => new()
+    {
+        { transaction => transaction.ExecuteSqlStreamReader(new ExecuteSqlRequest(), null), "ExecuteStreamingSql" },
+        { transaction => transaction.ReadStreamReader(new ReadRequest(), null), "StreamingRead" },
+    };
+
+    [Theory]
+    [MemberData(nameof(ReliableStreamSuccessCases))]
+    public async Task SpannerClient_RecordsMetrics_ReliableStream_Success(
+        Func<ManagedTransaction, ReliableStreamReader> createReader,
+        string expectedMethod)
+    {
+        var client = CreateClient(new FakeCallInvoker(s_serverTimingMetadata));
+
+        var measurements = await RunWithMeterListenerAsync(() => ConsumeReaderAsync(createReader(CreateTransaction(client))));
+
+        ValidateEmittedMetrics(measurements, StatusCode.OK, methodName: expectedMethod);
+    }
+
+    public static TheoryData<Func<ManagedTransaction, ReliableStreamReader>, StatusCode, string> ReliableStreamFailureCases => new()
+    {
+        { transaction => transaction.ExecuteSqlStreamReader(new ExecuteSqlRequest(), null), StatusCode.Unknown, "ExecuteStreamingSql" },
+        { transaction => transaction.ExecuteSqlStreamReader(new ExecuteSqlRequest(), null), StatusCode.DeadlineExceeded, "ExecuteStreamingSql" },
+        { transaction => transaction.ReadStreamReader(new ReadRequest(), null), StatusCode.Unknown, "StreamingRead" },
+        { transaction => transaction.ReadStreamReader(new ReadRequest(), null), StatusCode.DeadlineExceeded, "StreamingRead" },
+    };
+
+    [Theory]
+    [MemberData(nameof(ReliableStreamFailureCases))]
+    public async Task SpannerClient_RecordsMetrics_ReliableStream_Failure(
+        Func<ManagedTransaction, ReliableStreamReader> createReader,
+        StatusCode expectedStatus,
+        string expectedMethod)
+    {
+        var client = CreateClient(new FakeCallInvoker(s_serverTimingMetadata, expectedStatus));
+
+        var measurements = await RunWithMeterListenerAsync(
+            () => Assert.ThrowsAnyAsync<RpcException>(() => ConsumeReaderAsync(createReader(CreateTransaction(client)))));
+
+        ValidateEmittedMetrics(measurements, expectedStatus, methodName: expectedMethod);
+    }
+
+    private static ManagedTransaction CreateTransaction(SpannerClient client) =>
+        ManagedTransaction.FromTransaction(
+            client,
+            new Session { SessionName = s_sessionName },
+            transactionId: null,
+            transactionOptions: null,
+            readTimestamp: null);
+
+    private static Task ConsumeStreamAsync<T>(ServerStreamingBase<T> stream) =>
+        ConsumeStreamAsync(stream.GrpcCall.ResponseStream);
+
+    private static async Task ConsumeStreamAsync<T>(IAsyncStreamReader<T> stream)
+    {
+        while (await stream.MoveNext(CancellationToken.None).ConfigureAwait(false))
+        {
+        }
+    }
+
+    private static async Task ConsumeReaderAsync(ReliableStreamReader reader)
+    {
+        using (reader)
+        {
+            while (await reader.NextAsync(CancellationToken.None).ConfigureAwait(false) is not null)
+            {
+            }
+        }
+    }
 
     /// <summary>
     /// Verifies that built in metrics were recorded.
