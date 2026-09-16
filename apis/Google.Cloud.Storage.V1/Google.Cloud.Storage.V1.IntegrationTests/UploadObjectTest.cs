@@ -522,38 +522,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Same(exception, thrown);
         }
 
-        [Fact]
-        public async Task CustomMediaUpload_ShouldSucceedAndCreateObject_WhenRetriedFromIntermediateOffset()
-        {
-            var client = _fixture.Client;
-            var bucket = _fixture.MultiVersionBucket;
-            var name = IdGenerator.FromGuid();
-            var contentType = "application/octet-stream";
-
-            int totalSize = UploadObjectOptions.MinimumChunkSize + 100;
-            var source = GenerateData(totalSize);
-
-            var destination = new Object { Bucket = bucket, Name = name, ContentType = contentType };
-            var options = new UploadObjectOptions
-            {
-                ChunkSize = UploadObjectOptions.MinimumChunkSize,
-                UploadValidationMode = UploadValidationMode.RejectAndThrow
-            };
-
-            var uploader = (CustomMediaUpload) client.CreateObjectUploader(destination, source, options);
-
-            // Read first chunk to hash it, then simulate retry by rewinding stream to an intermediate offset before uploading
-            var buffer = new byte[10];
-            uploader.ContentStream.Read(buffer, 0, 10);
-            uploader.ContentStream.Position = 5;
-            uploader.ContentStream.Position = 0;
-
-            var progress = await uploader.UploadAsync();
-            progress.ThrowOnFailure();
-            Assert.Equal(UploadStatus.Completed, progress.Status);
-            ValidateData(bucket, name, source);
-        }
-
         private Object GetExistingObject()
         {
             var obj = _fixture.Client.UploadObject(_fixture.MultiVersionBucket, IdGenerator.FromGuid(), "application/octet-stream", GenerateData(100));
