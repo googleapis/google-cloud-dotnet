@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Apis.Upload;
 using System;
+using System.IO;
 using static Google.Apis.Storage.v1.ObjectsResource;
 using static Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload;
 
@@ -32,7 +33,7 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public const int MinimumChunkSize = ResumableUpload<Object>.MinimumChunkSize;
 
-        internal static UploadValidationMode DefaultValidationMode { get; } = V1.UploadValidationMode.DeleteAndThrow;
+        internal static UploadValidationMode DefaultValidationMode { get; } = V1.UploadValidationMode.RejectAndThrow;
 
         /// <summary>
         /// Precondition for upload: the object is only uploaded if the existing object's
@@ -128,6 +129,15 @@ namespace Google.Cloud.Storage.V1
         /// Resource Sharing, as documented at https://cloud.google.com/storage/docs/cross-origin.
         /// </summary>
         public string Origin { get; set; }
+
+        internal static Stream GetWrappedSourceStream(Stream source, UploadObjectOptions options)
+        {
+            var validationMode = options?.UploadValidationMode ?? DefaultValidationMode;
+            GaxPreconditions.CheckEnumValue(validationMode, nameof(UploadValidationMode));
+            return validationMode != V1.UploadValidationMode.None
+                ? new CustomMediaUpload.HashingStream(source)
+                : source;
+        }
 
         internal void ModifyMediaUpload(CustomMediaUpload upload)
         {
