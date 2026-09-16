@@ -4451,6 +4451,27 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.NetworkServices.V1Beta1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Network Services",
+      "productUrl": "https://cloud.google.com/products/networking",
+      "description": "",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/networkservices/v1beta1",
+      "includeCommonResourcesProto": true,
+      "shortName": "networkservices",
+      "serviceConfigFile": "networkservices_v1beta1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Notebooks.V1",
       "version": "2.6.0",
       "type": "grpc",
