@@ -5208,6 +5208,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.BackupDR.V1Beta/Google.Cloud.BackupDR.V1Beta"
             ]
+        },
+        {
+            "id": "Google.Cloud.NetworkServices.V1Beta1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/networkservices/v1beta1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.NetworkServices.V1Beta1/Google.Cloud.NetworkServices.V1Beta1"
+            ]
         }
     ],
     "ignoredApiPaths": [
