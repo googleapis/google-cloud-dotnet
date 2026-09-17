@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.16.0, released 2026-09-17
+
+### New features
+
+- Add idempotency header (#15778)
+
 ## Version 4.15.0, released 2026-06-08
 
 ### New features
