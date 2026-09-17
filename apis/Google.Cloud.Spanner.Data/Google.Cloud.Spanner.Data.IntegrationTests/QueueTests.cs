@@ -28,20 +28,25 @@ public class QueueTests
 
     public QueueTests(MutationsQueueFixture dmlQueueFixture) => _queueFixture = dmlQueueFixture;
 
+    private readonly byte[] _payloadBytes = Encoding.UTF8.GetBytes("Hello, World");
+    private static long UserId => 1L;
+    private static long MessageId => 1L;
+    private static int DeliveryDelay => 10;
+    private static DateTime DeliverAt => DateTime.UtcNow.AddSeconds(DeliveryDelay);
+    private static readonly SendOptions s_deliveryDelaySendOptions = new() { DeliverAt = DeliverAt };
+
     [Trait(Constants.SupportedOnEmulator, Constants.No)]
     [Fact]
     public async Task QueueIsLeftWithNoMessagesAfterAck_Basic()
     {
         using var connection = _queueFixture.GetConnection();
-        var key = KeyFromLongPair(1, 1);
-        var payload = Payload.FromBytes(Encoding.UTF8.GetBytes("Hello, World"));
 
         // Send Message
-        using var sendCommand = connection.CreateSendCommand(_queueFixture.QueueName, key, payload);
+        using var sendCommand = connection.CreateSendCommand(_queueFixture.QueueName, ParametersForKeyAndPayload(UserId, MessageId, _payloadBytes));
         await sendCommand.ExecuteNonQueryAsync();
 
         // Ack messages
-        var ackCommand = connection.CreateAckCommand(_queueFixture.QueueName, key);
+        var ackCommand = connection.CreateAckCommand(_queueFixture.QueueName, ParametersForKey(UserId, MessageId));
         await ackCommand.ExecuteNonQueryAsync();
 
         // Queue is left with no messages after Ack
@@ -57,12 +62,10 @@ public class QueueTests
     public async Task QueueIsLeftWithNoMessagesAfterAck_DeliveryTimeSpecified_Streamed()
     {
         using var connection = _queueFixture.GetConnection();
-        var key = KeyFromLongPair(1, 1);
-        var payload = Payload.FromBytes(Encoding.UTF8.GetBytes("Hello, World"));
-        int deliveryDelay = 10;
 
         // Send Message
-        using var sendCommand = connection.CreateSendCommand(_queueFixture.QueueName, key, payload, DateTime.UtcNow.AddSeconds(deliveryDelay));
+        using var sendCommand = connection.CreateSendCommand(_queueFixture.QueueName, ParametersForKeyAndPayload(UserId, MessageId, _payloadBytes));
+        sendCommand.SendOptions = s_deliveryDelaySendOptions;
         await sendCommand.ExecuteNonQueryAsync();
         Stopwatch sw = Stopwatch.StartNew();
 
@@ -71,7 +74,7 @@ public class QueueTests
 
         Assert.True(await reader.ReadAsync());
         // Add a buffer to compensate for the stopwatch starting after we get the response back
-        int adjustedDeliveryDelay = deliveryDelay - 1;
+        int adjustedDeliveryDelay = DeliveryDelay - 1;
         Assert.True(sw.Elapsed.TotalSeconds > adjustedDeliveryDelay, $"Expected to receive message after {adjustedDeliveryDelay} seconds, instead was {sw.Elapsed.TotalSeconds}");
     }
 
@@ -84,10 +87,7 @@ public class QueueTests
         // Send Messages
         for (long i = 0; i < 10; i++)
         {
-            var key = KeyFromLongPair(1L, i);
-            var payload = Payload.FromBytes(Encoding.UTF8.GetBytes("Hello, World"));
-
-            using var sendCommand = connection.CreateSendCommand(_queueFixture.QueueName, key, payload);
+            using var sendCommand = connection.CreateSendCommand(_queueFixture.QueueName, ParametersForKeyAndPayload(UserId, i, _payloadBytes));
             await sendCommand.ExecuteNonQueryAsync();
         }
 
@@ -99,7 +99,7 @@ public class QueueTests
                 long userId = reader.GetFieldValue<long>("UserId");
                 long messageId = reader.GetFieldValue<long>("MessageId");
 
-                var ackCommand = connection.CreateAckCommand(_queueFixture.QueueName, KeyFromLongPair(userId, messageId));
+                var ackCommand = connection.CreateAckCommand(_queueFixture.QueueName, ParametersForKey(userId, messageId));
                 await ackCommand.ExecuteNonQueryAsync();
             }
         }
@@ -114,32 +114,37 @@ public class QueueTests
 
     [Trait(Constants.SupportedOnEmulator, Constants.No)]
     [Fact]
-    public async Task AckAMissingMessage_IgnoreNotFound_ThrowsException()
+    public async Task AckAMissingMessage_IgnoreNotFound_False_ThrowsException()
     {
         using var connection = _queueFixture.GetConnection();
-        var key = KeyFromLongPair(1, 1);
 
-        // Ack messages
-        var ackCommand = connection.CreateAckCommand(_queueFixture.QueueName, key, ignoreNotFound: false);
+        // Ack missing messages
+        var ackCommand = connection.CreateAckCommand(_queueFixture.QueueName, ParametersForKey(UserId, MessageId));
+        ackCommand.AckOptions = new() { IgnoreNotFound = false };
         await Assert.ThrowsAsync<SpannerException>(ackCommand.ExecuteNonQueryAsync);
     }
 
     [Trait(Constants.SupportedOnEmulator, Constants.No)]
     [Fact]
-    public async Task AckAMissingMessage_IgnoreFound_Ok()
+    public async Task AckAMissingMessage_IgnoreFound_True_Ok()
     {
         using var connection = _queueFixture.GetConnection();
-        var key = KeyFromLongPair(1, 1);
 
-        // Ack messages
-        var ackCommand = connection.CreateAckCommand(_queueFixture.QueueName, key, ignoreNotFound: true);
+        // Ack missing messages
+        var ackCommand = connection.CreateAckCommand(_queueFixture.QueueName, ParametersForKey(UserId, MessageId));
+        ackCommand.AckOptions = new() { IgnoreNotFound = true };
         await ackCommand.ExecuteNonQueryAsync();
     }
 
-    private static Key KeyFromLongPair(long long1, long long2) => new(
-            new SpannerParameterCollection([
-                new SpannerParameter("UserId", SpannerDbType.Int64, value: long1),
-                new SpannerParameter("MessageId", SpannerDbType.Int64, value: long2),
-            ])
-        );
+    private static SpannerParameterCollection ParametersForKey(long long1, long long2)
+        => new([
+            new SpannerParameter("UserId", SpannerDbType.Int64, value: long1),
+            new SpannerParameter("MessageId", SpannerDbType.Int64, value: long2),
+        ]);
+
+    private static SpannerParameter PayloadParameterForBytes(byte[] bytes)
+        => new("Payload", SpannerDbType.Bytes, bytes);
+
+    private static SpannerParameterCollection ParametersForKeyAndPayload(long long1, long long2, byte[] bytes)
+        => [.. ParametersForKey(long1, long2), PayloadParameterForBytes(bytes)];
 }
