@@ -31,8 +31,8 @@ public class QueueTests
 
     private readonly byte[] _payloadBytes = Encoding.UTF8.GetBytes("Hello, World");
     private static int DeliveryDelay => 10;
-    private static DateTime DeliverAt => DateTime.UtcNow.AddSeconds(DeliveryDelay);
-    private static readonly SendOptions s_deliveryDelaySendOptions = new() { DeliverAt = DeliverAt };
+    private static Func<int, DateTime> GetTimeFromNow => (int delay) => DateTime.UtcNow.AddSeconds(delay);
+    private static SendOptions DeliverAfterDelayFromNow => new() { DeliverAt = GetTimeFromNow(DeliveryDelay) };
 
     [Trait(Constants.SupportedOnEmulator, Constants.No)]
     [Fact]
@@ -66,7 +66,7 @@ public class QueueTests
 
         // Send Message
         using var sendCommand = connection.CreateSendCommand(_queueFixture.QueueName, ParametersForKeyAndPayload(userId, messageId, _payloadBytes));
-        sendCommand.SendOptions = s_deliveryDelaySendOptions;
+        sendCommand.SendOptions = DeliverAfterDelayFromNow;
         await sendCommand.ExecuteNonQueryAsync();
         Stopwatch sw = Stopwatch.StartNew();
 
