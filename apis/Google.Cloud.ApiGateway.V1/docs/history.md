@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.6.0, released 2026-09-17
+
+### New features
+
+- Add streaming_mode and effective_streaming_mode to the Gateway resource
+
+### Documentation improvements
+
+- Describe defaultHostname by what it serves rather than by a fixed hostname template
+- Rewrap field comments to the publishing tool's line width, with no change of meaning
+- Reference google.longrunning.Operation.error explicitly in OperationMetadata so the link resolves
+
 ## Version 2.5.0, released 2025-11-03
 
 ### New features
