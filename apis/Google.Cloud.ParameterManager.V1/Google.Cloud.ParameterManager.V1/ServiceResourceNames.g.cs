@@ -545,6 +545,521 @@ namespace Google.Cloud.ParameterManager.V1
         public static bool operator !=(ParameterVersionName a, ParameterVersionName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>Template</c> resource.</summary>
+    public sealed partial class TemplateName : gax::IResourceName, sys::IEquatable<TemplateName>
+    {
+        /// <summary>The possible contents of <see cref="TemplateName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/templates/{template}</c>.
+            /// </summary>
+            ProjectLocationTemplate = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationTemplate = new gax::PathTemplate("projects/{project}/locations/{location}/templates/{template}");
+
+        /// <summary>Creates a <see cref="TemplateName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="TemplateName"/> containing the provided <paramref name="unparsedResourceName"/>
+        /// .
+        /// </returns>
+        public static TemplateName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new TemplateName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="TemplateName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/templates/{template}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="templateId">The <c>Template</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="TemplateName"/> constructed from the provided ids.</returns>
+        public static TemplateName FromProjectLocationTemplate(string projectId, string locationId, string templateId) =>
+            new TemplateName(ResourceNameType.ProjectLocationTemplate, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), templateId: gax::GaxPreconditions.CheckNotNullOrEmpty(templateId, nameof(templateId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TemplateName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/templates/{template}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="templateId">The <c>Template</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TemplateName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/templates/{template}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string templateId) =>
+            FormatProjectLocationTemplate(projectId, locationId, templateId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TemplateName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/templates/{template}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="templateId">The <c>Template</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TemplateName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/templates/{template}</c>.
+        /// </returns>
+        public static string FormatProjectLocationTemplate(string projectId, string locationId, string templateId) =>
+            s_projectLocationTemplate.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(templateId, nameof(templateId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="TemplateName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/templates/{template}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="templateName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="TemplateName"/> if successful.</returns>
+        public static TemplateName Parse(string templateName) => Parse(templateName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="TemplateName"/> instance; optionally allowing an
+        /// unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/templates/{template}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="templateName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="TemplateName"/> if successful.</returns>
+        public static TemplateName Parse(string templateName, bool allowUnparsed) =>
+            TryParse(templateName, allowUnparsed, out TemplateName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TemplateName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/templates/{template}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="templateName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TemplateName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string templateName, out TemplateName result) => TryParse(templateName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TemplateName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/templates/{template}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="templateName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TemplateName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string templateName, bool allowUnparsed, out TemplateName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(templateName, nameof(templateName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationTemplate.TryParseName(templateName, out resourceName))
+            {
+                result = FromProjectLocationTemplate(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(templateName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private TemplateName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string templateId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            TemplateId = templateId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="TemplateName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/templates/{template}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="templateId">The <c>Template</c> ID. Must not be <c>null</c> or empty.</param>
+        public TemplateName(string projectId, string locationId, string templateId) : this(ResourceNameType.ProjectLocationTemplate, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), templateId: gax::GaxPreconditions.CheckNotNullOrEmpty(templateId, nameof(templateId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Template</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string TemplateId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationTemplate: return s_projectLocationTemplate.Expand(ProjectId, LocationId, TemplateId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as TemplateName);
+
+        /// <inheritdoc/>
+        public bool Equals(TemplateName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(TemplateName a, TemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(TemplateName a, TemplateName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>TemplateVersion</c> resource.</summary>
+    public sealed partial class TemplateVersionName : gax::IResourceName, sys::IEquatable<TemplateVersionName>
+    {
+        /// <summary>The possible contents of <see cref="TemplateVersionName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/templates/{template}/versions/{template_version}</c>.
+            /// </summary>
+            ProjectLocationTemplateTemplateVersion = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationTemplateTemplateVersion = new gax::PathTemplate("projects/{project}/locations/{location}/templates/{template}/versions/{template_version}");
+
+        /// <summary>Creates a <see cref="TemplateVersionName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="TemplateVersionName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static TemplateVersionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new TemplateVersionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="TemplateVersionName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/templates/{template}/versions/{template_version}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="templateId">The <c>Template</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="templateVersionId">The <c>TemplateVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="TemplateVersionName"/> constructed from the provided ids.</returns>
+        public static TemplateVersionName FromProjectLocationTemplateTemplateVersion(string projectId, string locationId, string templateId, string templateVersionId) =>
+            new TemplateVersionName(ResourceNameType.ProjectLocationTemplateTemplateVersion, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), templateId: gax::GaxPreconditions.CheckNotNullOrEmpty(templateId, nameof(templateId)), templateVersionId: gax::GaxPreconditions.CheckNotNullOrEmpty(templateVersionId, nameof(templateVersionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TemplateVersionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/templates/{template}/versions/{template_version}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="templateId">The <c>Template</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="templateVersionId">The <c>TemplateVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TemplateVersionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/templates/{template}/versions/{template_version}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string templateId, string templateVersionId) =>
+            FormatProjectLocationTemplateTemplateVersion(projectId, locationId, templateId, templateVersionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TemplateVersionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/templates/{template}/versions/{template_version}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="templateId">The <c>Template</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="templateVersionId">The <c>TemplateVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TemplateVersionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/templates/{template}/versions/{template_version}</c>.
+        /// </returns>
+        public static string FormatProjectLocationTemplateTemplateVersion(string projectId, string locationId, string templateId, string templateVersionId) =>
+            s_projectLocationTemplateTemplateVersion.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(templateId, nameof(templateId)), gax::GaxPreconditions.CheckNotNullOrEmpty(templateVersionId, nameof(templateVersionId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="TemplateVersionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/templates/{template}/versions/{template_version}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="templateVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="TemplateVersionName"/> if successful.</returns>
+        public static TemplateVersionName Parse(string templateVersionName) => Parse(templateVersionName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="TemplateVersionName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/templates/{template}/versions/{template_version}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="templateVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="TemplateVersionName"/> if successful.</returns>
+        public static TemplateVersionName Parse(string templateVersionName, bool allowUnparsed) =>
+            TryParse(templateVersionName, allowUnparsed, out TemplateVersionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TemplateVersionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/templates/{template}/versions/{template_version}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="templateVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TemplateVersionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string templateVersionName, out TemplateVersionName result) =>
+            TryParse(templateVersionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TemplateVersionName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/templates/{template}/versions/{template_version}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="templateVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TemplateVersionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string templateVersionName, bool allowUnparsed, out TemplateVersionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(templateVersionName, nameof(templateVersionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationTemplateTemplateVersion.TryParseName(templateVersionName, out resourceName))
+            {
+                result = FromProjectLocationTemplateTemplateVersion(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(templateVersionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private TemplateVersionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string templateId = null, string templateVersionId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            TemplateId = templateId;
+            TemplateVersionId = templateVersionId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="TemplateVersionName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/templates/{template}/versions/{template_version}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="templateId">The <c>Template</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="templateVersionId">The <c>TemplateVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        public TemplateVersionName(string projectId, string locationId, string templateId, string templateVersionId) : this(ResourceNameType.ProjectLocationTemplateTemplateVersion, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), templateId: gax::GaxPreconditions.CheckNotNullOrEmpty(templateId, nameof(templateId)), templateVersionId: gax::GaxPreconditions.CheckNotNullOrEmpty(templateVersionId, nameof(templateVersionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Template</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string TemplateId { get; }
+
+        /// <summary>
+        /// The <c>TemplateVersion</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string TemplateVersionId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationTemplateTemplateVersion: return s_projectLocationTemplateTemplateVersion.Expand(ProjectId, LocationId, TemplateId, TemplateVersionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as TemplateVersionName);
+
+        /// <inheritdoc/>
+        public bool Equals(TemplateVersionName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(TemplateVersionName a, TemplateVersionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(TemplateVersionName a, TemplateVersionName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>CryptoKey</c> resource.</summary>
     public sealed partial class CryptoKeyName : gax::IResourceName, sys::IEquatable<CryptoKeyName>
     {
@@ -965,6 +1480,170 @@ namespace Google.Cloud.ParameterManager.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcpv::ParameterVersionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class Template
+    {
+        /// <summary>
+        /// <see cref="gcpv::TemplateName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcpv::TemplateName TemplateName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcpv::TemplateName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListTemplatesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetTemplateRequest
+    {
+        /// <summary>
+        /// <see cref="gcpv::TemplateName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcpv::TemplateName TemplateName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcpv::TemplateName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateTemplateRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteTemplateRequest
+    {
+        /// <summary>
+        /// <see cref="gcpv::TemplateName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcpv::TemplateName TemplateName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcpv::TemplateName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class TemplateVersion
+    {
+        /// <summary>
+        /// <see cref="gcpv::TemplateVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcpv::TemplateVersionName TemplateVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcpv::TemplateVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListTemplateVersionsRequest
+    {
+        /// <summary>
+        /// <see cref="TemplateName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public TemplateName ParentAsTemplateName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TemplateName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetTemplateVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gcpv::TemplateVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcpv::TemplateVersionName TemplateVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcpv::TemplateVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateTemplateVersionRequest
+    {
+        /// <summary>
+        /// <see cref="TemplateName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public TemplateName ParentAsTemplateName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TemplateName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteTemplateVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gcpv::TemplateVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcpv::TemplateVersionName TemplateVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcpv::TemplateVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RenderTemplateVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gcpv::TemplateVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcpv::TemplateVersionName TemplateVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcpv::TemplateVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ParameterVersionName"/>-typed view over the <see cref="ParameterVersion"/> resource name
+        /// property.
+        /// </summary>
+        public ParameterVersionName ParameterVersionAsParameterVersionName
+        {
+            get => string.IsNullOrEmpty(ParameterVersion) ? null : ParameterVersionName.Parse(ParameterVersion, allowUnparsed: true);
+            set => ParameterVersion = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RenderTemplateVersionResponse
+    {
+        /// <summary>
+        /// <see cref="TemplateVersionName"/>-typed view over the <see cref="TemplateVersion"/> resource name property.
+        /// </summary>
+        public TemplateVersionName TemplateVersionAsTemplateVersionName
+        {
+            get => string.IsNullOrEmpty(TemplateVersion) ? null : TemplateVersionName.Parse(TemplateVersion, allowUnparsed: true);
+            set => TemplateVersion = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ParameterVersionName"/>-typed view over the <see cref="ParameterVersion"/> resource name
+        /// property.
+        /// </summary>
+        public ParameterVersionName ParameterVersionAsParameterVersionName
+        {
+            get => string.IsNullOrEmpty(ParameterVersion) ? null : ParameterVersionName.Parse(ParameterVersion, allowUnparsed: true);
+            set => ParameterVersion = value?.ToString() ?? "";
         }
     }
 }

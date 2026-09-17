@@ -3,7 +3,7 @@
 //     source: google/cloud/parametermanager/v1/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -97,6 +97,38 @@ namespace Google.Cloud.ParameterManager.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.UpdateParameterVersionRequest> __Marshaller_google_cloud_parametermanager_v1_UpdateParameterVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.UpdateParameterVersionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.DeleteParameterVersionRequest> __Marshaller_google_cloud_parametermanager_v1_DeleteParameterVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.DeleteParameterVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.ListTemplatesRequest> __Marshaller_google_cloud_parametermanager_v1_ListTemplatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.ListTemplatesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.ListTemplatesResponse> __Marshaller_google_cloud_parametermanager_v1_ListTemplatesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.ListTemplatesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.GetTemplateRequest> __Marshaller_google_cloud_parametermanager_v1_GetTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.GetTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.Template> __Marshaller_google_cloud_parametermanager_v1_Template = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.Template.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.CreateTemplateRequest> __Marshaller_google_cloud_parametermanager_v1_CreateTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.CreateTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.UpdateTemplateRequest> __Marshaller_google_cloud_parametermanager_v1_UpdateTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.UpdateTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.DeleteTemplateRequest> __Marshaller_google_cloud_parametermanager_v1_DeleteTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.DeleteTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsRequest> __Marshaller_google_cloud_parametermanager_v1_ListTemplateVersionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse> __Marshaller_google_cloud_parametermanager_v1_ListTemplateVersionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.GetTemplateVersionRequest> __Marshaller_google_cloud_parametermanager_v1_GetTemplateVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.GetTemplateVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.TemplateVersion> __Marshaller_google_cloud_parametermanager_v1_TemplateVersion = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.TemplateVersion.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.CreateTemplateVersionRequest> __Marshaller_google_cloud_parametermanager_v1_CreateTemplateVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.CreateTemplateVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.UpdateTemplateVersionRequest> __Marshaller_google_cloud_parametermanager_v1_UpdateTemplateVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.UpdateTemplateVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.DeleteTemplateVersionRequest> __Marshaller_google_cloud_parametermanager_v1_DeleteTemplateVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.DeleteTemplateVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionRequest> __Marshaller_google_cloud_parametermanager_v1_RenderTemplateVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse> __Marshaller_google_cloud_parametermanager_v1_RenderTemplateVersionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ParameterManager.V1.ListParametersRequest, global::Google.Cloud.ParameterManager.V1.ListParametersResponse> __Method_ListParameters = new grpc::Method<global::Google.Cloud.ParameterManager.V1.ListParametersRequest, global::Google.Cloud.ParameterManager.V1.ListParametersResponse>(
@@ -185,6 +217,94 @@ namespace Google.Cloud.ParameterManager.V1 {
         "DeleteParameterVersion",
         __Marshaller_google_cloud_parametermanager_v1_DeleteParameterVersionRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ParameterManager.V1.ListTemplatesRequest, global::Google.Cloud.ParameterManager.V1.ListTemplatesResponse> __Method_ListTemplates = new grpc::Method<global::Google.Cloud.ParameterManager.V1.ListTemplatesRequest, global::Google.Cloud.ParameterManager.V1.ListTemplatesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListTemplates",
+        __Marshaller_google_cloud_parametermanager_v1_ListTemplatesRequest,
+        __Marshaller_google_cloud_parametermanager_v1_ListTemplatesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ParameterManager.V1.GetTemplateRequest, global::Google.Cloud.ParameterManager.V1.Template> __Method_GetTemplate = new grpc::Method<global::Google.Cloud.ParameterManager.V1.GetTemplateRequest, global::Google.Cloud.ParameterManager.V1.Template>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTemplate",
+        __Marshaller_google_cloud_parametermanager_v1_GetTemplateRequest,
+        __Marshaller_google_cloud_parametermanager_v1_Template);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ParameterManager.V1.CreateTemplateRequest, global::Google.Cloud.ParameterManager.V1.Template> __Method_CreateTemplate = new grpc::Method<global::Google.Cloud.ParameterManager.V1.CreateTemplateRequest, global::Google.Cloud.ParameterManager.V1.Template>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateTemplate",
+        __Marshaller_google_cloud_parametermanager_v1_CreateTemplateRequest,
+        __Marshaller_google_cloud_parametermanager_v1_Template);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ParameterManager.V1.UpdateTemplateRequest, global::Google.Cloud.ParameterManager.V1.Template> __Method_UpdateTemplate = new grpc::Method<global::Google.Cloud.ParameterManager.V1.UpdateTemplateRequest, global::Google.Cloud.ParameterManager.V1.Template>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateTemplate",
+        __Marshaller_google_cloud_parametermanager_v1_UpdateTemplateRequest,
+        __Marshaller_google_cloud_parametermanager_v1_Template);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ParameterManager.V1.DeleteTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTemplate = new grpc::Method<global::Google.Cloud.ParameterManager.V1.DeleteTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteTemplate",
+        __Marshaller_google_cloud_parametermanager_v1_DeleteTemplateRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsRequest, global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse> __Method_ListTemplateVersions = new grpc::Method<global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsRequest, global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListTemplateVersions",
+        __Marshaller_google_cloud_parametermanager_v1_ListTemplateVersionsRequest,
+        __Marshaller_google_cloud_parametermanager_v1_ListTemplateVersionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ParameterManager.V1.GetTemplateVersionRequest, global::Google.Cloud.ParameterManager.V1.TemplateVersion> __Method_GetTemplateVersion = new grpc::Method<global::Google.Cloud.ParameterManager.V1.GetTemplateVersionRequest, global::Google.Cloud.ParameterManager.V1.TemplateVersion>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTemplateVersion",
+        __Marshaller_google_cloud_parametermanager_v1_GetTemplateVersionRequest,
+        __Marshaller_google_cloud_parametermanager_v1_TemplateVersion);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ParameterManager.V1.CreateTemplateVersionRequest, global::Google.Cloud.ParameterManager.V1.TemplateVersion> __Method_CreateTemplateVersion = new grpc::Method<global::Google.Cloud.ParameterManager.V1.CreateTemplateVersionRequest, global::Google.Cloud.ParameterManager.V1.TemplateVersion>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateTemplateVersion",
+        __Marshaller_google_cloud_parametermanager_v1_CreateTemplateVersionRequest,
+        __Marshaller_google_cloud_parametermanager_v1_TemplateVersion);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ParameterManager.V1.UpdateTemplateVersionRequest, global::Google.Cloud.ParameterManager.V1.TemplateVersion> __Method_UpdateTemplateVersion = new grpc::Method<global::Google.Cloud.ParameterManager.V1.UpdateTemplateVersionRequest, global::Google.Cloud.ParameterManager.V1.TemplateVersion>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateTemplateVersion",
+        __Marshaller_google_cloud_parametermanager_v1_UpdateTemplateVersionRequest,
+        __Marshaller_google_cloud_parametermanager_v1_TemplateVersion);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ParameterManager.V1.DeleteTemplateVersionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTemplateVersion = new grpc::Method<global::Google.Cloud.ParameterManager.V1.DeleteTemplateVersionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteTemplateVersion",
+        __Marshaller_google_cloud_parametermanager_v1_DeleteTemplateVersionRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionRequest, global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse> __Method_RenderTemplateVersion = new grpc::Method<global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionRequest, global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RenderTemplateVersion",
+        __Marshaller_google_cloud_parametermanager_v1_RenderTemplateVersionRequest,
+        __Marshaller_google_cloud_parametermanager_v1_RenderTemplateVersionResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -324,6 +444,138 @@ namespace Google.Cloud.ParameterManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteParameterVersion(global::Google.Cloud.ParameterManager.V1.DeleteParameterVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Templates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ParameterManager.V1.ListTemplatesResponse> ListTemplates(global::Google.Cloud.ParameterManager.V1.ListTemplatesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single Template.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ParameterManager.V1.Template> GetTemplate(global::Google.Cloud.ParameterManager.V1.GetTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new Template in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ParameterManager.V1.Template> CreateTemplate(global::Google.Cloud.ParameterManager.V1.CreateTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a single Template.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ParameterManager.V1.Template> UpdateTemplate(global::Google.Cloud.ParameterManager.V1.UpdateTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single Template.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTemplate(global::Google.Cloud.ParameterManager.V1.DeleteTemplateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists TemplateVersions in a given project, location, and template.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse> ListTemplateVersions(global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ParameterManager.V1.TemplateVersion> GetTemplateVersion(global::Google.Cloud.ParameterManager.V1.GetTemplateVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new TemplateVersion in a given project, location, and template.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ParameterManager.V1.TemplateVersion> CreateTemplateVersion(global::Google.Cloud.ParameterManager.V1.CreateTemplateVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ParameterManager.V1.TemplateVersion> UpdateTemplateVersion(global::Google.Cloud.ParameterManager.V1.UpdateTemplateVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTemplateVersion(global::Google.Cloud.ParameterManager.V1.DeleteTemplateVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets rendered version of a TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse> RenderTemplateVersion(global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -885,6 +1137,534 @@ namespace Google.Cloud.ParameterManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteParameterVersion, null, options, request);
       }
+      /// <summary>
+      /// Lists Templates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.ListTemplatesResponse ListTemplates(global::Google.Cloud.ParameterManager.V1.ListTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTemplates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Templates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.ListTemplatesResponse ListTemplates(global::Google.Cloud.ParameterManager.V1.ListTemplatesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListTemplates, null, options, request);
+      }
+      /// <summary>
+      /// Lists Templates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.ListTemplatesResponse> ListTemplatesAsync(global::Google.Cloud.ParameterManager.V1.ListTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTemplatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Templates in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.ListTemplatesResponse> ListTemplatesAsync(global::Google.Cloud.ParameterManager.V1.ListTemplatesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListTemplates, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single Template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.Template GetTemplate(global::Google.Cloud.ParameterManager.V1.GetTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single Template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.Template GetTemplate(global::Google.Cloud.ParameterManager.V1.GetTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single Template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.Template> GetTemplateAsync(global::Google.Cloud.ParameterManager.V1.GetTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single Template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.Template> GetTemplateAsync(global::Google.Cloud.ParameterManager.V1.GetTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new Template in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.Template CreateTemplate(global::Google.Cloud.ParameterManager.V1.CreateTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new Template in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.Template CreateTemplate(global::Google.Cloud.ParameterManager.V1.CreateTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new Template in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.Template> CreateTemplateAsync(global::Google.Cloud.ParameterManager.V1.CreateTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new Template in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.Template> CreateTemplateAsync(global::Google.Cloud.ParameterManager.V1.CreateTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Updates a single Template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.Template UpdateTemplate(global::Google.Cloud.ParameterManager.V1.UpdateTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a single Template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.Template UpdateTemplate(global::Google.Cloud.ParameterManager.V1.UpdateTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Updates a single Template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.Template> UpdateTemplateAsync(global::Google.Cloud.ParameterManager.V1.UpdateTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a single Template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.Template> UpdateTemplateAsync(global::Google.Cloud.ParameterManager.V1.UpdateTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single Template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTemplate(global::Google.Cloud.ParameterManager.V1.DeleteTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single Template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTemplate(global::Google.Cloud.ParameterManager.V1.DeleteTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single Template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTemplateAsync(global::Google.Cloud.ParameterManager.V1.DeleteTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single Template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTemplateAsync(global::Google.Cloud.ParameterManager.V1.DeleteTemplateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteTemplate, null, options, request);
+      }
+      /// <summary>
+      /// Lists TemplateVersions in a given project, location, and template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse ListTemplateVersions(global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTemplateVersions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists TemplateVersions in a given project, location, and template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse ListTemplateVersions(global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListTemplateVersions, null, options, request);
+      }
+      /// <summary>
+      /// Lists TemplateVersions in a given project, location, and template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse> ListTemplateVersionsAsync(global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTemplateVersionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists TemplateVersions in a given project, location, and template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse> ListTemplateVersionsAsync(global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListTemplateVersions, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.TemplateVersion GetTemplateVersion(global::Google.Cloud.ParameterManager.V1.GetTemplateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTemplateVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.TemplateVersion GetTemplateVersion(global::Google.Cloud.ParameterManager.V1.GetTemplateVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTemplateVersion, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.TemplateVersion> GetTemplateVersionAsync(global::Google.Cloud.ParameterManager.V1.GetTemplateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTemplateVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.TemplateVersion> GetTemplateVersionAsync(global::Google.Cloud.ParameterManager.V1.GetTemplateVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTemplateVersion, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new TemplateVersion in a given project, location, and template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.TemplateVersion CreateTemplateVersion(global::Google.Cloud.ParameterManager.V1.CreateTemplateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateTemplateVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new TemplateVersion in a given project, location, and template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.TemplateVersion CreateTemplateVersion(global::Google.Cloud.ParameterManager.V1.CreateTemplateVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateTemplateVersion, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new TemplateVersion in a given project, location, and template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.TemplateVersion> CreateTemplateVersionAsync(global::Google.Cloud.ParameterManager.V1.CreateTemplateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateTemplateVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new TemplateVersion in a given project, location, and template.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.TemplateVersion> CreateTemplateVersionAsync(global::Google.Cloud.ParameterManager.V1.CreateTemplateVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateTemplateVersion, null, options, request);
+      }
+      /// <summary>
+      /// Updates a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.TemplateVersion UpdateTemplateVersion(global::Google.Cloud.ParameterManager.V1.UpdateTemplateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTemplateVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.TemplateVersion UpdateTemplateVersion(global::Google.Cloud.ParameterManager.V1.UpdateTemplateVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateTemplateVersion, null, options, request);
+      }
+      /// <summary>
+      /// Updates a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.TemplateVersion> UpdateTemplateVersionAsync(global::Google.Cloud.ParameterManager.V1.UpdateTemplateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTemplateVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.TemplateVersion> UpdateTemplateVersionAsync(global::Google.Cloud.ParameterManager.V1.UpdateTemplateVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateTemplateVersion, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTemplateVersion(global::Google.Cloud.ParameterManager.V1.DeleteTemplateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTemplateVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTemplateVersion(global::Google.Cloud.ParameterManager.V1.DeleteTemplateVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteTemplateVersion, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTemplateVersionAsync(global::Google.Cloud.ParameterManager.V1.DeleteTemplateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTemplateVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTemplateVersionAsync(global::Google.Cloud.ParameterManager.V1.DeleteTemplateVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteTemplateVersion, null, options, request);
+      }
+      /// <summary>
+      /// Gets rendered version of a TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse RenderTemplateVersion(global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RenderTemplateVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets rendered version of a TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse RenderTemplateVersion(global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RenderTemplateVersion, null, options, request);
+      }
+      /// <summary>
+      /// Gets rendered version of a TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse> RenderTemplateVersionAsync(global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RenderTemplateVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets rendered version of a TemplateVersion.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse> RenderTemplateVersionAsync(global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RenderTemplateVersion, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ParameterManagerClient NewInstance(ClientBaseConfiguration configuration)
@@ -909,7 +1689,18 @@ namespace Google.Cloud.ParameterManager.V1 {
           .AddMethod(__Method_RenderParameterVersion, serviceImpl.RenderParameterVersion)
           .AddMethod(__Method_CreateParameterVersion, serviceImpl.CreateParameterVersion)
           .AddMethod(__Method_UpdateParameterVersion, serviceImpl.UpdateParameterVersion)
-          .AddMethod(__Method_DeleteParameterVersion, serviceImpl.DeleteParameterVersion).Build();
+          .AddMethod(__Method_DeleteParameterVersion, serviceImpl.DeleteParameterVersion)
+          .AddMethod(__Method_ListTemplates, serviceImpl.ListTemplates)
+          .AddMethod(__Method_GetTemplate, serviceImpl.GetTemplate)
+          .AddMethod(__Method_CreateTemplate, serviceImpl.CreateTemplate)
+          .AddMethod(__Method_UpdateTemplate, serviceImpl.UpdateTemplate)
+          .AddMethod(__Method_DeleteTemplate, serviceImpl.DeleteTemplate)
+          .AddMethod(__Method_ListTemplateVersions, serviceImpl.ListTemplateVersions)
+          .AddMethod(__Method_GetTemplateVersion, serviceImpl.GetTemplateVersion)
+          .AddMethod(__Method_CreateTemplateVersion, serviceImpl.CreateTemplateVersion)
+          .AddMethod(__Method_UpdateTemplateVersion, serviceImpl.UpdateTemplateVersion)
+          .AddMethod(__Method_DeleteTemplateVersion, serviceImpl.DeleteTemplateVersion)
+          .AddMethod(__Method_RenderTemplateVersion, serviceImpl.RenderTemplateVersion).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -930,6 +1721,17 @@ namespace Google.Cloud.ParameterManager.V1 {
       serviceBinder.AddMethod(__Method_CreateParameterVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ParameterManager.V1.CreateParameterVersionRequest, global::Google.Cloud.ParameterManager.V1.ParameterVersion>(serviceImpl.CreateParameterVersion));
       serviceBinder.AddMethod(__Method_UpdateParameterVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ParameterManager.V1.UpdateParameterVersionRequest, global::Google.Cloud.ParameterManager.V1.ParameterVersion>(serviceImpl.UpdateParameterVersion));
       serviceBinder.AddMethod(__Method_DeleteParameterVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ParameterManager.V1.DeleteParameterVersionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteParameterVersion));
+      serviceBinder.AddMethod(__Method_ListTemplates, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ParameterManager.V1.ListTemplatesRequest, global::Google.Cloud.ParameterManager.V1.ListTemplatesResponse>(serviceImpl.ListTemplates));
+      serviceBinder.AddMethod(__Method_GetTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ParameterManager.V1.GetTemplateRequest, global::Google.Cloud.ParameterManager.V1.Template>(serviceImpl.GetTemplate));
+      serviceBinder.AddMethod(__Method_CreateTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ParameterManager.V1.CreateTemplateRequest, global::Google.Cloud.ParameterManager.V1.Template>(serviceImpl.CreateTemplate));
+      serviceBinder.AddMethod(__Method_UpdateTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ParameterManager.V1.UpdateTemplateRequest, global::Google.Cloud.ParameterManager.V1.Template>(serviceImpl.UpdateTemplate));
+      serviceBinder.AddMethod(__Method_DeleteTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ParameterManager.V1.DeleteTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTemplate));
+      serviceBinder.AddMethod(__Method_ListTemplateVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsRequest, global::Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse>(serviceImpl.ListTemplateVersions));
+      serviceBinder.AddMethod(__Method_GetTemplateVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ParameterManager.V1.GetTemplateVersionRequest, global::Google.Cloud.ParameterManager.V1.TemplateVersion>(serviceImpl.GetTemplateVersion));
+      serviceBinder.AddMethod(__Method_CreateTemplateVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ParameterManager.V1.CreateTemplateVersionRequest, global::Google.Cloud.ParameterManager.V1.TemplateVersion>(serviceImpl.CreateTemplateVersion));
+      serviceBinder.AddMethod(__Method_UpdateTemplateVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ParameterManager.V1.UpdateTemplateVersionRequest, global::Google.Cloud.ParameterManager.V1.TemplateVersion>(serviceImpl.UpdateTemplateVersion));
+      serviceBinder.AddMethod(__Method_DeleteTemplateVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ParameterManager.V1.DeleteTemplateVersionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTemplateVersion));
+      serviceBinder.AddMethod(__Method_RenderTemplateVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionRequest, global::Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse>(serviceImpl.RenderTemplateVersion));
     }
 
   }

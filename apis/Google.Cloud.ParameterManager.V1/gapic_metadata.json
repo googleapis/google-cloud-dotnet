@@ -22,6 +22,18 @@
                 "CreateParameterVersionAsync"
               ]
             },
+            "CreateTemplate": {
+              "methods": [
+                "CreateTemplate",
+                "CreateTemplateAsync"
+              ]
+            },
+            "CreateTemplateVersion": {
+              "methods": [
+                "CreateTemplateVersion",
+                "CreateTemplateVersionAsync"
+              ]
+            },
             "DeleteParameter": {
               "methods": [
                 "DeleteParameter",
@@ -32,6 +44,18 @@
               "methods": [
                 "DeleteParameterVersion",
                 "DeleteParameterVersionAsync"
+              ]
+            },
+            "DeleteTemplate": {
+              "methods": [
+                "DeleteTemplate",
+                "DeleteTemplateAsync"
+              ]
+            },
+            "DeleteTemplateVersion": {
+              "methods": [
+                "DeleteTemplateVersion",
+                "DeleteTemplateVersionAsync"
               ]
             },
             "GetParameter": {
@@ -46,6 +70,18 @@
                 "GetParameterVersionAsync"
               ]
             },
+            "GetTemplate": {
+              "methods": [
+                "GetTemplate",
+                "GetTemplateAsync"
+              ]
+            },
+            "GetTemplateVersion": {
+              "methods": [
+                "GetTemplateVersion",
+                "GetTemplateVersionAsync"
+              ]
+            },
             "ListParameterVersions": {
               "methods": [
                 "ListParameterVersions",
@@ -58,10 +94,28 @@
                 "ListParametersAsync"
               ]
             },
+            "ListTemplateVersions": {
+              "methods": [
+                "ListTemplateVersions",
+                "ListTemplateVersionsAsync"
+              ]
+            },
+            "ListTemplates": {
+              "methods": [
+                "ListTemplates",
+                "ListTemplatesAsync"
+              ]
+            },
             "RenderParameterVersion": {
               "methods": [
                 "RenderParameterVersion",
                 "RenderParameterVersionAsync"
+              ]
+            },
+            "RenderTemplateVersion": {
+              "methods": [
+                "RenderTemplateVersion",
+                "RenderTemplateVersionAsync"
               ]
             },
             "UpdateParameter": {
@@ -74,6 +128,18 @@
               "methods": [
                 "UpdateParameterVersion",
                 "UpdateParameterVersionAsync"
+              ]
+            },
+            "UpdateTemplate": {
+              "methods": [
+                "UpdateTemplate",
+                "UpdateTemplateAsync"
+              ]
+            },
+            "UpdateTemplateVersion": {
+              "methods": [
+                "UpdateTemplateVersion",
+                "UpdateTemplateVersionAsync"
               ]
             }
           }

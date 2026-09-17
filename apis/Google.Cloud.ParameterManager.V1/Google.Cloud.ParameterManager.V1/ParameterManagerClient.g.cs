@@ -59,6 +59,17 @@ namespace Google.Cloud.ParameterManager.V1
             CreateParameterVersionSettings = existing.CreateParameterVersionSettings;
             UpdateParameterVersionSettings = existing.UpdateParameterVersionSettings;
             DeleteParameterVersionSettings = existing.DeleteParameterVersionSettings;
+            ListTemplatesSettings = existing.ListTemplatesSettings;
+            GetTemplateSettings = existing.GetTemplateSettings;
+            CreateTemplateSettings = existing.CreateTemplateSettings;
+            UpdateTemplateSettings = existing.UpdateTemplateSettings;
+            DeleteTemplateSettings = existing.DeleteTemplateSettings;
+            ListTemplateVersionsSettings = existing.ListTemplateVersionsSettings;
+            GetTemplateVersionSettings = existing.GetTemplateVersionSettings;
+            CreateTemplateVersionSettings = existing.CreateTemplateVersionSettings;
+            UpdateTemplateVersionSettings = existing.UpdateTemplateVersionSettings;
+            DeleteTemplateVersionSettings = existing.DeleteTemplateVersionSettings;
+            RenderTemplateVersionSettings = existing.RenderTemplateVersionSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -232,6 +243,143 @@ namespace Google.Cloud.ParameterManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteParameterVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParameterManagerClient.ListTemplates</c> and <c>ParameterManagerClient.ListTemplatesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListTemplatesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParameterManagerClient.GetTemplate</c> and <c>ParameterManagerClient.GetTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParameterManagerClient.CreateTemplate</c> and <c>ParameterManagerClient.CreateTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParameterManagerClient.UpdateTemplate</c> and <c>ParameterManagerClient.UpdateTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParameterManagerClient.DeleteTemplate</c> and <c>ParameterManagerClient.DeleteTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParameterManagerClient.ListTemplateVersions</c> and <c>ParameterManagerClient.ListTemplateVersionsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListTemplateVersionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParameterManagerClient.GetTemplateVersion</c> and <c>ParameterManagerClient.GetTemplateVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetTemplateVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParameterManagerClient.CreateTemplateVersion</c> and <c>ParameterManagerClient.CreateTemplateVersionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateTemplateVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParameterManagerClient.UpdateTemplateVersion</c> and <c>ParameterManagerClient.UpdateTemplateVersionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateTemplateVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParameterManagerClient.DeleteTemplateVersion</c> and <c>ParameterManagerClient.DeleteTemplateVersionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteTemplateVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParameterManagerClient.RenderTemplateVersion</c> and <c>ParameterManagerClient.RenderTemplateVersionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RenderTemplateVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1732,6 +1880,1357 @@ namespace Google.Cloud.ParameterManager.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteParameterVersionAsync(ParameterVersionName name, st::CancellationToken cancellationToken) =>
             DeleteParameterVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists Templates in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Template"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTemplatesResponse, Template> ListTemplates(ListTemplatesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Templates in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Template"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTemplatesResponse, Template> ListTemplatesAsync(ListTemplatesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Templates in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListTemplatesRequest in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Template"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTemplatesResponse, Template> ListTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTemplatesRequest request = new ListTemplatesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTemplates(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Templates in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListTemplatesRequest in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Template"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTemplatesResponse, Template> ListTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTemplatesRequest request = new ListTemplatesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTemplatesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Templates in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListTemplatesRequest in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Template"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTemplatesResponse, Template> ListTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTemplatesRequest request = new ListTemplatesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTemplates(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Templates in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListTemplatesRequest in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Template"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTemplatesResponse, Template> ListTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTemplatesRequest request = new ListTemplatesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTemplatesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Template GetTemplate(GetTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> GetTemplateAsync(GetTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> GetTemplateAsync(GetTemplateRequest request, st::CancellationToken cancellationToken) =>
+            GetTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single Template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Template GetTemplate(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTemplate(new GetTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single Template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> GetTemplateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTemplateAsync(new GetTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single Template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> GetTemplateAsync(string name, st::CancellationToken cancellationToken) =>
+            GetTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single Template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Template GetTemplate(TemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTemplate(new GetTemplateRequest
+            {
+                TemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single Template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> GetTemplateAsync(TemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTemplateAsync(new GetTemplateRequest
+            {
+                TemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single Template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> GetTemplateAsync(TemplateName name, st::CancellationToken cancellationToken) =>
+            GetTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Template in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Template CreateTemplate(CreateTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new Template in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> CreateTemplateAsync(CreateTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new Template in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> CreateTemplateAsync(CreateTemplateRequest request, st::CancellationToken cancellationToken) =>
+            CreateTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Template in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="template">
+        /// Required. The Template resource being created
+        /// </param>
+        /// <param name="templateId">
+        /// Required. Id of the Template resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Template CreateTemplate(string parent, Template template, string templateId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTemplate(new CreateTemplateRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                TemplateId = gax::GaxPreconditions.CheckNotNullOrEmpty(templateId, nameof(templateId)),
+                Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Template in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="template">
+        /// Required. The Template resource being created
+        /// </param>
+        /// <param name="templateId">
+        /// Required. Id of the Template resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> CreateTemplateAsync(string parent, Template template, string templateId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTemplateAsync(new CreateTemplateRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                TemplateId = gax::GaxPreconditions.CheckNotNullOrEmpty(templateId, nameof(templateId)),
+                Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Template in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="template">
+        /// Required. The Template resource being created
+        /// </param>
+        /// <param name="templateId">
+        /// Required. Id of the Template resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> CreateTemplateAsync(string parent, Template template, string templateId, st::CancellationToken cancellationToken) =>
+            CreateTemplateAsync(parent, template, templateId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Template in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="template">
+        /// Required. The Template resource being created
+        /// </param>
+        /// <param name="templateId">
+        /// Required. Id of the Template resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Template CreateTemplate(gagr::LocationName parent, Template template, string templateId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTemplate(new CreateTemplateRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TemplateId = gax::GaxPreconditions.CheckNotNullOrEmpty(templateId, nameof(templateId)),
+                Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Template in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="template">
+        /// Required. The Template resource being created
+        /// </param>
+        /// <param name="templateId">
+        /// Required. Id of the Template resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> CreateTemplateAsync(gagr::LocationName parent, Template template, string templateId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTemplateAsync(new CreateTemplateRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TemplateId = gax::GaxPreconditions.CheckNotNullOrEmpty(templateId, nameof(templateId)),
+                Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Template in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="template">
+        /// Required. The Template resource being created
+        /// </param>
+        /// <param name="templateId">
+        /// Required. Id of the Template resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> CreateTemplateAsync(gagr::LocationName parent, Template template, string templateId, st::CancellationToken cancellationToken) =>
+            CreateTemplateAsync(parent, template, templateId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Template UpdateTemplate(UpdateTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> UpdateTemplateAsync(UpdateTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> UpdateTemplateAsync(UpdateTemplateRequest request, st::CancellationToken cancellationToken) =>
+            UpdateTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a single Template.
+        /// </summary>
+        /// <param name="template">
+        /// Required. The Template resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Template resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A mutable field will be overwritten if it is in the
+        /// mask. If the user does not provide a mask then all mutable fields present
+        /// in the request will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Template UpdateTemplate(Template template, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateTemplate(new UpdateTemplateRequest
+            {
+                UpdateMask = updateMask,
+                Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a single Template.
+        /// </summary>
+        /// <param name="template">
+        /// Required. The Template resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Template resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A mutable field will be overwritten if it is in the
+        /// mask. If the user does not provide a mask then all mutable fields present
+        /// in the request will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> UpdateTemplateAsync(Template template, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateTemplateAsync(new UpdateTemplateRequest
+            {
+                UpdateMask = updateMask,
+                Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a single Template.
+        /// </summary>
+        /// <param name="template">
+        /// Required. The Template resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Template resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A mutable field will be overwritten if it is in the
+        /// mask. If the user does not provide a mask then all mutable fields present
+        /// in the request will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Template> UpdateTemplateAsync(Template template, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateTemplateAsync(template, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTemplate(DeleteTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTemplateAsync(DeleteTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTemplateAsync(DeleteTemplateRequest request, st::CancellationToken cancellationToken) =>
+            DeleteTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single Template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTemplate(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTemplate(new DeleteTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTemplateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTemplateAsync(new DeleteTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTemplateAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single Template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTemplate(TemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTemplate(new DeleteTemplateRequest
+            {
+                TemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTemplateAsync(TemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTemplateAsync(new DeleteTemplateRequest
+            {
+                TemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTemplateAsync(TemplateName name, st::CancellationToken cancellationToken) =>
+            DeleteTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists TemplateVersions in a given project, location, and template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TemplateVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTemplateVersionsResponse, TemplateVersion> ListTemplateVersions(ListTemplateVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists TemplateVersions in a given project, location, and template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TemplateVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTemplateVersionsResponse, TemplateVersion> ListTemplateVersionsAsync(ListTemplateVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists TemplateVersions in a given project, location, and template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListTemplateVersionsRequest in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TemplateVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTemplateVersionsResponse, TemplateVersion> ListTemplateVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTemplateVersionsRequest request = new ListTemplateVersionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTemplateVersions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists TemplateVersions in a given project, location, and template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListTemplateVersionsRequest in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TemplateVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTemplateVersionsResponse, TemplateVersion> ListTemplateVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTemplateVersionsRequest request = new ListTemplateVersionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTemplateVersionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists TemplateVersions in a given project, location, and template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListTemplateVersionsRequest in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TemplateVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTemplateVersionsResponse, TemplateVersion> ListTemplateVersions(TemplateName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTemplateVersionsRequest request = new ListTemplateVersionsRequest
+            {
+                ParentAsTemplateName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTemplateVersions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists TemplateVersions in a given project, location, and template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListTemplateVersionsRequest in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TemplateVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTemplateVersionsResponse, TemplateVersion> ListTemplateVersionsAsync(TemplateName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTemplateVersionsRequest request = new ListTemplateVersionsRequest
+            {
+                ParentAsTemplateName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTemplateVersionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TemplateVersion GetTemplateVersion(GetTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> GetTemplateVersionAsync(GetTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> GetTemplateVersionAsync(GetTemplateVersionRequest request, st::CancellationToken cancellationToken) =>
+            GetTemplateVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*/versions/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TemplateVersion GetTemplateVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTemplateVersion(new GetTemplateVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*/versions/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> GetTemplateVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTemplateVersionAsync(new GetTemplateVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*/versions/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> GetTemplateVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetTemplateVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*/versions/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TemplateVersion GetTemplateVersion(TemplateVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTemplateVersion(new GetTemplateVersionRequest
+            {
+                TemplateVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*/versions/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> GetTemplateVersionAsync(TemplateVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTemplateVersionAsync(new GetTemplateVersionRequest
+            {
+                TemplateVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*/versions/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> GetTemplateVersionAsync(TemplateVersionName name, st::CancellationToken cancellationToken) =>
+            GetTemplateVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new TemplateVersion in a given project, location, and template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TemplateVersion CreateTemplateVersion(CreateTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new TemplateVersion in a given project, location, and template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> CreateTemplateVersionAsync(CreateTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new TemplateVersion in a given project, location, and template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> CreateTemplateVersionAsync(CreateTemplateVersionRequest request, st::CancellationToken cancellationToken) =>
+            CreateTemplateVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new TemplateVersion in a given project, location, and template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="templateVersion">
+        /// Required. The TemplateVersion resource being created
+        /// </param>
+        /// <param name="templateVersionId">
+        /// Required. Id of the TemplateVersion resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TemplateVersion CreateTemplateVersion(string parent, TemplateVersion templateVersion, string templateVersionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTemplateVersion(new CreateTemplateVersionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                TemplateVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(templateVersionId, nameof(templateVersionId)),
+                TemplateVersion = gax::GaxPreconditions.CheckNotNull(templateVersion, nameof(templateVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new TemplateVersion in a given project, location, and template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="templateVersion">
+        /// Required. The TemplateVersion resource being created
+        /// </param>
+        /// <param name="templateVersionId">
+        /// Required. Id of the TemplateVersion resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> CreateTemplateVersionAsync(string parent, TemplateVersion templateVersion, string templateVersionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTemplateVersionAsync(new CreateTemplateVersionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                TemplateVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(templateVersionId, nameof(templateVersionId)),
+                TemplateVersion = gax::GaxPreconditions.CheckNotNull(templateVersion, nameof(templateVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new TemplateVersion in a given project, location, and template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="templateVersion">
+        /// Required. The TemplateVersion resource being created
+        /// </param>
+        /// <param name="templateVersionId">
+        /// Required. Id of the TemplateVersion resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> CreateTemplateVersionAsync(string parent, TemplateVersion templateVersion, string templateVersionId, st::CancellationToken cancellationToken) =>
+            CreateTemplateVersionAsync(parent, templateVersion, templateVersionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new TemplateVersion in a given project, location, and template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="templateVersion">
+        /// Required. The TemplateVersion resource being created
+        /// </param>
+        /// <param name="templateVersionId">
+        /// Required. Id of the TemplateVersion resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TemplateVersion CreateTemplateVersion(TemplateName parent, TemplateVersion templateVersion, string templateVersionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTemplateVersion(new CreateTemplateVersionRequest
+            {
+                ParentAsTemplateName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TemplateVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(templateVersionId, nameof(templateVersionId)),
+                TemplateVersion = gax::GaxPreconditions.CheckNotNull(templateVersion, nameof(templateVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new TemplateVersion in a given project, location, and template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="templateVersion">
+        /// Required. The TemplateVersion resource being created
+        /// </param>
+        /// <param name="templateVersionId">
+        /// Required. Id of the TemplateVersion resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> CreateTemplateVersionAsync(TemplateName parent, TemplateVersion templateVersion, string templateVersionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTemplateVersionAsync(new CreateTemplateVersionRequest
+            {
+                ParentAsTemplateName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TemplateVersionId = gax::GaxPreconditions.CheckNotNullOrEmpty(templateVersionId, nameof(templateVersionId)),
+                TemplateVersion = gax::GaxPreconditions.CheckNotNull(templateVersion, nameof(templateVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new TemplateVersion in a given project, location, and template.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Value for parent in the format
+        /// `projects/*/locations/*/templates/*`.
+        /// </param>
+        /// <param name="templateVersion">
+        /// Required. The TemplateVersion resource being created
+        /// </param>
+        /// <param name="templateVersionId">
+        /// Required. Id of the TemplateVersion resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> CreateTemplateVersionAsync(TemplateName parent, TemplateVersion templateVersion, string templateVersionId, st::CancellationToken cancellationToken) =>
+            CreateTemplateVersionAsync(parent, templateVersion, templateVersionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TemplateVersion UpdateTemplateVersion(UpdateTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> UpdateTemplateVersionAsync(UpdateTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> UpdateTemplateVersionAsync(UpdateTemplateVersionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateTemplateVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a single TemplateVersion.
+        /// </summary>
+        /// <param name="templateVersion">
+        /// Required. The TemplateVersion resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// TemplateVersion resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A mutable field will be overwritten if it is in the
+        /// mask. If the user does not provide a mask then all mutable fields present
+        /// in the request will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TemplateVersion UpdateTemplateVersion(TemplateVersion templateVersion, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateTemplateVersion(new UpdateTemplateVersionRequest
+            {
+                UpdateMask = updateMask,
+                TemplateVersion = gax::GaxPreconditions.CheckNotNull(templateVersion, nameof(templateVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a single TemplateVersion.
+        /// </summary>
+        /// <param name="templateVersion">
+        /// Required. The TemplateVersion resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// TemplateVersion resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A mutable field will be overwritten if it is in the
+        /// mask. If the user does not provide a mask then all mutable fields present
+        /// in the request will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> UpdateTemplateVersionAsync(TemplateVersion templateVersion, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateTemplateVersionAsync(new UpdateTemplateVersionRequest
+            {
+                UpdateMask = updateMask,
+                TemplateVersion = gax::GaxPreconditions.CheckNotNull(templateVersion, nameof(templateVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a single TemplateVersion.
+        /// </summary>
+        /// <param name="templateVersion">
+        /// Required. The TemplateVersion resource being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// TemplateVersion resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A mutable field will be overwritten if it is in the
+        /// mask. If the user does not provide a mask then all mutable fields present
+        /// in the request will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TemplateVersion> UpdateTemplateVersionAsync(TemplateVersion templateVersion, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateTemplateVersionAsync(templateVersion, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTemplateVersion(DeleteTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTemplateVersionAsync(DeleteTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTemplateVersionAsync(DeleteTemplateVersionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteTemplateVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*/versions/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTemplateVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTemplateVersion(new DeleteTemplateVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*/versions/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTemplateVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTemplateVersionAsync(new DeleteTemplateVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*/versions/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTemplateVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteTemplateVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*/versions/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTemplateVersion(TemplateVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTemplateVersion(new DeleteTemplateVersionRequest
+            {
+                TemplateVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*/versions/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTemplateVersionAsync(TemplateVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTemplateVersionAsync(new DeleteTemplateVersionRequest
+            {
+                TemplateVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format
+        /// `projects/*/locations/*/templates/*/versions/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTemplateVersionAsync(TemplateVersionName name, st::CancellationToken cancellationToken) =>
+            DeleteTemplateVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets rendered version of a TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RenderTemplateVersionResponse RenderTemplateVersion(RenderTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets rendered version of a TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RenderTemplateVersionResponse> RenderTemplateVersionAsync(RenderTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets rendered version of a TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RenderTemplateVersionResponse> RenderTemplateVersionAsync(RenderTemplateVersionRequest request, st::CancellationToken cancellationToken) =>
+            RenderTemplateVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets rendered version of a TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RenderTemplateVersionResponse RenderTemplateVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RenderTemplateVersion(new RenderTemplateVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets rendered version of a TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RenderTemplateVersionResponse> RenderTemplateVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RenderTemplateVersionAsync(new RenderTemplateVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets rendered version of a TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RenderTemplateVersionResponse> RenderTemplateVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            RenderTemplateVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets rendered version of a TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RenderTemplateVersionResponse RenderTemplateVersion(TemplateVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            RenderTemplateVersion(new RenderTemplateVersionRequest
+            {
+                TemplateVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets rendered version of a TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RenderTemplateVersionResponse> RenderTemplateVersionAsync(TemplateVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            RenderTemplateVersionAsync(new RenderTemplateVersionRequest
+            {
+                TemplateVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets rendered version of a TemplateVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RenderTemplateVersionResponse> RenderTemplateVersionAsync(TemplateVersionName name, st::CancellationToken cancellationToken) =>
+            RenderTemplateVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ParameterManager client wrapper implementation, for convenient use.</summary>
@@ -1761,6 +3260,28 @@ namespace Google.Cloud.ParameterManager.V1
         private readonly gaxgrpc::ApiCall<UpdateParameterVersionRequest, ParameterVersion> _callUpdateParameterVersion;
 
         private readonly gaxgrpc::ApiCall<DeleteParameterVersionRequest, wkt::Empty> _callDeleteParameterVersion;
+
+        private readonly gaxgrpc::ApiCall<ListTemplatesRequest, ListTemplatesResponse> _callListTemplates;
+
+        private readonly gaxgrpc::ApiCall<GetTemplateRequest, Template> _callGetTemplate;
+
+        private readonly gaxgrpc::ApiCall<CreateTemplateRequest, Template> _callCreateTemplate;
+
+        private readonly gaxgrpc::ApiCall<UpdateTemplateRequest, Template> _callUpdateTemplate;
+
+        private readonly gaxgrpc::ApiCall<DeleteTemplateRequest, wkt::Empty> _callDeleteTemplate;
+
+        private readonly gaxgrpc::ApiCall<ListTemplateVersionsRequest, ListTemplateVersionsResponse> _callListTemplateVersions;
+
+        private readonly gaxgrpc::ApiCall<GetTemplateVersionRequest, TemplateVersion> _callGetTemplateVersion;
+
+        private readonly gaxgrpc::ApiCall<CreateTemplateVersionRequest, TemplateVersion> _callCreateTemplateVersion;
+
+        private readonly gaxgrpc::ApiCall<UpdateTemplateVersionRequest, TemplateVersion> _callUpdateTemplateVersion;
+
+        private readonly gaxgrpc::ApiCall<DeleteTemplateVersionRequest, wkt::Empty> _callDeleteTemplateVersion;
+
+        private readonly gaxgrpc::ApiCall<RenderTemplateVersionRequest, RenderTemplateVersionResponse> _callRenderTemplateVersion;
 
         /// <summary>
         /// Constructs a client wrapper for the ParameterManager service, with the specified gRPC client and settings.
@@ -1811,6 +3332,39 @@ namespace Google.Cloud.ParameterManager.V1
             _callDeleteParameterVersion = clientHelper.BuildApiCall<DeleteParameterVersionRequest, wkt::Empty>("DeleteParameterVersion", grpcClient.DeleteParameterVersionAsync, grpcClient.DeleteParameterVersion, effectiveSettings.DeleteParameterVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteParameterVersion);
             Modify_DeleteParameterVersionApiCall(ref _callDeleteParameterVersion);
+            _callListTemplates = clientHelper.BuildApiCall<ListTemplatesRequest, ListTemplatesResponse>("ListTemplates", grpcClient.ListTemplatesAsync, grpcClient.ListTemplates, effectiveSettings.ListTemplatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListTemplates);
+            Modify_ListTemplatesApiCall(ref _callListTemplates);
+            _callGetTemplate = clientHelper.BuildApiCall<GetTemplateRequest, Template>("GetTemplate", grpcClient.GetTemplateAsync, grpcClient.GetTemplate, effectiveSettings.GetTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetTemplate);
+            Modify_GetTemplateApiCall(ref _callGetTemplate);
+            _callCreateTemplate = clientHelper.BuildApiCall<CreateTemplateRequest, Template>("CreateTemplate", grpcClient.CreateTemplateAsync, grpcClient.CreateTemplate, effectiveSettings.CreateTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateTemplate);
+            Modify_CreateTemplateApiCall(ref _callCreateTemplate);
+            _callUpdateTemplate = clientHelper.BuildApiCall<UpdateTemplateRequest, Template>("UpdateTemplate", grpcClient.UpdateTemplateAsync, grpcClient.UpdateTemplate, effectiveSettings.UpdateTemplateSettings).WithGoogleRequestParam("template.name", request => request.Template?.Name);
+            Modify_ApiCall(ref _callUpdateTemplate);
+            Modify_UpdateTemplateApiCall(ref _callUpdateTemplate);
+            _callDeleteTemplate = clientHelper.BuildApiCall<DeleteTemplateRequest, wkt::Empty>("DeleteTemplate", grpcClient.DeleteTemplateAsync, grpcClient.DeleteTemplate, effectiveSettings.DeleteTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteTemplate);
+            Modify_DeleteTemplateApiCall(ref _callDeleteTemplate);
+            _callListTemplateVersions = clientHelper.BuildApiCall<ListTemplateVersionsRequest, ListTemplateVersionsResponse>("ListTemplateVersions", grpcClient.ListTemplateVersionsAsync, grpcClient.ListTemplateVersions, effectiveSettings.ListTemplateVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListTemplateVersions);
+            Modify_ListTemplateVersionsApiCall(ref _callListTemplateVersions);
+            _callGetTemplateVersion = clientHelper.BuildApiCall<GetTemplateVersionRequest, TemplateVersion>("GetTemplateVersion", grpcClient.GetTemplateVersionAsync, grpcClient.GetTemplateVersion, effectiveSettings.GetTemplateVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetTemplateVersion);
+            Modify_GetTemplateVersionApiCall(ref _callGetTemplateVersion);
+            _callCreateTemplateVersion = clientHelper.BuildApiCall<CreateTemplateVersionRequest, TemplateVersion>("CreateTemplateVersion", grpcClient.CreateTemplateVersionAsync, grpcClient.CreateTemplateVersion, effectiveSettings.CreateTemplateVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateTemplateVersion);
+            Modify_CreateTemplateVersionApiCall(ref _callCreateTemplateVersion);
+            _callUpdateTemplateVersion = clientHelper.BuildApiCall<UpdateTemplateVersionRequest, TemplateVersion>("UpdateTemplateVersion", grpcClient.UpdateTemplateVersionAsync, grpcClient.UpdateTemplateVersion, effectiveSettings.UpdateTemplateVersionSettings).WithGoogleRequestParam("template_version.name", request => request.TemplateVersion?.Name);
+            Modify_ApiCall(ref _callUpdateTemplateVersion);
+            Modify_UpdateTemplateVersionApiCall(ref _callUpdateTemplateVersion);
+            _callDeleteTemplateVersion = clientHelper.BuildApiCall<DeleteTemplateVersionRequest, wkt::Empty>("DeleteTemplateVersion", grpcClient.DeleteTemplateVersionAsync, grpcClient.DeleteTemplateVersion, effectiveSettings.DeleteTemplateVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteTemplateVersion);
+            Modify_DeleteTemplateVersionApiCall(ref _callDeleteTemplateVersion);
+            _callRenderTemplateVersion = clientHelper.BuildApiCall<RenderTemplateVersionRequest, RenderTemplateVersionResponse>("RenderTemplateVersion", grpcClient.RenderTemplateVersionAsync, grpcClient.RenderTemplateVersion, effectiveSettings.RenderTemplateVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRenderTemplateVersion);
+            Modify_RenderTemplateVersionApiCall(ref _callRenderTemplateVersion);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1837,6 +3391,28 @@ namespace Google.Cloud.ParameterManager.V1
         partial void Modify_UpdateParameterVersionApiCall(ref gaxgrpc::ApiCall<UpdateParameterVersionRequest, ParameterVersion> call);
 
         partial void Modify_DeleteParameterVersionApiCall(ref gaxgrpc::ApiCall<DeleteParameterVersionRequest, wkt::Empty> call);
+
+        partial void Modify_ListTemplatesApiCall(ref gaxgrpc::ApiCall<ListTemplatesRequest, ListTemplatesResponse> call);
+
+        partial void Modify_GetTemplateApiCall(ref gaxgrpc::ApiCall<GetTemplateRequest, Template> call);
+
+        partial void Modify_CreateTemplateApiCall(ref gaxgrpc::ApiCall<CreateTemplateRequest, Template> call);
+
+        partial void Modify_UpdateTemplateApiCall(ref gaxgrpc::ApiCall<UpdateTemplateRequest, Template> call);
+
+        partial void Modify_DeleteTemplateApiCall(ref gaxgrpc::ApiCall<DeleteTemplateRequest, wkt::Empty> call);
+
+        partial void Modify_ListTemplateVersionsApiCall(ref gaxgrpc::ApiCall<ListTemplateVersionsRequest, ListTemplateVersionsResponse> call);
+
+        partial void Modify_GetTemplateVersionApiCall(ref gaxgrpc::ApiCall<GetTemplateVersionRequest, TemplateVersion> call);
+
+        partial void Modify_CreateTemplateVersionApiCall(ref gaxgrpc::ApiCall<CreateTemplateVersionRequest, TemplateVersion> call);
+
+        partial void Modify_UpdateTemplateVersionApiCall(ref gaxgrpc::ApiCall<UpdateTemplateVersionRequest, TemplateVersion> call);
+
+        partial void Modify_DeleteTemplateVersionApiCall(ref gaxgrpc::ApiCall<DeleteTemplateVersionRequest, wkt::Empty> call);
+
+        partial void Modify_RenderTemplateVersionApiCall(ref gaxgrpc::ApiCall<RenderTemplateVersionRequest, RenderTemplateVersionResponse> call);
 
         partial void OnConstruction(ParameterManager.ParameterManagerClient grpcClient, ParameterManagerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1867,6 +3443,28 @@ namespace Google.Cloud.ParameterManager.V1
         partial void Modify_UpdateParameterVersionRequest(ref UpdateParameterVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteParameterVersionRequest(ref DeleteParameterVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListTemplatesRequest(ref ListTemplatesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetTemplateRequest(ref GetTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateTemplateRequest(ref CreateTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateTemplateRequest(ref UpdateTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteTemplateRequest(ref DeleteTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListTemplateVersionsRequest(ref ListTemplateVersionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetTemplateVersionRequest(ref GetTemplateVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateTemplateVersionRequest(ref CreateTemplateVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateTemplateVersionRequest(ref UpdateTemplateVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteTemplateVersionRequest(ref DeleteTemplateVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RenderTemplateVersionRequest(ref RenderTemplateVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Parameters in a given project and location.
@@ -2131,6 +3729,270 @@ namespace Google.Cloud.ParameterManager.V1
             Modify_DeleteParameterVersionRequest(ref request, ref callSettings);
             return _callDeleteParameterVersion.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists Templates in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Template"/> resources.</returns>
+        public override gax::PagedEnumerable<ListTemplatesResponse, Template> ListTemplates(ListTemplatesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTemplatesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListTemplatesRequest, ListTemplatesResponse, Template>(_callListTemplates, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Templates in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Template"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListTemplatesResponse, Template> ListTemplatesAsync(ListTemplatesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTemplatesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTemplatesRequest, ListTemplatesResponse, Template>(_callListTemplates, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Template GetTemplate(GetTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTemplateRequest(ref request, ref callSettings);
+            return _callGetTemplate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Template> GetTemplateAsync(GetTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTemplateRequest(ref request, ref callSettings);
+            return _callGetTemplate.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new Template in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Template CreateTemplate(CreateTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateTemplateRequest(ref request, ref callSettings);
+            return _callCreateTemplate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new Template in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Template> CreateTemplateAsync(CreateTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateTemplateRequest(ref request, ref callSettings);
+            return _callCreateTemplate.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Template UpdateTemplate(UpdateTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateTemplateRequest(ref request, ref callSettings);
+            return _callUpdateTemplate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Template> UpdateTemplateAsync(UpdateTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateTemplateRequest(ref request, ref callSettings);
+            return _callUpdateTemplate.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteTemplate(DeleteTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTemplateRequest(ref request, ref callSettings);
+            _callDeleteTemplate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single Template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteTemplateAsync(DeleteTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTemplateRequest(ref request, ref callSettings);
+            return _callDeleteTemplate.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists TemplateVersions in a given project, location, and template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TemplateVersion"/> resources.</returns>
+        public override gax::PagedEnumerable<ListTemplateVersionsResponse, TemplateVersion> ListTemplateVersions(ListTemplateVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTemplateVersionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListTemplateVersionsRequest, ListTemplateVersionsResponse, TemplateVersion>(_callListTemplateVersions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists TemplateVersions in a given project, location, and template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TemplateVersion"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListTemplateVersionsResponse, TemplateVersion> ListTemplateVersionsAsync(ListTemplateVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTemplateVersionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTemplateVersionsRequest, ListTemplateVersionsResponse, TemplateVersion>(_callListTemplateVersions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TemplateVersion GetTemplateVersion(GetTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTemplateVersionRequest(ref request, ref callSettings);
+            return _callGetTemplateVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TemplateVersion> GetTemplateVersionAsync(GetTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTemplateVersionRequest(ref request, ref callSettings);
+            return _callGetTemplateVersion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new TemplateVersion in a given project, location, and template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TemplateVersion CreateTemplateVersion(CreateTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateTemplateVersionRequest(ref request, ref callSettings);
+            return _callCreateTemplateVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new TemplateVersion in a given project, location, and template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TemplateVersion> CreateTemplateVersionAsync(CreateTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateTemplateVersionRequest(ref request, ref callSettings);
+            return _callCreateTemplateVersion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TemplateVersion UpdateTemplateVersion(UpdateTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateTemplateVersionRequest(ref request, ref callSettings);
+            return _callUpdateTemplateVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TemplateVersion> UpdateTemplateVersionAsync(UpdateTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateTemplateVersionRequest(ref request, ref callSettings);
+            return _callUpdateTemplateVersion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteTemplateVersion(DeleteTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTemplateVersionRequest(ref request, ref callSettings);
+            _callDeleteTemplateVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteTemplateVersionAsync(DeleteTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTemplateVersionRequest(ref request, ref callSettings);
+            return _callDeleteTemplateVersion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets rendered version of a TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RenderTemplateVersionResponse RenderTemplateVersion(RenderTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RenderTemplateVersionRequest(ref request, ref callSettings);
+            return _callRenderTemplateVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets rendered version of a TemplateVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RenderTemplateVersionResponse> RenderTemplateVersionAsync(RenderTemplateVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RenderTemplateVersionRequest(ref request, ref callSettings);
+            return _callRenderTemplateVersion.Async(request, callSettings);
+        }
     }
 
     public partial class ListParametersRequest : gaxgrpc::IPageRequest
@@ -2138,6 +4000,14 @@ namespace Google.Cloud.ParameterManager.V1
     }
 
     public partial class ListParameterVersionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListTemplatesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListTemplateVersionsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -2153,6 +4023,22 @@ namespace Google.Cloud.ParameterManager.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ParameterVersion> GetEnumerator() => ParameterVersions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListTemplatesResponse : gaxgrpc::IPageResponse<Template>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Template> GetEnumerator() => Templates.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListTemplateVersionsResponse : gaxgrpc::IPageResponse<TemplateVersion>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<TemplateVersion> GetEnumerator() => TemplateVersions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
