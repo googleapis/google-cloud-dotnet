@@ -465,11 +465,11 @@ namespace Google.Cloud.Spanner.Data
                     return new List<Mutation> { new Mutation { Delete = d } };
                 }
 
-                static SpannerParameter SeparatePayloadParameter(SpannerParameterCollection parameters, out SpannerParameterCollection remaiderParameters)
+                static SpannerParameter SeparatePayloadParameter(SpannerParameterCollection parameters, out SpannerParameterCollection keyParameters)
                 {
                     var payload = parameters.FirstOrDefault(p => p.ParameterName == SpannerParameter.PayloadParameterName);
 
-                    remaiderParameters = payload is null ? parameters : [.. parameters.Where(p => p != payload)];
+                    keyParameters = payload is null ? parameters : [.. parameters.Where(p => p != payload)];
 
                     return payload;
                 }
