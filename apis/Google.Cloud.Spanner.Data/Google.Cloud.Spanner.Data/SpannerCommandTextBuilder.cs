@@ -265,6 +265,8 @@ namespace Google.Cloud.Spanner.Data
         /// If the intended <see cref="SpannerCommandType"/> is Update, Delete,
         /// InsertOrUpdate, or Insert, then the text should be '[spanner command type] [table name]'
         /// such as 'INSERT MYTABLE'.  Must not be null or empty.
+        /// Note: Insert and Delete are never treated as Send and Ack even when the
+        /// target table is internall a queue.
         /// </remarks>
         /// <param name="commandText">The full command text containing a query, DDL statement or insert/update/delete
         /// operation.  The given text will be parsed and validated. Must not be null.</param>
