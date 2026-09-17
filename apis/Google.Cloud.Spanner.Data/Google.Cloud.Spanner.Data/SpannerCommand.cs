@@ -128,9 +128,8 @@ namespace Google.Cloud.Spanner.Data
             : this(connection, transaction, parameters: null, commandPartition: null, ephemeralTransactionOptions: null)
         {
             GaxPreconditions.CheckArgument(
-                commandTextBuilder.SpannerCommandType == SpannerCommandType.Read || commandTextBuilder.SpannerCommandType == SpannerCommandType.Delete ||
-                  commandTextBuilder.SpannerCommandType == SpannerCommandType.Send || commandTextBuilder.SpannerCommandType == SpannerCommandType.Ack,
-                nameof(commandTextBuilder.SpannerCommandType), "KeySet is only allowed for Read, Delete, Send, and Ack commands");
+                commandTextBuilder.SpannerCommandType == SpannerCommandType.Read || commandTextBuilder.SpannerCommandType == SpannerCommandType.Delete,
+                nameof(commandTextBuilder.SpannerCommandType), "KeySet is only allowed for Read and Delete commands");
             SpannerCommandTextBuilder = GaxPreconditions.CheckNotNull(commandTextBuilder, nameof(commandTextBuilder));
             KeySet = GaxPreconditions.CheckNotNull(keySet, nameof(keySet));
         }
