@@ -5189,7 +5189,7 @@
             "id": "Google.Shopping.Merchant.LoyaltyCustomers.V1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "17dbe87fc987e1beaa67812d803177d73946da39",
             "apiPaths": [
                 "google/shopping/merchant/loyaltycustomers/v1"
