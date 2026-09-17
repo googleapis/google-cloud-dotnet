@@ -5203,6 +5203,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "c6aa609c98b26d7a6b76cac43fb22ff6b8fd98fe",
             "apiPaths": [
                 "google/cloud/backupdr/v1beta"
             ],
