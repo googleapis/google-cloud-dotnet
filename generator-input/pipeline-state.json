@@ -1047,7 +1047,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-09-11T18:33:15.653177226Z",
-            "lastGeneratedCommit": "31daafc7af507fab68f0317a5b15a382ba2c3fda",
+            "lastGeneratedCommit": "10c2d66aae6c8cbdfbe9b820417d9e28b9df91f2",
             "lastReleasedCommit": "31daafc7af507fab68f0317a5b15a382ba2c3fda",
             "apiPaths": [
                 "google/cloud/compute/v1"
@@ -2272,7 +2272,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-07-28T23:19:39.804984221Z",
-            "lastGeneratedCommit": "a8f3f1d760caf80a71992f3b8e1f7b86e6114e4b",
+            "lastGeneratedCommit": "1d4ae2021761d93a0dfcd532b52f0cd87c20a8e2",
             "lastReleasedCommit": "a8f3f1d760caf80a71992f3b8e1f7b86e6114e4b",
             "apiPaths": [
                 "google/cloud/networkservices/v1"
