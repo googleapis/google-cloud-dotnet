@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta12, released 2026-09-17
+
+### New features
+
+- Added `DaiSessionService`
+- Added `startTime`, `archived`, and `publisherFloorExempt` fields to `PrivateAuctionDeal`
+
+### Documentation improvements
+
+- Fix for some documentation cross-references
+
 ## Version 1.0.0-beta11, released 2026-09-11
 
 ### New features
