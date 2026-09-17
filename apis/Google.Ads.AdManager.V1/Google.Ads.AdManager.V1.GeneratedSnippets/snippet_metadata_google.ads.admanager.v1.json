@@ -47324,6 +47324,293 @@
       ]
     },
     {
+      "regionTag": "admanager_v1_generated_DaiSessionService_GetDaiSession_sync",
+      "title": "GetDaiSessionRequestObject",
+      "description": "Snippet for GetDaiSession",
+      "file": "DaiSessionServiceClient.GetDaiSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDaiSession",
+        "fullName": "Google.Ads.AdManager.V1.DaiSessionServiceClient.GetDaiSession",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.GetDaiSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.DaiSession",
+        "client": {
+          "shortName": "DaiSessionServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.DaiSessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetDaiSession",
+          "fullName": "google.ads.admanager.v1.DaiSessionService.GetDaiSession",
+          "service": {
+            "shortName": "DaiSessionService",
+            "fullName": "google.ads.admanager.v1.DaiSessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_DaiSessionService_GetDaiSession_async",
+      "title": "GetDaiSessionRequestObjectAsync",
+      "description": "Snippet for GetDaiSessionAsync",
+      "file": "DaiSessionServiceClient.GetDaiSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDaiSessionAsync",
+        "fullName": "Google.Ads.AdManager.V1.DaiSessionServiceClient.GetDaiSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.GetDaiSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.DaiSession>",
+        "client": {
+          "shortName": "DaiSessionServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.DaiSessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetDaiSession",
+          "fullName": "google.ads.admanager.v1.DaiSessionService.GetDaiSession",
+          "service": {
+            "shortName": "DaiSessionService",
+            "fullName": "google.ads.admanager.v1.DaiSessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_DaiSessionService_GetDaiSession_sync_flattened",
+      "title": "GetDaiSession",
+      "description": "Snippet for GetDaiSession",
+      "file": "DaiSessionServiceClient.GetDaiSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDaiSession",
+        "fullName": "Google.Ads.AdManager.V1.DaiSessionServiceClient.GetDaiSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.DaiSession",
+        "client": {
+          "shortName": "DaiSessionServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.DaiSessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetDaiSession",
+          "fullName": "google.ads.admanager.v1.DaiSessionService.GetDaiSession",
+          "service": {
+            "shortName": "DaiSessionService",
+            "fullName": "google.ads.admanager.v1.DaiSessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_DaiSessionService_GetDaiSession_async_flattened",
+      "title": "GetDaiSessionAsync",
+      "description": "Snippet for GetDaiSessionAsync",
+      "file": "DaiSessionServiceClient.GetDaiSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDaiSessionAsync",
+        "fullName": "Google.Ads.AdManager.V1.DaiSessionServiceClient.GetDaiSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.DaiSession>",
+        "client": {
+          "shortName": "DaiSessionServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.DaiSessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetDaiSession",
+          "fullName": "google.ads.admanager.v1.DaiSessionService.GetDaiSession",
+          "service": {
+            "shortName": "DaiSessionService",
+            "fullName": "google.ads.admanager.v1.DaiSessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_DaiSessionService_GetDaiSession_sync_flattened_resourceNames",
+      "title": "GetDaiSessionResourceNames",
+      "description": "Snippet for GetDaiSession",
+      "file": "DaiSessionServiceClient.GetDaiSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDaiSession",
+        "fullName": "Google.Ads.AdManager.V1.DaiSessionServiceClient.GetDaiSession",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.DaiSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.DaiSession",
+        "client": {
+          "shortName": "DaiSessionServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.DaiSessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetDaiSession",
+          "fullName": "google.ads.admanager.v1.DaiSessionService.GetDaiSession",
+          "service": {
+            "shortName": "DaiSessionService",
+            "fullName": "google.ads.admanager.v1.DaiSessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_DaiSessionService_GetDaiSession_async_flattened_resourceNames",
+      "title": "GetDaiSessionResourceNamesAsync",
+      "description": "Snippet for GetDaiSessionAsync",
+      "file": "DaiSessionServiceClient.GetDaiSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDaiSessionAsync",
+        "fullName": "Google.Ads.AdManager.V1.DaiSessionServiceClient.GetDaiSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.DaiSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.DaiSession>",
+        "client": {
+          "shortName": "DaiSessionServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.DaiSessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetDaiSession",
+          "fullName": "google.ads.admanager.v1.DaiSessionService.GetDaiSession",
+          "service": {
+            "shortName": "DaiSessionService",
+            "fullName": "google.ads.admanager.v1.DaiSessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "admanager_v1_generated_DeviceCapabilityService_GetDeviceCapability_sync",
       "title": "GetDeviceCapabilityRequestObject",
       "description": "Snippet for GetDeviceCapability",
