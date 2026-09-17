@@ -428,7 +428,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     // Key
                     GaxPreconditions.CheckState(Parameters.Count > 0,
-                            $"{SpannerCommandType.Ack} must include exactly one parameter for the key.");
+                            $"{SpannerCommandType.Ack} must include at least one parameter for the key.");
                     Key key = new(Parameters);
 
                     var ackMutation = new Mutation.Types.Ack
