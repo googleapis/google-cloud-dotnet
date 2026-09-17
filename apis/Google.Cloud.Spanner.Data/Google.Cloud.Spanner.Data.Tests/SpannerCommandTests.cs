@@ -1820,7 +1820,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
             using var command = connection.CreateSendCommand(queue, parameters);
             command.SendOptions = sendOptions;
-            var payloadParameter = parameters.First(p => p.ParameterName == SpannerParameter.PayloadParameterName);
 
             var mutation = command.GetMutation();
 
