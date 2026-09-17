@@ -27,8 +27,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         protected override async Task CreateQueue() => await ExecuteDdl(
             $@"CREATE QUEUE {QueueName} (
-                UserId        INT64 NOT NULL,
-                MessageId     INT64 NOT NULL,
+                UserId        STRING(100) NOT NULL,
+                MessageId     STRING(100) NOT NULL,
                 Payload       BYTES(MAX) NOT NULL,
                 ) PRIMARY KEY(UserId, MessageId),
                 OPTIONS(receive_mode= ""PULL"")");
