@@ -393,8 +393,8 @@ namespace Google.Cloud.Spanner.Data
             DirectedReadOptions = DirectedReadOptions?.Clone(),
             ClientContext = ClientContext?.Clone(),
             EphemeralTransactionCreationOptions = EphemeralTransactionCreationOptions,
-            SendOptions = SendOptions.Clone(),
-            AckOptions = AckOptions.Clone(),
+            SendOptions = SendOptions?.Clone(),
+            AckOptions = AckOptions?.Clone(),
         };
 
         /// <inheritdoc />
