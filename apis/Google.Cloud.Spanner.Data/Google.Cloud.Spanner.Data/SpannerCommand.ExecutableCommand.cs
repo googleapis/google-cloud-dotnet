@@ -54,7 +54,6 @@ namespace Google.Cloud.Spanner.Data
             internal SpannerTransactionOptions EphemeralTransactionOptions { get; }
             internal CommandPartition Partition { get; }
             internal SpannerParameterCollection Parameters { get; }
-            internal Payload Payload { get; }
             internal KeySet KeySet { get; }
             internal QueryOptions QueryOptions { get; }
             internal Priority Priority { get; }
@@ -62,8 +61,8 @@ namespace Google.Cloud.Spanner.Data
             internal DirectedReadOptions DirectedReadOptions { get; }
             internal ClientContext ClientContext { get; }
             internal SpannerConversionOptions ConversionOptions => SpannerConversionOptions.ForConnection(Connection);
-            internal DateTime? DeliverAt { get; }
-            internal bool? IgnoreNotFound { get; }
+            internal SendOptions SendOptions { get; }
+            internal AckOptions AckOptions { get; }
 
             public ExecutableCommand(SpannerCommand command)
             {
@@ -73,7 +72,6 @@ namespace Google.Cloud.Spanner.Data
                 CommandTimeout = command.CommandTimeout;
                 Partition = command.Partition;
                 Parameters = command.Parameters;
-                Payload = command.Payload;
                 KeySet = command.KeySet;
                 Transaction = command._transaction;
                 QueryOptions = command.QueryOptions;
@@ -84,8 +82,8 @@ namespace Google.Cloud.Spanner.Data
                 EphemeralTransactionCreationOptions = command.EphemeralTransactionCreationOptions;
                 EphemeralTransactionOptions = new SpannerTransactionOptions(command.EphemeralTransactionOptions);
                 EphemeralTransactionOptions.CommitPriority ??= Priority;
-                DeliverAt = command.DeliverAt;
-                IgnoreNotFound = command.IgnoreNotFound;
+                SendOptions = command.SendOptions;
+                AckOptions = command.AckOptions;
             }
 
             // ExecuteScalar is simply implemented in terms of ExecuteReader.
@@ -406,32 +404,39 @@ namespace Google.Cloud.Spanner.Data
                 }
                 else if (CommandTextBuilder.SpannerCommandType == SpannerCommandType.Send)
                 {
+                    // Payload
+                    var payload = SeparatePayloadParameter(Parameters, out SpannerParameterCollection keyParameters);
+                    GaxPreconditions.CheckState(payload is not null,
+                        $"{SpannerCommandType.Send} must include a parameter named Payload.");
+
+                    // Key
+                    GaxPreconditions.CheckState(keyParameters.Count > 0,
+                        $"{SpannerCommandType.Send} must include at least one non-Payload parameter for the key.");
+                    Key key = new(keyParameters);
+
                     var sendMutation = new Mutation.Types.Send
                     {
                         Queue = CommandTextBuilder.TargetTable,
-                        Payload = Payload.Value,
-                        DeliverTime = DeliverAt.HasValue ? Timestamp.FromDateTime(DeliverAt.Value.ToUniversalTime()) : null,
+                        Key = key.ToProtobuf(conversionOptions),
+                        Payload = payload.GetConfiguredSpannerDbType(conversionOptions).ToProtobufValue(payload.GetValidatedValue()),
+                        DeliverTime = (SendOptions?.DeliverAt.HasValue ?? false) ? Timestamp.FromDateTime(SendOptions.DeliverAt.Value.ToUniversalTime()) : null,
                     };
-
-                    // Key
-                    GaxPreconditions.CheckState((KeySet?.Keys?.Count() ?? 0) == 1,
-                            $"{SpannerCommandType.Send} must include exactly one key");
-                    sendMutation.Key = KeySet.Keys.First().ToProtobuf(conversionOptions);
 
                     return [new() { Send = sendMutation }];
                 }
                 else if (CommandTextBuilder.SpannerCommandType == SpannerCommandType.Ack)
                 {
+                    // Key
+                    GaxPreconditions.CheckState(Parameters.Count > 0,
+                            $"{SpannerCommandType.Ack} must include exactly one parameter for the key.");
+                    Key key = new(Parameters);
+
                     var ackMutation = new Mutation.Types.Ack
                     {
                         Queue = CommandTextBuilder.TargetTable,
-                        IgnoreNotFound = IgnoreNotFound ?? false,
+                        Key = key.ToProtobuf(conversionOptions),
+                        IgnoreNotFound = AckOptions?.IgnoreNotFound ?? false,
                     };
-
-                    // Key
-                    GaxPreconditions.CheckState((KeySet?.Keys?.Count() ?? 0) == 1,
-                            $"{SpannerCommandType.Ack} must include exactly one key");
-                    ackMutation.Key = KeySet.Keys.First().ToProtobuf(conversionOptions);
 
                     return [new() { Ack = ackMutation }];
                 }
@@ -458,6 +463,15 @@ namespace Google.Cloud.Spanner.Data
                                 : new V1.KeySet { Keys = { listValue } })
                     };
                     return new List<Mutation> { new Mutation { Delete = d } };
+                }
+
+                static SpannerParameter SeparatePayloadParameter(SpannerParameterCollection parameters, out SpannerParameterCollection remaiderParameters)
+                {
+                    var payload = parameters.FirstOrDefault(p => p.ParameterName == SpannerParameter.PayloadParameterName);
+
+                    remaiderParameters = payload is null ? parameters : [.. parameters.Where(p => p != payload)];
+
+                    return payload;
                 }
             }
 

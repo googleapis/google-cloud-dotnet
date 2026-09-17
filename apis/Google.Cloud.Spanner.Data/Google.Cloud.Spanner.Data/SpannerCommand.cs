@@ -136,33 +136,6 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Initializes a new instance of <see cref="SpannerCommand"/> for a Send comand
-        /// </summary>
-        private SpannerCommand(
-            SpannerCommandTextBuilder commandTextBuilder,
-            SpannerConnection connection,
-            Key key,
-            Payload payload,
-            DateTime? deliverAt,
-            SpannerTransaction transaction = null)
-            : this(commandTextBuilder, connection, KeySet.FromKeys(key), transaction)
-        {
-            Payload = payload;
-            DeliverAt = deliverAt;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of <see cref="SpannerCommand"/> for an Ack command
-        /// </summary>
-        private SpannerCommand(
-            SpannerCommandTextBuilder commandTextBuilder,
-            SpannerConnection connection,
-            Key key,
-            bool ignoreNotFound,
-            SpannerTransaction transaction = null)
-            : this(commandTextBuilder, connection, KeySet.FromKeys(key), transaction) => IgnoreNotFound = ignoreNotFound;
-
-        /// <summary>
         /// Initializes a new instance of <see cref="SpannerCommand"/>.
         /// </summary>
         /// <param name="connection">The <see cref="SpannerConnection"/> that is
@@ -222,20 +195,14 @@ namespace Google.Cloud.Spanner.Data
         internal static SpannerCommand ForSendCommand(
             SpannerCommandTextBuilder commandTextBuilder,
             SpannerConnection connection,
-            Key key,
-            Payload payload,
-            DateTime? deliverAt,
-            SpannerTransaction transaction = null) => new(commandTextBuilder, connection, key, payload, deliverAt, transaction);
+            SpannerParameterCollection parameters,
+            SpannerTransaction transaction = null) => new(commandTextBuilder, connection, transaction, parameters);
 
         internal static SpannerCommand ForAckCommand(
             SpannerCommandTextBuilder commandTextBuilder,
             SpannerConnection connection,
-            Key key,
-            bool ignoreNotFound,
-            SpannerTransaction transaction = null)
-        {
-            return new SpannerCommand(commandTextBuilder, connection, key, ignoreNotFound, transaction);
-        }
+            SpannerParameterCollection parameters,
+            SpannerTransaction transaction = null) => new(commandTextBuilder, connection, transaction, parameters);
 
         internal Mutation GetMutation() => CreateExecutableCommand().GetMutation();
 
@@ -282,11 +249,6 @@ namespace Google.Cloud.Spanner.Data
         /// The parameters of the SQL statement or command.
         /// </summary>
         public new SpannerParameterCollection Parameters { get; } = new SpannerParameterCollection();
-
-        /// <summary>
-        /// The payload for a Send command to a queue.
-        /// </summary>
-        public Payload Payload { get; set; }
 
         /// <summary>
         /// The keys of the rows to read or delete from the target table if the command is Read or Delete.
@@ -406,15 +368,14 @@ namespace Google.Cloud.Spanner.Data
         public SpannerTransactionOptions EphemeralTransactionOptions { get; }
 
         /// <summary>
-        /// Time to delivery the message.
+        /// Optional configurations for Send mutations.
         /// </summary>
-        public DateTime? DeliverAt { get; set; }
+        public SendOptions SendOptions { get; set; }
 
         /// <summary>
-        /// Option included with an Ack command. If set, a transaction will not fail when
-        /// trying to acknowledge a message not found.
+        /// Optional configurations for Ack mutations.
         /// </summary>
-        public bool IgnoreNotFound { get; set; }
+        public AckOptions AckOptions { get; set; }
 
         /// <summary>
         /// Returns a copy of this <see cref="SpannerCommand"/>.
@@ -432,9 +393,8 @@ namespace Google.Cloud.Spanner.Data
             DirectedReadOptions = DirectedReadOptions?.Clone(),
             ClientContext = ClientContext?.Clone(),
             EphemeralTransactionCreationOptions = EphemeralTransactionCreationOptions,
-            Payload = (Payload) Payload?.Clone(),
-            DeliverAt = DeliverAt,
-            IgnoreNotFound = IgnoreNotFound,
+            SendOptions = SendOptions.Clone(),
+            AckOptions = AckOptions.Clone(),
         };
 
         /// <inheritdoc />
