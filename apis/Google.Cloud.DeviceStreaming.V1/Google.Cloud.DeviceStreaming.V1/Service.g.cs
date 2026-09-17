@@ -51,7 +51,7 @@ namespace Google.Cloud.DeviceStreaming.V1 {
             "ZGF0ZURldmljZVNlc3Npb25SZXF1ZXN0EksKDmRldmljZV9zZXNzaW9uGAEg",
             "ASgLMi4uZ29vZ2xlLmNsb3VkLmRldmljZXN0cmVhbWluZy52MS5EZXZpY2VT",
             "ZXNzaW9uQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuRmllbGRNYXNrQgPgQQEitQgKDURldmljZVNlc3Npb24SEQoEbmFt",
+            "dG9idWYuRmllbGRNYXNrQgPgQQEi/AgKDURldmljZVNlc3Npb24SEQoEbmFt",
             "ZRgBIAEoCUID4EEBEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EEDEk8KBXN0",
             "YXRlGAMgASgOMjsuZ29vZ2xlLmNsb3VkLmRldmljZXN0cmVhbWluZy52MS5E",
             "ZXZpY2VTZXNzaW9uLlNlc3Npb25TdGF0ZUID4EEDEl4KD3N0YXRlX2hpc3Rv",
@@ -64,54 +64,57 @@ namespace Google.Cloud.DeviceStreaming.V1 {
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI6ChFhY3RpdmVfc3RhcnRf",
             "dGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJL",
             "Cg5hbmRyb2lkX2RldmljZRgPIAEoCzIuLmdvb2dsZS5jbG91ZC5kZXZpY2Vz",
-            "dHJlYW1pbmcudjEuQW5kcm9pZERldmljZUID4EECGr0BChFTZXNzaW9uU3Rh",
-            "dGVFdmVudBJXCg1zZXNzaW9uX3N0YXRlGAEgASgOMjsuZ29vZ2xlLmNsb3Vk",
-            "LmRldmljZXN0cmVhbWluZy52MS5EZXZpY2VTZXNzaW9uLlNlc3Npb25TdGF0",
-            "ZUID4EEDEjMKCmV2ZW50X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSGgoNc3RhdGVfbWVzc2FnZRgDIAEoCUID4EEDIowB",
-            "CgxTZXNzaW9uU3RhdGUSHQoZU0VTU0lPTl9TVEFURV9VTlNQRUNJRklFRBAA",
-            "Eg0KCVJFUVVFU1RFRBABEgsKB1BFTkRJTkcQAhIKCgZBQ1RJVkUQAxILCgdF",
-            "WFBJUkVEEAQSDAoIRklOSVNIRUQQBRIPCgtVTkFWQUlMQUJMRRAGEgkKBUVS",
-            "Uk9SEAc6hQHqQYEBCixkZXZpY2VzdHJlYW1pbmcuZ29vZ2xlYXBpcy5jb20v",
-            "RGV2aWNlU2Vzc2lvbhIycHJvamVjdHMve3Byb2plY3R9L2RldmljZVNlc3Np",
-            "b25zL3tkZXZpY2Vfc2Vzc2lvbn0qDmRldmljZVNlc3Npb25zMg1kZXZpY2VT",
-            "ZXNzaW9uQgwKCmV4cGlyYXRpb24ifgoNQW5kcm9pZERldmljZRIdChBhbmRy",
-            "b2lkX21vZGVsX2lkGAEgASgJQgPgQQISHwoSYW5kcm9pZF92ZXJzaW9uX2lk",
-            "GAIgASgJQgPgQQISEwoGbG9jYWxlGAMgASgJQgPgQQESGAoLb3JpZW50YXRp",
-            "b24YBCABKAlCA+BBATLgCQoTRGlyZWN0QWNjZXNzU2VydmljZRLsAQoTQ3Jl",
-            "YXRlRGV2aWNlU2Vzc2lvbhI7Lmdvb2dsZS5jbG91ZC5kZXZpY2VzdHJlYW1p",
-            "bmcudjEuQ3JlYXRlRGV2aWNlU2Vzc2lvblJlcXVlc3QaLi5nb29nbGUuY2xv",
-            "dWQuZGV2aWNlc3RyZWFtaW5nLnYxLkRldmljZVNlc3Npb24iaNpBJ3BhcmVu",
-            "dCxkZXZpY2Vfc2Vzc2lvbixkZXZpY2Vfc2Vzc2lvbl9pZILT5JMCOCImL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKn0vZGV2aWNlU2Vzc2lvbnM6DmRldmljZV9z",
-            "ZXNzaW9uEsYBChJMaXN0RGV2aWNlU2Vzc2lvbnMSOi5nb29nbGUuY2xvdWQu",
-            "ZGV2aWNlc3RyZWFtaW5nLnYxLkxpc3REZXZpY2VTZXNzaW9uc1JlcXVlc3Qa",
-            "Oy5nb29nbGUuY2xvdWQuZGV2aWNlc3RyZWFtaW5nLnYxLkxpc3REZXZpY2VT",
-            "ZXNzaW9uc1Jlc3BvbnNlIjfaQQZwYXJlbnSC0+STAigSJi92MS97cGFyZW50",
-            "PXByb2plY3RzLyp9L2RldmljZVNlc3Npb25zErMBChBHZXREZXZpY2VTZXNz",
-            "aW9uEjguZ29vZ2xlLmNsb3VkLmRldmljZXN0cmVhbWluZy52MS5HZXREZXZp",
-            "Y2VTZXNzaW9uUmVxdWVzdBouLmdvb2dsZS5jbG91ZC5kZXZpY2VzdHJlYW1p",
-            "bmcudjEuRGV2aWNlU2Vzc2lvbiI12kEEbmFtZYLT5JMCKBImL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovZGV2aWNlU2Vzc2lvbnMvKn0SpAEKE0NhbmNlbERldmlj",
-            "ZVNlc3Npb24SOy5nb29nbGUuY2xvdWQuZGV2aWNlc3RyZWFtaW5nLnYxLkNh",
-            "bmNlbERldmljZVNlc3Npb25SZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5IjiC0+STAjIiLS92MS97bmFtZT1wcm9qZWN0cy8qL2RldmljZVNlc3Np",
-            "b25zLyp9OmNhbmNlbDoBKhLuAQoTVXBkYXRlRGV2aWNlU2Vzc2lvbhI7Lmdv",
-            "b2dsZS5jbG91ZC5kZXZpY2VzdHJlYW1pbmcudjEuVXBkYXRlRGV2aWNlU2Vz",
-            "c2lvblJlcXVlc3QaLi5nb29nbGUuY2xvdWQuZGV2aWNlc3RyZWFtaW5nLnYx",
-            "LkRldmljZVNlc3Npb24iatpBGmRldmljZV9zZXNzaW9uLHVwZGF0ZV9tYXNr",
-            "gtPkkwJHMjUvdjEve2RldmljZV9zZXNzaW9uLm5hbWU9cHJvamVjdHMvKi9k",
-            "ZXZpY2VTZXNzaW9ucy8qfToOZGV2aWNlX3Nlc3Npb24SbwoKQWRiQ29ubmVj",
-            "dBIrLmdvb2dsZS5jbG91ZC5kZXZpY2VzdHJlYW1pbmcudjEuQWRiTWVzc2Fn",
-            "ZRouLmdvb2dsZS5jbG91ZC5kZXZpY2VzdHJlYW1pbmcudjEuRGV2aWNlTWVz",
-            "c2FnZSIAKAEwARpSykEeZGV2aWNlc3RyZWFtaW5nLmdvb2dsZWFwaXMuY29t",
-            "0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
-            "Zm9ybULtAQojY29tLmdvb2dsZS5jbG91ZC5kZXZpY2VzdHJlYW1pbmcudjFC",
-            "DFNlcnZpY2VQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2RldmljZXN0",
-            "cmVhbWluZy9hcGl2MS9kZXZpY2VzdHJlYW1pbmdwYjtkZXZpY2VzdHJlYW1p",
-            "bmdwYqoCH0dvb2dsZS5DbG91ZC5EZXZpY2VTdHJlYW1pbmcuVjHKAh9Hb29n",
-            "bGVcQ2xvdWRcRGV2aWNlU3RyZWFtaW5nXFYx6gIiR29vZ2xlOjpDbG91ZDo6",
-            "RGV2aWNlU3RyZWFtaW5nOjpWMWIGcHJvdG8z"));
+            "dHJlYW1pbmcudjEuQW5kcm9pZERldmljZUID4EECEkUKC2NsaWVudF9pbmZv",
+            "GBUgASgLMisuZ29vZ2xlLmNsb3VkLmRldmljZXN0cmVhbWluZy52MS5DbGll",
+            "bnRJbmZvQgPgQQEavQEKEVNlc3Npb25TdGF0ZUV2ZW50ElcKDXNlc3Npb25f",
+            "c3RhdGUYASABKA4yOy5nb29nbGUuY2xvdWQuZGV2aWNlc3RyZWFtaW5nLnYx",
+            "LkRldmljZVNlc3Npb24uU2Vzc2lvblN0YXRlQgPgQQMSMwoKZXZlbnRfdGlt",
+            "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIaCg1z",
+            "dGF0ZV9tZXNzYWdlGAMgASgJQgPgQQMijAEKDFNlc3Npb25TdGF0ZRIdChlT",
+            "RVNTSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASDQoJUkVRVUVTVEVEEAESCwoH",
+            "UEVORElORxACEgoKBkFDVElWRRADEgsKB0VYUElSRUQQBBIMCghGSU5JU0hF",
+            "RBAFEg8KC1VOQVZBSUxBQkxFEAYSCQoFRVJST1IQBzqFAepBgQEKLGRldmlj",
+            "ZXN0cmVhbWluZy5nb29nbGVhcGlzLmNvbS9EZXZpY2VTZXNzaW9uEjJwcm9q",
+            "ZWN0cy97cHJvamVjdH0vZGV2aWNlU2Vzc2lvbnMve2RldmljZV9zZXNzaW9u",
+            "fSoOZGV2aWNlU2Vzc2lvbnMyDWRldmljZVNlc3Npb25CDAoKZXhwaXJhdGlv",
+            "biI3CgpDbGllbnRJbmZvEhMKBmNsaWVudBgBIAEoCUID4EECEhQKB3ZlcnNp",
+            "b24YAiABKAlCA+BBASJ+Cg1BbmRyb2lkRGV2aWNlEh0KEGFuZHJvaWRfbW9k",
+            "ZWxfaWQYASABKAlCA+BBAhIfChJhbmRyb2lkX3ZlcnNpb25faWQYAiABKAlC",
+            "A+BBAhITCgZsb2NhbGUYAyABKAlCA+BBARIYCgtvcmllbnRhdGlvbhgEIAEo",
+            "CUID4EEBMuAJChNEaXJlY3RBY2Nlc3NTZXJ2aWNlEuwBChNDcmVhdGVEZXZp",
+            "Y2VTZXNzaW9uEjsuZ29vZ2xlLmNsb3VkLmRldmljZXN0cmVhbWluZy52MS5D",
+            "cmVhdGVEZXZpY2VTZXNzaW9uUmVxdWVzdBouLmdvb2dsZS5jbG91ZC5kZXZp",
+            "Y2VzdHJlYW1pbmcudjEuRGV2aWNlU2Vzc2lvbiJo2kEncGFyZW50LGRldmlj",
+            "ZV9zZXNzaW9uLGRldmljZV9zZXNzaW9uX2lkgtPkkwI4IiYvdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qfS9kZXZpY2VTZXNzaW9uczoOZGV2aWNlX3Nlc3Npb24S",
+            "xgEKEkxpc3REZXZpY2VTZXNzaW9ucxI6Lmdvb2dsZS5jbG91ZC5kZXZpY2Vz",
+            "dHJlYW1pbmcudjEuTGlzdERldmljZVNlc3Npb25zUmVxdWVzdBo7Lmdvb2ds",
+            "ZS5jbG91ZC5kZXZpY2VzdHJlYW1pbmcudjEuTGlzdERldmljZVNlc3Npb25z",
+            "UmVzcG9uc2UiN9pBBnBhcmVudILT5JMCKBImL3YxL3twYXJlbnQ9cHJvamVj",
+            "dHMvKn0vZGV2aWNlU2Vzc2lvbnMSswEKEEdldERldmljZVNlc3Npb24SOC5n",
+            "b29nbGUuY2xvdWQuZGV2aWNlc3RyZWFtaW5nLnYxLkdldERldmljZVNlc3Np",
+            "b25SZXF1ZXN0Gi4uZ29vZ2xlLmNsb3VkLmRldmljZXN0cmVhbWluZy52MS5E",
+            "ZXZpY2VTZXNzaW9uIjXaQQRuYW1lgtPkkwIoEiYvdjEve25hbWU9cHJvamVj",
+            "dHMvKi9kZXZpY2VTZXNzaW9ucy8qfRKkAQoTQ2FuY2VsRGV2aWNlU2Vzc2lv",
+            "bhI7Lmdvb2dsZS5jbG91ZC5kZXZpY2VzdHJlYW1pbmcudjEuQ2FuY2VsRGV2",
+            "aWNlU2Vzc2lvblJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiOILT",
+            "5JMCMiItL3YxL3tuYW1lPXByb2plY3RzLyovZGV2aWNlU2Vzc2lvbnMvKn06",
+            "Y2FuY2VsOgEqEu4BChNVcGRhdGVEZXZpY2VTZXNzaW9uEjsuZ29vZ2xlLmNs",
+            "b3VkLmRldmljZXN0cmVhbWluZy52MS5VcGRhdGVEZXZpY2VTZXNzaW9uUmVx",
+            "dWVzdBouLmdvb2dsZS5jbG91ZC5kZXZpY2VzdHJlYW1pbmcudjEuRGV2aWNl",
+            "U2Vzc2lvbiJq2kEaZGV2aWNlX3Nlc3Npb24sdXBkYXRlX21hc2uC0+STAkcy",
+            "NS92MS97ZGV2aWNlX3Nlc3Npb24ubmFtZT1wcm9qZWN0cy8qL2RldmljZVNl",
+            "c3Npb25zLyp9Og5kZXZpY2Vfc2Vzc2lvbhJvCgpBZGJDb25uZWN0EisuZ29v",
+            "Z2xlLmNsb3VkLmRldmljZXN0cmVhbWluZy52MS5BZGJNZXNzYWdlGi4uZ29v",
+            "Z2xlLmNsb3VkLmRldmljZXN0cmVhbWluZy52MS5EZXZpY2VNZXNzYWdlIgAo",
+            "ATABGlLKQR5kZXZpY2VzdHJlYW1pbmcuZ29vZ2xlYXBpcy5jb23SQS5odHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQu0B",
+            "CiNjb20uZ29vZ2xlLmNsb3VkLmRldmljZXN0cmVhbWluZy52MUIMU2Vydmlj",
+            "ZVByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGV2aWNlc3RyZWFtaW5n",
+            "L2FwaXYxL2RldmljZXN0cmVhbWluZ3BiO2RldmljZXN0cmVhbWluZ3BiqgIf",
+            "R29vZ2xlLkNsb3VkLkRldmljZVN0cmVhbWluZy5WMcoCH0dvb2dsZVxDbG91",
+            "ZFxEZXZpY2VTdHJlYW1pbmdcVjHqAiJHb29nbGU6OkNsb3VkOjpEZXZpY2VT",
+            "dHJlYW1pbmc6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DeviceStreaming.V1.AdbServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -121,7 +124,8 @@ namespace Google.Cloud.DeviceStreaming.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DeviceStreaming.V1.GetDeviceSessionRequest), global::Google.Cloud.DeviceStreaming.V1.GetDeviceSessionRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DeviceStreaming.V1.CancelDeviceSessionRequest), global::Google.Cloud.DeviceStreaming.V1.CancelDeviceSessionRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DeviceStreaming.V1.UpdateDeviceSessionRequest), global::Google.Cloud.DeviceStreaming.V1.UpdateDeviceSessionRequest.Parser, new[]{ "DeviceSession", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DeviceStreaming.V1.DeviceSession), global::Google.Cloud.DeviceStreaming.V1.DeviceSession.Parser, new[]{ "Name", "DisplayName", "State", "StateHistories", "Ttl", "ExpireTime", "InactivityTimeout", "CreateTime", "ActiveStartTime", "AndroidDevice" }, new[]{ "Expiration" }, new[]{ typeof(global::Google.Cloud.DeviceStreaming.V1.DeviceSession.Types.SessionState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DeviceStreaming.V1.DeviceSession.Types.SessionStateEvent), global::Google.Cloud.DeviceStreaming.V1.DeviceSession.Types.SessionStateEvent.Parser, new[]{ "SessionState", "EventTime", "StateMessage" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DeviceStreaming.V1.DeviceSession), global::Google.Cloud.DeviceStreaming.V1.DeviceSession.Parser, new[]{ "Name", "DisplayName", "State", "StateHistories", "Ttl", "ExpireTime", "InactivityTimeout", "CreateTime", "ActiveStartTime", "AndroidDevice", "ClientInfo" }, new[]{ "Expiration" }, new[]{ typeof(global::Google.Cloud.DeviceStreaming.V1.DeviceSession.Types.SessionState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DeviceStreaming.V1.DeviceSession.Types.SessionStateEvent), global::Google.Cloud.DeviceStreaming.V1.DeviceSession.Types.SessionStateEvent.Parser, new[]{ "SessionState", "EventTime", "StateMessage" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DeviceStreaming.V1.ClientInfo), global::Google.Cloud.DeviceStreaming.V1.ClientInfo.Parser, new[]{ "Client", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DeviceStreaming.V1.AndroidDevice), global::Google.Cloud.DeviceStreaming.V1.AndroidDevice.Parser, new[]{ "AndroidModelId", "AndroidVersionId", "Locale", "Orientation" }, null, null, null, null)
           }));
     }
@@ -1706,6 +1710,7 @@ namespace Google.Cloud.DeviceStreaming.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       activeStartTime_ = other.activeStartTime_ != null ? other.activeStartTime_.Clone() : null;
       androidDevice_ = other.androidDevice_ != null ? other.androidDevice_.Clone() : null;
+      clientInfo_ = other.clientInfo_ != null ? other.clientInfo_.Clone() : null;
       switch (other.ExpirationCase) {
         case ExpirationOneofCase.Ttl:
           Ttl = other.Ttl.Clone();
@@ -1869,7 +1874,7 @@ namespace Google.Cloud.DeviceStreaming.V1 {
     public const int AndroidDeviceFieldNumber = 15;
     private global::Google.Cloud.DeviceStreaming.V1.AndroidDevice androidDevice_;
     /// <summary>
-    /// Required. The requested device
+    /// Required. The requested device.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1877,6 +1882,21 @@ namespace Google.Cloud.DeviceStreaming.V1 {
       get { return androidDevice_; }
       set {
         androidDevice_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "client_info" field.</summary>
+    public const int ClientInfoFieldNumber = 21;
+    private global::Google.Cloud.DeviceStreaming.V1.ClientInfo clientInfo_;
+    /// <summary>
+    /// Optional. Information about the client which invoked the device session.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DeviceStreaming.V1.ClientInfo ClientInfo {
+      get { return clientInfo_; }
+      set {
+        clientInfo_ = value;
       }
     }
 
@@ -1926,6 +1946,7 @@ namespace Google.Cloud.DeviceStreaming.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(ActiveStartTime, other.ActiveStartTime)) return false;
       if (!object.Equals(AndroidDevice, other.AndroidDevice)) return false;
+      if (!object.Equals(ClientInfo, other.ClientInfo)) return false;
       if (ExpirationCase != other.ExpirationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1944,6 +1965,7 @@ namespace Google.Cloud.DeviceStreaming.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (activeStartTime_ != null) hash ^= ActiveStartTime.GetHashCode();
       if (androidDevice_ != null) hash ^= AndroidDevice.GetHashCode();
+      if (clientInfo_ != null) hash ^= ClientInfo.GetHashCode();
       hash ^= (int) expirationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2000,6 +2022,10 @@ namespace Google.Cloud.DeviceStreaming.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(AndroidDevice);
       }
+      if (clientInfo_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(ClientInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2047,6 +2073,10 @@ namespace Google.Cloud.DeviceStreaming.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(AndroidDevice);
       }
+      if (clientInfo_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(ClientInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2084,6 +2114,9 @@ namespace Google.Cloud.DeviceStreaming.V1 {
       }
       if (androidDevice_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AndroidDevice);
+      }
+      if (clientInfo_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ClientInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2130,6 +2163,12 @@ namespace Google.Cloud.DeviceStreaming.V1 {
           AndroidDevice = new global::Google.Cloud.DeviceStreaming.V1.AndroidDevice();
         }
         AndroidDevice.MergeFrom(other.AndroidDevice);
+      }
+      if (other.clientInfo_ != null) {
+        if (clientInfo_ == null) {
+          ClientInfo = new global::Google.Cloud.DeviceStreaming.V1.ClientInfo();
+        }
+        ClientInfo.MergeFrom(other.ClientInfo);
       }
       switch (other.ExpirationCase) {
         case ExpirationOneofCase.Ttl:
@@ -2227,6 +2266,13 @@ namespace Google.Cloud.DeviceStreaming.V1 {
             input.ReadMessage(AndroidDevice);
             break;
           }
+          case 170: {
+            if (clientInfo_ == null) {
+              ClientInfo = new global::Google.Cloud.DeviceStreaming.V1.ClientInfo();
+            }
+            input.ReadMessage(ClientInfo);
+            break;
+          }
         }
       }
     #endif
@@ -2306,6 +2352,13 @@ namespace Google.Cloud.DeviceStreaming.V1 {
               AndroidDevice = new global::Google.Cloud.DeviceStreaming.V1.AndroidDevice();
             }
             input.ReadMessage(AndroidDevice);
+            break;
+          }
+          case 170: {
+            if (clientInfo_ == null) {
+              ClientInfo = new global::Google.Cloud.DeviceStreaming.V1.ClientInfo();
+            }
+            input.ReadMessage(ClientInfo);
             break;
           }
         }
@@ -2666,6 +2719,250 @@ namespace Google.Cloud.DeviceStreaming.V1 {
   }
 
   /// <summary>
+  /// Information about the client which invoked the device session.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ClientInfo : pb::IMessage<ClientInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ClientInfo> _parser = new pb::MessageParser<ClientInfo>(() => new ClientInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ClientInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DeviceStreaming.V1.ServiceReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClientInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClientInfo(ClientInfo other) : this() {
+      client_ = other.client_;
+      version_ = other.version_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ClientInfo Clone() {
+      return new ClientInfo(this);
+    }
+
+    /// <summary>Field number for the "client" field.</summary>
+    public const int ClientFieldNumber = 1;
+    private string client_ = "";
+    /// <summary>
+    /// Required. Client name, such as gcloud. The maximum length is 64 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Client {
+      get { return client_; }
+      set {
+        client_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 2;
+    private string version_ = "";
+    /// <summary>
+    /// Optional. Client version. The maximum length is 64 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Version {
+      get { return version_; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ClientInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ClientInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Client != other.Client) return false;
+      if (Version != other.Version) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Client.Length != 0) hash ^= Client.GetHashCode();
+      if (Version.Length != 0) hash ^= Version.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Client.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Client);
+      }
+      if (Version.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Version);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Client.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Client);
+      }
+      if (Version.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Version);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Client.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Client);
+      }
+      if (Version.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ClientInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Client.Length != 0) {
+        Client = other.Client;
+      }
+      if (other.Version.Length != 0) {
+        Version = other.Version;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Client = input.ReadString();
+            break;
+          }
+          case 18: {
+            Version = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Client = input.ReadString();
+            break;
+          }
+          case 18: {
+            Version = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// A single Android device.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -2683,7 +2980,7 @@ namespace Google.Cloud.DeviceStreaming.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DeviceStreaming.V1.ServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.DeviceStreaming.V1.ServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
