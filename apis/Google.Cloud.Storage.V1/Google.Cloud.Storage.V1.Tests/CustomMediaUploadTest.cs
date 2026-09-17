@@ -26,8 +26,8 @@ using System.Threading.Tasks;
 using Xunit;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
-namespace Google.Cloud.Storage.V1.Tests
-{
+namespace Google.Cloud.Storage.V1.Tests;
+
     public class CustomMediaUploadTest
     {
         [Fact]
@@ -171,4 +171,3 @@ namespace Google.Cloud.Storage.V1.Tests
             }
         }
     }
-}
