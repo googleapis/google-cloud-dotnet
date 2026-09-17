@@ -166,6 +166,10 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Initializes a new instance of <see cref="SpannerCommand"/>
         /// </summary>
+        /// <remarks>
+        /// Note: "Insert" and "Delete" are never treated as Send and Ack even when the
+        /// target table is internally a queue.
+        /// </remarks>
         /// <param name="commandText">If this command is a SQL Query, then commandText is
         /// the SQL statement. If its an update, insert or delete command, then this text
         /// is "[operation] [table]" such as "UPDATE MYTABLE"</param>. Must not be null.
