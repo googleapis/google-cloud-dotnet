@@ -142,6 +142,9 @@ namespace Google.Ads.AdManager.V1
             yield return DaiEncodingProfileEnumsReflection.Descriptor;
             yield return DaiEncodingProfileMessagesReflection.Descriptor;
             yield return DaiEncodingProfileServiceReflection.Descriptor;
+            yield return DaiSessionEnumsReflection.Descriptor;
+            yield return DaiSessionMessagesReflection.Descriptor;
+            yield return DaiSessionServiceReflection.Descriptor;
             yield return DealBuyerPermissionTypeEnumReflection.Descriptor;
             yield return DealPriorityTierEnumReflection.Descriptor;
             yield return DeliveryEnumsReflection.Descriptor;

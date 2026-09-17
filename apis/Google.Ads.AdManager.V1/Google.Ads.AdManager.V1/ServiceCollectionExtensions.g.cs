@@ -1005,6 +1005,42 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gaav::DaiSessionServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddDaiSessionServiceClient(this IServiceCollection services, sys::Action<gaav::DaiSessionServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gaav::DaiSessionServiceClientBuilder builder = new gaav::DaiSessionServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gaav::DaiSessionServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddDaiSessionServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gaav::DaiSessionServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gaav::DaiSessionServiceClientBuilder builder = new gaav::DaiSessionServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gaav::DeviceCapabilityServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
