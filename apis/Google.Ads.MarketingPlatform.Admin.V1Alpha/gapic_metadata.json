@@ -10,10 +10,28 @@
         "grpc": {
           "libraryClient": "MarketingplatformAdminServiceClient",
           "rpcs": {
+            "CreateAdminAccessBinding": {
+              "methods": [
+                "CreateAdminAccessBinding",
+                "CreateAdminAccessBindingAsync"
+              ]
+            },
             "CreateAnalyticsAccountLink": {
               "methods": [
                 "CreateAnalyticsAccountLink",
                 "CreateAnalyticsAccountLinkAsync"
+              ]
+            },
+            "CreateUserGroup": {
+              "methods": [
+                "CreateUserGroup",
+                "CreateUserGroupAsync"
+              ]
+            },
+            "CreateUserGroupMember": {
+              "methods": [
+                "CreateUserGroupMember",
+                "CreateUserGroupMemberAsync"
               ]
             },
             "DeleteAnalyticsAccountLink": {
@@ -22,16 +40,52 @@
                 "DeleteAnalyticsAccountLinkAsync"
               ]
             },
+            "DeleteUserGroup": {
+              "methods": [
+                "DeleteUserGroup",
+                "DeleteUserGroupAsync"
+              ]
+            },
+            "DeleteUserGroupMember": {
+              "methods": [
+                "DeleteUserGroupMember",
+                "DeleteUserGroupMemberAsync"
+              ]
+            },
             "FindSalesPartnerManagedClients": {
               "methods": [
                 "FindSalesPartnerManagedClients",
                 "FindSalesPartnerManagedClientsAsync"
               ]
             },
+            "GetAdminAccessBinding": {
+              "methods": [
+                "GetAdminAccessBinding",
+                "GetAdminAccessBindingAsync"
+              ]
+            },
             "GetOrganization": {
               "methods": [
                 "GetOrganization",
                 "GetOrganizationAsync"
+              ]
+            },
+            "GetUserGroup": {
+              "methods": [
+                "GetUserGroup",
+                "GetUserGroupAsync"
+              ]
+            },
+            "GetUserGroupMember": {
+              "methods": [
+                "GetUserGroupMember",
+                "GetUserGroupMemberAsync"
+              ]
+            },
+            "ListAdminAccessBindings": {
+              "methods": [
+                "ListAdminAccessBindings",
+                "ListAdminAccessBindingsAsync"
               ]
             },
             "ListAnalyticsAccountLinks": {
@@ -46,6 +100,18 @@
                 "ListOrganizationsAsync"
               ]
             },
+            "ListUserGroupMembers": {
+              "methods": [
+                "ListUserGroupMembers",
+                "ListUserGroupMembersAsync"
+              ]
+            },
+            "ListUserGroups": {
+              "methods": [
+                "ListUserGroups",
+                "ListUserGroupsAsync"
+              ]
+            },
             "ReportPropertyUsage": {
               "methods": [
                 "ReportPropertyUsage",
@@ -56,6 +122,24 @@
               "methods": [
                 "SetPropertyServiceLevel",
                 "SetPropertyServiceLevelAsync"
+              ]
+            },
+            "UpdateAdminAccessBinding": {
+              "methods": [
+                "UpdateAdminAccessBinding",
+                "UpdateAdminAccessBindingAsync"
+              ]
+            },
+            "UpdateUserGroup": {
+              "methods": [
+                "UpdateUserGroup",
+                "UpdateUserGroupAsync"
+              ]
+            },
+            "UpdateUserGroupMember": {
+              "methods": [
+                "UpdateUserGroupMember",
+                "UpdateUserGroupMemberAsync"
               ]
             }
           }

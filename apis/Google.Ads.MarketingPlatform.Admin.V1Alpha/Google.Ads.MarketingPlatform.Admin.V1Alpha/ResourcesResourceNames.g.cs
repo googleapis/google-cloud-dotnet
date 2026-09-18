@@ -500,6 +500,748 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         public static bool operator !=(AnalyticsAccountLinkName a, AnalyticsAccountLinkName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>UserGroup</c> resource.</summary>
+    public sealed partial class UserGroupName : gax::IResourceName, sys::IEquatable<UserGroupName>
+    {
+        /// <summary>The possible contents of <see cref="UserGroupName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>organizations/{organization}/userGroups/{user_group}</c>.
+            /// </summary>
+            OrganizationUserGroup = 1,
+        }
+
+        private static gax::PathTemplate s_organizationUserGroup = new gax::PathTemplate("organizations/{organization}/userGroups/{user_group}");
+
+        /// <summary>Creates a <see cref="UserGroupName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="UserGroupName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static UserGroupName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new UserGroupName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="UserGroupName"/> with the pattern
+        /// <c>organizations/{organization}/userGroups/{user_group}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="userGroupId">The <c>UserGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="UserGroupName"/> constructed from the provided ids.</returns>
+        public static UserGroupName FromOrganizationUserGroup(string organizationId, string userGroupId) =>
+            new UserGroupName(ResourceNameType.OrganizationUserGroup, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), userGroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(userGroupId, nameof(userGroupId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="UserGroupName"/> with pattern
+        /// <c>organizations/{organization}/userGroups/{user_group}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="userGroupId">The <c>UserGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="UserGroupName"/> with pattern
+        /// <c>organizations/{organization}/userGroups/{user_group}</c>.
+        /// </returns>
+        public static string Format(string organizationId, string userGroupId) =>
+            FormatOrganizationUserGroup(organizationId, userGroupId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="UserGroupName"/> with pattern
+        /// <c>organizations/{organization}/userGroups/{user_group}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="userGroupId">The <c>UserGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="UserGroupName"/> with pattern
+        /// <c>organizations/{organization}/userGroups/{user_group}</c>.
+        /// </returns>
+        public static string FormatOrganizationUserGroup(string organizationId, string userGroupId) =>
+            s_organizationUserGroup.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(userGroupId, nameof(userGroupId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="UserGroupName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>organizations/{organization}/userGroups/{user_group}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="userGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="UserGroupName"/> if successful.</returns>
+        public static UserGroupName Parse(string userGroupName) => Parse(userGroupName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="UserGroupName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>organizations/{organization}/userGroups/{user_group}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="userGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="UserGroupName"/> if successful.</returns>
+        public static UserGroupName Parse(string userGroupName, bool allowUnparsed) =>
+            TryParse(userGroupName, allowUnparsed, out UserGroupName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="UserGroupName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>organizations/{organization}/userGroups/{user_group}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="userGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="UserGroupName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string userGroupName, out UserGroupName result) => TryParse(userGroupName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="UserGroupName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>organizations/{organization}/userGroups/{user_group}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="userGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="UserGroupName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string userGroupName, bool allowUnparsed, out UserGroupName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(userGroupName, nameof(userGroupName));
+            gax::TemplatedResourceName resourceName;
+            if (s_organizationUserGroup.TryParseName(userGroupName, out resourceName))
+            {
+                result = FromOrganizationUserGroup(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(userGroupName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private UserGroupName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string organizationId = null, string userGroupId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            OrganizationId = organizationId;
+            UserGroupId = userGroupId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="UserGroupName"/> class from the component parts of pattern
+        /// <c>organizations/{organization}/userGroups/{user_group}</c>
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="userGroupId">The <c>UserGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        public UserGroupName(string organizationId, string userGroupId) : this(ResourceNameType.OrganizationUserGroup, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), userGroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(userGroupId, nameof(userGroupId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>UserGroup</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string UserGroupId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.OrganizationUserGroup: return s_organizationUserGroup.Expand(OrganizationId, UserGroupId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as UserGroupName);
+
+        /// <inheritdoc/>
+        public bool Equals(UserGroupName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(UserGroupName a, UserGroupName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(UserGroupName a, UserGroupName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>UserGroupMember</c> resource.</summary>
+    public sealed partial class UserGroupMemberName : gax::IResourceName, sys::IEquatable<UserGroupMemberName>
+    {
+        /// <summary>The possible contents of <see cref="UserGroupMemberName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>organizations/{organization}/userGroups/{user_group}/members/{member}</c>
+            /// .
+            /// </summary>
+            OrganizationUserGroupMember = 1,
+        }
+
+        private static gax::PathTemplate s_organizationUserGroupMember = new gax::PathTemplate("organizations/{organization}/userGroups/{user_group}/members/{member}");
+
+        /// <summary>Creates a <see cref="UserGroupMemberName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="UserGroupMemberName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static UserGroupMemberName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new UserGroupMemberName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="UserGroupMemberName"/> with the pattern
+        /// <c>organizations/{organization}/userGroups/{user_group}/members/{member}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="userGroupId">The <c>UserGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memberId">The <c>Member</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="UserGroupMemberName"/> constructed from the provided ids.</returns>
+        public static UserGroupMemberName FromOrganizationUserGroupMember(string organizationId, string userGroupId, string memberId) =>
+            new UserGroupMemberName(ResourceNameType.OrganizationUserGroupMember, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), userGroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(userGroupId, nameof(userGroupId)), memberId: gax::GaxPreconditions.CheckNotNullOrEmpty(memberId, nameof(memberId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="UserGroupMemberName"/> with pattern
+        /// <c>organizations/{organization}/userGroups/{user_group}/members/{member}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="userGroupId">The <c>UserGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memberId">The <c>Member</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="UserGroupMemberName"/> with pattern
+        /// <c>organizations/{organization}/userGroups/{user_group}/members/{member}</c>.
+        /// </returns>
+        public static string Format(string organizationId, string userGroupId, string memberId) =>
+            FormatOrganizationUserGroupMember(organizationId, userGroupId, memberId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="UserGroupMemberName"/> with pattern
+        /// <c>organizations/{organization}/userGroups/{user_group}/members/{member}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="userGroupId">The <c>UserGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memberId">The <c>Member</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="UserGroupMemberName"/> with pattern
+        /// <c>organizations/{organization}/userGroups/{user_group}/members/{member}</c>.
+        /// </returns>
+        public static string FormatOrganizationUserGroupMember(string organizationId, string userGroupId, string memberId) =>
+            s_organizationUserGroupMember.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(userGroupId, nameof(userGroupId)), gax::GaxPreconditions.CheckNotNullOrEmpty(memberId, nameof(memberId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="UserGroupMemberName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>organizations/{organization}/userGroups/{user_group}/members/{member}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="userGroupMemberName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="UserGroupMemberName"/> if successful.</returns>
+        public static UserGroupMemberName Parse(string userGroupMemberName) => Parse(userGroupMemberName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="UserGroupMemberName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>organizations/{organization}/userGroups/{user_group}/members/{member}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="userGroupMemberName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="UserGroupMemberName"/> if successful.</returns>
+        public static UserGroupMemberName Parse(string userGroupMemberName, bool allowUnparsed) =>
+            TryParse(userGroupMemberName, allowUnparsed, out UserGroupMemberName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="UserGroupMemberName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>organizations/{organization}/userGroups/{user_group}/members/{member}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="userGroupMemberName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="UserGroupMemberName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string userGroupMemberName, out UserGroupMemberName result) =>
+            TryParse(userGroupMemberName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="UserGroupMemberName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>organizations/{organization}/userGroups/{user_group}/members/{member}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="userGroupMemberName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="UserGroupMemberName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string userGroupMemberName, bool allowUnparsed, out UserGroupMemberName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(userGroupMemberName, nameof(userGroupMemberName));
+            gax::TemplatedResourceName resourceName;
+            if (s_organizationUserGroupMember.TryParseName(userGroupMemberName, out resourceName))
+            {
+                result = FromOrganizationUserGroupMember(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(userGroupMemberName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private UserGroupMemberName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string memberId = null, string organizationId = null, string userGroupId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            MemberId = memberId;
+            OrganizationId = organizationId;
+            UserGroupId = userGroupId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="UserGroupMemberName"/> class from the component parts of pattern
+        /// <c>organizations/{organization}/userGroups/{user_group}/members/{member}</c>
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="userGroupId">The <c>UserGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memberId">The <c>Member</c> ID. Must not be <c>null</c> or empty.</param>
+        public UserGroupMemberName(string organizationId, string userGroupId, string memberId) : this(ResourceNameType.OrganizationUserGroupMember, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), userGroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(userGroupId, nameof(userGroupId)), memberId: gax::GaxPreconditions.CheckNotNullOrEmpty(memberId, nameof(memberId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Member</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string MemberId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>UserGroup</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string UserGroupId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.OrganizationUserGroupMember: return s_organizationUserGroupMember.Expand(OrganizationId, UserGroupId, MemberId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as UserGroupMemberName);
+
+        /// <inheritdoc/>
+        public bool Equals(UserGroupMemberName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(UserGroupMemberName a, UserGroupMemberName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(UserGroupMemberName a, UserGroupMemberName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>AdminAccessBinding</c> resource.</summary>
+    public sealed partial class AdminAccessBindingName : gax::IResourceName, sys::IEquatable<AdminAccessBindingName>
+    {
+        /// <summary>The possible contents of <see cref="AdminAccessBindingName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>organizations/{organization}/adminAccessBindings/{admin_access_binding}</c>
+            /// .
+            /// </summary>
+            OrganizationAdminAccessBinding = 1,
+        }
+
+        private static gax::PathTemplate s_organizationAdminAccessBinding = new gax::PathTemplate("organizations/{organization}/adminAccessBindings/{admin_access_binding}");
+
+        /// <summary>Creates a <see cref="AdminAccessBindingName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="AdminAccessBindingName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static AdminAccessBindingName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new AdminAccessBindingName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="AdminAccessBindingName"/> with the pattern
+        /// <c>organizations/{organization}/adminAccessBindings/{admin_access_binding}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="adminAccessBindingId">
+        /// The <c>AdminAccessBinding</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>A new instance of <see cref="AdminAccessBindingName"/> constructed from the provided ids.</returns>
+        public static AdminAccessBindingName FromOrganizationAdminAccessBinding(string organizationId, string adminAccessBindingId) =>
+            new AdminAccessBindingName(ResourceNameType.OrganizationAdminAccessBinding, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), adminAccessBindingId: gax::GaxPreconditions.CheckNotNullOrEmpty(adminAccessBindingId, nameof(adminAccessBindingId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AdminAccessBindingName"/> with pattern
+        /// <c>organizations/{organization}/adminAccessBindings/{admin_access_binding}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="adminAccessBindingId">
+        /// The <c>AdminAccessBinding</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="AdminAccessBindingName"/> with pattern
+        /// <c>organizations/{organization}/adminAccessBindings/{admin_access_binding}</c>.
+        /// </returns>
+        public static string Format(string organizationId, string adminAccessBindingId) =>
+            FormatOrganizationAdminAccessBinding(organizationId, adminAccessBindingId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AdminAccessBindingName"/> with pattern
+        /// <c>organizations/{organization}/adminAccessBindings/{admin_access_binding}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="adminAccessBindingId">
+        /// The <c>AdminAccessBinding</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="AdminAccessBindingName"/> with pattern
+        /// <c>organizations/{organization}/adminAccessBindings/{admin_access_binding}</c>.
+        /// </returns>
+        public static string FormatOrganizationAdminAccessBinding(string organizationId, string adminAccessBindingId) =>
+            s_organizationAdminAccessBinding.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(adminAccessBindingId, nameof(adminAccessBindingId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AdminAccessBindingName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>organizations/{organization}/adminAccessBindings/{admin_access_binding}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="adminAccessBindingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AdminAccessBindingName"/> if successful.</returns>
+        public static AdminAccessBindingName Parse(string adminAccessBindingName) => Parse(adminAccessBindingName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AdminAccessBindingName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>organizations/{organization}/adminAccessBindings/{admin_access_binding}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="adminAccessBindingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="AdminAccessBindingName"/> if successful.</returns>
+        public static AdminAccessBindingName Parse(string adminAccessBindingName, bool allowUnparsed) =>
+            TryParse(adminAccessBindingName, allowUnparsed, out AdminAccessBindingName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AdminAccessBindingName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>organizations/{organization}/adminAccessBindings/{admin_access_binding}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="adminAccessBindingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AdminAccessBindingName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string adminAccessBindingName, out AdminAccessBindingName result) =>
+            TryParse(adminAccessBindingName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AdminAccessBindingName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>organizations/{organization}/adminAccessBindings/{admin_access_binding}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="adminAccessBindingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AdminAccessBindingName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string adminAccessBindingName, bool allowUnparsed, out AdminAccessBindingName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(adminAccessBindingName, nameof(adminAccessBindingName));
+            gax::TemplatedResourceName resourceName;
+            if (s_organizationAdminAccessBinding.TryParseName(adminAccessBindingName, out resourceName))
+            {
+                result = FromOrganizationAdminAccessBinding(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(adminAccessBindingName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private AdminAccessBindingName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string adminAccessBindingId = null, string organizationId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            AdminAccessBindingId = adminAccessBindingId;
+            OrganizationId = organizationId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="AdminAccessBindingName"/> class from the component parts of
+        /// pattern <c>organizations/{organization}/adminAccessBindings/{admin_access_binding}</c>
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="adminAccessBindingId">
+        /// The <c>AdminAccessBinding</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        public AdminAccessBindingName(string organizationId, string adminAccessBindingId) : this(ResourceNameType.OrganizationAdminAccessBinding, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), adminAccessBindingId: gax::GaxPreconditions.CheckNotNullOrEmpty(adminAccessBindingId, nameof(adminAccessBindingId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>AdminAccessBinding</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
+        /// resource name.
+        /// </summary>
+        public string AdminAccessBindingId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.OrganizationAdminAccessBinding: return s_organizationAdminAccessBinding.Expand(OrganizationId, AdminAccessBindingId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as AdminAccessBindingName);
+
+        /// <inheritdoc/>
+        public bool Equals(AdminAccessBindingName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(AdminAccessBindingName a, AdminAccessBindingName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(AdminAccessBindingName a, AdminAccessBindingName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>Account</c> resource.</summary>
     public sealed partial class AccountName : gax::IResourceName, sys::IEquatable<AccountName>
     {
@@ -735,6 +1477,42 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         {
             get => string.IsNullOrEmpty(AnalyticsAccount) ? null : AccountName.Parse(AnalyticsAccount, allowUnparsed: true);
             set => AnalyticsAccount = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UserGroup
+    {
+        /// <summary>
+        /// <see cref="gamav::UserGroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamav::UserGroupName UserGroupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamav::UserGroupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UserGroupMember
+    {
+        /// <summary>
+        /// <see cref="gamav::UserGroupMemberName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamav::UserGroupMemberName UserGroupMemberName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamav::UserGroupMemberName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AdminAccessBinding
+    {
+        /// <summary>
+        /// <see cref="gamav::AdminAccessBindingName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamav::AdminAccessBindingName AdminAccessBindingName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamav::AdminAccessBindingName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

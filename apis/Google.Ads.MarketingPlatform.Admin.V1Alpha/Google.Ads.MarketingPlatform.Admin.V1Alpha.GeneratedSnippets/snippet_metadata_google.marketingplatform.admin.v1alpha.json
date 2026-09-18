@@ -1780,6 +1780,3901 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetUserGroup_sync",
+      "title": "GetUserGroupRequestObject",
+      "description": "Snippet for GetUserGroup",
+      "file": "MarketingplatformAdminServiceClient.GetUserGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserGroup",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetUserGroup",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetUserGroup_async",
+      "title": "GetUserGroupRequestObjectAsync",
+      "description": "Snippet for GetUserGroupAsync",
+      "file": "MarketingplatformAdminServiceClient.GetUserGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserGroupAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetUserGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetUserGroup_sync_flattened",
+      "title": "GetUserGroup",
+      "description": "Snippet for GetUserGroup",
+      "file": "MarketingplatformAdminServiceClient.GetUserGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserGroup",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetUserGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetUserGroup_async_flattened",
+      "title": "GetUserGroupAsync",
+      "description": "Snippet for GetUserGroupAsync",
+      "file": "MarketingplatformAdminServiceClient.GetUserGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserGroupAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetUserGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetUserGroup_sync_flattened_resourceNames",
+      "title": "GetUserGroupResourceNames",
+      "description": "Snippet for GetUserGroup",
+      "file": "MarketingplatformAdminServiceClient.GetUserGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserGroup",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetUserGroup",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetUserGroup_async_flattened_resourceNames",
+      "title": "GetUserGroupResourceNamesAsync",
+      "description": "Snippet for GetUserGroupAsync",
+      "file": "MarketingplatformAdminServiceClient.GetUserGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserGroupAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetUserGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListUserGroups_sync",
+      "title": "ListUserGroupsRequestObject",
+      "description": "Snippet for ListUserGroups",
+      "file": "MarketingplatformAdminServiceClient.ListUserGroupsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserGroups",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListUserGroups",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserGroups",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListUserGroups",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListUserGroups_async",
+      "title": "ListUserGroupsRequestObjectAsync",
+      "description": "Snippet for ListUserGroupsAsync",
+      "file": "MarketingplatformAdminServiceClient.ListUserGroupsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserGroupsAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListUserGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserGroups",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListUserGroups",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListUserGroups_sync_flattened",
+      "title": "ListUserGroups",
+      "description": "Snippet for ListUserGroups",
+      "file": "MarketingplatformAdminServiceClient.ListUserGroupsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserGroups",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListUserGroups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserGroups",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListUserGroups",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListUserGroups_async_flattened",
+      "title": "ListUserGroupsAsync",
+      "description": "Snippet for ListUserGroupsAsync",
+      "file": "MarketingplatformAdminServiceClient.ListUserGroupsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserGroupsAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListUserGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserGroups",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListUserGroups",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListUserGroups_sync_flattened_resourceNames",
+      "title": "ListUserGroupsResourceNames",
+      "description": "Snippet for ListUserGroups",
+      "file": "MarketingplatformAdminServiceClient.ListUserGroupsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserGroups",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListUserGroups",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserGroups",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListUserGroups",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListUserGroups_async_flattened_resourceNames",
+      "title": "ListUserGroupsResourceNamesAsync",
+      "description": "Snippet for ListUserGroupsAsync",
+      "file": "MarketingplatformAdminServiceClient.ListUserGroupsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserGroupsAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListUserGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserGroups",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListUserGroups",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateUserGroup_sync",
+      "title": "CreateUserGroupRequestObject",
+      "description": "Snippet for CreateUserGroup",
+      "file": "MarketingplatformAdminServiceClient.CreateUserGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserGroup",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateUserGroup",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateUserGroup_async",
+      "title": "CreateUserGroupRequestObjectAsync",
+      "description": "Snippet for CreateUserGroupAsync",
+      "file": "MarketingplatformAdminServiceClient.CreateUserGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserGroupAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateUserGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateUserGroup_sync_flattened",
+      "title": "CreateUserGroup",
+      "description": "Snippet for CreateUserGroup",
+      "file": "MarketingplatformAdminServiceClient.CreateUserGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserGroup",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateUserGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup",
+            "name": "userGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateUserGroup_async_flattened",
+      "title": "CreateUserGroupAsync",
+      "description": "Snippet for CreateUserGroupAsync",
+      "file": "MarketingplatformAdminServiceClient.CreateUserGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserGroupAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateUserGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup",
+            "name": "userGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateUserGroup_sync_flattened_resourceNames",
+      "title": "CreateUserGroupResourceNames",
+      "description": "Snippet for CreateUserGroup",
+      "file": "MarketingplatformAdminServiceClient.CreateUserGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserGroup",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateUserGroup",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup",
+            "name": "userGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateUserGroup_async_flattened_resourceNames",
+      "title": "CreateUserGroupResourceNamesAsync",
+      "description": "Snippet for CreateUserGroupAsync",
+      "file": "MarketingplatformAdminServiceClient.CreateUserGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserGroupAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateUserGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup",
+            "name": "userGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_UpdateUserGroup_sync",
+      "title": "UpdateUserGroupRequestObject",
+      "description": "Snippet for UpdateUserGroup",
+      "file": "MarketingplatformAdminServiceClient.UpdateUserGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserGroup",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.UpdateUserGroup",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.UpdateUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_UpdateUserGroup_async",
+      "title": "UpdateUserGroupRequestObjectAsync",
+      "description": "Snippet for UpdateUserGroupAsync",
+      "file": "MarketingplatformAdminServiceClient.UpdateUserGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserGroupAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.UpdateUserGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.UpdateUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_UpdateUserGroup_sync_flattened",
+      "title": "UpdateUserGroup",
+      "description": "Snippet for UpdateUserGroup",
+      "file": "MarketingplatformAdminServiceClient.UpdateUserGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserGroup",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.UpdateUserGroup",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup",
+            "name": "userGroup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.UpdateUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_UpdateUserGroup_async_flattened",
+      "title": "UpdateUserGroupAsync",
+      "description": "Snippet for UpdateUserGroupAsync",
+      "file": "MarketingplatformAdminServiceClient.UpdateUserGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserGroupAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.UpdateUserGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup",
+            "name": "userGroup"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.UpdateUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_DeleteUserGroup_sync",
+      "title": "DeleteUserGroupRequestObject",
+      "description": "Snippet for DeleteUserGroup",
+      "file": "MarketingplatformAdminServiceClient.DeleteUserGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserGroup",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.DeleteUserGroup",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.DeleteUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_DeleteUserGroup_async",
+      "title": "DeleteUserGroupRequestObjectAsync",
+      "description": "Snippet for DeleteUserGroupAsync",
+      "file": "MarketingplatformAdminServiceClient.DeleteUserGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserGroupAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.DeleteUserGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.DeleteUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_DeleteUserGroup_sync_flattened",
+      "title": "DeleteUserGroup",
+      "description": "Snippet for DeleteUserGroup",
+      "file": "MarketingplatformAdminServiceClient.DeleteUserGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserGroup",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.DeleteUserGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.DeleteUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_DeleteUserGroup_async_flattened",
+      "title": "DeleteUserGroupAsync",
+      "description": "Snippet for DeleteUserGroupAsync",
+      "file": "MarketingplatformAdminServiceClient.DeleteUserGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserGroupAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.DeleteUserGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.DeleteUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_DeleteUserGroup_sync_flattened_resourceNames",
+      "title": "DeleteUserGroupResourceNames",
+      "description": "Snippet for DeleteUserGroup",
+      "file": "MarketingplatformAdminServiceClient.DeleteUserGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserGroup",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.DeleteUserGroup",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.DeleteUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_DeleteUserGroup_async_flattened_resourceNames",
+      "title": "DeleteUserGroupResourceNamesAsync",
+      "description": "Snippet for DeleteUserGroupAsync",
+      "file": "MarketingplatformAdminServiceClient.DeleteUserGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserGroupAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.DeleteUserGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserGroup",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.DeleteUserGroup",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetUserGroupMember_sync",
+      "title": "GetUserGroupMemberRequestObject",
+      "description": "Snippet for GetUserGroupMember",
+      "file": "MarketingplatformAdminServiceClient.GetUserGroupMemberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserGroupMember",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetUserGroupMember",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetUserGroupMember_async",
+      "title": "GetUserGroupMemberRequestObjectAsync",
+      "description": "Snippet for GetUserGroupMemberAsync",
+      "file": "MarketingplatformAdminServiceClient.GetUserGroupMemberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserGroupMemberAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetUserGroupMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetUserGroupMember_sync_flattened",
+      "title": "GetUserGroupMember",
+      "description": "Snippet for GetUserGroupMember",
+      "file": "MarketingplatformAdminServiceClient.GetUserGroupMemberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserGroupMember",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetUserGroupMember",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetUserGroupMember_async_flattened",
+      "title": "GetUserGroupMemberAsync",
+      "description": "Snippet for GetUserGroupMemberAsync",
+      "file": "MarketingplatformAdminServiceClient.GetUserGroupMemberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserGroupMemberAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetUserGroupMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetUserGroupMember_sync_flattened_resourceNames",
+      "title": "GetUserGroupMemberResourceNames",
+      "description": "Snippet for GetUserGroupMember",
+      "file": "MarketingplatformAdminServiceClient.GetUserGroupMemberResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserGroupMember",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetUserGroupMember",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMemberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetUserGroupMember_async_flattened_resourceNames",
+      "title": "GetUserGroupMemberResourceNamesAsync",
+      "description": "Snippet for GetUserGroupMemberAsync",
+      "file": "MarketingplatformAdminServiceClient.GetUserGroupMemberResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserGroupMemberAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetUserGroupMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMemberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListUserGroupMembers_sync",
+      "title": "ListUserGroupMembersRequestObject",
+      "description": "Snippet for ListUserGroupMembers",
+      "file": "MarketingplatformAdminServiceClient.ListUserGroupMembersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserGroupMembers",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListUserGroupMembers",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserGroupMembers",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListUserGroupMembers",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListUserGroupMembers_async",
+      "title": "ListUserGroupMembersRequestObjectAsync",
+      "description": "Snippet for ListUserGroupMembersAsync",
+      "file": "MarketingplatformAdminServiceClient.ListUserGroupMembersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserGroupMembersAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListUserGroupMembersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserGroupMembers",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListUserGroupMembers",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListUserGroupMembers_sync_flattened",
+      "title": "ListUserGroupMembers",
+      "description": "Snippet for ListUserGroupMembers",
+      "file": "MarketingplatformAdminServiceClient.ListUserGroupMembersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserGroupMembers",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListUserGroupMembers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserGroupMembers",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListUserGroupMembers",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListUserGroupMembers_async_flattened",
+      "title": "ListUserGroupMembersAsync",
+      "description": "Snippet for ListUserGroupMembersAsync",
+      "file": "MarketingplatformAdminServiceClient.ListUserGroupMembersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserGroupMembersAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListUserGroupMembersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserGroupMembers",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListUserGroupMembers",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListUserGroupMembers_sync_flattened_resourceNames",
+      "title": "ListUserGroupMembersResourceNames",
+      "description": "Snippet for ListUserGroupMembers",
+      "file": "MarketingplatformAdminServiceClient.ListUserGroupMembersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserGroupMembers",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListUserGroupMembers",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserGroupMembers",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListUserGroupMembers",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListUserGroupMembers_async_flattened_resourceNames",
+      "title": "ListUserGroupMembersResourceNamesAsync",
+      "description": "Snippet for ListUserGroupMembersAsync",
+      "file": "MarketingplatformAdminServiceClient.ListUserGroupMembersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserGroupMembersAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListUserGroupMembersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListUserGroupMembers",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListUserGroupMembers",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateUserGroupMember_sync",
+      "title": "CreateUserGroupMemberRequestObject",
+      "description": "Snippet for CreateUserGroupMember",
+      "file": "MarketingplatformAdminServiceClient.CreateUserGroupMemberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserGroupMember",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateUserGroupMember",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateUserGroupMember_async",
+      "title": "CreateUserGroupMemberRequestObjectAsync",
+      "description": "Snippet for CreateUserGroupMemberAsync",
+      "file": "MarketingplatformAdminServiceClient.CreateUserGroupMemberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserGroupMemberAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateUserGroupMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateUserGroupMember_sync_flattened",
+      "title": "CreateUserGroupMember",
+      "description": "Snippet for CreateUserGroupMember",
+      "file": "MarketingplatformAdminServiceClient.CreateUserGroupMemberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserGroupMember",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateUserGroupMember",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember",
+            "name": "userGroupMember"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateUserGroupMember_async_flattened",
+      "title": "CreateUserGroupMemberAsync",
+      "description": "Snippet for CreateUserGroupMemberAsync",
+      "file": "MarketingplatformAdminServiceClient.CreateUserGroupMemberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserGroupMemberAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateUserGroupMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember",
+            "name": "userGroupMember"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateUserGroupMember_sync_flattened_resourceNames",
+      "title": "CreateUserGroupMemberResourceNames",
+      "description": "Snippet for CreateUserGroupMember",
+      "file": "MarketingplatformAdminServiceClient.CreateUserGroupMemberResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserGroupMember",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateUserGroupMember",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember",
+            "name": "userGroupMember"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateUserGroupMember_async_flattened_resourceNames",
+      "title": "CreateUserGroupMemberResourceNamesAsync",
+      "description": "Snippet for CreateUserGroupMemberAsync",
+      "file": "MarketingplatformAdminServiceClient.CreateUserGroupMemberResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserGroupMemberAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateUserGroupMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember",
+            "name": "userGroupMember"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_UpdateUserGroupMember_sync",
+      "title": "UpdateUserGroupMemberRequestObject",
+      "description": "Snippet for UpdateUserGroupMember",
+      "file": "MarketingplatformAdminServiceClient.UpdateUserGroupMemberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserGroupMember",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.UpdateUserGroupMember",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.UpdateUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_UpdateUserGroupMember_async",
+      "title": "UpdateUserGroupMemberRequestObjectAsync",
+      "description": "Snippet for UpdateUserGroupMemberAsync",
+      "file": "MarketingplatformAdminServiceClient.UpdateUserGroupMemberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserGroupMemberAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.UpdateUserGroupMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.UpdateUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_UpdateUserGroupMember_sync_flattened",
+      "title": "UpdateUserGroupMember",
+      "description": "Snippet for UpdateUserGroupMember",
+      "file": "MarketingplatformAdminServiceClient.UpdateUserGroupMemberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserGroupMember",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.UpdateUserGroupMember",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember",
+            "name": "userGroupMember"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.UpdateUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_UpdateUserGroupMember_async_flattened",
+      "title": "UpdateUserGroupMemberAsync",
+      "description": "Snippet for UpdateUserGroupMemberAsync",
+      "file": "MarketingplatformAdminServiceClient.UpdateUserGroupMemberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserGroupMemberAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.UpdateUserGroupMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember",
+            "name": "userGroupMember"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.UpdateUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_DeleteUserGroupMember_sync",
+      "title": "DeleteUserGroupMemberRequestObject",
+      "description": "Snippet for DeleteUserGroupMember",
+      "file": "MarketingplatformAdminServiceClient.DeleteUserGroupMemberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserGroupMember",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.DeleteUserGroupMember",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.DeleteUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_DeleteUserGroupMember_async",
+      "title": "DeleteUserGroupMemberRequestObjectAsync",
+      "description": "Snippet for DeleteUserGroupMemberAsync",
+      "file": "MarketingplatformAdminServiceClient.DeleteUserGroupMemberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserGroupMemberAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.DeleteUserGroupMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.DeleteUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_DeleteUserGroupMember_sync_flattened",
+      "title": "DeleteUserGroupMember",
+      "description": "Snippet for DeleteUserGroupMember",
+      "file": "MarketingplatformAdminServiceClient.DeleteUserGroupMemberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserGroupMember",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.DeleteUserGroupMember",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.DeleteUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_DeleteUserGroupMember_async_flattened",
+      "title": "DeleteUserGroupMemberAsync",
+      "description": "Snippet for DeleteUserGroupMemberAsync",
+      "file": "MarketingplatformAdminServiceClient.DeleteUserGroupMemberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserGroupMemberAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.DeleteUserGroupMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.DeleteUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_DeleteUserGroupMember_sync_flattened_resourceNames",
+      "title": "DeleteUserGroupMemberResourceNames",
+      "description": "Snippet for DeleteUserGroupMember",
+      "file": "MarketingplatformAdminServiceClient.DeleteUserGroupMemberResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserGroupMember",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.DeleteUserGroupMember",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMemberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.DeleteUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_DeleteUserGroupMember_async_flattened_resourceNames",
+      "title": "DeleteUserGroupMemberResourceNamesAsync",
+      "description": "Snippet for DeleteUserGroupMemberAsync",
+      "file": "MarketingplatformAdminServiceClient.DeleteUserGroupMemberResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserGroupMemberAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.DeleteUserGroupMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMemberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteUserGroupMember",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.DeleteUserGroupMember",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetAdminAccessBinding_sync",
+      "title": "GetAdminAccessBindingRequestObject",
+      "description": "Snippet for GetAdminAccessBinding",
+      "file": "MarketingplatformAdminServiceClient.GetAdminAccessBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAdminAccessBinding",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetAdminAccessBinding",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.GetAdminAccessBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetAdminAccessBinding_async",
+      "title": "GetAdminAccessBindingRequestObjectAsync",
+      "description": "Snippet for GetAdminAccessBindingAsync",
+      "file": "MarketingplatformAdminServiceClient.GetAdminAccessBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAdminAccessBindingAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetAdminAccessBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.GetAdminAccessBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetAdminAccessBinding_sync_flattened",
+      "title": "GetAdminAccessBinding",
+      "description": "Snippet for GetAdminAccessBinding",
+      "file": "MarketingplatformAdminServiceClient.GetAdminAccessBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAdminAccessBinding",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetAdminAccessBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetAdminAccessBinding_async_flattened",
+      "title": "GetAdminAccessBindingAsync",
+      "description": "Snippet for GetAdminAccessBindingAsync",
+      "file": "MarketingplatformAdminServiceClient.GetAdminAccessBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAdminAccessBindingAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetAdminAccessBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetAdminAccessBinding_sync_flattened_resourceNames",
+      "title": "GetAdminAccessBindingResourceNames",
+      "description": "Snippet for GetAdminAccessBinding",
+      "file": "MarketingplatformAdminServiceClient.GetAdminAccessBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAdminAccessBinding",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetAdminAccessBinding",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_GetAdminAccessBinding_async_flattened_resourceNames",
+      "title": "GetAdminAccessBindingResourceNamesAsync",
+      "description": "Snippet for GetAdminAccessBindingAsync",
+      "file": "MarketingplatformAdminServiceClient.GetAdminAccessBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAdminAccessBindingAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.GetAdminAccessBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "GetAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.GetAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListAdminAccessBindings_sync",
+      "title": "ListAdminAccessBindingsRequestObject",
+      "description": "Snippet for ListAdminAccessBindings",
+      "file": "MarketingplatformAdminServiceClient.ListAdminAccessBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAdminAccessBindings",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListAdminAccessBindings",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAdminAccessBindings",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListAdminAccessBindings",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListAdminAccessBindings_async",
+      "title": "ListAdminAccessBindingsRequestObjectAsync",
+      "description": "Snippet for ListAdminAccessBindingsAsync",
+      "file": "MarketingplatformAdminServiceClient.ListAdminAccessBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAdminAccessBindingsAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListAdminAccessBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAdminAccessBindings",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListAdminAccessBindings",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListAdminAccessBindings_sync_flattened",
+      "title": "ListAdminAccessBindings",
+      "description": "Snippet for ListAdminAccessBindings",
+      "file": "MarketingplatformAdminServiceClient.ListAdminAccessBindingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAdminAccessBindings",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListAdminAccessBindings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAdminAccessBindings",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListAdminAccessBindings",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListAdminAccessBindings_async_flattened",
+      "title": "ListAdminAccessBindingsAsync",
+      "description": "Snippet for ListAdminAccessBindingsAsync",
+      "file": "MarketingplatformAdminServiceClient.ListAdminAccessBindingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAdminAccessBindingsAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListAdminAccessBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAdminAccessBindings",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListAdminAccessBindings",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListAdminAccessBindings_sync_flattened_resourceNames",
+      "title": "ListAdminAccessBindingsResourceNames",
+      "description": "Snippet for ListAdminAccessBindings",
+      "file": "MarketingplatformAdminServiceClient.ListAdminAccessBindingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAdminAccessBindings",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListAdminAccessBindings",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAdminAccessBindings",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListAdminAccessBindings",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListAdminAccessBindings_async_flattened_resourceNames",
+      "title": "ListAdminAccessBindingsResourceNamesAsync",
+      "description": "Snippet for ListAdminAccessBindingsAsync",
+      "file": "MarketingplatformAdminServiceClient.ListAdminAccessBindingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAdminAccessBindingsAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListAdminAccessBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListAdminAccessBindings",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListAdminAccessBindings",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateAdminAccessBinding_sync",
+      "title": "CreateAdminAccessBindingRequestObject",
+      "description": "Snippet for CreateAdminAccessBinding",
+      "file": "MarketingplatformAdminServiceClient.CreateAdminAccessBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdminAccessBinding",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateAdminAccessBinding",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateAdminAccessBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateAdminAccessBinding_async",
+      "title": "CreateAdminAccessBindingRequestObjectAsync",
+      "description": "Snippet for CreateAdminAccessBindingAsync",
+      "file": "MarketingplatformAdminServiceClient.CreateAdminAccessBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdminAccessBindingAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateAdminAccessBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateAdminAccessBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateAdminAccessBinding_sync_flattened",
+      "title": "CreateAdminAccessBinding",
+      "description": "Snippet for CreateAdminAccessBinding",
+      "file": "MarketingplatformAdminServiceClient.CreateAdminAccessBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdminAccessBinding",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateAdminAccessBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding",
+            "name": "adminAccessBinding"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateAdminAccessBinding_async_flattened",
+      "title": "CreateAdminAccessBindingAsync",
+      "description": "Snippet for CreateAdminAccessBindingAsync",
+      "file": "MarketingplatformAdminServiceClient.CreateAdminAccessBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdminAccessBindingAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateAdminAccessBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding",
+            "name": "adminAccessBinding"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateAdminAccessBinding_sync_flattened_resourceNames",
+      "title": "CreateAdminAccessBindingResourceNames",
+      "description": "Snippet for CreateAdminAccessBinding",
+      "file": "MarketingplatformAdminServiceClient.CreateAdminAccessBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdminAccessBinding",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateAdminAccessBinding",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding",
+            "name": "adminAccessBinding"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_CreateAdminAccessBinding_async_flattened_resourceNames",
+      "title": "CreateAdminAccessBindingResourceNamesAsync",
+      "description": "Snippet for CreateAdminAccessBindingAsync",
+      "file": "MarketingplatformAdminServiceClient.CreateAdminAccessBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdminAccessBindingAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.CreateAdminAccessBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding",
+            "name": "adminAccessBinding"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.CreateAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_UpdateAdminAccessBinding_sync",
+      "title": "UpdateAdminAccessBindingRequestObject",
+      "description": "Snippet for UpdateAdminAccessBinding",
+      "file": "MarketingplatformAdminServiceClient.UpdateAdminAccessBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAdminAccessBinding",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.UpdateAdminAccessBinding",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateAdminAccessBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.UpdateAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_UpdateAdminAccessBinding_async",
+      "title": "UpdateAdminAccessBindingRequestObjectAsync",
+      "description": "Snippet for UpdateAdminAccessBindingAsync",
+      "file": "MarketingplatformAdminServiceClient.UpdateAdminAccessBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAdminAccessBindingAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.UpdateAdminAccessBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateAdminAccessBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.UpdateAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_UpdateAdminAccessBinding_sync_flattened",
+      "title": "UpdateAdminAccessBinding",
+      "description": "Snippet for UpdateAdminAccessBinding",
+      "file": "MarketingplatformAdminServiceClient.UpdateAdminAccessBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAdminAccessBinding",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.UpdateAdminAccessBinding",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding",
+            "name": "adminAccessBinding"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.UpdateAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_UpdateAdminAccessBinding_async_flattened",
+      "title": "UpdateAdminAccessBindingAsync",
+      "description": "Snippet for UpdateAdminAccessBindingAsync",
+      "file": "MarketingplatformAdminServiceClient.UpdateAdminAccessBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAdminAccessBindingAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.UpdateAdminAccessBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding",
+            "name": "adminAccessBinding"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAdminAccessBinding",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.UpdateAdminAccessBinding",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

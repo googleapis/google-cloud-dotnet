@@ -298,4 +298,136 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             set => AnalyticsProperty = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetUserGroupRequest
+    {
+        /// <summary>
+        /// <see cref="gamav::UserGroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamav::UserGroupName UserGroupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamav::UserGroupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListUserGroupsRequest
+    {
+        /// <summary>
+        /// <see cref="OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationName ParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateUserGroupRequest
+    {
+        /// <summary>
+        /// <see cref="OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationName ParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteUserGroupRequest
+    {
+        /// <summary>
+        /// <see cref="gamav::UserGroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamav::UserGroupName UserGroupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamav::UserGroupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetUserGroupMemberRequest
+    {
+        /// <summary>
+        /// <see cref="gamav::UserGroupMemberName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamav::UserGroupMemberName UserGroupMemberName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamav::UserGroupMemberName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListUserGroupMembersRequest
+    {
+        /// <summary>
+        /// <see cref="UserGroupName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public UserGroupName ParentAsUserGroupName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : UserGroupName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateUserGroupMemberRequest
+    {
+        /// <summary>
+        /// <see cref="UserGroupName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public UserGroupName ParentAsUserGroupName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : UserGroupName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteUserGroupMemberRequest
+    {
+        /// <summary>
+        /// <see cref="gamav::UserGroupMemberName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamav::UserGroupMemberName UserGroupMemberName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamav::UserGroupMemberName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAdminAccessBindingRequest
+    {
+        /// <summary>
+        /// <see cref="gamav::AdminAccessBindingName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamav::AdminAccessBindingName AdminAccessBindingName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamav::AdminAccessBindingName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListAdminAccessBindingsRequest
+    {
+        /// <summary>
+        /// <see cref="OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationName ParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateAdminAccessBindingRequest
+    {
+        /// <summary>
+        /// <see cref="OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationName ParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

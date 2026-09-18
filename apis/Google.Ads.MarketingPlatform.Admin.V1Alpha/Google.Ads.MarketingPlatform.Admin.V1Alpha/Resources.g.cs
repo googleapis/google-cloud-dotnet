@@ -41,30 +41,59 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
             "eXRpY3NBY2NvdW50TGluaxJLb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9u",
             "fS9hbmFseXRpY3NBY2NvdW50TGlua3Mve2FuYWx5dGljc19hY2NvdW50X2xp",
             "bmt9KhVhbmFseXRpY3NBY2NvdW50TGlua3MyFGFuYWx5dGljc0FjY291bnRM",
-            "aW5rKpABChVMaW5rVmVyaWZpY2F0aW9uU3RhdGUSJwojTElOS19WRVJJRklD",
-            "QVRJT05fU1RBVEVfVU5TUEVDSUZJRUQQABIkCiBMSU5LX1ZFUklGSUNBVElP",
-            "Tl9TVEFURV9WRVJJRklFRBABEigKJExJTktfVkVSSUZJQ0FUSU9OX1NUQVRF",
-            "X05PVF9WRVJJRklFRBACKocBChVBbmFseXRpY3NTZXJ2aWNlTGV2ZWwSJwoj",
-            "QU5BTFlUSUNTX1NFUlZJQ0VfTEVWRUxfVU5TUEVDSUZJRUQQABIkCiBBTkFM",
-            "WVRJQ1NfU0VSVklDRV9MRVZFTF9TVEFOREFSRBABEh8KG0FOQUxZVElDU19T",
-            "RVJWSUNFX0xFVkVMXzM2MBACKrMBChVBbmFseXRpY3NQcm9wZXJ0eVR5cGUS",
-            "JwojQU5BTFlUSUNTX1BST1BFUlRZX1RZUEVfVU5TUEVDSUZJRUQQABIkCiBB",
-            "TkFMWVRJQ1NfUFJPUEVSVFlfVFlQRV9PUkRJTkFSWRABEicKI0FOQUxZVElD",
-            "U19QUk9QRVJUWV9UWVBFX1NVQlBST1BFUlRZEAISIgoeQU5BTFlUSUNTX1BS",
-            "T1BFUlRZX1RZUEVfUk9MTFVQEANC2AIKLmNvbS5nb29nbGUuYWRzLm1hcmtl",
-            "dGluZ3BsYXRmb3JtLmFkbWluLnYxYWxwaGFCDlJlc291cmNlc1Byb3RvUAFa",
-            "S2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbWFya2V0",
-            "aW5ncGxhdGZvcm0vYWRtaW4vdjFhbHBoYTthZG1pbqoCKkdvb2dsZS5BZHMu",
-            "TWFya2V0aW5nUGxhdGZvcm0uQWRtaW4uVjFBbHBoYcoCKkdvb2dsZVxBZHNc",
-            "TWFya2V0aW5nUGxhdGZvcm1cQWRtaW5cVjFhbHBoYeoCLkdvb2dsZTo6QWRz",
-            "OjpNYXJrZXRpbmdQbGF0Zm9ybTo6QWRtaW46OlYxYWxwaGHqQTsKJWFuYWx5",
-            "dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY291bnQSEmFjY291bnRzL3th",
-            "Y2NvdW50fWIGcHJvdG8z"));
+            "aW5rItcBCglVc2VyR3JvdXASEQoEbmFtZRgBIAEoCUID4EEIEhkKDGRpc3Bs",
+            "YXlfbmFtZRgCIAEoCUID4EEBEhgKC2Rlc2NyaXB0aW9uGAMgASgJQgPgQQE6",
+            "gQHqQX4KL21hcmtldGluZ3BsYXRmb3JtYWRtaW4uZ29vZ2xlYXBpcy5jb20v",
+            "VXNlckdyb3VwEjRvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L3VzZXJH",
+            "cm91cHMve3VzZXJfZ3JvdXB9Kgp1c2VyR3JvdXBzMgl1c2VyR3JvdXAi0gMK",
+            "D1VzZXJHcm91cE1lbWJlchIUCgp1c2VyX2VtYWlsGAIgASgJSAASFAoKdXNl",
+            "cl9ncm91cBgDIAEoCUgAEhEKBG5hbWUYASABKAlCA+BBCBJkCg9tZW1iZXJz",
+            "aGlwX3JvbGUYBCABKA4yRi5nb29nbGUubWFya2V0aW5ncGxhdGZvcm0uYWRt",
+            "aW4udjFhbHBoYS5Vc2VyR3JvdXBNZW1iZXIuTWVtYmVyc2hpcFJvbGVCA+BB",
+            "ASJoCg5NZW1iZXJzaGlwUm9sZRIfChtNRU1CRVJTSElQX1JPTEVfVU5TUEVD",
+            "SUZJRUQQABIZChVNRU1CRVJTSElQX1JPTEVfT1dORVIQARIaChZNRU1CRVJT",
+            "SElQX1JPTEVfTUVNQkVSEAI6pQHqQaEBCjVtYXJrZXRpbmdwbGF0Zm9ybWFk",
+            "bWluLmdvb2dsZWFwaXMuY29tL1VzZXJHcm91cE1lbWJlchJFb3JnYW5pemF0",
+            "aW9ucy97b3JnYW5pemF0aW9ufS91c2VyR3JvdXBzL3t1c2VyX2dyb3VwfS9t",
+            "ZW1iZXJzL3ttZW1iZXJ9KhB1c2VyR3JvdXBNZW1iZXJzMg91c2VyR3JvdXBN",
+            "ZW1iZXJCCAoGbWVtYmVyIvICChJBZG1pbkFjY2Vzc0JpbmRpbmcSFAoKdXNl",
+            "cl9lbWFpbBgCIAEoCUgAEhQKCnVzZXJfZ3JvdXAYAyABKAlIABIRCgRuYW1l",
+            "GAEgASgJQgPgQQgSWQoSb3JnYW5pemF0aW9uX3JvbGVzGAQgAygOMjguZ29v",
+            "Z2xlLm1hcmtldGluZ3BsYXRmb3JtLmFkbWluLnYxYWxwaGEuT3JnYW5pemF0",
+            "aW9uUm9sZUID4EEBOrAB6kGsAQo4bWFya2V0aW5ncGxhdGZvcm1hZG1pbi5n",
+            "b29nbGVhcGlzLmNvbS9BZG1pbkFjY2Vzc0JpbmRpbmcSR29yZ2FuaXphdGlv",
+            "bnMve29yZ2FuaXphdGlvbn0vYWRtaW5BY2Nlc3NCaW5kaW5ncy97YWRtaW5f",
+            "YWNjZXNzX2JpbmRpbmd9KhNhZG1pbkFjY2Vzc0JpbmRpbmdzMhJhZG1pbkFj",
+            "Y2Vzc0JpbmRpbmdCDwoNYWNjZXNzX3RhcmdldCqQAQoVTGlua1ZlcmlmaWNh",
+            "dGlvblN0YXRlEicKI0xJTktfVkVSSUZJQ0FUSU9OX1NUQVRFX1VOU1BFQ0lG",
+            "SUVEEAASJAogTElOS19WRVJJRklDQVRJT05fU1RBVEVfVkVSSUZJRUQQARIo",
+            "CiRMSU5LX1ZFUklGSUNBVElPTl9TVEFURV9OT1RfVkVSSUZJRUQQAiqHAQoV",
+            "QW5hbHl0aWNzU2VydmljZUxldmVsEicKI0FOQUxZVElDU19TRVJWSUNFX0xF",
+            "VkVMX1VOU1BFQ0lGSUVEEAASJAogQU5BTFlUSUNTX1NFUlZJQ0VfTEVWRUxf",
+            "U1RBTkRBUkQQARIfChtBTkFMWVRJQ1NfU0VSVklDRV9MRVZFTF8zNjAQAiqz",
+            "AQoVQW5hbHl0aWNzUHJvcGVydHlUeXBlEicKI0FOQUxZVElDU19QUk9QRVJU",
+            "WV9UWVBFX1VOU1BFQ0lGSUVEEAASJAogQU5BTFlUSUNTX1BST1BFUlRZX1RZ",
+            "UEVfT1JESU5BUlkQARInCiNBTkFMWVRJQ1NfUFJPUEVSVFlfVFlQRV9TVUJQ",
+            "Uk9QRVJUWRACEiIKHkFOQUxZVElDU19QUk9QRVJUWV9UWVBFX1JPTExVUBAD",
+            "KnYKEE9yZ2FuaXphdGlvblJvbGUSIQodT1JHQU5JWkFUSU9OX1JPTEVfVU5T",
+            "UEVDSUZJRUQQABISCg5PUkdfQURNSU5fUk9MRRABEhMKD1VTRVJfQURNSU5f",
+            "Uk9MRRACEhYKEkJJTExJTkdfQURNSU5fUk9MRRADQtgCCi5jb20uZ29vZ2xl",
+            "LmFkcy5tYXJrZXRpbmdwbGF0Zm9ybS5hZG1pbi52MWFscGhhQg5SZXNvdXJj",
+            "ZXNQcm90b1ABWktnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL21hcmtldGluZ3BsYXRmb3JtL2FkbWluL3YxYWxwaGE7YWRtaW6qAipH",
+            "b29nbGUuQWRzLk1hcmtldGluZ1BsYXRmb3JtLkFkbWluLlYxQWxwaGHKAipH",
+            "b29nbGVcQWRzXE1hcmtldGluZ1BsYXRmb3JtXEFkbWluXFYxYWxwaGHqAi5H",
+            "b29nbGU6OkFkczo6TWFya2V0aW5nUGxhdGZvcm06OkFkbWluOjpWMWFscGhh",
+            "6kE7CiVhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhJh",
+            "Y2NvdW50cy97YWNjb3VudH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.LinkVerificationState), typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AnalyticsServiceLevel), typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AnalyticsPropertyType), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.LinkVerificationState), typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AnalyticsServiceLevel), typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AnalyticsPropertyType), typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.OrganizationRole), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization), global::Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization.Parser, new[]{ "Name", "DisplayName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AnalyticsAccountLink), global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AnalyticsAccountLink.Parser, new[]{ "Name", "AnalyticsAccount", "DisplayName", "LinkVerificationState" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AnalyticsAccountLink), global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AnalyticsAccountLink.Parser, new[]{ "Name", "AnalyticsAccount", "DisplayName", "LinkVerificationState" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup), global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup.Parser, new[]{ "Name", "DisplayName", "Description" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember), global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember.Parser, new[]{ "UserEmail", "UserGroup", "Name", "MembershipRole" }, new[]{ "Member" }, new[]{ typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember.Types.MembershipRole) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding), global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding.Parser, new[]{ "UserEmail", "UserGroup", "Name", "OrganizationRoles" }, new[]{ "AccessTarget" }, null, null, null)
           }));
     }
     #endregion
@@ -129,6 +158,30 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
     /// Google Analytics rollup property
     /// </summary>
     [pbr::OriginalName("ANALYTICS_PROPERTY_TYPE_ROLLUP")] Rollup = 3,
+  }
+
+  /// <summary>
+  /// Roles that can be assigned to a user or user group in a GMP organization.
+  /// </summary>
+  public enum OrganizationRole {
+    /// <summary>
+    /// Unknown or unspecified organization role.
+    /// </summary>
+    [pbr::OriginalName("ORGANIZATION_ROLE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Organization admin role that grants all administrative privileges.
+    /// </summary>
+    [pbr::OriginalName("ORG_ADMIN_ROLE")] OrgAdminRole = 1,
+    /// <summary>
+    /// User admin role that grants access to the Users section to perform various
+    /// user management functions.
+    /// </summary>
+    [pbr::OriginalName("USER_ADMIN_ROLE")] UserAdminRole = 2,
+    /// <summary>
+    /// Billing admin role that grants access to the Billing section to perform
+    /// various billing-related functions.
+    /// </summary>
+    [pbr::OriginalName("BILLING_ADMIN_ROLE")] BillingAdminRole = 3,
   }
 
   #endregion
@@ -705,6 +758,1094 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
           }
           case 32: {
             LinkVerificationState = (global::Google.Ads.MarketingPlatform.Admin.V1Alpha.LinkVerificationState) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A resource message representing a user group in a GMP organization.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UserGroup : pb::IMessage<UserGroup>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UserGroup> _parser = new pb::MessageParser<UserGroup>(() => new UserGroup());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UserGroup> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserGroup() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserGroup(UserGroup other) : this() {
+      name_ = other.name_;
+      displayName_ = other.displayName_;
+      description_ = other.description_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserGroup Clone() {
+      return new UserGroup(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Identifier. Resource name of this UserGroup.
+    ///
+    /// Format: organizations/{org_id}/userGroups/{user_group_id}
+    /// Example: "organizations/123abc/userGroups/456def"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 2;
+    private string displayName_ = "";
+    /// <summary>
+    /// Optional. The human-readable name for the user group.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private string description_ = "";
+    /// <summary>
+    /// Optional. The description of the user group.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UserGroup);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UserGroup other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (Description != other.Description) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UserGroup other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A resource message representing a member of a user group.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UserGroupMember : pb::IMessage<UserGroupMember>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UserGroupMember> _parser = new pb::MessageParser<UserGroupMember>(() => new UserGroupMember());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UserGroupMember> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserGroupMember() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserGroupMember(UserGroupMember other) : this() {
+      name_ = other.name_;
+      membershipRole_ = other.membershipRole_;
+      switch (other.MemberCase) {
+        case MemberOneofCase.UserEmail:
+          UserEmail = other.UserEmail;
+          break;
+        case MemberOneofCase.UserGroup:
+          UserGroup = other.UserGroup;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserGroupMember Clone() {
+      return new UserGroupMember(this);
+    }
+
+    /// <summary>Field number for the "user_email" field.</summary>
+    public const int UserEmailFieldNumber = 2;
+    /// <summary>
+    /// Email address of the user member.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserEmail {
+      get { return HasUserEmail ? (string) member_ : ""; }
+      set {
+        member_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        memberCase_ = MemberOneofCase.UserEmail;
+      }
+    }
+    /// <summary>Gets whether the "user_email" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUserEmail {
+      get { return memberCase_ == MemberOneofCase.UserEmail; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "user_email" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUserEmail() {
+      if (HasUserEmail) {
+        ClearMember();
+      }
+    }
+
+    /// <summary>Field number for the "user_group" field.</summary>
+    public const int UserGroupFieldNumber = 3;
+    /// <summary>
+    /// User group resource name of the group member.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserGroup {
+      get { return HasUserGroup ? (string) member_ : ""; }
+      set {
+        member_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        memberCase_ = MemberOneofCase.UserGroup;
+      }
+    }
+    /// <summary>Gets whether the "user_group" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUserGroup {
+      get { return memberCase_ == MemberOneofCase.UserGroup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "user_group" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUserGroup() {
+      if (HasUserGroup) {
+        ClearMember();
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Identifier. The resource name of this UserGroupMember.
+    ///
+    /// Format:
+    /// organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+    /// Example:
+    /// "organizations/123abc/userGroups/456def/members/789ghi"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "membership_role" field.</summary>
+    public const int MembershipRoleFieldNumber = 4;
+    private global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember.Types.MembershipRole membershipRole_ = global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember.Types.MembershipRole.Unspecified;
+    /// <summary>
+    /// Optional. The role of the member in the user group.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember.Types.MembershipRole MembershipRole {
+      get { return membershipRole_; }
+      set {
+        membershipRole_ = value;
+      }
+    }
+
+    private object member_;
+    /// <summary>Enum of possible cases for the "member" oneof.</summary>
+    public enum MemberOneofCase {
+      None = 0,
+      UserEmail = 2,
+      UserGroup = 3,
+    }
+    private MemberOneofCase memberCase_ = MemberOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MemberOneofCase MemberCase {
+      get { return memberCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMember() {
+      memberCase_ = MemberOneofCase.None;
+      member_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UserGroupMember);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UserGroupMember other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UserEmail != other.UserEmail) return false;
+      if (UserGroup != other.UserGroup) return false;
+      if (Name != other.Name) return false;
+      if (MembershipRole != other.MembershipRole) return false;
+      if (MemberCase != other.MemberCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasUserEmail) hash ^= UserEmail.GetHashCode();
+      if (HasUserGroup) hash ^= UserGroup.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (MembershipRole != global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember.Types.MembershipRole.Unspecified) hash ^= MembershipRole.GetHashCode();
+      hash ^= (int) memberCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (HasUserEmail) {
+        output.WriteRawTag(18);
+        output.WriteString(UserEmail);
+      }
+      if (HasUserGroup) {
+        output.WriteRawTag(26);
+        output.WriteString(UserGroup);
+      }
+      if (MembershipRole != global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember.Types.MembershipRole.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) MembershipRole);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (HasUserEmail) {
+        output.WriteRawTag(18);
+        output.WriteString(UserEmail);
+      }
+      if (HasUserGroup) {
+        output.WriteRawTag(26);
+        output.WriteString(UserGroup);
+      }
+      if (MembershipRole != global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember.Types.MembershipRole.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) MembershipRole);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasUserEmail) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserEmail);
+      }
+      if (HasUserGroup) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserGroup);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (MembershipRole != global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember.Types.MembershipRole.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MembershipRole);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UserGroupMember other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.MembershipRole != global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember.Types.MembershipRole.Unspecified) {
+        MembershipRole = other.MembershipRole;
+      }
+      switch (other.MemberCase) {
+        case MemberOneofCase.UserEmail:
+          UserEmail = other.UserEmail;
+          break;
+        case MemberOneofCase.UserGroup:
+          UserGroup = other.UserGroup;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            UserEmail = input.ReadString();
+            break;
+          }
+          case 26: {
+            UserGroup = input.ReadString();
+            break;
+          }
+          case 32: {
+            MembershipRole = (global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember.Types.MembershipRole) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            UserEmail = input.ReadString();
+            break;
+          }
+          case 26: {
+            UserGroup = input.ReadString();
+            break;
+          }
+          case 32: {
+            MembershipRole = (global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember.Types.MembershipRole) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the UserGroupMember message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The role of the member in the user group.
+      /// </summary>
+      public enum MembershipRole {
+        /// <summary>
+        /// Unspecified membership role.
+        /// </summary>
+        [pbr::OriginalName("MEMBERSHIP_ROLE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Owner role that can add and remove group members.
+        /// </summary>
+        [pbr::OriginalName("MEMBERSHIP_ROLE_OWNER")] Owner = 1,
+        /// <summary>
+        /// Member role that receives all permissions assigned to the group.
+        /// </summary>
+        [pbr::OriginalName("MEMBERSHIP_ROLE_MEMBER")] Member = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A resource message representing a binding to a set of roles.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AdminAccessBinding : pb::IMessage<AdminAccessBinding>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AdminAccessBinding> _parser = new pb::MessageParser<AdminAccessBinding>(() => new AdminAccessBinding());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AdminAccessBinding> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdminAccessBinding() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdminAccessBinding(AdminAccessBinding other) : this() {
+      name_ = other.name_;
+      organizationRoles_ = other.organizationRoles_.Clone();
+      switch (other.AccessTargetCase) {
+        case AccessTargetOneofCase.UserEmail:
+          UserEmail = other.UserEmail;
+          break;
+        case AccessTargetOneofCase.UserGroup:
+          UserGroup = other.UserGroup;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdminAccessBinding Clone() {
+      return new AdminAccessBinding(this);
+    }
+
+    /// <summary>Field number for the "user_email" field.</summary>
+    public const int UserEmailFieldNumber = 2;
+    /// <summary>
+    /// Email address of the user.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserEmail {
+      get { return HasUserEmail ? (string) accessTarget_ : ""; }
+      set {
+        accessTarget_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        accessTargetCase_ = AccessTargetOneofCase.UserEmail;
+      }
+    }
+    /// <summary>Gets whether the "user_email" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUserEmail {
+      get { return accessTargetCase_ == AccessTargetOneofCase.UserEmail; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "user_email" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUserEmail() {
+      if (HasUserEmail) {
+        ClearAccessTarget();
+      }
+    }
+
+    /// <summary>Field number for the "user_group" field.</summary>
+    public const int UserGroupFieldNumber = 3;
+    /// <summary>
+    /// Resource name of the user group.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserGroup {
+      get { return HasUserGroup ? (string) accessTarget_ : ""; }
+      set {
+        accessTarget_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        accessTargetCase_ = AccessTargetOneofCase.UserGroup;
+      }
+    }
+    /// <summary>Gets whether the "user_group" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUserGroup {
+      get { return accessTargetCase_ == AccessTargetOneofCase.UserGroup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "user_group" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUserGroup() {
+      if (HasUserGroup) {
+        ClearAccessTarget();
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Identifier. The resource name of this AdminAccessBinding.
+    ///
+    /// Format:
+    /// organizations/{org_id}/adminAccessBindings/{admin_access_binding_id}
+    /// Example: "organizations/123abc/adminAccessBindings/456def"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "organization_roles" field.</summary>
+    public const int OrganizationRolesFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.OrganizationRole> _repeated_organizationRoles_codec
+        = pb::FieldCodec.ForEnum(34, x => (int) x, x => (global::Google.Ads.MarketingPlatform.Admin.V1Alpha.OrganizationRole) x);
+    private readonly pbc::RepeatedField<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.OrganizationRole> organizationRoles_ = new pbc::RepeatedField<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.OrganizationRole>();
+    /// <summary>
+    /// Optional. A list of roles granted to the parent organization.
+    ///
+    /// USER_ADMIN_ROLE and BILLING_ADMIN_ROLE will be automatically added if
+    /// ORG_ADMIN_ROLE is assigned.
+    ///
+    /// No roles will be assigned if no roles are specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.OrganizationRole> OrganizationRoles {
+      get { return organizationRoles_; }
+    }
+
+    private object accessTarget_;
+    /// <summary>Enum of possible cases for the "access_target" oneof.</summary>
+    public enum AccessTargetOneofCase {
+      None = 0,
+      UserEmail = 2,
+      UserGroup = 3,
+    }
+    private AccessTargetOneofCase accessTargetCase_ = AccessTargetOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AccessTargetOneofCase AccessTargetCase {
+      get { return accessTargetCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAccessTarget() {
+      accessTargetCase_ = AccessTargetOneofCase.None;
+      accessTarget_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AdminAccessBinding);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AdminAccessBinding other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UserEmail != other.UserEmail) return false;
+      if (UserGroup != other.UserGroup) return false;
+      if (Name != other.Name) return false;
+      if(!organizationRoles_.Equals(other.organizationRoles_)) return false;
+      if (AccessTargetCase != other.AccessTargetCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasUserEmail) hash ^= UserEmail.GetHashCode();
+      if (HasUserGroup) hash ^= UserGroup.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= organizationRoles_.GetHashCode();
+      hash ^= (int) accessTargetCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (HasUserEmail) {
+        output.WriteRawTag(18);
+        output.WriteString(UserEmail);
+      }
+      if (HasUserGroup) {
+        output.WriteRawTag(26);
+        output.WriteString(UserGroup);
+      }
+      organizationRoles_.WriteTo(output, _repeated_organizationRoles_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (HasUserEmail) {
+        output.WriteRawTag(18);
+        output.WriteString(UserEmail);
+      }
+      if (HasUserGroup) {
+        output.WriteRawTag(26);
+        output.WriteString(UserGroup);
+      }
+      organizationRoles_.WriteTo(ref output, _repeated_organizationRoles_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasUserEmail) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserEmail);
+      }
+      if (HasUserGroup) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserGroup);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      size += organizationRoles_.CalculateSize(_repeated_organizationRoles_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AdminAccessBinding other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      organizationRoles_.Add(other.organizationRoles_);
+      switch (other.AccessTargetCase) {
+        case AccessTargetOneofCase.UserEmail:
+          UserEmail = other.UserEmail;
+          break;
+        case AccessTargetOneofCase.UserGroup:
+          UserGroup = other.UserGroup;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            UserEmail = input.ReadString();
+            break;
+          }
+          case 26: {
+            UserGroup = input.ReadString();
+            break;
+          }
+          case 34:
+          case 32: {
+            organizationRoles_.AddEntriesFrom(input, _repeated_organizationRoles_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            UserEmail = input.ReadString();
+            break;
+          }
+          case 26: {
+            UserGroup = input.ReadString();
+            break;
+          }
+          case 34:
+          case 32: {
+            organizationRoles_.AddEntriesFrom(ref input, _repeated_organizationRoles_codec);
             break;
           }
         }
