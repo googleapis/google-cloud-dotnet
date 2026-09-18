@@ -5218,7 +5218,7 @@
             "id": "Google.Cloud.NetworkServices.V1Beta1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "1d4ae2021761d93a0dfcd532b52f0cd87c20a8e2",
             "apiPaths": [
                 "google/cloud/networkservices/v1beta1"
