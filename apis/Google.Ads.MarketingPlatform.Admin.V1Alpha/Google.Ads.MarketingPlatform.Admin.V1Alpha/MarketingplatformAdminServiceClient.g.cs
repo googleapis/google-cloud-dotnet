@@ -56,6 +56,20 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             DeleteAnalyticsAccountLinkSettings = existing.DeleteAnalyticsAccountLinkSettings;
             SetPropertyServiceLevelSettings = existing.SetPropertyServiceLevelSettings;
             ReportPropertyUsageSettings = existing.ReportPropertyUsageSettings;
+            GetUserGroupSettings = existing.GetUserGroupSettings;
+            ListUserGroupsSettings = existing.ListUserGroupsSettings;
+            CreateUserGroupSettings = existing.CreateUserGroupSettings;
+            UpdateUserGroupSettings = existing.UpdateUserGroupSettings;
+            DeleteUserGroupSettings = existing.DeleteUserGroupSettings;
+            GetUserGroupMemberSettings = existing.GetUserGroupMemberSettings;
+            ListUserGroupMembersSettings = existing.ListUserGroupMembersSettings;
+            CreateUserGroupMemberSettings = existing.CreateUserGroupMemberSettings;
+            UpdateUserGroupMemberSettings = existing.UpdateUserGroupMemberSettings;
+            DeleteUserGroupMemberSettings = existing.DeleteUserGroupMemberSettings;
+            GetAdminAccessBindingSettings = existing.GetAdminAccessBindingSettings;
+            ListAdminAccessBindingsSettings = existing.ListAdminAccessBindingsSettings;
+            CreateAdminAccessBindingSettings = existing.CreateAdminAccessBindingSettings;
+            UpdateAdminAccessBindingSettings = existing.UpdateAdminAccessBindingSettings;
             OnCopy(existing);
         }
 
@@ -237,6 +251,314 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         /// </remarks>
         public gaxgrpc::CallSettings ReportPropertyUsageSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.GetUserGroup</c> and
+        /// <c>MarketingplatformAdminServiceClient.GetUserGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetUserGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.ListUserGroups</c> and
+        /// <c>MarketingplatformAdminServiceClient.ListUserGroupsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListUserGroupsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.CreateUserGroup</c> and
+        /// <c>MarketingplatformAdminServiceClient.CreateUserGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateUserGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.UpdateUserGroup</c> and
+        /// <c>MarketingplatformAdminServiceClient.UpdateUserGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateUserGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.DeleteUserGroup</c> and
+        /// <c>MarketingplatformAdminServiceClient.DeleteUserGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteUserGroupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.GetUserGroupMember</c> and
+        /// <c>MarketingplatformAdminServiceClient.GetUserGroupMemberAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetUserGroupMemberSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.ListUserGroupMembers</c> and
+        /// <c>MarketingplatformAdminServiceClient.ListUserGroupMembersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListUserGroupMembersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.CreateUserGroupMember</c> and
+        /// <c>MarketingplatformAdminServiceClient.CreateUserGroupMemberAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateUserGroupMemberSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.UpdateUserGroupMember</c> and
+        /// <c>MarketingplatformAdminServiceClient.UpdateUserGroupMemberAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateUserGroupMemberSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.DeleteUserGroupMember</c> and
+        /// <c>MarketingplatformAdminServiceClient.DeleteUserGroupMemberAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteUserGroupMemberSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.GetAdminAccessBinding</c> and
+        /// <c>MarketingplatformAdminServiceClient.GetAdminAccessBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAdminAccessBindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.ListAdminAccessBindings</c> and
+        /// <c>MarketingplatformAdminServiceClient.ListAdminAccessBindingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAdminAccessBindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.CreateAdminAccessBinding</c> and
+        /// <c>MarketingplatformAdminServiceClient.CreateAdminAccessBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAdminAccessBindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.UpdateAdminAccessBinding</c> and
+        /// <c>MarketingplatformAdminServiceClient.UpdateAdminAccessBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAdminAccessBindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="MarketingplatformAdminServiceSettings"/> object.</returns>
         public MarketingplatformAdminServiceSettings Clone() => new MarketingplatformAdminServiceSettings(this);
@@ -389,7 +711,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         public virtual MarketingplatformAdminService.MarketingplatformAdminServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lookup for a single organization.
+        /// Looks up a single organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -398,7 +720,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lookup for a single organization.
+        /// Looks up a single organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -407,7 +729,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lookup for a single organization.
+        /// Looks up a single organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -416,7 +738,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             GetOrganizationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lookup for a single organization.
+        /// Looks up a single organization.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Organization to retrieve.
@@ -431,7 +753,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single organization.
+        /// Looks up a single organization.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Organization to retrieve.
@@ -446,7 +768,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single organization.
+        /// Looks up a single organization.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Organization to retrieve.
@@ -458,7 +780,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             GetOrganizationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lookup for a single organization.
+        /// Looks up a single organization.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Organization to retrieve.
@@ -473,7 +795,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single organization.
+        /// Looks up a single organization.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Organization to retrieve.
@@ -488,7 +810,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single organization.
+        /// Looks up a single organization.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Organization to retrieve.
@@ -1117,7 +1439,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             SetPropertyServiceLevelAsync(analyticsAccountLink, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get the usage and billing data for properties within the organization for
+        /// Gets the usage and billing data for properties within the organization for
         /// the specified month.
         /// 
         /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
@@ -1135,7 +1457,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get the usage and billing data for properties within the organization for
+        /// Gets the usage and billing data for properties within the organization for
         /// the specified month.
         /// 
         /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
@@ -1153,7 +1475,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get the usage and billing data for properties within the organization for
+        /// Gets the usage and billing data for properties within the organization for
         /// the specified month.
         /// 
         /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
@@ -1171,7 +1493,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             ReportPropertyUsageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get the usage and billing data for properties within the organization for
+        /// Gets the usage and billing data for properties within the organization for
         /// the specified month.
         /// 
         /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
@@ -1196,7 +1518,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Get the usage and billing data for properties within the organization for
+        /// Gets the usage and billing data for properties within the organization for
         /// the specified month.
         /// 
         /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
@@ -1221,7 +1543,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Get the usage and billing data for properties within the organization for
+        /// Gets the usage and billing data for properties within the organization for
         /// the specified month.
         /// 
         /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
@@ -1241,6 +1563,1710 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ReportPropertyUsageResponse> ReportPropertyUsageAsync(string organization, st::CancellationToken cancellationToken) =>
             ReportPropertyUsageAsync(organization, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up a single user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroup GetUserGroup(GetUserGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up a single user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> GetUserGroupAsync(GetUserGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up a single user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> GetUserGroupAsync(GetUserGroupRequest request, st::CancellationToken cancellationToken) =>
+            GetUserGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up a single user group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the UserGroup to retrieve.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroup GetUserGroup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserGroup(new GetUserGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single user group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the UserGroup to retrieve.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> GetUserGroupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserGroupAsync(new GetUserGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single user group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the UserGroup to retrieve.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> GetUserGroupAsync(string name, st::CancellationToken cancellationToken) =>
+            GetUserGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up a single user group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the UserGroup to retrieve.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroup GetUserGroup(UserGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserGroup(new GetUserGroupRequest
+            {
+                UserGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single user group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the UserGroup to retrieve.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> GetUserGroupAsync(UserGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserGroupAsync(new GetUserGroupRequest
+            {
+                UserGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single user group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the UserGroup to retrieve.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> GetUserGroupAsync(UserGroupName name, st::CancellationToken cancellationToken) =>
+            GetUserGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of user groups in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUserGroupsResponse, UserGroup> ListUserGroups(ListUserGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of user groups in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUserGroupsResponse, UserGroup> ListUserGroupsAsync(ListUserGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of user groups in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent org where this UserGroup will be listed.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUserGroupsResponse, UserGroup> ListUserGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserGroupsRequest request = new ListUserGroupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserGroups(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of user groups in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent org where this UserGroup will be listed.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUserGroupsResponse, UserGroup> ListUserGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserGroupsRequest request = new ListUserGroupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserGroupsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of user groups in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent org where this UserGroup will be listed.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUserGroupsResponse, UserGroup> ListUserGroups(OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserGroupsRequest request = new ListUserGroupsRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserGroups(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of user groups in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent org where this UserGroup will be listed.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUserGroupsResponse, UserGroup> ListUserGroupsAsync(OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserGroupsRequest request = new ListUserGroupsRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserGroupsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroup CreateUserGroup(CreateUserGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> CreateUserGroupAsync(CreateUserGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> CreateUserGroupAsync(CreateUserGroupRequest request, st::CancellationToken cancellationToken) =>
+            CreateUserGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this UserGroup will be created.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="userGroup">
+        /// Required. The user group to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroup CreateUserGroup(string parent, UserGroup userGroup, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserGroup(new CreateUserGroupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                UserGroup = gax::GaxPreconditions.CheckNotNull(userGroup, nameof(userGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this UserGroup will be created.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="userGroup">
+        /// Required. The user group to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> CreateUserGroupAsync(string parent, UserGroup userGroup, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserGroupAsync(new CreateUserGroupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                UserGroup = gax::GaxPreconditions.CheckNotNull(userGroup, nameof(userGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this UserGroup will be created.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="userGroup">
+        /// Required. The user group to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> CreateUserGroupAsync(string parent, UserGroup userGroup, st::CancellationToken cancellationToken) =>
+            CreateUserGroupAsync(parent, userGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this UserGroup will be created.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="userGroup">
+        /// Required. The user group to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroup CreateUserGroup(OrganizationName parent, UserGroup userGroup, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserGroup(new CreateUserGroupRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                UserGroup = gax::GaxPreconditions.CheckNotNull(userGroup, nameof(userGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this UserGroup will be created.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="userGroup">
+        /// Required. The user group to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> CreateUserGroupAsync(OrganizationName parent, UserGroup userGroup, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserGroupAsync(new CreateUserGroupRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                UserGroup = gax::GaxPreconditions.CheckNotNull(userGroup, nameof(userGroup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this UserGroup will be created.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="userGroup">
+        /// Required. The user group to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> CreateUserGroupAsync(OrganizationName parent, UserGroup userGroup, st::CancellationToken cancellationToken) =>
+            CreateUserGroupAsync(parent, userGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroup UpdateUserGroup(UpdateUserGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> UpdateUserGroupAsync(UpdateUserGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> UpdateUserGroupAsync(UpdateUserGroupRequest request, st::CancellationToken cancellationToken) =>
+            UpdateUserGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="userGroup">
+        /// Required. The user group to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroup UpdateUserGroup(UserGroup userGroup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateUserGroup(new UpdateUserGroupRequest
+            {
+                UserGroup = gax::GaxPreconditions.CheckNotNull(userGroup, nameof(userGroup)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="userGroup">
+        /// Required. The user group to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> UpdateUserGroupAsync(UserGroup userGroup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateUserGroupAsync(new UpdateUserGroupRequest
+            {
+                UserGroup = gax::GaxPreconditions.CheckNotNull(userGroup, nameof(userGroup)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="userGroup">
+        /// Required. The user group to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroup> UpdateUserGroupAsync(UserGroup userGroup, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateUserGroupAsync(userGroup, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserGroup(DeleteUserGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserGroupAsync(DeleteUserGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserGroupAsync(DeleteUserGroupRequest request, st::CancellationToken cancellationToken) =>
+            DeleteUserGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group to delete.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserGroup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserGroup(new DeleteUserGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group to delete.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserGroupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserGroupAsync(new DeleteUserGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group to delete.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserGroupAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteUserGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group to delete.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserGroup(UserGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserGroup(new DeleteUserGroupRequest
+            {
+                UserGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group to delete.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserGroupAsync(UserGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserGroupAsync(new DeleteUserGroupRequest
+            {
+                UserGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group to delete.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserGroupAsync(UserGroupName name, st::CancellationToken cancellationToken) =>
+            DeleteUserGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up a single user group member.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroupMember GetUserGroupMember(GetUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up a single user group member.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> GetUserGroupMemberAsync(GetUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up a single user group member.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> GetUserGroupMemberAsync(GetUserGroupMemberRequest request, st::CancellationToken cancellationToken) =>
+            GetUserGroupMemberAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up a single user group member.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group member to retrieve.
+        /// Format:
+        /// organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroupMember GetUserGroupMember(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserGroupMember(new GetUserGroupMemberRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single user group member.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group member to retrieve.
+        /// Format:
+        /// organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> GetUserGroupMemberAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserGroupMemberAsync(new GetUserGroupMemberRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single user group member.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group member to retrieve.
+        /// Format:
+        /// organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> GetUserGroupMemberAsync(string name, st::CancellationToken cancellationToken) =>
+            GetUserGroupMemberAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up a single user group member.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group member to retrieve.
+        /// Format:
+        /// organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroupMember GetUserGroupMember(UserGroupMemberName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserGroupMember(new GetUserGroupMemberRequest
+            {
+                UserGroupMemberName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single user group member.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group member to retrieve.
+        /// Format:
+        /// organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> GetUserGroupMemberAsync(UserGroupMemberName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserGroupMemberAsync(new GetUserGroupMemberRequest
+            {
+                UserGroupMemberName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single user group member.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group member to retrieve.
+        /// Format:
+        /// organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> GetUserGroupMemberAsync(UserGroupMemberName name, st::CancellationToken cancellationToken) =>
+            GetUserGroupMemberAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of members in the specified user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserGroupMember"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUserGroupMembersResponse, UserGroupMember> ListUserGroupMembers(ListUserGroupMembersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of members in the specified user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserGroupMember"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUserGroupMembersResponse, UserGroupMember> ListUserGroupMembersAsync(ListUserGroupMembersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of members in the specified user group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent user group where this UserGroupMember will be listed.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserGroupMember"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUserGroupMembersResponse, UserGroupMember> ListUserGroupMembers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserGroupMembersRequest request = new ListUserGroupMembersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserGroupMembers(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of members in the specified user group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent user group where this UserGroupMember will be listed.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserGroupMember"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUserGroupMembersResponse, UserGroupMember> ListUserGroupMembersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserGroupMembersRequest request = new ListUserGroupMembersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserGroupMembersAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of members in the specified user group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent user group where this UserGroupMember will be listed.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserGroupMember"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUserGroupMembersResponse, UserGroupMember> ListUserGroupMembers(UserGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserGroupMembersRequest request = new ListUserGroupMembersRequest
+            {
+                ParentAsUserGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserGroupMembers(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of members in the specified user group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent user group where this UserGroupMember will be listed.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserGroupMember"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUserGroupMembersResponse, UserGroupMember> ListUserGroupMembersAsync(UserGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserGroupMembersRequest request = new ListUserGroupMembersRequest
+            {
+                ParentAsUserGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserGroupMembersAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Adds a member to the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroupMember CreateUserGroupMember(CreateUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds a member to the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> CreateUserGroupMemberAsync(CreateUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds a member to the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> CreateUserGroupMemberAsync(CreateUserGroupMemberRequest request, st::CancellationToken cancellationToken) =>
+            CreateUserGroupMemberAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds a member to the specified GMP user group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this UserGroupMember will be created.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="userGroupMember">
+        /// Required. The user group member to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroupMember CreateUserGroupMember(string parent, UserGroupMember userGroupMember, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserGroupMember(new CreateUserGroupMemberRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                UserGroupMember = gax::GaxPreconditions.CheckNotNull(userGroupMember, nameof(userGroupMember)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a member to the specified GMP user group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this UserGroupMember will be created.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="userGroupMember">
+        /// Required. The user group member to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> CreateUserGroupMemberAsync(string parent, UserGroupMember userGroupMember, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserGroupMemberAsync(new CreateUserGroupMemberRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                UserGroupMember = gax::GaxPreconditions.CheckNotNull(userGroupMember, nameof(userGroupMember)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a member to the specified GMP user group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this UserGroupMember will be created.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="userGroupMember">
+        /// Required. The user group member to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> CreateUserGroupMemberAsync(string parent, UserGroupMember userGroupMember, st::CancellationToken cancellationToken) =>
+            CreateUserGroupMemberAsync(parent, userGroupMember, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds a member to the specified GMP user group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this UserGroupMember will be created.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="userGroupMember">
+        /// Required. The user group member to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroupMember CreateUserGroupMember(UserGroupName parent, UserGroupMember userGroupMember, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserGroupMember(new CreateUserGroupMemberRequest
+            {
+                ParentAsUserGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                UserGroupMember = gax::GaxPreconditions.CheckNotNull(userGroupMember, nameof(userGroupMember)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a member to the specified GMP user group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this UserGroupMember will be created.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="userGroupMember">
+        /// Required. The user group member to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> CreateUserGroupMemberAsync(UserGroupName parent, UserGroupMember userGroupMember, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserGroupMemberAsync(new CreateUserGroupMemberRequest
+            {
+                ParentAsUserGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                UserGroupMember = gax::GaxPreconditions.CheckNotNull(userGroupMember, nameof(userGroupMember)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a member to the specified GMP user group.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this UserGroupMember will be created.
+        /// Format: organizations/{org_id}/userGroups/{user_group_id}
+        /// </param>
+        /// <param name="userGroupMember">
+        /// Required. The user group member to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> CreateUserGroupMemberAsync(UserGroupName parent, UserGroupMember userGroupMember, st::CancellationToken cancellationToken) =>
+            CreateUserGroupMemberAsync(parent, userGroupMember, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroupMember UpdateUserGroupMember(UpdateUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> UpdateUserGroupMemberAsync(UpdateUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> UpdateUserGroupMemberAsync(UpdateUserGroupMemberRequest request, st::CancellationToken cancellationToken) =>
+            UpdateUserGroupMemberAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="userGroupMember">
+        /// Required. The user group member to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserGroupMember UpdateUserGroupMember(UserGroupMember userGroupMember, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateUserGroupMember(new UpdateUserGroupMemberRequest
+            {
+                UserGroupMember = gax::GaxPreconditions.CheckNotNull(userGroupMember, nameof(userGroupMember)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="userGroupMember">
+        /// Required. The user group member to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> UpdateUserGroupMemberAsync(UserGroupMember userGroupMember, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateUserGroupMemberAsync(new UpdateUserGroupMemberRequest
+            {
+                UserGroupMember = gax::GaxPreconditions.CheckNotNull(userGroupMember, nameof(userGroupMember)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="userGroupMember">
+        /// Required. The user group member to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserGroupMember> UpdateUserGroupMemberAsync(UserGroupMember userGroupMember, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateUserGroupMemberAsync(userGroupMember, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserGroupMember(DeleteUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserGroupMemberAsync(DeleteUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserGroupMemberAsync(DeleteUserGroupMemberRequest request, st::CancellationToken cancellationToken) =>
+            DeleteUserGroupMemberAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group member to delete.
+        /// Format:
+        /// organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserGroupMember(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserGroupMember(new DeleteUserGroupMemberRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group member to delete.
+        /// Format:
+        /// organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserGroupMemberAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserGroupMemberAsync(new DeleteUserGroupMemberRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group member to delete.
+        /// Format:
+        /// organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserGroupMemberAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteUserGroupMemberAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group member to delete.
+        /// Format:
+        /// organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserGroupMember(UserGroupMemberName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserGroupMember(new DeleteUserGroupMemberRequest
+            {
+                UserGroupMemberName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group member to delete.
+        /// Format:
+        /// organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserGroupMemberAsync(UserGroupMemberName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserGroupMemberAsync(new DeleteUserGroupMemberRequest
+            {
+                UserGroupMemberName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the user group member to delete.
+        /// Format:
+        /// organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserGroupMemberAsync(UserGroupMemberName name, st::CancellationToken cancellationToken) =>
+            DeleteUserGroupMemberAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up a single admin access binding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdminAccessBinding GetAdminAccessBinding(GetAdminAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up a single admin access binding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> GetAdminAccessBindingAsync(GetAdminAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up a single admin access binding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> GetAdminAccessBindingAsync(GetAdminAccessBindingRequest request, st::CancellationToken cancellationToken) =>
+            GetAdminAccessBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up a single admin access binding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AdminAccessBinding to retrieve.
+        /// Format:
+        /// organizations/{org_id}/adminAccessBindings/{admin_access_binding_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdminAccessBinding GetAdminAccessBinding(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAdminAccessBinding(new GetAdminAccessBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single admin access binding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AdminAccessBinding to retrieve.
+        /// Format:
+        /// organizations/{org_id}/adminAccessBindings/{admin_access_binding_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> GetAdminAccessBindingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAdminAccessBindingAsync(new GetAdminAccessBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single admin access binding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AdminAccessBinding to retrieve.
+        /// Format:
+        /// organizations/{org_id}/adminAccessBindings/{admin_access_binding_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> GetAdminAccessBindingAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAdminAccessBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Looks up a single admin access binding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AdminAccessBinding to retrieve.
+        /// Format:
+        /// organizations/{org_id}/adminAccessBindings/{admin_access_binding_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdminAccessBinding GetAdminAccessBinding(AdminAccessBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAdminAccessBinding(new GetAdminAccessBindingRequest
+            {
+                AdminAccessBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single admin access binding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AdminAccessBinding to retrieve.
+        /// Format:
+        /// organizations/{org_id}/adminAccessBindings/{admin_access_binding_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> GetAdminAccessBindingAsync(AdminAccessBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAdminAccessBindingAsync(new GetAdminAccessBindingRequest
+            {
+                AdminAccessBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up a single admin access binding.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AdminAccessBinding to retrieve.
+        /// Format:
+        /// organizations/{org_id}/adminAccessBindings/{admin_access_binding_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> GetAdminAccessBindingAsync(AdminAccessBindingName name, st::CancellationToken cancellationToken) =>
+            GetAdminAccessBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of admin access bindings in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdminAccessBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAdminAccessBindingsResponse, AdminAccessBinding> ListAdminAccessBindings(ListAdminAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of admin access bindings in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdminAccessBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAdminAccessBindingsResponse, AdminAccessBinding> ListAdminAccessBindingsAsync(ListAdminAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of admin access bindings in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent organization, which owns this collection of Admin
+        /// Access Bindings. Format: organizations/{org_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdminAccessBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAdminAccessBindingsResponse, AdminAccessBinding> ListAdminAccessBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdminAccessBindingsRequest request = new ListAdminAccessBindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdminAccessBindings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of admin access bindings in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent organization, which owns this collection of Admin
+        /// Access Bindings. Format: organizations/{org_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdminAccessBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAdminAccessBindingsResponse, AdminAccessBinding> ListAdminAccessBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdminAccessBindingsRequest request = new ListAdminAccessBindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdminAccessBindingsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of admin access bindings in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent organization, which owns this collection of Admin
+        /// Access Bindings. Format: organizations/{org_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdminAccessBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAdminAccessBindingsResponse, AdminAccessBinding> ListAdminAccessBindings(OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdminAccessBindingsRequest request = new ListAdminAccessBindingsRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdminAccessBindings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of admin access bindings in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent organization, which owns this collection of Admin
+        /// Access Bindings. Format: organizations/{org_id}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdminAccessBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAdminAccessBindingsResponse, AdminAccessBinding> ListAdminAccessBindingsAsync(OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAdminAccessBindingsRequest request = new ListAdminAccessBindingsRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAdminAccessBindingsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdminAccessBinding CreateAdminAccessBinding(CreateAdminAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> CreateAdminAccessBindingAsync(CreateAdminAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> CreateAdminAccessBindingAsync(CreateAdminAccessBindingRequest request, st::CancellationToken cancellationToken) =>
+            CreateAdminAccessBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent organization, which owns this Admin Access Binding.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="adminAccessBinding">
+        /// Required. The Admin Access Binding to create.
+        /// 
+        /// Only 'user_email' input is allowed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdminAccessBinding CreateAdminAccessBinding(string parent, AdminAccessBinding adminAccessBinding, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAdminAccessBinding(new CreateAdminAccessBindingRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AdminAccessBinding = gax::GaxPreconditions.CheckNotNull(adminAccessBinding, nameof(adminAccessBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent organization, which owns this Admin Access Binding.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="adminAccessBinding">
+        /// Required. The Admin Access Binding to create.
+        /// 
+        /// Only 'user_email' input is allowed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> CreateAdminAccessBindingAsync(string parent, AdminAccessBinding adminAccessBinding, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAdminAccessBindingAsync(new CreateAdminAccessBindingRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AdminAccessBinding = gax::GaxPreconditions.CheckNotNull(adminAccessBinding, nameof(adminAccessBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent organization, which owns this Admin Access Binding.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="adminAccessBinding">
+        /// Required. The Admin Access Binding to create.
+        /// 
+        /// Only 'user_email' input is allowed.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> CreateAdminAccessBindingAsync(string parent, AdminAccessBinding adminAccessBinding, st::CancellationToken cancellationToken) =>
+            CreateAdminAccessBindingAsync(parent, adminAccessBinding, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent organization, which owns this Admin Access Binding.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="adminAccessBinding">
+        /// Required. The Admin Access Binding to create.
+        /// 
+        /// Only 'user_email' input is allowed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdminAccessBinding CreateAdminAccessBinding(OrganizationName parent, AdminAccessBinding adminAccessBinding, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAdminAccessBinding(new CreateAdminAccessBindingRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AdminAccessBinding = gax::GaxPreconditions.CheckNotNull(adminAccessBinding, nameof(adminAccessBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent organization, which owns this Admin Access Binding.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="adminAccessBinding">
+        /// Required. The Admin Access Binding to create.
+        /// 
+        /// Only 'user_email' input is allowed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> CreateAdminAccessBindingAsync(OrganizationName parent, AdminAccessBinding adminAccessBinding, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAdminAccessBindingAsync(new CreateAdminAccessBindingRequest
+            {
+                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AdminAccessBinding = gax::GaxPreconditions.CheckNotNull(adminAccessBinding, nameof(adminAccessBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent organization, which owns this Admin Access Binding.
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="adminAccessBinding">
+        /// Required. The Admin Access Binding to create.
+        /// 
+        /// Only 'user_email' input is allowed.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> CreateAdminAccessBindingAsync(OrganizationName parent, AdminAccessBinding adminAccessBinding, st::CancellationToken cancellationToken) =>
+            CreateAdminAccessBindingAsync(parent, adminAccessBinding, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdminAccessBinding UpdateAdminAccessBinding(UpdateAdminAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> UpdateAdminAccessBindingAsync(UpdateAdminAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> UpdateAdminAccessBindingAsync(UpdateAdminAccessBindingRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAdminAccessBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="adminAccessBinding">
+        /// Required. The AdminAccessBinding to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AdminAccessBinding UpdateAdminAccessBinding(AdminAccessBinding adminAccessBinding, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAdminAccessBinding(new UpdateAdminAccessBindingRequest
+            {
+                AdminAccessBinding = gax::GaxPreconditions.CheckNotNull(adminAccessBinding, nameof(adminAccessBinding)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="adminAccessBinding">
+        /// Required. The AdminAccessBinding to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> UpdateAdminAccessBindingAsync(AdminAccessBinding adminAccessBinding, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAdminAccessBindingAsync(new UpdateAdminAccessBindingRequest
+            {
+                AdminAccessBinding = gax::GaxPreconditions.CheckNotNull(adminAccessBinding, nameof(adminAccessBinding)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="adminAccessBinding">
+        /// Required. The AdminAccessBinding to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Field names must be in snake case
+        /// (for example, "field_to_update"). Omitted fields will not be updated. To
+        /// replace the entire entity, use one path with the string "*" to match all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AdminAccessBinding> UpdateAdminAccessBindingAsync(AdminAccessBinding adminAccessBinding, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAdminAccessBindingAsync(adminAccessBinding, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>MarketingplatformAdminService client wrapper implementation, for convenient use.</summary>
@@ -1264,6 +3290,34 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<SetPropertyServiceLevelRequest, SetPropertyServiceLevelResponse> _callSetPropertyServiceLevel;
 
         private readonly gaxgrpc::ApiCall<ReportPropertyUsageRequest, ReportPropertyUsageResponse> _callReportPropertyUsage;
+
+        private readonly gaxgrpc::ApiCall<GetUserGroupRequest, UserGroup> _callGetUserGroup;
+
+        private readonly gaxgrpc::ApiCall<ListUserGroupsRequest, ListUserGroupsResponse> _callListUserGroups;
+
+        private readonly gaxgrpc::ApiCall<CreateUserGroupRequest, UserGroup> _callCreateUserGroup;
+
+        private readonly gaxgrpc::ApiCall<UpdateUserGroupRequest, UserGroup> _callUpdateUserGroup;
+
+        private readonly gaxgrpc::ApiCall<DeleteUserGroupRequest, wkt::Empty> _callDeleteUserGroup;
+
+        private readonly gaxgrpc::ApiCall<GetUserGroupMemberRequest, UserGroupMember> _callGetUserGroupMember;
+
+        private readonly gaxgrpc::ApiCall<ListUserGroupMembersRequest, ListUserGroupMembersResponse> _callListUserGroupMembers;
+
+        private readonly gaxgrpc::ApiCall<CreateUserGroupMemberRequest, UserGroupMember> _callCreateUserGroupMember;
+
+        private readonly gaxgrpc::ApiCall<UpdateUserGroupMemberRequest, UserGroupMember> _callUpdateUserGroupMember;
+
+        private readonly gaxgrpc::ApiCall<DeleteUserGroupMemberRequest, wkt::Empty> _callDeleteUserGroupMember;
+
+        private readonly gaxgrpc::ApiCall<GetAdminAccessBindingRequest, AdminAccessBinding> _callGetAdminAccessBinding;
+
+        private readonly gaxgrpc::ApiCall<ListAdminAccessBindingsRequest, ListAdminAccessBindingsResponse> _callListAdminAccessBindings;
+
+        private readonly gaxgrpc::ApiCall<CreateAdminAccessBindingRequest, AdminAccessBinding> _callCreateAdminAccessBinding;
+
+        private readonly gaxgrpc::ApiCall<UpdateAdminAccessBindingRequest, AdminAccessBinding> _callUpdateAdminAccessBinding;
 
         /// <summary>
         /// Constructs a client wrapper for the MarketingplatformAdminService service, with the specified gRPC client
@@ -1307,6 +3361,48 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             _callReportPropertyUsage = clientHelper.BuildApiCall<ReportPropertyUsageRequest, ReportPropertyUsageResponse>("ReportPropertyUsage", grpcClient.ReportPropertyUsageAsync, grpcClient.ReportPropertyUsage, effectiveSettings.ReportPropertyUsageSettings).WithGoogleRequestParam("organization", request => request.Organization);
             Modify_ApiCall(ref _callReportPropertyUsage);
             Modify_ReportPropertyUsageApiCall(ref _callReportPropertyUsage);
+            _callGetUserGroup = clientHelper.BuildApiCall<GetUserGroupRequest, UserGroup>("GetUserGroup", grpcClient.GetUserGroupAsync, grpcClient.GetUserGroup, effectiveSettings.GetUserGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetUserGroup);
+            Modify_GetUserGroupApiCall(ref _callGetUserGroup);
+            _callListUserGroups = clientHelper.BuildApiCall<ListUserGroupsRequest, ListUserGroupsResponse>("ListUserGroups", grpcClient.ListUserGroupsAsync, grpcClient.ListUserGroups, effectiveSettings.ListUserGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListUserGroups);
+            Modify_ListUserGroupsApiCall(ref _callListUserGroups);
+            _callCreateUserGroup = clientHelper.BuildApiCall<CreateUserGroupRequest, UserGroup>("CreateUserGroup", grpcClient.CreateUserGroupAsync, grpcClient.CreateUserGroup, effectiveSettings.CreateUserGroupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateUserGroup);
+            Modify_CreateUserGroupApiCall(ref _callCreateUserGroup);
+            _callUpdateUserGroup = clientHelper.BuildApiCall<UpdateUserGroupRequest, UserGroup>("UpdateUserGroup", grpcClient.UpdateUserGroupAsync, grpcClient.UpdateUserGroup, effectiveSettings.UpdateUserGroupSettings).WithGoogleRequestParam("user_group.name", request => request.UserGroup?.Name);
+            Modify_ApiCall(ref _callUpdateUserGroup);
+            Modify_UpdateUserGroupApiCall(ref _callUpdateUserGroup);
+            _callDeleteUserGroup = clientHelper.BuildApiCall<DeleteUserGroupRequest, wkt::Empty>("DeleteUserGroup", grpcClient.DeleteUserGroupAsync, grpcClient.DeleteUserGroup, effectiveSettings.DeleteUserGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteUserGroup);
+            Modify_DeleteUserGroupApiCall(ref _callDeleteUserGroup);
+            _callGetUserGroupMember = clientHelper.BuildApiCall<GetUserGroupMemberRequest, UserGroupMember>("GetUserGroupMember", grpcClient.GetUserGroupMemberAsync, grpcClient.GetUserGroupMember, effectiveSettings.GetUserGroupMemberSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetUserGroupMember);
+            Modify_GetUserGroupMemberApiCall(ref _callGetUserGroupMember);
+            _callListUserGroupMembers = clientHelper.BuildApiCall<ListUserGroupMembersRequest, ListUserGroupMembersResponse>("ListUserGroupMembers", grpcClient.ListUserGroupMembersAsync, grpcClient.ListUserGroupMembers, effectiveSettings.ListUserGroupMembersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListUserGroupMembers);
+            Modify_ListUserGroupMembersApiCall(ref _callListUserGroupMembers);
+            _callCreateUserGroupMember = clientHelper.BuildApiCall<CreateUserGroupMemberRequest, UserGroupMember>("CreateUserGroupMember", grpcClient.CreateUserGroupMemberAsync, grpcClient.CreateUserGroupMember, effectiveSettings.CreateUserGroupMemberSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateUserGroupMember);
+            Modify_CreateUserGroupMemberApiCall(ref _callCreateUserGroupMember);
+            _callUpdateUserGroupMember = clientHelper.BuildApiCall<UpdateUserGroupMemberRequest, UserGroupMember>("UpdateUserGroupMember", grpcClient.UpdateUserGroupMemberAsync, grpcClient.UpdateUserGroupMember, effectiveSettings.UpdateUserGroupMemberSettings).WithGoogleRequestParam("user_group_member.name", request => request.UserGroupMember?.Name);
+            Modify_ApiCall(ref _callUpdateUserGroupMember);
+            Modify_UpdateUserGroupMemberApiCall(ref _callUpdateUserGroupMember);
+            _callDeleteUserGroupMember = clientHelper.BuildApiCall<DeleteUserGroupMemberRequest, wkt::Empty>("DeleteUserGroupMember", grpcClient.DeleteUserGroupMemberAsync, grpcClient.DeleteUserGroupMember, effectiveSettings.DeleteUserGroupMemberSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteUserGroupMember);
+            Modify_DeleteUserGroupMemberApiCall(ref _callDeleteUserGroupMember);
+            _callGetAdminAccessBinding = clientHelper.BuildApiCall<GetAdminAccessBindingRequest, AdminAccessBinding>("GetAdminAccessBinding", grpcClient.GetAdminAccessBindingAsync, grpcClient.GetAdminAccessBinding, effectiveSettings.GetAdminAccessBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAdminAccessBinding);
+            Modify_GetAdminAccessBindingApiCall(ref _callGetAdminAccessBinding);
+            _callListAdminAccessBindings = clientHelper.BuildApiCall<ListAdminAccessBindingsRequest, ListAdminAccessBindingsResponse>("ListAdminAccessBindings", grpcClient.ListAdminAccessBindingsAsync, grpcClient.ListAdminAccessBindings, effectiveSettings.ListAdminAccessBindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAdminAccessBindings);
+            Modify_ListAdminAccessBindingsApiCall(ref _callListAdminAccessBindings);
+            _callCreateAdminAccessBinding = clientHelper.BuildApiCall<CreateAdminAccessBindingRequest, AdminAccessBinding>("CreateAdminAccessBinding", grpcClient.CreateAdminAccessBindingAsync, grpcClient.CreateAdminAccessBinding, effectiveSettings.CreateAdminAccessBindingSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAdminAccessBinding);
+            Modify_CreateAdminAccessBindingApiCall(ref _callCreateAdminAccessBinding);
+            _callUpdateAdminAccessBinding = clientHelper.BuildApiCall<UpdateAdminAccessBindingRequest, AdminAccessBinding>("UpdateAdminAccessBinding", grpcClient.UpdateAdminAccessBindingAsync, grpcClient.UpdateAdminAccessBinding, effectiveSettings.UpdateAdminAccessBindingSettings).WithGoogleRequestParam("admin_access_binding.name", request => request.AdminAccessBinding?.Name);
+            Modify_ApiCall(ref _callUpdateAdminAccessBinding);
+            Modify_UpdateAdminAccessBindingApiCall(ref _callUpdateAdminAccessBinding);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1327,6 +3423,34 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         partial void Modify_SetPropertyServiceLevelApiCall(ref gaxgrpc::ApiCall<SetPropertyServiceLevelRequest, SetPropertyServiceLevelResponse> call);
 
         partial void Modify_ReportPropertyUsageApiCall(ref gaxgrpc::ApiCall<ReportPropertyUsageRequest, ReportPropertyUsageResponse> call);
+
+        partial void Modify_GetUserGroupApiCall(ref gaxgrpc::ApiCall<GetUserGroupRequest, UserGroup> call);
+
+        partial void Modify_ListUserGroupsApiCall(ref gaxgrpc::ApiCall<ListUserGroupsRequest, ListUserGroupsResponse> call);
+
+        partial void Modify_CreateUserGroupApiCall(ref gaxgrpc::ApiCall<CreateUserGroupRequest, UserGroup> call);
+
+        partial void Modify_UpdateUserGroupApiCall(ref gaxgrpc::ApiCall<UpdateUserGroupRequest, UserGroup> call);
+
+        partial void Modify_DeleteUserGroupApiCall(ref gaxgrpc::ApiCall<DeleteUserGroupRequest, wkt::Empty> call);
+
+        partial void Modify_GetUserGroupMemberApiCall(ref gaxgrpc::ApiCall<GetUserGroupMemberRequest, UserGroupMember> call);
+
+        partial void Modify_ListUserGroupMembersApiCall(ref gaxgrpc::ApiCall<ListUserGroupMembersRequest, ListUserGroupMembersResponse> call);
+
+        partial void Modify_CreateUserGroupMemberApiCall(ref gaxgrpc::ApiCall<CreateUserGroupMemberRequest, UserGroupMember> call);
+
+        partial void Modify_UpdateUserGroupMemberApiCall(ref gaxgrpc::ApiCall<UpdateUserGroupMemberRequest, UserGroupMember> call);
+
+        partial void Modify_DeleteUserGroupMemberApiCall(ref gaxgrpc::ApiCall<DeleteUserGroupMemberRequest, wkt::Empty> call);
+
+        partial void Modify_GetAdminAccessBindingApiCall(ref gaxgrpc::ApiCall<GetAdminAccessBindingRequest, AdminAccessBinding> call);
+
+        partial void Modify_ListAdminAccessBindingsApiCall(ref gaxgrpc::ApiCall<ListAdminAccessBindingsRequest, ListAdminAccessBindingsResponse> call);
+
+        partial void Modify_CreateAdminAccessBindingApiCall(ref gaxgrpc::ApiCall<CreateAdminAccessBindingRequest, AdminAccessBinding> call);
+
+        partial void Modify_UpdateAdminAccessBindingApiCall(ref gaxgrpc::ApiCall<UpdateAdminAccessBindingRequest, AdminAccessBinding> call);
 
         partial void OnConstruction(MarketingplatformAdminService.MarketingplatformAdminServiceClient grpcClient, MarketingplatformAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1349,8 +3473,36 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
 
         partial void Modify_ReportPropertyUsageRequest(ref ReportPropertyUsageRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetUserGroupRequest(ref GetUserGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListUserGroupsRequest(ref ListUserGroupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateUserGroupRequest(ref CreateUserGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateUserGroupRequest(ref UpdateUserGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteUserGroupRequest(ref DeleteUserGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetUserGroupMemberRequest(ref GetUserGroupMemberRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListUserGroupMembersRequest(ref ListUserGroupMembersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateUserGroupMemberRequest(ref CreateUserGroupMemberRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateUserGroupMemberRequest(ref UpdateUserGroupMemberRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteUserGroupMemberRequest(ref DeleteUserGroupMemberRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAdminAccessBindingRequest(ref GetAdminAccessBindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAdminAccessBindingsRequest(ref ListAdminAccessBindingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAdminAccessBindingRequest(ref CreateAdminAccessBindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAdminAccessBindingRequest(ref UpdateAdminAccessBindingRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
-        /// Lookup for a single organization.
+        /// Looks up a single organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1362,7 +3514,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Lookup for a single organization.
+        /// Looks up a single organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1544,7 +3696,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Get the usage and billing data for properties within the organization for
+        /// Gets the usage and billing data for properties within the organization for
         /// the specified month.
         /// 
         /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
@@ -1565,7 +3717,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Get the usage and billing data for properties within the organization for
+        /// Gets the usage and billing data for properties within the organization for
         /// the specified month.
         /// 
         /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
@@ -1584,6 +3736,342 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             Modify_ReportPropertyUsageRequest(ref request, ref callSettings);
             return _callReportPropertyUsage.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Looks up a single user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserGroup GetUserGroup(GetUserGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetUserGroupRequest(ref request, ref callSettings);
+            return _callGetUserGroup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up a single user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserGroup> GetUserGroupAsync(GetUserGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetUserGroupRequest(ref request, ref callSettings);
+            return _callGetUserGroup.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of user groups in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserGroup"/> resources.</returns>
+        public override gax::PagedEnumerable<ListUserGroupsResponse, UserGroup> ListUserGroups(ListUserGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUserGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListUserGroupsRequest, ListUserGroupsResponse, UserGroup>(_callListUserGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of user groups in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserGroup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListUserGroupsResponse, UserGroup> ListUserGroupsAsync(ListUserGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUserGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListUserGroupsRequest, ListUserGroupsResponse, UserGroup>(_callListUserGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserGroup CreateUserGroup(CreateUserGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateUserGroupRequest(ref request, ref callSettings);
+            return _callCreateUserGroup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserGroup> CreateUserGroupAsync(CreateUserGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateUserGroupRequest(ref request, ref callSettings);
+            return _callCreateUserGroup.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserGroup UpdateUserGroup(UpdateUserGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateUserGroupRequest(ref request, ref callSettings);
+            return _callUpdateUserGroup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserGroup> UpdateUserGroupAsync(UpdateUserGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateUserGroupRequest(ref request, ref callSettings);
+            return _callUpdateUserGroup.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteUserGroup(DeleteUserGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteUserGroupRequest(ref request, ref callSettings);
+            _callDeleteUserGroup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a user group in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteUserGroupAsync(DeleteUserGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteUserGroupRequest(ref request, ref callSettings);
+            return _callDeleteUserGroup.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up a single user group member.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserGroupMember GetUserGroupMember(GetUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetUserGroupMemberRequest(ref request, ref callSettings);
+            return _callGetUserGroupMember.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up a single user group member.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserGroupMember> GetUserGroupMemberAsync(GetUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetUserGroupMemberRequest(ref request, ref callSettings);
+            return _callGetUserGroupMember.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of members in the specified user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserGroupMember"/> resources.</returns>
+        public override gax::PagedEnumerable<ListUserGroupMembersResponse, UserGroupMember> ListUserGroupMembers(ListUserGroupMembersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUserGroupMembersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListUserGroupMembersRequest, ListUserGroupMembersResponse, UserGroupMember>(_callListUserGroupMembers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of members in the specified user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserGroupMember"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListUserGroupMembersResponse, UserGroupMember> ListUserGroupMembersAsync(ListUserGroupMembersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUserGroupMembersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListUserGroupMembersRequest, ListUserGroupMembersResponse, UserGroupMember>(_callListUserGroupMembers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Adds a member to the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserGroupMember CreateUserGroupMember(CreateUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateUserGroupMemberRequest(ref request, ref callSettings);
+            return _callCreateUserGroupMember.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Adds a member to the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserGroupMember> CreateUserGroupMemberAsync(CreateUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateUserGroupMemberRequest(ref request, ref callSettings);
+            return _callCreateUserGroupMember.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserGroupMember UpdateUserGroupMember(UpdateUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateUserGroupMemberRequest(ref request, ref callSettings);
+            return _callUpdateUserGroupMember.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserGroupMember> UpdateUserGroupMemberAsync(UpdateUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateUserGroupMemberRequest(ref request, ref callSettings);
+            return _callUpdateUserGroupMember.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteUserGroupMember(DeleteUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteUserGroupMemberRequest(ref request, ref callSettings);
+            _callDeleteUserGroupMember.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a member in the specified GMP user group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteUserGroupMemberAsync(DeleteUserGroupMemberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteUserGroupMemberRequest(ref request, ref callSettings);
+            return _callDeleteUserGroupMember.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up a single admin access binding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AdminAccessBinding GetAdminAccessBinding(GetAdminAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAdminAccessBindingRequest(ref request, ref callSettings);
+            return _callGetAdminAccessBinding.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up a single admin access binding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AdminAccessBinding> GetAdminAccessBindingAsync(GetAdminAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAdminAccessBindingRequest(ref request, ref callSettings);
+            return _callGetAdminAccessBinding.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of admin access bindings in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AdminAccessBinding"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAdminAccessBindingsResponse, AdminAccessBinding> ListAdminAccessBindings(ListAdminAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAdminAccessBindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAdminAccessBindingsRequest, ListAdminAccessBindingsResponse, AdminAccessBinding>(_callListAdminAccessBindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of admin access bindings in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AdminAccessBinding"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAdminAccessBindingsResponse, AdminAccessBinding> ListAdminAccessBindingsAsync(ListAdminAccessBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAdminAccessBindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAdminAccessBindingsRequest, ListAdminAccessBindingsResponse, AdminAccessBinding>(_callListAdminAccessBindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AdminAccessBinding CreateAdminAccessBinding(CreateAdminAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAdminAccessBindingRequest(ref request, ref callSettings);
+            return _callCreateAdminAccessBinding.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AdminAccessBinding> CreateAdminAccessBindingAsync(CreateAdminAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAdminAccessBindingRequest(ref request, ref callSettings);
+            return _callCreateAdminAccessBinding.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AdminAccessBinding UpdateAdminAccessBinding(UpdateAdminAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAdminAccessBindingRequest(ref request, ref callSettings);
+            return _callUpdateAdminAccessBinding.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an admin access binding in the specified GMP organization.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AdminAccessBinding> UpdateAdminAccessBindingAsync(UpdateAdminAccessBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAdminAccessBindingRequest(ref request, ref callSettings);
+            return _callUpdateAdminAccessBinding.Async(request, callSettings);
+        }
     }
 
     public partial class ListOrganizationsRequest : gaxgrpc::IPageRequest
@@ -1591,6 +4079,18 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
     }
 
     public partial class ListAnalyticsAccountLinksRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListUserGroupsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListUserGroupMembersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAdminAccessBindingsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1606,6 +4106,30 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<AnalyticsAccountLink> GetEnumerator() => AnalyticsAccountLinks.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListUserGroupsResponse : gaxgrpc::IPageResponse<UserGroup>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<UserGroup> GetEnumerator() => UserGroups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListUserGroupMembersResponse : gaxgrpc::IPageResponse<UserGroupMember>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<UserGroupMember> GetEnumerator() => UserGroupMembers.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAdminAccessBindingsResponse : gaxgrpc::IPageResponse<AdminAccessBinding>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AdminAccessBinding> GetEnumerator() => AdminAccessBindings.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

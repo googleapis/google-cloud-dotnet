@@ -3,7 +3,7 @@
 //     source: google/marketingplatform/admin/v1alpha/marketingplatform_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -95,6 +95,46 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest> __Marshaller_google_marketingplatform_admin_v1alpha_ReportPropertyUsageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse> __Marshaller_google_marketingplatform_admin_v1alpha_ReportPropertyUsageResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupRequest> __Marshaller_google_marketingplatform_admin_v1alpha_GetUserGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup> __Marshaller_google_marketingplatform_admin_v1alpha_UserGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsRequest> __Marshaller_google_marketingplatform_admin_v1alpha_ListUserGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse> __Marshaller_google_marketingplatform_admin_v1alpha_ListUserGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupRequest> __Marshaller_google_marketingplatform_admin_v1alpha_CreateUserGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupRequest> __Marshaller_google_marketingplatform_admin_v1alpha_UpdateUserGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupRequest> __Marshaller_google_marketingplatform_admin_v1alpha_DeleteUserGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupMemberRequest> __Marshaller_google_marketingplatform_admin_v1alpha_GetUserGroupMemberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupMemberRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember> __Marshaller_google_marketingplatform_admin_v1alpha_UserGroupMember = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersRequest> __Marshaller_google_marketingplatform_admin_v1alpha_ListUserGroupMembersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse> __Marshaller_google_marketingplatform_admin_v1alpha_ListUserGroupMembersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupMemberRequest> __Marshaller_google_marketingplatform_admin_v1alpha_CreateUserGroupMemberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupMemberRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupMemberRequest> __Marshaller_google_marketingplatform_admin_v1alpha_UpdateUserGroupMemberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupMemberRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupMemberRequest> __Marshaller_google_marketingplatform_admin_v1alpha_DeleteUserGroupMemberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupMemberRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetAdminAccessBindingRequest> __Marshaller_google_marketingplatform_admin_v1alpha_GetAdminAccessBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetAdminAccessBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding> __Marshaller_google_marketingplatform_admin_v1alpha_AdminAccessBinding = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsRequest> __Marshaller_google_marketingplatform_admin_v1alpha_ListAdminAccessBindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse> __Marshaller_google_marketingplatform_admin_v1alpha_ListAdminAccessBindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateAdminAccessBindingRequest> __Marshaller_google_marketingplatform_admin_v1alpha_CreateAdminAccessBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateAdminAccessBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateAdminAccessBindingRequest> __Marshaller_google_marketingplatform_admin_v1alpha_UpdateAdminAccessBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateAdminAccessBindingRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetOrganizationRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization> __Method_GetOrganization = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetOrganizationRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization>(
@@ -160,6 +200,118 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
         __Marshaller_google_marketingplatform_admin_v1alpha_ReportPropertyUsageRequest,
         __Marshaller_google_marketingplatform_admin_v1alpha_ReportPropertyUsageResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup> __Method_GetUserGroup = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetUserGroup",
+        __Marshaller_google_marketingplatform_admin_v1alpha_GetUserGroupRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_UserGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse> __Method_ListUserGroups = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListUserGroups",
+        __Marshaller_google_marketingplatform_admin_v1alpha_ListUserGroupsRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_ListUserGroupsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup> __Method_CreateUserGroup = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateUserGroup",
+        __Marshaller_google_marketingplatform_admin_v1alpha_CreateUserGroupRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_UserGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup> __Method_UpdateUserGroup = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateUserGroup",
+        __Marshaller_google_marketingplatform_admin_v1alpha_UpdateUserGroupRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_UserGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteUserGroup = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteUserGroup",
+        __Marshaller_google_marketingplatform_admin_v1alpha_DeleteUserGroupRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupMemberRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember> __Method_GetUserGroupMember = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupMemberRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetUserGroupMember",
+        __Marshaller_google_marketingplatform_admin_v1alpha_GetUserGroupMemberRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_UserGroupMember);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse> __Method_ListUserGroupMembers = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListUserGroupMembers",
+        __Marshaller_google_marketingplatform_admin_v1alpha_ListUserGroupMembersRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_ListUserGroupMembersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupMemberRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember> __Method_CreateUserGroupMember = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupMemberRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateUserGroupMember",
+        __Marshaller_google_marketingplatform_admin_v1alpha_CreateUserGroupMemberRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_UserGroupMember);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupMemberRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember> __Method_UpdateUserGroupMember = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupMemberRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateUserGroupMember",
+        __Marshaller_google_marketingplatform_admin_v1alpha_UpdateUserGroupMemberRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_UserGroupMember);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupMemberRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteUserGroupMember = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupMemberRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteUserGroupMember",
+        __Marshaller_google_marketingplatform_admin_v1alpha_DeleteUserGroupMemberRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetAdminAccessBindingRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding> __Method_GetAdminAccessBinding = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetAdminAccessBindingRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAdminAccessBinding",
+        __Marshaller_google_marketingplatform_admin_v1alpha_GetAdminAccessBindingRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_AdminAccessBinding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse> __Method_ListAdminAccessBindings = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAdminAccessBindings",
+        __Marshaller_google_marketingplatform_admin_v1alpha_ListAdminAccessBindingsRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_ListAdminAccessBindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateAdminAccessBindingRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding> __Method_CreateAdminAccessBinding = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateAdminAccessBindingRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAdminAccessBinding",
+        __Marshaller_google_marketingplatform_admin_v1alpha_CreateAdminAccessBindingRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_AdminAccessBinding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateAdminAccessBindingRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding> __Method_UpdateAdminAccessBinding = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateAdminAccessBindingRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAdminAccessBinding",
+        __Marshaller_google_marketingplatform_admin_v1alpha_UpdateAdminAccessBindingRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_AdminAccessBinding);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -171,7 +323,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
     public abstract partial class MarketingplatformAdminServiceBase
     {
       /// <summary>
-      /// Lookup for a single organization.
+      /// Looks up a single organization.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -268,7 +420,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Get the usage and billing data for properties within the organization for
+      /// Gets the usage and billing data for properties within the organization for
       /// the specified month.
       ///
       /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
@@ -284,6 +436,174 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse> ReportPropertyUsage(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Looks up a single user group.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup> GetUserGroup(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of user groups in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse> ListUserGroups(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup> CreateUserGroup(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup> UpdateUserGroup(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserGroup(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Looks up a single user group member.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember> GetUserGroupMember(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupMemberRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of members in the specified user group.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse> ListUserGroupMembers(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Adds a member to the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember> CreateUserGroupMember(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupMemberRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a member in the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember> UpdateUserGroupMember(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupMemberRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a member in the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserGroupMember(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupMemberRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Looks up a single admin access binding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding> GetAdminAccessBinding(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetAdminAccessBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of admin access bindings in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse> ListAdminAccessBindings(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an admin access binding in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding> CreateAdminAccessBinding(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateAdminAccessBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an admin access binding in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding> UpdateAdminAccessBinding(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateAdminAccessBindingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -318,7 +638,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Lookup for a single organization.
+      /// Looks up a single organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -331,7 +651,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
         return GetOrganization(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single organization.
+      /// Looks up a single organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -342,7 +662,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
         return CallInvoker.BlockingUnaryCall(__Method_GetOrganization, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single organization.
+      /// Looks up a single organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -355,7 +675,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
         return GetOrganizationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single organization.
+      /// Looks up a single organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -706,7 +1026,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_SetPropertyServiceLevel, null, options, request);
       }
       /// <summary>
-      /// Get the usage and billing data for properties within the organization for
+      /// Gets the usage and billing data for properties within the organization for
       /// the specified month.
       ///
       /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
@@ -728,7 +1048,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
         return ReportPropertyUsage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the usage and billing data for properties within the organization for
+      /// Gets the usage and billing data for properties within the organization for
       /// the specified month.
       ///
       /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
@@ -748,7 +1068,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
         return CallInvoker.BlockingUnaryCall(__Method_ReportPropertyUsage, null, options, request);
       }
       /// <summary>
-      /// Get the usage and billing data for properties within the organization for
+      /// Gets the usage and billing data for properties within the organization for
       /// the specified month.
       ///
       /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
@@ -770,7 +1090,7 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
         return ReportPropertyUsageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get the usage and billing data for properties within the organization for
+      /// Gets the usage and billing data for properties within the organization for
       /// the specified month.
       ///
       /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
@@ -788,6 +1108,678 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse> ReportPropertyUsageAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReportPropertyUsage, null, options, request);
+      }
+      /// <summary>
+      /// Looks up a single user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup GetUserGroup(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up a single user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup GetUserGroup(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetUserGroup, null, options, request);
+      }
+      /// <summary>
+      /// Looks up a single user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup> GetUserGroupAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up a single user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup> GetUserGroupAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetUserGroup, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of user groups in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse ListUserGroups(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUserGroups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of user groups in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse ListUserGroups(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListUserGroups, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of user groups in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse> ListUserGroupsAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUserGroupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of user groups in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse> ListUserGroupsAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListUserGroups, null, options, request);
+      }
+      /// <summary>
+      /// Creates a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup CreateUserGroup(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateUserGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup CreateUserGroup(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateUserGroup, null, options, request);
+      }
+      /// <summary>
+      /// Creates a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup> CreateUserGroupAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateUserGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup> CreateUserGroupAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateUserGroup, null, options, request);
+      }
+      /// <summary>
+      /// Updates a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup UpdateUserGroup(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateUserGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup UpdateUserGroup(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateUserGroup, null, options, request);
+      }
+      /// <summary>
+      /// Updates a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup> UpdateUserGroupAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateUserGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup> UpdateUserGroupAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateUserGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUserGroup(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUserGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUserGroup(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteUserGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserGroupAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUserGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a user group in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserGroupAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteUserGroup, null, options, request);
+      }
+      /// <summary>
+      /// Looks up a single user group member.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember GetUserGroupMember(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserGroupMember(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up a single user group member.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember GetUserGroupMember(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetUserGroupMember, null, options, request);
+      }
+      /// <summary>
+      /// Looks up a single user group member.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember> GetUserGroupMemberAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserGroupMemberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up a single user group member.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember> GetUserGroupMemberAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetUserGroupMember, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of members in the specified user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse ListUserGroupMembers(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUserGroupMembers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of members in the specified user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse ListUserGroupMembers(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListUserGroupMembers, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of members in the specified user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse> ListUserGroupMembersAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUserGroupMembersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of members in the specified user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse> ListUserGroupMembersAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListUserGroupMembers, null, options, request);
+      }
+      /// <summary>
+      /// Adds a member to the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember CreateUserGroupMember(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateUserGroupMember(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds a member to the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember CreateUserGroupMember(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateUserGroupMember, null, options, request);
+      }
+      /// <summary>
+      /// Adds a member to the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember> CreateUserGroupMemberAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateUserGroupMemberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds a member to the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember> CreateUserGroupMemberAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateUserGroupMember, null, options, request);
+      }
+      /// <summary>
+      /// Updates a member in the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember UpdateUserGroupMember(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateUserGroupMember(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a member in the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember UpdateUserGroupMember(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateUserGroupMember, null, options, request);
+      }
+      /// <summary>
+      /// Updates a member in the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember> UpdateUserGroupMemberAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateUserGroupMemberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a member in the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember> UpdateUserGroupMemberAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateUserGroupMember, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a member in the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUserGroupMember(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUserGroupMember(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a member in the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUserGroupMember(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteUserGroupMember, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a member in the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserGroupMemberAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUserGroupMemberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a member in the specified GMP user group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserGroupMemberAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteUserGroupMember, null, options, request);
+      }
+      /// <summary>
+      /// Looks up a single admin access binding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding GetAdminAccessBinding(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetAdminAccessBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAdminAccessBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up a single admin access binding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding GetAdminAccessBinding(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetAdminAccessBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAdminAccessBinding, null, options, request);
+      }
+      /// <summary>
+      /// Looks up a single admin access binding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding> GetAdminAccessBindingAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetAdminAccessBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAdminAccessBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up a single admin access binding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding> GetAdminAccessBindingAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetAdminAccessBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAdminAccessBinding, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of admin access bindings in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse ListAdminAccessBindings(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAdminAccessBindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of admin access bindings in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse ListAdminAccessBindings(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAdminAccessBindings, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of admin access bindings in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse> ListAdminAccessBindingsAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAdminAccessBindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of admin access bindings in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse> ListAdminAccessBindingsAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAdminAccessBindings, null, options, request);
+      }
+      /// <summary>
+      /// Creates an admin access binding in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding CreateAdminAccessBinding(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateAdminAccessBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAdminAccessBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an admin access binding in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding CreateAdminAccessBinding(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateAdminAccessBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAdminAccessBinding, null, options, request);
+      }
+      /// <summary>
+      /// Creates an admin access binding in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding> CreateAdminAccessBindingAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateAdminAccessBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAdminAccessBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an admin access binding in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding> CreateAdminAccessBindingAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateAdminAccessBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAdminAccessBinding, null, options, request);
+      }
+      /// <summary>
+      /// Updates an admin access binding in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding UpdateAdminAccessBinding(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateAdminAccessBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAdminAccessBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an admin access binding in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding UpdateAdminAccessBinding(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateAdminAccessBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAdminAccessBinding, null, options, request);
+      }
+      /// <summary>
+      /// Updates an admin access binding in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding> UpdateAdminAccessBindingAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateAdminAccessBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAdminAccessBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an admin access binding in the specified GMP organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding> UpdateAdminAccessBindingAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateAdminAccessBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAdminAccessBinding, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -810,7 +1802,21 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
           .AddMethod(__Method_CreateAnalyticsAccountLink, serviceImpl.CreateAnalyticsAccountLink)
           .AddMethod(__Method_DeleteAnalyticsAccountLink, serviceImpl.DeleteAnalyticsAccountLink)
           .AddMethod(__Method_SetPropertyServiceLevel, serviceImpl.SetPropertyServiceLevel)
-          .AddMethod(__Method_ReportPropertyUsage, serviceImpl.ReportPropertyUsage).Build();
+          .AddMethod(__Method_ReportPropertyUsage, serviceImpl.ReportPropertyUsage)
+          .AddMethod(__Method_GetUserGroup, serviceImpl.GetUserGroup)
+          .AddMethod(__Method_ListUserGroups, serviceImpl.ListUserGroups)
+          .AddMethod(__Method_CreateUserGroup, serviceImpl.CreateUserGroup)
+          .AddMethod(__Method_UpdateUserGroup, serviceImpl.UpdateUserGroup)
+          .AddMethod(__Method_DeleteUserGroup, serviceImpl.DeleteUserGroup)
+          .AddMethod(__Method_GetUserGroupMember, serviceImpl.GetUserGroupMember)
+          .AddMethod(__Method_ListUserGroupMembers, serviceImpl.ListUserGroupMembers)
+          .AddMethod(__Method_CreateUserGroupMember, serviceImpl.CreateUserGroupMember)
+          .AddMethod(__Method_UpdateUserGroupMember, serviceImpl.UpdateUserGroupMember)
+          .AddMethod(__Method_DeleteUserGroupMember, serviceImpl.DeleteUserGroupMember)
+          .AddMethod(__Method_GetAdminAccessBinding, serviceImpl.GetAdminAccessBinding)
+          .AddMethod(__Method_ListAdminAccessBindings, serviceImpl.ListAdminAccessBindings)
+          .AddMethod(__Method_CreateAdminAccessBinding, serviceImpl.CreateAdminAccessBinding)
+          .AddMethod(__Method_UpdateAdminAccessBinding, serviceImpl.UpdateAdminAccessBinding).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -828,6 +1834,20 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_DeleteAnalyticsAccountLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteAnalyticsAccountLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAnalyticsAccountLink));
       serviceBinder.AddMethod(__Method_SetPropertyServiceLevel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.SetPropertyServiceLevelRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.SetPropertyServiceLevelResponse>(serviceImpl.SetPropertyServiceLevel));
       serviceBinder.AddMethod(__Method_ReportPropertyUsage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse>(serviceImpl.ReportPropertyUsage));
+      serviceBinder.AddMethod(__Method_GetUserGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>(serviceImpl.GetUserGroup));
+      serviceBinder.AddMethod(__Method_ListUserGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupsResponse>(serviceImpl.ListUserGroups));
+      serviceBinder.AddMethod(__Method_CreateUserGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>(serviceImpl.CreateUserGroup));
+      serviceBinder.AddMethod(__Method_UpdateUserGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroup>(serviceImpl.UpdateUserGroup));
+      serviceBinder.AddMethod(__Method_DeleteUserGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteUserGroup));
+      serviceBinder.AddMethod(__Method_GetUserGroupMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetUserGroupMemberRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>(serviceImpl.GetUserGroupMember));
+      serviceBinder.AddMethod(__Method_ListUserGroupMembers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListUserGroupMembersResponse>(serviceImpl.ListUserGroupMembers));
+      serviceBinder.AddMethod(__Method_CreateUserGroupMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateUserGroupMemberRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>(serviceImpl.CreateUserGroupMember));
+      serviceBinder.AddMethod(__Method_UpdateUserGroupMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateUserGroupMemberRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UserGroupMember>(serviceImpl.UpdateUserGroupMember));
+      serviceBinder.AddMethod(__Method_DeleteUserGroupMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteUserGroupMemberRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteUserGroupMember));
+      serviceBinder.AddMethod(__Method_GetAdminAccessBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetAdminAccessBindingRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>(serviceImpl.GetAdminAccessBinding));
+      serviceBinder.AddMethod(__Method_ListAdminAccessBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAdminAccessBindingsResponse>(serviceImpl.ListAdminAccessBindings));
+      serviceBinder.AddMethod(__Method_CreateAdminAccessBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateAdminAccessBindingRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>(serviceImpl.CreateAdminAccessBinding));
+      serviceBinder.AddMethod(__Method_UpdateAdminAccessBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.UpdateAdminAccessBindingRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AdminAccessBinding>(serviceImpl.UpdateAdminAccessBinding));
     }
 
   }
