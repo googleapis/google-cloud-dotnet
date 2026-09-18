@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AuditManager.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -27,6 +28,899 @@ namespace GoogleCSharpSnippets
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedAuditManagerClientSnippets
     {
+        /// <summary>Snippet for CreateAuditSchedule</summary>
+        public void CreateAuditScheduleRequestObject()
+        {
+            // Snippet: CreateAuditSchedule(CreateAuditScheduleRequest, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            CreateAuditScheduleRequest request = new CreateAuditScheduleRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AuditSchedule = new AuditSchedule(),
+                AuditScheduleId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            AuditSchedule response = auditManagerClient.CreateAuditSchedule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuditScheduleAsync</summary>
+        public async Task CreateAuditScheduleRequestObjectAsync()
+        {
+            // Snippet: CreateAuditScheduleAsync(CreateAuditScheduleRequest, CallSettings)
+            // Additional: CreateAuditScheduleAsync(CreateAuditScheduleRequest, CancellationToken)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAuditScheduleRequest request = new CreateAuditScheduleRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AuditSchedule = new AuditSchedule(),
+                AuditScheduleId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            AuditSchedule response = await auditManagerClient.CreateAuditScheduleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuditSchedule</summary>
+        public void CreateAuditSchedule()
+        {
+            // Snippet: CreateAuditSchedule(string, AuditSchedule, string, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AuditSchedule auditSchedule = new AuditSchedule();
+            string auditScheduleId = "";
+            // Make the request
+            AuditSchedule response = auditManagerClient.CreateAuditSchedule(parent, auditSchedule, auditScheduleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuditScheduleAsync</summary>
+        public async Task CreateAuditScheduleAsync()
+        {
+            // Snippet: CreateAuditScheduleAsync(string, AuditSchedule, string, CallSettings)
+            // Additional: CreateAuditScheduleAsync(string, AuditSchedule, string, CancellationToken)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AuditSchedule auditSchedule = new AuditSchedule();
+            string auditScheduleId = "";
+            // Make the request
+            AuditSchedule response = await auditManagerClient.CreateAuditScheduleAsync(parent, auditSchedule, auditScheduleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuditSchedule</summary>
+        public void CreateAuditScheduleResourceNames1()
+        {
+            // Snippet: CreateAuditSchedule(LocationName, AuditSchedule, string, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AuditSchedule auditSchedule = new AuditSchedule();
+            string auditScheduleId = "";
+            // Make the request
+            AuditSchedule response = auditManagerClient.CreateAuditSchedule(parent, auditSchedule, auditScheduleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuditScheduleAsync</summary>
+        public async Task CreateAuditScheduleResourceNames1Async()
+        {
+            // Snippet: CreateAuditScheduleAsync(LocationName, AuditSchedule, string, CallSettings)
+            // Additional: CreateAuditScheduleAsync(LocationName, AuditSchedule, string, CancellationToken)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AuditSchedule auditSchedule = new AuditSchedule();
+            string auditScheduleId = "";
+            // Make the request
+            AuditSchedule response = await auditManagerClient.CreateAuditScheduleAsync(parent, auditSchedule, auditScheduleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuditSchedule</summary>
+        public void CreateAuditScheduleResourceNames2()
+        {
+            // Snippet: CreateAuditSchedule(FolderLocationName, AuditSchedule, string, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            AuditSchedule auditSchedule = new AuditSchedule();
+            string auditScheduleId = "";
+            // Make the request
+            AuditSchedule response = auditManagerClient.CreateAuditSchedule(parent, auditSchedule, auditScheduleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuditScheduleAsync</summary>
+        public async Task CreateAuditScheduleResourceNames2Async()
+        {
+            // Snippet: CreateAuditScheduleAsync(FolderLocationName, AuditSchedule, string, CallSettings)
+            // Additional: CreateAuditScheduleAsync(FolderLocationName, AuditSchedule, string, CancellationToken)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            AuditSchedule auditSchedule = new AuditSchedule();
+            string auditScheduleId = "";
+            // Make the request
+            AuditSchedule response = await auditManagerClient.CreateAuditScheduleAsync(parent, auditSchedule, auditScheduleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuditSchedule</summary>
+        public void CreateAuditScheduleResourceNames3()
+        {
+            // Snippet: CreateAuditSchedule(OrganizationLocationName, AuditSchedule, string, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            AuditSchedule auditSchedule = new AuditSchedule();
+            string auditScheduleId = "";
+            // Make the request
+            AuditSchedule response = auditManagerClient.CreateAuditSchedule(parent, auditSchedule, auditScheduleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuditScheduleAsync</summary>
+        public async Task CreateAuditScheduleResourceNames3Async()
+        {
+            // Snippet: CreateAuditScheduleAsync(OrganizationLocationName, AuditSchedule, string, CallSettings)
+            // Additional: CreateAuditScheduleAsync(OrganizationLocationName, AuditSchedule, string, CancellationToken)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            AuditSchedule auditSchedule = new AuditSchedule();
+            string auditScheduleId = "";
+            // Make the request
+            AuditSchedule response = await auditManagerClient.CreateAuditScheduleAsync(parent, auditSchedule, auditScheduleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuditSchedule</summary>
+        public void CreateAuditScheduleResourceNames4()
+        {
+            // Snippet: CreateAuditSchedule(EnrollmentStatusScopeName, AuditSchedule, string, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            EnrollmentStatusScopeName parent = EnrollmentStatusScopeName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            AuditSchedule auditSchedule = new AuditSchedule();
+            string auditScheduleId = "";
+            // Make the request
+            AuditSchedule response = auditManagerClient.CreateAuditSchedule(parent, auditSchedule, auditScheduleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuditScheduleAsync</summary>
+        public async Task CreateAuditScheduleResourceNames4Async()
+        {
+            // Snippet: CreateAuditScheduleAsync(EnrollmentStatusScopeName, AuditSchedule, string, CallSettings)
+            // Additional: CreateAuditScheduleAsync(EnrollmentStatusScopeName, AuditSchedule, string, CancellationToken)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            EnrollmentStatusScopeName parent = EnrollmentStatusScopeName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            AuditSchedule auditSchedule = new AuditSchedule();
+            string auditScheduleId = "";
+            // Make the request
+            AuditSchedule response = await auditManagerClient.CreateAuditScheduleAsync(parent, auditSchedule, auditScheduleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAuditSchedule</summary>
+        public void UpdateAuditScheduleRequestObject()
+        {
+            // Snippet: UpdateAuditSchedule(UpdateAuditScheduleRequest, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            UpdateAuditScheduleRequest request = new UpdateAuditScheduleRequest
+            {
+                AuditSchedule = new AuditSchedule(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            AuditSchedule response = auditManagerClient.UpdateAuditSchedule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAuditScheduleAsync</summary>
+        public async Task UpdateAuditScheduleRequestObjectAsync()
+        {
+            // Snippet: UpdateAuditScheduleAsync(UpdateAuditScheduleRequest, CallSettings)
+            // Additional: UpdateAuditScheduleAsync(UpdateAuditScheduleRequest, CancellationToken)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAuditScheduleRequest request = new UpdateAuditScheduleRequest
+            {
+                AuditSchedule = new AuditSchedule(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            AuditSchedule response = await auditManagerClient.UpdateAuditScheduleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAuditSchedule</summary>
+        public void UpdateAuditSchedule()
+        {
+            // Snippet: UpdateAuditSchedule(AuditSchedule, FieldMask, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            AuditSchedule auditSchedule = new AuditSchedule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            AuditSchedule response = auditManagerClient.UpdateAuditSchedule(auditSchedule, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAuditScheduleAsync</summary>
+        public async Task UpdateAuditScheduleAsync()
+        {
+            // Snippet: UpdateAuditScheduleAsync(AuditSchedule, FieldMask, CallSettings)
+            // Additional: UpdateAuditScheduleAsync(AuditSchedule, FieldMask, CancellationToken)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            AuditSchedule auditSchedule = new AuditSchedule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            AuditSchedule response = await auditManagerClient.UpdateAuditScheduleAsync(auditSchedule, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuditSchedule</summary>
+        public void GetAuditScheduleRequestObject()
+        {
+            // Snippet: GetAuditSchedule(GetAuditScheduleRequest, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            GetAuditScheduleRequest request = new GetAuditScheduleRequest
+            {
+                AuditScheduleName = AuditScheduleName.FromProjectLocationAuditSchedule("[PROJECT]", "[LOCATION]", "[AUDIT_SCHEDULE]"),
+            };
+            // Make the request
+            AuditSchedule response = auditManagerClient.GetAuditSchedule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuditScheduleAsync</summary>
+        public async Task GetAuditScheduleRequestObjectAsync()
+        {
+            // Snippet: GetAuditScheduleAsync(GetAuditScheduleRequest, CallSettings)
+            // Additional: GetAuditScheduleAsync(GetAuditScheduleRequest, CancellationToken)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAuditScheduleRequest request = new GetAuditScheduleRequest
+            {
+                AuditScheduleName = AuditScheduleName.FromProjectLocationAuditSchedule("[PROJECT]", "[LOCATION]", "[AUDIT_SCHEDULE]"),
+            };
+            // Make the request
+            AuditSchedule response = await auditManagerClient.GetAuditScheduleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuditSchedule</summary>
+        public void GetAuditSchedule()
+        {
+            // Snippet: GetAuditSchedule(string, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/auditSchedules/[AUDIT_SCHEDULE]";
+            // Make the request
+            AuditSchedule response = auditManagerClient.GetAuditSchedule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuditScheduleAsync</summary>
+        public async Task GetAuditScheduleAsync()
+        {
+            // Snippet: GetAuditScheduleAsync(string, CallSettings)
+            // Additional: GetAuditScheduleAsync(string, CancellationToken)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/auditSchedules/[AUDIT_SCHEDULE]";
+            // Make the request
+            AuditSchedule response = await auditManagerClient.GetAuditScheduleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuditSchedule</summary>
+        public void GetAuditScheduleResourceNames()
+        {
+            // Snippet: GetAuditSchedule(AuditScheduleName, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            AuditScheduleName name = AuditScheduleName.FromProjectLocationAuditSchedule("[PROJECT]", "[LOCATION]", "[AUDIT_SCHEDULE]");
+            // Make the request
+            AuditSchedule response = auditManagerClient.GetAuditSchedule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuditScheduleAsync</summary>
+        public async Task GetAuditScheduleResourceNamesAsync()
+        {
+            // Snippet: GetAuditScheduleAsync(AuditScheduleName, CallSettings)
+            // Additional: GetAuditScheduleAsync(AuditScheduleName, CancellationToken)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            AuditScheduleName name = AuditScheduleName.FromProjectLocationAuditSchedule("[PROJECT]", "[LOCATION]", "[AUDIT_SCHEDULE]");
+            // Make the request
+            AuditSchedule response = await auditManagerClient.GetAuditScheduleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditSchedules</summary>
+        public void ListAuditSchedulesRequestObject()
+        {
+            // Snippet: ListAuditSchedules(ListAuditSchedulesRequest, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            ListAuditSchedulesRequest request = new ListAuditSchedulesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListAuditSchedulesResponse, AuditSchedule> response = auditManagerClient.ListAuditSchedules(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AuditSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAuditSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditSchedule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditSchedulesAsync</summary>
+        public async Task ListAuditSchedulesRequestObjectAsync()
+        {
+            // Snippet: ListAuditSchedulesAsync(ListAuditSchedulesRequest, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAuditSchedulesRequest request = new ListAuditSchedulesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAuditSchedulesResponse, AuditSchedule> response = auditManagerClient.ListAuditSchedulesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AuditSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAuditSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditSchedule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditSchedules</summary>
+        public void ListAuditSchedules()
+        {
+            // Snippet: ListAuditSchedules(string, string, int?, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListAuditSchedulesResponse, AuditSchedule> response = auditManagerClient.ListAuditSchedules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AuditSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAuditSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditSchedule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditSchedulesAsync</summary>
+        public async Task ListAuditSchedulesAsync()
+        {
+            // Snippet: ListAuditSchedulesAsync(string, string, int?, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListAuditSchedulesResponse, AuditSchedule> response = auditManagerClient.ListAuditSchedulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AuditSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAuditSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditSchedule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditSchedules</summary>
+        public void ListAuditSchedulesResourceNames1()
+        {
+            // Snippet: ListAuditSchedules(LocationName, string, int?, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAuditSchedulesResponse, AuditSchedule> response = auditManagerClient.ListAuditSchedules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AuditSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAuditSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditSchedule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditSchedulesAsync</summary>
+        public async Task ListAuditSchedulesResourceNames1Async()
+        {
+            // Snippet: ListAuditSchedulesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAuditSchedulesResponse, AuditSchedule> response = auditManagerClient.ListAuditSchedulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AuditSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAuditSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditSchedule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditSchedules</summary>
+        public void ListAuditSchedulesResourceNames2()
+        {
+            // Snippet: ListAuditSchedules(FolderLocationName, string, int?, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAuditSchedulesResponse, AuditSchedule> response = auditManagerClient.ListAuditSchedules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AuditSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAuditSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditSchedule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditSchedulesAsync</summary>
+        public async Task ListAuditSchedulesResourceNames2Async()
+        {
+            // Snippet: ListAuditSchedulesAsync(FolderLocationName, string, int?, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderLocationName parent = FolderLocationName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAuditSchedulesResponse, AuditSchedule> response = auditManagerClient.ListAuditSchedulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AuditSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAuditSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditSchedule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditSchedules</summary>
+        public void ListAuditSchedulesResourceNames3()
+        {
+            // Snippet: ListAuditSchedules(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAuditSchedulesResponse, AuditSchedule> response = auditManagerClient.ListAuditSchedules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AuditSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAuditSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditSchedule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditSchedulesAsync</summary>
+        public async Task ListAuditSchedulesResourceNames3Async()
+        {
+            // Snippet: ListAuditSchedulesAsync(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAuditSchedulesResponse, AuditSchedule> response = auditManagerClient.ListAuditSchedulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AuditSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAuditSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditSchedule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditSchedules</summary>
+        public void ListAuditSchedulesResourceNames4()
+        {
+            // Snippet: ListAuditSchedules(EnrollmentStatusScopeName, string, int?, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = AuditManagerClient.Create();
+            // Initialize request argument(s)
+            EnrollmentStatusScopeName parent = EnrollmentStatusScopeName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAuditSchedulesResponse, AuditSchedule> response = auditManagerClient.ListAuditSchedules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AuditSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAuditSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditSchedule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuditSchedulesAsync</summary>
+        public async Task ListAuditSchedulesResourceNames4Async()
+        {
+            // Snippet: ListAuditSchedulesAsync(EnrollmentStatusScopeName, string, int?, CallSettings)
+            // Create client
+            AuditManagerClient auditManagerClient = await AuditManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            EnrollmentStatusScopeName parent = EnrollmentStatusScopeName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAuditSchedulesResponse, AuditSchedule> response = auditManagerClient.ListAuditSchedulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AuditSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAuditSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuditSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuditSchedule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuditSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for EnrollResource</summary>
         public void EnrollResourceRequestObject()
         {
@@ -41,6 +935,7 @@ namespace GoogleCSharpSnippets
                 {
                     new EnrollResourceRequest.Types.EligibleDestination(),
                 },
+                ValidateOnly = false,
             };
             // Make the request
             Enrollment response = auditManagerClient.EnrollResource(request);
@@ -62,6 +957,7 @@ namespace GoogleCSharpSnippets
                 {
                     new EnrollResourceRequest.Types.EligibleDestination(),
                 },
+                ValidateOnly = false,
             };
             // Make the request
             Enrollment response = await auditManagerClient.EnrollResourceAsync(request);
@@ -115,6 +1011,7 @@ namespace GoogleCSharpSnippets
                 Scope = "",
                 ReportFormat = GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat.Unspecified,
                 ComplianceFramework = "",
+                ValidateOnly = false,
             };
             // Make the request
             AuditScopeReport response = auditManagerClient.GenerateAuditScopeReport(request);
@@ -134,6 +1031,7 @@ namespace GoogleCSharpSnippets
                 Scope = "",
                 ReportFormat = GenerateAuditScopeReportRequest.Types.AuditScopeReportFormat.Unspecified,
                 ComplianceFramework = "",
+                ValidateOnly = false,
             };
             // Make the request
             AuditScopeReport response = await auditManagerClient.GenerateAuditScopeReportAsync(request);

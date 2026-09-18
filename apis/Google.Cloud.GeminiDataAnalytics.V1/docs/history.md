@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.1.0, released 2026-08-31
+
+### New features
+
+- Add a new field `property_graph_references` to support BigQuery graphs in the Gemini Data Analytics API
+
 ## Version 1.0.0, released 2026-08-10
 
 ### New features

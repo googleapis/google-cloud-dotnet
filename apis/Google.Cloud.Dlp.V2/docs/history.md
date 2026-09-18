@@ -1,5 +1,16 @@
 # Version history
 
+## Version 4.27.0, released 2026-08-31
+
+### New features
+
+- Add ContentPolicy configuration and management APIs
+- Add FileLabelInfoType to CustomInfoType for detecting Microsoft Sensitivity Labels and Google Drive Labels
+
+### Documentation improvements
+
+- Update documentation links
+
 ## Version 4.26.0, released 2026-06-08
 
 ### New features

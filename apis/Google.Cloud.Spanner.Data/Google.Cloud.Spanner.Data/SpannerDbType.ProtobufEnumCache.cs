@@ -69,7 +69,7 @@ public partial class SpannerDbType
                 && intermediateParent.Name == "Types" && intermediateParent.IsClass
                 && intermediateParent.IsAbstract && intermediateParent.IsSealed // Check for "IsStatic"
                 && intermediateParent.DeclaringType is System.Type parentMessageType
-                && ProtobufCache.GetProtobufMessageDescriptor(parentMessageType) is MessageDescriptor messageDescriptor
+                && ProtobufMessageCache.GetProtobufMessageDescriptor(parentMessageType) is MessageDescriptor messageDescriptor
                 && messageDescriptor.EnumTypes.FirstOrDefault(enumDescriptor => enumDescriptor.ClrType.Equals(targetEnumType)) is EnumDescriptor enumDescriptor)
             {
                 return enumDescriptor;

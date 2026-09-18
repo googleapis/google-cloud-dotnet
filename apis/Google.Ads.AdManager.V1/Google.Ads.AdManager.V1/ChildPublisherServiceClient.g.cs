@@ -54,6 +54,10 @@ namespace Google.Ads.AdManager.V1
             BatchCreateChildPublishersSettings = existing.BatchCreateChildPublishersSettings;
             UpdateChildPublisherSettings = existing.UpdateChildPublisherSettings;
             BatchUpdateChildPublishersSettings = existing.BatchUpdateChildPublishersSettings;
+            BatchResendChildPublisherInvitationEmailsSettings = existing.BatchResendChildPublisherInvitationEmailsSettings;
+            BatchRenegotiateChildPublisherAgreementsSettings = existing.BatchRenegotiateChildPublisherAgreementsSettings;
+            BatchRejectChildPublishersSettings = existing.BatchRejectChildPublishersSettings;
+            BatchWithdrawChildPublishersSettings = existing.BatchWithdrawChildPublishersSettings;
             OnCopy(existing);
         }
 
@@ -136,6 +140,58 @@ namespace Google.Ads.AdManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings BatchUpdateChildPublishersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChildPublisherServiceClient.BatchResendChildPublisherInvitationEmails</c> and
+        /// <c>ChildPublisherServiceClient.BatchResendChildPublisherInvitationEmailsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchResendChildPublisherInvitationEmailsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChildPublisherServiceClient.BatchRenegotiateChildPublisherAgreements</c> and
+        /// <c>ChildPublisherServiceClient.BatchRenegotiateChildPublisherAgreementsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchRenegotiateChildPublisherAgreementsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChildPublisherServiceClient.BatchRejectChildPublishers</c> and
+        /// <c>ChildPublisherServiceClient.BatchRejectChildPublishersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchRejectChildPublishersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChildPublisherServiceClient.BatchWithdrawChildPublishers</c> and
+        /// <c>ChildPublisherServiceClient.BatchWithdrawChildPublishersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchWithdrawChildPublishersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ChildPublisherServiceSettings"/> object.</returns>
@@ -1151,6 +1207,880 @@ namespace Google.Ads.AdManager.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<BatchUpdateChildPublishersResponse> BatchUpdateChildPublishersAsync(NetworkName parent, scg::IEnumerable<UpdateChildPublisherRequest> requests, st::CancellationToken cancellationToken) =>
             BatchUpdateChildPublishersAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch resends invitation emails to
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired and pending
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+        /// invitation emails. Rejected, withdrawn, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchResendChildPublisherInvitationEmailsResponse BatchResendChildPublisherInvitationEmails(BatchResendChildPublisherInvitationEmailsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch resends invitation emails to
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired and pending
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+        /// invitation emails. Rejected, withdrawn, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchResendChildPublisherInvitationEmailsResponse> BatchResendChildPublisherInvitationEmailsAsync(BatchResendChildPublisherInvitationEmailsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch resends invitation emails to
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired and pending
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+        /// invitation emails. Rejected, withdrawn, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchResendChildPublisherInvitationEmailsResponse> BatchResendChildPublisherInvitationEmailsAsync(BatchResendChildPublisherInvitationEmailsRequest request, st::CancellationToken cancellationToken) =>
+            BatchResendChildPublisherInvitationEmailsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch resends invitation emails to
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired and pending
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+        /// invitation emails. Rejected, withdrawn, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that should be
+        /// resent invitation emails. Format:
+        /// `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchResendChildPublisherInvitationEmailsResponse BatchResendChildPublisherInvitationEmails(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchResendChildPublisherInvitationEmails(new BatchResendChildPublisherInvitationEmailsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch resends invitation emails to
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired and pending
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+        /// invitation emails. Rejected, withdrawn, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that should be
+        /// resent invitation emails. Format:
+        /// `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchResendChildPublisherInvitationEmailsResponse> BatchResendChildPublisherInvitationEmailsAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchResendChildPublisherInvitationEmailsAsync(new BatchResendChildPublisherInvitationEmailsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch resends invitation emails to
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired and pending
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+        /// invitation emails. Rejected, withdrawn, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that should be
+        /// resent invitation emails. Format:
+        /// `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchResendChildPublisherInvitationEmailsResponse> BatchResendChildPublisherInvitationEmailsAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchResendChildPublisherInvitationEmailsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch resends invitation emails to
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired and pending
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+        /// invitation emails. Rejected, withdrawn, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that should be
+        /// resent invitation emails. Format:
+        /// `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchResendChildPublisherInvitationEmailsResponse BatchResendChildPublisherInvitationEmails(NetworkName parent, scg::IEnumerable<ChildPublisherName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchResendChildPublisherInvitationEmails(new BatchResendChildPublisherInvitationEmailsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ChildPublisherNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch resends invitation emails to
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired and pending
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+        /// invitation emails. Rejected, withdrawn, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that should be
+        /// resent invitation emails. Format:
+        /// `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchResendChildPublisherInvitationEmailsResponse> BatchResendChildPublisherInvitationEmailsAsync(NetworkName parent, scg::IEnumerable<ChildPublisherName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchResendChildPublisherInvitationEmailsAsync(new BatchResendChildPublisherInvitationEmailsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ChildPublisherNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch resends invitation emails to
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired and pending
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+        /// invitation emails. Rejected, withdrawn, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that should be
+        /// resent invitation emails. Format:
+        /// `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchResendChildPublisherInvitationEmailsResponse> BatchResendChildPublisherInvitationEmailsAsync(NetworkName parent, scg::IEnumerable<ChildPublisherName> names, st::CancellationToken cancellationToken) =>
+            BatchResendChildPublisherInvitationEmailsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+        /// agreements (i.e., invite with updated terms).
+        /// 
+        /// Only the agreements of rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+        /// renegotiated. Expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchRenegotiateChildPublisherAgreementsResponse BatchRenegotiateChildPublisherAgreements(BatchRenegotiateChildPublisherAgreementsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+        /// agreements (i.e., invite with updated terms).
+        /// 
+        /// Only the agreements of rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+        /// renegotiated. Expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchRenegotiateChildPublisherAgreementsResponse> BatchRenegotiateChildPublisherAgreementsAsync(BatchRenegotiateChildPublisherAgreementsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+        /// agreements (i.e., invite with updated terms).
+        /// 
+        /// Only the agreements of rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+        /// renegotiated. Expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchRenegotiateChildPublisherAgreementsResponse> BatchRenegotiateChildPublisherAgreementsAsync(BatchRenegotiateChildPublisherAgreementsRequest request, st::CancellationToken cancellationToken) =>
+            BatchRenegotiateChildPublisherAgreementsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+        /// agreements (i.e., invite with updated terms).
+        /// 
+        /// Only the agreements of rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+        /// renegotiated. Expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The requests to renegotiate
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher] agreements.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchRenegotiateChildPublisherAgreementsResponse BatchRenegotiateChildPublisherAgreements(string parent, scg::IEnumerable<RenegotiateChildPublisherAgreementRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchRenegotiateChildPublisherAgreements(new BatchRenegotiateChildPublisherAgreementsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+        /// agreements (i.e., invite with updated terms).
+        /// 
+        /// Only the agreements of rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+        /// renegotiated. Expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The requests to renegotiate
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher] agreements.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchRenegotiateChildPublisherAgreementsResponse> BatchRenegotiateChildPublisherAgreementsAsync(string parent, scg::IEnumerable<RenegotiateChildPublisherAgreementRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchRenegotiateChildPublisherAgreementsAsync(new BatchRenegotiateChildPublisherAgreementsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+        /// agreements (i.e., invite with updated terms).
+        /// 
+        /// Only the agreements of rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+        /// renegotiated. Expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The requests to renegotiate
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher] agreements.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchRenegotiateChildPublisherAgreementsResponse> BatchRenegotiateChildPublisherAgreementsAsync(string parent, scg::IEnumerable<RenegotiateChildPublisherAgreementRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchRenegotiateChildPublisherAgreementsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+        /// agreements (i.e., invite with updated terms).
+        /// 
+        /// Only the agreements of rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+        /// renegotiated. Expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The requests to renegotiate
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher] agreements.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchRenegotiateChildPublisherAgreementsResponse BatchRenegotiateChildPublisherAgreements(NetworkName parent, scg::IEnumerable<RenegotiateChildPublisherAgreementRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchRenegotiateChildPublisherAgreements(new BatchRenegotiateChildPublisherAgreementsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+        /// agreements (i.e., invite with updated terms).
+        /// 
+        /// Only the agreements of rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+        /// renegotiated. Expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The requests to renegotiate
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher] agreements.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchRenegotiateChildPublisherAgreementsResponse> BatchRenegotiateChildPublisherAgreementsAsync(NetworkName parent, scg::IEnumerable<RenegotiateChildPublisherAgreementRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchRenegotiateChildPublisherAgreementsAsync(new BatchRenegotiateChildPublisherAgreementsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+        /// agreements (i.e., invite with updated terms).
+        /// 
+        /// Only the agreements of rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+        /// renegotiated. Expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The requests to renegotiate
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher] agreements.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchRenegotiateChildPublisherAgreementsResponse> BatchRenegotiateChildPublisherAgreementsAsync(NetworkName parent, scg::IEnumerable<RenegotiateChildPublisherAgreementRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchRenegotiateChildPublisherAgreementsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only pending or active
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+        /// Expired, rejected, and withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// 
+        /// This method is only intended to be called in response to a child user
+        /// rejecting an invitation and exists to support the rejection of
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+        /// associated with an Ad Manager network.
+        /// 
+        /// To sever the relationship from the parent publisher's side, use
+        /// [BatchWithdrawChildPublisher][].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchRejectChildPublishersResponse BatchRejectChildPublishers(BatchRejectChildPublishersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only pending or active
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+        /// Expired, rejected, and withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// 
+        /// This method is only intended to be called in response to a child user
+        /// rejecting an invitation and exists to support the rejection of
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+        /// associated with an Ad Manager network.
+        /// 
+        /// To sever the relationship from the parent publisher's side, use
+        /// [BatchWithdrawChildPublisher][].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchRejectChildPublishersResponse> BatchRejectChildPublishersAsync(BatchRejectChildPublishersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only pending or active
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+        /// Expired, rejected, and withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// 
+        /// This method is only intended to be called in response to a child user
+        /// rejecting an invitation and exists to support the rejection of
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+        /// associated with an Ad Manager network.
+        /// 
+        /// To sever the relationship from the parent publisher's side, use
+        /// [BatchWithdrawChildPublisher][].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchRejectChildPublishersResponse> BatchRejectChildPublishersAsync(BatchRejectChildPublishersRequest request, st::CancellationToken cancellationToken) =>
+            BatchRejectChildPublishersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only pending or active
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+        /// Expired, rejected, and withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// 
+        /// This method is only intended to be called in response to a child user
+        /// rejecting an invitation and exists to support the rejection of
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+        /// associated with an Ad Manager network.
+        /// 
+        /// To sever the relationship from the parent publisher's side, use
+        /// [BatchWithdrawChildPublisher][].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to reject.
+        /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchRejectChildPublishersResponse BatchRejectChildPublishers(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchRejectChildPublishers(new BatchRejectChildPublishersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only pending or active
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+        /// Expired, rejected, and withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// 
+        /// This method is only intended to be called in response to a child user
+        /// rejecting an invitation and exists to support the rejection of
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+        /// associated with an Ad Manager network.
+        /// 
+        /// To sever the relationship from the parent publisher's side, use
+        /// [BatchWithdrawChildPublisher][].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to reject.
+        /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchRejectChildPublishersResponse> BatchRejectChildPublishersAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchRejectChildPublishersAsync(new BatchRejectChildPublishersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only pending or active
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+        /// Expired, rejected, and withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// 
+        /// This method is only intended to be called in response to a child user
+        /// rejecting an invitation and exists to support the rejection of
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+        /// associated with an Ad Manager network.
+        /// 
+        /// To sever the relationship from the parent publisher's side, use
+        /// [BatchWithdrawChildPublisher][].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to reject.
+        /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchRejectChildPublishersResponse> BatchRejectChildPublishersAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchRejectChildPublishersAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only pending or active
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+        /// Expired, rejected, and withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// 
+        /// This method is only intended to be called in response to a child user
+        /// rejecting an invitation and exists to support the rejection of
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+        /// associated with an Ad Manager network.
+        /// 
+        /// To sever the relationship from the parent publisher's side, use
+        /// [BatchWithdrawChildPublisher][].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to reject.
+        /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchRejectChildPublishersResponse BatchRejectChildPublishers(NetworkName parent, scg::IEnumerable<ChildPublisherName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchRejectChildPublishers(new BatchRejectChildPublishersRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ChildPublisherNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only pending or active
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+        /// Expired, rejected, and withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// 
+        /// This method is only intended to be called in response to a child user
+        /// rejecting an invitation and exists to support the rejection of
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+        /// associated with an Ad Manager network.
+        /// 
+        /// To sever the relationship from the parent publisher's side, use
+        /// [BatchWithdrawChildPublisher][].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to reject.
+        /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchRejectChildPublishersResponse> BatchRejectChildPublishersAsync(NetworkName parent, scg::IEnumerable<ChildPublisherName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchRejectChildPublishersAsync(new BatchRejectChildPublishersRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ChildPublisherNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only pending or active
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+        /// Expired, rejected, and withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// 
+        /// This method is only intended to be called in response to a child user
+        /// rejecting an invitation and exists to support the rejection of
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+        /// associated with an Ad Manager network.
+        /// 
+        /// To sever the relationship from the parent publisher's side, use
+        /// [BatchWithdrawChildPublisher][].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to reject.
+        /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchRejectChildPublishersResponse> BatchRejectChildPublishersAsync(NetworkName parent, scg::IEnumerable<ChildPublisherName> names, st::CancellationToken cancellationToken) =>
+            BatchRejectChildPublishersAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// Rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchWithdrawChildPublishersResponse BatchWithdrawChildPublishers(BatchWithdrawChildPublishersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// Rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchWithdrawChildPublishersResponse> BatchWithdrawChildPublishersAsync(BatchWithdrawChildPublishersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// Rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchWithdrawChildPublishersResponse> BatchWithdrawChildPublishersAsync(BatchWithdrawChildPublishersRequest request, st::CancellationToken cancellationToken) =>
+            BatchWithdrawChildPublishersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// Rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to withdraw.
+        /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchWithdrawChildPublishersResponse BatchWithdrawChildPublishers(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchWithdrawChildPublishers(new BatchWithdrawChildPublishersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// Rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to withdraw.
+        /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchWithdrawChildPublishersResponse> BatchWithdrawChildPublishersAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchWithdrawChildPublishersAsync(new BatchWithdrawChildPublishersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// Rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to withdraw.
+        /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchWithdrawChildPublishersResponse> BatchWithdrawChildPublishersAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchWithdrawChildPublishersAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// Rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to withdraw.
+        /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchWithdrawChildPublishersResponse BatchWithdrawChildPublishers(NetworkName parent, scg::IEnumerable<ChildPublisherName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchWithdrawChildPublishers(new BatchWithdrawChildPublishersRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ChildPublisherNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// Rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to withdraw.
+        /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchWithdrawChildPublishersResponse> BatchWithdrawChildPublishersAsync(NetworkName parent, scg::IEnumerable<ChildPublisherName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchWithdrawChildPublishersAsync(new BatchWithdrawChildPublishersRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ChildPublisherNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// Rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. Resource names of the
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s to withdraw.
+        /// Format: `networks/{network_code}/childPublisher/{child_publisher_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchWithdrawChildPublishersResponse> BatchWithdrawChildPublishersAsync(NetworkName parent, scg::IEnumerable<ChildPublisherName> names, st::CancellationToken cancellationToken) =>
+            BatchWithdrawChildPublishersAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ChildPublisherService client wrapper implementation, for convenient use.</summary>
@@ -1171,6 +2101,14 @@ namespace Google.Ads.AdManager.V1
         private readonly gaxgrpc::ApiCall<UpdateChildPublisherRequest, ChildPublisher> _callUpdateChildPublisher;
 
         private readonly gaxgrpc::ApiCall<BatchUpdateChildPublishersRequest, BatchUpdateChildPublishersResponse> _callBatchUpdateChildPublishers;
+
+        private readonly gaxgrpc::ApiCall<BatchResendChildPublisherInvitationEmailsRequest, BatchResendChildPublisherInvitationEmailsResponse> _callBatchResendChildPublisherInvitationEmails;
+
+        private readonly gaxgrpc::ApiCall<BatchRenegotiateChildPublisherAgreementsRequest, BatchRenegotiateChildPublisherAgreementsResponse> _callBatchRenegotiateChildPublisherAgreements;
+
+        private readonly gaxgrpc::ApiCall<BatchRejectChildPublishersRequest, BatchRejectChildPublishersResponse> _callBatchRejectChildPublishers;
+
+        private readonly gaxgrpc::ApiCall<BatchWithdrawChildPublishersRequest, BatchWithdrawChildPublishersResponse> _callBatchWithdrawChildPublishers;
 
         /// <summary>
         /// Constructs a client wrapper for the ChildPublisherService service, with the specified gRPC client and
@@ -1206,6 +2144,18 @@ namespace Google.Ads.AdManager.V1
             _callBatchUpdateChildPublishers = clientHelper.BuildApiCall<BatchUpdateChildPublishersRequest, BatchUpdateChildPublishersResponse>("BatchUpdateChildPublishers", grpcClient.BatchUpdateChildPublishersAsync, grpcClient.BatchUpdateChildPublishers, effectiveSettings.BatchUpdateChildPublishersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchUpdateChildPublishers);
             Modify_BatchUpdateChildPublishersApiCall(ref _callBatchUpdateChildPublishers);
+            _callBatchResendChildPublisherInvitationEmails = clientHelper.BuildApiCall<BatchResendChildPublisherInvitationEmailsRequest, BatchResendChildPublisherInvitationEmailsResponse>("BatchResendChildPublisherInvitationEmails", grpcClient.BatchResendChildPublisherInvitationEmailsAsync, grpcClient.BatchResendChildPublisherInvitationEmails, effectiveSettings.BatchResendChildPublisherInvitationEmailsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchResendChildPublisherInvitationEmails);
+            Modify_BatchResendChildPublisherInvitationEmailsApiCall(ref _callBatchResendChildPublisherInvitationEmails);
+            _callBatchRenegotiateChildPublisherAgreements = clientHelper.BuildApiCall<BatchRenegotiateChildPublisherAgreementsRequest, BatchRenegotiateChildPublisherAgreementsResponse>("BatchRenegotiateChildPublisherAgreements", grpcClient.BatchRenegotiateChildPublisherAgreementsAsync, grpcClient.BatchRenegotiateChildPublisherAgreements, effectiveSettings.BatchRenegotiateChildPublisherAgreementsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchRenegotiateChildPublisherAgreements);
+            Modify_BatchRenegotiateChildPublisherAgreementsApiCall(ref _callBatchRenegotiateChildPublisherAgreements);
+            _callBatchRejectChildPublishers = clientHelper.BuildApiCall<BatchRejectChildPublishersRequest, BatchRejectChildPublishersResponse>("BatchRejectChildPublishers", grpcClient.BatchRejectChildPublishersAsync, grpcClient.BatchRejectChildPublishers, effectiveSettings.BatchRejectChildPublishersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchRejectChildPublishers);
+            Modify_BatchRejectChildPublishersApiCall(ref _callBatchRejectChildPublishers);
+            _callBatchWithdrawChildPublishers = clientHelper.BuildApiCall<BatchWithdrawChildPublishersRequest, BatchWithdrawChildPublishersResponse>("BatchWithdrawChildPublishers", grpcClient.BatchWithdrawChildPublishersAsync, grpcClient.BatchWithdrawChildPublishers, effectiveSettings.BatchWithdrawChildPublishersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchWithdrawChildPublishers);
+            Modify_BatchWithdrawChildPublishersApiCall(ref _callBatchWithdrawChildPublishers);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1223,6 +2173,14 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_BatchUpdateChildPublishersApiCall(ref gaxgrpc::ApiCall<BatchUpdateChildPublishersRequest, BatchUpdateChildPublishersResponse> call);
 
+        partial void Modify_BatchResendChildPublisherInvitationEmailsApiCall(ref gaxgrpc::ApiCall<BatchResendChildPublisherInvitationEmailsRequest, BatchResendChildPublisherInvitationEmailsResponse> call);
+
+        partial void Modify_BatchRenegotiateChildPublisherAgreementsApiCall(ref gaxgrpc::ApiCall<BatchRenegotiateChildPublisherAgreementsRequest, BatchRenegotiateChildPublisherAgreementsResponse> call);
+
+        partial void Modify_BatchRejectChildPublishersApiCall(ref gaxgrpc::ApiCall<BatchRejectChildPublishersRequest, BatchRejectChildPublishersResponse> call);
+
+        partial void Modify_BatchWithdrawChildPublishersApiCall(ref gaxgrpc::ApiCall<BatchWithdrawChildPublishersRequest, BatchWithdrawChildPublishersResponse> call);
+
         partial void OnConstruction(ChildPublisherService.ChildPublisherServiceClient grpcClient, ChildPublisherServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ChildPublisherService client</summary>
@@ -1239,6 +2197,14 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_UpdateChildPublisherRequest(ref UpdateChildPublisherRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchUpdateChildPublishersRequest(ref BatchUpdateChildPublishersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchResendChildPublisherInvitationEmailsRequest(ref BatchResendChildPublisherInvitationEmailsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchRenegotiateChildPublisherAgreementsRequest(ref BatchRenegotiateChildPublisherAgreementsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchRejectChildPublishersRequest(ref BatchRejectChildPublishersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchWithdrawChildPublishersRequest(ref BatchWithdrawChildPublishersRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves a [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
@@ -1386,6 +2352,162 @@ namespace Google.Ads.AdManager.V1
         {
             Modify_BatchUpdateChildPublishersRequest(ref request, ref callSettings);
             return _callBatchUpdateChildPublishers.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch resends invitation emails to
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired and pending
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+        /// invitation emails. Rejected, withdrawn, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchResendChildPublisherInvitationEmailsResponse BatchResendChildPublisherInvitationEmails(BatchResendChildPublisherInvitationEmailsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchResendChildPublisherInvitationEmailsRequest(ref request, ref callSettings);
+            return _callBatchResendChildPublisherInvitationEmails.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch resends invitation emails to
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired and pending
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be sent
+        /// invitation emails. Rejected, withdrawn, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchResendChildPublisherInvitationEmailsResponse> BatchResendChildPublisherInvitationEmailsAsync(BatchResendChildPublisherInvitationEmailsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchResendChildPublisherInvitationEmailsRequest(ref request, ref callSettings);
+            return _callBatchResendChildPublisherInvitationEmails.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+        /// agreements (i.e., invite with updated terms).
+        /// 
+        /// Only the agreements of rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+        /// renegotiated. Expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchRenegotiateChildPublisherAgreementsResponse BatchRenegotiateChildPublisherAgreements(BatchRenegotiateChildPublisherAgreementsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchRenegotiateChildPublisherAgreementsRequest(ref request, ref callSettings);
+            return _callBatchRenegotiateChildPublisherAgreements.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch renegotiates [ChildPublisher][google.ads.admanager.v1.ChildPublisher]
+        /// agreements (i.e., invite with updated terms).
+        /// 
+        /// Only the agreements of rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be
+        /// renegotiated. Expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchRenegotiateChildPublisherAgreementsResponse> BatchRenegotiateChildPublisherAgreementsAsync(BatchRenegotiateChildPublisherAgreementsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchRenegotiateChildPublisherAgreementsRequest(ref request, ref callSettings);
+            return _callBatchRenegotiateChildPublisherAgreements.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only pending or active
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+        /// Expired, rejected, and withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// 
+        /// This method is only intended to be called in response to a child user
+        /// rejecting an invitation and exists to support the rejection of
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+        /// associated with an Ad Manager network.
+        /// 
+        /// To sever the relationship from the parent publisher's side, use
+        /// [BatchWithdrawChildPublisher][].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchRejectChildPublishersResponse BatchRejectChildPublishers(BatchRejectChildPublishersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchRejectChildPublishersRequest(ref request, ref callSettings);
+            return _callBatchRejectChildPublishers.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch rejects [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only pending or active
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be rejected.
+        /// Expired, rejected, and withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// 
+        /// This method is only intended to be called in response to a child user
+        /// rejecting an invitation and exists to support the rejection of
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s that are not yet
+        /// associated with an Ad Manager network.
+        /// 
+        /// To sever the relationship from the parent publisher's side, use
+        /// [BatchWithdrawChildPublisher][].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchRejectChildPublishersResponse> BatchRejectChildPublishersAsync(BatchRejectChildPublishersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchRejectChildPublishersRequest(ref request, ref callSettings);
+            return _callBatchRejectChildPublishers.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// Rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchWithdrawChildPublishersResponse BatchWithdrawChildPublishers(BatchWithdrawChildPublishersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchWithdrawChildPublishersRequest(ref request, ref callSettings);
+            return _callBatchWithdrawChildPublishers.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch withdraws [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s.
+        /// 
+        /// Only expired, pending, and accepted
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s can be withdrawn.
+        /// Rejected or withdrawn
+        /// [ChildPublisher][google.ads.admanager.v1.ChildPublisher]s will be ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchWithdrawChildPublishersResponse> BatchWithdrawChildPublishersAsync(BatchWithdrawChildPublishersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchWithdrawChildPublishersRequest(ref request, ref callSettings);
+            return _callBatchWithdrawChildPublishers.Async(request, callSettings);
         }
     }
 

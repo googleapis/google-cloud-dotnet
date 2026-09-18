@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 SpaceName = SpaceName.FromSpace("[SPACE]"),
                 Offer = "",
+                Config = new ConnectActiveConferenceRequest.Types.ConnectionConfig(),
             };
             // Make the request
             ConnectActiveConferenceResponse response = await spacesServiceClient.ConnectActiveConferenceAsync(request);

@@ -70,7 +70,7 @@ namespace Google.Cloud.ApiGateway.V1 {
             "RxAEEgwKCFVQREFUSU5HEAUSDgoKQUNUSVZBVElORxAGOm3qQWoKI2FwaWdh",
             "dGV3YXkuZ29vZ2xlYXBpcy5jb20vQXBpQ29uZmlnEkNwcm9qZWN0cy97cHJv",
             "amVjdH0vbG9jYXRpb25zL2dsb2JhbC9hcGlzL3thcGl9L2NvbmZpZ3Mve2Fw",
-            "aV9jb25maWd9Iv0ECgdHYXRld2F5EhEKBG5hbWUYASABKAlCA+BBAxI0Cgtj",
+            "aV9jb25maWd9IpIICgdHYXRld2F5EhEKBG5hbWUYASABKAlCA+BBAxI0Cgtj",
             "cmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
             "A+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
             "aW1lc3RhbXBCA+BBAxJECgZsYWJlbHMYBCADKAsyLy5nb29nbGUuY2xvdWQu",
@@ -78,11 +78,20 @@ namespace Google.Cloud.ApiGateway.V1 {
             "cGxheV9uYW1lGAUgASgJQgPgQQESPwoKYXBpX2NvbmZpZxgGIAEoCUIr4EEC",
             "+kElCiNhcGlnYXRld2F5Lmdvb2dsZWFwaXMuY29tL0FwaUNvbmZpZxI9CgVz",
             "dGF0ZRgHIAEoDjIpLmdvb2dsZS5jbG91ZC5hcGlnYXRld2F5LnYxLkdhdGV3",
-            "YXkuU3RhdGVCA+BBAxIdChBkZWZhdWx0X2hvc3RuYW1lGAkgASgJQgPgQQMa",
-            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "ASJgCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5H",
-            "EAESCgoGQUNUSVZFEAISCgoGRkFJTEVEEAMSDAoIREVMRVRJTkcQBBIMCghV",
-            "UERBVElORxAFOmLqQV8KIWFwaWdhdGV3YXkuZ29vZ2xlYXBpcy5jb20vR2F0",
+            "YXkuU3RhdGVCA+BBAxIdChBkZWZhdWx0X2hvc3RuYW1lGAkgASgJQgPgQQMS",
+            "UQoOc3RyZWFtaW5nX21vZGUYCyABKA4yMS5nb29nbGUuY2xvdWQuYXBpZ2F0",
+            "ZXdheS52MS5HYXRld2F5LlN0cmVhbWluZ01vZGVCBuBBBeBBARJhChhlZmZl",
+            "Y3RpdmVfc3RyZWFtaW5nX21vZGUYDCABKA4yOi5nb29nbGUuY2xvdWQuYXBp",
+            "Z2F0ZXdheS52MS5HYXRld2F5LkVmZmVjdGl2ZVN0cmVhbWluZ01vZGVCA+BB",
+            "AxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBImAKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJ",
+            "TkcQARIKCgZBQ1RJVkUQAhIKCgZGQUlMRUQQAxIMCghERUxFVElORxAEEgwK",
+            "CFVQREFUSU5HEAUiSwoNU3RyZWFtaW5nTW9kZRIeChpTVFJFQU1JTkdfTU9E",
+            "RV9VTlNQRUNJRklFRBAAEhoKFlNUUkVBTUlOR19NT0RFX0VOQUJMRUQQASKP",
+            "AQoWRWZmZWN0aXZlU3RyZWFtaW5nTW9kZRIoCiRFRkZFQ1RJVkVfU1RSRUFN",
+            "SU5HX01PREVfVU5TUEVDSUZJRUQQABIlCiFFRkZFQ1RJVkVfU1RSRUFNSU5H",
+            "X01PREVfRElTQUJMRUQQARIkCiBFRkZFQ1RJVkVfU1RSRUFNSU5HX01PREVf",
+            "RU5BQkxFRBACOmLqQV8KIWFwaWdhdGV3YXkuZ29vZ2xlYXBpcy5jb20vR2F0",
             "ZXdheRI6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
             "L2dhdGV3YXlzL3tnYXRld2F5fSKZAQoTTGlzdEdhdGV3YXlzUmVxdWVzdBI5",
             "CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMu",
@@ -164,7 +173,7 @@ namespace Google.Cloud.ApiGateway.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.OpenApiDocument), global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.OpenApiDocument.Parser, new[]{ "Document" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.GrpcServiceDefinition), global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.GrpcServiceDefinition.Parser, new[]{ "FileDescriptorSet", "Source" }, null, null, null, null),
             null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiGateway.V1.Gateway), global::Google.Cloud.ApiGateway.V1.Gateway.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "DisplayName", "ApiConfig", "State", "DefaultHostname" }, null, new[]{ typeof(global::Google.Cloud.ApiGateway.V1.Gateway.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiGateway.V1.Gateway), global::Google.Cloud.ApiGateway.V1.Gateway.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "DisplayName", "ApiConfig", "State", "DefaultHostname", "StreamingMode", "EffectiveStreamingMode" }, null, new[]{ typeof(global::Google.Cloud.ApiGateway.V1.Gateway.Types.State), typeof(global::Google.Cloud.ApiGateway.V1.Gateway.Types.StreamingMode), typeof(global::Google.Cloud.ApiGateway.V1.Gateway.Types.EffectiveStreamingMode) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest), global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse), global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse.Parser, new[]{ "Gateways", "NextPageToken", "UnreachableLocations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiGateway.V1.GetGatewayRequest), global::Google.Cloud.ApiGateway.V1.GetGatewayRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -825,8 +834,8 @@ namespace Google.Cloud.ApiGateway.V1 {
     public const int GatewayServiceAccountFieldNumber = 14;
     private string gatewayServiceAccount_ = "";
     /// <summary>
-    /// Immutable. The Google Cloud IAM Service Account that Gateways serving this config
-    /// should use to authenticate to other services. This may either be the
+    /// Immutable. The Google Cloud IAM Service Account that Gateways serving this
+    /// config should use to authenticate to other services. This may either be the
     /// Service Account's email
     /// (`{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`) or its full resource
     /// name (`projects/{PROJECT}/accounts/{UNIQUE_ID}`). This is most often used
@@ -894,8 +903,8 @@ namespace Google.Cloud.ApiGateway.V1 {
         = pb::FieldCodec.ForMessage(82, global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.GrpcServiceDefinition.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.GrpcServiceDefinition> grpcServices_ = new pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.GrpcServiceDefinition>();
     /// <summary>
-    /// Optional. gRPC service definition files. If specified, openapi_documents must
-    /// not be included.
+    /// Optional. gRPC service definition files. If specified, openapi_documents
+    /// must not be included.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -909,8 +918,8 @@ namespace Google.Cloud.ApiGateway.V1 {
         = pb::FieldCodec.ForMessage(90, global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.File.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.File> managedServiceConfigs_ = new pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.File>();
     /// <summary>
-    /// Optional. Service Configuration files. At least one must be included when using gRPC
-    /// service definitions. See
+    /// Optional. Service Configuration files. At least one must be included when
+    /// using gRPC service definitions. See
     /// https://cloud.google.com/endpoints/docs/grpc/grpc-service-config#service_configuration_overview
     /// for the expected file contents.
     ///
@@ -1859,8 +1868,8 @@ namespace Google.Cloud.ApiGateway.V1 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.File.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.File> source_ = new pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.ApiConfig.Types.File>();
         /// <summary>
-        /// Optional. Uncompiled proto files associated with the descriptor set, used for
-        /// display purposes (server-side compilation is not supported). These
+        /// Optional. Uncompiled proto files associated with the descriptor set, used
+        /// for display purposes (server-side compilation is not supported). These
         /// should match the inputs to 'protoc' command used to generate
         /// file_descriptor_set.
         /// </summary>
@@ -2087,6 +2096,8 @@ namespace Google.Cloud.ApiGateway.V1 {
       apiConfig_ = other.apiConfig_;
       state_ = other.state_;
       defaultHostname_ = other.defaultHostname_;
+      streamingMode_ = other.streamingMode_;
+      effectiveStreamingMode_ = other.effectiveStreamingMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2208,8 +2219,7 @@ namespace Google.Cloud.ApiGateway.V1 {
     public const int DefaultHostnameFieldNumber = 9;
     private string defaultHostname_ = "";
     /// <summary>
-    /// Output only. The default API Gateway host name of the form
-    /// `{gateway_id}-{hash}.{region_code}.gateway.dev`.
+    /// Output only. The default hostname that serves traffic for this Gateway.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2217,6 +2227,43 @@ namespace Google.Cloud.ApiGateway.V1 {
       get { return defaultHostname_; }
       set {
         defaultHostname_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "streaming_mode" field.</summary>
+    public const int StreamingModeFieldNumber = 11;
+    private global::Google.Cloud.ApiGateway.V1.Gateway.Types.StreamingMode streamingMode_ = global::Google.Cloud.ApiGateway.V1.Gateway.Types.StreamingMode.Unspecified;
+    /// <summary>
+    /// Optional. Immutable. Requests streaming for a new gateway. An attempt to
+    /// change it on update is rejected. If unset, the service selects the mode.
+    /// This field records only what was requested and is never modified by the
+    /// service; read `effective_streaming_mode` for the mode the gateway is served
+    /// with.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiGateway.V1.Gateway.Types.StreamingMode StreamingMode {
+      get { return streamingMode_; }
+      set {
+        streamingMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "effective_streaming_mode" field.</summary>
+    public const int EffectiveStreamingModeFieldNumber = 12;
+    private global::Google.Cloud.ApiGateway.V1.Gateway.Types.EffectiveStreamingMode effectiveStreamingMode_ = global::Google.Cloud.ApiGateway.V1.Gateway.Types.EffectiveStreamingMode.Unspecified;
+    /// <summary>
+    /// Output only. The streaming mode this gateway is actually served with, which
+    /// the service resolves at creation from `streaming_mode`, the referenced API
+    /// Config, and the platform default at the time. Read this rather than
+    /// `streaming_mode` to determine whether a gateway supports streaming.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiGateway.V1.Gateway.Types.EffectiveStreamingMode EffectiveStreamingMode {
+      get { return effectiveStreamingMode_; }
+      set {
+        effectiveStreamingMode_ = value;
       }
     }
 
@@ -2243,6 +2290,8 @@ namespace Google.Cloud.ApiGateway.V1 {
       if (ApiConfig != other.ApiConfig) return false;
       if (State != other.State) return false;
       if (DefaultHostname != other.DefaultHostname) return false;
+      if (StreamingMode != other.StreamingMode) return false;
+      if (EffectiveStreamingMode != other.EffectiveStreamingMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2258,6 +2307,8 @@ namespace Google.Cloud.ApiGateway.V1 {
       if (ApiConfig.Length != 0) hash ^= ApiConfig.GetHashCode();
       if (State != global::Google.Cloud.ApiGateway.V1.Gateway.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (DefaultHostname.Length != 0) hash ^= DefaultHostname.GetHashCode();
+      if (StreamingMode != global::Google.Cloud.ApiGateway.V1.Gateway.Types.StreamingMode.Unspecified) hash ^= StreamingMode.GetHashCode();
+      if (EffectiveStreamingMode != global::Google.Cloud.ApiGateway.V1.Gateway.Types.EffectiveStreamingMode.Unspecified) hash ^= EffectiveStreamingMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2305,6 +2356,14 @@ namespace Google.Cloud.ApiGateway.V1 {
         output.WriteRawTag(74);
         output.WriteString(DefaultHostname);
       }
+      if (StreamingMode != global::Google.Cloud.ApiGateway.V1.Gateway.Types.StreamingMode.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) StreamingMode);
+      }
+      if (EffectiveStreamingMode != global::Google.Cloud.ApiGateway.V1.Gateway.Types.EffectiveStreamingMode.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) EffectiveStreamingMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2344,6 +2403,14 @@ namespace Google.Cloud.ApiGateway.V1 {
         output.WriteRawTag(74);
         output.WriteString(DefaultHostname);
       }
+      if (StreamingMode != global::Google.Cloud.ApiGateway.V1.Gateway.Types.StreamingMode.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) StreamingMode);
+      }
+      if (EffectiveStreamingMode != global::Google.Cloud.ApiGateway.V1.Gateway.Types.EffectiveStreamingMode.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) EffectiveStreamingMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2375,6 +2442,12 @@ namespace Google.Cloud.ApiGateway.V1 {
       }
       if (DefaultHostname.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DefaultHostname);
+      }
+      if (StreamingMode != global::Google.Cloud.ApiGateway.V1.Gateway.Types.StreamingMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) StreamingMode);
+      }
+      if (EffectiveStreamingMode != global::Google.Cloud.ApiGateway.V1.Gateway.Types.EffectiveStreamingMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EffectiveStreamingMode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2415,6 +2488,12 @@ namespace Google.Cloud.ApiGateway.V1 {
       }
       if (other.DefaultHostname.Length != 0) {
         DefaultHostname = other.DefaultHostname;
+      }
+      if (other.StreamingMode != global::Google.Cloud.ApiGateway.V1.Gateway.Types.StreamingMode.Unspecified) {
+        StreamingMode = other.StreamingMode;
+      }
+      if (other.EffectiveStreamingMode != global::Google.Cloud.ApiGateway.V1.Gateway.Types.EffectiveStreamingMode.Unspecified) {
+        EffectiveStreamingMode = other.EffectiveStreamingMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2471,6 +2550,14 @@ namespace Google.Cloud.ApiGateway.V1 {
           }
           case 74: {
             DefaultHostname = input.ReadString();
+            break;
+          }
+          case 88: {
+            StreamingMode = (global::Google.Cloud.ApiGateway.V1.Gateway.Types.StreamingMode) input.ReadEnum();
+            break;
+          }
+          case 96: {
+            EffectiveStreamingMode = (global::Google.Cloud.ApiGateway.V1.Gateway.Types.EffectiveStreamingMode) input.ReadEnum();
             break;
           }
         }
@@ -2530,6 +2617,14 @@ namespace Google.Cloud.ApiGateway.V1 {
             DefaultHostname = input.ReadString();
             break;
           }
+          case 88: {
+            StreamingMode = (global::Google.Cloud.ApiGateway.V1.Gateway.Types.StreamingMode) input.ReadEnum();
+            break;
+          }
+          case 96: {
+            EffectiveStreamingMode = (global::Google.Cloud.ApiGateway.V1.Gateway.Types.EffectiveStreamingMode) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -2568,6 +2663,44 @@ namespace Google.Cloud.ApiGateway.V1 {
         /// Gateway is being updated.
         /// </summary>
         [pbr::OriginalName("UPDATING")] Updating = 5,
+      }
+
+      /// <summary>
+      /// Streaming mode for a Gateway.
+      /// This enum is frozen. No values are expected to be added in the future.
+      /// </summary>
+      public enum StreamingMode {
+        /// <summary>
+        /// Lets the service select the streaming mode.
+        /// </summary>
+        [pbr::OriginalName("STREAMING_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Enables streaming. The gateway supports Server-Sent Events (SSE), HTTP/2
+        /// streaming, HTTP chunked transfer, WebSockets, and gRPC bidirectional
+        /// streaming.
+        /// </summary>
+        [pbr::OriginalName("STREAMING_MODE_ENABLED")] Enabled = 1,
+      }
+
+      /// <summary>
+      /// The streaming mode a Gateway is served with.
+      /// This enum is frozen. No values are expected to be added in the future.
+      /// </summary>
+      public enum EffectiveStreamingMode {
+        /// <summary>
+        /// Indicates that the service has not resolved a mode. Every gateway
+        /// returned by `GetGateway` and `ListGateways` carries a resolved mode, so
+        /// this value should not be returned under normal circumstances.
+        /// </summary>
+        [pbr::OriginalName("EFFECTIVE_STREAMING_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates that the gateway does not support streaming.
+        /// </summary>
+        [pbr::OriginalName("EFFECTIVE_STREAMING_MODE_DISABLED")] Disabled = 1,
+        /// <summary>
+        /// Indicates that the gateway supports streaming.
+        /// </summary>
+        [pbr::OriginalName("EFFECTIVE_STREAMING_MODE_ENABLED")] Enabled = 2,
       }
 
     }
@@ -3477,8 +3610,8 @@ namespace Google.Cloud.ApiGateway.V1 {
     public const int GatewayIdFieldNumber = 2;
     private string gatewayId_ = "";
     /// <summary>
-    /// Required. Identifier to assign to the Gateway. Must be unique within scope of
-    /// the parent resource.
+    /// Required. Identifier to assign to the Gateway. Must be unique within scope
+    /// of the parent resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6737,8 +6870,8 @@ namespace Google.Cloud.ApiGateway.V1 {
     public const int ApiConfigIdFieldNumber = 2;
     private string apiConfigId_ = "";
     /// <summary>
-    /// Required. Identifier to assign to the API Config. Must be unique within scope of
-    /// the parent resource.
+    /// Required. Identifier to assign to the API Config. Must be unique within
+    /// scope of the parent resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7569,7 +7702,9 @@ namespace Google.Cloud.ApiGateway.V1 {
     /// <summary>
     /// Output only. Identifies whether the user has requested cancellation
     /// of the operation. Operations that have successfully been cancelled
-    /// have [Operation.error][] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+    /// have
+    /// [google.longrunning.Operation.error][google.longrunning.Operation.error]
+    /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
     /// corresponding to `Code.CANCELLED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7602,7 +7737,8 @@ namespace Google.Cloud.ApiGateway.V1 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.ApiGateway.V1.OperationMetadata.Types.Diagnostic.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.OperationMetadata.Types.Diagnostic> diagnostics_ = new pbc::RepeatedField<global::Google.Cloud.ApiGateway.V1.OperationMetadata.Types.Diagnostic>();
     /// <summary>
-    /// Output only. Diagnostics generated during processing of configuration source files.
+    /// Output only. Diagnostics generated during processing of configuration
+    /// source files.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

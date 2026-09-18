@@ -116,7 +116,7 @@ namespace Google.Analytics.Data.V1Beta {
             "EgoKZW5kX29mZnNldBgDIAEoBSJOCgtHcmFudWxhcml0eRIbChdHUkFOVUxB",
             "UklUWV9VTlNQRUNJRklFRBAAEgkKBURBSUxZEAESCgoGV0VFS0xZEAISCwoH",
             "TU9OVEhMWRADIioKFENvaG9ydFJlcG9ydFNldHRpbmdzEhIKCmFjY3VtdWxh",
-            "dGUYASABKAgilgYKEFJlc3BvbnNlTWV0YURhdGESIAoYZGF0YV9sb3NzX2Zy",
+            "dGUYASABKAgi8Q4KEFJlc3BvbnNlTWV0YURhdGESIAoYZGF0YV9sb3NzX2Zy",
             "b21fb3RoZXJfcm93GAMgASgIEnIKG3NjaGVtYV9yZXN0cmljdGlvbl9yZXNw",
             "b25zZRgEIAEoCzJILmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUmVz",
             "cG9uc2VNZXRhRGF0YS5TY2hlbWFSZXN0cmljdGlvblJlc3BvbnNlSACIAQES",
@@ -124,84 +124,109 @@ namespace Google.Analytics.Data.V1Beta {
             "CUgCiAEBEhkKDGVtcHR5X3JlYXNvbhgHIAEoCUgDiAEBEiQKF3N1YmplY3Rf",
             "dG9fdGhyZXNob2xkaW5nGAggASgISASIAQESSgoSc2FtcGxpbmdfbWV0YWRh",
             "dGFzGAkgAygLMi4uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5TYW1w",
-            "bGluZ01ldGFkYXRhGr0CChlTY2hlbWFSZXN0cmljdGlvblJlc3BvbnNlEoQB",
-            "ChphY3RpdmVfbWV0cmljX3Jlc3RyaWN0aW9ucxgBIAMoCzJgLmdvb2dsZS5h",
-            "bmFseXRpY3MuZGF0YS52MWJldGEuUmVzcG9uc2VNZXRhRGF0YS5TY2hlbWFS",
-            "ZXN0cmljdGlvblJlc3BvbnNlLkFjdGl2ZU1ldHJpY1Jlc3RyaWN0aW9uGpgB",
-            "ChdBY3RpdmVNZXRyaWNSZXN0cmljdGlvbhIYCgttZXRyaWNfbmFtZRgBIAEo",
-            "CUgAiAEBElMKF3Jlc3RyaWN0ZWRfbWV0cmljX3R5cGVzGAIgAygOMjIuZ29v",
-            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5SZXN0cmljdGVkTWV0cmljVHlw",
-            "ZUIOCgxfbWV0cmljX25hbWVCHgocX3NjaGVtYV9yZXN0cmljdGlvbl9yZXNw",
-            "b25zZUIQCg5fY3VycmVuY3lfY29kZUIMCgpfdGltZV96b25lQg8KDV9lbXB0",
-            "eV9yZWFzb25CGgoYX3N1YmplY3RfdG9fdGhyZXNob2xkaW5nIksKEFNhbXBs",
-            "aW5nTWV0YWRhdGESGgoSc2FtcGxlc19yZWFkX2NvdW50GAEgASgDEhsKE3Nh",
-            "bXBsaW5nX3NwYWNlX3NpemUYAiABKAMiHwoPRGltZW5zaW9uSGVhZGVyEgwK",
-            "BG5hbWUYASABKAkiVAoMTWV0cmljSGVhZGVyEgwKBG5hbWUYASABKAkSNgoE",
-            "dHlwZRgCIAEoDjIoLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0",
-            "cmljVHlwZSJ1CgtQaXZvdEhlYWRlchJTChdwaXZvdF9kaW1lbnNpb25faGVh",
-            "ZGVycxgBIAMoCzIyLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUGl2",
-            "b3REaW1lbnNpb25IZWFkZXISEQoJcm93X2NvdW50GAIgASgFIl4KFFBpdm90",
-            "RGltZW5zaW9uSGVhZGVyEkYKEGRpbWVuc2lvbl92YWx1ZXMYASADKAsyLC5n",
-            "b29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkRpbWVuc2lvblZhbHVlIo8B",
-            "CgNSb3cSRgoQZGltZW5zaW9uX3ZhbHVlcxgBIAMoCzIsLmdvb2dsZS5hbmFs",
-            "eXRpY3MuZGF0YS52MWJldGEuRGltZW5zaW9uVmFsdWUSQAoNbWV0cmljX3Zh",
-            "bHVlcxgCIAMoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0",
-            "cmljVmFsdWUiLgoORGltZW5zaW9uVmFsdWUSDwoFdmFsdWUYASABKAlIAEIL",
-            "CglvbmVfdmFsdWUiKwoLTWV0cmljVmFsdWUSDwoFdmFsdWUYBCABKAlIAEIL",
-            "CglvbmVfdmFsdWUiSgoMTnVtZXJpY1ZhbHVlEhUKC2ludDY0X3ZhbHVlGAEg",
-            "ASgDSAASFgoMZG91YmxlX3ZhbHVlGAIgASgBSABCCwoJb25lX3ZhbHVlIuMD",
-            "Cg1Qcm9wZXJ0eVF1b3RhEkEKDnRva2Vuc19wZXJfZGF5GAEgASgLMikuZ29v",
-            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cxJCCg90b2tl",
-            "bnNfcGVyX2hvdXIYAiABKAsyKS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFi",
-            "ZXRhLlF1b3RhU3RhdHVzEkYKE2NvbmN1cnJlbnRfcmVxdWVzdHMYAyABKAsy",
-            "KS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlF1b3RhU3RhdHVzElUK",
-            "InNlcnZlcl9lcnJvcnNfcGVyX3Byb2plY3RfcGVyX2hvdXIYBCABKAsyKS5n",
-            "b29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlF1b3RhU3RhdHVzElwKKXBv",
-            "dGVudGlhbGx5X3RocmVzaG9sZGVkX3JlcXVlc3RzX3Blcl9ob3VyGAUgASgL",
-            "MikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cxJO",
-            "Cht0b2tlbnNfcGVyX3Byb2plY3RfcGVyX2hvdXIYBiABKAsyKS5nb29nbGUu",
-            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLlF1b3RhU3RhdHVzIlcKC1F1b3RhU3Rh",
-            "dHVzEhUKCGNvbnN1bWVkGAEgASgFSACIAQESFgoJcmVtYWluaW5nGAIgASgF",
-            "SAGIAQFCCwoJX2NvbnN1bWVkQgwKCl9yZW1haW5pbmcilgEKEURpbWVuc2lv",
-            "bk1ldGFkYXRhEhAKCGFwaV9uYW1lGAEgASgJEg8KB3VpX25hbWUYAiABKAkS",
-            "EwoLZGVzY3JpcHRpb24YAyABKAkSHAoUZGVwcmVjYXRlZF9hcGlfbmFtZXMY",
-            "BCADKAkSGQoRY3VzdG9tX2RlZmluaXRpb24YBSABKAgSEAoIY2F0ZWdvcnkY",
-            "ByABKAkikgMKDk1ldHJpY01ldGFkYXRhEhAKCGFwaV9uYW1lGAEgASgJEg8K",
-            "B3VpX25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSHAoUZGVwcmVj",
-            "YXRlZF9hcGlfbmFtZXMYBCADKAkSNgoEdHlwZRgFIAEoDjIoLmdvb2dsZS5h",
-            "bmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmljVHlwZRISCgpleHByZXNzaW9u",
-            "GAYgASgJEhkKEWN1c3RvbV9kZWZpbml0aW9uGAcgASgIElMKD2Jsb2NrZWRf",
-            "cmVhc29ucxgIIAMoDjI6Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEu",
-            "TWV0cmljTWV0YWRhdGEuQmxvY2tlZFJlYXNvbhIQCghjYXRlZ29yeRgKIAEo",
-            "CSJcCg1CbG9ja2VkUmVhc29uEh4KGkJMT0NLRURfUkVBU09OX1VOU1BFQ0lG",
-            "SUVEEAASFgoSTk9fUkVWRU5VRV9NRVRSSUNTEAESEwoPTk9fQ09TVF9NRVRS",
-            "SUNTEAIiTAoSQ29tcGFyaXNvbk1ldGFkYXRhEhAKCGFwaV9uYW1lGAEgASgJ",
-            "Eg8KB3VpX25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAki3AEKFkRp",
-            "bWVuc2lvbkNvbXBhdGliaWxpdHkSUAoSZGltZW5zaW9uX21ldGFkYXRhGAEg",
-            "ASgLMi8uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5EaW1lbnNpb25N",
-            "ZXRhZGF0YUgAiAEBEkcKDWNvbXBhdGliaWxpdHkYAiABKA4yKy5nb29nbGUu",
-            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLkNvbXBhdGliaWxpdHlIAYgBAUIVChNf",
-            "ZGltZW5zaW9uX21ldGFkYXRhQhAKDl9jb21wYXRpYmlsaXR5ItABChNNZXRy",
-            "aWNDb21wYXRpYmlsaXR5EkoKD21ldHJpY19tZXRhZGF0YRgBIAEoCzIsLmdv",
-            "b2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmljTWV0YWRhdGFIAIgB",
-            "ARJHCg1jb21wYXRpYmlsaXR5GAIgASgOMisuZ29vZ2xlLmFuYWx5dGljcy5k",
-            "YXRhLnYxYmV0YS5Db21wYXRpYmlsaXR5SAGIAQFCEgoQX21ldHJpY19tZXRh",
-            "ZGF0YUIQCg5fY29tcGF0aWJpbGl0eSpnChFNZXRyaWNBZ2dyZWdhdGlvbhIi",
-            "Ch5NRVRSSUNfQUdHUkVHQVRJT05fVU5TUEVDSUZJRUQQABIJCgVUT1RBTBAB",
-            "EgsKB01JTklNVU0QBRILCgdNQVhJTVVNEAYSCQoFQ09VTlQQBCqBAgoKTWV0",
-            "cmljVHlwZRIbChdNRVRSSUNfVFlQRV9VTlNQRUNJRklFRBAAEhAKDFRZUEVf",
-            "SU5URUdFUhABEg4KClRZUEVfRkxPQVQQAhIQCgxUWVBFX1NFQ09ORFMQBBIV",
-            "ChFUWVBFX01JTExJU0VDT05EUxAFEhAKDFRZUEVfTUlOVVRFUxAGEg4KClRZ",
-            "UEVfSE9VUlMQBxIRCg1UWVBFX1NUQU5EQVJEEAgSEQoNVFlQRV9DVVJSRU5D",
-            "WRAJEg0KCVRZUEVfRkVFVBAKEg4KClRZUEVfTUlMRVMQCxIPCgtUWVBFX01F",
-            "VEVSUxAMEhMKD1RZUEVfS0lMT01FVEVSUxANKl8KFFJlc3RyaWN0ZWRNZXRy",
-            "aWNUeXBlEiYKIlJFU1RSSUNURURfTUVUUklDX1RZUEVfVU5TUEVDSUZJRUQQ",
-            "ABINCglDT1NUX0RBVEEQARIQCgxSRVZFTlVFX0RBVEEQAipQCg1Db21wYXRp",
-            "YmlsaXR5Eh0KGUNPTVBBVElCSUxJVFlfVU5TUEVDSUZJRUQQABIOCgpDT01Q",
-            "QVRJQkxFEAESEAoMSU5DT01QQVRJQkxFEAJCeQogY29tLmdvb2dsZS5hbmFs",
-            "eXRpY3MuZGF0YS52MWJldGFCEVJlcG9ydGluZ0FwaVByb3RvUAFaQGdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYW5hbHl0aWNzL2Rh",
-            "dGEvdjFiZXRhO2RhdGFiBnByb3RvMw=="));
+            "bGluZ01ldGFkYXRhEmQKF2RhdGFfdHJ1bmNhdGlvbl9yZWFzb25zGAogAygL",
+            "MkMuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5SZXNwb25zZU1ldGFE",
+            "YXRhLkRhdGFUcnVuY2F0aW9uUmVhc29uGr0CChlTY2hlbWFSZXN0cmljdGlv",
+            "blJlc3BvbnNlEoQBChphY3RpdmVfbWV0cmljX3Jlc3RyaWN0aW9ucxgBIAMo",
+            "CzJgLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUmVzcG9uc2VNZXRh",
+            "RGF0YS5TY2hlbWFSZXN0cmljdGlvblJlc3BvbnNlLkFjdGl2ZU1ldHJpY1Jl",
+            "c3RyaWN0aW9uGpgBChdBY3RpdmVNZXRyaWNSZXN0cmljdGlvbhIYCgttZXRy",
+            "aWNfbmFtZRgBIAEoCUgAiAEBElMKF3Jlc3RyaWN0ZWRfbWV0cmljX3R5cGVz",
+            "GAIgAygOMjIuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5SZXN0cmlj",
+            "dGVkTWV0cmljVHlwZUIOCgxfbWV0cmljX25hbWUa8gcKFERhdGFUcnVuY2F0",
+            "aW9uUmVhc29uEnkKFGRhdGFfdHJ1bmNhdGlvbl90eXBlGAEgASgOMlYuZ29v",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5SZXNwb25zZU1ldGFEYXRhLkRh",
+            "dGFUcnVuY2F0aW9uUmVhc29uLkRhdGFUcnVuY2F0aW9uVHlwZUgAiAEBEiQK",
+            "F2RhdGFfdHJ1bmNhdGlvbl9tZXNzYWdlGAIgASgJSAGIAQESIQoUZGF0YV90",
+            "cnVuY2F0aW9uX2RhdGUYAyABKAlIAogBARKAAQobZGF0YV90cnVuY2F0aW9u",
+            "X2RhdGVfcmFuZ2VzGAQgAygLMlsuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYx",
+            "YmV0YS5SZXNwb25zZU1ldGFEYXRhLkRhdGFUcnVuY2F0aW9uUmVhc29uLkRh",
+            "dGFUcnVuY2F0aW9uRGF0ZVJhbmdlGmUKF0RhdGFUcnVuY2F0aW9uRGF0ZVJh",
+            "bmdlEhcKCnN0YXJ0X2RhdGUYASABKAlIAIgBARIVCghlbmRfZGF0ZRgCIAEo",
+            "CUgBiAEBQg0KC19zdGFydF9kYXRlQgsKCV9lbmRfZGF0ZSLdAwoSRGF0YVRy",
+            "dW5jYXRpb25UeXBlEiQKIERBVEFfVFJVTkNBVElPTl9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASKwonREFUQV9UUlVOQ0FUSU9OX1RZUEVfUlVMRVNfQkFTRURfTU9E",
+            "RUxTEAESMAosREFUQV9UUlVOQ0FUSU9OX1RZUEVfREFUQV9EUklWRU5fQVRU",
+            "UklCVVRJT04QAhIeChpEQVRBX1RSVU5DQVRJT05fVFlQRV9EVjM2MBADEh4K",
+            "GkRBVEFfVFJVTkNBVElPTl9UWVBFX0NNMzYwEAQSNgoyREFUQV9UUlVOQ0FU",
+            "SU9OX1RZUEVfSVRFTV9TQ09QRURfRUNPTU1FUkNFX01FVFJJQ1MQBRI3CjNE",
+            "QVRBX1RSVU5DQVRJT05fVFlQRV9FVkVOVF9TQ09QRURfRUNPTU1FUkNFX01F",
+            "VFJJQ1MQBhIjCh9EQVRBX1RSVU5DQVRJT05fVFlQRV9EQVRFX1JBTkdFEAcS",
+            "IQodREFUQV9UUlVOQ0FUSU9OX1RZUEVfUFJPUEVSVFkQCBIkCiBEQVRBX1RS",
+            "VU5DQVRJT05fVFlQRV9DT05WRVJTSU9OUxAJEiMKH0RBVEFfVFJVTkNBVElP",
+            "Tl9UWVBFX0dPT0dMRV9BRFMQCkIXChVfZGF0YV90cnVuY2F0aW9uX3R5cGVC",
+            "GgoYX2RhdGFfdHJ1bmNhdGlvbl9tZXNzYWdlQhcKFV9kYXRhX3RydW5jYXRp",
+            "b25fZGF0ZUIeChxfc2NoZW1hX3Jlc3RyaWN0aW9uX3Jlc3BvbnNlQhAKDl9j",
+            "dXJyZW5jeV9jb2RlQgwKCl90aW1lX3pvbmVCDwoNX2VtcHR5X3JlYXNvbkIa",
+            "Chhfc3ViamVjdF90b190aHJlc2hvbGRpbmciSwoQU2FtcGxpbmdNZXRhZGF0",
+            "YRIaChJzYW1wbGVzX3JlYWRfY291bnQYASABKAMSGwoTc2FtcGxpbmdfc3Bh",
+            "Y2Vfc2l6ZRgCIAEoAyIfCg9EaW1lbnNpb25IZWFkZXISDAoEbmFtZRgBIAEo",
+            "CSJUCgxNZXRyaWNIZWFkZXISDAoEbmFtZRgBIAEoCRI2CgR0eXBlGAIgASgO",
+            "MiguZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5NZXRyaWNUeXBlInUK",
+            "C1Bpdm90SGVhZGVyElMKF3Bpdm90X2RpbWVuc2lvbl9oZWFkZXJzGAEgAygL",
+            "MjIuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5QaXZvdERpbWVuc2lv",
+            "bkhlYWRlchIRCglyb3dfY291bnQYAiABKAUiXgoUUGl2b3REaW1lbnNpb25I",
+            "ZWFkZXISRgoQZGltZW5zaW9uX3ZhbHVlcxgBIAMoCzIsLmdvb2dsZS5hbmFs",
+            "eXRpY3MuZGF0YS52MWJldGEuRGltZW5zaW9uVmFsdWUijwEKA1JvdxJGChBk",
+            "aW1lbnNpb25fdmFsdWVzGAEgAygLMiwuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYmV0YS5EaW1lbnNpb25WYWx1ZRJACg1tZXRyaWNfdmFsdWVzGAIgAygL",
+            "MikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5NZXRyaWNWYWx1ZSIu",
+            "Cg5EaW1lbnNpb25WYWx1ZRIPCgV2YWx1ZRgBIAEoCUgAQgsKCW9uZV92YWx1",
+            "ZSIrCgtNZXRyaWNWYWx1ZRIPCgV2YWx1ZRgEIAEoCUgAQgsKCW9uZV92YWx1",
+            "ZSJKCgxOdW1lcmljVmFsdWUSFQoLaW50NjRfdmFsdWUYASABKANIABIWCgxk",
+            "b3VibGVfdmFsdWUYAiABKAFIAEILCglvbmVfdmFsdWUi4wMKDVByb3BlcnR5",
+            "UXVvdGESQQoOdG9rZW5zX3Blcl9kYXkYASABKAsyKS5nb29nbGUuYW5hbHl0",
+            "aWNzLmRhdGEudjFiZXRhLlF1b3RhU3RhdHVzEkIKD3Rva2Vuc19wZXJfaG91",
+            "chgCIAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUXVvdGFT",
+            "dGF0dXMSRgoTY29uY3VycmVudF9yZXF1ZXN0cxgDIAEoCzIpLmdvb2dsZS5h",
+            "bmFseXRpY3MuZGF0YS52MWJldGEuUXVvdGFTdGF0dXMSVQoic2VydmVyX2Vy",
+            "cm9yc19wZXJfcHJvamVjdF9wZXJfaG91chgEIAEoCzIpLmdvb2dsZS5hbmFs",
+            "eXRpY3MuZGF0YS52MWJldGEuUXVvdGFTdGF0dXMSXAopcG90ZW50aWFsbHlf",
+            "dGhyZXNob2xkZWRfcmVxdWVzdHNfcGVyX2hvdXIYBSABKAsyKS5nb29nbGUu",
+            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLlF1b3RhU3RhdHVzEk4KG3Rva2Vuc19w",
+            "ZXJfcHJvamVjdF9wZXJfaG91chgGIAEoCzIpLmdvb2dsZS5hbmFseXRpY3Mu",
+            "ZGF0YS52MWJldGEuUXVvdGFTdGF0dXMiVwoLUXVvdGFTdGF0dXMSFQoIY29u",
+            "c3VtZWQYASABKAVIAIgBARIWCglyZW1haW5pbmcYAiABKAVIAYgBAUILCglf",
+            "Y29uc3VtZWRCDAoKX3JlbWFpbmluZyKWAQoRRGltZW5zaW9uTWV0YWRhdGES",
+            "EAoIYXBpX25hbWUYASABKAkSDwoHdWlfbmFtZRgCIAEoCRITCgtkZXNjcmlw",
+            "dGlvbhgDIAEoCRIcChRkZXByZWNhdGVkX2FwaV9uYW1lcxgEIAMoCRIZChFj",
+            "dXN0b21fZGVmaW5pdGlvbhgFIAEoCBIQCghjYXRlZ29yeRgHIAEoCSKSAwoO",
+            "TWV0cmljTWV0YWRhdGESEAoIYXBpX25hbWUYASABKAkSDwoHdWlfbmFtZRgC",
+            "IAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRIcChRkZXByZWNhdGVkX2FwaV9u",
+            "YW1lcxgEIAMoCRI2CgR0eXBlGAUgASgOMiguZ29vZ2xlLmFuYWx5dGljcy5k",
+            "YXRhLnYxYmV0YS5NZXRyaWNUeXBlEhIKCmV4cHJlc3Npb24YBiABKAkSGQoR",
+            "Y3VzdG9tX2RlZmluaXRpb24YByABKAgSUwoPYmxvY2tlZF9yZWFzb25zGAgg",
+            "AygOMjouZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5NZXRyaWNNZXRh",
+            "ZGF0YS5CbG9ja2VkUmVhc29uEhAKCGNhdGVnb3J5GAogASgJIlwKDUJsb2Nr",
+            "ZWRSZWFzb24SHgoaQkxPQ0tFRF9SRUFTT05fVU5TUEVDSUZJRUQQABIWChJO",
+            "T19SRVZFTlVFX01FVFJJQ1MQARITCg9OT19DT1NUX01FVFJJQ1MQAiJMChJD",
+            "b21wYXJpc29uTWV0YWRhdGESEAoIYXBpX25hbWUYASABKAkSDwoHdWlfbmFt",
+            "ZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCSLcAQoWRGltZW5zaW9uQ29t",
+            "cGF0aWJpbGl0eRJQChJkaW1lbnNpb25fbWV0YWRhdGEYASABKAsyLy5nb29n",
+            "bGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkRpbWVuc2lvbk1ldGFkYXRhSACI",
+            "AQESRwoNY29tcGF0aWJpbGl0eRgCIAEoDjIrLmdvb2dsZS5hbmFseXRpY3Mu",
+            "ZGF0YS52MWJldGEuQ29tcGF0aWJpbGl0eUgBiAEBQhUKE19kaW1lbnNpb25f",
+            "bWV0YWRhdGFCEAoOX2NvbXBhdGliaWxpdHki0AEKE01ldHJpY0NvbXBhdGli",
+            "aWxpdHkSSgoPbWV0cmljX21ldGFkYXRhGAEgASgLMiwuZ29vZ2xlLmFuYWx5",
+            "dGljcy5kYXRhLnYxYmV0YS5NZXRyaWNNZXRhZGF0YUgAiAEBEkcKDWNvbXBh",
+            "dGliaWxpdHkYAiABKA4yKy5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
+            "LkNvbXBhdGliaWxpdHlIAYgBAUISChBfbWV0cmljX21ldGFkYXRhQhAKDl9j",
+            "b21wYXRpYmlsaXR5KmcKEU1ldHJpY0FnZ3JlZ2F0aW9uEiIKHk1FVFJJQ19B",
+            "R0dSRUdBVElPTl9VTlNQRUNJRklFRBAAEgkKBVRPVEFMEAESCwoHTUlOSU1V",
+            "TRAFEgsKB01BWElNVU0QBhIJCgVDT1VOVBAEKoECCgpNZXRyaWNUeXBlEhsK",
+            "F01FVFJJQ19UWVBFX1VOU1BFQ0lGSUVEEAASEAoMVFlQRV9JTlRFR0VSEAES",
+            "DgoKVFlQRV9GTE9BVBACEhAKDFRZUEVfU0VDT05EUxAEEhUKEVRZUEVfTUlM",
+            "TElTRUNPTkRTEAUSEAoMVFlQRV9NSU5VVEVTEAYSDgoKVFlQRV9IT1VSUxAH",
+            "EhEKDVRZUEVfU1RBTkRBUkQQCBIRCg1UWVBFX0NVUlJFTkNZEAkSDQoJVFlQ",
+            "RV9GRUVUEAoSDgoKVFlQRV9NSUxFUxALEg8KC1RZUEVfTUVURVJTEAwSEwoP",
+            "VFlQRV9LSUxPTUVURVJTEA0qXwoUUmVzdHJpY3RlZE1ldHJpY1R5cGUSJgoi",
+            "UkVTVFJJQ1RFRF9NRVRSSUNfVFlQRV9VTlNQRUNJRklFRBAAEg0KCUNPU1Rf",
+            "REFUQRABEhAKDFJFVkVOVUVfREFUQRACKlAKDUNvbXBhdGliaWxpdHkSHQoZ",
+            "Q09NUEFUSUJJTElUWV9VTlNQRUNJRklFRBAAEg4KCkNPTVBBVElCTEUQARIQ",
+            "CgxJTkNPTVBBVElCTEUQAkJ5CiBjb20uZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYmV0YUIRUmVwb3J0aW5nQXBpUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hbmFseXRpY3MvZGF0YS92MWJldGE7",
+            "ZGF0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Data.V1Beta.MetricAggregation), typeof(global::Google.Analytics.Data.V1Beta.MetricType), typeof(global::Google.Analytics.Data.V1Beta.RestrictedMetricType), typeof(global::Google.Analytics.Data.V1Beta.Compatibility), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -227,7 +252,8 @@ namespace Google.Analytics.Data.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Cohort), global::Google.Analytics.Data.V1Beta.Cohort.Parser, new[]{ "Name", "Dimension", "DateRange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.CohortsRange), global::Google.Analytics.Data.V1Beta.CohortsRange.Parser, new[]{ "Granularity", "StartOffset", "EndOffset" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Beta.CohortsRange.Types.Granularity) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.CohortReportSettings), global::Google.Analytics.Data.V1Beta.CohortReportSettings.Parser, new[]{ "Accumulate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Parser, new[]{ "DataLossFromOtherRow", "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason", "SubjectToThresholding", "SamplingMetadatas" }, new[]{ "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason", "SubjectToThresholding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Parser, new[]{ "ActiveMetricRestrictions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction.Parser, new[]{ "MetricName", "RestrictedMetricTypes" }, new[]{ "MetricName" }, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Parser, new[]{ "DataLossFromOtherRow", "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason", "SubjectToThresholding", "SamplingMetadatas", "DataTruncationReasons" }, new[]{ "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason", "SubjectToThresholding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Parser, new[]{ "ActiveMetricRestrictions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction.Parser, new[]{ "MetricName", "RestrictedMetricTypes" }, new[]{ "MetricName" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Parser, new[]{ "DataTruncationType", "DataTruncationMessage", "DataTruncationDate", "DataTruncationDateRanges" }, new[]{ "DataTruncationType", "DataTruncationMessage", "DataTruncationDate" }, new[]{ typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Types.DataTruncationType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Types.DataTruncationDateRange), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Types.DataTruncationDateRange.Parser, new[]{ "StartDate", "EndDate" }, new[]{ "StartDate", "EndDate" }, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.SamplingMetadata), global::Google.Analytics.Data.V1Beta.SamplingMetadata.Parser, new[]{ "SamplesReadCount", "SamplingSpaceSize" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionHeader), global::Google.Analytics.Data.V1Beta.DimensionHeader.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricHeader), global::Google.Analytics.Data.V1Beta.MetricHeader.Parser, new[]{ "Name", "Type" }, null, null, null, null),
@@ -8143,6 +8169,7 @@ namespace Google.Analytics.Data.V1Beta {
       emptyReason_ = other.emptyReason_;
       subjectToThresholding_ = other.subjectToThresholding_;
       samplingMetadatas_ = other.samplingMetadatas_.Clone();
+      dataTruncationReasons_ = other.dataTruncationReasons_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8352,6 +8379,20 @@ namespace Google.Analytics.Data.V1Beta {
       get { return samplingMetadatas_; }
     }
 
+    /// <summary>Field number for the "data_truncation_reasons" field.</summary>
+    public const int DataTruncationReasonsFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason> _repeated_dataTruncationReasons_codec
+        = pb::FieldCodec.ForMessage(82, global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason> dataTruncationReasons_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason>();
+    /// <summary>
+    /// If set, indicate there is data truncation in the report.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason> DataTruncationReasons {
+      get { return dataTruncationReasons_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8374,6 +8415,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (EmptyReason != other.EmptyReason) return false;
       if (SubjectToThresholding != other.SubjectToThresholding) return false;
       if(!samplingMetadatas_.Equals(other.samplingMetadatas_)) return false;
+      if(!dataTruncationReasons_.Equals(other.dataTruncationReasons_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8388,6 +8430,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (HasEmptyReason) hash ^= EmptyReason.GetHashCode();
       if (HasSubjectToThresholding) hash ^= SubjectToThresholding.GetHashCode();
       hash ^= samplingMetadatas_.GetHashCode();
+      hash ^= dataTruncationReasons_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8431,6 +8474,7 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteBool(SubjectToThresholding);
       }
       samplingMetadatas_.WriteTo(output, _repeated_samplingMetadatas_codec);
+      dataTruncationReasons_.WriteTo(output, _repeated_dataTruncationReasons_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8466,6 +8510,7 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteBool(SubjectToThresholding);
       }
       samplingMetadatas_.WriteTo(ref output, _repeated_samplingMetadatas_codec);
+      dataTruncationReasons_.WriteTo(ref output, _repeated_dataTruncationReasons_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8495,6 +8540,7 @@ namespace Google.Analytics.Data.V1Beta {
         size += 1 + 1;
       }
       size += samplingMetadatas_.CalculateSize(_repeated_samplingMetadatas_codec);
+      size += dataTruncationReasons_.CalculateSize(_repeated_dataTruncationReasons_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -8529,6 +8575,7 @@ namespace Google.Analytics.Data.V1Beta {
         SubjectToThresholding = other.SubjectToThresholding;
       }
       samplingMetadatas_.Add(other.samplingMetadatas_);
+      dataTruncationReasons_.Add(other.dataTruncationReasons_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8579,6 +8626,10 @@ namespace Google.Analytics.Data.V1Beta {
             samplingMetadatas_.AddEntriesFrom(input, _repeated_samplingMetadatas_codec);
             break;
           }
+          case 82: {
+            dataTruncationReasons_.AddEntriesFrom(input, _repeated_dataTruncationReasons_codec);
+            break;
+          }
         }
       }
     #endif
@@ -8627,6 +8678,10 @@ namespace Google.Analytics.Data.V1Beta {
           }
           case 74: {
             samplingMetadatas_.AddEntriesFrom(ref input, _repeated_samplingMetadatas_codec);
+            break;
+          }
+          case 82: {
+            dataTruncationReasons_.AddEntriesFrom(ref input, _repeated_dataTruncationReasons_codec);
             break;
           }
         }
@@ -9080,6 +9135,701 @@ namespace Google.Analytics.Data.V1Beta {
                   case 18:
                   case 16: {
                     restrictedMetricTypes_.AddEntriesFrom(ref input, _repeated_restrictedMetricTypes_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// Describes a reason for data truncation in the report.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DataTruncationReason : pb::IMessage<DataTruncationReason>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DataTruncationReason> _parser = new pb::MessageParser<DataTruncationReason>(() => new DataTruncationReason());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DataTruncationReason> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Analytics.Data.V1Beta.ResponseMetaData.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataTruncationReason() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataTruncationReason(DataTruncationReason other) : this() {
+          _hasBits0 = other._hasBits0;
+          dataTruncationType_ = other.dataTruncationType_;
+          dataTruncationMessage_ = other.dataTruncationMessage_;
+          dataTruncationDate_ = other.dataTruncationDate_;
+          dataTruncationDateRanges_ = other.dataTruncationDateRanges_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataTruncationReason Clone() {
+          return new DataTruncationReason(this);
+        }
+
+        /// <summary>Field number for the "data_truncation_type" field.</summary>
+        public const int DataTruncationTypeFieldNumber = 1;
+        private readonly static global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Types.DataTruncationType DataTruncationTypeDefaultValue = global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Types.DataTruncationType.Unspecified;
+
+        private global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Types.DataTruncationType dataTruncationType_;
+        /// <summary>
+        /// The type of data truncation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Types.DataTruncationType DataTruncationType {
+          get { if ((_hasBits0 & 1) != 0) { return dataTruncationType_; } else { return DataTruncationTypeDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            dataTruncationType_ = value;
+          }
+        }
+        /// <summary>Gets whether the "data_truncation_type" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDataTruncationType {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "data_truncation_type" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDataTruncationType() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "data_truncation_message" field.</summary>
+        public const int DataTruncationMessageFieldNumber = 2;
+        private readonly static string DataTruncationMessageDefaultValue = "";
+
+        private string dataTruncationMessage_;
+        /// <summary>
+        /// A descriptive message explaining the data truncation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string DataTruncationMessage {
+          get { return dataTruncationMessage_ ?? DataTruncationMessageDefaultValue; }
+          set {
+            dataTruncationMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+        /// <summary>Gets whether the "data_truncation_message" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDataTruncationMessage {
+          get { return dataTruncationMessage_ != null; }
+        }
+        /// <summary>Clears the value of the "data_truncation_message" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDataTruncationMessage() {
+          dataTruncationMessage_ = null;
+        }
+
+        /// <summary>Field number for the "data_truncation_date" field.</summary>
+        public const int DataTruncationDateFieldNumber = 3;
+        private readonly static string DataTruncationDateDefaultValue = "";
+
+        private string dataTruncationDate_;
+        /// <summary>
+        /// The data truncation date in the format YYYY-MM-DD.
+        /// Indicates data before this date is truncated.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string DataTruncationDate {
+          get { return dataTruncationDate_ ?? DataTruncationDateDefaultValue; }
+          set {
+            dataTruncationDate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+        /// <summary>Gets whether the "data_truncation_date" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDataTruncationDate {
+          get { return dataTruncationDate_ != null; }
+        }
+        /// <summary>Clears the value of the "data_truncation_date" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDataTruncationDate() {
+          dataTruncationDate_ = null;
+        }
+
+        /// <summary>Field number for the "data_truncation_date_ranges" field.</summary>
+        public const int DataTruncationDateRangesFieldNumber = 4;
+        private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Types.DataTruncationDateRange> _repeated_dataTruncationDateRanges_codec
+            = pb::FieldCodec.ForMessage(34, global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Types.DataTruncationDateRange.Parser);
+        private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Types.DataTruncationDateRange> dataTruncationDateRanges_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Types.DataTruncationDateRange>();
+        /// <summary>
+        /// The truncated date ranges.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Types.DataTruncationDateRange> DataTruncationDateRanges {
+          get { return dataTruncationDateRanges_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DataTruncationReason);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DataTruncationReason other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (DataTruncationType != other.DataTruncationType) return false;
+          if (DataTruncationMessage != other.DataTruncationMessage) return false;
+          if (DataTruncationDate != other.DataTruncationDate) return false;
+          if(!dataTruncationDateRanges_.Equals(other.dataTruncationDateRanges_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasDataTruncationType) hash ^= DataTruncationType.GetHashCode();
+          if (HasDataTruncationMessage) hash ^= DataTruncationMessage.GetHashCode();
+          if (HasDataTruncationDate) hash ^= DataTruncationDate.GetHashCode();
+          hash ^= dataTruncationDateRanges_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasDataTruncationType) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) DataTruncationType);
+          }
+          if (HasDataTruncationMessage) {
+            output.WriteRawTag(18);
+            output.WriteString(DataTruncationMessage);
+          }
+          if (HasDataTruncationDate) {
+            output.WriteRawTag(26);
+            output.WriteString(DataTruncationDate);
+          }
+          dataTruncationDateRanges_.WriteTo(output, _repeated_dataTruncationDateRanges_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasDataTruncationType) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) DataTruncationType);
+          }
+          if (HasDataTruncationMessage) {
+            output.WriteRawTag(18);
+            output.WriteString(DataTruncationMessage);
+          }
+          if (HasDataTruncationDate) {
+            output.WriteRawTag(26);
+            output.WriteString(DataTruncationDate);
+          }
+          dataTruncationDateRanges_.WriteTo(ref output, _repeated_dataTruncationDateRanges_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasDataTruncationType) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DataTruncationType);
+          }
+          if (HasDataTruncationMessage) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DataTruncationMessage);
+          }
+          if (HasDataTruncationDate) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DataTruncationDate);
+          }
+          size += dataTruncationDateRanges_.CalculateSize(_repeated_dataTruncationDateRanges_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DataTruncationReason other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasDataTruncationType) {
+            DataTruncationType = other.DataTruncationType;
+          }
+          if (other.HasDataTruncationMessage) {
+            DataTruncationMessage = other.DataTruncationMessage;
+          }
+          if (other.HasDataTruncationDate) {
+            DataTruncationDate = other.DataTruncationDate;
+          }
+          dataTruncationDateRanges_.Add(other.dataTruncationDateRanges_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                DataTruncationType = (global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Types.DataTruncationType) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                DataTruncationMessage = input.ReadString();
+                break;
+              }
+              case 26: {
+                DataTruncationDate = input.ReadString();
+                break;
+              }
+              case 34: {
+                dataTruncationDateRanges_.AddEntriesFrom(input, _repeated_dataTruncationDateRanges_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                DataTruncationType = (global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Types.DataTruncationType) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                DataTruncationMessage = input.ReadString();
+                break;
+              }
+              case 26: {
+                DataTruncationDate = input.ReadString();
+                break;
+              }
+              case 34: {
+                dataTruncationDateRanges_.AddEntriesFrom(ref input, _repeated_dataTruncationDateRanges_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the DataTruncationReason message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The type of data truncation.
+          /// </summary>
+          public enum DataTruncationType {
+            /// <summary>
+            /// Unspecified type.
+            /// </summary>
+            [pbr::OriginalName("DATA_TRUNCATION_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Data is truncated in attribution report for rules-based models golden
+            /// date.
+            /// </summary>
+            [pbr::OriginalName("DATA_TRUNCATION_TYPE_RULES_BASED_MODELS")] RulesBasedModels = 1,
+            /// <summary>
+            /// Data is truncated in attribution report for data driven attribution
+            /// golden date.
+            /// </summary>
+            [pbr::OriginalName("DATA_TRUNCATION_TYPE_DATA_DRIVEN_ATTRIBUTION")] DataDrivenAttribution = 2,
+            /// <summary>
+            /// Data is truncated because DV360 policy does not permit data older than
+            /// 2 years from being returned.
+            /// </summary>
+            [pbr::OriginalName("DATA_TRUNCATION_TYPE_DV360")] Dv360 = 3,
+            /// <summary>
+            /// Data is truncated because CM360 policy does not permit data older than
+            /// 2 years from being returned.
+            /// </summary>
+            [pbr::OriginalName("DATA_TRUNCATION_TYPE_CM360")] Cm360 = 4,
+            /// <summary>
+            /// New item-scoped ecommerce metrics only have data after a specific date.
+            /// </summary>
+            [pbr::OriginalName("DATA_TRUNCATION_TYPE_ITEM_SCOPED_ECOMMERCE_METRICS")] ItemScopedEcommerceMetrics = 5,
+            /// <summary>
+            /// New event-scoped ecommerce metrics only have data after a specific
+            /// date.
+            /// </summary>
+            [pbr::OriginalName("DATA_TRUNCATION_TYPE_EVENT_SCOPED_ECOMMERCE_METRICS")] EventScopedEcommerceMetrics = 6,
+            /// <summary>
+            /// Query date range may not be fully served.
+            /// </summary>
+            [pbr::OriginalName("DATA_TRUNCATION_TYPE_DATE_RANGE")] DateRange = 7,
+            /// <summary>
+            /// Data truncated because the query attempts to read event data prior
+            /// to its retention date.
+            /// </summary>
+            [pbr::OriginalName("DATA_TRUNCATION_TYPE_PROPERTY")] Property = 8,
+            /// <summary>
+            /// Data is truncated in conversions report.
+            /// </summary>
+            [pbr::OriginalName("DATA_TRUNCATION_TYPE_CONVERSIONS")] Conversions = 9,
+            /// <summary>
+            /// Data is truncated due to Google Ads 36 month retention policy.
+            /// </summary>
+            [pbr::OriginalName("DATA_TRUNCATION_TYPE_GOOGLE_ADS")] GoogleAds = 10,
+          }
+
+          /// <summary>
+          /// Define the truncated date range from start_date to end_date.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class DataTruncationDateRange : pb::IMessage<DataTruncationDateRange>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<DataTruncationDateRange> _parser = new pb::MessageParser<DataTruncationDateRange>(() => new DataTruncationDateRange());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<DataTruncationDateRange> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.DataTruncationReason.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DataTruncationDateRange() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DataTruncationDateRange(DataTruncationDateRange other) : this() {
+              startDate_ = other.startDate_;
+              endDate_ = other.endDate_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DataTruncationDateRange Clone() {
+              return new DataTruncationDateRange(this);
+            }
+
+            /// <summary>Field number for the "start_date" field.</summary>
+            public const int StartDateFieldNumber = 1;
+            private readonly static string StartDateDefaultValue = "";
+
+            private string startDate_;
+            /// <summary>
+            /// The start date in the format YYYY-MM-DD (inclusive).
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string StartDate {
+              get { return startDate_ ?? StartDateDefaultValue; }
+              set {
+                startDate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+            /// <summary>Gets whether the "start_date" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasStartDate {
+              get { return startDate_ != null; }
+            }
+            /// <summary>Clears the value of the "start_date" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearStartDate() {
+              startDate_ = null;
+            }
+
+            /// <summary>Field number for the "end_date" field.</summary>
+            public const int EndDateFieldNumber = 2;
+            private readonly static string EndDateDefaultValue = "";
+
+            private string endDate_;
+            /// <summary>
+            /// The end date in the format YYYY-MM-DD (inclusive).
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string EndDate {
+              get { return endDate_ ?? EndDateDefaultValue; }
+              set {
+                endDate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+            /// <summary>Gets whether the "end_date" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasEndDate {
+              get { return endDate_ != null; }
+            }
+            /// <summary>Clears the value of the "end_date" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearEndDate() {
+              endDate_ = null;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as DataTruncationDateRange);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(DataTruncationDateRange other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (StartDate != other.StartDate) return false;
+              if (EndDate != other.EndDate) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (HasStartDate) hash ^= StartDate.GetHashCode();
+              if (HasEndDate) hash ^= EndDate.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (HasStartDate) {
+                output.WriteRawTag(10);
+                output.WriteString(StartDate);
+              }
+              if (HasEndDate) {
+                output.WriteRawTag(18);
+                output.WriteString(EndDate);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (HasStartDate) {
+                output.WriteRawTag(10);
+                output.WriteString(StartDate);
+              }
+              if (HasEndDate) {
+                output.WriteRawTag(18);
+                output.WriteString(EndDate);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (HasStartDate) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(StartDate);
+              }
+              if (HasEndDate) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(EndDate);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(DataTruncationDateRange other) {
+              if (other == null) {
+                return;
+              }
+              if (other.HasStartDate) {
+                StartDate = other.StartDate;
+              }
+              if (other.HasEndDate) {
+                EndDate = other.EndDate;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    StartDate = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    EndDate = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    StartDate = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    EndDate = input.ReadString();
                     break;
                   }
                 }

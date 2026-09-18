@@ -2975,6 +2975,812 @@
       ]
     },
     {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateMemoryLayer_sync",
+      "title": "UpdateMemoryLayerRequestObject",
+      "description": "Snippet for UpdateMemoryLayer",
+      "file": "BigtableInstanceAdminClient.UpdateMemoryLayerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMemoryLayer",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateMemoryLayer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.MemoryLayer, Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerMetadata>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateMemoryLayer",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.UpdateMemoryLayer",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateMemoryLayer_async",
+      "title": "UpdateMemoryLayerRequestObjectAsync",
+      "description": "Snippet for UpdateMemoryLayerAsync",
+      "file": "BigtableInstanceAdminClient.UpdateMemoryLayerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMemoryLayerAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateMemoryLayerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.MemoryLayer, Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerMetadata>>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateMemoryLayer",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.UpdateMemoryLayer",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateMemoryLayer_sync_flattened",
+      "title": "UpdateMemoryLayer",
+      "description": "Snippet for UpdateMemoryLayer",
+      "file": "BigtableInstanceAdminClient.UpdateMemoryLayerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMemoryLayer",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateMemoryLayer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.MemoryLayer",
+            "name": "memoryLayer"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.MemoryLayer, Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerMetadata>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateMemoryLayer",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.UpdateMemoryLayer",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateMemoryLayer_async_flattened",
+      "title": "UpdateMemoryLayerAsync",
+      "description": "Snippet for UpdateMemoryLayerAsync",
+      "file": "BigtableInstanceAdminClient.UpdateMemoryLayerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMemoryLayerAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateMemoryLayerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.MemoryLayer",
+            "name": "memoryLayer"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.MemoryLayer, Google.Cloud.Bigtable.Admin.V2.UpdateMemoryLayerMetadata>>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateMemoryLayer",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.UpdateMemoryLayer",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListMemoryLayers_sync",
+      "title": "ListMemoryLayersRequestObject",
+      "description": "Snippet for ListMemoryLayers",
+      "file": "BigtableInstanceAdminClient.ListMemoryLayersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemoryLayers",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListMemoryLayers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse, Google.Cloud.Bigtable.Admin.V2.MemoryLayer>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListMemoryLayers",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListMemoryLayers",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListMemoryLayers_async",
+      "title": "ListMemoryLayersRequestObjectAsync",
+      "description": "Snippet for ListMemoryLayersAsync",
+      "file": "BigtableInstanceAdminClient.ListMemoryLayersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemoryLayersAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListMemoryLayersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse, Google.Cloud.Bigtable.Admin.V2.MemoryLayer>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListMemoryLayers",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListMemoryLayers",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListMemoryLayers_sync_flattened",
+      "title": "ListMemoryLayers",
+      "description": "Snippet for ListMemoryLayers",
+      "file": "BigtableInstanceAdminClient.ListMemoryLayersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemoryLayers",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListMemoryLayers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse, Google.Cloud.Bigtable.Admin.V2.MemoryLayer>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListMemoryLayers",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListMemoryLayers",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListMemoryLayers_async_flattened",
+      "title": "ListMemoryLayersAsync",
+      "description": "Snippet for ListMemoryLayersAsync",
+      "file": "BigtableInstanceAdminClient.ListMemoryLayersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemoryLayersAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListMemoryLayersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse, Google.Cloud.Bigtable.Admin.V2.MemoryLayer>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListMemoryLayers",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListMemoryLayers",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListMemoryLayers_sync_flattened_resourceNames",
+      "title": "ListMemoryLayersResourceNames",
+      "description": "Snippet for ListMemoryLayers",
+      "file": "BigtableInstanceAdminClient.ListMemoryLayersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemoryLayers",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListMemoryLayers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse, Google.Cloud.Bigtable.Admin.V2.MemoryLayer>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListMemoryLayers",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListMemoryLayers",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListMemoryLayers_async_flattened_resourceNames",
+      "title": "ListMemoryLayersResourceNamesAsync",
+      "description": "Snippet for ListMemoryLayersAsync",
+      "file": "BigtableInstanceAdminClient.ListMemoryLayersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemoryLayersAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListMemoryLayersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListMemoryLayersResponse, Google.Cloud.Bigtable.Admin.V2.MemoryLayer>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListMemoryLayers",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListMemoryLayers",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetMemoryLayer_sync",
+      "title": "GetMemoryLayerRequestObject",
+      "description": "Snippet for GetMemoryLayer",
+      "file": "BigtableInstanceAdminClient.GetMemoryLayerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemoryLayer",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetMemoryLayer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetMemoryLayerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.Admin.V2.MemoryLayer",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetMemoryLayer",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetMemoryLayer",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetMemoryLayer_async",
+      "title": "GetMemoryLayerRequestObjectAsync",
+      "description": "Snippet for GetMemoryLayerAsync",
+      "file": "BigtableInstanceAdminClient.GetMemoryLayerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemoryLayerAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetMemoryLayerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetMemoryLayerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.MemoryLayer>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetMemoryLayer",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetMemoryLayer",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetMemoryLayer_sync_flattened",
+      "title": "GetMemoryLayer",
+      "description": "Snippet for GetMemoryLayer",
+      "file": "BigtableInstanceAdminClient.GetMemoryLayerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemoryLayer",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetMemoryLayer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.Admin.V2.MemoryLayer",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetMemoryLayer",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetMemoryLayer",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetMemoryLayer_async_flattened",
+      "title": "GetMemoryLayerAsync",
+      "description": "Snippet for GetMemoryLayerAsync",
+      "file": "BigtableInstanceAdminClient.GetMemoryLayerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemoryLayerAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetMemoryLayerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.MemoryLayer>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetMemoryLayer",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetMemoryLayer",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetMemoryLayer_sync_flattened_resourceNames",
+      "title": "GetMemoryLayerResourceNames",
+      "description": "Snippet for GetMemoryLayer",
+      "file": "BigtableInstanceAdminClient.GetMemoryLayerResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemoryLayer",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetMemoryLayer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.MemoryLayerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.Admin.V2.MemoryLayer",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetMemoryLayer",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetMemoryLayer",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetMemoryLayer_async_flattened_resourceNames",
+      "title": "GetMemoryLayerResourceNamesAsync",
+      "description": "Snippet for GetMemoryLayerAsync",
+      "file": "BigtableInstanceAdminClient.GetMemoryLayerResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemoryLayerAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetMemoryLayerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.MemoryLayerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.MemoryLayer>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetMemoryLayer",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetMemoryLayer",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_CreateAppProfile_sync",
       "title": "CreateAppProfileRequestObject",
       "description": "Snippet for CreateAppProfile",

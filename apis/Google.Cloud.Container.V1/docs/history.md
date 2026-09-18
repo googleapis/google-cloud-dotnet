@@ -1,5 +1,21 @@
 # Version history
 
+## Version 3.40.0, released 2026-08-24
+
+### New features
+
+- Support for rollback-safe upgrade
+- Support for setting VFIO on a node
+- Support for disk I/O scheduler
+- Support for consuming available capacity in reservation affinity
+- Support for setting maintenance policies on node pools
+- Support for kubelet certificate expiry timestamps
+- Support for logging KCP vertical pod autoscaler messages
+
+### Documentation improvements
+
+- Trivial updates
+
 ## Version 3.39.0, released 2026-06-01
 
 ### New features

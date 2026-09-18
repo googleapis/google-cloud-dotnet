@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta11, released 2026-08-31
+
+### New features
+
+- Update v1beta protos for datasources and query data response
+
+### Documentation improvements
+
+- Update comment for total_row_count in ExecutedQueryResult
+
 ## Version 1.0.0-beta10, released 2026-06-08
 
 ### New features

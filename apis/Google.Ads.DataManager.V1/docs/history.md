@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.0.0-beta10, released 2026-09-11
+
+### New features
+
+- Add GOOGLE_AD_MANAGER Destination AccountType
+- Make product_destination_id OPTIONAL in ProductDestination
+- Add ppid and visitor_ppid fields to Event
+- Add REQUEST_TOO_OLD, CONVERSION_ACTION_TOO_RECENTLY_CREATED to ErrorCode
+- Update RetrieveRequestStatus timeout in gRPC service config
+- Add ip_address field to AdEvent
+
+### Documentation improvements
+
+- Remove EEA/UK/CH IP address restriction note from device_info.proto
+- Document partner_link_metadata.implicit_accounts.account_id filter in ListPartnerLinks
+
 ## Version 1.0.0-beta09, released 2026-08-07
 
 ### New features

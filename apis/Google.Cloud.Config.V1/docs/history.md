@@ -1,5 +1,24 @@
 # Version history
 
+## Version 1.13.0, released 2026-08-24
+
+### New features
+
+- Add indicator if early apply results are available
+
+### Documentation improvements
+
+- A comment for field `artifacts_gcs_bucket` in message `.google.cloud.config.v1.Deployment` is changed
+- A comment for field `worker_pool` in message `.google.cloud.config.v1.Deployment` is changed
+- A comment for field `tf_version_constraint` in message `.google.cloud.config.v1.Deployment` is changed
+- A comment for field `repo` in message `.google.cloud.config.v1.GitSource` is changed
+- A comment for field `directory` in message `.google.cloud.config.v1.GitSource` is changed
+- A comment for field `ref` in message `.google.cloud.config.v1.GitSource` is changed
+- A comment for field `deployment` in message `.google.cloud.config.v1.Preview` is changed
+- A comment for field `artifacts_gcs_bucket` in message `.google.cloud.config.v1.Preview` is changed
+- A comment for field `worker_pool` in message `.google.cloud.config.v1.Preview` is changed
+- A comment for field `tf_version_constraint` in message `.google.cloud.config.v1.Preview` is changed
+
 ## Version 1.12.0, released 2026-04-13
 
 ### New features

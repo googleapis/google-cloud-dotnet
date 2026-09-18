@@ -30,4 +30,17 @@ namespace Google.Ads.AdManager.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetDefaultThirdPartyDataDeclarationRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::DefaultThirdPartyDataDeclarationName"/>-typed view over the <see cref="Name"/> resource
+        /// name property.
+        /// </summary>
+        public gaav::DefaultThirdPartyDataDeclarationName DefaultThirdPartyDataDeclarationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::DefaultThirdPartyDataDeclarationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

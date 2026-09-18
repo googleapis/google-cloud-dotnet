@@ -308,6 +308,99 @@
         }
       }
     },
+    "FeedsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FeedsServiceClient",
+          "rpcs": {
+            "CreateFeed": {
+              "methods": [
+                "CreateFeed",
+                "CreateFeedAsync"
+              ]
+            },
+            "DeleteFeed": {
+              "methods": [
+                "DeleteFeed",
+                "DeleteFeedAsync"
+              ]
+            },
+            "DisableFeed": {
+              "methods": [
+                "DisableFeed",
+                "DisableFeedAsync"
+              ]
+            },
+            "EnableFeed": {
+              "methods": [
+                "EnableFeed",
+                "EnableFeedAsync"
+              ]
+            },
+            "FetchServiceAccountForCustomer": {
+              "methods": [
+                "FetchServiceAccountForCustomer",
+                "FetchServiceAccountForCustomerAsync"
+              ]
+            },
+            "GenerateSecret": {
+              "methods": [
+                "GenerateSecret",
+                "GenerateSecretAsync"
+              ]
+            },
+            "GetFeed": {
+              "methods": [
+                "GetFeed",
+                "GetFeedAsync"
+              ]
+            },
+            "GetFeedPack": {
+              "methods": [
+                "GetFeedPack",
+                "GetFeedPackAsync"
+              ]
+            },
+            "ImportPushLogs": {
+              "methods": [
+                "ImportPushLogs",
+                "ImportPushLogsAsync"
+              ]
+            },
+            "ListFeedPacks": {
+              "methods": [
+                "ListFeedPacks",
+                "ListFeedPacksAsync"
+              ]
+            },
+            "ListFeedSourceTypeSchemas": {
+              "methods": [
+                "ListFeedSourceTypeSchemas",
+                "ListFeedSourceTypeSchemasAsync"
+              ]
+            },
+            "ListFeeds": {
+              "methods": [
+                "ListFeeds",
+                "ListFeedsAsync"
+              ]
+            },
+            "ListLogTypeSchemas": {
+              "methods": [
+                "ListLogTypeSchemas",
+                "ListLogTypeSchemasAsync"
+              ]
+            },
+            "UpdateFeed": {
+              "methods": [
+                "UpdateFeed",
+                "UpdateFeedAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "FindingsRefinementService": {
       "clients": {
         "grpc": {

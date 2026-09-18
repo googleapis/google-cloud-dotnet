@@ -36,7 +36,7 @@ namespace Google.Cloud.Dlp.V2 {
             "WV9MT1cQChIXChNTRU5TSVRJVklUWV9VTktOT1dOEAwSGAoUU0VOU0lUSVZJ",
             "VFlfTU9ERVJBVEUQFBIUChBTRU5TSVRJVklUWV9ISUdIEB4iSwoKU3RvcmVk",
             "VHlwZRIMCgRuYW1lGAEgASgJEi8KC2NyZWF0ZV90aW1lGAIgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCK9DQoOQ3VzdG9tSW5mb1R5cGUSMgoJ",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCLpEQoOQ3VzdG9tSW5mb1R5cGUSMgoJ",
             "aW5mb190eXBlGAEgASgLMh8uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkluZm9U",
             "eXBlEjUKCmxpa2VsaWhvb2QYBiABKA4yIS5nb29nbGUucHJpdmFjeS5kbHAu",
             "djIuTGlrZWxpaG9vZBJGCgpkaWN0aW9uYXJ5GAIgASgLMjAuZ29vZ2xlLnBy",
@@ -47,124 +47,138 @@ namespace Google.Cloud.Dlp.V2 {
             "ABI4CgtzdG9yZWRfdHlwZRgFIAEoCzIhLmdvb2dsZS5wcml2YWN5LmRscC52",
             "Mi5TdG9yZWRUeXBlSAASaQodbWV0YWRhdGFfa2V5X3ZhbHVlX2V4cHJlc3Np",
             "b24YCiABKAsyQC5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5mb1R5",
-            "cGUuTWV0YWRhdGFLZXlWYWx1ZUV4cHJlc3Npb25IABJMCg9kZXRlY3Rpb25f",
-            "cnVsZXMYByADKAsyMy5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5m",
-            "b1R5cGUuRGV0ZWN0aW9uUnVsZRJLCg5leGNsdXNpb25fdHlwZRgIIAEoDjIz",
-            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlwZS5FeGNsdXNp",
-            "b25UeXBlEkIKEXNlbnNpdGl2aXR5X3Njb3JlGAkgASgLMicuZ29vZ2xlLnBy",
-            "aXZhY3kuZGxwLnYyLlNlbnNpdGl2aXR5U2NvcmUayAEKCkRpY3Rpb25hcnkS",
-            "TgoJd29yZF9saXN0GAEgASgLMjkuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1",
-            "c3RvbUluZm9UeXBlLkRpY3Rpb25hcnkuV29yZExpc3RIABJFChJjbG91ZF9z",
-            "dG9yYWdlX3BhdGgYAyABKAsyJy5nb29nbGUucHJpdmFjeS5kbHAudjIuQ2xv",
-            "dWRTdG9yYWdlUGF0aEgAGhkKCFdvcmRMaXN0Eg0KBXdvcmRzGAEgAygJQggK",
-            "BnNvdXJjZRovCgVSZWdleBIPCgdwYXR0ZXJuGAEgASgJEhUKDWdyb3VwX2lu",
-            "ZGV4ZXMYAiADKAUaDwoNU3Vycm9nYXRlVHlwZRpEChpNZXRhZGF0YUtleVZh",
-            "bHVlRXhwcmVzc2lvbhIRCglrZXlfcmVnZXgYASABKAkSEwoLdmFsdWVfcmVn",
-            "ZXgYAiABKAkavgQKDURldGVjdGlvblJ1bGUSVwoMaG90d29yZF9ydWxlGAEg",
-            "ASgLMj8uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLkRl",
-            "dGVjdGlvblJ1bGUuSG90d29yZFJ1bGVIABo4CglQcm94aW1pdHkSFQoNd2lu",
-            "ZG93X2JlZm9yZRgBIAEoBRIUCgx3aW5kb3dfYWZ0ZXIYAiABKAUaggEKFExp",
-            "a2VsaWhvb2RBZGp1c3RtZW50Ej0KEGZpeGVkX2xpa2VsaWhvb2QYASABKA4y",
-            "IS5nb29nbGUucHJpdmFjeS5kbHAudjIuTGlrZWxpaG9vZEgAEh0KE3JlbGF0",
-            "aXZlX2xpa2VsaWhvb2QYAiABKAVIAEIMCgphZGp1c3RtZW50GowCCgtIb3R3",
-            "b3JkUnVsZRJCCg1ob3R3b3JkX3JlZ2V4GAEgASgLMisuZ29vZ2xlLnByaXZh",
-            "Y3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLlJlZ2V4ElAKCXByb3hpbWl0eRgC",
-            "IAEoCzI9Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlwZS5E",
-            "ZXRlY3Rpb25SdWxlLlByb3hpbWl0eRJnChVsaWtlbGlob29kX2FkanVzdG1l",
-            "bnQYAyABKAsySC5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5mb1R5",
-            "cGUuRGV0ZWN0aW9uUnVsZS5MaWtlbGlob29kQWRqdXN0bWVudEIGCgR0eXBl",
-            "IksKDUV4Y2x1c2lvblR5cGUSHgoaRVhDTFVTSU9OX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIaChZFWENMVVNJT05fVFlQRV9FWENMVURFEAFCBgoEdHlwZSIXCgdG",
-            "aWVsZElkEgwKBG5hbWUYASABKAkiNwoLUGFydGl0aW9uSWQSEgoKcHJvamVj",
-            "dF9pZBgCIAEoCRIUCgxuYW1lc3BhY2VfaWQYBCABKAkiHgoOS2luZEV4cHJl",
-            "c3Npb24SDAoEbmFtZRgBIAEoCSKBAQoQRGF0YXN0b3JlT3B0aW9ucxI4Cgxw",
-            "YXJ0aXRpb25faWQYASABKAsyIi5nb29nbGUucHJpdmFjeS5kbHAudjIuUGFy",
-            "dGl0aW9uSWQSMwoEa2luZBgCIAEoCzIlLmdvb2dsZS5wcml2YWN5LmRscC52",
-            "Mi5LaW5kRXhwcmVzc2lvbiJdChhDbG91ZFN0b3JhZ2VSZWdleEZpbGVTZXQS",
-            "EwoLYnVja2V0X25hbWUYASABKAkSFQoNaW5jbHVkZV9yZWdleBgCIAMoCRIV",
-            "Cg1leGNsdWRlX3JlZ2V4GAMgAygJIuwDChNDbG91ZFN0b3JhZ2VPcHRpb25z",
-            "EkQKCGZpbGVfc2V0GAEgASgLMjIuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkNs",
-            "b3VkU3RvcmFnZU9wdGlvbnMuRmlsZVNldBIcChRieXRlc19saW1pdF9wZXJf",
-            "ZmlsZRgEIAEoAxIkChxieXRlc19saW1pdF9wZXJfZmlsZV9wZXJjZW50GAgg",
-            "ASgFEjMKCmZpbGVfdHlwZXMYBSADKA4yHy5nb29nbGUucHJpdmFjeS5kbHAu",
-            "djIuRmlsZVR5cGUSTgoNc2FtcGxlX21ldGhvZBgGIAEoDjI3Lmdvb2dsZS5w",
-            "cml2YWN5LmRscC52Mi5DbG91ZFN0b3JhZ2VPcHRpb25zLlNhbXBsZU1ldGhv",
-            "ZBIbChNmaWxlc19saW1pdF9wZXJjZW50GAcgASgFGl8KB0ZpbGVTZXQSCwoD",
-            "dXJsGAEgASgJEkcKDnJlZ2V4X2ZpbGVfc2V0GAIgASgLMi8uZ29vZ2xlLnBy",
-            "aXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFnZVJlZ2V4RmlsZVNldCJICgxTYW1w",
-            "bGVNZXRob2QSHQoZU0FNUExFX01FVEhPRF9VTlNQRUNJRklFRBAAEgcKA1RP",
-            "UBABEhAKDFJBTkRPTV9TVEFSVBACIiIKE0Nsb3VkU3RvcmFnZUZpbGVTZXQS",
-            "CwoDdXJsGAEgASgJIiAKEENsb3VkU3RvcmFnZVBhdGgSDAoEcGF0aBgBIAEo",
-            "CSLEAwoPQmlnUXVlcnlPcHRpb25zEj0KD3RhYmxlX3JlZmVyZW5jZRgBIAEo",
-            "CzIkLmdvb2dsZS5wcml2YWN5LmRscC52Mi5CaWdRdWVyeVRhYmxlEjoKEmlk",
-            "ZW50aWZ5aW5nX2ZpZWxkcxgCIAMoCzIeLmdvb2dsZS5wcml2YWN5LmRscC52",
-            "Mi5GaWVsZElkEhIKCnJvd3NfbGltaXQYAyABKAMSGgoScm93c19saW1pdF9w",
-            "ZXJjZW50GAYgASgFEkoKDXNhbXBsZV9tZXRob2QYBCABKA4yMy5nb29nbGUu",
-            "cHJpdmFjeS5kbHAudjIuQmlnUXVlcnlPcHRpb25zLlNhbXBsZU1ldGhvZBI3",
-            "Cg9leGNsdWRlZF9maWVsZHMYBSADKAsyHi5nb29nbGUucHJpdmFjeS5kbHAu",
-            "djIuRmllbGRJZBI3Cg9pbmNsdWRlZF9maWVsZHMYByADKAsyHi5nb29nbGUu",
-            "cHJpdmFjeS5kbHAudjIuRmllbGRJZCJICgxTYW1wbGVNZXRob2QSHQoZU0FN",
-            "UExFX01FVEhPRF9VTlNQRUNJRklFRBAAEgcKA1RPUBABEhAKDFJBTkRPTV9T",
-            "VEFSVBACItoECg1TdG9yYWdlQ29uZmlnEkQKEWRhdGFzdG9yZV9vcHRpb25z",
-            "GAIgASgLMicuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkRhdGFzdG9yZU9wdGlv",
-            "bnNIABJLChVjbG91ZF9zdG9yYWdlX29wdGlvbnMYAyABKAsyKi5nb29nbGUu",
-            "cHJpdmFjeS5kbHAudjIuQ2xvdWRTdG9yYWdlT3B0aW9uc0gAEkMKEWJpZ19x",
-            "dWVyeV9vcHRpb25zGAQgASgLMiYuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJp",
-            "Z1F1ZXJ5T3B0aW9uc0gAEj4KDmh5YnJpZF9vcHRpb25zGAkgASgLMiQuZ29v",
-            "Z2xlLnByaXZhY3kuZGxwLnYyLkh5YnJpZE9wdGlvbnNIABJMCg90aW1lc3Bh",
-            "bl9jb25maWcYBiABKAsyMy5nb29nbGUucHJpdmFjeS5kbHAudjIuU3RvcmFn",
-            "ZUNvbmZpZy5UaW1lc3BhbkNvbmZpZxraAQoOVGltZXNwYW5Db25maWcSLgoK",
-            "c3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "LAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "EjcKD3RpbWVzdGFtcF9maWVsZBgDIAEoCzIeLmdvb2dsZS5wcml2YWN5LmRs",
-            "cC52Mi5GaWVsZElkEjEKKWVuYWJsZV9hdXRvX3BvcHVsYXRpb25fb2ZfdGlt",
-            "ZXNwYW5fY29uZmlnGAQgASgIQgYKBHR5cGUi9gEKDUh5YnJpZE9wdGlvbnMS",
-            "EwoLZGVzY3JpcHRpb24YASABKAkSIwobcmVxdWlyZWRfZmluZGluZ19sYWJl",
-            "bF9rZXlzGAIgAygJEkAKBmxhYmVscxgDIAMoCzIwLmdvb2dsZS5wcml2YWN5",
-            "LmRscC52Mi5IeWJyaWRPcHRpb25zLkxhYmVsc0VudHJ5EjoKDXRhYmxlX29w",
-            "dGlvbnMYBCABKAsyIy5nb29nbGUucHJpdmFjeS5kbHAudjIuVGFibGVPcHRp",
-            "b25zGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAEiYAoLQmlnUXVlcnlLZXkSPQoPdGFibGVfcmVmZXJlbmNlGAEgASgL",
-            "MiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5VGFibGUSEgoKcm93",
-            "X251bWJlchgCIAEoAyI+CgxEYXRhc3RvcmVLZXkSLgoKZW50aXR5X2tleRgB",
-            "IAEoCzIaLmdvb2dsZS5wcml2YWN5LmRscC52Mi5LZXkiuwEKA0tleRI4Cgxw",
-            "YXJ0aXRpb25faWQYASABKAsyIi5nb29nbGUucHJpdmFjeS5kbHAudjIuUGFy",
-            "dGl0aW9uSWQSNAoEcGF0aBgCIAMoCzImLmdvb2dsZS5wcml2YWN5LmRscC52",
-            "Mi5LZXkuUGF0aEVsZW1lbnQaRAoLUGF0aEVsZW1lbnQSDAoEa2luZBgBIAEo",
-            "CRIMCgJpZBgCIAEoA0gAEg4KBG5hbWUYAyABKAlIAEIJCgdpZF90eXBlIqEB",
-            "CglSZWNvcmRLZXkSPAoNZGF0YXN0b3JlX2tleRgCIAEoCzIjLmdvb2dsZS5w",
-            "cml2YWN5LmRscC52Mi5EYXRhc3RvcmVLZXlIABI7Cg1iaWdfcXVlcnlfa2V5",
-            "GAMgASgLMiIuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5S2V5SAAS",
-            "EQoJaWRfdmFsdWVzGAUgAygJQgYKBHR5cGUiSQoNQmlnUXVlcnlUYWJsZRIS",
-            "Cgpwcm9qZWN0X2lkGAEgASgJEhIKCmRhdGFzZXRfaWQYAiABKAkSEAoIdGFi",
-            "bGVfaWQYAyABKAkiSgoOVGFibGVSZWZlcmVuY2USEgoKZGF0YXNldF9pZBgB",
-            "IAEoCRIQCgh0YWJsZV9pZBgCIAEoCRISCgpwcm9qZWN0X2lkGAMgASgJInMK",
-            "DUJpZ1F1ZXJ5RmllbGQSMwoFdGFibGUYASABKAsyJC5nb29nbGUucHJpdmFj",
-            "eS5kbHAudjIuQmlnUXVlcnlUYWJsZRItCgVmaWVsZBgCIAEoCzIeLmdvb2ds",
-            "ZS5wcml2YWN5LmRscC52Mi5GaWVsZElkIjkKCEVudGl0eUlkEi0KBWZpZWxk",
-            "GAEgASgLMh4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQiSgoMVGFi",
-            "bGVPcHRpb25zEjoKEmlkZW50aWZ5aW5nX2ZpZWxkcxgBIAMoCzIeLmdvb2ds",
-            "ZS5wcml2YWN5LmRscC52Mi5GaWVsZElkKnQKCkxpa2VsaWhvb2QSGgoWTElL",
-            "RUxJSE9PRF9VTlNQRUNJRklFRBAAEhEKDVZFUllfVU5MSUtFTFkQARIMCghV",
-            "TkxJS0VMWRACEgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZEAQSDwoLVkVSWV9M",
-            "SUtFTFkQBSqaAQoIRmlsZVR5cGUSGQoVRklMRV9UWVBFX1VOU1BFQ0lGSUVE",
-            "EAASDwoLQklOQVJZX0ZJTEUQARINCglURVhUX0ZJTEUQAhIJCgVJTUFHRRAD",
-            "EggKBFdPUkQQBRIHCgNQREYQBhIICgRBVlJPEAcSBwoDQ1NWEAgSBwoDVFNW",
-            "EAkSDgoKUE9XRVJQT0lOVBALEgkKBUVYQ0VMEAxCmQEKGWNvbS5nb29nbGUu",
-            "cHJpdmFjeS5kbHAudjJCCkRscFN0b3JhZ2VQAVopY2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9kbHAvYXBpdjIvZGxwcGI7ZGxwcGKqAhNHb29nbGUuQ2xvdWQuRGxw",
-            "LlYyygITR29vZ2xlXENsb3VkXERscFxWMuoCFkdvb2dsZTo6Q2xvdWQ6OkRs",
-            "cDo6VjJiBnByb3RvMw=="));
+            "cGUuTWV0YWRhdGFLZXlWYWx1ZUV4cHJlc3Npb25IABJXChRmaWxlX2xhYmVs",
+            "X2luZm9fdHlwZRgMIAEoCzI3Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0",
+            "b21JbmZvVHlwZS5GaWxlTGFiZWxJbmZvVHlwZUgAEkwKD2RldGVjdGlvbl9y",
+            "dWxlcxgHIAMoCzIzLmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZv",
+            "VHlwZS5EZXRlY3Rpb25SdWxlEksKDmV4Y2x1c2lvbl90eXBlGAggASgOMjMu",
+            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLkV4Y2x1c2lv",
+            "blR5cGUSQgoRc2Vuc2l0aXZpdHlfc2NvcmUYCSABKAsyJy5nb29nbGUucHJp",
+            "dmFjeS5kbHAudjIuU2Vuc2l0aXZpdHlTY29yZRrIAQoKRGljdGlvbmFyeRJO",
+            "Cgl3b3JkX2xpc3QYASABKAsyOS5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3Vz",
+            "dG9tSW5mb1R5cGUuRGljdGlvbmFyeS5Xb3JkTGlzdEgAEkUKEmNsb3VkX3N0",
+            "b3JhZ2VfcGF0aBgDIAEoCzInLmdvb2dsZS5wcml2YWN5LmRscC52Mi5DbG91",
+            "ZFN0b3JhZ2VQYXRoSAAaGQoIV29yZExpc3QSDQoFd29yZHMYASADKAlCCAoG",
+            "c291cmNlGi8KBVJlZ2V4Eg8KB3BhdHRlcm4YASABKAkSFQoNZ3JvdXBfaW5k",
+            "ZXhlcxgCIAMoBRoPCg1TdXJyb2dhdGVUeXBlGkQKGk1ldGFkYXRhS2V5VmFs",
+            "dWVFeHByZXNzaW9uEhEKCWtleV9yZWdleBgBIAEoCRITCgt2YWx1ZV9yZWdl",
+            "eBgCIAEoCRrQAwoRRmlsZUxhYmVsSW5mb1R5cGUSZQoRc2Vuc2l0aXZpdHlf",
+            "bGFiZWwYASABKAsySC5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5m",
+            "b1R5cGUuRmlsZUxhYmVsSW5mb1R5cGUuU2Vuc2l0aXZpdHlMYWJlbEgAEmYK",
+            "Emdvb2dsZV9kcml2ZV9sYWJlbBgCIAEoCzJILmdvb2dsZS5wcml2YWN5LmRs",
+            "cC52Mi5DdXN0b21JbmZvVHlwZS5GaWxlTGFiZWxJbmZvVHlwZS5Hb29nbGVE",
+            "cml2ZUxhYmVsSAAaIAoQU2Vuc2l0aXZpdHlMYWJlbBIMCgRndWlkGAEgASgJ",
+            "GsEBChBHb29nbGVEcml2ZUxhYmVsEhAKCGxhYmVsX2lkGAEgASgJEnIKFWxh",
+            "YmVsX2ZpZWxkc190b19tYXRjaBgCIAMoCzJTLmdvb2dsZS5wcml2YWN5LmRs",
+            "cC52Mi5DdXN0b21JbmZvVHlwZS5GaWxlTGFiZWxJbmZvVHlwZS5Hb29nbGVE",
+            "cml2ZUxhYmVsLkxhYmVsRmllbGQaJwoKTGFiZWxGaWVsZBIKCgJpZBgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoCUIGCgR0eXBlGr4ECg1EZXRlY3Rpb25SdWxlElcK",
+            "DGhvdHdvcmRfcnVsZRgBIAEoCzI/Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5D",
+            "dXN0b21JbmZvVHlwZS5EZXRlY3Rpb25SdWxlLkhvdHdvcmRSdWxlSAAaOAoJ",
+            "UHJveGltaXR5EhUKDXdpbmRvd19iZWZvcmUYASABKAUSFAoMd2luZG93X2Fm",
+            "dGVyGAIgASgFGoIBChRMaWtlbGlob29kQWRqdXN0bWVudBI9ChBmaXhlZF9s",
+            "aWtlbGlob29kGAEgASgOMiEuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkxpa2Vs",
+            "aWhvb2RIABIdChNyZWxhdGl2ZV9saWtlbGlob29kGAIgASgFSABCDAoKYWRq",
+            "dXN0bWVudBqMAgoLSG90d29yZFJ1bGUSQgoNaG90d29yZF9yZWdleBgBIAEo",
+            "CzIrLmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlwZS5SZWdl",
+            "eBJQCglwcm94aW1pdHkYAiABKAsyPS5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "Q3VzdG9tSW5mb1R5cGUuRGV0ZWN0aW9uUnVsZS5Qcm94aW1pdHkSZwoVbGlr",
+            "ZWxpaG9vZF9hZGp1c3RtZW50GAMgASgLMkguZ29vZ2xlLnByaXZhY3kuZGxw",
+            "LnYyLkN1c3RvbUluZm9UeXBlLkRldGVjdGlvblJ1bGUuTGlrZWxpaG9vZEFk",
+            "anVzdG1lbnRCBgoEdHlwZSJLCg1FeGNsdXNpb25UeXBlEh4KGkVYQ0xVU0lP",
+            "Tl9UWVBFX1VOU1BFQ0lGSUVEEAASGgoWRVhDTFVTSU9OX1RZUEVfRVhDTFVE",
+            "RRABQgYKBHR5cGUiFwoHRmllbGRJZBIMCgRuYW1lGAEgASgJIjcKC1BhcnRp",
+            "dGlvbklkEhIKCnByb2plY3RfaWQYAiABKAkSFAoMbmFtZXNwYWNlX2lkGAQg",
+            "ASgJIh4KDktpbmRFeHByZXNzaW9uEgwKBG5hbWUYASABKAkigQEKEERhdGFz",
+            "dG9yZU9wdGlvbnMSOAoMcGFydGl0aW9uX2lkGAEgASgLMiIuZ29vZ2xlLnBy",
+            "aXZhY3kuZGxwLnYyLlBhcnRpdGlvbklkEjMKBGtpbmQYAiABKAsyJS5nb29n",
+            "bGUucHJpdmFjeS5kbHAudjIuS2luZEV4cHJlc3Npb24iXQoYQ2xvdWRTdG9y",
+            "YWdlUmVnZXhGaWxlU2V0EhMKC2J1Y2tldF9uYW1lGAEgASgJEhUKDWluY2x1",
+            "ZGVfcmVnZXgYAiADKAkSFQoNZXhjbHVkZV9yZWdleBgDIAMoCSLsAwoTQ2xv",
+            "dWRTdG9yYWdlT3B0aW9ucxJECghmaWxlX3NldBgBIAEoCzIyLmdvb2dsZS5w",
+            "cml2YWN5LmRscC52Mi5DbG91ZFN0b3JhZ2VPcHRpb25zLkZpbGVTZXQSHAoU",
+            "Ynl0ZXNfbGltaXRfcGVyX2ZpbGUYBCABKAMSJAocYnl0ZXNfbGltaXRfcGVy",
+            "X2ZpbGVfcGVyY2VudBgIIAEoBRIzCgpmaWxlX3R5cGVzGAUgAygOMh8uZ29v",
+            "Z2xlLnByaXZhY3kuZGxwLnYyLkZpbGVUeXBlEk4KDXNhbXBsZV9tZXRob2QY",
+            "BiABKA4yNy5nb29nbGUucHJpdmFjeS5kbHAudjIuQ2xvdWRTdG9yYWdlT3B0",
+            "aW9ucy5TYW1wbGVNZXRob2QSGwoTZmlsZXNfbGltaXRfcGVyY2VudBgHIAEo",
+            "BRpfCgdGaWxlU2V0EgsKA3VybBgBIAEoCRJHCg5yZWdleF9maWxlX3NldBgC",
+            "IAEoCzIvLmdvb2dsZS5wcml2YWN5LmRscC52Mi5DbG91ZFN0b3JhZ2VSZWdl",
+            "eEZpbGVTZXQiSAoMU2FtcGxlTWV0aG9kEh0KGVNBTVBMRV9NRVRIT0RfVU5T",
+            "UEVDSUZJRUQQABIHCgNUT1AQARIQCgxSQU5ET01fU1RBUlQQAiIiChNDbG91",
+            "ZFN0b3JhZ2VGaWxlU2V0EgsKA3VybBgBIAEoCSIgChBDbG91ZFN0b3JhZ2VQ",
+            "YXRoEgwKBHBhdGgYASABKAkixAMKD0JpZ1F1ZXJ5T3B0aW9ucxI9Cg90YWJs",
+            "ZV9yZWZlcmVuY2UYASABKAsyJC5nb29nbGUucHJpdmFjeS5kbHAudjIuQmln",
+            "UXVlcnlUYWJsZRI6ChJpZGVudGlmeWluZ19maWVsZHMYAiADKAsyHi5nb29n",
+            "bGUucHJpdmFjeS5kbHAudjIuRmllbGRJZBISCgpyb3dzX2xpbWl0GAMgASgD",
+            "EhoKEnJvd3NfbGltaXRfcGVyY2VudBgGIAEoBRJKCg1zYW1wbGVfbWV0aG9k",
+            "GAQgASgOMjMuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5T3B0aW9u",
+            "cy5TYW1wbGVNZXRob2QSNwoPZXhjbHVkZWRfZmllbGRzGAUgAygLMh4uZ29v",
+            "Z2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQSNwoPaW5jbHVkZWRfZmllbGRz",
+            "GAcgAygLMh4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQiSAoMU2Ft",
+            "cGxlTWV0aG9kEh0KGVNBTVBMRV9NRVRIT0RfVU5TUEVDSUZJRUQQABIHCgNU",
+            "T1AQARIQCgxSQU5ET01fU1RBUlQQAiLaBAoNU3RvcmFnZUNvbmZpZxJEChFk",
+            "YXRhc3RvcmVfb3B0aW9ucxgCIAEoCzInLmdvb2dsZS5wcml2YWN5LmRscC52",
+            "Mi5EYXRhc3RvcmVPcHRpb25zSAASSwoVY2xvdWRfc3RvcmFnZV9vcHRpb25z",
+            "GAMgASgLMiouZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFnZU9w",
+            "dGlvbnNIABJDChFiaWdfcXVlcnlfb3B0aW9ucxgEIAEoCzImLmdvb2dsZS5w",
+            "cml2YWN5LmRscC52Mi5CaWdRdWVyeU9wdGlvbnNIABI+Cg5oeWJyaWRfb3B0",
+            "aW9ucxgJIAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52Mi5IeWJyaWRPcHRp",
+            "b25zSAASTAoPdGltZXNwYW5fY29uZmlnGAYgASgLMjMuZ29vZ2xlLnByaXZh",
+            "Y3kuZGxwLnYyLlN0b3JhZ2VDb25maWcuVGltZXNwYW5Db25maWca2gEKDlRp",
+            "bWVzcGFuQ29uZmlnEi4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBI3Cg90aW1lc3RhbXBfZmllbGQYAyABKAsyHi5n",
+            "b29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZBIxCillbmFibGVfYXV0b19w",
+            "b3B1bGF0aW9uX29mX3RpbWVzcGFuX2NvbmZpZxgEIAEoCEIGCgR0eXBlIvYB",
+            "Cg1IeWJyaWRPcHRpb25zEhMKC2Rlc2NyaXB0aW9uGAEgASgJEiMKG3JlcXVp",
+            "cmVkX2ZpbmRpbmdfbGFiZWxfa2V5cxgCIAMoCRJACgZsYWJlbHMYAyADKAsy",
+            "MC5nb29nbGUucHJpdmFjeS5kbHAudjIuSHlicmlkT3B0aW9ucy5MYWJlbHNF",
+            "bnRyeRI6Cg10YWJsZV9vcHRpb25zGAQgASgLMiMuZ29vZ2xlLnByaXZhY3ku",
+            "ZGxwLnYyLlRhYmxlT3B0aW9ucxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBImAKC0JpZ1F1ZXJ5S2V5Ej0KD3RhYmxl",
+            "X3JlZmVyZW5jZRgBIAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52Mi5CaWdR",
+            "dWVyeVRhYmxlEhIKCnJvd19udW1iZXIYAiABKAMiPgoMRGF0YXN0b3JlS2V5",
+            "Ei4KCmVudGl0eV9rZXkYASABKAsyGi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "S2V5IrsBCgNLZXkSOAoMcGFydGl0aW9uX2lkGAEgASgLMiIuZ29vZ2xlLnBy",
+            "aXZhY3kuZGxwLnYyLlBhcnRpdGlvbklkEjQKBHBhdGgYAiADKAsyJi5nb29n",
+            "bGUucHJpdmFjeS5kbHAudjIuS2V5LlBhdGhFbGVtZW50GkQKC1BhdGhFbGVt",
+            "ZW50EgwKBGtpbmQYASABKAkSDAoCaWQYAiABKANIABIOCgRuYW1lGAMgASgJ",
+            "SABCCQoHaWRfdHlwZSKhAQoJUmVjb3JkS2V5EjwKDWRhdGFzdG9yZV9rZXkY",
+            "AiABKAsyIy5nb29nbGUucHJpdmFjeS5kbHAudjIuRGF0YXN0b3JlS2V5SAAS",
+            "OwoNYmlnX3F1ZXJ5X2tleRgDIAEoCzIiLmdvb2dsZS5wcml2YWN5LmRscC52",
+            "Mi5CaWdRdWVyeUtleUgAEhEKCWlkX3ZhbHVlcxgFIAMoCUIGCgR0eXBlIkkK",
+            "DUJpZ1F1ZXJ5VGFibGUSEgoKcHJvamVjdF9pZBgBIAEoCRISCgpkYXRhc2V0",
+            "X2lkGAIgASgJEhAKCHRhYmxlX2lkGAMgASgJIkoKDlRhYmxlUmVmZXJlbmNl",
+            "EhIKCmRhdGFzZXRfaWQYASABKAkSEAoIdGFibGVfaWQYAiABKAkSEgoKcHJv",
+            "amVjdF9pZBgDIAEoCSJzCg1CaWdRdWVyeUZpZWxkEjMKBXRhYmxlGAEgASgL",
+            "MiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5VGFibGUSLQoFZmll",
+            "bGQYAiABKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZCI5CghF",
+            "bnRpdHlJZBItCgVmaWVsZBgBIAEoCzIeLmdvb2dsZS5wcml2YWN5LmRscC52",
+            "Mi5GaWVsZElkIkoKDFRhYmxlT3B0aW9ucxI6ChJpZGVudGlmeWluZ19maWVs",
+            "ZHMYASADKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZCp0CgpM",
+            "aWtlbGlob29kEhoKFkxJS0VMSUhPT0RfVU5TUEVDSUZJRUQQABIRCg1WRVJZ",
+            "X1VOTElLRUxZEAESDAoIVU5MSUtFTFkQAhIMCghQT1NTSUJMRRADEgoKBkxJ",
+            "S0VMWRAEEg8KC1ZFUllfTElLRUxZEAUqmgEKCEZpbGVUeXBlEhkKFUZJTEVf",
+            "VFlQRV9VTlNQRUNJRklFRBAAEg8KC0JJTkFSWV9GSUxFEAESDQoJVEVYVF9G",
+            "SUxFEAISCQoFSU1BR0UQAxIICgRXT1JEEAUSBwoDUERGEAYSCAoEQVZSTxAH",
+            "EgcKA0NTVhAIEgcKA1RTVhAJEg4KClBPV0VSUE9JTlQQCxIJCgVFWENFTBAM",
+            "QpkBChljb20uZ29vZ2xlLnByaXZhY3kuZGxwLnYyQgpEbHBTdG9yYWdlUAFa",
+            "KWNsb3VkLmdvb2dsZS5jb20vZ28vZGxwL2FwaXYyL2RscHBiO2RscHBiqgIT",
+            "R29vZ2xlLkNsb3VkLkRscC5WMsoCE0dvb2dsZVxDbG91ZFxEbHBcVjLqAhZH",
+            "b29nbGU6OkNsb3VkOjpEbHA6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.Likelihood), typeof(global::Google.Cloud.Dlp.V2.FileType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoType), global::Google.Cloud.Dlp.V2.InfoType.Parser, new[]{ "Name", "Version", "SensitivityScore" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.SensitivityScore), global::Google.Cloud.Dlp.V2.SensitivityScore.Parser, new[]{ "Score" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.SensitivityScore.Types.SensitivityScoreLevel) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredType), global::Google.Cloud.Dlp.V2.StoredType.Parser, new[]{ "Name", "CreateTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Parser, new[]{ "InfoType", "Likelihood", "Dictionary", "Regex", "SurrogateType", "StoredType", "MetadataKeyValueExpression", "DetectionRules", "ExclusionType", "SensitivityScore" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList", "CloudStoragePath" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Parser, new[]{ "InfoType", "Likelihood", "Dictionary", "Regex", "SurrogateType", "StoredType", "MetadataKeyValueExpression", "FileLabelInfoType", "DetectionRules", "ExclusionType", "SensitivityScore" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList", "CloudStoragePath" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex.Parser, new[]{ "Pattern", "GroupIndexes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.MetadataKeyValueExpression), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.MetadataKeyValueExpression.Parser, new[]{ "KeyRegex", "ValueRegex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Parser, new[]{ "SensitivityLabel", "GoogleDriveLabel" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.SensitivityLabel), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.SensitivityLabel.Parser, new[]{ "Guid" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel.Parser, new[]{ "LabelId", "LabelFieldsToMatch" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel.Types.LabelField), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel.Types.LabelField.Parser, new[]{ "Id", "Value" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Parser, new[]{ "HotwordRule" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity.Parser, new[]{ "WindowBefore", "WindowAfter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.LikelihoodAdjustment), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.LikelihoodAdjustment.Parser, new[]{ "FixedLikelihood", "RelativeLikelihood" }, new[]{ "Adjustment" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.HotwordRule), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.HotwordRule.Parser, new[]{ "HotwordRegex", "Proximity", "LikelihoodAdjustment" }, null, null, null, null)})}),
@@ -209,7 +223,7 @@ namespace Google.Cloud.Dlp.V2 {
   ///
   /// For more information about each likelihood level
   /// and how likelihood works, see [Match
-  /// likelihood](https://cloud.google.com/sensitive-data-protection/docs/likelihood).
+  /// likelihood](https://docs.cloud.google.com/sensitive-data-protection/docs/likelihood).
   /// </summary>
   public enum Likelihood {
     /// <summary>
@@ -381,7 +395,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// Name of the information type. Either a name of your choosing when
     /// creating a CustomInfoType, or one of the names listed
     /// at
-    /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+    /// https://docs.cloud.google.com/sensitive-data-protection/docs/infotypes-reference
     /// when specifying a built-in type.  When sending Cloud DLP results to Data
     /// Catalog, infoType names should conform to the pattern
     /// `[A-Za-z0-9$_-]{1,64}`.
@@ -1186,6 +1200,9 @@ namespace Google.Cloud.Dlp.V2 {
         case TypeOneofCase.MetadataKeyValueExpression:
           MetadataKeyValueExpression = other.MetadataKeyValueExpression.Clone();
           break;
+        case TypeOneofCase.FileLabelInfoType:
+          FileLabelInfoType = other.FileLabelInfoType.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1310,6 +1327,21 @@ namespace Google.Cloud.Dlp.V2 {
       }
     }
 
+    /// <summary>Field number for the "file_label_info_type" field.</summary>
+    public const int FileLabelInfoTypeFieldNumber = 12;
+    /// <summary>
+    /// File label to detect.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType FileLabelInfoType {
+      get { return typeCase_ == TypeOneofCase.FileLabelInfoType ? (global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.FileLabelInfoType;
+      }
+    }
+
     /// <summary>Field number for the "detection_rules" field.</summary>
     public const int DetectionRulesFieldNumber = 7;
     private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule> _repeated_detectionRules_codec
@@ -1371,6 +1403,7 @@ namespace Google.Cloud.Dlp.V2 {
       SurrogateType = 4,
       StoredType = 5,
       MetadataKeyValueExpression = 10,
+      FileLabelInfoType = 12,
     }
     private TypeOneofCase typeCase_ = TypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1408,6 +1441,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (!object.Equals(SurrogateType, other.SurrogateType)) return false;
       if (!object.Equals(StoredType, other.StoredType)) return false;
       if (!object.Equals(MetadataKeyValueExpression, other.MetadataKeyValueExpression)) return false;
+      if (!object.Equals(FileLabelInfoType, other.FileLabelInfoType)) return false;
       if(!detectionRules_.Equals(other.detectionRules_)) return false;
       if (ExclusionType != other.ExclusionType) return false;
       if (!object.Equals(SensitivityScore, other.SensitivityScore)) return false;
@@ -1426,6 +1460,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (typeCase_ == TypeOneofCase.SurrogateType) hash ^= SurrogateType.GetHashCode();
       if (typeCase_ == TypeOneofCase.StoredType) hash ^= StoredType.GetHashCode();
       if (typeCase_ == TypeOneofCase.MetadataKeyValueExpression) hash ^= MetadataKeyValueExpression.GetHashCode();
+      if (typeCase_ == TypeOneofCase.FileLabelInfoType) hash ^= FileLabelInfoType.GetHashCode();
       hash ^= detectionRules_.GetHashCode();
       if (ExclusionType != global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified) hash ^= ExclusionType.GetHashCode();
       if (sensitivityScore_ != null) hash ^= SensitivityScore.GetHashCode();
@@ -1485,6 +1520,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(82);
         output.WriteMessage(MetadataKeyValueExpression);
       }
+      if (typeCase_ == TypeOneofCase.FileLabelInfoType) {
+        output.WriteRawTag(98);
+        output.WriteMessage(FileLabelInfoType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1532,6 +1571,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(82);
         output.WriteMessage(MetadataKeyValueExpression);
       }
+      if (typeCase_ == TypeOneofCase.FileLabelInfoType) {
+        output.WriteRawTag(98);
+        output.WriteMessage(FileLabelInfoType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1562,6 +1605,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (typeCase_ == TypeOneofCase.MetadataKeyValueExpression) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MetadataKeyValueExpression);
+      }
+      if (typeCase_ == TypeOneofCase.FileLabelInfoType) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FileLabelInfoType);
       }
       size += detectionRules_.CalculateSize(_repeated_detectionRules_codec);
       if (ExclusionType != global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified) {
@@ -1631,6 +1677,12 @@ namespace Google.Cloud.Dlp.V2 {
             MetadataKeyValueExpression = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.MetadataKeyValueExpression();
           }
           MetadataKeyValueExpression.MergeFrom(other.MetadataKeyValueExpression);
+          break;
+        case TypeOneofCase.FileLabelInfoType:
+          if (FileLabelInfoType == null) {
+            FileLabelInfoType = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType();
+          }
+          FileLabelInfoType.MergeFrom(other.FileLabelInfoType);
           break;
       }
 
@@ -1724,6 +1776,15 @@ namespace Google.Cloud.Dlp.V2 {
             MetadataKeyValueExpression = subBuilder;
             break;
           }
+          case 98: {
+            global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType subBuilder = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType();
+            if (typeCase_ == TypeOneofCase.FileLabelInfoType) {
+              subBuilder.MergeFrom(FileLabelInfoType);
+            }
+            input.ReadMessage(subBuilder);
+            FileLabelInfoType = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1814,6 +1875,15 @@ namespace Google.Cloud.Dlp.V2 {
             MetadataKeyValueExpression = subBuilder;
             break;
           }
+          case 98: {
+            global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType subBuilder = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType();
+            if (typeCase_ == TypeOneofCase.FileLabelInfoType) {
+              subBuilder.MergeFrom(FileLabelInfoType);
+            }
+            input.ReadMessage(subBuilder);
+            FileLabelInfoType = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -1859,9 +1929,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// Dictionary words containing a large number of characters that are not
       /// letters or digits may result in unexpected findings because such characters
       /// are treated as whitespace. The
-      /// [limits](https://cloud.google.com/sensitive-data-protection/limits) page
-      /// contains details about the size limits of dictionaries. For dictionaries
-      /// that do not fit within these constraints, consider using
+      /// [limits](https://docs.cloud.google.com/sensitive-data-protection/limits)
+      /// page contains details about the size limits of dictionaries. For
+      /// dictionaries that do not fit within these constraints, consider using
       /// `LargeCustomDictionaryConfig` in the `StoredInfoType` API.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -2609,7 +2679,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Message for detecting output from deidentification transformations
       /// such as
-      /// [`CryptoReplaceFfxFpeConfig`](https://cloud.google.com/sensitive-data-protection/docs/reference/rest/v2/organizations.deidentifyTemplates#cryptoreplaceffxfpeconfig).
+      /// [`CryptoReplaceFfxFpeConfig`](https://docs.cloud.google.com/sensitive-data-protection/docs/reference/rest/v2/organizations.deidentifyTemplates#cryptoreplaceffxfpeconfig).
       /// These types of transformations are
       /// those that perform pseudonymization, thereby producing a "surrogate" as
       /// output. This should be used in conjunction with a field on the
@@ -3024,6 +3094,1008 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
+      /// Configuration for a custom infoType that detects file labels.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class FileLabelInfoType : pb::IMessage<FileLabelInfoType>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<FileLabelInfoType> _parser = new pb::MessageParser<FileLabelInfoType>(() => new FileLabelInfoType());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<FileLabelInfoType> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dlp.V2.CustomInfoType.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FileLabelInfoType() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FileLabelInfoType(FileLabelInfoType other) : this() {
+          switch (other.TypeCase) {
+            case TypeOneofCase.SensitivityLabel:
+              SensitivityLabel = other.SensitivityLabel.Clone();
+              break;
+            case TypeOneofCase.GoogleDriveLabel:
+              GoogleDriveLabel = other.GoogleDriveLabel.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FileLabelInfoType Clone() {
+          return new FileLabelInfoType(this);
+        }
+
+        /// <summary>Field number for the "sensitivity_label" field.</summary>
+        public const int SensitivityLabelFieldNumber = 1;
+        /// <summary>
+        /// Sensitivity labels published by Microsoft.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.SensitivityLabel SensitivityLabel {
+          get { return typeCase_ == TypeOneofCase.SensitivityLabel ? (global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.SensitivityLabel) type_ : null; }
+          set {
+            type_ = value;
+            typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.SensitivityLabel;
+          }
+        }
+
+        /// <summary>Field number for the "google_drive_label" field.</summary>
+        public const int GoogleDriveLabelFieldNumber = 2;
+        /// <summary>
+        /// Google Drive labels published by Google.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel GoogleDriveLabel {
+          get { return typeCase_ == TypeOneofCase.GoogleDriveLabel ? (global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel) type_ : null; }
+          set {
+            type_ = value;
+            typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.GoogleDriveLabel;
+          }
+        }
+
+        private object type_;
+        /// <summary>Enum of possible cases for the "type" oneof.</summary>
+        public enum TypeOneofCase {
+          None = 0,
+          SensitivityLabel = 1,
+          GoogleDriveLabel = 2,
+        }
+        private TypeOneofCase typeCase_ = TypeOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TypeOneofCase TypeCase {
+          get { return typeCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearType() {
+          typeCase_ = TypeOneofCase.None;
+          type_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as FileLabelInfoType);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(FileLabelInfoType other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(SensitivityLabel, other.SensitivityLabel)) return false;
+          if (!object.Equals(GoogleDriveLabel, other.GoogleDriveLabel)) return false;
+          if (TypeCase != other.TypeCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (typeCase_ == TypeOneofCase.SensitivityLabel) hash ^= SensitivityLabel.GetHashCode();
+          if (typeCase_ == TypeOneofCase.GoogleDriveLabel) hash ^= GoogleDriveLabel.GetHashCode();
+          hash ^= (int) typeCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (typeCase_ == TypeOneofCase.SensitivityLabel) {
+            output.WriteRawTag(10);
+            output.WriteMessage(SensitivityLabel);
+          }
+          if (typeCase_ == TypeOneofCase.GoogleDriveLabel) {
+            output.WriteRawTag(18);
+            output.WriteMessage(GoogleDriveLabel);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (typeCase_ == TypeOneofCase.SensitivityLabel) {
+            output.WriteRawTag(10);
+            output.WriteMessage(SensitivityLabel);
+          }
+          if (typeCase_ == TypeOneofCase.GoogleDriveLabel) {
+            output.WriteRawTag(18);
+            output.WriteMessage(GoogleDriveLabel);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (typeCase_ == TypeOneofCase.SensitivityLabel) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(SensitivityLabel);
+          }
+          if (typeCase_ == TypeOneofCase.GoogleDriveLabel) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(GoogleDriveLabel);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(FileLabelInfoType other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.TypeCase) {
+            case TypeOneofCase.SensitivityLabel:
+              if (SensitivityLabel == null) {
+                SensitivityLabel = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.SensitivityLabel();
+              }
+              SensitivityLabel.MergeFrom(other.SensitivityLabel);
+              break;
+            case TypeOneofCase.GoogleDriveLabel:
+              if (GoogleDriveLabel == null) {
+                GoogleDriveLabel = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel();
+              }
+              GoogleDriveLabel.MergeFrom(other.GoogleDriveLabel);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.SensitivityLabel subBuilder = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.SensitivityLabel();
+                if (typeCase_ == TypeOneofCase.SensitivityLabel) {
+                  subBuilder.MergeFrom(SensitivityLabel);
+                }
+                input.ReadMessage(subBuilder);
+                SensitivityLabel = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel subBuilder = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel();
+                if (typeCase_ == TypeOneofCase.GoogleDriveLabel) {
+                  subBuilder.MergeFrom(GoogleDriveLabel);
+                }
+                input.ReadMessage(subBuilder);
+                GoogleDriveLabel = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.SensitivityLabel subBuilder = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.SensitivityLabel();
+                if (typeCase_ == TypeOneofCase.SensitivityLabel) {
+                  subBuilder.MergeFrom(SensitivityLabel);
+                }
+                input.ReadMessage(subBuilder);
+                SensitivityLabel = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel subBuilder = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel();
+                if (typeCase_ == TypeOneofCase.GoogleDriveLabel) {
+                  subBuilder.MergeFrom(GoogleDriveLabel);
+                }
+                input.ReadMessage(subBuilder);
+                GoogleDriveLabel = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the FileLabelInfoType message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Sensitivity labels published by Microsoft.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class SensitivityLabel : pb::IMessage<SensitivityLabel>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<SensitivityLabel> _parser = new pb::MessageParser<SensitivityLabel>(() => new SensitivityLabel());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<SensitivityLabel> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SensitivityLabel() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SensitivityLabel(SensitivityLabel other) : this() {
+              guid_ = other.guid_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SensitivityLabel Clone() {
+              return new SensitivityLabel(this);
+            }
+
+            /// <summary>Field number for the "guid" field.</summary>
+            public const int GuidFieldNumber = 1;
+            private string guid_ = "";
+            /// <summary>
+            /// The GUID of the sensitivity label.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Guid {
+              get { return guid_; }
+              set {
+                guid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as SensitivityLabel);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(SensitivityLabel other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Guid != other.Guid) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Guid.Length != 0) hash ^= Guid.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Guid.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Guid);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Guid.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Guid);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Guid.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Guid);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(SensitivityLabel other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Guid.Length != 0) {
+                Guid = other.Guid;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Guid = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Guid = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Google Drive labels published by Google.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class GoogleDriveLabel : pb::IMessage<GoogleDriveLabel>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<GoogleDriveLabel> _parser = new pb::MessageParser<GoogleDriveLabel>(() => new GoogleDriveLabel());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<GoogleDriveLabel> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public GoogleDriveLabel() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public GoogleDriveLabel(GoogleDriveLabel other) : this() {
+              labelId_ = other.labelId_;
+              labelFieldsToMatch_ = other.labelFieldsToMatch_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public GoogleDriveLabel Clone() {
+              return new GoogleDriveLabel(this);
+            }
+
+            /// <summary>Field number for the "label_id" field.</summary>
+            public const int LabelIdFieldNumber = 1;
+            private string labelId_ = "";
+            /// <summary>
+            /// The [label
+            /// ID](https://developers.google.com/workspace/drive/labels/guides/overview)
+            /// of the Google Drive label.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string LabelId {
+              get { return labelId_; }
+              set {
+                labelId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "label_fields_to_match" field.</summary>
+            public const int LabelFieldsToMatchFieldNumber = 2;
+            private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel.Types.LabelField> _repeated_labelFieldsToMatch_codec
+                = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel.Types.LabelField.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel.Types.LabelField> labelFieldsToMatch_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel.Types.LabelField>();
+            /// <summary>
+            /// The field values of the Google Drive label to match.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel.Types.LabelField> LabelFieldsToMatch {
+              get { return labelFieldsToMatch_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as GoogleDriveLabel);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(GoogleDriveLabel other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (LabelId != other.LabelId) return false;
+              if(!labelFieldsToMatch_.Equals(other.labelFieldsToMatch_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (LabelId.Length != 0) hash ^= LabelId.GetHashCode();
+              hash ^= labelFieldsToMatch_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (LabelId.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(LabelId);
+              }
+              labelFieldsToMatch_.WriteTo(output, _repeated_labelFieldsToMatch_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (LabelId.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(LabelId);
+              }
+              labelFieldsToMatch_.WriteTo(ref output, _repeated_labelFieldsToMatch_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (LabelId.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(LabelId);
+              }
+              size += labelFieldsToMatch_.CalculateSize(_repeated_labelFieldsToMatch_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(GoogleDriveLabel other) {
+              if (other == null) {
+                return;
+              }
+              if (other.LabelId.Length != 0) {
+                LabelId = other.LabelId;
+              }
+              labelFieldsToMatch_.Add(other.labelFieldsToMatch_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    LabelId = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    labelFieldsToMatch_.AddEntriesFrom(input, _repeated_labelFieldsToMatch_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    LabelId = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    labelFieldsToMatch_.AddEntriesFrom(ref input, _repeated_labelFieldsToMatch_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the GoogleDriveLabel message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// The field values of the Google Drive label to match.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class LabelField : pb::IMessage<LabelField>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<LabelField> _parser = new pb::MessageParser<LabelField>(() => new LabelField());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<LabelField> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Dlp.V2.CustomInfoType.Types.FileLabelInfoType.Types.GoogleDriveLabel.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public LabelField() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public LabelField(LabelField other) : this() {
+                  id_ = other.id_;
+                  value_ = other.value_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public LabelField Clone() {
+                  return new LabelField(this);
+                }
+
+                /// <summary>Field number for the "id" field.</summary>
+                public const int IdFieldNumber = 1;
+                private string id_ = "";
+                /// <summary>
+                /// The identifier of the Label Field.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string Id {
+                  get { return id_; }
+                  set {
+                    id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                /// <summary>Field number for the "value" field.</summary>
+                public const int ValueFieldNumber = 2;
+                private string value_ = "";
+                /// <summary>
+                /// The value of the Label Field to match.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string Value {
+                  get { return value_; }
+                  set {
+                    value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as LabelField);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(LabelField other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (Id != other.Id) return false;
+                  if (Value != other.Value) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (Id.Length != 0) hash ^= Id.GetHashCode();
+                  if (Value.Length != 0) hash ^= Value.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (Id.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(Id);
+                  }
+                  if (Value.Length != 0) {
+                    output.WriteRawTag(18);
+                    output.WriteString(Value);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Id.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(Id);
+                  }
+                  if (Value.Length != 0) {
+                    output.WriteRawTag(18);
+                    output.WriteString(Value);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (Id.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+                  }
+                  if (Value.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(LabelField other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.Id.Length != 0) {
+                    Id = other.Id;
+                  }
+                  if (other.Value.Length != 0) {
+                    Value = other.Value;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                  if ((tag & 7) == 4) {
+                    // Abort on any end group tag.
+                    return;
+                  }
+                  switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        Id = input.ReadString();
+                        break;
+                      }
+                      case 18: {
+                        Value = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                  if ((tag & 7) == 4) {
+                    // Abort on any end group tag.
+                    return;
+                  }
+                  switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        Id = input.ReadString();
+                        break;
+                      }
+                      case 18: {
+                        Value = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
       /// Deprecated; use `InspectionRuleSet` instead. Rule for modifying a
       /// `CustomInfoType` to alter behavior under certain circumstances, depending
       /// on the specific details of the rule. Not supported for the `surrogate_type`
@@ -3044,7 +4116,7 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Dlp.V2.CustomInfoType.Descriptor.NestedTypes[4]; }
+          get { return global::Google.Cloud.Dlp.V2.CustomInfoType.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3334,7 +4406,7 @@ namespace Google.Cloud.Dlp.V2 {
             /// if you want to modify the likelihood of an entire column of findngs,
             /// set this to 1. For more information, see
             /// [Hotword example: Set the match likelihood of a table column]
-            /// (https://cloud.google.com/sensitive-data-protection/docs/creating-custom-infotypes-likelihood#match-column-values).
+            /// (https://docs.cloud.google.com/sensitive-data-protection/docs/creating-custom-infotypes-likelihood#match-column-values).
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3922,7 +4994,7 @@ namespace Google.Cloud.Dlp.V2 {
             /// For tabular data, if you want to modify the likelihood of an entire
             /// column of findngs, see
             /// [Hotword example: Set the match likelihood of a table column]
-            /// (https://cloud.google.com/sensitive-data-protection/docs/creating-custom-infotypes-likelihood#match-column-values).
+            /// (https://docs.cloud.google.com/sensitive-data-protection/docs/creating-custom-infotypes-likelihood#match-column-values).
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5480,7 +6552,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// This field can't be set if de-identification is requested. For certain file
     /// types, setting this field has no effect. For more information, see [Limits
     /// on bytes scanned per
-    /// file](https://cloud.google.com/sensitive-data-protection/docs/supported-file-types#max-byte-size-per-file).
+    /// file](https://docs.cloud.google.com/sensitive-data-protection/docs/supported-file-types#max-byte-size-per-file).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5502,7 +6574,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// This field can't be set if de-identification is requested. For certain file
     /// types, setting this field has no effect. For more information, see [Limits
     /// on bytes scanned per
-    /// file](https://cloud.google.com/sensitive-data-protection/docs/supported-file-types#max-byte-size-per-file).
+    /// file](https://docs.cloud.google.com/sensitive-data-protection/docs/supported-file-types#max-byte-size-per-file).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6645,7 +7717,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// TimespanConfig.
     ///
     /// Caution: A [known
-    /// issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#bq-sampling)
+    /// issue](https://docs.cloud.google.com/sensitive-data-protection/docs/known-issues#bq-sampling)
     /// is causing the `rowsLimitPercent` field to behave unexpectedly. We
     /// recommend using `rowsLimit` instead.
     /// </summary>
@@ -7571,7 +8643,7 @@ namespace Google.Cloud.Dlp.V2 {
         /// `TIMESTAMP`, and `DATETIME`.
         ///
         /// If your BigQuery table is [partitioned at ingestion
-        /// time](https://cloud.google.com/bigquery/docs/partitioned-tables#ingestion_time),
+        /// time](https://docs.cloud.google.com/bigquery/docs/partitioned-tables#ingestion_time),
         /// you can use any of the following pseudo-columns as your timestamp field.
         /// When used with Cloud DLP, these pseudo-column names are case sensitive.
         ///
@@ -7588,7 +8660,7 @@ namespace Google.Cloud.Dlp.V2 {
         ///
         /// See the
         /// [known
-        /// issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#bq-timespan)
+        /// issue](https://docs.cloud.google.com/sensitive-data-protection/docs/known-issues#bq-timespan)
         /// related to this operation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7618,7 +8690,7 @@ namespace Google.Cloud.Dlp.V2 {
         /// timestamp will result in skipped rows.
         ///
         /// See the [known
-        /// issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#recently-streamed-data)
+        /// issue](https://docs.cloud.google.com/sensitive-data-protection/docs/known-issues#recently-streamed-data)
         /// related to this operation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

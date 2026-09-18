@@ -33,26 +33,26 @@ namespace Google.Ads.DataManager.V1 {
             "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Qcm9kdWN0QWNjb3VudEID4EEB",
             "EkkKEW9wZXJhdGluZ19hY2NvdW50GAQgASgLMikuZ29vZ2xlLmFkcy5kYXRh",
             "bWFuYWdlci52MS5Qcm9kdWN0QWNjb3VudEID4EECEiMKFnByb2R1Y3RfZGVz",
-            "dGluYXRpb25faWQYBSABKAlCA+BBAiKYAwoOUHJvZHVjdEFjY291bnQSNwoH",
+            "dGluYXRpb25faWQYBSABKAlCA+BBASKvAwoOUHJvZHVjdEFjY291bnQSNwoH",
             "cHJvZHVjdBgBIAEoDjIiLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUHJv",
             "ZHVjdEICGAESFwoKYWNjb3VudF9pZBgCIAEoCUID4EECElAKDGFjY291bnRf",
             "dHlwZRgDIAEoDjI1Lmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUHJvZHVj",
-            "dEFjY291bnQuQWNjb3VudFR5cGVCA+BBAiLhAQoLQWNjb3VudFR5cGUSHAoY",
+            "dEFjY291bnQuQWNjb3VudFR5cGVCA+BBAiL4AQoLQWNjb3VudFR5cGUSHAoY",
             "QUNDT1VOVF9UWVBFX1VOU1BFQ0lGSUVEEAASDgoKR09PR0xFX0FEUxABEhkK",
             "FURJU1BMQVlfVklERU9fUEFSVE5FUhACEhwKGERJU1BMQVlfVklERU9fQURW",
             "RVJUSVNFUhADEhAKDERBVEFfUEFSVE5FUhAEEh0KGUdPT0dMRV9BTkFMWVRJ",
             "Q1NfUFJPUEVSVFkQBRIjCh9HT09HTEVfQURfTUFOQUdFUl9BVURJRU5DRV9M",
-            "SU5LEAYSFQoRRkxPT0RMSUdIVF9DT05GSUcQByqBAQoHUHJvZHVjdBIXChNQ",
-            "Uk9EVUNUX1VOU1BFQ0lGSUVEEAASDgoKR09PR0xFX0FEUxABEhkKFURJU1BM",
-            "QVlfVklERU9fUEFSVE5FUhACEhwKGERJU1BMQVlfVklERU9fQURWRVJUSVNF",
-            "UhADEhAKDERBVEFfUEFSVE5FUhAEGgIYAUKkAgodY29tLmdvb2dsZS5hZHMu",
-            "ZGF0YW1hbmFnZXIudjFCEERlc3RpbmF0aW9uUHJvdG9QAVpBY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9kYXRhbWFuYWdlci9hcGl2MS9kYXRhbWFuYWdlcnBiO2Rh",
-            "dGFtYW5hZ2VycGKqAhlHb29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29v",
-            "Z2xlXEFkc1xEYXRhTWFuYWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFu",
-            "YWdlcjo6VjHqQVQKImRhdGFtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0FjY291",
-            "bnQSLmFjY291bnRUeXBlcy97YWNjb3VudF90eXBlfS9hY2NvdW50cy97YWNj",
-            "b3VudH1iBnByb3RvMw=="));
+            "SU5LEAYSFQoRRkxPT0RMSUdIVF9DT05GSUcQBxIVChFHT09HTEVfQURfTUFO",
+            "QUdFUhAIKoEBCgdQcm9kdWN0EhcKE1BST0RVQ1RfVU5TUEVDSUZJRUQQABIO",
+            "CgpHT09HTEVfQURTEAESGQoVRElTUExBWV9WSURFT19QQVJUTkVSEAISHAoY",
+            "RElTUExBWV9WSURFT19BRFZFUlRJU0VSEAMSEAoMREFUQV9QQVJUTkVSEAQa",
+            "AhgBQqQCCh1jb20uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MUIQRGVzdGlu",
+            "YXRpb25Qcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFtYW5hZ2Vy",
+            "L2FwaXYxL2RhdGFtYW5hZ2VycGI7ZGF0YW1hbmFnZXJwYqoCGUdvb2dsZS5B",
+            "ZHMuRGF0YU1hbmFnZXIuVjHKAhlHb29nbGVcQWRzXERhdGFNYW5hZ2VyXFYx",
+            "6gIcR29vZ2xlOjpBZHM6OkRhdGFNYW5hZ2VyOjpWMepBVAoiZGF0YW1hbmFn",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vQWNjb3VudBIuYWNjb3VudFR5cGVzL3thY2Nv",
+            "dW50X3R5cGV9L2FjY291bnRzL3thY2NvdW50fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.Product), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -227,9 +227,12 @@ namespace Google.Ads.DataManager.V1 {
     public const int ProductDestinationIdFieldNumber = 5;
     private string productDestinationId_ = "";
     /// <summary>
-    /// Required. The object within the product account to ingest into. For
+    /// Optional. The object within the product account to ingest into. For
     /// example, a Google Ads audience ID, a Display &amp; Video 360 audience ID or a
     /// Google Ads conversion action ID.
+    ///
+    /// This field is optional for Google Ad Manager event ingestion and User
+    /// ingestion. Required for all other use cases.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -833,6 +836,10 @@ namespace Google.Ads.DataManager.V1 {
         /// Floodlight configuration.
         /// </summary>
         [pbr::OriginalName("FLOODLIGHT_CONFIG")] FloodlightConfig = 7,
+        /// <summary>
+        /// Google Ad Manager.
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_AD_MANAGER")] GoogleAdManager = 8,
       }
 
     }

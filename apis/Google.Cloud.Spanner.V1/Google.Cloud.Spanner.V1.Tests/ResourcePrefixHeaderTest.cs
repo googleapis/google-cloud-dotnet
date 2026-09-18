@@ -15,6 +15,7 @@
 using Grpc.Core;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Spanner.V1.Tests
@@ -204,13 +205,18 @@ namespace Google.Cloud.Spanner.V1.Tests
             public override AsyncServerStreamingCall<TResponse> AsyncServerStreamingCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options, TRequest request) =>
                 throw new NotImplementedException();
 
-            public override AsyncUnaryCall<TResponse> AsyncUnaryCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options, TRequest request) =>
+            public override TResponse BlockingUnaryCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options, TRequest request) =>
                 throw new NotImplementedException();
 
-            public override TResponse BlockingUnaryCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options, TRequest request)
+            public override AsyncUnaryCall<TResponse> AsyncUnaryCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options, TRequest request)
             {
                 Metadata = options.Headers;
-                return (TResponse) Activator.CreateInstance(typeof(TResponse));
+                return new AsyncUnaryCall<TResponse>(
+                    Task.FromResult((TResponse) Activator.CreateInstance(typeof(TResponse))),
+                    Task.FromResult(new Metadata()),
+                    () => Status.DefaultSuccess,
+                    () => new Metadata(),
+                    () => { });
             }
         }
     }

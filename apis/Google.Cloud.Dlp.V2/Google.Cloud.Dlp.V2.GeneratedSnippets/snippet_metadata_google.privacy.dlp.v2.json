@@ -18428,6 +18428,1518 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateContentPolicy_sync",
+      "title": "CreateContentPolicyRequestObject",
+      "description": "Snippet for CreateContentPolicy",
+      "file": "DlpServiceClient.CreateContentPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateContentPolicy",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateContentPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.CreateContentPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ContentPolicy",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateContentPolicy_async",
+      "title": "CreateContentPolicyRequestObjectAsync",
+      "description": "Snippet for CreateContentPolicyAsync",
+      "file": "DlpServiceClient.CreateContentPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateContentPolicyAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateContentPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.CreateContentPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateContentPolicy_sync_flattened",
+      "title": "CreateContentPolicy",
+      "description": "Snippet for CreateContentPolicy",
+      "file": "DlpServiceClient.CreateContentPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateContentPolicy",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateContentPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.ContentPolicy",
+            "name": "contentPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ContentPolicy",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateContentPolicy_async_flattened",
+      "title": "CreateContentPolicyAsync",
+      "description": "Snippet for CreateContentPolicyAsync",
+      "file": "DlpServiceClient.CreateContentPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateContentPolicyAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateContentPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.ContentPolicy",
+            "name": "contentPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateContentPolicy_sync_flattened_resourceNames",
+      "title": "CreateContentPolicyResourceNames",
+      "description": "Snippet for CreateContentPolicy",
+      "file": "DlpServiceClient.CreateContentPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateContentPolicy",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateContentPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.ContentPolicy",
+            "name": "contentPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ContentPolicy",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateContentPolicy_async_flattened_resourceNames",
+      "title": "CreateContentPolicyResourceNamesAsync",
+      "description": "Snippet for CreateContentPolicyAsync",
+      "file": "DlpServiceClient.CreateContentPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateContentPolicyAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateContentPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.ContentPolicy",
+            "name": "contentPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateContentPolicy_sync",
+      "title": "UpdateContentPolicyRequestObject",
+      "description": "Snippet for UpdateContentPolicy",
+      "file": "DlpServiceClient.UpdateContentPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateContentPolicy",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateContentPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.UpdateContentPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ContentPolicy",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateContentPolicy_async",
+      "title": "UpdateContentPolicyRequestObjectAsync",
+      "description": "Snippet for UpdateContentPolicyAsync",
+      "file": "DlpServiceClient.UpdateContentPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateContentPolicyAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateContentPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.UpdateContentPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateContentPolicy_sync_flattened",
+      "title": "UpdateContentPolicy",
+      "description": "Snippet for UpdateContentPolicy",
+      "file": "DlpServiceClient.UpdateContentPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateContentPolicy",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateContentPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.ContentPolicy",
+            "name": "contentPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ContentPolicy",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateContentPolicy_async_flattened",
+      "title": "UpdateContentPolicyAsync",
+      "description": "Snippet for UpdateContentPolicyAsync",
+      "file": "DlpServiceClient.UpdateContentPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateContentPolicyAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateContentPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.ContentPolicy",
+            "name": "contentPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateContentPolicy_sync_flattened_resourceNames",
+      "title": "UpdateContentPolicyResourceNames",
+      "description": "Snippet for UpdateContentPolicy",
+      "file": "DlpServiceClient.UpdateContentPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateContentPolicy",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateContentPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ContentPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.ContentPolicy",
+            "name": "contentPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ContentPolicy",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateContentPolicy_async_flattened_resourceNames",
+      "title": "UpdateContentPolicyResourceNamesAsync",
+      "description": "Snippet for UpdateContentPolicyAsync",
+      "file": "DlpServiceClient.UpdateContentPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateContentPolicyAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateContentPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ContentPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.ContentPolicy",
+            "name": "contentPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetContentPolicy_sync",
+      "title": "GetContentPolicyRequestObject",
+      "description": "Snippet for GetContentPolicy",
+      "file": "DlpServiceClient.GetContentPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetContentPolicy",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetContentPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.GetContentPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ContentPolicy",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetContentPolicy_async",
+      "title": "GetContentPolicyRequestObjectAsync",
+      "description": "Snippet for GetContentPolicyAsync",
+      "file": "DlpServiceClient.GetContentPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetContentPolicyAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetContentPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.GetContentPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetContentPolicy_sync_flattened",
+      "title": "GetContentPolicy",
+      "description": "Snippet for GetContentPolicy",
+      "file": "DlpServiceClient.GetContentPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetContentPolicy",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetContentPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ContentPolicy",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetContentPolicy_async_flattened",
+      "title": "GetContentPolicyAsync",
+      "description": "Snippet for GetContentPolicyAsync",
+      "file": "DlpServiceClient.GetContentPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetContentPolicyAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetContentPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetContentPolicy_sync_flattened_resourceNames",
+      "title": "GetContentPolicyResourceNames",
+      "description": "Snippet for GetContentPolicy",
+      "file": "DlpServiceClient.GetContentPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetContentPolicy",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetContentPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ContentPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ContentPolicy",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetContentPolicy_async_flattened_resourceNames",
+      "title": "GetContentPolicyResourceNamesAsync",
+      "description": "Snippet for GetContentPolicyAsync",
+      "file": "DlpServiceClient.GetContentPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetContentPolicyAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetContentPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ContentPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListContentPolicies_sync",
+      "title": "ListContentPoliciesRequestObject",
+      "description": "Snippet for ListContentPolicies",
+      "file": "DlpServiceClient.ListContentPoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListContentPolicies",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListContentPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ListContentPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListContentPoliciesResponse, Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListContentPolicies",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListContentPolicies",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListContentPolicies_async",
+      "title": "ListContentPoliciesRequestObjectAsync",
+      "description": "Snippet for ListContentPoliciesAsync",
+      "file": "DlpServiceClient.ListContentPoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListContentPoliciesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListContentPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ListContentPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListContentPoliciesResponse, Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListContentPolicies",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListContentPolicies",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListContentPolicies_sync_flattened",
+      "title": "ListContentPolicies",
+      "description": "Snippet for ListContentPolicies",
+      "file": "DlpServiceClient.ListContentPoliciesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListContentPolicies",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListContentPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListContentPoliciesResponse, Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListContentPolicies",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListContentPolicies",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListContentPolicies_async_flattened",
+      "title": "ListContentPoliciesAsync",
+      "description": "Snippet for ListContentPoliciesAsync",
+      "file": "DlpServiceClient.ListContentPoliciesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListContentPoliciesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListContentPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListContentPoliciesResponse, Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListContentPolicies",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListContentPolicies",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListContentPolicies_sync_flattened_resourceNames",
+      "title": "ListContentPoliciesResourceNames",
+      "description": "Snippet for ListContentPolicies",
+      "file": "DlpServiceClient.ListContentPoliciesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListContentPolicies",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListContentPolicies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListContentPoliciesResponse, Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListContentPolicies",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListContentPolicies",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListContentPolicies_async_flattened_resourceNames",
+      "title": "ListContentPoliciesResourceNamesAsync",
+      "description": "Snippet for ListContentPoliciesAsync",
+      "file": "DlpServiceClient.ListContentPoliciesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListContentPoliciesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListContentPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListContentPoliciesResponse, Google.Cloud.Dlp.V2.ContentPolicy>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListContentPolicies",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListContentPolicies",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteContentPolicy_sync",
+      "title": "DeleteContentPolicyRequestObject",
+      "description": "Snippet for DeleteContentPolicy",
+      "file": "DlpServiceClient.DeleteContentPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteContentPolicy",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteContentPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.DeleteContentPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteContentPolicy_async",
+      "title": "DeleteContentPolicyRequestObjectAsync",
+      "description": "Snippet for DeleteContentPolicyAsync",
+      "file": "DlpServiceClient.DeleteContentPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteContentPolicyAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteContentPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.DeleteContentPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteContentPolicy_sync_flattened",
+      "title": "DeleteContentPolicy",
+      "description": "Snippet for DeleteContentPolicy",
+      "file": "DlpServiceClient.DeleteContentPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteContentPolicy",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteContentPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteContentPolicy_async_flattened",
+      "title": "DeleteContentPolicyAsync",
+      "description": "Snippet for DeleteContentPolicyAsync",
+      "file": "DlpServiceClient.DeleteContentPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteContentPolicyAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteContentPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteContentPolicy_sync_flattened_resourceNames",
+      "title": "DeleteContentPolicyResourceNames",
+      "description": "Snippet for DeleteContentPolicy",
+      "file": "DlpServiceClient.DeleteContentPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteContentPolicy",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteContentPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ContentPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteContentPolicy_async_flattened_resourceNames",
+      "title": "DeleteContentPolicyResourceNamesAsync",
+      "description": "Snippet for DeleteContentPolicyAsync",
+      "file": "DlpServiceClient.DeleteContentPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteContentPolicyAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteContentPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ContentPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteContentPolicy",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteContentPolicy",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

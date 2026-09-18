@@ -1,0 +1,1210 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.AppTopology.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.apptopology.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GenerateDiscoveredResourcesTopology_sync",
+      "title": "GenerateDiscoveredResourcesTopologyRequestObject",
+      "description": "Snippet for GenerateDiscoveredResourcesTopology",
+      "file": "AppTopologyClient.GenerateDiscoveredResourcesTopologyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateDiscoveredResourcesTopology",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GenerateDiscoveredResourcesTopology",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppTopology.V1.GenerateDiscoveredResourcesTopologyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppTopology.V1.GenerateDiscoveredResourcesTopologyResponse",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GenerateDiscoveredResourcesTopology",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GenerateDiscoveredResourcesTopology",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GenerateDiscoveredResourcesTopology_async",
+      "title": "GenerateDiscoveredResourcesTopologyRequestObjectAsync",
+      "description": "Snippet for GenerateDiscoveredResourcesTopologyAsync",
+      "file": "AppTopologyClient.GenerateDiscoveredResourcesTopologyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateDiscoveredResourcesTopologyAsync",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GenerateDiscoveredResourcesTopologyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppTopology.V1.GenerateDiscoveredResourcesTopologyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppTopology.V1.GenerateDiscoveredResourcesTopologyResponse>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GenerateDiscoveredResourcesTopology",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GenerateDiscoveredResourcesTopology",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GenerateDiscoveredResourcesTopology_sync_flattened",
+      "title": "GenerateDiscoveredResourcesTopology",
+      "description": "Snippet for GenerateDiscoveredResourcesTopology",
+      "file": "AppTopologyClient.GenerateDiscoveredResourcesTopologySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateDiscoveredResourcesTopology",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GenerateDiscoveredResourcesTopology",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "topologyDomains"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppTopology.V1.GenerateDiscoveredResourcesTopologyResponse",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GenerateDiscoveredResourcesTopology",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GenerateDiscoveredResourcesTopology",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GenerateDiscoveredResourcesTopology_async_flattened",
+      "title": "GenerateDiscoveredResourcesTopologyAsync",
+      "description": "Snippet for GenerateDiscoveredResourcesTopologyAsync",
+      "file": "AppTopologyClient.GenerateDiscoveredResourcesTopologyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateDiscoveredResourcesTopologyAsync",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GenerateDiscoveredResourcesTopologyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "topologyDomains"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppTopology.V1.GenerateDiscoveredResourcesTopologyResponse>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GenerateDiscoveredResourcesTopology",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GenerateDiscoveredResourcesTopology",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GenerateDiscoveredResourcesTopology_sync_flattened_resourceNames",
+      "title": "GenerateDiscoveredResourcesTopologyResourceNames",
+      "description": "Snippet for GenerateDiscoveredResourcesTopology",
+      "file": "AppTopologyClient.GenerateDiscoveredResourcesTopologyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateDiscoveredResourcesTopology",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GenerateDiscoveredResourcesTopology",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppTopology.V1.DiscoveredResourcesTopologyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AppTopology.V1.DomainName",
+            "name": "topologyDomains"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppTopology.V1.GenerateDiscoveredResourcesTopologyResponse",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GenerateDiscoveredResourcesTopology",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GenerateDiscoveredResourcesTopology",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GenerateDiscoveredResourcesTopology_async_flattened_resourceNames",
+      "title": "GenerateDiscoveredResourcesTopologyResourceNamesAsync",
+      "description": "Snippet for GenerateDiscoveredResourcesTopologyAsync",
+      "file": "AppTopologyClient.GenerateDiscoveredResourcesTopologyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateDiscoveredResourcesTopologyAsync",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GenerateDiscoveredResourcesTopologyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppTopology.V1.DiscoveredResourcesTopologyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AppTopology.V1.DomainName",
+            "name": "topologyDomains"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppTopology.V1.GenerateDiscoveredResourcesTopologyResponse>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GenerateDiscoveredResourcesTopology",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GenerateDiscoveredResourcesTopology",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GetSchema_sync",
+      "title": "GetSchemaRequestObject",
+      "description": "Snippet for GetSchema",
+      "file": "AppTopologyClient.GetSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchema",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GetSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppTopology.V1.GetSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppTopology.V1.Schema",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GetSchema",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GetSchema_async",
+      "title": "GetSchemaRequestObjectAsync",
+      "description": "Snippet for GetSchemaAsync",
+      "file": "AppTopologyClient.GetSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaAsync",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GetSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppTopology.V1.GetSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppTopology.V1.Schema>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GetSchema",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GetSchema_sync_flattened",
+      "title": "GetSchema",
+      "description": "Snippet for GetSchema",
+      "file": "AppTopologyClient.GetSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchema",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GetSchema",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppTopology.V1.Schema",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GetSchema",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GetSchema_async_flattened",
+      "title": "GetSchemaAsync",
+      "description": "Snippet for GetSchemaAsync",
+      "file": "AppTopologyClient.GetSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaAsync",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GetSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppTopology.V1.Schema>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GetSchema",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GetSchema_sync_flattened_resourceNames",
+      "title": "GetSchemaResourceNames",
+      "description": "Snippet for GetSchema",
+      "file": "AppTopologyClient.GetSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchema",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GetSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppTopology.V1.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppTopology.V1.Schema",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GetSchema",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GetSchema_async_flattened_resourceNames",
+      "title": "GetSchemaResourceNamesAsync",
+      "description": "Snippet for GetSchemaAsync",
+      "file": "AppTopologyClient.GetSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSchemaAsync",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GetSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppTopology.V1.SchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppTopology.V1.Schema>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GetSchema",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GetSchema",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GetDomain_sync",
+      "title": "GetDomainRequestObject",
+      "description": "Snippet for GetDomain",
+      "file": "AppTopologyClient.GetDomainRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDomain",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GetDomain",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppTopology.V1.GetDomainRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppTopology.V1.Domain",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GetDomain",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GetDomain",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GetDomain_async",
+      "title": "GetDomainRequestObjectAsync",
+      "description": "Snippet for GetDomainAsync",
+      "file": "AppTopologyClient.GetDomainRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDomainAsync",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GetDomainAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppTopology.V1.GetDomainRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppTopology.V1.Domain>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GetDomain",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GetDomain",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GetDomain_sync_flattened",
+      "title": "GetDomain",
+      "description": "Snippet for GetDomain",
+      "file": "AppTopologyClient.GetDomainSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDomain",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GetDomain",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppTopology.V1.Domain",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GetDomain",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GetDomain",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GetDomain_async_flattened",
+      "title": "GetDomainAsync",
+      "description": "Snippet for GetDomainAsync",
+      "file": "AppTopologyClient.GetDomainAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDomainAsync",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GetDomainAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppTopology.V1.Domain>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GetDomain",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GetDomain",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GetDomain_sync_flattened_resourceNames",
+      "title": "GetDomainResourceNames",
+      "description": "Snippet for GetDomain",
+      "file": "AppTopologyClient.GetDomainResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDomain",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GetDomain",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppTopology.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppTopology.V1.Domain",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GetDomain",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GetDomain",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_GetDomain_async_flattened_resourceNames",
+      "title": "GetDomainResourceNamesAsync",
+      "description": "Snippet for GetDomainAsync",
+      "file": "AppTopologyClient.GetDomainResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDomainAsync",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.GetDomainAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppTopology.V1.DomainName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppTopology.V1.Domain>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "GetDomain",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.GetDomain",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_ListDomains_sync",
+      "title": "ListDomainsRequestObject",
+      "description": "Snippet for ListDomains",
+      "file": "AppTopologyClient.ListDomainsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDomains",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.ListDomains",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppTopology.V1.ListDomainsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppTopology.V1.ListDomainsResponse, Google.Cloud.AppTopology.V1.Domain>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "ListDomains",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.ListDomains",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_ListDomains_async",
+      "title": "ListDomainsRequestObjectAsync",
+      "description": "Snippet for ListDomainsAsync",
+      "file": "AppTopologyClient.ListDomainsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDomainsAsync",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.ListDomainsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppTopology.V1.ListDomainsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppTopology.V1.ListDomainsResponse, Google.Cloud.AppTopology.V1.Domain>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "ListDomains",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.ListDomains",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_ListDomains_sync_flattened",
+      "title": "ListDomains",
+      "description": "Snippet for ListDomains",
+      "file": "AppTopologyClient.ListDomainsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDomains",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.ListDomains",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppTopology.V1.ListDomainsResponse, Google.Cloud.AppTopology.V1.Domain>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "ListDomains",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.ListDomains",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_ListDomains_async_flattened",
+      "title": "ListDomainsAsync",
+      "description": "Snippet for ListDomainsAsync",
+      "file": "AppTopologyClient.ListDomainsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDomainsAsync",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.ListDomainsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppTopology.V1.ListDomainsResponse, Google.Cloud.AppTopology.V1.Domain>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "ListDomains",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.ListDomains",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_ListDomains_sync_flattened_resourceNames",
+      "title": "ListDomainsResourceNames",
+      "description": "Snippet for ListDomains",
+      "file": "AppTopologyClient.ListDomainsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDomains",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.ListDomains",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppTopology.V1.ListDomainsResponse, Google.Cloud.AppTopology.V1.Domain>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "ListDomains",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.ListDomains",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apptopology_v1_generated_AppTopology_ListDomains_async_flattened_resourceNames",
+      "title": "ListDomainsResourceNamesAsync",
+      "description": "Snippet for ListDomainsAsync",
+      "file": "AppTopologyClient.ListDomainsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDomainsAsync",
+        "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient.ListDomainsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppTopology.V1.ListDomainsResponse, Google.Cloud.AppTopology.V1.Domain>",
+        "client": {
+          "shortName": "AppTopologyClient",
+          "fullName": "Google.Cloud.AppTopology.V1.AppTopologyClient"
+        },
+        "method": {
+          "shortName": "ListDomains",
+          "fullName": "google.cloud.apptopology.v1.AppTopology.ListDomains",
+          "service": {
+            "shortName": "AppTopology",
+            "fullName": "google.cloud.apptopology.v1.AppTopology"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

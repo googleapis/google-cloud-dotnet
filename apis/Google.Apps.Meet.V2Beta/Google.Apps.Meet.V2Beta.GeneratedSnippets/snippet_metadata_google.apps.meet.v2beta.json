@@ -3425,6 +3425,612 @@
       ]
     },
     {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetSmartNote_sync",
+      "title": "GetSmartNoteRequestObject",
+      "description": "Snippet for GetSmartNote",
+      "file": "ConferenceRecordsServiceClient.GetSmartNoteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSmartNote",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetSmartNote",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetSmartNoteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.SmartNote",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSmartNote",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetSmartNote",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetSmartNote_async",
+      "title": "GetSmartNoteRequestObjectAsync",
+      "description": "Snippet for GetSmartNoteAsync",
+      "file": "ConferenceRecordsServiceClient.GetSmartNoteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSmartNoteAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetSmartNoteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetSmartNoteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.SmartNote>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSmartNote",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetSmartNote",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetSmartNote_sync_flattened",
+      "title": "GetSmartNote",
+      "description": "Snippet for GetSmartNote",
+      "file": "ConferenceRecordsServiceClient.GetSmartNoteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSmartNote",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetSmartNote",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.SmartNote",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSmartNote",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetSmartNote",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetSmartNote_async_flattened",
+      "title": "GetSmartNoteAsync",
+      "description": "Snippet for GetSmartNoteAsync",
+      "file": "ConferenceRecordsServiceClient.GetSmartNoteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSmartNoteAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetSmartNoteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.SmartNote>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSmartNote",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetSmartNote",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetSmartNote_sync_flattened_resourceNames",
+      "title": "GetSmartNoteResourceNames",
+      "description": "Snippet for GetSmartNote",
+      "file": "ConferenceRecordsServiceClient.GetSmartNoteResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSmartNote",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetSmartNote",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SmartNoteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.SmartNote",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSmartNote",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetSmartNote",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetSmartNote_async_flattened_resourceNames",
+      "title": "GetSmartNoteResourceNamesAsync",
+      "description": "Snippet for GetSmartNoteAsync",
+      "file": "ConferenceRecordsServiceClient.GetSmartNoteResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSmartNoteAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetSmartNoteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SmartNoteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.SmartNote>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetSmartNote",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetSmartNote",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListSmartNotes_sync",
+      "title": "ListSmartNotesRequestObject",
+      "description": "Snippet for ListSmartNotes",
+      "file": "ConferenceRecordsServiceClient.ListSmartNotesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSmartNotes",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListSmartNotes",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListSmartNotesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListSmartNotesResponse, Google.Apps.Meet.V2Beta.SmartNote>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSmartNotes",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListSmartNotes",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListSmartNotes_async",
+      "title": "ListSmartNotesRequestObjectAsync",
+      "description": "Snippet for ListSmartNotesAsync",
+      "file": "ConferenceRecordsServiceClient.ListSmartNotesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSmartNotesAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListSmartNotesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListSmartNotesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListSmartNotesResponse, Google.Apps.Meet.V2Beta.SmartNote>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSmartNotes",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListSmartNotes",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListSmartNotes_sync_flattened",
+      "title": "ListSmartNotes",
+      "description": "Snippet for ListSmartNotes",
+      "file": "ConferenceRecordsServiceClient.ListSmartNotesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSmartNotes",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListSmartNotes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListSmartNotesResponse, Google.Apps.Meet.V2Beta.SmartNote>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSmartNotes",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListSmartNotes",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListSmartNotes_async_flattened",
+      "title": "ListSmartNotesAsync",
+      "description": "Snippet for ListSmartNotesAsync",
+      "file": "ConferenceRecordsServiceClient.ListSmartNotesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSmartNotesAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListSmartNotesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListSmartNotesResponse, Google.Apps.Meet.V2Beta.SmartNote>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSmartNotes",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListSmartNotes",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListSmartNotes_sync_flattened_resourceNames",
+      "title": "ListSmartNotesResourceNames",
+      "description": "Snippet for ListSmartNotes",
+      "file": "ConferenceRecordsServiceClient.ListSmartNotesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSmartNotes",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListSmartNotes",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ConferenceRecordName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListSmartNotesResponse, Google.Apps.Meet.V2Beta.SmartNote>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSmartNotes",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListSmartNotes",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListSmartNotes_async_flattened_resourceNames",
+      "title": "ListSmartNotesResourceNamesAsync",
+      "description": "Snippet for ListSmartNotesAsync",
+      "file": "ConferenceRecordsServiceClient.ListSmartNotesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSmartNotesAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListSmartNotesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ConferenceRecordName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListSmartNotesResponse, Google.Apps.Meet.V2Beta.SmartNote>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListSmartNotes",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListSmartNotes",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "meet_v2beta_generated_SpacesService_CreateSpace_sync",
       "title": "CreateSpaceRequestObject",
       "description": "Snippet for CreateSpace",
@@ -4141,12 +4747,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 43,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -4190,12 +4796,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -5863,6 +6469,303 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_UpdateMember_sync",
+      "title": "UpdateMemberRequestObject",
+      "description": "Snippet for UpdateMember",
+      "file": "SpacesServiceClient.UpdateMemberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.UpdateMember",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.UpdateMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Member",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.UpdateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_UpdateMember_async",
+      "title": "UpdateMemberRequestObjectAsync",
+      "description": "Snippet for UpdateMemberAsync",
+      "file": "SpacesServiceClient.UpdateMemberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.UpdateMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.UpdateMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.UpdateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_UpdateMember_sync_flattened",
+      "title": "UpdateMember",
+      "description": "Snippet for UpdateMember",
+      "file": "SpacesServiceClient.UpdateMemberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.UpdateMember",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.Member",
+            "name": "member"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Member",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.UpdateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_UpdateMember_async_flattened",
+      "title": "UpdateMemberAsync",
+      "description": "Snippet for UpdateMemberAsync",
+      "file": "SpacesServiceClient.UpdateMemberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.UpdateMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.Member",
+            "name": "member"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.UpdateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_BatchUpdateMembers_sync",
+      "title": "BatchUpdateMembersRequestObject",
+      "description": "Snippet for BatchUpdateMembers",
+      "file": "SpacesServiceClient.BatchUpdateMembersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateMembers",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.BatchUpdateMembers",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.BatchUpdateMembersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.BatchUpdateMembersResponse",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateMembers",
+          "fullName": "google.apps.meet.v2beta.SpacesService.BatchUpdateMembers",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_BatchUpdateMembers_async",
+      "title": "BatchUpdateMembersRequestObjectAsync",
+      "description": "Snippet for BatchUpdateMembersAsync",
+      "file": "SpacesServiceClient.BatchUpdateMembersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateMembersAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.BatchUpdateMembersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.BatchUpdateMembersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.BatchUpdateMembersResponse>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateMembers",
+          "fullName": "google.apps.meet.v2beta.SpacesService.BatchUpdateMembers",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 49,
           "type": "SHORT"
         }
       ]

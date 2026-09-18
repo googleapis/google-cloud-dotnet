@@ -40,7 +40,7 @@ namespace Google.Maps.Routing.V2 {
             "L3VuaXRzLnByb3RvGiVnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3dheXBvaW50",
             "LnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2ds",
             "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVz",
-            "LnByb3RvGiBnb29nbGUvdHlwZS9sb2NhbGl6ZWRfdGV4dC5wcm90byLnCwoU",
+            "LnByb3RvGiBnb29nbGUvdHlwZS9sb2NhbGl6ZWRfdGV4dC5wcm90byK+DAoU",
             "Q29tcHV0ZVJvdXRlc1JlcXVlc3QSNQoGb3JpZ2luGAEgASgLMiAuZ29vZ2xl",
             "Lm1hcHMucm91dGluZy52Mi5XYXlwb2ludEID4EECEjoKC2Rlc3RpbmF0aW9u",
             "GAIgASgLMiAuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5XYXlwb2ludEID4EEC",
@@ -69,73 +69,75 @@ namespace Google.Maps.Routing.V2 {
             "aXRfcHJlZmVyZW5jZXMYFCABKAsyKi5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
             "LlRyYW5zaXRQcmVmZXJlbmNlc0ID4EEBIlsKDlJlZmVyZW5jZVJvdXRlEh8K",
             "G1JFRkVSRU5DRV9ST1VURV9VTlNQRUNJRklFRBAAEhIKDkZVRUxfRUZGSUNJ",
-            "RU5UEAESFAoQU0hPUlRFUl9ESVNUQU5DRRACItsBChBFeHRyYUNvbXB1dGF0",
+            "RU5UEAESFAoQU0hPUlRFUl9ESVNUQU5DRRACIrICChBFeHRyYUNvbXB1dGF0",
             "aW9uEiEKHUVYVFJBX0NPTVBVVEFUSU9OX1VOU1BFQ0lGSUVEEAASCQoFVE9M",
             "TFMQARIUChBGVUVMX0NPTlNVTVBUSU9OEAISFwoTVFJBRkZJQ19PTl9QT0xZ",
             "TElORRADEioKJkhUTUxfRk9STUFUVEVEX05BVklHQVRJT05fSU5TVFJVQ1RJ",
             "T05TEAQSHAoYRkxZT1ZFUl9JTkZPX09OX1BPTFlMSU5FEAcSIAocTkFSUk9X",
-            "X1JPQURfSU5GT19PTl9QT0xZTElORRAIIsgBChVDb21wdXRlUm91dGVzUmVz",
-            "cG9uc2USLQoGcm91dGVzGAEgAygLMh0uZ29vZ2xlLm1hcHMucm91dGluZy52",
-            "Mi5Sb3V0ZRI7Cg1mYWxsYmFja19pbmZvGAIgASgLMiQuZ29vZ2xlLm1hcHMu",
-            "cm91dGluZy52Mi5GYWxsYmFja0luZm8SQwoRZ2VvY29kaW5nX3Jlc3VsdHMY",
-            "AyABKAsyKC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkdlb2NvZGluZ1Jlc3Vs",
-            "dHMixgYKGUNvbXB1dGVSb3V0ZU1hdHJpeFJlcXVlc3QSPwoHb3JpZ2lucxgB",
-            "IAMoCzIpLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVNYXRyaXhPcmln",
-            "aW5CA+BBAhJJCgxkZXN0aW5hdGlvbnMYAiADKAsyLi5nb29nbGUubWFwcy5y",
-            "b3V0aW5nLnYyLlJvdXRlTWF0cml4RGVzdGluYXRpb25CA+BBAhJBCgt0cmF2",
-            "ZWxfbW9kZRgDIAEoDjInLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVU",
-            "cmF2ZWxNb2RlQgPgQQESSgoScm91dGluZ19wcmVmZXJlbmNlGAQgASgOMiku",
-            "Z29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0aW5nUHJlZmVyZW5jZUID4EEB",
-            "EjcKDmRlcGFydHVyZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEBEjUKDGFycml2YWxfdGltZRgLIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBARIaCg1sYW5ndWFnZV9jb2RlGAYgASgJ",
-            "QgPgQQESGAoLcmVnaW9uX2NvZGUYCSABKAlCA+BBARIxCgV1bml0cxgHIAEo",
-            "DjIdLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuVW5pdHNCA+BBARJjChJleHRy",
-            "YV9jb21wdXRhdGlvbnMYCCADKA4yQi5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
-            "LkNvbXB1dGVSb3V0ZU1hdHJpeFJlcXVlc3QuRXh0cmFDb21wdXRhdGlvbkID",
-            "4EEBEkAKDXRyYWZmaWNfbW9kZWwYCiABKA4yJC5nb29nbGUubWFwcy5yb3V0",
-            "aW5nLnYyLlRyYWZmaWNNb2RlbEID4EEBEkwKE3RyYW5zaXRfcHJlZmVyZW5j",
-            "ZXMYDCABKAsyKi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlRyYW5zaXRQcmVm",
-            "ZXJlbmNlc0ID4EEBIkAKEEV4dHJhQ29tcHV0YXRpb24SIQodRVhUUkFfQ09N",
-            "UFVUQVRJT05fVU5TUEVDSUZJRUQQABIJCgVUT0xMUxABIpIBChFSb3V0ZU1h",
-            "dHJpeE9yaWdpbhI3Cgh3YXlwb2ludBgBIAEoCzIgLmdvb2dsZS5tYXBzLnJv",
-            "dXRpbmcudjIuV2F5cG9pbnRCA+BBAhJECg9yb3V0ZV9tb2RpZmllcnMYAiAB",
-            "KAsyJi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTW9kaWZpZXJzQgPg",
-            "QQEiUQoWUm91dGVNYXRyaXhEZXN0aW5hdGlvbhI3Cgh3YXlwb2ludBgBIAEo",
-            "CzIgLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuV2F5cG9pbnRCA+BBAiKMBgoS",
-            "Um91dGVNYXRyaXhFbGVtZW50EhkKDG9yaWdpbl9pbmRleBgBIAEoBUgAiAEB",
-            "Eh4KEWRlc3RpbmF0aW9uX2luZGV4GAIgASgFSAGIAQESIgoGc3RhdHVzGAMg",
-            "ASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSRgoJY29uZGl0aW9uGAkgASgOMjMu",
-            "Z29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1hdHJpeEVsZW1lbnRDb25k",
-            "aXRpb24SFwoPZGlzdGFuY2VfbWV0ZXJzGAQgASgFEisKCGR1cmF0aW9uGAUg",
-            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjIKD3N0YXRpY19kdXJh",
-            "dGlvbhgGIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJECg90cmF2",
-            "ZWxfYWR2aXNvcnkYByABKAsyKy5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJv",
-            "dXRlVHJhdmVsQWR2aXNvcnkSOwoNZmFsbGJhY2tfaW5mbxgIIAEoCzIkLmdv",
-            "b2dsZS5tYXBzLnJvdXRpbmcudjIuRmFsbGJhY2tJbmZvElQKEGxvY2FsaXpl",
-            "ZF92YWx1ZXMYCiABKAsyOi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRl",
-            "TWF0cml4RWxlbWVudC5Mb2NhbGl6ZWRWYWx1ZXMa1AEKD0xvY2FsaXplZFZh",
-            "bHVlcxIsCghkaXN0YW5jZRgBIAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXpl",
-            "ZFRleHQSLAoIZHVyYXRpb24YAiABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6",
-            "ZWRUZXh0EjMKD3N0YXRpY19kdXJhdGlvbhgDIAEoCzIaLmdvb2dsZS50eXBl",
-            "LkxvY2FsaXplZFRleHQSMAoMdHJhbnNpdF9mYXJlGAQgASgLMhouZ29vZ2xl",
-            "LnR5cGUuTG9jYWxpemVkVGV4dEIPCg1fb3JpZ2luX2luZGV4QhQKEl9kZXN0",
-            "aW5hdGlvbl9pbmRleCp0ChtSb3V0ZU1hdHJpeEVsZW1lbnRDb25kaXRpb24S",
-            "LgoqUk9VVEVfTUFUUklYX0VMRU1FTlRfQ09ORElUSU9OX1VOU1BFQ0lGSUVE",
-            "EAASEAoMUk9VVEVfRVhJU1RTEAESEwoPUk9VVEVfTk9UX0ZPVU5EEAIy5AIK",
-            "BlJvdXRlcxKVAQoNQ29tcHV0ZVJvdXRlcxIsLmdvb2dsZS5tYXBzLnJvdXRp",
-            "bmcudjIuQ29tcHV0ZVJvdXRlc1JlcXVlc3QaLS5nb29nbGUubWFwcy5yb3V0",
-            "aW5nLnYyLkNvbXB1dGVSb3V0ZXNSZXNwb25zZSIngtPkkwIhIhwvZGlyZWN0",
-            "aW9ucy92Mjpjb21wdXRlUm91dGVzOgEqEqcBChJDb21wdXRlUm91dGVNYXRy",
-            "aXgSMS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkNvbXB1dGVSb3V0ZU1hdHJp",
-            "eFJlcXVlc3QaKi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTWF0cml4",
-            "RWxlbWVudCIwgtPkkwIqIiUvZGlzdGFuY2VNYXRyaXgvdjI6Y29tcHV0ZVJv",
-            "dXRlTWF0cml4OgEqMAEaGMpBFXJvdXRlcy5nb29nbGVhcGlzLmNvbULEAQoa",
-            "Y29tLmdvb2dsZS5tYXBzLnJvdXRpbmcudjJCElJvdXRlc1NlcnZpY2VQcm90",
-            "b1ABWjpjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcm91dGluZy9hcGl2Mi9y",
-            "b3V0aW5ncGI7cm91dGluZ3BiogIFR01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0",
-            "aW5nLlYyygIWR29vZ2xlXE1hcHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6TWFw",
-            "czo6Um91dGluZzo6VjJiBnByb3RvMw=="));
+            "X1JPQURfSU5GT19PTl9QT0xZTElORRAIEhsKF1RVTk5FTF9JTkZPX09OX1BP",
+            "TFlMSU5FEAkSGwoXQlJJREdFX0lORk9fT05fUE9MWUxJTkUQChIbChdTS1lX",
+            "QVlfSU5GT19PTl9QT0xZTElORRALIsgBChVDb21wdXRlUm91dGVzUmVzcG9u",
+            "c2USLQoGcm91dGVzGAEgAygLMh0uZ29vZ2xlLm1hcHMucm91dGluZy52Mi5S",
+            "b3V0ZRI7Cg1mYWxsYmFja19pbmZvGAIgASgLMiQuZ29vZ2xlLm1hcHMucm91",
+            "dGluZy52Mi5GYWxsYmFja0luZm8SQwoRZ2VvY29kaW5nX3Jlc3VsdHMYAyAB",
+            "KAsyKC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkdlb2NvZGluZ1Jlc3VsdHMi",
+            "xgYKGUNvbXB1dGVSb3V0ZU1hdHJpeFJlcXVlc3QSPwoHb3JpZ2lucxgBIAMo",
+            "CzIpLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVNYXRyaXhPcmlnaW5C",
+            "A+BBAhJJCgxkZXN0aW5hdGlvbnMYAiADKAsyLi5nb29nbGUubWFwcy5yb3V0",
+            "aW5nLnYyLlJvdXRlTWF0cml4RGVzdGluYXRpb25CA+BBAhJBCgt0cmF2ZWxf",
+            "bW9kZRgDIAEoDjInLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVUcmF2",
+            "ZWxNb2RlQgPgQQESSgoScm91dGluZ19wcmVmZXJlbmNlGAQgASgOMikuZ29v",
+            "Z2xlLm1hcHMucm91dGluZy52Mi5Sb3V0aW5nUHJlZmVyZW5jZUID4EEBEjcK",
+            "DmRlcGFydHVyZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEBEjUKDGFycml2YWxfdGltZRgLIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBARIaCg1sYW5ndWFnZV9jb2RlGAYgASgJQgPg",
+            "QQESGAoLcmVnaW9uX2NvZGUYCSABKAlCA+BBARIxCgV1bml0cxgHIAEoDjId",
+            "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuVW5pdHNCA+BBARJjChJleHRyYV9j",
+            "b21wdXRhdGlvbnMYCCADKA4yQi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkNv",
+            "bXB1dGVSb3V0ZU1hdHJpeFJlcXVlc3QuRXh0cmFDb21wdXRhdGlvbkID4EEB",
+            "EkAKDXRyYWZmaWNfbW9kZWwYCiABKA4yJC5nb29nbGUubWFwcy5yb3V0aW5n",
+            "LnYyLlRyYWZmaWNNb2RlbEID4EEBEkwKE3RyYW5zaXRfcHJlZmVyZW5jZXMY",
+            "DCABKAsyKi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlRyYW5zaXRQcmVmZXJl",
+            "bmNlc0ID4EEBIkAKEEV4dHJhQ29tcHV0YXRpb24SIQodRVhUUkFfQ09NUFVU",
+            "QVRJT05fVU5TUEVDSUZJRUQQABIJCgVUT0xMUxABIpIBChFSb3V0ZU1hdHJp",
+            "eE9yaWdpbhI3Cgh3YXlwb2ludBgBIAEoCzIgLmdvb2dsZS5tYXBzLnJvdXRp",
+            "bmcudjIuV2F5cG9pbnRCA+BBAhJECg9yb3V0ZV9tb2RpZmllcnMYAiABKAsy",
+            "Ji5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTW9kaWZpZXJzQgPgQQEi",
+            "UQoWUm91dGVNYXRyaXhEZXN0aW5hdGlvbhI3Cgh3YXlwb2ludBgBIAEoCzIg",
+            "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuV2F5cG9pbnRCA+BBAiKMBgoSUm91",
+            "dGVNYXRyaXhFbGVtZW50EhkKDG9yaWdpbl9pbmRleBgBIAEoBUgAiAEBEh4K",
+            "EWRlc3RpbmF0aW9uX2luZGV4GAIgASgFSAGIAQESIgoGc3RhdHVzGAMgASgL",
+            "MhIuZ29vZ2xlLnJwYy5TdGF0dXMSRgoJY29uZGl0aW9uGAkgASgOMjMuZ29v",
+            "Z2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1hdHJpeEVsZW1lbnRDb25kaXRp",
+            "b24SFwoPZGlzdGFuY2VfbWV0ZXJzGAQgASgFEisKCGR1cmF0aW9uGAUgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjIKD3N0YXRpY19kdXJhdGlv",
+            "bhgGIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJECg90cmF2ZWxf",
+            "YWR2aXNvcnkYByABKAsyKy5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRl",
+            "VHJhdmVsQWR2aXNvcnkSOwoNZmFsbGJhY2tfaW5mbxgIIAEoCzIkLmdvb2ds",
+            "ZS5tYXBzLnJvdXRpbmcudjIuRmFsbGJhY2tJbmZvElQKEGxvY2FsaXplZF92",
+            "YWx1ZXMYCiABKAsyOi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTWF0",
+            "cml4RWxlbWVudC5Mb2NhbGl6ZWRWYWx1ZXMa1AEKD0xvY2FsaXplZFZhbHVl",
+            "cxIsCghkaXN0YW5jZRgBIAEoCzIaLmdvb2dsZS50eXBlLkxvY2FsaXplZFRl",
+            "eHQSLAoIZHVyYXRpb24YAiABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRU",
+            "ZXh0EjMKD3N0YXRpY19kdXJhdGlvbhgDIAEoCzIaLmdvb2dsZS50eXBlLkxv",
+            "Y2FsaXplZFRleHQSMAoMdHJhbnNpdF9mYXJlGAQgASgLMhouZ29vZ2xlLnR5",
+            "cGUuTG9jYWxpemVkVGV4dEIPCg1fb3JpZ2luX2luZGV4QhQKEl9kZXN0aW5h",
+            "dGlvbl9pbmRleCp0ChtSb3V0ZU1hdHJpeEVsZW1lbnRDb25kaXRpb24SLgoq",
+            "Uk9VVEVfTUFUUklYX0VMRU1FTlRfQ09ORElUSU9OX1VOU1BFQ0lGSUVEEAAS",
+            "EAoMUk9VVEVfRVhJU1RTEAESEwoPUk9VVEVfTk9UX0ZPVU5EEAIy5AIKBlJv",
+            "dXRlcxKVAQoNQ29tcHV0ZVJvdXRlcxIsLmdvb2dsZS5tYXBzLnJvdXRpbmcu",
+            "djIuQ29tcHV0ZVJvdXRlc1JlcXVlc3QaLS5nb29nbGUubWFwcy5yb3V0aW5n",
+            "LnYyLkNvbXB1dGVSb3V0ZXNSZXNwb25zZSIngtPkkwIhIhwvZGlyZWN0aW9u",
+            "cy92Mjpjb21wdXRlUm91dGVzOgEqEqcBChJDb21wdXRlUm91dGVNYXRyaXgS",
+            "MS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkNvbXB1dGVSb3V0ZU1hdHJpeFJl",
+            "cXVlc3QaKi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTWF0cml4RWxl",
+            "bWVudCIwgtPkkwIqIiUvZGlzdGFuY2VNYXRyaXgvdjI6Y29tcHV0ZVJvdXRl",
+            "TWF0cml4OgEqMAEaGMpBFXJvdXRlcy5nb29nbGVhcGlzLmNvbULEAQoaY29t",
+            "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjJCElJvdXRlc1NlcnZpY2VQcm90b1AB",
+            "WjpjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcm91dGluZy9hcGl2Mi9yb3V0",
+            "aW5ncGI7cm91dGluZ3BiogIFR01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5n",
+            "LlYyygIWR29vZ2xlXE1hcHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6",
+            "Um91dGluZzo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Maps.Routing.V2.FallbackInfoReflection.Descriptor, global::Google.Maps.Routing.V2.GeocodingResultsReflection.Descriptor, global::Google.Maps.Routing.V2.PolylineReflection.Descriptor, global::Google.Maps.Routing.V2.RouteReflection.Descriptor, global::Google.Maps.Routing.V2.RouteModifiersReflection.Descriptor, global::Google.Maps.Routing.V2.RouteTravelModeReflection.Descriptor, global::Google.Maps.Routing.V2.RoutingPreferenceReflection.Descriptor, global::Google.Maps.Routing.V2.TrafficModelReflection.Descriptor, global::Google.Maps.Routing.V2.TransitPreferencesReflection.Descriptor, global::Google.Maps.Routing.V2.UnitsReflection.Descriptor, global::Google.Maps.Routing.V2.WaypointReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.RouteMatrixElementCondition), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -488,9 +490,9 @@ namespace Google.Maps.Routing.V2 {
     /// Optional. If set to true, the service attempts to minimize the overall cost
     /// of the route by re-ordering the specified intermediate waypoints. The
     /// request fails if any of the intermediate waypoints is a `via` waypoint. Use
-    /// `ComputeRoutesResponse.Routes.optimized_intermediate_waypoint_index` to
+    /// `ComputeRoutesResponse.routes.optimized_intermediate_waypoint_index` to
     /// find the new ordering.
-    /// If `ComputeRoutesResponseroutes.optimized_intermediate_waypoint_index` is
+    /// If `ComputeRoutesResponse.routes.optimized_intermediate_waypoint_index` is
     /// not requested in the `X-Goog-FieldMask` header, the request fails.
     /// If `optimize_waypoint_order` is set to false,
     /// `ComputeRoutesResponse.optimized_intermediate_waypoint_index` will be
@@ -1224,6 +1226,7 @@ namespace Google.Maps.Routing.V2 {
 
       /// <summary>
       /// Extra computations to perform while completing the request.
+      /// Additional values may be added in the future.
       /// </summary>
       public enum ExtraComputation {
         /// <summary>
@@ -1243,7 +1246,7 @@ namespace Google.Maps.Routing.V2 {
         /// </summary>
         [pbr::OriginalName("TRAFFIC_ON_POLYLINE")] TrafficOnPolyline = 3,
         /// <summary>
-        /// [`NavigationInstructions`](google.maps.routing.v2.NavigationInstructions.instructions)
+        /// [`NavigationInstruction`][google.maps.routing.v2.NavigationInstruction]
         /// presented as a formatted HTML text string. This content
         /// is meant to be read as-is. This content is for display only.
         /// Do not programmatically parse it.
@@ -1252,7 +1255,7 @@ namespace Google.Maps.Routing.V2 {
         /// <summary>
         /// Flyover information for the route(s). The
         /// `routes.polyline_details.flyover_info` fieldmask must be specified to
-        /// return this information. This data will only currently be populated for
+        /// return this information. This data will currently only be populated for
         /// certain metros in India. This feature is experimental, and the
         /// SKU/charge is subject to change.
         /// </summary>
@@ -1260,11 +1263,29 @@ namespace Google.Maps.Routing.V2 {
         /// <summary>
         /// Narrow road information for the route(s). The
         /// `routes.polyline_details.narrow_road_info` fieldmask must be specified
-        /// to return this information. This data will only currently be populated
+        /// to return this information. This data will currently only be populated
         /// for certain metros in India. This feature is experimental, and the
         /// SKU/charge is subject to change.
         /// </summary>
         [pbr::OriginalName("NARROW_ROAD_INFO_ON_POLYLINE")] NarrowRoadInfoOnPolyline = 8,
+        /// <summary>
+        /// Tunnel information for the route(s). The
+        /// `routes.polyline_details.tunnel_info` fieldmask must be specified to
+        /// return this information.
+        /// </summary>
+        [pbr::OriginalName("TUNNEL_INFO_ON_POLYLINE")] TunnelInfoOnPolyline = 9,
+        /// <summary>
+        /// Bridge information for the route(s). The
+        /// `routes.polyline_details.bridge_info` fieldmask must be specified to
+        /// return this information.
+        /// </summary>
+        [pbr::OriginalName("BRIDGE_INFO_ON_POLYLINE")] BridgeInfoOnPolyline = 10,
+        /// <summary>
+        /// Skyway information for the route(s). The
+        /// `routes.polyline_details.skyway_info` fieldmask must be specified to
+        /// return this information.
+        /// </summary>
+        [pbr::OriginalName("SKYWAY_INFO_ON_POLYLINE")] SkywayInfoOnPolyline = 11,
       }
 
     }

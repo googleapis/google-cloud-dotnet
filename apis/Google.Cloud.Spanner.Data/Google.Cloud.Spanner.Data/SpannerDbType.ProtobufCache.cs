@@ -22,9 +22,9 @@ namespace Google.Cloud.Spanner.Data;
 public partial class SpannerDbType
 {
     /// <summary>
-    /// Protobuf CLR type cache.
+    /// Protobuf message CLR type cache.
     /// </summary>
-    private static class ProtobufCache
+    private static class ProtobufMessageCache
     {
         private static readonly ConcurrentDictionary<System.Type, MessageDescriptor> _descriptors = new ConcurrentDictionary<System.Type, MessageDescriptor>();
 

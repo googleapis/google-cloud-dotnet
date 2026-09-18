@@ -44,7 +44,8 @@ namespace Google.Ads.AdManager.V1 {
   }
   #region Messages
   /// <summary>
-  /// Wrapper message for ReportVisibility enum.
+  /// Wrapper message for
+  /// [ReportVisibility][google.ads.admanager.v1.ReportVisibilityEnum.ReportVisibility].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReportVisibilityEnum : pb::IMessage<ReportVisibilityEnum>

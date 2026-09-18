@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gax = Google.Api.Gax;
 
 namespace Google.Cloud.DiscoveryEngine.V1
 {
@@ -63,6 +64,14 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
     public partial class SearchResponse
     {
+        /// <summary>
+        /// <see cref="ControlName"/>-typed view over the <see cref="AppliedControls"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<ControlName> AppliedControlsAsControlNames
+        {
+            get => new gax::ResourceNameList<ControlName>(AppliedControls, s => string.IsNullOrEmpty(s) ? null : ControlName.Parse(s, allowUnparsed: true));
+        }
+
         public partial class Types
         {
             public partial class Summary

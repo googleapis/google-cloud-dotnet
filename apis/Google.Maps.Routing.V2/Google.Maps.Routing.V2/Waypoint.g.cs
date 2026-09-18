@@ -191,7 +191,7 @@ namespace Google.Maps.Routing.V2 {
     public const int NavigationPointTokenFieldNumber = 8;
     /// <summary>
     /// A token that identifies a
-    /// [`NavigationPoint`](https://developers.google.com/maps/documentation/geocoding/reference/rest/v4alpha/geocode.destinations/searchDestinations#navigationpoint),
+    /// [`NavigationPoint`](/maps/documentation/geocoding/reference/rest/v4alpha/geocode.destinations/searchDestinations#navigationpoint),
     /// obtained from the `SearchDestinations` method of the Geocoding API.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

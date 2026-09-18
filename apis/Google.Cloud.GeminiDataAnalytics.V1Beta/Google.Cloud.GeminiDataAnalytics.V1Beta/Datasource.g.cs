@@ -30,7 +30,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             "b29nbGUvY2xvdWQvZ2VtaW5pZGF0YWFuYWx5dGljcy92MWJldGEvYWdlbnRf",
             "Y29udGV4dC5wcm90bxo5Z29vZ2xlL2Nsb3VkL2dlbWluaWRhdGFhbmFseXRp",
             "Y3MvdjFiZXRhL2NyZWRlbnRpYWxzLnByb3RvGhxnb29nbGUvcHJvdG9idWYv",
-            "c3RydWN0LnByb3RvIqAEChREYXRhc291cmNlUmVmZXJlbmNlcxJOCgJicRgB",
+            "c3RydWN0LnByb3RvItYFChREYXRhc291cmNlUmVmZXJlbmNlcxJOCgJicRgB",
             "IAEoCzJALmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0",
             "YS5CaWdRdWVyeVRhYmxlUmVmZXJlbmNlc0gAElUKBnN0dWRpbxgCIAEoCzJD",
             "Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5TdHVk",
@@ -42,130 +42,164 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLlNwYW5uZXJSZWZlcmVu",
             "Y2VIABJZChNjbG91ZF9zcWxfcmVmZXJlbmNlGAogASgLMjouZ29vZ2xlLmNs",
             "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkNsb3VkU3FsUmVmZXJl",
-            "bmNlSABCDAoKcmVmZXJlbmNlcyLqAQoXQmlnUXVlcnlUYWJsZVJlZmVyZW5j",
-            "ZXMSXgoQdGFibGVfcmVmZXJlbmNlcxgBIAMoCzI/Lmdvb2dsZS5jbG91ZC5n",
-            "ZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5CaWdRdWVyeVRhYmxlUmVmZXJl",
-            "bmNlQgPgQQESbwoZcHJvcGVydHlfZ3JhcGhfcmVmZXJlbmNlcxgCIAMoCzJH",
-            "Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5CaWdR",
-            "dWVyeVByb3BlcnR5R3JhcGhSZWZlcmVuY2VCA+BBASKnAQoWQmlnUXVlcnlU",
-            "YWJsZVJlZmVyZW5jZRIXCgpwcm9qZWN0X2lkGAEgASgJQgPgQQISFwoKZGF0",
-            "YXNldF9pZBgDIAEoCUID4EECEhUKCHRhYmxlX2lkGAQgASgJQgPgQQISRAoG",
-            "c2NoZW1hGAYgASgLMi8uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRp",
-            "Y3MudjFiZXRhLlNjaGVtYUID4EEBIoABChpTdHVkaW9EYXRhc291cmNlUmVm",
-            "ZXJlbmNlcxJiChFzdHVkaW9fcmVmZXJlbmNlcxgCIAMoCzJCLmdvb2dsZS5j",
-            "bG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5TdHVkaW9EYXRhc291",
-            "cmNlUmVmZXJlbmNlQgPgQQEiNwoZU3R1ZGlvRGF0YXNvdXJjZVJlZmVyZW5j",
-            "ZRIaCg1kYXRhc291cmNlX2lkGAEgASgJQgPgQQIi3AEKEEFsbG95RGJSZWZl",
-            "cmVuY2USYgoSZGF0YWJhc2VfcmVmZXJlbmNlGAEgASgLMkEuZ29vZ2xlLmNs",
-            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkFsbG95RGJEYXRhYmFz",
-            "ZVJlZmVyZW5jZUID4EECEmQKF2FnZW50X2NvbnRleHRfcmVmZXJlbmNlGAMg",
-            "ASgLMj4uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRh",
-            "LkFnZW50Q29udGV4dFJlZmVyZW5jZUID4EEBInUKFkRhdGFiYXNlVGFibGVS",
-            "ZWZlcmVuY2USFQoIdGFibGVfaWQYASABKAlCA+BBAhJECgZzY2hlbWEYAiAB",
-            "KAsyLy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEu",
-            "U2NoZW1hQgPgQQEilgIKGEFsbG95RGJEYXRhYmFzZVJlZmVyZW5jZRIXCgpw",
-            "cm9qZWN0X2lkGAEgASgJQgPgQQISEwoGcmVnaW9uGAIgASgJQgPgQQISFwoK",
-            "Y2x1c3Rlcl9pZBgDIAEoCUID4EECEhgKC2luc3RhbmNlX2lkGAQgASgJQgPg",
-            "QQISGAoLZGF0YWJhc2VfaWQYBSABKAlCA+BBAhIWCgl0YWJsZV9pZHMYBiAD",
-            "KAlCA+BBARJnChlkYXRhYmFzZV90YWJsZV9yZWZlcmVuY2VzGAcgAygLMj8u",
-            "Z29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkRhdGFi",
-            "YXNlVGFibGVSZWZlcmVuY2VCA+BBASLcAQoQU3Bhbm5lclJlZmVyZW5jZRJi",
-            "ChJkYXRhYmFzZV9yZWZlcmVuY2UYASABKAsyQS5nb29nbGUuY2xvdWQuZ2Vt",
-            "aW5pZGF0YWFuYWx5dGljcy52MWJldGEuU3Bhbm5lckRhdGFiYXNlUmVmZXJl",
-            "bmNlQgPgQQISZAoXYWdlbnRfY29udGV4dF9yZWZlcmVuY2UYAiABKAsyPi5n",
-            "b29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuQWdlbnRD",
-            "b250ZXh0UmVmZXJlbmNlQgPgQQEitQMKGFNwYW5uZXJEYXRhYmFzZVJlZmVy",
-            "ZW5jZRJdCgZlbmdpbmUYBiABKA4ySC5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0",
-            "YWFuYWx5dGljcy52MWJldGEuU3Bhbm5lckRhdGFiYXNlUmVmZXJlbmNlLkVu",
-            "Z2luZUID4EECEhcKCnByb2plY3RfaWQYASABKAlCA+BBAhIYCgtpbnN0YW5j",
-            "ZV9pZBgDIAEoCUID4EECEhgKC2RhdGFiYXNlX2lkGAQgASgJQgPgQQISFgoJ",
-            "dGFibGVfaWRzGAUgAygJQgPgQQESZwoZZGF0YWJhc2VfdGFibGVfcmVmZXJl",
-            "bmNlcxgHIAMoCzI/Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNz",
-            "LnYxYmV0YS5EYXRhYmFzZVRhYmxlUmVmZXJlbmNlQgPgQQESFQoIcHJpb3Jp",
-            "dHkYCCABKAlCA+BBARITCgtyZXF1ZXN0X3RhZxgJIAEoCSJACgZFbmdpbmUS",
-            "FgoSRU5HSU5FX1VOU1BFQ0lGSUVEEAASDgoKR09PR0xFX1NRTBABEg4KClBP",
-            "U1RHUkVTUUwQAiLeAQoRQ2xvdWRTcWxSZWZlcmVuY2USYwoSZGF0YWJhc2Vf",
-            "cmVmZXJlbmNlGAEgASgLMkIuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFs",
-            "eXRpY3MudjFiZXRhLkNsb3VkU3FsRGF0YWJhc2VSZWZlcmVuY2VCA+BBAhJk",
-            "ChdhZ2VudF9jb250ZXh0X3JlZmVyZW5jZRgCIAEoCzI+Lmdvb2dsZS5jbG91",
-            "ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5BZ2VudENvbnRleHRSZWZl",
-            "cmVuY2VCA+BBASKbAwoZQ2xvdWRTcWxEYXRhYmFzZVJlZmVyZW5jZRJeCgZl",
-            "bmdpbmUYASABKA4ySS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGlj",
-            "cy52MWJldGEuQ2xvdWRTcWxEYXRhYmFzZVJlZmVyZW5jZS5FbmdpbmVCA+BB",
-            "AhIXCgpwcm9qZWN0X2lkGAIgASgJQgPgQQISEwoGcmVnaW9uGAMgASgJQgPg",
-            "QQISGAoLaW5zdGFuY2VfaWQYBCABKAlCA+BBAhIYCgtkYXRhYmFzZV9pZBgF",
-            "IAEoCUID4EECEhYKCXRhYmxlX2lkcxgHIAMoCUID4EEBEmcKGWRhdGFiYXNl",
-            "X3RhYmxlX3JlZmVyZW5jZXMYCCADKAsyPy5nb29nbGUuY2xvdWQuZ2VtaW5p",
-            "ZGF0YWFuYWx5dGljcy52MWJldGEuRGF0YWJhc2VUYWJsZVJlZmVyZW5jZUID",
-            "4EEBIjsKBkVuZ2luZRIWChJFTkdJTkVfVU5TUEVDSUZJRUQQABIOCgpQT1NU",
-            "R1JFU1FMEAESCQoFTVlTUUwQAiLNAQoXTG9va2VyRXhwbG9yZVJlZmVyZW5j",
-            "ZXMSYAoSZXhwbG9yZV9yZWZlcmVuY2VzGAEgAygLMj8uZ29vZ2xlLmNsb3Vk",
-            "LmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkxvb2tlckV4cGxvcmVSZWZl",
-            "cmVuY2VCA+BBAhJQCgtjcmVkZW50aWFscxgCIAEoCzI0Lmdvb2dsZS5jbG91",
-            "ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5DcmVkZW50aWFsc0IFGAHg",
-            "QQEipgIKFkxvb2tlckV4cGxvcmVSZWZlcmVuY2USHQoTbG9va2VyX2luc3Rh",
-            "bmNlX3VyaRgJIAEoCUgAEmoKHHByaXZhdGVfbG9va2VyX2luc3RhbmNlX2lu",
-            "Zm8YCiABKAsyQi5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52",
-            "MWJldGEuUHJpdmF0ZUxvb2tlckluc3RhbmNlSW5mb0gAEhkKDGxvb2ttbF9t",
-            "b2RlbBgEIAEoCUID4EECEhQKB2V4cGxvcmUYBSABKAlCA+BBAhJECgZzY2hl",
-            "bWEYCCABKAsyLy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52",
-            "MWJldGEuU2NoZW1hQgPgQQFCCgoIaW5zdGFuY2UicgoeQmlnUXVlcnlQcm9w",
-            "ZXJ0eUdyYXBoUmVmZXJlbmNlEhcKCnByb2plY3RfaWQYASABKAlCA+BBAhIX",
-            "CgpkYXRhc2V0X2lkGAIgASgJQgPgQQISHgoRcHJvcGVydHlfZ3JhcGhfaWQY",
-            "AyABKAlCA+BBAiJXChlQcml2YXRlTG9va2VySW5zdGFuY2VJbmZvEhoKEmxv",
-            "b2tlcl9pbnN0YW5jZV9pZBgBIAEoCRIeChZzZXJ2aWNlX2RpcmVjdG9yeV9u",
-            "YW1lGAIgASgJIoAGCgpEYXRhc291cmNlEmMKGGJpZ3F1ZXJ5X3RhYmxlX3Jl",
-            "ZmVyZW5jZRgBIAEoCzI/Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0",
-            "aWNzLnYxYmV0YS5CaWdRdWVyeVRhYmxlUmVmZXJlbmNlSAASHgoUc3R1ZGlv",
-            "X2RhdGFzb3VyY2VfaWQYAiABKAlIABJjChhsb29rZXJfZXhwbG9yZV9yZWZl",
-            "cmVuY2UYBCABKAsyPy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGlj",
-            "cy52MWJldGEuTG9va2VyRXhwbG9yZVJlZmVyZW5jZUgAElcKEmFsbG95X2Ri",
-            "X3JlZmVyZW5jZRgMIAEoCzI5Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5h",
-            "bHl0aWNzLnYxYmV0YS5BbGxveURiUmVmZXJlbmNlSAASVgoRc3Bhbm5lcl9y",
-            "ZWZlcmVuY2UYDSABKAsyOS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5",
-            "dGljcy52MWJldGEuU3Bhbm5lclJlZmVyZW5jZUgAElkKE2Nsb3VkX3NxbF9y",
-            "ZWZlcmVuY2UYDiABKAsyOi5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5",
-            "dGljcy52MWJldGEuQ2xvdWRTcWxSZWZlcmVuY2VIABJ0CiFiaWdxdWVyeV9w",
-            "cm9wZXJ0eV9ncmFwaF9yZWZlcmVuY2UYECABKAsyRy5nb29nbGUuY2xvdWQu",
-            "Z2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuQmlnUXVlcnlQcm9wZXJ0eUdy",
-            "YXBoUmVmZXJlbmNlSAASRAoGc2NoZW1hGAcgASgLMi8uZ29vZ2xlLmNsb3Vk",
-            "LmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLlNjaGVtYUID4EEBEjMKDXN0",
-            "cnVjdF9zY2hlbWEYCiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPg",
-            "QQFCCwoJcmVmZXJlbmNlIvcBCgZTY2hlbWESQwoGZmllbGRzGAEgAygLMi4u",
-            "Z29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkZpZWxk",
-            "QgPgQQESGAoLZGVzY3JpcHRpb24YAiABKAlCA+BBARIVCghzeW5vbnltcxgD",
-            "IAMoCUID4EEBEhEKBHRhZ3MYBCADKAlCA+BBARIZCgxkaXNwbGF5X25hbWUY",
-            "BSABKAlCA+BBARJJCgdmaWx0ZXJzGAYgAygLMjMuZ29vZ2xlLmNsb3VkLmdl",
-            "bWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkRhdGFGaWx0ZXJCA+BBASKZAgoF",
-            "RmllbGQSEQoEbmFtZRgBIAEoCUID4EEBEhEKBHR5cGUYAiABKAlCA+BBARIY",
-            "CgtkZXNjcmlwdGlvbhgDIAEoCUID4EEBEhEKBG1vZGUYBCABKAlCA+BBARIV",
-            "CghzeW5vbnltcxgGIAMoCUID4EEBEhEKBHRhZ3MYByADKAlCA+BBARIZCgxk",
-            "aXNwbGF5X25hbWUYCCABKAlCA+BBARJGCglzdWJmaWVsZHMYCSADKAsyLi5n",
-            "b29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuRmllbGRC",
-            "A+BBARIVCghjYXRlZ29yeRgKIAEoCUID4EEBEhkKDHZhbHVlX2Zvcm1hdBgL",
-            "IAEoCUID4EEBIoABCgpEYXRhRmlsdGVyEhIKBWZpZWxkGAEgASgJQgPgQQES",
-            "EgoFdmFsdWUYAiABKAlCA+BBARJKCgR0eXBlGAMgASgOMjcuZ29vZ2xlLmNs",
-            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkRhdGFGaWx0ZXJUeXBl",
-            "QgPgQQEqRQoORGF0YUZpbHRlclR5cGUSIAocREFUQV9GSUxURVJfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEhEKDUFMV0FZU19GSUxURVIQAUKgAgorY29tLmdvb2ds",
-            "ZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YUIPRGF0YXNvdXJj",
-            "ZVByb3RvUAFaXWNsb3VkLmdvb2dsZS5jb20vZ28vZ2VtaW5pZGF0YWFuYWx5",
-            "dGljcy9hcGl2MWJldGEvZ2VtaW5pZGF0YWFuYWx5dGljc3BiO2dlbWluaWRh",
-            "dGFhbmFseXRpY3NwYqoCJ0dvb2dsZS5DbG91ZC5HZW1pbmlEYXRhQW5hbHl0",
-            "aWNzLlYxQmV0YcoCJ0dvb2dsZVxDbG91ZFxHZW1pbmlEYXRhQW5hbHl0aWNz",
-            "XFYxYmV0YeoCKkdvb2dsZTo6Q2xvdWQ6OkdlbWluaURhdGFBbmFseXRpY3M6",
-            "OlYxYmV0YWIGcHJvdG8z"));
+            "bmNlSAASWAoSYmlndGFibGVfcmVmZXJlbmNlGAsgASgLMjouZ29vZ2xlLmNs",
+            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkJpZ3RhYmxlUmVmZXJl",
+            "bmNlSAASWgoTZmlyZXN0b3JlX3JlZmVyZW5jZRgNIAEoCzI7Lmdvb2dsZS5j",
+            "bG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5GaXJlc3RvcmVSZWZl",
+            "cmVuY2VIAEIMCgpyZWZlcmVuY2VzItACChdCaWdRdWVyeVRhYmxlUmVmZXJl",
+            "bmNlcxJeChB0YWJsZV9yZWZlcmVuY2VzGAEgAygLMj8uZ29vZ2xlLmNsb3Vk",
+            "LmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkJpZ1F1ZXJ5VGFibGVSZWZl",
+            "cmVuY2VCA+BBARJvChlwcm9wZXJ0eV9ncmFwaF9yZWZlcmVuY2VzGAIgAygL",
+            "MkcuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkJp",
+            "Z1F1ZXJ5UHJvcGVydHlHcmFwaFJlZmVyZW5jZUID4EEBEmQKF2FnZW50X2Nv",
+            "bnRleHRfcmVmZXJlbmNlGAQgASgLMj4uZ29vZ2xlLmNsb3VkLmdlbWluaWRh",
+            "dGFhbmFseXRpY3MudjFiZXRhLkFnZW50Q29udGV4dFJlZmVyZW5jZUID4EEB",
+            "IqcBChZCaWdRdWVyeVRhYmxlUmVmZXJlbmNlEhcKCnByb2plY3RfaWQYASAB",
+            "KAlCA+BBAhIXCgpkYXRhc2V0X2lkGAMgASgJQgPgQQISFQoIdGFibGVfaWQY",
+            "BCABKAlCA+BBAhJECgZzY2hlbWEYBiABKAsyLy5nb29nbGUuY2xvdWQuZ2Vt",
+            "aW5pZGF0YWFuYWx5dGljcy52MWJldGEuU2NoZW1hQgPgQQEigAEKGlN0dWRp",
+            "b0RhdGFzb3VyY2VSZWZlcmVuY2VzEmIKEXN0dWRpb19yZWZlcmVuY2VzGAIg",
+            "AygLMkIuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRh",
+            "LlN0dWRpb0RhdGFzb3VyY2VSZWZlcmVuY2VCA+BBASI3ChlTdHVkaW9EYXRh",
+            "c291cmNlUmVmZXJlbmNlEhoKDWRhdGFzb3VyY2VfaWQYASABKAlCA+BBAiLc",
+            "AQoQQWxsb3lEYlJlZmVyZW5jZRJiChJkYXRhYmFzZV9yZWZlcmVuY2UYASAB",
+            "KAsyQS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEu",
+            "QWxsb3lEYkRhdGFiYXNlUmVmZXJlbmNlQgPgQQISZAoXYWdlbnRfY29udGV4",
+            "dF9yZWZlcmVuY2UYAyABKAsyPi5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFu",
+            "YWx5dGljcy52MWJldGEuQWdlbnRDb250ZXh0UmVmZXJlbmNlQgPgQQEidQoW",
+            "RGF0YWJhc2VUYWJsZVJlZmVyZW5jZRIVCgh0YWJsZV9pZBgBIAEoCUID4EEC",
+            "EkQKBnNjaGVtYRgCIAEoCzIvLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5h",
+            "bHl0aWNzLnYxYmV0YS5TY2hlbWFCA+BBASKWAgoYQWxsb3lEYkRhdGFiYXNl",
+            "UmVmZXJlbmNlEhcKCnByb2plY3RfaWQYASABKAlCA+BBAhITCgZyZWdpb24Y",
+            "AiABKAlCA+BBAhIXCgpjbHVzdGVyX2lkGAMgASgJQgPgQQISGAoLaW5zdGFu",
+            "Y2VfaWQYBCABKAlCA+BBAhIYCgtkYXRhYmFzZV9pZBgFIAEoCUID4EECEhYK",
+            "CXRhYmxlX2lkcxgGIAMoCUID4EEBEmcKGWRhdGFiYXNlX3RhYmxlX3JlZmVy",
+            "ZW5jZXMYByADKAsyPy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGlj",
+            "cy52MWJldGEuRGF0YWJhc2VUYWJsZVJlZmVyZW5jZUID4EEBIt4BChFCaWd0",
+            "YWJsZVJlZmVyZW5jZRJjChJkYXRhYmFzZV9yZWZlcmVuY2UYASABKAsyQi5n",
+            "b29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuQmlndGFi",
+            "bGVEYXRhYmFzZVJlZmVyZW5jZUID4EECEmQKF2FnZW50X2NvbnRleHRfcmVm",
+            "ZXJlbmNlGAIgASgLMj4uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRp",
+            "Y3MudjFiZXRhLkFnZW50Q29udGV4dFJlZmVyZW5jZUID4EEBIs8BChlCaWd0",
+            "YWJsZURhdGFiYXNlUmVmZXJlbmNlEhcKCnByb2plY3RfaWQYASABKAlCA+BB",
+            "AhIYCgtpbnN0YW5jZV9pZBgCIAEoCUID4EECEhYKCXRhYmxlX2lkcxgDIAMo",
+            "CUID4EEBEmcKGWRhdGFiYXNlX3RhYmxlX3JlZmVyZW5jZXMYBCADKAsyPy5n",
+            "b29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuRGF0YWJh",
+            "c2VUYWJsZVJlZmVyZW5jZUID4EEBIuABChJGaXJlc3RvcmVSZWZlcmVuY2US",
+            "ZAoSZGF0YWJhc2VfcmVmZXJlbmNlGAEgASgLMkMuZ29vZ2xlLmNsb3VkLmdl",
+            "bWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkZpcmVzdG9yZURhdGFiYXNlUmVm",
+            "ZXJlbmNlQgPgQQISZAoXYWdlbnRfY29udGV4dF9yZWZlcmVuY2UYAiABKAsy",
+            "Pi5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuQWdl",
+            "bnRDb250ZXh0UmVmZXJlbmNlQgPgQQEi1QEKGkZpcmVzdG9yZURhdGFiYXNl",
+            "UmVmZXJlbmNlEhcKCnByb2plY3RfaWQYASABKAlCA+BBAhIYCgtkYXRhYmFz",
+            "ZV9pZBgCIAEoCUID4EECEhsKDmNvbGxlY3Rpb25faWRzGAMgAygJQgPgQQES",
+            "ZwoZZGF0YWJhc2VfdGFibGVfcmVmZXJlbmNlcxgEIAMoCzI/Lmdvb2dsZS5j",
+            "bG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5EYXRhYmFzZVRhYmxl",
+            "UmVmZXJlbmNlQgPgQQEi3AEKEFNwYW5uZXJSZWZlcmVuY2USYgoSZGF0YWJh",
+            "c2VfcmVmZXJlbmNlGAEgASgLMkEuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFh",
+            "bmFseXRpY3MudjFiZXRhLlNwYW5uZXJEYXRhYmFzZVJlZmVyZW5jZUID4EEC",
+            "EmQKF2FnZW50X2NvbnRleHRfcmVmZXJlbmNlGAIgASgLMj4uZ29vZ2xlLmNs",
+            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkFnZW50Q29udGV4dFJl",
+            "ZmVyZW5jZUID4EEBIrUDChhTcGFubmVyRGF0YWJhc2VSZWZlcmVuY2USXQoG",
+            "ZW5naW5lGAYgASgOMkguZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRp",
+            "Y3MudjFiZXRhLlNwYW5uZXJEYXRhYmFzZVJlZmVyZW5jZS5FbmdpbmVCA+BB",
+            "AhIXCgpwcm9qZWN0X2lkGAEgASgJQgPgQQISGAoLaW5zdGFuY2VfaWQYAyAB",
+            "KAlCA+BBAhIYCgtkYXRhYmFzZV9pZBgEIAEoCUID4EECEhYKCXRhYmxlX2lk",
+            "cxgFIAMoCUID4EEBEmcKGWRhdGFiYXNlX3RhYmxlX3JlZmVyZW5jZXMYByAD",
+            "KAsyPy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEu",
+            "RGF0YWJhc2VUYWJsZVJlZmVyZW5jZUID4EEBEhUKCHByaW9yaXR5GAggASgJ",
+            "QgPgQQESEwoLcmVxdWVzdF90YWcYCSABKAkiQAoGRW5naW5lEhYKEkVOR0lO",
+            "RV9VTlNQRUNJRklFRBAAEg4KCkdPT0dMRV9TUUwQARIOCgpQT1NUR1JFU1FM",
+            "EAIi3gEKEUNsb3VkU3FsUmVmZXJlbmNlEmMKEmRhdGFiYXNlX3JlZmVyZW5j",
+            "ZRgBIAEoCzJCLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYx",
+            "YmV0YS5DbG91ZFNxbERhdGFiYXNlUmVmZXJlbmNlQgPgQQISZAoXYWdlbnRf",
+            "Y29udGV4dF9yZWZlcmVuY2UYAiABKAsyPi5nb29nbGUuY2xvdWQuZ2VtaW5p",
+            "ZGF0YWFuYWx5dGljcy52MWJldGEuQWdlbnRDb250ZXh0UmVmZXJlbmNlQgPg",
+            "QQEimwMKGUNsb3VkU3FsRGF0YWJhc2VSZWZlcmVuY2USXgoGZW5naW5lGAEg",
+            "ASgOMkkuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRh",
+            "LkNsb3VkU3FsRGF0YWJhc2VSZWZlcmVuY2UuRW5naW5lQgPgQQISFwoKcHJv",
+            "amVjdF9pZBgCIAEoCUID4EECEhMKBnJlZ2lvbhgDIAEoCUID4EECEhgKC2lu",
+            "c3RhbmNlX2lkGAQgASgJQgPgQQISGAoLZGF0YWJhc2VfaWQYBSABKAlCA+BB",
+            "AhIWCgl0YWJsZV9pZHMYByADKAlCA+BBARJnChlkYXRhYmFzZV90YWJsZV9y",
+            "ZWZlcmVuY2VzGAggAygLMj8uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFs",
+            "eXRpY3MudjFiZXRhLkRhdGFiYXNlVGFibGVSZWZlcmVuY2VCA+BBASI7CgZF",
+            "bmdpbmUSFgoSRU5HSU5FX1VOU1BFQ0lGSUVEEAASDgoKUE9TVEdSRVNRTBAB",
+            "EgkKBU1ZU1FMEAIizQEKF0xvb2tlckV4cGxvcmVSZWZlcmVuY2VzEmAKEmV4",
+            "cGxvcmVfcmVmZXJlbmNlcxgBIAMoCzI/Lmdvb2dsZS5jbG91ZC5nZW1pbmlk",
+            "YXRhYW5hbHl0aWNzLnYxYmV0YS5Mb29rZXJFeHBsb3JlUmVmZXJlbmNlQgPg",
+            "QQISUAoLY3JlZGVudGlhbHMYAiABKAsyNC5nb29nbGUuY2xvdWQuZ2VtaW5p",
+            "ZGF0YWFuYWx5dGljcy52MWJldGEuQ3JlZGVudGlhbHNCBRgB4EEBIqYCChZM",
+            "b29rZXJFeHBsb3JlUmVmZXJlbmNlEh0KE2xvb2tlcl9pbnN0YW5jZV91cmkY",
+            "CSABKAlIABJqChxwcml2YXRlX2xvb2tlcl9pbnN0YW5jZV9pbmZvGAogASgL",
+            "MkIuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLlBy",
+            "aXZhdGVMb29rZXJJbnN0YW5jZUluZm9IABIZCgxsb29rbWxfbW9kZWwYBCAB",
+            "KAlCA+BBAhIUCgdleHBsb3JlGAUgASgJQgPgQQISRAoGc2NoZW1hGAggASgL",
+            "Mi8uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLlNj",
+            "aGVtYUID4EEBQgoKCGluc3RhbmNlInIKHkJpZ1F1ZXJ5UHJvcGVydHlHcmFw",
+            "aFJlZmVyZW5jZRIXCgpwcm9qZWN0X2lkGAEgASgJQgPgQQISFwoKZGF0YXNl",
+            "dF9pZBgCIAEoCUID4EECEh4KEXByb3BlcnR5X2dyYXBoX2lkGAMgASgJQgPg",
+            "QQIiVwoZUHJpdmF0ZUxvb2tlckluc3RhbmNlSW5mbxIaChJsb29rZXJfaW5z",
+            "dGFuY2VfaWQYASABKAkSHgoWc2VydmljZV9kaXJlY3RvcnlfbmFtZRgCIAEo",
+            "CSK2BwoKRGF0YXNvdXJjZRJjChhiaWdxdWVyeV90YWJsZV9yZWZlcmVuY2UY",
+            "ASABKAsyPy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJl",
+            "dGEuQmlnUXVlcnlUYWJsZVJlZmVyZW5jZUgAEh4KFHN0dWRpb19kYXRhc291",
+            "cmNlX2lkGAIgASgJSAASYwoYbG9va2VyX2V4cGxvcmVfcmVmZXJlbmNlGAQg",
+            "ASgLMj8uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRh",
+            "Lkxvb2tlckV4cGxvcmVSZWZlcmVuY2VIABJXChJhbGxveV9kYl9yZWZlcmVu",
+            "Y2UYDCABKAsyOS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52",
+            "MWJldGEuQWxsb3lEYlJlZmVyZW5jZUgAElYKEXNwYW5uZXJfcmVmZXJlbmNl",
+            "GA0gASgLMjkuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFi",
+            "ZXRhLlNwYW5uZXJSZWZlcmVuY2VIABJZChNjbG91ZF9zcWxfcmVmZXJlbmNl",
+            "GA4gASgLMjouZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFi",
+            "ZXRhLkNsb3VkU3FsUmVmZXJlbmNlSAASWAoSYmlndGFibGVfcmVmZXJlbmNl",
+            "GA8gASgLMjouZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFi",
+            "ZXRhLkJpZ3RhYmxlUmVmZXJlbmNlSAASdAohYmlncXVlcnlfcHJvcGVydHlf",
+            "Z3JhcGhfcmVmZXJlbmNlGBAgASgLMkcuZ29vZ2xlLmNsb3VkLmdlbWluaWRh",
+            "dGFhbmFseXRpY3MudjFiZXRhLkJpZ1F1ZXJ5UHJvcGVydHlHcmFwaFJlZmVy",
+            "ZW5jZUgAEloKE2ZpcmVzdG9yZV9yZWZlcmVuY2UYESABKAsyOy5nb29nbGUu",
+            "Y2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuRmlyZXN0b3JlUmVm",
+            "ZXJlbmNlSAASRAoGc2NoZW1hGAcgASgLMi8uZ29vZ2xlLmNsb3VkLmdlbWlu",
+            "aWRhdGFhbmFseXRpY3MudjFiZXRhLlNjaGVtYUID4EEBEjMKDXN0cnVjdF9z",
+            "Y2hlbWEYCiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQFCCwoJ",
+            "cmVmZXJlbmNlIvcBCgZTY2hlbWESQwoGZmllbGRzGAEgAygLMi4uZ29vZ2xl",
+            "LmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkZpZWxkQgPgQQES",
+            "GAoLZGVzY3JpcHRpb24YAiABKAlCA+BBARIVCghzeW5vbnltcxgDIAMoCUID",
+            "4EEBEhEKBHRhZ3MYBCADKAlCA+BBARIZCgxkaXNwbGF5X25hbWUYBSABKAlC",
+            "A+BBARJJCgdmaWx0ZXJzGAYgAygLMjMuZ29vZ2xlLmNsb3VkLmdlbWluaWRh",
+            "dGFhbmFseXRpY3MudjFiZXRhLkRhdGFGaWx0ZXJCA+BBASKZAgoFRmllbGQS",
+            "EQoEbmFtZRgBIAEoCUID4EEBEhEKBHR5cGUYAiABKAlCA+BBARIYCgtkZXNj",
+            "cmlwdGlvbhgDIAEoCUID4EEBEhEKBG1vZGUYBCABKAlCA+BBARIVCghzeW5v",
+            "bnltcxgGIAMoCUID4EEBEhEKBHRhZ3MYByADKAlCA+BBARIZCgxkaXNwbGF5",
+            "X25hbWUYCCABKAlCA+BBARJGCglzdWJmaWVsZHMYCSADKAsyLi5nb29nbGUu",
+            "Y2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuRmllbGRCA+BBARIV",
+            "CghjYXRlZ29yeRgKIAEoCUID4EEBEhkKDHZhbHVlX2Zvcm1hdBgLIAEoCUID",
+            "4EEBIoABCgpEYXRhRmlsdGVyEhIKBWZpZWxkGAEgASgJQgPgQQESEgoFdmFs",
+            "dWUYAiABKAlCA+BBARJKCgR0eXBlGAMgASgOMjcuZ29vZ2xlLmNsb3VkLmdl",
+            "bWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkRhdGFGaWx0ZXJUeXBlQgPgQQEq",
+            "RQoORGF0YUZpbHRlclR5cGUSIAocREFUQV9GSUxURVJfVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEhEKDUFMV0FZU19GSUxURVIQAUKgAgorY29tLmdvb2dsZS5jbG91",
+            "ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YUIPRGF0YXNvdXJjZVByb3Rv",
+            "UAFaXWNsb3VkLmdvb2dsZS5jb20vZ28vZ2VtaW5pZGF0YWFuYWx5dGljcy9h",
+            "cGl2MWJldGEvZ2VtaW5pZGF0YWFuYWx5dGljc3BiO2dlbWluaWRhdGFhbmFs",
+            "eXRpY3NwYqoCJ0dvb2dsZS5DbG91ZC5HZW1pbmlEYXRhQW5hbHl0aWNzLlYx",
+            "QmV0YcoCJ0dvb2dsZVxDbG91ZFxHZW1pbmlEYXRhQW5hbHl0aWNzXFYxYmV0",
+            "YeoCKkdvb2dsZTo6Q2xvdWQ6OkdlbWluaURhdGFBbmFseXRpY3M6OlYxYmV0",
+            "YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1Beta.CredentialsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataFilterType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReferences), global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReferences.Parser, new[]{ "Bq", "Studio", "Looker", "Alloydb", "SpannerReference", "CloudSqlReference" }, new[]{ "References" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryTableReferences), global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryTableReferences.Parser, new[]{ "TableReferences", "PropertyGraphReferences" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReferences), global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReferences.Parser, new[]{ "Bq", "Studio", "Looker", "Alloydb", "SpannerReference", "CloudSqlReference", "BigtableReference", "FirestoreReference" }, new[]{ "References" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryTableReferences), global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryTableReferences.Parser, new[]{ "TableReferences", "PropertyGraphReferences", "AgentContextReference" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryTableReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryTableReference.Parser, new[]{ "ProjectId", "DatasetId", "TableId", "Schema" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.StudioDatasourceReferences), global::Google.Cloud.GeminiDataAnalytics.V1Beta.StudioDatasourceReferences.Parser, new[]{ "StudioReferences" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.StudioDatasourceReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.StudioDatasourceReference.Parser, new[]{ "DatasourceId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.AlloyDbReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.AlloyDbReference.Parser, new[]{ "DatabaseReference", "AgentContextReference" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatabaseTableReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatabaseTableReference.Parser, new[]{ "TableId", "Schema" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.AlloyDbDatabaseReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.AlloyDbDatabaseReference.Parser, new[]{ "ProjectId", "Region", "ClusterId", "InstanceId", "DatabaseId", "TableIds", "DatabaseTableReferences" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference.Parser, new[]{ "DatabaseReference", "AgentContextReference" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableDatabaseReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableDatabaseReference.Parser, new[]{ "ProjectId", "InstanceId", "TableIds", "DatabaseTableReferences" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference.Parser, new[]{ "DatabaseReference", "AgentContextReference" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreDatabaseReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreDatabaseReference.Parser, new[]{ "ProjectId", "DatabaseId", "CollectionIds", "DatabaseTableReferences" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.SpannerReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.SpannerReference.Parser, new[]{ "DatabaseReference", "AgentContextReference" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.SpannerDatabaseReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.SpannerDatabaseReference.Parser, new[]{ "Engine", "ProjectId", "InstanceId", "DatabaseId", "TableIds", "DatabaseTableReferences", "Priority", "RequestTag" }, null, new[]{ typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.SpannerDatabaseReference.Types.Engine) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.CloudSqlReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.CloudSqlReference.Parser, new[]{ "DatabaseReference", "AgentContextReference" }, null, null, null, null),
@@ -174,7 +208,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.LookerExploreReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.LookerExploreReference.Parser, new[]{ "LookerInstanceUri", "PrivateLookerInstanceInfo", "LookmlModel", "Explore", "Schema" }, new[]{ "Instance" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryPropertyGraphReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryPropertyGraphReference.Parser, new[]{ "ProjectId", "DatasetId", "PropertyGraphId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.PrivateLookerInstanceInfo), global::Google.Cloud.GeminiDataAnalytics.V1Beta.PrivateLookerInstanceInfo.Parser, new[]{ "LookerInstanceId", "ServiceDirectoryName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Datasource), global::Google.Cloud.GeminiDataAnalytics.V1Beta.Datasource.Parser, new[]{ "BigqueryTableReference", "StudioDatasourceId", "LookerExploreReference", "AlloyDbReference", "SpannerReference", "CloudSqlReference", "BigqueryPropertyGraphReference", "Schema", "StructSchema" }, new[]{ "Reference" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Datasource), global::Google.Cloud.GeminiDataAnalytics.V1Beta.Datasource.Parser, new[]{ "BigqueryTableReference", "StudioDatasourceId", "LookerExploreReference", "AlloyDbReference", "SpannerReference", "CloudSqlReference", "BigtableReference", "BigqueryPropertyGraphReference", "FirestoreReference", "Schema", "StructSchema" }, new[]{ "Reference" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Schema), global::Google.Cloud.GeminiDataAnalytics.V1Beta.Schema.Parser, new[]{ "Fields", "Description", "Synonyms", "Tags", "DisplayName", "Filters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Field), global::Google.Cloud.GeminiDataAnalytics.V1Beta.Field.Parser, new[]{ "Name", "Type", "Description", "Mode", "Synonyms", "Tags", "DisplayName", "Subfields", "Category", "ValueFormat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataFilter), global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataFilter.Parser, new[]{ "Field", "Value", "Type" }, null, null, null, null)
@@ -259,6 +293,12 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
           break;
         case ReferencesOneofCase.CloudSqlReference:
           CloudSqlReference = other.CloudSqlReference.Clone();
+          break;
+        case ReferencesOneofCase.BigtableReference:
+          BigtableReference = other.BigtableReference.Clone();
+          break;
+        case ReferencesOneofCase.FirestoreReference:
+          FirestoreReference = other.FirestoreReference.Clone();
           break;
       }
 
@@ -364,6 +404,36 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "bigtable_reference" field.</summary>
+    public const int BigtableReferenceFieldNumber = 11;
+    /// <summary>
+    /// Reference to a Bigtable instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference BigtableReference {
+      get { return referencesCase_ == ReferencesOneofCase.BigtableReference ? (global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference) references_ : null; }
+      set {
+        references_ = value;
+        referencesCase_ = value == null ? ReferencesOneofCase.None : ReferencesOneofCase.BigtableReference;
+      }
+    }
+
+    /// <summary>Field number for the "firestore_reference" field.</summary>
+    public const int FirestoreReferenceFieldNumber = 13;
+    /// <summary>
+    /// Reference to a Firestore database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference FirestoreReference {
+      get { return referencesCase_ == ReferencesOneofCase.FirestoreReference ? (global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference) references_ : null; }
+      set {
+        references_ = value;
+        referencesCase_ = value == null ? ReferencesOneofCase.None : ReferencesOneofCase.FirestoreReference;
+      }
+    }
+
     private object references_;
     /// <summary>Enum of possible cases for the "references" oneof.</summary>
     public enum ReferencesOneofCase {
@@ -374,6 +444,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       Alloydb = 8,
       SpannerReference = 9,
       CloudSqlReference = 10,
+      BigtableReference = 11,
+      FirestoreReference = 13,
     }
     private ReferencesOneofCase referencesCase_ = ReferencesOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -410,6 +482,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (!object.Equals(Alloydb, other.Alloydb)) return false;
       if (!object.Equals(SpannerReference, other.SpannerReference)) return false;
       if (!object.Equals(CloudSqlReference, other.CloudSqlReference)) return false;
+      if (!object.Equals(BigtableReference, other.BigtableReference)) return false;
+      if (!object.Equals(FirestoreReference, other.FirestoreReference)) return false;
       if (ReferencesCase != other.ReferencesCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -424,6 +498,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (referencesCase_ == ReferencesOneofCase.Alloydb) hash ^= Alloydb.GetHashCode();
       if (referencesCase_ == ReferencesOneofCase.SpannerReference) hash ^= SpannerReference.GetHashCode();
       if (referencesCase_ == ReferencesOneofCase.CloudSqlReference) hash ^= CloudSqlReference.GetHashCode();
+      if (referencesCase_ == ReferencesOneofCase.BigtableReference) hash ^= BigtableReference.GetHashCode();
+      if (referencesCase_ == ReferencesOneofCase.FirestoreReference) hash ^= FirestoreReference.GetHashCode();
       hash ^= (int) referencesCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -467,6 +543,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteRawTag(82);
         output.WriteMessage(CloudSqlReference);
       }
+      if (referencesCase_ == ReferencesOneofCase.BigtableReference) {
+        output.WriteRawTag(90);
+        output.WriteMessage(BigtableReference);
+      }
+      if (referencesCase_ == ReferencesOneofCase.FirestoreReference) {
+        output.WriteRawTag(106);
+        output.WriteMessage(FirestoreReference);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -501,6 +585,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteRawTag(82);
         output.WriteMessage(CloudSqlReference);
       }
+      if (referencesCase_ == ReferencesOneofCase.BigtableReference) {
+        output.WriteRawTag(90);
+        output.WriteMessage(BigtableReference);
+      }
+      if (referencesCase_ == ReferencesOneofCase.FirestoreReference) {
+        output.WriteRawTag(106);
+        output.WriteMessage(FirestoreReference);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -528,6 +620,12 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
       if (referencesCase_ == ReferencesOneofCase.CloudSqlReference) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudSqlReference);
+      }
+      if (referencesCase_ == ReferencesOneofCase.BigtableReference) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigtableReference);
+      }
+      if (referencesCase_ == ReferencesOneofCase.FirestoreReference) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FirestoreReference);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -577,6 +675,18 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             CloudSqlReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.CloudSqlReference();
           }
           CloudSqlReference.MergeFrom(other.CloudSqlReference);
+          break;
+        case ReferencesOneofCase.BigtableReference:
+          if (BigtableReference == null) {
+            BigtableReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference();
+          }
+          BigtableReference.MergeFrom(other.BigtableReference);
+          break;
+        case ReferencesOneofCase.FirestoreReference:
+          if (FirestoreReference == null) {
+            FirestoreReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference();
+          }
+          FirestoreReference.MergeFrom(other.FirestoreReference);
           break;
       }
 
@@ -653,6 +763,24 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             CloudSqlReference = subBuilder;
             break;
           }
+          case 90: {
+            global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference subBuilder = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference();
+            if (referencesCase_ == ReferencesOneofCase.BigtableReference) {
+              subBuilder.MergeFrom(BigtableReference);
+            }
+            input.ReadMessage(subBuilder);
+            BigtableReference = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference subBuilder = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference();
+            if (referencesCase_ == ReferencesOneofCase.FirestoreReference) {
+              subBuilder.MergeFrom(FirestoreReference);
+            }
+            input.ReadMessage(subBuilder);
+            FirestoreReference = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -724,6 +852,24 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             }
             input.ReadMessage(subBuilder);
             CloudSqlReference = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference subBuilder = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference();
+            if (referencesCase_ == ReferencesOneofCase.BigtableReference) {
+              subBuilder.MergeFrom(BigtableReference);
+            }
+            input.ReadMessage(subBuilder);
+            BigtableReference = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference subBuilder = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference();
+            if (referencesCase_ == ReferencesOneofCase.FirestoreReference) {
+              subBuilder.MergeFrom(FirestoreReference);
+            }
+            input.ReadMessage(subBuilder);
+            FirestoreReference = subBuilder;
             break;
           }
         }
@@ -775,6 +921,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     public BigQueryTableReferences(BigQueryTableReferences other) : this() {
       tableReferences_ = other.tableReferences_.Clone();
       propertyGraphReferences_ = other.propertyGraphReferences_.Clone();
+      agentContextReference_ = other.agentContextReference_ != null ? other.agentContextReference_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -815,6 +962,21 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       get { return propertyGraphReferences_; }
     }
 
+    /// <summary>Field number for the "agent_context_reference" field.</summary>
+    public const int AgentContextReferenceFieldNumber = 4;
+    private global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference agentContextReference_;
+    /// <summary>
+    /// Optional. Parameters for retrieving data from Agent Context.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference AgentContextReference {
+      get { return agentContextReference_; }
+      set {
+        agentContextReference_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -832,6 +994,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
       if(!tableReferences_.Equals(other.tableReferences_)) return false;
       if(!propertyGraphReferences_.Equals(other.propertyGraphReferences_)) return false;
+      if (!object.Equals(AgentContextReference, other.AgentContextReference)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -841,6 +1004,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       int hash = 1;
       hash ^= tableReferences_.GetHashCode();
       hash ^= propertyGraphReferences_.GetHashCode();
+      if (agentContextReference_ != null) hash ^= AgentContextReference.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -861,6 +1025,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     #else
       tableReferences_.WriteTo(output, _repeated_tableReferences_codec);
       propertyGraphReferences_.WriteTo(output, _repeated_propertyGraphReferences_codec);
+      if (agentContextReference_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AgentContextReference);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -873,6 +1041,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       tableReferences_.WriteTo(ref output, _repeated_tableReferences_codec);
       propertyGraphReferences_.WriteTo(ref output, _repeated_propertyGraphReferences_codec);
+      if (agentContextReference_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AgentContextReference);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -885,6 +1057,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       int size = 0;
       size += tableReferences_.CalculateSize(_repeated_tableReferences_codec);
       size += propertyGraphReferences_.CalculateSize(_repeated_propertyGraphReferences_codec);
+      if (agentContextReference_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AgentContextReference);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -899,6 +1074,12 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
       tableReferences_.Add(other.tableReferences_);
       propertyGraphReferences_.Add(other.propertyGraphReferences_);
+      if (other.agentContextReference_ != null) {
+        if (agentContextReference_ == null) {
+          AgentContextReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference();
+        }
+        AgentContextReference.MergeFrom(other.AgentContextReference);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -926,6 +1107,13 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             propertyGraphReferences_.AddEntriesFrom(input, _repeated_propertyGraphReferences_codec);
             break;
           }
+          case 34: {
+            if (agentContextReference_ == null) {
+              AgentContextReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference();
+            }
+            input.ReadMessage(AgentContextReference);
+            break;
+          }
         }
       }
     #endif
@@ -951,6 +1139,13 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
           }
           case 18: {
             propertyGraphReferences_.AddEntriesFrom(ref input, _repeated_propertyGraphReferences_codec);
+            break;
+          }
+          case 34: {
+            if (agentContextReference_ == null) {
+              AgentContextReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference();
+            }
+            input.ReadMessage(AgentContextReference);
             break;
           }
         }
@@ -2657,6 +2852,1140 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
   }
 
   /// <summary>
+  /// Message representing reference to a Bigtable instance and agent context.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BigtableReference : pb::IMessage<BigtableReference>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BigtableReference> _parser = new pb::MessageParser<BigtableReference>(() => new BigtableReference());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BigtableReference> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BigtableReference() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BigtableReference(BigtableReference other) : this() {
+      databaseReference_ = other.databaseReference_ != null ? other.databaseReference_.Clone() : null;
+      agentContextReference_ = other.agentContextReference_ != null ? other.agentContextReference_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BigtableReference Clone() {
+      return new BigtableReference(this);
+    }
+
+    /// <summary>Field number for the "database_reference" field.</summary>
+    public const int DatabaseReferenceFieldNumber = 1;
+    private global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableDatabaseReference databaseReference_;
+    /// <summary>
+    /// Required. Singular proto that supports specifying which database and tables
+    /// to include.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableDatabaseReference DatabaseReference {
+      get { return databaseReference_; }
+      set {
+        databaseReference_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "agent_context_reference" field.</summary>
+    public const int AgentContextReferenceFieldNumber = 2;
+    private global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference agentContextReference_;
+    /// <summary>
+    /// Optional. Parameters for retrieving data from Agent Context.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference AgentContextReference {
+      get { return agentContextReference_; }
+      set {
+        agentContextReference_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BigtableReference);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BigtableReference other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(DatabaseReference, other.DatabaseReference)) return false;
+      if (!object.Equals(AgentContextReference, other.AgentContextReference)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (databaseReference_ != null) hash ^= DatabaseReference.GetHashCode();
+      if (agentContextReference_ != null) hash ^= AgentContextReference.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (databaseReference_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DatabaseReference);
+      }
+      if (agentContextReference_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AgentContextReference);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (databaseReference_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DatabaseReference);
+      }
+      if (agentContextReference_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AgentContextReference);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (databaseReference_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DatabaseReference);
+      }
+      if (agentContextReference_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AgentContextReference);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BigtableReference other) {
+      if (other == null) {
+        return;
+      }
+      if (other.databaseReference_ != null) {
+        if (databaseReference_ == null) {
+          DatabaseReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableDatabaseReference();
+        }
+        DatabaseReference.MergeFrom(other.DatabaseReference);
+      }
+      if (other.agentContextReference_ != null) {
+        if (agentContextReference_ == null) {
+          AgentContextReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference();
+        }
+        AgentContextReference.MergeFrom(other.AgentContextReference);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (databaseReference_ == null) {
+              DatabaseReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableDatabaseReference();
+            }
+            input.ReadMessage(DatabaseReference);
+            break;
+          }
+          case 18: {
+            if (agentContextReference_ == null) {
+              AgentContextReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference();
+            }
+            input.ReadMessage(AgentContextReference);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (databaseReference_ == null) {
+              DatabaseReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableDatabaseReference();
+            }
+            input.ReadMessage(DatabaseReference);
+            break;
+          }
+          case 18: {
+            if (agentContextReference_ == null) {
+              AgentContextReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference();
+            }
+            input.ReadMessage(AgentContextReference);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message representing reference to Bigtable database.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BigtableDatabaseReference : pb::IMessage<BigtableDatabaseReference>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BigtableDatabaseReference> _parser = new pb::MessageParser<BigtableDatabaseReference>(() => new BigtableDatabaseReference());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BigtableDatabaseReference> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BigtableDatabaseReference() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BigtableDatabaseReference(BigtableDatabaseReference other) : this() {
+      projectId_ = other.projectId_;
+      instanceId_ = other.instanceId_;
+      tableIds_ = other.tableIds_.Clone();
+      databaseTableReferences_ = other.databaseTableReferences_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BigtableDatabaseReference Clone() {
+      return new BigtableDatabaseReference(this);
+    }
+
+    /// <summary>Field number for the "project_id" field.</summary>
+    public const int ProjectIdFieldNumber = 1;
+    private string projectId_ = "";
+    /// <summary>
+    /// Required. The project the instance belongs to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ProjectId {
+      get { return projectId_; }
+      set {
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "instance_id" field.</summary>
+    public const int InstanceIdFieldNumber = 2;
+    private string instanceId_ = "";
+    /// <summary>
+    /// Required. The instance id.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InstanceId {
+      get { return instanceId_; }
+      set {
+        instanceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "table_ids" field.</summary>
+    public const int TableIdsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_tableIds_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> tableIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The table ids. Denotes all tables if unset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TableIds {
+      get { return tableIds_; }
+    }
+
+    /// <summary>Field number for the "database_table_references" field.</summary>
+    public const int DatabaseTableReferencesFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatabaseTableReference> _repeated_databaseTableReferences_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatabaseTableReference.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatabaseTableReference> databaseTableReferences_ = new pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatabaseTableReference>();
+    /// <summary>
+    /// Optional. References to tables within the database. Each reference
+    /// specifies a table and can optionally include the table's schema to provide
+    /// context for the query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatabaseTableReference> DatabaseTableReferences {
+      get { return databaseTableReferences_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BigtableDatabaseReference);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BigtableDatabaseReference other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ProjectId != other.ProjectId) return false;
+      if (InstanceId != other.InstanceId) return false;
+      if(!tableIds_.Equals(other.tableIds_)) return false;
+      if(!databaseTableReferences_.Equals(other.databaseTableReferences_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
+      if (InstanceId.Length != 0) hash ^= InstanceId.GetHashCode();
+      hash ^= tableIds_.GetHashCode();
+      hash ^= databaseTableReferences_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (InstanceId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(InstanceId);
+      }
+      tableIds_.WriteTo(output, _repeated_tableIds_codec);
+      databaseTableReferences_.WriteTo(output, _repeated_databaseTableReferences_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (InstanceId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(InstanceId);
+      }
+      tableIds_.WriteTo(ref output, _repeated_tableIds_codec);
+      databaseTableReferences_.WriteTo(ref output, _repeated_databaseTableReferences_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ProjectId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
+      }
+      if (InstanceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InstanceId);
+      }
+      size += tableIds_.CalculateSize(_repeated_tableIds_codec);
+      size += databaseTableReferences_.CalculateSize(_repeated_databaseTableReferences_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BigtableDatabaseReference other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ProjectId.Length != 0) {
+        ProjectId = other.ProjectId;
+      }
+      if (other.InstanceId.Length != 0) {
+        InstanceId = other.InstanceId;
+      }
+      tableIds_.Add(other.tableIds_);
+      databaseTableReferences_.Add(other.databaseTableReferences_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            InstanceId = input.ReadString();
+            break;
+          }
+          case 26: {
+            tableIds_.AddEntriesFrom(input, _repeated_tableIds_codec);
+            break;
+          }
+          case 34: {
+            databaseTableReferences_.AddEntriesFrom(input, _repeated_databaseTableReferences_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            InstanceId = input.ReadString();
+            break;
+          }
+          case 26: {
+            tableIds_.AddEntriesFrom(ref input, _repeated_tableIds_codec);
+            break;
+          }
+          case 34: {
+            databaseTableReferences_.AddEntriesFrom(ref input, _repeated_databaseTableReferences_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message representing reference to a Firestore database and agent context.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FirestoreReference : pb::IMessage<FirestoreReference>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FirestoreReference> _parser = new pb::MessageParser<FirestoreReference>(() => new FirestoreReference());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FirestoreReference> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FirestoreReference() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FirestoreReference(FirestoreReference other) : this() {
+      databaseReference_ = other.databaseReference_ != null ? other.databaseReference_.Clone() : null;
+      agentContextReference_ = other.agentContextReference_ != null ? other.agentContextReference_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FirestoreReference Clone() {
+      return new FirestoreReference(this);
+    }
+
+    /// <summary>Field number for the "database_reference" field.</summary>
+    public const int DatabaseReferenceFieldNumber = 1;
+    private global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreDatabaseReference databaseReference_;
+    /// <summary>
+    /// Required. Singular proto that supports specifying which database and tables
+    /// to include.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreDatabaseReference DatabaseReference {
+      get { return databaseReference_; }
+      set {
+        databaseReference_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "agent_context_reference" field.</summary>
+    public const int AgentContextReferenceFieldNumber = 2;
+    private global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference agentContextReference_;
+    /// <summary>
+    /// Optional. Parameters for retrieving data from Agent Context.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference AgentContextReference {
+      get { return agentContextReference_; }
+      set {
+        agentContextReference_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FirestoreReference);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FirestoreReference other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(DatabaseReference, other.DatabaseReference)) return false;
+      if (!object.Equals(AgentContextReference, other.AgentContextReference)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (databaseReference_ != null) hash ^= DatabaseReference.GetHashCode();
+      if (agentContextReference_ != null) hash ^= AgentContextReference.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (databaseReference_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DatabaseReference);
+      }
+      if (agentContextReference_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AgentContextReference);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (databaseReference_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DatabaseReference);
+      }
+      if (agentContextReference_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AgentContextReference);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (databaseReference_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DatabaseReference);
+      }
+      if (agentContextReference_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AgentContextReference);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FirestoreReference other) {
+      if (other == null) {
+        return;
+      }
+      if (other.databaseReference_ != null) {
+        if (databaseReference_ == null) {
+          DatabaseReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreDatabaseReference();
+        }
+        DatabaseReference.MergeFrom(other.DatabaseReference);
+      }
+      if (other.agentContextReference_ != null) {
+        if (agentContextReference_ == null) {
+          AgentContextReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference();
+        }
+        AgentContextReference.MergeFrom(other.AgentContextReference);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (databaseReference_ == null) {
+              DatabaseReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreDatabaseReference();
+            }
+            input.ReadMessage(DatabaseReference);
+            break;
+          }
+          case 18: {
+            if (agentContextReference_ == null) {
+              AgentContextReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference();
+            }
+            input.ReadMessage(AgentContextReference);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (databaseReference_ == null) {
+              DatabaseReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreDatabaseReference();
+            }
+            input.ReadMessage(DatabaseReference);
+            break;
+          }
+          case 18: {
+            if (agentContextReference_ == null) {
+              AgentContextReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.AgentContextReference();
+            }
+            input.ReadMessage(AgentContextReference);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message representing a reference to a single Firestore database.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FirestoreDatabaseReference : pb::IMessage<FirestoreDatabaseReference>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FirestoreDatabaseReference> _parser = new pb::MessageParser<FirestoreDatabaseReference>(() => new FirestoreDatabaseReference());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FirestoreDatabaseReference> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FirestoreDatabaseReference() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FirestoreDatabaseReference(FirestoreDatabaseReference other) : this() {
+      projectId_ = other.projectId_;
+      databaseId_ = other.databaseId_;
+      collectionIds_ = other.collectionIds_.Clone();
+      databaseTableReferences_ = other.databaseTableReferences_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FirestoreDatabaseReference Clone() {
+      return new FirestoreDatabaseReference(this);
+    }
+
+    /// <summary>Field number for the "project_id" field.</summary>
+    public const int ProjectIdFieldNumber = 1;
+    private string projectId_ = "";
+    /// <summary>
+    /// Required. Project the firestore database belongs to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ProjectId {
+      get { return projectId_; }
+      set {
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "database_id" field.</summary>
+    public const int DatabaseIdFieldNumber = 2;
+    private string databaseId_ = "";
+    /// <summary>
+    /// Required. The database id.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DatabaseId {
+      get { return databaseId_; }
+      set {
+        databaseId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "collection_ids" field.</summary>
+    public const int CollectionIdsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_collectionIds_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> collectionIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The collection ids. Denotes all collections if unset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CollectionIds {
+      get { return collectionIds_; }
+    }
+
+    /// <summary>Field number for the "database_table_references" field.</summary>
+    public const int DatabaseTableReferencesFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatabaseTableReference> _repeated_databaseTableReferences_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatabaseTableReference.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatabaseTableReference> databaseTableReferences_ = new pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatabaseTableReference>();
+    /// <summary>
+    /// Optional. References to collections within the database. Each reference
+    /// specifies a collection and can optionally include the collection's schema
+    /// to provide context for the query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatabaseTableReference> DatabaseTableReferences {
+      get { return databaseTableReferences_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FirestoreDatabaseReference);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FirestoreDatabaseReference other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ProjectId != other.ProjectId) return false;
+      if (DatabaseId != other.DatabaseId) return false;
+      if(!collectionIds_.Equals(other.collectionIds_)) return false;
+      if(!databaseTableReferences_.Equals(other.databaseTableReferences_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
+      if (DatabaseId.Length != 0) hash ^= DatabaseId.GetHashCode();
+      hash ^= collectionIds_.GetHashCode();
+      hash ^= databaseTableReferences_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (DatabaseId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DatabaseId);
+      }
+      collectionIds_.WriteTo(output, _repeated_collectionIds_codec);
+      databaseTableReferences_.WriteTo(output, _repeated_databaseTableReferences_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (DatabaseId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DatabaseId);
+      }
+      collectionIds_.WriteTo(ref output, _repeated_collectionIds_codec);
+      databaseTableReferences_.WriteTo(ref output, _repeated_databaseTableReferences_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ProjectId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
+      }
+      if (DatabaseId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatabaseId);
+      }
+      size += collectionIds_.CalculateSize(_repeated_collectionIds_codec);
+      size += databaseTableReferences_.CalculateSize(_repeated_databaseTableReferences_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FirestoreDatabaseReference other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ProjectId.Length != 0) {
+        ProjectId = other.ProjectId;
+      }
+      if (other.DatabaseId.Length != 0) {
+        DatabaseId = other.DatabaseId;
+      }
+      collectionIds_.Add(other.collectionIds_);
+      databaseTableReferences_.Add(other.databaseTableReferences_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            DatabaseId = input.ReadString();
+            break;
+          }
+          case 26: {
+            collectionIds_.AddEntriesFrom(input, _repeated_collectionIds_codec);
+            break;
+          }
+          case 34: {
+            databaseTableReferences_.AddEntriesFrom(input, _repeated_databaseTableReferences_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            DatabaseId = input.ReadString();
+            break;
+          }
+          case 26: {
+            collectionIds_.AddEntriesFrom(ref input, _repeated_collectionIds_codec);
+            break;
+          }
+          case 34: {
+            databaseTableReferences_.AddEntriesFrom(ref input, _repeated_databaseTableReferences_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Message representing reference to a Spanner database and agent context.
   /// Only supported for the `QueryData` method.
   /// </summary>
@@ -2675,7 +4004,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2938,7 +4267,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3434,7 +4763,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3697,7 +5026,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4147,7 +5476,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4396,7 +5725,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4835,7 +6164,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5120,7 +6449,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5364,7 +6693,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5405,8 +6734,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         case ReferenceOneofCase.CloudSqlReference:
           CloudSqlReference = other.CloudSqlReference.Clone();
           break;
+        case ReferenceOneofCase.BigtableReference:
+          BigtableReference = other.BigtableReference.Clone();
+          break;
         case ReferenceOneofCase.BigqueryPropertyGraphReference:
           BigqueryPropertyGraphReference = other.BigqueryPropertyGraphReference.Clone();
+          break;
+        case ReferenceOneofCase.FirestoreReference:
+          FirestoreReference = other.FirestoreReference.Clone();
           break;
       }
 
@@ -5523,6 +6858,21 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "bigtable_reference" field.</summary>
+    public const int BigtableReferenceFieldNumber = 15;
+    /// <summary>
+    /// A reference to a Bigtable instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference BigtableReference {
+      get { return referenceCase_ == ReferenceOneofCase.BigtableReference ? (global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference) reference_ : null; }
+      set {
+        reference_ = value;
+        referenceCase_ = value == null ? ReferenceOneofCase.None : ReferenceOneofCase.BigtableReference;
+      }
+    }
+
     /// <summary>Field number for the "bigquery_property_graph_reference" field.</summary>
     public const int BigqueryPropertyGraphReferenceFieldNumber = 16;
     /// <summary>
@@ -5535,6 +6885,21 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       set {
         reference_ = value;
         referenceCase_ = value == null ? ReferenceOneofCase.None : ReferenceOneofCase.BigqueryPropertyGraphReference;
+      }
+    }
+
+    /// <summary>Field number for the "firestore_reference" field.</summary>
+    public const int FirestoreReferenceFieldNumber = 17;
+    /// <summary>
+    /// A reference to a Firestore database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference FirestoreReference {
+      get { return referenceCase_ == ReferenceOneofCase.FirestoreReference ? (global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference) reference_ : null; }
+      set {
+        reference_ = value;
+        referenceCase_ = value == null ? ReferenceOneofCase.None : ReferenceOneofCase.FirestoreReference;
       }
     }
 
@@ -5583,7 +6948,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       AlloyDbReference = 12,
       SpannerReference = 13,
       CloudSqlReference = 14,
+      BigtableReference = 15,
       BigqueryPropertyGraphReference = 16,
+      FirestoreReference = 17,
     }
     private ReferenceOneofCase referenceCase_ = ReferenceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5620,7 +6987,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (!object.Equals(AlloyDbReference, other.AlloyDbReference)) return false;
       if (!object.Equals(SpannerReference, other.SpannerReference)) return false;
       if (!object.Equals(CloudSqlReference, other.CloudSqlReference)) return false;
+      if (!object.Equals(BigtableReference, other.BigtableReference)) return false;
       if (!object.Equals(BigqueryPropertyGraphReference, other.BigqueryPropertyGraphReference)) return false;
+      if (!object.Equals(FirestoreReference, other.FirestoreReference)) return false;
       if (!object.Equals(Schema, other.Schema)) return false;
       if (!object.Equals(StructSchema, other.StructSchema)) return false;
       if (ReferenceCase != other.ReferenceCase) return false;
@@ -5637,7 +7006,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (referenceCase_ == ReferenceOneofCase.AlloyDbReference) hash ^= AlloyDbReference.GetHashCode();
       if (referenceCase_ == ReferenceOneofCase.SpannerReference) hash ^= SpannerReference.GetHashCode();
       if (referenceCase_ == ReferenceOneofCase.CloudSqlReference) hash ^= CloudSqlReference.GetHashCode();
+      if (referenceCase_ == ReferenceOneofCase.BigtableReference) hash ^= BigtableReference.GetHashCode();
       if (referenceCase_ == ReferenceOneofCase.BigqueryPropertyGraphReference) hash ^= BigqueryPropertyGraphReference.GetHashCode();
+      if (referenceCase_ == ReferenceOneofCase.FirestoreReference) hash ^= FirestoreReference.GetHashCode();
       if (schema_ != null) hash ^= Schema.GetHashCode();
       if (structSchema_ != null) hash ^= StructSchema.GetHashCode();
       hash ^= (int) referenceCase_;
@@ -5691,9 +7062,17 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteRawTag(114);
         output.WriteMessage(CloudSqlReference);
       }
+      if (referenceCase_ == ReferenceOneofCase.BigtableReference) {
+        output.WriteRawTag(122);
+        output.WriteMessage(BigtableReference);
+      }
       if (referenceCase_ == ReferenceOneofCase.BigqueryPropertyGraphReference) {
         output.WriteRawTag(130, 1);
         output.WriteMessage(BigqueryPropertyGraphReference);
+      }
+      if (referenceCase_ == ReferenceOneofCase.FirestoreReference) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(FirestoreReference);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5737,9 +7116,17 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteRawTag(114);
         output.WriteMessage(CloudSqlReference);
       }
+      if (referenceCase_ == ReferenceOneofCase.BigtableReference) {
+        output.WriteRawTag(122);
+        output.WriteMessage(BigtableReference);
+      }
       if (referenceCase_ == ReferenceOneofCase.BigqueryPropertyGraphReference) {
         output.WriteRawTag(130, 1);
         output.WriteMessage(BigqueryPropertyGraphReference);
+      }
+      if (referenceCase_ == ReferenceOneofCase.FirestoreReference) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(FirestoreReference);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -5769,8 +7156,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (referenceCase_ == ReferenceOneofCase.CloudSqlReference) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudSqlReference);
       }
+      if (referenceCase_ == ReferenceOneofCase.BigtableReference) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigtableReference);
+      }
       if (referenceCase_ == ReferenceOneofCase.BigqueryPropertyGraphReference) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(BigqueryPropertyGraphReference);
+      }
+      if (referenceCase_ == ReferenceOneofCase.FirestoreReference) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FirestoreReference);
       }
       if (schema_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Schema);
@@ -5836,11 +7229,23 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
           }
           CloudSqlReference.MergeFrom(other.CloudSqlReference);
           break;
+        case ReferenceOneofCase.BigtableReference:
+          if (BigtableReference == null) {
+            BigtableReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference();
+          }
+          BigtableReference.MergeFrom(other.BigtableReference);
+          break;
         case ReferenceOneofCase.BigqueryPropertyGraphReference:
           if (BigqueryPropertyGraphReference == null) {
             BigqueryPropertyGraphReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryPropertyGraphReference();
           }
           BigqueryPropertyGraphReference.MergeFrom(other.BigqueryPropertyGraphReference);
+          break;
+        case ReferenceOneofCase.FirestoreReference:
+          if (FirestoreReference == null) {
+            FirestoreReference = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference();
+          }
+          FirestoreReference.MergeFrom(other.FirestoreReference);
           break;
       }
 
@@ -5926,6 +7331,15 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             CloudSqlReference = subBuilder;
             break;
           }
+          case 122: {
+            global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference subBuilder = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference();
+            if (referenceCase_ == ReferenceOneofCase.BigtableReference) {
+              subBuilder.MergeFrom(BigtableReference);
+            }
+            input.ReadMessage(subBuilder);
+            BigtableReference = subBuilder;
+            break;
+          }
           case 130: {
             global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryPropertyGraphReference subBuilder = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryPropertyGraphReference();
             if (referenceCase_ == ReferenceOneofCase.BigqueryPropertyGraphReference) {
@@ -5933,6 +7347,15 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             }
             input.ReadMessage(subBuilder);
             BigqueryPropertyGraphReference = subBuilder;
+            break;
+          }
+          case 138: {
+            global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference subBuilder = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference();
+            if (referenceCase_ == ReferenceOneofCase.FirestoreReference) {
+              subBuilder.MergeFrom(FirestoreReference);
+            }
+            input.ReadMessage(subBuilder);
+            FirestoreReference = subBuilder;
             break;
           }
         }
@@ -6017,6 +7440,15 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             CloudSqlReference = subBuilder;
             break;
           }
+          case 122: {
+            global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference subBuilder = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigtableReference();
+            if (referenceCase_ == ReferenceOneofCase.BigtableReference) {
+              subBuilder.MergeFrom(BigtableReference);
+            }
+            input.ReadMessage(subBuilder);
+            BigtableReference = subBuilder;
+            break;
+          }
           case 130: {
             global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryPropertyGraphReference subBuilder = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryPropertyGraphReference();
             if (referenceCase_ == ReferenceOneofCase.BigqueryPropertyGraphReference) {
@@ -6024,6 +7456,15 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             }
             input.ReadMessage(subBuilder);
             BigqueryPropertyGraphReference = subBuilder;
+            break;
+          }
+          case 138: {
+            global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference subBuilder = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.FirestoreReference();
+            if (referenceCase_ == ReferenceOneofCase.FirestoreReference) {
+              subBuilder.MergeFrom(FirestoreReference);
+            }
+            input.ReadMessage(subBuilder);
+            FirestoreReference = subBuilder;
             break;
           }
         }
@@ -6051,7 +7492,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6420,7 +7861,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6958,7 +8399,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

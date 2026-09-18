@@ -3114,6 +3114,3111 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_ListTemplates_sync",
+      "title": "ListTemplatesRequestObject",
+      "description": "Snippet for ListTemplates",
+      "file": "ParameterManagerClient.ListTemplatesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplates",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.ListTemplates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.ListTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ParameterManager.V1.ListTemplatesResponse, Google.Cloud.ParameterManager.V1.Template>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "ListTemplates",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.ListTemplates",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_ListTemplates_async",
+      "title": "ListTemplatesRequestObjectAsync",
+      "description": "Snippet for ListTemplatesAsync",
+      "file": "ParameterManagerClient.ListTemplatesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplatesAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.ListTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.ListTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ParameterManager.V1.ListTemplatesResponse, Google.Cloud.ParameterManager.V1.Template>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "ListTemplates",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.ListTemplates",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_ListTemplates_sync_flattened",
+      "title": "ListTemplates",
+      "description": "Snippet for ListTemplates",
+      "file": "ParameterManagerClient.ListTemplatesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplates",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.ListTemplates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ParameterManager.V1.ListTemplatesResponse, Google.Cloud.ParameterManager.V1.Template>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "ListTemplates",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.ListTemplates",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_ListTemplates_async_flattened",
+      "title": "ListTemplatesAsync",
+      "description": "Snippet for ListTemplatesAsync",
+      "file": "ParameterManagerClient.ListTemplatesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplatesAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.ListTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ParameterManager.V1.ListTemplatesResponse, Google.Cloud.ParameterManager.V1.Template>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "ListTemplates",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.ListTemplates",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_ListTemplates_sync_flattened_resourceNames",
+      "title": "ListTemplatesResourceNames",
+      "description": "Snippet for ListTemplates",
+      "file": "ParameterManagerClient.ListTemplatesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplates",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.ListTemplates",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ParameterManager.V1.ListTemplatesResponse, Google.Cloud.ParameterManager.V1.Template>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "ListTemplates",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.ListTemplates",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_ListTemplates_async_flattened_resourceNames",
+      "title": "ListTemplatesResourceNamesAsync",
+      "description": "Snippet for ListTemplatesAsync",
+      "file": "ParameterManagerClient.ListTemplatesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplatesAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.ListTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ParameterManager.V1.ListTemplatesResponse, Google.Cloud.ParameterManager.V1.Template>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "ListTemplates",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.ListTemplates",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_GetTemplate_sync",
+      "title": "GetTemplateRequestObject",
+      "description": "Snippet for GetTemplate",
+      "file": "ParameterManagerClient.GetTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplate",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.GetTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.GetTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.Template",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "GetTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.GetTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_GetTemplate_async",
+      "title": "GetTemplateRequestObjectAsync",
+      "description": "Snippet for GetTemplateAsync",
+      "file": "ParameterManagerClient.GetTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplateAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.GetTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.GetTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.Template>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "GetTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.GetTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_GetTemplate_sync_flattened",
+      "title": "GetTemplate",
+      "description": "Snippet for GetTemplate",
+      "file": "ParameterManagerClient.GetTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplate",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.GetTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.Template",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "GetTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.GetTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_GetTemplate_async_flattened",
+      "title": "GetTemplateAsync",
+      "description": "Snippet for GetTemplateAsync",
+      "file": "ParameterManagerClient.GetTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplateAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.GetTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.Template>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "GetTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.GetTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_GetTemplate_sync_flattened_resourceNames",
+      "title": "GetTemplateResourceNames",
+      "description": "Snippet for GetTemplate",
+      "file": "ParameterManagerClient.GetTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplate",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.GetTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.Template",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "GetTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.GetTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_GetTemplate_async_flattened_resourceNames",
+      "title": "GetTemplateResourceNamesAsync",
+      "description": "Snippet for GetTemplateAsync",
+      "file": "ParameterManagerClient.GetTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplateAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.GetTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.Template>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "GetTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.GetTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_CreateTemplate_sync",
+      "title": "CreateTemplateRequestObject",
+      "description": "Snippet for CreateTemplate",
+      "file": "ParameterManagerClient.CreateTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplate",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.CreateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.CreateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.Template",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.CreateTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_CreateTemplate_async",
+      "title": "CreateTemplateRequestObjectAsync",
+      "description": "Snippet for CreateTemplateAsync",
+      "file": "ParameterManagerClient.CreateTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplateAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.CreateTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.CreateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.Template>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.CreateTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_CreateTemplate_sync_flattened",
+      "title": "CreateTemplate",
+      "description": "Snippet for CreateTemplate",
+      "file": "ParameterManagerClient.CreateTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplate",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.CreateTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ParameterManager.V1.Template",
+            "name": "template"
+          },
+          {
+            "type": "System.String",
+            "name": "templateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.Template",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.CreateTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_CreateTemplate_async_flattened",
+      "title": "CreateTemplateAsync",
+      "description": "Snippet for CreateTemplateAsync",
+      "file": "ParameterManagerClient.CreateTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplateAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.CreateTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ParameterManager.V1.Template",
+            "name": "template"
+          },
+          {
+            "type": "System.String",
+            "name": "templateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.Template>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.CreateTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_CreateTemplate_sync_flattened_resourceNames",
+      "title": "CreateTemplateResourceNames",
+      "description": "Snippet for CreateTemplate",
+      "file": "ParameterManagerClient.CreateTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplate",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.CreateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ParameterManager.V1.Template",
+            "name": "template"
+          },
+          {
+            "type": "System.String",
+            "name": "templateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.Template",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.CreateTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_CreateTemplate_async_flattened_resourceNames",
+      "title": "CreateTemplateResourceNamesAsync",
+      "description": "Snippet for CreateTemplateAsync",
+      "file": "ParameterManagerClient.CreateTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplateAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.CreateTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ParameterManager.V1.Template",
+            "name": "template"
+          },
+          {
+            "type": "System.String",
+            "name": "templateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.Template>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.CreateTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_UpdateTemplate_sync",
+      "title": "UpdateTemplateRequestObject",
+      "description": "Snippet for UpdateTemplate",
+      "file": "ParameterManagerClient.UpdateTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTemplate",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.UpdateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.UpdateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.Template",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.UpdateTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_UpdateTemplate_async",
+      "title": "UpdateTemplateRequestObjectAsync",
+      "description": "Snippet for UpdateTemplateAsync",
+      "file": "ParameterManagerClient.UpdateTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTemplateAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.UpdateTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.UpdateTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.Template>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.UpdateTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_UpdateTemplate_sync_flattened",
+      "title": "UpdateTemplate",
+      "description": "Snippet for UpdateTemplate",
+      "file": "ParameterManagerClient.UpdateTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTemplate",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.UpdateTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.Template",
+            "name": "template"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.Template",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.UpdateTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_UpdateTemplate_async_flattened",
+      "title": "UpdateTemplateAsync",
+      "description": "Snippet for UpdateTemplateAsync",
+      "file": "ParameterManagerClient.UpdateTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTemplateAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.UpdateTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.Template",
+            "name": "template"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.Template>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.UpdateTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_DeleteTemplate_sync",
+      "title": "DeleteTemplateRequestObject",
+      "description": "Snippet for DeleteTemplate",
+      "file": "ParameterManagerClient.DeleteTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplate",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.DeleteTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.DeleteTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.DeleteTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_DeleteTemplate_async",
+      "title": "DeleteTemplateRequestObjectAsync",
+      "description": "Snippet for DeleteTemplateAsync",
+      "file": "ParameterManagerClient.DeleteTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplateAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.DeleteTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.DeleteTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.DeleteTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_DeleteTemplate_sync_flattened",
+      "title": "DeleteTemplate",
+      "description": "Snippet for DeleteTemplate",
+      "file": "ParameterManagerClient.DeleteTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplate",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.DeleteTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.DeleteTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_DeleteTemplate_async_flattened",
+      "title": "DeleteTemplateAsync",
+      "description": "Snippet for DeleteTemplateAsync",
+      "file": "ParameterManagerClient.DeleteTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplateAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.DeleteTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.DeleteTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_DeleteTemplate_sync_flattened_resourceNames",
+      "title": "DeleteTemplateResourceNames",
+      "description": "Snippet for DeleteTemplate",
+      "file": "ParameterManagerClient.DeleteTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplate",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.DeleteTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.DeleteTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_DeleteTemplate_async_flattened_resourceNames",
+      "title": "DeleteTemplateResourceNamesAsync",
+      "description": "Snippet for DeleteTemplateAsync",
+      "file": "ParameterManagerClient.DeleteTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplateAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.DeleteTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplate",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.DeleteTemplate",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_ListTemplateVersions_sync",
+      "title": "ListTemplateVersionsRequestObject",
+      "description": "Snippet for ListTemplateVersions",
+      "file": "ParameterManagerClient.ListTemplateVersionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplateVersions",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.ListTemplateVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.ListTemplateVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse, Google.Cloud.ParameterManager.V1.TemplateVersion>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "ListTemplateVersions",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.ListTemplateVersions",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_ListTemplateVersions_async",
+      "title": "ListTemplateVersionsRequestObjectAsync",
+      "description": "Snippet for ListTemplateVersionsAsync",
+      "file": "ParameterManagerClient.ListTemplateVersionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplateVersionsAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.ListTemplateVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.ListTemplateVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse, Google.Cloud.ParameterManager.V1.TemplateVersion>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "ListTemplateVersions",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.ListTemplateVersions",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_ListTemplateVersions_sync_flattened",
+      "title": "ListTemplateVersions",
+      "description": "Snippet for ListTemplateVersions",
+      "file": "ParameterManagerClient.ListTemplateVersionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplateVersions",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.ListTemplateVersions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse, Google.Cloud.ParameterManager.V1.TemplateVersion>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "ListTemplateVersions",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.ListTemplateVersions",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_ListTemplateVersions_async_flattened",
+      "title": "ListTemplateVersionsAsync",
+      "description": "Snippet for ListTemplateVersionsAsync",
+      "file": "ParameterManagerClient.ListTemplateVersionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplateVersionsAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.ListTemplateVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse, Google.Cloud.ParameterManager.V1.TemplateVersion>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "ListTemplateVersions",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.ListTemplateVersions",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_ListTemplateVersions_sync_flattened_resourceNames",
+      "title": "ListTemplateVersionsResourceNames",
+      "description": "Snippet for ListTemplateVersions",
+      "file": "ParameterManagerClient.ListTemplateVersionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplateVersions",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.ListTemplateVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse, Google.Cloud.ParameterManager.V1.TemplateVersion>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "ListTemplateVersions",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.ListTemplateVersions",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_ListTemplateVersions_async_flattened_resourceNames",
+      "title": "ListTemplateVersionsResourceNamesAsync",
+      "description": "Snippet for ListTemplateVersionsAsync",
+      "file": "ParameterManagerClient.ListTemplateVersionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTemplateVersionsAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.ListTemplateVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ParameterManager.V1.ListTemplateVersionsResponse, Google.Cloud.ParameterManager.V1.TemplateVersion>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "ListTemplateVersions",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.ListTemplateVersions",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_GetTemplateVersion_sync",
+      "title": "GetTemplateVersionRequestObject",
+      "description": "Snippet for GetTemplateVersion",
+      "file": "ParameterManagerClient.GetTemplateVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplateVersion",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.GetTemplateVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.GetTemplateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.TemplateVersion",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "GetTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.GetTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_GetTemplateVersion_async",
+      "title": "GetTemplateVersionRequestObjectAsync",
+      "description": "Snippet for GetTemplateVersionAsync",
+      "file": "ParameterManagerClient.GetTemplateVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplateVersionAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.GetTemplateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.GetTemplateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.TemplateVersion>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "GetTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.GetTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_GetTemplateVersion_sync_flattened",
+      "title": "GetTemplateVersion",
+      "description": "Snippet for GetTemplateVersion",
+      "file": "ParameterManagerClient.GetTemplateVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplateVersion",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.GetTemplateVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.TemplateVersion",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "GetTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.GetTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_GetTemplateVersion_async_flattened",
+      "title": "GetTemplateVersionAsync",
+      "description": "Snippet for GetTemplateVersionAsync",
+      "file": "ParameterManagerClient.GetTemplateVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplateVersionAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.GetTemplateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.TemplateVersion>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "GetTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.GetTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_GetTemplateVersion_sync_flattened_resourceNames",
+      "title": "GetTemplateVersionResourceNames",
+      "description": "Snippet for GetTemplateVersion",
+      "file": "ParameterManagerClient.GetTemplateVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplateVersion",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.GetTemplateVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.TemplateVersion",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "GetTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.GetTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_GetTemplateVersion_async_flattened_resourceNames",
+      "title": "GetTemplateVersionResourceNamesAsync",
+      "description": "Snippet for GetTemplateVersionAsync",
+      "file": "ParameterManagerClient.GetTemplateVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTemplateVersionAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.GetTemplateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.TemplateVersion>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "GetTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.GetTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_CreateTemplateVersion_sync",
+      "title": "CreateTemplateVersionRequestObject",
+      "description": "Snippet for CreateTemplateVersion",
+      "file": "ParameterManagerClient.CreateTemplateVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplateVersion",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.CreateTemplateVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.CreateTemplateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.TemplateVersion",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.CreateTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_CreateTemplateVersion_async",
+      "title": "CreateTemplateVersionRequestObjectAsync",
+      "description": "Snippet for CreateTemplateVersionAsync",
+      "file": "ParameterManagerClient.CreateTemplateVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplateVersionAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.CreateTemplateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.CreateTemplateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.TemplateVersion>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.CreateTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_CreateTemplateVersion_sync_flattened",
+      "title": "CreateTemplateVersion",
+      "description": "Snippet for CreateTemplateVersion",
+      "file": "ParameterManagerClient.CreateTemplateVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplateVersion",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.CreateTemplateVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateVersion",
+            "name": "templateVersion"
+          },
+          {
+            "type": "System.String",
+            "name": "templateVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.TemplateVersion",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.CreateTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_CreateTemplateVersion_async_flattened",
+      "title": "CreateTemplateVersionAsync",
+      "description": "Snippet for CreateTemplateVersionAsync",
+      "file": "ParameterManagerClient.CreateTemplateVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplateVersionAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.CreateTemplateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateVersion",
+            "name": "templateVersion"
+          },
+          {
+            "type": "System.String",
+            "name": "templateVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.TemplateVersion>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.CreateTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_CreateTemplateVersion_sync_flattened_resourceNames",
+      "title": "CreateTemplateVersionResourceNames",
+      "description": "Snippet for CreateTemplateVersion",
+      "file": "ParameterManagerClient.CreateTemplateVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplateVersion",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.CreateTemplateVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateVersion",
+            "name": "templateVersion"
+          },
+          {
+            "type": "System.String",
+            "name": "templateVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.TemplateVersion",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.CreateTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_CreateTemplateVersion_async_flattened_resourceNames",
+      "title": "CreateTemplateVersionResourceNamesAsync",
+      "description": "Snippet for CreateTemplateVersionAsync",
+      "file": "ParameterManagerClient.CreateTemplateVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTemplateVersionAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.CreateTemplateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateVersion",
+            "name": "templateVersion"
+          },
+          {
+            "type": "System.String",
+            "name": "templateVersionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.TemplateVersion>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.CreateTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_UpdateTemplateVersion_sync",
+      "title": "UpdateTemplateVersionRequestObject",
+      "description": "Snippet for UpdateTemplateVersion",
+      "file": "ParameterManagerClient.UpdateTemplateVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTemplateVersion",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.UpdateTemplateVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.UpdateTemplateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.TemplateVersion",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.UpdateTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_UpdateTemplateVersion_async",
+      "title": "UpdateTemplateVersionRequestObjectAsync",
+      "description": "Snippet for UpdateTemplateVersionAsync",
+      "file": "ParameterManagerClient.UpdateTemplateVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTemplateVersionAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.UpdateTemplateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.UpdateTemplateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.TemplateVersion>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.UpdateTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_UpdateTemplateVersion_sync_flattened",
+      "title": "UpdateTemplateVersion",
+      "description": "Snippet for UpdateTemplateVersion",
+      "file": "ParameterManagerClient.UpdateTemplateVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTemplateVersion",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.UpdateTemplateVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateVersion",
+            "name": "templateVersion"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.TemplateVersion",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.UpdateTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_UpdateTemplateVersion_async_flattened",
+      "title": "UpdateTemplateVersionAsync",
+      "description": "Snippet for UpdateTemplateVersionAsync",
+      "file": "ParameterManagerClient.UpdateTemplateVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTemplateVersionAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.UpdateTemplateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateVersion",
+            "name": "templateVersion"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.TemplateVersion>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.UpdateTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_DeleteTemplateVersion_sync",
+      "title": "DeleteTemplateVersionRequestObject",
+      "description": "Snippet for DeleteTemplateVersion",
+      "file": "ParameterManagerClient.DeleteTemplateVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplateVersion",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.DeleteTemplateVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.DeleteTemplateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.DeleteTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_DeleteTemplateVersion_async",
+      "title": "DeleteTemplateVersionRequestObjectAsync",
+      "description": "Snippet for DeleteTemplateVersionAsync",
+      "file": "ParameterManagerClient.DeleteTemplateVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplateVersionAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.DeleteTemplateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.DeleteTemplateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.DeleteTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_DeleteTemplateVersion_sync_flattened",
+      "title": "DeleteTemplateVersion",
+      "description": "Snippet for DeleteTemplateVersion",
+      "file": "ParameterManagerClient.DeleteTemplateVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplateVersion",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.DeleteTemplateVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.DeleteTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_DeleteTemplateVersion_async_flattened",
+      "title": "DeleteTemplateVersionAsync",
+      "description": "Snippet for DeleteTemplateVersionAsync",
+      "file": "ParameterManagerClient.DeleteTemplateVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplateVersionAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.DeleteTemplateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.DeleteTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_DeleteTemplateVersion_sync_flattened_resourceNames",
+      "title": "DeleteTemplateVersionResourceNames",
+      "description": "Snippet for DeleteTemplateVersion",
+      "file": "ParameterManagerClient.DeleteTemplateVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplateVersion",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.DeleteTemplateVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.DeleteTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_DeleteTemplateVersion_async_flattened_resourceNames",
+      "title": "DeleteTemplateVersionResourceNamesAsync",
+      "description": "Snippet for DeleteTemplateVersionAsync",
+      "file": "ParameterManagerClient.DeleteTemplateVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTemplateVersionAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.DeleteTemplateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.DeleteTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_RenderTemplateVersion_sync",
+      "title": "RenderTemplateVersionRequestObject",
+      "description": "Snippet for RenderTemplateVersion",
+      "file": "ParameterManagerClient.RenderTemplateVersionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderTemplateVersion",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.RenderTemplateVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.RenderTemplateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "RenderTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.RenderTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_RenderTemplateVersion_async",
+      "title": "RenderTemplateVersionRequestObjectAsync",
+      "description": "Snippet for RenderTemplateVersionAsync",
+      "file": "ParameterManagerClient.RenderTemplateVersionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderTemplateVersionAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.RenderTemplateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.RenderTemplateVersionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "RenderTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.RenderTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_RenderTemplateVersion_sync_flattened",
+      "title": "RenderTemplateVersion",
+      "description": "Snippet for RenderTemplateVersion",
+      "file": "ParameterManagerClient.RenderTemplateVersionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderTemplateVersion",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.RenderTemplateVersion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "RenderTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.RenderTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_RenderTemplateVersion_async_flattened",
+      "title": "RenderTemplateVersionAsync",
+      "description": "Snippet for RenderTemplateVersionAsync",
+      "file": "ParameterManagerClient.RenderTemplateVersionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderTemplateVersionAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.RenderTemplateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "RenderTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.RenderTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_RenderTemplateVersion_sync_flattened_resourceNames",
+      "title": "RenderTemplateVersionResourceNames",
+      "description": "Snippet for RenderTemplateVersion",
+      "file": "ParameterManagerClient.RenderTemplateVersionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderTemplateVersion",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.RenderTemplateVersion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "RenderTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.RenderTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parametermanager_v1_generated_ParameterManager_RenderTemplateVersion_async_flattened_resourceNames",
+      "title": "RenderTemplateVersionResourceNamesAsync",
+      "description": "Snippet for RenderTemplateVersionAsync",
+      "file": "ParameterManagerClient.RenderTemplateVersionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderTemplateVersionAsync",
+        "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient.RenderTemplateVersionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ParameterManager.V1.TemplateVersionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ParameterManager.V1.RenderTemplateVersionResponse>",
+        "client": {
+          "shortName": "ParameterManagerClient",
+          "fullName": "Google.Cloud.ParameterManager.V1.ParameterManagerClient"
+        },
+        "method": {
+          "shortName": "RenderTemplateVersion",
+          "fullName": "google.cloud.parametermanager.v1.ParameterManager.RenderTemplateVersion",
+          "service": {
+            "shortName": "ParameterManager",
+            "fullName": "google.cloud.parametermanager.v1.ParameterManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

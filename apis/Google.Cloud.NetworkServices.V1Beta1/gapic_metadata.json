@@ -1,0 +1,147 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.networkservices.v1beta1",
+  "libraryPackage": "Google.Cloud.NetworkServices.V1Beta1",
+  "services": {
+    "DepService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DepServiceClient",
+          "rpcs": {
+            "CreateExtensionBinding": {
+              "methods": [
+                "CreateExtensionBinding",
+                "CreateExtensionBindingAsync"
+              ]
+            },
+            "CreateLbRouteExtension": {
+              "methods": [
+                "CreateLbRouteExtension",
+                "CreateLbRouteExtensionAsync"
+              ]
+            },
+            "CreateLbTrafficExtension": {
+              "methods": [
+                "CreateLbTrafficExtension",
+                "CreateLbTrafficExtensionAsync"
+              ]
+            },
+            "DeleteExtensionBinding": {
+              "methods": [
+                "DeleteExtensionBinding",
+                "DeleteExtensionBindingAsync"
+              ]
+            },
+            "DeleteLbRouteExtension": {
+              "methods": [
+                "DeleteLbRouteExtension",
+                "DeleteLbRouteExtensionAsync"
+              ]
+            },
+            "DeleteLbTrafficExtension": {
+              "methods": [
+                "DeleteLbTrafficExtension",
+                "DeleteLbTrafficExtensionAsync"
+              ]
+            },
+            "GetExtensionBinding": {
+              "methods": [
+                "GetExtensionBinding",
+                "GetExtensionBindingAsync"
+              ]
+            },
+            "GetLbRouteExtension": {
+              "methods": [
+                "GetLbRouteExtension",
+                "GetLbRouteExtensionAsync"
+              ]
+            },
+            "GetLbTrafficExtension": {
+              "methods": [
+                "GetLbTrafficExtension",
+                "GetLbTrafficExtensionAsync"
+              ]
+            },
+            "ListExtensionBindings": {
+              "methods": [
+                "ListExtensionBindings",
+                "ListExtensionBindingsAsync"
+              ]
+            },
+            "ListLbRouteExtensions": {
+              "methods": [
+                "ListLbRouteExtensions",
+                "ListLbRouteExtensionsAsync"
+              ]
+            },
+            "ListLbTrafficExtensions": {
+              "methods": [
+                "ListLbTrafficExtensions",
+                "ListLbTrafficExtensionsAsync"
+              ]
+            },
+            "UpdateExtensionBinding": {
+              "methods": [
+                "UpdateExtensionBinding",
+                "UpdateExtensionBindingAsync"
+              ]
+            },
+            "UpdateLbRouteExtension": {
+              "methods": [
+                "UpdateLbRouteExtension",
+                "UpdateLbRouteExtensionAsync"
+              ]
+            },
+            "UpdateLbTrafficExtension": {
+              "methods": [
+                "UpdateLbTrafficExtension",
+                "UpdateLbTrafficExtensionAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "NetworkServices": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "NetworkServicesClient",
+          "rpcs": {
+            "CreateEndpointPolicy": {
+              "methods": [
+                "CreateEndpointPolicy",
+                "CreateEndpointPolicyAsync"
+              ]
+            },
+            "DeleteEndpointPolicy": {
+              "methods": [
+                "DeleteEndpointPolicy",
+                "DeleteEndpointPolicyAsync"
+              ]
+            },
+            "GetEndpointPolicy": {
+              "methods": [
+                "GetEndpointPolicy",
+                "GetEndpointPolicyAsync"
+              ]
+            },
+            "ListEndpointPolicies": {
+              "methods": [
+                "ListEndpointPolicies",
+                "ListEndpointPoliciesAsync"
+              ]
+            },
+            "UpdateEndpointPolicy": {
+              "methods": [
+                "UpdateEndpointPolicy",
+                "UpdateEndpointPolicyAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

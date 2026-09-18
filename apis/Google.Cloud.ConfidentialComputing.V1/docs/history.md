@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.13.0, released 2026-09-11
+
+### New features
+
+- Add `PlatformType` enum and `platform_type` field to `VerifyConfidentialGkeRequest`
+
 ## Version 1.12.0, released 2026-06-15
 
 ### New features

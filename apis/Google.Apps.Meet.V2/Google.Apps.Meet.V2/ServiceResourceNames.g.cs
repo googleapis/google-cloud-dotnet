@@ -43,6 +43,60 @@ namespace Google.Apps.Meet.V2
         }
     }
 
+    public partial class CreateMemberRequest
+    {
+        /// <summary><see cref="SpaceName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public SpaceName ParentAsSpaceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SpaceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetMemberRequest
+    {
+        /// <summary>
+        /// <see cref="gamv::MemberName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamv::MemberName MemberName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamv::MemberName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListMembersRequest
+    {
+        /// <summary><see cref="SpaceName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public SpaceName ParentAsSpaceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SpaceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteMemberRequest
+    {
+        /// <summary>
+        /// <see cref="gamv::MemberName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamv::MemberName MemberName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamv::MemberName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchUpdateMembersRequest
+    {
+        /// <summary><see cref="SpaceName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public SpaceName ParentAsSpaceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SpaceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetConferenceRecordRequest
     {
         /// <summary>
@@ -171,6 +225,30 @@ namespace Google.Apps.Meet.V2
         public TranscriptName ParentAsTranscriptName
         {
             get => string.IsNullOrEmpty(Parent) ? null : TranscriptName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetSmartNoteRequest
+    {
+        /// <summary>
+        /// <see cref="gamv::SmartNoteName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamv::SmartNoteName SmartNoteName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamv::SmartNoteName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListSmartNotesRequest
+    {
+        /// <summary>
+        /// <see cref="ConferenceRecordName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ConferenceRecordName ParentAsConferenceRecordName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ConferenceRecordName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

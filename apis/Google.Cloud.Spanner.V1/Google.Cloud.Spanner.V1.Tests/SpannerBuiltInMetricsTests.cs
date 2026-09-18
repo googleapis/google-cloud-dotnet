@@ -13,7 +13,12 @@
 // limitations under the License.
 
 using Google.Cloud.Spanner.Common.V1;
+using Grpc.Core;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Spanner.V1.Tests;
@@ -52,7 +57,7 @@ public class SpannerBuiltInMetricsTests
     public void GetLabels_ValidRequests_ExtractsResourceLabels(object request, string expectedProjectId, string expectedInstanceId, string expectedDatabaseId)
     {
         var identity = SpannerBuiltInMetrics.Labeler.GenerateIdentity();
-        var labels = SpannerBuiltInMetrics.Labeler.GetLabels("MethodName", (IDatabaseNameProvider)request, "OK", identity);
+        var labels = SpannerBuiltInMetrics.Labeler.GetLabels("MethodName", (IDatabaseNameProvider)request, StatusCode.OK, identity);
 
         Assert.Contains(labels, l => l.Key == "project_id" && (string) l.Value == expectedProjectId);
         Assert.Contains(labels, l => l.Key == "instance_id" && (string) l.Value == expectedInstanceId);
@@ -73,7 +78,7 @@ public class SpannerBuiltInMetricsTests
     public void GetLabels_InvalidRequests_DefaultsToUnknown(object request)
     {
         var identity = SpannerBuiltInMetrics.Labeler.GenerateIdentity();
-        var labels = SpannerBuiltInMetrics.Labeler.GetLabels("MethodName", request as IDatabaseNameProvider, "OK", identity);
+        var labels = SpannerBuiltInMetrics.Labeler.GetLabels("MethodName", request as IDatabaseNameProvider, StatusCode.OK, identity);
 
         Assert.Contains(labels, l => l.Key == "project_id" && (string) l.Value == "unknown");
         Assert.Contains(labels, l => l.Key == "instance_id" && (string) l.Value == "unknown");
@@ -81,10 +86,10 @@ public class SpannerBuiltInMetricsTests
     }
 
     [Theory]
-    [InlineData("SomeMethod1", "OK")]
-    [InlineData("SomeMethod2", "CANCELLED")]
-    [InlineData("SomeMethod3", "DEADLINE_EXCEEDED")]
-    public void GetLabels_PopulatesAllNonResourceLabels(string method, string status)
+    [InlineData("SomeMethod1", StatusCode.OK)]
+    [InlineData("SomeMethod2", StatusCode.Cancelled)]
+    [InlineData("SomeMethod3", StatusCode.DeadlineExceeded)]
+    public void GetLabels_PopulatesAllNonResourceLabels(string method, StatusCode status)
     {
         var identity = SpannerBuiltInMetrics.Labeler.GenerateIdentity();
         var request = new ReadRequest(); // The request object doesn't matter for this test.
@@ -92,7 +97,7 @@ public class SpannerBuiltInMetricsTests
 
         // Verify explicitly passed parameters
         Assert.Contains(labels, l => l.Key == "method" && (string) l.Value == method);
-        Assert.Contains(labels, l => l.Key == "status" && (string) l.Value == status);
+        Assert.Contains(labels, l => l.Key == "status" && (string) l.Value == status.ToString());
         Assert.Contains(labels, l => l.Key == "client_uid" && (string) l.Value == identity.Id);
 
         // Verify statically assigned defaults
@@ -109,5 +114,30 @@ public class SpannerBuiltInMetricsTests
         var clientHash = (string) clientHashLabel.Value;
         Assert.Equal(6, clientHash.Length);
         Assert.True(int.TryParse(clientHash, System.Globalization.NumberStyles.HexNumber, null, out int _));
+    }
+
+    public static TheoryData<string, double?> ServerTimingTestCases => new()
+    {
+        { "gfet4t7; dur=12.5", 12.5 },
+        { "gfet4t7; dur = 42", 42.0 },
+        { "gfet4t7; dur=12.5, afe; dur=8.5", 12.5 },
+        { "other; dur=5, gfet4t7; dur=12.5", 12.5 },
+        { "other_metric; dur=12.5", null },
+        { "not_gfet4t7; dur=99.0", null },
+        { "not_afe; dur=99.0", null },
+        { "gfet4t7; dur=invalid", null },
+    };
+
+    [Theory]
+    [MemberData(nameof(ServerTimingTestCases))]
+    public void RecordServerTimingMetrics_HeaderString_ExtractsExpectedDuration(string serverTimingHeader, double? expectedDuration)
+    {
+        double? recordedDuration = null;
+        SpannerBuiltInMetrics.RecordServerTimingMetrics(
+            serverTimingHeader,
+            "gfet4t7",
+            duration => recordedDuration = duration);
+
+        Assert.Equal(expectedDuration, recordedDuration);
     }
 }

@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     using Google.Ads.AdManager.V1;
     using Google.Api.Gax;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Threading.Tasks;
 
@@ -198,6 +199,184 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNetwork</summary>
+        public void UpdateNetworkRequestObject()
+        {
+            // Snippet: UpdateNetwork(UpdateNetworkRequest, CallSettings)
+            // Create client
+            NetworkServiceClient networkServiceClient = NetworkServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateNetworkRequest request = new UpdateNetworkRequest
+            {
+                Network = new Network(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Network response = networkServiceClient.UpdateNetwork(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNetworkAsync</summary>
+        public async Task UpdateNetworkRequestObjectAsync()
+        {
+            // Snippet: UpdateNetworkAsync(UpdateNetworkRequest, CallSettings)
+            // Additional: UpdateNetworkAsync(UpdateNetworkRequest, CancellationToken)
+            // Create client
+            NetworkServiceClient networkServiceClient = await NetworkServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateNetworkRequest request = new UpdateNetworkRequest
+            {
+                Network = new Network(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Network response = await networkServiceClient.UpdateNetworkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNetwork</summary>
+        public void UpdateNetwork()
+        {
+            // Snippet: UpdateNetwork(Network, FieldMask, CallSettings)
+            // Create client
+            NetworkServiceClient networkServiceClient = NetworkServiceClient.Create();
+            // Initialize request argument(s)
+            Network network = new Network();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Network response = networkServiceClient.UpdateNetwork(network, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNetworkAsync</summary>
+        public async Task UpdateNetworkAsync()
+        {
+            // Snippet: UpdateNetworkAsync(Network, FieldMask, CallSettings)
+            // Additional: UpdateNetworkAsync(Network, FieldMask, CancellationToken)
+            // Create client
+            NetworkServiceClient networkServiceClient = await NetworkServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Network network = new Network();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Network response = await networkServiceClient.UpdateNetworkAsync(network, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ProvisionTestNetwork</summary>
+        public void ProvisionTestNetworkRequestObject()
+        {
+            // Snippet: ProvisionTestNetwork(ProvisionTestNetworkRequest, CallSettings)
+            // Create client
+            NetworkServiceClient networkServiceClient = NetworkServiceClient.Create();
+            // Initialize request argument(s)
+            ProvisionTestNetworkRequest request = new ProvisionTestNetworkRequest { };
+            // Make the request
+            Network response = networkServiceClient.ProvisionTestNetwork(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ProvisionTestNetworkAsync</summary>
+        public async Task ProvisionTestNetworkRequestObjectAsync()
+        {
+            // Snippet: ProvisionTestNetworkAsync(ProvisionTestNetworkRequest, CallSettings)
+            // Additional: ProvisionTestNetworkAsync(ProvisionTestNetworkRequest, CancellationToken)
+            // Create client
+            NetworkServiceClient networkServiceClient = await NetworkServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProvisionTestNetworkRequest request = new ProvisionTestNetworkRequest { };
+            // Make the request
+            Network response = await networkServiceClient.ProvisionTestNetworkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultThirdPartyDataDeclaration</summary>
+        public void GetDefaultThirdPartyDataDeclarationRequestObject()
+        {
+            // Snippet: GetDefaultThirdPartyDataDeclaration(GetDefaultThirdPartyDataDeclarationRequest, CallSettings)
+            // Create client
+            NetworkServiceClient networkServiceClient = NetworkServiceClient.Create();
+            // Initialize request argument(s)
+            GetDefaultThirdPartyDataDeclarationRequest request = new GetDefaultThirdPartyDataDeclarationRequest
+            {
+                DefaultThirdPartyDataDeclarationName = DefaultThirdPartyDataDeclarationName.FromNetworkCode("[NETWORK_CODE]"),
+            };
+            // Make the request
+            DefaultThirdPartyDataDeclaration response = networkServiceClient.GetDefaultThirdPartyDataDeclaration(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultThirdPartyDataDeclarationAsync</summary>
+        public async Task GetDefaultThirdPartyDataDeclarationRequestObjectAsync()
+        {
+            // Snippet: GetDefaultThirdPartyDataDeclarationAsync(GetDefaultThirdPartyDataDeclarationRequest, CallSettings)
+            // Additional: GetDefaultThirdPartyDataDeclarationAsync(GetDefaultThirdPartyDataDeclarationRequest, CancellationToken)
+            // Create client
+            NetworkServiceClient networkServiceClient = await NetworkServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDefaultThirdPartyDataDeclarationRequest request = new GetDefaultThirdPartyDataDeclarationRequest
+            {
+                DefaultThirdPartyDataDeclarationName = DefaultThirdPartyDataDeclarationName.FromNetworkCode("[NETWORK_CODE]"),
+            };
+            // Make the request
+            DefaultThirdPartyDataDeclaration response = await networkServiceClient.GetDefaultThirdPartyDataDeclarationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultThirdPartyDataDeclaration</summary>
+        public void GetDefaultThirdPartyDataDeclaration()
+        {
+            // Snippet: GetDefaultThirdPartyDataDeclaration(string, CallSettings)
+            // Create client
+            NetworkServiceClient networkServiceClient = NetworkServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "networks/[NETWORK_CODE]/defaultThirdPartyDataDeclaration";
+            // Make the request
+            DefaultThirdPartyDataDeclaration response = networkServiceClient.GetDefaultThirdPartyDataDeclaration(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultThirdPartyDataDeclarationAsync</summary>
+        public async Task GetDefaultThirdPartyDataDeclarationAsync()
+        {
+            // Snippet: GetDefaultThirdPartyDataDeclarationAsync(string, CallSettings)
+            // Additional: GetDefaultThirdPartyDataDeclarationAsync(string, CancellationToken)
+            // Create client
+            NetworkServiceClient networkServiceClient = await NetworkServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "networks/[NETWORK_CODE]/defaultThirdPartyDataDeclaration";
+            // Make the request
+            DefaultThirdPartyDataDeclaration response = await networkServiceClient.GetDefaultThirdPartyDataDeclarationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultThirdPartyDataDeclaration</summary>
+        public void GetDefaultThirdPartyDataDeclarationResourceNames()
+        {
+            // Snippet: GetDefaultThirdPartyDataDeclaration(DefaultThirdPartyDataDeclarationName, CallSettings)
+            // Create client
+            NetworkServiceClient networkServiceClient = NetworkServiceClient.Create();
+            // Initialize request argument(s)
+            DefaultThirdPartyDataDeclarationName name = DefaultThirdPartyDataDeclarationName.FromNetworkCode("[NETWORK_CODE]");
+            // Make the request
+            DefaultThirdPartyDataDeclaration response = networkServiceClient.GetDefaultThirdPartyDataDeclaration(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultThirdPartyDataDeclarationAsync</summary>
+        public async Task GetDefaultThirdPartyDataDeclarationResourceNamesAsync()
+        {
+            // Snippet: GetDefaultThirdPartyDataDeclarationAsync(DefaultThirdPartyDataDeclarationName, CallSettings)
+            // Additional: GetDefaultThirdPartyDataDeclarationAsync(DefaultThirdPartyDataDeclarationName, CancellationToken)
+            // Create client
+            NetworkServiceClient networkServiceClient = await NetworkServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DefaultThirdPartyDataDeclarationName name = DefaultThirdPartyDataDeclarationName.FromNetworkCode("[NETWORK_CODE]");
+            // Make the request
+            DefaultThirdPartyDataDeclaration response = await networkServiceClient.GetDefaultThirdPartyDataDeclarationAsync(name);
             // End snippet
         }
     }

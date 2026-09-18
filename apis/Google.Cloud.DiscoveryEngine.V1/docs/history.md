@@ -1,5 +1,30 @@
 # Version history
 
+## Version 1.16.0, released 2026-09-14
+
+### New features
+
+- Add SearchAddonSpec and SearchRequest.search_addon_spec, letting callers disable individual search add-ons (semantic, KPI personalization, generative answer) under configurable pricing
+- Add CustomRankingParams and SearchRequest.custom_ranking_params
+- Add SearchRequest.entity for customers running multiple entities, domains, sites or regions
+- Add SearchRequest.num_results_per_data_store and SearchRequest.DataStoreSpec.num_results to cap results per data store
+- Add SearchRequest.SearchAsYouTypeSpec.Field, fields and score_threshold for per-request Search As You Type scoring
+- Add SearchResponse.applied_controls, reporting which serving controls were applied
+- Add SearchResponse.SearchResult.RetrievalSignals and retrieval_signals, exposing retrieval source and semantic relevance score
+- Add SearchResponse.SearchResult.RankSignals.precomputed_expression_values
+- Add discoveryengine.readwrite, discoveryengine.assist.readwrite and discoveryengine.serving.readwrite OAuth scopes to SearchService
+
+### Documentation improvements
+
+- Multi-turn Search is no longer restricted to private GA; the allowlisting note is removed from SearchRequest and SearchRequest.session
+- Clarify SearchRequest.geo_search_query_detection_field_names, SearchRequest.ranking_expression, ImageQuery.image_bytes and the media ranking expression list
+
+## Version 1.15.0, released 2026-08-24
+
+### New features
+
+- Expose StreamAssistRequest agents_spec and agent_id
+
 ## Version 1.14.0, released 2026-07-13
 
 ### New features

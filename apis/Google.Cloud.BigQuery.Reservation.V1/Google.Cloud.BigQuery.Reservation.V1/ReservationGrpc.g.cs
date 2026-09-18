@@ -165,6 +165,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest> __Marshaller_google_cloud_bigquery_reservation_v1_ListReservationGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse> __Marshaller_google_cloud_bigquery_reservation_v1_ListReservationGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationGroupRequest> __Marshaller_google_cloud_bigquery_reservation_v1_UpdateReservationGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationGroupRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.Reservation> __Method_CreateReservation = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.Reservation>(
@@ -397,6 +399,14 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         "ListReservationGroups",
         __Marshaller_google_cloud_bigquery_reservation_v1_ListReservationGroupsRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_ListReservationGroupsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationGroupRequest, global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> __Method_UpdateReservationGroup = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationGroupRequest, global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateReservationGroup",
+        __Marshaller_google_cloud_bigquery_reservation_v1_UpdateReservationGroupRequest,
+        __Marshaller_google_cloud_bigquery_reservation_v1_ReservationGroup);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -933,6 +943,18 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse> ListReservationGroups(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an existing reservation group resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> UpdateReservationGroup(global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationGroupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3082,6 +3104,54 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListReservationGroups, null, options, request);
       }
+      /// <summary>
+      /// Updates an existing reservation group resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup UpdateReservationGroup(global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateReservationGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing reservation group resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup UpdateReservationGroup(global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateReservationGroup, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing reservation group resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> UpdateReservationGroupAsync(global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateReservationGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing reservation group resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> UpdateReservationGroupAsync(global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateReservationGroup, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ReservationServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -3124,7 +3194,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
           .AddMethod(__Method_CreateReservationGroup, serviceImpl.CreateReservationGroup)
           .AddMethod(__Method_GetReservationGroup, serviceImpl.GetReservationGroup)
           .AddMethod(__Method_DeleteReservationGroup, serviceImpl.DeleteReservationGroup)
-          .AddMethod(__Method_ListReservationGroups, serviceImpl.ListReservationGroups).Build();
+          .AddMethod(__Method_ListReservationGroups, serviceImpl.ListReservationGroups)
+          .AddMethod(__Method_UpdateReservationGroup, serviceImpl.UpdateReservationGroup).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3163,6 +3234,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       serviceBinder.AddMethod(__Method_GetReservationGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest, global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>(serviceImpl.GetReservationGroup));
       serviceBinder.AddMethod(__Method_DeleteReservationGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteReservationGroup));
       serviceBinder.AddMethod(__Method_ListReservationGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest, global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse>(serviceImpl.ListReservationGroups));
+      serviceBinder.AddMethod(__Method_UpdateReservationGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationGroupRequest, global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>(serviceImpl.UpdateReservationGroup));
     }
 
   }

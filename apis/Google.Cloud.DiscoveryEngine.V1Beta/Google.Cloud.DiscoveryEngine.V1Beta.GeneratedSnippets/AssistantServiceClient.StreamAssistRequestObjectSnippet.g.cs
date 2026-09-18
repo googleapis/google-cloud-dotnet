@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 UserMetadata = new AssistUserMetadata(),
                 ToolsSpec = new StreamAssistRequest.Types.ToolsSpec(),
                 GenerationSpec = new StreamAssistRequest.Types.GenerationSpec(),
+                AgentsSpec = new StreamAssistRequest.Types.AgentsSpec(),
             };
             // Make the request, returning a streaming response
             using AssistantServiceClient.StreamAssistStream response = assistantServiceClient.StreamAssist(request);

@@ -71,6 +71,14 @@ namespace Google.Ads.AdManager.V1 {
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListNetworksRequest> __Marshaller_google_ads_admanager_v1_ListNetworksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListNetworksRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListNetworksResponse> __Marshaller_google_ads_admanager_v1_ListNetworksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListNetworksResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.UpdateNetworkRequest> __Marshaller_google_ads_admanager_v1_UpdateNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.UpdateNetworkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ProvisionTestNetworkRequest> __Marshaller_google_ads_admanager_v1_ProvisionTestNetworkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ProvisionTestNetworkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.GetDefaultThirdPartyDataDeclarationRequest> __Marshaller_google_ads_admanager_v1_GetDefaultThirdPartyDataDeclarationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.GetDefaultThirdPartyDataDeclarationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration> __Marshaller_google_ads_admanager_v1_DefaultThirdPartyDataDeclaration = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.GetNetworkRequest, global::Google.Ads.AdManager.V1.Network> __Method_GetNetwork = new grpc::Method<global::Google.Ads.AdManager.V1.GetNetworkRequest, global::Google.Ads.AdManager.V1.Network>(
@@ -87,6 +95,30 @@ namespace Google.Ads.AdManager.V1 {
         "ListNetworks",
         __Marshaller_google_ads_admanager_v1_ListNetworksRequest,
         __Marshaller_google_ads_admanager_v1_ListNetworksResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.UpdateNetworkRequest, global::Google.Ads.AdManager.V1.Network> __Method_UpdateNetwork = new grpc::Method<global::Google.Ads.AdManager.V1.UpdateNetworkRequest, global::Google.Ads.AdManager.V1.Network>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateNetwork",
+        __Marshaller_google_ads_admanager_v1_UpdateNetworkRequest,
+        __Marshaller_google_ads_admanager_v1_Network);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.ProvisionTestNetworkRequest, global::Google.Ads.AdManager.V1.Network> __Method_ProvisionTestNetwork = new grpc::Method<global::Google.Ads.AdManager.V1.ProvisionTestNetworkRequest, global::Google.Ads.AdManager.V1.Network>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ProvisionTestNetwork",
+        __Marshaller_google_ads_admanager_v1_ProvisionTestNetworkRequest,
+        __Marshaller_google_ads_admanager_v1_Network);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.GetDefaultThirdPartyDataDeclarationRequest, global::Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration> __Method_GetDefaultThirdPartyDataDeclaration = new grpc::Method<global::Google.Ads.AdManager.V1.GetDefaultThirdPartyDataDeclarationRequest, global::Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDefaultThirdPartyDataDeclaration",
+        __Marshaller_google_ads_admanager_v1_GetDefaultThirdPartyDataDeclarationRequest,
+        __Marshaller_google_ads_admanager_v1_DefaultThirdPartyDataDeclaration);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -118,6 +150,56 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.ListNetworksResponse> ListNetworks(global::Google.Ads.AdManager.V1.ListNetworksRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a `Network` object. Currently, only the network display name can be
+      /// updated.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.Network> UpdateNetwork(global::Google.Ads.AdManager.V1.UpdateNetworkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Provisions a test network associated with the current user. Only one test
+      /// network can be provisioned per user.
+      ///
+      /// Before the test network can be used, you must complete setup in the Ad
+      /// Manager UI. If the test network's owner is a service account, you must add
+      /// a non-service account user by calling UserService.CreateUser.
+      ///
+      /// Test networks are limited in the following ways:
+      ///
+      ///   * Test networks have a maximum of 10,000 objects per entity type.
+      ///   * Test networks cannot serve ads.
+      ///   * Reports on serving data have zero rows.
+      ///   * Forecast service results contain mock data.
+      ///   * Test networks do not have Ad Manager 360 or premium features enabled.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.Network> ProvisionTestNetwork(global::Google.Ads.AdManager.V1.ProvisionTestNetworkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration> GetDefaultThirdPartyDataDeclaration(global::Google.Ads.AdManager.V1.GetDefaultThirdPartyDataDeclarationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -247,6 +329,206 @@ namespace Google.Ads.AdManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListNetworks, null, options, request);
       }
+      /// <summary>
+      /// Updates a `Network` object. Currently, only the network display name can be
+      /// updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Network UpdateNetwork(global::Google.Ads.AdManager.V1.UpdateNetworkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateNetwork(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `Network` object. Currently, only the network display name can be
+      /// updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Network UpdateNetwork(global::Google.Ads.AdManager.V1.UpdateNetworkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateNetwork, null, options, request);
+      }
+      /// <summary>
+      /// Updates a `Network` object. Currently, only the network display name can be
+      /// updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Network> UpdateNetworkAsync(global::Google.Ads.AdManager.V1.UpdateNetworkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateNetworkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `Network` object. Currently, only the network display name can be
+      /// updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Network> UpdateNetworkAsync(global::Google.Ads.AdManager.V1.UpdateNetworkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateNetwork, null, options, request);
+      }
+      /// <summary>
+      /// Provisions a test network associated with the current user. Only one test
+      /// network can be provisioned per user.
+      ///
+      /// Before the test network can be used, you must complete setup in the Ad
+      /// Manager UI. If the test network's owner is a service account, you must add
+      /// a non-service account user by calling UserService.CreateUser.
+      ///
+      /// Test networks are limited in the following ways:
+      ///
+      ///   * Test networks have a maximum of 10,000 objects per entity type.
+      ///   * Test networks cannot serve ads.
+      ///   * Reports on serving data have zero rows.
+      ///   * Forecast service results contain mock data.
+      ///   * Test networks do not have Ad Manager 360 or premium features enabled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Network ProvisionTestNetwork(global::Google.Ads.AdManager.V1.ProvisionTestNetworkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ProvisionTestNetwork(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Provisions a test network associated with the current user. Only one test
+      /// network can be provisioned per user.
+      ///
+      /// Before the test network can be used, you must complete setup in the Ad
+      /// Manager UI. If the test network's owner is a service account, you must add
+      /// a non-service account user by calling UserService.CreateUser.
+      ///
+      /// Test networks are limited in the following ways:
+      ///
+      ///   * Test networks have a maximum of 10,000 objects per entity type.
+      ///   * Test networks cannot serve ads.
+      ///   * Reports on serving data have zero rows.
+      ///   * Forecast service results contain mock data.
+      ///   * Test networks do not have Ad Manager 360 or premium features enabled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Network ProvisionTestNetwork(global::Google.Ads.AdManager.V1.ProvisionTestNetworkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ProvisionTestNetwork, null, options, request);
+      }
+      /// <summary>
+      /// Provisions a test network associated with the current user. Only one test
+      /// network can be provisioned per user.
+      ///
+      /// Before the test network can be used, you must complete setup in the Ad
+      /// Manager UI. If the test network's owner is a service account, you must add
+      /// a non-service account user by calling UserService.CreateUser.
+      ///
+      /// Test networks are limited in the following ways:
+      ///
+      ///   * Test networks have a maximum of 10,000 objects per entity type.
+      ///   * Test networks cannot serve ads.
+      ///   * Reports on serving data have zero rows.
+      ///   * Forecast service results contain mock data.
+      ///   * Test networks do not have Ad Manager 360 or premium features enabled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Network> ProvisionTestNetworkAsync(global::Google.Ads.AdManager.V1.ProvisionTestNetworkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ProvisionTestNetworkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Provisions a test network associated with the current user. Only one test
+      /// network can be provisioned per user.
+      ///
+      /// Before the test network can be used, you must complete setup in the Ad
+      /// Manager UI. If the test network's owner is a service account, you must add
+      /// a non-service account user by calling UserService.CreateUser.
+      ///
+      /// Test networks are limited in the following ways:
+      ///
+      ///   * Test networks have a maximum of 10,000 objects per entity type.
+      ///   * Test networks cannot serve ads.
+      ///   * Reports on serving data have zero rows.
+      ///   * Forecast service results contain mock data.
+      ///   * Test networks do not have Ad Manager 360 or premium features enabled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Network> ProvisionTestNetworkAsync(global::Google.Ads.AdManager.V1.ProvisionTestNetworkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ProvisionTestNetwork, null, options, request);
+      }
+      /// <summary>
+      /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration GetDefaultThirdPartyDataDeclaration(global::Google.Ads.AdManager.V1.GetDefaultThirdPartyDataDeclarationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDefaultThirdPartyDataDeclaration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration GetDefaultThirdPartyDataDeclaration(global::Google.Ads.AdManager.V1.GetDefaultThirdPartyDataDeclarationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDefaultThirdPartyDataDeclaration, null, options, request);
+      }
+      /// <summary>
+      /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration> GetDefaultThirdPartyDataDeclarationAsync(global::Google.Ads.AdManager.V1.GetDefaultThirdPartyDataDeclarationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDefaultThirdPartyDataDeclarationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the [DefaultThirdPartyDataDeclaration] for this network.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration> GetDefaultThirdPartyDataDeclarationAsync(global::Google.Ads.AdManager.V1.GetDefaultThirdPartyDataDeclarationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDefaultThirdPartyDataDeclaration, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override NetworkServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -262,7 +544,10 @@ namespace Google.Ads.AdManager.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetNetwork, serviceImpl.GetNetwork)
-          .AddMethod(__Method_ListNetworks, serviceImpl.ListNetworks).Build();
+          .AddMethod(__Method_ListNetworks, serviceImpl.ListNetworks)
+          .AddMethod(__Method_UpdateNetwork, serviceImpl.UpdateNetwork)
+          .AddMethod(__Method_ProvisionTestNetwork, serviceImpl.ProvisionTestNetwork)
+          .AddMethod(__Method_GetDefaultThirdPartyDataDeclaration, serviceImpl.GetDefaultThirdPartyDataDeclaration).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -274,6 +559,9 @@ namespace Google.Ads.AdManager.V1 {
     {
       serviceBinder.AddMethod(__Method_GetNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.GetNetworkRequest, global::Google.Ads.AdManager.V1.Network>(serviceImpl.GetNetwork));
       serviceBinder.AddMethod(__Method_ListNetworks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListNetworksRequest, global::Google.Ads.AdManager.V1.ListNetworksResponse>(serviceImpl.ListNetworks));
+      serviceBinder.AddMethod(__Method_UpdateNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.UpdateNetworkRequest, global::Google.Ads.AdManager.V1.Network>(serviceImpl.UpdateNetwork));
+      serviceBinder.AddMethod(__Method_ProvisionTestNetwork, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ProvisionTestNetworkRequest, global::Google.Ads.AdManager.V1.Network>(serviceImpl.ProvisionTestNetwork));
+      serviceBinder.AddMethod(__Method_GetDefaultThirdPartyDataDeclaration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.GetDefaultThirdPartyDataDeclarationRequest, global::Google.Ads.AdManager.V1.DefaultThirdPartyDataDeclaration>(serviceImpl.GetDefaultThirdPartyDataDeclaration));
     }
 
   }

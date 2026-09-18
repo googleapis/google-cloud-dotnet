@@ -3526,5 +3526,69 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for UpdateReservationGroup</summary>
+        public void UpdateReservationGroupRequestObject()
+        {
+            // Snippet: UpdateReservationGroup(UpdateReservationGroupRequest, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateReservationGroupRequest request = new UpdateReservationGroupRequest
+            {
+                ReservationGroup = new ReservationGroup(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ReservationGroup response = reservationServiceClient.UpdateReservationGroup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateReservationGroupAsync</summary>
+        public async Task UpdateReservationGroupRequestObjectAsync()
+        {
+            // Snippet: UpdateReservationGroupAsync(UpdateReservationGroupRequest, CallSettings)
+            // Additional: UpdateReservationGroupAsync(UpdateReservationGroupRequest, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateReservationGroupRequest request = new UpdateReservationGroupRequest
+            {
+                ReservationGroup = new ReservationGroup(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ReservationGroup response = await reservationServiceClient.UpdateReservationGroupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateReservationGroup</summary>
+        public void UpdateReservationGroup()
+        {
+            // Snippet: UpdateReservationGroup(ReservationGroup, FieldMask, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            ReservationGroup reservationGroup = new ReservationGroup();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ReservationGroup response = reservationServiceClient.UpdateReservationGroup(reservationGroup, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateReservationGroupAsync</summary>
+        public async Task UpdateReservationGroupAsync()
+        {
+            // Snippet: UpdateReservationGroupAsync(ReservationGroup, FieldMask, CallSettings)
+            // Additional: UpdateReservationGroupAsync(ReservationGroup, FieldMask, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReservationGroup reservationGroup = new ReservationGroup();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ReservationGroup response = await reservationServiceClient.UpdateReservationGroupAsync(reservationGroup, updateMask);
+            // End snippet
+        }
     }
 }

@@ -78,7 +78,7 @@ namespace Google.Ads.DataManager.V1 {
             "bmFnZXIudjEuRmllbGRXYXJuaW5nIroBChVJbmdlc3RBZEV2ZW50c1JlcXVl",
             "c3QSOgoJYWRfZXZlbnRzGAEgAygLMiIuZ29vZ2xlLmFkcy5kYXRhbWFuYWdl",
             "ci52MS5BZEV2ZW50QgPgQQISRwoPZW5jcnlwdGlvbl9pbmZvGAIgASgLMiku",
-            "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5FbmNyeXB0aW9uSW5mb0ID4EEC",
+            "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5FbmNyeXB0aW9uSW5mb0ID4EEB",
             "EhwKDXZhbGlkYXRlX29ubHkYAyABKAhCBRgB4EEBIhgKFkluZ2VzdEFkRXZl",
             "bnRzUmVzcG9uc2UiNwocUmV0cmlldmVSZXF1ZXN0U3RhdHVzUmVxdWVzdBIX",
             "CgpyZXF1ZXN0X2lkGAEgASgJQgPgQQIifwodUmV0cmlldmVSZXF1ZXN0U3Rh",
@@ -280,13 +280,14 @@ namespace Google.Ads.DataManager.V1 {
     public const int EncodingFieldNumber = 5;
     private global::Google.Ads.DataManager.V1.Encoding encoding_ = global::Google.Ads.DataManager.V1.Encoding.Unspecified;
     /// <summary>
-    /// Optional. Required for [UserData][google.ads.datamanager.v1.UserData]
-    /// uploads. The encoding type of the user identifiers. For hashed user
-    /// identifiers, this is the encoding type of the hashed string. For encrypted
-    /// hashed user identifiers, this is the encoding type of the outer encrypted
-    /// string, but not necessarily the inner hashed string, meaning the inner
-    /// hashed string could be encoded in a different way than the outer encrypted
-    /// string. For non `UserData` uploads, this field is ignored.
+    /// Optional. Must be provided for
+    /// [UserData][google.ads.datamanager.v1.UserData] uploads. The encoding type
+    /// of the user identifiers. For hashed user identifiers, this is the encoding
+    /// type of the hashed string. For encrypted hashed user identifiers, this is
+    /// the encoding type of the outer encrypted string, but not necessarily the
+    /// inner hashed string, meaning the inner hashed string could be encoded in a
+    /// different way than the outer encrypted string. For non `UserData` uploads,
+    /// this field is ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -958,10 +959,10 @@ namespace Google.Ads.DataManager.V1 {
     public const int EncodingFieldNumber = 4;
     private global::Google.Ads.DataManager.V1.Encoding encoding_ = global::Google.Ads.DataManager.V1.Encoding.Unspecified;
     /// <summary>
-    /// Optional. Required for [UserData][google.ads.datamanager.v1.UserData]
-    /// uploads. The encoding type of the user identifiers. Applies to only the
-    /// outer encoding for encrypted user identifiers. For non `UserData` uploads,
-    /// this field is ignored.
+    /// Optional. Must be provided for
+    /// [UserData][google.ads.datamanager.v1.UserData] uploads. The encoding type
+    /// of the user identifiers. Applies to only the outer encoding for encrypted
+    /// user identifiers. For non `UserData` uploads, this field is ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2034,13 +2035,14 @@ namespace Google.Ads.DataManager.V1 {
     public const int EncodingFieldNumber = 5;
     private global::Google.Ads.DataManager.V1.Encoding encoding_ = global::Google.Ads.DataManager.V1.Encoding.Unspecified;
     /// <summary>
-    /// Optional. Required for [UserData][google.ads.datamanager.v1.UserData]
-    /// uploads. The encoding type of the user identifiers. For hashed user
-    /// identifiers, this is the encoding type of the hashed string. For encrypted
-    /// hashed user identifiers, this is the encoding type of the outer encrypted
-    /// string, but not necessarily the inner hashed string, meaning the inner
-    /// hashed string could be encoded in a different way than the outer encrypted
-    /// string. For non `UserData` uploads, this field is ignored.
+    /// Optional. Must be provided for
+    /// [UserData][google.ads.datamanager.v1.UserData] uploads. The encoding type
+    /// of the user identifiers. For hashed user identifiers, this is the encoding
+    /// type of the hashed string. For encrypted hashed user identifiers, this is
+    /// the encoding type of the outer encrypted string, but not necessarily the
+    /// inner hashed string, meaning the inner hashed string could be encoded in a
+    /// different way than the outer encrypted string. For non `UserData` uploads,
+    /// this field is ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2630,8 +2632,9 @@ namespace Google.Ads.DataManager.V1 {
     public const int EncryptionInfoFieldNumber = 2;
     private global::Google.Ads.DataManager.V1.EncryptionInfo encryptionInfo_;
     /// <summary>
-    /// Required. Information about encryption keys which are used to encrypt the
-    /// data.
+    /// Optional. Information about encryption keys which are used to encrypt the
+    /// data. This field must be provided when ad events contain
+    /// [UserData][google.ads.datamanager.v1.UserData].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

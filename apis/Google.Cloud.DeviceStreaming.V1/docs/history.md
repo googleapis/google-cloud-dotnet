@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.1.0, released 2026-09-17
+
+### New features
+
+- Add ClientInfo message to DeviceSession message
+
 ## Version 1.0.0, released 2026-08-10
 
 ### New features

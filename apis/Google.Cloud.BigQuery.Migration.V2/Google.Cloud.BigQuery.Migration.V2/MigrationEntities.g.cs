@@ -92,28 +92,65 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             "EAUSFgoSUEVORElOR19ERVBFTkRFTkNZEAY6iAHqQYQBCjFiaWdxdWVyeW1p",
             "Z3JhdGlvbi5nb29nbGVhcGlzLmNvbS9NaWdyYXRpb25TdWJ0YXNrEk9wcm9q",
             "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vd29ya2Zsb3dz",
-            "L3t3b3JrZmxvd30vc3VidGFza3Mve3N1YnRhc2t9In4KE01pZ3JhdGlvblRh",
-            "c2tSZXN1bHQSXAoXdHJhbnNsYXRpb25fdGFza19yZXN1bHQYAiABKAsyOS5n",
-            "b29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyLlRyYW5zbGF0aW9u",
-            "VGFza1Jlc3VsdEgAQgkKB2RldGFpbHMizAEKFVRyYW5zbGF0aW9uVGFza1Jl",
-            "c3VsdBJIChN0cmFuc2xhdGVkX2xpdGVyYWxzGAEgAygLMisuZ29vZ2xlLmNs",
-            "b3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5MaXRlcmFsElQKE3JlcG9ydF9s",
-            "b2dfbWVzc2FnZXMYAiADKAsyNy5nb29nbGUuY2xvdWQuYmlncXVlcnkubWln",
-            "cmF0aW9uLnYyLkdjc1JlcG9ydExvZ01lc3NhZ2USEwoLY29uc29sZV91cmkY",
-            "AyABKAlC0gEKJmNvbS5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9u",
-            "LnYyQhZNaWdyYXRpb25FbnRpdGllc1Byb3RvUAFaRGNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vYmlncXVlcnkvbWlncmF0aW9uL2FwaXYyL21pZ3JhdGlvbnBiO21p",
-            "Z3JhdGlvbnBiqgIiR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5Lk1pZ3JhdGlvbi5W",
-            "MsoCIkdvb2dsZVxDbG91ZFxCaWdRdWVyeVxNaWdyYXRpb25cVjJiBnByb3Rv",
-            "Mw=="));
+            "L3t3b3JrZmxvd30vc3VidGFza3Mve3N1YnRhc2t9IsICChNNaWdyYXRpb25U",
+            "YXNrUmVzdWx0ElwKF3RyYW5zbGF0aW9uX3Rhc2tfcmVzdWx0GAIgASgLMjku",
+            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5UcmFuc2xhdGlv",
+            "blRhc2tSZXN1bHRIABJeCgx0YXNrX291dHB1dHMYAyADKAsySC5nb29nbGUu",
+            "Y2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyLk1pZ3JhdGlvblRhc2tSZXN1",
+            "bHQuVGFza091dHB1dHNFbnRyeRpiChBUYXNrT3V0cHV0c0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRI9CgV2YWx1ZRgCIAEoCzIuLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
+            "eS5taWdyYXRpb24udjIuVGFza091dHB1dDoCOAFCCQoHZGV0YWlscyLMAQoV",
+            "VHJhbnNsYXRpb25UYXNrUmVzdWx0EkgKE3RyYW5zbGF0ZWRfbGl0ZXJhbHMY",
+            "ASADKAsyKy5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyLkxp",
+            "dGVyYWwSVAoTcmVwb3J0X2xvZ19tZXNzYWdlcxgCIAMoCzI3Lmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuR2NzUmVwb3J0TG9nTWVzc2Fn",
+            "ZRITCgtjb25zb2xlX3VyaRgDIAEoCSKmAgoKVGFza091dHB1dBJLCg5saW5l",
+            "YWdlX291dHB1dBgDIAEoCzIxLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdy",
+            "YXRpb24udjIuTGluZWFnZU91dHB1dEgAEkgKBXN0YXRlGAEgASgOMjQuZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5UYXNrT3V0cHV0LlN0",
+            "YXRlQgPgQQMSLwoQcHJvY2Vzc2luZ19lcnJvchgCIAEoCzIVLmdvb2dsZS5y",
+            "cGMuRXJyb3JJbmZvIkYKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAAS",
+            "CwoHUEVORElORxABEg0KCVNVQ0NFRURFRBACEgoKBkZBSUxFRBADQggKBm91",
+            "dHB1dCKXCAoNTGluZWFnZU91dHB1dBISCgp3ZWJhcHBfdXJpGAEgASgJEmEK",
+            "EXJlY29nbml6ZWRfaW5wdXRzGAIgAygLMkEuZ29vZ2xlLmNsb3VkLmJpZ3F1",
+            "ZXJ5Lm1pZ3JhdGlvbi52Mi5MaW5lYWdlT3V0cHV0LlJlY29nbml6ZWRJbnB1",
+            "dEID4EEDEmoKG3Byb2Nlc3NpbmdfcHJvZ3Jlc3NfcmVwb3J0cxgDIAMoCzJA",
+            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuTGluZWFnZU91",
+            "dHB1dC5Qcm9ncmVzc1JlcG9ydEID4EEDGtkBCg9SZWNvZ25pemVkSW5wdXQS",
+            "WQoEdHlwZRgBIAEoDjJGLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRp",
+            "b24udjIuTGluZWFnZU91dHB1dC5SZWNvZ25pemVkSW5wdXQuVHlwZUID4EED",
+            "EiQKF3VuY29tcHJlc3NlZF9zaXplX2J5dGVzGAIgASgDQgPgQQMiRQoEVHlw",
+            "ZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDAoITUVUQURBVEEQARINCglRVUVS",
+            "WV9MT0cQAhIKCgZTQ1JJUFQQAxrGBAoOUHJvZ3Jlc3NSZXBvcnQSbwoQcHJv",
+            "Y2Vzc2luZ19zdGFnZRgBIAEoDjJQLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5t",
+            "aWdyYXRpb24udjIuTGluZWFnZU91dHB1dC5Qcm9ncmVzc1JlcG9ydC5Qcm9j",
+            "ZXNzaW5nU3RhZ2VCA+BBAxJpCg53b3JrX3N1bW1hcmllcxgCIAMoCzJMLmdv",
+            "b2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuTGluZWFnZU91dHB1",
+            "dC5Qcm9ncmVzc1JlcG9ydC5Xb3JrU3VtbWFyeUID4EEDGvcBCgtXb3JrU3Vt",
+            "bWFyeRJmCgVzdGF0ZRgBIAEoDjJSLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5t",
+            "aWdyYXRpb24udjIuTGluZWFnZU91dHB1dC5Qcm9ncmVzc1JlcG9ydC5Xb3Jr",
+            "U3VtbWFyeS5TdGF0ZUID4EEDEhEKBHNpemUYAiABKANCA+BBAxIUCgdjb21t",
+            "ZW50GAMgASgJQgPgQQMiVwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
+            "ABINCglTVUNDRUVERUQQARIKCgZGQUlMRUQQAhIPCgtJTl9QUk9HUkVTUxAD",
+            "EgsKB1NLSVBQRUQQBCJeCg9Qcm9jZXNzaW5nU3RhZ2USIAocUFJPQ0VTU0lO",
+            "R19TVEFHRV9VTlNQRUNJRklFRBAAEhQKD0lOUFVUX0lOR0VTVElPThDoBxIT",
+            "Cg5QT1NUUFJPQ0VTU0lORxDQD0LSAQomY29tLmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5taWdyYXRpb24udjJCFk1pZ3JhdGlvbkVudGl0aWVzUHJvdG9QAVpE",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9iaWdxdWVyeS9taWdyYXRpb24vYXBpdjIv",
+            "bWlncmF0aW9ucGI7bWlncmF0aW9ucGKqAiJHb29nbGUuQ2xvdWQuQmlnUXVl",
+            "cnkuTWlncmF0aW9uLlYyygIiR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XE1pZ3Jh",
+            "dGlvblxWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.AssessmentTaskReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.MigrationErrorDetailsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.MigrationMetricsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.TranslationUsabilityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.ErrorDetailsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow), global::Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow.Parser, new[]{ "Name", "DisplayName", "Tasks", "State", "CreateTime", "LastUpdateTime" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationTask), global::Google.Cloud.BigQuery.Migration.V2.MigrationTask.Parser, new[]{ "AssessmentTaskDetails", "TranslationConfigDetails", "TranslationDetails", "Id", "Type", "State", "ProcessingError", "CreateTime", "LastUpdateTime", "ResourceErrorDetails", "ResourceErrorCount", "Metrics", "TaskResult", "TotalProcessingErrorCount", "TotalResourceErrorCount" }, new[]{ "TaskDetails" }, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationTask.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationSubtask), global::Google.Cloud.BigQuery.Migration.V2.MigrationSubtask.Parser, new[]{ "Name", "TaskId", "Type", "State", "ProcessingError", "ResourceErrorDetails", "ResourceErrorCount", "CreateTime", "LastUpdateTime", "Metrics" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationSubtask.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationTaskResult), global::Google.Cloud.BigQuery.Migration.V2.MigrationTaskResult.Parser, new[]{ "TranslationTaskResult" }, new[]{ "Details" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult), global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult.Parser, new[]{ "TranslatedLiterals", "ReportLogMessages", "ConsoleUri" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationTaskResult), global::Google.Cloud.BigQuery.Migration.V2.MigrationTaskResult.Parser, new[]{ "TranslationTaskResult", "TaskOutputs" }, new[]{ "Details" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult), global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult.Parser, new[]{ "TranslatedLiterals", "ReportLogMessages", "ConsoleUri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.TaskOutput), global::Google.Cloud.BigQuery.Migration.V2.TaskOutput.Parser, new[]{ "LineageOutput", "State", "ProcessingError" }, new[]{ "Output" }, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.TaskOutput.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.LineageOutput), global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Parser, new[]{ "WebappUri", "RecognizedInputs", "ProcessingProgressReports" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput), global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput.Parser, new[]{ "Type", "UncompressedSizeBytes" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport), global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Parser, new[]{ "ProcessingStage", "WorkSummaries" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.ProcessingStage) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary), global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary.Parser, new[]{ "State", "Size", "Comment" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary.Types.State) }, null, null)})})
           }));
     }
     #endregion
@@ -2162,6 +2199,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrationTaskResult(MigrationTaskResult other) : this() {
+      taskOutputs_ = other.taskOutputs_.Clone();
       switch (other.DetailsCase) {
         case DetailsOneofCase.TranslationTaskResult:
           TranslationTaskResult = other.TranslationTaskResult.Clone();
@@ -2190,6 +2228,20 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         details_ = value;
         detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.TranslationTaskResult;
       }
+    }
+
+    /// <summary>Field number for the "task_outputs" field.</summary>
+    public const int TaskOutputsFieldNumber = 3;
+    private static readonly pbc::MapField<string, global::Google.Cloud.BigQuery.Migration.V2.TaskOutput>.Codec _map_taskOutputs_codec
+        = new pbc::MapField<string, global::Google.Cloud.BigQuery.Migration.V2.TaskOutput>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.BigQuery.Migration.V2.TaskOutput.Parser), 26);
+    private readonly pbc::MapField<string, global::Google.Cloud.BigQuery.Migration.V2.TaskOutput> taskOutputs_ = new pbc::MapField<string, global::Google.Cloud.BigQuery.Migration.V2.TaskOutput>();
+    /// <summary>
+    /// The map of task output types to the task outputs, e.g. "LINEAGE".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.BigQuery.Migration.V2.TaskOutput> TaskOutputs {
+      get { return taskOutputs_; }
     }
 
     private object details_;
@@ -2228,6 +2280,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         return true;
       }
       if (!object.Equals(TranslationTaskResult, other.TranslationTaskResult)) return false;
+      if (!TaskOutputs.Equals(other.TaskOutputs)) return false;
       if (DetailsCase != other.DetailsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2237,6 +2290,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (detailsCase_ == DetailsOneofCase.TranslationTaskResult) hash ^= TranslationTaskResult.GetHashCode();
+      hash ^= TaskOutputs.GetHashCode();
       hash ^= (int) detailsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2260,6 +2314,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(TranslationTaskResult);
       }
+      taskOutputs_.WriteTo(output, _map_taskOutputs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2274,6 +2329,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(TranslationTaskResult);
       }
+      taskOutputs_.WriteTo(ref output, _map_taskOutputs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2287,6 +2343,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       if (detailsCase_ == DetailsOneofCase.TranslationTaskResult) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TranslationTaskResult);
       }
+      size += taskOutputs_.CalculateSize(_map_taskOutputs_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2299,6 +2356,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       if (other == null) {
         return;
       }
+      taskOutputs_.MergeFrom(other.taskOutputs_);
       switch (other.DetailsCase) {
         case DetailsOneofCase.TranslationTaskResult:
           if (TranslationTaskResult == null) {
@@ -2336,6 +2394,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             TranslationTaskResult = subBuilder;
             break;
           }
+          case 26: {
+            taskOutputs_.AddEntriesFrom(input, _map_taskOutputs_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2362,6 +2424,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             }
             input.ReadMessage(subBuilder);
             TranslationTaskResult = subBuilder;
+            break;
+          }
+          case 26: {
+            taskOutputs_.AddEntriesFrom(ref input, _map_taskOutputs_codec);
             break;
           }
         }
@@ -2630,6 +2696,1526 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// The task output for a task type including the status and any errors.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TaskOutput : pb::IMessage<TaskOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TaskOutput> _parser = new pb::MessageParser<TaskOutput>(() => new TaskOutput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TaskOutput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Migration.V2.MigrationEntitiesReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TaskOutput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TaskOutput(TaskOutput other) : this() {
+      state_ = other.state_;
+      processingError_ = other.processingError_ != null ? other.processingError_.Clone() : null;
+      switch (other.OutputCase) {
+        case OutputOneofCase.LineageOutput:
+          LineageOutput = other.LineageOutput.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TaskOutput Clone() {
+      return new TaskOutput(this);
+    }
+
+    /// <summary>Field number for the "lineage_output" field.</summary>
+    public const int LineageOutputFieldNumber = 3;
+    /// <summary>
+    /// The output of the task with output type "LINEAGE".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Migration.V2.LineageOutput LineageOutput {
+      get { return outputCase_ == OutputOneofCase.LineageOutput ? (global::Google.Cloud.BigQuery.Migration.V2.LineageOutput) output_ : null; }
+      set {
+        output_ = value;
+        outputCase_ = value == null ? OutputOneofCase.None : OutputOneofCase.LineageOutput;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 1;
+    private global::Google.Cloud.BigQuery.Migration.V2.TaskOutput.Types.State state_ = global::Google.Cloud.BigQuery.Migration.V2.TaskOutput.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. The current state of the task output.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Migration.V2.TaskOutput.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "processing_error" field.</summary>
+    public const int ProcessingErrorFieldNumber = 2;
+    private global::Google.Rpc.ErrorInfo processingError_;
+    /// <summary>
+    /// An explanation that may be populated when the task output is in FAILED
+    /// state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Rpc.ErrorInfo ProcessingError {
+      get { return processingError_; }
+      set {
+        processingError_ = value;
+      }
+    }
+
+    private object output_;
+    /// <summary>Enum of possible cases for the "output" oneof.</summary>
+    public enum OutputOneofCase {
+      None = 0,
+      LineageOutput = 3,
+    }
+    private OutputOneofCase outputCase_ = OutputOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OutputOneofCase OutputCase {
+      get { return outputCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOutput() {
+      outputCase_ = OutputOneofCase.None;
+      output_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TaskOutput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TaskOutput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(LineageOutput, other.LineageOutput)) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(ProcessingError, other.ProcessingError)) return false;
+      if (OutputCase != other.OutputCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (outputCase_ == OutputOneofCase.LineageOutput) hash ^= LineageOutput.GetHashCode();
+      if (State != global::Google.Cloud.BigQuery.Migration.V2.TaskOutput.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (processingError_ != null) hash ^= ProcessingError.GetHashCode();
+      hash ^= (int) outputCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (State != global::Google.Cloud.BigQuery.Migration.V2.TaskOutput.Types.State.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) State);
+      }
+      if (processingError_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ProcessingError);
+      }
+      if (outputCase_ == OutputOneofCase.LineageOutput) {
+        output.WriteRawTag(26);
+        output.WriteMessage(LineageOutput);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (State != global::Google.Cloud.BigQuery.Migration.V2.TaskOutput.Types.State.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) State);
+      }
+      if (processingError_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ProcessingError);
+      }
+      if (outputCase_ == OutputOneofCase.LineageOutput) {
+        output.WriteRawTag(26);
+        output.WriteMessage(LineageOutput);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (outputCase_ == OutputOneofCase.LineageOutput) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LineageOutput);
+      }
+      if (State != global::Google.Cloud.BigQuery.Migration.V2.TaskOutput.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (processingError_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProcessingError);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TaskOutput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.State != global::Google.Cloud.BigQuery.Migration.V2.TaskOutput.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.processingError_ != null) {
+        if (processingError_ == null) {
+          ProcessingError = new global::Google.Rpc.ErrorInfo();
+        }
+        ProcessingError.MergeFrom(other.ProcessingError);
+      }
+      switch (other.OutputCase) {
+        case OutputOneofCase.LineageOutput:
+          if (LineageOutput == null) {
+            LineageOutput = new global::Google.Cloud.BigQuery.Migration.V2.LineageOutput();
+          }
+          LineageOutput.MergeFrom(other.LineageOutput);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            State = (global::Google.Cloud.BigQuery.Migration.V2.TaskOutput.Types.State) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (processingError_ == null) {
+              ProcessingError = new global::Google.Rpc.ErrorInfo();
+            }
+            input.ReadMessage(ProcessingError);
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.BigQuery.Migration.V2.LineageOutput subBuilder = new global::Google.Cloud.BigQuery.Migration.V2.LineageOutput();
+            if (outputCase_ == OutputOneofCase.LineageOutput) {
+              subBuilder.MergeFrom(LineageOutput);
+            }
+            input.ReadMessage(subBuilder);
+            LineageOutput = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            State = (global::Google.Cloud.BigQuery.Migration.V2.TaskOutput.Types.State) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (processingError_ == null) {
+              ProcessingError = new global::Google.Rpc.ErrorInfo();
+            }
+            input.ReadMessage(ProcessingError);
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.BigQuery.Migration.V2.LineageOutput subBuilder = new global::Google.Cloud.BigQuery.Migration.V2.LineageOutput();
+            if (outputCase_ == OutputOneofCase.LineageOutput) {
+              subBuilder.MergeFrom(LineageOutput);
+            }
+            input.ReadMessage(subBuilder);
+            LineageOutput = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TaskOutput message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Possible task output states.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Task output state is unspecified.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Task output is pending.
+        /// </summary>
+        [pbr::OriginalName("PENDING")] Pending = 1,
+        /// <summary>
+        /// Task output is succeeded.
+        /// </summary>
+        [pbr::OriginalName("SUCCEEDED")] Succeeded = 2,
+        /// <summary>
+        /// Task output is failed. This does not mean that there is no useful
+        /// information in the output; partial outputs or failure details may be
+        /// available.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The output of a task with output type "LINEAGE".
+  ///
+  /// Actual generated lineage can be queried separately (see
+  /// [webapp_uri][google.cloud.bigquery.migration.v2.LineageOutput.webapp_uri]),
+  /// this message contains only metadata: processing status, errors, etc.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LineageOutput : pb::IMessage<LineageOutput>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LineageOutput> _parser = new pb::MessageParser<LineageOutput>(() => new LineageOutput());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LineageOutput> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Migration.V2.MigrationEntitiesReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineageOutput() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineageOutput(LineageOutput other) : this() {
+      webappUri_ = other.webappUri_;
+      recognizedInputs_ = other.recognizedInputs_.Clone();
+      processingProgressReports_ = other.processingProgressReports_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineageOutput Clone() {
+      return new LineageOutput(this);
+    }
+
+    /// <summary>Field number for the "webapp_uri" field.</summary>
+    public const int WebappUriFieldNumber = 1;
+    private string webappUri_ = "";
+    /// <summary>
+    /// The URI of the webapp that visualizes the lineage.
+    /// The user needs the `bigquerymigration.googleapis.com/lineageDbs.query` IAM
+    /// permission to use the webapp.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string WebappUri {
+      get { return webappUri_; }
+      set {
+        webappUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "recognized_inputs" field.</summary>
+    public const int RecognizedInputsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput> _repeated_recognizedInputs_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput> recognizedInputs_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput>();
+    /// <summary>
+    /// Output only. Recognized lineage inputs.
+    ///
+    /// All inputs are processed only if the task succeeds and all work is in state
+    /// [SUCCEEDED](ProgressReport.WorkSummary.State.SUCCEEDED) (in particular,
+    /// nothing is [SKIPPED](ProgressReport.WorkSummary.State.SKIPPED)).
+    ///
+    /// Even with all inputs processed successfully, there may be transpiler errors
+    /// present leading to inaccurate lineage.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput> RecognizedInputs {
+      get { return recognizedInputs_; }
+    }
+
+    /// <summary>Field number for the "processing_progress_reports" field.</summary>
+    public const int ProcessingProgressReportsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport> _repeated_processingProgressReports_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport> processingProgressReports_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport>();
+    /// <summary>
+    /// Output only. Work processing progress reports broken up by processing
+    /// stage.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport> ProcessingProgressReports {
+      get { return processingProgressReports_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LineageOutput);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LineageOutput other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (WebappUri != other.WebappUri) return false;
+      if(!recognizedInputs_.Equals(other.recognizedInputs_)) return false;
+      if(!processingProgressReports_.Equals(other.processingProgressReports_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (WebappUri.Length != 0) hash ^= WebappUri.GetHashCode();
+      hash ^= recognizedInputs_.GetHashCode();
+      hash ^= processingProgressReports_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (WebappUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(WebappUri);
+      }
+      recognizedInputs_.WriteTo(output, _repeated_recognizedInputs_codec);
+      processingProgressReports_.WriteTo(output, _repeated_processingProgressReports_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (WebappUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(WebappUri);
+      }
+      recognizedInputs_.WriteTo(ref output, _repeated_recognizedInputs_codec);
+      processingProgressReports_.WriteTo(ref output, _repeated_processingProgressReports_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (WebappUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WebappUri);
+      }
+      size += recognizedInputs_.CalculateSize(_repeated_recognizedInputs_codec);
+      size += processingProgressReports_.CalculateSize(_repeated_processingProgressReports_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LineageOutput other) {
+      if (other == null) {
+        return;
+      }
+      if (other.WebappUri.Length != 0) {
+        WebappUri = other.WebappUri;
+      }
+      recognizedInputs_.Add(other.recognizedInputs_);
+      processingProgressReports_.Add(other.processingProgressReports_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            WebappUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            recognizedInputs_.AddEntriesFrom(input, _repeated_recognizedInputs_codec);
+            break;
+          }
+          case 26: {
+            processingProgressReports_.AddEntriesFrom(input, _repeated_processingProgressReports_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            WebappUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            recognizedInputs_.AddEntriesFrom(ref input, _repeated_recognizedInputs_codec);
+            break;
+          }
+          case 26: {
+            processingProgressReports_.AddEntriesFrom(ref input, _repeated_processingProgressReports_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the LineageOutput message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Information about lineage input of the given type that lineage generation
+      /// recognized.
+      ///
+      /// If you expected to process more of the given input, verify your input was
+      /// uploaded and is in the correct format and the request to generate lineage
+      /// correctly specified the input location.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RecognizedInput : pb::IMessage<RecognizedInput>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RecognizedInput> _parser = new pb::MessageParser<RecognizedInput>(() => new RecognizedInput());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RecognizedInput> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RecognizedInput() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RecognizedInput(RecognizedInput other) : this() {
+          type_ = other.type_;
+          uncompressedSizeBytes_ = other.uncompressedSizeBytes_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RecognizedInput Clone() {
+          return new RecognizedInput(this);
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 1;
+        private global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput.Types.Type type_ = global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput.Types.Type.Unspecified;
+        /// <summary>
+        /// Output only. The type of the input.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput.Types.Type Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "uncompressed_size_bytes" field.</summary>
+        public const int UncompressedSizeBytesFieldNumber = 2;
+        private long uncompressedSizeBytes_;
+        /// <summary>
+        /// Output only. The uncompressed size of the recognized input of the given
+        /// type.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long UncompressedSizeBytes {
+          get { return uncompressedSizeBytes_; }
+          set {
+            uncompressedSizeBytes_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RecognizedInput);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RecognizedInput other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Type != other.Type) return false;
+          if (UncompressedSizeBytes != other.UncompressedSizeBytes) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Type != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+          if (UncompressedSizeBytes != 0L) hash ^= UncompressedSizeBytes.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Type != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput.Types.Type.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (UncompressedSizeBytes != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(UncompressedSizeBytes);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Type != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput.Types.Type.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (UncompressedSizeBytes != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(UncompressedSizeBytes);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Type != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput.Types.Type.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (UncompressedSizeBytes != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(UncompressedSizeBytes);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RecognizedInput other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Type != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput.Types.Type.Unspecified) {
+            Type = other.Type;
+          }
+          if (other.UncompressedSizeBytes != 0L) {
+            UncompressedSizeBytes = other.UncompressedSizeBytes;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput.Types.Type) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                UncompressedSizeBytes = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.RecognizedInput.Types.Type) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                UncompressedSizeBytes = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the RecognizedInput message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Input type recognized by the lineage processing.
+          /// </summary>
+          public enum Type {
+            /// <summary>
+            /// The type is not specified.
+            /// </summary>
+            [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The input is metadata.
+            /// </summary>
+            [pbr::OriginalName("METADATA")] Metadata = 1,
+            /// <summary>
+            /// The input is a query log.
+            /// </summary>
+            [pbr::OriginalName("QUERY_LOG")] QueryLog = 2,
+            /// <summary>
+            /// The input is a SQL script.
+            /// </summary>
+            [pbr::OriginalName("SCRIPT")] Script = 3,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// Breaks down processing progress of work.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ProgressReport : pb::IMessage<ProgressReport>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ProgressReport> _parser = new pb::MessageParser<ProgressReport>(() => new ProgressReport());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ProgressReport> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProgressReport() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProgressReport(ProgressReport other) : this() {
+          processingStage_ = other.processingStage_;
+          workSummaries_ = other.workSummaries_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProgressReport Clone() {
+          return new ProgressReport(this);
+        }
+
+        /// <summary>Field number for the "processing_stage" field.</summary>
+        public const int ProcessingStageFieldNumber = 1;
+        private global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.ProcessingStage processingStage_ = global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.ProcessingStage.Unspecified;
+        /// <summary>
+        /// Output only. The processing stage this progress report describes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.ProcessingStage ProcessingStage {
+          get { return processingStage_; }
+          set {
+            processingStage_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "work_summaries" field.</summary>
+        public const int WorkSummariesFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary> _repeated_workSummaries_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary> workSummaries_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary>();
+        /// <summary>
+        /// Output only. Summaries of work broken up by the state of the work. Each
+        /// work summary describes how much work is in the given state.
+        ///
+        /// To get numbers for the total work covered, aggregate the numbers from all
+        /// summaries.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary> WorkSummaries {
+          get { return workSummaries_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ProgressReport);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ProgressReport other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ProcessingStage != other.ProcessingStage) return false;
+          if(!workSummaries_.Equals(other.workSummaries_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ProcessingStage != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.ProcessingStage.Unspecified) hash ^= ProcessingStage.GetHashCode();
+          hash ^= workSummaries_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ProcessingStage != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.ProcessingStage.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ProcessingStage);
+          }
+          workSummaries_.WriteTo(output, _repeated_workSummaries_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ProcessingStage != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.ProcessingStage.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ProcessingStage);
+          }
+          workSummaries_.WriteTo(ref output, _repeated_workSummaries_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ProcessingStage != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.ProcessingStage.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ProcessingStage);
+          }
+          size += workSummaries_.CalculateSize(_repeated_workSummaries_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ProgressReport other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ProcessingStage != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.ProcessingStage.Unspecified) {
+            ProcessingStage = other.ProcessingStage;
+          }
+          workSummaries_.Add(other.workSummaries_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ProcessingStage = (global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.ProcessingStage) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                workSummaries_.AddEntriesFrom(input, _repeated_workSummaries_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ProcessingStage = (global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.ProcessingStage) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                workSummaries_.AddEntriesFrom(ref input, _repeated_workSummaries_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the ProgressReport message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The processing stage the progress report describes.
+          /// </summary>
+          public enum ProcessingStage {
+            /// <summary>
+            /// The stage is not specified.
+            /// </summary>
+            [pbr::OriginalName("PROCESSING_STAGE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The input ingestion stage.
+            /// </summary>
+            [pbr::OriginalName("INPUT_INGESTION")] InputIngestion = 1000,
+            /// <summary>
+            /// The lineage DB postprocessing stage.
+            /// </summary>
+            [pbr::OriginalName("POSTPROCESSING")] Postprocessing = 2000,
+          }
+
+          /// <summary>
+          /// Summary of work in the given state.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class WorkSummary : pb::IMessage<WorkSummary>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<WorkSummary> _parser = new pb::MessageParser<WorkSummary>(() => new WorkSummary());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<WorkSummary> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public WorkSummary() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public WorkSummary(WorkSummary other) : this() {
+              state_ = other.state_;
+              size_ = other.size_;
+              comment_ = other.comment_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public WorkSummary Clone() {
+              return new WorkSummary(this);
+            }
+
+            /// <summary>Field number for the "state" field.</summary>
+            public const int StateFieldNumber = 1;
+            private global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary.Types.State state_ = global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary.Types.State.Unspecified;
+            /// <summary>
+            /// Output only. The state of the work this summary describes.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary.Types.State State {
+              get { return state_; }
+              set {
+                state_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "size" field.</summary>
+            public const int SizeFieldNumber = 2;
+            private long size_;
+            /// <summary>
+            /// Output only. Size of the work in the given State.
+            ///
+            /// Size counts "units of work". Units represent arbitrary division of
+            /// work; there's no expectation each unit takes similar time to process.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public long Size {
+              get { return size_; }
+              set {
+                size_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "comment" field.</summary>
+            public const int CommentFieldNumber = 3;
+            private string comment_ = "";
+            /// <summary>
+            /// Output only. Human-readable comment.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Comment {
+              get { return comment_; }
+              set {
+                comment_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as WorkSummary);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(WorkSummary other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (State != other.State) return false;
+              if (Size != other.Size) return false;
+              if (Comment != other.Comment) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (State != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary.Types.State.Unspecified) hash ^= State.GetHashCode();
+              if (Size != 0L) hash ^= Size.GetHashCode();
+              if (Comment.Length != 0) hash ^= Comment.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (State != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary.Types.State.Unspecified) {
+                output.WriteRawTag(8);
+                output.WriteEnum((int) State);
+              }
+              if (Size != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(Size);
+              }
+              if (Comment.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(Comment);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (State != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary.Types.State.Unspecified) {
+                output.WriteRawTag(8);
+                output.WriteEnum((int) State);
+              }
+              if (Size != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(Size);
+              }
+              if (Comment.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(Comment);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (State != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary.Types.State.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+              }
+              if (Size != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(Size);
+              }
+              if (Comment.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Comment);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(WorkSummary other) {
+              if (other == null) {
+                return;
+              }
+              if (other.State != global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary.Types.State.Unspecified) {
+                State = other.State;
+              }
+              if (other.Size != 0L) {
+                Size = other.Size;
+              }
+              if (other.Comment.Length != 0) {
+                Comment = other.Comment;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    State = (global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary.Types.State) input.ReadEnum();
+                    break;
+                  }
+                  case 16: {
+                    Size = input.ReadInt64();
+                    break;
+                  }
+                  case 26: {
+                    Comment = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    State = (global::Google.Cloud.BigQuery.Migration.V2.LineageOutput.Types.ProgressReport.Types.WorkSummary.Types.State) input.ReadEnum();
+                    break;
+                  }
+                  case 16: {
+                    Size = input.ReadInt64();
+                    break;
+                  }
+                  case 26: {
+                    Comment = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the WorkSummary message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// States of work. Each piece of work is in exactly one state.
+              /// [SUCCEEDED], [FAILED] and [SKIPPED] are terminal states; work in the
+              /// [IN_PROGRESS] will eventually transition to one of the terminal states.
+              /// </summary>
+              public enum State {
+                /// <summary>
+                /// The state is not specified.
+                /// </summary>
+                [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+                /// <summary>
+                /// Work that was processed successfully.
+                /// </summary>
+                [pbr::OriginalName("SUCCEEDED")] Succeeded = 1,
+                /// <summary>
+                /// Work that failed processing.
+                /// </summary>
+                [pbr::OriginalName("FAILED")] Failed = 2,
+                /// <summary>
+                /// Work that is currently being processed or queued for processing.
+                /// </summary>
+                [pbr::OriginalName("IN_PROGRESS")] InProgress = 3,
+                /// <summary>
+                /// Work that was recognised as necessary to fully process inputs but was
+                /// skipped due to system limitations.
+                /// </summary>
+                [pbr::OriginalName("SKIPPED")] Skipped = 4,
+              }
+
+            }
+            #endregion
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 

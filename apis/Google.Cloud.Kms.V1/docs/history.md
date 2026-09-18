@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.27.0, released 2026-09-11
+
+### New features
+
+- Add key version backend override field for external key protection options
+
+### Documentation improvements
+
+- Comments for fields in ExternalProtectionLevelOptions are updated
+
 ## Version 3.26.0, released 2026-07-20
 
 ### New features

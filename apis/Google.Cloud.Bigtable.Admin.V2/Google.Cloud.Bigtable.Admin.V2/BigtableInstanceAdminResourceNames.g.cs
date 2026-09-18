@@ -117,6 +117,30 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
     }
 
+    public partial class ListMemoryLayersRequest
+    {
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ClusterName ParentAsClusterName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ClusterName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetMemoryLayerRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::MemoryLayerName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::MemoryLayerName MemoryLayerName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::MemoryLayerName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateAppProfileRequest
     {
         /// <summary>

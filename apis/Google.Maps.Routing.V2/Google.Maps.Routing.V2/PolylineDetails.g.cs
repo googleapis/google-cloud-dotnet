@@ -26,32 +26,53 @@ namespace Google.Maps.Routing.V2 {
           string.Concat(
             "Ci1nb29nbGUvbWFwcy9yb3V0aW5nL3YyL3BvbHlsaW5lX2RldGFpbHMucHJv",
             "dG8SFmdvb2dsZS5tYXBzLnJvdXRpbmcudjIaH2dvb2dsZS9hcGkvZmllbGRf",
-            "YmVoYXZpb3IucHJvdG8i+QUKD1BvbHlsaW5lRGV0YWlscxJJCgxmbHlvdmVy",
-            "X2luZm8YDCADKAsyMy5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlBvbHlsaW5l",
-            "RGV0YWlscy5GbHlvdmVySW5mbxJQChBuYXJyb3dfcm9hZF9pbmZvGA0gAygL",
-            "MjYuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZURldGFpbHMuTmFy",
-            "cm93Um9hZEluZm8aZAoSUG9seWxpbmVQb2ludEluZGV4EhgKC3N0YXJ0X2lu",
-            "ZGV4GAEgASgFSACIAQESFgoJZW5kX2luZGV4GAIgASgFSAGIAQFCDgoMX3N0",
-            "YXJ0X2luZGV4QgwKCl9lbmRfaW5kZXgawAEKC0ZseW92ZXJJbmZvElcKEGZs",
-            "eW92ZXJfcHJlc2VuY2UYASABKA4yOC5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
-            "LlBvbHlsaW5lRGV0YWlscy5Sb2FkRmVhdHVyZVN0YXRlQgPgQQMSWAoUcG9s",
-            "eWxpbmVfcG9pbnRfaW5kZXgYAiABKAsyOi5nb29nbGUubWFwcy5yb3V0aW5n",
-            "LnYyLlBvbHlsaW5lRGV0YWlscy5Qb2x5bGluZVBvaW50SW5kZXgaxwEKDk5h",
-            "cnJvd1JvYWRJbmZvElsKFG5hcnJvd19yb2FkX3ByZXNlbmNlGAEgASgOMjgu",
-            "Z29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZURldGFpbHMuUm9hZEZl",
-            "YXR1cmVTdGF0ZUID4EEDElgKFHBvbHlsaW5lX3BvaW50X2luZGV4GAIgASgL",
-            "MjouZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZURldGFpbHMuUG9s",
-            "eWxpbmVQb2ludEluZGV4IlYKEFJvYWRGZWF0dXJlU3RhdGUSIgoeUk9BRF9G",
-            "RUFUVVJFX1NUQVRFX1VOU1BFQ0lGSUVEEAASCgoGRVhJU1RTEAESEgoORE9F",
-            "U19OT1RfRVhJU1QQAkLGAQoaY29tLmdvb2dsZS5tYXBzLnJvdXRpbmcudjJC",
-            "FFBvbHlsaW5lRGV0YWlsc1Byb3RvUAFaOmNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "bWFwcy9yb3V0aW5nL2FwaXYyL3JvdXRpbmdwYjtyb3V0aW5ncGKiAgVHTVJW",
-            "MqoCFkdvb2dsZS5NYXBzLlJvdXRpbmcuVjLKAhZHb29nbGVcTWFwc1xSb3V0",
-            "aW5nXFYy6gIZR29vZ2xlOjpNYXBzOjpSb3V0aW5nOjpWMmIGcHJvdG8z"));
+            "YmVoYXZpb3IucHJvdG8iiAwKD1BvbHlsaW5lRGV0YWlscxJHCgt0dW5uZWxf",
+            "aW5mbxgIIAMoCzIyLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUG9seWxpbmVE",
+            "ZXRhaWxzLlR1bm5lbEluZm8SSQoMZmx5b3Zlcl9pbmZvGAwgAygLMjMuZ29v",
+            "Z2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGluZURldGFpbHMuRmx5b3Zlcklu",
+            "Zm8SUAoQbmFycm93X3JvYWRfaW5mbxgNIAMoCzI2Lmdvb2dsZS5tYXBzLnJv",
+            "dXRpbmcudjIuUG9seWxpbmVEZXRhaWxzLk5hcnJvd1JvYWRJbmZvEkcKC2Jy",
+            "aWRnZV9pbmZvGA4gAygLMjIuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5",
+            "bGluZURldGFpbHMuQnJpZGdlSW5mbxJHCgtza3l3YXlfaW5mbxgPIAMoCzIy",
+            "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUG9seWxpbmVEZXRhaWxzLlNreXdh",
+            "eUluZm8aZAoSUG9seWxpbmVQb2ludEluZGV4EhgKC3N0YXJ0X2luZGV4GAEg",
+            "ASgFSACIAQESFgoJZW5kX2luZGV4GAIgASgFSAGIAQFCDgoMX3N0YXJ0X2lu",
+            "ZGV4QgwKCl9lbmRfaW5kZXgauQEKClR1bm5lbEluZm8SUQoPdHVubmVsX3By",
+            "ZXNlbmNlGAEgASgOMjguZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5bGlu",
+            "ZURldGFpbHMuUm9hZEZlYXR1cmVTdGF0ZRJYChRwb2x5bGluZV9wb2ludF9p",
+            "bmRleBgCIAEoCzI6Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUG9seWxpbmVE",
+            "ZXRhaWxzLlBvbHlsaW5lUG9pbnRJbmRleBq5AQoKQnJpZGdlSW5mbxJRCg9i",
+            "cmlkZ2VfcHJlc2VuY2UYASABKA4yOC5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
+            "LlBvbHlsaW5lRGV0YWlscy5Sb2FkRmVhdHVyZVN0YXRlElgKFHBvbHlsaW5l",
+            "X3BvaW50X2luZGV4GAIgASgLMjouZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Q",
+            "b2x5bGluZURldGFpbHMuUG9seWxpbmVQb2ludEluZGV4GrkBCgpTa3l3YXlJ",
+            "bmZvElEKD3NreXdheV9wcmVzZW5jZRgBIAEoDjI4Lmdvb2dsZS5tYXBzLnJv",
+            "dXRpbmcudjIuUG9seWxpbmVEZXRhaWxzLlJvYWRGZWF0dXJlU3RhdGUSWAoU",
+            "cG9seWxpbmVfcG9pbnRfaW5kZXgYAiABKAsyOi5nb29nbGUubWFwcy5yb3V0",
+            "aW5nLnYyLlBvbHlsaW5lRGV0YWlscy5Qb2x5bGluZVBvaW50SW5kZXgawAEK",
+            "C0ZseW92ZXJJbmZvElcKEGZseW92ZXJfcHJlc2VuY2UYASABKA4yOC5nb29n",
+            "bGUubWFwcy5yb3V0aW5nLnYyLlBvbHlsaW5lRGV0YWlscy5Sb2FkRmVhdHVy",
+            "ZVN0YXRlQgPgQQMSWAoUcG9seWxpbmVfcG9pbnRfaW5kZXgYAiABKAsyOi5n",
+            "b29nbGUubWFwcy5yb3V0aW5nLnYyLlBvbHlsaW5lRGV0YWlscy5Qb2x5bGlu",
+            "ZVBvaW50SW5kZXgaxwEKDk5hcnJvd1JvYWRJbmZvElsKFG5hcnJvd19yb2Fk",
+            "X3ByZXNlbmNlGAEgASgOMjguZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Qb2x5",
+            "bGluZURldGFpbHMuUm9hZEZlYXR1cmVTdGF0ZUID4EEDElgKFHBvbHlsaW5l",
+            "X3BvaW50X2luZGV4GAIgASgLMjouZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Q",
+            "b2x5bGluZURldGFpbHMuUG9seWxpbmVQb2ludEluZGV4IlYKEFJvYWRGZWF0",
+            "dXJlU3RhdGUSIgoeUk9BRF9GRUFUVVJFX1NUQVRFX1VOU1BFQ0lGSUVEEAAS",
+            "CgoGRVhJU1RTEAESEgoORE9FU19OT1RfRVhJU1QQAkLGAQoaY29tLmdvb2ds",
+            "ZS5tYXBzLnJvdXRpbmcudjJCFFBvbHlsaW5lRGV0YWlsc1Byb3RvUAFaOmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vbWFwcy9yb3V0aW5nL2FwaXYyL3JvdXRpbmdw",
+            "Yjtyb3V0aW5ncGKiAgVHTVJWMqoCFkdvb2dsZS5NYXBzLlJvdXRpbmcuVjLK",
+            "AhZHb29nbGVcTWFwc1xSb3V0aW5nXFYy6gIZR29vZ2xlOjpNYXBzOjpSb3V0",
+            "aW5nOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.PolylineDetails), global::Google.Maps.Routing.V2.PolylineDetails.Parser, new[]{ "FlyoverInfo", "NarrowRoadInfo" }, null, new[]{ typeof(global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex), global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex.Parser, new[]{ "StartIndex", "EndIndex" }, new[]{ "StartIndex", "EndIndex" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.PolylineDetails), global::Google.Maps.Routing.V2.PolylineDetails.Parser, new[]{ "TunnelInfo", "FlyoverInfo", "NarrowRoadInfo", "BridgeInfo", "SkywayInfo" }, null, new[]{ typeof(global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex), global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex.Parser, new[]{ "StartIndex", "EndIndex" }, new[]{ "StartIndex", "EndIndex" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.PolylineDetails.Types.TunnelInfo), global::Google.Maps.Routing.V2.PolylineDetails.Types.TunnelInfo.Parser, new[]{ "TunnelPresence", "PolylinePointIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.PolylineDetails.Types.BridgeInfo), global::Google.Maps.Routing.V2.PolylineDetails.Types.BridgeInfo.Parser, new[]{ "BridgePresence", "PolylinePointIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.PolylineDetails.Types.SkywayInfo), global::Google.Maps.Routing.V2.PolylineDetails.Types.SkywayInfo.Parser, new[]{ "SkywayPresence", "PolylinePointIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.PolylineDetails.Types.FlyoverInfo), global::Google.Maps.Routing.V2.PolylineDetails.Types.FlyoverInfo.Parser, new[]{ "FlyoverPresence", "PolylinePointIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.PolylineDetails.Types.NarrowRoadInfo), global::Google.Maps.Routing.V2.PolylineDetails.Types.NarrowRoadInfo.Parser, new[]{ "NarrowRoadPresence", "PolylinePointIndex" }, null, null, null, null)})
           }));
@@ -100,8 +121,11 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PolylineDetails(PolylineDetails other) : this() {
+      tunnelInfo_ = other.tunnelInfo_.Clone();
       flyoverInfo_ = other.flyoverInfo_.Clone();
       narrowRoadInfo_ = other.narrowRoadInfo_.Clone();
+      bridgeInfo_ = other.bridgeInfo_.Clone();
+      skywayInfo_ = other.skywayInfo_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -109,6 +133,23 @@ namespace Google.Maps.Routing.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PolylineDetails Clone() {
       return new PolylineDetails(this);
+    }
+
+    /// <summary>Field number for the "tunnel_info" field.</summary>
+    public const int TunnelInfoFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Google.Maps.Routing.V2.PolylineDetails.Types.TunnelInfo> _repeated_tunnelInfo_codec
+        = pb::FieldCodec.ForMessage(66, global::Google.Maps.Routing.V2.PolylineDetails.Types.TunnelInfo.Parser);
+    private readonly pbc::RepeatedField<global::Google.Maps.Routing.V2.PolylineDetails.Types.TunnelInfo> tunnelInfo_ = new pbc::RepeatedField<global::Google.Maps.Routing.V2.PolylineDetails.Types.TunnelInfo>();
+    /// <summary>
+    /// Tunnel details along the polyline. This field is populated if the request
+    /// specifies the `avoid_tunnels` route modifier and the resultant route fails
+    /// to avoid them, OR if `TUNNEL_INFO_ON_POLYLINE` is specified in
+    /// `extra_computations` and the route contains tunnels.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Maps.Routing.V2.PolylineDetails.Types.TunnelInfo> TunnelInfo {
+      get { return tunnelInfo_; }
     }
 
     /// <summary>Field number for the "flyover_info" field.</summary>
@@ -139,6 +180,34 @@ namespace Google.Maps.Routing.V2 {
       get { return narrowRoadInfo_; }
     }
 
+    /// <summary>Field number for the "bridge_info" field.</summary>
+    public const int BridgeInfoFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::Google.Maps.Routing.V2.PolylineDetails.Types.BridgeInfo> _repeated_bridgeInfo_codec
+        = pb::FieldCodec.ForMessage(114, global::Google.Maps.Routing.V2.PolylineDetails.Types.BridgeInfo.Parser);
+    private readonly pbc::RepeatedField<global::Google.Maps.Routing.V2.PolylineDetails.Types.BridgeInfo> bridgeInfo_ = new pbc::RepeatedField<global::Google.Maps.Routing.V2.PolylineDetails.Types.BridgeInfo>();
+    /// <summary>
+    /// Bridge details along the polyline.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Maps.Routing.V2.PolylineDetails.Types.BridgeInfo> BridgeInfo {
+      get { return bridgeInfo_; }
+    }
+
+    /// <summary>Field number for the "skyway_info" field.</summary>
+    public const int SkywayInfoFieldNumber = 15;
+    private static readonly pb::FieldCodec<global::Google.Maps.Routing.V2.PolylineDetails.Types.SkywayInfo> _repeated_skywayInfo_codec
+        = pb::FieldCodec.ForMessage(122, global::Google.Maps.Routing.V2.PolylineDetails.Types.SkywayInfo.Parser);
+    private readonly pbc::RepeatedField<global::Google.Maps.Routing.V2.PolylineDetails.Types.SkywayInfo> skywayInfo_ = new pbc::RepeatedField<global::Google.Maps.Routing.V2.PolylineDetails.Types.SkywayInfo>();
+    /// <summary>
+    /// Skyway details along the polyline.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Maps.Routing.V2.PolylineDetails.Types.SkywayInfo> SkywayInfo {
+      get { return skywayInfo_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -154,8 +223,11 @@ namespace Google.Maps.Routing.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!tunnelInfo_.Equals(other.tunnelInfo_)) return false;
       if(!flyoverInfo_.Equals(other.flyoverInfo_)) return false;
       if(!narrowRoadInfo_.Equals(other.narrowRoadInfo_)) return false;
+      if(!bridgeInfo_.Equals(other.bridgeInfo_)) return false;
+      if(!skywayInfo_.Equals(other.skywayInfo_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -163,8 +235,11 @@ namespace Google.Maps.Routing.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= tunnelInfo_.GetHashCode();
       hash ^= flyoverInfo_.GetHashCode();
       hash ^= narrowRoadInfo_.GetHashCode();
+      hash ^= bridgeInfo_.GetHashCode();
+      hash ^= skywayInfo_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,8 +258,11 @@ namespace Google.Maps.Routing.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      tunnelInfo_.WriteTo(output, _repeated_tunnelInfo_codec);
       flyoverInfo_.WriteTo(output, _repeated_flyoverInfo_codec);
       narrowRoadInfo_.WriteTo(output, _repeated_narrowRoadInfo_codec);
+      bridgeInfo_.WriteTo(output, _repeated_bridgeInfo_codec);
+      skywayInfo_.WriteTo(output, _repeated_skywayInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -195,8 +273,11 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      tunnelInfo_.WriteTo(ref output, _repeated_tunnelInfo_codec);
       flyoverInfo_.WriteTo(ref output, _repeated_flyoverInfo_codec);
       narrowRoadInfo_.WriteTo(ref output, _repeated_narrowRoadInfo_codec);
+      bridgeInfo_.WriteTo(ref output, _repeated_bridgeInfo_codec);
+      skywayInfo_.WriteTo(ref output, _repeated_skywayInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -207,8 +288,11 @@ namespace Google.Maps.Routing.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += tunnelInfo_.CalculateSize(_repeated_tunnelInfo_codec);
       size += flyoverInfo_.CalculateSize(_repeated_flyoverInfo_codec);
       size += narrowRoadInfo_.CalculateSize(_repeated_narrowRoadInfo_codec);
+      size += bridgeInfo_.CalculateSize(_repeated_bridgeInfo_codec);
+      size += skywayInfo_.CalculateSize(_repeated_skywayInfo_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -221,8 +305,11 @@ namespace Google.Maps.Routing.V2 {
       if (other == null) {
         return;
       }
+      tunnelInfo_.Add(other.tunnelInfo_);
       flyoverInfo_.Add(other.flyoverInfo_);
       narrowRoadInfo_.Add(other.narrowRoadInfo_);
+      bridgeInfo_.Add(other.bridgeInfo_);
+      skywayInfo_.Add(other.skywayInfo_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -242,12 +329,24 @@ namespace Google.Maps.Routing.V2 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 66: {
+            tunnelInfo_.AddEntriesFrom(input, _repeated_tunnelInfo_codec);
+            break;
+          }
           case 98: {
             flyoverInfo_.AddEntriesFrom(input, _repeated_flyoverInfo_codec);
             break;
           }
           case 106: {
             narrowRoadInfo_.AddEntriesFrom(input, _repeated_narrowRoadInfo_codec);
+            break;
+          }
+          case 114: {
+            bridgeInfo_.AddEntriesFrom(input, _repeated_bridgeInfo_codec);
+            break;
+          }
+          case 122: {
+            skywayInfo_.AddEntriesFrom(input, _repeated_skywayInfo_codec);
             break;
           }
         }
@@ -269,12 +368,24 @@ namespace Google.Maps.Routing.V2 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 66: {
+            tunnelInfo_.AddEntriesFrom(ref input, _repeated_tunnelInfo_codec);
+            break;
+          }
           case 98: {
             flyoverInfo_.AddEntriesFrom(ref input, _repeated_flyoverInfo_codec);
             break;
           }
           case 106: {
             narrowRoadInfo_.AddEntriesFrom(ref input, _repeated_narrowRoadInfo_codec);
+            break;
+          }
+          case 114: {
+            bridgeInfo_.AddEntriesFrom(ref input, _repeated_bridgeInfo_codec);
+            break;
+          }
+          case 122: {
+            skywayInfo_.AddEntriesFrom(ref input, _repeated_skywayInfo_codec);
             break;
           }
         }
@@ -584,6 +695,765 @@ namespace Google.Maps.Routing.V2 {
       }
 
       /// <summary>
+      /// Encapsulates information about tunnels along the polyline.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class TunnelInfo : pb::IMessage<TunnelInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TunnelInfo> _parser = new pb::MessageParser<TunnelInfo>(() => new TunnelInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TunnelInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Routing.V2.PolylineDetails.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TunnelInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TunnelInfo(TunnelInfo other) : this() {
+          tunnelPresence_ = other.tunnelPresence_;
+          polylinePointIndex_ = other.polylinePointIndex_ != null ? other.polylinePointIndex_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TunnelInfo Clone() {
+          return new TunnelInfo(this);
+        }
+
+        /// <summary>Field number for the "tunnel_presence" field.</summary>
+        public const int TunnelPresenceFieldNumber = 1;
+        private global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState tunnelPresence_ = global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified;
+        /// <summary>
+        /// Denotes whether a tunnel exists for a given stretch of the polyline.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState TunnelPresence {
+          get { return tunnelPresence_; }
+          set {
+            tunnelPresence_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "polyline_point_index" field.</summary>
+        public const int PolylinePointIndexFieldNumber = 2;
+        private global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex polylinePointIndex_;
+        /// <summary>
+        /// The location of tunnel related information along the polyline.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex PolylinePointIndex {
+          get { return polylinePointIndex_; }
+          set {
+            polylinePointIndex_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TunnelInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TunnelInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (TunnelPresence != other.TunnelPresence) return false;
+          if (!object.Equals(PolylinePointIndex, other.PolylinePointIndex)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (TunnelPresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) hash ^= TunnelPresence.GetHashCode();
+          if (polylinePointIndex_ != null) hash ^= PolylinePointIndex.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (TunnelPresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) TunnelPresence);
+          }
+          if (polylinePointIndex_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(PolylinePointIndex);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (TunnelPresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) TunnelPresence);
+          }
+          if (polylinePointIndex_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(PolylinePointIndex);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (TunnelPresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TunnelPresence);
+          }
+          if (polylinePointIndex_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PolylinePointIndex);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TunnelInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.TunnelPresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) {
+            TunnelPresence = other.TunnelPresence;
+          }
+          if (other.polylinePointIndex_ != null) {
+            if (polylinePointIndex_ == null) {
+              PolylinePointIndex = new global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex();
+            }
+            PolylinePointIndex.MergeFrom(other.PolylinePointIndex);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                TunnelPresence = (global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (polylinePointIndex_ == null) {
+                  PolylinePointIndex = new global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex();
+                }
+                input.ReadMessage(PolylinePointIndex);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                TunnelPresence = (global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (polylinePointIndex_ == null) {
+                  PolylinePointIndex = new global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex();
+                }
+                input.ReadMessage(PolylinePointIndex);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Encapsulates information about bridges along the polyline.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class BridgeInfo : pb::IMessage<BridgeInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<BridgeInfo> _parser = new pb::MessageParser<BridgeInfo>(() => new BridgeInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<BridgeInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Routing.V2.PolylineDetails.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BridgeInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BridgeInfo(BridgeInfo other) : this() {
+          bridgePresence_ = other.bridgePresence_;
+          polylinePointIndex_ = other.polylinePointIndex_ != null ? other.polylinePointIndex_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BridgeInfo Clone() {
+          return new BridgeInfo(this);
+        }
+
+        /// <summary>Field number for the "bridge_presence" field.</summary>
+        public const int BridgePresenceFieldNumber = 1;
+        private global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState bridgePresence_ = global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified;
+        /// <summary>
+        /// Denotes whether a bridge exists for a given stretch of the polyline.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState BridgePresence {
+          get { return bridgePresence_; }
+          set {
+            bridgePresence_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "polyline_point_index" field.</summary>
+        public const int PolylinePointIndexFieldNumber = 2;
+        private global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex polylinePointIndex_;
+        /// <summary>
+        /// The location of bridge related information along the polyline.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex PolylinePointIndex {
+          get { return polylinePointIndex_; }
+          set {
+            polylinePointIndex_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as BridgeInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(BridgeInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (BridgePresence != other.BridgePresence) return false;
+          if (!object.Equals(PolylinePointIndex, other.PolylinePointIndex)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (BridgePresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) hash ^= BridgePresence.GetHashCode();
+          if (polylinePointIndex_ != null) hash ^= PolylinePointIndex.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (BridgePresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) BridgePresence);
+          }
+          if (polylinePointIndex_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(PolylinePointIndex);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (BridgePresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) BridgePresence);
+          }
+          if (polylinePointIndex_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(PolylinePointIndex);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (BridgePresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BridgePresence);
+          }
+          if (polylinePointIndex_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PolylinePointIndex);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(BridgeInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.BridgePresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) {
+            BridgePresence = other.BridgePresence;
+          }
+          if (other.polylinePointIndex_ != null) {
+            if (polylinePointIndex_ == null) {
+              PolylinePointIndex = new global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex();
+            }
+            PolylinePointIndex.MergeFrom(other.PolylinePointIndex);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                BridgePresence = (global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (polylinePointIndex_ == null) {
+                  PolylinePointIndex = new global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex();
+                }
+                input.ReadMessage(PolylinePointIndex);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                BridgePresence = (global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (polylinePointIndex_ == null) {
+                  PolylinePointIndex = new global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex();
+                }
+                input.ReadMessage(PolylinePointIndex);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Encapsulates information about skyways along the polyline.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SkywayInfo : pb::IMessage<SkywayInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SkywayInfo> _parser = new pb::MessageParser<SkywayInfo>(() => new SkywayInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SkywayInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Routing.V2.PolylineDetails.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SkywayInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SkywayInfo(SkywayInfo other) : this() {
+          skywayPresence_ = other.skywayPresence_;
+          polylinePointIndex_ = other.polylinePointIndex_ != null ? other.polylinePointIndex_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SkywayInfo Clone() {
+          return new SkywayInfo(this);
+        }
+
+        /// <summary>Field number for the "skyway_presence" field.</summary>
+        public const int SkywayPresenceFieldNumber = 1;
+        private global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState skywayPresence_ = global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified;
+        /// <summary>
+        /// Denotes whether a skyway exists for a given stretch of the polyline.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState SkywayPresence {
+          get { return skywayPresence_; }
+          set {
+            skywayPresence_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "polyline_point_index" field.</summary>
+        public const int PolylinePointIndexFieldNumber = 2;
+        private global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex polylinePointIndex_;
+        /// <summary>
+        /// The location of skyway related information along the polyline.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex PolylinePointIndex {
+          get { return polylinePointIndex_; }
+          set {
+            polylinePointIndex_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SkywayInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SkywayInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (SkywayPresence != other.SkywayPresence) return false;
+          if (!object.Equals(PolylinePointIndex, other.PolylinePointIndex)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (SkywayPresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) hash ^= SkywayPresence.GetHashCode();
+          if (polylinePointIndex_ != null) hash ^= PolylinePointIndex.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (SkywayPresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) SkywayPresence);
+          }
+          if (polylinePointIndex_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(PolylinePointIndex);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (SkywayPresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) SkywayPresence);
+          }
+          if (polylinePointIndex_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(PolylinePointIndex);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (SkywayPresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SkywayPresence);
+          }
+          if (polylinePointIndex_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PolylinePointIndex);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SkywayInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.SkywayPresence != global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState.Unspecified) {
+            SkywayPresence = other.SkywayPresence;
+          }
+          if (other.polylinePointIndex_ != null) {
+            if (polylinePointIndex_ == null) {
+              PolylinePointIndex = new global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex();
+            }
+            PolylinePointIndex.MergeFrom(other.PolylinePointIndex);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                SkywayPresence = (global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (polylinePointIndex_ == null) {
+                  PolylinePointIndex = new global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex();
+                }
+                input.ReadMessage(PolylinePointIndex);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                SkywayPresence = (global::Google.Maps.Routing.V2.PolylineDetails.Types.RoadFeatureState) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (polylinePointIndex_ == null) {
+                  PolylinePointIndex = new global::Google.Maps.Routing.V2.PolylineDetails.Types.PolylinePointIndex();
+                }
+                input.ReadMessage(PolylinePointIndex);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Encapsulates information about flyovers along the polyline.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -601,7 +1471,7 @@ namespace Google.Maps.Routing.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Maps.Routing.V2.PolylineDetails.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Maps.Routing.V2.PolylineDetails.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -855,7 +1725,7 @@ namespace Google.Maps.Routing.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Maps.Routing.V2.PolylineDetails.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Maps.Routing.V2.PolylineDetails.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -1,5 +1,41 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2026-09-11
+
+### New features
+
+- Add Member resource and Member management RPCs (CreateMember, GetMember, ListMembers, DeleteMember, UpdateMember, BatchUpdateMembers) to SpacesService in Meet v2 GA API
+- Add SmartNote resource and SmartNotes RPCs (GetSmartNote, ListSmartNotes) to ConferenceRecordsService in Meet v2 GA and v2beta API
+- Add UpdateMember and BatchUpdateMembers RPCs to SpacesService in Meet v2beta API
+- Add ArtifactConfig, Moderation, ModerationRestrictions, and AttendanceReportGenerationType to SpaceConfig in Meet v2 GA API
+- Add PhoneAccess and GatewaySipAccess to Space in Meet v2 and v2beta API
+- Add media_api_consenter_present to ActiveConference in Meet v2beta API
+- Add ConnectionConfig to ConnectActiveConferenceRequest in Meet v2beta API
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.apps.meet.v2beta.Space` is changed
+- A comment for message `SpaceConfig` is changed
+- A comment for field `moderation` in message `.google.apps.meet.v2beta.SpaceConfig` is changed
+- A comment for field `moderation_restrictions` in message `.google.apps.meet.v2beta.SpaceConfig` is changed
+- A comment for field `attendance_report_generation_type` in message `.google.apps.meet.v2beta.SpaceConfig` is changed
+- A comment for field `artifact_config` in message `.google.apps.meet.v2beta.SpaceConfig` is changed
+- A comment for enum value `ROLE_UNSPECIFIED` in enum `Role` is changed
+- A comment for method `GetSpace` in service `SpacesService` is changed
+- A comment for method `UpdateSpace` in service `SpacesService` is changed
+- A comment for method `ConnectActiveConference` in service `SpacesService` is changed
+- A comment for method `EndActiveConference` in service `SpacesService` is changed
+- A comment for method `CreateMember` in service `SpacesService` is changed
+- A comment for method `GetMember` in service `SpacesService` is changed
+- A comment for method `ListMembers` in service `SpacesService` is changed
+- A comment for method `DeleteMember` in service `SpacesService` is changed
+- A comment for method `GetTranscriptEntry` in service `ConferenceRecordsService` is changed
+- A comment for method `ListTranscriptEntries` in service `ConferenceRecordsService` is changed
+- A comment for field `name` in message `.google.apps.meet.v2beta.GetSpaceRequest` is changed
+- A comment for message `ConnectActiveConferenceResponse` is changed
+- A comment for field `name` in message `.google.apps.meet.v2beta.EndActiveConferenceRequest` is changed
+- A comment for field `page_size` in message `.google.apps.meet.v2beta.ListMembersRequest` is changed
+
 ## Version 1.0.0-beta08, released 2025-11-03
 
 ### New features

@@ -28,6 +28,12 @@
                 "CreateConnectionAsync"
               ]
             },
+            "CreateContentPolicy": {
+              "methods": [
+                "CreateContentPolicy",
+                "CreateContentPolicyAsync"
+              ]
+            },
             "CreateDeidentifyTemplate": {
               "methods": [
                 "CreateDeidentifyTemplate",
@@ -74,6 +80,12 @@
               "methods": [
                 "DeleteConnection",
                 "DeleteConnectionAsync"
+              ]
+            },
+            "DeleteContentPolicy": {
+              "methods": [
+                "DeleteContentPolicy",
+                "DeleteContentPolicyAsync"
               ]
             },
             "DeleteDeidentifyTemplate": {
@@ -140,6 +152,12 @@
               "methods": [
                 "GetConnection",
                 "GetConnectionAsync"
+              ]
+            },
+            "GetContentPolicy": {
+              "methods": [
+                "GetContentPolicy",
+                "GetContentPolicyAsync"
               ]
             },
             "GetDeidentifyTemplate": {
@@ -226,6 +244,12 @@
                 "ListConnectionsAsync"
               ]
             },
+            "ListContentPolicies": {
+              "methods": [
+                "ListContentPolicies",
+                "ListContentPoliciesAsync"
+              ]
+            },
             "ListDeidentifyTemplates": {
               "methods": [
                 "ListDeidentifyTemplates",
@@ -308,6 +332,12 @@
               "methods": [
                 "UpdateConnection",
                 "UpdateConnectionAsync"
+              ]
+            },
+            "UpdateContentPolicy": {
+              "methods": [
+                "UpdateContentPolicy",
+                "UpdateContentPolicyAsync"
               ]
             },
             "UpdateDeidentifyTemplate": {

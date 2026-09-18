@@ -46,16 +46,19 @@ namespace Google.Ads.AdManager.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AdBreakMessagesReflection.Descriptor;
+            yield return AdBreakOptimizationTypeEnumReflection.Descriptor;
             yield return AdBreakServiceReflection.Descriptor;
             yield return AdReviewCenterAdEnumsReflection.Descriptor;
             yield return AdReviewCenterAdMessagesReflection.Descriptor;
             yield return AdReviewCenterAdServiceReflection.Descriptor;
             yield return AdRuleEnumsReflection.Descriptor;
+            yield return AdRuleFillOrderDirectionEnumReflection.Descriptor;
             yield return AdRuleMessagesReflection.Descriptor;
             yield return AdRuleServiceReflection.Descriptor;
             yield return AdRuleSlotBehaviorEnumReflection.Descriptor;
             yield return AdRuleSlotBumperEnumReflection.Descriptor;
             yield return AdRuleSlotMidrollFrequencyTypeEnumReflection.Descriptor;
+            yield return AdSpotFillTypeEnumReflection.Descriptor;
             yield return AdSpotMessagesReflection.Descriptor;
             yield return AdSpotServiceReflection.Descriptor;
             yield return AdSpotTargetingTypeEnumReflection.Descriptor;
@@ -67,11 +70,14 @@ namespace Google.Ads.AdManager.V1
             yield return ApplicationMessagesReflection.Descriptor;
             yield return ApplicationServiceReflection.Descriptor;
             yield return AppliedLabelReflection.Descriptor;
+            yield return AudienceSegmentEnumsReflection.Descriptor;
             yield return AudienceSegmentMessagesReflection.Descriptor;
             yield return AudienceSegmentServiceReflection.Descriptor;
             yield return BandwidthGroupMessagesReflection.Descriptor;
             yield return BandwidthGroupServiceReflection.Descriptor;
             yield return BrandLiftPartnerEnumReflection.Descriptor;
+            yield return BreakTemplateMessagesReflection.Descriptor;
+            yield return BreakTemplateServiceReflection.Descriptor;
             yield return BrowserLanguageMessagesReflection.Descriptor;
             yield return BrowserLanguageServiceReflection.Descriptor;
             yield return BrowserMessagesReflection.Descriptor;
@@ -136,6 +142,9 @@ namespace Google.Ads.AdManager.V1
             yield return DaiEncodingProfileEnumsReflection.Descriptor;
             yield return DaiEncodingProfileMessagesReflection.Descriptor;
             yield return DaiEncodingProfileServiceReflection.Descriptor;
+            yield return DaiSessionEnumsReflection.Descriptor;
+            yield return DaiSessionMessagesReflection.Descriptor;
+            yield return DaiSessionServiceReflection.Descriptor;
             yield return DealBuyerPermissionTypeEnumReflection.Descriptor;
             yield return DealPriorityTierEnumReflection.Descriptor;
             yield return DeliveryEnumsReflection.Descriptor;
@@ -188,6 +197,9 @@ namespace Google.Ads.AdManager.V1
             yield return MobileDeviceServiceReflection.Descriptor;
             yield return MobileDeviceSubmodelMessagesReflection.Descriptor;
             yield return MobileDeviceSubmodelServiceReflection.Descriptor;
+            yield return NativeStyleEnumsReflection.Descriptor;
+            yield return NativeStyleMessagesReflection.Descriptor;
+            yield return NativeStyleServiceReflection.Descriptor;
             yield return NetworkMessagesReflection.Descriptor;
             yield return NetworkServiceReflection.Descriptor;
             yield return NielsenCtvPacingEnumReflection.Descriptor;

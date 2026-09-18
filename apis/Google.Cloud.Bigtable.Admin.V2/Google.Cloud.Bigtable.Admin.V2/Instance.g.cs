@@ -79,67 +79,80 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "REVfU0NBTElOR19GQUNUT1JfMlgQAjp46kF1CiRiaWd0YWJsZWFkbWluLmdv",
             "b2dsZWFwaXMuY29tL0NsdXN0ZXISOnByb2plY3RzL3twcm9qZWN0fS9pbnN0",
             "YW5jZXMve2luc3RhbmNlfS9jbHVzdGVycy97Y2x1c3Rlcn0qCGNsdXN0ZXJz",
-            "MgdjbHVzdGVyQggKBmNvbmZpZyLtCgoKQXBwUHJvZmlsZRIMCgRuYW1lGAEg",
-            "ASgJEgwKBGV0YWcYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSZwodbXVs",
-            "dGlfY2x1c3Rlcl9yb3V0aW5nX3VzZV9hbnkYBSABKAsyPi5nb29nbGUuYmln",
-            "dGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZS5NdWx0aUNsdXN0ZXJSb3V0aW5n",
-            "VXNlQW55SAASWwoWc2luZ2xlX2NsdXN0ZXJfcm91dGluZxgGIAEoCzI5Lmdv",
-            "b2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxlLlNpbmdsZUNsdXN0",
-            "ZXJSb3V0aW5nSAASRQoIcHJpb3JpdHkYByABKA4yLS5nb29nbGUuYmlndGFi",
-            "bGUuYWRtaW4udjIuQXBwUHJvZmlsZS5Qcmlvcml0eUICGAFIARJUChJzdGFu",
-            "ZGFyZF9pc29sYXRpb24YCyABKAsyNi5nb29nbGUuYmlndGFibGUuYWRtaW4u",
-            "djIuQXBwUHJvZmlsZS5TdGFuZGFyZElzb2xhdGlvbkgBEmkKHmRhdGFfYm9v",
-            "c3RfaXNvbGF0aW9uX3JlYWRfb25seRgKIAEoCzI/Lmdvb2dsZS5iaWd0YWJs",
-            "ZS5hZG1pbi52Mi5BcHBQcm9maWxlLkRhdGFCb29zdElzb2xhdGlvblJlYWRP",
-            "bmx5SAEarwEKGU11bHRpQ2x1c3RlclJvdXRpbmdVc2VBbnkSEwoLY2x1c3Rl",
-            "cl9pZHMYASADKAkSYgoMcm93X2FmZmluaXR5GAMgASgLMkouZ29vZ2xlLmJp",
-            "Z3RhYmxlLmFkbWluLnYyLkFwcFByb2ZpbGUuTXVsdGlDbHVzdGVyUm91dGlu",
-            "Z1VzZUFueS5Sb3dBZmZpbml0eUgAGg0KC1Jvd0FmZmluaXR5QgoKCGFmZmlu",
-            "aXR5Gk4KFFNpbmdsZUNsdXN0ZXJSb3V0aW5nEhIKCmNsdXN0ZXJfaWQYASAB",
-            "KAkSIgoaYWxsb3dfdHJhbnNhY3Rpb25hbF93cml0ZXMYAiABKAgaVAoRU3Rh",
-            "bmRhcmRJc29sYXRpb24SPwoIcHJpb3JpdHkYASABKA4yLS5nb29nbGUuYmln",
-            "dGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZS5Qcmlvcml0eRr8AQoaRGF0YUJv",
-            "b3N0SXNvbGF0aW9uUmVhZE9ubHkSdwoVY29tcHV0ZV9iaWxsaW5nX293bmVy",
-            "GAEgASgOMlMuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkFwcFByb2ZpbGUu",
-            "RGF0YUJvb3N0SXNvbGF0aW9uUmVhZE9ubHkuQ29tcHV0ZUJpbGxpbmdPd25l",
-            "ckgAiAEBIksKE0NvbXB1dGVCaWxsaW5nT3duZXISJQohQ09NUFVURV9CSUxM",
-            "SU5HX09XTkVSX1VOU1BFQ0lGSUVEEAASDQoJSE9TVF9QQVlTEAFCGAoWX2Nv",
-            "bXB1dGVfYmlsbGluZ19vd25lciJeCghQcmlvcml0eRIYChRQUklPUklUWV9V",
-            "TlNQRUNJRklFRBAAEhAKDFBSSU9SSVRZX0xPVxABEhMKD1BSSU9SSVRZX01F",
-            "RElVTRACEhEKDVBSSU9SSVRZX0hJR0gQAzqJAepBhQEKJ2JpZ3RhYmxlYWRt",
-            "aW4uZ29vZ2xlYXBpcy5jb20vQXBwUHJvZmlsZRJBcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2FwcFByb2ZpbGVzL3thcHBfcHJv",
-            "ZmlsZX0qC2FwcFByb2ZpbGVzMgphcHBQcm9maWxlQhAKDnJvdXRpbmdfcG9s",
-            "aWN5QgsKCWlzb2xhdGlvbiKhAwoJSG90VGFibGV0EgwKBG5hbWUYASABKAkS",
-            "OwoKdGFibGVfbmFtZRgCIAEoCUIn+kEkCiJiaWd0YWJsZWFkbWluLmdvb2ds",
-            "ZWFwaXMuY29tL1RhYmxlEjMKCnN0YXJ0X3RpbWUYAyABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYBCABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEQoJc3RhcnRfa2V5GAUg",
-            "ASgJEg8KB2VuZF9rZXkYBiABKAkSIwoWbm9kZV9jcHVfdXNhZ2VfcGVyY2Vu",
-            "dBgHIAEoAkID4EEDOpcB6kGTAQomYmlndGFibGVhZG1pbi5nb29nbGVhcGlz",
-            "LmNvbS9Ib3RUYWJsZXQSUnByb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMv",
-            "e2luc3RhbmNlfS9jbHVzdGVycy97Y2x1c3Rlcn0vaG90VGFibGV0cy97aG90",
-            "X3RhYmxldH0qCmhvdFRhYmxldHMyCWhvdFRhYmxldCL6AQoLTG9naWNhbFZp",
-            "ZXcSEQoEbmFtZRgBIAEoCUID4EEIEhIKBXF1ZXJ5GAIgASgJQgPgQQISEQoE",
-            "ZXRhZxgDIAEoCUID4EEBEiAKE2RlbGV0aW9uX3Byb3RlY3Rpb24YBiABKAhC",
-            "A+BBATqOAepBigEKKGJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vTG9n",
-            "aWNhbFZpZXcSQ3Byb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3Rh",
-            "bmNlfS9sb2dpY2FsVmlld3Mve2xvZ2ljYWxfdmlld30qDGxvZ2ljYWxWaWV3",
-            "czILbG9naWNhbFZpZXcilgIKEE1hdGVyaWFsaXplZFZpZXcSEQoEbmFtZRgB",
-            "IAEoCUID4EEIEhUKBXF1ZXJ5GAIgASgJQgbgQQLgQQUSEQoEZXRhZxgDIAEo",
-            "CUID4EEBEhsKE2RlbGV0aW9uX3Byb3RlY3Rpb24YBiABKAg6pwHqQaMBCi1i",
-            "aWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL01hdGVyaWFsaXplZFZpZXcS",
-            "TXByb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9tYXRl",
-            "cmlhbGl6ZWRWaWV3cy97bWF0ZXJpYWxpemVkX3ZpZXd9KhFtYXRlcmlhbGl6",
-            "ZWRWaWV3czIQbWF0ZXJpYWxpemVkVmlld0LLAgocY29tLmdvb2dsZS5iaWd0",
-            "YWJsZS5hZG1pbi52MkINSW5zdGFuY2VQcm90b1ABWjhjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2JpZ3RhYmxlL2FkbWluL2FwaXYyL2FkbWlucGI7YWRtaW5wYqoC",
-            "Hkdvb2dsZS5DbG91ZC5CaWd0YWJsZS5BZG1pbi5WMsoCHkdvb2dsZVxDbG91",
-            "ZFxCaWd0YWJsZVxBZG1pblxWMuoCIkdvb2dsZTo6Q2xvdWQ6OkJpZ3RhYmxl",
-            "OjpBZG1pbjo6VjLqQXgKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0",
-            "b0tleRJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L2tleVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tleX1i",
-            "BnByb3RvMw=="));
+            "MgdjbHVzdGVyQggKBmNvbmZpZyLVAwoLTWVtb3J5TGF5ZXISEQoEbmFtZRgB",
+            "IAEoCUID4EEIEkkKDW1lbW9yeV9jb25maWcYAiABKAsyMi5nb29nbGUuYmln",
+            "dGFibGUuYWRtaW4udjIuTWVtb3J5TGF5ZXIuTWVtb3J5Q29uZmlnEhEKBGV0",
+            "YWcYAyABKAlCA+BBARI/CgVzdGF0ZRgEIAEoDjIrLmdvb2dsZS5iaWd0YWJs",
+            "ZS5hZG1pbi52Mi5NZW1vcnlMYXllci5TdGF0ZUID4EEDGi0KDE1lbW9yeUNv",
+            "bmZpZxIdChBzdG9yYWdlX3NpemVfZ2liGAIgASgFQgPgQQMiUQoFU3RhdGUS",
+            "EwoPU1RBVEVfTk9UX0tOT1dOEAASCQoFUkVBRFkQARIMCghFTkFCTElORxAC",
+            "EgwKCFJFU0laSU5HEAMSDAoIRElTQUJMRUQQBDqRAepBjQEKKGJpZ3RhYmxl",
+            "YWRtaW4uZ29vZ2xlYXBpcy5jb20vTWVtb3J5TGF5ZXISRnByb2plY3RzL3tw",
+            "cm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9jbHVzdGVycy97Y2x1c3Rl",
+            "cn0vbWVtb3J5TGF5ZXIqDG1lbW9yeUxheWVyczILbWVtb3J5TGF5ZXIi3wsK",
+            "CkFwcFByb2ZpbGUSDAoEbmFtZRgBIAEoCRIMCgRldGFnGAIgASgJEhMKC2Rl",
+            "c2NyaXB0aW9uGAMgASgJEmcKHW11bHRpX2NsdXN0ZXJfcm91dGluZ191c2Vf",
+            "YW55GAUgASgLMj4uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkFwcFByb2Zp",
+            "bGUuTXVsdGlDbHVzdGVyUm91dGluZ1VzZUFueUgAElsKFnNpbmdsZV9jbHVz",
+            "dGVyX3JvdXRpbmcYBiABKAsyOS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIu",
+            "QXBwUHJvZmlsZS5TaW5nbGVDbHVzdGVyUm91dGluZ0gAEkUKCHByaW9yaXR5",
+            "GAcgASgOMi0uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkFwcFByb2ZpbGUu",
+            "UHJpb3JpdHlCAhgBSAESVAoSc3RhbmRhcmRfaXNvbGF0aW9uGAsgASgLMjYu",
+            "Z29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkFwcFByb2ZpbGUuU3RhbmRhcmRJ",
+            "c29sYXRpb25IARJpCh5kYXRhX2Jvb3N0X2lzb2xhdGlvbl9yZWFkX29ubHkY",
+            "CiABKAsyPy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZS5E",
+            "YXRhQm9vc3RJc29sYXRpb25SZWFkT25seUgBGq8BChlNdWx0aUNsdXN0ZXJS",
+            "b3V0aW5nVXNlQW55EhMKC2NsdXN0ZXJfaWRzGAEgAygJEmIKDHJvd19hZmZp",
+            "bml0eRgDIAEoCzJKLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9m",
+            "aWxlLk11bHRpQ2x1c3RlclJvdXRpbmdVc2VBbnkuUm93QWZmaW5pdHlIABoN",
+            "CgtSb3dBZmZpbml0eUIKCghhZmZpbml0eRpOChRTaW5nbGVDbHVzdGVyUm91",
+            "dGluZxISCgpjbHVzdGVyX2lkGAEgASgJEiIKGmFsbG93X3RyYW5zYWN0aW9u",
+            "YWxfd3JpdGVzGAIgASgIGsUBChFTdGFuZGFyZElzb2xhdGlvbhI/Cghwcmlv",
+            "cml0eRgBIAEoDjItLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9m",
+            "aWxlLlByaW9yaXR5El8KDW1lbW9yeV9jb25maWcYAiABKAsyQy5nb29nbGUu",
+            "YmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZS5TdGFuZGFyZElzb2xhdGlv",
+            "bi5NZW1vcnlDb25maWdCA+BBARoOCgxNZW1vcnlDb25maWca/AEKGkRhdGFC",
+            "b29zdElzb2xhdGlvblJlYWRPbmx5EncKFWNvbXB1dGVfYmlsbGluZ19vd25l",
+            "chgBIAEoDjJTLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxl",
+            "LkRhdGFCb29zdElzb2xhdGlvblJlYWRPbmx5LkNvbXB1dGVCaWxsaW5nT3du",
+            "ZXJIAIgBASJLChNDb21wdXRlQmlsbGluZ093bmVyEiUKIUNPTVBVVEVfQklM",
+            "TElOR19PV05FUl9VTlNQRUNJRklFRBAAEg0KCUhPU1RfUEFZUxABQhgKFl9j",
+            "b21wdXRlX2JpbGxpbmdfb3duZXIiXgoIUHJpb3JpdHkSGAoUUFJJT1JJVFlf",
+            "VU5TUEVDSUZJRUQQABIQCgxQUklPUklUWV9MT1cQARITCg9QUklPUklUWV9N",
+            "RURJVU0QAhIRCg1QUklPUklUWV9ISUdIEAM6iQHqQYUBCidiaWd0YWJsZWFk",
+            "bWluLmdvb2dsZWFwaXMuY29tL0FwcFByb2ZpbGUSQXByb2plY3RzL3twcm9q",
+            "ZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9hcHBQcm9maWxlcy97YXBwX3By",
+            "b2ZpbGV9KgthcHBQcm9maWxlczIKYXBwUHJvZmlsZUIQCg5yb3V0aW5nX3Bv",
+            "bGljeUILCglpc29sYXRpb24ioQMKCUhvdFRhYmxldBIMCgRuYW1lGAEgASgJ",
+            "EjsKCnRhYmxlX25hbWUYAiABKAlCJ/pBJAoiYmlndGFibGVhZG1pbi5nb29n",
+            "bGVhcGlzLmNvbS9UYWJsZRIzCgpzdGFydF90aW1lGAMgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAQgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhEKCXN0YXJ0X2tleRgF",
+            "IAEoCRIPCgdlbmRfa2V5GAYgASgJEiMKFm5vZGVfY3B1X3VzYWdlX3BlcmNl",
+            "bnQYByABKAJCA+BBAzqXAepBkwEKJmJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBp",
+            "cy5jb20vSG90VGFibGV0ElJwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2Vz",
+            "L3tpbnN0YW5jZX0vY2x1c3RlcnMve2NsdXN0ZXJ9L2hvdFRhYmxldHMve2hv",
+            "dF90YWJsZXR9Kgpob3RUYWJsZXRzMglob3RUYWJsZXQi+gEKC0xvZ2ljYWxW",
+            "aWV3EhEKBG5hbWUYASABKAlCA+BBCBISCgVxdWVyeRgCIAEoCUID4EECEhEK",
+            "BGV0YWcYAyABKAlCA+BBARIgChNkZWxldGlvbl9wcm90ZWN0aW9uGAYgASgI",
+            "QgPgQQE6jgHqQYoBCihiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL0xv",
+            "Z2ljYWxWaWV3EkNwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0",
+            "YW5jZX0vbG9naWNhbFZpZXdzL3tsb2dpY2FsX3ZpZXd9Kgxsb2dpY2FsVmll",
+            "d3MyC2xvZ2ljYWxWaWV3IpYCChBNYXRlcmlhbGl6ZWRWaWV3EhEKBG5hbWUY",
+            "ASABKAlCA+BBCBIVCgVxdWVyeRgCIAEoCUIG4EEC4EEFEhEKBGV0YWcYAyAB",
+            "KAlCA+BBARIbChNkZWxldGlvbl9wcm90ZWN0aW9uGAYgASgIOqcB6kGjAQot",
+            "YmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9NYXRlcmlhbGl6ZWRWaWV3",
+            "Ek1wcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vbWF0",
+            "ZXJpYWxpemVkVmlld3Mve21hdGVyaWFsaXplZF92aWV3fSoRbWF0ZXJpYWxp",
+            "emVkVmlld3MyEG1hdGVyaWFsaXplZFZpZXdCywIKHGNvbS5nb29nbGUuYmln",
+            "dGFibGUuYWRtaW4udjJCDUluc3RhbmNlUHJvdG9QAVo4Y2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9iaWd0YWJsZS9hZG1pbi9hcGl2Mi9hZG1pbnBiO2FkbWlucGKq",
+            "Ah5Hb29nbGUuQ2xvdWQuQmlndGFibGUuQWRtaW4uVjLKAh5Hb29nbGVcQ2xv",
+            "dWRcQmlndGFibGVcQWRtaW5cVjLqAiJHb29nbGU6OkNsb3VkOjpCaWd0YWJs",
+            "ZTo6QWRtaW46OlYy6kF4CiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9Dcnlw",
+            "dG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -149,9 +162,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "NodeScalingFactor", "ClusterConfig", "DefaultStorageType", "EncryptionConfig" }, new[]{ "Config" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State), typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.NodeScalingFactor) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig.Parser, new[]{ "AutoscalingLimits", "AutoscalingTargets" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig.Parser, new[]{ "ClusterAutoscalingConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer), global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Parser, new[]{ "Name", "MemoryConfig", "Etag", "State" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.MemoryConfig), global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.MemoryConfig.Parser, new[]{ "StorageSizeGib" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting", "Priority", "StandardIsolation", "DataBoostIsolationReadOnly" }, new[]{ "RoutingPolicy", "Isolation" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, new[]{ "ClusterIds", "RowAffinity" }, new[]{ "Affinity" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Types.RowAffinity), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Types.RowAffinity.Parser, null, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Parser, new[]{ "Priority" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Parser, new[]{ "Priority", "MemoryConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Types.MemoryConfig), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Types.MemoryConfig.Parser, null, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Parser, new[]{ "ComputeBillingOwner" }, new[]{ "ComputeBillingOwner" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.HotTablet), global::Google.Cloud.Bigtable.Admin.V2.HotTablet.Parser, new[]{ "Name", "TableName", "StartTime", "EndTime", "StartKey", "EndKey", "NodeCpuUsagePercent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.LogicalView), global::Google.Cloud.Bigtable.Admin.V2.LogicalView.Parser, new[]{ "Name", "Query", "Etag", "DeletionProtection" }, null, null, null, null),
@@ -2643,6 +2657,591 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
+  /// The memory layer of a cluster. A memory layer serves reads from
+  /// memory without hitting the backing persistent data store.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MemoryLayer : pb::IMessage<MemoryLayer>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MemoryLayer> _parser = new pb::MessageParser<MemoryLayer>(() => new MemoryLayer());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MemoryLayer> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MemoryLayer() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MemoryLayer(MemoryLayer other) : this() {
+      name_ = other.name_;
+      memoryConfig_ = other.memoryConfig_ != null ? other.memoryConfig_.Clone() : null;
+      etag_ = other.etag_;
+      state_ = other.state_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MemoryLayer Clone() {
+      return new MemoryLayer(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Identifier. Name of the memory layer. This is always:
+    /// "projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "memory_config" field.</summary>
+    public const int MemoryConfigFieldNumber = 2;
+    private global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.MemoryConfig memoryConfig_;
+    /// <summary>
+    /// The configuration of this memory layer. Set an empty `memory_config` to
+    /// enable the memory layer. Unset this to disable the memory layer.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.MemoryConfig MemoryConfig {
+      get { return memoryConfig_; }
+      set {
+        memoryConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 3;
+    private string etag_ = "";
+    /// <summary>
+    /// Optional. The etag for this memory layer.
+    /// This may be sent on update requests to ensure that the client has an
+    /// up-to-date value before proceeding. The server returns an ABORTED error on
+    /// a mismatched etag.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 4;
+    private global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.State state_ = global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.State.NotKnown;
+    /// <summary>
+    /// Output only. The current state of the memory layer.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MemoryLayer);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MemoryLayer other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(MemoryConfig, other.MemoryConfig)) return false;
+      if (Etag != other.Etag) return false;
+      if (State != other.State) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (memoryConfig_ != null) hash ^= MemoryConfig.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.State.NotKnown) hash ^= State.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (memoryConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MemoryConfig);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Etag);
+      }
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.State.NotKnown) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) State);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (memoryConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MemoryConfig);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Etag);
+      }
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.State.NotKnown) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) State);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (memoryConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MemoryConfig);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.State.NotKnown) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MemoryLayer other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.memoryConfig_ != null) {
+        if (memoryConfig_ == null) {
+          MemoryConfig = new global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.MemoryConfig();
+        }
+        MemoryConfig.MergeFrom(other.MemoryConfig);
+      }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
+      if (other.State != global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.State.NotKnown) {
+        State = other.State;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (memoryConfig_ == null) {
+              MemoryConfig = new global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.MemoryConfig();
+            }
+            input.ReadMessage(MemoryConfig);
+            break;
+          }
+          case 26: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 32: {
+            State = (global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.State) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (memoryConfig_ == null) {
+              MemoryConfig = new global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.MemoryConfig();
+            }
+            input.ReadMessage(MemoryConfig);
+            break;
+          }
+          case 26: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 32: {
+            State = (global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Types.State) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the MemoryLayer message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Possible states of a memory layer.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// The state of the memory layer could not be determined.
+        /// </summary>
+        [pbr::OriginalName("STATE_NOT_KNOWN")] NotKnown = 0,
+        /// <summary>
+        /// The memory layer has been successfully enabled and is ready to serve
+        /// requests.
+        /// </summary>
+        [pbr::OriginalName("READY")] Ready = 1,
+        /// <summary>
+        /// The memory layer is currently being enabled, and may be disabled
+        /// if the enablement process encounters an error. A cluster may not be able
+        /// to serve requests from the memory layer while being enabled.
+        /// </summary>
+        [pbr::OriginalName("ENABLING")] Enabling = 2,
+        /// <summary>
+        /// The memory layer is currently being resized, and may revert to its
+        /// previous storage size if the process encounters an error. The memory
+        /// layer is still capable of serving requests while being resized, but may
+        /// exhibit performance as if its number of allocated nodes is between the
+        /// starting and requested states.
+        /// </summary>
+        [pbr::OriginalName("RESIZING")] Resizing = 3,
+        /// <summary>
+        /// The memory layer is disabled. The default state for a cluster without a
+        /// memory layer.
+        /// </summary>
+        [pbr::OriginalName("DISABLED")] Disabled = 4,
+      }
+
+      /// <summary>
+      /// Configuration of a memory layer.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class MemoryConfig : pb::IMessage<MemoryConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MemoryConfig> _parser = new pb::MessageParser<MemoryConfig>(() => new MemoryConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MemoryConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.Admin.V2.MemoryLayer.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MemoryConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MemoryConfig(MemoryConfig other) : this() {
+          storageSizeGib_ = other.storageSizeGib_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MemoryConfig Clone() {
+          return new MemoryConfig(this);
+        }
+
+        /// <summary>Field number for the "storage_size_gib" field.</summary>
+        public const int StorageSizeGibFieldNumber = 2;
+        private int storageSizeGib_;
+        /// <summary>
+        /// Output only. Reporting the current size of the memory layer in GiB.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int StorageSizeGib {
+          get { return storageSizeGib_; }
+          set {
+            storageSizeGib_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MemoryConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MemoryConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (StorageSizeGib != other.StorageSizeGib) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (StorageSizeGib != 0) hash ^= StorageSizeGib.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (StorageSizeGib != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(StorageSizeGib);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (StorageSizeGib != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(StorageSizeGib);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (StorageSizeGib != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(StorageSizeGib);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MemoryConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.StorageSizeGib != 0) {
+            StorageSizeGib = other.StorageSizeGib;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 16: {
+                StorageSizeGib = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 16: {
+                StorageSizeGib = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// A configuration object describing how Cloud Bigtable should treat traffic
   /// from a particular end user application.
   /// </summary>
@@ -2661,7 +3260,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4048,6 +4647,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public StandardIsolation(StandardIsolation other) : this() {
           priority_ = other.priority_;
+          memoryConfig_ = other.memoryConfig_ != null ? other.memoryConfig_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4072,6 +4672,22 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
         }
 
+        /// <summary>Field number for the "memory_config" field.</summary>
+        public const int MemoryConfigFieldNumber = 2;
+        private global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Types.MemoryConfig memoryConfig_;
+        /// <summary>
+        /// Optional. The memory config to use for requests sent using this app
+        /// profile.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Types.MemoryConfig MemoryConfig {
+          get { return memoryConfig_; }
+          set {
+            memoryConfig_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -4088,6 +4704,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             return true;
           }
           if (Priority != other.Priority) return false;
+          if (!object.Equals(MemoryConfig, other.MemoryConfig)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4096,6 +4713,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         public override int GetHashCode() {
           int hash = 1;
           if (Priority != global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified) hash ^= Priority.GetHashCode();
+          if (memoryConfig_ != null) hash ^= MemoryConfig.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4118,6 +4736,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             output.WriteRawTag(8);
             output.WriteEnum((int) Priority);
           }
+          if (memoryConfig_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(MemoryConfig);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4132,6 +4754,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             output.WriteRawTag(8);
             output.WriteEnum((int) Priority);
           }
+          if (memoryConfig_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(MemoryConfig);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4144,6 +4770,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           int size = 0;
           if (Priority != global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Priority);
+          }
+          if (memoryConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(MemoryConfig);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -4159,6 +4788,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
           if (other.Priority != global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified) {
             Priority = other.Priority;
+          }
+          if (other.memoryConfig_ != null) {
+            if (memoryConfig_ == null) {
+              MemoryConfig = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Types.MemoryConfig();
+            }
+            MemoryConfig.MergeFrom(other.MemoryConfig);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -4181,6 +4816,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
                 break;
               case 8: {
                 Priority = (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (memoryConfig_ == null) {
+                  MemoryConfig = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Types.MemoryConfig();
+                }
+                input.ReadMessage(MemoryConfig);
                 break;
               }
             }
@@ -4206,10 +4848,193 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
                 Priority = (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority) input.ReadEnum();
                 break;
               }
+              case 18: {
+                if (memoryConfig_ == null) {
+                  MemoryConfig = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Types.MemoryConfig();
+                }
+                input.ReadMessage(MemoryConfig);
+                break;
+              }
             }
           }
         }
         #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the StandardIsolation message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// If set, eligible single-row requests (currently limited to ReadRows)
+          /// using this app profile will be routed to the memory layer. All eligible
+          /// writes populate the memory layer. MemoryConfig can only be set if the
+          /// AppProfile uses single cluster routing and the configured cluster has a
+          /// memory layer enabled.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class MemoryConfig : pb::IMessage<MemoryConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<MemoryConfig> _parser = new pb::MessageParser<MemoryConfig>(() => new MemoryConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<MemoryConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MemoryConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MemoryConfig(MemoryConfig other) : this() {
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MemoryConfig Clone() {
+              return new MemoryConfig(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as MemoryConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(MemoryConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(MemoryConfig other) {
+              if (other == null) {
+                return;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
 
       }
 
@@ -4490,7 +5315,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4957,7 +5782,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5286,7 +6111,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

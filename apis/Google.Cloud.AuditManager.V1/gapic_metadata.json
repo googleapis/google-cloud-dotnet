@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "AuditManagerClient",
           "rpcs": {
+            "CreateAuditSchedule": {
+              "methods": [
+                "CreateAuditSchedule",
+                "CreateAuditScheduleAsync"
+              ]
+            },
             "EnrollResource": {
               "methods": [
                 "EnrollResource",
@@ -34,6 +40,12 @@
                 "GetAuditReportAsync"
               ]
             },
+            "GetAuditSchedule": {
+              "methods": [
+                "GetAuditSchedule",
+                "GetAuditScheduleAsync"
+              ]
+            },
             "GetResourceEnrollmentStatus": {
               "methods": [
                 "GetResourceEnrollmentStatus",
@@ -46,6 +58,12 @@
                 "ListAuditReportsAsync"
               ]
             },
+            "ListAuditSchedules": {
+              "methods": [
+                "ListAuditSchedules",
+                "ListAuditSchedulesAsync"
+              ]
+            },
             "ListControls": {
               "methods": [
                 "ListControls",
@@ -56,6 +74,12 @@
               "methods": [
                 "ListResourceEnrollmentStatuses",
                 "ListResourceEnrollmentStatusesAsync"
+              ]
+            },
+            "UpdateAuditSchedule": {
+              "methods": [
+                "UpdateAuditSchedule",
+                "UpdateAuditScheduleAsync"
               ]
             }
           }

@@ -13,9 +13,13 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.Metrics;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.V1;
 
@@ -24,6 +28,9 @@ namespace Google.Cloud.Spanner.V1;
 /// </summary>
 internal static partial class SpannerBuiltInMetrics
 {
+    private const string ServerTimingHeader = "server-timing";
+    private const string GfeMetricPrefix = "gfet4t7";
+
     /// <summary>
     /// The name of the meter used for Spanner built-in metrics.
     /// </summary>
@@ -49,6 +56,193 @@ internal static partial class SpannerBuiltInMetrics
     internal static readonly Histogram<double> s_attemptLatency = s_spannerMeter.CreateHistogram<double>(AttemptLatenciesName);
     internal static readonly Histogram<double> s_gfeLatency = s_spannerMeter.CreateHistogram<double>(GfeLatenciesName);
     internal static readonly Counter<long> s_gfeConnectivityErrorCounter = s_spannerMeter.CreateCounter<long>(GfeConnectivityErrorCountName);
+
+    /// <summary>
+    /// Records attempt-level metrics including count and latency.
+    /// </summary>
+    /// <param name="latencyMs">The elapsed duration of the attempt in milliseconds.</param>
+    /// <param name="methodName">The name of the gRPC method invoked.</param>
+    /// <param name="dbNameProvider">The provider holding database context details.</param>
+    /// <param name="status">The resolved status of the attempt.</param>
+    /// <param name="clientIdentity">The identity context for the client executing the attempt.</param>
+    internal static void RecordAttemptMetrics(double latencyMs, string methodName, IDatabaseNameProvider dbNameProvider, StatusCode status, ClientIdentity clientIdentity)
+    {
+        try
+        {
+            var labels = Labeler.GetLabels(methodName, dbNameProvider, status, clientIdentity);
+            RecordAttemptMetrics(latencyMs, labels);
+        }
+        catch
+        {
+            // Silently swallow exceptions.
+        }
+    }
+
+    /// <summary>
+    /// Records attempt-level metrics including count and latency.
+    /// </summary>
+    /// <param name="latencyMs">The elapsed duration of the attempt in milliseconds.</param>
+    /// <param name="labels">The metric labels to apply to the measurement.</param>
+    internal static void RecordAttemptMetrics(double latencyMs, KeyValuePair<string, object>[] labels)
+    {
+        try
+        {
+            s_attemptCounter.Add(1, labels);
+            s_attemptLatency.Record(latencyMs, labels);
+        }
+        catch
+        {
+            // Silently swallow exceptions.
+        }
+    }
+
+    /// <summary>
+    /// Records server-timing metrics asynchronously when the response headers task resolves.
+    /// </summary>
+    internal static async Task RecordServerTimingMetricsAsync(Task<Metadata> headersTask, KeyValuePair<string, object>[] labels)
+    {
+        try
+        {
+            if (headersTask == null)
+            {
+                return;
+            }
+
+            var headers = await headersTask.ConfigureAwait(false);
+            RecordServerTimingMetrics(headers, labels);
+        }
+        catch
+        {
+            // Silently swallow exceptions.
+        }
+    }
+
+    /// <summary>
+    /// Records server-timing metrics (such as GFE latency) from response headers.
+    /// </summary>
+    internal static void RecordServerTimingMetrics(Metadata headers, KeyValuePair<string, object>[] labels)
+    {
+        try
+        {
+            if (headers == null)
+            {
+                return;
+            }
+
+            foreach (var header in headers.Where(h => string.Equals(h.Key, ServerTimingHeader, StringComparison.OrdinalIgnoreCase)))
+            {
+                RecordServerTimingMetrics(header.Value, GfeMetricPrefix, duration => s_gfeLatency.Record(duration, labels));
+                // TODO: Record AFE timing metrics when they are enabled
+            }
+        }
+        catch
+        {
+            // Silently swallow exceptions.
+        }
+    }
+
+    internal static void RecordServerTimingMetrics(string header, string metricPrefix, Action<double> recordAction)
+    {
+        if (string.IsNullOrEmpty(header))
+        {
+            return;
+        }
+
+        int currentStart = 0;
+        do
+        {
+            // Find the first occurrence of the metric from the point we are at.
+            int metricIndex = header.IndexOf(metricPrefix, currentStart);
+            if (metricIndex < 0)
+            {
+                return;
+            }
+            // Ensure the matched metric name starts at a boundary (preceded by start of string, comma, or whitespace).
+            // Avoids matching substrings inside other metric names (e.g. "not_gfet4t7; dur=99").
+            if (metricIndex > 0 && header[metricIndex - 1] != ',' && !char.IsWhiteSpace(header[metricIndex - 1]))
+            {
+                currentStart = metricIndex + metricPrefix.Length;
+                continue;
+            }
+            // Move past the first occurennce of the metric.
+            currentStart = metricIndex + metricPrefix.Length;
+            // Find the first of "dur" or ",".
+            bool durMissing = true;
+            // We don't need to continue when we have less than 3 characters left.
+            for (int i = currentStart; i < header.Length - 2; i++)
+            {
+                // This signals the end of the metric, so we didn't find 'dur'.
+                // We move past this position and attempt to find another occurrence of the metric.
+                if (header[i] == ',')
+                {
+                    currentStart = i + 1;
+                    break;
+                }
+                // We found 'dur'.
+                // We move past 'dur' so we can now extract the associated value.
+                if (header[i] == 'd' && header[i+1] == 'u' && header[i+2] == 'r')
+                {
+                    durMissing = false;
+                    currentStart = i + 3;
+                    break;
+                }
+            }
+            if (durMissing)
+            {
+                continue;
+            }
+            // If we are here, we found 'dur' and we now need to extract the associated value.
+            // Go past '=' from the point we are at.
+            int equalIndex = header.IndexOf('=', currentStart);
+            currentStart = equalIndex + 1;
+            // The metric value.
+            double duration = 0;
+            bool hasDigits = false;
+            // We use these to build the number as we parse it.
+            // Before we find the decimal separator, we multiply our accumulator by 10 for every digit.
+            // But after finding the decimal separator, we'll multiply our accumulator by 1 for every digit.
+            double integerMultiplier = 10;
+            // Before we find the decimal separator, we have no fractional part so each digit is divided by 1.
+            // After we find the decimal separator, we have to divide each digit by incremental powers of ten.
+            double fractionalDividend = 1;
+            double fractionalDividendModifier = 1;
+            for (; currentStart < header.Length; currentStart++)
+            {
+                // Skip spaces, at the beginning and also at the end,
+                // because it's just easier to not make the distinction.
+                if (char.IsWhiteSpace(header[currentStart]))
+                {
+                    continue;
+                }
+                // If we find the decimal point, swap to fractional places.
+                if (header[currentStart] == '.')
+                {
+                    integerMultiplier = 1;
+                    fractionalDividend = 10;
+                    fractionalDividendModifier = 10;
+                }
+                // Consume the digits and add them to our accumulator
+                else if (char.IsDigit(header, currentStart))
+                {
+                    hasDigits = true;
+                    double digit = char.GetNumericValue(header, currentStart);
+                    duration = (duration * integerMultiplier) + (digit / fractionalDividend);
+                    fractionalDividend *= fractionalDividendModifier;
+                }
+                // For any other character, we are done finding the value.
+                else
+                {
+                    break;
+                }
+            }
+            // Ensure at least one numeric digit was parsed before recording the metric.
+            // Avoids recording default 0 for invalid non-numeric durations (e.g. "gfet4t7; dur=invalid").
+            if (hasDigits)
+            {
+                recordAction(duration);
+            }
+        } while (currentStart < header.Length);
+    }
 
     /// <summary>
     /// Helper class to extract and generate resource tags and metric labels.
@@ -81,6 +275,45 @@ internal static partial class SpannerBuiltInMetrics
         private static readonly KeyValuePair<string, object> s_directPathUsedLabel = new(DirectPathUsedLabelName, "false");
 
         /// <summary>
+        /// Records operation count and latency metrics.
+        /// </summary>
+        /// <param name="latencyMs">The elapsed duration of the operation in milliseconds.</param>
+        /// <param name="methodName">The name of the gRPC method invoked.</param>
+        /// <param name="dbNameProvider">The provider holding database context details.</param>
+        /// <param name="status">The resolved status of the operation.</param>
+        /// <param name="clientIdentity">The identity context for the client executing the operation.</param>
+        internal static void RecordOperationMetrics(double latencyMs, string methodName, IDatabaseNameProvider dbNameProvider, StatusCode status, ClientIdentity clientIdentity)
+        {
+            try
+            {
+                var labels = Labeler.GetLabels(methodName, dbNameProvider, status, clientIdentity);
+                RecordOperationMetrics(latencyMs, labels);
+            }
+            catch
+            {
+                // Silently swallow exceptions.
+            }
+        }
+
+        /// <summary>
+        /// Records operation count and latency metrics.
+        /// </summary>
+        /// <param name="latencyMs">The elapsed duration of the operation in milliseconds.</param>
+        /// <param name="labels">The metric labels to apply to the measurement.</param>
+        internal static void RecordOperationMetrics(double latencyMs, KeyValuePair<string, object>[] labels)
+        {
+            try
+            {
+                s_operationCounter.Add(1, labels);
+                s_operationLatency.Record(latencyMs, labels);
+            }
+            catch
+            {
+                // Silently swallow exceptions.
+            }
+        }
+
+        /// <summary>
         /// Generates the standard set of labels for a metric measurement.
         /// </summary>
         /// <param name="method">The RPC method name.</param>
@@ -91,14 +324,14 @@ internal static partial class SpannerBuiltInMetrics
         internal static KeyValuePair<string, object>[] GetLabels(
             string method,
             IDatabaseNameProvider provider,
-            string status,
+            StatusCode status,
             ClientIdentity clientIdentity) => [
                 new KeyValuePair<string, object>(ProjectIdLabelName, provider?.ProjectId ?? UnknownLabelValue),
                 new KeyValuePair<string, object>(InstanceIdLabelName, provider?.InstanceId ?? UnknownLabelValue),
                 new KeyValuePair<string, object>(DatabaseLabelName, provider?.DatabaseId ?? UnknownLabelValue),
                 new KeyValuePair<string, object>(ClientHashLabelName, clientIdentity.Hash),
                 new KeyValuePair<string, object>(MethodLabelName, method),
-                new KeyValuePair<string, object>(StatusLabelName, status),
+                new KeyValuePair<string, object>(StatusLabelName, status.ToString()),
                 new KeyValuePair<string, object>(ClientUidLabelName, clientIdentity.Id),
                 new KeyValuePair<string, object>(ClientNameLabelName, s_cachedClientName.Value),
                 new KeyValuePair<string, object>(LocationLabelName, s_cachedLocation.Value),
@@ -196,5 +429,57 @@ internal static partial class SpannerBuiltInMetrics
         /// Gets the hash of the client ID.
         /// </summary>
         public string Hash { get; }
+    }
+
+    /// <summary>
+    /// A stopwatch to measure elapesed time.
+    /// </summary>
+    internal interface IStopwatch
+    {
+        /// <summary>
+        /// Gets the total elapsed time measured by the stopwatch, in milliseconds.
+        /// </summary>
+        double ElapsedMilliseconds { get; }
+
+        /// <summary>
+        /// Stops measuring elapsed time for an interval.
+        /// </summary>
+        void Stop();
+    }
+
+    /// <summary>
+    /// A provider that generates new <see cref="IStopwatch"/> instances.
+    /// </summary>
+    internal interface IStopwatchProvider
+    {
+        /// <summary>
+        /// Initializes and starts a new <see cref="IStopwatch"/>.
+        /// </summary>
+        /// <returns>A new, running stopwatch.</returns>
+        IStopwatch StartNew();
+    }
+
+    /// <summary>
+    /// The default implementation of <see cref="IStopwatchProvider"/> utilizing <see cref="Stopwatch"/>.
+    /// </summary>
+    internal sealed class DefaultStopwatchProvider : IStopwatchProvider
+    {
+        /// <summary>
+        /// The singleton instance of the default stopwatch provider.
+        /// </summary>
+        public static readonly DefaultStopwatchProvider Instance = new();
+
+        /// <inheritdoc/>
+        public IStopwatch StartNew() => new StopwatchWrapper(Stopwatch.StartNew());
+
+        /// <inheritdoc/>
+        private class StopwatchWrapper(Stopwatch stopwatch) : IStopwatch
+        {
+            /// <inheritdoc/>
+            public double ElapsedMilliseconds => stopwatch.Elapsed.TotalMilliseconds;
+
+            /// <inheritdoc/>
+            public void Stop() => stopwatch.Stop();
+        }
     }
 }

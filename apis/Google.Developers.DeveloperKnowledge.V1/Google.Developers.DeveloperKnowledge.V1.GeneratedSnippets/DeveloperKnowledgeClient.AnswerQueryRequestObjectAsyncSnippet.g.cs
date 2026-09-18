@@ -35,7 +35,11 @@ namespace GoogleCSharpSnippets
             // Create client
             DeveloperKnowledgeClient developerKnowledgeClient = await DeveloperKnowledgeClient.CreateAsync();
             // Initialize request argument(s)
-            AnswerQueryRequest request = new AnswerQueryRequest { Query = "", };
+            AnswerQueryRequest request = new AnswerQueryRequest
+            {
+                Query = "",
+                Filter = "",
+            };
             // Make the request
             AnswerQueryResponse response = await developerKnowledgeClient.AnswerQueryAsync(request);
         }

@@ -106,6 +106,12 @@
                 "GetMaterializedViewAsync"
               ]
             },
+            "GetMemoryLayer": {
+              "methods": [
+                "GetMemoryLayer",
+                "GetMemoryLayerAsync"
+              ]
+            },
             "ListAppProfiles": {
               "methods": [
                 "ListAppProfiles",
@@ -140,6 +146,12 @@
               "methods": [
                 "ListMaterializedViews",
                 "ListMaterializedViewsAsync"
+              ]
+            },
+            "ListMemoryLayers": {
+              "methods": [
+                "ListMemoryLayers",
+                "ListMemoryLayersAsync"
               ]
             },
             "PartialUpdateCluster": {
@@ -194,6 +206,12 @@
               "methods": [
                 "UpdateMaterializedView",
                 "UpdateMaterializedViewAsync"
+              ]
+            },
+            "UpdateMemoryLayer": {
+              "methods": [
+                "UpdateMemoryLayer",
+                "UpdateMemoryLayerAsync"
               ]
             }
           }

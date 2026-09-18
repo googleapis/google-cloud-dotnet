@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 {
                     new EnrollResourceRequest.Types.EligibleDestination(),
                 },
+                ValidateOnly = false,
             };
             // Make the request
             Enrollment response = auditManagerClient.EnrollResource(request);

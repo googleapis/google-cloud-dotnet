@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.16.0, released 2026-08-31
+
+### New features
+
+- Added new NicType field to job
+
+### Documentation improvements
+
+- Restrict `allowed_locations` region or zone values to the same region where the job is created
+
 ## Version 2.15.0, released 2025-12-03
 
 ### New features

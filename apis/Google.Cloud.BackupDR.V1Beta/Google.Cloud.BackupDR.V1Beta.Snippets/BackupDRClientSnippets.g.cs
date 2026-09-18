@@ -1,0 +1,9221 @@
+// Copyright 2026 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+// Generated code. DO NOT EDIT!
+
+namespace GoogleCSharpSnippets
+{
+    using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.BackupDR.V1Beta;
+    using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
+    using System;
+    using System.Threading.Tasks;
+
+    /// <summary>Generated snippets.</summary>
+    public sealed class AllGeneratedBackupDRClientSnippets
+    {
+        /// <summary>Snippet for ListManagementServers</summary>
+        public void ListManagementServersRequestObject()
+        {
+            // Snippet: ListManagementServers(ListManagementServersRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListManagementServersRequest request = new ListManagementServersRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListManagementServersResponse, ManagementServer> response = backupDRClient.ListManagementServers(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ManagementServer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListManagementServersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagementServer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagementServer> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagementServer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagementServersAsync</summary>
+        public async Task ListManagementServersRequestObjectAsync()
+        {
+            // Snippet: ListManagementServersAsync(ListManagementServersRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListManagementServersRequest request = new ListManagementServersRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListManagementServersResponse, ManagementServer> response = backupDRClient.ListManagementServersAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (ManagementServer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListManagementServersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagementServer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagementServer> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagementServer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagementServers</summary>
+        public void ListManagementServers()
+        {
+            // Snippet: ListManagementServers(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListManagementServersResponse, ManagementServer> response = backupDRClient.ListManagementServers(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ManagementServer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListManagementServersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagementServer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagementServer> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagementServer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagementServersAsync</summary>
+        public async Task ListManagementServersAsync()
+        {
+            // Snippet: ListManagementServersAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListManagementServersResponse, ManagementServer> response = backupDRClient.ListManagementServersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (ManagementServer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListManagementServersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagementServer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagementServer> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagementServer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagementServers</summary>
+        public void ListManagementServersResourceNames()
+        {
+            // Snippet: ListManagementServers(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListManagementServersResponse, ManagementServer> response = backupDRClient.ListManagementServers(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ManagementServer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListManagementServersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagementServer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagementServer> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagementServer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagementServersAsync</summary>
+        public async Task ListManagementServersResourceNamesAsync()
+        {
+            // Snippet: ListManagementServersAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListManagementServersResponse, ManagementServer> response = backupDRClient.ListManagementServersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (ManagementServer item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListManagementServersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagementServer item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagementServer> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagementServer item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagementServer</summary>
+        public void GetManagementServerRequestObject()
+        {
+            // Snippet: GetManagementServer(GetManagementServerRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetManagementServerRequest request = new GetManagementServerRequest
+            {
+                ManagementServerName = ManagementServerName.FromProjectLocationManagementserver("[PROJECT]", "[LOCATION]", "[MANAGEMENTSERVER]"),
+            };
+            // Make the request
+            ManagementServer response = backupDRClient.GetManagementServer(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagementServerAsync</summary>
+        public async Task GetManagementServerRequestObjectAsync()
+        {
+            // Snippet: GetManagementServerAsync(GetManagementServerRequest, CallSettings)
+            // Additional: GetManagementServerAsync(GetManagementServerRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetManagementServerRequest request = new GetManagementServerRequest
+            {
+                ManagementServerName = ManagementServerName.FromProjectLocationManagementserver("[PROJECT]", "[LOCATION]", "[MANAGEMENTSERVER]"),
+            };
+            // Make the request
+            ManagementServer response = await backupDRClient.GetManagementServerAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagementServer</summary>
+        public void GetManagementServer()
+        {
+            // Snippet: GetManagementServer(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/managementServers/[MANAGEMENTSERVER]";
+            // Make the request
+            ManagementServer response = backupDRClient.GetManagementServer(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagementServerAsync</summary>
+        public async Task GetManagementServerAsync()
+        {
+            // Snippet: GetManagementServerAsync(string, CallSettings)
+            // Additional: GetManagementServerAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/managementServers/[MANAGEMENTSERVER]";
+            // Make the request
+            ManagementServer response = await backupDRClient.GetManagementServerAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagementServer</summary>
+        public void GetManagementServerResourceNames()
+        {
+            // Snippet: GetManagementServer(ManagementServerName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ManagementServerName name = ManagementServerName.FromProjectLocationManagementserver("[PROJECT]", "[LOCATION]", "[MANAGEMENTSERVER]");
+            // Make the request
+            ManagementServer response = backupDRClient.GetManagementServer(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagementServerAsync</summary>
+        public async Task GetManagementServerResourceNamesAsync()
+        {
+            // Snippet: GetManagementServerAsync(ManagementServerName, CallSettings)
+            // Additional: GetManagementServerAsync(ManagementServerName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ManagementServerName name = ManagementServerName.FromProjectLocationManagementserver("[PROJECT]", "[LOCATION]", "[MANAGEMENTSERVER]");
+            // Make the request
+            ManagementServer response = await backupDRClient.GetManagementServerAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagementServer</summary>
+        public void CreateManagementServerRequestObject()
+        {
+            // Snippet: CreateManagementServer(CreateManagementServerRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            CreateManagementServerRequest request = new CreateManagementServerRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ManagementServerId = "",
+                ManagementServer = new ManagementServer(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ManagementServer, OperationMetadata> response = backupDRClient.CreateManagementServer(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementServer, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ManagementServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementServer, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateManagementServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagementServerAsync</summary>
+        public async Task CreateManagementServerRequestObjectAsync()
+        {
+            // Snippet: CreateManagementServerAsync(CreateManagementServerRequest, CallSettings)
+            // Additional: CreateManagementServerAsync(CreateManagementServerRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateManagementServerRequest request = new CreateManagementServerRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ManagementServerId = "",
+                ManagementServer = new ManagementServer(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ManagementServer, OperationMetadata> response = await backupDRClient.CreateManagementServerAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementServer, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ManagementServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementServer, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateManagementServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagementServer</summary>
+        public void CreateManagementServer()
+        {
+            // Snippet: CreateManagementServer(string, ManagementServer, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ManagementServer managementServer = new ManagementServer();
+            string managementServerId = "";
+            // Make the request
+            Operation<ManagementServer, OperationMetadata> response = backupDRClient.CreateManagementServer(parent, managementServer, managementServerId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementServer, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ManagementServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementServer, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateManagementServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagementServerAsync</summary>
+        public async Task CreateManagementServerAsync()
+        {
+            // Snippet: CreateManagementServerAsync(string, ManagementServer, string, CallSettings)
+            // Additional: CreateManagementServerAsync(string, ManagementServer, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ManagementServer managementServer = new ManagementServer();
+            string managementServerId = "";
+            // Make the request
+            Operation<ManagementServer, OperationMetadata> response = await backupDRClient.CreateManagementServerAsync(parent, managementServer, managementServerId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementServer, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ManagementServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementServer, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateManagementServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagementServer</summary>
+        public void CreateManagementServerResourceNames()
+        {
+            // Snippet: CreateManagementServer(LocationName, ManagementServer, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ManagementServer managementServer = new ManagementServer();
+            string managementServerId = "";
+            // Make the request
+            Operation<ManagementServer, OperationMetadata> response = backupDRClient.CreateManagementServer(parent, managementServer, managementServerId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementServer, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ManagementServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementServer, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateManagementServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagementServerAsync</summary>
+        public async Task CreateManagementServerResourceNamesAsync()
+        {
+            // Snippet: CreateManagementServerAsync(LocationName, ManagementServer, string, CallSettings)
+            // Additional: CreateManagementServerAsync(LocationName, ManagementServer, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ManagementServer managementServer = new ManagementServer();
+            string managementServerId = "";
+            // Make the request
+            Operation<ManagementServer, OperationMetadata> response = await backupDRClient.CreateManagementServerAsync(parent, managementServer, managementServerId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ManagementServer, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ManagementServer result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ManagementServer, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateManagementServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ManagementServer retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagementServer</summary>
+        public void DeleteManagementServerRequestObject()
+        {
+            // Snippet: DeleteManagementServer(DeleteManagementServerRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DeleteManagementServerRequest request = new DeleteManagementServerRequest
+            {
+                ManagementServerName = ManagementServerName.FromProjectLocationManagementserver("[PROJECT]", "[LOCATION]", "[MANAGEMENTSERVER]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteManagementServer(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteManagementServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagementServerAsync</summary>
+        public async Task DeleteManagementServerRequestObjectAsync()
+        {
+            // Snippet: DeleteManagementServerAsync(DeleteManagementServerRequest, CallSettings)
+            // Additional: DeleteManagementServerAsync(DeleteManagementServerRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteManagementServerRequest request = new DeleteManagementServerRequest
+            {
+                ManagementServerName = ManagementServerName.FromProjectLocationManagementserver("[PROJECT]", "[LOCATION]", "[MANAGEMENTSERVER]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteManagementServerAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteManagementServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagementServer</summary>
+        public void DeleteManagementServer()
+        {
+            // Snippet: DeleteManagementServer(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/managementServers/[MANAGEMENTSERVER]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteManagementServer(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteManagementServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagementServerAsync</summary>
+        public async Task DeleteManagementServerAsync()
+        {
+            // Snippet: DeleteManagementServerAsync(string, CallSettings)
+            // Additional: DeleteManagementServerAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/managementServers/[MANAGEMENTSERVER]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteManagementServerAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteManagementServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagementServer</summary>
+        public void DeleteManagementServerResourceNames()
+        {
+            // Snippet: DeleteManagementServer(ManagementServerName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ManagementServerName name = ManagementServerName.FromProjectLocationManagementserver("[PROJECT]", "[LOCATION]", "[MANAGEMENTSERVER]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteManagementServer(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteManagementServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagementServerAsync</summary>
+        public async Task DeleteManagementServerResourceNamesAsync()
+        {
+            // Snippet: DeleteManagementServerAsync(ManagementServerName, CallSettings)
+            // Additional: DeleteManagementServerAsync(ManagementServerName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ManagementServerName name = ManagementServerName.FromProjectLocationManagementserver("[PROJECT]", "[LOCATION]", "[MANAGEMENTSERVER]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteManagementServerAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteManagementServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupVault</summary>
+        public void CreateBackupVaultRequestObject()
+        {
+            // Snippet: CreateBackupVault(CreateBackupVaultRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            CreateBackupVaultRequest request = new CreateBackupVaultRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BackupVaultId = "",
+                BackupVault = new BackupVault(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = backupDRClient.CreateBackupVault(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupVaultAsync</summary>
+        public async Task CreateBackupVaultRequestObjectAsync()
+        {
+            // Snippet: CreateBackupVaultAsync(CreateBackupVaultRequest, CallSettings)
+            // Additional: CreateBackupVaultAsync(CreateBackupVaultRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateBackupVaultRequest request = new CreateBackupVaultRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BackupVaultId = "",
+                BackupVault = new BackupVault(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = await backupDRClient.CreateBackupVaultAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupVault</summary>
+        public void CreateBackupVault()
+        {
+            // Snippet: CreateBackupVault(string, BackupVault, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            BackupVault backupVault = new BackupVault();
+            string backupVaultId = "";
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = backupDRClient.CreateBackupVault(parent, backupVault, backupVaultId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupVaultAsync</summary>
+        public async Task CreateBackupVaultAsync()
+        {
+            // Snippet: CreateBackupVaultAsync(string, BackupVault, string, CallSettings)
+            // Additional: CreateBackupVaultAsync(string, BackupVault, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            BackupVault backupVault = new BackupVault();
+            string backupVaultId = "";
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = await backupDRClient.CreateBackupVaultAsync(parent, backupVault, backupVaultId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupVault</summary>
+        public void CreateBackupVaultResourceNames()
+        {
+            // Snippet: CreateBackupVault(LocationName, BackupVault, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            BackupVault backupVault = new BackupVault();
+            string backupVaultId = "";
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = backupDRClient.CreateBackupVault(parent, backupVault, backupVaultId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupVaultAsync</summary>
+        public async Task CreateBackupVaultResourceNamesAsync()
+        {
+            // Snippet: CreateBackupVaultAsync(LocationName, BackupVault, string, CallSettings)
+            // Additional: CreateBackupVaultAsync(LocationName, BackupVault, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            BackupVault backupVault = new BackupVault();
+            string backupVaultId = "";
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = await backupDRClient.CreateBackupVaultAsync(parent, backupVault, backupVaultId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupVaults</summary>
+        public void ListBackupVaultsRequestObject()
+        {
+            // Snippet: ListBackupVaults(ListBackupVaultsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListBackupVaultsRequest request = new ListBackupVaultsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+                View = BackupVaultView.Unspecified,
+            };
+            // Make the request
+            PagedEnumerable<ListBackupVaultsResponse, BackupVault> response = backupDRClient.ListBackupVaults(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupVaultsAsync</summary>
+        public async Task ListBackupVaultsRequestObjectAsync()
+        {
+            // Snippet: ListBackupVaultsAsync(ListBackupVaultsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBackupVaultsRequest request = new ListBackupVaultsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+                View = BackupVaultView.Unspecified,
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> response = backupDRClient.ListBackupVaultsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupVaults</summary>
+        public void ListBackupVaults()
+        {
+            // Snippet: ListBackupVaults(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListBackupVaultsResponse, BackupVault> response = backupDRClient.ListBackupVaults(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupVaultsAsync</summary>
+        public async Task ListBackupVaultsAsync()
+        {
+            // Snippet: ListBackupVaultsAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> response = backupDRClient.ListBackupVaultsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupVaults</summary>
+        public void ListBackupVaultsResourceNames()
+        {
+            // Snippet: ListBackupVaults(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListBackupVaultsResponse, BackupVault> response = backupDRClient.ListBackupVaults(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupVaultsAsync</summary>
+        public async Task ListBackupVaultsResourceNamesAsync()
+        {
+            // Snippet: ListBackupVaultsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListBackupVaultsResponse, BackupVault> response = backupDRClient.ListBackupVaultsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchUsableBackupVaults</summary>
+        public void FetchUsableBackupVaultsRequestObject()
+        {
+            // Snippet: FetchUsableBackupVaults(FetchUsableBackupVaultsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            FetchUsableBackupVaultsRequest request = new FetchUsableBackupVaultsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<FetchUsableBackupVaultsResponse, BackupVault> response = backupDRClient.FetchUsableBackupVaults(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchUsableBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchUsableBackupVaultsAsync</summary>
+        public async Task FetchUsableBackupVaultsRequestObjectAsync()
+        {
+            // Snippet: FetchUsableBackupVaultsAsync(FetchUsableBackupVaultsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchUsableBackupVaultsRequest request = new FetchUsableBackupVaultsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<FetchUsableBackupVaultsResponse, BackupVault> response = backupDRClient.FetchUsableBackupVaultsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchUsableBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchUsableBackupVaults</summary>
+        public void FetchUsableBackupVaults()
+        {
+            // Snippet: FetchUsableBackupVaults(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<FetchUsableBackupVaultsResponse, BackupVault> response = backupDRClient.FetchUsableBackupVaults(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchUsableBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchUsableBackupVaultsAsync</summary>
+        public async Task FetchUsableBackupVaultsAsync()
+        {
+            // Snippet: FetchUsableBackupVaultsAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<FetchUsableBackupVaultsResponse, BackupVault> response = backupDRClient.FetchUsableBackupVaultsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchUsableBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchUsableBackupVaults</summary>
+        public void FetchUsableBackupVaultsResourceNames()
+        {
+            // Snippet: FetchUsableBackupVaults(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<FetchUsableBackupVaultsResponse, BackupVault> response = backupDRClient.FetchUsableBackupVaults(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchUsableBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchUsableBackupVaultsAsync</summary>
+        public async Task FetchUsableBackupVaultsResourceNamesAsync()
+        {
+            // Snippet: FetchUsableBackupVaultsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<FetchUsableBackupVaultsResponse, BackupVault> response = backupDRClient.FetchUsableBackupVaultsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupVault item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchUsableBackupVaultsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupVault item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupVault> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupVault item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupVault</summary>
+        public void GetBackupVaultRequestObject()
+        {
+            // Snippet: GetBackupVault(GetBackupVaultRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetBackupVaultRequest request = new GetBackupVaultRequest
+            {
+                BackupVaultName = BackupVaultName.FromProjectLocationBackupvault("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]"),
+                View = BackupVaultView.Unspecified,
+            };
+            // Make the request
+            BackupVault response = backupDRClient.GetBackupVault(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupVaultAsync</summary>
+        public async Task GetBackupVaultRequestObjectAsync()
+        {
+            // Snippet: GetBackupVaultAsync(GetBackupVaultRequest, CallSettings)
+            // Additional: GetBackupVaultAsync(GetBackupVaultRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBackupVaultRequest request = new GetBackupVaultRequest
+            {
+                BackupVaultName = BackupVaultName.FromProjectLocationBackupvault("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]"),
+                View = BackupVaultView.Unspecified,
+            };
+            // Make the request
+            BackupVault response = await backupDRClient.GetBackupVaultAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupVault</summary>
+        public void GetBackupVault()
+        {
+            // Snippet: GetBackupVault(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]";
+            // Make the request
+            BackupVault response = backupDRClient.GetBackupVault(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupVaultAsync</summary>
+        public async Task GetBackupVaultAsync()
+        {
+            // Snippet: GetBackupVaultAsync(string, CallSettings)
+            // Additional: GetBackupVaultAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]";
+            // Make the request
+            BackupVault response = await backupDRClient.GetBackupVaultAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupVault</summary>
+        public void GetBackupVaultResourceNames()
+        {
+            // Snippet: GetBackupVault(BackupVaultName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupVaultName name = BackupVaultName.FromProjectLocationBackupvault("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]");
+            // Make the request
+            BackupVault response = backupDRClient.GetBackupVault(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupVaultAsync</summary>
+        public async Task GetBackupVaultResourceNamesAsync()
+        {
+            // Snippet: GetBackupVaultAsync(BackupVaultName, CallSettings)
+            // Additional: GetBackupVaultAsync(BackupVaultName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupVaultName name = BackupVaultName.FromProjectLocationBackupvault("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]");
+            // Make the request
+            BackupVault response = await backupDRClient.GetBackupVaultAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupVault</summary>
+        public void UpdateBackupVaultRequestObject()
+        {
+            // Snippet: UpdateBackupVault(UpdateBackupVaultRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            UpdateBackupVaultRequest request = new UpdateBackupVaultRequest
+            {
+                UpdateMask = new FieldMask(),
+                BackupVault = new BackupVault(),
+                RequestId = "",
+                ValidateOnly = false,
+                Force = false,
+                ForceUpdateAccessRestriction = false,
+            };
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = backupDRClient.UpdateBackupVault(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupVaultAsync</summary>
+        public async Task UpdateBackupVaultRequestObjectAsync()
+        {
+            // Snippet: UpdateBackupVaultAsync(UpdateBackupVaultRequest, CallSettings)
+            // Additional: UpdateBackupVaultAsync(UpdateBackupVaultRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBackupVaultRequest request = new UpdateBackupVaultRequest
+            {
+                UpdateMask = new FieldMask(),
+                BackupVault = new BackupVault(),
+                RequestId = "",
+                ValidateOnly = false,
+                Force = false,
+                ForceUpdateAccessRestriction = false,
+            };
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = await backupDRClient.UpdateBackupVaultAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupVault</summary>
+        public void UpdateBackupVault()
+        {
+            // Snippet: UpdateBackupVault(BackupVault, FieldMask, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupVault backupVault = new BackupVault();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = backupDRClient.UpdateBackupVault(backupVault, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupVaultAsync</summary>
+        public async Task UpdateBackupVaultAsync()
+        {
+            // Snippet: UpdateBackupVaultAsync(BackupVault, FieldMask, CallSettings)
+            // Additional: UpdateBackupVaultAsync(BackupVault, FieldMask, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupVault backupVault = new BackupVault();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<BackupVault, OperationMetadata> response = await backupDRClient.UpdateBackupVaultAsync(backupVault, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupVault, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupVault result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupVault, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupVault retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupVault</summary>
+        public void DeleteBackupVaultRequestObject()
+        {
+            // Snippet: DeleteBackupVault(DeleteBackupVaultRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DeleteBackupVaultRequest request = new DeleteBackupVaultRequest
+            {
+                BackupVaultName = BackupVaultName.FromProjectLocationBackupvault("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]"),
+                RequestId = "",
+                Force = false,
+                Etag = "",
+                ValidateOnly = false,
+                AllowMissing = false,
+                IgnoreBackupPlanReferences = false,
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteBackupVault(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupVaultAsync</summary>
+        public async Task DeleteBackupVaultRequestObjectAsync()
+        {
+            // Snippet: DeleteBackupVaultAsync(DeleteBackupVaultRequest, CallSettings)
+            // Additional: DeleteBackupVaultAsync(DeleteBackupVaultRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteBackupVaultRequest request = new DeleteBackupVaultRequest
+            {
+                BackupVaultName = BackupVaultName.FromProjectLocationBackupvault("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]"),
+                RequestId = "",
+                Force = false,
+                Etag = "",
+                ValidateOnly = false,
+                AllowMissing = false,
+                IgnoreBackupPlanReferences = false,
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteBackupVaultAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupVault</summary>
+        public void DeleteBackupVault()
+        {
+            // Snippet: DeleteBackupVault(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteBackupVault(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupVaultAsync</summary>
+        public async Task DeleteBackupVaultAsync()
+        {
+            // Snippet: DeleteBackupVaultAsync(string, CallSettings)
+            // Additional: DeleteBackupVaultAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteBackupVaultAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupVault</summary>
+        public void DeleteBackupVaultResourceNames()
+        {
+            // Snippet: DeleteBackupVault(BackupVaultName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupVaultName name = BackupVaultName.FromProjectLocationBackupvault("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteBackupVault(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteBackupVault(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupVaultAsync</summary>
+        public async Task DeleteBackupVaultResourceNamesAsync()
+        {
+            // Snippet: DeleteBackupVaultAsync(BackupVaultName, CallSettings)
+            // Additional: DeleteBackupVaultAsync(BackupVaultName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupVaultName name = BackupVaultName.FromProjectLocationBackupvault("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteBackupVaultAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteBackupVaultAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSources</summary>
+        public void ListDataSourcesRequestObject()
+        {
+            // Snippet: ListDataSources(ListDataSourcesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListDataSourcesRequest request = new ListDataSourcesRequest
+            {
+                ParentAsBackupVaultName = BackupVaultName.FromProjectLocationBackupvault("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListDataSourcesResponse, DataSource> response = backupDRClient.ListDataSources(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDataSourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourcesAsync</summary>
+        public async Task ListDataSourcesRequestObjectAsync()
+        {
+            // Snippet: ListDataSourcesAsync(ListDataSourcesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDataSourcesRequest request = new ListDataSourcesRequest
+            {
+                ParentAsBackupVaultName = BackupVaultName.FromProjectLocationBackupvault("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response = backupDRClient.ListDataSourcesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DataSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDataSourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSources</summary>
+        public void ListDataSources()
+        {
+            // Snippet: ListDataSources(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]";
+            // Make the request
+            PagedEnumerable<ListDataSourcesResponse, DataSource> response = backupDRClient.ListDataSources(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDataSourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourcesAsync</summary>
+        public async Task ListDataSourcesAsync()
+        {
+            // Snippet: ListDataSourcesAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]";
+            // Make the request
+            PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response = backupDRClient.ListDataSourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DataSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDataSourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSources</summary>
+        public void ListDataSourcesResourceNames()
+        {
+            // Snippet: ListDataSources(BackupVaultName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupVaultName parent = BackupVaultName.FromProjectLocationBackupvault("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]");
+            // Make the request
+            PagedEnumerable<ListDataSourcesResponse, DataSource> response = backupDRClient.ListDataSources(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDataSourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourcesAsync</summary>
+        public async Task ListDataSourcesResourceNamesAsync()
+        {
+            // Snippet: ListDataSourcesAsync(BackupVaultName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupVaultName parent = BackupVaultName.FromProjectLocationBackupvault("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]");
+            // Make the request
+            PagedAsyncEnumerable<ListDataSourcesResponse, DataSource> response = backupDRClient.ListDataSourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DataSource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDataSourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataSource</summary>
+        public void GetDataSourceRequestObject()
+        {
+            // Snippet: GetDataSource(GetDataSourceRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetDataSourceRequest request = new GetDataSourceRequest
+            {
+                DataSourceName = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]"),
+            };
+            // Make the request
+            DataSource response = backupDRClient.GetDataSource(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataSourceAsync</summary>
+        public async Task GetDataSourceRequestObjectAsync()
+        {
+            // Snippet: GetDataSourceAsync(GetDataSourceRequest, CallSettings)
+            // Additional: GetDataSourceAsync(GetDataSourceRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDataSourceRequest request = new GetDataSourceRequest
+            {
+                DataSourceName = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]"),
+            };
+            // Make the request
+            DataSource response = await backupDRClient.GetDataSourceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataSource</summary>
+        public void GetDataSource()
+        {
+            // Snippet: GetDataSource(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]/dataSources/[DATASOURCE]";
+            // Make the request
+            DataSource response = backupDRClient.GetDataSource(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataSourceAsync</summary>
+        public async Task GetDataSourceAsync()
+        {
+            // Snippet: GetDataSourceAsync(string, CallSettings)
+            // Additional: GetDataSourceAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]/dataSources/[DATASOURCE]";
+            // Make the request
+            DataSource response = await backupDRClient.GetDataSourceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataSource</summary>
+        public void GetDataSourceResourceNames()
+        {
+            // Snippet: GetDataSource(DataSourceName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DataSourceName name = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]");
+            // Make the request
+            DataSource response = backupDRClient.GetDataSource(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataSourceAsync</summary>
+        public async Task GetDataSourceResourceNamesAsync()
+        {
+            // Snippet: GetDataSourceAsync(DataSourceName, CallSettings)
+            // Additional: GetDataSourceAsync(DataSourceName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DataSourceName name = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]");
+            // Make the request
+            DataSource response = await backupDRClient.GetDataSourceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataSource</summary>
+        public void UpdateDataSourceRequestObject()
+        {
+            // Snippet: UpdateDataSource(UpdateDataSourceRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            UpdateDataSourceRequest request = new UpdateDataSourceRequest
+            {
+                UpdateMask = new FieldMask(),
+                DataSource = new DataSource(),
+                RequestId = "",
+                AllowMissing = false,
+            };
+            // Make the request
+            Operation<DataSource, OperationMetadata> response = backupDRClient.UpdateDataSource(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DataSource, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DataSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DataSource, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateDataSource(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DataSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataSourceAsync</summary>
+        public async Task UpdateDataSourceRequestObjectAsync()
+        {
+            // Snippet: UpdateDataSourceAsync(UpdateDataSourceRequest, CallSettings)
+            // Additional: UpdateDataSourceAsync(UpdateDataSourceRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDataSourceRequest request = new UpdateDataSourceRequest
+            {
+                UpdateMask = new FieldMask(),
+                DataSource = new DataSource(),
+                RequestId = "",
+                AllowMissing = false,
+            };
+            // Make the request
+            Operation<DataSource, OperationMetadata> response = await backupDRClient.UpdateDataSourceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DataSource, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DataSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DataSource, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateDataSourceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DataSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataSource</summary>
+        public void UpdateDataSource()
+        {
+            // Snippet: UpdateDataSource(DataSource, FieldMask, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DataSource dataSource = new DataSource();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DataSource, OperationMetadata> response = backupDRClient.UpdateDataSource(dataSource, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DataSource, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DataSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DataSource, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateDataSource(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DataSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDataSourceAsync</summary>
+        public async Task UpdateDataSourceAsync()
+        {
+            // Snippet: UpdateDataSourceAsync(DataSource, FieldMask, CallSettings)
+            // Additional: UpdateDataSourceAsync(DataSource, FieldMask, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DataSource dataSource = new DataSource();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DataSource, OperationMetadata> response = await backupDRClient.UpdateDataSourceAsync(dataSource, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DataSource, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DataSource result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DataSource, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateDataSourceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DataSource retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackups</summary>
+        public void ListBackupsRequestObject()
+        {
+            // Snippet: ListBackups(ListBackupsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                ParentAsDataSourceName = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]"),
+                Filter = "",
+                OrderBy = "",
+                View = BackupView.Unspecified,
+            };
+            // Make the request
+            PagedEnumerable<ListBackupsResponse, Backup> response = backupDRClient.ListBackups(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupsAsync</summary>
+        public async Task ListBackupsRequestObjectAsync()
+        {
+            // Snippet: ListBackupsAsync(ListBackupsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                ParentAsDataSourceName = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]"),
+                Filter = "",
+                OrderBy = "",
+                View = BackupView.Unspecified,
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBackupsResponse, Backup> response = backupDRClient.ListBackupsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackups</summary>
+        public void ListBackups()
+        {
+            // Snippet: ListBackups(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]/dataSources/[DATASOURCE]";
+            // Make the request
+            PagedEnumerable<ListBackupsResponse, Backup> response = backupDRClient.ListBackups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupsAsync</summary>
+        public async Task ListBackupsAsync()
+        {
+            // Snippet: ListBackupsAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]/dataSources/[DATASOURCE]";
+            // Make the request
+            PagedAsyncEnumerable<ListBackupsResponse, Backup> response = backupDRClient.ListBackupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackups</summary>
+        public void ListBackupsResourceNames()
+        {
+            // Snippet: ListBackups(DataSourceName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DataSourceName parent = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]");
+            // Make the request
+            PagedEnumerable<ListBackupsResponse, Backup> response = backupDRClient.ListBackups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupsAsync</summary>
+        public async Task ListBackupsResourceNamesAsync()
+        {
+            // Snippet: ListBackupsAsync(DataSourceName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DataSourceName parent = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]");
+            // Make the request
+            PagedAsyncEnumerable<ListBackupsResponse, Backup> response = backupDRClient.ListBackupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupsForResourceType</summary>
+        public void FetchBackupsForResourceTypeRequestObject()
+        {
+            // Snippet: FetchBackupsForResourceType(FetchBackupsForResourceTypeRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            FetchBackupsForResourceTypeRequest request = new FetchBackupsForResourceTypeRequest
+            {
+                ParentAsDataSourceName = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]"),
+                ResourceType = "",
+                Filter = "",
+                OrderBy = "",
+                View = BackupView.Unspecified,
+            };
+            // Make the request
+            PagedEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceType(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchBackupsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupsForResourceTypeAsync</summary>
+        public async Task FetchBackupsForResourceTypeRequestObjectAsync()
+        {
+            // Snippet: FetchBackupsForResourceTypeAsync(FetchBackupsForResourceTypeRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchBackupsForResourceTypeRequest request = new FetchBackupsForResourceTypeRequest
+            {
+                ParentAsDataSourceName = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]"),
+                ResourceType = "",
+                Filter = "",
+                OrderBy = "",
+                View = BackupView.Unspecified,
+            };
+            // Make the request
+            PagedAsyncEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceTypeAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchBackupsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupsForResourceType</summary>
+        public void FetchBackupsForResourceType()
+        {
+            // Snippet: FetchBackupsForResourceType(string, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]/dataSources/[DATASOURCE]";
+            string resourceType = "";
+            // Make the request
+            PagedEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceType(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchBackupsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupsForResourceTypeAsync</summary>
+        public async Task FetchBackupsForResourceTypeAsync()
+        {
+            // Snippet: FetchBackupsForResourceTypeAsync(string, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]/dataSources/[DATASOURCE]";
+            string resourceType = "";
+            // Make the request
+            PagedAsyncEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceTypeAsync(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchBackupsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupsForResourceType</summary>
+        public void FetchBackupsForResourceTypeResourceNames()
+        {
+            // Snippet: FetchBackupsForResourceType(DataSourceName, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DataSourceName parent = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]");
+            string resourceType = "";
+            // Make the request
+            PagedEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceType(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchBackupsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupsForResourceTypeAsync</summary>
+        public async Task FetchBackupsForResourceTypeResourceNamesAsync()
+        {
+            // Snippet: FetchBackupsForResourceTypeAsync(DataSourceName, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DataSourceName parent = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]");
+            string resourceType = "";
+            // Make the request
+            PagedAsyncEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceTypeAsync(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchBackupsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackup</summary>
+        public void GetBackupRequestObject()
+        {
+            // Snippet: GetBackup(GetBackupRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationBackupvaultDatasourceBackup("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]", "[BACKUP]"),
+                View = BackupView.Unspecified,
+            };
+            // Make the request
+            Backup response = backupDRClient.GetBackup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupAsync</summary>
+        public async Task GetBackupRequestObjectAsync()
+        {
+            // Snippet: GetBackupAsync(GetBackupRequest, CallSettings)
+            // Additional: GetBackupAsync(GetBackupRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationBackupvaultDatasourceBackup("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]", "[BACKUP]"),
+                View = BackupView.Unspecified,
+            };
+            // Make the request
+            Backup response = await backupDRClient.GetBackupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackup</summary>
+        public void GetBackup()
+        {
+            // Snippet: GetBackup(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]/dataSources/[DATASOURCE]/backups/[BACKUP]";
+            // Make the request
+            Backup response = backupDRClient.GetBackup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupAsync</summary>
+        public async Task GetBackupAsync()
+        {
+            // Snippet: GetBackupAsync(string, CallSettings)
+            // Additional: GetBackupAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]/dataSources/[DATASOURCE]/backups/[BACKUP]";
+            // Make the request
+            Backup response = await backupDRClient.GetBackupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackup</summary>
+        public void GetBackupResourceNames()
+        {
+            // Snippet: GetBackup(BackupName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupName name = BackupName.FromProjectLocationBackupvaultDatasourceBackup("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]", "[BACKUP]");
+            // Make the request
+            Backup response = backupDRClient.GetBackup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupAsync</summary>
+        public async Task GetBackupResourceNamesAsync()
+        {
+            // Snippet: GetBackupAsync(BackupName, CallSettings)
+            // Additional: GetBackupAsync(BackupName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupName name = BackupName.FromProjectLocationBackupvaultDatasourceBackup("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]", "[BACKUP]");
+            // Make the request
+            Backup response = await backupDRClient.GetBackupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackup</summary>
+        public void UpdateBackupRequestObject()
+        {
+            // Snippet: UpdateBackup(UpdateBackupRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            UpdateBackupRequest request = new UpdateBackupRequest
+            {
+                UpdateMask = new FieldMask(),
+                Backup = new Backup(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Backup, OperationMetadata> response = backupDRClient.UpdateBackup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupAsync</summary>
+        public async Task UpdateBackupRequestObjectAsync()
+        {
+            // Snippet: UpdateBackupAsync(UpdateBackupRequest, CallSettings)
+            // Additional: UpdateBackupAsync(UpdateBackupRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBackupRequest request = new UpdateBackupRequest
+            {
+                UpdateMask = new FieldMask(),
+                Backup = new Backup(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Backup, OperationMetadata> response = await backupDRClient.UpdateBackupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackup</summary>
+        public void UpdateBackup()
+        {
+            // Snippet: UpdateBackup(Backup, FieldMask, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            Backup backup = new Backup();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Backup, OperationMetadata> response = backupDRClient.UpdateBackup(backup, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupAsync</summary>
+        public async Task UpdateBackupAsync()
+        {
+            // Snippet: UpdateBackupAsync(Backup, FieldMask, CallSettings)
+            // Additional: UpdateBackupAsync(Backup, FieldMask, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            Backup backup = new Backup();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Backup, OperationMetadata> response = await backupDRClient.UpdateBackupAsync(backup, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackup</summary>
+        public void DeleteBackupRequestObject()
+        {
+            // Snippet: DeleteBackup(DeleteBackupRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationBackupvaultDatasourceBackup("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]", "[BACKUP]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Backup, OperationMetadata> response = backupDRClient.DeleteBackup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupAsync</summary>
+        public async Task DeleteBackupRequestObjectAsync()
+        {
+            // Snippet: DeleteBackupAsync(DeleteBackupRequest, CallSettings)
+            // Additional: DeleteBackupAsync(DeleteBackupRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationBackupvaultDatasourceBackup("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]", "[BACKUP]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Backup, OperationMetadata> response = await backupDRClient.DeleteBackupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackup</summary>
+        public void DeleteBackup()
+        {
+            // Snippet: DeleteBackup(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]/dataSources/[DATASOURCE]/backups/[BACKUP]";
+            // Make the request
+            Operation<Backup, OperationMetadata> response = backupDRClient.DeleteBackup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupAsync</summary>
+        public async Task DeleteBackupAsync()
+        {
+            // Snippet: DeleteBackupAsync(string, CallSettings)
+            // Additional: DeleteBackupAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]/dataSources/[DATASOURCE]/backups/[BACKUP]";
+            // Make the request
+            Operation<Backup, OperationMetadata> response = await backupDRClient.DeleteBackupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackup</summary>
+        public void DeleteBackupResourceNames()
+        {
+            // Snippet: DeleteBackup(BackupName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupName name = BackupName.FromProjectLocationBackupvaultDatasourceBackup("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]", "[BACKUP]");
+            // Make the request
+            Operation<Backup, OperationMetadata> response = backupDRClient.DeleteBackup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupAsync</summary>
+        public async Task DeleteBackupResourceNamesAsync()
+        {
+            // Snippet: DeleteBackupAsync(BackupName, CallSettings)
+            // Additional: DeleteBackupAsync(BackupName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupName name = BackupName.FromProjectLocationBackupvaultDatasourceBackup("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]", "[BACKUP]");
+            // Make the request
+            Operation<Backup, OperationMetadata> response = await backupDRClient.DeleteBackupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Backup, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Backup result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Backup, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreBackup</summary>
+        public void RestoreBackupRequestObject()
+        {
+            // Snippet: RestoreBackup(RestoreBackupRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            RestoreBackupRequest request = new RestoreBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationBackupvaultDatasourceBackup("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]", "[BACKUP]"),
+                RequestId = "",
+                ComputeInstanceTargetEnvironment = new ComputeInstanceTargetEnvironment(),
+                ComputeInstanceRestoreProperties = new ComputeInstanceRestoreProperties(),
+                ClearOverridesFieldMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<RestoreBackupResponse, OperationMetadata> response = backupDRClient.RestoreBackup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreBackupResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreBackupResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreBackupResponse, OperationMetadata> retrievedResponse = backupDRClient.PollOnceRestoreBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreBackupResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreBackupAsync</summary>
+        public async Task RestoreBackupRequestObjectAsync()
+        {
+            // Snippet: RestoreBackupAsync(RestoreBackupRequest, CallSettings)
+            // Additional: RestoreBackupAsync(RestoreBackupRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreBackupRequest request = new RestoreBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationBackupvaultDatasourceBackup("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]", "[BACKUP]"),
+                RequestId = "",
+                ComputeInstanceTargetEnvironment = new ComputeInstanceTargetEnvironment(),
+                ComputeInstanceRestoreProperties = new ComputeInstanceRestoreProperties(),
+                ClearOverridesFieldMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<RestoreBackupResponse, OperationMetadata> response = await backupDRClient.RestoreBackupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreBackupResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreBackupResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreBackupResponse, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceRestoreBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreBackupResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreBackup</summary>
+        public void RestoreBackup()
+        {
+            // Snippet: RestoreBackup(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]/dataSources/[DATASOURCE]/backups/[BACKUP]";
+            // Make the request
+            Operation<RestoreBackupResponse, OperationMetadata> response = backupDRClient.RestoreBackup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreBackupResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreBackupResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreBackupResponse, OperationMetadata> retrievedResponse = backupDRClient.PollOnceRestoreBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreBackupResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreBackupAsync</summary>
+        public async Task RestoreBackupAsync()
+        {
+            // Snippet: RestoreBackupAsync(string, CallSettings)
+            // Additional: RestoreBackupAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]/dataSources/[DATASOURCE]/backups/[BACKUP]";
+            // Make the request
+            Operation<RestoreBackupResponse, OperationMetadata> response = await backupDRClient.RestoreBackupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreBackupResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreBackupResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreBackupResponse, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceRestoreBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreBackupResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreBackup</summary>
+        public void RestoreBackupResourceNames()
+        {
+            // Snippet: RestoreBackup(BackupName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupName name = BackupName.FromProjectLocationBackupvaultDatasourceBackup("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]", "[BACKUP]");
+            // Make the request
+            Operation<RestoreBackupResponse, OperationMetadata> response = backupDRClient.RestoreBackup(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreBackupResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RestoreBackupResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreBackupResponse, OperationMetadata> retrievedResponse = backupDRClient.PollOnceRestoreBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreBackupResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreBackupAsync</summary>
+        public async Task RestoreBackupResourceNamesAsync()
+        {
+            // Snippet: RestoreBackupAsync(BackupName, CallSettings)
+            // Additional: RestoreBackupAsync(BackupName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupName name = BackupName.FromProjectLocationBackupvaultDatasourceBackup("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]", "[BACKUP]");
+            // Make the request
+            Operation<RestoreBackupResponse, OperationMetadata> response = await backupDRClient.RestoreBackupAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RestoreBackupResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RestoreBackupResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RestoreBackupResponse, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceRestoreBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RestoreBackupResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPlan</summary>
+        public void CreateBackupPlanRequestObject()
+        {
+            // Snippet: CreateBackupPlan(CreateBackupPlanRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            CreateBackupPlanRequest request = new CreateBackupPlanRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BackupPlanId = "",
+                BackupPlan = new BackupPlan(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<BackupPlan, OperationMetadata> response = backupDRClient.CreateBackupPlan(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlan, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlan, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateBackupPlan(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPlanAsync</summary>
+        public async Task CreateBackupPlanRequestObjectAsync()
+        {
+            // Snippet: CreateBackupPlanAsync(CreateBackupPlanRequest, CallSettings)
+            // Additional: CreateBackupPlanAsync(CreateBackupPlanRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateBackupPlanRequest request = new CreateBackupPlanRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BackupPlanId = "",
+                BackupPlan = new BackupPlan(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<BackupPlan, OperationMetadata> response = await backupDRClient.CreateBackupPlanAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlan, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlan, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateBackupPlanAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPlan</summary>
+        public void CreateBackupPlan()
+        {
+            // Snippet: CreateBackupPlan(string, BackupPlan, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            BackupPlan backupPlan = new BackupPlan();
+            string backupPlanId = "";
+            // Make the request
+            Operation<BackupPlan, OperationMetadata> response = backupDRClient.CreateBackupPlan(parent, backupPlan, backupPlanId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlan, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlan, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateBackupPlan(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPlanAsync</summary>
+        public async Task CreateBackupPlanAsync()
+        {
+            // Snippet: CreateBackupPlanAsync(string, BackupPlan, string, CallSettings)
+            // Additional: CreateBackupPlanAsync(string, BackupPlan, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            BackupPlan backupPlan = new BackupPlan();
+            string backupPlanId = "";
+            // Make the request
+            Operation<BackupPlan, OperationMetadata> response = await backupDRClient.CreateBackupPlanAsync(parent, backupPlan, backupPlanId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlan, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlan, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateBackupPlanAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPlan</summary>
+        public void CreateBackupPlanResourceNames()
+        {
+            // Snippet: CreateBackupPlan(LocationName, BackupPlan, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            BackupPlan backupPlan = new BackupPlan();
+            string backupPlanId = "";
+            // Make the request
+            Operation<BackupPlan, OperationMetadata> response = backupDRClient.CreateBackupPlan(parent, backupPlan, backupPlanId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlan, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlan, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateBackupPlan(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPlanAsync</summary>
+        public async Task CreateBackupPlanResourceNamesAsync()
+        {
+            // Snippet: CreateBackupPlanAsync(LocationName, BackupPlan, string, CallSettings)
+            // Additional: CreateBackupPlanAsync(LocationName, BackupPlan, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            BackupPlan backupPlan = new BackupPlan();
+            string backupPlanId = "";
+            // Make the request
+            Operation<BackupPlan, OperationMetadata> response = await backupDRClient.CreateBackupPlanAsync(parent, backupPlan, backupPlanId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlan, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlan, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateBackupPlanAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupPlan</summary>
+        public void UpdateBackupPlanRequestObject()
+        {
+            // Snippet: UpdateBackupPlan(UpdateBackupPlanRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            UpdateBackupPlanRequest request = new UpdateBackupPlanRequest
+            {
+                BackupPlan = new BackupPlan(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<BackupPlan, OperationMetadata> response = backupDRClient.UpdateBackupPlan(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlan, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlan, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateBackupPlan(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupPlanAsync</summary>
+        public async Task UpdateBackupPlanRequestObjectAsync()
+        {
+            // Snippet: UpdateBackupPlanAsync(UpdateBackupPlanRequest, CallSettings)
+            // Additional: UpdateBackupPlanAsync(UpdateBackupPlanRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBackupPlanRequest request = new UpdateBackupPlanRequest
+            {
+                BackupPlan = new BackupPlan(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<BackupPlan, OperationMetadata> response = await backupDRClient.UpdateBackupPlanAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlan, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlan, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateBackupPlanAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupPlan</summary>
+        public void UpdateBackupPlan()
+        {
+            // Snippet: UpdateBackupPlan(BackupPlan, FieldMask, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupPlan backupPlan = new BackupPlan();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<BackupPlan, OperationMetadata> response = backupDRClient.UpdateBackupPlan(backupPlan, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlan, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlan, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateBackupPlan(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupPlanAsync</summary>
+        public async Task UpdateBackupPlanAsync()
+        {
+            // Snippet: UpdateBackupPlanAsync(BackupPlan, FieldMask, CallSettings)
+            // Additional: UpdateBackupPlanAsync(BackupPlan, FieldMask, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupPlan backupPlan = new BackupPlan();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<BackupPlan, OperationMetadata> response = await backupDRClient.UpdateBackupPlanAsync(backupPlan, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlan, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPlan result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlan, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateBackupPlanAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlan retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlan</summary>
+        public void GetBackupPlanRequestObject()
+        {
+            // Snippet: GetBackupPlan(GetBackupPlanRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetBackupPlanRequest request = new GetBackupPlanRequest
+            {
+                BackupPlanName = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]"),
+            };
+            // Make the request
+            BackupPlan response = backupDRClient.GetBackupPlan(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanAsync</summary>
+        public async Task GetBackupPlanRequestObjectAsync()
+        {
+            // Snippet: GetBackupPlanAsync(GetBackupPlanRequest, CallSettings)
+            // Additional: GetBackupPlanAsync(GetBackupPlanRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBackupPlanRequest request = new GetBackupPlanRequest
+            {
+                BackupPlanName = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]"),
+            };
+            // Make the request
+            BackupPlan response = await backupDRClient.GetBackupPlanAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlan</summary>
+        public void GetBackupPlan()
+        {
+            // Snippet: GetBackupPlan(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPlans/[BACKUP_PLAN]";
+            // Make the request
+            BackupPlan response = backupDRClient.GetBackupPlan(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanAsync</summary>
+        public async Task GetBackupPlanAsync()
+        {
+            // Snippet: GetBackupPlanAsync(string, CallSettings)
+            // Additional: GetBackupPlanAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPlans/[BACKUP_PLAN]";
+            // Make the request
+            BackupPlan response = await backupDRClient.GetBackupPlanAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlan</summary>
+        public void GetBackupPlanResourceNames()
+        {
+            // Snippet: GetBackupPlan(BackupPlanName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupPlanName name = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]");
+            // Make the request
+            BackupPlan response = backupDRClient.GetBackupPlan(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanAsync</summary>
+        public async Task GetBackupPlanResourceNamesAsync()
+        {
+            // Snippet: GetBackupPlanAsync(BackupPlanName, CallSettings)
+            // Additional: GetBackupPlanAsync(BackupPlanName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupPlanName name = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]");
+            // Make the request
+            BackupPlan response = await backupDRClient.GetBackupPlanAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlans</summary>
+        public void ListBackupPlansRequestObject()
+        {
+            // Snippet: ListBackupPlans(ListBackupPlansRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListBackupPlansRequest request = new ListBackupPlansRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListBackupPlansResponse, BackupPlan> response = backupDRClient.ListBackupPlans(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlan item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPlansResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlan item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlan> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlan item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlansAsync</summary>
+        public async Task ListBackupPlansRequestObjectAsync()
+        {
+            // Snippet: ListBackupPlansAsync(ListBackupPlansRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBackupPlansRequest request = new ListBackupPlansRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPlansResponse, BackupPlan> response = backupDRClient.ListBackupPlansAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupPlan item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupPlansResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlan item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlan> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlan item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlans</summary>
+        public void ListBackupPlans()
+        {
+            // Snippet: ListBackupPlans(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListBackupPlansResponse, BackupPlan> response = backupDRClient.ListBackupPlans(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlan item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPlansResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlan item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlan> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlan item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlansAsync</summary>
+        public async Task ListBackupPlansAsync()
+        {
+            // Snippet: ListBackupPlansAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPlansResponse, BackupPlan> response = backupDRClient.ListBackupPlansAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupPlan item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupPlansResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlan item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlan> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlan item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlans</summary>
+        public void ListBackupPlansResourceNames()
+        {
+            // Snippet: ListBackupPlans(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListBackupPlansResponse, BackupPlan> response = backupDRClient.ListBackupPlans(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlan item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPlansResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlan item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlan> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlan item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlansAsync</summary>
+        public async Task ListBackupPlansResourceNamesAsync()
+        {
+            // Snippet: ListBackupPlansAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPlansResponse, BackupPlan> response = backupDRClient.ListBackupPlansAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupPlan item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupPlansResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlan item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlan> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlan item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPlan</summary>
+        public void DeleteBackupPlanRequestObject()
+        {
+            // Snippet: DeleteBackupPlan(DeleteBackupPlanRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DeleteBackupPlanRequest request = new DeleteBackupPlanRequest
+            {
+                BackupPlanName = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteBackupPlan(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteBackupPlan(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPlanAsync</summary>
+        public async Task DeleteBackupPlanRequestObjectAsync()
+        {
+            // Snippet: DeleteBackupPlanAsync(DeleteBackupPlanRequest, CallSettings)
+            // Additional: DeleteBackupPlanAsync(DeleteBackupPlanRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteBackupPlanRequest request = new DeleteBackupPlanRequest
+            {
+                BackupPlanName = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteBackupPlanAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteBackupPlanAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPlan</summary>
+        public void DeleteBackupPlan()
+        {
+            // Snippet: DeleteBackupPlan(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPlans/[BACKUP_PLAN]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteBackupPlan(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteBackupPlan(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPlanAsync</summary>
+        public async Task DeleteBackupPlanAsync()
+        {
+            // Snippet: DeleteBackupPlanAsync(string, CallSettings)
+            // Additional: DeleteBackupPlanAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPlans/[BACKUP_PLAN]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteBackupPlanAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteBackupPlanAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPlan</summary>
+        public void DeleteBackupPlanResourceNames()
+        {
+            // Snippet: DeleteBackupPlan(BackupPlanName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupPlanName name = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteBackupPlan(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteBackupPlan(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPlanAsync</summary>
+        public async Task DeleteBackupPlanResourceNamesAsync()
+        {
+            // Snippet: DeleteBackupPlanAsync(BackupPlanName, CallSettings)
+            // Additional: DeleteBackupPlanAsync(BackupPlanName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupPlanName name = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteBackupPlanAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteBackupPlanAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanRevision</summary>
+        public void GetBackupPlanRevisionRequestObject()
+        {
+            // Snippet: GetBackupPlanRevision(GetBackupPlanRevisionRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetBackupPlanRevisionRequest request = new GetBackupPlanRevisionRequest
+            {
+                BackupPlanRevisionName = BackupPlanRevisionName.FromProjectLocationBackupPlanRevision("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]", "[REVISION]"),
+            };
+            // Make the request
+            BackupPlanRevision response = backupDRClient.GetBackupPlanRevision(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanRevisionAsync</summary>
+        public async Task GetBackupPlanRevisionRequestObjectAsync()
+        {
+            // Snippet: GetBackupPlanRevisionAsync(GetBackupPlanRevisionRequest, CallSettings)
+            // Additional: GetBackupPlanRevisionAsync(GetBackupPlanRevisionRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBackupPlanRevisionRequest request = new GetBackupPlanRevisionRequest
+            {
+                BackupPlanRevisionName = BackupPlanRevisionName.FromProjectLocationBackupPlanRevision("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]", "[REVISION]"),
+            };
+            // Make the request
+            BackupPlanRevision response = await backupDRClient.GetBackupPlanRevisionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanRevision</summary>
+        public void GetBackupPlanRevision()
+        {
+            // Snippet: GetBackupPlanRevision(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPlans/[BACKUP_PLAN]/revisions/[REVISION]";
+            // Make the request
+            BackupPlanRevision response = backupDRClient.GetBackupPlanRevision(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanRevisionAsync</summary>
+        public async Task GetBackupPlanRevisionAsync()
+        {
+            // Snippet: GetBackupPlanRevisionAsync(string, CallSettings)
+            // Additional: GetBackupPlanRevisionAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPlans/[BACKUP_PLAN]/revisions/[REVISION]";
+            // Make the request
+            BackupPlanRevision response = await backupDRClient.GetBackupPlanRevisionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanRevision</summary>
+        public void GetBackupPlanRevisionResourceNames()
+        {
+            // Snippet: GetBackupPlanRevision(BackupPlanRevisionName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupPlanRevisionName name = BackupPlanRevisionName.FromProjectLocationBackupPlanRevision("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]", "[REVISION]");
+            // Make the request
+            BackupPlanRevision response = backupDRClient.GetBackupPlanRevision(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanRevisionAsync</summary>
+        public async Task GetBackupPlanRevisionResourceNamesAsync()
+        {
+            // Snippet: GetBackupPlanRevisionAsync(BackupPlanRevisionName, CallSettings)
+            // Additional: GetBackupPlanRevisionAsync(BackupPlanRevisionName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupPlanRevisionName name = BackupPlanRevisionName.FromProjectLocationBackupPlanRevision("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]", "[REVISION]");
+            // Make the request
+            BackupPlanRevision response = await backupDRClient.GetBackupPlanRevisionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanRevisions</summary>
+        public void ListBackupPlanRevisionsRequestObject()
+        {
+            // Snippet: ListBackupPlanRevisions(ListBackupPlanRevisionsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListBackupPlanRevisionsRequest request = new ListBackupPlanRevisionsRequest
+            {
+                ParentAsBackupPlanName = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]"),
+            };
+            // Make the request
+            PagedEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> response = backupDRClient.ListBackupPlanRevisions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlanRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPlanRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanRevisionsAsync</summary>
+        public async Task ListBackupPlanRevisionsRequestObjectAsync()
+        {
+            // Snippet: ListBackupPlanRevisionsAsync(ListBackupPlanRevisionsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBackupPlanRevisionsRequest request = new ListBackupPlanRevisionsRequest
+            {
+                ParentAsBackupPlanName = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> response = backupDRClient.ListBackupPlanRevisionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupPlanRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupPlanRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanRevisions</summary>
+        public void ListBackupPlanRevisions()
+        {
+            // Snippet: ListBackupPlanRevisions(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupPlans/[BACKUP_PLAN]";
+            // Make the request
+            PagedEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> response = backupDRClient.ListBackupPlanRevisions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlanRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPlanRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanRevisionsAsync</summary>
+        public async Task ListBackupPlanRevisionsAsync()
+        {
+            // Snippet: ListBackupPlanRevisionsAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupPlans/[BACKUP_PLAN]";
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> response = backupDRClient.ListBackupPlanRevisionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupPlanRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupPlanRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanRevisions</summary>
+        public void ListBackupPlanRevisionsResourceNames()
+        {
+            // Snippet: ListBackupPlanRevisions(BackupPlanName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupPlanName parent = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]");
+            // Make the request
+            PagedEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> response = backupDRClient.ListBackupPlanRevisions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlanRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPlanRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanRevisionsAsync</summary>
+        public async Task ListBackupPlanRevisionsResourceNamesAsync()
+        {
+            // Snippet: ListBackupPlanRevisionsAsync(BackupPlanName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupPlanName parent = BackupPlanName.FromProjectLocationBackupPlan("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN]");
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPlanRevisionsResponse, BackupPlanRevision> response = backupDRClient.ListBackupPlanRevisionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupPlanRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupPlanRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPlanAssociation</summary>
+        public void CreateBackupPlanAssociationRequestObject()
+        {
+            // Snippet: CreateBackupPlanAssociation(CreateBackupPlanAssociationRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            CreateBackupPlanAssociationRequest request = new CreateBackupPlanAssociationRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BackupPlanAssociationId = "",
+                BackupPlanAssociation = new BackupPlanAssociation(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = backupDRClient.CreateBackupPlanAssociation(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateBackupPlanAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPlanAssociationAsync</summary>
+        public async Task CreateBackupPlanAssociationRequestObjectAsync()
+        {
+            // Snippet: CreateBackupPlanAssociationAsync(CreateBackupPlanAssociationRequest, CallSettings)
+            // Additional: CreateBackupPlanAssociationAsync(CreateBackupPlanAssociationRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateBackupPlanAssociationRequest request = new CreateBackupPlanAssociationRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BackupPlanAssociationId = "",
+                BackupPlanAssociation = new BackupPlanAssociation(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = await backupDRClient.CreateBackupPlanAssociationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateBackupPlanAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPlanAssociation</summary>
+        public void CreateBackupPlanAssociation()
+        {
+            // Snippet: CreateBackupPlanAssociation(string, BackupPlanAssociation, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            BackupPlanAssociation backupPlanAssociation = new BackupPlanAssociation();
+            string backupPlanAssociationId = "";
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = backupDRClient.CreateBackupPlanAssociation(parent, backupPlanAssociation, backupPlanAssociationId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateBackupPlanAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPlanAssociationAsync</summary>
+        public async Task CreateBackupPlanAssociationAsync()
+        {
+            // Snippet: CreateBackupPlanAssociationAsync(string, BackupPlanAssociation, string, CallSettings)
+            // Additional: CreateBackupPlanAssociationAsync(string, BackupPlanAssociation, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            BackupPlanAssociation backupPlanAssociation = new BackupPlanAssociation();
+            string backupPlanAssociationId = "";
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = await backupDRClient.CreateBackupPlanAssociationAsync(parent, backupPlanAssociation, backupPlanAssociationId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateBackupPlanAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPlanAssociation</summary>
+        public void CreateBackupPlanAssociationResourceNames()
+        {
+            // Snippet: CreateBackupPlanAssociation(LocationName, BackupPlanAssociation, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            BackupPlanAssociation backupPlanAssociation = new BackupPlanAssociation();
+            string backupPlanAssociationId = "";
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = backupDRClient.CreateBackupPlanAssociation(parent, backupPlanAssociation, backupPlanAssociationId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateBackupPlanAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupPlanAssociationAsync</summary>
+        public async Task CreateBackupPlanAssociationResourceNamesAsync()
+        {
+            // Snippet: CreateBackupPlanAssociationAsync(LocationName, BackupPlanAssociation, string, CallSettings)
+            // Additional: CreateBackupPlanAssociationAsync(LocationName, BackupPlanAssociation, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            BackupPlanAssociation backupPlanAssociation = new BackupPlanAssociation();
+            string backupPlanAssociationId = "";
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = await backupDRClient.CreateBackupPlanAssociationAsync(parent, backupPlanAssociation, backupPlanAssociationId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateBackupPlanAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupPlanAssociation</summary>
+        public void UpdateBackupPlanAssociationRequestObject()
+        {
+            // Snippet: UpdateBackupPlanAssociation(UpdateBackupPlanAssociationRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            UpdateBackupPlanAssociationRequest request = new UpdateBackupPlanAssociationRequest
+            {
+                BackupPlanAssociation = new BackupPlanAssociation(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = backupDRClient.UpdateBackupPlanAssociation(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateBackupPlanAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupPlanAssociationAsync</summary>
+        public async Task UpdateBackupPlanAssociationRequestObjectAsync()
+        {
+            // Snippet: UpdateBackupPlanAssociationAsync(UpdateBackupPlanAssociationRequest, CallSettings)
+            // Additional: UpdateBackupPlanAssociationAsync(UpdateBackupPlanAssociationRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBackupPlanAssociationRequest request = new UpdateBackupPlanAssociationRequest
+            {
+                BackupPlanAssociation = new BackupPlanAssociation(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = await backupDRClient.UpdateBackupPlanAssociationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateBackupPlanAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupPlanAssociation</summary>
+        public void UpdateBackupPlanAssociation()
+        {
+            // Snippet: UpdateBackupPlanAssociation(BackupPlanAssociation, FieldMask, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupPlanAssociation backupPlanAssociation = new BackupPlanAssociation();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = backupDRClient.UpdateBackupPlanAssociation(backupPlanAssociation, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateBackupPlanAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupPlanAssociationAsync</summary>
+        public async Task UpdateBackupPlanAssociationAsync()
+        {
+            // Snippet: UpdateBackupPlanAssociationAsync(BackupPlanAssociation, FieldMask, CallSettings)
+            // Additional: UpdateBackupPlanAssociationAsync(BackupPlanAssociation, FieldMask, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupPlanAssociation backupPlanAssociation = new BackupPlanAssociation();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = await backupDRClient.UpdateBackupPlanAssociationAsync(backupPlanAssociation, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateBackupPlanAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanAssociation</summary>
+        public void GetBackupPlanAssociationRequestObject()
+        {
+            // Snippet: GetBackupPlanAssociation(GetBackupPlanAssociationRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetBackupPlanAssociationRequest request = new GetBackupPlanAssociationRequest
+            {
+                BackupPlanAssociationName = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]"),
+            };
+            // Make the request
+            BackupPlanAssociation response = backupDRClient.GetBackupPlanAssociation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanAssociationAsync</summary>
+        public async Task GetBackupPlanAssociationRequestObjectAsync()
+        {
+            // Snippet: GetBackupPlanAssociationAsync(GetBackupPlanAssociationRequest, CallSettings)
+            // Additional: GetBackupPlanAssociationAsync(GetBackupPlanAssociationRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBackupPlanAssociationRequest request = new GetBackupPlanAssociationRequest
+            {
+                BackupPlanAssociationName = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]"),
+            };
+            // Make the request
+            BackupPlanAssociation response = await backupDRClient.GetBackupPlanAssociationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanAssociation</summary>
+        public void GetBackupPlanAssociation()
+        {
+            // Snippet: GetBackupPlanAssociation(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPlanAssociations/[BACKUP_PLAN_ASSOCIATION]";
+            // Make the request
+            BackupPlanAssociation response = backupDRClient.GetBackupPlanAssociation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanAssociationAsync</summary>
+        public async Task GetBackupPlanAssociationAsync()
+        {
+            // Snippet: GetBackupPlanAssociationAsync(string, CallSettings)
+            // Additional: GetBackupPlanAssociationAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPlanAssociations/[BACKUP_PLAN_ASSOCIATION]";
+            // Make the request
+            BackupPlanAssociation response = await backupDRClient.GetBackupPlanAssociationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanAssociation</summary>
+        public void GetBackupPlanAssociationResourceNames()
+        {
+            // Snippet: GetBackupPlanAssociation(BackupPlanAssociationName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupPlanAssociationName name = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]");
+            // Make the request
+            BackupPlanAssociation response = backupDRClient.GetBackupPlanAssociation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupPlanAssociationAsync</summary>
+        public async Task GetBackupPlanAssociationResourceNamesAsync()
+        {
+            // Snippet: GetBackupPlanAssociationAsync(BackupPlanAssociationName, CallSettings)
+            // Additional: GetBackupPlanAssociationAsync(BackupPlanAssociationName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupPlanAssociationName name = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]");
+            // Make the request
+            BackupPlanAssociation response = await backupDRClient.GetBackupPlanAssociationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanAssociations</summary>
+        public void ListBackupPlanAssociationsRequestObject()
+        {
+            // Snippet: ListBackupPlanAssociations(ListBackupPlanAssociationsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListBackupPlanAssociationsRequest request = new ListBackupPlanAssociationsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListBackupPlanAssociationsResponse, BackupPlanAssociation> response = backupDRClient.ListBackupPlanAssociations(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPlanAssociationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanAssociation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanAssociationsAsync</summary>
+        public async Task ListBackupPlanAssociationsRequestObjectAsync()
+        {
+            // Snippet: ListBackupPlanAssociationsAsync(ListBackupPlanAssociationsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBackupPlanAssociationsRequest request = new ListBackupPlanAssociationsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPlanAssociationsResponse, BackupPlanAssociation> response = backupDRClient.ListBackupPlanAssociationsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupPlanAssociationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanAssociation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanAssociations</summary>
+        public void ListBackupPlanAssociations()
+        {
+            // Snippet: ListBackupPlanAssociations(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListBackupPlanAssociationsResponse, BackupPlanAssociation> response = backupDRClient.ListBackupPlanAssociations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPlanAssociationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanAssociation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanAssociationsAsync</summary>
+        public async Task ListBackupPlanAssociationsAsync()
+        {
+            // Snippet: ListBackupPlanAssociationsAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPlanAssociationsResponse, BackupPlanAssociation> response = backupDRClient.ListBackupPlanAssociationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupPlanAssociationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanAssociation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanAssociations</summary>
+        public void ListBackupPlanAssociationsResourceNames()
+        {
+            // Snippet: ListBackupPlanAssociations(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListBackupPlanAssociationsResponse, BackupPlanAssociation> response = backupDRClient.ListBackupPlanAssociations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupPlanAssociationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanAssociation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupPlanAssociationsAsync</summary>
+        public async Task ListBackupPlanAssociationsResourceNamesAsync()
+        {
+            // Snippet: ListBackupPlanAssociationsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListBackupPlanAssociationsResponse, BackupPlanAssociation> response = backupDRClient.ListBackupPlanAssociationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBackupPlanAssociationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanAssociation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupPlanAssociationsForResourceType</summary>
+        public void FetchBackupPlanAssociationsForResourceTypeRequestObject()
+        {
+            // Snippet: FetchBackupPlanAssociationsForResourceType(FetchBackupPlanAssociationsForResourceTypeRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            FetchBackupPlanAssociationsForResourceTypeRequest request = new FetchBackupPlanAssociationsForResourceTypeRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ResourceType = "",
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> response = backupDRClient.FetchBackupPlanAssociationsForResourceType(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchBackupPlanAssociationsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanAssociation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupPlanAssociationsForResourceTypeAsync</summary>
+        public async Task FetchBackupPlanAssociationsForResourceTypeRequestObjectAsync()
+        {
+            // Snippet: FetchBackupPlanAssociationsForResourceTypeAsync(FetchBackupPlanAssociationsForResourceTypeRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchBackupPlanAssociationsForResourceTypeRequest request = new FetchBackupPlanAssociationsForResourceTypeRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ResourceType = "",
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> response = backupDRClient.FetchBackupPlanAssociationsForResourceTypeAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchBackupPlanAssociationsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanAssociation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupPlanAssociationsForResourceType</summary>
+        public void FetchBackupPlanAssociationsForResourceType()
+        {
+            // Snippet: FetchBackupPlanAssociationsForResourceType(string, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string resourceType = "";
+            // Make the request
+            PagedEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> response = backupDRClient.FetchBackupPlanAssociationsForResourceType(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchBackupPlanAssociationsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanAssociation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupPlanAssociationsForResourceTypeAsync</summary>
+        public async Task FetchBackupPlanAssociationsForResourceTypeAsync()
+        {
+            // Snippet: FetchBackupPlanAssociationsForResourceTypeAsync(string, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string resourceType = "";
+            // Make the request
+            PagedAsyncEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> response = backupDRClient.FetchBackupPlanAssociationsForResourceTypeAsync(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchBackupPlanAssociationsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanAssociation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupPlanAssociationsForResourceType</summary>
+        public void FetchBackupPlanAssociationsForResourceTypeResourceNames()
+        {
+            // Snippet: FetchBackupPlanAssociationsForResourceType(LocationName, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string resourceType = "";
+            // Make the request
+            PagedEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> response = backupDRClient.FetchBackupPlanAssociationsForResourceType(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchBackupPlanAssociationsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanAssociation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupPlanAssociationsForResourceTypeAsync</summary>
+        public async Task FetchBackupPlanAssociationsForResourceTypeResourceNamesAsync()
+        {
+            // Snippet: FetchBackupPlanAssociationsForResourceTypeAsync(LocationName, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string resourceType = "";
+            // Make the request
+            PagedAsyncEnumerable<FetchBackupPlanAssociationsForResourceTypeResponse, BackupPlanAssociation> response = backupDRClient.FetchBackupPlanAssociationsForResourceTypeAsync(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackupPlanAssociation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchBackupPlanAssociationsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupPlanAssociation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupPlanAssociation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupPlanAssociation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPlanAssociation</summary>
+        public void DeleteBackupPlanAssociationRequestObject()
+        {
+            // Snippet: DeleteBackupPlanAssociation(DeleteBackupPlanAssociationRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DeleteBackupPlanAssociationRequest request = new DeleteBackupPlanAssociationRequest
+            {
+                BackupPlanAssociationName = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]"),
+                RequestId = "",
+                AutoProtectionPolicyBindingAsAutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteBackupPlanAssociation(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteBackupPlanAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPlanAssociationAsync</summary>
+        public async Task DeleteBackupPlanAssociationRequestObjectAsync()
+        {
+            // Snippet: DeleteBackupPlanAssociationAsync(DeleteBackupPlanAssociationRequest, CallSettings)
+            // Additional: DeleteBackupPlanAssociationAsync(DeleteBackupPlanAssociationRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteBackupPlanAssociationRequest request = new DeleteBackupPlanAssociationRequest
+            {
+                BackupPlanAssociationName = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]"),
+                RequestId = "",
+                AutoProtectionPolicyBindingAsAutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteBackupPlanAssociationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteBackupPlanAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPlanAssociation</summary>
+        public void DeleteBackupPlanAssociation()
+        {
+            // Snippet: DeleteBackupPlanAssociation(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPlanAssociations/[BACKUP_PLAN_ASSOCIATION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteBackupPlanAssociation(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteBackupPlanAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPlanAssociationAsync</summary>
+        public async Task DeleteBackupPlanAssociationAsync()
+        {
+            // Snippet: DeleteBackupPlanAssociationAsync(string, CallSettings)
+            // Additional: DeleteBackupPlanAssociationAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPlanAssociations/[BACKUP_PLAN_ASSOCIATION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteBackupPlanAssociationAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteBackupPlanAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPlanAssociation</summary>
+        public void DeleteBackupPlanAssociationResourceNames()
+        {
+            // Snippet: DeleteBackupPlanAssociation(BackupPlanAssociationName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupPlanAssociationName name = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteBackupPlanAssociation(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteBackupPlanAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupPlanAssociationAsync</summary>
+        public async Task DeleteBackupPlanAssociationResourceNamesAsync()
+        {
+            // Snippet: DeleteBackupPlanAssociationAsync(BackupPlanAssociationName, CallSettings)
+            // Additional: DeleteBackupPlanAssociationAsync(BackupPlanAssociationName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupPlanAssociationName name = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteBackupPlanAssociationAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteBackupPlanAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerBackup</summary>
+        public void TriggerBackupRequestObject()
+        {
+            // Snippet: TriggerBackup(TriggerBackupRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            TriggerBackupRequest request = new TriggerBackupRequest
+            {
+                BackupPlanAssociationName = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]"),
+                RuleId = "",
+                RequestId = "",
+                CustomRetentionDays = 0,
+                Labels = { { "", "" }, },
+            };
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = backupDRClient.TriggerBackup(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = backupDRClient.PollOnceTriggerBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerBackupAsync</summary>
+        public async Task TriggerBackupRequestObjectAsync()
+        {
+            // Snippet: TriggerBackupAsync(TriggerBackupRequest, CallSettings)
+            // Additional: TriggerBackupAsync(TriggerBackupRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            TriggerBackupRequest request = new TriggerBackupRequest
+            {
+                BackupPlanAssociationName = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]"),
+                RuleId = "",
+                RequestId = "",
+                CustomRetentionDays = 0,
+                Labels = { { "", "" }, },
+            };
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = await backupDRClient.TriggerBackupAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceTriggerBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerBackup</summary>
+        public void TriggerBackup()
+        {
+            // Snippet: TriggerBackup(string, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPlanAssociations/[BACKUP_PLAN_ASSOCIATION]";
+            string ruleId = "";
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = backupDRClient.TriggerBackup(name, ruleId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = backupDRClient.PollOnceTriggerBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerBackupAsync</summary>
+        public async Task TriggerBackupAsync()
+        {
+            // Snippet: TriggerBackupAsync(string, string, CallSettings)
+            // Additional: TriggerBackupAsync(string, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backupPlanAssociations/[BACKUP_PLAN_ASSOCIATION]";
+            string ruleId = "";
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = await backupDRClient.TriggerBackupAsync(name, ruleId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceTriggerBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerBackup</summary>
+        public void TriggerBackupResourceNames()
+        {
+            // Snippet: TriggerBackup(BackupPlanAssociationName, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BackupPlanAssociationName name = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]");
+            string ruleId = "";
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = backupDRClient.TriggerBackup(name, ruleId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = backupDRClient.PollOnceTriggerBackup(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TriggerBackupAsync</summary>
+        public async Task TriggerBackupResourceNamesAsync()
+        {
+            // Snippet: TriggerBackupAsync(BackupPlanAssociationName, string, CallSettings)
+            // Additional: TriggerBackupAsync(BackupPlanAssociationName, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupPlanAssociationName name = BackupPlanAssociationName.FromProjectLocationBackupPlanAssociation("[PROJECT]", "[LOCATION]", "[BACKUP_PLAN_ASSOCIATION]");
+            string ruleId = "";
+            // Make the request
+            Operation<BackupPlanAssociation, OperationMetadata> response = await backupDRClient.TriggerBackupAsync(name, ruleId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BackupPlanAssociation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BackupPlanAssociation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BackupPlanAssociation, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceTriggerBackupAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataSourceReference</summary>
+        public void GetDataSourceReferenceRequestObject()
+        {
+            // Snippet: GetDataSourceReference(GetDataSourceReferenceRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetDataSourceReferenceRequest request = new GetDataSourceReferenceRequest
+            {
+                DataSourceReferenceName = DataSourceReferenceName.FromProjectLocationDataSourceReference("[PROJECT]", "[LOCATION]", "[DATA_SOURCE_REFERENCE]"),
+            };
+            // Make the request
+            DataSourceReference response = backupDRClient.GetDataSourceReference(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataSourceReferenceAsync</summary>
+        public async Task GetDataSourceReferenceRequestObjectAsync()
+        {
+            // Snippet: GetDataSourceReferenceAsync(GetDataSourceReferenceRequest, CallSettings)
+            // Additional: GetDataSourceReferenceAsync(GetDataSourceReferenceRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDataSourceReferenceRequest request = new GetDataSourceReferenceRequest
+            {
+                DataSourceReferenceName = DataSourceReferenceName.FromProjectLocationDataSourceReference("[PROJECT]", "[LOCATION]", "[DATA_SOURCE_REFERENCE]"),
+            };
+            // Make the request
+            DataSourceReference response = await backupDRClient.GetDataSourceReferenceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataSourceReference</summary>
+        public void GetDataSourceReference()
+        {
+            // Snippet: GetDataSourceReference(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataSourceReferences/[DATA_SOURCE_REFERENCE]";
+            // Make the request
+            DataSourceReference response = backupDRClient.GetDataSourceReference(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataSourceReferenceAsync</summary>
+        public async Task GetDataSourceReferenceAsync()
+        {
+            // Snippet: GetDataSourceReferenceAsync(string, CallSettings)
+            // Additional: GetDataSourceReferenceAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataSourceReferences/[DATA_SOURCE_REFERENCE]";
+            // Make the request
+            DataSourceReference response = await backupDRClient.GetDataSourceReferenceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataSourceReference</summary>
+        public void GetDataSourceReferenceResourceNames()
+        {
+            // Snippet: GetDataSourceReference(DataSourceReferenceName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DataSourceReferenceName name = DataSourceReferenceName.FromProjectLocationDataSourceReference("[PROJECT]", "[LOCATION]", "[DATA_SOURCE_REFERENCE]");
+            // Make the request
+            DataSourceReference response = backupDRClient.GetDataSourceReference(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDataSourceReferenceAsync</summary>
+        public async Task GetDataSourceReferenceResourceNamesAsync()
+        {
+            // Snippet: GetDataSourceReferenceAsync(DataSourceReferenceName, CallSettings)
+            // Additional: GetDataSourceReferenceAsync(DataSourceReferenceName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DataSourceReferenceName name = DataSourceReferenceName.FromProjectLocationDataSourceReference("[PROJECT]", "[LOCATION]", "[DATA_SOURCE_REFERENCE]");
+            // Make the request
+            DataSourceReference response = await backupDRClient.GetDataSourceReferenceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourceReferences</summary>
+        public void ListDataSourceReferencesRequestObject()
+        {
+            // Snippet: ListDataSourceReferences(ListDataSourceReferencesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListDataSourceReferencesRequest request = new ListDataSourceReferencesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferences(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDataSourceReferencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourceReferencesAsync</summary>
+        public async Task ListDataSourceReferencesRequestObjectAsync()
+        {
+            // Snippet: ListDataSourceReferencesAsync(ListDataSourceReferencesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDataSourceReferencesRequest request = new ListDataSourceReferencesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferencesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDataSourceReferencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourceReferences</summary>
+        public void ListDataSourceReferences()
+        {
+            // Snippet: ListDataSourceReferences(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferences(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDataSourceReferencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourceReferencesAsync</summary>
+        public async Task ListDataSourceReferencesAsync()
+        {
+            // Snippet: ListDataSourceReferencesAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferencesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDataSourceReferencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourceReferences</summary>
+        public void ListDataSourceReferencesResourceNames()
+        {
+            // Snippet: ListDataSourceReferences(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferences(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDataSourceReferencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourceReferencesAsync</summary>
+        public async Task ListDataSourceReferencesResourceNamesAsync()
+        {
+            // Snippet: ListDataSourceReferencesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferencesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListDataSourceReferencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchDataSourceReferencesForResourceType</summary>
+        public void FetchDataSourceReferencesForResourceTypeRequestObject()
+        {
+            // Snippet: FetchDataSourceReferencesForResourceType(FetchDataSourceReferencesForResourceTypeRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            FetchDataSourceReferencesForResourceTypeRequest request = new FetchDataSourceReferencesForResourceTypeRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ResourceType = "",
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> response = backupDRClient.FetchDataSourceReferencesForResourceType(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchDataSourceReferencesForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchDataSourceReferencesForResourceTypeAsync</summary>
+        public async Task FetchDataSourceReferencesForResourceTypeRequestObjectAsync()
+        {
+            // Snippet: FetchDataSourceReferencesForResourceTypeAsync(FetchDataSourceReferencesForResourceTypeRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchDataSourceReferencesForResourceTypeRequest request = new FetchDataSourceReferencesForResourceTypeRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ResourceType = "",
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> response = backupDRClient.FetchDataSourceReferencesForResourceTypeAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchDataSourceReferencesForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchDataSourceReferencesForResourceType</summary>
+        public void FetchDataSourceReferencesForResourceType()
+        {
+            // Snippet: FetchDataSourceReferencesForResourceType(string, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string resourceType = "";
+            // Make the request
+            PagedEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> response = backupDRClient.FetchDataSourceReferencesForResourceType(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchDataSourceReferencesForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchDataSourceReferencesForResourceTypeAsync</summary>
+        public async Task FetchDataSourceReferencesForResourceTypeAsync()
+        {
+            // Snippet: FetchDataSourceReferencesForResourceTypeAsync(string, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string resourceType = "";
+            // Make the request
+            PagedAsyncEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> response = backupDRClient.FetchDataSourceReferencesForResourceTypeAsync(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchDataSourceReferencesForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchDataSourceReferencesForResourceType</summary>
+        public void FetchDataSourceReferencesForResourceTypeResourceNames()
+        {
+            // Snippet: FetchDataSourceReferencesForResourceType(LocationName, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string resourceType = "";
+            // Make the request
+            PagedEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> response = backupDRClient.FetchDataSourceReferencesForResourceType(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchDataSourceReferencesForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchDataSourceReferencesForResourceTypeAsync</summary>
+        public async Task FetchDataSourceReferencesForResourceTypeResourceNamesAsync()
+        {
+            // Snippet: FetchDataSourceReferencesForResourceTypeAsync(LocationName, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string resourceType = "";
+            // Make the request
+            PagedAsyncEnumerable<FetchDataSourceReferencesForResourceTypeResponse, DataSourceReference> response = backupDRClient.FetchDataSourceReferencesForResourceTypeAsync(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchDataSourceReferencesForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitializeService</summary>
+        public void InitializeServiceRequestObject()
+        {
+            // Snippet: InitializeService(InitializeServiceRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            InitializeServiceRequest request = new InitializeServiceRequest
+            {
+                Name = "",
+                ResourceType = "",
+                RequestId = "",
+                CloudSqlInstanceInitializationConfig = new CloudSqlInstanceInitializationConfig(),
+                BackupPlanLocation = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<InitializeServiceResponse, OperationMetadata> response = backupDRClient.InitializeService(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InitializeServiceResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            InitializeServiceResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InitializeServiceResponse, OperationMetadata> retrievedResponse = backupDRClient.PollOnceInitializeService(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InitializeServiceResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitializeServiceAsync</summary>
+        public async Task InitializeServiceRequestObjectAsync()
+        {
+            // Snippet: InitializeServiceAsync(InitializeServiceRequest, CallSettings)
+            // Additional: InitializeServiceAsync(InitializeServiceRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            InitializeServiceRequest request = new InitializeServiceRequest
+            {
+                Name = "",
+                ResourceType = "",
+                RequestId = "",
+                CloudSqlInstanceInitializationConfig = new CloudSqlInstanceInitializationConfig(),
+                BackupPlanLocation = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<InitializeServiceResponse, OperationMetadata> response = await backupDRClient.InitializeServiceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InitializeServiceResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            InitializeServiceResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InitializeServiceResponse, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceInitializeServiceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InitializeServiceResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicy</summary>
+        public void CreateAutoProtectionPolicyRequestObject()
+        {
+            // Snippet: CreateAutoProtectionPolicy(CreateAutoProtectionPolicyRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            CreateAutoProtectionPolicyRequest request = new CreateAutoProtectionPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AutoProtectionPolicyId = "",
+                AutoProtectionPolicy = new AutoProtectionPolicy(),
+            };
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyAsync</summary>
+        public async Task CreateAutoProtectionPolicyRequestObjectAsync()
+        {
+            // Snippet: CreateAutoProtectionPolicyAsync(CreateAutoProtectionPolicyRequest, CallSettings)
+            // Additional: CreateAutoProtectionPolicyAsync(CreateAutoProtectionPolicyRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAutoProtectionPolicyRequest request = new CreateAutoProtectionPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AutoProtectionPolicyId = "",
+                AutoProtectionPolicy = new AutoProtectionPolicy(),
+            };
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = await backupDRClient.CreateAutoProtectionPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicy</summary>
+        public void CreateAutoProtectionPolicy()
+        {
+            // Snippet: CreateAutoProtectionPolicy(string, AutoProtectionPolicy, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AutoProtectionPolicy autoProtectionPolicy = new AutoProtectionPolicy();
+            string autoProtectionPolicyId = "";
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicy(parent, autoProtectionPolicy, autoProtectionPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyAsync</summary>
+        public async Task CreateAutoProtectionPolicyAsync()
+        {
+            // Snippet: CreateAutoProtectionPolicyAsync(string, AutoProtectionPolicy, string, CallSettings)
+            // Additional: CreateAutoProtectionPolicyAsync(string, AutoProtectionPolicy, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AutoProtectionPolicy autoProtectionPolicy = new AutoProtectionPolicy();
+            string autoProtectionPolicyId = "";
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = await backupDRClient.CreateAutoProtectionPolicyAsync(parent, autoProtectionPolicy, autoProtectionPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicy</summary>
+        public void CreateAutoProtectionPolicyResourceNames()
+        {
+            // Snippet: CreateAutoProtectionPolicy(LocationName, AutoProtectionPolicy, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AutoProtectionPolicy autoProtectionPolicy = new AutoProtectionPolicy();
+            string autoProtectionPolicyId = "";
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicy(parent, autoProtectionPolicy, autoProtectionPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyAsync</summary>
+        public async Task CreateAutoProtectionPolicyResourceNamesAsync()
+        {
+            // Snippet: CreateAutoProtectionPolicyAsync(LocationName, AutoProtectionPolicy, string, CallSettings)
+            // Additional: CreateAutoProtectionPolicyAsync(LocationName, AutoProtectionPolicy, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AutoProtectionPolicy autoProtectionPolicy = new AutoProtectionPolicy();
+            string autoProtectionPolicyId = "";
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = await backupDRClient.CreateAutoProtectionPolicyAsync(parent, autoProtectionPolicy, autoProtectionPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicies</summary>
+        public void ListAutoProtectionPoliciesRequestObject()
+        {
+            // Snippet: ListAutoProtectionPolicies(ListAutoProtectionPoliciesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListAutoProtectionPoliciesRequest request = new ListAutoProtectionPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> response = backupDRClient.ListAutoProtectionPolicies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPoliciesAsync</summary>
+        public async Task ListAutoProtectionPoliciesRequestObjectAsync()
+        {
+            // Snippet: ListAutoProtectionPoliciesAsync(ListAutoProtectionPoliciesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAutoProtectionPoliciesRequest request = new ListAutoProtectionPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> response = backupDRClient.ListAutoProtectionPoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicies</summary>
+        public void ListAutoProtectionPolicies()
+        {
+            // Snippet: ListAutoProtectionPolicies(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> response = backupDRClient.ListAutoProtectionPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPoliciesAsync</summary>
+        public async Task ListAutoProtectionPoliciesAsync()
+        {
+            // Snippet: ListAutoProtectionPoliciesAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> response = backupDRClient.ListAutoProtectionPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicies</summary>
+        public void ListAutoProtectionPoliciesResourceNames()
+        {
+            // Snippet: ListAutoProtectionPolicies(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> response = backupDRClient.ListAutoProtectionPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPoliciesAsync</summary>
+        public async Task ListAutoProtectionPoliciesResourceNamesAsync()
+        {
+            // Snippet: ListAutoProtectionPoliciesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAutoProtectionPoliciesResponse, AutoProtectionPolicy> response = backupDRClient.ListAutoProtectionPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicy</summary>
+        public void GetAutoProtectionPolicyRequestObject()
+        {
+            // Snippet: GetAutoProtectionPolicy(GetAutoProtectionPolicyRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetAutoProtectionPolicyRequest request = new GetAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+            };
+            // Make the request
+            AutoProtectionPolicy response = backupDRClient.GetAutoProtectionPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyAsync</summary>
+        public async Task GetAutoProtectionPolicyRequestObjectAsync()
+        {
+            // Snippet: GetAutoProtectionPolicyAsync(GetAutoProtectionPolicyRequest, CallSettings)
+            // Additional: GetAutoProtectionPolicyAsync(GetAutoProtectionPolicyRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAutoProtectionPolicyRequest request = new GetAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+            };
+            // Make the request
+            AutoProtectionPolicy response = await backupDRClient.GetAutoProtectionPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicy</summary>
+        public void GetAutoProtectionPolicy()
+        {
+            // Snippet: GetAutoProtectionPolicy(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            // Make the request
+            AutoProtectionPolicy response = backupDRClient.GetAutoProtectionPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyAsync</summary>
+        public async Task GetAutoProtectionPolicyAsync()
+        {
+            // Snippet: GetAutoProtectionPolicyAsync(string, CallSettings)
+            // Additional: GetAutoProtectionPolicyAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            // Make the request
+            AutoProtectionPolicy response = await backupDRClient.GetAutoProtectionPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicy</summary>
+        public void GetAutoProtectionPolicyResourceNames()
+        {
+            // Snippet: GetAutoProtectionPolicy(AutoProtectionPolicyName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName name = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            // Make the request
+            AutoProtectionPolicy response = backupDRClient.GetAutoProtectionPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyAsync</summary>
+        public async Task GetAutoProtectionPolicyResourceNamesAsync()
+        {
+            // Snippet: GetAutoProtectionPolicyAsync(AutoProtectionPolicyName, CallSettings)
+            // Additional: GetAutoProtectionPolicyAsync(AutoProtectionPolicyName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName name = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            // Make the request
+            AutoProtectionPolicy response = await backupDRClient.GetAutoProtectionPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutoProtectionPolicy</summary>
+        public void UpdateAutoProtectionPolicyRequestObject()
+        {
+            // Snippet: UpdateAutoProtectionPolicy(UpdateAutoProtectionPolicyRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            UpdateAutoProtectionPolicyRequest request = new UpdateAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicy = new AutoProtectionPolicy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = backupDRClient.UpdateAutoProtectionPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutoProtectionPolicyAsync</summary>
+        public async Task UpdateAutoProtectionPolicyRequestObjectAsync()
+        {
+            // Snippet: UpdateAutoProtectionPolicyAsync(UpdateAutoProtectionPolicyRequest, CallSettings)
+            // Additional: UpdateAutoProtectionPolicyAsync(UpdateAutoProtectionPolicyRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAutoProtectionPolicyRequest request = new UpdateAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicy = new AutoProtectionPolicy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = await backupDRClient.UpdateAutoProtectionPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutoProtectionPolicy</summary>
+        public void UpdateAutoProtectionPolicy()
+        {
+            // Snippet: UpdateAutoProtectionPolicy(AutoProtectionPolicy, FieldMask, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicy autoProtectionPolicy = new AutoProtectionPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = backupDRClient.UpdateAutoProtectionPolicy(autoProtectionPolicy, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = backupDRClient.PollOnceUpdateAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutoProtectionPolicyAsync</summary>
+        public async Task UpdateAutoProtectionPolicyAsync()
+        {
+            // Snippet: UpdateAutoProtectionPolicyAsync(AutoProtectionPolicy, FieldMask, CallSettings)
+            // Additional: UpdateAutoProtectionPolicyAsync(AutoProtectionPolicy, FieldMask, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicy autoProtectionPolicy = new AutoProtectionPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AutoProtectionPolicy, OperationMetadata> response = await backupDRClient.UpdateAutoProtectionPolicyAsync(autoProtectionPolicy, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicy, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceUpdateAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutoProtectionPolicy</summary>
+        public void DeleteAutoProtectionPolicyRequestObject()
+        {
+            // Snippet: DeleteAutoProtectionPolicy(DeleteAutoProtectionPolicyRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DeleteAutoProtectionPolicyRequest request = new DeleteAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteAutoProtectionPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutoProtectionPolicyAsync</summary>
+        public async Task DeleteAutoProtectionPolicyRequestObjectAsync()
+        {
+            // Snippet: DeleteAutoProtectionPolicyAsync(DeleteAutoProtectionPolicyRequest, CallSettings)
+            // Additional: DeleteAutoProtectionPolicyAsync(DeleteAutoProtectionPolicyRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAutoProtectionPolicyRequest request = new DeleteAutoProtectionPolicyRequest
+            {
+                AutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteAutoProtectionPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutoProtectionPolicy</summary>
+        public void DeleteAutoProtectionPolicy()
+        {
+            // Snippet: DeleteAutoProtectionPolicy(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteAutoProtectionPolicy(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutoProtectionPolicyAsync</summary>
+        public async Task DeleteAutoProtectionPolicyAsync()
+        {
+            // Snippet: DeleteAutoProtectionPolicyAsync(string, CallSettings)
+            // Additional: DeleteAutoProtectionPolicyAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteAutoProtectionPolicyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutoProtectionPolicy</summary>
+        public void DeleteAutoProtectionPolicyResourceNames()
+        {
+            // Snippet: DeleteAutoProtectionPolicy(AutoProtectionPolicyName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName name = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteAutoProtectionPolicy(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteAutoProtectionPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutoProtectionPolicyAsync</summary>
+        public async Task DeleteAutoProtectionPolicyResourceNamesAsync()
+        {
+            // Snippet: DeleteAutoProtectionPolicyAsync(AutoProtectionPolicyName, CallSettings)
+            // Additional: DeleteAutoProtectionPolicyAsync(AutoProtectionPolicyName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName name = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteAutoProtectionPolicyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceDeleteAutoProtectionPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyBinding</summary>
+        public void CreateAutoProtectionPolicyBindingRequestObject()
+        {
+            // Snippet: CreateAutoProtectionPolicyBinding(CreateAutoProtectionPolicyBindingRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            CreateAutoProtectionPolicyBindingRequest request = new CreateAutoProtectionPolicyBindingRequest
+            {
+                ParentAsAutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+                AutoProtectionPolicyBindingId = "",
+                AutoProtectionPolicyBinding = new AutoProtectionPolicyBinding(),
+            };
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicyBinding(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateAutoProtectionPolicyBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyBindingAsync</summary>
+        public async Task CreateAutoProtectionPolicyBindingRequestObjectAsync()
+        {
+            // Snippet: CreateAutoProtectionPolicyBindingAsync(CreateAutoProtectionPolicyBindingRequest, CallSettings)
+            // Additional: CreateAutoProtectionPolicyBindingAsync(CreateAutoProtectionPolicyBindingRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAutoProtectionPolicyBindingRequest request = new CreateAutoProtectionPolicyBindingRequest
+            {
+                ParentAsAutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+                AutoProtectionPolicyBindingId = "",
+                AutoProtectionPolicyBinding = new AutoProtectionPolicyBinding(),
+            };
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.CreateAutoProtectionPolicyBindingAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateAutoProtectionPolicyBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyBinding</summary>
+        public void CreateAutoProtectionPolicyBinding()
+        {
+            // Snippet: CreateAutoProtectionPolicyBinding(string, AutoProtectionPolicyBinding, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            AutoProtectionPolicyBinding autoProtectionPolicyBinding = new AutoProtectionPolicyBinding();
+            string autoProtectionPolicyBindingId = "";
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicyBinding(parent, autoProtectionPolicyBinding, autoProtectionPolicyBindingId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateAutoProtectionPolicyBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyBindingAsync</summary>
+        public async Task CreateAutoProtectionPolicyBindingAsync()
+        {
+            // Snippet: CreateAutoProtectionPolicyBindingAsync(string, AutoProtectionPolicyBinding, string, CallSettings)
+            // Additional: CreateAutoProtectionPolicyBindingAsync(string, AutoProtectionPolicyBinding, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            AutoProtectionPolicyBinding autoProtectionPolicyBinding = new AutoProtectionPolicyBinding();
+            string autoProtectionPolicyBindingId = "";
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.CreateAutoProtectionPolicyBindingAsync(parent, autoProtectionPolicyBinding, autoProtectionPolicyBindingId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateAutoProtectionPolicyBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyBinding</summary>
+        public void CreateAutoProtectionPolicyBindingResourceNames()
+        {
+            // Snippet: CreateAutoProtectionPolicyBinding(AutoProtectionPolicyName, AutoProtectionPolicyBinding, string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName parent = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            AutoProtectionPolicyBinding autoProtectionPolicyBinding = new AutoProtectionPolicyBinding();
+            string autoProtectionPolicyBindingId = "";
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = backupDRClient.CreateAutoProtectionPolicyBinding(parent, autoProtectionPolicyBinding, autoProtectionPolicyBindingId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = backupDRClient.PollOnceCreateAutoProtectionPolicyBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutoProtectionPolicyBindingAsync</summary>
+        public async Task CreateAutoProtectionPolicyBindingResourceNamesAsync()
+        {
+            // Snippet: CreateAutoProtectionPolicyBindingAsync(AutoProtectionPolicyName, AutoProtectionPolicyBinding, string, CallSettings)
+            // Additional: CreateAutoProtectionPolicyBindingAsync(AutoProtectionPolicyName, AutoProtectionPolicyBinding, string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName parent = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            AutoProtectionPolicyBinding autoProtectionPolicyBinding = new AutoProtectionPolicyBinding();
+            string autoProtectionPolicyBindingId = "";
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.CreateAutoProtectionPolicyBindingAsync(parent, autoProtectionPolicyBinding, autoProtectionPolicyBindingId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceCreateAutoProtectionPolicyBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyBinding</summary>
+        public void GetAutoProtectionPolicyBindingRequestObject()
+        {
+            // Snippet: GetAutoProtectionPolicyBinding(GetAutoProtectionPolicyBindingRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetAutoProtectionPolicyBindingRequest request = new GetAutoProtectionPolicyBindingRequest
+            {
+                AutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+            };
+            // Make the request
+            AutoProtectionPolicyBinding response = backupDRClient.GetAutoProtectionPolicyBinding(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyBindingAsync</summary>
+        public async Task GetAutoProtectionPolicyBindingRequestObjectAsync()
+        {
+            // Snippet: GetAutoProtectionPolicyBindingAsync(GetAutoProtectionPolicyBindingRequest, CallSettings)
+            // Additional: GetAutoProtectionPolicyBindingAsync(GetAutoProtectionPolicyBindingRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAutoProtectionPolicyBindingRequest request = new GetAutoProtectionPolicyBindingRequest
+            {
+                AutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+            };
+            // Make the request
+            AutoProtectionPolicyBinding response = await backupDRClient.GetAutoProtectionPolicyBindingAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyBinding</summary>
+        public void GetAutoProtectionPolicyBinding()
+        {
+            // Snippet: GetAutoProtectionPolicyBinding(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]/bindings/[BINDING]";
+            // Make the request
+            AutoProtectionPolicyBinding response = backupDRClient.GetAutoProtectionPolicyBinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyBindingAsync</summary>
+        public async Task GetAutoProtectionPolicyBindingAsync()
+        {
+            // Snippet: GetAutoProtectionPolicyBindingAsync(string, CallSettings)
+            // Additional: GetAutoProtectionPolicyBindingAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]/bindings/[BINDING]";
+            // Make the request
+            AutoProtectionPolicyBinding response = await backupDRClient.GetAutoProtectionPolicyBindingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyBinding</summary>
+        public void GetAutoProtectionPolicyBindingResourceNames()
+        {
+            // Snippet: GetAutoProtectionPolicyBinding(AutoProtectionPolicyBindingName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicyBindingName name = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]");
+            // Make the request
+            AutoProtectionPolicyBinding response = backupDRClient.GetAutoProtectionPolicyBinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutoProtectionPolicyBindingAsync</summary>
+        public async Task GetAutoProtectionPolicyBindingResourceNamesAsync()
+        {
+            // Snippet: GetAutoProtectionPolicyBindingAsync(AutoProtectionPolicyBindingName, CallSettings)
+            // Additional: GetAutoProtectionPolicyBindingAsync(AutoProtectionPolicyBindingName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicyBindingName name = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]");
+            // Make the request
+            AutoProtectionPolicyBinding response = await backupDRClient.GetAutoProtectionPolicyBindingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicyBindings</summary>
+        public void ListAutoProtectionPolicyBindingsRequestObject()
+        {
+            // Snippet: ListAutoProtectionPolicyBindings(ListAutoProtectionPolicyBindingsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListAutoProtectionPolicyBindingsRequest request = new ListAutoProtectionPolicyBindingsRequest
+            {
+                ParentAsAutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> response = backupDRClient.ListAutoProtectionPolicyBindings(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutoProtectionPolicyBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutoProtectionPolicyBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicyBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicyBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicyBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicyBindingsAsync</summary>
+        public async Task ListAutoProtectionPolicyBindingsRequestObjectAsync()
+        {
+            // Snippet: ListAutoProtectionPolicyBindingsAsync(ListAutoProtectionPolicyBindingsRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAutoProtectionPolicyBindingsRequest request = new ListAutoProtectionPolicyBindingsRequest
+            {
+                ParentAsAutoProtectionPolicyName = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> response = backupDRClient.ListAutoProtectionPolicyBindingsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AutoProtectionPolicyBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAutoProtectionPolicyBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicyBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicyBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicyBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicyBindings</summary>
+        public void ListAutoProtectionPolicyBindings()
+        {
+            // Snippet: ListAutoProtectionPolicyBindings(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            // Make the request
+            PagedEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> response = backupDRClient.ListAutoProtectionPolicyBindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutoProtectionPolicyBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutoProtectionPolicyBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicyBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicyBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicyBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicyBindingsAsync</summary>
+        public async Task ListAutoProtectionPolicyBindingsAsync()
+        {
+            // Snippet: ListAutoProtectionPolicyBindingsAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]";
+            // Make the request
+            PagedAsyncEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> response = backupDRClient.ListAutoProtectionPolicyBindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AutoProtectionPolicyBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAutoProtectionPolicyBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicyBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicyBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicyBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicyBindings</summary>
+        public void ListAutoProtectionPolicyBindingsResourceNames()
+        {
+            // Snippet: ListAutoProtectionPolicyBindings(AutoProtectionPolicyName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName parent = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            // Make the request
+            PagedEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> response = backupDRClient.ListAutoProtectionPolicyBindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutoProtectionPolicyBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutoProtectionPolicyBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicyBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicyBinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicyBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutoProtectionPolicyBindingsAsync</summary>
+        public async Task ListAutoProtectionPolicyBindingsResourceNamesAsync()
+        {
+            // Snippet: ListAutoProtectionPolicyBindingsAsync(AutoProtectionPolicyName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicyName parent = AutoProtectionPolicyName.FromProjectLocationAutoProtectionPolicy("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]");
+            // Make the request
+            PagedAsyncEnumerable<ListAutoProtectionPolicyBindingsResponse, AutoProtectionPolicyBinding> response = backupDRClient.ListAutoProtectionPolicyBindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AutoProtectionPolicyBinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAutoProtectionPolicyBindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutoProtectionPolicyBinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutoProtectionPolicyBinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutoProtectionPolicyBinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppliedAutoProtectionPolicies</summary>
+        public void ListAppliedAutoProtectionPoliciesRequestObject()
+        {
+            // Snippet: ListAppliedAutoProtectionPolicies(ListAppliedAutoProtectionPoliciesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListAppliedAutoProtectionPoliciesRequest request = new ListAppliedAutoProtectionPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> response = backupDRClient.ListAppliedAutoProtectionPolicies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AppliedAutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAppliedAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppliedAutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppliedAutoProtectionPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppliedAutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppliedAutoProtectionPoliciesAsync</summary>
+        public async Task ListAppliedAutoProtectionPoliciesRequestObjectAsync()
+        {
+            // Snippet: ListAppliedAutoProtectionPoliciesAsync(ListAppliedAutoProtectionPoliciesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAppliedAutoProtectionPoliciesRequest request = new ListAppliedAutoProtectionPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> response = backupDRClient.ListAppliedAutoProtectionPoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AppliedAutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAppliedAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppliedAutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppliedAutoProtectionPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppliedAutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppliedAutoProtectionPolicies</summary>
+        public void ListAppliedAutoProtectionPolicies()
+        {
+            // Snippet: ListAppliedAutoProtectionPolicies(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> response = backupDRClient.ListAppliedAutoProtectionPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AppliedAutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAppliedAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppliedAutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppliedAutoProtectionPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppliedAutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppliedAutoProtectionPoliciesAsync</summary>
+        public async Task ListAppliedAutoProtectionPoliciesAsync()
+        {
+            // Snippet: ListAppliedAutoProtectionPoliciesAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> response = backupDRClient.ListAppliedAutoProtectionPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AppliedAutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAppliedAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppliedAutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppliedAutoProtectionPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppliedAutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppliedAutoProtectionPolicies</summary>
+        public void ListAppliedAutoProtectionPoliciesResourceNames()
+        {
+            // Snippet: ListAppliedAutoProtectionPolicies(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> response = backupDRClient.ListAppliedAutoProtectionPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AppliedAutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAppliedAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppliedAutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppliedAutoProtectionPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppliedAutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAppliedAutoProtectionPoliciesAsync</summary>
+        public async Task ListAppliedAutoProtectionPoliciesResourceNamesAsync()
+        {
+            // Snippet: ListAppliedAutoProtectionPoliciesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAppliedAutoProtectionPoliciesResponse, AppliedAutoProtectionPolicy> response = backupDRClient.ListAppliedAutoProtectionPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AppliedAutoProtectionPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAppliedAutoProtectionPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AppliedAutoProtectionPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AppliedAutoProtectionPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AppliedAutoProtectionPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitiateDeleteAutoProtectionPolicyBinding</summary>
+        public void InitiateDeleteAutoProtectionPolicyBindingRequestObject()
+        {
+            // Snippet: InitiateDeleteAutoProtectionPolicyBinding(InitiateDeleteAutoProtectionPolicyBindingRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            InitiateDeleteAutoProtectionPolicyBindingRequest request = new InitiateDeleteAutoProtectionPolicyBindingRequest
+            {
+                AutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+            };
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = backupDRClient.InitiateDeleteAutoProtectionPolicyBinding(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = backupDRClient.PollOnceInitiateDeleteAutoProtectionPolicyBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitiateDeleteAutoProtectionPolicyBindingAsync</summary>
+        public async Task InitiateDeleteAutoProtectionPolicyBindingRequestObjectAsync()
+        {
+            // Snippet: InitiateDeleteAutoProtectionPolicyBindingAsync(InitiateDeleteAutoProtectionPolicyBindingRequest, CallSettings)
+            // Additional: InitiateDeleteAutoProtectionPolicyBindingAsync(InitiateDeleteAutoProtectionPolicyBindingRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            InitiateDeleteAutoProtectionPolicyBindingRequest request = new InitiateDeleteAutoProtectionPolicyBindingRequest
+            {
+                AutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+            };
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.InitiateDeleteAutoProtectionPolicyBindingAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceInitiateDeleteAutoProtectionPolicyBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitiateDeleteAutoProtectionPolicyBinding</summary>
+        public void InitiateDeleteAutoProtectionPolicyBinding()
+        {
+            // Snippet: InitiateDeleteAutoProtectionPolicyBinding(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]/bindings/[BINDING]";
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = backupDRClient.InitiateDeleteAutoProtectionPolicyBinding(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = backupDRClient.PollOnceInitiateDeleteAutoProtectionPolicyBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitiateDeleteAutoProtectionPolicyBindingAsync</summary>
+        public async Task InitiateDeleteAutoProtectionPolicyBindingAsync()
+        {
+            // Snippet: InitiateDeleteAutoProtectionPolicyBindingAsync(string, CallSettings)
+            // Additional: InitiateDeleteAutoProtectionPolicyBindingAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]/bindings/[BINDING]";
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.InitiateDeleteAutoProtectionPolicyBindingAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceInitiateDeleteAutoProtectionPolicyBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitiateDeleteAutoProtectionPolicyBinding</summary>
+        public void InitiateDeleteAutoProtectionPolicyBindingResourceNames()
+        {
+            // Snippet: InitiateDeleteAutoProtectionPolicyBinding(AutoProtectionPolicyBindingName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicyBindingName name = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]");
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = backupDRClient.InitiateDeleteAutoProtectionPolicyBinding(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = backupDRClient.PollOnceInitiateDeleteAutoProtectionPolicyBinding(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitiateDeleteAutoProtectionPolicyBindingAsync</summary>
+        public async Task InitiateDeleteAutoProtectionPolicyBindingResourceNamesAsync()
+        {
+            // Snippet: InitiateDeleteAutoProtectionPolicyBindingAsync(AutoProtectionPolicyBindingName, CallSettings)
+            // Additional: InitiateDeleteAutoProtectionPolicyBindingAsync(AutoProtectionPolicyBindingName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicyBindingName name = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]");
+            // Make the request
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> response = await backupDRClient.InitiateDeleteAutoProtectionPolicyBindingAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AutoProtectionPolicyBinding result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AutoProtectionPolicyBinding, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceInitiateDeleteAutoProtectionPolicyBindingAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AutoProtectionPolicyBinding retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBindingMatchingResource</summary>
+        public void GetBindingMatchingResourceRequestObject()
+        {
+            // Snippet: GetBindingMatchingResource(GetBindingMatchingResourceRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            GetBindingMatchingResourceRequest request = new GetBindingMatchingResourceRequest
+            {
+                BindingMatchingResourceName = BindingMatchingResourceName.FromProjectLocationAutoProtectionPolicyBindingMatchingResource("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]", "[MATCHING_RESOURCE]"),
+            };
+            // Make the request
+            BindingMatchingResource response = backupDRClient.GetBindingMatchingResource(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBindingMatchingResourceAsync</summary>
+        public async Task GetBindingMatchingResourceRequestObjectAsync()
+        {
+            // Snippet: GetBindingMatchingResourceAsync(GetBindingMatchingResourceRequest, CallSettings)
+            // Additional: GetBindingMatchingResourceAsync(GetBindingMatchingResourceRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBindingMatchingResourceRequest request = new GetBindingMatchingResourceRequest
+            {
+                BindingMatchingResourceName = BindingMatchingResourceName.FromProjectLocationAutoProtectionPolicyBindingMatchingResource("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]", "[MATCHING_RESOURCE]"),
+            };
+            // Make the request
+            BindingMatchingResource response = await backupDRClient.GetBindingMatchingResourceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBindingMatchingResource</summary>
+        public void GetBindingMatchingResource()
+        {
+            // Snippet: GetBindingMatchingResource(string, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]/bindings/[BINDING]/matchingResources/[MATCHING_RESOURCE]";
+            // Make the request
+            BindingMatchingResource response = backupDRClient.GetBindingMatchingResource(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBindingMatchingResourceAsync</summary>
+        public async Task GetBindingMatchingResourceAsync()
+        {
+            // Snippet: GetBindingMatchingResourceAsync(string, CallSettings)
+            // Additional: GetBindingMatchingResourceAsync(string, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]/bindings/[BINDING]/matchingResources/[MATCHING_RESOURCE]";
+            // Make the request
+            BindingMatchingResource response = await backupDRClient.GetBindingMatchingResourceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBindingMatchingResource</summary>
+        public void GetBindingMatchingResourceResourceNames()
+        {
+            // Snippet: GetBindingMatchingResource(BindingMatchingResourceName, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            BindingMatchingResourceName name = BindingMatchingResourceName.FromProjectLocationAutoProtectionPolicyBindingMatchingResource("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]", "[MATCHING_RESOURCE]");
+            // Make the request
+            BindingMatchingResource response = backupDRClient.GetBindingMatchingResource(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBindingMatchingResourceAsync</summary>
+        public async Task GetBindingMatchingResourceResourceNamesAsync()
+        {
+            // Snippet: GetBindingMatchingResourceAsync(BindingMatchingResourceName, CallSettings)
+            // Additional: GetBindingMatchingResourceAsync(BindingMatchingResourceName, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            BindingMatchingResourceName name = BindingMatchingResourceName.FromProjectLocationAutoProtectionPolicyBindingMatchingResource("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]", "[MATCHING_RESOURCE]");
+            // Make the request
+            BindingMatchingResource response = await backupDRClient.GetBindingMatchingResourceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBindingMatchingResources</summary>
+        public void ListBindingMatchingResourcesRequestObject()
+        {
+            // Snippet: ListBindingMatchingResources(ListBindingMatchingResourcesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListBindingMatchingResourcesRequest request = new ListBindingMatchingResourcesRequest
+            {
+                ParentAsAutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> response = backupDRClient.ListBindingMatchingResources(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BindingMatchingResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBindingMatchingResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BindingMatchingResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BindingMatchingResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BindingMatchingResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBindingMatchingResourcesAsync</summary>
+        public async Task ListBindingMatchingResourcesRequestObjectAsync()
+        {
+            // Snippet: ListBindingMatchingResourcesAsync(ListBindingMatchingResourcesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBindingMatchingResourcesRequest request = new ListBindingMatchingResourcesRequest
+            {
+                ParentAsAutoProtectionPolicyBindingName = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> response = backupDRClient.ListBindingMatchingResourcesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BindingMatchingResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBindingMatchingResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BindingMatchingResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BindingMatchingResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BindingMatchingResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBindingMatchingResources</summary>
+        public void ListBindingMatchingResources()
+        {
+            // Snippet: ListBindingMatchingResources(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]/bindings/[BINDING]";
+            // Make the request
+            PagedEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> response = backupDRClient.ListBindingMatchingResources(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BindingMatchingResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBindingMatchingResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BindingMatchingResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BindingMatchingResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BindingMatchingResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBindingMatchingResourcesAsync</summary>
+        public async Task ListBindingMatchingResourcesAsync()
+        {
+            // Snippet: ListBindingMatchingResourcesAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/autoProtectionPolicies/[AUTO_PROTECTION_POLICY]/bindings/[BINDING]";
+            // Make the request
+            PagedAsyncEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> response = backupDRClient.ListBindingMatchingResourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BindingMatchingResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBindingMatchingResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BindingMatchingResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BindingMatchingResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BindingMatchingResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBindingMatchingResources</summary>
+        public void ListBindingMatchingResourcesResourceNames()
+        {
+            // Snippet: ListBindingMatchingResources(AutoProtectionPolicyBindingName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            AutoProtectionPolicyBindingName parent = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]");
+            // Make the request
+            PagedEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> response = backupDRClient.ListBindingMatchingResources(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BindingMatchingResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBindingMatchingResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BindingMatchingResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BindingMatchingResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BindingMatchingResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBindingMatchingResourcesAsync</summary>
+        public async Task ListBindingMatchingResourcesResourceNamesAsync()
+        {
+            // Snippet: ListBindingMatchingResourcesAsync(AutoProtectionPolicyBindingName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            AutoProtectionPolicyBindingName parent = AutoProtectionPolicyBindingName.FromProjectLocationAutoProtectionPolicyBinding("[PROJECT]", "[LOCATION]", "[AUTO_PROTECTION_POLICY]", "[BINDING]");
+            // Make the request
+            PagedAsyncEnumerable<ListBindingMatchingResourcesResponse, BindingMatchingResource> response = backupDRClient.ListBindingMatchingResourcesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BindingMatchingResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListBindingMatchingResourcesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BindingMatchingResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BindingMatchingResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BindingMatchingResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+    }
+}

@@ -33,6 +33,7 @@ integrationprogress.txt
 integration-test-failures.txt
 integration-test-failures.txt.tmp
 results.xml
+*.runsettings
 
 # Speech language codes temporary output
 language-codes.tmp.txt

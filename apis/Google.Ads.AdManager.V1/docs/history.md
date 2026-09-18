@@ -1,5 +1,45 @@
 # Version history
 
+## Version 1.0.0-beta12, released 2026-09-17
+
+### New features
+
+- Added `DaiSessionService`
+- Added `startTime`, `archived`, and `publisherFloorExempt` fields to `PrivateAuctionDeal`
+
+### Documentation improvements
+
+- Fix for some documentation cross-references
+
+## Version 1.0.0-beta11, released 2026-09-11
+
+### New features
+
+- Added `PAYMENT_PROFILE_ID` and `PAYMENT_PROFILE_NAME` report dimensions
+- Added `AD_EXCHANGE_RENDER_RATE` report metric
+- Added create methods for `AudienceSegmentService`
+- Added `BreakTemplateService`
+
+### Documentation improvements
+
+- A comment for field `preview_url` in message `.google.ads.admanager.v1.AdReviewCenterAd` is changed
+
+## Version 1.0.0-beta10, released 2026-08-31
+
+### New features
+
+- Added methods for activation, deactivation, approval, rejection, and population of audience segments
+- Added `HIGH_ENGAGEMENT_ADS_ALLOWED` report dimension
+- Added `WEB_INTERSTITIAL_TRIGGER_TYPE` report dimension
+- Added `WEB_INTERSTITIAL_TRIGGER_TYPE_NAME` report dimension
+- Added `UpdateNetwork`, `ProvisionTestNetwork`, and `GetDefaultThirdPartyDataDeclaration` to NetworkService
+- Added additional AudienceSegment fields
+
+### Documentation improvements
+
+- Updated documentation for AudienceSegmentService endpoints
+- Additional columns are now filterable in `ListAudienceSegmentsRequest`
+
 ## Version 1.0.0-beta09, released 2026-08-17
 
 ### New features

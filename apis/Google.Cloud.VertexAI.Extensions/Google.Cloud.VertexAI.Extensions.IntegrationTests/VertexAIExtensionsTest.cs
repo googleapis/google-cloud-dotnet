@@ -67,7 +67,7 @@ public class VertexAIExtensionsTest
         }
     }
 
-    [Fact]
+    [Fact(Skip = "b/549774591")]
     public async Task AsIImageGenerator_GenerateImage()
     {
         IImageGenerator generator = await new PredictionServiceClientBuilder()

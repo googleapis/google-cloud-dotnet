@@ -34,7 +34,11 @@ namespace GoogleCSharpSnippets
             // Create client
             DeveloperKnowledgeClient developerKnowledgeClient = DeveloperKnowledgeClient.Create();
             // Initialize request argument(s)
-            AnswerQueryRequest request = new AnswerQueryRequest { Query = "", };
+            AnswerQueryRequest request = new AnswerQueryRequest
+            {
+                Query = "",
+                Filter = "",
+            };
             // Make the request
             AnswerQueryResponse response = developerKnowledgeClient.AnswerQuery(request);
         }

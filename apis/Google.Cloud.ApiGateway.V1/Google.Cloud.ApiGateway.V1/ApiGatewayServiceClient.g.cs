@@ -970,8 +970,8 @@ namespace Google.Cloud.ApiGateway.V1
         /// Required. Gateway resource.
         /// </param>
         /// <param name="gatewayId">
-        /// Required. Identifier to assign to the Gateway. Must be unique within scope of
-        /// the parent resource.
+        /// Required. Identifier to assign to the Gateway. Must be unique within scope
+        /// of the parent resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -994,8 +994,8 @@ namespace Google.Cloud.ApiGateway.V1
         /// Required. Gateway resource.
         /// </param>
         /// <param name="gatewayId">
-        /// Required. Identifier to assign to the Gateway. Must be unique within scope of
-        /// the parent resource.
+        /// Required. Identifier to assign to the Gateway. Must be unique within scope
+        /// of the parent resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1018,8 +1018,8 @@ namespace Google.Cloud.ApiGateway.V1
         /// Required. Gateway resource.
         /// </param>
         /// <param name="gatewayId">
-        /// Required. Identifier to assign to the Gateway. Must be unique within scope of
-        /// the parent resource.
+        /// Required. Identifier to assign to the Gateway. Must be unique within scope
+        /// of the parent resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1037,8 +1037,8 @@ namespace Google.Cloud.ApiGateway.V1
         /// Required. Gateway resource.
         /// </param>
         /// <param name="gatewayId">
-        /// Required. Identifier to assign to the Gateway. Must be unique within scope of
-        /// the parent resource.
+        /// Required. Identifier to assign to the Gateway. Must be unique within scope
+        /// of the parent resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1061,8 +1061,8 @@ namespace Google.Cloud.ApiGateway.V1
         /// Required. Gateway resource.
         /// </param>
         /// <param name="gatewayId">
-        /// Required. Identifier to assign to the Gateway. Must be unique within scope of
-        /// the parent resource.
+        /// Required. Identifier to assign to the Gateway. Must be unique within scope
+        /// of the parent resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1085,8 +1085,8 @@ namespace Google.Cloud.ApiGateway.V1
         /// Required. Gateway resource.
         /// </param>
         /// <param name="gatewayId">
-        /// Required. Identifier to assign to the Gateway. Must be unique within scope of
-        /// the parent resource.
+        /// Required. Identifier to assign to the Gateway. Must be unique within scope
+        /// of the parent resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2378,8 +2378,8 @@ namespace Google.Cloud.ApiGateway.V1
         /// Required. API resource.
         /// </param>
         /// <param name="apiConfigId">
-        /// Required. Identifier to assign to the API Config. Must be unique within scope of
-        /// the parent resource.
+        /// Required. Identifier to assign to the API Config. Must be unique within
+        /// scope of the parent resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2402,8 +2402,8 @@ namespace Google.Cloud.ApiGateway.V1
         /// Required. API resource.
         /// </param>
         /// <param name="apiConfigId">
-        /// Required. Identifier to assign to the API Config. Must be unique within scope of
-        /// the parent resource.
+        /// Required. Identifier to assign to the API Config. Must be unique within
+        /// scope of the parent resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2426,8 +2426,8 @@ namespace Google.Cloud.ApiGateway.V1
         /// Required. API resource.
         /// </param>
         /// <param name="apiConfigId">
-        /// Required. Identifier to assign to the API Config. Must be unique within scope of
-        /// the parent resource.
+        /// Required. Identifier to assign to the API Config. Must be unique within
+        /// scope of the parent resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2445,8 +2445,8 @@ namespace Google.Cloud.ApiGateway.V1
         /// Required. API resource.
         /// </param>
         /// <param name="apiConfigId">
-        /// Required. Identifier to assign to the API Config. Must be unique within scope of
-        /// the parent resource.
+        /// Required. Identifier to assign to the API Config. Must be unique within
+        /// scope of the parent resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2469,8 +2469,8 @@ namespace Google.Cloud.ApiGateway.V1
         /// Required. API resource.
         /// </param>
         /// <param name="apiConfigId">
-        /// Required. Identifier to assign to the API Config. Must be unique within scope of
-        /// the parent resource.
+        /// Required. Identifier to assign to the API Config. Must be unique within
+        /// scope of the parent resource.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2493,8 +2493,8 @@ namespace Google.Cloud.ApiGateway.V1
         /// Required. API resource.
         /// </param>
         /// <param name="apiConfigId">
-        /// Required. Identifier to assign to the API Config. Must be unique within scope of
-        /// the parent resource.
+        /// Required. Identifier to assign to the API Config. Must be unique within
+        /// scope of the parent resource.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

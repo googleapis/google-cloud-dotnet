@@ -183,6 +183,12 @@
                 "UpdateReservation",
                 "UpdateReservationAsync"
               ]
+            },
+            "UpdateReservationGroup": {
+              "methods": [
+                "UpdateReservationGroup",
+                "UpdateReservationGroupAsync"
+              ]
             }
           }
         }
