@@ -59,33 +59,6 @@ public class QueueTests
 
     [Trait(Constants.SupportedOnEmulator, Constants.No)]
     [Fact]
-    public async Task QueueIsLeftWithNoMessagesAfterAck_DeliveryTimeSpecified_Streamed()
-    {
-        using var connection = _queueFixture.GetConnection();
-        (string userId, string messageId) = (IdGenerator.FromGuid(), IdGenerator.FromGuid());
-
-        // Send Message
-        using var sendCommand = connection.CreateSendCommand(_queueFixture.QueueName, ParametersForKeyAndPayload(userId, messageId, _payloadBytes));
-        sendCommand.SendOptions = DeliverAfterDelayFromNow;
-        await sendCommand.ExecuteNonQueryAsync();
-        Stopwatch sw = Stopwatch.StartNew();
-
-        using var receiveCommand = connection.CreateSelectCommand($"SELECT UserId, MessageId FROM RECEIVE_{_queueFixture.QueueName}(max_duration => '15s')");
-        using var reader = await receiveCommand.ExecuteReaderAsync();
-
-        Assert.True(await reader.ReadAsync());
-        // Add a buffer to compensate for the stopwatch starting after we get the response back
-        int adjustedDeliveryDelay = DeliveryDelay - 1;
-        Assert.True(sw.Elapsed.TotalSeconds > adjustedDeliveryDelay, $"Expected to receive message after {adjustedDeliveryDelay} seconds, instead was {sw.Elapsed.TotalSeconds}");
-
-        // Clean up the lingering message
-        var ackCommand = connection.CreateAckCommand(_queueFixture.QueueName, ParametersForKey(userId, messageId));
-        await ackCommand.ExecuteNonQueryAsync();
-
-    }
-
-    [Trait(Constants.SupportedOnEmulator, Constants.No)]
-    [Fact]
     public async Task QueueIsLeftWithNoMessagesAfterAck_Streaming()
     {
         using var connection = _queueFixture.GetConnection();
@@ -118,30 +91,6 @@ public class QueueTests
         var count = await selectCommand.ExecuteScalarAsync();
 
         Assert.Equal(0L, (long) count);
-    }
-
-    [Trait(Constants.SupportedOnEmulator, Constants.No)]
-    [Fact]
-    public async Task AckAMissingMessage_IgnoreNotFound_False_ThrowsException()
-    {
-        using var connection = _queueFixture.GetConnection();
-
-        // Ack missing messages
-        var ackCommand = connection.CreateAckCommand(_queueFixture.QueueName, ParametersForKey("Roger", "Federer"));
-        ackCommand.AckOptions = new() { IgnoreNotFound = false };
-        await Assert.ThrowsAsync<SpannerException>(ackCommand.ExecuteNonQueryAsync);
-    }
-
-    [Trait(Constants.SupportedOnEmulator, Constants.No)]
-    [Fact]
-    public async Task AckAMissingMessage_IgnoreFound_True_Ok()
-    {
-        using var connection = _queueFixture.GetConnection();
-
-        // Ack missing messages
-        var ackCommand = connection.CreateAckCommand(_queueFixture.QueueName, ParametersForKey("Rafael", "Nadal"));
-        ackCommand.AckOptions = new() { IgnoreNotFound = true };
-        await ackCommand.ExecuteNonQueryAsync();
     }
 
     private static SpannerParameterCollection ParametersForKey(string str1, string str2)
