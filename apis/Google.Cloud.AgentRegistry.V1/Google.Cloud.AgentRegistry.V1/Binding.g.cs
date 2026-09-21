@@ -33,7 +33,7 @@ namespace Google.Cloud.AgentRegistry.V1 {
             "bmdIABIUCgRuYW1lGAEgASgJQgbgQQjgQQISGQoMZGlzcGxheV9uYW1lGAIg",
             "ASgJQgPgQQESGAoLZGVzY3JpcHRpb24YAyABKAlCA+BBARJCCgZzb3VyY2UY",
             "BCABKAsyLS5nb29nbGUuY2xvdWQuYWdlbnRyZWdpc3RyeS52MS5CaW5kaW5n",
-            "LlNvdXJjZUID4EECEkIKBnRhcmdldBgFIAEoCzItLmdvb2dsZS5jbG91ZC5h",
+            "LlNvdXJjZUID4EEBEkIKBnRhcmdldBgFIAEoCzItLmdvb2dsZS5jbG91ZC5h",
             "Z2VudHJlZ2lzdHJ5LnYxLkJpbmRpbmcuVGFyZ2V0QgPgQQISNAoLY3JlYXRl",
             "X3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
             "NAoLdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
@@ -189,7 +189,7 @@ namespace Google.Cloud.AgentRegistry.V1 {
     public const int SourceFieldNumber = 4;
     private global::Google.Cloud.AgentRegistry.V1.Binding.Types.Source source_;
     /// <summary>
-    /// Required. The target Agent of the Binding.
+    /// Optional. The source Agent of the Binding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
