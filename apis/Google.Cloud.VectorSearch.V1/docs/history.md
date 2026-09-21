@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.2.0, released 2026-09-21
+
+### New features
+
+- Add SearchHint.IndexHint.DenseScannParams with target_recall to set a query-time target recall for dense ScaNN search
+- Relax SemanticSearch.search_text and SemanticSearch.task_type from REQUIRED to OPTIONAL
+- Relax VertexEmbeddingConfig.text_template and VertexEmbeddingConfig.task_type from REQUIRED to OPTIONAL
+
+### Documentation improvements
+
+- Update documentation for embedding task types and ranking
+
 ## Version 1.1.0, released 2026-08-17
 
 ### New features
