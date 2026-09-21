@@ -888,7 +888,7 @@
     },
     {
       "id": "Google.Cloud.BackupDR.V1Beta",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Backup and DR Service",
       "productUrl": "https://cloud.google.com/backup-disaster-recovery/docs/reference/rpc",
