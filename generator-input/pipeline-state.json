@@ -5217,10 +5217,12 @@
         },
         {
             "id": "Google.Cloud.NetworkServices.V1Beta1",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-09-21T19:23:43.374336458Z",
             "lastGeneratedCommit": "1d4ae2021761d93a0dfcd532b52f0cd87c20a8e2",
+            "lastReleasedCommit": "1d4ae2021761d93a0dfcd532b52f0cd87c20a8e2",
             "apiPaths": [
                 "google/cloud/networkservices/v1beta1"
             ],
