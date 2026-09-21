@@ -28,8 +28,8 @@ namespace Google.Cloud.VectorSearch.V1 {
             "aWcucHJvdG8SHGdvb2dsZS5jbG91ZC52ZWN0b3JzZWFyY2gudjEaH2dvb2ds",
             "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8ikwEKFVZlcnRleEVtYmVkZGlu",
             "Z0NvbmZpZxIVCghtb2RlbF9pZBgBIAEoCUID4EECEhoKDXRleHRfdGVtcGxh",
-            "dGUYAiABKAlCA+BBAhJHCgl0YXNrX3R5cGUYAyABKA4yLy5nb29nbGUuY2xv",
-            "dWQudmVjdG9yc2VhcmNoLnYxLkVtYmVkZGluZ1Rhc2tUeXBlQgPgQQIq6wEK",
+            "dGUYAiABKAlCA+BBARJHCgl0YXNrX3R5cGUYAyABKA4yLy5nb29nbGUuY2xv",
+            "dWQudmVjdG9yc2VhcmNoLnYxLkVtYmVkZGluZ1Rhc2tUeXBlQgPgQQEq6wEK",
             "EUVtYmVkZGluZ1Rhc2tUeXBlEiMKH0VNQkVERElOR19UQVNLX1RZUEVfVU5T",
             "UEVDSUZJRUQQABITCg9SRVRSSUVWQUxfUVVFUlkQARIWChJSRVRSSUVWQUxf",
             "RE9DVU1FTlQQAhIXChNTRU1BTlRJQ19TSU1JTEFSSVRZEAMSEgoOQ0xBU1NJ",
@@ -168,9 +168,11 @@ namespace Google.Cloud.VectorSearch.V1 {
     public const int TextTemplateFieldNumber = 2;
     private string textTemplate_ = "";
     /// <summary>
-    /// Required. Required: Text template for the input to the model. The template
-    /// must contain one or more references to fields in the DataObject, e.g.:
-    /// "Movie Title: {title} ---- Movie Plot: {plot}".
+    /// Optional. Text template for the input to the model. The template must
+    /// contain one or more references to fields in the DataObject, e.g.: "Movie
+    /// Title: {title} ---- Movie Plot: {plot}".
+    ///
+    /// Required when using the text-only path.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -185,7 +187,11 @@ namespace Google.Cloud.VectorSearch.V1 {
     public const int TaskTypeFieldNumber = 3;
     private global::Google.Cloud.VectorSearch.V1.EmbeddingTaskType taskType_ = global::Google.Cloud.VectorSearch.V1.EmbeddingTaskType.Unspecified;
     /// <summary>
-    /// Required. Required: Task type for the embeddings.
+    /// Optional. Optional: Task type for the embeddings. Required for text-only
+    /// embedding models, see
+    /// https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/embeddings/task-types
+    /// Not needed for multi modal embedding models, see
+    /// https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/embeddings/get-multimodal-embeddings#specify-task-instructions
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
