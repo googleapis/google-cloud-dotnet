@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.0.0, released 2026-09-21
+
+### New features
+
+- Enable full object checksum validation for resumable uploads (#15769)
+
 ## Version 4.16.0, released 2026-09-17
 
 ### New features
