@@ -93,6 +93,62 @@ public class QueueTests
         Assert.Equal(0L, (long) count);
     }
 
+    [Trait(Constants.SupportedOnEmulator, Constants.No)]
+    [Fact]
+    public async Task QueueIsLeftWithNoMessagesAfterDmlInsertThenDelete_Basic()
+    {
+        using var connection = _queueFixture.GetConnection();
+        (string userId, string messageId) = (IdGenerator.FromGuid(), IdGenerator.FromGuid());
+
+        // Insert Message via DML
+        using var insertCommand = connection.CreateDmlCommand(
+            $"INSERT INTO {_queueFixture.QueueName} (UserId, MessageId, Payload) VALUES (@UserId, @MessageId, @Payload)",
+            ParametersForKeyAndPayload(userId, messageId, _payloadBytes));
+        int insertedCount = await insertCommand.ExecuteNonQueryAsync();
+        Assert.Equal(1, insertedCount);
+
+        // Delete Message via DML
+        using var deleteCommand = connection.CreateDmlCommand(
+            $"DELETE FROM {_queueFixture.QueueName} WHERE UserId = @UserId AND MessageId = @MessageId",
+            ParametersForKey(userId, messageId));
+        int deletedCount = await deleteCommand.ExecuteNonQueryAsync();
+        Assert.Equal(1, deletedCount);
+
+        // Assert Queue is left with no messages after Delete
+        using var selectCommand = connection.CreateSelectCommand($"SELECT COUNT(*) FROM {_queueFixture.QueueName};");
+        var count = await selectCommand.ExecuteScalarAsync();
+        Assert.Equal(0L, (long) count);
+    }
+
+    [Trait(Constants.SupportedOnEmulator, Constants.No)]
+    [Fact]
+    public async Task QueueIsLeftWithNoMessagesAfterDmlInsertThenDelete_CommandConstructor()
+    {
+        using var connection = _queueFixture.GetConnection();
+        (string userId, string messageId) = (IdGenerator.FromGuid(), IdGenerator.FromGuid());
+
+        // Insert Message via SpannerCommand string constructor
+        using var insertCommand = new SpannerCommand(
+            $"INSERT INTO {_queueFixture.QueueName} (UserId, MessageId, Payload) VALUES (@UserId, @MessageId, @Payload)",
+            connection,
+            parameters: ParametersForKeyAndPayload(userId, messageId, _payloadBytes));
+        int insertedCount = await insertCommand.ExecuteNonQueryAsync();
+        Assert.Equal(1, insertedCount);
+
+        // Delete Message via SpannerCommand string constructor
+        using var deleteCommand = new SpannerCommand(
+            $"DELETE FROM {_queueFixture.QueueName} WHERE UserId = @UserId AND MessageId = @MessageId",
+            connection,
+            parameters: ParametersForKey(userId, messageId));
+        int deletedCount = await deleteCommand.ExecuteNonQueryAsync();
+        Assert.Equal(1, deletedCount);
+
+        // Assert Queue is left with no messages after Delete
+        using var selectCommand = connection.CreateSelectCommand($"SELECT COUNT(*) FROM {_queueFixture.QueueName};");
+        var count = await selectCommand.ExecuteScalarAsync();
+        Assert.Equal(0L, (long) count);
+    }
+
     private static SpannerParameterCollection ParametersForKey(string str1, string str2)
         => new([
             new SpannerParameter("UserId", SpannerDbType.String, value: str1),
