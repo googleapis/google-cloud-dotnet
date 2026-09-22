@@ -21,6 +21,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Api.Gax.Grpc.Gcp.AffinityConfig.Types;
+using static Google.Cloud.Spanner.V1.SpannerBuiltInMetrics;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -35,6 +36,12 @@ namespace Google.Cloud.Spanner.V1
         {
             set => SpannerClientImpl.ProcessId = value;
         }
+
+        /// <summary>
+        /// Stores the <see cref="ClientIdentity"/> for the client currently being constructed in the ambient
+        /// execution context. This is used to identify built in metrics.
+        /// </summary>
+        private readonly AsyncLocal<ClientIdentity> _clientId = new();
 
         /// <summary>
         /// The Grpc.Gcp method configurations for pool options.
@@ -170,10 +177,51 @@ namespace Google.Cloud.Spanner.V1
             GaxPreconditions.CheckState(CallInvoker is null || AffinityChannelPoolConfiguration is null, "Channel affinity cannot be configured with a custom CallInvoker.");
         }
 
-        partial void InterceptBuild(ref SpannerClient client) => client = MaybeCreateEmulatorClientBuilder()?.Build();
+        partial void InterceptBuild(ref SpannerClient client)
+        {
+            var builder = MaybeCreateEmulatorClientBuilder() ?? this;
+            builder.InitializeLocalBuildContext();
+            try
+            {
+                var rawClient = builder.BuildImpl();
+                client = BuiltInMetricsWrapper.Wrap(rawClient, builder._clientId.Value);
+            }
+            finally
+            {
+                builder.ClearLocalBuildContext();
+            }
+        }
 
-        partial void InterceptBuildAsync(CancellationToken cancellationToken, ref Task<SpannerClient> task) =>
-            task = MaybeCreateEmulatorClientBuilder()?.BuildAsync(cancellationToken);
+        partial void InterceptBuildAsync(CancellationToken cancellationToken, ref Task<SpannerClient> task)
+        {
+            var builder = MaybeCreateEmulatorClientBuilder() ?? this;
+            task = BuildAsync();
+
+            async Task<SpannerClient> BuildAsync()
+            {
+                builder.InitializeLocalBuildContext();
+                try
+                {
+                    var rawClient = await builder.BuildAsyncImpl(cancellationToken).ConfigureAwait(false);
+                    return BuiltInMetricsWrapper.Wrap(rawClient, builder._clientId.Value);
+                }
+                finally
+                {
+                    builder.ClearLocalBuildContext();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Initializes the ambient context for a new build. Must be called at the root of the build lifecycle so context state
+        /// flows down to all downstream operations.
+        /// </summary>
+        private void InitializeLocalBuildContext() => _clientId.Value = Labeler.GenerateIdentity();
+
+        /// <summary>
+        /// Clears the ambient context once build has completed.
+        /// </summary>
+        private void ClearLocalBuildContext() => _clientId.Value = default;
 
         /// <inheritdoc/>
         protected override CallInvoker CreateCallInvoker()
@@ -189,7 +237,7 @@ namespace Google.Cloud.Spanner.V1
                     EffectiveGrpcAdapter);
             return invoker
                 .Intercept(RequestIdOnExceptionInterceptor.Instance)
-                .Intercept(new SpannerBuiltInMetrics.MetricsInterceptor(SpannerBuiltInMetrics.Labeler.GenerateIdentity()));
+                .Intercept(new MetricsInterceptor(_clientId.Value));
         }
 
         /// <inheritdoc/>
@@ -206,7 +254,7 @@ namespace Google.Cloud.Spanner.V1
                     EffectiveGrpcAdapter);
             return invoker
                 .Intercept(RequestIdOnExceptionInterceptor.Instance)
-                .Intercept(new SpannerBuiltInMetrics.MetricsInterceptor(SpannerBuiltInMetrics.Labeler.GenerateIdentity()));
+                .Intercept(new MetricsInterceptor(_clientId.Value));
         }
 
         private ApiConfig GetApiConfig() => new ApiConfig

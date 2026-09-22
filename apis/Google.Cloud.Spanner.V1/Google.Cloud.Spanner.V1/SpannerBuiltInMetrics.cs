@@ -58,6 +58,17 @@ internal static partial class SpannerBuiltInMetrics
     internal static readonly Counter<long> s_gfeConnectivityErrorCounter = s_spannerMeter.CreateCounter<long>(GfeConnectivityErrorCountName);
 
     /// <summary>
+    /// Determines the appropriate gRPC status code for a given exception.
+    /// </summary>
+    /// <param name="ex">The thrown exception.</param>
+    /// <returns>The resolved gRPC status code.</returns>
+    internal static StatusCode GetStatus(Exception ex) => ex switch
+    {
+        RpcException rpcEx => rpcEx.StatusCode,
+        _ => StatusCode.Unknown
+    };
+
+    /// <summary>
     /// Records attempt-level metrics including count and latency.
     /// </summary>
     /// <param name="latencyMs">The elapsed duration of the attempt in milliseconds.</param>
