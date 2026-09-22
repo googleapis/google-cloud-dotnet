@@ -5,6 +5,33 @@
   "protoPackage": "google.cloud.geminidataanalytics.v1beta",
   "libraryPackage": "Google.Cloud.GeminiDataAnalytics.V1Beta",
   "services": {
+    "DataA2AService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataA2AServiceClient",
+          "rpcs": {
+            "GetAgentCard": {
+              "methods": [
+                "GetAgentCard",
+                "GetAgentCardAsync"
+              ]
+            },
+            "SendMessage": {
+              "methods": [
+                "SendMessage",
+                "SendMessageAsync"
+              ]
+            },
+            "SendStreamingMessage": {
+              "methods": [
+                "SendStreamingMessage",
+                "SendStreamingMessageAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "DataAgentService": {
       "clients": {
         "grpc": {
@@ -56,6 +83,18 @@
               "methods": [
                 "ListDataAgents",
                 "ListDataAgentsAsync"
+              ]
+            },
+            "RetrieveAgentOpsObservability": {
+              "methods": [
+                "RetrieveAgentOpsObservability",
+                "RetrieveAgentOpsObservabilityAsync"
+              ]
+            },
+            "SetAgentOpsObservability": {
+              "methods": [
+                "SetAgentOpsObservability",
+                "SetAgentOpsObservabilityAsync"
               ]
             },
             "SetIamPolicy": {
@@ -125,6 +164,12 @@
               "methods": [
                 "QueryData",
                 "QueryDataAsync"
+              ]
+            },
+            "UpdateConversation": {
+              "methods": [
+                "UpdateConversation",
+                "UpdateConversationAsync"
               ]
             }
           }

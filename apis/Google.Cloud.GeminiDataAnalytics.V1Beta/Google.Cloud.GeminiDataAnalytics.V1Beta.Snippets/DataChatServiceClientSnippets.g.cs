@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.GeminiDataAnalytics.V1Beta;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Threading.Tasks;
 
@@ -243,6 +244,72 @@ namespace GoogleCSharpSnippets
             ConversationName name = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]");
             // Make the request
             await dataChatServiceClient.DeleteConversationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConversation</summary>
+        public void UpdateConversationRequestObject()
+        {
+            // Snippet: UpdateConversation(UpdateConversationRequest, CallSettings)
+            // Create client
+            DataChatServiceClient dataChatServiceClient = DataChatServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateConversationRequest request = new UpdateConversationRequest
+            {
+                Conversation = new Conversation(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Conversation response = dataChatServiceClient.UpdateConversation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConversationAsync</summary>
+        public async Task UpdateConversationRequestObjectAsync()
+        {
+            // Snippet: UpdateConversationAsync(UpdateConversationRequest, CallSettings)
+            // Additional: UpdateConversationAsync(UpdateConversationRequest, CancellationToken)
+            // Create client
+            DataChatServiceClient dataChatServiceClient = await DataChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateConversationRequest request = new UpdateConversationRequest
+            {
+                Conversation = new Conversation(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            Conversation response = await dataChatServiceClient.UpdateConversationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConversation</summary>
+        public void UpdateConversation()
+        {
+            // Snippet: UpdateConversation(Conversation, FieldMask, CallSettings)
+            // Create client
+            DataChatServiceClient dataChatServiceClient = DataChatServiceClient.Create();
+            // Initialize request argument(s)
+            Conversation conversation = new Conversation();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Conversation response = dataChatServiceClient.UpdateConversation(conversation, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConversationAsync</summary>
+        public async Task UpdateConversationAsync()
+        {
+            // Snippet: UpdateConversationAsync(Conversation, FieldMask, CallSettings)
+            // Additional: UpdateConversationAsync(Conversation, FieldMask, CancellationToken)
+            // Create client
+            DataChatServiceClient dataChatServiceClient = await DataChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Conversation conversation = new Conversation();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Conversation response = await dataChatServiceClient.UpdateConversationAsync(conversation, updateMask);
             // End snippet
         }
 

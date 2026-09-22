@@ -91,6 +91,12 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityRequest> __Marshaller_google_cloud_geminidataanalytics_v1beta_SetAgentOpsObservabilityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityRequest> __Marshaller_google_cloud_geminidataanalytics_v1beta_RetrieveAgentOpsObservabilityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityResponse> __Marshaller_google_cloud_geminidataanalytics_v1beta_RetrieveAgentOpsObservabilityResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListDataAgentsRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListDataAgentsResponse> __Method_ListDataAgents = new grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListDataAgentsRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListDataAgentsResponse>(
@@ -179,6 +185,22 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         "SetIamPolicy",
         __Marshaller_google_iam_v1_SetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityRequest, global::Google.LongRunning.Operation> __Method_SetAgentOpsObservability = new grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetAgentOpsObservability",
+        __Marshaller_google_cloud_geminidataanalytics_v1beta_SetAgentOpsObservabilityRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityResponse> __Method_RetrieveAgentOpsObservability = new grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RetrieveAgentOpsObservability",
+        __Marshaller_google_cloud_geminidataanalytics_v1beta_RetrieveAgentOpsObservabilityRequest,
+        __Marshaller_google_cloud_geminidataanalytics_v1beta_RetrieveAgentOpsObservabilityResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -319,6 +341,32 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Enables/Disables required GCP services and configures AgentOps
+      /// observability settings calling the Admin Settings executable node to
+      /// update the AgentOps Observability feature.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SetAgentOpsObservability(global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets AgentOps observability settings and status of required services.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityResponse> RetrieveAgentOpsObservability(global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -884,6 +932,110 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
+      /// <summary>
+      /// Enables/Disables required GCP services and configures AgentOps
+      /// observability settings calling the Admin Settings executable node to
+      /// update the AgentOps Observability feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SetAgentOpsObservability(global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetAgentOpsObservability(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enables/Disables required GCP services and configures AgentOps
+      /// observability settings calling the Admin Settings executable node to
+      /// update the AgentOps Observability feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SetAgentOpsObservability(global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetAgentOpsObservability, null, options, request);
+      }
+      /// <summary>
+      /// Enables/Disables required GCP services and configures AgentOps
+      /// observability settings calling the Admin Settings executable node to
+      /// update the AgentOps Observability feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SetAgentOpsObservabilityAsync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetAgentOpsObservabilityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enables/Disables required GCP services and configures AgentOps
+      /// observability settings calling the Admin Settings executable node to
+      /// update the AgentOps Observability feature.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SetAgentOpsObservabilityAsync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetAgentOpsObservability, null, options, request);
+      }
+      /// <summary>
+      /// Gets AgentOps observability settings and status of required services.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityResponse RetrieveAgentOpsObservability(global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RetrieveAgentOpsObservability(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets AgentOps observability settings and status of required services.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityResponse RetrieveAgentOpsObservability(global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RetrieveAgentOpsObservability, null, options, request);
+      }
+      /// <summary>
+      /// Gets AgentOps observability settings and status of required services.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityResponse> RetrieveAgentOpsObservabilityAsync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RetrieveAgentOpsObservabilityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets AgentOps observability settings and status of required services.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityResponse> RetrieveAgentOpsObservabilityAsync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RetrieveAgentOpsObservability, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DataAgentServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -908,7 +1060,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
           .AddMethod(__Method_DeleteDataAgent, serviceImpl.DeleteDataAgent)
           .AddMethod(__Method_DeleteDataAgentSync, serviceImpl.DeleteDataAgentSync)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
-          .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy).Build();
+          .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
+          .AddMethod(__Method_SetAgentOpsObservability, serviceImpl.SetAgentOpsObservability)
+          .AddMethod(__Method_RetrieveAgentOpsObservability, serviceImpl.RetrieveAgentOpsObservability).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -929,6 +1083,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       serviceBinder.AddMethod(__Method_DeleteDataAgentSync, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteDataAgentSync));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
+      serviceBinder.AddMethod(__Method_SetAgentOpsObservability, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityRequest, global::Google.LongRunning.Operation>(serviceImpl.SetAgentOpsObservability));
+      serviceBinder.AddMethod(__Method_RetrieveAgentOpsObservability, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityResponse>(serviceImpl.RetrieveAgentOpsObservability));
     }
 
   }

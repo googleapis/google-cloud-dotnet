@@ -64,6 +64,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             DeleteDataAgentSyncSettings = existing.DeleteDataAgentSyncSettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
+            SetAgentOpsObservabilitySettings = existing.SetAgentOpsObservabilitySettings;
+            SetAgentOpsObservabilityOperationsSettings = existing.SetAgentOpsObservabilityOperationsSettings.Clone();
+            RetrieveAgentOpsObservabilitySettings = existing.RetrieveAgentOpsObservabilitySettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -325,6 +328,62 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataAgentServiceClient.SetAgentOpsObservability</c> and
+        /// <c>DataAgentServiceClient.SetAgentOpsObservabilityAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetAgentOpsObservabilitySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataAgentServiceClient.SetAgentOpsObservability</c> and
+        /// <c>DataAgentServiceClient.SetAgentOpsObservabilityAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetAgentOpsObservabilityOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataAgentServiceClient.RetrieveAgentOpsObservability</c> and
+        /// <c>DataAgentServiceClient.RetrieveAgentOpsObservabilityAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RetrieveAgentOpsObservabilitySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1907,6 +1966,363 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gax::IResourceName resource, st::CancellationToken cancellationToken) =>
             SetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables/Disables required GCP services and configures AgentOps
+        /// observability settings calling the Admin Settings executable node to
+        /// update the AgentOps Observability feature.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> SetAgentOpsObservability(SetAgentOpsObservabilityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Enables/Disables required GCP services and configures AgentOps
+        /// observability settings calling the Admin Settings executable node to
+        /// update the AgentOps Observability feature.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata>> SetAgentOpsObservabilityAsync(SetAgentOpsObservabilityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Enables/Disables required GCP services and configures AgentOps
+        /// observability settings calling the Admin Settings executable node to
+        /// update the AgentOps Observability feature.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata>> SetAgentOpsObservabilityAsync(SetAgentOpsObservabilityRequest request, st::CancellationToken cancellationToken) =>
+            SetAgentOpsObservabilityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetAgentOpsObservability</c>.</summary>
+        public virtual lro::OperationsClient SetAgentOpsObservabilityOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetAgentOpsObservability</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> PollOnceSetAgentOpsObservability(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetAgentOpsObservabilityOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetAgentOpsObservability</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata>> PollOnceSetAgentOpsObservabilityAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetAgentOpsObservabilityOperationsClient, callSettings);
+
+        /// <summary>
+        /// Enables/Disables required GCP services and configures AgentOps
+        /// observability settings calling the Admin Settings executable node to
+        /// update the AgentOps Observability feature.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for SetAgentOpsObservabilityRequest.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="telemetryEnabled">
+        /// Optional. Whether to enable or disable AgentOps observability.
+        /// When update_mask is provided, this field is ignored unless specified in the
+        /// mask.
+        /// </param>
+        /// <param name="dataSourceType">
+        /// Required. The data source type for which to set observability settings.
+        /// Examples: "bigquery", "looker"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> SetAgentOpsObservability(string parent, bool telemetryEnabled, string dataSourceType, gaxgrpc::CallSettings callSettings = null) =>
+            SetAgentOpsObservability(new SetAgentOpsObservabilityRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                TelemetryEnabled = telemetryEnabled,
+                DataSourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(dataSourceType, nameof(dataSourceType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables/Disables required GCP services and configures AgentOps
+        /// observability settings calling the Admin Settings executable node to
+        /// update the AgentOps Observability feature.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for SetAgentOpsObservabilityRequest.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="telemetryEnabled">
+        /// Optional. Whether to enable or disable AgentOps observability.
+        /// When update_mask is provided, this field is ignored unless specified in the
+        /// mask.
+        /// </param>
+        /// <param name="dataSourceType">
+        /// Required. The data source type for which to set observability settings.
+        /// Examples: "bigquery", "looker"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata>> SetAgentOpsObservabilityAsync(string parent, bool telemetryEnabled, string dataSourceType, gaxgrpc::CallSettings callSettings = null) =>
+            SetAgentOpsObservabilityAsync(new SetAgentOpsObservabilityRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                TelemetryEnabled = telemetryEnabled,
+                DataSourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(dataSourceType, nameof(dataSourceType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables/Disables required GCP services and configures AgentOps
+        /// observability settings calling the Admin Settings executable node to
+        /// update the AgentOps Observability feature.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for SetAgentOpsObservabilityRequest.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="telemetryEnabled">
+        /// Optional. Whether to enable or disable AgentOps observability.
+        /// When update_mask is provided, this field is ignored unless specified in the
+        /// mask.
+        /// </param>
+        /// <param name="dataSourceType">
+        /// Required. The data source type for which to set observability settings.
+        /// Examples: "bigquery", "looker"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata>> SetAgentOpsObservabilityAsync(string parent, bool telemetryEnabled, string dataSourceType, st::CancellationToken cancellationToken) =>
+            SetAgentOpsObservabilityAsync(parent, telemetryEnabled, dataSourceType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables/Disables required GCP services and configures AgentOps
+        /// observability settings calling the Admin Settings executable node to
+        /// update the AgentOps Observability feature.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for SetAgentOpsObservabilityRequest.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="telemetryEnabled">
+        /// Optional. Whether to enable or disable AgentOps observability.
+        /// When update_mask is provided, this field is ignored unless specified in the
+        /// mask.
+        /// </param>
+        /// <param name="dataSourceType">
+        /// Required. The data source type for which to set observability settings.
+        /// Examples: "bigquery", "looker"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> SetAgentOpsObservability(gagr::LocationName parent, bool telemetryEnabled, string dataSourceType, gaxgrpc::CallSettings callSettings = null) =>
+            SetAgentOpsObservability(new SetAgentOpsObservabilityRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TelemetryEnabled = telemetryEnabled,
+                DataSourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(dataSourceType, nameof(dataSourceType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables/Disables required GCP services and configures AgentOps
+        /// observability settings calling the Admin Settings executable node to
+        /// update the AgentOps Observability feature.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for SetAgentOpsObservabilityRequest.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="telemetryEnabled">
+        /// Optional. Whether to enable or disable AgentOps observability.
+        /// When update_mask is provided, this field is ignored unless specified in the
+        /// mask.
+        /// </param>
+        /// <param name="dataSourceType">
+        /// Required. The data source type for which to set observability settings.
+        /// Examples: "bigquery", "looker"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata>> SetAgentOpsObservabilityAsync(gagr::LocationName parent, bool telemetryEnabled, string dataSourceType, gaxgrpc::CallSettings callSettings = null) =>
+            SetAgentOpsObservabilityAsync(new SetAgentOpsObservabilityRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TelemetryEnabled = telemetryEnabled,
+                DataSourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(dataSourceType, nameof(dataSourceType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables/Disables required GCP services and configures AgentOps
+        /// observability settings calling the Admin Settings executable node to
+        /// update the AgentOps Observability feature.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for SetAgentOpsObservabilityRequest.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="telemetryEnabled">
+        /// Optional. Whether to enable or disable AgentOps observability.
+        /// When update_mask is provided, this field is ignored unless specified in the
+        /// mask.
+        /// </param>
+        /// <param name="dataSourceType">
+        /// Required. The data source type for which to set observability settings.
+        /// Examples: "bigquery", "looker"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata>> SetAgentOpsObservabilityAsync(gagr::LocationName parent, bool telemetryEnabled, string dataSourceType, st::CancellationToken cancellationToken) =>
+            SetAgentOpsObservabilityAsync(parent, telemetryEnabled, dataSourceType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets AgentOps observability settings and status of required services.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetrieveAgentOpsObservabilityResponse RetrieveAgentOpsObservability(RetrieveAgentOpsObservabilityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets AgentOps observability settings and status of required services.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveAgentOpsObservabilityResponse> RetrieveAgentOpsObservabilityAsync(RetrieveAgentOpsObservabilityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets AgentOps observability settings and status of required services.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveAgentOpsObservabilityResponse> RetrieveAgentOpsObservabilityAsync(RetrieveAgentOpsObservabilityRequest request, st::CancellationToken cancellationToken) =>
+            RetrieveAgentOpsObservabilityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets AgentOps observability settings and status of required services.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for RetrieveAgentOpsObservabilityRequest.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="dataSourceType">
+        /// Required. The data source type for which to retrieve observability
+        /// settings. Examples: "bigquery", "looker"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetrieveAgentOpsObservabilityResponse RetrieveAgentOpsObservability(string parent, string dataSourceType, gaxgrpc::CallSettings callSettings = null) =>
+            RetrieveAgentOpsObservability(new RetrieveAgentOpsObservabilityRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DataSourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(dataSourceType, nameof(dataSourceType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets AgentOps observability settings and status of required services.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for RetrieveAgentOpsObservabilityRequest.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="dataSourceType">
+        /// Required. The data source type for which to retrieve observability
+        /// settings. Examples: "bigquery", "looker"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveAgentOpsObservabilityResponse> RetrieveAgentOpsObservabilityAsync(string parent, string dataSourceType, gaxgrpc::CallSettings callSettings = null) =>
+            RetrieveAgentOpsObservabilityAsync(new RetrieveAgentOpsObservabilityRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DataSourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(dataSourceType, nameof(dataSourceType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets AgentOps observability settings and status of required services.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for RetrieveAgentOpsObservabilityRequest.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="dataSourceType">
+        /// Required. The data source type for which to retrieve observability
+        /// settings. Examples: "bigquery", "looker"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveAgentOpsObservabilityResponse> RetrieveAgentOpsObservabilityAsync(string parent, string dataSourceType, st::CancellationToken cancellationToken) =>
+            RetrieveAgentOpsObservabilityAsync(parent, dataSourceType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets AgentOps observability settings and status of required services.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for RetrieveAgentOpsObservabilityRequest.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="dataSourceType">
+        /// Required. The data source type for which to retrieve observability
+        /// settings. Examples: "bigquery", "looker"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetrieveAgentOpsObservabilityResponse RetrieveAgentOpsObservability(gagr::LocationName parent, string dataSourceType, gaxgrpc::CallSettings callSettings = null) =>
+            RetrieveAgentOpsObservability(new RetrieveAgentOpsObservabilityRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DataSourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(dataSourceType, nameof(dataSourceType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets AgentOps observability settings and status of required services.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for RetrieveAgentOpsObservabilityRequest.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="dataSourceType">
+        /// Required. The data source type for which to retrieve observability
+        /// settings. Examples: "bigquery", "looker"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveAgentOpsObservabilityResponse> RetrieveAgentOpsObservabilityAsync(gagr::LocationName parent, string dataSourceType, gaxgrpc::CallSettings callSettings = null) =>
+            RetrieveAgentOpsObservabilityAsync(new RetrieveAgentOpsObservabilityRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DataSourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(dataSourceType, nameof(dataSourceType)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets AgentOps observability settings and status of required services.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for RetrieveAgentOpsObservabilityRequest.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="dataSourceType">
+        /// Required. The data source type for which to retrieve observability
+        /// settings. Examples: "bigquery", "looker"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveAgentOpsObservabilityResponse> RetrieveAgentOpsObservabilityAsync(gagr::LocationName parent, string dataSourceType, st::CancellationToken cancellationToken) =>
+            RetrieveAgentOpsObservabilityAsync(parent, dataSourceType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DataAgentService client wrapper implementation, for convenient use.</summary>
@@ -1937,6 +2353,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
 
         private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
 
+        private readonly gaxgrpc::ApiCall<SetAgentOpsObservabilityRequest, lro::Operation> _callSetAgentOpsObservability;
+
+        private readonly gaxgrpc::ApiCall<RetrieveAgentOpsObservabilityRequest, RetrieveAgentOpsObservabilityResponse> _callRetrieveAgentOpsObservability;
+
         /// <summary>
         /// Constructs a client wrapper for the DataAgentService service, with the specified gRPC client and settings.
         /// </summary>
@@ -1955,6 +2375,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             CreateDataAgentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDataAgentOperationsSettings, logger);
             UpdateDataAgentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDataAgentOperationsSettings, logger);
             DeleteDataAgentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDataAgentOperationsSettings, logger);
+            SetAgentOpsObservabilityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetAgentOpsObservabilityOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListDataAgents = clientHelper.BuildApiCall<ListDataAgentsRequest, ListDataAgentsResponse>("ListDataAgents", grpcClient.ListDataAgentsAsync, grpcClient.ListDataAgents, effectiveSettings.ListDataAgentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataAgents);
@@ -1989,6 +2410,12 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
+            _callSetAgentOpsObservability = clientHelper.BuildApiCall<SetAgentOpsObservabilityRequest, lro::Operation>("SetAgentOpsObservability", grpcClient.SetAgentOpsObservabilityAsync, grpcClient.SetAgentOpsObservability, effectiveSettings.SetAgentOpsObservabilitySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSetAgentOpsObservability);
+            Modify_SetAgentOpsObservabilityApiCall(ref _callSetAgentOpsObservability);
+            _callRetrieveAgentOpsObservability = clientHelper.BuildApiCall<RetrieveAgentOpsObservabilityRequest, RetrieveAgentOpsObservabilityResponse>("RetrieveAgentOpsObservability", grpcClient.RetrieveAgentOpsObservabilityAsync, grpcClient.RetrieveAgentOpsObservability, effectiveSettings.RetrieveAgentOpsObservabilitySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callRetrieveAgentOpsObservability);
+            Modify_RetrieveAgentOpsObservabilityApiCall(ref _callRetrieveAgentOpsObservability);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2016,6 +2443,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
 
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> call);
 
+        partial void Modify_SetAgentOpsObservabilityApiCall(ref gaxgrpc::ApiCall<SetAgentOpsObservabilityRequest, lro::Operation> call);
+
+        partial void Modify_RetrieveAgentOpsObservabilityApiCall(ref gaxgrpc::ApiCall<RetrieveAgentOpsObservabilityRequest, RetrieveAgentOpsObservabilityResponse> call);
+
         partial void OnConstruction(DataAgentService.DataAgentServiceClient grpcClient, DataAgentServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DataAgentService client</summary>
@@ -2039,6 +2470,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetAgentOpsObservabilityRequest(ref SetAgentOpsObservabilityRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RetrieveAgentOpsObservabilityRequest(ref RetrieveAgentOpsObservabilityRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists DataAgents in a given project and location.
@@ -2313,6 +2748,61 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         {
             Modify_SetIamPolicyRequest(ref request, ref callSettings);
             return _callSetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>SetAgentOpsObservability</c>.</summary>
+        public override lro::OperationsClient SetAgentOpsObservabilityOperationsClient { get; }
+
+        /// <summary>
+        /// Enables/Disables required GCP services and configures AgentOps
+        /// observability settings calling the Admin Settings executable node to
+        /// update the AgentOps Observability feature.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> SetAgentOpsObservability(SetAgentOpsObservabilityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetAgentOpsObservabilityRequest(ref request, ref callSettings);
+            return new lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata>(_callSetAgentOpsObservability.Sync(request, callSettings), SetAgentOpsObservabilityOperationsClient);
+        }
+
+        /// <summary>
+        /// Enables/Disables required GCP services and configures AgentOps
+        /// observability settings calling the Admin Settings executable node to
+        /// update the AgentOps Observability feature.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata>> SetAgentOpsObservabilityAsync(SetAgentOpsObservabilityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetAgentOpsObservabilityRequest(ref request, ref callSettings);
+            return new lro::Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata>(await _callSetAgentOpsObservability.Async(request, callSettings).ConfigureAwait(false), SetAgentOpsObservabilityOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets AgentOps observability settings and status of required services.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RetrieveAgentOpsObservabilityResponse RetrieveAgentOpsObservability(RetrieveAgentOpsObservabilityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RetrieveAgentOpsObservabilityRequest(ref request, ref callSettings);
+            return _callRetrieveAgentOpsObservability.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets AgentOps observability settings and status of required services.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RetrieveAgentOpsObservabilityResponse> RetrieveAgentOpsObservabilityAsync(RetrieveAgentOpsObservabilityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RetrieveAgentOpsObservabilityRequest(ref request, ref callSettings);
+            return _callRetrieveAgentOpsObservability.Async(request, callSettings);
         }
     }
 
