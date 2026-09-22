@@ -28,35 +28,40 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             "ZW50LnByb3RvEiNnb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52",
             "MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2Fw",
             "aS9yZXNvdXJjZS5wcm90bxo+Z29vZ2xlL2Nsb3VkL2dlbWluaWRhdGFhbmFs",
-            "eXRpY3MvdjEvZGF0YV9hbmFseXRpY3NfYWdlbnQucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8i6AUKCURhdGFBZ2VudBJXChRkYXRh",
-            "X2FuYWx5dGljc19hZ2VudBhlIAEoCzI3Lmdvb2dsZS5jbG91ZC5nZW1pbmlk",
-            "YXRhYW5hbHl0aWNzLnYxLkRhdGFBbmFseXRpY3NBZ2VudEgAEhQKBG5hbWUY",
-            "ASABKAlCBuBBAeBBCBIZCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBARIYCgtk",
-            "ZXNjcmlwdGlvbhgEIAEoCUID4EEBEk8KBmxhYmVscxgFIAMoCzI6Lmdvb2ds",
-            "ZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkRhdGFBZ2VudC5MYWJl",
-            "bHNFbnRyeUID4EEBEjQKC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAggASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC2RlbGV0ZV90aW1l",
-            "GAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjMKCnB1",
-            "cmdlX3RpbWUYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMSPwoHa21zX2tleRgOIAEoCUIp4EEB+kEjCiFjbG91ZGttcy5nb29nbGVh",
-            "cGlzLmNvbS9DcnlwdG9LZXlIAYgBARotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOooB6kGGAQosZ2VtaW5pZGF0YWFu",
-            "YWx5dGljcy5nb29nbGVhcGlzLmNvbS9EYXRhQWdlbnQSP3Byb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhQWdlbnRzL3tkYXRh",
-            "X2FnZW50fSoKZGF0YUFnZW50czIJZGF0YUFnZW50QgYKBHR5cGVCCgoIX2tt",
-            "c19rZXlCiwIKJ2NvbS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGlj",
-            "cy52MUIORGF0YUFnZW50UHJvdG9QAVpZY2xvdWQuZ29vZ2xlLmNvbS9nby9n",
-            "ZW1pbmlkYXRhYW5hbHl0aWNzL2FwaXYxL2dlbWluaWRhdGFhbmFseXRpY3Nw",
-            "YjtnZW1pbmlkYXRhYW5hbHl0aWNzcGKqAiNHb29nbGUuQ2xvdWQuR2VtaW5p",
-            "RGF0YUFuYWx5dGljcy5WMcoCI0dvb2dsZVxDbG91ZFxHZW1pbmlEYXRhQW5h",
-            "bHl0aWNzXFYx6gImR29vZ2xlOjpDbG91ZDo6R2VtaW5pRGF0YUFuYWx5dGlj",
-            "czo6VjFiBnByb3RvMw=="));
+            "eXRpY3MvdjEvZGF0YV9hbmFseXRpY3NfYWdlbnQucHJvdG8aNGdvb2dsZS9j",
+            "bG91ZC9nZW1pbmlkYXRhYW5hbHl0aWNzL3YxL2RhdGFzb3VyY2UucHJvdG8a",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iqwcKCURhdGFBZ2Vu",
+            "dBJXChRkYXRhX2FuYWx5dGljc19hZ2VudBhlIAEoCzI3Lmdvb2dsZS5jbG91",
+            "ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkRhdGFBbmFseXRpY3NBZ2VudEgA",
+            "EhQKBG5hbWUYASABKAlCBuBBAeBBCBIZCgxkaXNwbGF5X25hbWUYAyABKAlC",
+            "A+BBARIYCgtkZXNjcmlwdGlvbhgEIAEoCUID4EEBEk8KBmxhYmVscxgFIAMo",
+            "CzI6Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkRhdGFB",
+            "Z2VudC5MYWJlbHNFbnRyeUID4EEBEjQKC2NyZWF0ZV90aW1lGAcgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1l",
+            "GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC2Rl",
+            "bGV0ZV90aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDEjMKCnB1cmdlX3RpbWUYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSPwoHa21zX2tleRgOIAEoCUIp4EEB+kEjCiFjbG91ZGtt",
+            "cy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlIAYgBARIyCiBiaWdxdWVyeV9h",
+            "Z2VudF9hbmFseXRpY3NfZW5hYmxlZBgSIAEoCEID4EEBSAKIAQESaAoeYmln",
+            "cXVlcnlfYWdlbnRfYW5hbHl0aWNzX3RhYmxlGBMgASgLMjsuZ29vZ2xlLmNs",
+            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuQmlnUXVlcnlUYWJsZVJlZmVy",
+            "ZW5jZUID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAE6igHqQYYBCixnZW1pbmlkYXRhYW5hbHl0aWNzLmdvb2ds",
+            "ZWFwaXMuY29tL0RhdGFBZ2VudBI/cHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2RhdGFBZ2VudHMve2RhdGFfYWdlbnR9KgpkYXRh",
+            "QWdlbnRzMglkYXRhQWdlbnRCBgoEdHlwZUIKCghfa21zX2tleUIjCiFfYmln",
+            "cXVlcnlfYWdlbnRfYW5hbHl0aWNzX2VuYWJsZWRCiwIKJ2NvbS5nb29nbGUu",
+            "Y2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MUIORGF0YUFnZW50UHJvdG9Q",
+            "AVpZY2xvdWQuZ29vZ2xlLmNvbS9nby9nZW1pbmlkYXRhYW5hbHl0aWNzL2Fw",
+            "aXYxL2dlbWluaWRhdGFhbmFseXRpY3NwYjtnZW1pbmlkYXRhYW5hbHl0aWNz",
+            "cGKqAiNHb29nbGUuQ2xvdWQuR2VtaW5pRGF0YUFuYWx5dGljcy5WMcoCI0dv",
+            "b2dsZVxDbG91ZFxHZW1pbmlEYXRhQW5hbHl0aWNzXFYx6gImR29vZ2xlOjpD",
+            "bG91ZDo6R2VtaW5pRGF0YUFuYWx5dGljczo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1.DataAnalyticsAgentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1.DataAnalyticsAgentReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1.DatasourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.DataAgent), global::Google.Cloud.GeminiDataAnalytics.V1.DataAgent.Parser, new[]{ "DataAnalyticsAgent", "Name", "DisplayName", "Description", "Labels", "CreateTime", "UpdateTime", "DeleteTime", "PurgeTime", "KmsKey" }, new[]{ "Type", "KmsKey" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.DataAgent), global::Google.Cloud.GeminiDataAnalytics.V1.DataAgent.Parser, new[]{ "DataAnalyticsAgent", "Name", "DisplayName", "Description", "Labels", "CreateTime", "UpdateTime", "DeleteTime", "PurgeTime", "KmsKey", "BigqueryAgentAnalyticsEnabled", "BigqueryAgentAnalyticsTable" }, new[]{ "Type", "KmsKey", "BigqueryAgentAnalyticsEnabled" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -74,6 +79,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
   {
     private static readonly pb::MessageParser<DataAgent> _parser = new pb::MessageParser<DataAgent>(() => new DataAgent());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DataAgent> Parser { get { return _parser; } }
@@ -101,6 +107,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataAgent(DataAgent other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       displayName_ = other.displayName_;
       description_ = other.description_;
@@ -110,6 +117,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
       purgeTime_ = other.purgeTime_ != null ? other.purgeTime_.Clone() : null;
       kmsKey_ = other.kmsKey_;
+      bigqueryAgentAnalyticsEnabled_ = other.bigqueryAgentAnalyticsEnabled_;
+      bigqueryAgentAnalyticsTable_ = other.bigqueryAgentAnalyticsTable_ != null ? other.bigqueryAgentAnalyticsTable_.Clone() : null;
       switch (other.TypeCase) {
         case TypeOneofCase.DataAnalyticsAgent:
           DataAnalyticsAgent = other.DataAnalyticsAgent.Clone();
@@ -313,6 +322,96 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       kmsKey_ = null;
     }
 
+    /// <summary>Field number for the "bigquery_agent_analytics_enabled" field.</summary>
+    public const int BigqueryAgentAnalyticsEnabledFieldNumber = 18;
+    private readonly static bool BigqueryAgentAnalyticsEnabledDefaultValue = false;
+
+    private bool bigqueryAgentAnalyticsEnabled_;
+    /// <summary>
+    /// Optional. Controls whether BigQuery Agent Analytics trace logging is
+    /// enabled for the agent.
+    ///
+    /// BigQuery Agent Analytics is in Preview and is delivered to enrolled
+    /// projects only. In a project that is not enrolled this field is accepted
+    /// and stored, but no trace rows are written and no error is returned.
+    ///
+    /// Trace logging is additionally suppressed for the entire turn, without
+    /// error, when any table in the agent's datasource carries row-level
+    /// security, column-level security or policy tags. It is also suppressed
+    /// when that determination cannot be made, for example when the caller
+    /// lacks permission to list a table's row access policies.
+    ///
+    /// Trace rows are written only when this is `true` and
+    /// `bigquery_agent_analytics_table` is set. On a BigQuery agent, enabling
+    /// this without a table has no effect: no table is created for the agent
+    /// and no rows are written. On an agent whose datasource is not BigQuery,
+    /// `CreateDataAgent` rejects either field with `INVALID_ARGUMENT`.
+    ///
+    /// This setting is independent of the project-level BigQuery Agent Analytics
+    /// setting configured through `SetAgentOpsObservability`. An agent does not
+    /// inherit that setting.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BigqueryAgentAnalyticsEnabled {
+      get { if ((_hasBits0 & 1) != 0) { return bigqueryAgentAnalyticsEnabled_; } else { return BigqueryAgentAnalyticsEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        bigqueryAgentAnalyticsEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "bigquery_agent_analytics_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBigqueryAgentAnalyticsEnabled {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "bigquery_agent_analytics_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBigqueryAgentAnalyticsEnabled() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "bigquery_agent_analytics_table" field.</summary>
+    public const int BigqueryAgentAnalyticsTableFieldNumber = 19;
+    private global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReference bigqueryAgentAnalyticsTable_;
+    /// <summary>
+    /// Optional. The BigQuery table that BigQuery Agent Analytics trace rows are
+    /// written to. Has no effect unless `bigquery_agent_analytics_enabled` is
+    /// `true`. The Preview enrollment described on that field applies here too.
+    ///
+    /// The trace table is validated when it is set on `CreateDataAgent`, or when
+    /// it is included in the `update_mask` of an `UpdateDataAgent` call. The
+    /// following are rejected with `INVALID_ARGUMENT`:
+    ///
+    /// * The table must belong to the same project as the agent.
+    /// * The agent's datasource must be BigQuery. BigQuery Agent Analytics is not
+    ///   supported for Looker, Looker Studio or AlloyDB agents.
+    ///
+    /// These are validated against the agent as sent in the request. An agent
+    /// that carries no datasource is not validated, and an agent switched to a
+    /// non-BigQuery datasource is not re-validated; in the latter case no trace
+    /// rows are written.
+    ///
+    /// The destination dataset must already exist and must grant write access to
+    /// the project's Gemini Data Analytics service agent, whose address is
+    /// `service-PROJECT_NUMBER@gcp-sa-geminidataanalytics.iam.gserviceaccount.com`
+    /// (that grant is not performed on your behalf). Without it the agent answers
+    /// normally and no trace rows are written.
+    ///
+    /// Changing the table on an existing agent affects subsequent turns only. Rows
+    /// already written to the previous table are left in place.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReference BigqueryAgentAnalyticsTable {
+      get { return bigqueryAgentAnalyticsTable_; }
+      set {
+        bigqueryAgentAnalyticsTable_ = value;
+      }
+    }
+
     private object type_;
     /// <summary>Enum of possible cases for the "type" oneof.</summary>
     public enum TypeOneofCase {
@@ -358,6 +457,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
       if (!object.Equals(PurgeTime, other.PurgeTime)) return false;
       if (KmsKey != other.KmsKey) return false;
+      if (BigqueryAgentAnalyticsEnabled != other.BigqueryAgentAnalyticsEnabled) return false;
+      if (!object.Equals(BigqueryAgentAnalyticsTable, other.BigqueryAgentAnalyticsTable)) return false;
       if (TypeCase != other.TypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -376,6 +477,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
       if (purgeTime_ != null) hash ^= PurgeTime.GetHashCode();
       if (HasKmsKey) hash ^= KmsKey.GetHashCode();
+      if (HasBigqueryAgentAnalyticsEnabled) hash ^= BigqueryAgentAnalyticsEnabled.GetHashCode();
+      if (bigqueryAgentAnalyticsTable_ != null) hash ^= BigqueryAgentAnalyticsTable.GetHashCode();
       hash ^= (int) typeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -428,6 +531,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         output.WriteRawTag(114);
         output.WriteString(KmsKey);
       }
+      if (HasBigqueryAgentAnalyticsEnabled) {
+        output.WriteRawTag(144, 1);
+        output.WriteBool(BigqueryAgentAnalyticsEnabled);
+      }
+      if (bigqueryAgentAnalyticsTable_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(BigqueryAgentAnalyticsTable);
+      }
       if (typeCase_ == TypeOneofCase.DataAnalyticsAgent) {
         output.WriteRawTag(170, 6);
         output.WriteMessage(DataAnalyticsAgent);
@@ -475,6 +586,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         output.WriteRawTag(114);
         output.WriteString(KmsKey);
       }
+      if (HasBigqueryAgentAnalyticsEnabled) {
+        output.WriteRawTag(144, 1);
+        output.WriteBool(BigqueryAgentAnalyticsEnabled);
+      }
+      if (bigqueryAgentAnalyticsTable_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(BigqueryAgentAnalyticsTable);
+      }
       if (typeCase_ == TypeOneofCase.DataAnalyticsAgent) {
         output.WriteRawTag(170, 6);
         output.WriteMessage(DataAnalyticsAgent);
@@ -516,6 +635,12 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
       if (HasKmsKey) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKey);
+      }
+      if (HasBigqueryAgentAnalyticsEnabled) {
+        size += 2 + 1;
+      }
+      if (bigqueryAgentAnalyticsTable_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BigqueryAgentAnalyticsTable);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -565,6 +690,15 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
       if (other.HasKmsKey) {
         KmsKey = other.KmsKey;
+      }
+      if (other.HasBigqueryAgentAnalyticsEnabled) {
+        BigqueryAgentAnalyticsEnabled = other.BigqueryAgentAnalyticsEnabled;
+      }
+      if (other.bigqueryAgentAnalyticsTable_ != null) {
+        if (bigqueryAgentAnalyticsTable_ == null) {
+          BigqueryAgentAnalyticsTable = new global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReference();
+        }
+        BigqueryAgentAnalyticsTable.MergeFrom(other.BigqueryAgentAnalyticsTable);
       }
       switch (other.TypeCase) {
         case TypeOneofCase.DataAnalyticsAgent:
@@ -642,6 +776,17 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             KmsKey = input.ReadString();
             break;
           }
+          case 144: {
+            BigqueryAgentAnalyticsEnabled = input.ReadBool();
+            break;
+          }
+          case 154: {
+            if (bigqueryAgentAnalyticsTable_ == null) {
+              BigqueryAgentAnalyticsTable = new global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReference();
+            }
+            input.ReadMessage(BigqueryAgentAnalyticsTable);
+            break;
+          }
           case 810: {
             global::Google.Cloud.GeminiDataAnalytics.V1.DataAnalyticsAgent subBuilder = new global::Google.Cloud.GeminiDataAnalytics.V1.DataAnalyticsAgent();
             if (typeCase_ == TypeOneofCase.DataAnalyticsAgent) {
@@ -716,6 +861,17 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
           }
           case 114: {
             KmsKey = input.ReadString();
+            break;
+          }
+          case 144: {
+            BigqueryAgentAnalyticsEnabled = input.ReadBool();
+            break;
+          }
+          case 154: {
+            if (bigqueryAgentAnalyticsTable_ == null) {
+              BigqueryAgentAnalyticsTable = new global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReference();
+            }
+            input.ReadMessage(BigqueryAgentAnalyticsTable);
             break;
           }
           case 810: {

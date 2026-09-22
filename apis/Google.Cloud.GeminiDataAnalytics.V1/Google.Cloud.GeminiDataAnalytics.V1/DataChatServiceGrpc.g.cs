@@ -78,6 +78,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GeminiDataAnalytics.V1.UpdateConversationRequest> __Marshaller_google_cloud_geminidataanalytics_v1_UpdateConversationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GeminiDataAnalytics.V1.UpdateConversationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GeminiDataAnalytics.V1.GetConversationRequest> __Marshaller_google_cloud_geminidataanalytics_v1_GetConversationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GeminiDataAnalytics.V1.GetConversationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GeminiDataAnalytics.V1.ListConversationsRequest> __Marshaller_google_cloud_geminidataanalytics_v1_ListConversationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GeminiDataAnalytics.V1.ListConversationsRequest.Parser));
@@ -111,6 +113,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         "DeleteConversation",
         __Marshaller_google_cloud_geminidataanalytics_v1_DeleteConversationRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1.UpdateConversationRequest, global::Google.Cloud.GeminiDataAnalytics.V1.Conversation> __Method_UpdateConversation = new grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1.UpdateConversationRequest, global::Google.Cloud.GeminiDataAnalytics.V1.Conversation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateConversation",
+        __Marshaller_google_cloud_geminidataanalytics_v1_UpdateConversationRequest,
+        __Marshaller_google_cloud_geminidataanalytics_v1_Conversation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1.GetConversationRequest, global::Google.Cloud.GeminiDataAnalytics.V1.Conversation> __Method_GetConversation = new grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1.GetConversationRequest, global::Google.Cloud.GeminiDataAnalytics.V1.Conversation>(
@@ -181,6 +191,18 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConversation(global::Google.Cloud.GeminiDataAnalytics.V1.DeleteConversationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a conversation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GeminiDataAnalytics.V1.Conversation> UpdateConversation(global::Google.Cloud.GeminiDataAnalytics.V1.UpdateConversationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -377,6 +399,54 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteConversation, null, options, request);
       }
       /// <summary>
+      /// Updates a conversation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GeminiDataAnalytics.V1.Conversation UpdateConversation(global::Google.Cloud.GeminiDataAnalytics.V1.UpdateConversationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateConversation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a conversation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GeminiDataAnalytics.V1.Conversation UpdateConversation(global::Google.Cloud.GeminiDataAnalytics.V1.UpdateConversationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateConversation, null, options, request);
+      }
+      /// <summary>
+      /// Updates a conversation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GeminiDataAnalytics.V1.Conversation> UpdateConversationAsync(global::Google.Cloud.GeminiDataAnalytics.V1.UpdateConversationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateConversationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a conversation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GeminiDataAnalytics.V1.Conversation> UpdateConversationAsync(global::Google.Cloud.GeminiDataAnalytics.V1.UpdateConversationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateConversation, null, options, request);
+      }
+      /// <summary>
       /// Gets details of a single conversation by using conversation id and parent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -537,6 +607,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
           .AddMethod(__Method_Chat, serviceImpl.Chat)
           .AddMethod(__Method_CreateConversation, serviceImpl.CreateConversation)
           .AddMethod(__Method_DeleteConversation, serviceImpl.DeleteConversation)
+          .AddMethod(__Method_UpdateConversation, serviceImpl.UpdateConversation)
           .AddMethod(__Method_GetConversation, serviceImpl.GetConversation)
           .AddMethod(__Method_ListConversations, serviceImpl.ListConversations)
           .AddMethod(__Method_ListMessages, serviceImpl.ListMessages).Build();
@@ -552,6 +623,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       serviceBinder.AddMethod(__Method_Chat, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1.ChatRequest, global::Google.Cloud.GeminiDataAnalytics.V1.Message>(serviceImpl.Chat));
       serviceBinder.AddMethod(__Method_CreateConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1.CreateConversationRequest, global::Google.Cloud.GeminiDataAnalytics.V1.Conversation>(serviceImpl.CreateConversation));
       serviceBinder.AddMethod(__Method_DeleteConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1.DeleteConversationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteConversation));
+      serviceBinder.AddMethod(__Method_UpdateConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1.UpdateConversationRequest, global::Google.Cloud.GeminiDataAnalytics.V1.Conversation>(serviceImpl.UpdateConversation));
       serviceBinder.AddMethod(__Method_GetConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1.GetConversationRequest, global::Google.Cloud.GeminiDataAnalytics.V1.Conversation>(serviceImpl.GetConversation));
       serviceBinder.AddMethod(__Method_ListConversations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1.ListConversationsRequest, global::Google.Cloud.GeminiDataAnalytics.V1.ListConversationsResponse>(serviceImpl.ListConversations));
       serviceBinder.AddMethod(__Method_ListMessages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1.ListMessagesRequest, global::Google.Cloud.GeminiDataAnalytics.V1.ListMessagesResponse>(serviceImpl.ListMessages));
