@@ -170,10 +170,36 @@ namespace Google.Cloud.Spanner.V1
             GaxPreconditions.CheckState(CallInvoker is null || AffinityChannelPoolConfiguration is null, "Channel affinity cannot be configured with a custom CallInvoker.");
         }
 
-        partial void InterceptBuild(ref SpannerClient client) => client = MaybeCreateEmulatorClientBuilder()?.Build();
+        partial void InterceptBuild(ref SpannerClient client)
+        {
+            client ??= MaybeCreateEmulatorClientBuilder()?.Build();
+            client ??= BuildImpl();
+            client = SpannerBuiltInMetrics.BuiltInMetricsWrapper.MaybeWrap(client);
+        }
 
-        partial void InterceptBuildAsync(CancellationToken cancellationToken, ref Task<SpannerClient> task) =>
-            task = MaybeCreateEmulatorClientBuilder()?.BuildAsync(cancellationToken);
+        partial void InterceptBuildAsync(CancellationToken cancellationToken, ref Task<SpannerClient> task)
+        {
+            task = WrapClientAsync(task, cancellationToken);
+        }
+
+        private async Task<SpannerClient> WrapClientAsync(Task<SpannerClient> existingTask, CancellationToken cancellationToken)
+        {
+            SpannerClient client = null;
+            if (existingTask != null)
+            {
+                client = await existingTask.ConfigureAwait(false);
+            }
+            else
+            {
+                var emulatorTask = MaybeCreateEmulatorClientBuilder()?.BuildAsync(cancellationToken);
+                if (emulatorTask != null)
+                {
+                    client = await emulatorTask.ConfigureAwait(false);
+                }
+                client ??= await BuildAsyncImpl(cancellationToken).ConfigureAwait(false);
+            }
+            return SpannerBuiltInMetrics.BuiltInMetricsWrapper.MaybeWrap(client);
+        }
 
         /// <inheritdoc/>
         protected override CallInvoker CreateCallInvoker()
