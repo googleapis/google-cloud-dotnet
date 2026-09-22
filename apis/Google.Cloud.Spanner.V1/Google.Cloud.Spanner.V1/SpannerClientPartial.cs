@@ -31,7 +31,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Gets the unique client identity used to populate built-in metrics labels.
         /// </summary>
-        internal SpannerBuiltInMetrics.ClientIdentity ClientIdentity { get; } = SpannerBuiltInMetrics.Labeler.GenerateIdentity();
+        internal virtual SpannerBuiltInMetrics.ClientIdentity ClientIdentity { get; } = SpannerBuiltInMetrics.Labeler.GenerateIdentity();
 
         internal void MaybeApplyRouteToLeaderHeader(ref CallSettings settings, TransactionOptions.ModeOneofCase transactionMode)
         {
