@@ -63,7 +63,7 @@ internal static partial class SpannerBuiltInMetrics
                 double elapsedMs = stopwatch.ElapsedMilliseconds;
                 // No headers are available if continuation fails, but we can record status (if RpcException) and latency.
                 // An RpcException here is unexpected but defensively handled in case a previous interceptor throws it.
-                StatusCode status = ex is RpcException rpcEx ? rpcEx.StatusCode : StatusCode.Unknown;
+                StatusCode status = GetStatus(ex);
                 RecordAttemptMetrics(elapsedMs, context.Method.Name, dbNameProvider, status, _clientIdentity);
                 throw;
             }
