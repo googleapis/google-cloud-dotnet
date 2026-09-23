@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 Filter = "",
                 OrderBy = "",
                 ShowDeleted = false,
+                CreatorFilter = ListAccessibleDataAgentsRequest.Types.CreatorFilter.Unspecified,
             };
             // Make the request
             PagedAsyncEnumerable<ListDataAgentsResponse, DataAgent> response = dataAgentServiceClient.ListDataAgentsAsync(request);

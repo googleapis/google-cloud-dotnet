@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 Filter = "",
                 OrderBy = "",
                 ShowDeleted = false,
+                CreatorFilter = ListAccessibleDataAgentsRequest.Types.CreatorFilter.Unspecified,
             };
             // Make the request
             PagedEnumerable<ListDataAgentsResponse, DataAgent> response = dataAgentServiceClient.ListDataAgents(request);
@@ -92,6 +93,7 @@ namespace GoogleCSharpSnippets
                 Filter = "",
                 OrderBy = "",
                 ShowDeleted = false,
+                CreatorFilter = ListAccessibleDataAgentsRequest.Types.CreatorFilter.Unspecified,
             };
             // Make the request
             PagedAsyncEnumerable<ListDataAgentsResponse, DataAgent> response = dataAgentServiceClient.ListDataAgentsAsync(request);
@@ -1626,6 +1628,298 @@ namespace GoogleCSharpSnippets
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             Policy response = await dataAgentServiceClient.SetIamPolicyAsync(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetAgentOpsObservability</summary>
+        public void SetAgentOpsObservabilityRequestObject()
+        {
+            // Snippet: SetAgentOpsObservability(SetAgentOpsObservabilityRequest, CallSettings)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = DataAgentServiceClient.Create();
+            // Initialize request argument(s)
+            SetAgentOpsObservabilityRequest request = new SetAgentOpsObservabilityRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                TelemetryEnabled = false,
+                DataSourceType = "",
+                BqaaEnabled = false,
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> response = dataAgentServiceClient.SetAgentOpsObservability(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            SetAgentOpsObservabilityResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> retrievedResponse = dataAgentServiceClient.PollOnceSetAgentOpsObservability(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SetAgentOpsObservabilityResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetAgentOpsObservabilityAsync</summary>
+        public async Task SetAgentOpsObservabilityRequestObjectAsync()
+        {
+            // Snippet: SetAgentOpsObservabilityAsync(SetAgentOpsObservabilityRequest, CallSettings)
+            // Additional: SetAgentOpsObservabilityAsync(SetAgentOpsObservabilityRequest, CancellationToken)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = await DataAgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SetAgentOpsObservabilityRequest request = new SetAgentOpsObservabilityRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                TelemetryEnabled = false,
+                DataSourceType = "",
+                BqaaEnabled = false,
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> response = await dataAgentServiceClient.SetAgentOpsObservabilityAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            SetAgentOpsObservabilityResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> retrievedResponse = await dataAgentServiceClient.PollOnceSetAgentOpsObservabilityAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SetAgentOpsObservabilityResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetAgentOpsObservability</summary>
+        public void SetAgentOpsObservability()
+        {
+            // Snippet: SetAgentOpsObservability(string, bool, string, CallSettings)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = DataAgentServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            bool telemetryEnabled = false;
+            string dataSourceType = "";
+            // Make the request
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> response = dataAgentServiceClient.SetAgentOpsObservability(parent, telemetryEnabled, dataSourceType);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            SetAgentOpsObservabilityResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> retrievedResponse = dataAgentServiceClient.PollOnceSetAgentOpsObservability(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SetAgentOpsObservabilityResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetAgentOpsObservabilityAsync</summary>
+        public async Task SetAgentOpsObservabilityAsync()
+        {
+            // Snippet: SetAgentOpsObservabilityAsync(string, bool, string, CallSettings)
+            // Additional: SetAgentOpsObservabilityAsync(string, bool, string, CancellationToken)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = await DataAgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            bool telemetryEnabled = false;
+            string dataSourceType = "";
+            // Make the request
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> response = await dataAgentServiceClient.SetAgentOpsObservabilityAsync(parent, telemetryEnabled, dataSourceType);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            SetAgentOpsObservabilityResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> retrievedResponse = await dataAgentServiceClient.PollOnceSetAgentOpsObservabilityAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SetAgentOpsObservabilityResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetAgentOpsObservability</summary>
+        public void SetAgentOpsObservabilityResourceNames()
+        {
+            // Snippet: SetAgentOpsObservability(LocationName, bool, string, CallSettings)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = DataAgentServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            bool telemetryEnabled = false;
+            string dataSourceType = "";
+            // Make the request
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> response = dataAgentServiceClient.SetAgentOpsObservability(parent, telemetryEnabled, dataSourceType);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            SetAgentOpsObservabilityResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> retrievedResponse = dataAgentServiceClient.PollOnceSetAgentOpsObservability(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SetAgentOpsObservabilityResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetAgentOpsObservabilityAsync</summary>
+        public async Task SetAgentOpsObservabilityResourceNamesAsync()
+        {
+            // Snippet: SetAgentOpsObservabilityAsync(LocationName, bool, string, CallSettings)
+            // Additional: SetAgentOpsObservabilityAsync(LocationName, bool, string, CancellationToken)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = await DataAgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            bool telemetryEnabled = false;
+            string dataSourceType = "";
+            // Make the request
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> response = await dataAgentServiceClient.SetAgentOpsObservabilityAsync(parent, telemetryEnabled, dataSourceType);
+
+            // Poll until the returned long-running operation is complete
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            SetAgentOpsObservabilityResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<SetAgentOpsObservabilityResponse, SetAgentOpsObservabilityMetadata> retrievedResponse = await dataAgentServiceClient.PollOnceSetAgentOpsObservabilityAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                SetAgentOpsObservabilityResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveAgentOpsObservability</summary>
+        public void RetrieveAgentOpsObservabilityRequestObject()
+        {
+            // Snippet: RetrieveAgentOpsObservability(RetrieveAgentOpsObservabilityRequest, CallSettings)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = DataAgentServiceClient.Create();
+            // Initialize request argument(s)
+            RetrieveAgentOpsObservabilityRequest request = new RetrieveAgentOpsObservabilityRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DataSourceType = "",
+            };
+            // Make the request
+            RetrieveAgentOpsObservabilityResponse response = dataAgentServiceClient.RetrieveAgentOpsObservability(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveAgentOpsObservabilityAsync</summary>
+        public async Task RetrieveAgentOpsObservabilityRequestObjectAsync()
+        {
+            // Snippet: RetrieveAgentOpsObservabilityAsync(RetrieveAgentOpsObservabilityRequest, CallSettings)
+            // Additional: RetrieveAgentOpsObservabilityAsync(RetrieveAgentOpsObservabilityRequest, CancellationToken)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = await DataAgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RetrieveAgentOpsObservabilityRequest request = new RetrieveAgentOpsObservabilityRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DataSourceType = "",
+            };
+            // Make the request
+            RetrieveAgentOpsObservabilityResponse response = await dataAgentServiceClient.RetrieveAgentOpsObservabilityAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveAgentOpsObservability</summary>
+        public void RetrieveAgentOpsObservability()
+        {
+            // Snippet: RetrieveAgentOpsObservability(string, string, CallSettings)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = DataAgentServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string dataSourceType = "";
+            // Make the request
+            RetrieveAgentOpsObservabilityResponse response = dataAgentServiceClient.RetrieveAgentOpsObservability(parent, dataSourceType);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveAgentOpsObservabilityAsync</summary>
+        public async Task RetrieveAgentOpsObservabilityAsync()
+        {
+            // Snippet: RetrieveAgentOpsObservabilityAsync(string, string, CallSettings)
+            // Additional: RetrieveAgentOpsObservabilityAsync(string, string, CancellationToken)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = await DataAgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string dataSourceType = "";
+            // Make the request
+            RetrieveAgentOpsObservabilityResponse response = await dataAgentServiceClient.RetrieveAgentOpsObservabilityAsync(parent, dataSourceType);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveAgentOpsObservability</summary>
+        public void RetrieveAgentOpsObservabilityResourceNames()
+        {
+            // Snippet: RetrieveAgentOpsObservability(LocationName, string, CallSettings)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = DataAgentServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string dataSourceType = "";
+            // Make the request
+            RetrieveAgentOpsObservabilityResponse response = dataAgentServiceClient.RetrieveAgentOpsObservability(parent, dataSourceType);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveAgentOpsObservabilityAsync</summary>
+        public async Task RetrieveAgentOpsObservabilityResourceNamesAsync()
+        {
+            // Snippet: RetrieveAgentOpsObservabilityAsync(LocationName, string, CallSettings)
+            // Additional: RetrieveAgentOpsObservabilityAsync(LocationName, string, CancellationToken)
+            // Create client
+            DataAgentServiceClient dataAgentServiceClient = await DataAgentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string dataSourceType = "";
+            // Make the request
+            RetrieveAgentOpsObservabilityResponse response = await dataAgentServiceClient.RetrieveAgentOpsObservabilityAsync(parent, dataSourceType);
             // End snippet
         }
     }

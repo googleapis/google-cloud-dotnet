@@ -58,6 +58,18 @@
                 "ListDataAgentsAsync"
               ]
             },
+            "RetrieveAgentOpsObservability": {
+              "methods": [
+                "RetrieveAgentOpsObservability",
+                "RetrieveAgentOpsObservabilityAsync"
+              ]
+            },
+            "SetAgentOpsObservability": {
+              "methods": [
+                "SetAgentOpsObservability",
+                "SetAgentOpsObservabilityAsync"
+              ]
+            },
             "SetIamPolicy": {
               "methods": [
                 "SetIamPolicy",
@@ -119,6 +131,12 @@
               "methods": [
                 "ListMessages",
                 "ListMessagesAsync"
+              ]
+            },
+            "UpdateConversation": {
+              "methods": [
+                "UpdateConversation",
+                "UpdateConversationAsync"
               ]
             }
           }

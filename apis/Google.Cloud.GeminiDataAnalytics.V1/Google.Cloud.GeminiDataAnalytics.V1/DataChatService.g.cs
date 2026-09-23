@@ -160,7 +160,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             "cmllcxJPCg9leGFtcGxlX3F1ZXJpZXMYASADKAsyMS5nb29nbGUuY2xvdWQu",
             "Z2VtaW5pZGF0YWFuYWx5dGljcy52MS5FeGFtcGxlUXVlcnlCA+BBASIxCgRC",
             "bG9iEhYKCW1pbWVfdHlwZRgBIAEoCUID4EECEhEKBGRhdGEYAiABKAxCA+BB",
-            "AjKnCgoPRGF0YUNoYXRTZXJ2aWNlEp0BCgRDaGF0EjAuZ29vZ2xlLmNsb3Vk",
+            "AjKiDAoPRGF0YUNoYXRTZXJ2aWNlEp0BCgRDaGF0EjAuZ29vZ2xlLmNsb3Vk",
             "LmdlbWluaWRhdGFhbmFseXRpY3MudjEuQ2hhdFJlcXVlc3QaLC5nb29nbGUu",
             "Y2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5NZXNzYWdlIjOC0+STAi0i",
             "KC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9OmNoYXQ6ASow",
@@ -173,29 +173,35 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             "aW9uEj4uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuRGVs",
             "ZXRlQ29udmVyc2F0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
             "eSJA2kEEbmFtZYLT5JMCMyoxL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovY29udmVyc2F0aW9ucy8qfRLDAQoPR2V0Q29udmVyc2F0aW9uEjsu",
-            "Z29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuR2V0Q29udmVy",
-            "c2F0aW9uUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0",
-            "aWNzLnYxLkNvbnZlcnNhdGlvbiJA2kEEbmFtZYLT5JMCMxIxL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovY29udmVyc2F0aW9ucy8qfRLWAQoR",
-            "TGlzdENvbnZlcnNhdGlvbnMSPS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFu",
-            "YWx5dGljcy52MS5MaXN0Q29udmVyc2F0aW9uc1JlcXVlc3QaPi5nb29nbGUu",
-            "Y2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5MaXN0Q29udmVyc2F0aW9u",
-            "c1Jlc3BvbnNlIkLaQQZwYXJlbnSC0+STAjMSMS92MS97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyp9L2NvbnZlcnNhdGlvbnMS0gEKDExpc3RNZXNz",
-            "YWdlcxI4Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkxp",
-            "c3RNZXNzYWdlc1JlcXVlc3QaOS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFu",
-            "YWx5dGljcy52MS5MaXN0TWVzc2FnZXNSZXNwb25zZSJN2kEGcGFyZW50gtPk",
-            "kwI+EjwvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbnZl",
-            "cnNhdGlvbnMvKn0vbWVzc2FnZXMaVspBImdlbWluaWRhdGFhbmFseXRpY3Mu",
-            "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2Nsb3VkLXBsYXRmb3JtQpECCidjb20uZ29vZ2xlLmNsb3VkLmdlbWlu",
-            "aWRhdGFhbmFseXRpY3MudjFCFERhdGFDaGF0U2VydmljZVByb3RvUAFaWWNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vZ2VtaW5pZGF0YWFuYWx5dGljcy9hcGl2MS9n",
-            "ZW1pbmlkYXRhYW5hbHl0aWNzcGI7Z2VtaW5pZGF0YWFuYWx5dGljc3BiqgIj",
-            "R29vZ2xlLkNsb3VkLkdlbWluaURhdGFBbmFseXRpY3MuVjHKAiNHb29nbGVc",
-            "Q2xvdWRcR2VtaW5pRGF0YUFuYWx5dGljc1xWMeoCJkdvb2dsZTo6Q2xvdWQ6",
-            "OkdlbWluaURhdGFBbmFseXRpY3M6OlYxYgZwcm90bzM="));
+            "b25zLyovY29udmVyc2F0aW9ucy8qfRL4AQoSVXBkYXRlQ29udmVyc2F0aW9u",
+            "Ej4uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuVXBkYXRl",
+            "Q29udmVyc2F0aW9uUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRh",
+            "YW5hbHl0aWNzLnYxLkNvbnZlcnNhdGlvbiJv2kEYY29udmVyc2F0aW9uLHVw",
+            "ZGF0ZV9tYXNrgtPkkwJOMj4vdjEve2NvbnZlcnNhdGlvbi5uYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovY29udmVyc2F0aW9ucy8qfToMY29udmVyc2F0",
+            "aW9uEsMBCg9HZXRDb252ZXJzYXRpb24SOy5nb29nbGUuY2xvdWQuZ2VtaW5p",
+            "ZGF0YWFuYWx5dGljcy52MS5HZXRDb252ZXJzYXRpb25SZXF1ZXN0GjEuZ29v",
+            "Z2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuQ29udmVyc2F0aW9u",
+            "IkDaQQRuYW1lgtPkkwIzEjEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9jb252ZXJzYXRpb25zLyp9EtYBChFMaXN0Q29udmVyc2F0aW9ucxI9",
+            "Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkxpc3RDb252",
+            "ZXJzYXRpb25zUmVxdWVzdBo+Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5h",
+            "bHl0aWNzLnYxLkxpc3RDb252ZXJzYXRpb25zUmVzcG9uc2UiQtpBBnBhcmVu",
+            "dILT5JMCMxIxL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
+            "Y29udmVyc2F0aW9ucxLSAQoMTGlzdE1lc3NhZ2VzEjguZ29vZ2xlLmNsb3Vk",
+            "LmdlbWluaWRhdGFhbmFseXRpY3MudjEuTGlzdE1lc3NhZ2VzUmVxdWVzdBo5",
+            "Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkxpc3RNZXNz",
+            "YWdlc1Jlc3BvbnNlIk3aQQZwYXJlbnSC0+STAj4SPC92MS97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovY29udmVyc2F0aW9ucy8qfS9tZXNzYWdl",
+            "cxpWykEiZ2VtaW5pZGF0YWFuYWx5dGljcy5nb29nbGVhcGlzLmNvbdJBLmh0",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C",
+            "kQIKJ2NvbS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MUIU",
+            "RGF0YUNoYXRTZXJ2aWNlUHJvdG9QAVpZY2xvdWQuZ29vZ2xlLmNvbS9nby9n",
+            "ZW1pbmlkYXRhYW5hbHl0aWNzL2FwaXYxL2dlbWluaWRhdGFhbmFseXRpY3Nw",
+            "YjtnZW1pbmlkYXRhYW5hbHl0aWNzcGKqAiNHb29nbGUuQ2xvdWQuR2VtaW5p",
+            "RGF0YUFuYWx5dGljcy5WMcoCI0dvb2dsZVxDbG91ZFxHZW1pbmlEYXRhQW5h",
+            "bHl0aWNzXFYx6gImR29vZ2xlOjpDbG91ZDo6R2VtaW5pRGF0YUFuYWx5dGlj",
+            "czo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1.ConversationReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1.CredentialsReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1.DatasourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1774,7 +1780,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       /// </summary>
       public enum ThinkingMode {
         /// <summary>
-        /// Unspecified thinking mode, agent will use THINKING mode by default.
+        /// Unspecified thinking mode, agent will use THINKING mode by default except
+        /// for BigQuery user defaulting to FAST mode by default.
         /// </summary>
         [pbr::OriginalName("THINKING_MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -1788,19 +1795,16 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
 
       /// <summary>
-      /// Model selection for the agent.
+      /// Model selection for the agent for BigQuery users.
       /// </summary>
       public enum Model {
         /// <summary>
-        /// No model specified. The default model will be used. Currently, this is
-        /// `gemini-3.0-flash-preview`.
+        /// No model specified. Either preview or non preview model can be used.
         /// </summary>
         [pbr::OriginalName("MODEL_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Use the most up-to-date non-preview model. Currently, this is
-        /// `gemini-2.5-flash`. This constrains the request level settings. The
-        /// default will change to `gemini-2.5-flash`, and setting `thinking_mode`
-        /// will not be supported.
+        /// Use the most up-to-date non-preview model. This may constrain certain
+        /// request level settings.
         /// </summary>
         [pbr::OriginalName("LATEST_GA_MODEL")] LatestGaModel = 1,
       }
