@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 Filter = "",
                 OrderBy = "",
                 ShowDeleted = false,
+                CreatorFilter = ListAccessibleDataAgentsRequest.Types.CreatorFilter.Unspecified,
             };
             // Make the request
             PagedEnumerable<ListDataAgentsResponse, DataAgent> response = dataAgentServiceClient.ListDataAgents(request);
