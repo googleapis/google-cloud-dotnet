@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Copyright 2025 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,38 +14,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#!/bin/bash
-
 set -eo pipefail
 
-## cd to the parent directory, i.e. the root of the git repo
-cd ./
-
-RETURN_CODE=0
+# Navigate to the repo root directory
+cd "$(dirname "$0")/../../.."
 
 # Build the proxy
-pushd .
-cd apis/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.ConformanceTests
-dotnet build
-# Start the proxy in a separate process
-dotnet run &
-popd
+dotnet build apis/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.ConformanceTests
 
-pushd .
-cd cloud-bigtable-clients-test/tests
+# Start the proxy in the background
+dotnet run --no-build --project apis/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.ConformanceTests &
+PROXY_PID=$!
+
+# Ensure the proxy process is killed on exit
+trap 'kill $PROXY_PID || true' EXIT
+
 # Cookie, RetryInfo, ExecuteQuery, ReverseScans and FeatureGap are known failures of new features that we don't yet support.
 # CloseClient we don't support as expected, but we support it in a valid manner.
 # For the others we have issues to investigate, see comments in b/372509076 .
-eval "go test -v -proxy_addr=:7238 -skip _Retry_WithRoutingCookie\|_Retry_WithRetryInfo\|_CloseClient\|_ReverseScans\|TestFeatureGap\|TestExecuteQuery\|TestReadRows_Retry_LastScannedRow_Reverse\|TestReadRow_Generic_DeadlineExceeded"
-returnCode=$?
-popd
-
-if [[ ${returnCode} -gt 0 ]]
-then
-  echo "Conformance test failed"
-  RETURN_CODE=${returnCode}
-else
-  echo "Conformance test passed"
-fi
-
-exit ${RETURN_CODE}
+cd cloud-bigtable-clients-test/tests
+go test -v -proxy_addr=:7238 -skip "_Retry_WithRoutingCookie|_Retry_WithRetryInfo|_CloseClient|_ReverseScans|TestFeatureGap|TestExecuteQuery|TestReadRows_Retry_LastScannedRow_Reverse|TestReadRow_Generic_DeadlineExceeded"
