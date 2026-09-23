@@ -35,116 +35,148 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             "aWN5LnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90",
             "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9i",
             "dWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90byLVAQoVTGlzdERhdGFBZ2VudHNSZXF1ZXN0EkQKBnBhcmVudBgB",
+            "cC5wcm90byLKAgoVTGlzdERhdGFBZ2VudHNSZXF1ZXN0EkQKBnBhcmVudBgB",
             "IAEoCUI04EEC+kEuEixnZW1pbmlkYXRhYW5hbHl0aWNzLmdvb2dsZWFwaXMu",
             "Y29tL0RhdGFBZ2VudBIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdl",
             "X3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3Jk",
-            "ZXJfYnkYBSABKAlCA+BBARIZCgxzaG93X2RlbGV0ZWQYBiABKAhCA+BBASKU",
-            "AQoWTGlzdERhdGFBZ2VudHNSZXNwb25zZRJHCgtkYXRhX2FnZW50cxgBIAMo",
+            "ZXJfYnkYBSABKAlCA+BBARIZCgxzaG93X2RlbGV0ZWQYBiABKAhCA+BBARJz",
+            "Cg5jcmVhdG9yX2ZpbHRlchgIIAEoDjJWLmdvb2dsZS5jbG91ZC5nZW1pbmlk",
+            "YXRhYW5hbHl0aWNzLnYxYmV0YS5MaXN0QWNjZXNzaWJsZURhdGFBZ2VudHNS",
+            "ZXF1ZXN0LkNyZWF0b3JGaWx0ZXJCA+BBASKUAQoWTGlzdERhdGFBZ2VudHNS",
+            "ZXNwb25zZRJHCgtkYXRhX2FnZW50cxgBIAMoCzIyLmdvb2dsZS5jbG91ZC5n",
+            "ZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5EYXRhQWdlbnQSFwoPbmV4dF9w",
+            "YWdlX3Rva2VuGAIgASgJEhgKC3VucmVhY2hhYmxlGAMgAygJQgPgQQYitwMK",
+            "H0xpc3RBY2Nlc3NpYmxlRGF0YUFnZW50c1JlcXVlc3QSRAoGcGFyZW50GAEg",
+            "ASgJQjTgQQL6QS4SLGdlbWluaWRhdGFhbmFseXRpY3MuZ29vZ2xlYXBpcy5j",
+            "b20vRGF0YUFnZW50EhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2Vf",
+            "dG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIYBCABKAlCA+BBARIVCghvcmRl",
+            "cl9ieRgFIAEoCUID4EEBEhkKDHNob3dfZGVsZXRlZBgGIAEoCEID4EEBEnMK",
+            "DmNyZWF0b3JfZmlsdGVyGAcgASgOMlYuZ29vZ2xlLmNsb3VkLmdlbWluaWRh",
+            "dGFhbmFseXRpY3MudjFiZXRhLkxpc3RBY2Nlc3NpYmxlRGF0YUFnZW50c1Jl",
+            "cXVlc3QuQ3JlYXRvckZpbHRlckID4EEBImEKDUNyZWF0b3JGaWx0ZXISHgoa",
+            "Q1JFQVRPUl9GSUxURVJfVU5TUEVDSUZJRUQQABIICgROT05FEAESEAoMQ1JF",
+            "QVRPUl9PTkxZEAISFAoQTk9UX0NSRUFUT1JfT05MWRADIp4BCiBMaXN0QWNj",
+            "ZXNzaWJsZURhdGFBZ2VudHNSZXNwb25zZRJHCgtkYXRhX2FnZW50cxgBIAMo",
             "CzIyLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5E",
             "YXRhQWdlbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhgKC3VucmVhY2hh",
-            "YmxlGAMgAygJQgPgQQYitwMKH0xpc3RBY2Nlc3NpYmxlRGF0YUFnZW50c1Jl",
-            "cXVlc3QSRAoGcGFyZW50GAEgASgJQjTgQQL6QS4SLGdlbWluaWRhdGFhbmFs",
-            "eXRpY3MuZ29vZ2xlYXBpcy5jb20vRGF0YUFnZW50EhYKCXBhZ2Vfc2l6ZRgC",
-            "IAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIY",
-            "BCABKAlCA+BBARIVCghvcmRlcl9ieRgFIAEoCUID4EEBEhkKDHNob3dfZGVs",
-            "ZXRlZBgGIAEoCEID4EEBEnMKDmNyZWF0b3JfZmlsdGVyGAcgASgOMlYuZ29v",
-            "Z2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkxpc3RBY2Nl",
-            "c3NpYmxlRGF0YUFnZW50c1JlcXVlc3QuQ3JlYXRvckZpbHRlckID4EEBImEK",
-            "DUNyZWF0b3JGaWx0ZXISHgoaQ1JFQVRPUl9GSUxURVJfVU5TUEVDSUZJRUQQ",
-            "ABIICgROT05FEAESEAoMQ1JFQVRPUl9PTkxZEAISFAoQTk9UX0NSRUFUT1Jf",
-            "T05MWRADIp4BCiBMaXN0QWNjZXNzaWJsZURhdGFBZ2VudHNSZXNwb25zZRJH",
-            "CgtkYXRhX2FnZW50cxgBIAMoCzIyLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRh",
-            "YW5hbHl0aWNzLnYxYmV0YS5EYXRhQWdlbnQSFwoPbmV4dF9wYWdlX3Rva2Vu",
-            "GAIgASgJEhgKC3VucmVhY2hhYmxlGAMgAygJQgPgQQYiWQoTR2V0RGF0YUFn",
-            "ZW50UmVxdWVzdBJCCgRuYW1lGAEgASgJQjTgQQL6QS4KLGdlbWluaWRhdGFh",
-            "bmFseXRpY3MuZ29vZ2xlYXBpcy5jb20vRGF0YUFnZW50IugBChZDcmVhdGVE",
-            "YXRhQWdlbnRSZXF1ZXN0EkQKBnBhcmVudBgBIAEoCUI04EEC+kEuEixnZW1p",
-            "bmlkYXRhYW5hbHl0aWNzLmdvb2dsZWFwaXMuY29tL0RhdGFBZ2VudBIaCg1k",
-            "YXRhX2FnZW50X2lkGAIgASgJQgPgQQESSwoKZGF0YV9hZ2VudBgDIAEoCzIy",
-            "Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5EYXRh",
-            "QWdlbnRCA+BBAhIfCgpyZXF1ZXN0X2lkGAQgASgJQgvgQQHijM/XCAIIASK8",
-            "AQoWVXBkYXRlRGF0YUFnZW50UmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBARJLCgpkYXRhX2Fn",
-            "ZW50GAIgASgLMjIuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3Mu",
-            "djFiZXRhLkRhdGFBZ2VudEID4EECEh8KCnJlcXVlc3RfaWQYAyABKAlCC+BB",
-            "AeKMz9cIAggBIn0KFkRlbGV0ZURhdGFBZ2VudFJlcXVlc3QSQgoEbmFtZRgB",
-            "IAEoCUI04EEC+kEuCixnZW1pbmlkYXRhYW5hbHl0aWNzLmdvb2dsZWFwaXMu",
-            "Y29tL0RhdGFBZ2VudBIfCgpyZXF1ZXN0X2lkGAIgASgJQgvgQQHijM/XCAII",
-            "ASKAAgoRT3BlcmF0aW9uTWV0YWRhdGESNAoLY3JlYXRlX3RpbWUYASABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUY",
-            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEwoGdGFy",
-            "Z2V0GAMgASgJQgPgQQMSEQoEdmVyYhgEIAEoCUID4EEDEhsKDnN0YXR1c19t",
-            "ZXNzYWdlGAUgASgJQgPgQQMSIwoWcmVxdWVzdGVkX2NhbmNlbGxhdGlvbhgG",
-            "IAEoCEID4EEDEhgKC2FwaV92ZXJzaW9uGAcgASgJQgPgQQMyiBQKEERhdGFB",
-            "Z2VudFNlcnZpY2US1gEKDkxpc3REYXRhQWdlbnRzEj4uZ29vZ2xlLmNsb3Vk",
-            "LmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkxpc3REYXRhQWdlbnRzUmVx",
-            "dWVzdBo/Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0",
-            "YS5MaXN0RGF0YUFnZW50c1Jlc3BvbnNlIkPaQQZwYXJlbnSC0+STAjQSMi92",
-            "MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9kYXRhQWdl",
-            "bnRzEoMCChhMaXN0QWNjZXNzaWJsZURhdGFBZ2VudHMSSC5nb29nbGUuY2xv",
-            "dWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuTGlzdEFjY2Vzc2libGVE",
-            "YXRhQWdlbnRzUmVxdWVzdBpJLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5h",
-            "bHl0aWNzLnYxYmV0YS5MaXN0QWNjZXNzaWJsZURhdGFBZ2VudHNSZXNwb25z",
-            "ZSJS2kEGcGFyZW50gtPkkwJDEkEvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKn0vZGF0YUFnZW50czpsaXN0QWNjZXNzaWJsZRLDAQoM",
-            "R2V0RGF0YUFnZW50EjwuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRp",
-            "Y3MudjFiZXRhLkdldERhdGFBZ2VudFJlcXVlc3QaMi5nb29nbGUuY2xvdWQu",
-            "Z2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuRGF0YUFnZW50IkHaQQRuYW1l",
-            "gtPkkwI0EjIvdjFiZXRhL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "ZGF0YUFnZW50cy8qfRL9AQoPQ3JlYXRlRGF0YUFnZW50Ej8uZ29vZ2xlLmNs",
-            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkNyZWF0ZURhdGFBZ2Vu",
-            "dFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIokBykEe",
-            "CglEYXRhQWdlbnQSEU9wZXJhdGlvbk1ldGFkYXRh2kEfcGFyZW50LGRhdGFf",
-            "YWdlbnQsZGF0YV9hZ2VudF9pZILT5JMCQCIyL3YxYmV0YS97cGFyZW50PXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyp9L2RhdGFBZ2VudHM6CmRhdGFfYWdlbnQS",
-            "/wEKE0NyZWF0ZURhdGFBZ2VudFN5bmMSPy5nb29nbGUuY2xvdWQuZ2VtaW5p",
-            "ZGF0YWFuYWx5dGljcy52MWJldGEuQ3JlYXRlRGF0YUFnZW50UmVxdWVzdBoy",
-            "Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5EYXRh",
-            "QWdlbnQic9pBH3BhcmVudCxkYXRhX2FnZW50LGRhdGFfYWdlbnRfaWSC0+ST",
-            "AksiPS92MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9k",
-            "YXRhQWdlbnRzOmNyZWF0ZVN5bmM6CmRhdGFfYWdlbnQS/wEKD1VwZGF0ZURh",
-            "dGFBZ2VudBI/Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYx",
-            "YmV0YS5VcGRhdGVEYXRhQWdlbnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
-            "aW5nLk9wZXJhdGlvbiKLAcpBHgoJRGF0YUFnZW50EhFPcGVyYXRpb25NZXRh",
-            "ZGF0YdpBFmRhdGFfYWdlbnQsdXBkYXRlX21hc2uC0+STAksyPS92MWJldGEv",
-            "e2RhdGFfYWdlbnQubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFB",
-            "Z2VudHMvKn06CmRhdGFfYWdlbnQSgQIKE1VwZGF0ZURhdGFBZ2VudFN5bmMS",
-            "Py5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuVXBk",
-            "YXRlRGF0YUFnZW50UmVxdWVzdBoyLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRh",
-            "YW5hbHl0aWNzLnYxYmV0YS5EYXRhQWdlbnQiddpBFmRhdGFfYWdlbnQsdXBk",
-            "YXRlX21hc2uC0+STAlYySC92MWJldGEve2RhdGFfYWdlbnQubmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFBZ2VudHMvKn06dXBkYXRlU3luYzoK",
-            "ZGF0YV9hZ2VudBLhAQoPRGVsZXRlRGF0YUFnZW50Ej8uZ29vZ2xlLmNsb3Vk",
-            "LmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkRlbGV0ZURhdGFBZ2VudFJl",
-            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIm7KQSoKFWdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1l",
-            "gtPkkwI0KjIvdjFiZXRhL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "ZGF0YUFnZW50cy8qfRK8AQoTRGVsZXRlRGF0YUFnZW50U3luYxI/Lmdvb2ds",
-            "ZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5EZWxldGVEYXRh",
-            "QWdlbnRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkzaQQRuYW1l",
-            "gtPkkwI/Kj0vdjFiZXRhL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "ZGF0YUFnZW50cy8qfTpkZWxldGVTeW5jEqQBCgxHZXRJYW1Qb2xpY3kSIi5n",
-            "b29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFt",
-            "LnYxLlBvbGljeSJZ2kEIcmVzb3VyY2WC0+STAkgiQy92MWJldGEve3Jlc291",
-            "cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUFnZW50cy8qfTpnZXRJ",
-            "YW1Qb2xpY3k6ASoSpAEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEu",
-            "U2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5Ilna",
-            "QQhyZXNvdXJjZYLT5JMCSCJDL3YxYmV0YS97cmVzb3VyY2U9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9kYXRhQWdlbnRzLyp9OnNldElhbVBvbGljeToBKhpW",
-            "ykEiZ2VtaW5pZGF0YWFuYWx5dGljcy5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CpgIK",
-            "K2NvbS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGFC",
-            "FURhdGFBZ2VudFNlcnZpY2VQcm90b1ABWl1jbG91ZC5nb29nbGUuY29tL2dv",
-            "L2dlbWluaWRhdGFhbmFseXRpY3MvYXBpdjFiZXRhL2dlbWluaWRhdGFhbmFs",
-            "eXRpY3NwYjtnZW1pbmlkYXRhYW5hbHl0aWNzcGKqAidHb29nbGUuQ2xvdWQu",
-            "R2VtaW5pRGF0YUFuYWx5dGljcy5WMUJldGHKAidHb29nbGVcQ2xvdWRcR2Vt",
-            "aW5pRGF0YUFuYWx5dGljc1xWMWJldGHqAipHb29nbGU6OkNsb3VkOjpHZW1p",
-            "bmlEYXRhQW5hbHl0aWNzOjpWMWJldGFiBnByb3RvMw=="));
+            "YmxlGAMgAygJQgPgQQYiWQoTR2V0RGF0YUFnZW50UmVxdWVzdBJCCgRuYW1l",
+            "GAEgASgJQjTgQQL6QS4KLGdlbWluaWRhdGFhbmFseXRpY3MuZ29vZ2xlYXBp",
+            "cy5jb20vRGF0YUFnZW50IugBChZDcmVhdGVEYXRhQWdlbnRSZXF1ZXN0EkQK",
+            "BnBhcmVudBgBIAEoCUI04EEC+kEuEixnZW1pbmlkYXRhYW5hbHl0aWNzLmdv",
+            "b2dsZWFwaXMuY29tL0RhdGFBZ2VudBIaCg1kYXRhX2FnZW50X2lkGAIgASgJ",
+            "QgPgQQESSwoKZGF0YV9hZ2VudBgDIAEoCzIyLmdvb2dsZS5jbG91ZC5nZW1p",
+            "bmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5EYXRhQWdlbnRCA+BBAhIfCgpyZXF1",
+            "ZXN0X2lkGAQgASgJQgvgQQHijM/XCAIIASK8AQoWVXBkYXRlRGF0YUFnZW50",
+            "UmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5GaWVsZE1hc2tCA+BBARJLCgpkYXRhX2FnZW50GAIgASgLMjIuZ29vZ2xl",
+            "LmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkRhdGFBZ2VudEID",
+            "4EECEh8KCnJlcXVlc3RfaWQYAyABKAlCC+BBAeKMz9cIAggBIn0KFkRlbGV0",
+            "ZURhdGFBZ2VudFJlcXVlc3QSQgoEbmFtZRgBIAEoCUI04EEC+kEuCixnZW1p",
+            "bmlkYXRhYW5hbHl0aWNzLmdvb2dsZWFwaXMuY29tL0RhdGFBZ2VudBIfCgpy",
+            "ZXF1ZXN0X2lkGAIgASgJQgvgQQHijM/XCAIIASKAAgoRT3BlcmF0aW9uTWV0",
+            "YWRhdGESNAoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQMSEwoGdGFyZ2V0GAMgASgJQgPgQQMSEQoE",
+            "dmVyYhgEIAEoCUID4EEDEhsKDnN0YXR1c19tZXNzYWdlGAUgASgJQgPgQQMS",
+            "IwoWcmVxdWVzdGVkX2NhbmNlbGxhdGlvbhgGIAEoCEID4EEDEhgKC2FwaV92",
+            "ZXJzaW9uGAcgASgJQgPgQQMi7AEKH1NldEFnZW50T3BzT2JzZXJ2YWJpbGl0",
+            "eVJlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5n",
+            "b29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIeChF0ZWxlbWV0cnlfZW5hYmxlZBgC",
+            "IAEoCEID4EEBEh0KEGRhdGFfc291cmNlX3R5cGUYAyABKAlCA+BBAhIZCgxi",
+            "cWFhX2VuYWJsZWQYBCABKAhCA+BBARI0Cgt1cGRhdGVfbWFzaxgFIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBASIiCiBTZXRBZ2VudE9w",
+            "c09ic2VydmFiaWxpdHlSZXNwb25zZSIiCiBTZXRBZ2VudE9wc09ic2VydmFi",
+            "aWxpdHlNZXRhZGF0YSKAAQokUmV0cmlldmVBZ2VudE9wc09ic2VydmFiaWxp",
+            "dHlSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMu",
+            "Z29vZ2xlYXBpcy5jb20vTG9jYXRpb24SHQoQZGF0YV9zb3VyY2VfdHlwZRgC",
+            "IAEoCUID4EECIu4BCiVSZXRyaWV2ZUFnZW50T3BzT2JzZXJ2YWJpbGl0eVJl",
+            "c3BvbnNlEh4KEXRlbGVtZXRyeV9lbmFibGVkGAEgASgIQgPgQQMSHQoQYmln",
+            "cXVlcnlfZW5hYmxlZBgDIAEoCEID4EEDEiAKE2Nsb3VkX3RyYWNlX2VuYWJs",
+            "ZWQYBCABKAhCA+BBAxIlChhjbG91ZF9tb25pdG9yaW5nX2VuYWJsZWQYBSAB",
+            "KAhCA+BBAxIiChVjbG91ZF9sb2dnaW5nX2VuYWJsZWQYBiABKAhCA+BBAxIZ",
+            "CgxicWFhX2VuYWJsZWQYByABKAhCA+BBAzKPGQoQRGF0YUFnZW50U2Vydmlj",
+            "ZRLWAQoOTGlzdERhdGFBZ2VudHMSPi5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0",
+            "YWFuYWx5dGljcy52MWJldGEuTGlzdERhdGFBZ2VudHNSZXF1ZXN0Gj8uZ29v",
+            "Z2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkxpc3REYXRh",
+            "QWdlbnRzUmVzcG9uc2UiQ9pBBnBhcmVudILT5JMCNBIyL3YxYmV0YS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2RhdGFBZ2VudHMSgwIKGExp",
+            "c3RBY2Nlc3NpYmxlRGF0YUFnZW50cxJILmdvb2dsZS5jbG91ZC5nZW1pbmlk",
+            "YXRhYW5hbHl0aWNzLnYxYmV0YS5MaXN0QWNjZXNzaWJsZURhdGFBZ2VudHNS",
+            "ZXF1ZXN0GkkuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFi",
+            "ZXRhLkxpc3RBY2Nlc3NpYmxlRGF0YUFnZW50c1Jlc3BvbnNlIlLaQQZwYXJl",
+            "bnSC0+STAkMSQS92MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qfS9kYXRhQWdlbnRzOmxpc3RBY2Nlc3NpYmxlEsMBCgxHZXREYXRhQWdl",
+            "bnQSPC5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEu",
+            "R2V0RGF0YUFnZW50UmVxdWVzdBoyLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRh",
+            "YW5hbHl0aWNzLnYxYmV0YS5EYXRhQWdlbnQiQdpBBG5hbWWC0+STAjQSMi92",
+            "MWJldGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhQWdlbnRz",
+            "Lyp9Ev0BCg9DcmVhdGVEYXRhQWdlbnQSPy5nb29nbGUuY2xvdWQuZ2VtaW5p",
+            "ZGF0YWFuYWx5dGljcy52MWJldGEuQ3JlYXRlRGF0YUFnZW50UmVxdWVzdBod",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iiQHKQR4KCURhdGFBZ2Vu",
+            "dBIRT3BlcmF0aW9uTWV0YWRhdGHaQR9wYXJlbnQsZGF0YV9hZ2VudCxkYXRh",
+            "X2FnZW50X2lkgtPkkwJAIjIvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn0vZGF0YUFnZW50czoKZGF0YV9hZ2VudBL/AQoTQ3JlYXRl",
+            "RGF0YUFnZW50U3luYxI/Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0",
+            "aWNzLnYxYmV0YS5DcmVhdGVEYXRhQWdlbnRSZXF1ZXN0GjIuZ29vZ2xlLmNs",
+            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkRhdGFBZ2VudCJz2kEf",
+            "cGFyZW50LGRhdGFfYWdlbnQsZGF0YV9hZ2VudF9pZILT5JMCSyI9L3YxYmV0",
+            "YS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2RhdGFBZ2VudHM6",
+            "Y3JlYXRlU3luYzoKZGF0YV9hZ2VudBL/AQoPVXBkYXRlRGF0YUFnZW50Ej8u",
+            "Z29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLlVwZGF0",
+            "ZURhdGFBZ2VudFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
+            "aW9uIosBykEeCglEYXRhQWdlbnQSEU9wZXJhdGlvbk1ldGFkYXRh2kEWZGF0",
+            "YV9hZ2VudCx1cGRhdGVfbWFza4LT5JMCSzI9L3YxYmV0YS97ZGF0YV9hZ2Vu",
+            "dC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YUFnZW50cy8qfToK",
+            "ZGF0YV9hZ2VudBKBAgoTVXBkYXRlRGF0YUFnZW50U3luYxI/Lmdvb2dsZS5j",
+            "bG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5VcGRhdGVEYXRhQWdl",
+            "bnRSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3Mu",
+            "djFiZXRhLkRhdGFBZ2VudCJ12kEWZGF0YV9hZ2VudCx1cGRhdGVfbWFza4LT",
+            "5JMCVjJIL3YxYmV0YS97ZGF0YV9hZ2VudC5uYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovZGF0YUFnZW50cy8qfTp1cGRhdGVTeW5jOgpkYXRhX2FnZW50",
+            "EuEBCg9EZWxldGVEYXRhQWdlbnQSPy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0",
+            "YWFuYWx5dGljcy52MWJldGEuRGVsZXRlRGF0YUFnZW50UmVxdWVzdBodLmdv",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ibspBKgoVZ29vZ2xlLnByb3Rv",
+            "YnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAjQqMi92",
+            "MWJldGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhQWdlbnRz",
+            "Lyp9ErwBChNEZWxldGVEYXRhQWdlbnRTeW5jEj8uZ29vZ2xlLmNsb3VkLmdl",
+            "bWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkRlbGV0ZURhdGFBZ2VudFJlcXVl",
+            "c3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiTNpBBG5hbWWC0+STAj8qPS92",
+            "MWJldGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhQWdlbnRz",
+            "Lyp9OmRlbGV0ZVN5bmMSpAEKDEdldElhbVBvbGljeRIiLmdvb2dsZS5pYW0u",
+            "djEuR2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5",
+            "IlnaQQhyZXNvdXJjZYLT5JMCSCJDL3YxYmV0YS97cmVzb3VyY2U9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9kYXRhQWdlbnRzLyp9OmdldElhbVBvbGljeToB",
+            "KhKkAQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJYW1Qb2xp",
+            "Y3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiWdpBCHJlc291cmNl",
+            "gtPkkwJIIkMvdjFiZXRhL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2RhdGFBZ2VudHMvKn06c2V0SWFtUG9saWN5OgEqEtoCChhTZXRBZ2Vu",
+            "dE9wc09ic2VydmFiaWxpdHkSSC5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFu",
+            "YWx5dGljcy52MWJldGEuU2V0QWdlbnRPcHNPYnNlcnZhYmlsaXR5UmVxdWVz",
+            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i1AHKQUQKIFNldEFn",
+            "ZW50T3BzT2JzZXJ2YWJpbGl0eVJlc3BvbnNlEiBTZXRBZ2VudE9wc09ic2Vy",
+            "dmFiaWxpdHlNZXRhZGF0YdpBKXBhcmVudCx0ZWxlbWV0cnlfZW5hYmxlZCxk",
+            "YXRhX3NvdXJjZV90eXBlgtPkkwJbIlYvdjFiZXRhL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKn0vb2JzZXJ2YWJpbGl0eVNldHRpbmdzOnNldEFn",
+            "ZW50T3BzT2JzZXJ2YWJpbGl0eToBKhKnAgodUmV0cmlldmVBZ2VudE9wc09i",
+            "c2VydmFiaWxpdHkSTS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGlj",
+            "cy52MWJldGEuUmV0cmlldmVBZ2VudE9wc09ic2VydmFiaWxpdHlSZXF1ZXN0",
+            "Gk4uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLlJl",
+            "dHJpZXZlQWdlbnRPcHNPYnNlcnZhYmlsaXR5UmVzcG9uc2UiZ9pBF3BhcmVu",
+            "dCxkYXRhX3NvdXJjZV90eXBlgtPkkwJHEkUvdjFiZXRhL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKn06cmV0cmlldmVBZ2VudE9wc09ic2VydmFi",
+            "aWxpdHkaVspBImdlbWluaWRhdGFhbmFseXRpY3MuZ29vZ2xlYXBpcy5jb23S",
+            "QS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
+            "b3JtQqYCCitjb20uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3Mu",
+            "djFiZXRhQhVEYXRhQWdlbnRTZXJ2aWNlUHJvdG9QAVpdY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9nZW1pbmlkYXRhYW5hbHl0aWNzL2FwaXYxYmV0YS9nZW1pbmlk",
+            "YXRhYW5hbHl0aWNzcGI7Z2VtaW5pZGF0YWFuYWx5dGljc3BiqgInR29vZ2xl",
+            "LkNsb3VkLkdlbWluaURhdGFBbmFseXRpY3MuVjFCZXRhygInR29vZ2xlXENs",
+            "b3VkXEdlbWluaURhdGFBbmFseXRpY3NcVjFiZXRh6gIqR29vZ2xlOjpDbG91",
+            "ZDo6R2VtaW5pRGF0YUFuYWx5dGljczo6VjFiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListDataAgentsRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListDataAgentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy", "ShowDeleted" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListDataAgentsRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListDataAgentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy", "ShowDeleted", "CreatorFilter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListDataAgentsResponse), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListDataAgentsResponse.Parser, new[]{ "DataAgents", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy", "ShowDeleted", "CreatorFilter" }, null, new[]{ typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsRequest.Types.CreatorFilter) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsResponse), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsResponse.Parser, new[]{ "DataAgents", "NextPageToken", "Unreachable" }, null, null, null, null),
@@ -152,7 +184,12 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateDataAgentRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateDataAgentRequest.Parser, new[]{ "Parent", "DataAgentId", "DataAgent", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.UpdateDataAgentRequest.Parser, new[]{ "UpdateMask", "DataAgent", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteDataAgentRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.OperationMetadata), global::Google.Cloud.GeminiDataAnalytics.V1Beta.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusMessage", "RequestedCancellation", "ApiVersion" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.OperationMetadata), global::Google.Cloud.GeminiDataAnalytics.V1Beta.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusMessage", "RequestedCancellation", "ApiVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityRequest.Parser, new[]{ "Parent", "TelemetryEnabled", "DataSourceType", "BqaaEnabled", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityResponse), global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityMetadata), global::Google.Cloud.GeminiDataAnalytics.V1Beta.SetAgentOpsObservabilityMetadata.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityRequest.Parser, new[]{ "Parent", "DataSourceType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityResponse), global::Google.Cloud.GeminiDataAnalytics.V1Beta.RetrieveAgentOpsObservabilityResponse.Parser, new[]{ "TelemetryEnabled", "BigqueryEnabled", "CloudTraceEnabled", "CloudMonitoringEnabled", "CloudLoggingEnabled", "BqaaEnabled" }, null, null, null, null)
           }));
     }
     #endregion
@@ -203,6 +240,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       filter_ = other.filter_;
       orderBy_ = other.orderBy_;
       showDeleted_ = other.showDeleted_;
+      creatorFilter_ = other.creatorFilter_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -310,6 +348,21 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "creator_filter" field.</summary>
+    public const int CreatorFilterFieldNumber = 8;
+    private global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsRequest.Types.CreatorFilter creatorFilter_ = global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsRequest.Types.CreatorFilter.Unspecified;
+    /// <summary>
+    /// Optional. Filter for the creator of the agent.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsRequest.Types.CreatorFilter CreatorFilter {
+      get { return creatorFilter_; }
+      set {
+        creatorFilter_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -331,6 +384,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (Filter != other.Filter) return false;
       if (OrderBy != other.OrderBy) return false;
       if (ShowDeleted != other.ShowDeleted) return false;
+      if (CreatorFilter != other.CreatorFilter) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -344,6 +398,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (ShowDeleted != false) hash ^= ShowDeleted.GetHashCode();
+      if (CreatorFilter != global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsRequest.Types.CreatorFilter.Unspecified) hash ^= CreatorFilter.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -386,6 +441,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteRawTag(48);
         output.WriteBool(ShowDeleted);
       }
+      if (CreatorFilter != global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsRequest.Types.CreatorFilter.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) CreatorFilter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -420,6 +479,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteRawTag(48);
         output.WriteBool(ShowDeleted);
       }
+      if (CreatorFilter != global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsRequest.Types.CreatorFilter.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) CreatorFilter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -447,6 +510,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
       if (ShowDeleted != false) {
         size += 1 + 1;
+      }
+      if (CreatorFilter != global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsRequest.Types.CreatorFilter.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CreatorFilter);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -477,6 +543,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
       if (other.ShowDeleted != false) {
         ShowDeleted = other.ShowDeleted;
+      }
+      if (other.CreatorFilter != global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsRequest.Types.CreatorFilter.Unspecified) {
+        CreatorFilter = other.CreatorFilter;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -521,6 +590,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             ShowDeleted = input.ReadBool();
             break;
           }
+          case 64: {
+            CreatorFilter = (global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsRequest.Types.CreatorFilter) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -562,6 +635,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
           }
           case 48: {
             ShowDeleted = input.ReadBool();
+            break;
+          }
+          case 64: {
+            CreatorFilter = (global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListAccessibleDataAgentsRequest.Types.CreatorFilter) input.ReadEnum();
             break;
           }
         }
@@ -3161,6 +3238,1383 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
           }
           case 58: {
             ApiVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for SetAgentOpsObservability.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SetAgentOpsObservabilityRequest : pb::IMessage<SetAgentOpsObservabilityRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SetAgentOpsObservabilityRequest> _parser = new pb::MessageParser<SetAgentOpsObservabilityRequest>(() => new SetAgentOpsObservabilityRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SetAgentOpsObservabilityRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetAgentOpsObservabilityRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetAgentOpsObservabilityRequest(SetAgentOpsObservabilityRequest other) : this() {
+      parent_ = other.parent_;
+      telemetryEnabled_ = other.telemetryEnabled_;
+      dataSourceType_ = other.dataSourceType_;
+      bqaaEnabled_ = other.bqaaEnabled_;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetAgentOpsObservabilityRequest Clone() {
+      return new SetAgentOpsObservabilityRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. Parent value for SetAgentOpsObservabilityRequest.
+    /// Format: projects/{project}/locations/{location}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "telemetry_enabled" field.</summary>
+    public const int TelemetryEnabledFieldNumber = 2;
+    private bool telemetryEnabled_;
+    /// <summary>
+    /// Optional. Whether to enable or disable AgentOps observability.
+    /// When update_mask is provided, this field is ignored unless specified in the
+    /// mask.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool TelemetryEnabled {
+      get { return telemetryEnabled_; }
+      set {
+        telemetryEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data_source_type" field.</summary>
+    public const int DataSourceTypeFieldNumber = 3;
+    private string dataSourceType_ = "";
+    /// <summary>
+    /// Required. The data source type for which to set observability settings.
+    /// Examples: "bigquery", "looker"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DataSourceType {
+      get { return dataSourceType_; }
+      set {
+        dataSourceType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "bqaa_enabled" field.</summary>
+    public const int BqaaEnabledFieldNumber = 4;
+    private bool bqaaEnabled_;
+    /// <summary>
+    /// Optional. Whether BigQuery Agent Analytics is enabled.
+    /// Note: An explicit `update_mask` containing "bqaa_enabled" is required to
+    /// modify this field. If `update_mask` is omitted, this field is ignored and
+    /// an existing enabled setting cannot be disabled.
+    ///
+    /// This is a project-level setting and does not by itself enable trace
+    /// logging for any individual agent. Per-agent trace logging is controlled
+    /// by `DataAgent.bigquery_agent_analytics_enabled` together with
+    /// `DataAgent.bigquery_agent_analytics_table`; an agent does not inherit
+    /// this setting.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BqaaEnabled {
+      get { return bqaaEnabled_; }
+      set {
+        bqaaEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. Field mask is used to specify the fields to be overwritten by the
+    /// update. The fields specified in the update_mask are relative to the
+    /// resource. A field will be overwritten if it is in the mask.
+    ///
+    /// If the user does not provide a mask, only `telemetry_enabled` will be
+    /// updated (for backward compatibility with legacy callers). Note that
+    /// disabling BigQuery Agent Analytics (`bqaa_enabled = false`) requires
+    /// providing an explicit `update_mask` containing "bqaa_enabled".
+    ///
+    /// Per AIP-161:
+    /// - The special wildcard value '*' is supported to update all fields.
+    /// - Field paths should use snake_case, though camelCase equivalents
+    ///   (`telemetryEnabled`, `bqaaEnabled`) are accepted for REST/JSON
+    ///   transcoding compatibility.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SetAgentOpsObservabilityRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SetAgentOpsObservabilityRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (TelemetryEnabled != other.TelemetryEnabled) return false;
+      if (DataSourceType != other.DataSourceType) return false;
+      if (BqaaEnabled != other.BqaaEnabled) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (TelemetryEnabled != false) hash ^= TelemetryEnabled.GetHashCode();
+      if (DataSourceType.Length != 0) hash ^= DataSourceType.GetHashCode();
+      if (BqaaEnabled != false) hash ^= BqaaEnabled.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (TelemetryEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(TelemetryEnabled);
+      }
+      if (DataSourceType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DataSourceType);
+      }
+      if (BqaaEnabled != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(BqaaEnabled);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (TelemetryEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(TelemetryEnabled);
+      }
+      if (DataSourceType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DataSourceType);
+      }
+      if (BqaaEnabled != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(BqaaEnabled);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (TelemetryEnabled != false) {
+        size += 1 + 1;
+      }
+      if (DataSourceType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DataSourceType);
+      }
+      if (BqaaEnabled != false) {
+        size += 1 + 1;
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SetAgentOpsObservabilityRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.TelemetryEnabled != false) {
+        TelemetryEnabled = other.TelemetryEnabled;
+      }
+      if (other.DataSourceType.Length != 0) {
+        DataSourceType = other.DataSourceType;
+      }
+      if (other.BqaaEnabled != false) {
+        BqaaEnabled = other.BqaaEnabled;
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            TelemetryEnabled = input.ReadBool();
+            break;
+          }
+          case 26: {
+            DataSourceType = input.ReadString();
+            break;
+          }
+          case 32: {
+            BqaaEnabled = input.ReadBool();
+            break;
+          }
+          case 42: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            TelemetryEnabled = input.ReadBool();
+            break;
+          }
+          case 26: {
+            DataSourceType = input.ReadString();
+            break;
+          }
+          case 32: {
+            BqaaEnabled = input.ReadBool();
+            break;
+          }
+          case 42: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response for SetAgentOpsObservability.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SetAgentOpsObservabilityResponse : pb::IMessage<SetAgentOpsObservabilityResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SetAgentOpsObservabilityResponse> _parser = new pb::MessageParser<SetAgentOpsObservabilityResponse>(() => new SetAgentOpsObservabilityResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SetAgentOpsObservabilityResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetAgentOpsObservabilityResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetAgentOpsObservabilityResponse(SetAgentOpsObservabilityResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetAgentOpsObservabilityResponse Clone() {
+      return new SetAgentOpsObservabilityResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SetAgentOpsObservabilityResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SetAgentOpsObservabilityResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SetAgentOpsObservabilityResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata for SetAgentOpsObservability.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SetAgentOpsObservabilityMetadata : pb::IMessage<SetAgentOpsObservabilityMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SetAgentOpsObservabilityMetadata> _parser = new pb::MessageParser<SetAgentOpsObservabilityMetadata>(() => new SetAgentOpsObservabilityMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SetAgentOpsObservabilityMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetAgentOpsObservabilityMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetAgentOpsObservabilityMetadata(SetAgentOpsObservabilityMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetAgentOpsObservabilityMetadata Clone() {
+      return new SetAgentOpsObservabilityMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SetAgentOpsObservabilityMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SetAgentOpsObservabilityMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SetAgentOpsObservabilityMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for RetrieveAgentOpsObservability.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RetrieveAgentOpsObservabilityRequest : pb::IMessage<RetrieveAgentOpsObservabilityRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RetrieveAgentOpsObservabilityRequest> _parser = new pb::MessageParser<RetrieveAgentOpsObservabilityRequest>(() => new RetrieveAgentOpsObservabilityRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RetrieveAgentOpsObservabilityRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetrieveAgentOpsObservabilityRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetrieveAgentOpsObservabilityRequest(RetrieveAgentOpsObservabilityRequest other) : this() {
+      parent_ = other.parent_;
+      dataSourceType_ = other.dataSourceType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetrieveAgentOpsObservabilityRequest Clone() {
+      return new RetrieveAgentOpsObservabilityRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. Parent value for RetrieveAgentOpsObservabilityRequest.
+    /// Format: projects/{project}/locations/{location}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "data_source_type" field.</summary>
+    public const int DataSourceTypeFieldNumber = 2;
+    private string dataSourceType_ = "";
+    /// <summary>
+    /// Required. The data source type for which to retrieve observability
+    /// settings. Examples: "bigquery", "looker"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DataSourceType {
+      get { return dataSourceType_; }
+      set {
+        dataSourceType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RetrieveAgentOpsObservabilityRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RetrieveAgentOpsObservabilityRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (DataSourceType != other.DataSourceType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (DataSourceType.Length != 0) hash ^= DataSourceType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (DataSourceType.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DataSourceType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (DataSourceType.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DataSourceType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (DataSourceType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DataSourceType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RetrieveAgentOpsObservabilityRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.DataSourceType.Length != 0) {
+        DataSourceType = other.DataSourceType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            DataSourceType = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            DataSourceType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response for RetrieveAgentOpsObservability.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RetrieveAgentOpsObservabilityResponse : pb::IMessage<RetrieveAgentOpsObservabilityResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RetrieveAgentOpsObservabilityResponse> _parser = new pb::MessageParser<RetrieveAgentOpsObservabilityResponse>(() => new RetrieveAgentOpsObservabilityResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RetrieveAgentOpsObservabilityResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgentServiceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetrieveAgentOpsObservabilityResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetrieveAgentOpsObservabilityResponse(RetrieveAgentOpsObservabilityResponse other) : this() {
+      telemetryEnabled_ = other.telemetryEnabled_;
+      bigqueryEnabled_ = other.bigqueryEnabled_;
+      cloudTraceEnabled_ = other.cloudTraceEnabled_;
+      cloudMonitoringEnabled_ = other.cloudMonitoringEnabled_;
+      cloudLoggingEnabled_ = other.cloudLoggingEnabled_;
+      bqaaEnabled_ = other.bqaaEnabled_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetrieveAgentOpsObservabilityResponse Clone() {
+      return new RetrieveAgentOpsObservabilityResponse(this);
+    }
+
+    /// <summary>Field number for the "telemetry_enabled" field.</summary>
+    public const int TelemetryEnabledFieldNumber = 1;
+    private bool telemetryEnabled_;
+    /// <summary>
+    /// Output only. Whether AgentOps observability telemetry is enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool TelemetryEnabled {
+      get { return telemetryEnabled_; }
+      set {
+        telemetryEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "bigquery_enabled" field.</summary>
+    public const int BigqueryEnabledFieldNumber = 3;
+    private bool bigqueryEnabled_;
+    /// <summary>
+    /// Output only. Whether BigQuery API is enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BigqueryEnabled {
+      get { return bigqueryEnabled_; }
+      set {
+        bigqueryEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cloud_trace_enabled" field.</summary>
+    public const int CloudTraceEnabledFieldNumber = 4;
+    private bool cloudTraceEnabled_;
+    /// <summary>
+    /// Output only. Whether Cloud Trace API is enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CloudTraceEnabled {
+      get { return cloudTraceEnabled_; }
+      set {
+        cloudTraceEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cloud_monitoring_enabled" field.</summary>
+    public const int CloudMonitoringEnabledFieldNumber = 5;
+    private bool cloudMonitoringEnabled_;
+    /// <summary>
+    /// Output only. Whether Cloud Monitoring API is enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CloudMonitoringEnabled {
+      get { return cloudMonitoringEnabled_; }
+      set {
+        cloudMonitoringEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cloud_logging_enabled" field.</summary>
+    public const int CloudLoggingEnabledFieldNumber = 6;
+    private bool cloudLoggingEnabled_;
+    /// <summary>
+    /// Output only. Whether Cloud Logging API is enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CloudLoggingEnabled {
+      get { return cloudLoggingEnabled_; }
+      set {
+        cloudLoggingEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "bqaa_enabled" field.</summary>
+    public const int BqaaEnabledFieldNumber = 7;
+    private bool bqaaEnabled_;
+    /// <summary>
+    /// Output only. Whether BigQuery Agent Analytics is enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BqaaEnabled {
+      get { return bqaaEnabled_; }
+      set {
+        bqaaEnabled_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RetrieveAgentOpsObservabilityResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RetrieveAgentOpsObservabilityResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TelemetryEnabled != other.TelemetryEnabled) return false;
+      if (BigqueryEnabled != other.BigqueryEnabled) return false;
+      if (CloudTraceEnabled != other.CloudTraceEnabled) return false;
+      if (CloudMonitoringEnabled != other.CloudMonitoringEnabled) return false;
+      if (CloudLoggingEnabled != other.CloudLoggingEnabled) return false;
+      if (BqaaEnabled != other.BqaaEnabled) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TelemetryEnabled != false) hash ^= TelemetryEnabled.GetHashCode();
+      if (BigqueryEnabled != false) hash ^= BigqueryEnabled.GetHashCode();
+      if (CloudTraceEnabled != false) hash ^= CloudTraceEnabled.GetHashCode();
+      if (CloudMonitoringEnabled != false) hash ^= CloudMonitoringEnabled.GetHashCode();
+      if (CloudLoggingEnabled != false) hash ^= CloudLoggingEnabled.GetHashCode();
+      if (BqaaEnabled != false) hash ^= BqaaEnabled.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TelemetryEnabled != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(TelemetryEnabled);
+      }
+      if (BigqueryEnabled != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(BigqueryEnabled);
+      }
+      if (CloudTraceEnabled != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(CloudTraceEnabled);
+      }
+      if (CloudMonitoringEnabled != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(CloudMonitoringEnabled);
+      }
+      if (CloudLoggingEnabled != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(CloudLoggingEnabled);
+      }
+      if (BqaaEnabled != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(BqaaEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TelemetryEnabled != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(TelemetryEnabled);
+      }
+      if (BigqueryEnabled != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(BigqueryEnabled);
+      }
+      if (CloudTraceEnabled != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(CloudTraceEnabled);
+      }
+      if (CloudMonitoringEnabled != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(CloudMonitoringEnabled);
+      }
+      if (CloudLoggingEnabled != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(CloudLoggingEnabled);
+      }
+      if (BqaaEnabled != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(BqaaEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TelemetryEnabled != false) {
+        size += 1 + 1;
+      }
+      if (BigqueryEnabled != false) {
+        size += 1 + 1;
+      }
+      if (CloudTraceEnabled != false) {
+        size += 1 + 1;
+      }
+      if (CloudMonitoringEnabled != false) {
+        size += 1 + 1;
+      }
+      if (CloudLoggingEnabled != false) {
+        size += 1 + 1;
+      }
+      if (BqaaEnabled != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RetrieveAgentOpsObservabilityResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TelemetryEnabled != false) {
+        TelemetryEnabled = other.TelemetryEnabled;
+      }
+      if (other.BigqueryEnabled != false) {
+        BigqueryEnabled = other.BigqueryEnabled;
+      }
+      if (other.CloudTraceEnabled != false) {
+        CloudTraceEnabled = other.CloudTraceEnabled;
+      }
+      if (other.CloudMonitoringEnabled != false) {
+        CloudMonitoringEnabled = other.CloudMonitoringEnabled;
+      }
+      if (other.CloudLoggingEnabled != false) {
+        CloudLoggingEnabled = other.CloudLoggingEnabled;
+      }
+      if (other.BqaaEnabled != false) {
+        BqaaEnabled = other.BqaaEnabled;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            TelemetryEnabled = input.ReadBool();
+            break;
+          }
+          case 24: {
+            BigqueryEnabled = input.ReadBool();
+            break;
+          }
+          case 32: {
+            CloudTraceEnabled = input.ReadBool();
+            break;
+          }
+          case 40: {
+            CloudMonitoringEnabled = input.ReadBool();
+            break;
+          }
+          case 48: {
+            CloudLoggingEnabled = input.ReadBool();
+            break;
+          }
+          case 56: {
+            BqaaEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            TelemetryEnabled = input.ReadBool();
+            break;
+          }
+          case 24: {
+            BigqueryEnabled = input.ReadBool();
+            break;
+          }
+          case 32: {
+            CloudTraceEnabled = input.ReadBool();
+            break;
+          }
+          case 40: {
+            CloudMonitoringEnabled = input.ReadBool();
+            break;
+          }
+          case 48: {
+            CloudLoggingEnabled = input.ReadBool();
+            break;
+          }
+          case 56: {
+            BqaaEnabled = input.ReadBool();
             break;
           }
         }
