@@ -48,12 +48,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 80,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -97,12 +97,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 83,
+          "end": 84,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 81,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -3119,6 +3119,628 @@
       ]
     },
     {
+      "regionTag": "geminidataanalytics_v1_generated_DataAgentService_SetAgentOpsObservability_sync",
+      "title": "SetAgentOpsObservabilityRequestObject",
+      "description": "Snippet for SetAgentOpsObservability",
+      "file": "DataAgentServiceClient.SetAgentOpsObservabilityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetAgentOpsObservability",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient.SetAgentOpsObservability",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1.SetAgentOpsObservabilityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GeminiDataAnalytics.V1.SetAgentOpsObservabilityResponse, Google.Cloud.GeminiDataAnalytics.V1.SetAgentOpsObservabilityMetadata>",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "SetAgentOpsObservability",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService.SetAgentOpsObservability",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataAgentService_SetAgentOpsObservability_async",
+      "title": "SetAgentOpsObservabilityRequestObjectAsync",
+      "description": "Snippet for SetAgentOpsObservabilityAsync",
+      "file": "DataAgentServiceClient.SetAgentOpsObservabilityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetAgentOpsObservabilityAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient.SetAgentOpsObservabilityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1.SetAgentOpsObservabilityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GeminiDataAnalytics.V1.SetAgentOpsObservabilityResponse, Google.Cloud.GeminiDataAnalytics.V1.SetAgentOpsObservabilityMetadata>>",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "SetAgentOpsObservability",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService.SetAgentOpsObservability",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataAgentService_SetAgentOpsObservability_sync_flattened",
+      "title": "SetAgentOpsObservability",
+      "description": "Snippet for SetAgentOpsObservability",
+      "file": "DataAgentServiceClient.SetAgentOpsObservabilitySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetAgentOpsObservability",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient.SetAgentOpsObservability",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "telemetryEnabled"
+          },
+          {
+            "type": "System.String",
+            "name": "dataSourceType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GeminiDataAnalytics.V1.SetAgentOpsObservabilityResponse, Google.Cloud.GeminiDataAnalytics.V1.SetAgentOpsObservabilityMetadata>",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "SetAgentOpsObservability",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService.SetAgentOpsObservability",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataAgentService_SetAgentOpsObservability_async_flattened",
+      "title": "SetAgentOpsObservabilityAsync",
+      "description": "Snippet for SetAgentOpsObservabilityAsync",
+      "file": "DataAgentServiceClient.SetAgentOpsObservabilityAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetAgentOpsObservabilityAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient.SetAgentOpsObservabilityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "telemetryEnabled"
+          },
+          {
+            "type": "System.String",
+            "name": "dataSourceType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GeminiDataAnalytics.V1.SetAgentOpsObservabilityResponse, Google.Cloud.GeminiDataAnalytics.V1.SetAgentOpsObservabilityMetadata>>",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "SetAgentOpsObservability",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService.SetAgentOpsObservability",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataAgentService_SetAgentOpsObservability_sync_flattened_resourceNames",
+      "title": "SetAgentOpsObservabilityResourceNames",
+      "description": "Snippet for SetAgentOpsObservability",
+      "file": "DataAgentServiceClient.SetAgentOpsObservabilityResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetAgentOpsObservability",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient.SetAgentOpsObservability",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "telemetryEnabled"
+          },
+          {
+            "type": "System.String",
+            "name": "dataSourceType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GeminiDataAnalytics.V1.SetAgentOpsObservabilityResponse, Google.Cloud.GeminiDataAnalytics.V1.SetAgentOpsObservabilityMetadata>",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "SetAgentOpsObservability",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService.SetAgentOpsObservability",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataAgentService_SetAgentOpsObservability_async_flattened_resourceNames",
+      "title": "SetAgentOpsObservabilityResourceNamesAsync",
+      "description": "Snippet for SetAgentOpsObservabilityAsync",
+      "file": "DataAgentServiceClient.SetAgentOpsObservabilityResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetAgentOpsObservabilityAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient.SetAgentOpsObservabilityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "telemetryEnabled"
+          },
+          {
+            "type": "System.String",
+            "name": "dataSourceType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GeminiDataAnalytics.V1.SetAgentOpsObservabilityResponse, Google.Cloud.GeminiDataAnalytics.V1.SetAgentOpsObservabilityMetadata>>",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "SetAgentOpsObservability",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService.SetAgentOpsObservability",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataAgentService_RetrieveAgentOpsObservability_sync",
+      "title": "RetrieveAgentOpsObservabilityRequestObject",
+      "description": "Snippet for RetrieveAgentOpsObservability",
+      "file": "DataAgentServiceClient.RetrieveAgentOpsObservabilityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveAgentOpsObservability",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient.RetrieveAgentOpsObservability",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1.RetrieveAgentOpsObservabilityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GeminiDataAnalytics.V1.RetrieveAgentOpsObservabilityResponse",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveAgentOpsObservability",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService.RetrieveAgentOpsObservability",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataAgentService_RetrieveAgentOpsObservability_async",
+      "title": "RetrieveAgentOpsObservabilityRequestObjectAsync",
+      "description": "Snippet for RetrieveAgentOpsObservabilityAsync",
+      "file": "DataAgentServiceClient.RetrieveAgentOpsObservabilityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveAgentOpsObservabilityAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient.RetrieveAgentOpsObservabilityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1.RetrieveAgentOpsObservabilityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GeminiDataAnalytics.V1.RetrieveAgentOpsObservabilityResponse>",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveAgentOpsObservability",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService.RetrieveAgentOpsObservability",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataAgentService_RetrieveAgentOpsObservability_sync_flattened",
+      "title": "RetrieveAgentOpsObservability",
+      "description": "Snippet for RetrieveAgentOpsObservability",
+      "file": "DataAgentServiceClient.RetrieveAgentOpsObservabilitySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveAgentOpsObservability",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient.RetrieveAgentOpsObservability",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "dataSourceType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GeminiDataAnalytics.V1.RetrieveAgentOpsObservabilityResponse",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveAgentOpsObservability",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService.RetrieveAgentOpsObservability",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataAgentService_RetrieveAgentOpsObservability_async_flattened",
+      "title": "RetrieveAgentOpsObservabilityAsync",
+      "description": "Snippet for RetrieveAgentOpsObservabilityAsync",
+      "file": "DataAgentServiceClient.RetrieveAgentOpsObservabilityAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveAgentOpsObservabilityAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient.RetrieveAgentOpsObservabilityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "dataSourceType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GeminiDataAnalytics.V1.RetrieveAgentOpsObservabilityResponse>",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveAgentOpsObservability",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService.RetrieveAgentOpsObservability",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataAgentService_RetrieveAgentOpsObservability_sync_flattened_resourceNames",
+      "title": "RetrieveAgentOpsObservabilityResourceNames",
+      "description": "Snippet for RetrieveAgentOpsObservability",
+      "file": "DataAgentServiceClient.RetrieveAgentOpsObservabilityResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveAgentOpsObservability",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient.RetrieveAgentOpsObservability",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "dataSourceType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GeminiDataAnalytics.V1.RetrieveAgentOpsObservabilityResponse",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveAgentOpsObservability",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService.RetrieveAgentOpsObservability",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataAgentService_RetrieveAgentOpsObservability_async_flattened_resourceNames",
+      "title": "RetrieveAgentOpsObservabilityResourceNamesAsync",
+      "description": "Snippet for RetrieveAgentOpsObservabilityAsync",
+      "file": "DataAgentServiceClient.RetrieveAgentOpsObservabilityResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveAgentOpsObservabilityAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient.RetrieveAgentOpsObservabilityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "dataSourceType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GeminiDataAnalytics.V1.RetrieveAgentOpsObservabilityResponse>",
+        "client": {
+          "shortName": "DataAgentServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataAgentServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveAgentOpsObservability",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService.RetrieveAgentOpsObservability",
+          "service": {
+            "shortName": "DataAgentService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataAgentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "geminidataanalytics_v1_generated_DataChatService_Chat_sync",
       "title": "ChatRequestObject",
       "description": "Snippet for Chat",
@@ -3765,6 +4387,206 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataChatService_UpdateConversation_sync",
+      "title": "UpdateConversationRequestObject",
+      "description": "Snippet for UpdateConversation",
+      "file": "DataChatServiceClient.UpdateConversationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversation",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataChatServiceClient.UpdateConversation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1.UpdateConversationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GeminiDataAnalytics.V1.Conversation",
+        "client": {
+          "shortName": "DataChatServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversation",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataChatService.UpdateConversation",
+          "service": {
+            "shortName": "DataChatService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataChatService_UpdateConversation_async",
+      "title": "UpdateConversationRequestObjectAsync",
+      "description": "Snippet for UpdateConversationAsync",
+      "file": "DataChatServiceClient.UpdateConversationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversationAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataChatServiceClient.UpdateConversationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1.UpdateConversationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GeminiDataAnalytics.V1.Conversation>",
+        "client": {
+          "shortName": "DataChatServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversation",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataChatService.UpdateConversation",
+          "service": {
+            "shortName": "DataChatService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataChatService_UpdateConversation_sync_flattened",
+      "title": "UpdateConversation",
+      "description": "Snippet for UpdateConversation",
+      "file": "DataChatServiceClient.UpdateConversationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversation",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataChatServiceClient.UpdateConversation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1.Conversation",
+            "name": "conversation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GeminiDataAnalytics.V1.Conversation",
+        "client": {
+          "shortName": "DataChatServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversation",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataChatService.UpdateConversation",
+          "service": {
+            "shortName": "DataChatService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1_generated_DataChatService_UpdateConversation_async_flattened",
+      "title": "UpdateConversationAsync",
+      "description": "Snippet for UpdateConversationAsync",
+      "file": "DataChatServiceClient.UpdateConversationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversationAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataChatServiceClient.UpdateConversationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1.Conversation",
+            "name": "conversation"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GeminiDataAnalytics.V1.Conversation>",
+        "client": {
+          "shortName": "DataChatServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1.DataChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversation",
+          "fullName": "google.cloud.geminidataanalytics.v1.DataChatService.UpdateConversation",
+          "service": {
+            "shortName": "DataChatService",
+            "fullName": "google.cloud.geminidataanalytics.v1.DataChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
           "type": "SHORT"
         }
       ]
