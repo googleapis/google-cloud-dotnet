@@ -767,7 +767,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-09-11T18:31:20.330427886Z",
-            "lastGeneratedCommit": "0fad50179076be3c908551df3c7cd388e0928df1",
+            "lastGeneratedCommit": "0f932b887c0fd71b65f6012f62f4d0b5635abba9",
             "lastReleasedCommit": "0fad50179076be3c908551df3c7cd388e0928df1",
             "apiPaths": [
                 "google/bigtable/admin/v2"
@@ -4398,7 +4398,7 @@
         {
             "id": "Google.Cloud.ConfigDelivery.V1",
             "currentVersion": "1.0.0",
-            "nextVersion":  "2.0.0",
+            "nextVersion": "2.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-08-10T23:03:44.436999845Z",
