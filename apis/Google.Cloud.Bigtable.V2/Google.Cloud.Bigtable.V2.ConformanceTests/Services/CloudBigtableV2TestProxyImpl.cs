@@ -196,14 +196,25 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
         try
         {
             MutateRowsResponse response = await bigtableClient.MutateRowsAsync(request.Request);
-            string message = "MutateRows succeeded";
-            result.Status = SetSuccessStatus(message);
+            // Collect only failed entries (non-OK status). Successful entries are omitted from result.Entries.
             foreach (MutateRowsResponse.Types.Entry entry in response.Entries)
             {
-                if (entry.Status.Code > 0)
+                if (entry.Status.Code != (int) Google.Rpc.Code.Ok)
                 {
                     result.Entries.Add(entry);
                 }
+            }
+            // If any entries failed, result.Entries is non-empty and result.Entries[0] is the first failed entry.
+            // We set top-level result.Status to a non-OK status using that first failed entry's status.
+            // If all entries succeeded, result.Entries is empty and we report an overall OK status.
+            if (result.Entries.Count > 0)
+            {
+                result.Status = result.Entries[0].Status;
+            }
+            else
+            {
+                string message = "MutateRows succeeded";
+                result.Status = SetSuccessStatus(message);
             }
             return result;
         }
