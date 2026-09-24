@@ -409,6 +409,7 @@ namespace Google.Cloud.Bigtable.V2 {
       }
 
       /// <summary>
+      ///
       /// This RPC is only intended to be used by the official Cloud Bigtable client
       /// libraries to implement the Bigtable Session based protocol. It is subject
       /// to change without notice.
@@ -941,6 +942,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return CallInvoker.AsyncServerStreamingCall(__Method_ExecuteQuery, null, options, request);
       }
       /// <summary>
+      ///
       /// This RPC is only intended to be used by the official Cloud Bigtable client
       /// libraries to implement the Bigtable Session based protocol. It is subject
       /// to change without notice.
@@ -956,6 +958,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return GetClientConfiguration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      ///
       /// This RPC is only intended to be used by the official Cloud Bigtable client
       /// libraries to implement the Bigtable Session based protocol. It is subject
       /// to change without notice.
@@ -969,6 +972,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetClientConfiguration, null, options, request);
       }
       /// <summary>
+      ///
       /// This RPC is only intended to be used by the official Cloud Bigtable client
       /// libraries to implement the Bigtable Session based protocol. It is subject
       /// to change without notice.
@@ -984,6 +988,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return GetClientConfigurationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      ///
       /// This RPC is only intended to be used by the official Cloud Bigtable client
       /// libraries to implement the Bigtable Session based protocol. It is subject
       /// to change without notice.
