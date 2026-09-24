@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START lustre_v1_generated_Lustre_DeleteInstance_async]
+    // [START lustre_v1_generated_Lustre_UpdateMirror_async]
     using Google.Cloud.Lustre.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
@@ -24,7 +24,7 @@ namespace GoogleCSharpSnippets
 
     public sealed partial class GeneratedLustreClientSnippets
     {
-        /// <summary>Snippet for DeleteInstanceAsync</summary>
+        /// <summary>Snippet for UpdateMirrorAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,36 +32,36 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task DeleteInstanceRequestObjectAsync()
+        public async Task UpdateMirrorRequestObjectAsync()
         {
             // Create client
             LustreClient lustreClient = await LustreClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteInstanceRequest request = new DeleteInstanceRequest
+            UpdateMirrorRequest request = new UpdateMirrorRequest
             {
-                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                Mirror = new Mirror(),
+                UpdateMask = new FieldMask(),
                 RequestId = "",
-                Force = false,
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await lustreClient.DeleteInstanceAsync(request);
+            Operation<Mirror, OperationMetadata> response = await lustreClient.UpdateMirrorAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Mirror, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Empty result = completedResponse.Result;
+            Mirror result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await lustreClient.PollOnceDeleteInstanceAsync(operationName);
+            Operation<Mirror, OperationMetadata> retrievedResponse = await lustreClient.PollOnceUpdateMirrorAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Empty retrievedResult = retrievedResponse.Result;
+                Mirror retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END lustre_v1_generated_Lustre_DeleteInstance_async]
+    // [END lustre_v1_generated_Lustre_UpdateMirror_async]
 }

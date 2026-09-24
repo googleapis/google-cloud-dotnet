@@ -16,15 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START lustre_v1_generated_Lustre_DeleteInstance_async]
+    // [START lustre_v1_generated_Lustre_CreateDirectoryPolicy_sync_flattened_resourceNames]
     using Google.Cloud.Lustre.V1;
     using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedLustreClientSnippets
     {
-        /// <summary>Snippet for DeleteInstanceAsync</summary>
+        /// <summary>Snippet for CreateDirectoryPolicy</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,36 +30,33 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task DeleteInstanceRequestObjectAsync()
+        public void CreateDirectoryPolicyResourceNames()
         {
             // Create client
-            LustreClient lustreClient = await LustreClient.CreateAsync();
+            LustreClient lustreClient = LustreClient.Create();
             // Initialize request argument(s)
-            DeleteInstanceRequest request = new DeleteInstanceRequest
-            {
-                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-                RequestId = "",
-                Force = false,
-            };
+            InstanceName parent = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            DirectoryPolicy directoryPolicy = new DirectoryPolicy();
+            string directoryPolicyId = "";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await lustreClient.DeleteInstanceAsync(request);
+            Operation<DirectoryPolicy, OperationMetadata> response = lustreClient.CreateDirectoryPolicy(parent, directoryPolicy, directoryPolicyId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<DirectoryPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Empty result = completedResponse.Result;
+            DirectoryPolicy result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await lustreClient.PollOnceDeleteInstanceAsync(operationName);
+            Operation<DirectoryPolicy, OperationMetadata> retrievedResponse = lustreClient.PollOnceCreateDirectoryPolicy(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Empty retrievedResult = retrievedResponse.Result;
+                DirectoryPolicy retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END lustre_v1_generated_Lustre_DeleteInstance_async]
+    // [END lustre_v1_generated_Lustre_CreateDirectoryPolicy_sync_flattened_resourceNames]
 }

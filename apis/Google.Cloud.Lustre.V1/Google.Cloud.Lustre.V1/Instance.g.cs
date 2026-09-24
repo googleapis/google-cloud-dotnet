@@ -28,64 +28,127 @@ namespace Google.Cloud.Lustre.V1 {
             "bGUuY2xvdWQubHVzdHJlLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
             "LnByb3RvGhtnb29nbGUvYXBpL2ZpZWxkX2luZm8ucHJvdG8aGWdvb2dsZS9h",
             "cGkvcmVzb3VyY2UucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNr",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIqUGCghJ",
-            "bnN0YW5jZRIRCgRuYW1lGAEgASgJQgPgQQgSGgoKZmlsZXN5c3RlbRgKIAEo",
-            "CUIG4EEF4EECEhkKDGNhcGFjaXR5X2dpYhgCIAEoA0ID4EECEjoKB25ldHdv",
-            "cmsYAyABKAlCKeBBBeBBAvpBIAoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9O",
-            "ZXR3b3JrEjoKBXN0YXRlGAQgASgOMiYuZ29vZ2xlLmNsb3VkLmx1c3RyZS52",
-            "MS5JbnN0YW5jZS5TdGF0ZUID4EEDEhgKC21vdW50X3BvaW50GAUgASgJQgPg",
-            "QQMSNAoLY3JlYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSGAoLZGVzY3JpcHRpb24YCCABKAlCA+BB",
-            "ARJBCgZsYWJlbHMYCSADKAsyLC5nb29nbGUuY2xvdWQubHVzdHJlLnYxLklu",
-            "c3RhbmNlLkxhYmVsc0VudHJ5QgPgQQESKAobcGVyX3VuaXRfc3RvcmFnZV90",
-            "aHJvdWdocHV0GAsgASgDQgPgQQISIgoTZ2tlX3N1cHBvcnRfZW5hYmxlZBgM",
-            "IAEoCEIFGAHgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
-            "bHVlGAIgASgJOgI4ASJ/CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAA",
-            "EgoKBkFDVElWRRABEgwKCENSRUFUSU5HEAISDAoIREVMRVRJTkcQAxINCglV",
-            "UEdSQURJTkcQBBINCglSRVBBSVJJTkcQBRILCgdTVE9QUEVEEAYSDAoIVVBE",
-            "QVRJTkcQBzp26kFzCh5sdXN0cmUuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2US",
-            "PHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9pbnN0",
-            "YW5jZXMve2luc3RhbmNlfSoJaW5zdGFuY2VzMghpbnN0YW5jZSKrAQoUTGlz",
-            "dEluc3RhbmNlc1JlcXVlc3QSNgoGcGFyZW50GAEgASgJQibgQQL6QSASHmx1",
-            "c3RyZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIWCglwYWdlX3NpemUYAiAB",
-            "KAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQg",
-            "ASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBASJ/ChVMaXN0SW5zdGFu",
-            "Y2VzUmVzcG9uc2USMwoJaW5zdGFuY2VzGAEgAygLMiAuZ29vZ2xlLmNsb3Vk",
-            "Lmx1c3RyZS52MS5JbnN0YW5jZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkS",
-            "GAoLdW5yZWFjaGFibGUYAyADKAlCA+BBBiJKChJHZXRJbnN0YW5jZVJlcXVl",
-            "c3QSNAoEbmFtZRgBIAEoCUIm4EEC+kEgCh5sdXN0cmUuZ29vZ2xlYXBpcy5j",
-            "b20vSW5zdGFuY2UiwwEKFUNyZWF0ZUluc3RhbmNlUmVxdWVzdBI2CgZwYXJl",
-            "bnQYASABKAlCJuBBAvpBIBIebHVzdHJlLmdvb2dsZWFwaXMuY29tL0luc3Rh",
-            "bmNlEhgKC2luc3RhbmNlX2lkGAIgASgJQgPgQQISNwoIaW5zdGFuY2UYAyAB",
-            "KAsyIC5nb29nbGUuY2xvdWQubHVzdHJlLnYxLkluc3RhbmNlQgPgQQISHwoK",
-            "cmVxdWVzdF9pZBgEIAEoCUIL4EEB4ozP1wgCCAEipwEKFVVwZGF0ZUluc3Rh",
-            "bmNlUmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5GaWVsZE1hc2tCA+BBARI3CghpbnN0YW5jZRgCIAEoCzIgLmdvb2ds",
-            "ZS5jbG91ZC5sdXN0cmUudjEuSW5zdGFuY2VCA+BBAhIfCgpyZXF1ZXN0X2lk",
-            "GAMgASgJQgvgQQHijM/XCAIIASJuChVEZWxldGVJbnN0YW5jZVJlcXVlc3QS",
-            "NAoEbmFtZRgBIAEoCUIm4EEC+kEgCh5sdXN0cmUuZ29vZ2xlYXBpcy5jb20v",
-            "SW5zdGFuY2USHwoKcmVxdWVzdF9pZBgCIAEoCUIL4EEB4ozP1wgCCAEigAIK",
-            "EU9wZXJhdGlvbk1ldGFkYXRhEjQKC2NyZWF0ZV90aW1lGAEgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhMKBnRhcmdldBgD",
-            "IAEoCUID4EEDEhEKBHZlcmIYBCABKAlCA+BBAxIbCg5zdGF0dXNfbWVzc2Fn",
-            "ZRgFIAEoCUID4EEDEiMKFnJlcXVlc3RlZF9jYW5jZWxsYXRpb24YBiABKAhC",
-            "A+BBAxIYCgthcGlfdmVyc2lvbhgHIAEoCUID4EEDQmEKGmNvbS5nb29nbGUu",
-            "Y2xvdWQubHVzdHJlLnYxQg1JbnN0YW5jZVByb3RvUAFaMmNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vbHVzdHJlL2FwaXYxL2x1c3RyZXBiO2x1c3RyZXBiYgZwcm90",
-            "bzM="));
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhZnb29n",
+            "bGUvdHlwZS9kYXRlLnByb3RvGhtnb29nbGUvdHlwZS9kYXlvZndlZWsucHJv",
+            "dG8aG2dvb2dsZS90eXBlL3RpbWVvZmRheS5wcm90byLnCwoISW5zdGFuY2US",
+            "EQoEbmFtZRgBIAEoCUID4EEIEhoKCmZpbGVzeXN0ZW0YCiABKAlCBuBBBeBB",
+            "AhIZCgxjYXBhY2l0eV9naWIYAiABKANCA+BBAhI6CgduZXR3b3JrGAMgASgJ",
+            "QingQQXgQQL6QSAKHmNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29yaxI6",
+            "CgVzdGF0ZRgEIAEoDjImLmdvb2dsZS5jbG91ZC5sdXN0cmUudjEuSW5zdGFu",
+            "Y2UuU3RhdGVCA+BBAxIYCgttb3VudF9wb2ludBgFIAEoCUID4EEDEjQKC2Ny",
+            "ZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDEjQKC3VwZGF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEhgKC2Rlc2NyaXB0aW9uGAggASgJQgPgQQESQQoGbGFi",
+            "ZWxzGAkgAygLMiwuZ29vZ2xlLmNsb3VkLmx1c3RyZS52MS5JbnN0YW5jZS5M",
+            "YWJlbHNFbnRyeUID4EEBEigKG3Blcl91bml0X3N0b3JhZ2VfdGhyb3VnaHB1",
+            "dBgLIAEoA0ID4EEBEiIKE2drZV9zdXBwb3J0X2VuYWJsZWQYDCABKAhCBRgB",
+            "4EEBEj0KB2ttc19rZXkYDSABKAlCLOBBAeBBBfpBIwohY2xvdWRrbXMuZ29v",
+            "Z2xlYXBpcy5jb20vQ3J5cHRvS2V5EhkKDHN0YXRlX3JlYXNvbhgOIAEoCUID",
+            "4EEDEkcKEHBsYWNlbWVudF9wb2xpY3kYESABKAlCLeBBAfpBJwolY29tcHV0",
+            "ZS5nb29nbGVhcGlzLmNvbS9SZXNvdXJjZVBvbGljeRJNChRhY2Nlc3NfcnVs",
+            "ZXNfb3B0aW9ucxgSIAEoCzIqLmdvb2dsZS5jbG91ZC5sdXN0cmUudjEuQWNj",
+            "ZXNzUnVsZXNPcHRpb25zQgPgQQESGAoDdWlkGBMgASgJQgvgQQPijM/XCAII",
+            "ARJKChJtYWludGVuYW5jZV9wb2xpY3kYFCABKAsyKS5nb29nbGUuY2xvdWQu",
+            "bHVzdHJlLnYxLk1haW50ZW5hbmNlUG9saWN5QgPgQQESVwoddXBjb21pbmdf",
+            "bWFpbnRlbmFuY2Vfc2NoZWR1bGUYFSABKAsyKy5nb29nbGUuY2xvdWQubHVz",
+            "dHJlLnYxLk1haW50ZW5hbmNlU2NoZWR1bGVCA+BBAxJQChRkeW5hbWljX3Rp",
+            "ZXJfb3B0aW9ucxgYIAEoCzIqLmdvb2dsZS5jbG91ZC5sdXN0cmUudjEuRHlu",
+            "YW1pY1RpZXJPcHRpb25zQgbgQQXgQQESIwoRYXZhaWxhYmxlX3ZlcnNpb24Y",
+            "ISABKAlCA+BBA0gAiAEBEiAKDnRhcmdldF92ZXJzaW9uGCIgASgJQgPgQQFI",
+            "AYgBARIjChFlZmZlY3RpdmVfdmVyc2lvbhgjIAEoCUID4EEDSAKIAQEaLQoL",
+            "TGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKS",
+            "AQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIM",
+            "CghDUkVBVElORxACEgwKCERFTEVUSU5HEAMSDQoJVVBHUkFESU5HEAQSDQoJ",
+            "UkVQQUlSSU5HEAUSCwoHU1RPUFBFRBAGEhAKCFVQREFUSU5HEAcaAggBEg0K",
+            "CVNVU1BFTkRFRBAIOnbqQXMKHmx1c3RyZS5nb29nbGVhcGlzLmNvbS9JbnN0",
+            "YW5jZRI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L2luc3RhbmNlcy97aW5zdGFuY2V9KglpbnN0YW5jZXMyCGluc3RhbmNlQhQK",
+            "El9hdmFpbGFibGVfdmVyc2lvbkIRCg9fdGFyZ2V0X3ZlcnNpb25CFAoSX2Vm",
+            "ZmVjdGl2ZV92ZXJzaW9uIpoBChJEeW5hbWljVGllck9wdGlvbnMSRQoEbW9k",
+            "ZRgBIAEoDjIvLmdvb2dsZS5jbG91ZC5sdXN0cmUudjEuRHluYW1pY1RpZXJP",
+            "cHRpb25zLk1vZGVCBuBBBeBBAiI9CgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJ",
+            "RUQQABIMCghESVNBQkxFRBABEhEKDURFRkFVTFRfQ0FDSEUQAiLfAwoSQWNj",
+            "ZXNzUnVsZXNPcHRpb25zElAKDGFjY2Vzc19ydWxlcxgBIAMoCzI1Lmdvb2ds",
+            "ZS5jbG91ZC5sdXN0cmUudjEuQWNjZXNzUnVsZXNPcHRpb25zLkFjY2Vzc1J1",
+            "bGVCA+BBARJXChNkZWZhdWx0X3NxdWFzaF9tb2RlGAIgASgOMjUuZ29vZ2xl",
+            "LmNsb3VkLmx1c3RyZS52MS5BY2Nlc3NSdWxlc09wdGlvbnMuU3F1YXNoTW9k",
+            "ZUID4EECEh8KEmRlZmF1bHRfc3F1YXNoX3VpZBgDIAEoBUID4EEBEh8KEmRl",
+            "ZmF1bHRfc3F1YXNoX2dpZBgEIAEoBUID4EEBGpABCgpBY2Nlc3NSdWxlEhEK",
+            "BG5hbWUYASABKAlCA+BBAhIeChFpcF9hZGRyZXNzX3JhbmdlcxgCIAMoCUID",
+            "4EECEk8KC3NxdWFzaF9tb2RlGAYgASgOMjUuZ29vZ2xlLmNsb3VkLmx1c3Ry",
+            "ZS52MS5BY2Nlc3NSdWxlc09wdGlvbnMuU3F1YXNoTW9kZUID4EECIkkKClNx",
+            "dWFzaE1vZGUSGwoXU1FVQVNIX01PREVfVU5TUEVDSUZJRUQQABINCglOT19T",
+            "UVVBU0gQARIPCgtST09UX1NRVUFTSBACIqsBChRMaXN0SW5zdGFuY2VzUmVx",
+            "dWVzdBI2CgZwYXJlbnQYASABKAlCJuBBAvpBIBIebHVzdHJlLmdvb2dsZWFw",
+            "aXMuY29tL0luc3RhbmNlEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBh",
+            "Z2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIYBCABKAlCA+BBARIVCghv",
+            "cmRlcl9ieRgFIAEoCUID4EEBIn8KFUxpc3RJbnN0YW5jZXNSZXNwb25zZRIz",
+            "CglpbnN0YW5jZXMYASADKAsyIC5nb29nbGUuY2xvdWQubHVzdHJlLnYxLklu",
+            "c3RhbmNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIYCgt1bnJlYWNoYWJs",
+            "ZRgDIAMoCUID4EEGIkoKEkdldEluc3RhbmNlUmVxdWVzdBI0CgRuYW1lGAEg",
+            "ASgJQibgQQL6QSAKHmx1c3RyZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZSLD",
+            "AQoVQ3JlYXRlSW5zdGFuY2VSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEC",
+            "+kEgEh5sdXN0cmUuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USGAoLaW5zdGFu",
+            "Y2VfaWQYAiABKAlCA+BBAhI3CghpbnN0YW5jZRgDIAEoCzIgLmdvb2dsZS5j",
+            "bG91ZC5sdXN0cmUudjEuSW5zdGFuY2VCA+BBAhIfCgpyZXF1ZXN0X2lkGAQg",
+            "ASgJQgvgQQHijM/XCAIIASKnAQoVVXBkYXRlSW5zdGFuY2VSZXF1ZXN0EjQK",
+            "C3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFz",
+            "a0ID4EEBEjcKCGluc3RhbmNlGAIgASgLMiAuZ29vZ2xlLmNsb3VkLmx1c3Ry",
+            "ZS52MS5JbnN0YW5jZUID4EECEh8KCnJlcXVlc3RfaWQYAyABKAlCC+BBAeKM",
+            "z9cIAggBIoIBChVEZWxldGVJbnN0YW5jZVJlcXVlc3QSNAoEbmFtZRgBIAEo",
+            "CUIm4EEC+kEgCh5sdXN0cmUuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USHwoK",
+            "cmVxdWVzdF9pZBgCIAEoCUIL4EEB4ozP1wgCCAESEgoFZm9yY2UYAyABKAhC",
+            "A+BBASKAAgoRT3BlcmF0aW9uTWV0YWRhdGESNAoLY3JlYXRlX3RpbWUYASAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3Rp",
+            "bWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEwoG",
+            "dGFyZ2V0GAMgASgJQgPgQQMSEQoEdmVyYhgEIAEoCUID4EEDEhsKDnN0YXR1",
+            "c19tZXNzYWdlGAUgASgJQgPgQQMSIwoWcmVxdWVzdGVkX2NhbmNlbGxhdGlv",
+            "bhgGIAEoCEID4EEDEhgKC2FwaV92ZXJzaW9uGAcgASgJQgPgQQMijgQKEU1h",
+            "aW50ZW5hbmNlUG9saWN5EmoKGndlZWtseV9tYWludGVuYW5jZV93aW5kb3dz",
+            "GAMgAygLMkEuZ29vZ2xlLmNsb3VkLmx1c3RyZS52MS5NYWludGVuYW5jZVBv",
+            "bGljeS5XZWVrbHlNYWludGVuYW5jZVdpbmRvd0ID4EECEm8KHG1haW50ZW5h",
+            "bmNlX2V4Y2x1c2lvbl93aW5kb3cYBCADKAsyRC5nb29nbGUuY2xvdWQubHVz",
+            "dHJlLnYxLk1haW50ZW5hbmNlUG9saWN5Lk1haW50ZW5hbmNlRXhjbHVzaW9u",
+            "V2luZG93QgPgQQEafAoXV2Vla2x5TWFpbnRlbmFuY2VXaW5kb3cSMAoLZGF5",
+            "X29mX3dlZWsYASABKA4yFi5nb29nbGUudHlwZS5EYXlPZldlZWtCA+BBAhIv",
+            "CgpzdGFydF90aW1lGAIgASgLMhYuZ29vZ2xlLnR5cGUuVGltZU9mRGF5QgPg",
+            "QQIanQEKGk1haW50ZW5hbmNlRXhjbHVzaW9uV2luZG93EioKCnN0YXJ0X2Rh",
+            "dGUYASABKAsyES5nb29nbGUudHlwZS5EYXRlQgPgQQISKAoIZW5kX2RhdGUY",
+            "AiABKAsyES5nb29nbGUudHlwZS5EYXRlQgPgQQISKQoEdGltZRgDIAEoCzIW",
+            "Lmdvb2dsZS50eXBlLlRpbWVPZkRheUID4EECIn0KE01haW50ZW5hbmNlU2No",
+            "ZWR1bGUSMwoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAyLjAwocUmVzY2hlZHVsZU1haW50ZW5hbmNl",
+            "UmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmx1c3RyZS5nb29nbGVh",
+            "cGlzLmNvbS9JbnN0YW5jZRJYCgpyZXNjaGVkdWxlGAIgASgLMj8uZ29vZ2xl",
+            "LmNsb3VkLmx1c3RyZS52MS5SZXNjaGVkdWxlTWFpbnRlbmFuY2VSZXF1ZXN0",
+            "LlJlc2NoZWR1bGVCA+BBAhIfCgpyZXF1ZXN0X2lkGAMgASgJQgvgQQHijM/X",
+            "CAIIARqnAQoKUmVzY2hlZHVsZRJhCg9yZXNjaGVkdWxlX3R5cGUYASABKA4y",
+            "Qy5nb29nbGUuY2xvdWQubHVzdHJlLnYxLlJlc2NoZWR1bGVNYWludGVuYW5j",
+            "ZVJlcXVlc3QuUmVzY2hlZHVsZVR5cGVCA+BBAhI2Cg1zY2hlZHVsZV90aW1l",
+            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEBImgKDlJl",
+            "c2NoZWR1bGVUeXBlEh8KG1JFU0NIRURVTEVfVFlQRV9VTlNQRUNJRklFRBAA",
+            "Eg0KCUlNTUVESUFURRABEhkKFU5FWFRfQVZBSUxBQkxFX1dJTkRPVxACEgsK",
+            "B0JZX1RJTUUQA0JhChpjb20uZ29vZ2xlLmNsb3VkLmx1c3RyZS52MUINSW5z",
+            "dGFuY2VQcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL2x1c3RyZS9hcGl2",
+            "MS9sdXN0cmVwYjtsdXN0cmVwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.Instance), global::Google.Cloud.Lustre.V1.Instance.Parser, new[]{ "Name", "Filesystem", "CapacityGib", "Network", "State", "MountPoint", "CreateTime", "UpdateTime", "Description", "Labels", "PerUnitStorageThroughput", "GkeSupportEnabled" }, null, new[]{ typeof(global::Google.Cloud.Lustre.V1.Instance.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.Instance), global::Google.Cloud.Lustre.V1.Instance.Parser, new[]{ "Name", "Filesystem", "CapacityGib", "Network", "State", "MountPoint", "CreateTime", "UpdateTime", "Description", "Labels", "PerUnitStorageThroughput", "GkeSupportEnabled", "KmsKey", "StateReason", "PlacementPolicy", "AccessRulesOptions", "Uid", "MaintenancePolicy", "UpcomingMaintenanceSchedule", "DynamicTierOptions", "AvailableVersion", "TargetVersion", "EffectiveVersion" }, new[]{ "AvailableVersion", "TargetVersion", "EffectiveVersion" }, new[]{ typeof(global::Google.Cloud.Lustre.V1.Instance.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.DynamicTierOptions), global::Google.Cloud.Lustre.V1.DynamicTierOptions.Parser, new[]{ "Mode" }, null, new[]{ typeof(global::Google.Cloud.Lustre.V1.DynamicTierOptions.Types.Mode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.AccessRulesOptions), global::Google.Cloud.Lustre.V1.AccessRulesOptions.Parser, new[]{ "AccessRules", "DefaultSquashMode", "DefaultSquashUid", "DefaultSquashGid" }, null, new[]{ typeof(global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.AccessRule), global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.AccessRule.Parser, new[]{ "Name", "IpAddressRanges", "SquashMode" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.ListInstancesRequest), global::Google.Cloud.Lustre.V1.ListInstancesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.ListInstancesResponse), global::Google.Cloud.Lustre.V1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.GetInstanceRequest), global::Google.Cloud.Lustre.V1.GetInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.CreateInstanceRequest), global::Google.Cloud.Lustre.V1.CreateInstanceRequest.Parser, new[]{ "Parent", "InstanceId", "Instance", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.UpdateInstanceRequest), global::Google.Cloud.Lustre.V1.UpdateInstanceRequest.Parser, new[]{ "UpdateMask", "Instance", "RequestId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.DeleteInstanceRequest), global::Google.Cloud.Lustre.V1.DeleteInstanceRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.OperationMetadata), global::Google.Cloud.Lustre.V1.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusMessage", "RequestedCancellation", "ApiVersion" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.DeleteInstanceRequest), global::Google.Cloud.Lustre.V1.DeleteInstanceRequest.Parser, new[]{ "Name", "RequestId", "Force" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.OperationMetadata), global::Google.Cloud.Lustre.V1.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusMessage", "RequestedCancellation", "ApiVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.MaintenancePolicy), global::Google.Cloud.Lustre.V1.MaintenancePolicy.Parser, new[]{ "WeeklyMaintenanceWindows", "MaintenanceExclusionWindow" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.MaintenancePolicy.Types.WeeklyMaintenanceWindow), global::Google.Cloud.Lustre.V1.MaintenancePolicy.Types.WeeklyMaintenanceWindow.Parser, new[]{ "DayOfWeek", "StartTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.MaintenancePolicy.Types.MaintenanceExclusionWindow), global::Google.Cloud.Lustre.V1.MaintenancePolicy.Types.MaintenanceExclusionWindow.Parser, new[]{ "StartDate", "EndDate", "Time" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.MaintenanceSchedule), global::Google.Cloud.Lustre.V1.MaintenanceSchedule.Parser, new[]{ "StartTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest), global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Parser, new[]{ "Name", "Reschedule", "RequestId" }, null, new[]{ typeof(global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.RescheduleType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.Reschedule), global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.Reschedule.Parser, new[]{ "RescheduleType", "ScheduleTime" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -142,6 +205,17 @@ namespace Google.Cloud.Lustre.V1 {
       labels_ = other.labels_.Clone();
       perUnitStorageThroughput_ = other.perUnitStorageThroughput_;
       gkeSupportEnabled_ = other.gkeSupportEnabled_;
+      kmsKey_ = other.kmsKey_;
+      stateReason_ = other.stateReason_;
+      placementPolicy_ = other.placementPolicy_;
+      accessRulesOptions_ = other.accessRulesOptions_ != null ? other.accessRulesOptions_.Clone() : null;
+      uid_ = other.uid_;
+      maintenancePolicy_ = other.maintenancePolicy_ != null ? other.maintenancePolicy_.Clone() : null;
+      upcomingMaintenanceSchedule_ = other.upcomingMaintenanceSchedule_ != null ? other.upcomingMaintenanceSchedule_.Clone() : null;
+      dynamicTierOptions_ = other.dynamicTierOptions_ != null ? other.dynamicTierOptions_.Clone() : null;
+      availableVersion_ = other.availableVersion_;
+      targetVersion_ = other.targetVersion_;
+      effectiveVersion_ = other.effectiveVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -188,7 +262,9 @@ namespace Google.Cloud.Lustre.V1 {
     private long capacityGib_;
     /// <summary>
     /// Required. The storage capacity of the instance in gibibytes (GiB). Allowed
-    /// values are from `18000` to `954000`, in increments of 9000.
+    /// values depend on the `perUnitStorageThroughput`. See [Performance
+    /// tiers](https://docs.cloud.google.com/managed-lustre/docs/performance-tiers)
+    /// for specific minimums, maximums, and step sizes for each performance tier.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -310,8 +386,13 @@ namespace Google.Cloud.Lustre.V1 {
     public const int PerUnitStorageThroughputFieldNumber = 11;
     private long perUnitStorageThroughput_;
     /// <summary>
-    /// Required. The throughput of the instance in MB/s/TiB.
-    /// Valid values are 125, 250, 500, 1000.
+    /// Optional. The throughput of the instance in MBps per TiB. Valid values are
+    /// 0, 125, 250, 500, 1000. See [Performance
+    /// tiers](https://docs.cloud.google.com/managed-lustre/docs/performance-tiers)
+    /// for more information.
+    ///
+    /// If the instance is using the Dynamic tier, this field must not be set or
+    /// must be set to zero.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -326,9 +407,9 @@ namespace Google.Cloud.Lustre.V1 {
     public const int GkeSupportEnabledFieldNumber = 12;
     private bool gkeSupportEnabled_;
     /// <summary>
-    /// Optional. Indicates whether you want to enable support for GKE clients. By
-    /// default, GKE clients are not supported. Deprecated. No longer required for
-    /// GKE instance creation.
+    /// Optional. Deprecated: No longer required for GKE instance creation.
+    /// Indicates whether you want to enable support for GKE clients. By default,
+    /// GKE clients are not supported.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -338,6 +419,231 @@ namespace Google.Cloud.Lustre.V1 {
       set {
         gkeSupportEnabled_ = value;
       }
+    }
+
+    /// <summary>Field number for the "kms_key" field.</summary>
+    public const int KmsKeyFieldNumber = 13;
+    private string kmsKey_ = "";
+    /// <summary>
+    /// Optional. Immutable. The Cloud KMS key name to use for data encryption.
+    /// If not set, the instance will use Google-managed encryption keys.
+    /// If set, the instance will use customer-managed encryption keys.
+    /// The key must be in the same region as the instance.
+    /// The key format is:
+    /// projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KmsKey {
+      get { return kmsKey_; }
+      set {
+        kmsKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state_reason" field.</summary>
+    public const int StateReasonFieldNumber = 14;
+    private string stateReason_ = "";
+    /// <summary>
+    /// Output only. The reason why the instance is in a certain state (e.g.
+    /// SUSPENDED).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StateReason {
+      get { return stateReason_; }
+      set {
+        stateReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "placement_policy" field.</summary>
+    public const int PlacementPolicyFieldNumber = 17;
+    private string placementPolicy_ = "";
+    /// <summary>
+    /// Optional. The placement policy name for the instance in the format of
+    /// projects/{project}/locations/{location}/resourcePolicies/{resource_policy}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PlacementPolicy {
+      get { return placementPolicy_; }
+      set {
+        placementPolicy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "access_rules_options" field.</summary>
+    public const int AccessRulesOptionsFieldNumber = 18;
+    private global::Google.Cloud.Lustre.V1.AccessRulesOptions accessRulesOptions_;
+    /// <summary>
+    /// Optional. The access rules options for the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Lustre.V1.AccessRulesOptions AccessRulesOptions {
+      get { return accessRulesOptions_; }
+      set {
+        accessRulesOptions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 19;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. Unique ID of the resource.
+    /// This is unrelated to the access rules which allow specifying the root
+    /// squash uid.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "maintenance_policy" field.</summary>
+    public const int MaintenancePolicyFieldNumber = 20;
+    private global::Google.Cloud.Lustre.V1.MaintenancePolicy maintenancePolicy_;
+    /// <summary>
+    /// Optional. The maintenance policy for the instance to determine when to
+    /// allow or exclude the instance from maintenance updates.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Lustre.V1.MaintenancePolicy MaintenancePolicy {
+      get { return maintenancePolicy_; }
+      set {
+        maintenancePolicy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "upcoming_maintenance_schedule" field.</summary>
+    public const int UpcomingMaintenanceScheduleFieldNumber = 21;
+    private global::Google.Cloud.Lustre.V1.MaintenanceSchedule upcomingMaintenanceSchedule_;
+    /// <summary>
+    /// Output only. Date and time of upcoming maintenance for the instance, if a
+    /// maintenance policy is set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Lustre.V1.MaintenanceSchedule UpcomingMaintenanceSchedule {
+      get { return upcomingMaintenanceSchedule_; }
+      set {
+        upcomingMaintenanceSchedule_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dynamic_tier_options" field.</summary>
+    public const int DynamicTierOptionsFieldNumber = 24;
+    private global::Google.Cloud.Lustre.V1.DynamicTierOptions dynamicTierOptions_;
+    /// <summary>
+    /// Optional. Immutable. Specifies whether the instance is on the Dynamic tier.
+    /// See [Performance
+    /// tiers](https://docs.cloud.google.com/managed-lustre/docs/performance-tiers)
+    /// for more information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Lustre.V1.DynamicTierOptions DynamicTierOptions {
+      get { return dynamicTierOptions_; }
+      set {
+        dynamicTierOptions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "available_version" field.</summary>
+    public const int AvailableVersionFieldNumber = 33;
+    private readonly static string AvailableVersionDefaultValue = "";
+
+    private string availableVersion_;
+    /// <summary>
+    /// Output only. The available version that this instance can be upgraded to.
+    /// Format: `Lustre_YYYYMMDD.NN_pXX`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AvailableVersion {
+      get { return availableVersion_ ?? AvailableVersionDefaultValue; }
+      set {
+        availableVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "available_version" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAvailableVersion {
+      get { return availableVersion_ != null; }
+    }
+    /// <summary>Clears the value of the "available_version" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAvailableVersion() {
+      availableVersion_ = null;
+    }
+
+    /// <summary>Field number for the "target_version" field.</summary>
+    public const int TargetVersionFieldNumber = 34;
+    private readonly static string TargetVersionDefaultValue = "";
+
+    private string targetVersion_;
+    /// <summary>
+    /// Optional. The target version of the instance. Setting this field triggers a
+    /// self-service update to the specified version.
+    /// Format: `Lustre_YYYYMMDD.NN_pXX` or `latest`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TargetVersion {
+      get { return targetVersion_ ?? TargetVersionDefaultValue; }
+      set {
+        targetVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "target_version" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTargetVersion {
+      get { return targetVersion_ != null; }
+    }
+    /// <summary>Clears the value of the "target_version" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTargetVersion() {
+      targetVersion_ = null;
+    }
+
+    /// <summary>Field number for the "effective_version" field.</summary>
+    public const int EffectiveVersionFieldNumber = 35;
+    private readonly static string EffectiveVersionDefaultValue = "";
+
+    private string effectiveVersion_;
+    /// <summary>
+    /// Output only. The effective version of the instance.
+    /// Format: `Lustre_YYYYMMDD.NN_pXX`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EffectiveVersion {
+      get { return effectiveVersion_ ?? EffectiveVersionDefaultValue; }
+      set {
+        effectiveVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "effective_version" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEffectiveVersion {
+      get { return effectiveVersion_ != null; }
+    }
+    /// <summary>Clears the value of the "effective_version" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEffectiveVersion() {
+      effectiveVersion_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -367,6 +673,17 @@ namespace Google.Cloud.Lustre.V1 {
       if (!Labels.Equals(other.Labels)) return false;
       if (PerUnitStorageThroughput != other.PerUnitStorageThroughput) return false;
       if (GkeSupportEnabled != other.GkeSupportEnabled) return false;
+      if (KmsKey != other.KmsKey) return false;
+      if (StateReason != other.StateReason) return false;
+      if (PlacementPolicy != other.PlacementPolicy) return false;
+      if (!object.Equals(AccessRulesOptions, other.AccessRulesOptions)) return false;
+      if (Uid != other.Uid) return false;
+      if (!object.Equals(MaintenancePolicy, other.MaintenancePolicy)) return false;
+      if (!object.Equals(UpcomingMaintenanceSchedule, other.UpcomingMaintenanceSchedule)) return false;
+      if (!object.Equals(DynamicTierOptions, other.DynamicTierOptions)) return false;
+      if (AvailableVersion != other.AvailableVersion) return false;
+      if (TargetVersion != other.TargetVersion) return false;
+      if (EffectiveVersion != other.EffectiveVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -386,6 +703,17 @@ namespace Google.Cloud.Lustre.V1 {
       hash ^= Labels.GetHashCode();
       if (PerUnitStorageThroughput != 0L) hash ^= PerUnitStorageThroughput.GetHashCode();
       if (GkeSupportEnabled != false) hash ^= GkeSupportEnabled.GetHashCode();
+      if (KmsKey.Length != 0) hash ^= KmsKey.GetHashCode();
+      if (StateReason.Length != 0) hash ^= StateReason.GetHashCode();
+      if (PlacementPolicy.Length != 0) hash ^= PlacementPolicy.GetHashCode();
+      if (accessRulesOptions_ != null) hash ^= AccessRulesOptions.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      if (maintenancePolicy_ != null) hash ^= MaintenancePolicy.GetHashCode();
+      if (upcomingMaintenanceSchedule_ != null) hash ^= UpcomingMaintenanceSchedule.GetHashCode();
+      if (dynamicTierOptions_ != null) hash ^= DynamicTierOptions.GetHashCode();
+      if (HasAvailableVersion) hash ^= AvailableVersion.GetHashCode();
+      if (HasTargetVersion) hash ^= TargetVersion.GetHashCode();
+      if (HasEffectiveVersion) hash ^= EffectiveVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -449,6 +777,50 @@ namespace Google.Cloud.Lustre.V1 {
         output.WriteRawTag(96);
         output.WriteBool(GkeSupportEnabled);
       }
+      if (KmsKey.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(KmsKey);
+      }
+      if (StateReason.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(StateReason);
+      }
+      if (PlacementPolicy.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(PlacementPolicy);
+      }
+      if (accessRulesOptions_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(AccessRulesOptions);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(Uid);
+      }
+      if (maintenancePolicy_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(MaintenancePolicy);
+      }
+      if (upcomingMaintenanceSchedule_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(UpcomingMaintenanceSchedule);
+      }
+      if (dynamicTierOptions_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(DynamicTierOptions);
+      }
+      if (HasAvailableVersion) {
+        output.WriteRawTag(138, 2);
+        output.WriteString(AvailableVersion);
+      }
+      if (HasTargetVersion) {
+        output.WriteRawTag(146, 2);
+        output.WriteString(TargetVersion);
+      }
+      if (HasEffectiveVersion) {
+        output.WriteRawTag(154, 2);
+        output.WriteString(EffectiveVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -504,6 +876,50 @@ namespace Google.Cloud.Lustre.V1 {
         output.WriteRawTag(96);
         output.WriteBool(GkeSupportEnabled);
       }
+      if (KmsKey.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(KmsKey);
+      }
+      if (StateReason.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(StateReason);
+      }
+      if (PlacementPolicy.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(PlacementPolicy);
+      }
+      if (accessRulesOptions_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(AccessRulesOptions);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(Uid);
+      }
+      if (maintenancePolicy_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(MaintenancePolicy);
+      }
+      if (upcomingMaintenanceSchedule_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(UpcomingMaintenanceSchedule);
+      }
+      if (dynamicTierOptions_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(DynamicTierOptions);
+      }
+      if (HasAvailableVersion) {
+        output.WriteRawTag(138, 2);
+        output.WriteString(AvailableVersion);
+      }
+      if (HasTargetVersion) {
+        output.WriteRawTag(146, 2);
+        output.WriteString(TargetVersion);
+      }
+      if (HasEffectiveVersion) {
+        output.WriteRawTag(154, 2);
+        output.WriteString(EffectiveVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -547,6 +963,39 @@ namespace Google.Cloud.Lustre.V1 {
       }
       if (GkeSupportEnabled != false) {
         size += 1 + 1;
+      }
+      if (KmsKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKey);
+      }
+      if (StateReason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StateReason);
+      }
+      if (PlacementPolicy.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PlacementPolicy);
+      }
+      if (accessRulesOptions_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AccessRulesOptions);
+      }
+      if (Uid.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
+      if (maintenancePolicy_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MaintenancePolicy);
+      }
+      if (upcomingMaintenanceSchedule_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(UpcomingMaintenanceSchedule);
+      }
+      if (dynamicTierOptions_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DynamicTierOptions);
+      }
+      if (HasAvailableVersion) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(AvailableVersion);
+      }
+      if (HasTargetVersion) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(TargetVersion);
+      }
+      if (HasEffectiveVersion) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(EffectiveVersion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -599,6 +1048,51 @@ namespace Google.Cloud.Lustre.V1 {
       }
       if (other.GkeSupportEnabled != false) {
         GkeSupportEnabled = other.GkeSupportEnabled;
+      }
+      if (other.KmsKey.Length != 0) {
+        KmsKey = other.KmsKey;
+      }
+      if (other.StateReason.Length != 0) {
+        StateReason = other.StateReason;
+      }
+      if (other.PlacementPolicy.Length != 0) {
+        PlacementPolicy = other.PlacementPolicy;
+      }
+      if (other.accessRulesOptions_ != null) {
+        if (accessRulesOptions_ == null) {
+          AccessRulesOptions = new global::Google.Cloud.Lustre.V1.AccessRulesOptions();
+        }
+        AccessRulesOptions.MergeFrom(other.AccessRulesOptions);
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
+      }
+      if (other.maintenancePolicy_ != null) {
+        if (maintenancePolicy_ == null) {
+          MaintenancePolicy = new global::Google.Cloud.Lustre.V1.MaintenancePolicy();
+        }
+        MaintenancePolicy.MergeFrom(other.MaintenancePolicy);
+      }
+      if (other.upcomingMaintenanceSchedule_ != null) {
+        if (upcomingMaintenanceSchedule_ == null) {
+          UpcomingMaintenanceSchedule = new global::Google.Cloud.Lustre.V1.MaintenanceSchedule();
+        }
+        UpcomingMaintenanceSchedule.MergeFrom(other.UpcomingMaintenanceSchedule);
+      }
+      if (other.dynamicTierOptions_ != null) {
+        if (dynamicTierOptions_ == null) {
+          DynamicTierOptions = new global::Google.Cloud.Lustre.V1.DynamicTierOptions();
+        }
+        DynamicTierOptions.MergeFrom(other.DynamicTierOptions);
+      }
+      if (other.HasAvailableVersion) {
+        AvailableVersion = other.AvailableVersion;
+      }
+      if (other.HasTargetVersion) {
+        TargetVersion = other.TargetVersion;
+      }
+      if (other.HasEffectiveVersion) {
+        EffectiveVersion = other.EffectiveVersion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -671,6 +1165,62 @@ namespace Google.Cloud.Lustre.V1 {
           }
           case 96: {
             GkeSupportEnabled = input.ReadBool();
+            break;
+          }
+          case 106: {
+            KmsKey = input.ReadString();
+            break;
+          }
+          case 114: {
+            StateReason = input.ReadString();
+            break;
+          }
+          case 138: {
+            PlacementPolicy = input.ReadString();
+            break;
+          }
+          case 146: {
+            if (accessRulesOptions_ == null) {
+              AccessRulesOptions = new global::Google.Cloud.Lustre.V1.AccessRulesOptions();
+            }
+            input.ReadMessage(AccessRulesOptions);
+            break;
+          }
+          case 154: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 162: {
+            if (maintenancePolicy_ == null) {
+              MaintenancePolicy = new global::Google.Cloud.Lustre.V1.MaintenancePolicy();
+            }
+            input.ReadMessage(MaintenancePolicy);
+            break;
+          }
+          case 170: {
+            if (upcomingMaintenanceSchedule_ == null) {
+              UpcomingMaintenanceSchedule = new global::Google.Cloud.Lustre.V1.MaintenanceSchedule();
+            }
+            input.ReadMessage(UpcomingMaintenanceSchedule);
+            break;
+          }
+          case 194: {
+            if (dynamicTierOptions_ == null) {
+              DynamicTierOptions = new global::Google.Cloud.Lustre.V1.DynamicTierOptions();
+            }
+            input.ReadMessage(DynamicTierOptions);
+            break;
+          }
+          case 266: {
+            AvailableVersion = input.ReadString();
+            break;
+          }
+          case 274: {
+            TargetVersion = input.ReadString();
+            break;
+          }
+          case 282: {
+            EffectiveVersion = input.ReadString();
             break;
           }
         }
@@ -746,6 +1296,62 @@ namespace Google.Cloud.Lustre.V1 {
             GkeSupportEnabled = input.ReadBool();
             break;
           }
+          case 106: {
+            KmsKey = input.ReadString();
+            break;
+          }
+          case 114: {
+            StateReason = input.ReadString();
+            break;
+          }
+          case 138: {
+            PlacementPolicy = input.ReadString();
+            break;
+          }
+          case 146: {
+            if (accessRulesOptions_ == null) {
+              AccessRulesOptions = new global::Google.Cloud.Lustre.V1.AccessRulesOptions();
+            }
+            input.ReadMessage(AccessRulesOptions);
+            break;
+          }
+          case 154: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 162: {
+            if (maintenancePolicy_ == null) {
+              MaintenancePolicy = new global::Google.Cloud.Lustre.V1.MaintenancePolicy();
+            }
+            input.ReadMessage(MaintenancePolicy);
+            break;
+          }
+          case 170: {
+            if (upcomingMaintenanceSchedule_ == null) {
+              UpcomingMaintenanceSchedule = new global::Google.Cloud.Lustre.V1.MaintenanceSchedule();
+            }
+            input.ReadMessage(UpcomingMaintenanceSchedule);
+            break;
+          }
+          case 194: {
+            if (dynamicTierOptions_ == null) {
+              DynamicTierOptions = new global::Google.Cloud.Lustre.V1.DynamicTierOptions();
+            }
+            input.ReadMessage(DynamicTierOptions);
+            break;
+          }
+          case 266: {
+            AvailableVersion = input.ReadString();
+            break;
+          }
+          case 274: {
+            TargetVersion = input.ReadString();
+            break;
+          }
+          case 282: {
+            EffectiveVersion = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -791,7 +1397,897 @@ namespace Google.Cloud.Lustre.V1 {
         /// <summary>
         /// The instance is being updated.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("UPDATING")] Updating = 7,
+        /// <summary>
+        /// The instance is suspended due to an issue related to Cloud KMS. The
+        /// details are available in
+        /// [state_reason][google.cloud.lustre.v1.Instance.state_reason].
+        /// </summary>
+        [pbr::OriginalName("SUSPENDED")] Suspended = 8,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Dynamic tier options for a Managed Lustre instance.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DynamicTierOptions : pb::IMessage<DynamicTierOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DynamicTierOptions> _parser = new pb::MessageParser<DynamicTierOptions>(() => new DynamicTierOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DynamicTierOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DynamicTierOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DynamicTierOptions(DynamicTierOptions other) : this() {
+      mode_ = other.mode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DynamicTierOptions Clone() {
+      return new DynamicTierOptions(this);
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 1;
+    private global::Google.Cloud.Lustre.V1.DynamicTierOptions.Types.Mode mode_ = global::Google.Cloud.Lustre.V1.DynamicTierOptions.Types.Mode.Unspecified;
+    /// <summary>
+    /// Required. Immutable. The dynamic tier mode of the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Lustre.V1.DynamicTierOptions.Types.Mode Mode {
+      get { return mode_; }
+      set {
+        mode_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DynamicTierOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DynamicTierOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Mode != other.Mode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Mode != global::Google.Cloud.Lustre.V1.DynamicTierOptions.Types.Mode.Unspecified) hash ^= Mode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Mode != global::Google.Cloud.Lustre.V1.DynamicTierOptions.Types.Mode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Mode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Mode != global::Google.Cloud.Lustre.V1.DynamicTierOptions.Types.Mode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Mode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Mode != global::Google.Cloud.Lustre.V1.DynamicTierOptions.Types.Mode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DynamicTierOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Mode != global::Google.Cloud.Lustre.V1.DynamicTierOptions.Types.Mode.Unspecified) {
+        Mode = other.Mode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Mode = (global::Google.Cloud.Lustre.V1.DynamicTierOptions.Types.Mode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Mode = (global::Google.Cloud.Lustre.V1.DynamicTierOptions.Types.Mode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DynamicTierOptions message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Specifies the Dynamic performance tier for the instance.
+      ///
+      /// If this field is set to `DEFAULT_CACHE`, `per_unit_storage_throughput`
+      /// must not be set or must be set to zero.
+      /// </summary>
+      public enum Mode {
+        /// <summary>
+        /// Unspecified dynamic tier mode.
+        /// </summary>
+        [pbr::OriginalName("MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The dynamic tier is explicitly disabled.
+        /// </summary>
+        [pbr::OriginalName("DISABLED")] Disabled = 1,
+        /// <summary>
+        /// The dynamic tier is enabled.
+        /// </summary>
+        [pbr::OriginalName("DEFAULT_CACHE")] DefaultCache = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// IP-based access rules for the Managed Lustre instance. These options
+  /// define the root user squash configuration.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AccessRulesOptions : pb::IMessage<AccessRulesOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AccessRulesOptions> _parser = new pb::MessageParser<AccessRulesOptions>(() => new AccessRulesOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AccessRulesOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AccessRulesOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AccessRulesOptions(AccessRulesOptions other) : this() {
+      accessRules_ = other.accessRules_.Clone();
+      defaultSquashMode_ = other.defaultSquashMode_;
+      defaultSquashUid_ = other.defaultSquashUid_;
+      defaultSquashGid_ = other.defaultSquashGid_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AccessRulesOptions Clone() {
+      return new AccessRulesOptions(this);
+    }
+
+    /// <summary>Field number for the "access_rules" field.</summary>
+    public const int AccessRulesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.AccessRule> _repeated_accessRules_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.AccessRule.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.AccessRule> accessRules_ = new pbc::RepeatedField<global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.AccessRule>();
+    /// <summary>
+    /// Optional. The access rules for the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.AccessRule> AccessRules {
+      get { return accessRules_; }
+    }
+
+    /// <summary>Field number for the "default_squash_mode" field.</summary>
+    public const int DefaultSquashModeFieldNumber = 2;
+    private global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode defaultSquashMode_ = global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode.Unspecified;
+    /// <summary>
+    /// Required. The squash mode for the default access rule.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode DefaultSquashMode {
+      get { return defaultSquashMode_; }
+      set {
+        defaultSquashMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "default_squash_uid" field.</summary>
+    public const int DefaultSquashUidFieldNumber = 3;
+    private int defaultSquashUid_;
+    /// <summary>
+    /// Optional. The user squash UID for the default access rule.
+    /// This user squash UID applies to all root users connecting from clients
+    /// that are not matched by any of the access rules. If not set, the default
+    /// is 0 (no UID squash).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int DefaultSquashUid {
+      get { return defaultSquashUid_; }
+      set {
+        defaultSquashUid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "default_squash_gid" field.</summary>
+    public const int DefaultSquashGidFieldNumber = 4;
+    private int defaultSquashGid_;
+    /// <summary>
+    /// Optional. The user squash GID for the default access rule.
+    /// This user squash GID applies to all root users connecting from clients
+    /// that are not matched by any of the access rules. If not set, the default
+    /// is 0 (no GID squash).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int DefaultSquashGid {
+      get { return defaultSquashGid_; }
+      set {
+        defaultSquashGid_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AccessRulesOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AccessRulesOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!accessRules_.Equals(other.accessRules_)) return false;
+      if (DefaultSquashMode != other.DefaultSquashMode) return false;
+      if (DefaultSquashUid != other.DefaultSquashUid) return false;
+      if (DefaultSquashGid != other.DefaultSquashGid) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= accessRules_.GetHashCode();
+      if (DefaultSquashMode != global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode.Unspecified) hash ^= DefaultSquashMode.GetHashCode();
+      if (DefaultSquashUid != 0) hash ^= DefaultSquashUid.GetHashCode();
+      if (DefaultSquashGid != 0) hash ^= DefaultSquashGid.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      accessRules_.WriteTo(output, _repeated_accessRules_codec);
+      if (DefaultSquashMode != global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) DefaultSquashMode);
+      }
+      if (DefaultSquashUid != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(DefaultSquashUid);
+      }
+      if (DefaultSquashGid != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(DefaultSquashGid);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      accessRules_.WriteTo(ref output, _repeated_accessRules_codec);
+      if (DefaultSquashMode != global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) DefaultSquashMode);
+      }
+      if (DefaultSquashUid != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(DefaultSquashUid);
+      }
+      if (DefaultSquashGid != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(DefaultSquashGid);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += accessRules_.CalculateSize(_repeated_accessRules_codec);
+      if (DefaultSquashMode != global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DefaultSquashMode);
+      }
+      if (DefaultSquashUid != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DefaultSquashUid);
+      }
+      if (DefaultSquashGid != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DefaultSquashGid);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AccessRulesOptions other) {
+      if (other == null) {
+        return;
+      }
+      accessRules_.Add(other.accessRules_);
+      if (other.DefaultSquashMode != global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode.Unspecified) {
+        DefaultSquashMode = other.DefaultSquashMode;
+      }
+      if (other.DefaultSquashUid != 0) {
+        DefaultSquashUid = other.DefaultSquashUid;
+      }
+      if (other.DefaultSquashGid != 0) {
+        DefaultSquashGid = other.DefaultSquashGid;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            accessRules_.AddEntriesFrom(input, _repeated_accessRules_codec);
+            break;
+          }
+          case 16: {
+            DefaultSquashMode = (global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            DefaultSquashUid = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            DefaultSquashGid = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            accessRules_.AddEntriesFrom(ref input, _repeated_accessRules_codec);
+            break;
+          }
+          case 16: {
+            DefaultSquashMode = (global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            DefaultSquashUid = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            DefaultSquashGid = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AccessRulesOptions message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Squash mode for an access rule.
+      /// </summary>
+      public enum SquashMode {
+        /// <summary>
+        /// Unspecified squash mode.
+        /// </summary>
+        [pbr::OriginalName("SQUASH_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Squash is disabled.
+        ///
+        /// If set inside an
+        /// [AccessRule][google.cloud.lustre.v1.AccessRulesOptions.AccessRule], root
+        /// users matching the [ip_ranges][AccessRule.ip_ranges] are not squashed.
+        ///
+        /// If set as the
+        /// [default_squash_mode][google.cloud.lustre.v1.AccessRulesOptions.default_squash_mode],
+        /// root squash is disabled for this instance.
+        ///
+        /// If the default squash mode is `NO_SQUASH`, do not set the
+        /// [default_squash_uid][google.cloud.lustre.v1.AccessRulesOptions.default_squash_uid]
+        /// or
+        /// [default_squash_gid][google.cloud.lustre.v1.AccessRulesOptions.default_squash_gid],
+        /// or an `invalid argument` error is returned.
+        /// </summary>
+        [pbr::OriginalName("NO_SQUASH")] NoSquash = 1,
+        /// <summary>
+        /// Root user squash is enabled.
+        ///
+        /// Not supported inside an
+        /// [AccessRule][google.cloud.lustre.v1.AccessRulesOptions.AccessRule].
+        ///
+        /// If set as the
+        /// [default_squash_mode][google.cloud.lustre.v1.AccessRulesOptions.default_squash_mode],
+        /// root users not matching any of the
+        /// [access_rules][google.cloud.lustre.v1.AccessRulesOptions.access_rules]
+        /// are squashed to the
+        /// [default_squash_uid][google.cloud.lustre.v1.AccessRulesOptions.default_squash_uid]
+        /// and
+        /// [default_squash_gid][google.cloud.lustre.v1.AccessRulesOptions.default_squash_gid].
+        /// </summary>
+        [pbr::OriginalName("ROOT_SQUASH")] RootSquash = 2,
+      }
+
+      /// <summary>
+      /// A single policy group with IP-based access rules for the Managed
+      /// Lustre instance.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AccessRule : pb::IMessage<AccessRule>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AccessRule> _parser = new pb::MessageParser<AccessRule>(() => new AccessRule());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AccessRule> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Lustre.V1.AccessRulesOptions.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessRule() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessRule(AccessRule other) : this() {
+          name_ = other.name_;
+          ipAddressRanges_ = other.ipAddressRanges_.Clone();
+          squashMode_ = other.squashMode_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessRule Clone() {
+          return new AccessRule(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// Required. The name of the access rule policy group.
+        /// Must be 16 characters or less and include only alphanumeric characters
+        /// or '_'.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "ip_address_ranges" field.</summary>
+        public const int IpAddressRangesFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_ipAddressRanges_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> ipAddressRanges_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Required. The IP address ranges to which to apply this access rule.
+        /// Accepts non-overlapping CIDR ranges (e.g., `192.168.1.0/24`) and IP
+        /// addresses (e.g., `192.168.1.0`).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> IpAddressRanges {
+          get { return ipAddressRanges_; }
+        }
+
+        /// <summary>Field number for the "squash_mode" field.</summary>
+        public const int SquashModeFieldNumber = 6;
+        private global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode squashMode_ = global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode.Unspecified;
+        /// <summary>
+        /// Required. Squash mode for the access rule.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode SquashMode {
+          get { return squashMode_; }
+          set {
+            squashMode_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AccessRule);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AccessRule other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          if(!ipAddressRanges_.Equals(other.ipAddressRanges_)) return false;
+          if (SquashMode != other.SquashMode) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          hash ^= ipAddressRanges_.GetHashCode();
+          if (SquashMode != global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode.Unspecified) hash ^= SquashMode.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          ipAddressRanges_.WriteTo(output, _repeated_ipAddressRanges_codec);
+          if (SquashMode != global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode.Unspecified) {
+            output.WriteRawTag(48);
+            output.WriteEnum((int) SquashMode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          ipAddressRanges_.WriteTo(ref output, _repeated_ipAddressRanges_codec);
+          if (SquashMode != global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode.Unspecified) {
+            output.WriteRawTag(48);
+            output.WriteEnum((int) SquashMode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          size += ipAddressRanges_.CalculateSize(_repeated_ipAddressRanges_codec);
+          if (SquashMode != global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SquashMode);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AccessRule other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          ipAddressRanges_.Add(other.ipAddressRanges_);
+          if (other.SquashMode != global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode.Unspecified) {
+            SquashMode = other.SquashMode;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                ipAddressRanges_.AddEntriesFrom(input, _repeated_ipAddressRanges_codec);
+                break;
+              }
+              case 48: {
+                SquashMode = (global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                ipAddressRanges_.AddEntriesFrom(ref input, _repeated_ipAddressRanges_codec);
+                break;
+              }
+              case 48: {
+                SquashMode = (global::Google.Cloud.Lustre.V1.AccessRulesOptions.Types.SquashMode) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }
@@ -817,7 +2313,7 @@ namespace Google.Cloud.Lustre.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1186,7 +2682,7 @@ namespace Google.Cloud.Lustre.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1448,7 +2944,7 @@ namespace Google.Cloud.Lustre.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1653,7 +3149,7 @@ namespace Google.Cloud.Lustre.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2005,7 +3501,7 @@ namespace Google.Cloud.Lustre.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2326,7 +3822,7 @@ namespace Google.Cloud.Lustre.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2348,6 +3844,7 @@ namespace Google.Cloud.Lustre.V1 {
     public DeleteInstanceRequest(DeleteInstanceRequest other) : this() {
       name_ = other.name_;
       requestId_ = other.requestId_;
+      force_ = other.force_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2400,6 +3897,23 @@ namespace Google.Cloud.Lustre.V1 {
       }
     }
 
+    /// <summary>Field number for the "force" field.</summary>
+    public const int ForceFieldNumber = 3;
+    private bool force_;
+    /// <summary>
+    /// Optional. If set to true, any sub-resources from this instance will also be
+    /// deleted. Otherwise, the request will only work if the instance has no
+    /// sub-resources.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Force {
+      get { return force_; }
+      set {
+        force_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2417,6 +3931,7 @@ namespace Google.Cloud.Lustre.V1 {
       }
       if (Name != other.Name) return false;
       if (RequestId != other.RequestId) return false;
+      if (Force != other.Force) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2426,6 +3941,7 @@ namespace Google.Cloud.Lustre.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (Force != false) hash ^= Force.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2452,6 +3968,10 @@ namespace Google.Cloud.Lustre.V1 {
         output.WriteRawTag(18);
         output.WriteString(RequestId);
       }
+      if (Force != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Force);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2470,6 +3990,10 @@ namespace Google.Cloud.Lustre.V1 {
         output.WriteRawTag(18);
         output.WriteString(RequestId);
       }
+      if (Force != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Force);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2485,6 +4009,9 @@ namespace Google.Cloud.Lustre.V1 {
       }
       if (RequestId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (Force != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2503,6 +4030,9 @@ namespace Google.Cloud.Lustre.V1 {
       }
       if (other.RequestId.Length != 0) {
         RequestId = other.RequestId;
+      }
+      if (other.Force != false) {
+        Force = other.Force;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2529,6 +4059,10 @@ namespace Google.Cloud.Lustre.V1 {
           }
           case 18: {
             RequestId = input.ReadString();
+            break;
+          }
+          case 24: {
+            Force = input.ReadBool();
             break;
           }
         }
@@ -2558,6 +4092,10 @@ namespace Google.Cloud.Lustre.V1 {
             RequestId = input.ReadString();
             break;
           }
+          case 24: {
+            Force = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -2583,7 +4121,7 @@ namespace Google.Cloud.Lustre.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3028,6 +4566,1657 @@ namespace Google.Cloud.Lustre.V1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Defines a maintenance policy for a resource.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MaintenancePolicy : pb::IMessage<MaintenancePolicy>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MaintenancePolicy> _parser = new pb::MessageParser<MaintenancePolicy>(() => new MaintenancePolicy());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MaintenancePolicy> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenancePolicy() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenancePolicy(MaintenancePolicy other) : this() {
+      weeklyMaintenanceWindows_ = other.weeklyMaintenanceWindows_.Clone();
+      maintenanceExclusionWindow_ = other.maintenanceExclusionWindow_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenancePolicy Clone() {
+      return new MaintenancePolicy(this);
+    }
+
+    /// <summary>Field number for the "weekly_maintenance_windows" field.</summary>
+    public const int WeeklyMaintenanceWindowsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Lustre.V1.MaintenancePolicy.Types.WeeklyMaintenanceWindow> _repeated_weeklyMaintenanceWindows_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Lustre.V1.MaintenancePolicy.Types.WeeklyMaintenanceWindow.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Lustre.V1.MaintenancePolicy.Types.WeeklyMaintenanceWindow> weeklyMaintenanceWindows_ = new pbc::RepeatedField<global::Google.Cloud.Lustre.V1.MaintenancePolicy.Types.WeeklyMaintenanceWindow>();
+    /// <summary>
+    /// Required. The weekly maintenance windows for the instance. Currently
+    /// limited to 1 window.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Lustre.V1.MaintenancePolicy.Types.WeeklyMaintenanceWindow> WeeklyMaintenanceWindows {
+      get { return weeklyMaintenanceWindows_; }
+    }
+
+    /// <summary>Field number for the "maintenance_exclusion_window" field.</summary>
+    public const int MaintenanceExclusionWindowFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Lustre.V1.MaintenancePolicy.Types.MaintenanceExclusionWindow> _repeated_maintenanceExclusionWindow_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Lustre.V1.MaintenancePolicy.Types.MaintenanceExclusionWindow.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Lustre.V1.MaintenancePolicy.Types.MaintenanceExclusionWindow> maintenanceExclusionWindow_ = new pbc::RepeatedField<global::Google.Cloud.Lustre.V1.MaintenancePolicy.Types.MaintenanceExclusionWindow>();
+    /// <summary>
+    /// Optional. The exclusion windows for the instance. Currently limited to 1
+    /// window.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Lustre.V1.MaintenancePolicy.Types.MaintenanceExclusionWindow> MaintenanceExclusionWindow {
+      get { return maintenanceExclusionWindow_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MaintenancePolicy);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MaintenancePolicy other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!weeklyMaintenanceWindows_.Equals(other.weeklyMaintenanceWindows_)) return false;
+      if(!maintenanceExclusionWindow_.Equals(other.maintenanceExclusionWindow_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= weeklyMaintenanceWindows_.GetHashCode();
+      hash ^= maintenanceExclusionWindow_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      weeklyMaintenanceWindows_.WriteTo(output, _repeated_weeklyMaintenanceWindows_codec);
+      maintenanceExclusionWindow_.WriteTo(output, _repeated_maintenanceExclusionWindow_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      weeklyMaintenanceWindows_.WriteTo(ref output, _repeated_weeklyMaintenanceWindows_codec);
+      maintenanceExclusionWindow_.WriteTo(ref output, _repeated_maintenanceExclusionWindow_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += weeklyMaintenanceWindows_.CalculateSize(_repeated_weeklyMaintenanceWindows_codec);
+      size += maintenanceExclusionWindow_.CalculateSize(_repeated_maintenanceExclusionWindow_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MaintenancePolicy other) {
+      if (other == null) {
+        return;
+      }
+      weeklyMaintenanceWindows_.Add(other.weeklyMaintenanceWindows_);
+      maintenanceExclusionWindow_.Add(other.maintenanceExclusionWindow_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 26: {
+            weeklyMaintenanceWindows_.AddEntriesFrom(input, _repeated_weeklyMaintenanceWindows_codec);
+            break;
+          }
+          case 34: {
+            maintenanceExclusionWindow_.AddEntriesFrom(input, _repeated_maintenanceExclusionWindow_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 26: {
+            weeklyMaintenanceWindows_.AddEntriesFrom(ref input, _repeated_weeklyMaintenanceWindows_codec);
+            break;
+          }
+          case 34: {
+            maintenanceExclusionWindow_.AddEntriesFrom(ref input, _repeated_maintenanceExclusionWindow_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the MaintenancePolicy message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Weekly time window in which maintenance updates may occur.
+      /// Duration of the window is currently fixed at 1 hour.
+      /// Time zone is UTC.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class WeeklyMaintenanceWindow : pb::IMessage<WeeklyMaintenanceWindow>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<WeeklyMaintenanceWindow> _parser = new pb::MessageParser<WeeklyMaintenanceWindow>(() => new WeeklyMaintenanceWindow());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<WeeklyMaintenanceWindow> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Lustre.V1.MaintenancePolicy.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public WeeklyMaintenanceWindow() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public WeeklyMaintenanceWindow(WeeklyMaintenanceWindow other) : this() {
+          dayOfWeek_ = other.dayOfWeek_;
+          startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public WeeklyMaintenanceWindow Clone() {
+          return new WeeklyMaintenanceWindow(this);
+        }
+
+        /// <summary>Field number for the "day_of_week" field.</summary>
+        public const int DayOfWeekFieldNumber = 1;
+        private global::Google.Type.DayOfWeek dayOfWeek_ = global::Google.Type.DayOfWeek.Unspecified;
+        /// <summary>
+        /// Required. Day of the week for the maintenance window.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.DayOfWeek DayOfWeek {
+          get { return dayOfWeek_; }
+          set {
+            dayOfWeek_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "start_time" field.</summary>
+        public const int StartTimeFieldNumber = 2;
+        private global::Google.Type.TimeOfDay startTime_;
+        /// <summary>
+        /// Required. Start time of the maintenance window in UTC time zone.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.TimeOfDay StartTime {
+          get { return startTime_; }
+          set {
+            startTime_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as WeeklyMaintenanceWindow);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(WeeklyMaintenanceWindow other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (DayOfWeek != other.DayOfWeek) return false;
+          if (!object.Equals(StartTime, other.StartTime)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (DayOfWeek != global::Google.Type.DayOfWeek.Unspecified) hash ^= DayOfWeek.GetHashCode();
+          if (startTime_ != null) hash ^= StartTime.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (DayOfWeek != global::Google.Type.DayOfWeek.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) DayOfWeek);
+          }
+          if (startTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(StartTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (DayOfWeek != global::Google.Type.DayOfWeek.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) DayOfWeek);
+          }
+          if (startTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(StartTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (DayOfWeek != global::Google.Type.DayOfWeek.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DayOfWeek);
+          }
+          if (startTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(WeeklyMaintenanceWindow other) {
+          if (other == null) {
+            return;
+          }
+          if (other.DayOfWeek != global::Google.Type.DayOfWeek.Unspecified) {
+            DayOfWeek = other.DayOfWeek;
+          }
+          if (other.startTime_ != null) {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Type.TimeOfDay();
+            }
+            StartTime.MergeFrom(other.StartTime);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                DayOfWeek = (global::Google.Type.DayOfWeek) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (startTime_ == null) {
+                  StartTime = new global::Google.Type.TimeOfDay();
+                }
+                input.ReadMessage(StartTime);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                DayOfWeek = (global::Google.Type.DayOfWeek) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (startTime_ == null) {
+                  StartTime = new global::Google.Type.TimeOfDay();
+                }
+                input.ReadMessage(StartTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Exclusion period when maintenance updates should not occur.
+      /// An exclusion window can be in either of the following two formats:
+      /// * Non-recurring : A full date, with non-zero year, month and day values.
+      /// * Recurring : A month and day value, with a zero year.
+      /// Time zone is UTC.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class MaintenanceExclusionWindow : pb::IMessage<MaintenanceExclusionWindow>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MaintenanceExclusionWindow> _parser = new pb::MessageParser<MaintenanceExclusionWindow>(() => new MaintenanceExclusionWindow());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MaintenanceExclusionWindow> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Lustre.V1.MaintenancePolicy.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MaintenanceExclusionWindow() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MaintenanceExclusionWindow(MaintenanceExclusionWindow other) : this() {
+          startDate_ = other.startDate_ != null ? other.startDate_.Clone() : null;
+          endDate_ = other.endDate_ != null ? other.endDate_.Clone() : null;
+          time_ = other.time_ != null ? other.time_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MaintenanceExclusionWindow Clone() {
+          return new MaintenanceExclusionWindow(this);
+        }
+
+        /// <summary>Field number for the "start_date" field.</summary>
+        public const int StartDateFieldNumber = 1;
+        private global::Google.Type.Date startDate_;
+        /// <summary>
+        /// Required. Start date of the exclusion period in UTC time zone. This date
+        /// is inclusive.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.Date StartDate {
+          get { return startDate_; }
+          set {
+            startDate_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "end_date" field.</summary>
+        public const int EndDateFieldNumber = 2;
+        private global::Google.Type.Date endDate_;
+        /// <summary>
+        /// Required. End date of the exclusion period in UTC time zone. This date is
+        /// inclusive.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.Date EndDate {
+          get { return endDate_; }
+          set {
+            endDate_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "time" field.</summary>
+        public const int TimeFieldNumber = 3;
+        private global::Google.Type.TimeOfDay time_;
+        /// <summary>
+        /// Required. Time in UTC when the exclusion window starts on start_date and
+        /// ends on end_date. This can be:
+        /// * Full time OR
+        /// * All zeros for 00:00:00 UTC
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.TimeOfDay Time {
+          get { return time_; }
+          set {
+            time_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MaintenanceExclusionWindow);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MaintenanceExclusionWindow other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(StartDate, other.StartDate)) return false;
+          if (!object.Equals(EndDate, other.EndDate)) return false;
+          if (!object.Equals(Time, other.Time)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (startDate_ != null) hash ^= StartDate.GetHashCode();
+          if (endDate_ != null) hash ^= EndDate.GetHashCode();
+          if (time_ != null) hash ^= Time.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (startDate_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(StartDate);
+          }
+          if (endDate_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(EndDate);
+          }
+          if (time_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Time);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (startDate_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(StartDate);
+          }
+          if (endDate_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(EndDate);
+          }
+          if (time_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Time);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (startDate_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartDate);
+          }
+          if (endDate_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndDate);
+          }
+          if (time_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Time);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MaintenanceExclusionWindow other) {
+          if (other == null) {
+            return;
+          }
+          if (other.startDate_ != null) {
+            if (startDate_ == null) {
+              StartDate = new global::Google.Type.Date();
+            }
+            StartDate.MergeFrom(other.StartDate);
+          }
+          if (other.endDate_ != null) {
+            if (endDate_ == null) {
+              EndDate = new global::Google.Type.Date();
+            }
+            EndDate.MergeFrom(other.EndDate);
+          }
+          if (other.time_ != null) {
+            if (time_ == null) {
+              Time = new global::Google.Type.TimeOfDay();
+            }
+            Time.MergeFrom(other.Time);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (startDate_ == null) {
+                  StartDate = new global::Google.Type.Date();
+                }
+                input.ReadMessage(StartDate);
+                break;
+              }
+              case 18: {
+                if (endDate_ == null) {
+                  EndDate = new global::Google.Type.Date();
+                }
+                input.ReadMessage(EndDate);
+                break;
+              }
+              case 26: {
+                if (time_ == null) {
+                  Time = new global::Google.Type.TimeOfDay();
+                }
+                input.ReadMessage(Time);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (startDate_ == null) {
+                  StartDate = new global::Google.Type.Date();
+                }
+                input.ReadMessage(StartDate);
+                break;
+              }
+              case 18: {
+                if (endDate_ == null) {
+                  EndDate = new global::Google.Type.Date();
+                }
+                input.ReadMessage(EndDate);
+                break;
+              }
+              case 26: {
+                if (time_ == null) {
+                  Time = new global::Google.Type.TimeOfDay();
+                }
+                input.ReadMessage(Time);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Represents a scheduled maintenance event.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MaintenanceSchedule : pb::IMessage<MaintenanceSchedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MaintenanceSchedule> _parser = new pb::MessageParser<MaintenanceSchedule>(() => new MaintenanceSchedule());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MaintenanceSchedule> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenanceSchedule() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenanceSchedule(MaintenanceSchedule other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenanceSchedule Clone() {
+      return new MaintenanceSchedule(this);
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Output only. The scheduled start time for the maintenance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// Output only. The scheduled end time for the maintenance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MaintenanceSchedule);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MaintenanceSchedule other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MaintenanceSchedule other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message for requesting to reschedule a maintenance event for a specific
+  /// instance.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RescheduleMaintenanceRequest : pb::IMessage<RescheduleMaintenanceRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RescheduleMaintenanceRequest> _parser = new pb::MessageParser<RescheduleMaintenanceRequest>(() => new RescheduleMaintenanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RescheduleMaintenanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Lustre.V1.InstanceReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RescheduleMaintenanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RescheduleMaintenanceRequest(RescheduleMaintenanceRequest other) : this() {
+      name_ = other.name_;
+      reschedule_ = other.reschedule_ != null ? other.reschedule_.Clone() : null;
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RescheduleMaintenanceRequest Clone() {
+      return new RescheduleMaintenanceRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Format:
+    /// projects/{project}/locations/{location}/instances/{instance}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "reschedule" field.</summary>
+    public const int RescheduleFieldNumber = 2;
+    private global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.Reschedule reschedule_;
+    /// <summary>
+    /// Required. The desired reschedule settings.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.Reschedule Reschedule {
+      get { return reschedule_; }
+      set {
+        reschedule_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 3;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. A unique identifier for this request. A random UUID is
+    /// recommended. This request is only idempotent if a `request_id` is provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RescheduleMaintenanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RescheduleMaintenanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(Reschedule, other.Reschedule)) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (reschedule_ != null) hash ^= Reschedule.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (reschedule_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Reschedule);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (reschedule_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Reschedule);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (reschedule_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reschedule);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RescheduleMaintenanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.reschedule_ != null) {
+        if (reschedule_ == null) {
+          Reschedule = new global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.Reschedule();
+        }
+        Reschedule.MergeFrom(other.Reschedule);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (reschedule_ == null) {
+              Reschedule = new global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.Reschedule();
+            }
+            input.ReadMessage(Reschedule);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (reschedule_ == null) {
+              Reschedule = new global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.Reschedule();
+            }
+            input.ReadMessage(Reschedule);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RescheduleMaintenanceRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The type of rescheduling event. More reschedule types may be added in the
+      /// future.
+      /// </summary>
+      public enum RescheduleType {
+        /// <summary>
+        /// Unspecified schedule type.
+        /// </summary>
+        [pbr::OriginalName("RESCHEDULE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Apply update immediately
+        /// </summary>
+        [pbr::OriginalName("IMMEDIATE")] Immediate = 1,
+        /// <summary>
+        /// Reschedule to the next available window.
+        /// </summary>
+        [pbr::OriginalName("NEXT_AVAILABLE_WINDOW")] NextAvailableWindow = 2,
+        /// <summary>
+        /// Reschedule to a specific time.
+        /// </summary>
+        [pbr::OriginalName("BY_TIME")] ByTime = 3,
+      }
+
+      /// <summary>
+      /// The desired reschedule settings.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Reschedule : pb::IMessage<Reschedule>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Reschedule> _parser = new pb::MessageParser<Reschedule>(() => new Reschedule());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Reschedule> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Reschedule() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Reschedule(Reschedule other) : this() {
+          rescheduleType_ = other.rescheduleType_;
+          scheduleTime_ = other.scheduleTime_ != null ? other.scheduleTime_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Reschedule Clone() {
+          return new Reschedule(this);
+        }
+
+        /// <summary>Field number for the "reschedule_type" field.</summary>
+        public const int RescheduleTypeFieldNumber = 1;
+        private global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType_ = global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified;
+        /// <summary>
+        /// Required. The type of rescheduling.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.RescheduleType RescheduleType {
+          get { return rescheduleType_; }
+          set {
+            rescheduleType_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "schedule_time" field.</summary>
+        public const int ScheduleTimeFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp scheduleTime_;
+        /// <summary>
+        /// Optional. Required if reschedule_type is BY_TIME. Timestamp when the
+        /// maintenance shall be rescheduled to. This time must be within
+        /// 28 days of the original scheduled maintenance start time.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp ScheduleTime {
+          get { return scheduleTime_; }
+          set {
+            scheduleTime_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Reschedule);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Reschedule other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (RescheduleType != other.RescheduleType) return false;
+          if (!object.Equals(ScheduleTime, other.ScheduleTime)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (RescheduleType != global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified) hash ^= RescheduleType.GetHashCode();
+          if (scheduleTime_ != null) hash ^= ScheduleTime.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (RescheduleType != global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) RescheduleType);
+          }
+          if (scheduleTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(ScheduleTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RescheduleType != global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) RescheduleType);
+          }
+          if (scheduleTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(ScheduleTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (RescheduleType != global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RescheduleType);
+          }
+          if (scheduleTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ScheduleTime);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Reschedule other) {
+          if (other == null) {
+            return;
+          }
+          if (other.RescheduleType != global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.RescheduleType.Unspecified) {
+            RescheduleType = other.RescheduleType;
+          }
+          if (other.scheduleTime_ != null) {
+            if (scheduleTime_ == null) {
+              ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            ScheduleTime.MergeFrom(other.ScheduleTime);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                RescheduleType = (global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.RescheduleType) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (scheduleTime_ == null) {
+                  ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(ScheduleTime);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                RescheduleType = (global::Google.Cloud.Lustre.V1.RescheduleMaintenanceRequest.Types.RescheduleType) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (scheduleTime_ == null) {
+                  ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(ScheduleTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 

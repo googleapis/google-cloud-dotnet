@@ -10,10 +10,28 @@
         "grpc": {
           "libraryClient": "LustreClient",
           "rpcs": {
+            "CreateDirectoryPolicy": {
+              "methods": [
+                "CreateDirectoryPolicy",
+                "CreateDirectoryPolicyAsync"
+              ]
+            },
             "CreateInstance": {
               "methods": [
                 "CreateInstance",
                 "CreateInstanceAsync"
+              ]
+            },
+            "CreateMirror": {
+              "methods": [
+                "CreateMirror",
+                "CreateMirrorAsync"
+              ]
+            },
+            "DeleteDirectoryPolicy": {
+              "methods": [
+                "DeleteDirectoryPolicy",
+                "DeleteDirectoryPolicyAsync"
               ]
             },
             "DeleteInstance": {
@@ -22,10 +40,22 @@
                 "DeleteInstanceAsync"
               ]
             },
+            "DeleteMirror": {
+              "methods": [
+                "DeleteMirror",
+                "DeleteMirrorAsync"
+              ]
+            },
             "ExportData": {
               "methods": [
                 "ExportData",
                 "ExportDataAsync"
+              ]
+            },
+            "GetDirectoryPolicy": {
+              "methods": [
+                "GetDirectoryPolicy",
+                "GetDirectoryPolicyAsync"
               ]
             },
             "GetInstance": {
@@ -34,10 +64,22 @@
                 "GetInstanceAsync"
               ]
             },
+            "GetMirror": {
+              "methods": [
+                "GetMirror",
+                "GetMirrorAsync"
+              ]
+            },
             "ImportData": {
               "methods": [
                 "ImportData",
                 "ImportDataAsync"
+              ]
+            },
+            "ListDirectoryPolicies": {
+              "methods": [
+                "ListDirectoryPolicies",
+                "ListDirectoryPoliciesAsync"
               ]
             },
             "ListInstances": {
@@ -46,10 +88,28 @@
                 "ListInstancesAsync"
               ]
             },
+            "ListMirrors": {
+              "methods": [
+                "ListMirrors",
+                "ListMirrorsAsync"
+              ]
+            },
+            "RescheduleMaintenance": {
+              "methods": [
+                "RescheduleMaintenance",
+                "RescheduleMaintenanceAsync"
+              ]
+            },
             "UpdateInstance": {
               "methods": [
                 "UpdateInstance",
                 "UpdateInstanceAsync"
+              ]
+            },
+            "UpdateMirror": {
+              "methods": [
+                "UpdateMirror",
+                "UpdateMirrorAsync"
               ]
             }
           }
