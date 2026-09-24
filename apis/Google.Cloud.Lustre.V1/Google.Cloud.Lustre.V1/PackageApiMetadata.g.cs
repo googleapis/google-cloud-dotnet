@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
@@ -43,6 +44,21 @@ namespace Google.Cloud.Lustre.V1
                     proto::ByteString.FromBase64("Eh8vdjEve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25z")
                 },
                 {
+                    "google.iam.v1.IAMPolicy.GetIamPolicy",
+                    // { "get": "/v1/{resource=projects/*/locations/*/instances/*}:getIamPolicy", "additionalBindings": [ { "get": "/v1/{resource=projects/*/locations/*/instances/*/directoryPolicies/*}:getIamPolicy" } ] }
+                    proto::ByteString.FromBase64("Ej4vdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OmdldElhbVBvbGljeVpUElIvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyovZGlyZWN0b3J5UG9saWNpZXMvKn06Z2V0SWFtUG9saWN5")
+                },
+                {
+                    "google.iam.v1.IAMPolicy.SetIamPolicy",
+                    // { "post": "/v1/{resource=projects/*/locations/*/instances/*}:setIamPolicy", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/instances/*/directoryPolicies/*}:setIamPolicy", "body": "*" } ] }
+                    proto::ByteString.FromBase64("Ij4vdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OnNldElhbVBvbGljeToBKlpXIlIvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyovZGlyZWN0b3J5UG9saWNpZXMvKn06c2V0SWFtUG9saWN5OgEq")
+                },
+                {
+                    "google.iam.v1.IAMPolicy.TestIamPermissions",
+                    // { "post": "/v1/{resource=projects/*/locations/*/instances/*}:testIamPermissions", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/instances/*/directoryPolicies/*}:testIamPermissions", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IkQvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlpdIlgvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyovZGlyZWN0b3J5UG9saWNpZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq")
+                },
+                {
                     "google.longrunning.Operations.CancelOperation",
                     // { "post": "/v1/{name=projects/*/locations/*/operations/*}:cancel" }
                     proto::ByteString.FromBase64("IjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9OmNhbmNlbA==")
@@ -66,9 +82,14 @@ namespace Google.Cloud.Lustre.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return gciv::IamPolicyReflection.Descriptor;
+            yield return gciv::OptionsReflection.Descriptor;
+            yield return gciv::PolicyReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
+            yield return DirectoryPolicyReflection.Descriptor;
             yield return InstanceReflection.Descriptor;
             yield return LustreReflection.Descriptor;
+            yield return MirrorReflection.Descriptor;
             yield return TransferReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

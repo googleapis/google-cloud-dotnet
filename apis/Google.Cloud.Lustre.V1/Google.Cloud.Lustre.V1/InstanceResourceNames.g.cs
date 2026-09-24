@@ -283,6 +283,24 @@ namespace Google.Cloud.Lustre.V1
             get => string.IsNullOrEmpty(Network) ? null : NetworkName.Parse(Network, allowUnparsed: true);
             set => Network = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKey"/> resource name property.
+        /// </summary>
+        public CryptoKeyName KmsKeyAsCryptoKeyName
+        {
+            get => string.IsNullOrEmpty(KmsKey) ? null : CryptoKeyName.Parse(KmsKey, allowUnparsed: true);
+            set => KmsKey = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="ResourcePolicyName"/>-typed view over the <see cref="PlacementPolicy"/> resource name property.
+        /// </summary>
+        public ResourcePolicyName PlacementPolicyAsResourcePolicyName
+        {
+            get => string.IsNullOrEmpty(PlacementPolicy) ? null : ResourcePolicyName.Parse(PlacementPolicy, allowUnparsed: true);
+            set => PlacementPolicy = value?.ToString() ?? "";
+        }
     }
 
     public partial class ListInstancesRequest
@@ -322,6 +340,18 @@ namespace Google.Cloud.Lustre.V1
     }
 
     public partial class DeleteInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="gclv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gclv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gclv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RescheduleMaintenanceRequest
     {
         /// <summary>
         /// <see cref="gclv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.

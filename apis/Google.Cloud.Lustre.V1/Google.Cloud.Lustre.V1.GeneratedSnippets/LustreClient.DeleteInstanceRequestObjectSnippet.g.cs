@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = lustreClient.DeleteInstance(request);

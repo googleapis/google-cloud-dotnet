@@ -18,6 +18,7 @@
 using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -57,11 +58,28 @@ namespace Google.Cloud.Lustre.V1
             UpdateInstanceOperationsSettings = existing.UpdateInstanceOperationsSettings.Clone();
             DeleteInstanceSettings = existing.DeleteInstanceSettings;
             DeleteInstanceOperationsSettings = existing.DeleteInstanceOperationsSettings.Clone();
+            RescheduleMaintenanceSettings = existing.RescheduleMaintenanceSettings;
+            RescheduleMaintenanceOperationsSettings = existing.RescheduleMaintenanceOperationsSettings.Clone();
             ImportDataSettings = existing.ImportDataSettings;
             ImportDataOperationsSettings = existing.ImportDataOperationsSettings.Clone();
             ExportDataSettings = existing.ExportDataSettings;
             ExportDataOperationsSettings = existing.ExportDataOperationsSettings.Clone();
+            CreateMirrorSettings = existing.CreateMirrorSettings;
+            CreateMirrorOperationsSettings = existing.CreateMirrorOperationsSettings.Clone();
+            UpdateMirrorSettings = existing.UpdateMirrorSettings;
+            UpdateMirrorOperationsSettings = existing.UpdateMirrorOperationsSettings.Clone();
+            DeleteMirrorSettings = existing.DeleteMirrorSettings;
+            DeleteMirrorOperationsSettings = existing.DeleteMirrorOperationsSettings.Clone();
+            GetMirrorSettings = existing.GetMirrorSettings;
+            ListMirrorsSettings = existing.ListMirrorsSettings;
+            CreateDirectoryPolicySettings = existing.CreateDirectoryPolicySettings;
+            CreateDirectoryPolicyOperationsSettings = existing.CreateDirectoryPolicyOperationsSettings.Clone();
+            DeleteDirectoryPolicySettings = existing.DeleteDirectoryPolicySettings;
+            DeleteDirectoryPolicyOperationsSettings = existing.DeleteDirectoryPolicyOperationsSettings.Clone();
+            GetDirectoryPolicySettings = existing.GetDirectoryPolicySettings;
+            ListDirectoryPoliciesSettings = existing.ListDirectoryPoliciesSettings;
             LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -182,6 +200,36 @@ namespace Google.Cloud.Lustre.V1
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LustreClient.RescheduleMaintenance</c> and <c>LustreClient.RescheduleMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RescheduleMaintenanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LustreClient.RescheduleMaintenance</c> and
+        /// <c>LustreClient.RescheduleMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RescheduleMaintenanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>LustreClient.ImportData</c>
         /// and <c>LustreClient.ImportDataAsync</c>.
         /// </summary>
@@ -242,9 +290,212 @@ namespace Google.Cloud.Lustre.V1
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>LustreClient.CreateMirror</c>
+        ///  and <c>LustreClient.CreateMirrorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateMirrorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LustreClient.CreateMirror</c> and
+        /// <c>LustreClient.CreateMirrorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateMirrorOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>LustreClient.UpdateMirror</c>
+        ///  and <c>LustreClient.UpdateMirrorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateMirrorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LustreClient.UpdateMirror</c> and
+        /// <c>LustreClient.UpdateMirrorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateMirrorOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>LustreClient.DeleteMirror</c>
+        ///  and <c>LustreClient.DeleteMirrorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteMirrorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LustreClient.DeleteMirror</c> and
+        /// <c>LustreClient.DeleteMirrorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteMirrorOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>LustreClient.GetMirror</c>
+        /// and <c>LustreClient.GetMirrorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetMirrorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>LustreClient.ListMirrors</c>
+        ///  and <c>LustreClient.ListMirrorsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListMirrorsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LustreClient.CreateDirectoryPolicy</c> and <c>LustreClient.CreateDirectoryPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDirectoryPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LustreClient.CreateDirectoryPolicy</c> and
+        /// <c>LustreClient.CreateDirectoryPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateDirectoryPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LustreClient.DeleteDirectoryPolicy</c> and <c>LustreClient.DeleteDirectoryPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDirectoryPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LustreClient.DeleteDirectoryPolicy</c> and
+        /// <c>LustreClient.DeleteDirectoryPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteDirectoryPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LustreClient.GetDirectoryPolicy</c> and <c>LustreClient.GetDirectoryPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDirectoryPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LustreClient.ListDirectoryPolicies</c> and <c>LustreClient.ListDirectoryPoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDirectoryPoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="LustreSettings"/> object.</returns>
@@ -387,6 +638,9 @@ namespace Google.Cloud.Lustre.V1
 
         /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists instances in a given project and location.
@@ -1144,6 +1398,166 @@ namespace Google.Cloud.Lustre.V1
             DeleteInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Reschedules a planned maintenance event for a specific instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> RescheduleMaintenance(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Reschedules a planned maintenance event for a specific instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Reschedules a planned maintenance event for a specific instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(RescheduleMaintenanceRequest request, st::CancellationToken cancellationToken) =>
+            RescheduleMaintenanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RescheduleMaintenance</c>.</summary>
+        public virtual lro::OperationsClient RescheduleMaintenanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RescheduleMaintenance</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> PollOnceRescheduleMaintenance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RescheduleMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RescheduleMaintenance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceRescheduleMaintenanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RescheduleMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Reschedules a planned maintenance event for a specific instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="reschedule">
+        /// Required. The desired reschedule settings.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> RescheduleMaintenance(string name, RescheduleMaintenanceRequest.Types.Reschedule reschedule, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenance(new RescheduleMaintenanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Reschedule = gax::GaxPreconditions.CheckNotNull(reschedule, nameof(reschedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedules a planned maintenance event for a specific instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="reschedule">
+        /// Required. The desired reschedule settings.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(string name, RescheduleMaintenanceRequest.Types.Reschedule reschedule, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenanceAsync(new RescheduleMaintenanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Reschedule = gax::GaxPreconditions.CheckNotNull(reschedule, nameof(reschedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedules a planned maintenance event for a specific instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="reschedule">
+        /// Required. The desired reschedule settings.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(string name, RescheduleMaintenanceRequest.Types.Reschedule reschedule, st::CancellationToken cancellationToken) =>
+            RescheduleMaintenanceAsync(name, reschedule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Reschedules a planned maintenance event for a specific instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="reschedule">
+        /// Required. The desired reschedule settings.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> RescheduleMaintenance(InstanceName name, RescheduleMaintenanceRequest.Types.Reschedule reschedule, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenance(new RescheduleMaintenanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Reschedule = gax::GaxPreconditions.CheckNotNull(reschedule, nameof(reschedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedules a planned maintenance event for a specific instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="reschedule">
+        /// Required. The desired reschedule settings.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(InstanceName name, RescheduleMaintenanceRequest.Types.Reschedule reschedule, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenanceAsync(new RescheduleMaintenanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Reschedule = gax::GaxPreconditions.CheckNotNull(reschedule, nameof(reschedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedules a planned maintenance event for a specific instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="reschedule">
+        /// Required. The desired reschedule settings.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(InstanceName name, RescheduleMaintenanceRequest.Types.Reschedule reschedule, st::CancellationToken cancellationToken) =>
+            RescheduleMaintenanceAsync(name, reschedule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Imports data from Cloud Storage to a Managed Lustre instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1332,6 +1746,1353 @@ namespace Google.Cloud.Lustre.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<ExportDataResponse, ExportDataMetadata>> PollOnceExportDataAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<ExportDataResponse, ExportDataMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportDataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new mirror in a given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Mirror, CreateMirrorMetadata> CreateMirror(CreateMirrorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new mirror in a given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Mirror, CreateMirrorMetadata>> CreateMirrorAsync(CreateMirrorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new mirror in a given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Mirror, CreateMirrorMetadata>> CreateMirrorAsync(CreateMirrorRequest request, st::CancellationToken cancellationToken) =>
+            CreateMirrorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateMirror</c>.</summary>
+        public virtual lro::OperationsClient CreateMirrorOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateMirror</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Mirror, CreateMirrorMetadata> PollOnceCreateMirror(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Mirror, CreateMirrorMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateMirrorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateMirror</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Mirror, CreateMirrorMetadata>> PollOnceCreateMirrorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Mirror, CreateMirrorMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateMirrorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new mirror in a given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent instance resource where the mirror will be created, in the
+        /// format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="mirror">
+        /// Required. The mirror to create.
+        /// </param>
+        /// <param name="mirrorId">
+        /// Required. The ID to use for the mirror.
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// 
+        /// The ID cannot be changed after the mirror is created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Mirror, CreateMirrorMetadata> CreateMirror(string parent, Mirror mirror, string mirrorId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMirror(new CreateMirrorRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                MirrorId = gax::GaxPreconditions.CheckNotNullOrEmpty(mirrorId, nameof(mirrorId)),
+                Mirror = gax::GaxPreconditions.CheckNotNull(mirror, nameof(mirror)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new mirror in a given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent instance resource where the mirror will be created, in the
+        /// format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="mirror">
+        /// Required. The mirror to create.
+        /// </param>
+        /// <param name="mirrorId">
+        /// Required. The ID to use for the mirror.
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// 
+        /// The ID cannot be changed after the mirror is created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Mirror, CreateMirrorMetadata>> CreateMirrorAsync(string parent, Mirror mirror, string mirrorId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMirrorAsync(new CreateMirrorRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                MirrorId = gax::GaxPreconditions.CheckNotNullOrEmpty(mirrorId, nameof(mirrorId)),
+                Mirror = gax::GaxPreconditions.CheckNotNull(mirror, nameof(mirror)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new mirror in a given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent instance resource where the mirror will be created, in the
+        /// format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="mirror">
+        /// Required. The mirror to create.
+        /// </param>
+        /// <param name="mirrorId">
+        /// Required. The ID to use for the mirror.
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// 
+        /// The ID cannot be changed after the mirror is created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Mirror, CreateMirrorMetadata>> CreateMirrorAsync(string parent, Mirror mirror, string mirrorId, st::CancellationToken cancellationToken) =>
+            CreateMirrorAsync(parent, mirror, mirrorId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new mirror in a given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent instance resource where the mirror will be created, in the
+        /// format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="mirror">
+        /// Required. The mirror to create.
+        /// </param>
+        /// <param name="mirrorId">
+        /// Required. The ID to use for the mirror.
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// 
+        /// The ID cannot be changed after the mirror is created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Mirror, CreateMirrorMetadata> CreateMirror(InstanceName parent, Mirror mirror, string mirrorId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMirror(new CreateMirrorRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MirrorId = gax::GaxPreconditions.CheckNotNullOrEmpty(mirrorId, nameof(mirrorId)),
+                Mirror = gax::GaxPreconditions.CheckNotNull(mirror, nameof(mirror)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new mirror in a given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent instance resource where the mirror will be created, in the
+        /// format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="mirror">
+        /// Required. The mirror to create.
+        /// </param>
+        /// <param name="mirrorId">
+        /// Required. The ID to use for the mirror.
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// 
+        /// The ID cannot be changed after the mirror is created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Mirror, CreateMirrorMetadata>> CreateMirrorAsync(InstanceName parent, Mirror mirror, string mirrorId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMirrorAsync(new CreateMirrorRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MirrorId = gax::GaxPreconditions.CheckNotNullOrEmpty(mirrorId, nameof(mirrorId)),
+                Mirror = gax::GaxPreconditions.CheckNotNull(mirror, nameof(mirror)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new mirror in a given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent instance resource where the mirror will be created, in the
+        /// format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="mirror">
+        /// Required. The mirror to create.
+        /// </param>
+        /// <param name="mirrorId">
+        /// Required. The ID to use for the mirror.
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// 
+        /// The ID cannot be changed after the mirror is created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Mirror, CreateMirrorMetadata>> CreateMirrorAsync(InstanceName parent, Mirror mirror, string mirrorId, st::CancellationToken cancellationToken) =>
+            CreateMirrorAsync(parent, mirror, mirrorId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Mirror, OperationMetadata> UpdateMirror(UpdateMirrorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Mirror, OperationMetadata>> UpdateMirrorAsync(UpdateMirrorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Mirror, OperationMetadata>> UpdateMirrorAsync(UpdateMirrorRequest request, st::CancellationToken cancellationToken) =>
+            UpdateMirrorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateMirror</c>.</summary>
+        public virtual lro::OperationsClient UpdateMirrorOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateMirror</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Mirror, OperationMetadata> PollOnceUpdateMirror(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Mirror, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateMirrorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateMirror</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Mirror, OperationMetadata>> PollOnceUpdateMirrorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Mirror, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateMirrorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single mirror.
+        /// </summary>
+        /// <param name="mirror">
+        /// Required. Mirror to update. The mirror's `name` field is used to identify
+        /// the mirror to update, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Fields specified in the update_mask are relative to the resource,
+        /// not the full request. A field will be overwritten if it is in the mask. If
+        /// no mask is provided then all fields present in the request are overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Mirror, OperationMetadata> UpdateMirror(Mirror mirror, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMirror(new UpdateMirrorRequest
+            {
+                Mirror = gax::GaxPreconditions.CheckNotNull(mirror, nameof(mirror)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single mirror.
+        /// </summary>
+        /// <param name="mirror">
+        /// Required. Mirror to update. The mirror's `name` field is used to identify
+        /// the mirror to update, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Fields specified in the update_mask are relative to the resource,
+        /// not the full request. A field will be overwritten if it is in the mask. If
+        /// no mask is provided then all fields present in the request are overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Mirror, OperationMetadata>> UpdateMirrorAsync(Mirror mirror, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMirrorAsync(new UpdateMirrorRequest
+            {
+                Mirror = gax::GaxPreconditions.CheckNotNull(mirror, nameof(mirror)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single mirror.
+        /// </summary>
+        /// <param name="mirror">
+        /// Required. Mirror to update. The mirror's `name` field is used to identify
+        /// the mirror to update, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Fields specified in the update_mask are relative to the resource,
+        /// not the full request. A field will be overwritten if it is in the mask. If
+        /// no mask is provided then all fields present in the request are overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Mirror, OperationMetadata>> UpdateMirrorAsync(Mirror mirror, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateMirrorAsync(mirror, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteMirror(DeleteMirrorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMirrorAsync(DeleteMirrorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMirrorAsync(DeleteMirrorRequest request, st::CancellationToken cancellationToken) =>
+            DeleteMirrorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteMirror</c>.</summary>
+        public virtual lro::OperationsClient DeleteMirrorOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteMirror</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteMirror(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteMirrorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteMirror</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteMirrorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteMirrorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single mirror.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mirror to delete, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteMirror(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMirror(new DeleteMirrorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single mirror.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mirror to delete, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMirrorAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMirrorAsync(new DeleteMirrorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single mirror.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mirror to delete, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMirrorAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteMirrorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single mirror.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mirror to delete, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteMirror(MirrorName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMirror(new DeleteMirrorRequest
+            {
+                MirrorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single mirror.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mirror to delete, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMirrorAsync(MirrorName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMirrorAsync(new DeleteMirrorRequest
+            {
+                MirrorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single mirror.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mirror to delete, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMirrorAsync(MirrorName name, st::CancellationToken cancellationToken) =>
+            DeleteMirrorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Mirror GetMirror(GetMirrorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Mirror> GetMirrorAsync(GetMirrorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Mirror> GetMirrorAsync(GetMirrorRequest request, st::CancellationToken cancellationToken) =>
+            GetMirrorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single mirror.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mirror to retrieve, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Mirror GetMirror(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMirror(new GetMirrorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single mirror.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mirror to retrieve, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Mirror> GetMirrorAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMirrorAsync(new GetMirrorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single mirror.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mirror to retrieve, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Mirror> GetMirrorAsync(string name, st::CancellationToken cancellationToken) =>
+            GetMirrorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single mirror.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mirror to retrieve, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Mirror GetMirror(MirrorName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMirror(new GetMirrorRequest
+            {
+                MirrorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single mirror.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mirror to retrieve, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Mirror> GetMirrorAsync(MirrorName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMirrorAsync(new GetMirrorRequest
+            {
+                MirrorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single mirror.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the mirror to retrieve, in the format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/mirrors/{mirror}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Mirror> GetMirrorAsync(MirrorName name, st::CancellationToken cancellationToken) =>
+            GetMirrorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of multiple mirrors under a given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Mirror"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMirrorsResponse, Mirror> ListMirrors(ListMirrorsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of multiple mirrors under a given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Mirror"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMirrorsResponse, Mirror> ListMirrorsAsync(ListMirrorsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of multiple mirrors under a given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent instance resource where the mirrors will be listed, in the
+        /// format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Mirror"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMirrorsResponse, Mirror> ListMirrors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMirrorsRequest request = new ListMirrorsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMirrors(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of multiple mirrors under a given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent instance resource where the mirrors will be listed, in the
+        /// format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Mirror"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMirrorsResponse, Mirror> ListMirrorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMirrorsRequest request = new ListMirrorsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMirrorsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of multiple mirrors under a given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent instance resource where the mirrors will be listed, in the
+        /// format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Mirror"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMirrorsResponse, Mirror> ListMirrors(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMirrorsRequest request = new ListMirrorsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMirrors(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of multiple mirrors under a given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent instance resource where the mirrors will be listed, in the
+        /// format: `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Mirror"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMirrorsResponse, Mirror> ListMirrorsAsync(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMirrorsRequest request = new ListMirrorsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMirrorsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a directory policy resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DirectoryPolicy, OperationMetadata> CreateDirectoryPolicy(CreateDirectoryPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a directory policy resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DirectoryPolicy, OperationMetadata>> CreateDirectoryPolicyAsync(CreateDirectoryPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a directory policy resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DirectoryPolicy, OperationMetadata>> CreateDirectoryPolicyAsync(CreateDirectoryPolicyRequest request, st::CancellationToken cancellationToken) =>
+            CreateDirectoryPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateDirectoryPolicy</c>.</summary>
+        public virtual lro::OperationsClient CreateDirectoryPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateDirectoryPolicy</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DirectoryPolicy, OperationMetadata> PollOnceCreateDirectoryPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DirectoryPolicy, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDirectoryPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateDirectoryPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DirectoryPolicy, OperationMetadata>> PollOnceCreateDirectoryPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DirectoryPolicy, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDirectoryPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a directory policy resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance.
+        /// It must be in the format of
+        /// `projects/{project}/locations/{location}/instances/{instance}`.
+        /// </param>
+        /// <param name="directoryPolicy">
+        /// Required. The directory policy to create.
+        /// </param>
+        /// <param name="directoryPolicyId">
+        /// Required. The ID for the DirectoryPolicy to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DirectoryPolicy, OperationMetadata> CreateDirectoryPolicy(string parent, DirectoryPolicy directoryPolicy, string directoryPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDirectoryPolicy(new CreateDirectoryPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DirectoryPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(directoryPolicyId, nameof(directoryPolicyId)),
+                DirectoryPolicy = gax::GaxPreconditions.CheckNotNull(directoryPolicy, nameof(directoryPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a directory policy resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance.
+        /// It must be in the format of
+        /// `projects/{project}/locations/{location}/instances/{instance}`.
+        /// </param>
+        /// <param name="directoryPolicy">
+        /// Required. The directory policy to create.
+        /// </param>
+        /// <param name="directoryPolicyId">
+        /// Required. The ID for the DirectoryPolicy to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DirectoryPolicy, OperationMetadata>> CreateDirectoryPolicyAsync(string parent, DirectoryPolicy directoryPolicy, string directoryPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDirectoryPolicyAsync(new CreateDirectoryPolicyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DirectoryPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(directoryPolicyId, nameof(directoryPolicyId)),
+                DirectoryPolicy = gax::GaxPreconditions.CheckNotNull(directoryPolicy, nameof(directoryPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a directory policy resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance.
+        /// It must be in the format of
+        /// `projects/{project}/locations/{location}/instances/{instance}`.
+        /// </param>
+        /// <param name="directoryPolicy">
+        /// Required. The directory policy to create.
+        /// </param>
+        /// <param name="directoryPolicyId">
+        /// Required. The ID for the DirectoryPolicy to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DirectoryPolicy, OperationMetadata>> CreateDirectoryPolicyAsync(string parent, DirectoryPolicy directoryPolicy, string directoryPolicyId, st::CancellationToken cancellationToken) =>
+            CreateDirectoryPolicyAsync(parent, directoryPolicy, directoryPolicyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a directory policy resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance.
+        /// It must be in the format of
+        /// `projects/{project}/locations/{location}/instances/{instance}`.
+        /// </param>
+        /// <param name="directoryPolicy">
+        /// Required. The directory policy to create.
+        /// </param>
+        /// <param name="directoryPolicyId">
+        /// Required. The ID for the DirectoryPolicy to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DirectoryPolicy, OperationMetadata> CreateDirectoryPolicy(InstanceName parent, DirectoryPolicy directoryPolicy, string directoryPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDirectoryPolicy(new CreateDirectoryPolicyRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DirectoryPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(directoryPolicyId, nameof(directoryPolicyId)),
+                DirectoryPolicy = gax::GaxPreconditions.CheckNotNull(directoryPolicy, nameof(directoryPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a directory policy resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance.
+        /// It must be in the format of
+        /// `projects/{project}/locations/{location}/instances/{instance}`.
+        /// </param>
+        /// <param name="directoryPolicy">
+        /// Required. The directory policy to create.
+        /// </param>
+        /// <param name="directoryPolicyId">
+        /// Required. The ID for the DirectoryPolicy to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DirectoryPolicy, OperationMetadata>> CreateDirectoryPolicyAsync(InstanceName parent, DirectoryPolicy directoryPolicy, string directoryPolicyId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDirectoryPolicyAsync(new CreateDirectoryPolicyRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DirectoryPolicyId = gax::GaxPreconditions.CheckNotNullOrEmpty(directoryPolicyId, nameof(directoryPolicyId)),
+                DirectoryPolicy = gax::GaxPreconditions.CheckNotNull(directoryPolicy, nameof(directoryPolicy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a directory policy resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance.
+        /// It must be in the format of
+        /// `projects/{project}/locations/{location}/instances/{instance}`.
+        /// </param>
+        /// <param name="directoryPolicy">
+        /// Required. The directory policy to create.
+        /// </param>
+        /// <param name="directoryPolicyId">
+        /// Required. The ID for the DirectoryPolicy to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DirectoryPolicy, OperationMetadata>> CreateDirectoryPolicyAsync(InstanceName parent, DirectoryPolicy directoryPolicy, string directoryPolicyId, st::CancellationToken cancellationToken) =>
+            CreateDirectoryPolicyAsync(parent, directoryPolicy, directoryPolicyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a directory policy resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDirectoryPolicy(DeleteDirectoryPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a directory policy resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDirectoryPolicyAsync(DeleteDirectoryPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a directory policy resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDirectoryPolicyAsync(DeleteDirectoryPolicyRequest request, st::CancellationToken cancellationToken) =>
+            DeleteDirectoryPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteDirectoryPolicy</c>.</summary>
+        public virtual lro::OperationsClient DeleteDirectoryPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteDirectoryPolicy</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteDirectoryPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDirectoryPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteDirectoryPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteDirectoryPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDirectoryPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a directory policy resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the directory policy.
+        /// DirectoryPolicy names have the form
+        /// `projects/{project}/locations/{location}/instances/{instance}/directoryPolicies/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDirectoryPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDirectoryPolicy(new DeleteDirectoryPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a directory policy resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the directory policy.
+        /// DirectoryPolicy names have the form
+        /// `projects/{project}/locations/{location}/instances/{instance}/directoryPolicies/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDirectoryPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDirectoryPolicyAsync(new DeleteDirectoryPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a directory policy resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the directory policy.
+        /// DirectoryPolicy names have the form
+        /// `projects/{project}/locations/{location}/instances/{instance}/directoryPolicies/{id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDirectoryPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDirectoryPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a directory policy resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the directory policy.
+        /// DirectoryPolicy names have the form
+        /// `projects/{project}/locations/{location}/instances/{instance}/directoryPolicies/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDirectoryPolicy(DirectoryPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDirectoryPolicy(new DeleteDirectoryPolicyRequest
+            {
+                DirectoryPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a directory policy resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the directory policy.
+        /// DirectoryPolicy names have the form
+        /// `projects/{project}/locations/{location}/instances/{instance}/directoryPolicies/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDirectoryPolicyAsync(DirectoryPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDirectoryPolicyAsync(new DeleteDirectoryPolicyRequest
+            {
+                DirectoryPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a directory policy resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the directory policy.
+        /// DirectoryPolicy names have the form
+        /// `projects/{project}/locations/{location}/instances/{instance}/directoryPolicies/{id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDirectoryPolicyAsync(DirectoryPolicyName name, st::CancellationToken cancellationToken) =>
+            DeleteDirectoryPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single directory policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DirectoryPolicy GetDirectoryPolicy(GetDirectoryPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single directory policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DirectoryPolicy> GetDirectoryPolicyAsync(GetDirectoryPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single directory policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DirectoryPolicy> GetDirectoryPolicyAsync(GetDirectoryPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetDirectoryPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single directory policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the directory policy.
+        /// DirectoryPolicy names have the form
+        /// `projects/{project}/locations/{location}/instances/{instance}/directoryPolicies/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DirectoryPolicy GetDirectoryPolicy(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDirectoryPolicy(new GetDirectoryPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single directory policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the directory policy.
+        /// DirectoryPolicy names have the form
+        /// `projects/{project}/locations/{location}/instances/{instance}/directoryPolicies/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DirectoryPolicy> GetDirectoryPolicyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDirectoryPolicyAsync(new GetDirectoryPolicyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single directory policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the directory policy.
+        /// DirectoryPolicy names have the form
+        /// `projects/{project}/locations/{location}/instances/{instance}/directoryPolicies/{id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DirectoryPolicy> GetDirectoryPolicyAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDirectoryPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single directory policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the directory policy.
+        /// DirectoryPolicy names have the form
+        /// `projects/{project}/locations/{location}/instances/{instance}/directoryPolicies/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DirectoryPolicy GetDirectoryPolicy(DirectoryPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDirectoryPolicy(new GetDirectoryPolicyRequest
+            {
+                DirectoryPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single directory policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the directory policy.
+        /// DirectoryPolicy names have the form
+        /// `projects/{project}/locations/{location}/instances/{instance}/directoryPolicies/{id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DirectoryPolicy> GetDirectoryPolicyAsync(DirectoryPolicyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDirectoryPolicyAsync(new GetDirectoryPolicyRequest
+            {
+                DirectoryPolicyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single directory policy.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the directory policy.
+        /// DirectoryPolicy names have the form
+        /// `projects/{project}/locations/{location}/instances/{instance}/directoryPolicies/{id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DirectoryPolicy> GetDirectoryPolicyAsync(DirectoryPolicyName name, st::CancellationToken cancellationToken) =>
+            GetDirectoryPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of multiple directory policies under a given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DirectoryPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDirectoryPoliciesResponse, DirectoryPolicy> ListDirectoryPolicies(ListDirectoryPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of multiple directory policies under a given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DirectoryPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDirectoryPoliciesResponse, DirectoryPolicy> ListDirectoryPoliciesAsync(ListDirectoryPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of multiple directory policies under a given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance.
+        /// It must be in the format of
+        /// `projects/{project}/locations/{location}/instances/{instance}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DirectoryPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDirectoryPoliciesResponse, DirectoryPolicy> ListDirectoryPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDirectoryPoliciesRequest request = new ListDirectoryPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDirectoryPolicies(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of multiple directory policies under a given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance.
+        /// It must be in the format of
+        /// `projects/{project}/locations/{location}/instances/{instance}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DirectoryPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDirectoryPoliciesResponse, DirectoryPolicy> ListDirectoryPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDirectoryPoliciesRequest request = new ListDirectoryPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDirectoryPoliciesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of multiple directory policies under a given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance.
+        /// It must be in the format of
+        /// `projects/{project}/locations/{location}/instances/{instance}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DirectoryPolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDirectoryPoliciesResponse, DirectoryPolicy> ListDirectoryPolicies(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDirectoryPoliciesRequest request = new ListDirectoryPoliciesRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDirectoryPolicies(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of multiple directory policies under a given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance.
+        /// It must be in the format of
+        /// `projects/{project}/locations/{location}/instances/{instance}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DirectoryPolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDirectoryPoliciesResponse, DirectoryPolicy> ListDirectoryPoliciesAsync(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDirectoryPoliciesRequest request = new ListDirectoryPoliciesRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDirectoryPoliciesAsync(request, callSettings);
+        }
     }
 
     /// <summary>Lustre client wrapper implementation, for convenient use.</summary>
@@ -1350,9 +3111,29 @@ namespace Google.Cloud.Lustre.V1
 
         private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> _callDeleteInstance;
 
+        private readonly gaxgrpc::ApiCall<RescheduleMaintenanceRequest, lro::Operation> _callRescheduleMaintenance;
+
         private readonly gaxgrpc::ApiCall<ImportDataRequest, lro::Operation> _callImportData;
 
         private readonly gaxgrpc::ApiCall<ExportDataRequest, lro::Operation> _callExportData;
+
+        private readonly gaxgrpc::ApiCall<CreateMirrorRequest, lro::Operation> _callCreateMirror;
+
+        private readonly gaxgrpc::ApiCall<UpdateMirrorRequest, lro::Operation> _callUpdateMirror;
+
+        private readonly gaxgrpc::ApiCall<DeleteMirrorRequest, lro::Operation> _callDeleteMirror;
+
+        private readonly gaxgrpc::ApiCall<GetMirrorRequest, Mirror> _callGetMirror;
+
+        private readonly gaxgrpc::ApiCall<ListMirrorsRequest, ListMirrorsResponse> _callListMirrors;
+
+        private readonly gaxgrpc::ApiCall<CreateDirectoryPolicyRequest, lro::Operation> _callCreateDirectoryPolicy;
+
+        private readonly gaxgrpc::ApiCall<DeleteDirectoryPolicyRequest, lro::Operation> _callDeleteDirectoryPolicy;
+
+        private readonly gaxgrpc::ApiCall<GetDirectoryPolicyRequest, DirectoryPolicy> _callGetDirectoryPolicy;
+
+        private readonly gaxgrpc::ApiCall<ListDirectoryPoliciesRequest, ListDirectoryPoliciesResponse> _callListDirectoryPolicies;
 
         /// <summary>
         /// Constructs a client wrapper for the Lustre service, with the specified gRPC client and settings.
@@ -1372,9 +3153,16 @@ namespace Google.Cloud.Lustre.V1
             CreateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings, logger);
             UpdateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceOperationsSettings, logger);
             DeleteInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings, logger);
+            RescheduleMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RescheduleMaintenanceOperationsSettings, logger);
             ImportDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDataOperationsSettings, logger);
             ExportDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDataOperationsSettings, logger);
+            CreateMirrorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMirrorOperationsSettings, logger);
+            UpdateMirrorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMirrorOperationsSettings, logger);
+            DeleteMirrorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteMirrorOperationsSettings, logger);
+            CreateDirectoryPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDirectoryPolicyOperationsSettings, logger);
+            DeleteDirectoryPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDirectoryPolicyOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
@@ -1390,12 +3178,42 @@ namespace Google.Cloud.Lustre.V1
             _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, lro::Operation>("DeleteInstance", grpcClient.DeleteInstanceAsync, grpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteInstance);
             Modify_DeleteInstanceApiCall(ref _callDeleteInstance);
+            _callRescheduleMaintenance = clientHelper.BuildApiCall<RescheduleMaintenanceRequest, lro::Operation>("RescheduleMaintenance", grpcClient.RescheduleMaintenanceAsync, grpcClient.RescheduleMaintenance, effectiveSettings.RescheduleMaintenanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRescheduleMaintenance);
+            Modify_RescheduleMaintenanceApiCall(ref _callRescheduleMaintenance);
             _callImportData = clientHelper.BuildApiCall<ImportDataRequest, lro::Operation>("ImportData", grpcClient.ImportDataAsync, grpcClient.ImportData, effectiveSettings.ImportDataSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callImportData);
             Modify_ImportDataApiCall(ref _callImportData);
             _callExportData = clientHelper.BuildApiCall<ExportDataRequest, lro::Operation>("ExportData", grpcClient.ExportDataAsync, grpcClient.ExportData, effectiveSettings.ExportDataSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callExportData);
             Modify_ExportDataApiCall(ref _callExportData);
+            _callCreateMirror = clientHelper.BuildApiCall<CreateMirrorRequest, lro::Operation>("CreateMirror", grpcClient.CreateMirrorAsync, grpcClient.CreateMirror, effectiveSettings.CreateMirrorSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateMirror);
+            Modify_CreateMirrorApiCall(ref _callCreateMirror);
+            _callUpdateMirror = clientHelper.BuildApiCall<UpdateMirrorRequest, lro::Operation>("UpdateMirror", grpcClient.UpdateMirrorAsync, grpcClient.UpdateMirror, effectiveSettings.UpdateMirrorSettings).WithGoogleRequestParam("mirror.name", request => request.Mirror?.Name);
+            Modify_ApiCall(ref _callUpdateMirror);
+            Modify_UpdateMirrorApiCall(ref _callUpdateMirror);
+            _callDeleteMirror = clientHelper.BuildApiCall<DeleteMirrorRequest, lro::Operation>("DeleteMirror", grpcClient.DeleteMirrorAsync, grpcClient.DeleteMirror, effectiveSettings.DeleteMirrorSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteMirror);
+            Modify_DeleteMirrorApiCall(ref _callDeleteMirror);
+            _callGetMirror = clientHelper.BuildApiCall<GetMirrorRequest, Mirror>("GetMirror", grpcClient.GetMirrorAsync, grpcClient.GetMirror, effectiveSettings.GetMirrorSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetMirror);
+            Modify_GetMirrorApiCall(ref _callGetMirror);
+            _callListMirrors = clientHelper.BuildApiCall<ListMirrorsRequest, ListMirrorsResponse>("ListMirrors", grpcClient.ListMirrorsAsync, grpcClient.ListMirrors, effectiveSettings.ListMirrorsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListMirrors);
+            Modify_ListMirrorsApiCall(ref _callListMirrors);
+            _callCreateDirectoryPolicy = clientHelper.BuildApiCall<CreateDirectoryPolicyRequest, lro::Operation>("CreateDirectoryPolicy", grpcClient.CreateDirectoryPolicyAsync, grpcClient.CreateDirectoryPolicy, effectiveSettings.CreateDirectoryPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateDirectoryPolicy);
+            Modify_CreateDirectoryPolicyApiCall(ref _callCreateDirectoryPolicy);
+            _callDeleteDirectoryPolicy = clientHelper.BuildApiCall<DeleteDirectoryPolicyRequest, lro::Operation>("DeleteDirectoryPolicy", grpcClient.DeleteDirectoryPolicyAsync, grpcClient.DeleteDirectoryPolicy, effectiveSettings.DeleteDirectoryPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteDirectoryPolicy);
+            Modify_DeleteDirectoryPolicyApiCall(ref _callDeleteDirectoryPolicy);
+            _callGetDirectoryPolicy = clientHelper.BuildApiCall<GetDirectoryPolicyRequest, DirectoryPolicy>("GetDirectoryPolicy", grpcClient.GetDirectoryPolicyAsync, grpcClient.GetDirectoryPolicy, effectiveSettings.GetDirectoryPolicySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDirectoryPolicy);
+            Modify_GetDirectoryPolicyApiCall(ref _callGetDirectoryPolicy);
+            _callListDirectoryPolicies = clientHelper.BuildApiCall<ListDirectoryPoliciesRequest, ListDirectoryPoliciesResponse>("ListDirectoryPolicies", grpcClient.ListDirectoryPoliciesAsync, grpcClient.ListDirectoryPolicies, effectiveSettings.ListDirectoryPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDirectoryPolicies);
+            Modify_ListDirectoryPoliciesApiCall(ref _callListDirectoryPolicies);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1411,9 +3229,29 @@ namespace Google.Cloud.Lustre.V1
 
         partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> call);
 
+        partial void Modify_RescheduleMaintenanceApiCall(ref gaxgrpc::ApiCall<RescheduleMaintenanceRequest, lro::Operation> call);
+
         partial void Modify_ImportDataApiCall(ref gaxgrpc::ApiCall<ImportDataRequest, lro::Operation> call);
 
         partial void Modify_ExportDataApiCall(ref gaxgrpc::ApiCall<ExportDataRequest, lro::Operation> call);
+
+        partial void Modify_CreateMirrorApiCall(ref gaxgrpc::ApiCall<CreateMirrorRequest, lro::Operation> call);
+
+        partial void Modify_UpdateMirrorApiCall(ref gaxgrpc::ApiCall<UpdateMirrorRequest, lro::Operation> call);
+
+        partial void Modify_DeleteMirrorApiCall(ref gaxgrpc::ApiCall<DeleteMirrorRequest, lro::Operation> call);
+
+        partial void Modify_GetMirrorApiCall(ref gaxgrpc::ApiCall<GetMirrorRequest, Mirror> call);
+
+        partial void Modify_ListMirrorsApiCall(ref gaxgrpc::ApiCall<ListMirrorsRequest, ListMirrorsResponse> call);
+
+        partial void Modify_CreateDirectoryPolicyApiCall(ref gaxgrpc::ApiCall<CreateDirectoryPolicyRequest, lro::Operation> call);
+
+        partial void Modify_DeleteDirectoryPolicyApiCall(ref gaxgrpc::ApiCall<DeleteDirectoryPolicyRequest, lro::Operation> call);
+
+        partial void Modify_GetDirectoryPolicyApiCall(ref gaxgrpc::ApiCall<GetDirectoryPolicyRequest, DirectoryPolicy> call);
+
+        partial void Modify_ListDirectoryPoliciesApiCall(ref gaxgrpc::ApiCall<ListDirectoryPoliciesRequest, ListDirectoryPoliciesResponse> call);
 
         partial void OnConstruction(Lustre.LustreClient grpcClient, LustreSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1422,6 +3260,9 @@ namespace Google.Cloud.Lustre.V1
 
         /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
         public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1433,9 +3274,29 @@ namespace Google.Cloud.Lustre.V1
 
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_RescheduleMaintenanceRequest(ref RescheduleMaintenanceRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ImportDataRequest(ref ImportDataRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExportDataRequest(ref ExportDataRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateMirrorRequest(ref CreateMirrorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateMirrorRequest(ref UpdateMirrorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteMirrorRequest(ref DeleteMirrorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetMirrorRequest(ref GetMirrorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListMirrorsRequest(ref ListMirrorsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateDirectoryPolicyRequest(ref CreateDirectoryPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteDirectoryPolicyRequest(ref DeleteDirectoryPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDirectoryPolicyRequest(ref GetDirectoryPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDirectoryPoliciesRequest(ref ListDirectoryPoliciesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists instances in a given project and location.
@@ -1566,6 +3427,33 @@ namespace Google.Cloud.Lustre.V1
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteInstance.Async(request, callSettings).ConfigureAwait(false), DeleteInstanceOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>RescheduleMaintenance</c>.</summary>
+        public override lro::OperationsClient RescheduleMaintenanceOperationsClient { get; }
+
+        /// <summary>
+        /// Reschedules a planned maintenance event for a specific instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, OperationMetadata> RescheduleMaintenance(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RescheduleMaintenanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(_callRescheduleMaintenance.Sync(request, callSettings), RescheduleMaintenanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Reschedules a planned maintenance event for a specific instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RescheduleMaintenanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(await _callRescheduleMaintenance.Async(request, callSettings).ConfigureAwait(false), RescheduleMaintenanceOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>ImportData</c>.</summary>
         public override lro::OperationsClient ImportDataOperationsClient { get; }
 
@@ -1619,9 +3507,248 @@ namespace Google.Cloud.Lustre.V1
             Modify_ExportDataRequest(ref request, ref callSettings);
             return new lro::Operation<ExportDataResponse, ExportDataMetadata>(await _callExportData.Async(request, callSettings).ConfigureAwait(false), ExportDataOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>CreateMirror</c>.</summary>
+        public override lro::OperationsClient CreateMirrorOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new mirror in a given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Mirror, CreateMirrorMetadata> CreateMirror(CreateMirrorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateMirrorRequest(ref request, ref callSettings);
+            return new lro::Operation<Mirror, CreateMirrorMetadata>(_callCreateMirror.Sync(request, callSettings), CreateMirrorOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new mirror in a given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Mirror, CreateMirrorMetadata>> CreateMirrorAsync(CreateMirrorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateMirrorRequest(ref request, ref callSettings);
+            return new lro::Operation<Mirror, CreateMirrorMetadata>(await _callCreateMirror.Async(request, callSettings).ConfigureAwait(false), CreateMirrorOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateMirror</c>.</summary>
+        public override lro::OperationsClient UpdateMirrorOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Mirror, OperationMetadata> UpdateMirror(UpdateMirrorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateMirrorRequest(ref request, ref callSettings);
+            return new lro::Operation<Mirror, OperationMetadata>(_callUpdateMirror.Sync(request, callSettings), UpdateMirrorOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Mirror, OperationMetadata>> UpdateMirrorAsync(UpdateMirrorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateMirrorRequest(ref request, ref callSettings);
+            return new lro::Operation<Mirror, OperationMetadata>(await _callUpdateMirror.Async(request, callSettings).ConfigureAwait(false), UpdateMirrorOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteMirror</c>.</summary>
+        public override lro::OperationsClient DeleteMirrorOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteMirror(DeleteMirrorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteMirrorRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteMirror.Sync(request, callSettings), DeleteMirrorOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteMirrorAsync(DeleteMirrorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteMirrorRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteMirror.Async(request, callSettings).ConfigureAwait(false), DeleteMirrorOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets details of a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Mirror GetMirror(GetMirrorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMirrorRequest(ref request, ref callSettings);
+            return _callGetMirror.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single mirror.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Mirror> GetMirrorAsync(GetMirrorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMirrorRequest(ref request, ref callSettings);
+            return _callGetMirror.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of multiple mirrors under a given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Mirror"/> resources.</returns>
+        public override gax::PagedEnumerable<ListMirrorsResponse, Mirror> ListMirrors(ListMirrorsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMirrorsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMirrorsRequest, ListMirrorsResponse, Mirror>(_callListMirrors, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of multiple mirrors under a given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Mirror"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListMirrorsResponse, Mirror> ListMirrorsAsync(ListMirrorsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMirrorsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMirrorsRequest, ListMirrorsResponse, Mirror>(_callListMirrors, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateDirectoryPolicy</c>.</summary>
+        public override lro::OperationsClient CreateDirectoryPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a directory policy resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DirectoryPolicy, OperationMetadata> CreateDirectoryPolicy(CreateDirectoryPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDirectoryPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<DirectoryPolicy, OperationMetadata>(_callCreateDirectoryPolicy.Sync(request, callSettings), CreateDirectoryPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a directory policy resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DirectoryPolicy, OperationMetadata>> CreateDirectoryPolicyAsync(CreateDirectoryPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDirectoryPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<DirectoryPolicy, OperationMetadata>(await _callCreateDirectoryPolicy.Async(request, callSettings).ConfigureAwait(false), CreateDirectoryPolicyOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteDirectoryPolicy</c>.</summary>
+        public override lro::OperationsClient DeleteDirectoryPolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a directory policy resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteDirectoryPolicy(DeleteDirectoryPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDirectoryPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteDirectoryPolicy.Sync(request, callSettings), DeleteDirectoryPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a directory policy resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDirectoryPolicyAsync(DeleteDirectoryPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDirectoryPolicyRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteDirectoryPolicy.Async(request, callSettings).ConfigureAwait(false), DeleteDirectoryPolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets details of a single directory policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DirectoryPolicy GetDirectoryPolicy(GetDirectoryPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDirectoryPolicyRequest(ref request, ref callSettings);
+            return _callGetDirectoryPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single directory policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DirectoryPolicy> GetDirectoryPolicyAsync(GetDirectoryPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDirectoryPolicyRequest(ref request, ref callSettings);
+            return _callGetDirectoryPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of multiple directory policies under a given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DirectoryPolicy"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDirectoryPoliciesResponse, DirectoryPolicy> ListDirectoryPolicies(ListDirectoryPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDirectoryPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDirectoryPoliciesRequest, ListDirectoryPoliciesResponse, DirectoryPolicy>(_callListDirectoryPolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of multiple directory policies under a given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DirectoryPolicy"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDirectoryPoliciesResponse, DirectoryPolicy> ListDirectoryPoliciesAsync(ListDirectoryPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDirectoryPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDirectoryPoliciesRequest, ListDirectoryPoliciesResponse, DirectoryPolicy>(_callListDirectoryPolicies, request, callSettings);
+        }
     }
 
     public partial class ListInstancesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListMirrorsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListDirectoryPoliciesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1629,6 +3756,22 @@ namespace Google.Cloud.Lustre.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Instance> GetEnumerator() => Instances.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListMirrorsResponse : gaxgrpc::IPageResponse<Mirror>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Mirror> GetEnumerator() => Mirrors.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDirectoryPoliciesResponse : gaxgrpc::IPageResponse<DirectoryPolicy>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DirectoryPolicy> GetEnumerator() => DirectoryPolicies.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
@@ -1660,6 +3803,16 @@ namespace Google.Cloud.Lustre.V1
             /// </returns>
             public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
                 new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }
