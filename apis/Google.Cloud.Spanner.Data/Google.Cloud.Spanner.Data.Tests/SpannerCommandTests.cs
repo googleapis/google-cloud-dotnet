@@ -1687,10 +1687,10 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal(clrType, clrValue.GetType());
         }
 
-        private static readonly DateTime s_deliverAtTime = DateTime.UtcNow;
-
         public static IEnumerable<object[]> CreateSendCommandParameters()
         {
+            DateTime s_deliverAtTime = DateTime.UtcNow;
+
             yield return new object[] {
                 "MyQueue",
                 new SpannerParameterCollection([
