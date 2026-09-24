@@ -1858,7 +1858,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal(Mutation.OperationOneofCase.Ack, mutation.OperationCase);
             Assert.Equal("TestQueue", mutation.Ack.Queue);
             Assert.Equal(expectedKey, mutation.Ack.Key);
-            Assert.True(mutation.Ack.IgnoreNotFound);
+            Assert.Equal(command.AckOptions.IgnoreNotFound, mutation.Ack.IgnoreNotFound);
         }
 
         public static IEnumerable<object[]> SendParametersMissingPayload()
