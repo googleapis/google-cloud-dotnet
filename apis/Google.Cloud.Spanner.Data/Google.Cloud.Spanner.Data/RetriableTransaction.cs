@@ -61,15 +61,18 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckNotNull(asyncWork, nameof(asyncWork));
 
-            // Session will be initialized and subsequently modified by CommitAttempt.
-            PooledSession session = null;
+            // Transaction will be initialized and subsequently modified by CommitAttempt.
+            ManagedTransaction managedTransaction = null;
             try
             {
                 return await ExecuteWithRetryAsync(CommitAttempt, cancellationToken).ConfigureAwait(false);
             }
             finally
             {
-                session?.Dispose();
+                if (managedTransaction != null)
+                {
+                    _ = Task.Run(() => managedTransaction.DisposeAsync().AsTask());
+                }
             }
 
             async Task<TResult> CommitAttempt()
@@ -82,9 +85,9 @@ namespace Google.Cloud.Spanner.Data
                         try
                         {
                             SpannerTransactionCreationOptions effectiveCreationOptions = _creationOptions;
-                            session = await (session?.RefreshedOrNewAsync(cancellationToken) ?? _connection.AcquireSessionAsync(_creationOptions, cancellationToken, out effectiveCreationOptions)).ConfigureAwait(false);
+                            managedTransaction = managedTransaction?.FreshAfterAbort() ?? await _connection.BeginManagedTransactionAsync(_creationOptions, cancellationToken, out effectiveCreationOptions).ConfigureAwait(false);
 
-                            transaction = new SpannerTransaction(_connection, session, effectiveCreationOptions, _transactionOptions, isRetriable: true);
+                            transaction = new SpannerTransaction(_connection, managedTransaction, effectiveCreationOptions, _transactionOptions, isRetriable: true);
 
                             TResult result = await asyncWork(transaction).ConfigureAwait(false);
                             await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
@@ -114,12 +117,6 @@ namespace Google.Cloud.Spanner.Data
                         {
                             if (transaction != null)
                             {
-                                // Since the transaction was marked as retriable, disposing of it won't attempt to dispose of or
-                                // return the underlying session to the pool. That's because we'll be attempting to get a
-                                // fresh transaction for this same session first.
-                                // If that fails will attempt a new session acquisition.
-                                // This session will be disposed of by the pool if it can't be refreshed or by the RunAsync method
-                                // if we are not retrying anymore.
                                 transaction.Dispose();
                             }
                         }

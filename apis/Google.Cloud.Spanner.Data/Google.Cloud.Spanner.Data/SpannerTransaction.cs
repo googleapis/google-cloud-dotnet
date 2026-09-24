@@ -17,6 +17,7 @@ using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
@@ -104,7 +105,7 @@ namespace Google.Cloud.Spanner.Data
         /// </remarks>
         public TransactionMode Mode => _creationOptions.TransactionMode;
 
-        private readonly PooledSession _session;
+        private readonly ManagedTransaction _transaction;
 
         /// <summary>
         /// Options to apply to the transaction after creation, usually before committing the transaction
@@ -150,7 +151,7 @@ namespace Google.Cloud.Spanner.Data
         /// </list>
         /// </para>
         /// </remarks>
-        public TimestampBound TimestampBound => _creationOptions.TimestampBound ?? _creationOptions.TransactionId?.TimestampBound;
+        public TimestampBound TimestampBound => _creationOptions.EffectiveTimestampBound;
 
         /// <inheritdoc />
         protected override DbConnection DbConnection => SpannerConnection;
@@ -205,13 +206,13 @@ namespace Google.Cloud.Spanner.Data
 
         internal SpannerTransaction(
             SpannerConnection connection,
-            PooledSession session,
+            ManagedTransaction transaction,
             SpannerTransactionCreationOptions creationOptions,
             SpannerTransactionOptions transactionOptions,
             bool isRetriable)
         {
             SpannerConnection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
-            _session = GaxPreconditions.CheckNotNull(session, nameof(session));
+            _transaction = GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
             _creationOptions = GaxPreconditions.CheckNotNull(creationOptions, nameof(creationOptions));
             TransactionOptions = transactionOptions is null ? new SpannerTransactionOptions() : new SpannerTransactionOptions(transactionOptions);
             _isRetriable = isRetriable;
@@ -222,7 +223,13 @@ namespace Google.Cloud.Spanner.Data
         /// A detached transaction's resources are not pooled, so the transaction may be
         /// shared across processes for instance, for partitioned reads.
         /// </summary>
-        public bool IsDetached => _session.IsDetached;
+        public bool IsDetached => _transaction.Shared;
+
+        /// <summary>
+        /// Whether this transaction is shared or not.
+        /// A shared transaction is required for partiioned reads.
+        /// </summary>
+        public bool IsShared => _transaction.Shared;
 
         /// <summary>
         /// Specifies how resources are treated when <see cref="Dispose"/> is called.
@@ -275,7 +282,7 @@ namespace Google.Cloud.Spanner.Data
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
             GaxPreconditions.CheckState(Mode == TransactionMode.ReadOnly, "You can only call GetPartitions on a read-only transaction.");
-            GaxPreconditions.CheckState(IsDetached, "You can only call GetPartitions on a detached transaction.");
+            GaxPreconditions.CheckState(IsShared, "You can only call GetPartitions on a detached transaction.");
             _hasExecutedStatements = true;
 
             ApplyTransactionTag(request);
@@ -286,7 +293,7 @@ namespace Google.Cloud.Spanner.Data
                     var callSettings = SpannerConnection.CreateCallSettings(
                         partitionRequest.GetCallSettings,
                         timeoutSeconds, cancellationToken);
-                    var response = await partitionRequest.PartitionReadOrQueryAsync(_session, callSettings).ConfigureAwait(false);
+                    var response = await partitionRequest.PartitionReadOrQueryAsync(_transaction, callSettings).ConfigureAwait(false);
                     return response.Partitions.Select(x => x.PartitionToken);
                 },
                 "SpannerTransaction.GetPartitionTokensAsync", SpannerConnection.Logger);
@@ -328,7 +335,7 @@ namespace Google.Cloud.Spanner.Data
             var callSettings = SpannerConnection.CreateCallSettings(
                 request.GetCallSettings,
                 cancellationToken);
-            return Task.FromResult(request.ExecuteReadOrQueryStreamReader(_session, callSettings));
+            return Task.FromResult(request.ExecuteReadOrQueryStreamReader(_transaction, callSettings));
         }
 
         Task<long> ISpannerTransaction.ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
@@ -344,7 +351,7 @@ namespace Google.Cloud.Spanner.Data
                 // Note: ExecuteSql would work, but by using a streaming call we enable potential future scenarios
                 // where the server returns interim resume tokens to avoid timeouts.
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, timeoutSeconds, cancellationToken);
-                using (var reader = _session.ExecuteSqlStreamReader(request, callSettings))
+                using (var reader = _transaction.ExecuteSqlStreamReader(request, callSettings))
                 {
                     await reader.NextAsync(cancellationToken).ConfigureAwait(false);
                     var stats = reader.Stats;
@@ -377,7 +384,7 @@ namespace Google.Cloud.Spanner.Data
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, timeoutSeconds, cancellationToken);
-                using var reader = _session.ExecuteSqlStreamReader(request, callSettings);
+                using var reader = _transaction.ExecuteSqlStreamReader(request, callSettings);
                 await reader.EnsureInitializedAsync(cancellationToken).ConfigureAwait(false);
                 return reader;
             }, "SpannerTransaction.ExecuteDmlReader", SpannerConnection.Logger);
@@ -394,7 +401,7 @@ namespace Google.Cloud.Spanner.Data
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteBatchDmlSettings, timeoutSeconds, cancellationToken);
-                ExecuteBatchDmlResponse response = await _session.ExecuteBatchDmlAsync(request, callSettings).ConfigureAwait(false);
+                ExecuteBatchDmlResponse response = await _transaction.ExecuteBatchDmlAsync(request, callSettings).ConfigureAwait(false);
                 IEnumerable<long> result = response.ResultSets.Select(rs => rs.Stats.RowCountExact);
                 // Work around an issue with the emulator, which can return an ExecuteBatchDmlResponse without populating a status.
                 // TODO: Remove this when the emulator has been fixed, although it does no harm if it stays longer than strictly necessary.
@@ -446,7 +453,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 var callSettings = SpannerConnection.CreateCallSettings(
                     settings => settings.CommitSettings, TransactionOptions.EffectiveCommitTimeout(SpannerConnection), cancellationToken);
-                var response = await _session.CommitAsync(request, callSettings).ConfigureAwait(false);
+                var response = await _transaction.CommitAsync(request, callSettings).ConfigureAwait(false);
                 Interlocked.Exchange(ref _commited, 1);
                 // We dispose of the SpannerTransaction to inmediately release the session to the pool when possible.
                 Dispose();
@@ -501,7 +508,7 @@ namespace Google.Cloud.Spanner.Data
             var callSettings = SpannerConnection.CreateCallSettings(
                 settings => settings.RollbackSettings, TransactionOptions.EffectiveCommitTimeout(SpannerConnection), cancellationToken);
             await  ExecuteHelper.WithErrorTranslationAndProfiling(
-                () => _session.RollbackAsync(new RollbackRequest(), callSettings),
+                () => _transaction.RollbackAsync(new RollbackRequest(), callSettings),
                 "SpannerTransaction.Rollback", SpannerConnection.Logger).ConfigureAwait(false);
             Dispose();
         }
@@ -511,15 +518,15 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public TransactionId TransactionId => new TransactionId(
             SpannerConnection.ConnectionString,
-            _session.SessionName.ToString(),
-            _session.TransactionId?.ToBase64(),
+            _transaction.SessionName.ToString(),
+            _transaction.TransactionId?.ToBase64(),
             TimestampBound);
 
         /// <summary>
         /// The read timestamp of the read-only transaction if
         /// <see cref="TimestampBound.ReturnReadTimestamp" /> is true, else <c>null</c>.
         /// </summary>
-        public Timestamp ReadTimestamp => _session.ReadTimestamp;
+        public Timestamp ReadTimestamp => _transaction.ReadTimestamp;
 
         private void CheckNotDisposed()
         {
@@ -540,24 +547,21 @@ namespace Google.Cloud.Spanner.Data
             if (_isRetriable && Interlocked.CompareExchange(ref _commited, 0, 0) == 0)
             {
                 // If this transaction is being used by RetriableTransaction and is not yet commited,
-                // we want to dispose of this instance but we don't want to do anything with the session,
-                // as the RetriableTransaction will attempt to reuse it with a fresh transaction.
-                // If acquiring a fresh transaction with the existing session fails, the session will be disposed
-                // and a new one with a fresh transaction will be obtained.
-                // If acquiring a fresh transaction succeeds, then the session will be disposed after the RetriableTransaction
-                // succeeds or we have stopped retrying.
+                // we want to dispose of this instance but we don't want to do anything with the underlying managed transaction,
+                // as the RetriableTransaction will create a new managed transaction from it.
                 return;
             }
 
             switch (TransactionOptions.DisposeBehavior)
             {
                 case DisposeBehavior.CloseResources:
-                    _session.ReleaseToPool(forceDelete: true);
+                    _ = Task.Run(_transaction.DisposeAsync);
                     break;
                 case DisposeBehavior.Default:
-                    // This is a no-op for a detached session.
-                    // We don't have to make a distinction here.
-                    _session.ReleaseToPool(forceDelete: false);
+                    if (!IsShared)
+                    {
+                        _ = Task.Run(_transaction.DisposeAsync);
+                    }
                     break;
                 default:
                     // Default for unknown DisposeBehavior is to do nothing.
