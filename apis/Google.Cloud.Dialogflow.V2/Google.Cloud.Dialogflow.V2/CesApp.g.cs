@@ -27,19 +27,19 @@ namespace Google.Cloud.Dialogflow.V2 {
             "Cihnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9jZXNfYXBwLnByb3RvEhpn",
             "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MhofZ29vZ2xlL2FwaS9maWVsZF9i",
             "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxolZ29v",
-            "Z2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvdjIvdG9vbC5wcm90byKSAgoKQ2VzQXBw",
+            "Z2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvdjIvdG9vbC5wcm90byKWAgoKQ2VzQXBw",
             "U3BlYxIvCgdjZXNfYXBwGAEgASgJQh7gQQH6QRgKFmNlcy5nb29nbGVhcGlz",
             "LmNvbS9BcHASXwoYY29uZmlybWF0aW9uX3JlcXVpcmVtZW50GAIgASgOMjgu",
             "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuVG9vbC5Db25maXJtYXRpb25S",
             "ZXF1aXJlbWVudEID4EEBEiMKEXByb2FjdGl2ZV9lbmFibGVkGAMgASgIQgPg",
-            "QQFIAIgBARIiChByZWFjdGl2ZV9lbmFibGVkGAQgASgIQgPgQQFIAYgBAUIU",
-            "ChJfcHJvYWN0aXZlX2VuYWJsZWRCEwoRX3JlYWN0aXZlX2VuYWJsZWRC4AEK",
-            "HmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkILQ2VzQXBwUHJvdG9Q",
-            "AVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2FwaXYyL2RpYWxv",
-            "Z2Zsb3dwYjtkaWFsb2dmbG93cGKiAgJERqoCGkdvb2dsZS5DbG91ZC5EaWFs",
-            "b2dmbG93LlYy6kFMChZjZXMuZ29vZ2xlYXBpcy5jb20vQXBwEjJwcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXBwcy97YXBwfWIG",
-            "cHJvdG8z"));
+            "QQFIAIgBARIiChByZWFjdGl2ZV9lbmFibGVkGAQgASgIQgPgQQFIAYgBAToC",
+            "GAFCFAoSX3Byb2FjdGl2ZV9lbmFibGVkQhMKEV9yZWFjdGl2ZV9lbmFibGVk",
+            "QuABCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJCC0Nlc0FwcFBy",
+            "b3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2Mi9k",
+            "aWFsb2dmbG93cGI7ZGlhbG9nZmxvd3BiogICREaqAhpHb29nbGUuQ2xvdWQu",
+            "RGlhbG9nZmxvdy5WMupBTAoWY2VzLmdvb2dsZWFwaXMuY29tL0FwcBIycHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2FwcHMve2Fw",
+            "cH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ToolReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -51,8 +51,10 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
   #region Messages
   /// <summary>
+  /// Deprecated: Use `CesToolSpec` instead.
   /// Spec of CES app that the generator can choose from.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CesAppSpec : pb::IMessage<CesAppSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

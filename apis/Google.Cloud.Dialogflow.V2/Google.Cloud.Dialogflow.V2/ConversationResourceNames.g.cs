@@ -910,6 +910,28 @@ namespace Google.Cloud.Dialogflow.V2
             get => string.IsNullOrEmpty(ConversationProfile) ? null : ConversationProfileName.Parse(ConversationProfile, allowUnparsed: true);
             set => ConversationProfile = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class ContextReference
+            {
+                public partial class Types
+                {
+                    public partial class ContextContent
+                    {
+                        /// <summary>
+                        /// <see cref="AnswerRecordName"/>-typed view over the <see cref="AnswerRecord"/> resource name
+                        /// property.
+                        /// </summary>
+                        public AnswerRecordName AnswerRecordAsAnswerRecordName
+                        {
+                            get => string.IsNullOrEmpty(AnswerRecord) ? null : AnswerRecordName.Parse(AnswerRecord, allowUnparsed: true);
+                            set => AnswerRecord = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public partial class CreateConversationRequest

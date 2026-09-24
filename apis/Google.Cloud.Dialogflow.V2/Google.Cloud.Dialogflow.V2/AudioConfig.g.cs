@@ -32,7 +32,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             "ASKSAQoOU3BlZWNoV29yZEluZm8SDAoEd29yZBgDIAEoCRIvCgxzdGFydF9v",
             "ZmZzZXQYASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SLQoKZW5k",
             "X29mZnNldBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhISCgpj",
-            "b25maWRlbmNlGAQgASgCIuEEChBJbnB1dEF1ZGlvQ29uZmlnEkYKDmF1ZGlv",
+            "b25maWRlbmNlGAQgASgCIvYFChBJbnB1dEF1ZGlvQ29uZmlnEkYKDmF1ZGlv",
             "X2VuY29kaW5nGAEgASgOMikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
             "QXVkaW9FbmNvZGluZ0ID4EECEh4KEXNhbXBsZV9yYXRlX2hlcnR6GAIgASgF",
             "QgPgQQISGgoNbGFuZ3VhZ2VfY29kZRgDIAEoCUID4EECEhgKEGVuYWJsZV93",
@@ -45,81 +45,100 @@ namespace Google.Cloud.Dialogflow.V2 {
             "YWJsZV9ub19zcGVlY2hfcmVjb2duaXplZF9ldmVudBgOIAEoCBIkChxlbmFi",
             "bGVfYXV0b21hdGljX3B1bmN0dWF0aW9uGBEgASgIEjkKC3BocmFzZV9zZXRz",
             "GBQgAygJQiT6QSEKH3NwZWVjaC5nb29nbGVhcGlzLmNvbS9QaHJhc2VTZXQS",
-            "KQohb3B0X291dF9jb25mb3JtZXJfbW9kZWxfbWlncmF0aW9uGBogASgIInAK",
-            "FFZvaWNlU2VsZWN0aW9uUGFyYW1zEhEKBG5hbWUYASABKAlCA+BBARJFCgtz",
-            "c21sX2dlbmRlchgCIAEoDjIrLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
-            "LlNzbWxWb2ljZUdlbmRlckID4EEBIqACChZTeW50aGVzaXplU3BlZWNoQ29u",
-            "ZmlnEhoKDXNwZWFraW5nX3JhdGUYASABKAFCA+BBARISCgVwaXRjaBgCIAEo",
-            "AUID4EEBEhsKDnZvbHVtZV9nYWluX2RiGAMgASgBQgPgQQESHwoSZWZmZWN0",
-            "c19wcm9maWxlX2lkGAUgAygJQgPgQQESRAoFdm9pY2UYBCABKAsyMC5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5Wb2ljZVNlbGVjdGlvblBhcmFtc0ID",
-            "4EEBElIKDnByb251bmNpYXRpb25zGAYgAygLMjUuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cudjIuQ3VzdG9tUHJvbnVuY2lhdGlvblBhcmFtc0ID4EEBIpYC",
-            "ChlDdXN0b21Qcm9udW5jaWF0aW9uUGFyYW1zEg4KBnBocmFzZRgBIAEoCRJh",
-            "ChFwaG9uZXRpY19lbmNvZGluZxgCIAEoDjJGLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LnYyLkN1c3RvbVByb251bmNpYXRpb25QYXJhbXMuUGhvbmV0aWNF",
-            "bmNvZGluZxIVCg1wcm9udW5jaWF0aW9uGAMgASgJIm8KEFBob25ldGljRW5j",
-            "b2RpbmcSIQodUEhPTkVUSUNfRU5DT0RJTkdfVU5TUEVDSUZJRUQQABIZChVQ",
-            "SE9ORVRJQ19FTkNPRElOR19JUEEQARIdChlQSE9ORVRJQ19FTkNPRElOR19Y",
-            "X1NBTVBBEAIi0gEKEU91dHB1dEF1ZGlvQ29uZmlnEkwKDmF1ZGlvX2VuY29k",
-            "aW5nGAEgASgOMi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuT3V0cHV0",
-            "QXVkaW9FbmNvZGluZ0ID4EECEhkKEXNhbXBsZV9yYXRlX2hlcnR6GAIgASgF",
-            "ElQKGHN5bnRoZXNpemVfc3BlZWNoX2NvbmZpZxgDIAEoCzIyLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LnYyLlN5bnRoZXNpemVTcGVlY2hDb25maWciVQoT",
-            "VGVsZXBob255RHRtZkV2ZW50cxI+CgtkdG1mX2V2ZW50cxgBIAMoDjIpLmdv",
-            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlRlbGVwaG9ueUR0bWYi4gIKElNw",
-            "ZWVjaFRvVGV4dENvbmZpZxJMChRzcGVlY2hfbW9kZWxfdmFyaWFudBgBIAEo",
-            "DjIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlNwZWVjaE1vZGVsVmFy",
-            "aWFudBINCgVtb2RlbBgCIAEoCRI5CgtwaHJhc2Vfc2V0cxgEIAMoCUIk+kEh",
-            "Ch9zcGVlY2guZ29vZ2xlYXBpcy5jb20vUGhyYXNlU2V0EkEKDmF1ZGlvX2Vu",
-            "Y29kaW5nGAYgASgOMikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQXVk",
-            "aW9FbmNvZGluZxIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgHIAEoBRIVCg1sYW5n",
-            "dWFnZV9jb2RlGAggASgJEhgKEGVuYWJsZV93b3JkX2luZm8YCSABKAgSJQod",
-            "dXNlX3RpbWVvdXRfYmFzZWRfZW5kcG9pbnRpbmcYCyABKAgqlAIKDVRlbGVw",
-            "aG9ueUR0bWYSHgoaVEVMRVBIT05ZX0RUTUZfVU5TUEVDSUZJRUQQABIMCghE",
-            "VE1GX09ORRABEgwKCERUTUZfVFdPEAISDgoKRFRNRl9USFJFRRADEg0KCURU",
-            "TUZfRk9VUhAEEg0KCURUTUZfRklWRRAFEgwKCERUTUZfU0lYEAYSDgoKRFRN",
-            "Rl9TRVZFThAHEg4KCkRUTUZfRUlHSFQQCBINCglEVE1GX05JTkUQCRINCglE",
-            "VE1GX1pFUk8QChIKCgZEVE1GX0EQCxIKCgZEVE1GX0IQDBIKCgZEVE1GX0MQ",
-            "DRIKCgZEVE1GX0QQDhINCglEVE1GX1NUQVIQDxIOCgpEVE1GX1BPVU5EEBAq",
-            "lAIKDUF1ZGlvRW5jb2RpbmcSHgoaQVVESU9fRU5DT0RJTkdfVU5TUEVDSUZJ",
-            "RUQQABIcChhBVURJT19FTkNPRElOR19MSU5FQVJfMTYQARIXChNBVURJT19F",
-            "TkNPRElOR19GTEFDEAISGAoUQVVESU9fRU5DT0RJTkdfTVVMQVcQAxIWChJB",
-            "VURJT19FTkNPRElOR19BTVIQBBIZChVBVURJT19FTkNPRElOR19BTVJfV0IQ",
-            "BRIbChdBVURJT19FTkNPRElOR19PR0dfT1BVUxAGEikKJUFVRElPX0VOQ09E",
-            "SU5HX1NQRUVYX1dJVEhfSEVBREVSX0JZVEUQBxIXChNBVURJT19FTkNPRElO",
-            "R19BTEFXEAgqdgoSU3BlZWNoTW9kZWxWYXJpYW50EiQKIFNQRUVDSF9NT0RF",
-            "TF9WQVJJQU5UX1VOU1BFQ0lGSUVEEAASFgoSVVNFX0JFU1RfQVZBSUxBQkxF",
-            "EAESEAoMVVNFX1NUQU5EQVJEEAISEAoMVVNFX0VOSEFOQ0VEEAMqjQEKD1Nz",
-            "bWxWb2ljZUdlbmRlchIhCh1TU01MX1ZPSUNFX0dFTkRFUl9VTlNQRUNJRklF",
-            "RBAAEhoKFlNTTUxfVk9JQ0VfR0VOREVSX01BTEUQARIcChhTU01MX1ZPSUNF",
-            "X0dFTkRFUl9GRU1BTEUQAhIdChlTU01MX1ZPSUNFX0dFTkRFUl9ORVVUUkFM",
-            "EAMqkAIKE091dHB1dEF1ZGlvRW5jb2RpbmcSJQohT1VUUFVUX0FVRElPX0VO",
-            "Q09ESU5HX1VOU1BFQ0lGSUVEEAASIwofT1VUUFVUX0FVRElPX0VOQ09ESU5H",
-            "X0xJTkVBUl8xNhABEiEKGU9VVFBVVF9BVURJT19FTkNPRElOR19NUDMQAhoC",
-            "CAESJQohT1VUUFVUX0FVRElPX0VOQ09ESU5HX01QM182NF9LQlBTEAQSIgoe",
-            "T1VUUFVUX0FVRElPX0VOQ09ESU5HX09HR19PUFVTEAMSHwobT1VUUFVUX0FV",
-            "RElPX0VOQ09ESU5HX01VTEFXEAUSHgoaT1VUUFVUX0FVRElPX0VOQ09ESU5H",
-            "X0FMQVcQBkLTAgoeY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyQhBB",
-            "dWRpb0NvbmZpZ1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9n",
-            "Zmxvdy9hcGl2Mi9kaWFsb2dmbG93cGI7ZGlhbG9nZmxvd3BiogICREaqAhpH",
-            "b29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMupBVQobYXV0b21sLmdvb2dsZWFw",
-            "aXMuY29tL01vZGVsEjZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vbW9kZWxzL3ttb2RlbH3qQWIKH3NwZWVjaC5nb29nbGVhcGlz",
-            "LmNvbS9QaHJhc2VTZXQSP3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9waHJhc2VTZXRzL3twaHJhc2Vfc2V0fWIGcHJvdG8z"));
+            "KQohb3B0X291dF9jb25mb3JtZXJfbW9kZWxfbWlncmF0aW9uGBogASgIEl4K",
+            "EWdlbWluaV9hc3JfY29uZmlnGB4gASgLMj4uZ29vZ2xlLmNsb3VkLmRpYWxv",
+            "Z2Zsb3cudjIuU3BlZWNoVG9UZXh0Q29uZmlnLkdlbWluaUFzckNvbmZpZ0ID",
+            "4EEBEiAKDnVzZV9nZW1pbmlfYXNyGB8gASgIQgPgQQFIAIgBAUIRCg9fdXNl",
+            "X2dlbWluaV9hc3IicAoUVm9pY2VTZWxlY3Rpb25QYXJhbXMSEQoEbmFtZRgB",
+            "IAEoCUID4EEBEkUKC3NzbWxfZ2VuZGVyGAIgASgOMisuZ29vZ2xlLmNsb3Vk",
+            "LmRpYWxvZ2Zsb3cudjIuU3NtbFZvaWNlR2VuZGVyQgPgQQEioAIKFlN5bnRo",
+            "ZXNpemVTcGVlY2hDb25maWcSGgoNc3BlYWtpbmdfcmF0ZRgBIAEoAUID4EEB",
+            "EhIKBXBpdGNoGAIgASgBQgPgQQESGwoOdm9sdW1lX2dhaW5fZGIYAyABKAFC",
+            "A+BBARIfChJlZmZlY3RzX3Byb2ZpbGVfaWQYBSADKAlCA+BBARJECgV2b2lj",
+            "ZRgEIAEoCzIwLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlZvaWNlU2Vs",
+            "ZWN0aW9uUGFyYW1zQgPgQQESUgoOcHJvbnVuY2lhdGlvbnMYBiADKAsyNS5n",
+            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5DdXN0b21Qcm9udW5jaWF0aW9u",
+            "UGFyYW1zQgPgQQEilgIKGUN1c3RvbVByb251bmNpYXRpb25QYXJhbXMSDgoG",
+            "cGhyYXNlGAEgASgJEmEKEXBob25ldGljX2VuY29kaW5nGAIgASgOMkYuZ29v",
+            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQ3VzdG9tUHJvbnVuY2lhdGlvblBh",
+            "cmFtcy5QaG9uZXRpY0VuY29kaW5nEhUKDXByb251bmNpYXRpb24YAyABKAki",
+            "bwoQUGhvbmV0aWNFbmNvZGluZxIhCh1QSE9ORVRJQ19FTkNPRElOR19VTlNQ",
+            "RUNJRklFRBAAEhkKFVBIT05FVElDX0VOQ09ESU5HX0lQQRABEh0KGVBIT05F",
+            "VElDX0VOQ09ESU5HX1hfU0FNUEEQAiLSAQoRT3V0cHV0QXVkaW9Db25maWcS",
+            "TAoOYXVkaW9fZW5jb2RpbmcYASABKA4yLy5nb29nbGUuY2xvdWQuZGlhbG9n",
+            "Zmxvdy52Mi5PdXRwdXRBdWRpb0VuY29kaW5nQgPgQQISGQoRc2FtcGxlX3Jh",
+            "dGVfaGVydHoYAiABKAUSVAoYc3ludGhlc2l6ZV9zcGVlY2hfY29uZmlnGAMg",
+            "ASgLMjIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3ludGhlc2l6ZVNw",
+            "ZWVjaENvbmZpZyJVChNUZWxlcGhvbnlEdG1mRXZlbnRzEj4KC2R0bWZfZXZl",
+            "bnRzGAEgAygOMikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuVGVsZXBo",
+            "b255RHRtZiKSCAoSU3BlZWNoVG9UZXh0Q29uZmlnEkwKFHNwZWVjaF9tb2Rl",
+            "bF92YXJpYW50GAEgASgOMi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
+            "U3BlZWNoTW9kZWxWYXJpYW50Eg0KBW1vZGVsGAIgASgJEjkKC3BocmFzZV9z",
+            "ZXRzGAQgAygJQiT6QSEKH3NwZWVjaC5nb29nbGVhcGlzLmNvbS9QaHJhc2VT",
+            "ZXQSQQoOYXVkaW9fZW5jb2RpbmcYBiABKA4yKS5nb29nbGUuY2xvdWQuZGlh",
+            "bG9nZmxvdy52Mi5BdWRpb0VuY29kaW5nEhkKEXNhbXBsZV9yYXRlX2hlcnR6",
+            "GAcgASgFEhUKDWxhbmd1YWdlX2NvZGUYCCABKAkSGAoQZW5hYmxlX3dvcmRf",
+            "aW5mbxgJIAEoCBIlCh11c2VfdGltZW91dF9iYXNlZF9lbmRwb2ludGluZxgL",
+            "IAEoCBJeChFnZW1pbmlfYXNyX2NvbmZpZxgPIAEoCzI+Lmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyLlNwZWVjaFRvVGV4dENvbmZpZy5HZW1pbmlBc3JD",
+            "b25maWdCA+BBARIbCg51c2VfZ2VtaW5pX2FzchgQIAEoCEID4EEBGrAECg9H",
+            "ZW1pbmlBc3JDb25maWcSFQoIbW9kZWxfaWQYASABKAlCA+BBARIgChNzaWxl",
+            "bmNlX2R1cmF0aW9uX21zGAIgASgFQgPgQQESHgoRcHJlZml4X3BhZGRpbmdf",
+            "bXMYAyABKAVCA+BBARJ5ChtzdGFydF9vZl9zcGVlY2hfc2Vuc2l0aXZpdHkY",
+            "BCABKA4yTy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TcGVlY2hUb1Rl",
+            "eHRDb25maWcuR2VtaW5pQXNyQ29uZmlnLlN0YXJ0U2Vuc2l0aXZpdHlCA+BB",
+            "ARJ1ChllbmRfb2Zfc3BlZWNoX3NlbnNpdGl2aXR5GAUgASgOMk0uZ29vZ2xl",
+            "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3BlZWNoVG9UZXh0Q29uZmlnLkdlbWlu",
+            "aUFzckNvbmZpZy5FbmRTZW5zaXRpdml0eUID4EEBImwKEFN0YXJ0U2Vuc2l0",
+            "aXZpdHkSIQodU1RBUlRfU0VOU0lUSVZJVFlfVU5TUEVDSUZJRUQQABIaChZT",
+            "VEFSVF9TRU5TSVRJVklUWV9ISUdIEAESGQoVU1RBUlRfU0VOU0lUSVZJVFlf",
+            "TE9XEAIiZAoORW5kU2Vuc2l0aXZpdHkSHwobRU5EX1NFTlNJVElWSVRZX1VO",
+            "U1BFQ0lGSUVEEAASGAoURU5EX1NFTlNJVElWSVRZX0hJR0gQARIXChNFTkRf",
+            "U0VOU0lUSVZJVFlfTE9XEAIqlAIKDVRlbGVwaG9ueUR0bWYSHgoaVEVMRVBI",
+            "T05ZX0RUTUZfVU5TUEVDSUZJRUQQABIMCghEVE1GX09ORRABEgwKCERUTUZf",
+            "VFdPEAISDgoKRFRNRl9USFJFRRADEg0KCURUTUZfRk9VUhAEEg0KCURUTUZf",
+            "RklWRRAFEgwKCERUTUZfU0lYEAYSDgoKRFRNRl9TRVZFThAHEg4KCkRUTUZf",
+            "RUlHSFQQCBINCglEVE1GX05JTkUQCRINCglEVE1GX1pFUk8QChIKCgZEVE1G",
+            "X0EQCxIKCgZEVE1GX0IQDBIKCgZEVE1GX0MQDRIKCgZEVE1GX0QQDhINCglE",
+            "VE1GX1NUQVIQDxIOCgpEVE1GX1BPVU5EEBAqlAIKDUF1ZGlvRW5jb2RpbmcS",
+            "HgoaQVVESU9fRU5DT0RJTkdfVU5TUEVDSUZJRUQQABIcChhBVURJT19FTkNP",
+            "RElOR19MSU5FQVJfMTYQARIXChNBVURJT19FTkNPRElOR19GTEFDEAISGAoU",
+            "QVVESU9fRU5DT0RJTkdfTVVMQVcQAxIWChJBVURJT19FTkNPRElOR19BTVIQ",
+            "BBIZChVBVURJT19FTkNPRElOR19BTVJfV0IQBRIbChdBVURJT19FTkNPRElO",
+            "R19PR0dfT1BVUxAGEikKJUFVRElPX0VOQ09ESU5HX1NQRUVYX1dJVEhfSEVB",
+            "REVSX0JZVEUQBxIXChNBVURJT19FTkNPRElOR19BTEFXEAgqdgoSU3BlZWNo",
+            "TW9kZWxWYXJpYW50EiQKIFNQRUVDSF9NT0RFTF9WQVJJQU5UX1VOU1BFQ0lG",
+            "SUVEEAASFgoSVVNFX0JFU1RfQVZBSUxBQkxFEAESEAoMVVNFX1NUQU5EQVJE",
+            "EAISEAoMVVNFX0VOSEFOQ0VEEAMqjQEKD1NzbWxWb2ljZUdlbmRlchIhCh1T",
+            "U01MX1ZPSUNFX0dFTkRFUl9VTlNQRUNJRklFRBAAEhoKFlNTTUxfVk9JQ0Vf",
+            "R0VOREVSX01BTEUQARIcChhTU01MX1ZPSUNFX0dFTkRFUl9GRU1BTEUQAhId",
+            "ChlTU01MX1ZPSUNFX0dFTkRFUl9ORVVUUkFMEAMqkAIKE091dHB1dEF1ZGlv",
+            "RW5jb2RpbmcSJQohT1VUUFVUX0FVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVE",
+            "EAASIwofT1VUUFVUX0FVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEiEKGU9V",
+            "VFBVVF9BVURJT19FTkNPRElOR19NUDMQAhoCCAESJQohT1VUUFVUX0FVRElP",
+            "X0VOQ09ESU5HX01QM182NF9LQlBTEAQSIgoeT1VUUFVUX0FVRElPX0VOQ09E",
+            "SU5HX09HR19PUFVTEAMSHwobT1VUUFVUX0FVRElPX0VOQ09ESU5HX01VTEFX",
+            "EAUSHgoaT1VUUFVUX0FVRElPX0VOQ09ESU5HX0FMQVcQBkLTAgoeY29tLmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyQhBBdWRpb0NvbmZpZ1Byb3RvUAFa",
+            "PmNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2Mi9kaWFsb2dm",
+            "bG93cGI7ZGlhbG9nZmxvd3BiogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9n",
+            "Zmxvdy5WMupBVQobYXV0b21sLmdvb2dsZWFwaXMuY29tL01vZGVsEjZwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbW9kZWxzL3tt",
+            "b2RlbH3qQWIKH3NwZWVjaC5nb29nbGVhcGlzLmNvbS9QaHJhc2VTZXQSP3By",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9waHJhc2VT",
+            "ZXRzL3twaHJhc2Vfc2V0fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.TelephonyDtmf), typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechContext), global::Google.Cloud.Dialogflow.V2.SpeechContext.Parser, new[]{ "Phrases", "Boost" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechWordInfo), global::Google.Cloud.Dialogflow.V2.SpeechWordInfo.Parser, new[]{ "Word", "StartOffset", "EndOffset", "Confidence" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.InputAudioConfig), global::Google.Cloud.Dialogflow.V2.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "EnableWordInfo", "PhraseHints", "SpeechContexts", "Model", "ModelVariant", "SingleUtterance", "EnableVoiceActivityEvents", "DisableNoSpeechRecognizedEvent", "EnableAutomaticPunctuation", "PhraseSets", "OptOutConformerModelMigration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.InputAudioConfig), global::Google.Cloud.Dialogflow.V2.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "EnableWordInfo", "PhraseHints", "SpeechContexts", "Model", "ModelVariant", "SingleUtterance", "EnableVoiceActivityEvents", "DisableNoSpeechRecognizedEvent", "EnableAutomaticPunctuation", "PhraseSets", "OptOutConformerModelMigration", "GeminiAsrConfig", "UseGeminiAsr" }, new[]{ "UseGeminiAsr" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams), global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams.Parser, new[]{ "Name", "SsmlGender" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig), global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig.Parser, new[]{ "SpeakingRate", "Pitch", "VolumeGainDb", "EffectsProfileId", "Voice", "Pronunciations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams), global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Parser, new[]{ "Phrase", "PhoneticEncoding", "Pronunciation" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Types.PhoneticEncoding) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioConfig), global::Google.Cloud.Dialogflow.V2.OutputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SynthesizeSpeechConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.TelephonyDtmfEvents), global::Google.Cloud.Dialogflow.V2.TelephonyDtmfEvents.Parser, new[]{ "DtmfEvents" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig), global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Parser, new[]{ "SpeechModelVariant", "Model", "PhraseSets", "AudioEncoding", "SampleRateHertz", "LanguageCode", "EnableWordInfo", "UseTimeoutBasedEndpointing" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig), global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Parser, new[]{ "SpeechModelVariant", "Model", "PhraseSets", "AudioEncoding", "SampleRateHertz", "LanguageCode", "EnableWordInfo", "UseTimeoutBasedEndpointing", "GeminiAsrConfig", "UseGeminiAsr" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig), global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Parser, new[]{ "ModelId", "SilenceDurationMs", "PrefixPaddingMs", "StartOfSpeechSensitivity", "EndOfSpeechSensitivity" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.StartSensitivity), typeof(global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.EndSensitivity) }, null, null)})
           }));
     }
     #endregion
@@ -999,6 +1018,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   {
     private static readonly pb::MessageParser<InputAudioConfig> _parser = new pb::MessageParser<InputAudioConfig>(() => new InputAudioConfig());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<InputAudioConfig> Parser { get { return _parser; } }
@@ -1026,6 +1046,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InputAudioConfig(InputAudioConfig other) : this() {
+      _hasBits0 = other._hasBits0;
       audioEncoding_ = other.audioEncoding_;
       sampleRateHertz_ = other.sampleRateHertz_;
       languageCode_ = other.languageCode_;
@@ -1040,6 +1061,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       enableAutomaticPunctuation_ = other.enableAutomaticPunctuation_;
       phraseSets_ = other.phraseSets_.Clone();
       optOutConformerModelMigration_ = other.optOutConformerModelMigration_;
+      geminiAsrConfig_ = other.geminiAsrConfig_ != null ? other.geminiAsrConfig_.Clone() : null;
+      useGeminiAsr_ = other.useGeminiAsr_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1306,6 +1329,54 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
     }
 
+    /// <summary>Field number for the "gemini_asr_config" field.</summary>
+    public const int GeminiAsrConfigFieldNumber = 30;
+    private global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig geminiAsrConfig_;
+    /// <summary>
+    /// Optional. Configuration for using Gemini ASR models served via Vertex AI.
+    /// This field is only used when `use_gemini_asr` is true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig GeminiAsrConfig {
+      get { return geminiAsrConfig_; }
+      set {
+        geminiAsrConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "use_gemini_asr" field.</summary>
+    public const int UseGeminiAsrFieldNumber = 31;
+    private readonly static bool UseGeminiAsrDefaultValue = false;
+
+    private bool useGeminiAsr_;
+    /// <summary>
+    /// Optional. If true, Gemini ASR will be used for transcription instead of
+    /// Cloud Speech-to-Text. If false, Cloud Speech-to-Text will be used.
+    /// If unset, this setting is inherited from the ConversationProfile.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UseGeminiAsr {
+      get { if ((_hasBits0 & 1) != 0) { return useGeminiAsr_; } else { return UseGeminiAsrDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        useGeminiAsr_ = value;
+      }
+    }
+    /// <summary>Gets whether the "use_gemini_asr" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUseGeminiAsr {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "use_gemini_asr" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUseGeminiAsr() {
+      _hasBits0 &= ~1;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1335,6 +1406,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (EnableAutomaticPunctuation != other.EnableAutomaticPunctuation) return false;
       if(!phraseSets_.Equals(other.phraseSets_)) return false;
       if (OptOutConformerModelMigration != other.OptOutConformerModelMigration) return false;
+      if (!object.Equals(GeminiAsrConfig, other.GeminiAsrConfig)) return false;
+      if (UseGeminiAsr != other.UseGeminiAsr) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1356,6 +1429,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (EnableAutomaticPunctuation != false) hash ^= EnableAutomaticPunctuation.GetHashCode();
       hash ^= phraseSets_.GetHashCode();
       if (OptOutConformerModelMigration != false) hash ^= OptOutConformerModelMigration.GetHashCode();
+      if (geminiAsrConfig_ != null) hash ^= GeminiAsrConfig.GetHashCode();
+      if (HasUseGeminiAsr) hash ^= UseGeminiAsr.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1421,6 +1496,14 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(216, 1);
         output.WriteBool(EnableVoiceActivityEvents);
       }
+      if (geminiAsrConfig_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(GeminiAsrConfig);
+      }
+      if (HasUseGeminiAsr) {
+        output.WriteRawTag(248, 1);
+        output.WriteBool(UseGeminiAsr);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1478,6 +1561,14 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(216, 1);
         output.WriteBool(EnableVoiceActivityEvents);
       }
+      if (geminiAsrConfig_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(GeminiAsrConfig);
+      }
+      if (HasUseGeminiAsr) {
+        output.WriteRawTag(248, 1);
+        output.WriteBool(UseGeminiAsr);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1522,6 +1613,12 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       size += phraseSets_.CalculateSize(_repeated_phraseSets_codec);
       if (OptOutConformerModelMigration != false) {
+        size += 2 + 1;
+      }
+      if (geminiAsrConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(GeminiAsrConfig);
+      }
+      if (HasUseGeminiAsr) {
         size += 2 + 1;
       }
       if (_unknownFields != null) {
@@ -1571,6 +1668,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       phraseSets_.Add(other.phraseSets_);
       if (other.OptOutConformerModelMigration != false) {
         OptOutConformerModelMigration = other.OptOutConformerModelMigration;
+      }
+      if (other.geminiAsrConfig_ != null) {
+        if (geminiAsrConfig_ == null) {
+          GeminiAsrConfig = new global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig();
+        }
+        GeminiAsrConfig.MergeFrom(other.GeminiAsrConfig);
+      }
+      if (other.HasUseGeminiAsr) {
+        UseGeminiAsr = other.UseGeminiAsr;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1647,6 +1753,17 @@ namespace Google.Cloud.Dialogflow.V2 {
             EnableVoiceActivityEvents = input.ReadBool();
             break;
           }
+          case 242: {
+            if (geminiAsrConfig_ == null) {
+              GeminiAsrConfig = new global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig();
+            }
+            input.ReadMessage(GeminiAsrConfig);
+            break;
+          }
+          case 248: {
+            UseGeminiAsr = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1720,6 +1837,17 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 216: {
             EnableVoiceActivityEvents = input.ReadBool();
+            break;
+          }
+          case 242: {
+            if (geminiAsrConfig_ == null) {
+              GeminiAsrConfig = new global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig();
+            }
+            input.ReadMessage(GeminiAsrConfig);
+            break;
+          }
+          case 248: {
+            UseGeminiAsr = input.ReadBool();
             break;
           }
         }
@@ -3241,6 +3369,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       languageCode_ = other.languageCode_;
       enableWordInfo_ = other.enableWordInfo_;
       useTimeoutBasedEndpointing_ = other.useTimeoutBasedEndpointing_;
+      geminiAsrConfig_ = other.geminiAsrConfig_ != null ? other.geminiAsrConfig_.Clone() : null;
+      useGeminiAsr_ = other.useGeminiAsr_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3416,6 +3546,39 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
     }
 
+    /// <summary>Field number for the "gemini_asr_config" field.</summary>
+    public const int GeminiAsrConfigFieldNumber = 15;
+    private global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig geminiAsrConfig_;
+    /// <summary>
+    /// Optional. Configuration for using Gemini ASR models served via Vertex AI,
+    /// overriding the default Gemini ASR model or providing additional advanced
+    /// parameters. This field is only used when `use_gemini_asr` is true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig GeminiAsrConfig {
+      get { return geminiAsrConfig_; }
+      set {
+        geminiAsrConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "use_gemini_asr" field.</summary>
+    public const int UseGeminiAsrFieldNumber = 16;
+    private bool useGeminiAsr_;
+    /// <summary>
+    /// Optional. If true, Gemini ASR will be used for transcription instead of
+    /// Cloud Speech-to-Text.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool UseGeminiAsr {
+      get { return useGeminiAsr_; }
+      set {
+        useGeminiAsr_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3439,6 +3602,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (LanguageCode != other.LanguageCode) return false;
       if (EnableWordInfo != other.EnableWordInfo) return false;
       if (UseTimeoutBasedEndpointing != other.UseTimeoutBasedEndpointing) return false;
+      if (!object.Equals(GeminiAsrConfig, other.GeminiAsrConfig)) return false;
+      if (UseGeminiAsr != other.UseGeminiAsr) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3454,6 +3619,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (EnableWordInfo != false) hash ^= EnableWordInfo.GetHashCode();
       if (UseTimeoutBasedEndpointing != false) hash ^= UseTimeoutBasedEndpointing.GetHashCode();
+      if (geminiAsrConfig_ != null) hash ^= GeminiAsrConfig.GetHashCode();
+      if (UseGeminiAsr != false) hash ^= UseGeminiAsr.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3501,6 +3668,14 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(88);
         output.WriteBool(UseTimeoutBasedEndpointing);
       }
+      if (geminiAsrConfig_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(GeminiAsrConfig);
+      }
+      if (UseGeminiAsr != false) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(UseGeminiAsr);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3540,6 +3715,14 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(88);
         output.WriteBool(UseTimeoutBasedEndpointing);
       }
+      if (geminiAsrConfig_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(GeminiAsrConfig);
+      }
+      if (UseGeminiAsr != false) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(UseGeminiAsr);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3571,6 +3754,12 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (UseTimeoutBasedEndpointing != false) {
         size += 1 + 1;
+      }
+      if (geminiAsrConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GeminiAsrConfig);
+      }
+      if (UseGeminiAsr != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3605,6 +3794,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.UseTimeoutBasedEndpointing != false) {
         UseTimeoutBasedEndpointing = other.UseTimeoutBasedEndpointing;
+      }
+      if (other.geminiAsrConfig_ != null) {
+        if (geminiAsrConfig_ == null) {
+          GeminiAsrConfig = new global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig();
+        }
+        GeminiAsrConfig.MergeFrom(other.GeminiAsrConfig);
+      }
+      if (other.UseGeminiAsr != false) {
+        UseGeminiAsr = other.UseGeminiAsr;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3655,6 +3853,17 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 88: {
             UseTimeoutBasedEndpointing = input.ReadBool();
+            break;
+          }
+          case 122: {
+            if (geminiAsrConfig_ == null) {
+              GeminiAsrConfig = new global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig();
+            }
+            input.ReadMessage(GeminiAsrConfig);
+            break;
+          }
+          case 128: {
+            UseGeminiAsr = input.ReadBool();
             break;
           }
         }
@@ -3708,10 +3917,443 @@ namespace Google.Cloud.Dialogflow.V2 {
             UseTimeoutBasedEndpointing = input.ReadBool();
             break;
           }
+          case 122: {
+            if (geminiAsrConfig_ == null) {
+              GeminiAsrConfig = new global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig();
+            }
+            input.ReadMessage(GeminiAsrConfig);
+            break;
+          }
+          case 128: {
+            UseGeminiAsr = input.ReadBool();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SpeechToTextConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Configuration for using Gemini ASR models served via Vertex AI. This
+      /// message is used to override the default Gemini ASR model or provide
+      /// additional advanced parameters.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class GeminiAsrConfig : pb::IMessage<GeminiAsrConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GeminiAsrConfig> _parser = new pb::MessageParser<GeminiAsrConfig>(() => new GeminiAsrConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GeminiAsrConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GeminiAsrConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GeminiAsrConfig(GeminiAsrConfig other) : this() {
+          modelId_ = other.modelId_;
+          silenceDurationMs_ = other.silenceDurationMs_;
+          prefixPaddingMs_ = other.prefixPaddingMs_;
+          startOfSpeechSensitivity_ = other.startOfSpeechSensitivity_;
+          endOfSpeechSensitivity_ = other.endOfSpeechSensitivity_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GeminiAsrConfig Clone() {
+          return new GeminiAsrConfig(this);
+        }
+
+        /// <summary>Field number for the "model_id" field.</summary>
+        public const int ModelIdFieldNumber = 1;
+        private string modelId_ = "";
+        /// <summary>
+        /// Optional. The Gemini ASR model ID used for transcription.
+        /// This value overrides the default model ID configured on the server.
+        /// Example: "gemini-3-flash-lite-asr-preview"
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ModelId {
+          get { return modelId_; }
+          set {
+            modelId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "silence_duration_ms" field.</summary>
+        public const int SilenceDurationMsFieldNumber = 2;
+        private int silenceDurationMs_;
+        /// <summary>
+        /// Optional. The required duration of detected silence (or non-speech)
+        /// before end-of-speech is committed.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int SilenceDurationMs {
+          get { return silenceDurationMs_; }
+          set {
+            silenceDurationMs_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "prefix_padding_ms" field.</summary>
+        public const int PrefixPaddingMsFieldNumber = 3;
+        private int prefixPaddingMs_;
+        /// <summary>
+        /// Optional. The required duration of detected speech before start-of-speech
+        /// is committed.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int PrefixPaddingMs {
+          get { return prefixPaddingMs_; }
+          set {
+            prefixPaddingMs_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "start_of_speech_sensitivity" field.</summary>
+        public const int StartOfSpeechSensitivityFieldNumber = 4;
+        private global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.StartSensitivity startOfSpeechSensitivity_ = global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.StartSensitivity.Unspecified;
+        /// <summary>
+        /// Optional. Start of speech sensitivity.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.StartSensitivity StartOfSpeechSensitivity {
+          get { return startOfSpeechSensitivity_; }
+          set {
+            startOfSpeechSensitivity_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "end_of_speech_sensitivity" field.</summary>
+        public const int EndOfSpeechSensitivityFieldNumber = 5;
+        private global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.EndSensitivity endOfSpeechSensitivity_ = global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.EndSensitivity.Unspecified;
+        /// <summary>
+        /// Optional. End of speech sensitivity.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.EndSensitivity EndOfSpeechSensitivity {
+          get { return endOfSpeechSensitivity_; }
+          set {
+            endOfSpeechSensitivity_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GeminiAsrConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GeminiAsrConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ModelId != other.ModelId) return false;
+          if (SilenceDurationMs != other.SilenceDurationMs) return false;
+          if (PrefixPaddingMs != other.PrefixPaddingMs) return false;
+          if (StartOfSpeechSensitivity != other.StartOfSpeechSensitivity) return false;
+          if (EndOfSpeechSensitivity != other.EndOfSpeechSensitivity) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ModelId.Length != 0) hash ^= ModelId.GetHashCode();
+          if (SilenceDurationMs != 0) hash ^= SilenceDurationMs.GetHashCode();
+          if (PrefixPaddingMs != 0) hash ^= PrefixPaddingMs.GetHashCode();
+          if (StartOfSpeechSensitivity != global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.StartSensitivity.Unspecified) hash ^= StartOfSpeechSensitivity.GetHashCode();
+          if (EndOfSpeechSensitivity != global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.EndSensitivity.Unspecified) hash ^= EndOfSpeechSensitivity.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ModelId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ModelId);
+          }
+          if (SilenceDurationMs != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(SilenceDurationMs);
+          }
+          if (PrefixPaddingMs != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(PrefixPaddingMs);
+          }
+          if (StartOfSpeechSensitivity != global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.StartSensitivity.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) StartOfSpeechSensitivity);
+          }
+          if (EndOfSpeechSensitivity != global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.EndSensitivity.Unspecified) {
+            output.WriteRawTag(40);
+            output.WriteEnum((int) EndOfSpeechSensitivity);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ModelId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ModelId);
+          }
+          if (SilenceDurationMs != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(SilenceDurationMs);
+          }
+          if (PrefixPaddingMs != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(PrefixPaddingMs);
+          }
+          if (StartOfSpeechSensitivity != global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.StartSensitivity.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) StartOfSpeechSensitivity);
+          }
+          if (EndOfSpeechSensitivity != global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.EndSensitivity.Unspecified) {
+            output.WriteRawTag(40);
+            output.WriteEnum((int) EndOfSpeechSensitivity);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ModelId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelId);
+          }
+          if (SilenceDurationMs != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(SilenceDurationMs);
+          }
+          if (PrefixPaddingMs != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(PrefixPaddingMs);
+          }
+          if (StartOfSpeechSensitivity != global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.StartSensitivity.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) StartOfSpeechSensitivity);
+          }
+          if (EndOfSpeechSensitivity != global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.EndSensitivity.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EndOfSpeechSensitivity);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GeminiAsrConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ModelId.Length != 0) {
+            ModelId = other.ModelId;
+          }
+          if (other.SilenceDurationMs != 0) {
+            SilenceDurationMs = other.SilenceDurationMs;
+          }
+          if (other.PrefixPaddingMs != 0) {
+            PrefixPaddingMs = other.PrefixPaddingMs;
+          }
+          if (other.StartOfSpeechSensitivity != global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.StartSensitivity.Unspecified) {
+            StartOfSpeechSensitivity = other.StartOfSpeechSensitivity;
+          }
+          if (other.EndOfSpeechSensitivity != global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.EndSensitivity.Unspecified) {
+            EndOfSpeechSensitivity = other.EndOfSpeechSensitivity;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ModelId = input.ReadString();
+                break;
+              }
+              case 16: {
+                SilenceDurationMs = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                PrefixPaddingMs = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                StartOfSpeechSensitivity = (global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.StartSensitivity) input.ReadEnum();
+                break;
+              }
+              case 40: {
+                EndOfSpeechSensitivity = (global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.EndSensitivity) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ModelId = input.ReadString();
+                break;
+              }
+              case 16: {
+                SilenceDurationMs = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                PrefixPaddingMs = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                StartOfSpeechSensitivity = (global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.StartSensitivity) input.ReadEnum();
+                break;
+              }
+              case 40: {
+                EndOfSpeechSensitivity = (global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Types.GeminiAsrConfig.Types.EndSensitivity) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the GeminiAsrConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Start of speech sensitivity.
+          /// </summary>
+          public enum StartSensitivity {
+            /// <summary>
+            /// The default is START_SENSITIVITY_LOW.
+            /// </summary>
+            [pbr::OriginalName("START_SENSITIVITY_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Automatic detection will detect the start of speech more often.
+            /// </summary>
+            [pbr::OriginalName("START_SENSITIVITY_HIGH")] High = 1,
+            /// <summary>
+            /// Automatic detection will detect the start of speech less often.
+            /// </summary>
+            [pbr::OriginalName("START_SENSITIVITY_LOW")] Low = 2,
+          }
+
+          /// <summary>
+          /// End of speech sensitivity.
+          /// </summary>
+          public enum EndSensitivity {
+            /// <summary>
+            /// The default is END_SENSITIVITY_LOW.
+            /// </summary>
+            [pbr::OriginalName("END_SENSITIVITY_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Automatic detection ends speech more often.
+            /// </summary>
+            [pbr::OriginalName("END_SENSITIVITY_HIGH")] High = 1,
+            /// <summary>
+            /// Automatic detection ends speech less often.
+            /// </summary>
+            [pbr::OriginalName("END_SENSITIVITY_LOW")] Low = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 

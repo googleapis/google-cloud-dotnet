@@ -133,7 +133,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             "SUZJRUQQABIOCgpUUkFOU0NSSVBUEAESDwoLRFRNRl9ESUdJVFMQAxIbChdF",
             "TkRfT0ZfU0lOR0xFX1VUVEVSQU5DRRACEhcKE1BBUlRJQUxfRFRNRl9ESUdJ",
             "VFMQBBIZChVTUEVFQ0hfQUNUSVZJVFlfQkVHSU4QBRIXChNTUEVFQ0hfQUNU",
-            "SVZJVFlfRU5EEAYiOgoJVGV4dElucHV0EhEKBHRleHQYASABKAlCA+BBAhIa",
+            "SVZJVFlfRU5EEAYiOgoJVGV4dElucHV0EhEKBHRleHQYASABKAlCA+BBARIa",
             "Cg1sYW5ndWFnZV9jb2RlGAIgASgJQgPgQQIiaAoKRXZlbnRJbnB1dBIRCgRu",
             "YW1lGAEgASgJQgPgQQISKwoKcGFyYW1ldGVycxgCIAEoCzIXLmdvb2dsZS5w",
             "cm90b2J1Zi5TdHJ1Y3QSGgoNbGFuZ3VhZ2VfY29kZRgDIAEoCUID4EECIkYK",
@@ -5496,8 +5496,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int TextFieldNumber = 1;
     private string text_ = "";
     /// <summary>
-    /// Required. The UTF-8 encoded natural language text to be processed.
+    /// Optional. The UTF-8 encoded natural language text to be processed.
     /// Text length must not exceed 256 characters for virtual agent interactions.
+    /// Only one of `text` and `companion_query` should be set - not both.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

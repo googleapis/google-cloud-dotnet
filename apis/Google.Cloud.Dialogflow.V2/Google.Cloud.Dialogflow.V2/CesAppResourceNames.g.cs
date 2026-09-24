@@ -261,6 +261,7 @@ namespace Google.Cloud.Dialogflow.V2
     public partial class CesAppSpec
     {
         /// <summary><see cref="AppName"/>-typed view over the <see cref="CesApp"/> resource name property.</summary>
+        [sys::ObsoleteAttribute]
         public AppName CesAppAsAppName
         {
             get => string.IsNullOrEmpty(CesApp) ? null : AppName.Parse(CesApp, allowUnparsed: true);
