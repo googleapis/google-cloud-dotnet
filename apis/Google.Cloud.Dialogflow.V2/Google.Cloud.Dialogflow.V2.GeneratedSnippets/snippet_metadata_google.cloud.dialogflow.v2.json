@@ -3078,6 +3078,1415 @@
       ]
     },
     {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_CreateCompanionAgent_sync",
+      "title": "CreateCompanionAgentRequestObject",
+      "description": "Snippet for CreateCompanionAgent",
+      "file": "CompanionAgentsClient.CreateCompanionAgentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCompanionAgent",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.CreateCompanionAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.CreateCompanionAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2.CompanionAgent",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "CreateCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.CreateCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_CreateCompanionAgent_async",
+      "title": "CreateCompanionAgentRequestObjectAsync",
+      "description": "Snippet for CreateCompanionAgentAsync",
+      "file": "CompanionAgentsClient.CreateCompanionAgentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCompanionAgentAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.CreateCompanionAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.CreateCompanionAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2.CompanionAgent>",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "CreateCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.CreateCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_CreateCompanionAgent_sync_flattened",
+      "title": "CreateCompanionAgent",
+      "description": "Snippet for CreateCompanionAgent",
+      "file": "CompanionAgentsClient.CreateCompanionAgentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCompanionAgent",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.CreateCompanionAgent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2.CompanionAgent",
+            "name": "companionAgent"
+          },
+          {
+            "type": "System.String",
+            "name": "companionAgentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2.CompanionAgent",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "CreateCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.CreateCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_CreateCompanionAgent_async_flattened",
+      "title": "CreateCompanionAgentAsync",
+      "description": "Snippet for CreateCompanionAgentAsync",
+      "file": "CompanionAgentsClient.CreateCompanionAgentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCompanionAgentAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.CreateCompanionAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2.CompanionAgent",
+            "name": "companionAgent"
+          },
+          {
+            "type": "System.String",
+            "name": "companionAgentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2.CompanionAgent>",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "CreateCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.CreateCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_CreateCompanionAgent_sync_flattened_resourceNames",
+      "title": "CreateCompanionAgentResourceNames",
+      "description": "Snippet for CreateCompanionAgent",
+      "file": "CompanionAgentsClient.CreateCompanionAgentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCompanionAgent",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.CreateCompanionAgent",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2.CompanionAgent",
+            "name": "companionAgent"
+          },
+          {
+            "type": "System.String",
+            "name": "companionAgentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2.CompanionAgent",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "CreateCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.CreateCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_CreateCompanionAgent_async_flattened_resourceNames",
+      "title": "CreateCompanionAgentResourceNamesAsync",
+      "description": "Snippet for CreateCompanionAgentAsync",
+      "file": "CompanionAgentsClient.CreateCompanionAgentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCompanionAgentAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.CreateCompanionAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2.CompanionAgent",
+            "name": "companionAgent"
+          },
+          {
+            "type": "System.String",
+            "name": "companionAgentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2.CompanionAgent>",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "CreateCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.CreateCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_GetCompanionAgent_sync",
+      "title": "GetCompanionAgentRequestObject",
+      "description": "Snippet for GetCompanionAgent",
+      "file": "CompanionAgentsClient.GetCompanionAgentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCompanionAgent",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.GetCompanionAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.GetCompanionAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2.CompanionAgent",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "GetCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.GetCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_GetCompanionAgent_async",
+      "title": "GetCompanionAgentRequestObjectAsync",
+      "description": "Snippet for GetCompanionAgentAsync",
+      "file": "CompanionAgentsClient.GetCompanionAgentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCompanionAgentAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.GetCompanionAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.GetCompanionAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2.CompanionAgent>",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "GetCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.GetCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_GetCompanionAgent_sync_flattened",
+      "title": "GetCompanionAgent",
+      "description": "Snippet for GetCompanionAgent",
+      "file": "CompanionAgentsClient.GetCompanionAgentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCompanionAgent",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.GetCompanionAgent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2.CompanionAgent",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "GetCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.GetCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_GetCompanionAgent_async_flattened",
+      "title": "GetCompanionAgentAsync",
+      "description": "Snippet for GetCompanionAgentAsync",
+      "file": "CompanionAgentsClient.GetCompanionAgentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCompanionAgentAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.GetCompanionAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2.CompanionAgent>",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "GetCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.GetCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_GetCompanionAgent_sync_flattened_resourceNames",
+      "title": "GetCompanionAgentResourceNames",
+      "description": "Snippet for GetCompanionAgent",
+      "file": "CompanionAgentsClient.GetCompanionAgentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCompanionAgent",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.GetCompanionAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.CompanionAgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2.CompanionAgent",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "GetCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.GetCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_GetCompanionAgent_async_flattened_resourceNames",
+      "title": "GetCompanionAgentResourceNamesAsync",
+      "description": "Snippet for GetCompanionAgentAsync",
+      "file": "CompanionAgentsClient.GetCompanionAgentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCompanionAgentAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.GetCompanionAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.CompanionAgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2.CompanionAgent>",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "GetCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.GetCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_UpdateCompanionAgent_sync",
+      "title": "UpdateCompanionAgentRequestObject",
+      "description": "Snippet for UpdateCompanionAgent",
+      "file": "CompanionAgentsClient.UpdateCompanionAgentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCompanionAgent",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.UpdateCompanionAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.UpdateCompanionAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2.CompanionAgent",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "UpdateCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.UpdateCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_UpdateCompanionAgent_async",
+      "title": "UpdateCompanionAgentRequestObjectAsync",
+      "description": "Snippet for UpdateCompanionAgentAsync",
+      "file": "CompanionAgentsClient.UpdateCompanionAgentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCompanionAgentAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.UpdateCompanionAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.UpdateCompanionAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2.CompanionAgent>",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "UpdateCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.UpdateCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_UpdateCompanionAgent_sync_flattened",
+      "title": "UpdateCompanionAgent",
+      "description": "Snippet for UpdateCompanionAgent",
+      "file": "CompanionAgentsClient.UpdateCompanionAgentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCompanionAgent",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.UpdateCompanionAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.CompanionAgent",
+            "name": "companionAgent"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2.CompanionAgent",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "UpdateCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.UpdateCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_UpdateCompanionAgent_async_flattened",
+      "title": "UpdateCompanionAgentAsync",
+      "description": "Snippet for UpdateCompanionAgentAsync",
+      "file": "CompanionAgentsClient.UpdateCompanionAgentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCompanionAgentAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.UpdateCompanionAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.CompanionAgent",
+            "name": "companionAgent"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2.CompanionAgent>",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "UpdateCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.UpdateCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_DeleteCompanionAgent_sync",
+      "title": "DeleteCompanionAgentRequestObject",
+      "description": "Snippet for DeleteCompanionAgent",
+      "file": "CompanionAgentsClient.DeleteCompanionAgentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCompanionAgent",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.DeleteCompanionAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.DeleteCompanionAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "DeleteCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.DeleteCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_DeleteCompanionAgent_async",
+      "title": "DeleteCompanionAgentRequestObjectAsync",
+      "description": "Snippet for DeleteCompanionAgentAsync",
+      "file": "CompanionAgentsClient.DeleteCompanionAgentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCompanionAgentAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.DeleteCompanionAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.DeleteCompanionAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "DeleteCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.DeleteCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_DeleteCompanionAgent_sync_flattened",
+      "title": "DeleteCompanionAgent",
+      "description": "Snippet for DeleteCompanionAgent",
+      "file": "CompanionAgentsClient.DeleteCompanionAgentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCompanionAgent",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.DeleteCompanionAgent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "DeleteCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.DeleteCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_DeleteCompanionAgent_async_flattened",
+      "title": "DeleteCompanionAgentAsync",
+      "description": "Snippet for DeleteCompanionAgentAsync",
+      "file": "CompanionAgentsClient.DeleteCompanionAgentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCompanionAgentAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.DeleteCompanionAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "DeleteCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.DeleteCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_DeleteCompanionAgent_sync_flattened_resourceNames",
+      "title": "DeleteCompanionAgentResourceNames",
+      "description": "Snippet for DeleteCompanionAgent",
+      "file": "CompanionAgentsClient.DeleteCompanionAgentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCompanionAgent",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.DeleteCompanionAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.CompanionAgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "DeleteCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.DeleteCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_DeleteCompanionAgent_async_flattened_resourceNames",
+      "title": "DeleteCompanionAgentResourceNamesAsync",
+      "description": "Snippet for DeleteCompanionAgentAsync",
+      "file": "CompanionAgentsClient.DeleteCompanionAgentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCompanionAgentAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.DeleteCompanionAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.CompanionAgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "DeleteCompanionAgent",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.DeleteCompanionAgent",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_ListCompanionAgents_sync",
+      "title": "ListCompanionAgentsRequestObject",
+      "description": "Snippet for ListCompanionAgents",
+      "file": "CompanionAgentsClient.ListCompanionAgentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCompanionAgents",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.ListCompanionAgents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.ListCompanionAgentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2.ListCompanionAgentsResponse, Google.Cloud.Dialogflow.V2.CompanionAgent>",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "ListCompanionAgents",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.ListCompanionAgents",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_ListCompanionAgents_async",
+      "title": "ListCompanionAgentsRequestObjectAsync",
+      "description": "Snippet for ListCompanionAgentsAsync",
+      "file": "CompanionAgentsClient.ListCompanionAgentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCompanionAgentsAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.ListCompanionAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2.ListCompanionAgentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2.ListCompanionAgentsResponse, Google.Cloud.Dialogflow.V2.CompanionAgent>",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "ListCompanionAgents",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.ListCompanionAgents",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_ListCompanionAgents_sync_flattened",
+      "title": "ListCompanionAgents",
+      "description": "Snippet for ListCompanionAgents",
+      "file": "CompanionAgentsClient.ListCompanionAgentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCompanionAgents",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.ListCompanionAgents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2.ListCompanionAgentsResponse, Google.Cloud.Dialogflow.V2.CompanionAgent>",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "ListCompanionAgents",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.ListCompanionAgents",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_ListCompanionAgents_async_flattened",
+      "title": "ListCompanionAgentsAsync",
+      "description": "Snippet for ListCompanionAgentsAsync",
+      "file": "CompanionAgentsClient.ListCompanionAgentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCompanionAgentsAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.ListCompanionAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2.ListCompanionAgentsResponse, Google.Cloud.Dialogflow.V2.CompanionAgent>",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "ListCompanionAgents",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.ListCompanionAgents",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_ListCompanionAgents_sync_flattened_resourceNames",
+      "title": "ListCompanionAgentsResourceNames",
+      "description": "Snippet for ListCompanionAgents",
+      "file": "CompanionAgentsClient.ListCompanionAgentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCompanionAgents",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.ListCompanionAgents",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2.ListCompanionAgentsResponse, Google.Cloud.Dialogflow.V2.CompanionAgent>",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "ListCompanionAgents",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.ListCompanionAgents",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_CompanionAgents_ListCompanionAgents_async_flattened_resourceNames",
+      "title": "ListCompanionAgentsResourceNamesAsync",
+      "description": "Snippet for ListCompanionAgentsAsync",
+      "file": "CompanionAgentsClient.ListCompanionAgentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCompanionAgentsAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient.ListCompanionAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2.ListCompanionAgentsResponse, Google.Cloud.Dialogflow.V2.CompanionAgent>",
+        "client": {
+          "shortName": "CompanionAgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.CompanionAgentsClient"
+        },
+        "method": {
+          "shortName": "ListCompanionAgents",
+          "fullName": "google.cloud.dialogflow.v2.CompanionAgents.ListCompanionAgents",
+          "service": {
+            "shortName": "CompanionAgents",
+            "fullName": "google.cloud.dialogflow.v2.CompanionAgents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dialogflow_v2_generated_Contexts_ListContexts_sync",
       "title": "ListContextsRequestObject",
       "description": "Snippet for ListContexts",
@@ -29593,6 +31002,102 @@
         {
           "start": 38,
           "end": 87,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_Participants_BidiStreamingAnalyzeContent_sync",
+      "title": "BidiStreamingAnalyzeContent",
+      "description": "Snippet for BidiStreamingAnalyzeContent",
+      "file": "ParticipantsClient.BidiStreamingAnalyzeContentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BidiStreamingAnalyzeContent",
+        "fullName": "Google.Cloud.Dialogflow.V2.ParticipantsClient.BidiStreamingAnalyzeContent",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2.ParticipantsClient+BidiStreamingAnalyzeContentStream",
+        "client": {
+          "shortName": "ParticipantsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.ParticipantsClient"
+        },
+        "method": {
+          "shortName": "BidiStreamingAnalyzeContent",
+          "fullName": "google.cloud.dialogflow.v2.Participants.BidiStreamingAnalyzeContent",
+          "service": {
+            "shortName": "Participants",
+            "fullName": "google.cloud.dialogflow.v2.Participants"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2_generated_Participants_StreamingReactiveCompanionSuggestions_sync",
+      "title": "StreamingReactiveCompanionSuggestions",
+      "description": "Snippet for StreamingReactiveCompanionSuggestions",
+      "file": "ParticipantsClient.StreamingReactiveCompanionSuggestionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamingReactiveCompanionSuggestions",
+        "fullName": "Google.Cloud.Dialogflow.V2.ParticipantsClient.StreamingReactiveCompanionSuggestions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2.ParticipantsClient+StreamingReactiveCompanionSuggestionsStream",
+        "client": {
+          "shortName": "ParticipantsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2.ParticipantsClient"
+        },
+        "method": {
+          "shortName": "StreamingReactiveCompanionSuggestions",
+          "fullName": "google.cloud.dialogflow.v2.Participants.StreamingReactiveCompanionSuggestions",
+          "service": {
+            "shortName": "Participants",
+            "fullName": "google.cloud.dialogflow.v2.Participants"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
           "type": "SHORT"
         }
       ]

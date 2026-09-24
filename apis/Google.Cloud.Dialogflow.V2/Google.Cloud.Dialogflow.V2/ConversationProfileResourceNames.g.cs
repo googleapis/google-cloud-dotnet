@@ -771,6 +771,16 @@ namespace Google.Cloud.Dialogflow.V2
                 {
                     get => new gax::ResourceNameList<GeneratorName>(Generators, s => string.IsNullOrEmpty(s) ? null : GeneratorName.Parse(s, allowUnparsed: true));
                 }
+
+                /// <summary>
+                /// <see cref="CompanionAgentName"/>-typed view over the <see cref="CompanionAgent"/> resource name
+                /// property.
+                /// </summary>
+                public CompanionAgentName CompanionAgentAsCompanionAgentName
+                {
+                    get => string.IsNullOrEmpty(CompanionAgent) ? null : CompanionAgentName.Parse(CompanionAgent, allowUnparsed: true);
+                    set => CompanionAgent = value?.ToString() ?? "";
+                }
             }
 
             public partial class SuggestionQueryConfig

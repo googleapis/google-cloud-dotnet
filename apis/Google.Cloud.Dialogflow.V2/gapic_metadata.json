@@ -89,6 +89,45 @@
         }
       }
     },
+    "CompanionAgents": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CompanionAgentsClient",
+          "rpcs": {
+            "CreateCompanionAgent": {
+              "methods": [
+                "CreateCompanionAgent",
+                "CreateCompanionAgentAsync"
+              ]
+            },
+            "DeleteCompanionAgent": {
+              "methods": [
+                "DeleteCompanionAgent",
+                "DeleteCompanionAgentAsync"
+              ]
+            },
+            "GetCompanionAgent": {
+              "methods": [
+                "GetCompanionAgent",
+                "GetCompanionAgentAsync"
+              ]
+            },
+            "ListCompanionAgents": {
+              "methods": [
+                "ListCompanionAgents",
+                "ListCompanionAgentsAsync"
+              ]
+            },
+            "UpdateCompanionAgent": {
+              "methods": [
+                "UpdateCompanionAgent",
+                "UpdateCompanionAgentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "Contexts": {
       "clients": {
         "grpc": {
@@ -748,6 +787,12 @@
                 "AnalyzeContentAsync"
               ]
             },
+            "BidiStreamingAnalyzeContent": {
+              "methods": [
+                "BidiStreamingAnalyzeContent",
+                "BidiStreamingAnalyzeContentAsync"
+              ]
+            },
             "CreateParticipant": {
               "methods": [
                 "CreateParticipant",
@@ -770,6 +815,12 @@
               "methods": [
                 "StreamingAnalyzeContent",
                 "StreamingAnalyzeContentAsync"
+              ]
+            },
+            "StreamingReactiveCompanionSuggestions": {
+              "methods": [
+                "StreamingReactiveCompanionSuggestions",
+                "StreamingReactiveCompanionSuggestionsAsync"
               ]
             },
             "SuggestArticles": {
