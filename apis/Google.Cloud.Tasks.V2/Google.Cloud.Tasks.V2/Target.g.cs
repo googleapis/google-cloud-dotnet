@@ -26,34 +26,62 @@ namespace Google.Cloud.Tasks.V2 {
           string.Concat(
             "CiJnb29nbGUvY2xvdWQvdGFza3MvdjIvdGFyZ2V0LnByb3RvEhVnb29nbGUu",
             "Y2xvdWQudGFza3MudjIaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJv",
-            "dG8i4QIKC0h0dHBSZXF1ZXN0EhAKA3VybBgBIAEoCUID4EECEjYKC2h0dHBf",
-            "bWV0aG9kGAIgASgOMiEuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyLkh0dHBNZXRo",
-            "b2QSQAoHaGVhZGVycxgDIAMoCzIvLmdvb2dsZS5jbG91ZC50YXNrcy52Mi5I",
-            "dHRwUmVxdWVzdC5IZWFkZXJzRW50cnkSDAoEYm9keRgEIAEoDBI4CgtvYXV0",
-            "aF90b2tlbhgFIAEoCzIhLmdvb2dsZS5jbG91ZC50YXNrcy52Mi5PQXV0aFRv",
-            "a2VuSAASNgoKb2lkY190b2tlbhgGIAEoCzIgLmdvb2dsZS5jbG91ZC50YXNr",
-            "cy52Mi5PaWRjVG9rZW5IABouCgxIZWFkZXJzRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4AUIWChRhdXRob3JpemF0aW9uX2hlYWRlciKy",
-            "AgoUQXBwRW5naW5lSHR0cFJlcXVlc3QSNgoLaHR0cF9tZXRob2QYASABKA4y",
-            "IS5nb29nbGUuY2xvdWQudGFza3MudjIuSHR0cE1ldGhvZBJDChJhcHBfZW5n",
-            "aW5lX3JvdXRpbmcYAiABKAsyJy5nb29nbGUuY2xvdWQudGFza3MudjIuQXBw",
-            "RW5naW5lUm91dGluZxIUCgxyZWxhdGl2ZV91cmkYAyABKAkSSQoHaGVhZGVy",
-            "cxgEIAMoCzI4Lmdvb2dsZS5jbG91ZC50YXNrcy52Mi5BcHBFbmdpbmVIdHRw",
-            "UmVxdWVzdC5IZWFkZXJzRW50cnkSDAoEYm9keRgFIAEoDBouCgxIZWFkZXJz",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJUChBBcHBF",
-            "bmdpbmVSb3V0aW5nEg8KB3NlcnZpY2UYASABKAkSDwoHdmVyc2lvbhgCIAEo",
-            "CRIQCghpbnN0YW5jZRgDIAEoCRIMCgRob3N0GAQgASgJIjoKCk9BdXRoVG9r",
-            "ZW4SHQoVc2VydmljZV9hY2NvdW50X2VtYWlsGAEgASgJEg0KBXNjb3BlGAIg",
-            "ASgJIjwKCU9pZGNUb2tlbhIdChVzZXJ2aWNlX2FjY291bnRfZW1haWwYASAB",
-            "KAkSEAoIYXVkaWVuY2UYAiABKAkqcwoKSHR0cE1ldGhvZBIbChdIVFRQX01F",
-            "VEhPRF9VTlNQRUNJRklFRBAAEggKBFBPU1QQARIHCgNHRVQQAhIICgRIRUFE",
-            "EAMSBwoDUFVUEAQSCgoGREVMRVRFEAUSCQoFUEFUQ0gQBhILCgdPUFRJT05T",
-            "EAdCagoZY29tLmdvb2dsZS5jbG91ZC50YXNrcy52MkILVGFyZ2V0UHJvdG9Q",
-            "AVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9jbG91ZHRhc2tzL2FwaXYyL2Nsb3Vk",
-            "dGFza3NwYjtjbG91ZHRhc2tzcGJiBnByb3RvMw=="));
+            "dG8iHAoMUGF0aE92ZXJyaWRlEgwKBHBhdGgYASABKAkiJQoNUXVlcnlPdmVy",
+            "cmlkZRIUCgxxdWVyeV9wYXJhbXMYASABKAkigwQKC1VyaU92ZXJyaWRlEj4K",
+            "BnNjaGVtZRgBIAEoDjIpLmdvb2dsZS5jbG91ZC50YXNrcy52Mi5VcmlPdmVy",
+            "cmlkZS5TY2hlbWVIAIgBARIRCgRob3N0GAIgASgJSAGIAQESEQoEcG9ydBgD",
+            "IAEoA0gCiAEBEjoKDXBhdGhfb3ZlcnJpZGUYBCABKAsyIy5nb29nbGUuY2xv",
+            "dWQudGFza3MudjIuUGF0aE92ZXJyaWRlEjwKDnF1ZXJ5X292ZXJyaWRlGAUg",
+            "ASgLMiQuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyLlF1ZXJ5T3ZlcnJpZGUSXAoZ",
+            "dXJpX292ZXJyaWRlX2VuZm9yY2VfbW9kZRgGIAEoDjI5Lmdvb2dsZS5jbG91",
+            "ZC50YXNrcy52Mi5VcmlPdmVycmlkZS5VcmlPdmVycmlkZUVuZm9yY2VNb2Rl",
+            "IjUKBlNjaGVtZRIWChJTQ0hFTUVfVU5TUEVDSUZJRUQQABIICgRIVFRQEAES",
+            "CQoFSFRUUFMQAiJiChZVcmlPdmVycmlkZUVuZm9yY2VNb2RlEikKJVVSSV9P",
+            "VkVSUklERV9FTkZPUkNFX01PREVfVU5TUEVDSUZJRUQQABIRCg1JRl9OT1Rf",
+            "RVhJU1RTEAESCgoGQUxXQVlTEAJCCQoHX3NjaGVtZUIHCgVfaG9zdEIHCgVf",
+            "cG9ydCLGAwoKSHR0cFRhcmdldBI4Cgx1cmlfb3ZlcnJpZGUYASABKAsyIi5n",
+            "b29nbGUuY2xvdWQudGFza3MudjIuVXJpT3ZlcnJpZGUSNgoLaHR0cF9tZXRo",
+            "b2QYAiABKA4yIS5nb29nbGUuY2xvdWQudGFza3MudjIuSHR0cE1ldGhvZBJK",
+            "ChBoZWFkZXJfb3ZlcnJpZGVzGAMgAygLMjAuZ29vZ2xlLmNsb3VkLnRhc2tz",
+            "LnYyLkh0dHBUYXJnZXQuSGVhZGVyT3ZlcnJpZGUSOAoLb2F1dGhfdG9rZW4Y",
+            "BSABKAsyIS5nb29nbGUuY2xvdWQudGFza3MudjIuT0F1dGhUb2tlbkgAEjYK",
+            "Cm9pZGNfdG9rZW4YBiABKAsyIC5nb29nbGUuY2xvdWQudGFza3MudjIuT2lk",
+            "Y1Rva2VuSAAaJAoGSGVhZGVyEgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CRpKCg5IZWFkZXJPdmVycmlkZRI4CgZoZWFkZXIYASABKAsyKC5nb29nbGUu",
+            "Y2xvdWQudGFza3MudjIuSHR0cFRhcmdldC5IZWFkZXJCFgoUYXV0aG9yaXph",
+            "dGlvbl9oZWFkZXIi4QIKC0h0dHBSZXF1ZXN0EhAKA3VybBgBIAEoCUID4EEC",
+            "EjYKC2h0dHBfbWV0aG9kGAIgASgOMiEuZ29vZ2xlLmNsb3VkLnRhc2tzLnYy",
+            "Lkh0dHBNZXRob2QSQAoHaGVhZGVycxgDIAMoCzIvLmdvb2dsZS5jbG91ZC50",
+            "YXNrcy52Mi5IdHRwUmVxdWVzdC5IZWFkZXJzRW50cnkSDAoEYm9keRgEIAEo",
+            "DBI4CgtvYXV0aF90b2tlbhgFIAEoCzIhLmdvb2dsZS5jbG91ZC50YXNrcy52",
+            "Mi5PQXV0aFRva2VuSAASNgoKb2lkY190b2tlbhgGIAEoCzIgLmdvb2dsZS5j",
+            "bG91ZC50YXNrcy52Mi5PaWRjVG9rZW5IABouCgxIZWFkZXJzRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUIWChRhdXRob3JpemF0aW9u",
+            "X2hlYWRlciKyAgoUQXBwRW5naW5lSHR0cFJlcXVlc3QSNgoLaHR0cF9tZXRo",
+            "b2QYASABKA4yIS5nb29nbGUuY2xvdWQudGFza3MudjIuSHR0cE1ldGhvZBJD",
+            "ChJhcHBfZW5naW5lX3JvdXRpbmcYAiABKAsyJy5nb29nbGUuY2xvdWQudGFz",
+            "a3MudjIuQXBwRW5naW5lUm91dGluZxIUCgxyZWxhdGl2ZV91cmkYAyABKAkS",
+            "SQoHaGVhZGVycxgEIAMoCzI4Lmdvb2dsZS5jbG91ZC50YXNrcy52Mi5BcHBF",
+            "bmdpbmVIdHRwUmVxdWVzdC5IZWFkZXJzRW50cnkSDAoEYm9keRgFIAEoDBou",
+            "CgxIZWFkZXJzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ASJUChBBcHBFbmdpbmVSb3V0aW5nEg8KB3NlcnZpY2UYASABKAkSDwoHdmVy",
+            "c2lvbhgCIAEoCRIQCghpbnN0YW5jZRgDIAEoCRIMCgRob3N0GAQgASgJIjoK",
+            "Ck9BdXRoVG9rZW4SHQoVc2VydmljZV9hY2NvdW50X2VtYWlsGAEgASgJEg0K",
+            "BXNjb3BlGAIgASgJIjwKCU9pZGNUb2tlbhIdChVzZXJ2aWNlX2FjY291bnRf",
+            "ZW1haWwYASABKAkSEAoIYXVkaWVuY2UYAiABKAkqcwoKSHR0cE1ldGhvZBIb",
+            "ChdIVFRQX01FVEhPRF9VTlNQRUNJRklFRBAAEggKBFBPU1QQARIHCgNHRVQQ",
+            "AhIICgRIRUFEEAMSBwoDUFVUEAQSCgoGREVMRVRFEAUSCQoFUEFUQ0gQBhIL",
+            "CgdPUFRJT05TEAdCagoZY29tLmdvb2dsZS5jbG91ZC50YXNrcy52MkILVGFy",
+            "Z2V0UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9jbG91ZHRhc2tzL2Fw",
+            "aXYyL2Nsb3VkdGFza3NwYjtjbG91ZHRhc2tzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Tasks.V2.HttpMethod), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.PathOverride), global::Google.Cloud.Tasks.V2.PathOverride.Parser, new[]{ "Path" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.QueryOverride), global::Google.Cloud.Tasks.V2.QueryOverride.Parser, new[]{ "QueryParams" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.UriOverride), global::Google.Cloud.Tasks.V2.UriOverride.Parser, new[]{ "Scheme", "Host", "Port", "PathOverride", "QueryOverride", "UriOverrideEnforceMode" }, new[]{ "Scheme", "Host", "Port" }, new[]{ typeof(global::Google.Cloud.Tasks.V2.UriOverride.Types.Scheme), typeof(global::Google.Cloud.Tasks.V2.UriOverride.Types.UriOverrideEnforceMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.HttpTarget), global::Google.Cloud.Tasks.V2.HttpTarget.Parser, new[]{ "UriOverride", "HttpMethod", "HeaderOverrides", "OauthToken", "OidcToken" }, new[]{ "AuthorizationHeader" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.HttpTarget.Types.Header), global::Google.Cloud.Tasks.V2.HttpTarget.Types.Header.Parser, new[]{ "Key", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.HttpTarget.Types.HeaderOverride), global::Google.Cloud.Tasks.V2.HttpTarget.Types.HeaderOverride.Parser, new[]{ "Header" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.HttpRequest), global::Google.Cloud.Tasks.V2.HttpRequest.Parser, new[]{ "Url", "HttpMethod", "Headers", "Body", "OauthToken", "OidcToken" }, new[]{ "AuthorizationHeader" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.AppEngineHttpRequest), global::Google.Cloud.Tasks.V2.AppEngineHttpRequest.Parser, new[]{ "HttpMethod", "AppEngineRouting", "RelativeUri", "Headers", "Body" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.AppEngineRouting), global::Google.Cloud.Tasks.V2.AppEngineRouting.Parser, new[]{ "Service", "Version", "Instance", "Host" }, null, null, null, null),
@@ -107,6 +135,1914 @@ namespace Google.Cloud.Tasks.V2 {
 
   #region Messages
   /// <summary>
+  /// PathOverride.
+  ///
+  /// Path message defines path override for HTTP targets.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PathOverride : pb::IMessage<PathOverride>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PathOverride> _parser = new pb::MessageParser<PathOverride>(() => new PathOverride());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PathOverride> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PathOverride() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PathOverride(PathOverride other) : this() {
+      path_ = other.path_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PathOverride Clone() {
+      return new PathOverride(this);
+    }
+
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 1;
+    private string path_ = "";
+    /// <summary>
+    /// The URI path (e.g., /users/1234). Default is an empty string.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Path {
+      get { return path_; }
+      set {
+        path_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PathOverride);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PathOverride other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Path != other.Path) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Path.Length != 0) hash ^= Path.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Path.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Path);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Path.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Path);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Path.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PathOverride other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Path.Length != 0) {
+        Path = other.Path;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Path = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Path = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// QueryOverride.
+  ///
+  /// Query message defines query override for HTTP targets.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class QueryOverride : pb::IMessage<QueryOverride>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<QueryOverride> _parser = new pb::MessageParser<QueryOverride>(() => new QueryOverride());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<QueryOverride> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryOverride() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryOverride(QueryOverride other) : this() {
+      queryParams_ = other.queryParams_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryOverride Clone() {
+      return new QueryOverride(this);
+    }
+
+    /// <summary>Field number for the "query_params" field.</summary>
+    public const int QueryParamsFieldNumber = 1;
+    private string queryParams_ = "";
+    /// <summary>
+    /// The query parameters (e.g., qparam1=123&amp;qparam2=456). Default is an empty
+    /// string.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string QueryParams {
+      get { return queryParams_; }
+      set {
+        queryParams_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as QueryOverride);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(QueryOverride other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (QueryParams != other.QueryParams) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (QueryParams.Length != 0) hash ^= QueryParams.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (QueryParams.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(QueryParams);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (QueryParams.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(QueryParams);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (QueryParams.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryParams);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(QueryOverride other) {
+      if (other == null) {
+        return;
+      }
+      if (other.QueryParams.Length != 0) {
+        QueryParams = other.QueryParams;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            QueryParams = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            QueryParams = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// URI Override.
+  ///
+  /// When specified, all the HTTP tasks inside the queue will be partially or
+  /// fully overridden depending on the configured values.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UriOverride : pb::IMessage<UriOverride>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UriOverride> _parser = new pb::MessageParser<UriOverride>(() => new UriOverride());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UriOverride> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UriOverride() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UriOverride(UriOverride other) : this() {
+      _hasBits0 = other._hasBits0;
+      scheme_ = other.scheme_;
+      host_ = other.host_;
+      port_ = other.port_;
+      pathOverride_ = other.pathOverride_ != null ? other.pathOverride_.Clone() : null;
+      queryOverride_ = other.queryOverride_ != null ? other.queryOverride_.Clone() : null;
+      uriOverrideEnforceMode_ = other.uriOverrideEnforceMode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UriOverride Clone() {
+      return new UriOverride(this);
+    }
+
+    /// <summary>Field number for the "scheme" field.</summary>
+    public const int SchemeFieldNumber = 1;
+    private readonly static global::Google.Cloud.Tasks.V2.UriOverride.Types.Scheme SchemeDefaultValue = global::Google.Cloud.Tasks.V2.UriOverride.Types.Scheme.Unspecified;
+
+    private global::Google.Cloud.Tasks.V2.UriOverride.Types.Scheme scheme_;
+    /// <summary>
+    /// Scheme override.
+    ///
+    /// When specified, the task URI scheme is replaced by the provided value (HTTP
+    /// or HTTPS).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Tasks.V2.UriOverride.Types.Scheme Scheme {
+      get { if ((_hasBits0 & 1) != 0) { return scheme_; } else { return SchemeDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        scheme_ = value;
+      }
+    }
+    /// <summary>Gets whether the "scheme" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasScheme {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "scheme" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearScheme() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "host" field.</summary>
+    public const int HostFieldNumber = 2;
+    private readonly static string HostDefaultValue = "";
+
+    private string host_;
+    /// <summary>
+    /// Host override.
+    ///
+    /// When specified, replaces the host part of the task URL. For example,
+    /// if the task URL is "https://www.google.com," and host value is set to
+    /// "example.net", the overridden URI will be changed to "https://example.net."
+    /// Host value cannot be an empty string (INVALID_ARGUMENT).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Host {
+      get { return host_ ?? HostDefaultValue; }
+      set {
+        host_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "host" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHost {
+      get { return host_ != null; }
+    }
+    /// <summary>Clears the value of the "host" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHost() {
+      host_ = null;
+    }
+
+    /// <summary>Field number for the "port" field.</summary>
+    public const int PortFieldNumber = 3;
+    private readonly static long PortDefaultValue = 0L;
+
+    private long port_;
+    /// <summary>
+    /// Port override.
+    ///
+    /// When specified, replaces the port part of the task URI. For instance,
+    /// for a URI "https://www.example.com/example" and port=123, the overridden
+    /// URI becomes "https://www.example.com:123/example". Note that the port value
+    /// must be a positive integer. Setting the port to 0 (Zero) clears the URI
+    /// port.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Port {
+      get { if ((_hasBits0 & 2) != 0) { return port_; } else { return PortDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        port_ = value;
+      }
+    }
+    /// <summary>Gets whether the "port" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPort {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "port" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPort() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "path_override" field.</summary>
+    public const int PathOverrideFieldNumber = 4;
+    private global::Google.Cloud.Tasks.V2.PathOverride pathOverride_;
+    /// <summary>
+    /// URI path.
+    ///
+    /// When specified, replaces the existing path of the task URL. Setting the
+    /// path value to an empty string clears the URI path segment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Tasks.V2.PathOverride PathOverride {
+      get { return pathOverride_; }
+      set {
+        pathOverride_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "query_override" field.</summary>
+    public const int QueryOverrideFieldNumber = 5;
+    private global::Google.Cloud.Tasks.V2.QueryOverride queryOverride_;
+    /// <summary>
+    /// URI query.
+    ///
+    /// When specified, replaces the query part of the task URI. Setting the
+    /// query value to an empty string clears the URI query segment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Tasks.V2.QueryOverride QueryOverride {
+      get { return queryOverride_; }
+      set {
+        queryOverride_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "uri_override_enforce_mode" field.</summary>
+    public const int UriOverrideEnforceModeFieldNumber = 6;
+    private global::Google.Cloud.Tasks.V2.UriOverride.Types.UriOverrideEnforceMode uriOverrideEnforceMode_ = global::Google.Cloud.Tasks.V2.UriOverride.Types.UriOverrideEnforceMode.Unspecified;
+    /// <summary>
+    /// URI Override Enforce Mode
+    ///
+    /// When specified, determines the Target UriOverride mode. If not specified,
+    /// it defaults to ALWAYS.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Tasks.V2.UriOverride.Types.UriOverrideEnforceMode UriOverrideEnforceMode {
+      get { return uriOverrideEnforceMode_; }
+      set {
+        uriOverrideEnforceMode_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UriOverride);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UriOverride other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Scheme != other.Scheme) return false;
+      if (Host != other.Host) return false;
+      if (Port != other.Port) return false;
+      if (!object.Equals(PathOverride, other.PathOverride)) return false;
+      if (!object.Equals(QueryOverride, other.QueryOverride)) return false;
+      if (UriOverrideEnforceMode != other.UriOverrideEnforceMode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasScheme) hash ^= Scheme.GetHashCode();
+      if (HasHost) hash ^= Host.GetHashCode();
+      if (HasPort) hash ^= Port.GetHashCode();
+      if (pathOverride_ != null) hash ^= PathOverride.GetHashCode();
+      if (queryOverride_ != null) hash ^= QueryOverride.GetHashCode();
+      if (UriOverrideEnforceMode != global::Google.Cloud.Tasks.V2.UriOverride.Types.UriOverrideEnforceMode.Unspecified) hash ^= UriOverrideEnforceMode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasScheme) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Scheme);
+      }
+      if (HasHost) {
+        output.WriteRawTag(18);
+        output.WriteString(Host);
+      }
+      if (HasPort) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Port);
+      }
+      if (pathOverride_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PathOverride);
+      }
+      if (queryOverride_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(QueryOverride);
+      }
+      if (UriOverrideEnforceMode != global::Google.Cloud.Tasks.V2.UriOverride.Types.UriOverrideEnforceMode.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) UriOverrideEnforceMode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasScheme) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Scheme);
+      }
+      if (HasHost) {
+        output.WriteRawTag(18);
+        output.WriteString(Host);
+      }
+      if (HasPort) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Port);
+      }
+      if (pathOverride_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PathOverride);
+      }
+      if (queryOverride_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(QueryOverride);
+      }
+      if (UriOverrideEnforceMode != global::Google.Cloud.Tasks.V2.UriOverride.Types.UriOverrideEnforceMode.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) UriOverrideEnforceMode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasScheme) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Scheme);
+      }
+      if (HasHost) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Host);
+      }
+      if (HasPort) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Port);
+      }
+      if (pathOverride_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PathOverride);
+      }
+      if (queryOverride_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryOverride);
+      }
+      if (UriOverrideEnforceMode != global::Google.Cloud.Tasks.V2.UriOverride.Types.UriOverrideEnforceMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UriOverrideEnforceMode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UriOverride other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasScheme) {
+        Scheme = other.Scheme;
+      }
+      if (other.HasHost) {
+        Host = other.Host;
+      }
+      if (other.HasPort) {
+        Port = other.Port;
+      }
+      if (other.pathOverride_ != null) {
+        if (pathOverride_ == null) {
+          PathOverride = new global::Google.Cloud.Tasks.V2.PathOverride();
+        }
+        PathOverride.MergeFrom(other.PathOverride);
+      }
+      if (other.queryOverride_ != null) {
+        if (queryOverride_ == null) {
+          QueryOverride = new global::Google.Cloud.Tasks.V2.QueryOverride();
+        }
+        QueryOverride.MergeFrom(other.QueryOverride);
+      }
+      if (other.UriOverrideEnforceMode != global::Google.Cloud.Tasks.V2.UriOverride.Types.UriOverrideEnforceMode.Unspecified) {
+        UriOverrideEnforceMode = other.UriOverrideEnforceMode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Scheme = (global::Google.Cloud.Tasks.V2.UriOverride.Types.Scheme) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Host = input.ReadString();
+            break;
+          }
+          case 24: {
+            Port = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            if (pathOverride_ == null) {
+              PathOverride = new global::Google.Cloud.Tasks.V2.PathOverride();
+            }
+            input.ReadMessage(PathOverride);
+            break;
+          }
+          case 42: {
+            if (queryOverride_ == null) {
+              QueryOverride = new global::Google.Cloud.Tasks.V2.QueryOverride();
+            }
+            input.ReadMessage(QueryOverride);
+            break;
+          }
+          case 48: {
+            UriOverrideEnforceMode = (global::Google.Cloud.Tasks.V2.UriOverride.Types.UriOverrideEnforceMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Scheme = (global::Google.Cloud.Tasks.V2.UriOverride.Types.Scheme) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Host = input.ReadString();
+            break;
+          }
+          case 24: {
+            Port = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            if (pathOverride_ == null) {
+              PathOverride = new global::Google.Cloud.Tasks.V2.PathOverride();
+            }
+            input.ReadMessage(PathOverride);
+            break;
+          }
+          case 42: {
+            if (queryOverride_ == null) {
+              QueryOverride = new global::Google.Cloud.Tasks.V2.QueryOverride();
+            }
+            input.ReadMessage(QueryOverride);
+            break;
+          }
+          case 48: {
+            UriOverrideEnforceMode = (global::Google.Cloud.Tasks.V2.UriOverride.Types.UriOverrideEnforceMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the UriOverride message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The Scheme for an HTTP request. By default, it is HTTPS.
+      /// </summary>
+      public enum Scheme {
+        /// <summary>
+        /// Scheme unspecified. Defaults to HTTPS.
+        /// </summary>
+        [pbr::OriginalName("SCHEME_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Convert the scheme to HTTP, e.g., "https://www.example.com" will change
+        /// to "http://www.example.com".
+        /// </summary>
+        [pbr::OriginalName("HTTP")] Http = 1,
+        /// <summary>
+        /// Convert the scheme to HTTPS, e.g., "http://www.example.com" will change
+        /// to "https://www.example.com".
+        /// </summary>
+        [pbr::OriginalName("HTTPS")] Https = 2,
+      }
+
+      /// <summary>
+      /// UriOverrideEnforceMode defines when the URI override is enforced.
+      /// </summary>
+      public enum UriOverrideEnforceMode {
+        /// <summary>
+        /// UriOverrideEnforceMode Unspecified. Defaults to ALWAYS.
+        /// </summary>
+        [pbr::OriginalName("URI_OVERRIDE_ENFORCE_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// In the IF_NOT_EXISTS mode, queue-level configuration is only
+        /// applied where task-level configuration does not exist.
+        /// </summary>
+        [pbr::OriginalName("IF_NOT_EXISTS")] IfNotExists = 1,
+        /// <summary>
+        /// In the ALWAYS mode, queue-level configuration overrides all
+        /// task-level configuration
+        /// </summary>
+        [pbr::OriginalName("ALWAYS")] Always = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// HTTP target.
+  ///
+  /// When specified at the [Queue][google.cloud.tasks.v2.Queue] level, all tasks
+  /// with [HttpRequest][google.cloud.tasks.v2.HttpRequest] are overridden
+  /// according to the target.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class HttpTarget : pb::IMessage<HttpTarget>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<HttpTarget> _parser = new pb::MessageParser<HttpTarget>(() => new HttpTarget());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<HttpTarget> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HttpTarget() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HttpTarget(HttpTarget other) : this() {
+      uriOverride_ = other.uriOverride_ != null ? other.uriOverride_.Clone() : null;
+      httpMethod_ = other.httpMethod_;
+      headerOverrides_ = other.headerOverrides_.Clone();
+      switch (other.AuthorizationHeaderCase) {
+        case AuthorizationHeaderOneofCase.OauthToken:
+          OauthToken = other.OauthToken.Clone();
+          break;
+        case AuthorizationHeaderOneofCase.OidcToken:
+          OidcToken = other.OidcToken.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HttpTarget Clone() {
+      return new HttpTarget(this);
+    }
+
+    /// <summary>Field number for the "uri_override" field.</summary>
+    public const int UriOverrideFieldNumber = 1;
+    private global::Google.Cloud.Tasks.V2.UriOverride uriOverride_;
+    /// <summary>
+    /// URI override.
+    ///
+    /// When specified, overrides the execution URI for all the tasks in the queue.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Tasks.V2.UriOverride UriOverride {
+      get { return uriOverride_; }
+      set {
+        uriOverride_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "http_method" field.</summary>
+    public const int HttpMethodFieldNumber = 2;
+    private global::Google.Cloud.Tasks.V2.HttpMethod httpMethod_ = global::Google.Cloud.Tasks.V2.HttpMethod.Unspecified;
+    /// <summary>
+    /// The HTTP method to use for the request.
+    ///
+    /// When specified, it overrides
+    /// [HttpRequest][google.cloud.tasks.v2.HttpTarget.http_method] for the task.
+    /// Note that if the value is set to [HttpMethod][GET] the [HttpRequest][body]
+    /// of the task will be ignored at execution time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Tasks.V2.HttpMethod HttpMethod {
+      get { return httpMethod_; }
+      set {
+        httpMethod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "header_overrides" field.</summary>
+    public const int HeaderOverridesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Tasks.V2.HttpTarget.Types.HeaderOverride> _repeated_headerOverrides_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Tasks.V2.HttpTarget.Types.HeaderOverride.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Tasks.V2.HttpTarget.Types.HeaderOverride> headerOverrides_ = new pbc::RepeatedField<global::Google.Cloud.Tasks.V2.HttpTarget.Types.HeaderOverride>();
+    /// <summary>
+    /// HTTP target headers.
+    ///
+    /// This map contains the header field names and values.
+    /// Headers will be set when running the
+    /// [CreateTask][google.cloud.tasks.v2.CloudTasks.CreateTask] and/or
+    /// [BufferTask][google.cloud.tasks.v2.CloudTasks.BufferTask].
+    ///
+    /// These headers represent a subset of the headers that will be configured for
+    /// the task's HTTP request. Some HTTP request headers will be ignored or
+    /// replaced.
+    ///
+    /// A partial list of headers that will be ignored or replaced is:
+    /// * Several predefined headers, prefixed with "X-CloudTasks-", can
+    /// be used to define properties of the task.
+    /// * Host: This will be computed by Cloud Tasks and derived from
+    /// [HttpRequest.url][google.cloud.tasks.v2.Target.HttpRequest.url].
+    /// * Content-Length: This will be computed by Cloud Tasks.
+    ///
+    /// `Content-Type` won't be set by Cloud Tasks. You can explicitly set
+    /// `Content-Type` to a media type when the
+    ///  [task is created][google.cloud.tasks.v2.CloudTasks.CreateTask].
+    ///  For example, `Content-Type` can be set to `"application/octet-stream"` or
+    ///  `"application/json"`. The default value is set to `"application/json"`.
+    ///
+    /// * User-Agent: This will be set to `"Google-Cloud-Tasks"`.
+    ///
+    /// Headers which can have multiple values (according to RFC2616) can be
+    /// specified using comma-separated values.
+    ///
+    /// The size of the headers must be less than 80KB.
+    /// Queue-level headers to override headers of all the tasks in the queue.
+    ///
+    /// Do not put business sensitive or personally identifying data in the HTTP
+    /// Header Override Configuration or other similar fields in accordance with
+    /// Section 12 (Resource Fields) of the
+    /// [Service Specific Terms](https://cloud.google.com/terms/service-terms).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Tasks.V2.HttpTarget.Types.HeaderOverride> HeaderOverrides {
+      get { return headerOverrides_; }
+    }
+
+    /// <summary>Field number for the "oauth_token" field.</summary>
+    public const int OauthTokenFieldNumber = 5;
+    /// <summary>
+    /// If specified, an
+    /// [OAuth token](https://developers.google.com/identity/protocols/OAuth2)
+    /// is generated and attached as the `Authorization` header in the HTTP
+    /// request.
+    ///
+    /// This type of authorization should generally be used only when calling
+    /// Google APIs hosted on *.googleapis.com. Note that both the service
+    /// account email and the scope MUST be specified when using the queue-level
+    /// authorization override.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Tasks.V2.OAuthToken OauthToken {
+      get { return authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken ? (global::Google.Cloud.Tasks.V2.OAuthToken) authorizationHeader_ : null; }
+      set {
+        authorizationHeader_ = value;
+        authorizationHeaderCase_ = value == null ? AuthorizationHeaderOneofCase.None : AuthorizationHeaderOneofCase.OauthToken;
+      }
+    }
+
+    /// <summary>Field number for the "oidc_token" field.</summary>
+    public const int OidcTokenFieldNumber = 6;
+    /// <summary>
+    /// If specified, an
+    /// [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect)
+    /// token is generated and attached as an `Authorization` header in the
+    /// HTTP request.
+    ///
+    /// This type of authorization can be used for many scenarios, including
+    /// calling Cloud Run, or endpoints where you intend to validate the token
+    /// yourself. Note that both the service account email and the audience MUST
+    /// be specified when using the queue-level authorization override.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Tasks.V2.OidcToken OidcToken {
+      get { return authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OidcToken ? (global::Google.Cloud.Tasks.V2.OidcToken) authorizationHeader_ : null; }
+      set {
+        authorizationHeader_ = value;
+        authorizationHeaderCase_ = value == null ? AuthorizationHeaderOneofCase.None : AuthorizationHeaderOneofCase.OidcToken;
+      }
+    }
+
+    private object authorizationHeader_;
+    /// <summary>Enum of possible cases for the "authorization_header" oneof.</summary>
+    public enum AuthorizationHeaderOneofCase {
+      None = 0,
+      OauthToken = 5,
+      OidcToken = 6,
+    }
+    private AuthorizationHeaderOneofCase authorizationHeaderCase_ = AuthorizationHeaderOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AuthorizationHeaderOneofCase AuthorizationHeaderCase {
+      get { return authorizationHeaderCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAuthorizationHeader() {
+      authorizationHeaderCase_ = AuthorizationHeaderOneofCase.None;
+      authorizationHeader_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as HttpTarget);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(HttpTarget other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(UriOverride, other.UriOverride)) return false;
+      if (HttpMethod != other.HttpMethod) return false;
+      if(!headerOverrides_.Equals(other.headerOverrides_)) return false;
+      if (!object.Equals(OauthToken, other.OauthToken)) return false;
+      if (!object.Equals(OidcToken, other.OidcToken)) return false;
+      if (AuthorizationHeaderCase != other.AuthorizationHeaderCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (uriOverride_ != null) hash ^= UriOverride.GetHashCode();
+      if (HttpMethod != global::Google.Cloud.Tasks.V2.HttpMethod.Unspecified) hash ^= HttpMethod.GetHashCode();
+      hash ^= headerOverrides_.GetHashCode();
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken) hash ^= OauthToken.GetHashCode();
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OidcToken) hash ^= OidcToken.GetHashCode();
+      hash ^= (int) authorizationHeaderCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (uriOverride_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UriOverride);
+      }
+      if (HttpMethod != global::Google.Cloud.Tasks.V2.HttpMethod.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) HttpMethod);
+      }
+      headerOverrides_.WriteTo(output, _repeated_headerOverrides_codec);
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken) {
+        output.WriteRawTag(42);
+        output.WriteMessage(OauthToken);
+      }
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OidcToken) {
+        output.WriteRawTag(50);
+        output.WriteMessage(OidcToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (uriOverride_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UriOverride);
+      }
+      if (HttpMethod != global::Google.Cloud.Tasks.V2.HttpMethod.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) HttpMethod);
+      }
+      headerOverrides_.WriteTo(ref output, _repeated_headerOverrides_codec);
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken) {
+        output.WriteRawTag(42);
+        output.WriteMessage(OauthToken);
+      }
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OidcToken) {
+        output.WriteRawTag(50);
+        output.WriteMessage(OidcToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (uriOverride_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UriOverride);
+      }
+      if (HttpMethod != global::Google.Cloud.Tasks.V2.HttpMethod.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HttpMethod);
+      }
+      size += headerOverrides_.CalculateSize(_repeated_headerOverrides_codec);
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OauthToken);
+      }
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OidcToken) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OidcToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(HttpTarget other) {
+      if (other == null) {
+        return;
+      }
+      if (other.uriOverride_ != null) {
+        if (uriOverride_ == null) {
+          UriOverride = new global::Google.Cloud.Tasks.V2.UriOverride();
+        }
+        UriOverride.MergeFrom(other.UriOverride);
+      }
+      if (other.HttpMethod != global::Google.Cloud.Tasks.V2.HttpMethod.Unspecified) {
+        HttpMethod = other.HttpMethod;
+      }
+      headerOverrides_.Add(other.headerOverrides_);
+      switch (other.AuthorizationHeaderCase) {
+        case AuthorizationHeaderOneofCase.OauthToken:
+          if (OauthToken == null) {
+            OauthToken = new global::Google.Cloud.Tasks.V2.OAuthToken();
+          }
+          OauthToken.MergeFrom(other.OauthToken);
+          break;
+        case AuthorizationHeaderOneofCase.OidcToken:
+          if (OidcToken == null) {
+            OidcToken = new global::Google.Cloud.Tasks.V2.OidcToken();
+          }
+          OidcToken.MergeFrom(other.OidcToken);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (uriOverride_ == null) {
+              UriOverride = new global::Google.Cloud.Tasks.V2.UriOverride();
+            }
+            input.ReadMessage(UriOverride);
+            break;
+          }
+          case 16: {
+            HttpMethod = (global::Google.Cloud.Tasks.V2.HttpMethod) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            headerOverrides_.AddEntriesFrom(input, _repeated_headerOverrides_codec);
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Tasks.V2.OAuthToken subBuilder = new global::Google.Cloud.Tasks.V2.OAuthToken();
+            if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken) {
+              subBuilder.MergeFrom(OauthToken);
+            }
+            input.ReadMessage(subBuilder);
+            OauthToken = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Tasks.V2.OidcToken subBuilder = new global::Google.Cloud.Tasks.V2.OidcToken();
+            if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OidcToken) {
+              subBuilder.MergeFrom(OidcToken);
+            }
+            input.ReadMessage(subBuilder);
+            OidcToken = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (uriOverride_ == null) {
+              UriOverride = new global::Google.Cloud.Tasks.V2.UriOverride();
+            }
+            input.ReadMessage(UriOverride);
+            break;
+          }
+          case 16: {
+            HttpMethod = (global::Google.Cloud.Tasks.V2.HttpMethod) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            headerOverrides_.AddEntriesFrom(ref input, _repeated_headerOverrides_codec);
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Tasks.V2.OAuthToken subBuilder = new global::Google.Cloud.Tasks.V2.OAuthToken();
+            if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken) {
+              subBuilder.MergeFrom(OauthToken);
+            }
+            input.ReadMessage(subBuilder);
+            OauthToken = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Tasks.V2.OidcToken subBuilder = new global::Google.Cloud.Tasks.V2.OidcToken();
+            if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OidcToken) {
+              subBuilder.MergeFrom(OidcToken);
+            }
+            input.ReadMessage(subBuilder);
+            OidcToken = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the HttpTarget message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Defines a header message. A header can have a key and a value.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Header : pb::IMessage<Header>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Header> _parser = new pb::MessageParser<Header>(() => new Header());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Header> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Tasks.V2.HttpTarget.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Header() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Header(Header other) : this() {
+          key_ = other.key_;
+          value_ = other.value_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Header Clone() {
+          return new Header(this);
+        }
+
+        /// <summary>Field number for the "key" field.</summary>
+        public const int KeyFieldNumber = 1;
+        private string key_ = "";
+        /// <summary>
+        /// The Key of the header.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Key {
+          get { return key_; }
+          set {
+            key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "value" field.</summary>
+        public const int ValueFieldNumber = 2;
+        private string value_ = "";
+        /// <summary>
+        /// The Value of the header.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Value {
+          get { return value_; }
+          set {
+            value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Header);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Header other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Key != other.Key) return false;
+          if (Value != other.Value) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Key.Length != 0) hash ^= Key.GetHashCode();
+          if (Value.Length != 0) hash ^= Value.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Key.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Key);
+          }
+          if (Value.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Value);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Key.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Key);
+          }
+          if (Value.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Value);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Key.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
+          }
+          if (Value.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Header other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Key.Length != 0) {
+            Key = other.Key;
+          }
+          if (other.Value.Length != 0) {
+            Value = other.Value;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Key = input.ReadString();
+                break;
+              }
+              case 18: {
+                Value = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Key = input.ReadString();
+                break;
+              }
+              case 18: {
+                Value = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Wraps the Header object.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class HeaderOverride : pb::IMessage<HeaderOverride>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<HeaderOverride> _parser = new pb::MessageParser<HeaderOverride>(() => new HeaderOverride());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<HeaderOverride> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Tasks.V2.HttpTarget.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HeaderOverride() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HeaderOverride(HeaderOverride other) : this() {
+          header_ = other.header_ != null ? other.header_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HeaderOverride Clone() {
+          return new HeaderOverride(this);
+        }
+
+        /// <summary>Field number for the "header" field.</summary>
+        public const int HeaderFieldNumber = 1;
+        private global::Google.Cloud.Tasks.V2.HttpTarget.Types.Header header_;
+        /// <summary>
+        /// Header embodying a key and a value.
+        ///
+        /// Do not put business sensitive or personally identifying data in the HTTP
+        /// Header Override Configuration or other similar fields in accordance with
+        /// Section 12 (Resource Fields) of the
+        /// [Service Specific Terms](https://cloud.google.com/terms/service-terms).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Tasks.V2.HttpTarget.Types.Header Header {
+          get { return header_; }
+          set {
+            header_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as HeaderOverride);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(HeaderOverride other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Header, other.Header)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (header_ != null) hash ^= Header.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (header_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Header);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (header_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Header);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (header_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(HeaderOverride other) {
+          if (other == null) {
+            return;
+          }
+          if (other.header_ != null) {
+            if (header_ == null) {
+              Header = new global::Google.Cloud.Tasks.V2.HttpTarget.Types.Header();
+            }
+            Header.MergeFrom(other.Header);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (header_ == null) {
+                  Header = new global::Google.Cloud.Tasks.V2.HttpTarget.Types.Header();
+                }
+                input.ReadMessage(Header);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (header_ == null) {
+                  Header = new global::Google.Cloud.Tasks.V2.HttpTarget.Types.Header();
+                }
+                input.ReadMessage(Header);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// HTTP request.
   ///
   /// The task will be pushed to the worker as an HTTP request. If the worker
@@ -154,7 +2090,7 @@ namespace Google.Cloud.Tasks.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -244,7 +2180,7 @@ namespace Google.Cloud.Tasks.V2 {
     ///
     /// This map contains the header field names and values.
     /// Headers can be set when the
-    /// [task is created][google.cloud.tasks.v2beta3.CloudTasks.CreateTask].
+    /// [task is created][google.cloud.tasks.v2.CloudTasks.CreateTask].
     ///
     /// These headers represent a subset of the headers that will accompany the
     /// task's HTTP request. Some HTTP request headers will be ignored or replaced.
@@ -260,7 +2196,7 @@ namespace Google.Cloud.Tasks.V2 {
     ///
     /// `Content-Type` won't be set by Cloud Tasks. You can explicitly set
     /// `Content-Type` to a media type when the
-    ///  [task is created][google.cloud.tasks.v2beta3.CloudTasks.CreateTask].
+    ///  [task is created][google.cloud.tasks.v2.CloudTasks.CreateTask].
     ///  For example, `Content-Type` can be set to `"application/octet-stream"` or
     ///  `"application/json"`.
     ///
@@ -721,7 +2657,7 @@ namespace Google.Cloud.Tasks.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1167,7 +3103,7 @@ namespace Google.Cloud.Tasks.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1549,7 +3485,7 @@ namespace Google.Cloud.Tasks.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1804,7 +3740,7 @@ namespace Google.Cloud.Tasks.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Tasks.V2.TargetReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

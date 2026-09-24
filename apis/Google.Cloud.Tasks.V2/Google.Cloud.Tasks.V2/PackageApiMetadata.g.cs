@@ -18,6 +18,7 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
 using gpr = Google.Protobuf.Reflection;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 
@@ -41,15 +42,22 @@ namespace Google.Cloud.Tasks.V2
                     // { "get": "/v2/{name=projects/*}/locations" }
                     proto::ByteString.FromBase64("Eh8vdjIve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25z")
                 },
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v2/{name=projects/*/locations/*/operations/*}" }
+                    proto::ByteString.FromBase64("Ei4vdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9")
+                },
             });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return gcl::LocationsReflection.Descriptor;
             yield return CloudtasksReflection.Descriptor;
+            yield return CmekConfigReflection.Descriptor;
             yield return QueueReflection.Descriptor;
             yield return TargetReflection.Descriptor;
             yield return TaskReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }
