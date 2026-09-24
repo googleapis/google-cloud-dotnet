@@ -1750,6 +1750,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         public static IEnumerable<object[]> SendCommandProtobufMappingData()
         {
+            DateTime deliveryAt = new DateTime(2026, 9, 1, 12, 0, 0, DateTimeKind.Utc);
             yield return new object[]
             {
                 "QueueA",
@@ -1758,13 +1759,14 @@ namespace Google.Cloud.Spanner.Data.Tests
                     new ("MessageId", SpannerDbType.Int64, value: 1),
                     new("Payload", SpannerDbType.String, "Hello, World"),
                 ]),
+                new SendOptions() { DeliverAt = deliveryAt },
                 new Key(
                     new SpannerParameterCollection([
                         new SpannerParameter("UserId", SpannerDbType.Int64, value: 1),
                         new SpannerParameter("MessageId", SpannerDbType.Int64, value: 1)
                     ])).ToProtobuf(SpannerConversionOptions.Default),
                 Value.ForString("Hello, World"),
-                new SendOptions() { DeliverAt = new DateTime(2026, 9, 1, 12, 0, 0, DateTimeKind.Utc) },
+                Timestamp.FromDateTime(deliveryAt.ToUniversalTime()),
             };
             yield return new object[]
             {
@@ -1774,6 +1776,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     new ("MessageId", SpannerDbType.Int64, value: 1),
                     new("Payload", SpannerDbType.Bytes, new byte[] { 1, 2, 3 }),
                 ]),
+                null,
                 new Key(
                     new SpannerParameterCollection([
                         new SpannerParameter("UserId", SpannerDbType.Int64, value: 1),
@@ -1789,12 +1792,13 @@ namespace Google.Cloud.Spanner.Data.Tests
                     new ("UserId", SpannerDbType.String, value: "key1"),
                     new("Payload", SpannerDbType.Json, "{\"foo\":\"bar\"}"),
                 ]),
+                new SendOptions(),
                 new Key(
                     new SpannerParameterCollection([
                         new SpannerParameter("UserId", SpannerDbType.String, value: "key1"),
                     ])).ToProtobuf(SpannerConversionOptions.Default),
                 Value.ForString("{\"foo\":\"bar\"}"),
-                new SendOptions() { DeliverAt = new DateTime(2026, 10, 15, 8, 30, 0, DateTimeKind.Utc) },
+                null,
             };
             var duration = new Duration { Seconds = 60, Nanos = 500 };
             yield return new object[]
@@ -1804,18 +1808,25 @@ namespace Google.Cloud.Spanner.Data.Tests
                     new ("UserId", SpannerDbType.String, value: "key1"),
                     new("Payload", SpannerDbType.FromClrType(duration.GetType()), duration),
                 ]),
+                null,
                 new Key(
                     new SpannerParameterCollection([
                         new SpannerParameter("UserId", SpannerDbType.String, value: "key1"),
                     ])).ToProtobuf(SpannerConversionOptions.Default),
                 Value.ForString(Convert.ToBase64String(duration.ToByteArray())),
-                new SendOptions() { DeliverAt = new DateTime(2026, 11, 1, 0, 0, 0, DateTimeKind.Utc) },
+                null,
             };
         }
 
         [Theory]
         [MemberData(nameof(SendCommandProtobufMappingData))]
-        public void SendCommand_GetMutation_MapsProtobufCorrectly(string queue, SpannerParameterCollection parameters, ListValue expectedKey, Value expectedPayloadValue, SendOptions sendOptions)
+        public void SendCommand_GetMutation_MapsProtobufCorrsectly(
+            string queue,
+            SpannerParameterCollection parameters,
+            SendOptions sendOptions,
+            ListValue expectedKey,
+            Value expectedPayloadValue,
+            Timestamp expectedDeliveryTimeStamp)
         {
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
             using var command = connection.CreateSendCommand(queue, parameters);
@@ -1827,14 +1838,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal(queue, mutation.Send.Queue);
             Assert.Equal(expectedKey, mutation.Send.Key);
             Assert.Equal(expectedPayloadValue, mutation.Send.Payload);
-            if (sendOptions is not null)
-            {
-                Assert.Equal(Timestamp.FromDateTime(sendOptions.DeliverAt.Value.ToUniversalTime()), mutation.Send.DeliverTime);
-            }
-            else
-            {
-                Assert.Null(mutation.Send.DeliverTime);
-            }
+            Assert.Equal(expectedDeliveryTimeStamp, mutation.Send.DeliverTime);
         }
 
         [Fact]
@@ -1857,7 +1861,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.True(mutation.Ack.IgnoreNotFound);
         }
 
-        public static IEnumerable<object[]> MissingPayloadSendParameters()
+        public static IEnumerable<object[]> SendParametersMissingPayload()
         {
             yield return new object[] { new SpannerParameterCollection([
                 new ("UserId", SpannerDbType.String, value: "key1"),
@@ -1865,16 +1869,16 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Theory]
-        [MemberData(nameof(InvalidSendKeyParameters))]
-        public void SendCommand_MissingPayload_ThrowsInvalidOperationException(SpannerParameterCollection invalidKeySet)
+        [MemberData(nameof(SendParametersMissingPayload))]
+        public void SendCommand_MissingPayload_ThrowsInvalidOperationException(SpannerParameterCollection parameters)
         {
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
-            using var command = connection.CreateSendCommand("TestQueue", invalidKeySet);
+            using var command = connection.CreateSendCommand("TestQueue", parameters);
 
             Assert.Throws<InvalidOperationException>(command.GetMutation);
         }
 
-        public static IEnumerable<object[]> InvalidSendKeyParameters()
+        public static IEnumerable<object[]> SendParametersMissingKey()
         {
             yield return new object[] { new SpannerParameterCollection([
                 new("Payload", SpannerDbType.Bytes, Encoding.UTF8.GetBytes("Hello, World")),
@@ -1882,26 +1886,26 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Theory]
-        [MemberData(nameof(InvalidSendKeyParameters))]
-        public void SendCommand_InvalidKeySet_ThrowsInvalidOperationException(SpannerParameterCollection invalidKeySet)
+        [MemberData(nameof(SendParametersMissingKey))]
+        public void SendCommand_InvalidParameterCollection_ThrowsInvalidOperationException(SpannerParameterCollection parameters)
         {
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
-            using var command = connection.CreateSendCommand("TestQueue", invalidKeySet);
+            using var command = connection.CreateSendCommand("TestQueue", parameters);
 
             Assert.Throws<InvalidOperationException>(command.GetMutation);
         }
 
-        public static IEnumerable<object[]> InvalidAckKeyParameters()
+        public static IEnumerable<object[]> EmptyAckParameters()
         {
             yield return new object[] { new SpannerParameterCollection() };
         }
 
         [Theory]
-        [MemberData(nameof(InvalidAckKeyParameters))]
-        public void AckCommand_InvalidKeySet_ThrowsInvalidOperationException(SpannerParameterCollection invalidKeySet)
+        [MemberData(nameof(EmptyAckParameters))]
+        public void AckCommand_InvalidParameterCollection_ThrowsInvalidOperationException(SpannerParameterCollection parameters)
         {
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
-            using var command = connection.CreateAckCommand("TestQueue", invalidKeySet);
+            using var command = connection.CreateAckCommand("TestQueue", parameters);
 
             Assert.Throws<InvalidOperationException>(command.GetMutation);
         }
