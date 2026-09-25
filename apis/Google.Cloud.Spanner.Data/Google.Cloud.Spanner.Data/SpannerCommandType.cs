@@ -59,5 +59,15 @@ namespace Google.Cloud.Spanner.Data
         /// Reads rows from a table
         /// </summary>
         Read,
+
+        /// <summary>
+        /// Send a message to a queue
+        /// </summary>
+        Send,
+
+        /// <summary>
+        /// Ack a message from a queue.
+        /// </summary>
+        Ack,
     }
 }

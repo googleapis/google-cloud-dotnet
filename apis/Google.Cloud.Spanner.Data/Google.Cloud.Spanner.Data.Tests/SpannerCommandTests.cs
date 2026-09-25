@@ -19,6 +19,7 @@ using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Cloud.Spanner.V1.Tests;
+using Google.Protobuf;
 using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -27,6 +28,8 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
 using Xunit;
@@ -1682,6 +1685,229 @@ namespace Google.Cloud.Spanner.Data.Tests
             var clrValue = dbType.ConvertToClrType<object>(protobufValue, options);
             // Check that CLR type of value is as expected.
             Assert.Equal(clrType, clrValue.GetType());
+        }
+
+        public static IEnumerable<object[]> CreateSendCommandParameters()
+        {
+            DateTime s_deliverAtTime = DateTime.UtcNow;
+
+            yield return new object[] {
+                "MyQueue",
+                new SpannerParameterCollection([
+                    new SpannerParameter("UserId", SpannerDbType.Int64, value: 1),
+                    new SpannerParameter("MessageId", SpannerDbType.Int64, value: 1),
+                    new("Payload", SpannerDbType.Bytes, Encoding.UTF8.GetBytes("Hello, World")),
+                ]),
+                new SendOptions() { DeliverAt = s_deliverAtTime }
+            };
+        }
+
+        [Theory]
+        [MemberData(nameof(CreateSendCommandParameters))]
+        public void CreateSendCommand_PopulatesProperties(
+            string queue,
+            SpannerParameterCollection parameters,
+            SendOptions sendOptions)
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+
+            using var sendCommand = connection.CreateSendCommand(queue, parameters);
+            sendCommand.SendOptions = sendOptions;
+
+            Assert.Equal(queue, sendCommand.SpannerCommandTextBuilder.TargetTable);
+            Assert.Same(parameters, sendCommand.Parameters);
+            Assert.Same(sendOptions, sendCommand.SendOptions);
+        }
+
+        public static IEnumerable<object[]> CreateAckCommandParameters()
+        {
+            yield return new object[] {
+                "MyQueue",
+                new SpannerParameterCollection([
+                    new SpannerParameter("UserId", SpannerDbType.Int64, value: 1),
+                    new SpannerParameter("MessageId", SpannerDbType.Int64, value: 1),
+                ]),
+                new AckOptions() { IgnoreNotFound = true }
+            };
+        }
+
+        [Theory]
+        [MemberData(nameof(CreateAckCommandParameters))]
+        public void CreateAckCommand_PopulatesProperties(
+            string queue,
+            SpannerParameterCollection parameters,
+            AckOptions ackOptions)
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+
+            using var ackCommand = connection.CreateAckCommand(queue, parameters);
+            ackCommand.AckOptions = ackOptions;
+
+            Assert.Equal(queue, ackCommand.SpannerCommandTextBuilder.TargetTable);
+            Assert.Same(parameters, ackCommand.Parameters);
+            Assert.Same(ackOptions, ackCommand.AckOptions);
+        }
+
+        public static IEnumerable<object[]> SendCommandProtobufMappingData()
+        {
+            DateTime deliveryAt = new DateTime(2026, 9, 1, 12, 0, 0, DateTimeKind.Utc);
+            yield return new object[]
+            {
+                "QueueA",
+                new SpannerParameterCollection([
+                    new ("UserId", SpannerDbType.Int64, value: 1),
+                    new ("MessageId", SpannerDbType.Int64, value: 1),
+                    new("Payload", SpannerDbType.String, "Hello, World"),
+                ]),
+                new SendOptions() { DeliverAt = deliveryAt },
+                new Key(
+                    new SpannerParameterCollection([
+                        new SpannerParameter("UserId", SpannerDbType.Int64, value: 1),
+                        new SpannerParameter("MessageId", SpannerDbType.Int64, value: 1)
+                    ])).ToProtobuf(SpannerConversionOptions.Default),
+                Value.ForString("Hello, World"),
+                Timestamp.FromDateTime(deliveryAt.ToUniversalTime()),
+            };
+            yield return new object[]
+            {
+                "QueueB",
+                new SpannerParameterCollection([
+                    new ("UserId", SpannerDbType.Int64, value: 1),
+                    new ("MessageId", SpannerDbType.Int64, value: 1),
+                    new("Payload", SpannerDbType.Bytes, new byte[] { 1, 2, 3 }),
+                ]),
+                null,
+                new Key(
+                    new SpannerParameterCollection([
+                        new SpannerParameter("UserId", SpannerDbType.Int64, value: 1),
+                        new SpannerParameter("MessageId", SpannerDbType.Int64, value: 1)
+                    ])).ToProtobuf(SpannerConversionOptions.Default),
+                Value.ForString(Convert.ToBase64String([1, 2, 3])),
+                null,
+            };
+            yield return new object[]
+            {
+                "QueueC",
+                new SpannerParameterCollection([
+                    new ("UserId", SpannerDbType.String, value: "key1"),
+                    new("Payload", SpannerDbType.Json, "{\"foo\":\"bar\"}"),
+                ]),
+                new SendOptions(),
+                new Key(
+                    new SpannerParameterCollection([
+                        new SpannerParameter("UserId", SpannerDbType.String, value: "key1"),
+                    ])).ToProtobuf(SpannerConversionOptions.Default),
+                Value.ForString("{\"foo\":\"bar\"}"),
+                null,
+            };
+            var duration = new Duration { Seconds = 60, Nanos = 500 };
+            yield return new object[]
+            {
+                "QueueProto",
+                new SpannerParameterCollection([
+                    new ("UserId", SpannerDbType.String, value: "key1"),
+                    new("Payload", SpannerDbType.FromClrType(duration.GetType()), duration),
+                ]),
+                null,
+                new Key(
+                    new SpannerParameterCollection([
+                        new SpannerParameter("UserId", SpannerDbType.String, value: "key1"),
+                    ])).ToProtobuf(SpannerConversionOptions.Default),
+                Value.ForString(Convert.ToBase64String(duration.ToByteArray())),
+                null,
+            };
+        }
+
+        [Theory]
+        [MemberData(nameof(SendCommandProtobufMappingData))]
+        public void SendCommand_GetMutation_MapsProtobufCorrsectly(
+            string queue,
+            SpannerParameterCollection parameters,
+            SendOptions sendOptions,
+            ListValue expectedKey,
+            Value expectedPayloadValue,
+            Timestamp expectedDeliveryTimeStamp)
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            using var command = connection.CreateSendCommand(queue, parameters);
+            command.SendOptions = sendOptions;
+
+            var mutation = command.GetMutation();
+
+            Assert.Equal(Mutation.OperationOneofCase.Send, mutation.OperationCase);
+            Assert.Equal(queue, mutation.Send.Queue);
+            Assert.Equal(expectedKey, mutation.Send.Key);
+            Assert.Equal(expectedPayloadValue, mutation.Send.Payload);
+            Assert.Equal(expectedDeliveryTimeStamp, mutation.Send.DeliverTime);
+        }
+
+        [Fact]
+        public void AckCommand_GetMutation_MapsProtobufCorrectly()
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            var parameters = new SpannerParameterCollection([
+                new ("UserId", SpannerDbType.String, value: "key1"),
+            ]);
+            var expectedKey = new Key(parameters).ToProtobuf(SpannerConversionOptions.Default);
+
+            using var command = connection.CreateAckCommand("TestQueue", parameters);
+            command.AckOptions = new AckOptions() { IgnoreNotFound = true };
+
+            var mutation = command.GetMutation();
+
+            Assert.Equal(Mutation.OperationOneofCase.Ack, mutation.OperationCase);
+            Assert.Equal("TestQueue", mutation.Ack.Queue);
+            Assert.Equal(expectedKey, mutation.Ack.Key);
+            Assert.Equal(command.AckOptions.IgnoreNotFound, mutation.Ack.IgnoreNotFound);
+        }
+
+        public static IEnumerable<object[]> SendParametersMissingPayload()
+        {
+            yield return new object[] { new SpannerParameterCollection([
+                new ("UserId", SpannerDbType.String, value: "key1"),
+            ]) };
+        }
+
+        [Theory]
+        [MemberData(nameof(SendParametersMissingPayload))]
+        public void SendCommand_MissingPayload_ThrowsInvalidOperationException(SpannerParameterCollection parameters)
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            using var command = connection.CreateSendCommand("TestQueue", parameters);
+
+            Assert.Throws<InvalidOperationException>(command.GetMutation);
+        }
+
+        public static IEnumerable<object[]> SendParametersMissingKey()
+        {
+            yield return new object[] { new SpannerParameterCollection([
+                new("Payload", SpannerDbType.Bytes, Encoding.UTF8.GetBytes("Hello, World")),
+            ]) };
+        }
+
+        [Theory]
+        [MemberData(nameof(SendParametersMissingKey))]
+        public void SendCommand_InvalidParameterCollection_ThrowsInvalidOperationException(SpannerParameterCollection parameters)
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            using var command = connection.CreateSendCommand("TestQueue", parameters);
+
+            Assert.Throws<InvalidOperationException>(command.GetMutation);
+        }
+
+        public static IEnumerable<object[]> EmptyAckParameters()
+        {
+            yield return new object[] { new SpannerParameterCollection() };
+        }
+
+        [Theory]
+        [MemberData(nameof(EmptyAckParameters))]
+        public void AckCommand_InvalidParameterCollection_ThrowsInvalidOperationException(SpannerParameterCollection parameters)
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            using var command = connection.CreateAckCommand("TestQueue", parameters);
+
+            Assert.Throws<InvalidOperationException>(command.GetMutation);
         }
 
         private Struct RunExecuteStreamingSqlWithParameter(SpannerConnectionStringBuilder builder, SpannerParameter parameter)

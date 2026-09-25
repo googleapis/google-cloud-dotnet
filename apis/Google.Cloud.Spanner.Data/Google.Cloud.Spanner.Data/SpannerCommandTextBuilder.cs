@@ -32,6 +32,8 @@ namespace Google.Cloud.Spanner.Data
         private const string UpdateCommand = "UPDATE";
         private const string DeleteCommand = "DELETE";
         private const string SelectCommand = "SELECT";
+        private const string SendCommand = "SEND";
+        private const string AckCommand = "ACK";
         private const string WithCommand = "WITH"; // Queries may also start with a WITH clause.
         private const string AlterCommand = "ALTER";
         private const string CreateCommand = "CREATE";
@@ -186,6 +188,24 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
+        /// for sending a message to a queue.
+        /// </summary>
+        /// <param name="queue">The name of the Spanner database queue for which messages will be sent. Must not be null.</param>
+        /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Send"/> Spanner command.</returns>
+        public static SpannerCommandTextBuilder CreateSendTextBuilder(string queue) =>
+            CreateBuilderForTableDml(SendCommand, SpannerCommandType.Send, queue);
+
+        /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
+        /// for acking a message to a queue.
+        /// </summary>
+        /// <param name="queue">The name of the Spanner database queue for which messages will be acked. Must not be null.</param>
+        /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Ack"/> Spanner command.</returns>
+        public static SpannerCommandTextBuilder CreateAckTextBuilder(string queue) =>
+            CreateBuilderForTableDml(AckCommand, SpannerCommandType.Ack, queue);
+
+        /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
         /// for querying rows via a SQL query.
         /// </summary>
         /// <param name="sqlQuery">The full SQL query. Must not be null or empty.</param>
@@ -245,6 +265,8 @@ namespace Google.Cloud.Spanner.Data
         /// If the intended <see cref="SpannerCommandType"/> is Update, Delete,
         /// InsertOrUpdate, or Insert, then the text should be '[spanner command type] [table name]'
         /// such as 'INSERT MYTABLE'.  Must not be null or empty.
+        /// Note: Insert and Delete are never treated as Send and Ack even when the
+        /// target table is internally a queue.
         /// </remarks>
         /// <param name="commandText">The full command text containing a query, DDL statement or insert/update/delete
         /// operation.  The given text will be parsed and validated. Must not be null.</param>
