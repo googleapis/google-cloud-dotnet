@@ -28,6 +28,12 @@
                 "IngestEventsAsync"
               ]
             },
+            "IngestUsers": {
+              "methods": [
+                "IngestUsers",
+                "IngestUsersAsync"
+              ]
+            },
             "RemoveAllAudienceMembers": {
               "methods": [
                 "RemoveAllAudienceMembers",
@@ -38,6 +44,12 @@
               "methods": [
                 "RemoveAudienceMembers",
                 "RemoveAudienceMembersAsync"
+              ]
+            },
+            "RemoveUsers": {
+              "methods": [
+                "RemoveUsers",
+                "RemoveUsersAsync"
               ]
             },
             "RetrieveRequestStatus": {

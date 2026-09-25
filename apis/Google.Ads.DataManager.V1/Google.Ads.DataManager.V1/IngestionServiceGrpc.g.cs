@@ -80,6 +80,14 @@ namespace Google.Ads.DataManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.DataManager.V1.IngestEventsResponse> __Marshaller_google_ads_datamanager_v1_IngestEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.DataManager.V1.IngestEventsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.DataManager.V1.IngestUsersRequest> __Marshaller_google_ads_datamanager_v1_IngestUsersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.DataManager.V1.IngestUsersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.DataManager.V1.IngestUsersResponse> __Marshaller_google_ads_datamanager_v1_IngestUsersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.DataManager.V1.IngestUsersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.DataManager.V1.RemoveUsersRequest> __Marshaller_google_ads_datamanager_v1_RemoveUsersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.DataManager.V1.RemoveUsersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.DataManager.V1.RemoveUsersResponse> __Marshaller_google_ads_datamanager_v1_RemoveUsersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.DataManager.V1.RemoveUsersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.DataManager.V1.IngestAdEventsRequest> __Marshaller_google_ads_datamanager_v1_IngestAdEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.DataManager.V1.IngestAdEventsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.DataManager.V1.IngestAdEventsResponse> __Marshaller_google_ads_datamanager_v1_IngestAdEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.DataManager.V1.IngestAdEventsResponse.Parser));
@@ -119,6 +127,22 @@ namespace Google.Ads.DataManager.V1 {
         "IngestEvents",
         __Marshaller_google_ads_datamanager_v1_IngestEventsRequest,
         __Marshaller_google_ads_datamanager_v1_IngestEventsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.DataManager.V1.IngestUsersRequest, global::Google.Ads.DataManager.V1.IngestUsersResponse> __Method_IngestUsers = new grpc::Method<global::Google.Ads.DataManager.V1.IngestUsersRequest, global::Google.Ads.DataManager.V1.IngestUsersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "IngestUsers",
+        __Marshaller_google_ads_datamanager_v1_IngestUsersRequest,
+        __Marshaller_google_ads_datamanager_v1_IngestUsersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.DataManager.V1.RemoveUsersRequest, global::Google.Ads.DataManager.V1.RemoveUsersResponse> __Method_RemoveUsers = new grpc::Method<global::Google.Ads.DataManager.V1.RemoveUsersRequest, global::Google.Ads.DataManager.V1.RemoveUsersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RemoveUsers",
+        __Marshaller_google_ads_datamanager_v1_RemoveUsersRequest,
+        __Marshaller_google_ads_datamanager_v1_RemoveUsersResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.DataManager.V1.IngestAdEventsRequest, global::Google.Ads.DataManager.V1.IngestAdEventsResponse> __Method_IngestAdEvents = new grpc::Method<global::Google.Ads.DataManager.V1.IngestAdEventsRequest, global::Google.Ads.DataManager.V1.IngestAdEventsResponse>(
@@ -196,6 +220,39 @@ namespace Google.Ads.DataManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.DataManager.V1.IngestEventsResponse> IngestEvents(global::Google.Ads.DataManager.V1.IngestEventsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Uploads a list of users to the provided destinations. Unlike
+      /// [IngestAudienceMembers][google.ads.datamanager.v1.IngestionService.IngestAudienceMembers]
+      /// (which adds users to specific advertiser audience lists for targeting),
+      /// `IngestUsers` ingests account level identity linkage data (for example,
+      /// user identifiers linked to mobile IDs) independent of specific audience
+      /// segments.
+      ///
+      /// This feature is only available to accounts on an allowlist.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.DataManager.V1.IngestUsersResponse> IngestUsers(global::Google.Ads.DataManager.V1.IngestUsersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Removes a list of users from the provided destinations.
+      ///
+      /// This feature is only available to accounts on an allowlist.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.DataManager.V1.RemoveUsersResponse> RemoveUsers(global::Google.Ads.DataManager.V1.RemoveUsersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -474,6 +531,138 @@ namespace Google.Ads.DataManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_IngestEvents, null, options, request);
       }
       /// <summary>
+      /// Uploads a list of users to the provided destinations. Unlike
+      /// [IngestAudienceMembers][google.ads.datamanager.v1.IngestionService.IngestAudienceMembers]
+      /// (which adds users to specific advertiser audience lists for targeting),
+      /// `IngestUsers` ingests account level identity linkage data (for example,
+      /// user identifiers linked to mobile IDs) independent of specific audience
+      /// segments.
+      ///
+      /// This feature is only available to accounts on an allowlist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.DataManager.V1.IngestUsersResponse IngestUsers(global::Google.Ads.DataManager.V1.IngestUsersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IngestUsers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Uploads a list of users to the provided destinations. Unlike
+      /// [IngestAudienceMembers][google.ads.datamanager.v1.IngestionService.IngestAudienceMembers]
+      /// (which adds users to specific advertiser audience lists for targeting),
+      /// `IngestUsers` ingests account level identity linkage data (for example,
+      /// user identifiers linked to mobile IDs) independent of specific audience
+      /// segments.
+      ///
+      /// This feature is only available to accounts on an allowlist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.DataManager.V1.IngestUsersResponse IngestUsers(global::Google.Ads.DataManager.V1.IngestUsersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_IngestUsers, null, options, request);
+      }
+      /// <summary>
+      /// Uploads a list of users to the provided destinations. Unlike
+      /// [IngestAudienceMembers][google.ads.datamanager.v1.IngestionService.IngestAudienceMembers]
+      /// (which adds users to specific advertiser audience lists for targeting),
+      /// `IngestUsers` ingests account level identity linkage data (for example,
+      /// user identifiers linked to mobile IDs) independent of specific audience
+      /// segments.
+      ///
+      /// This feature is only available to accounts on an allowlist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.DataManager.V1.IngestUsersResponse> IngestUsersAsync(global::Google.Ads.DataManager.V1.IngestUsersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IngestUsersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Uploads a list of users to the provided destinations. Unlike
+      /// [IngestAudienceMembers][google.ads.datamanager.v1.IngestionService.IngestAudienceMembers]
+      /// (which adds users to specific advertiser audience lists for targeting),
+      /// `IngestUsers` ingests account level identity linkage data (for example,
+      /// user identifiers linked to mobile IDs) independent of specific audience
+      /// segments.
+      ///
+      /// This feature is only available to accounts on an allowlist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.DataManager.V1.IngestUsersResponse> IngestUsersAsync(global::Google.Ads.DataManager.V1.IngestUsersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_IngestUsers, null, options, request);
+      }
+      /// <summary>
+      /// Removes a list of users from the provided destinations.
+      ///
+      /// This feature is only available to accounts on an allowlist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.DataManager.V1.RemoveUsersResponse RemoveUsers(global::Google.Ads.DataManager.V1.RemoveUsersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveUsers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Removes a list of users from the provided destinations.
+      ///
+      /// This feature is only available to accounts on an allowlist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.DataManager.V1.RemoveUsersResponse RemoveUsers(global::Google.Ads.DataManager.V1.RemoveUsersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RemoveUsers, null, options, request);
+      }
+      /// <summary>
+      /// Removes a list of users from the provided destinations.
+      ///
+      /// This feature is only available to accounts on an allowlist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.DataManager.V1.RemoveUsersResponse> RemoveUsersAsync(global::Google.Ads.DataManager.V1.RemoveUsersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveUsersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Removes a list of users from the provided destinations.
+      ///
+      /// This feature is only available to accounts on an allowlist.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.DataManager.V1.RemoveUsersResponse> RemoveUsersAsync(global::Google.Ads.DataManager.V1.RemoveUsersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RemoveUsers, null, options, request);
+      }
+      /// <summary>
       /// Uploads a list of
       /// [AdEvent][google.ads.datamanager.v1.AdEvent] resources to Google
       /// Analytics.
@@ -603,6 +792,8 @@ namespace Google.Ads.DataManager.V1 {
           .AddMethod(__Method_RemoveAudienceMembers, serviceImpl.RemoveAudienceMembers)
           .AddMethod(__Method_RemoveAllAudienceMembers, serviceImpl.RemoveAllAudienceMembers)
           .AddMethod(__Method_IngestEvents, serviceImpl.IngestEvents)
+          .AddMethod(__Method_IngestUsers, serviceImpl.IngestUsers)
+          .AddMethod(__Method_RemoveUsers, serviceImpl.RemoveUsers)
           .AddMethod(__Method_IngestAdEvents, serviceImpl.IngestAdEvents)
           .AddMethod(__Method_RetrieveRequestStatus, serviceImpl.RetrieveRequestStatus).Build();
     }
@@ -618,6 +809,8 @@ namespace Google.Ads.DataManager.V1 {
       serviceBinder.AddMethod(__Method_RemoveAudienceMembers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.DataManager.V1.RemoveAudienceMembersRequest, global::Google.Ads.DataManager.V1.RemoveAudienceMembersResponse>(serviceImpl.RemoveAudienceMembers));
       serviceBinder.AddMethod(__Method_RemoveAllAudienceMembers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.DataManager.V1.RemoveAllAudienceMembersRequest, global::Google.Ads.DataManager.V1.RemoveAllAudienceMembersResponse>(serviceImpl.RemoveAllAudienceMembers));
       serviceBinder.AddMethod(__Method_IngestEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.DataManager.V1.IngestEventsRequest, global::Google.Ads.DataManager.V1.IngestEventsResponse>(serviceImpl.IngestEvents));
+      serviceBinder.AddMethod(__Method_IngestUsers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.DataManager.V1.IngestUsersRequest, global::Google.Ads.DataManager.V1.IngestUsersResponse>(serviceImpl.IngestUsers));
+      serviceBinder.AddMethod(__Method_RemoveUsers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.DataManager.V1.RemoveUsersRequest, global::Google.Ads.DataManager.V1.RemoveUsersResponse>(serviceImpl.RemoveUsers));
       serviceBinder.AddMethod(__Method_IngestAdEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.DataManager.V1.IngestAdEventsRequest, global::Google.Ads.DataManager.V1.IngestAdEventsResponse>(serviceImpl.IngestAdEvents));
       serviceBinder.AddMethod(__Method_RetrieveRequestStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.DataManager.V1.RetrieveRequestStatusRequest, global::Google.Ads.DataManager.V1.RetrieveRequestStatusResponse>(serviceImpl.RetrieveRequestStatus));
     }

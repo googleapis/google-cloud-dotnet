@@ -25,7 +25,7 @@ namespace Google.Ads.DataManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2Vycm9yLnByb3RvEhlnb29n",
-            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxKoMjCgtFcnJvclJlYXNvbhIcChhFUlJP",
+            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxKr8jCgtFcnJvclJlYXNvbhIcChhFUlJP",
             "Ul9SRUFTT05fVU5TUEVDSUZJRUQQABISCg5JTlRFUk5BTF9FUlJPUhABEhUK",
             "EURFQURMSU5FX0VYQ0VFREVEEAISFgoSUkVTT1VSQ0VfRVhIQVVTVEVEEAMS",
             "DQoJTk9UX0ZPVU5EEAQSFQoRUEVSTUlTU0lPTl9ERU5JRUQQBRIUChBJTlZB",
@@ -120,16 +120,18 @@ namespace Google.Ads.DataManager.V1 {
             "X01JU01BVENIEHQSJgoiQ1VTVE9NX1ZBUklBQkxFX1ZBTFVFX0NPTlRBSU5T",
             "X1BJSRB1Eh8KG0NVU1RPTV9WQVJJQUJMRV9OT1RfRU5BQkxFRBB2EiEKHUlO",
             "VkFMSURfQ1VTVE9NX1ZBUklBQkxFX1ZBTFVFEHcSHQoZQ1VTVE9NX1ZBUklB",
-            "QkxFX05PVF9GT1VORBB4EisKJ0JBU0VMSU5FX0xPQ0FUSU9OX0FVVE9fREVU",
-            "RUNUSU9OX0ZBSUxFRBB6EiIKHklOU0lHSFRTX01JU1NJTkdfRk9SX0RJTUVO",
-            "U0lPThB7EiYKIlJFUVVJUkVEX1BSRVJFUVVJU0lURV9MSU5LX01JU1NJTkcQ",
-            "fBIdChlJTlZBTElEX1JFTU9WRV9BU19PRl9USU1FEH0SEwoPUkVRVUVTVF9U",
-            "T09fT0xEEH4SKgomQ09OVkVSU0lPTl9BQ1RJT05fVE9PX1JFQ0VOVExZX0NS",
-            "RUFURUQQf0LHAQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCCkVy",
-            "cm9yUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhbWFuYWdlci9h",
-            "cGl2MS9kYXRhbWFuYWdlcnBiO2RhdGFtYW5hZ2VycGKqAhlHb29nbGUuQWRz",
-            "LkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdlclxWMeoC",
-            "HEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "QkxFX05PVF9GT1VORBB4EhIKDlRPT19NQU5ZX1VTRVJTEHkSKwonQkFTRUxJ",
+            "TkVfTE9DQVRJT05fQVVUT19ERVRFQ1RJT05fRkFJTEVEEHoSIgoeSU5TSUdI",
+            "VFNfTUlTU0lOR19GT1JfRElNRU5TSU9OEHsSJgoiUkVRVUlSRURfUFJFUkVR",
+            "VUlTSVRFX0xJTktfTUlTU0lORxB8Eh0KGUlOVkFMSURfUkVNT1ZFX0FTX09G",
+            "X1RJTUUQfRITCg9SRVFVRVNUX1RPT19PTEQQfhIqCiZDT05WRVJTSU9OX0FD",
+            "VElPTl9UT09fUkVDRU5UTFlfQ1JFQVRFRBB/EiYKIUlOVkFMSURfQURfSURF",
+            "TlRJRklFUl9GT1JfQUNDT1VOVBCAAULHAQodY29tLmdvb2dsZS5hZHMuZGF0",
+            "YW1hbmFnZXIudjFCCkVycm9yUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9kYXRhbWFuYWdlci9hcGl2MS9kYXRhbWFuYWdlcnBiO2RhdGFtYW5hZ2Vy",
+            "cGKqAhlHb29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xE",
+            "YXRhTWFuYWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.ErrorReason), }, null, null));
@@ -647,6 +649,10 @@ namespace Google.Ads.DataManager.V1 {
     /// </summary>
     [pbr::OriginalName("CUSTOM_VARIABLE_NOT_FOUND")] CustomVariableNotFound = 120,
     /// <summary>
+    /// Maximum number of users allowed per request is 10,000.
+    /// </summary>
+    [pbr::OriginalName("TOO_MANY_USERS")] TooManyUsers = 121,
+    /// <summary>
     /// The
     /// [location_auto_detection_enabled][google.ads.datamanager.v1.Baseline.location_auto_detection_enabled]
     /// field of the request was set to `true`, but auto detection of baseline
@@ -676,6 +682,17 @@ namespace Google.Ads.DataManager.V1 {
     /// The conversion action was created too recently.
     /// </summary>
     [pbr::OriginalName("CONVERSION_ACTION_TOO_RECENTLY_CREATED")] ConversionActionTooRecentlyCreated = 127,
+    /// <summary>
+    /// The ad identifier does not belong to the account.
+    ///
+    /// For example, the [`gclid`][google.ads.datamanager.v1.AdIdentifiers.gclid]
+    /// isn't associated with the
+    /// [`operating_account`][google.ads.datamanager.v1.Destination.operating_account]
+    /// and
+    /// [`product_destination_id`][google.ads.datamanager.v1.Destination.product_destination_id]
+    /// of the destination.
+    /// </summary>
+    [pbr::OriginalName("INVALID_AD_IDENTIFIER_FOR_ACCOUNT")] InvalidAdIdentifierForAccount = 128,
   }
 
   #endregion

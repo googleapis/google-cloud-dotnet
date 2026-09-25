@@ -399,6 +399,200 @@
       ]
     },
     {
+      "regionTag": "datamanager_v1_generated_IngestionService_IngestUsers_sync",
+      "title": "IngestUsersRequestObject",
+      "description": "Snippet for IngestUsers",
+      "file": "IngestionServiceClient.IngestUsersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "IngestUsers",
+        "fullName": "Google.Ads.DataManager.V1.IngestionServiceClient.IngestUsers",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.IngestUsersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.IngestUsersResponse",
+        "client": {
+          "shortName": "IngestionServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.IngestionServiceClient"
+        },
+        "method": {
+          "shortName": "IngestUsers",
+          "fullName": "google.ads.datamanager.v1.IngestionService.IngestUsers",
+          "service": {
+            "shortName": "IngestionService",
+            "fullName": "google.ads.datamanager.v1.IngestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_IngestionService_IngestUsers_async",
+      "title": "IngestUsersRequestObjectAsync",
+      "description": "Snippet for IngestUsersAsync",
+      "file": "IngestionServiceClient.IngestUsersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "IngestUsersAsync",
+        "fullName": "Google.Ads.DataManager.V1.IngestionServiceClient.IngestUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.IngestUsersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.IngestUsersResponse>",
+        "client": {
+          "shortName": "IngestionServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.IngestionServiceClient"
+        },
+        "method": {
+          "shortName": "IngestUsers",
+          "fullName": "google.ads.datamanager.v1.IngestionService.IngestUsers",
+          "service": {
+            "shortName": "IngestionService",
+            "fullName": "google.ads.datamanager.v1.IngestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_IngestionService_RemoveUsers_sync",
+      "title": "RemoveUsersRequestObject",
+      "description": "Snippet for RemoveUsers",
+      "file": "IngestionServiceClient.RemoveUsersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveUsers",
+        "fullName": "Google.Ads.DataManager.V1.IngestionServiceClient.RemoveUsers",
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.RemoveUsersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.DataManager.V1.RemoveUsersResponse",
+        "client": {
+          "shortName": "IngestionServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.IngestionServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveUsers",
+          "fullName": "google.ads.datamanager.v1.IngestionService.RemoveUsers",
+          "service": {
+            "shortName": "IngestionService",
+            "fullName": "google.ads.datamanager.v1.IngestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datamanager_v1_generated_IngestionService_RemoveUsers_async",
+      "title": "RemoveUsersRequestObjectAsync",
+      "description": "Snippet for RemoveUsersAsync",
+      "file": "IngestionServiceClient.RemoveUsersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveUsersAsync",
+        "fullName": "Google.Ads.DataManager.V1.IngestionServiceClient.RemoveUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.DataManager.V1.RemoveUsersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.DataManager.V1.RemoveUsersResponse>",
+        "client": {
+          "shortName": "IngestionServiceClient",
+          "fullName": "Google.Ads.DataManager.V1.IngestionServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveUsers",
+          "fullName": "google.ads.datamanager.v1.IngestionService.RemoveUsers",
+          "service": {
+            "shortName": "IngestionService",
+            "fullName": "google.ads.datamanager.v1.IngestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "datamanager_v1_generated_IngestionService_IngestAdEvents_sync",
       "title": "IngestAdEventsRequestObject",
       "description": "Snippet for IngestAdEvents",
