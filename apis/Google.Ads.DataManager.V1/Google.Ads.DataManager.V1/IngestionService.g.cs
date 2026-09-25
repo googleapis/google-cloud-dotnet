@@ -35,89 +35,113 @@ namespace Google.Ads.DataManager.V1 {
             "L3YxL3Byb2Nlc3NpbmdfZXJyb3JzLnByb3RvGj5nb29nbGUvYWRzL2RhdGFt",
             "YW5hZ2VyL3YxL3JlcXVlc3Rfc3RhdHVzX3Blcl9kZXN0aW5hdGlvbi5wcm90",
             "bxowZ29vZ2xlL2Fkcy9kYXRhbWFuYWdlci92MS90ZXJtc19vZl9zZXJ2aWNl",
-            "LnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUv",
-            "YXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
-            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLQAwocSW5n",
-            "ZXN0QXVkaWVuY2VNZW1iZXJzUmVxdWVzdBJBCgxkZXN0aW5hdGlvbnMYASAD",
-            "KAsyJi5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkRlc3RpbmF0aW9uQgPg",
-            "QQISSAoQYXVkaWVuY2VfbWVtYmVycxgCIAMoCzIpLmdvb2dsZS5hZHMuZGF0",
-            "YW1hbmFnZXIudjEuQXVkaWVuY2VNZW1iZXJCA+BBAhI4Cgdjb25zZW50GAMg",
-            "ASgLMiIuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Db25zZW50QgPgQQES",
-            "GgoNdmFsaWRhdGVfb25seRgEIAEoCEID4EEBEjoKCGVuY29kaW5nGAUgASgO",
-            "MiMuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5FbmNvZGluZ0ID4EEBEkcK",
-            "D2VuY3J5cHRpb25faW5mbxgGIAEoCzIpLmdvb2dsZS5hZHMuZGF0YW1hbmFn",
-            "ZXIudjEuRW5jcnlwdGlvbkluZm9CA+BBARJIChB0ZXJtc19vZl9zZXJ2aWNl",
-            "GAcgASgLMikuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5UZXJtc09mU2Vy",
-            "dmljZUID4EEBInQKHUluZ2VzdEF1ZGllbmNlTWVtYmVyc1Jlc3BvbnNlEhIK",
-            "CnJlcXVlc3RfaWQYASABKAkSPwoOZmllbGRfd2FybmluZ3MYAiADKAsyJy5n",
-            "b29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkZpZWxkV2FybmluZyLMAgocUmVt",
-            "b3ZlQXVkaWVuY2VNZW1iZXJzUmVxdWVzdBJBCgxkZXN0aW5hdGlvbnMYASAD",
-            "KAsyJi5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkRlc3RpbmF0aW9uQgPg",
-            "QQISSAoQYXVkaWVuY2VfbWVtYmVycxgCIAMoCzIpLmdvb2dsZS5hZHMuZGF0",
-            "YW1hbmFnZXIudjEuQXVkaWVuY2VNZW1iZXJCA+BBAhIaCg12YWxpZGF0ZV9v",
-            "bmx5GAMgASgIQgPgQQESOgoIZW5jb2RpbmcYBCABKA4yIy5nb29nbGUuYWRz",
-            "LmRhdGFtYW5hZ2VyLnYxLkVuY29kaW5nQgPgQQESRwoPZW5jcnlwdGlvbl9p",
-            "bmZvGAUgASgLMikuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5FbmNyeXB0",
-            "aW9uSW5mb0ID4EEBIjMKHVJlbW92ZUF1ZGllbmNlTWVtYmVyc1Jlc3BvbnNl",
-            "EhIKCnJlcXVlc3RfaWQYASABKAkivAEKH1JlbW92ZUFsbEF1ZGllbmNlTWVt",
-            "YmVyc1JlcXVlc3QSQQoMZGVzdGluYXRpb25zGAEgAygLMiYuZ29vZ2xlLmFk",
-            "cy5kYXRhbWFuYWdlci52MS5EZXN0aW5hdGlvbkID4EECEjoKEXJlbW92ZV9h",
-            "c19vZl90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEBEhoKDXZhbGlkYXRlX29ubHkYAyABKAhCA+BBASI2CiBSZW1vdmVBbGxB",
-            "dWRpZW5jZU1lbWJlcnNSZXNwb25zZRISCgpyZXF1ZXN0X2lkGAEgASgJIuoC",
-            "ChNJbmdlc3RFdmVudHNSZXF1ZXN0EkEKDGRlc3RpbmF0aW9ucxgBIAMoCzIm",
-            "Lmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuRGVzdGluYXRpb25CA+BBAhI1",
-            "CgZldmVudHMYAiADKAsyIC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkV2",
-            "ZW50QgPgQQISOAoHY29uc2VudBgDIAEoCzIiLmdvb2dsZS5hZHMuZGF0YW1h",
-            "bmFnZXIudjEuQ29uc2VudEID4EEBEhoKDXZhbGlkYXRlX29ubHkYBCABKAhC",
-            "A+BBARI6CghlbmNvZGluZxgFIAEoDjIjLmdvb2dsZS5hZHMuZGF0YW1hbmFn",
-            "ZXIudjEuRW5jb2RpbmdCA+BBARJHCg9lbmNyeXB0aW9uX2luZm8YBiABKAsy",
-            "KS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkVuY3J5cHRpb25JbmZvQgPg",
-            "QQEiawoUSW5nZXN0RXZlbnRzUmVzcG9uc2USEgoKcmVxdWVzdF9pZBgBIAEo",
-            "CRI/Cg5maWVsZF93YXJuaW5ncxgCIAMoCzInLmdvb2dsZS5hZHMuZGF0YW1h",
-            "bmFnZXIudjEuRmllbGRXYXJuaW5nIroBChVJbmdlc3RBZEV2ZW50c1JlcXVl",
-            "c3QSOgoJYWRfZXZlbnRzGAEgAygLMiIuZ29vZ2xlLmFkcy5kYXRhbWFuYWdl",
-            "ci52MS5BZEV2ZW50QgPgQQISRwoPZW5jcnlwdGlvbl9pbmZvGAIgASgLMiku",
-            "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5FbmNyeXB0aW9uSW5mb0ID4EEB",
-            "EhwKDXZhbGlkYXRlX29ubHkYAyABKAhCBRgB4EEBIhgKFkluZ2VzdEFkRXZl",
-            "bnRzUmVzcG9uc2UiNwocUmV0cmlldmVSZXF1ZXN0U3RhdHVzUmVxdWVzdBIX",
-            "CgpyZXF1ZXN0X2lkGAEgASgJQgPgQQIifwodUmV0cmlldmVSZXF1ZXN0U3Rh",
-            "dHVzUmVzcG9uc2USXgoecmVxdWVzdF9zdGF0dXNfcGVyX2Rlc3RpbmF0aW9u",
-            "GAEgAygLMjYuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5SZXF1ZXN0U3Rh",
-            "dHVzUGVyRGVzdGluYXRpb24qOQoIRW5jb2RpbmcSGAoURU5DT0RJTkdfVU5T",
-            "UEVDSUZJRUQQABIHCgNIRVgQARIKCgZCQVNFNjQQAjLgCAoQSW5nZXN0aW9u",
-            "U2VydmljZRKxAQoVSW5nZXN0QXVkaWVuY2VNZW1iZXJzEjcuZ29vZ2xlLmFk",
-            "cy5kYXRhbWFuYWdlci52MS5Jbmdlc3RBdWRpZW5jZU1lbWJlcnNSZXF1ZXN0",
-            "GjguZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Jbmdlc3RBdWRpZW5jZU1l",
-            "bWJlcnNSZXNwb25zZSIlgtPkkwIfIhovdjEvYXVkaWVuY2VNZW1iZXJzOmlu",
-            "Z2VzdDoBKhKxAQoVUmVtb3ZlQXVkaWVuY2VNZW1iZXJzEjcuZ29vZ2xlLmFk",
-            "cy5kYXRhbWFuYWdlci52MS5SZW1vdmVBdWRpZW5jZU1lbWJlcnNSZXF1ZXN0",
-            "GjguZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5SZW1vdmVBdWRpZW5jZU1l",
-            "bWJlcnNSZXNwb25zZSIlgtPkkwIfIhovdjEvYXVkaWVuY2VNZW1iZXJzOnJl",
-            "bW92ZToBKhK9AQoYUmVtb3ZlQWxsQXVkaWVuY2VNZW1iZXJzEjouZ29vZ2xl",
-            "LmFkcy5kYXRhbWFuYWdlci52MS5SZW1vdmVBbGxBdWRpZW5jZU1lbWJlcnNS",
-            "ZXF1ZXN0GjsuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5SZW1vdmVBbGxB",
-            "dWRpZW5jZU1lbWJlcnNSZXNwb25zZSIogtPkkwIiIh0vdjEvYXVkaWVuY2VN",
-            "ZW1iZXJzOnJlbW92ZUFsbDoBKhKNAQoMSW5nZXN0RXZlbnRzEi4uZ29vZ2xl",
-            "LmFkcy5kYXRhbWFuYWdlci52MS5Jbmdlc3RFdmVudHNSZXF1ZXN0Gi8uZ29v",
-            "Z2xlLmFkcy5kYXRhbWFuYWdlci52MS5Jbmdlc3RFdmVudHNSZXNwb25zZSIc",
-            "gtPkkwIWIhEvdjEvZXZlbnRzOmluZ2VzdDoBKhKVAQoOSW5nZXN0QWRFdmVu",
-            "dHMSMC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkluZ2VzdEFkRXZlbnRz",
-            "UmVxdWVzdBoxLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuSW5nZXN0QWRF",
-            "dmVudHNSZXNwb25zZSIegtPkkwIYIhMvdjEvYWRFdmVudHM6aW5nZXN0OgEq",
-            "Eq4BChVSZXRyaWV2ZVJlcXVlc3RTdGF0dXMSNy5nb29nbGUuYWRzLmRhdGFt",
-            "YW5hZ2VyLnYxLlJldHJpZXZlUmVxdWVzdFN0YXR1c1JlcXVlc3QaOC5nb29n",
-            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlJldHJpZXZlUmVxdWVzdFN0YXR1c1Jl",
-            "c3BvbnNlIiKC0+STAhwSGi92MS9yZXF1ZXN0U3RhdHVzOnJldHJpZXZlGkvK",
-            "QRpkYXRhbWFuYWdlci5nb29nbGVhcGlzLmNvbdJBK2h0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvZGF0YW1hbmFnZXJC0gEKHWNvbS5nb29nbGUu",
-            "YWRzLmRhdGFtYW5hZ2VyLnYxQhVJbmdlc3Rpb25TZXJ2aWNlUHJvdG9QAVpB",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhbWFuYWdlci9hcGl2MS9kYXRhbWFu",
-            "YWdlcnBiO2RhdGFtYW5hZ2VycGKqAhlHb29nbGUuQWRzLkRhdGFNYW5hZ2Vy",
-            "LlYxygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdlclxWMeoCHEdvb2dsZTo6QWRz",
-            "OjpEYXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "LnByb3RvGiRnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL3VzZXIucHJvdG8a",
+            "KWdvb2dsZS9hZHMvZGF0YW1hbmFnZXIvdjEvdXNlcl9kYXRhLnByb3RvGhxn",
+            "b29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVu",
+            "dC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxofZ29v",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLQAwocSW5nZXN0QXVkaWVu",
+            "Y2VNZW1iZXJzUmVxdWVzdBJBCgxkZXN0aW5hdGlvbnMYASADKAsyJi5nb29n",
+            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkRlc3RpbmF0aW9uQgPgQQISSAoQYXVk",
+            "aWVuY2VfbWVtYmVycxgCIAMoCzIpLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIu",
+            "djEuQXVkaWVuY2VNZW1iZXJCA+BBAhI4Cgdjb25zZW50GAMgASgLMiIuZ29v",
+            "Z2xlLmFkcy5kYXRhbWFuYWdlci52MS5Db25zZW50QgPgQQESGgoNdmFsaWRh",
+            "dGVfb25seRgEIAEoCEID4EEBEjoKCGVuY29kaW5nGAUgASgOMiMuZ29vZ2xl",
+            "LmFkcy5kYXRhbWFuYWdlci52MS5FbmNvZGluZ0ID4EEBEkcKD2VuY3J5cHRp",
+            "b25faW5mbxgGIAEoCzIpLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuRW5j",
+            "cnlwdGlvbkluZm9CA+BBARJIChB0ZXJtc19vZl9zZXJ2aWNlGAcgASgLMiku",
+            "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5UZXJtc09mU2VydmljZUID4EEB",
+            "InQKHUluZ2VzdEF1ZGllbmNlTWVtYmVyc1Jlc3BvbnNlEhIKCnJlcXVlc3Rf",
+            "aWQYASABKAkSPwoOZmllbGRfd2FybmluZ3MYAiADKAsyJy5nb29nbGUuYWRz",
+            "LmRhdGFtYW5hZ2VyLnYxLkZpZWxkV2FybmluZyLMAgocUmVtb3ZlQXVkaWVu",
+            "Y2VNZW1iZXJzUmVxdWVzdBJBCgxkZXN0aW5hdGlvbnMYASADKAsyJi5nb29n",
+            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkRlc3RpbmF0aW9uQgPgQQISSAoQYXVk",
+            "aWVuY2VfbWVtYmVycxgCIAMoCzIpLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIu",
+            "djEuQXVkaWVuY2VNZW1iZXJCA+BBAhIaCg12YWxpZGF0ZV9vbmx5GAMgASgI",
+            "QgPgQQESOgoIZW5jb2RpbmcYBCABKA4yIy5nb29nbGUuYWRzLmRhdGFtYW5h",
+            "Z2VyLnYxLkVuY29kaW5nQgPgQQESRwoPZW5jcnlwdGlvbl9pbmZvGAUgASgL",
+            "MikuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5FbmNyeXB0aW9uSW5mb0ID",
+            "4EEBIjMKHVJlbW92ZUF1ZGllbmNlTWVtYmVyc1Jlc3BvbnNlEhIKCnJlcXVl",
+            "c3RfaWQYASABKAkivAEKH1JlbW92ZUFsbEF1ZGllbmNlTWVtYmVyc1JlcXVl",
+            "c3QSQQoMZGVzdGluYXRpb25zGAEgAygLMiYuZ29vZ2xlLmFkcy5kYXRhbWFu",
+            "YWdlci52MS5EZXN0aW5hdGlvbkID4EECEjoKEXJlbW92ZV9hc19vZl90aW1l",
+            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEBEhoKDXZh",
+            "bGlkYXRlX29ubHkYAyABKAhCA+BBASI2CiBSZW1vdmVBbGxBdWRpZW5jZU1l",
+            "bWJlcnNSZXNwb25zZRISCgpyZXF1ZXN0X2lkGAEgASgJIuoCChNJbmdlc3RF",
+            "dmVudHNSZXF1ZXN0EkEKDGRlc3RpbmF0aW9ucxgBIAMoCzImLmdvb2dsZS5h",
+            "ZHMuZGF0YW1hbmFnZXIudjEuRGVzdGluYXRpb25CA+BBAhI1CgZldmVudHMY",
+            "AiADKAsyIC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkV2ZW50QgPgQQIS",
+            "OAoHY29uc2VudBgDIAEoCzIiLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEu",
+            "Q29uc2VudEID4EEBEhoKDXZhbGlkYXRlX29ubHkYBCABKAhCA+BBARI6Cghl",
+            "bmNvZGluZxgFIAEoDjIjLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuRW5j",
+            "b2RpbmdCA+BBARJHCg9lbmNyeXB0aW9uX2luZm8YBiABKAsyKS5nb29nbGUu",
+            "YWRzLmRhdGFtYW5hZ2VyLnYxLkVuY3J5cHRpb25JbmZvQgPgQQEiawoUSW5n",
+            "ZXN0RXZlbnRzUmVzcG9uc2USEgoKcmVxdWVzdF9pZBgBIAEoCRI/Cg5maWVs",
+            "ZF93YXJuaW5ncxgCIAMoCzInLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEu",
+            "RmllbGRXYXJuaW5nIq0CChJJbmdlc3RVc2Vyc1JlcXVlc3QSQQoMZGVzdGlu",
+            "YXRpb25zGAEgAygLMiYuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5EZXN0",
+            "aW5hdGlvbkID4EECEjMKBXVzZXJzGAIgAygLMh8uZ29vZ2xlLmFkcy5kYXRh",
+            "bWFuYWdlci52MS5Vc2VyQgPgQQISRwoPZW5jcnlwdGlvbl9pbmZvGAMgASgL",
+            "MikuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5FbmNyeXB0aW9uSW5mb0ID",
+            "4EEBEhoKDXZhbGlkYXRlX29ubHkYBCABKAhCA+BBARI6CghlbmNvZGluZxgF",
+            "IAEoDjIjLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuRW5jb2RpbmdCA+BB",
+            "AiIpChNJbmdlc3RVc2Vyc1Jlc3BvbnNlEhIKCnJlcXVlc3RfaWQYASABKAki",
+            "tQIKElJlbW92ZVVzZXJzUmVxdWVzdBJBCgxkZXN0aW5hdGlvbnMYASADKAsy",
+            "Ji5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkRlc3RpbmF0aW9uQgPgQQIS",
+            "OwoJdXNlcl9kYXRhGAIgAygLMiMuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52",
+            "MS5Vc2VyRGF0YUID4EECEkcKD2VuY3J5cHRpb25faW5mbxgDIAEoCzIpLmdv",
+            "b2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuRW5jcnlwdGlvbkluZm9CA+BBARIa",
+            "Cg12YWxpZGF0ZV9vbmx5GAQgASgIQgPgQQESOgoIZW5jb2RpbmcYBSABKA4y",
+            "Iy5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkVuY29kaW5nQgPgQQIiKQoT",
+            "UmVtb3ZlVXNlcnNSZXNwb25zZRISCgpyZXF1ZXN0X2lkGAEgASgJIroBChVJ",
+            "bmdlc3RBZEV2ZW50c1JlcXVlc3QSOgoJYWRfZXZlbnRzGAEgAygLMiIuZ29v",
+            "Z2xlLmFkcy5kYXRhbWFuYWdlci52MS5BZEV2ZW50QgPgQQISRwoPZW5jcnlw",
+            "dGlvbl9pbmZvGAIgASgLMikuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5F",
+            "bmNyeXB0aW9uSW5mb0ID4EEBEhwKDXZhbGlkYXRlX29ubHkYAyABKAhCBRgB",
+            "4EEBIhgKFkluZ2VzdEFkRXZlbnRzUmVzcG9uc2UiNwocUmV0cmlldmVSZXF1",
+            "ZXN0U3RhdHVzUmVxdWVzdBIXCgpyZXF1ZXN0X2lkGAEgASgJQgPgQQIifwod",
+            "UmV0cmlldmVSZXF1ZXN0U3RhdHVzUmVzcG9uc2USXgoecmVxdWVzdF9zdGF0",
+            "dXNfcGVyX2Rlc3RpbmF0aW9uGAEgAygLMjYuZ29vZ2xlLmFkcy5kYXRhbWFu",
+            "YWdlci52MS5SZXF1ZXN0U3RhdHVzUGVyRGVzdGluYXRpb24qOQoIRW5jb2Rp",
+            "bmcSGAoURU5DT0RJTkdfVU5TUEVDSUZJRUQQABIHCgNIRVgQARIKCgZCQVNF",
+            "NjQQAjL4CgoQSW5nZXN0aW9uU2VydmljZRKxAQoVSW5nZXN0QXVkaWVuY2VN",
+            "ZW1iZXJzEjcuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Jbmdlc3RBdWRp",
+            "ZW5jZU1lbWJlcnNSZXF1ZXN0GjguZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52",
+            "MS5Jbmdlc3RBdWRpZW5jZU1lbWJlcnNSZXNwb25zZSIlgtPkkwIfIhovdjEv",
+            "YXVkaWVuY2VNZW1iZXJzOmluZ2VzdDoBKhKxAQoVUmVtb3ZlQXVkaWVuY2VN",
+            "ZW1iZXJzEjcuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5SZW1vdmVBdWRp",
+            "ZW5jZU1lbWJlcnNSZXF1ZXN0GjguZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52",
+            "MS5SZW1vdmVBdWRpZW5jZU1lbWJlcnNSZXNwb25zZSIlgtPkkwIfIhovdjEv",
+            "YXVkaWVuY2VNZW1iZXJzOnJlbW92ZToBKhK9AQoYUmVtb3ZlQWxsQXVkaWVu",
+            "Y2VNZW1iZXJzEjouZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5SZW1vdmVB",
+            "bGxBdWRpZW5jZU1lbWJlcnNSZXF1ZXN0GjsuZ29vZ2xlLmFkcy5kYXRhbWFu",
+            "YWdlci52MS5SZW1vdmVBbGxBdWRpZW5jZU1lbWJlcnNSZXNwb25zZSIogtPk",
+            "kwIiIh0vdjEvYXVkaWVuY2VNZW1iZXJzOnJlbW92ZUFsbDoBKhKNAQoMSW5n",
+            "ZXN0RXZlbnRzEi4uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Jbmdlc3RF",
+            "dmVudHNSZXF1ZXN0Gi8uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Jbmdl",
+            "c3RFdmVudHNSZXNwb25zZSIcgtPkkwIWIhEvdjEvZXZlbnRzOmluZ2VzdDoB",
+            "KhKJAQoLSW5nZXN0VXNlcnMSLS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYx",
+            "LkluZ2VzdFVzZXJzUmVxdWVzdBouLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIu",
+            "djEuSW5nZXN0VXNlcnNSZXNwb25zZSIbgtPkkwIVIhAvdjEvdXNlcnM6aW5n",
+            "ZXN0OgEqEokBCgtSZW1vdmVVc2VycxItLmdvb2dsZS5hZHMuZGF0YW1hbmFn",
+            "ZXIudjEuUmVtb3ZlVXNlcnNSZXF1ZXN0Gi4uZ29vZ2xlLmFkcy5kYXRhbWFu",
+            "YWdlci52MS5SZW1vdmVVc2Vyc1Jlc3BvbnNlIhuC0+STAhUiEC92MS91c2Vy",
+            "czpyZW1vdmU6ASoSlQEKDkluZ2VzdEFkRXZlbnRzEjAuZ29vZ2xlLmFkcy5k",
+            "YXRhbWFuYWdlci52MS5Jbmdlc3RBZEV2ZW50c1JlcXVlc3QaMS5nb29nbGUu",
+            "YWRzLmRhdGFtYW5hZ2VyLnYxLkluZ2VzdEFkRXZlbnRzUmVzcG9uc2UiHoLT",
+            "5JMCGCITL3YxL2FkRXZlbnRzOmluZ2VzdDoBKhKuAQoVUmV0cmlldmVSZXF1",
+            "ZXN0U3RhdHVzEjcuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5SZXRyaWV2",
+            "ZVJlcXVlc3RTdGF0dXNSZXF1ZXN0GjguZ29vZ2xlLmFkcy5kYXRhbWFuYWdl",
+            "ci52MS5SZXRyaWV2ZVJlcXVlc3RTdGF0dXNSZXNwb25zZSIigtPkkwIcEhov",
+            "djEvcmVxdWVzdFN0YXR1czpyZXRyaWV2ZRpLykEaZGF0YW1hbmFnZXIuZ29v",
+            "Z2xlYXBpcy5jb23SQStodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
+            "L2RhdGFtYW5hZ2VyQtIBCh1jb20uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52",
+            "MUIVSW5nZXN0aW9uU2VydmljZVByb3RvUAFaQWNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vZGF0YW1hbmFnZXIvYXBpdjEvZGF0YW1hbmFnZXJwYjtkYXRhbWFuYWdl",
+            "cnBiqgIZR29vZ2xlLkFkcy5EYXRhTWFuYWdlci5WMcoCGUdvb2dsZVxBZHNc",
+            "RGF0YU1hbmFnZXJcVjHqAhxHb29nbGU6OkFkczo6RGF0YU1hbmFnZXI6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Ads.DataManager.V1.AdEventReflection.Descriptor, global::Google.Ads.DataManager.V1.AudienceReflection.Descriptor, global::Google.Ads.DataManager.V1.ConsentReflection.Descriptor, global::Google.Ads.DataManager.V1.DestinationReflection.Descriptor, global::Google.Ads.DataManager.V1.EncryptionInfoReflection.Descriptor, global::Google.Ads.DataManager.V1.EventReflection.Descriptor, global::Google.Ads.DataManager.V1.ProcessingErrorsReflection.Descriptor, global::Google.Ads.DataManager.V1.RequestStatusPerDestinationReflection.Descriptor, global::Google.Ads.DataManager.V1.TermsOfServiceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.DataManager.V1.AdEventReflection.Descriptor, global::Google.Ads.DataManager.V1.AudienceReflection.Descriptor, global::Google.Ads.DataManager.V1.ConsentReflection.Descriptor, global::Google.Ads.DataManager.V1.DestinationReflection.Descriptor, global::Google.Ads.DataManager.V1.EncryptionInfoReflection.Descriptor, global::Google.Ads.DataManager.V1.EventReflection.Descriptor, global::Google.Ads.DataManager.V1.ProcessingErrorsReflection.Descriptor, global::Google.Ads.DataManager.V1.RequestStatusPerDestinationReflection.Descriptor, global::Google.Ads.DataManager.V1.TermsOfServiceReflection.Descriptor, global::Google.Ads.DataManager.V1.UserReflection.Descriptor, global::Google.Ads.DataManager.V1.UserDataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.Encoding), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.IngestAudienceMembersRequest), global::Google.Ads.DataManager.V1.IngestAudienceMembersRequest.Parser, new[]{ "Destinations", "AudienceMembers", "Consent", "ValidateOnly", "Encoding", "EncryptionInfo", "TermsOfService" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.IngestAudienceMembersResponse), global::Google.Ads.DataManager.V1.IngestAudienceMembersResponse.Parser, new[]{ "RequestId", "FieldWarnings" }, null, null, null, null),
@@ -127,6 +151,10 @@ namespace Google.Ads.DataManager.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RemoveAllAudienceMembersResponse), global::Google.Ads.DataManager.V1.RemoveAllAudienceMembersResponse.Parser, new[]{ "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.IngestEventsRequest), global::Google.Ads.DataManager.V1.IngestEventsRequest.Parser, new[]{ "Destinations", "Events", "Consent", "ValidateOnly", "Encoding", "EncryptionInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.IngestEventsResponse), global::Google.Ads.DataManager.V1.IngestEventsResponse.Parser, new[]{ "RequestId", "FieldWarnings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.IngestUsersRequest), global::Google.Ads.DataManager.V1.IngestUsersRequest.Parser, new[]{ "Destinations", "Users", "EncryptionInfo", "ValidateOnly", "Encoding" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.IngestUsersResponse), global::Google.Ads.DataManager.V1.IngestUsersResponse.Parser, new[]{ "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RemoveUsersRequest), global::Google.Ads.DataManager.V1.RemoveUsersRequest.Parser, new[]{ "Destinations", "UserData", "EncryptionInfo", "ValidateOnly", "Encoding" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RemoveUsersResponse), global::Google.Ads.DataManager.V1.RemoveUsersResponse.Parser, new[]{ "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.IngestAdEventsRequest), global::Google.Ads.DataManager.V1.IngestAdEventsRequest.Parser, new[]{ "AdEvents", "EncryptionInfo", "ValidateOnly" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.IngestAdEventsResponse), global::Google.Ads.DataManager.V1.IngestAdEventsResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.RetrieveRequestStatusRequest), global::Google.Ads.DataManager.V1.RetrieveRequestStatusRequest.Parser, new[]{ "RequestId" }, null, null, null, null),
@@ -2565,6 +2593,1121 @@ namespace Google.Ads.DataManager.V1 {
   }
 
   /// <summary>
+  /// Request to upload users to the provided destinations.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class IngestUsersRequest : pb::IMessage<IngestUsersRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<IngestUsersRequest> _parser = new pb::MessageParser<IngestUsersRequest>(() => new IngestUsersRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<IngestUsersRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.IngestionServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IngestUsersRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IngestUsersRequest(IngestUsersRequest other) : this() {
+      destinations_ = other.destinations_.Clone();
+      users_ = other.users_.Clone();
+      encryptionInfo_ = other.encryptionInfo_ != null ? other.encryptionInfo_.Clone() : null;
+      validateOnly_ = other.validateOnly_;
+      encoding_ = other.encoding_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IngestUsersRequest Clone() {
+      return new IngestUsersRequest(this);
+    }
+
+    /// <summary>Field number for the "destinations" field.</summary>
+    public const int DestinationsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Ads.DataManager.V1.Destination> _repeated_destinations_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Ads.DataManager.V1.Destination.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.DataManager.V1.Destination> destinations_ = new pbc::RepeatedField<global::Google.Ads.DataManager.V1.Destination>();
+    /// <summary>
+    /// Required. The list of possible ingestion destinations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.DataManager.V1.Destination> Destinations {
+      get { return destinations_; }
+    }
+
+    /// <summary>Field number for the "users" field.</summary>
+    public const int UsersFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Ads.DataManager.V1.User> _repeated_users_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Ads.DataManager.V1.User.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.DataManager.V1.User> users_ = new pbc::RepeatedField<global::Google.Ads.DataManager.V1.User>();
+    /// <summary>
+    /// Required. The list of users to ingest.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.DataManager.V1.User> Users {
+      get { return users_; }
+    }
+
+    /// <summary>Field number for the "encryption_info" field.</summary>
+    public const int EncryptionInfoFieldNumber = 3;
+    private global::Google.Ads.DataManager.V1.EncryptionInfo encryptionInfo_;
+    /// <summary>
+    /// Optional. Encryption information about encryption keys which are used to
+    /// encrypt the data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.EncryptionInfo EncryptionInfo {
+      get { return encryptionInfo_; }
+      set {
+        encryptionInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 4;
+    private bool validateOnly_;
+    /// <summary>
+    /// Optional. If `true`, the request is validated but not executed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "encoding" field.</summary>
+    public const int EncodingFieldNumber = 5;
+    private global::Google.Ads.DataManager.V1.Encoding encoding_ = global::Google.Ads.DataManager.V1.Encoding.Unspecified;
+    /// <summary>
+    /// Required. The encoding type of the user identifiers. For encrypted user
+    /// identifiers, this only applies to the outer encoding.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.Encoding Encoding {
+      get { return encoding_; }
+      set {
+        encoding_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as IngestUsersRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(IngestUsersRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!destinations_.Equals(other.destinations_)) return false;
+      if(!users_.Equals(other.users_)) return false;
+      if (!object.Equals(EncryptionInfo, other.EncryptionInfo)) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
+      if (Encoding != other.Encoding) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= destinations_.GetHashCode();
+      hash ^= users_.GetHashCode();
+      if (encryptionInfo_ != null) hash ^= EncryptionInfo.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
+      if (Encoding != global::Google.Ads.DataManager.V1.Encoding.Unspecified) hash ^= Encoding.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      destinations_.WriteTo(output, _repeated_destinations_codec);
+      users_.WriteTo(output, _repeated_users_codec);
+      if (encryptionInfo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EncryptionInfo);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
+      if (Encoding != global::Google.Ads.DataManager.V1.Encoding.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Encoding);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      destinations_.WriteTo(ref output, _repeated_destinations_codec);
+      users_.WriteTo(ref output, _repeated_users_codec);
+      if (encryptionInfo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EncryptionInfo);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
+      if (Encoding != global::Google.Ads.DataManager.V1.Encoding.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Encoding);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += destinations_.CalculateSize(_repeated_destinations_codec);
+      size += users_.CalculateSize(_repeated_users_codec);
+      if (encryptionInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionInfo);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
+      }
+      if (Encoding != global::Google.Ads.DataManager.V1.Encoding.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Encoding);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(IngestUsersRequest other) {
+      if (other == null) {
+        return;
+      }
+      destinations_.Add(other.destinations_);
+      users_.Add(other.users_);
+      if (other.encryptionInfo_ != null) {
+        if (encryptionInfo_ == null) {
+          EncryptionInfo = new global::Google.Ads.DataManager.V1.EncryptionInfo();
+        }
+        EncryptionInfo.MergeFrom(other.EncryptionInfo);
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
+      }
+      if (other.Encoding != global::Google.Ads.DataManager.V1.Encoding.Unspecified) {
+        Encoding = other.Encoding;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            destinations_.AddEntriesFrom(input, _repeated_destinations_codec);
+            break;
+          }
+          case 18: {
+            users_.AddEntriesFrom(input, _repeated_users_codec);
+            break;
+          }
+          case 26: {
+            if (encryptionInfo_ == null) {
+              EncryptionInfo = new global::Google.Ads.DataManager.V1.EncryptionInfo();
+            }
+            input.ReadMessage(EncryptionInfo);
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+          case 40: {
+            Encoding = (global::Google.Ads.DataManager.V1.Encoding) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            destinations_.AddEntriesFrom(ref input, _repeated_destinations_codec);
+            break;
+          }
+          case 18: {
+            users_.AddEntriesFrom(ref input, _repeated_users_codec);
+            break;
+          }
+          case 26: {
+            if (encryptionInfo_ == null) {
+              EncryptionInfo = new global::Google.Ads.DataManager.V1.EncryptionInfo();
+            }
+            input.ReadMessage(EncryptionInfo);
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+          case 40: {
+            Encoding = (global::Google.Ads.DataManager.V1.Encoding) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response from the IngestUsersRequest.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class IngestUsersResponse : pb::IMessage<IngestUsersResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<IngestUsersResponse> _parser = new pb::MessageParser<IngestUsersResponse>(() => new IngestUsersResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<IngestUsersResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.IngestionServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IngestUsersResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IngestUsersResponse(IngestUsersResponse other) : this() {
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IngestUsersResponse Clone() {
+      return new IngestUsersResponse(this);
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 1;
+    private string requestId_ = "";
+    /// <summary>
+    /// The generated request id of the Ingestion Request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as IngestUsersResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(IngestUsersResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(IngestUsersResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request to remove users from the provided destinations.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RemoveUsersRequest : pb::IMessage<RemoveUsersRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RemoveUsersRequest> _parser = new pb::MessageParser<RemoveUsersRequest>(() => new RemoveUsersRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RemoveUsersRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.IngestionServiceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveUsersRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveUsersRequest(RemoveUsersRequest other) : this() {
+      destinations_ = other.destinations_.Clone();
+      userData_ = other.userData_.Clone();
+      encryptionInfo_ = other.encryptionInfo_ != null ? other.encryptionInfo_.Clone() : null;
+      validateOnly_ = other.validateOnly_;
+      encoding_ = other.encoding_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveUsersRequest Clone() {
+      return new RemoveUsersRequest(this);
+    }
+
+    /// <summary>Field number for the "destinations" field.</summary>
+    public const int DestinationsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Ads.DataManager.V1.Destination> _repeated_destinations_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Ads.DataManager.V1.Destination.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.DataManager.V1.Destination> destinations_ = new pbc::RepeatedField<global::Google.Ads.DataManager.V1.Destination>();
+    /// <summary>
+    /// Required. The list of possible ingestion destinations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.DataManager.V1.Destination> Destinations {
+      get { return destinations_; }
+    }
+
+    /// <summary>Field number for the "user_data" field.</summary>
+    public const int UserDataFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Ads.DataManager.V1.UserData> _repeated_userData_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Ads.DataManager.V1.UserData.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.DataManager.V1.UserData> userData_ = new pbc::RepeatedField<global::Google.Ads.DataManager.V1.UserData>();
+    /// <summary>
+    /// Required. The individual bits of UserData that act as keys for the users to
+    /// remove.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.DataManager.V1.UserData> UserData {
+      get { return userData_; }
+    }
+
+    /// <summary>Field number for the "encryption_info" field.</summary>
+    public const int EncryptionInfoFieldNumber = 3;
+    private global::Google.Ads.DataManager.V1.EncryptionInfo encryptionInfo_;
+    /// <summary>
+    /// Optional. Encryption information about encryption keys which are used to
+    /// encrypt the data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.EncryptionInfo EncryptionInfo {
+      get { return encryptionInfo_; }
+      set {
+        encryptionInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 4;
+    private bool validateOnly_;
+    /// <summary>
+    /// Optional. If `true`, the request is validated but not executed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "encoding" field.</summary>
+    public const int EncodingFieldNumber = 5;
+    private global::Google.Ads.DataManager.V1.Encoding encoding_ = global::Google.Ads.DataManager.V1.Encoding.Unspecified;
+    /// <summary>
+    /// Required. The encoding type of the user identifiers. For encrypted user
+    /// identifiers, this only applies to the outer encoding.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.Encoding Encoding {
+      get { return encoding_; }
+      set {
+        encoding_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RemoveUsersRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RemoveUsersRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!destinations_.Equals(other.destinations_)) return false;
+      if(!userData_.Equals(other.userData_)) return false;
+      if (!object.Equals(EncryptionInfo, other.EncryptionInfo)) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
+      if (Encoding != other.Encoding) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= destinations_.GetHashCode();
+      hash ^= userData_.GetHashCode();
+      if (encryptionInfo_ != null) hash ^= EncryptionInfo.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
+      if (Encoding != global::Google.Ads.DataManager.V1.Encoding.Unspecified) hash ^= Encoding.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      destinations_.WriteTo(output, _repeated_destinations_codec);
+      userData_.WriteTo(output, _repeated_userData_codec);
+      if (encryptionInfo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EncryptionInfo);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
+      if (Encoding != global::Google.Ads.DataManager.V1.Encoding.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Encoding);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      destinations_.WriteTo(ref output, _repeated_destinations_codec);
+      userData_.WriteTo(ref output, _repeated_userData_codec);
+      if (encryptionInfo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EncryptionInfo);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
+      if (Encoding != global::Google.Ads.DataManager.V1.Encoding.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Encoding);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += destinations_.CalculateSize(_repeated_destinations_codec);
+      size += userData_.CalculateSize(_repeated_userData_codec);
+      if (encryptionInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionInfo);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
+      }
+      if (Encoding != global::Google.Ads.DataManager.V1.Encoding.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Encoding);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RemoveUsersRequest other) {
+      if (other == null) {
+        return;
+      }
+      destinations_.Add(other.destinations_);
+      userData_.Add(other.userData_);
+      if (other.encryptionInfo_ != null) {
+        if (encryptionInfo_ == null) {
+          EncryptionInfo = new global::Google.Ads.DataManager.V1.EncryptionInfo();
+        }
+        EncryptionInfo.MergeFrom(other.EncryptionInfo);
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
+      }
+      if (other.Encoding != global::Google.Ads.DataManager.V1.Encoding.Unspecified) {
+        Encoding = other.Encoding;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            destinations_.AddEntriesFrom(input, _repeated_destinations_codec);
+            break;
+          }
+          case 18: {
+            userData_.AddEntriesFrom(input, _repeated_userData_codec);
+            break;
+          }
+          case 26: {
+            if (encryptionInfo_ == null) {
+              EncryptionInfo = new global::Google.Ads.DataManager.V1.EncryptionInfo();
+            }
+            input.ReadMessage(EncryptionInfo);
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+          case 40: {
+            Encoding = (global::Google.Ads.DataManager.V1.Encoding) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            destinations_.AddEntriesFrom(ref input, _repeated_destinations_codec);
+            break;
+          }
+          case 18: {
+            userData_.AddEntriesFrom(ref input, _repeated_userData_codec);
+            break;
+          }
+          case 26: {
+            if (encryptionInfo_ == null) {
+              EncryptionInfo = new global::Google.Ads.DataManager.V1.EncryptionInfo();
+            }
+            input.ReadMessage(EncryptionInfo);
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+          case 40: {
+            Encoding = (global::Google.Ads.DataManager.V1.Encoding) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response from the RemoveUsersRequest.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RemoveUsersResponse : pb::IMessage<RemoveUsersResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RemoveUsersResponse> _parser = new pb::MessageParser<RemoveUsersResponse>(() => new RemoveUsersResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RemoveUsersResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.IngestionServiceReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveUsersResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveUsersResponse(RemoveUsersResponse other) : this() {
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveUsersResponse Clone() {
+      return new RemoveUsersResponse(this);
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 1;
+    private string requestId_ = "";
+    /// <summary>
+    /// The generated request id of the Ingestion Request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RemoveUsersResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RemoveUsersResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RemoveUsersResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request to upload ad events.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -2582,7 +3725,7 @@ namespace Google.Ads.DataManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.DataManager.V1.IngestionServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Ads.DataManager.V1.IngestionServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2867,7 +4010,7 @@ namespace Google.Ads.DataManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.DataManager.V1.IngestionServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Ads.DataManager.V1.IngestionServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3033,7 +4176,7 @@ namespace Google.Ads.DataManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.DataManager.V1.IngestionServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Ads.DataManager.V1.IngestionServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3238,7 +4381,7 @@ namespace Google.Ads.DataManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.DataManager.V1.IngestionServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Ads.DataManager.V1.IngestionServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

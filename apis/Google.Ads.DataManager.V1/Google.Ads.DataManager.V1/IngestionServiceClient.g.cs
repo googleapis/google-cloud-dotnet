@@ -48,6 +48,8 @@ namespace Google.Ads.DataManager.V1
             RemoveAudienceMembersSettings = existing.RemoveAudienceMembersSettings;
             RemoveAllAudienceMembersSettings = existing.RemoveAllAudienceMembersSettings;
             IngestEventsSettings = existing.IngestEventsSettings;
+            IngestUsersSettings = existing.IngestUsersSettings;
+            RemoveUsersSettings = existing.RemoveUsersSettings;
             IngestAdEventsSettings = existing.IngestAdEventsSettings;
             RetrieveRequestStatusSettings = existing.RetrieveRequestStatusSettings;
             OnCopy(existing);
@@ -132,6 +134,48 @@ namespace Google.Ads.DataManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings IngestEventsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(5000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>IngestionServiceClient.IngestUsers</c> and <c>IngestionServiceClient.IngestUsersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 5000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings IngestUsersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(5000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>IngestionServiceClient.RemoveUsers</c> and <c>IngestionServiceClient.RemoveUsersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 5000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RemoveUsersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(5000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -435,6 +479,87 @@ namespace Google.Ads.DataManager.V1
             IngestEventsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Uploads a list of users to the provided destinations. Unlike
+        /// [IngestAudienceMembers][google.ads.datamanager.v1.IngestionService.IngestAudienceMembers]
+        /// (which adds users to specific advertiser audience lists for targeting),
+        /// `IngestUsers` ingests account level identity linkage data (for example,
+        /// user identifiers linked to mobile IDs) independent of specific audience
+        /// segments.
+        /// 
+        /// This feature is only available to accounts on an allowlist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IngestUsersResponse IngestUsers(IngestUsersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Uploads a list of users to the provided destinations. Unlike
+        /// [IngestAudienceMembers][google.ads.datamanager.v1.IngestionService.IngestAudienceMembers]
+        /// (which adds users to specific advertiser audience lists for targeting),
+        /// `IngestUsers` ingests account level identity linkage data (for example,
+        /// user identifiers linked to mobile IDs) independent of specific audience
+        /// segments.
+        /// 
+        /// This feature is only available to accounts on an allowlist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IngestUsersResponse> IngestUsersAsync(IngestUsersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Uploads a list of users to the provided destinations. Unlike
+        /// [IngestAudienceMembers][google.ads.datamanager.v1.IngestionService.IngestAudienceMembers]
+        /// (which adds users to specific advertiser audience lists for targeting),
+        /// `IngestUsers` ingests account level identity linkage data (for example,
+        /// user identifiers linked to mobile IDs) independent of specific audience
+        /// segments.
+        /// 
+        /// This feature is only available to accounts on an allowlist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IngestUsersResponse> IngestUsersAsync(IngestUsersRequest request, st::CancellationToken cancellationToken) =>
+            IngestUsersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Removes a list of users from the provided destinations.
+        /// 
+        /// This feature is only available to accounts on an allowlist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RemoveUsersResponse RemoveUsers(RemoveUsersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Removes a list of users from the provided destinations.
+        /// 
+        /// This feature is only available to accounts on an allowlist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveUsersResponse> RemoveUsersAsync(RemoveUsersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Removes a list of users from the provided destinations.
+        /// 
+        /// This feature is only available to accounts on an allowlist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveUsersResponse> RemoveUsersAsync(RemoveUsersRequest request, st::CancellationToken cancellationToken) =>
+            RemoveUsersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Uploads a list of
         /// [AdEvent][google.ads.datamanager.v1.AdEvent] resources to Google
         /// Analytics.
@@ -515,6 +640,10 @@ namespace Google.Ads.DataManager.V1
 
         private readonly gaxgrpc::ApiCall<IngestEventsRequest, IngestEventsResponse> _callIngestEvents;
 
+        private readonly gaxgrpc::ApiCall<IngestUsersRequest, IngestUsersResponse> _callIngestUsers;
+
+        private readonly gaxgrpc::ApiCall<RemoveUsersRequest, RemoveUsersResponse> _callRemoveUsers;
+
         private readonly gaxgrpc::ApiCall<IngestAdEventsRequest, IngestAdEventsResponse> _callIngestAdEvents;
 
         private readonly gaxgrpc::ApiCall<RetrieveRequestStatusRequest, RetrieveRequestStatusResponse> _callRetrieveRequestStatus;
@@ -546,6 +675,12 @@ namespace Google.Ads.DataManager.V1
             _callIngestEvents = clientHelper.BuildApiCall<IngestEventsRequest, IngestEventsResponse>("IngestEvents", grpcClient.IngestEventsAsync, grpcClient.IngestEvents, effectiveSettings.IngestEventsSettings);
             Modify_ApiCall(ref _callIngestEvents);
             Modify_IngestEventsApiCall(ref _callIngestEvents);
+            _callIngestUsers = clientHelper.BuildApiCall<IngestUsersRequest, IngestUsersResponse>("IngestUsers", grpcClient.IngestUsersAsync, grpcClient.IngestUsers, effectiveSettings.IngestUsersSettings);
+            Modify_ApiCall(ref _callIngestUsers);
+            Modify_IngestUsersApiCall(ref _callIngestUsers);
+            _callRemoveUsers = clientHelper.BuildApiCall<RemoveUsersRequest, RemoveUsersResponse>("RemoveUsers", grpcClient.RemoveUsersAsync, grpcClient.RemoveUsers, effectiveSettings.RemoveUsersSettings);
+            Modify_ApiCall(ref _callRemoveUsers);
+            Modify_RemoveUsersApiCall(ref _callRemoveUsers);
             _callIngestAdEvents = clientHelper.BuildApiCall<IngestAdEventsRequest, IngestAdEventsResponse>("IngestAdEvents", grpcClient.IngestAdEventsAsync, grpcClient.IngestAdEvents, effectiveSettings.IngestAdEventsSettings);
             Modify_ApiCall(ref _callIngestAdEvents);
             Modify_IngestAdEventsApiCall(ref _callIngestAdEvents);
@@ -565,6 +700,10 @@ namespace Google.Ads.DataManager.V1
 
         partial void Modify_IngestEventsApiCall(ref gaxgrpc::ApiCall<IngestEventsRequest, IngestEventsResponse> call);
 
+        partial void Modify_IngestUsersApiCall(ref gaxgrpc::ApiCall<IngestUsersRequest, IngestUsersResponse> call);
+
+        partial void Modify_RemoveUsersApiCall(ref gaxgrpc::ApiCall<RemoveUsersRequest, RemoveUsersResponse> call);
+
         partial void Modify_IngestAdEventsApiCall(ref gaxgrpc::ApiCall<IngestAdEventsRequest, IngestAdEventsResponse> call);
 
         partial void Modify_RetrieveRequestStatusApiCall(ref gaxgrpc::ApiCall<RetrieveRequestStatusRequest, RetrieveRequestStatusResponse> call);
@@ -581,6 +720,10 @@ namespace Google.Ads.DataManager.V1
         partial void Modify_RemoveAllAudienceMembersRequest(ref RemoveAllAudienceMembersRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_IngestEventsRequest(ref IngestEventsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_IngestUsersRequest(ref IngestUsersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RemoveUsersRequest(ref RemoveUsersRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_IngestAdEventsRequest(ref IngestAdEventsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -692,6 +835,72 @@ namespace Google.Ads.DataManager.V1
         {
             Modify_IngestEventsRequest(ref request, ref callSettings);
             return _callIngestEvents.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Uploads a list of users to the provided destinations. Unlike
+        /// [IngestAudienceMembers][google.ads.datamanager.v1.IngestionService.IngestAudienceMembers]
+        /// (which adds users to specific advertiser audience lists for targeting),
+        /// `IngestUsers` ingests account level identity linkage data (for example,
+        /// user identifiers linked to mobile IDs) independent of specific audience
+        /// segments.
+        /// 
+        /// This feature is only available to accounts on an allowlist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override IngestUsersResponse IngestUsers(IngestUsersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_IngestUsersRequest(ref request, ref callSettings);
+            return _callIngestUsers.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Uploads a list of users to the provided destinations. Unlike
+        /// [IngestAudienceMembers][google.ads.datamanager.v1.IngestionService.IngestAudienceMembers]
+        /// (which adds users to specific advertiser audience lists for targeting),
+        /// `IngestUsers` ingests account level identity linkage data (for example,
+        /// user identifiers linked to mobile IDs) independent of specific audience
+        /// segments.
+        /// 
+        /// This feature is only available to accounts on an allowlist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<IngestUsersResponse> IngestUsersAsync(IngestUsersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_IngestUsersRequest(ref request, ref callSettings);
+            return _callIngestUsers.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Removes a list of users from the provided destinations.
+        /// 
+        /// This feature is only available to accounts on an allowlist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RemoveUsersResponse RemoveUsers(RemoveUsersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveUsersRequest(ref request, ref callSettings);
+            return _callRemoveUsers.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Removes a list of users from the provided destinations.
+        /// 
+        /// This feature is only available to accounts on an allowlist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RemoveUsersResponse> RemoveUsersAsync(RemoveUsersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveUsersRequest(ref request, ref callSettings);
+            return _callRemoveUsers.Async(request, callSettings);
         }
 
         /// <summary>

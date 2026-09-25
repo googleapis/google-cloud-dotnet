@@ -51,6 +51,7 @@ namespace Google.Ads.DataManager.V1
             yield return ProcessingErrorsReflection.Descriptor;
             yield return RequestStatusPerDestinationReflection.Descriptor;
             yield return TermsOfServiceReflection.Descriptor;
+            yield return UserReflection.Descriptor;
             yield return UserDataReflection.Descriptor;
             yield return UserListReflection.Descriptor;
             yield return UserListDirectLicenseReflection.Descriptor;

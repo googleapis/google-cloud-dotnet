@@ -201,6 +201,88 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for IngestUsers</summary>
+        public void IngestUsersRequestObject()
+        {
+            // Snippet: IngestUsers(IngestUsersRequest, CallSettings)
+            // Create client
+            IngestionServiceClient ingestionServiceClient = IngestionServiceClient.Create();
+            // Initialize request argument(s)
+            IngestUsersRequest request = new IngestUsersRequest
+            {
+                Destinations = { new Destination(), },
+                Users = { new User(), },
+                EncryptionInfo = new EncryptionInfo(),
+                ValidateOnly = false,
+                Encoding = Encoding.Unspecified,
+            };
+            // Make the request
+            IngestUsersResponse response = ingestionServiceClient.IngestUsers(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for IngestUsersAsync</summary>
+        public async Task IngestUsersRequestObjectAsync()
+        {
+            // Snippet: IngestUsersAsync(IngestUsersRequest, CallSettings)
+            // Additional: IngestUsersAsync(IngestUsersRequest, CancellationToken)
+            // Create client
+            IngestionServiceClient ingestionServiceClient = await IngestionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IngestUsersRequest request = new IngestUsersRequest
+            {
+                Destinations = { new Destination(), },
+                Users = { new User(), },
+                EncryptionInfo = new EncryptionInfo(),
+                ValidateOnly = false,
+                Encoding = Encoding.Unspecified,
+            };
+            // Make the request
+            IngestUsersResponse response = await ingestionServiceClient.IngestUsersAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveUsers</summary>
+        public void RemoveUsersRequestObject()
+        {
+            // Snippet: RemoveUsers(RemoveUsersRequest, CallSettings)
+            // Create client
+            IngestionServiceClient ingestionServiceClient = IngestionServiceClient.Create();
+            // Initialize request argument(s)
+            RemoveUsersRequest request = new RemoveUsersRequest
+            {
+                Destinations = { new Destination(), },
+                UserData = { new UserData(), },
+                EncryptionInfo = new EncryptionInfo(),
+                ValidateOnly = false,
+                Encoding = Encoding.Unspecified,
+            };
+            // Make the request
+            RemoveUsersResponse response = ingestionServiceClient.RemoveUsers(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveUsersAsync</summary>
+        public async Task RemoveUsersRequestObjectAsync()
+        {
+            // Snippet: RemoveUsersAsync(RemoveUsersRequest, CallSettings)
+            // Additional: RemoveUsersAsync(RemoveUsersRequest, CancellationToken)
+            // Create client
+            IngestionServiceClient ingestionServiceClient = await IngestionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RemoveUsersRequest request = new RemoveUsersRequest
+            {
+                Destinations = { new Destination(), },
+                UserData = { new UserData(), },
+                EncryptionInfo = new EncryptionInfo(),
+                ValidateOnly = false,
+                Encoding = Encoding.Unspecified,
+            };
+            // Make the request
+            RemoveUsersResponse response = await ingestionServiceClient.RemoveUsersAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for IngestAdEvents</summary>
         public void IngestAdEventsRequestObject()
         {
