@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2026-09-28
+
+### New features
+
+- Add HeartRateVariabilityMetadata (high_frequency_power and low_frequency_power) to HeartRateVariability
+- Expand Moods enum with additional mood values
+
+### Documentation improvements
+
+- Document accepted value ranges for health data types, self-sources data_source_family behavior, and aggregation window truncation
+
 ## Version 1.0.0-beta03, released 2026-08-17
 
 ### New features
