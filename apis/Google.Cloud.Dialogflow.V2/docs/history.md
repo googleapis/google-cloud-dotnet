@@ -1,5 +1,22 @@
 # Version history
 
+## Version 4.32.0, released 2026-09-28
+
+### New features
+
+- Expose BidiStreamingAnalyzeContent in Dialogflow v2 API
+
+### Documentation improvements
+
+- A comment for message `CesAppSpec` is changed
+- A comment for field `answer_record` in message `.google.cloud.dialogflow.v2.Conversation` is changed
+- A comment for field `enable_async_tool_call` in message `.google.cloud.dialogflow.v2.HumanAgentAssistantConfig` is changed
+- A comment for field `ces_app_specs` in message `.google.cloud.dialogflow.v2.Generator` is changed
+- A comment for field `content` in message `.google.cloud.dialogflow.v2.Message` is changed
+- A comment for message `KnowledgeAssistDebugInfo` is changed
+- A comment for field `query_generation_debug_info` in message `.google.cloud.dialogflow.v2.KnowledgeAssistDebugInfo` is changed
+- A comment for field `text` in message `.google.cloud.dialogflow.v2.TextInput` is changed
+
 ## Version 4.31.0, released 2026-06-29
 
 ### New features
