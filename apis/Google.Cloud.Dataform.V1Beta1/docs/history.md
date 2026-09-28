@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-beta15, released 2026-09-28
+
+### New features
+
+- Add EndUserAuthConfig to support repository end user authentication
+- Add EndUserAuthenticationConfig to support workflow invocation end user authentication
+- Add OAuthConfig to support additional OAuth scopes
+
 ## Version 1.0.0-beta14, released 2026-08-17
 
 ### New features
