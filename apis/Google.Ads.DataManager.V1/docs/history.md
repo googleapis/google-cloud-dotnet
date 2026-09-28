@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-beta11, released 2026-09-28
+
+### New features
+
+- Add IngestUsers and RemoveUsers methods to IngestionService
+- Add User message representing a user's PII and mobile device IDs
+- Add TOO_MANY_USERS, INVALID_AD_IDENTIFIER_FOR_ACCOUNT to ErrorReason
+
 ## Version 1.0.0-beta10, released 2026-09-11
 
 ### New features
