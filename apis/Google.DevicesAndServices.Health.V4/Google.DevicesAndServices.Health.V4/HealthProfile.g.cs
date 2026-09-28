@@ -492,6 +492,8 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// 1-63 characters consisting of lowercase and uppercase letters, numbers, and
     /// hyphens. The literal `me` can also be used to refer to the authenticated
     /// user.
+    ///
+    /// This field is read-only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -544,12 +546,10 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// <summary>
     /// Optional. The user's user configured walking stride length, in millimeters.
     ///
-    /// The user must consent to
-    /// one of the following access scopes to access this field:
+    /// The user must consent to the following access scope to access this field:
     ///
     /// -
     /// `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
-    /// - `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -581,12 +581,10 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// <summary>
     /// Optional. The user's user configured running stride length, in millimeters.
     ///
-    /// The user must consent to
-    /// one of the following access scopes to access this field:
+    /// The user must consent to the following access scope to access this field:
     ///
     /// -
     /// `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
-    /// - `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -619,12 +617,10 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// Output only. The automatically calculated walking stride length, in
     /// millimeters.
     ///
-    /// The user must consent to
-    /// one of the following access scopes to access this field:
+    /// The user must consent to the following access scope to access this field:
     ///
     /// -
     /// `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
-    /// - `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -657,12 +653,10 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// Output only. The automatically calculated running stride length, in
     /// millimeters.
     ///
-    /// The user must consent to
-    /// one of the following access scopes to access this field:
+    /// The user must consent to the following access scope to access this field:
     ///
     /// -
     /// `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
-    /// - `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2035,6 +2029,8 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// 1-63 characters consisting of lowercase and uppercase letters, numbers, and
     /// hyphens. The literal `me` can also be used to refer to the authenticated
     /// user.
+    ///
+    /// This field is read-only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
