@@ -1,5 +1,25 @@
 # Version history
 
+## Version 1.0.0-beta12, released 2026-09-28
+
+### New features
+
+- Add DataA2AService with GetAgentCard, SendMessage, and SendStreamingMessage RPCs
+- Add SetAgentOpsObservability and RetrieveAgentOpsObservability RPCs
+- Add UpdateConversation RPC and Conversation.title
+- Add DataAgent.bigquery_agent_analytics_enabled and bigquery_agent_analytics_table
+- Add ListDataAgentsRequest.creator_filter
+- Add DynamicField message and LookerQuery.dynamic_fields
+- Publish usage.proto with TokenUsage and add QueryDataResponse.token_usage
+
+### Bug fixes
+
+- Remove Conversation.memory_paused which is restricted to the memory preview
+
+### Documentation improvements
+
+- Document byte limits on context fields, clarify model version selection, and drop the Preview label from property_graph_references
+
 ## Version 1.0.0-beta11, released 2026-08-31
 
 ### New features
