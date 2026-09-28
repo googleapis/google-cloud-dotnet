@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.7.0, released 2026-09-28
+
+### New features
+
+- Add BatchCreateTasks and BatchDeleteTasks to CloudTasks v2
+- Add retry_config field to Task in CloudTasks v2
+- Add CmekConfig resource and UpdateCmekConfig and GetCmekConfig RPCs to CloudTasks v2
+
+### Documentation improvements
+
+- Update documentation comments in CloudTasks v2
+
 ## Version 3.6.0, released 2025-11-06
 
 ### New features
