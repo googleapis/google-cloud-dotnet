@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.36.0, released 2026-09-28
+
+### New features
+
+- Add keep_hot_duration, disabled, and effective_automated_backup_policy to AutomatedBackupPolicy and Table
+
 ## Version 3.35.0, released 2026-09-11
 
 ### New features
