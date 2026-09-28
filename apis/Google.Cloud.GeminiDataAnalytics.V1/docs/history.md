@@ -1,5 +1,23 @@
 # Version history
 
+## Version 1.2.0, released 2026-09-28
+
+### New features
+
+- Add SetAgentOpsObservability and RetrieveAgentOpsObservability RPCs
+- Add UpdateConversation RPC and Conversation.title
+- Add DataAgent.bigquery_agent_analytics_enabled and bigquery_agent_analytics_table
+- Add ListDataAgentsRequest.creator_filter
+- Add DynamicField message and LookerQuery.dynamic_fields
+
+### Bug fixes
+
+- Remove Conversation.memory_paused which is restricted to the memory preview
+
+### Documentation improvements
+
+- Document byte limits on context fields and clarify model version selection
+
 ## Version 1.1.0, released 2026-08-31
 
 ### New features
