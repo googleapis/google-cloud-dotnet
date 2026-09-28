@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.32.0, released 2026-09-28
+
+### New features
+
+- Support check and mutate on session protocol
+
 ## Version 3.31.0, released 2026-08-17
 
 ### New features
