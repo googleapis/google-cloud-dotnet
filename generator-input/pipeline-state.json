@@ -4398,7 +4398,6 @@
         {
             "id": "Google.Cloud.ConfigDelivery.V1",
             "currentVersion": "1.0.0",
-            "nextVersion": "2.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-08-10T23:03:44.436999845Z",
@@ -5024,6 +5023,7 @@
         {
             "id": "Google.Cloud.GeminiDataAnalytics.V1",
             "currentVersion": "1.1.0",
+            "nextVersion": "2.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-08-31T19:53:34.030575962Z",
