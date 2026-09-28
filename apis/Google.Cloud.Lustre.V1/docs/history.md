@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.1.0, released 2026-09-28
+
+### New features
+
+- Add a mirror & directory policy API
+
+### Documentation improvements
+
+- A comment for field `capacity_gib` in message `.google.cloud.lustre.v1.Instance` is changed
+- A comment for field `per_unit_storage_throughput` in message `.google.cloud.lustre.v1.Instance` is changed
+- A comment for field `gke_support_enabled` in message `.google.cloud.lustre.v1.Instance` is changed
+- A comment for field `service_account` in message `.google.cloud.lustre.v1.ImportDataRequest` is changed
+- A comment for field `service_account` in message `.google.cloud.lustre.v1.ExportDataRequest` is changed
+
 ## Version 1.0.0, released 2026-08-10
 
 ### New features
