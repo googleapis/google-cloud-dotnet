@@ -3240,12 +3240,12 @@
         },
         {
             "id": "Google.Cloud.Tasks.V2",
-            "currentVersion": "3.6.0",
+            "currentVersion": "3.7.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-06T16:49:43.865448898Z",
+            "releaseTimestamp": "2026-09-28T20:12:48.874681319Z",
             "lastGeneratedCommit": "3df0a6e9183a6abfe61f5e9c9102daad8b0bc54d",
-            "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastReleasedCommit": "3df0a6e9183a6abfe61f5e9c9102daad8b0bc54d",
             "apiPaths": [
                 "google/cloud/tasks/v2"
             ],
