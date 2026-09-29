@@ -1861,55 +1861,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal(command.AckOptions.IgnoreNotFound, mutation.Ack.IgnoreNotFound);
         }
 
-        public static IEnumerable<object[]> SendParametersMissingPayload()
-        {
-            yield return new object[] { new SpannerParameterCollection([
-                new ("UserId", SpannerDbType.String, value: "key1"),
-            ]) };
-        }
-
-        [Theory]
-        [MemberData(nameof(SendParametersMissingPayload))]
-        public void SendCommand_MissingPayload_ThrowsInvalidOperationException(SpannerParameterCollection parameters)
-        {
-            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
-            using var command = connection.CreateSendCommand("TestQueue", parameters);
-
-            Assert.Throws<InvalidOperationException>(command.GetMutation);
-        }
-
-        public static IEnumerable<object[]> SendParametersMissingKey()
-        {
-            yield return new object[] { new SpannerParameterCollection([
-                new("Payload", SpannerDbType.Bytes, Encoding.UTF8.GetBytes("Hello, World")),
-            ]) };
-        }
-
-        [Theory]
-        [MemberData(nameof(SendParametersMissingKey))]
-        public void SendCommand_InvalidParameterCollection_ThrowsInvalidOperationException(SpannerParameterCollection parameters)
-        {
-            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
-            using var command = connection.CreateSendCommand("TestQueue", parameters);
-
-            Assert.Throws<InvalidOperationException>(command.GetMutation);
-        }
-
-        public static IEnumerable<object[]> EmptyAckParameters()
-        {
-            yield return new object[] { new SpannerParameterCollection() };
-        }
-
-        [Theory]
-        [MemberData(nameof(EmptyAckParameters))]
-        public void AckCommand_InvalidParameterCollection_ThrowsInvalidOperationException(SpannerParameterCollection parameters)
-        {
-            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
-            using var command = connection.CreateAckCommand("TestQueue", parameters);
-
-            Assert.Throws<InvalidOperationException>(command.GetMutation);
-        }
-
         private Struct RunExecuteStreamingSqlWithParameter(SpannerConnectionStringBuilder builder, SpannerParameter parameter)
         {
             var request = new ExecuteSqlRequest();

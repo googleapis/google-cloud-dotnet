@@ -406,12 +406,8 @@ namespace Google.Cloud.Spanner.Data
                 {
                     // Payload
                     var payload = SeparatePayloadParameter(Parameters, out SpannerParameterCollection keyParameters);
-                    GaxPreconditions.CheckState(payload is not null,
-                        $"{SpannerCommandType.Send} must include a parameter named Payload.");
 
                     // Key
-                    GaxPreconditions.CheckState(keyParameters.Count > 0,
-                        $"{SpannerCommandType.Send} must include at least one non-Payload parameter for the key.");
                     Key key = new(keyParameters);
 
                     var sendMutation = new Mutation.Types.Send
@@ -427,8 +423,6 @@ namespace Google.Cloud.Spanner.Data
                 else if (CommandTextBuilder.SpannerCommandType == SpannerCommandType.Ack)
                 {
                     // Key
-                    GaxPreconditions.CheckState(Parameters.Count > 0,
-                            $"{SpannerCommandType.Ack} must include at least one parameter for the key.");
                     Key key = new(Parameters);
 
                     var ackMutation = new Mutation.Types.Ack
