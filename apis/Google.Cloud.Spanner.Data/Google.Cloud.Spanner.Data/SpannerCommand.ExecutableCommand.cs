@@ -412,7 +412,7 @@ namespace Google.Cloud.Spanner.Data
 
                     var sendMutation = new Mutation.Types.Send
                     {
-                        Queue = CommandTextBuilder.TargetTable,
+                        Queue = CommandTextBuilder.TargetQueue,
                         Key = key.ToProtobuf(conversionOptions),
                         Payload = payload.GetConfiguredSpannerDbType(conversionOptions).ToProtobufValue(payload.GetValidatedValue()),
                         DeliverTime = (SendOptions?.DeliverAt.HasValue ?? false) ? Timestamp.FromDateTime(SendOptions.DeliverAt.Value.ToUniversalTime()) : null,
@@ -427,7 +427,7 @@ namespace Google.Cloud.Spanner.Data
 
                     var ackMutation = new Mutation.Types.Ack
                     {
-                        Queue = CommandTextBuilder.TargetTable,
+                        Queue = CommandTextBuilder.TargetQueue,
                         Key = key.ToProtobuf(conversionOptions),
                         IgnoreNotFound = AckOptions?.IgnoreNotFound ?? false,
                     };

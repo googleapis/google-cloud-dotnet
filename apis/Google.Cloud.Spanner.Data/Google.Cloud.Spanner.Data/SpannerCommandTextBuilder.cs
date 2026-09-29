@@ -32,8 +32,6 @@ namespace Google.Cloud.Spanner.Data
         private const string UpdateCommand = "UPDATE";
         private const string DeleteCommand = "DELETE";
         private const string SelectCommand = "SELECT";
-        private const string SendCommand = "SEND";
-        private const string AckCommand = "ACK";
         private const string WithCommand = "WITH"; // Queries may also start with a WITH clause.
         private const string AlterCommand = "ALTER";
         private const string CreateCommand = "CREATE";
@@ -74,6 +72,12 @@ namespace Google.Cloud.Spanner.Data
         public string TargetTable { get; }
 
         /// <summary>
+        /// Returns the target Spanner database queue if the command is Send or Ack,
+        /// or null otherwise.
+        /// </summary>
+        public string TargetQueue { get; }
+
+        /// <summary>
         /// A set of additional statements to execute if supported by the command.
         /// </summary>
         public IReadOnlyList<string> ExtraStatements { get; }
@@ -99,6 +103,12 @@ namespace Google.Cloud.Spanner.Data
             ExtraStatements = extraStatements?.ToList().AsReadOnly();
             ProtobufDescriptors = protobufDescriptors;
             ReadOptions = readOptions;
+        }
+
+        private SpannerCommandTextBuilder(SpannerCommandType type, string targetQueue)
+        {
+            SpannerCommandType = type;
+            TargetQueue = targetQueue;
         }
 
         internal bool IsCreateDatabaseCommand => CommandText?.StartsWith(CreateDatabaseCommand, StringComparison.OrdinalIgnoreCase) ?? false;
@@ -145,6 +155,9 @@ namespace Google.Cloud.Spanner.Data
 
         private static SpannerCommandTextBuilder CreateBuilderForTableDml(string command, SpannerCommandType type, string table) =>
             new SpannerCommandTextBuilder($"{command} {table}", type, ValidateTableName(table, nameof(table)), extraStatements: null, protobufDescriptors: null, readOptions: null);
+
+        private static SpannerCommandTextBuilder CreateBuilderForQueueMutation(SpannerCommandType type, string queue) =>
+            new(type, queue);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
@@ -193,7 +206,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="queue">The name of the Spanner database queue for which messages will be sent. Must not be null.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Send"/> Spanner command.</returns>
         public static SpannerCommandTextBuilder CreateSendTextBuilder(string queue) =>
-            CreateBuilderForTableDml(SendCommand, SpannerCommandType.Send, queue);
+            CreateBuilderForQueueMutation(SpannerCommandType.Send, queue);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
@@ -202,7 +215,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="queue">The name of the Spanner database queue for which messages will be acked. Must not be null.</param>
         /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Ack"/> Spanner command.</returns>
         public static SpannerCommandTextBuilder CreateAckTextBuilder(string queue) =>
-            CreateBuilderForTableDml(AckCommand, SpannerCommandType.Ack, queue);
+            CreateBuilderForQueueMutation(SpannerCommandType.Ack, queue);
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
@@ -265,7 +278,7 @@ namespace Google.Cloud.Spanner.Data
         /// If the intended <see cref="SpannerCommandType"/> is Update, Delete,
         /// InsertOrUpdate, or Insert, then the text should be '[spanner command type] [table name]'
         /// such as 'INSERT MYTABLE'.  Must not be null or empty.
-        /// Note: "INSERT MYTABLE" and "DELETE MYTABLE" are always interpreted as
+        /// Note: "INSERT &lt;name&gt;" and "DELETE &lt;name&gt;" are always interpreted as
         /// insert and delete mutations, and never as send or ack mutations.
         /// </remarks>
         /// <param name="commandText">The full command text containing a query, DDL statement or insert/update/delete

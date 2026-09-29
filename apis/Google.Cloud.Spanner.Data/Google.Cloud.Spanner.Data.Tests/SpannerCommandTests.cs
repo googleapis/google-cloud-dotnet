@@ -1714,7 +1714,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             using var sendCommand = connection.CreateSendCommand(queue, parameters);
             sendCommand.SendOptions = sendOptions;
 
-            Assert.Equal(queue, sendCommand.SpannerCommandTextBuilder.TargetTable);
+            Assert.Equal(queue, sendCommand.SpannerCommandTextBuilder.TargetQueue);
             Assert.Same(parameters, sendCommand.Parameters);
             Assert.Same(sendOptions, sendCommand.SendOptions);
         }
@@ -1743,7 +1743,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             using var ackCommand = connection.CreateAckCommand(queue, parameters);
             ackCommand.AckOptions = ackOptions;
 
-            Assert.Equal(queue, ackCommand.SpannerCommandTextBuilder.TargetTable);
+            Assert.Equal(queue, ackCommand.SpannerCommandTextBuilder.TargetQueue);
             Assert.Same(parameters, ackCommand.Parameters);
             Assert.Same(ackOptions, ackCommand.AckOptions);
         }
