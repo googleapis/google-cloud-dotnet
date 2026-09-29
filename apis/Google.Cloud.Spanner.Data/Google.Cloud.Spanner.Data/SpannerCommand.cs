@@ -166,7 +166,7 @@ namespace Google.Cloud.Spanner.Data
         /// Initializes a new instance of <see cref="SpannerCommand"/>
         /// </summary>
         /// <remarks>
-        /// Note: "Insert {name}" and "Delete {name}" are always interpreted as
+        /// Note: "INSERT MYTABLE" and "DELETE MYTABLE" are always interpreted as
         /// insert and delete mutations, and never as send or ack mutations.
         /// </remarks>
         /// <param name="commandText">If this command is a SQL Query, then commandText is
