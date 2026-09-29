@@ -901,7 +901,7 @@ namespace Google.Cloud.Spanner.Data
         /// should contain the key elements and the payload.</param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateSendCommand(string databaseQueue, SpannerParameterCollection parameters) =>
-            SpannerCommand.ForSendCommand(SpannerCommandTextBuilder.CreateSendTextBuilder(databaseQueue), this, parameters);
+            new(SpannerCommandTextBuilder.CreateSendTextBuilder(databaseQueue), this, transaction: null, parameters);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to ack a message in a Spanner database queue.
@@ -912,7 +912,7 @@ namespace Google.Cloud.Spanner.Data
         /// should contain the key elements.</param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateAckCommand(string databaseQueue, SpannerParameterCollection parameters) =>
-            SpannerCommand.ForAckCommand(SpannerCommandTextBuilder.CreateAckTextBuilder(databaseQueue), connection: this, parameters);
+            new(SpannerCommandTextBuilder.CreateAckTextBuilder(databaseQueue), this, transaction: null, parameters);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to select rows using a SQL query statement.

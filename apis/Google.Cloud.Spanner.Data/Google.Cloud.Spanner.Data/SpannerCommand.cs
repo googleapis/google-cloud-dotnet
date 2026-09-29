@@ -166,8 +166,8 @@ namespace Google.Cloud.Spanner.Data
         /// Initializes a new instance of <see cref="SpannerCommand"/>
         /// </summary>
         /// <remarks>
-        /// Note: "Insert" and "Delete" are never treated as Send and Ack even when the
-        /// target table is internally a queue.
+        /// Note: "Insert {name}" and "Delete {name}" are always interpreted as
+        /// insert and delete mutations, and never as send or ack mutations.
         /// </remarks>
         /// <param name="commandText">If this command is a SQL Query, then commandText is
         /// the SQL statement. If its an update, insert or delete command, then this text
@@ -194,18 +194,6 @@ namespace Google.Cloud.Spanner.Data
                 Parameters = parameters;
             }
         }
-
-        internal static SpannerCommand ForSendCommand(
-            SpannerCommandTextBuilder commandTextBuilder,
-            SpannerConnection connection,
-            SpannerParameterCollection parameters,
-            SpannerTransaction transaction = null) => new(commandTextBuilder, connection, transaction, parameters);
-
-        internal static SpannerCommand ForAckCommand(
-            SpannerCommandTextBuilder commandTextBuilder,
-            SpannerConnection connection,
-            SpannerParameterCollection parameters,
-            SpannerTransaction transaction = null) => new(commandTextBuilder, connection, transaction, parameters);
 
         internal Mutation GetMutation() => CreateExecutableCommand().GetMutation();
 
@@ -373,11 +361,19 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Optional configurations for Send mutations.
         /// </summary>
+        /// <remarks>
+        /// These options will only be applied to send and ack commands.
+        /// They will be ignored for all other operations.
+        /// </remarks>
         public SendOptions SendOptions { get; set; }
 
         /// <summary>
         /// Optional configurations for Ack mutations.
         /// </summary>
+        /// <remarks>
+        /// These options will only be applied to send and ack commands.
+        /// They will be ignored for all other operations.
+        /// </remarks>
         public AckOptions AckOptions { get; set; }
 
         /// <summary>
