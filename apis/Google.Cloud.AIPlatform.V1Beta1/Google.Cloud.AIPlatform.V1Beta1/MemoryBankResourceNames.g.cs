@@ -35,9 +35,17 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             /// <c>projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}</c>.
             /// </summary>
             ProjectLocationReasoningEngineMemory = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}</c>.
+            /// </summary>
+            ProjectLocationMemoryBankMemory = 2,
         }
 
         private static gax::PathTemplate s_projectLocationReasoningEngineMemory = new gax::PathTemplate("projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}");
+
+        private static gax::PathTemplate s_projectLocationMemoryBankMemory = new gax::PathTemplate("projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}");
 
         /// <summary>Creates a <see cref="MemoryName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -58,6 +66,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <returns>A new instance of <see cref="MemoryName"/> constructed from the provided ids.</returns>
         public static MemoryName FromProjectLocationReasoningEngineMemory(string projectId, string locationId, string reasoningEngineId, string memoryId) =>
             new MemoryName(ResourceNameType.ProjectLocationReasoningEngineMemory, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), reasoningEngineId: gax::GaxPreconditions.CheckNotNullOrEmpty(reasoningEngineId, nameof(reasoningEngineId)), memoryId: gax::GaxPreconditions.CheckNotNullOrEmpty(memoryId, nameof(memoryId)));
+
+        /// <summary>
+        /// Creates a <see cref="MemoryName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryBankId">The <c>MemoryBank</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryId">The <c>Memory</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="MemoryName"/> constructed from the provided ids.</returns>
+        public static MemoryName FromProjectLocationMemoryBankMemory(string projectId, string locationId, string memoryBankId, string memoryId) =>
+            new MemoryName(ResourceNameType.ProjectLocationMemoryBankMemory, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), memoryBankId: gax::GaxPreconditions.CheckNotNullOrEmpty(memoryBankId, nameof(memoryBankId)), memoryId: gax::GaxPreconditions.CheckNotNullOrEmpty(memoryId, nameof(memoryId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="MemoryName"/> with pattern
@@ -89,6 +109,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public static string FormatProjectLocationReasoningEngineMemory(string projectId, string locationId, string reasoningEngineId, string memoryId) =>
             s_projectLocationReasoningEngineMemory.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(reasoningEngineId, nameof(reasoningEngineId)), gax::GaxPreconditions.CheckNotNullOrEmpty(memoryId, nameof(memoryId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="MemoryName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryBankId">The <c>MemoryBank</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryId">The <c>Memory</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="MemoryName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}</c>.
+        /// </returns>
+        public static string FormatProjectLocationMemoryBankMemory(string projectId, string locationId, string memoryBankId, string memoryId) =>
+            s_projectLocationMemoryBankMemory.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(memoryBankId, nameof(memoryBankId)), gax::GaxPreconditions.CheckNotNullOrEmpty(memoryId, nameof(memoryId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="MemoryName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -96,6 +131,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -114,6 +154,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -140,6 +185,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <c>projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="memoryName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -159,6 +209,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -183,6 +238,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
                 result = FromProjectLocationReasoningEngineMemory(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
                 return true;
             }
+            if (s_projectLocationMemoryBankMemory.TryParseName(memoryName, out resourceName))
+            {
+                result = FromProjectLocationMemoryBankMemory(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(memoryName, out gax::UnparsedResourceName unparsedResourceName))
@@ -195,12 +255,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             return false;
         }
 
-        private MemoryName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string memoryId = null, string projectId = null, string reasoningEngineId = null)
+        private MemoryName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string memoryId = null, string memoryBankId = null, string projectId = null, string reasoningEngineId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             LocationId = locationId;
             MemoryId = memoryId;
+            MemoryBankId = memoryBankId;
             ProjectId = projectId;
             ReasoningEngineId = reasoningEngineId;
         }
@@ -227,23 +288,29 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Memory</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Memory</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string MemoryId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>MemoryBank</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string MemoryBankId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
         /// <summary>
-        /// The <c>ReasoningEngine</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>ReasoningEngine</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string ReasoningEngineId { get; }
 
@@ -258,6 +325,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocationReasoningEngineMemory: return s_projectLocationReasoningEngineMemory.Expand(ProjectId, LocationId, ReasoningEngineId, MemoryId);
+                case ResourceNameType.ProjectLocationMemoryBankMemory: return s_projectLocationMemoryBankMemory.Expand(ProjectId, LocationId, MemoryBankId, MemoryId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -290,6 +358,389 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public static bool operator !=(MemoryName a, MemoryName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>MemoryRevision</c> resource.</summary>
+    public sealed partial class MemoryRevisionName : gax::IResourceName, sys::IEquatable<MemoryRevisionName>
+    {
+        /// <summary>The possible contents of <see cref="MemoryRevisionName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}</c>
+            /// .
+            /// </summary>
+            ProjectLocationReasoningEngineMemoryMemoryRevision = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}/revisions/{memory_revision}</c>
+            /// .
+            /// </summary>
+            ProjectLocationMemoryBankMemoryMemoryRevision = 2,
+        }
+
+        private static gax::PathTemplate s_projectLocationReasoningEngineMemoryMemoryRevision = new gax::PathTemplate("projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}");
+
+        private static gax::PathTemplate s_projectLocationMemoryBankMemoryMemoryRevision = new gax::PathTemplate("projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}/revisions/{memory_revision}");
+
+        /// <summary>Creates a <see cref="MemoryRevisionName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="MemoryRevisionName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static MemoryRevisionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new MemoryRevisionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="MemoryRevisionName"/> with the pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="reasoningEngineId">The <c>ReasoningEngine</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryId">The <c>Memory</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryRevisionId">The <c>MemoryRevision</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="MemoryRevisionName"/> constructed from the provided ids.</returns>
+        public static MemoryRevisionName FromProjectLocationReasoningEngineMemoryMemoryRevision(string projectId, string locationId, string reasoningEngineId, string memoryId, string memoryRevisionId) =>
+            new MemoryRevisionName(ResourceNameType.ProjectLocationReasoningEngineMemoryMemoryRevision, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), reasoningEngineId: gax::GaxPreconditions.CheckNotNullOrEmpty(reasoningEngineId, nameof(reasoningEngineId)), memoryId: gax::GaxPreconditions.CheckNotNullOrEmpty(memoryId, nameof(memoryId)), memoryRevisionId: gax::GaxPreconditions.CheckNotNullOrEmpty(memoryRevisionId, nameof(memoryRevisionId)));
+
+        /// <summary>
+        /// Creates a <see cref="MemoryRevisionName"/> with the pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}/revisions/{memory_revision}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryBankId">The <c>MemoryBank</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryId">The <c>Memory</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryRevisionId">The <c>MemoryRevision</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="MemoryRevisionName"/> constructed from the provided ids.</returns>
+        public static MemoryRevisionName FromProjectLocationMemoryBankMemoryMemoryRevision(string projectId, string locationId, string memoryBankId, string memoryId, string memoryRevisionId) =>
+            new MemoryRevisionName(ResourceNameType.ProjectLocationMemoryBankMemoryMemoryRevision, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), memoryBankId: gax::GaxPreconditions.CheckNotNullOrEmpty(memoryBankId, nameof(memoryBankId)), memoryId: gax::GaxPreconditions.CheckNotNullOrEmpty(memoryId, nameof(memoryId)), memoryRevisionId: gax::GaxPreconditions.CheckNotNullOrEmpty(memoryRevisionId, nameof(memoryRevisionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="MemoryRevisionName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="reasoningEngineId">The <c>ReasoningEngine</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryId">The <c>Memory</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryRevisionId">The <c>MemoryRevision</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="MemoryRevisionName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}</c>
+        /// .
+        /// </returns>
+        public static string Format(string projectId, string locationId, string reasoningEngineId, string memoryId, string memoryRevisionId) =>
+            FormatProjectLocationReasoningEngineMemoryMemoryRevision(projectId, locationId, reasoningEngineId, memoryId, memoryRevisionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="MemoryRevisionName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="reasoningEngineId">The <c>ReasoningEngine</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryId">The <c>Memory</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryRevisionId">The <c>MemoryRevision</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="MemoryRevisionName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationReasoningEngineMemoryMemoryRevision(string projectId, string locationId, string reasoningEngineId, string memoryId, string memoryRevisionId) =>
+            s_projectLocationReasoningEngineMemoryMemoryRevision.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(reasoningEngineId, nameof(reasoningEngineId)), gax::GaxPreconditions.CheckNotNullOrEmpty(memoryId, nameof(memoryId)), gax::GaxPreconditions.CheckNotNullOrEmpty(memoryRevisionId, nameof(memoryRevisionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="MemoryRevisionName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}/revisions/{memory_revision}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryBankId">The <c>MemoryBank</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryId">The <c>Memory</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryRevisionId">The <c>MemoryRevision</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="MemoryRevisionName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}/revisions/{memory_revision}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationMemoryBankMemoryMemoryRevision(string projectId, string locationId, string memoryBankId, string memoryId, string memoryRevisionId) =>
+            s_projectLocationMemoryBankMemoryMemoryRevision.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(memoryBankId, nameof(memoryBankId)), gax::GaxPreconditions.CheckNotNullOrEmpty(memoryId, nameof(memoryId)), gax::GaxPreconditions.CheckNotNullOrEmpty(memoryRevisionId, nameof(memoryRevisionId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="MemoryRevisionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}/revisions/{memory_revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="memoryRevisionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="MemoryRevisionName"/> if successful.</returns>
+        public static MemoryRevisionName Parse(string memoryRevisionName) => Parse(memoryRevisionName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="MemoryRevisionName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}/revisions/{memory_revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="memoryRevisionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="MemoryRevisionName"/> if successful.</returns>
+        public static MemoryRevisionName Parse(string memoryRevisionName, bool allowUnparsed) =>
+            TryParse(memoryRevisionName, allowUnparsed, out MemoryRevisionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="MemoryRevisionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}/revisions/{memory_revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="memoryRevisionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="MemoryRevisionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string memoryRevisionName, out MemoryRevisionName result) =>
+            TryParse(memoryRevisionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="MemoryRevisionName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/memoryBanks/{memory_bank}/memories/{memory}/revisions/{memory_revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="memoryRevisionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="MemoryRevisionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string memoryRevisionName, bool allowUnparsed, out MemoryRevisionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(memoryRevisionName, nameof(memoryRevisionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationReasoningEngineMemoryMemoryRevision.TryParseName(memoryRevisionName, out resourceName))
+            {
+                result = FromProjectLocationReasoningEngineMemoryMemoryRevision(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
+                return true;
+            }
+            if (s_projectLocationMemoryBankMemoryMemoryRevision.TryParseName(memoryRevisionName, out resourceName))
+            {
+                result = FromProjectLocationMemoryBankMemoryMemoryRevision(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(memoryRevisionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private MemoryRevisionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string memoryId = null, string memoryBankId = null, string memoryRevisionId = null, string projectId = null, string reasoningEngineId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            MemoryId = memoryId;
+            MemoryBankId = memoryBankId;
+            MemoryRevisionId = memoryRevisionId;
+            ProjectId = projectId;
+            ReasoningEngineId = reasoningEngineId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="MemoryRevisionName"/> class from the component parts of pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="reasoningEngineId">The <c>ReasoningEngine</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryId">The <c>Memory</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memoryRevisionId">The <c>MemoryRevision</c> ID. Must not be <c>null</c> or empty.</param>
+        public MemoryRevisionName(string projectId, string locationId, string reasoningEngineId, string memoryId, string memoryRevisionId) : this(ResourceNameType.ProjectLocationReasoningEngineMemoryMemoryRevision, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), reasoningEngineId: gax::GaxPreconditions.CheckNotNullOrEmpty(reasoningEngineId, nameof(reasoningEngineId)), memoryId: gax::GaxPreconditions.CheckNotNullOrEmpty(memoryId, nameof(memoryId)), memoryRevisionId: gax::GaxPreconditions.CheckNotNullOrEmpty(memoryRevisionId, nameof(memoryRevisionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Memory</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string MemoryId { get; }
+
+        /// <summary>
+        /// The <c>MemoryBank</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string MemoryBankId { get; }
+
+        /// <summary>
+        /// The <c>MemoryRevision</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string MemoryRevisionId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>ReasoningEngine</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string ReasoningEngineId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationReasoningEngineMemoryMemoryRevision: return s_projectLocationReasoningEngineMemoryMemoryRevision.Expand(ProjectId, LocationId, ReasoningEngineId, MemoryId, MemoryRevisionId);
+                case ResourceNameType.ProjectLocationMemoryBankMemoryMemoryRevision: return s_projectLocationMemoryBankMemoryMemoryRevision.Expand(ProjectId, LocationId, MemoryBankId, MemoryId, MemoryRevisionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as MemoryRevisionName);
+
+        /// <inheritdoc/>
+        public bool Equals(MemoryRevisionName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(MemoryRevisionName a, MemoryRevisionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(MemoryRevisionName a, MemoryRevisionName b) => !(a == b);
+    }
+
     public partial class Memory
     {
         /// <summary>
@@ -298,6 +749,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public gcav::MemoryName MemoryName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcav::MemoryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class MemoryRevision
+    {
+        /// <summary>
+        /// <see cref="gcav::MemoryRevisionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::MemoryRevisionName MemoryRevisionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::MemoryRevisionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
