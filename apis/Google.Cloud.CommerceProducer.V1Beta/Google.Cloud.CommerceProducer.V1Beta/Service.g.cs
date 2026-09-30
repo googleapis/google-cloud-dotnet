@@ -27,21 +27,40 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
             "CjJnb29nbGUvY2xvdWQvY29tbWVyY2Vwcm9kdWNlci92MWJldGEvc2Vydmlj",
             "ZS5wcm90bxIkZ29vZ2xlLmNsb3VkLmNvbW1lcmNlcHJvZHVjZXIudjFiZXRh",
             "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBp",
-            "L3Jlc291cmNlLnByb3RvIq0BCgdTZXJ2aWNlEhEKBG5hbWUYASABKAlCA+BB",
-            "CBISCgV0aXRsZRgCIAEoCUID4EEDOnvqQXgKJ2NvbW1lcmNlcHJvZHVjZXIu",
-            "Z29vZ2xlYXBpcy5jb20vU2VydmljZRI6cHJvamVjdHMve3Byb2plY3R9L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259L3NlcnZpY2VzL3tzZXJ2aWNlfSoIc2Vydmlj",
-            "ZXMyB3NlcnZpY2VCiAIKKGNvbS5nb29nbGUuY2xvdWQuY29tbWVyY2Vwcm9k",
-            "dWNlci52MWJldGFCDFNlcnZpY2VQcm90b1ABWlRjbG91ZC5nb29nbGUuY29t",
-            "L2dvL2NvbW1lcmNlcHJvZHVjZXIvYXBpdjFiZXRhL2NvbW1lcmNlcHJvZHVj",
-            "ZXJwYjtjb21tZXJjZXByb2R1Y2VycGKqAiRHb29nbGUuQ2xvdWQuQ29tbWVy",
-            "Y2VQcm9kdWNlci5WMUJldGHKAiRHb29nbGVcQ2xvdWRcQ29tbWVyY2VQcm9k",
-            "dWNlclxWMWJldGHqAidHb29nbGU6OkNsb3VkOjpDb21tZXJjZVByb2R1Y2Vy",
-            "OjpWMWJldGFiBnByb3RvMw=="));
+            "L3Jlc291cmNlLnByb3RvGjhnb29nbGUvY2xvdWQvY29tbWVyY2Vwcm9kdWNl",
+            "ci92MWJldGEvcHJpdmF0ZV9vZmZlci5wcm90byLmBwoHU2VydmljZRIRCgRu",
+            "YW1lGAEgASgJQgPgQQgSEgoFdGl0bGUYAiABKAlCA+BBAxJkChRkb2N1bWVu",
+            "dF9yZXF1aXJlbWVudBgDIAEoCzJBLmdvb2dsZS5jbG91ZC5jb21tZXJjZXBy",
+            "b2R1Y2VyLnYxYmV0YS5TZXJ2aWNlLkRvY3VtZW50UmVxdWlyZW1lbnRCA+BB",
+            "AxJUCgxwcm9kdWN0X3R5cGUYBCABKA4yOS5nb29nbGUuY2xvdWQuY29tbWVy",
+            "Y2Vwcm9kdWNlci52MWJldGEuU2VydmljZS5Qcm9kdWN0VHlwZUID4EEDGvwD",
+            "ChNEb2N1bWVudFJlcXVpcmVtZW50En0KGmRvY3VtZW50X3R5cGVfcmVxdWly",
+            "ZW1lbnRzGAEgAygLMlkuZ29vZ2xlLmNsb3VkLmNvbW1lcmNlcHJvZHVjZXIu",
+            "djFiZXRhLlNlcnZpY2UuRG9jdW1lbnRSZXF1aXJlbWVudC5Eb2N1bWVudFR5",
+            "cGVSZXF1aXJlbWVudBrlAgoXRG9jdW1lbnRUeXBlUmVxdWlyZW1lbnQSXgoN",
+            "ZG9jdW1lbnRfdHlwZRgBIAEoDjJHLmdvb2dsZS5jbG91ZC5jb21tZXJjZXBy",
+            "b2R1Y2VyLnYxYmV0YS5Qcml2YXRlT2ZmZXJEb2N1bWVudC5Eb2N1bWVudFR5",
+            "cGUShQEKEXJlcXVpcmVtZW50X2xldmVsGAIgASgOMmouZ29vZ2xlLmNsb3Vk",
+            "LmNvbW1lcmNlcHJvZHVjZXIudjFiZXRhLlNlcnZpY2UuRG9jdW1lbnRSZXF1",
+            "aXJlbWVudC5Eb2N1bWVudFR5cGVSZXF1aXJlbWVudC5SZXF1aXJlbWVudExl",
+            "dmVsImIKEFJlcXVpcmVtZW50TGV2ZWwSIQodUkVRVUlSRU1FTlRfTEVWRUxf",
+            "VU5TUEVDSUZJRUQQABIMCghSRVFVSVJFRBABEgwKCE9QVElPTkFMEAISDwoL",
+            "Tk9UX0FMTE9XRUQQAyJ8CgtQcm9kdWN0VHlwZRIcChhQUk9EVUNUX1RZUEVf",
+            "VU5TUEVDSUZJRUQQABIZChVTT0ZUV0FSRV9BU19BX1NFUlZJQ0UQARIZChVB",
+            "TkFMWVRJQ1NfSFVCX0xJU1RJTkcQAhIZChVQUk9GRVNTSU9OQUxfU0VSVklD",
+            "RVMQAzp76kF4Cidjb21tZXJjZXByb2R1Y2VyLmdvb2dsZWFwaXMuY29tL1Nl",
+            "cnZpY2USOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9zZXJ2aWNlcy97c2VydmljZX0qCHNlcnZpY2VzMgdzZXJ2aWNlQogCCihj",
+            "b20uZ29vZ2xlLmNsb3VkLmNvbW1lcmNlcHJvZHVjZXIudjFiZXRhQgxTZXJ2",
+            "aWNlUHJvdG9QAVpUY2xvdWQuZ29vZ2xlLmNvbS9nby9jb21tZXJjZXByb2R1",
+            "Y2VyL2FwaXYxYmV0YS9jb21tZXJjZXByb2R1Y2VycGI7Y29tbWVyY2Vwcm9k",
+            "dWNlcnBiqgIkR29vZ2xlLkNsb3VkLkNvbW1lcmNlUHJvZHVjZXIuVjFCZXRh",
+            "ygIkR29vZ2xlXENsb3VkXENvbW1lcmNlUHJvZHVjZXJcVjFiZXRh6gInR29v",
+            "Z2xlOjpDbG91ZDo6Q29tbWVyY2VQcm9kdWNlcjo6VjFiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.Service), global::Google.Cloud.CommerceProducer.V1Beta.Service.Parser, new[]{ "Name", "Title" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.Service), global::Google.Cloud.CommerceProducer.V1Beta.Service.Parser, new[]{ "Name", "Title", "DocumentRequirement", "ProductType" }, null, new[]{ typeof(global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.ProductType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement), global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Parser, new[]{ "DocumentTypeRequirements" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement), global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement.Parser, new[]{ "DocumentType", "RequirementLevel" }, null, new[]{ typeof(global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement.Types.RequirementLevel) }, null, null)})})
           }));
     }
     #endregion
@@ -88,6 +107,8 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
     public Service(Service other) : this() {
       name_ = other.name_;
       title_ = other.title_;
+      documentRequirement_ = other.documentRequirement_ != null ? other.documentRequirement_.Clone() : null;
+      productType_ = other.productType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -129,6 +150,40 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "document_requirement" field.</summary>
+    public const int DocumentRequirementFieldNumber = 3;
+    private global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement documentRequirement_;
+    /// <summary>
+    /// Output only. Document requirement for private offers on this service.
+    ///
+    /// Constraints that apply to every service, such as the restriction against
+    /// attaching both a standard and a custom EULA, are documented on
+    /// `PrivateOfferDocument` and are not represented here.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement DocumentRequirement {
+      get { return documentRequirement_; }
+      set {
+        documentRequirement_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "product_type" field.</summary>
+    public const int ProductTypeFieldNumber = 4;
+    private global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.ProductType productType_ = global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.ProductType.Unspecified;
+    /// <summary>
+    /// Output only. Type of the product this service commercializes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.ProductType ProductType {
+      get { return productType_; }
+      set {
+        productType_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -146,6 +201,8 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
       }
       if (Name != other.Name) return false;
       if (Title != other.Title) return false;
+      if (!object.Equals(DocumentRequirement, other.DocumentRequirement)) return false;
+      if (ProductType != other.ProductType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -155,6 +212,8 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Title.Length != 0) hash ^= Title.GetHashCode();
+      if (documentRequirement_ != null) hash ^= DocumentRequirement.GetHashCode();
+      if (ProductType != global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.ProductType.Unspecified) hash ^= ProductType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -181,6 +240,14 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
         output.WriteRawTag(18);
         output.WriteString(Title);
       }
+      if (documentRequirement_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DocumentRequirement);
+      }
+      if (ProductType != global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.ProductType.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ProductType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -199,6 +266,14 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
         output.WriteRawTag(18);
         output.WriteString(Title);
       }
+      if (documentRequirement_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DocumentRequirement);
+      }
+      if (ProductType != global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.ProductType.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ProductType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -214,6 +289,12 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
       }
       if (Title.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
+      }
+      if (documentRequirement_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DocumentRequirement);
+      }
+      if (ProductType != global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.ProductType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ProductType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,6 +313,15 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
       }
       if (other.Title.Length != 0) {
         Title = other.Title;
+      }
+      if (other.documentRequirement_ != null) {
+        if (documentRequirement_ == null) {
+          DocumentRequirement = new global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement();
+        }
+        DocumentRequirement.MergeFrom(other.DocumentRequirement);
+      }
+      if (other.ProductType != global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.ProductType.Unspecified) {
+        ProductType = other.ProductType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -258,6 +348,17 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
           }
           case 18: {
             Title = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (documentRequirement_ == null) {
+              DocumentRequirement = new global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement();
+            }
+            input.ReadMessage(DocumentRequirement);
+            break;
+          }
+          case 32: {
+            ProductType = (global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.ProductType) input.ReadEnum();
             break;
           }
         }
@@ -287,10 +388,548 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
             Title = input.ReadString();
             break;
           }
+          case 26: {
+            if (documentRequirement_ == null) {
+              DocumentRequirement = new global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement();
+            }
+            input.ReadMessage(DocumentRequirement);
+            break;
+          }
+          case 32: {
+            ProductType = (global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.ProductType) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Service message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The type of the product this service commercializes.
+      ///
+      /// Every service has a type, but only the types listed below are exposed. A
+      /// service whose type is not one of the listed values reports
+      /// `PRODUCT_TYPE_UNSPECIFIED`.
+      ///
+      /// Values may be added over time. Clients must handle unrecognized values.
+      /// When new values are added, the ProductType for an existing service may
+      /// change. Clients must also be able to handle a change in ProductType.
+      /// </summary>
+      public enum ProductType {
+        /// <summary>
+        /// The service has a type, but it is not one of the types exposed below.
+        /// </summary>
+        [pbr::OriginalName("PRODUCT_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Represents a software-as-a-service product. See
+        /// https://docs.cloud.google.com/marketplace/docs/partners/integrated-saas
+        /// </summary>
+        [pbr::OriginalName("SOFTWARE_AS_A_SERVICE")] SoftwareAsAService = 1,
+        /// <summary>
+        /// Represents a data product on BigQuery sharing (formerly Analytics Hub).
+        /// See https://docs.cloud.google.com/marketplace/docs/partners/data
+        /// </summary>
+        [pbr::OriginalName("ANALYTICS_HUB_LISTING")] AnalyticsHubListing = 2,
+        /// <summary>
+        /// Represents a professional services product. See
+        /// https://docs.cloud.google.com/marketplace/docs/partners/professional-services
+        /// </summary>
+        [pbr::OriginalName("PROFESSIONAL_SERVICES")] ProfessionalServices = 3,
+      }
+
+      /// <summary>
+      /// Requirements and constraints for documents attached to private offers.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DocumentRequirement : pb::IMessage<DocumentRequirement>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DocumentRequirement> _parser = new pb::MessageParser<DocumentRequirement>(() => new DocumentRequirement());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DocumentRequirement> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.CommerceProducer.V1Beta.Service.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DocumentRequirement() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DocumentRequirement(DocumentRequirement other) : this() {
+          documentTypeRequirements_ = other.documentTypeRequirements_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DocumentRequirement Clone() {
+          return new DocumentRequirement(this);
+        }
+
+        /// <summary>Field number for the "document_type_requirements" field.</summary>
+        public const int DocumentTypeRequirementsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement> _repeated_documentTypeRequirements_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement> documentTypeRequirements_ = new pbc::RepeatedField<global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement>();
+        /// <summary>
+        /// Document requirements for private offers on this service.
+        ///
+        /// Each document type appears at most once. The order of entries is not
+        /// significant. A document type that is not present in this list is not
+        /// permitted for private offers on this service.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement> DocumentTypeRequirements {
+          get { return documentTypeRequirements_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DocumentRequirement);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DocumentRequirement other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!documentTypeRequirements_.Equals(other.documentTypeRequirements_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= documentTypeRequirements_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          documentTypeRequirements_.WriteTo(output, _repeated_documentTypeRequirements_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          documentTypeRequirements_.WriteTo(ref output, _repeated_documentTypeRequirements_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += documentTypeRequirements_.CalculateSize(_repeated_documentTypeRequirements_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DocumentRequirement other) {
+          if (other == null) {
+            return;
+          }
+          documentTypeRequirements_.Add(other.documentTypeRequirements_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                documentTypeRequirements_.AddEntriesFrom(input, _repeated_documentTypeRequirements_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                documentTypeRequirements_.AddEntriesFrom(ref input, _repeated_documentTypeRequirements_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the DocumentRequirement message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Requirement specification for a specific document type.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class DocumentTypeRequirement : pb::IMessage<DocumentTypeRequirement>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<DocumentTypeRequirement> _parser = new pb::MessageParser<DocumentTypeRequirement>(() => new DocumentTypeRequirement());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<DocumentTypeRequirement> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DocumentTypeRequirement() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DocumentTypeRequirement(DocumentTypeRequirement other) : this() {
+              documentType_ = other.documentType_;
+              requirementLevel_ = other.requirementLevel_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DocumentTypeRequirement Clone() {
+              return new DocumentTypeRequirement(this);
+            }
+
+            /// <summary>Field number for the "document_type" field.</summary>
+            public const int DocumentTypeFieldNumber = 1;
+            private global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferDocument.Types.DocumentType documentType_ = global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferDocument.Types.DocumentType.Unspecified;
+            /// <summary>
+            /// The document type.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferDocument.Types.DocumentType DocumentType {
+              get { return documentType_; }
+              set {
+                documentType_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "requirement_level" field.</summary>
+            public const int RequirementLevelFieldNumber = 2;
+            private global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement.Types.RequirementLevel requirementLevel_ = global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement.Types.RequirementLevel.Unspecified;
+            /// <summary>
+            /// The requirement level for this document type.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement.Types.RequirementLevel RequirementLevel {
+              get { return requirementLevel_; }
+              set {
+                requirementLevel_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as DocumentTypeRequirement);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(DocumentTypeRequirement other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (DocumentType != other.DocumentType) return false;
+              if (RequirementLevel != other.RequirementLevel) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (DocumentType != global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferDocument.Types.DocumentType.Unspecified) hash ^= DocumentType.GetHashCode();
+              if (RequirementLevel != global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement.Types.RequirementLevel.Unspecified) hash ^= RequirementLevel.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (DocumentType != global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferDocument.Types.DocumentType.Unspecified) {
+                output.WriteRawTag(8);
+                output.WriteEnum((int) DocumentType);
+              }
+              if (RequirementLevel != global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement.Types.RequirementLevel.Unspecified) {
+                output.WriteRawTag(16);
+                output.WriteEnum((int) RequirementLevel);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (DocumentType != global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferDocument.Types.DocumentType.Unspecified) {
+                output.WriteRawTag(8);
+                output.WriteEnum((int) DocumentType);
+              }
+              if (RequirementLevel != global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement.Types.RequirementLevel.Unspecified) {
+                output.WriteRawTag(16);
+                output.WriteEnum((int) RequirementLevel);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (DocumentType != global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferDocument.Types.DocumentType.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DocumentType);
+              }
+              if (RequirementLevel != global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement.Types.RequirementLevel.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RequirementLevel);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(DocumentTypeRequirement other) {
+              if (other == null) {
+                return;
+              }
+              if (other.DocumentType != global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferDocument.Types.DocumentType.Unspecified) {
+                DocumentType = other.DocumentType;
+              }
+              if (other.RequirementLevel != global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement.Types.RequirementLevel.Unspecified) {
+                RequirementLevel = other.RequirementLevel;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    DocumentType = (global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferDocument.Types.DocumentType) input.ReadEnum();
+                    break;
+                  }
+                  case 16: {
+                    RequirementLevel = (global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement.Types.RequirementLevel) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    DocumentType = (global::Google.Cloud.CommerceProducer.V1Beta.PrivateOfferDocument.Types.DocumentType) input.ReadEnum();
+                    break;
+                  }
+                  case 16: {
+                    RequirementLevel = (global::Google.Cloud.CommerceProducer.V1Beta.Service.Types.DocumentRequirement.Types.DocumentTypeRequirement.Types.RequirementLevel) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the DocumentTypeRequirement message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// Requirement level for the document type.
+              /// </summary>
+              public enum RequirementLevel {
+                /// <summary>
+                /// Unspecified requirement level. Do not use.
+                /// </summary>
+                [pbr::OriginalName("REQUIREMENT_LEVEL_UNSPECIFIED")] Unspecified = 0,
+                /// <summary>
+                /// The document type is mandatory for private offers on this service.
+                /// Exactly one document of this type must be attached.
+                /// </summary>
+                [pbr::OriginalName("REQUIRED")] Required = 1,
+                /// <summary>
+                /// The document type is optional for private offers on this service.
+                /// At most one document of this type may be attached.
+                /// </summary>
+                [pbr::OriginalName("OPTIONAL")] Optional = 2,
+                /// <summary>
+                /// The document type is not permitted for private offers on this
+                /// service. No document of this type may be attached.
+                ///
+                /// A document type omitted from `document_type_requirements` is also
+                /// not permitted. This value is used to state the restriction
+                /// explicitly.
+                /// </summary>
+                [pbr::OriginalName("NOT_ALLOWED")] NotAllowed = 3,
+              }
+
+            }
+            #endregion
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 

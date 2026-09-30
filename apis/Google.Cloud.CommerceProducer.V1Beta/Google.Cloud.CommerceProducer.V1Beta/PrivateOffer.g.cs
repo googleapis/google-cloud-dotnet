@@ -7815,8 +7815,11 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
   /// is immutable. Existing documents cannot be updated or deleted, and new
   /// documents cannot be added.
   ///
-  /// A private offer must include a EULA, either by assigning a standard EULA
-  /// or attaching a custom EULA document, or a statement of work document.
+  /// A private offer may have at most one document of each type, and may not have
+  /// both a standard EULA and a custom EULA.
+  ///
+  /// Which document types are required, optional, or not permitted depends on the
+  /// service the offer is for, and is returned in `Service.document_requirement`.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PrivateOfferDocument : pb::IMessage<PrivateOfferDocument>
@@ -8305,20 +8308,21 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
         [pbr::OriginalName("DOCUMENT_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// The document is a custom EULA used in place of the standard product EULA.
-        /// A private offer may not have more than one custom EULA document.
+        /// A private offer may not have more than one custom EULA document, and may
+        /// not have both a custom EULA and a standard EULA.
         ///
         /// If this enum value is set, then mime_type and inline_content must
         /// be set.
         /// </summary>
         [pbr::OriginalName("CUSTOM_END_USER_LICENSE_AGREEMENT")] CustomEndUserLicenseAgreement = 1,
         /// <summary>
-        /// The document is the statement of work required by the [Cloud Marketplace
+        /// The document is the statement of work described by the [Cloud Marketplace
         /// Product Specific
-        /// Terms](https://cloud.google.com/terms/marketplace-product-terms) for all
-        /// Professional Services product private offers.
-        /// This document type is not permitted for private offers of any other
-        /// product type.
+        /// Terms](https://cloud.google.com/terms/marketplace-product-terms).
         /// A private offer may not have more than one statement of work document.
+        ///
+        /// Whether this document type is required, optional, or not permitted
+        /// depends on the service; see `Service.document_requirement`.
         ///
         /// The mime_type and inline_content fields must be set.
         /// </summary>
@@ -8326,16 +8330,23 @@ namespace Google.Cloud.CommerceProducer.V1Beta {
         /// <summary>
         /// The document is the Marketplace standard EULA, with the following link:
         /// https://cloud.google.com/terms/marketplace/eula-standard-v1-12102020.
-        /// Existing offers may have this document type, but this is not permitted
-        /// for new offers.
+        ///
+        /// This edition has been superseded by
+        /// STANDARD_END_USER_LICENSE_AGREEMENT_V2. Offers created before that
+        /// edition was published may have this document type, but it is not
+        /// permitted on any service for new offers.
         /// </summary>
         [pbr::OriginalName("STANDARD_END_USER_LICENSE_AGREEMENT_V1")] StandardEndUserLicenseAgreementV1 = 3,
         /// <summary>
         /// The document is the Marketplace standard EULA, with the following link:
         /// https://cloud.google.com/terms/marketplace/eula-standard-v2-01272021
         ///
-        /// New offers using Standard EULAs should set this enum value. This is not
-        /// permitted for Professional Services products.
+        /// New offers using Standard EULAs should set this enum value. A private
+        /// offer may not have more than one standard EULA document, and may not
+        /// have both a standard EULA and a custom EULA.
+        ///
+        /// Whether this document type is required, optional, or not permitted
+        /// depends on the service; see `Service.document_requirement`.
         ///
         /// The mime_type and inline_content fields must not be set.
         /// </summary>
