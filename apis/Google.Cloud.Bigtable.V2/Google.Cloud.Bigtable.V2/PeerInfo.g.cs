@@ -472,7 +472,7 @@ namespace Google.Cloud.Bigtable.V2 {
         [pbr::OriginalName("TRANSPORT_TYPE_UNKNOWN")] Unknown = 0,
         /// <summary>
         /// The client connected to this peer via an external network
-        /// (e.g. outside Google Coud).
+        /// (e.g. outside Google Cloud).
         /// </summary>
         [pbr::OriginalName("TRANSPORT_TYPE_EXTERNAL")] External = 1,
         /// <summary>
