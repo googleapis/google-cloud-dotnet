@@ -15,7 +15,6 @@
 using Grpc.Core;
 using Grpc.Core.Interceptors;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -70,7 +69,6 @@ internal static partial class SpannerBuiltInMetrics
 
             async Task<TResponse> InstrumentCallAsync()
             {
-                double elapsedMs = 0;
                 try
                 {
                     return await call.ResponseAsync.ConfigureAwait(false);
@@ -78,7 +76,7 @@ internal static partial class SpannerBuiltInMetrics
                 finally
                 {
                     stopwatch.Stop();
-                    elapsedMs = stopwatch.ElapsedMilliseconds;
+                    double elapsedMs = stopwatch.ElapsedMilliseconds;
                     var labels = Labeler.GetLabels(context.Method.Name, dbNameProvider, call.GetStatus().StatusCode, _clientIdentity);
                     var recordTimingTask = RecordServerTimingMetricsAsync(call.ResponseHeadersAsync, labels).ConfigureAwait(false);
                     RecordAttemptMetrics(elapsedMs, labels);
@@ -90,6 +88,55 @@ internal static partial class SpannerBuiltInMetrics
         // NOTE: We do not need to intercept blocking unary calls. All such calls resolve through the async
         // pipeline because each call now has a response metadata handler.
 
-        // TODO: Add instrumentation for server streaming calls
+        /// <inheritdoc/>
+        public override AsyncServerStreamingCall<TResponse> AsyncServerStreamingCall<TRequest, TResponse>(
+            TRequest request,
+            ClientInterceptorContext<TRequest, TResponse> context,
+            AsyncServerStreamingCallContinuation<TRequest, TResponse> continuation)
+        {
+            if (request is not IDatabaseNameProvider dbNameProvider)
+            {
+                return continuation(request, context);
+            }
+
+            IStopwatch stopwatch = _stopwatchProvider.StartNew();
+            AsyncServerStreamingCall<TResponse> call;
+            try
+            {
+                call = continuation(request, context);
+            }
+            catch (Exception ex)
+            {
+                stopwatch.Stop();
+                double elapsedMs = stopwatch.ElapsedMilliseconds;
+                StatusCode status = ex is RpcException rpcEx ? rpcEx.StatusCode : StatusCode.Unknown;
+                RecordAttemptMetrics(elapsedMs, context.Method.Name, dbNameProvider, status, _clientIdentity);
+                throw;
+            }
+
+            var instrumentedStreamReader = new InstrumentedAsyncStreamReader<TResponse>(
+                call.ResponseStream,
+                stopwatch,
+                (elapsedMs, status) =>
+                {
+                    var labels = Labeler.GetLabels(context.Method.Name, dbNameProvider, status, _clientIdentity);
+                    RecordAttemptMetrics(elapsedMs, labels);
+
+                    // Fire and forget, unlike the unary path: this callback runs inline on the reader's MoveNext
+                    // and so cannot await. RecordServerTimingMetricsAsync never throws, so the task is safe to drop.
+                    _ = RecordServerTimingMetricsAsync(call.ResponseHeadersAsync, labels);
+                });
+
+            return new AsyncServerStreamingCall<TResponse>(
+                instrumentedStreamReader,
+                call.ResponseHeadersAsync,
+                call.GetStatus,
+                call.GetTrailers,
+                () =>
+                {
+                    instrumentedStreamReader.NotifyClosed();
+                    call.Dispose();
+                });
+        }
     }
 }
