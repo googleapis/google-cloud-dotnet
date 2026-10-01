@@ -43,185 +43,253 @@ namespace Google.Cloud.Bigtable.V2 {
             "YmlndGFibGUudjIuTG9hZEJhbGFuY2luZ09wdGlvbnMuUmFuZG9tSAAaKwoN",
             "TGVhc3RJbkZsaWdodBIaChJyYW5kb21fc3Vic2V0X3NpemUYASABKAMaJgoI",
             "UGVha0V3bWESGgoScmFuZG9tX3N1YnNldF9zaXplGAEgASgDGggKBlJhbmRv",
-            "bUIZChdsb2FkX2JhbGFuY2luZ19zdHJhdGVneSK8CgoaU2Vzc2lvbkNsaWVu",
-            "dENvbmZpZ3VyYXRpb24SFAoMc2Vzc2lvbl9sb2FkGAEgASgCEkwKFmxvYWRf",
-            "YmFsYW5jaW5nX29wdGlvbnMYAiABKAsyKC5nb29nbGUuYmlndGFibGUudjIu",
-            "TG9hZEJhbGFuY2luZ09wdGlvbnNCAhgBEmYKFWNoYW5uZWxfY29uZmlndXJh",
-            "dGlvbhgDIAEoCzJHLmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9uQ2xpZW50",
-            "Q29uZmlndXJhdGlvbi5DaGFubmVsUG9vbENvbmZpZ3VyYXRpb24Sawoac2Vz",
-            "c2lvbl9wb29sX2NvbmZpZ3VyYXRpb24YBCABKAsyRy5nb29nbGUuYmlndGFi",
-            "bGUudjIuU2Vzc2lvbkNsaWVudENvbmZpZ3VyYXRpb24uU2Vzc2lvblBvb2xD",
-            "b25maWd1cmF0aW9uGv4EChhDaGFubmVsUG9vbENvbmZpZ3VyYXRpb24SGAoQ",
-            "bWluX3NlcnZlcl9jb3VudBgBIAEoBRIYChBtYXhfc2VydmVyX2NvdW50GAIg",
-            "ASgFEiAKGHBlcl9zZXJ2ZXJfc2Vzc2lvbl9jb3VudBgDIAEoBRKHAQobZGly",
-            "ZWN0X2FjY2Vzc193aXRoX2ZhbGxiYWNrGAQgASgLMmAuZ29vZ2xlLmJpZ3Rh",
-            "YmxlLnYyLlNlc3Npb25DbGllbnRDb25maWd1cmF0aW9uLkNoYW5uZWxQb29s",
-            "Q29uZmlndXJhdGlvbi5EaXJlY3RBY2Nlc3NXaXRoRmFsbGJhY2tIABJ2ChJk",
-            "aXJlY3RfYWNjZXNzX29ubHkYBSABKAsyWC5nb29nbGUuYmlndGFibGUudjIu",
-            "U2Vzc2lvbkNsaWVudENvbmZpZ3VyYXRpb24uQ2hhbm5lbFBvb2xDb25maWd1",
-            "cmF0aW9uLkRpcmVjdEFjY2Vzc09ubHlIABJwCg9jbG91ZF9wYXRoX29ubHkY",
-            "BiABKAsyVS5nb29nbGUuYmlndGFibGUudjIuU2Vzc2lvbkNsaWVudENvbmZp",
-            "Z3VyYXRpb24uQ2hhbm5lbFBvb2xDb25maWd1cmF0aW9uLkNsb3VkUGF0aE9u",
-            "bHlIABprChhEaXJlY3RBY2Nlc3NXaXRoRmFsbGJhY2sSHAoUZXJyb3JfcmF0",
-            "ZV90aHJlc2hvbGQYASABKAISMQoOY2hlY2tfaW50ZXJ2YWwYAiABKAsyGS5n",
-            "b29nbGUucHJvdG9idWYuRHVyYXRpb24aEgoQRGlyZWN0QWNjZXNzT25seRoP",
-            "Cg1DbG91ZFBhdGhPbmx5QgYKBG1vZGUa4wIKGFNlc3Npb25Qb29sQ29uZmln",
-            "dXJhdGlvbhIQCghoZWFkcm9vbRgBIAEoAhIZChFtaW5fc2Vzc2lvbl9jb3Vu",
-            "dBgCIAEoBRIZChFtYXhfc2Vzc2lvbl9jb3VudBgDIAEoBRIgChhuZXdfc2Vz",
-            "c2lvbl9xdWV1ZV9sZW5ndGgYBCABKAUSIwobbmV3X3Nlc3Npb25fY3JlYXRp",
-            "b25fYnVkZ2V0GAUgASgFEj8KHG5ld19zZXNzaW9uX2NyZWF0aW9uX3BlbmFs",
-            "dHkYBiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SLQolY29uc2Vj",
-            "dXRpdmVfc2Vzc2lvbl9mYWlsdXJlX3RocmVzaG9sZBgIIAEoBRJIChZsb2Fk",
-            "X2JhbGFuY2luZ19vcHRpb25zGAkgASgLMiguZ29vZ2xlLmJpZ3RhYmxlLnYy",
-            "LkxvYWRCYWxhbmNpbmdPcHRpb25zIq0BChZUZWxlbWV0cnlDb25maWd1cmF0",
-            "aW9uEkkKD2RlYnVnX3RhZ19sZXZlbBgBIAEoDjIwLmdvb2dsZS5iaWd0YWJs",
-            "ZS52Mi5UZWxlbWV0cnlDb25maWd1cmF0aW9uLkxldmVsIkgKBUxldmVsEhUK",
-            "EUxFVkVMX1VOU1BFQ0lGSUVEEAASCQoFREVCVUcQARIICgRJTkZPEAISCAoE",
-            "V0FSThADEgkKBUVSUk9SEAQijwQKE0NsaWVudENvbmZpZ3VyYXRpb24STQoV",
-            "c2Vzc2lvbl9jb25maWd1cmF0aW9uGAIgASgLMi4uZ29vZ2xlLmJpZ3RhYmxl",
-            "LnYyLlNlc3Npb25DbGllbnRDb25maWd1cmF0aW9uEhYKDHN0b3BfcG9sbGlu",
-            "ZxgDIAEoCEgAEjkKEHBvbGxpbmdfaW50ZXJ2YWwYBCABKAsyGS5nb29nbGUu",
-            "cHJvdG9idWYuRHVyYXRpb25CAhgBSAASXQoVcG9sbGluZ19jb25maWd1cmF0",
-            "aW9uGAUgASgLMjwuZ29vZ2xlLmJpZ3RhYmxlLnYyLkNsaWVudENvbmZpZ3Vy",
-            "YXRpb24uUG9sbGluZ0NvbmZpZ3VyYXRpb25IABJLChd0ZWxlbWV0cnlfY29u",
-            "ZmlndXJhdGlvbhgGIAEoCzIqLmdvb2dsZS5iaWd0YWJsZS52Mi5UZWxlbWV0",
-            "cnlDb25maWd1cmF0aW9uGp4BChRQb2xsaW5nQ29uZmlndXJhdGlvbhIzChBw",
-            "b2xsaW5nX2ludGVydmFsGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
-            "aW9uEjQKEXZhbGlkaXR5X2R1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uEhsKE21heF9ycGNfcmV0cnlfY291bnQYBiABKAVCCQoH",
-            "cG9sbGluZyLbAQoOU2Vzc2lvblJlcXVlc3QSPgoMb3Blbl9zZXNzaW9uGAEg",
-            "ASgLMiYuZ29vZ2xlLmJpZ3RhYmxlLnYyLk9wZW5TZXNzaW9uUmVxdWVzdEgA",
-            "EkAKDWNsb3NlX3Nlc3Npb24YAiABKAsyJy5nb29nbGUuYmlndGFibGUudjIu",
-            "Q2xvc2VTZXNzaW9uUmVxdWVzdEgAEjwKC3ZpcnR1YWxfcnBjGAMgASgLMiUu",
-            "Z29vZ2xlLmJpZ3RhYmxlLnYyLlZpcnR1YWxScGNSZXF1ZXN0SABCCQoHcGF5",
-            "bG9hZCLcAwoPU2Vzc2lvblJlc3BvbnNlEj8KDG9wZW5fc2Vzc2lvbhgBIAEo",
-            "CzInLmdvb2dsZS5iaWd0YWJsZS52Mi5PcGVuU2Vzc2lvblJlc3BvbnNlSAAS",
-            "PQoLdmlydHVhbF9ycGMYAiABKAsyJi5nb29nbGUuYmlndGFibGUudjIuVmly",
-            "dHVhbFJwY1Jlc3BvbnNlSAASMgoFZXJyb3IYAyABKAsyIS5nb29nbGUuYmln",
-            "dGFibGUudjIuRXJyb3JSZXNwb25zZUgAEksKEnNlc3Npb25fcGFyYW1ldGVy",
-            "cxgEIAEoCzItLmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9uUGFyYW1ldGVy",
-            "c1Jlc3BvbnNlSAASOgoJaGVhcnRiZWF0GAUgASgLMiUuZ29vZ2xlLmJpZ3Rh",
-            "YmxlLnYyLkhlYXJ0YmVhdFJlc3BvbnNlSAASNQoHZ29fYXdheRgGIAEoCzIi",
-            "Lmdvb2dsZS5iaWd0YWJsZS52Mi5Hb0F3YXlSZXNwb25zZUgAEkoKFnNlc3Np",
-            "b25fcmVmcmVzaF9jb25maWcYByABKAsyKC5nb29nbGUuYmlndGFibGUudjIu",
-            "U2Vzc2lvblJlZnJlc2hDb25maWdIAEIJCgdwYXlsb2FkIrgBChJPcGVuU2Vz",
-            "c2lvblJlcXVlc3QSGAoQcHJvdG9jb2xfdmVyc2lvbhgBIAEoAxIvCgVmbGFn",
-            "cxgCIAEoCzIgLmdvb2dsZS5iaWd0YWJsZS52Mi5GZWF0dXJlRmxhZ3MSLgom",
-            "Y29uc2VjdXRpdmVfZmFpbGVkX2Nvbm5lY3Rpb25fYXR0ZW1wdHMYAyABKAMS",
-            "FgoOcm91dGluZ19jb29raWUYBCABKAwSDwoHcGF5bG9hZBgFIAEoDCJzChFC",
-            "YWNrZW5kSWRlbnRpZmllchIaChJnb29nbGVfZnJvbnRlbmRfaWQYASABKAMS",
-            "HwoXYXBwbGljYXRpb25fZnJvbnRlbmRfaWQYAiABKAMSIQoZYXBwbGljYXRp",
-            "b25fZnJvbnRlbmRfem9uZRgDIAEoCSJeChNPcGVuU2Vzc2lvblJlc3BvbnNl",
-            "EjYKB2JhY2tlbmQYAiABKAsyJS5nb29nbGUuYmlndGFibGUudjIuQmFja2Vu",
-            "ZElkZW50aWZpZXISDwoHcGF5bG9hZBgBIAEoDCLbAgoTQ2xvc2VTZXNzaW9u",
-            "UmVxdWVzdBJKCgZyZWFzb24YASABKA4yOi5nb29nbGUuYmlndGFibGUudjIu",
-            "Q2xvc2VTZXNzaW9uUmVxdWVzdC5DbG9zZVNlc3Npb25SZWFzb24SEwoLZGVz",
-            "Y3JpcHRpb24YAiABKAki4gEKEkNsb3NlU2Vzc2lvblJlYXNvbhIeChpDTE9T",
-            "RV9TRVNTSU9OX1JFQVNPTl9VTlNFVBAAEh8KG0NMT1NFX1NFU1NJT05fUkVB",
-            "U09OX0dPQVdBWRABEh4KGkNMT1NFX1NFU1NJT05fUkVBU09OX0VSUk9SEAIS",
-            "HQoZQ0xPU0VfU0VTU0lPTl9SRUFTT05fVVNFUhADEiEKHUNMT1NFX1NFU1NJ",
-            "T05fUkVBU09OX0RPV05TSVpFEAQSKQolQ0xPU0VfU0VTU0lPTl9SRUFTT05f",
-            "TUlTU0VEX0hFQVJUQkVBVBAFIvUBChBPcGVuVGFibGVSZXF1ZXN0EhIKCnRh",
-            "YmxlX25hbWUYASABKAkSFgoOYXBwX3Byb2ZpbGVfaWQYAiABKAkSQwoKcGVy",
-            "bWlzc2lvbhgDIAEoDjIvLmdvb2dsZS5iaWd0YWJsZS52Mi5PcGVuVGFibGVS",
-            "ZXF1ZXN0LlBlcm1pc3Npb24iaAoKUGVybWlzc2lvbhIUChBQRVJNSVNTSU9O",
-            "X1VOU0VUEAASEwoPUEVSTUlTU0lPTl9SRUFEEAESFAoQUEVSTUlTU0lPTl9X",
-            "UklURRACEhkKFVBFUk1JU1NJT05fUkVBRF9XUklURRADOgbQwu2RBAEiGwoR",
-            "T3BlblRhYmxlUmVzcG9uc2U6BtDC7ZEEASKRAgoZT3BlbkF1dGhvcml6ZWRW",
-            "aWV3UmVxdWVzdBIcChRhdXRob3JpemVkX3ZpZXdfbmFtZRgBIAEoCRIWCg5h",
-            "cHBfcHJvZmlsZV9pZBgCIAEoCRJMCgpwZXJtaXNzaW9uGAMgASgOMjguZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyLk9wZW5BdXRob3JpemVkVmlld1JlcXVlc3QuUGVy",
-            "bWlzc2lvbiJoCgpQZXJtaXNzaW9uEhQKEFBFUk1JU1NJT05fVU5TRVQQABIT",
-            "Cg9QRVJNSVNTSU9OX1JFQUQQARIUChBQRVJNSVNTSU9OX1dSSVRFEAISGQoV",
-            "UEVSTUlTU0lPTl9SRUFEX1dSSVRFEAM6BtDC7ZEEAiIkChpPcGVuQXV0aG9y",
-            "aXplZFZpZXdSZXNwb25zZToG0MLtkQQCIuYBChtPcGVuTWF0ZXJpYWxpemVk",
-            "Vmlld1JlcXVlc3QSHgoWbWF0ZXJpYWxpemVkX3ZpZXdfbmFtZRgBIAEoCRIW",
-            "Cg5hcHBfcHJvZmlsZV9pZBgCIAEoCRJOCgpwZXJtaXNzaW9uGAMgASgOMjou",
-            "Z29vZ2xlLmJpZ3RhYmxlLnYyLk9wZW5NYXRlcmlhbGl6ZWRWaWV3UmVxdWVz",
-            "dC5QZXJtaXNzaW9uIjcKClBlcm1pc3Npb24SFAoQUEVSTUlTU0lPTl9VTlNF",
-            "VBAAEhMKD1BFUk1JU1NJT05fUkVBRBABOgbQwu2RBAMiJgocT3Blbk1hdGVy",
-            "aWFsaXplZFZpZXdSZXNwb25zZToG0MLtkQQDIo8CChFWaXJ0dWFsUnBjUmVx",
-            "dWVzdBIOCgZycGNfaWQYASABKAMSKwoIZGVhZGxpbmUYAiABKAsyGS5nb29n",
-            "bGUucHJvdG9idWYuRHVyYXRpb24SQAoIbWV0YWRhdGEYAyABKAsyLi5nb29n",
-            "bGUuYmlndGFibGUudjIuVmlydHVhbFJwY1JlcXVlc3QuTWV0YWRhdGESDwoH",
-            "cGF5bG9hZBgEIAEoDBpqCghNZXRhZGF0YRIWCg5hdHRlbXB0X251bWJlchgB",
-            "IAEoAxIxCg1hdHRlbXB0X3N0YXJ0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBITCgt0cmFjZXBhcmVudBgDIAEoCSI5ChJDbHVzdGVySW5m",
-            "b3JtYXRpb24SEgoKY2x1c3Rlcl9pZBgBIAEoCRIPCgd6b25lX2lkGAIgASgJ",
-            "IkkKE1Nlc3Npb25SZXF1ZXN0U3RhdHMSMgoPYmFja2VuZF9sYXRlbmN5GAEg",
-            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIqsBChJWaXJ0dWFsUnBj",
-            "UmVzcG9uc2USDgoGcnBjX2lkGAEgASgDEjwKDGNsdXN0ZXJfaW5mbxgCIAEo",
-            "CzImLmdvb2dsZS5iaWd0YWJsZS52Mi5DbHVzdGVySW5mb3JtYXRpb24SNgoF",
-            "c3RhdHMYBCABKAsyJy5nb29nbGUuYmlndGFibGUudjIuU2Vzc2lvblJlcXVl",
-            "c3RTdGF0cxIPCgdwYXlsb2FkGAMgASgMIqwBCg1FcnJvclJlc3BvbnNlEg4K",
-            "BnJwY19pZBgBIAEoAxI8CgxjbHVzdGVyX2luZm8YAiABKAsyJi5nb29nbGUu",
-            "YmlndGFibGUudjIuQ2x1c3RlckluZm9ybWF0aW9uEiIKBnN0YXR1cxgDIAEo",
-            "CzISLmdvb2dsZS5ycGMuU3RhdHVzEikKCnJldHJ5X2luZm8YBCABKAsyFS5n",
-            "b29nbGUucnBjLlJldHJ5SW5mbyL5AQoMVGFibGVSZXF1ZXN0Ej0KCHJlYWRf",
-            "cm93GAEgASgLMikuZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25SZWFkUm93",
-            "UmVxdWVzdEgAEkEKCm11dGF0ZV9yb3cYAiABKAsyKy5nb29nbGUuYmlndGFi",
-            "bGUudjIuU2Vzc2lvbk11dGF0ZVJvd1JlcXVlc3RIABJTChRjaGVja19hbmRf",
-            "bXV0YXRlX3JvdxgEIAEoCzIzLmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9u",
-            "Q2hlY2tBbmRNdXRhdGVSb3dSZXF1ZXN0SAA6B6rt7ZEEAQFCCQoHcGF5bG9h",
-            "ZCL9AQoNVGFibGVSZXNwb25zZRI+CghyZWFkX3JvdxgBIAEoCzIqLmdvb2ds",
-            "ZS5iaWd0YWJsZS52Mi5TZXNzaW9uUmVhZFJvd1Jlc3BvbnNlSAASQgoKbXV0",
-            "YXRlX3JvdxgCIAEoCzIsLmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9uTXV0",
-            "YXRlUm93UmVzcG9uc2VIABJUChRjaGVja19hbmRfbXV0YXRlX3JvdxgEIAEo",
-            "CzI0Lmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9uQ2hlY2tBbmRNdXRhdGVS",
-            "b3dSZXNwb25zZUgAOgeq7e2RBAEBQgkKB3BheWxvYWQiggIKFUF1dGhvcml6",
-            "ZWRWaWV3UmVxdWVzdBI9CghyZWFkX3JvdxgBIAEoCzIpLmdvb2dsZS5iaWd0",
-            "YWJsZS52Mi5TZXNzaW9uUmVhZFJvd1JlcXVlc3RIABJBCgptdXRhdGVfcm93",
-            "GAIgASgLMisuZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25NdXRhdGVSb3dS",
-            "ZXF1ZXN0SAASUwoUY2hlY2tfYW5kX211dGF0ZV9yb3cYBCABKAsyMy5nb29n",
-            "bGUuYmlndGFibGUudjIuU2Vzc2lvbkNoZWNrQW5kTXV0YXRlUm93UmVxdWVz",
-            "dEgAOgeq7e2RBAECQgkKB3BheWxvYWQihgIKFkF1dGhvcml6ZWRWaWV3UmVz",
-            "cG9uc2USPgoIcmVhZF9yb3cYASABKAsyKi5nb29nbGUuYmlndGFibGUudjIu",
-            "U2Vzc2lvblJlYWRSb3dSZXNwb25zZUgAEkIKCm11dGF0ZV9yb3cYAiABKAsy",
-            "LC5nb29nbGUuYmlndGFibGUudjIuU2Vzc2lvbk11dGF0ZVJvd1Jlc3BvbnNl",
-            "SAASVAoUY2hlY2tfYW5kX211dGF0ZV9yb3cYBCABKAsyNC5nb29nbGUuYmln",
-            "dGFibGUudjIuU2Vzc2lvbkNoZWNrQW5kTXV0YXRlUm93UmVzcG9uc2VIADoH",
-            "qu3tkQQBAkIJCgdwYXlsb2FkImwKF01hdGVyaWFsaXplZFZpZXdSZXF1ZXN0",
-            "Ej0KCHJlYWRfcm93GAEgASgLMikuZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Np",
-            "b25SZWFkUm93UmVxdWVzdEgAOgeq7e2RBAEDQgkKB3BheWxvYWQibgoYTWF0",
-            "ZXJpYWxpemVkVmlld1Jlc3BvbnNlEj4KCHJlYWRfcm93GAEgASgLMiouZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25SZWFkUm93UmVzcG9uc2VIADoHqu3t",
-            "kQQBA0IJCgdwYXlsb2FkIlMKFVNlc3Npb25SZWFkUm93UmVxdWVzdBILCgNr",
-            "ZXkYASABKAwSLQoGZmlsdGVyGAIgASgLMh0uZ29vZ2xlLmJpZ3RhYmxlLnYy",
-            "LlJvd0ZpbHRlciJvChZTZXNzaW9uUmVhZFJvd1Jlc3BvbnNlEiQKA3JvdxgB",
-            "IAEoCzIXLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3cSLwoFc3RhdHMYAiABKAsy",
-            "IC5nb29nbGUuYmlndGFibGUudjIuUmVxdWVzdFN0YXRzIlcKF1Nlc3Npb25N",
-            "dXRhdGVSb3dSZXF1ZXN0EgsKA2tleRgBIAEoDBIvCgltdXRhdGlvbnMYAiAD",
-            "KAsyHC5nb29nbGUuYmlndGFibGUudjIuTXV0YXRpb24iGgoYU2Vzc2lvbk11",
-            "dGF0ZVJvd1Jlc3BvbnNlItQBCh9TZXNzaW9uQ2hlY2tBbmRNdXRhdGVSb3dS",
-            "ZXF1ZXN0EgsKA2tleRgBIAEoDBI3ChBwcmVkaWNhdGVfZmlsdGVyGAIgASgL",
-            "Mh0uZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd0ZpbHRlchI0Cg50cnVlX211dGF0",
-            "aW9ucxgDIAMoCzIcLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbhI1Cg9m",
-            "YWxzZV9tdXRhdGlvbnMYBCADKAsyHC5nb29nbGUuYmlndGFibGUudjIuTXV0",
-            "YXRpb24iPQogU2Vzc2lvbkNoZWNrQW5kTXV0YXRlUm93UmVzcG9uc2USGQoR",
-            "cHJlZGljYXRlX21hdGNoZWQYASABKAgiSgoZU2Vzc2lvblBhcmFtZXRlcnNS",
-            "ZXNwb25zZRItCgprZWVwX2FsaXZlGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uIhMKEUhlYXJ0YmVhdFJlc3BvbnNlIlMKDkdvQXdheVJlc3Bv",
-            "bnNlEg4KBnJlYXNvbhgBIAEoCRITCgtkZXNjcmlwdGlvbhgCIAEoCRIcChRs",
-            "YXN0X3JwY19pZF9hZG1pdHRlZBgDIAEoAyLaAQoUU2Vzc2lvblJlZnJlc2hD",
-            "b25maWcSRgoWb3B0aW1pemVkX29wZW5fcmVxdWVzdBgBIAEoCzImLmdvb2ds",
-            "ZS5iaWd0YWJsZS52Mi5PcGVuU2Vzc2lvblJlcXVlc3QSSAoIbWV0YWRhdGEY",
-            "AiADKAsyMS5nb29nbGUuYmlndGFibGUudjIuU2Vzc2lvblJlZnJlc2hDb25m",
-            "aWcuTWV0YWRhdGFCA+BBAxowCghNZXRhZGF0YRIQCgNrZXkYASABKAlCA+BB",
-            "AxISCgV2YWx1ZRgCIAEoDEID4EEDKpsBCgtTZXNzaW9uVHlwZRIWChJTRVNT",
-            "SU9OX1RZUEVfVU5TRVQQABIWChJTRVNTSU9OX1RZUEVfVEFCTEUQARIgChxT",
-            "RVNTSU9OX1RZUEVfQVVUSE9SSVpFRF9WSUVXEAISIgoeU0VTU0lPTl9UWVBF",
-            "X01BVEVSSUFMSVpFRF9WSUVXEAMSFgoRU0VTU0lPTl9UWVBFX1RFU1QQj046",
-            "XgoRb3Blbl9zZXNzaW9uX3R5cGUSHy5nb29nbGUucHJvdG9idWYuTWVzc2Fn",
-            "ZU9wdGlvbnMYqtidQiABKA4yHy5nb29nbGUuYmlndGFibGUudjIuU2Vzc2lv",
-            "blR5cGU6XgoRdnJwY19zZXNzaW9uX3R5cGUSHy5nb29nbGUucHJvdG9idWYu",
-            "TWVzc2FnZU9wdGlvbnMY1d2dQiADKA4yHy5nb29nbGUuYmlndGFibGUudjIu",
-            "U2Vzc2lvblR5cGU6XAoQcnBjX3Nlc3Npb25fdHlwZRIeLmdvb2dsZS5wcm90",
-            "b2J1Zi5NZXRob2RPcHRpb25zGITa5EEgASgOMh8uZ29vZ2xlLmJpZ3RhYmxl",
-            "LnYyLlNlc3Npb25UeXBlQrYBChZjb20uZ29vZ2xlLmJpZ3RhYmxlLnYyQgxT",
-            "ZXNzaW9uUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9iaWd0YWJsZS9h",
-            "cGl2Mi9iaWd0YWJsZXBiO2JpZ3RhYmxlcGKqAhhHb29nbGUuQ2xvdWQuQmln",
-            "dGFibGUuVjLKAhhHb29nbGVcQ2xvdWRcQmlndGFibGVcVjLqAhtHb29nbGU6",
-            "OkNsb3VkOjpCaWd0YWJsZTo6VjJiBnByb3RvMw=="));
+            "bUIZChdsb2FkX2JhbGFuY2luZ19zdHJhdGVneSI6CiJTZXNzaW9uU2NvcGVE",
+            "aXZlcnNpb25Db25maWd1cmF0aW9uEhQKDHNlc3Npb25fbG9hZBgBIAEoAiLn",
+            "AwodU2Vzc2lvbkRpdmVyc2lvbkNvbmZpZ3VyYXRpb24SUgoQZ2xvYmFsX2Rp",
+            "dmVyc2lvbhgBIAEoCzI2Lmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9uU2Nv",
+            "cGVEaXZlcnNpb25Db25maWd1cmF0aW9uSAASYgoTcGVyX3Njb3BlX2RpdmVy",
+            "c2lvbhgCIAEoCzJDLmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9uRGl2ZXJz",
+            "aW9uQ29uZmlndXJhdGlvbi5QZXJTY29wZURpdmVyc2lvbkgAGvcBChFQZXJT",
+            "Y29wZURpdmVyc2lvbhJyChBzY29wZV9kaXZlcnNpb25zGAEgAygLMlguZ29v",
+            "Z2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25EaXZlcnNpb25Db25maWd1cmF0aW9u",
+            "LlBlclNjb3BlRGl2ZXJzaW9uLlNjb3BlRGl2ZXJzaW9uc0VudHJ5Gm4KFFNj",
+            "b3BlRGl2ZXJzaW9uc0VudHJ5EgsKA2tleRgBIAEoCRJFCgV2YWx1ZRgCIAEo",
+            "CzI2Lmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9uU2NvcGVEaXZlcnNpb25D",
+            "b25maWd1cmF0aW9uOgI4AUIUChJkaXZlcnNpb25fc3RyYXRlZ3kivwsKGlNl",
+            "c3Npb25DbGllbnRDb25maWd1cmF0aW9uEhgKDHNlc3Npb25fbG9hZBgBIAEo",
+            "AkICGAESWgofc2Vzc2lvbl9kaXZlcnNpb25fY29uZmlndXJhdGlvbhgFIAEo",
+            "CzIxLmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9uRGl2ZXJzaW9uQ29uZmln",
+            "dXJhdGlvbhJMChZsb2FkX2JhbGFuY2luZ19vcHRpb25zGAIgASgLMiguZ29v",
+            "Z2xlLmJpZ3RhYmxlLnYyLkxvYWRCYWxhbmNpbmdPcHRpb25zQgIYARJmChVj",
+            "aGFubmVsX2NvbmZpZ3VyYXRpb24YAyABKAsyRy5nb29nbGUuYmlndGFibGUu",
+            "djIuU2Vzc2lvbkNsaWVudENvbmZpZ3VyYXRpb24uQ2hhbm5lbFBvb2xDb25m",
+            "aWd1cmF0aW9uEmsKGnNlc3Npb25fcG9vbF9jb25maWd1cmF0aW9uGAQgASgL",
+            "MkcuZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25DbGllbnRDb25maWd1cmF0",
+            "aW9uLlNlc3Npb25Qb29sQ29uZmlndXJhdGlvbhr+BAoYQ2hhbm5lbFBvb2xD",
+            "b25maWd1cmF0aW9uEhgKEG1pbl9zZXJ2ZXJfY291bnQYASABKAUSGAoQbWF4",
+            "X3NlcnZlcl9jb3VudBgCIAEoBRIgChhwZXJfc2VydmVyX3Nlc3Npb25fY291",
+            "bnQYAyABKAUShwEKG2RpcmVjdF9hY2Nlc3Nfd2l0aF9mYWxsYmFjaxgEIAEo",
+            "CzJgLmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9uQ2xpZW50Q29uZmlndXJh",
+            "dGlvbi5DaGFubmVsUG9vbENvbmZpZ3VyYXRpb24uRGlyZWN0QWNjZXNzV2l0",
+            "aEZhbGxiYWNrSAASdgoSZGlyZWN0X2FjY2Vzc19vbmx5GAUgASgLMlguZ29v",
+            "Z2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25DbGllbnRDb25maWd1cmF0aW9uLkNo",
+            "YW5uZWxQb29sQ29uZmlndXJhdGlvbi5EaXJlY3RBY2Nlc3NPbmx5SAAScAoP",
+            "Y2xvdWRfcGF0aF9vbmx5GAYgASgLMlUuZ29vZ2xlLmJpZ3RhYmxlLnYyLlNl",
+            "c3Npb25DbGllbnRDb25maWd1cmF0aW9uLkNoYW5uZWxQb29sQ29uZmlndXJh",
+            "dGlvbi5DbG91ZFBhdGhPbmx5SAAaawoYRGlyZWN0QWNjZXNzV2l0aEZhbGxi",
+            "YWNrEhwKFGVycm9yX3JhdGVfdGhyZXNob2xkGAEgASgCEjEKDmNoZWNrX2lu",
+            "dGVydmFsGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGhIKEERp",
+            "cmVjdEFjY2Vzc09ubHkaDwoNQ2xvdWRQYXRoT25seUIGCgRtb2RlGoYDChhT",
+            "ZXNzaW9uUG9vbENvbmZpZ3VyYXRpb24SEAoIaGVhZHJvb20YASABKAISGQoR",
+            "bWluX3Nlc3Npb25fY291bnQYAiABKAUSGQoRbWF4X3Nlc3Npb25fY291bnQY",
+            "AyABKAUSIAoYbmV3X3Nlc3Npb25fcXVldWVfbGVuZ3RoGAQgASgFEiMKG25l",
+            "d19zZXNzaW9uX2NyZWF0aW9uX2J1ZGdldBgFIAEoBRI/ChxuZXdfc2Vzc2lv",
+            "bl9jcmVhdGlvbl9wZW5hbHR5GAYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
+            "cmF0aW9uEiEKGXNvZnRfc2Vzc2lvbl9jbG9zZV9idWRnZXQYByABKAUSLQol",
+            "Y29uc2VjdXRpdmVfc2Vzc2lvbl9mYWlsdXJlX3RocmVzaG9sZBgIIAEoBRJI",
+            "ChZsb2FkX2JhbGFuY2luZ19vcHRpb25zGAkgASgLMiguZ29vZ2xlLmJpZ3Rh",
+            "YmxlLnYyLkxvYWRCYWxhbmNpbmdPcHRpb25zIq0BChZUZWxlbWV0cnlDb25m",
+            "aWd1cmF0aW9uEkkKD2RlYnVnX3RhZ19sZXZlbBgBIAEoDjIwLmdvb2dsZS5i",
+            "aWd0YWJsZS52Mi5UZWxlbWV0cnlDb25maWd1cmF0aW9uLkxldmVsIkgKBUxl",
+            "dmVsEhUKEUxFVkVMX1VOU1BFQ0lGSUVEEAASCQoFREVCVUcQARIICgRJTkZP",
+            "EAISCAoEV0FSThADEgkKBUVSUk9SEAQijwQKE0NsaWVudENvbmZpZ3VyYXRp",
+            "b24STQoVc2Vzc2lvbl9jb25maWd1cmF0aW9uGAIgASgLMi4uZ29vZ2xlLmJp",
+            "Z3RhYmxlLnYyLlNlc3Npb25DbGllbnRDb25maWd1cmF0aW9uEhYKDHN0b3Bf",
+            "cG9sbGluZxgDIAEoCEgAEjkKEHBvbGxpbmdfaW50ZXJ2YWwYBCABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb25CAhgBSAASXQoVcG9sbGluZ19jb25m",
+            "aWd1cmF0aW9uGAUgASgLMjwuZ29vZ2xlLmJpZ3RhYmxlLnYyLkNsaWVudENv",
+            "bmZpZ3VyYXRpb24uUG9sbGluZ0NvbmZpZ3VyYXRpb25IABJLChd0ZWxlbWV0",
+            "cnlfY29uZmlndXJhdGlvbhgGIAEoCzIqLmdvb2dsZS5iaWd0YWJsZS52Mi5U",
+            "ZWxlbWV0cnlDb25maWd1cmF0aW9uGp4BChRQb2xsaW5nQ29uZmlndXJhdGlv",
+            "bhIzChBwb2xsaW5nX2ludGVydmFsGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
+            "LkR1cmF0aW9uEjQKEXZhbGlkaXR5X2R1cmF0aW9uGAIgASgLMhkuZ29vZ2xl",
+            "LnByb3RvYnVmLkR1cmF0aW9uEhsKE21heF9ycGNfcmV0cnlfY291bnQYBiAB",
+            "KAVCCQoHcG9sbGluZyL1AgoOU2Vzc2lvblJlcXVlc3QSPgoMb3Blbl9zZXNz",
+            "aW9uGAEgASgLMiYuZ29vZ2xlLmJpZ3RhYmxlLnYyLk9wZW5TZXNzaW9uUmVx",
+            "dWVzdEgAEkAKDWNsb3NlX3Nlc3Npb24YAiABKAsyJy5nb29nbGUuYmlndGFi",
+            "bGUudjIuQ2xvc2VTZXNzaW9uUmVxdWVzdEgAEjwKC3ZpcnR1YWxfcnBjGAMg",
+            "ASgLMiUuZ29vZ2xlLmJpZ3RhYmxlLnYyLlZpcnR1YWxScGNSZXF1ZXN0SAAS",
+            "TQoUY29udGludWVfdmlydHVhbF9ycGMYBCABKAsyLS5nb29nbGUuYmlndGFi",
+            "bGUudjIuQ29udGludWVWaXJ0dWFsUnBjUmVxdWVzdEgAEkkKEmNhbmNlbF92",
+            "aXJ0dWFsX3JwYxgFIAEoCzIrLmdvb2dsZS5iaWd0YWJsZS52Mi5DYW5jZWxW",
+            "aXJ0dWFsUnBjUmVxdWVzdEgAQgkKB3BheWxvYWQi3AMKD1Nlc3Npb25SZXNw",
+            "b25zZRI/CgxvcGVuX3Nlc3Npb24YASABKAsyJy5nb29nbGUuYmlndGFibGUu",
+            "djIuT3BlblNlc3Npb25SZXNwb25zZUgAEj0KC3ZpcnR1YWxfcnBjGAIgASgL",
+            "MiYuZ29vZ2xlLmJpZ3RhYmxlLnYyLlZpcnR1YWxScGNSZXNwb25zZUgAEjIK",
+            "BWVycm9yGAMgASgLMiEuZ29vZ2xlLmJpZ3RhYmxlLnYyLkVycm9yUmVzcG9u",
+            "c2VIABJLChJzZXNzaW9uX3BhcmFtZXRlcnMYBCABKAsyLS5nb29nbGUuYmln",
+            "dGFibGUudjIuU2Vzc2lvblBhcmFtZXRlcnNSZXNwb25zZUgAEjoKCWhlYXJ0",
+            "YmVhdBgFIAEoCzIlLmdvb2dsZS5iaWd0YWJsZS52Mi5IZWFydGJlYXRSZXNw",
+            "b25zZUgAEjUKB2dvX2F3YXkYBiABKAsyIi5nb29nbGUuYmlndGFibGUudjIu",
+            "R29Bd2F5UmVzcG9uc2VIABJKChZzZXNzaW9uX3JlZnJlc2hfY29uZmlnGAcg",
+            "ASgLMiguZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25SZWZyZXNoQ29uZmln",
+            "SABCCQoHcGF5bG9hZCK4AQoST3BlblNlc3Npb25SZXF1ZXN0EhgKEHByb3Rv",
+            "Y29sX3ZlcnNpb24YASABKAMSLwoFZmxhZ3MYAiABKAsyIC5nb29nbGUuYmln",
+            "dGFibGUudjIuRmVhdHVyZUZsYWdzEi4KJmNvbnNlY3V0aXZlX2ZhaWxlZF9j",
+            "b25uZWN0aW9uX2F0dGVtcHRzGAMgASgDEhYKDnJvdXRpbmdfY29va2llGAQg",
+            "ASgMEg8KB3BheWxvYWQYBSABKAwicwoRQmFja2VuZElkZW50aWZpZXISGgoS",
+            "Z29vZ2xlX2Zyb250ZW5kX2lkGAEgASgDEh8KF2FwcGxpY2F0aW9uX2Zyb250",
+            "ZW5kX2lkGAIgASgDEiEKGWFwcGxpY2F0aW9uX2Zyb250ZW5kX3pvbmUYAyAB",
+            "KAkiXgoTT3BlblNlc3Npb25SZXNwb25zZRI2CgdiYWNrZW5kGAIgASgLMiUu",
+            "Z29vZ2xlLmJpZ3RhYmxlLnYyLkJhY2tlbmRJZGVudGlmaWVyEg8KB3BheWxv",
+            "YWQYASABKAwi2wIKE0Nsb3NlU2Vzc2lvblJlcXVlc3QSSgoGcmVhc29uGAEg",
+            "ASgOMjouZ29vZ2xlLmJpZ3RhYmxlLnYyLkNsb3NlU2Vzc2lvblJlcXVlc3Qu",
+            "Q2xvc2VTZXNzaW9uUmVhc29uEhMKC2Rlc2NyaXB0aW9uGAIgASgJIuIBChJD",
+            "bG9zZVNlc3Npb25SZWFzb24SHgoaQ0xPU0VfU0VTU0lPTl9SRUFTT05fVU5T",
+            "RVQQABIfChtDTE9TRV9TRVNTSU9OX1JFQVNPTl9HT0FXQVkQARIeChpDTE9T",
+            "RV9TRVNTSU9OX1JFQVNPTl9FUlJPUhACEh0KGUNMT1NFX1NFU1NJT05fUkVB",
+            "U09OX1VTRVIQAxIhCh1DTE9TRV9TRVNTSU9OX1JFQVNPTl9ET1dOU0laRRAE",
+            "EikKJUNMT1NFX1NFU1NJT05fUkVBU09OX01JU1NFRF9IRUFSVEJFQVQQBSL1",
+            "AQoQT3BlblRhYmxlUmVxdWVzdBISCgp0YWJsZV9uYW1lGAEgASgJEhYKDmFw",
+            "cF9wcm9maWxlX2lkGAIgASgJEkMKCnBlcm1pc3Npb24YAyABKA4yLy5nb29n",
+            "bGUuYmlndGFibGUudjIuT3BlblRhYmxlUmVxdWVzdC5QZXJtaXNzaW9uImgK",
+            "ClBlcm1pc3Npb24SFAoQUEVSTUlTU0lPTl9VTlNFVBAAEhMKD1BFUk1JU1NJ",
+            "T05fUkVBRBABEhQKEFBFUk1JU1NJT05fV1JJVEUQAhIZChVQRVJNSVNTSU9O",
+            "X1JFQURfV1JJVEUQAzoG0MLtkQQBIhsKEU9wZW5UYWJsZVJlc3BvbnNlOgbQ",
+            "wu2RBAEikQIKGU9wZW5BdXRob3JpemVkVmlld1JlcXVlc3QSHAoUYXV0aG9y",
+            "aXplZF92aWV3X25hbWUYASABKAkSFgoOYXBwX3Byb2ZpbGVfaWQYAiABKAkS",
+            "TAoKcGVybWlzc2lvbhgDIAEoDjI4Lmdvb2dsZS5iaWd0YWJsZS52Mi5PcGVu",
+            "QXV0aG9yaXplZFZpZXdSZXF1ZXN0LlBlcm1pc3Npb24iaAoKUGVybWlzc2lv",
+            "bhIUChBQRVJNSVNTSU9OX1VOU0VUEAASEwoPUEVSTUlTU0lPTl9SRUFEEAES",
+            "FAoQUEVSTUlTU0lPTl9XUklURRACEhkKFVBFUk1JU1NJT05fUkVBRF9XUklU",
+            "RRADOgbQwu2RBAIiJAoaT3BlbkF1dGhvcml6ZWRWaWV3UmVzcG9uc2U6BtDC",
+            "7ZEEAiLmAQobT3Blbk1hdGVyaWFsaXplZFZpZXdSZXF1ZXN0Eh4KFm1hdGVy",
+            "aWFsaXplZF92aWV3X25hbWUYASABKAkSFgoOYXBwX3Byb2ZpbGVfaWQYAiAB",
+            "KAkSTgoKcGVybWlzc2lvbhgDIAEoDjI6Lmdvb2dsZS5iaWd0YWJsZS52Mi5P",
+            "cGVuTWF0ZXJpYWxpemVkVmlld1JlcXVlc3QuUGVybWlzc2lvbiI3CgpQZXJt",
+            "aXNzaW9uEhQKEFBFUk1JU1NJT05fVU5TRVQQABITCg9QRVJNSVNTSU9OX1JF",
+            "QUQQAToG0MLtkQQDIiYKHE9wZW5NYXRlcmlhbGl6ZWRWaWV3UmVzcG9uc2U6",
+            "BtDC7ZEEAyK6AgoRVmlydHVhbFJwY1JlcXVlc3QSDgoGcnBjX2lkGAEgASgD",
+            "EisKCGRlYWRsaW5lGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "EkAKCG1ldGFkYXRhGAMgASgLMi4uZ29vZ2xlLmJpZ3RhYmxlLnYyLlZpcnR1",
+            "YWxScGNSZXF1ZXN0Lk1ldGFkYXRhEg8KB3BheWxvYWQYBCABKAwalAEKCE1l",
+            "dGFkYXRhEhYKDmF0dGVtcHRfbnVtYmVyGAEgASgDEjEKDWF0dGVtcHRfc3Rh",
+            "cnQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhMKC3RyYWNl",
+            "cGFyZW50GAMgASgJEigKBWRlbGF5GAQgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
+            "LkR1cmF0aW9uIisKGUNvbnRpbnVlVmlydHVhbFJwY1JlcXVlc3QSDgoGcnBj",
+            "X2lkGAEgASgDIikKF0NhbmNlbFZpcnR1YWxScGNSZXF1ZXN0Eg4KBnJwY19p",
+            "ZBgBIAEoAyI5ChJDbHVzdGVySW5mb3JtYXRpb24SEgoKY2x1c3Rlcl9pZBgB",
+            "IAEoCRIPCgd6b25lX2lkGAIgASgJIkkKE1Nlc3Npb25SZXF1ZXN0U3RhdHMS",
+            "MgoPYmFja2VuZF9sYXRlbmN5GAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
+            "cmF0aW9uIr0BChJWaXJ0dWFsUnBjUmVzcG9uc2USDgoGcnBjX2lkGAEgASgD",
+            "EjwKDGNsdXN0ZXJfaW5mbxgCIAEoCzImLmdvb2dsZS5iaWd0YWJsZS52Mi5D",
+            "bHVzdGVySW5mb3JtYXRpb24SNgoFc3RhdHMYBCABKAsyJy5nb29nbGUuYmln",
+            "dGFibGUudjIuU2Vzc2lvblJlcXVlc3RTdGF0cxIPCgdwYXlsb2FkGAMgASgM",
+            "EhAKCGhhc19tb3JlGAUgASgIIqwBCg1FcnJvclJlc3BvbnNlEg4KBnJwY19p",
+            "ZBgBIAEoAxI8CgxjbHVzdGVyX2luZm8YAiABKAsyJi5nb29nbGUuYmlndGFi",
+            "bGUudjIuQ2x1c3RlckluZm9ybWF0aW9uEiIKBnN0YXR1cxgDIAEoCzISLmdv",
+            "b2dsZS5ycGMuU3RhdHVzEikKCnJldHJ5X2luZm8YBCABKAsyFS5nb29nbGUu",
+            "cnBjLlJldHJ5SW5mbyLWAwoMVGFibGVSZXF1ZXN0Ej0KCHJlYWRfcm93GAEg",
+            "ASgLMikuZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25SZWFkUm93UmVxdWVz",
+            "dEgAEkEKCm11dGF0ZV9yb3cYAiABKAsyKy5nb29nbGUuYmlndGFibGUudjIu",
+            "U2Vzc2lvbk11dGF0ZVJvd1JlcXVlc3RIABI/CglyZWFkX3Jvd3MYAyABKAsy",
+            "Ki5nb29nbGUuYmlndGFibGUudjIuU2Vzc2lvblJlYWRSb3dzUmVxdWVzdEgA",
+            "ElMKFGNoZWNrX2FuZF9tdXRhdGVfcm93GAQgASgLMjMuZ29vZ2xlLmJpZ3Rh",
+            "YmxlLnYyLlNlc3Npb25DaGVja0FuZE11dGF0ZVJvd1JlcXVlc3RIABJVChVy",
+            "ZWFkX21vZGlmeV93cml0ZV9yb3cYBSABKAsyNC5nb29nbGUuYmlndGFibGUu",
+            "djIuU2Vzc2lvblJlYWRNb2RpZnlXcml0ZVJvd1JlcXVlc3RIABJDCgttdXRh",
+            "dGVfcm93cxgGIAEoCzIsLmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9uTXV0",
+            "YXRlUm93c1JlcXVlc3RIADoHqu3tkQQBAUIJCgdwYXlsb2FkIt0DCg1UYWJs",
+            "ZVJlc3BvbnNlEj4KCHJlYWRfcm93GAEgASgLMiouZ29vZ2xlLmJpZ3RhYmxl",
+            "LnYyLlNlc3Npb25SZWFkUm93UmVzcG9uc2VIABJCCgptdXRhdGVfcm93GAIg",
+            "ASgLMiwuZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25NdXRhdGVSb3dSZXNw",
+            "b25zZUgAEkAKCXJlYWRfcm93cxgDIAEoCzIrLmdvb2dsZS5iaWd0YWJsZS52",
+            "Mi5TZXNzaW9uUmVhZFJvd3NSZXNwb25zZUgAElQKFGNoZWNrX2FuZF9tdXRh",
+            "dGVfcm93GAQgASgLMjQuZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25DaGVj",
+            "a0FuZE11dGF0ZVJvd1Jlc3BvbnNlSAASVgoVcmVhZF9tb2RpZnlfd3JpdGVf",
+            "cm93GAUgASgLMjUuZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25SZWFkTW9k",
+            "aWZ5V3JpdGVSb3dSZXNwb25zZUgAEkQKC211dGF0ZV9yb3dzGAYgASgLMi0u",
+            "Z29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25NdXRhdGVSb3dzUmVzcG9uc2VI",
+            "ADoHqu3tkQQBAUIJCgdwYXlsb2FkIt8DChVBdXRob3JpemVkVmlld1JlcXVl",
+            "c3QSPQoIcmVhZF9yb3cYASABKAsyKS5nb29nbGUuYmlndGFibGUudjIuU2Vz",
+            "c2lvblJlYWRSb3dSZXF1ZXN0SAASQQoKbXV0YXRlX3JvdxgCIAEoCzIrLmdv",
+            "b2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9uTXV0YXRlUm93UmVxdWVzdEgAEj8K",
+            "CXJlYWRfcm93cxgDIAEoCzIqLmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9u",
+            "UmVhZFJvd3NSZXF1ZXN0SAASUwoUY2hlY2tfYW5kX211dGF0ZV9yb3cYBCAB",
+            "KAsyMy5nb29nbGUuYmlndGFibGUudjIuU2Vzc2lvbkNoZWNrQW5kTXV0YXRl",
+            "Um93UmVxdWVzdEgAElUKFXJlYWRfbW9kaWZ5X3dyaXRlX3JvdxgFIAEoCzI0",
+            "Lmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9uUmVhZE1vZGlmeVdyaXRlUm93",
+            "UmVxdWVzdEgAEkMKC211dGF0ZV9yb3dzGAYgASgLMiwuZ29vZ2xlLmJpZ3Rh",
+            "YmxlLnYyLlNlc3Npb25NdXRhdGVSb3dzUmVxdWVzdEgAOgeq7e2RBAECQgkK",
+            "B3BheWxvYWQi5gMKFkF1dGhvcml6ZWRWaWV3UmVzcG9uc2USPgoIcmVhZF9y",
+            "b3cYASABKAsyKi5nb29nbGUuYmlndGFibGUudjIuU2Vzc2lvblJlYWRSb3dS",
+            "ZXNwb25zZUgAEkIKCm11dGF0ZV9yb3cYAiABKAsyLC5nb29nbGUuYmlndGFi",
+            "bGUudjIuU2Vzc2lvbk11dGF0ZVJvd1Jlc3BvbnNlSAASQAoJcmVhZF9yb3dz",
+            "GAMgASgLMisuZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25SZWFkUm93c1Jl",
+            "c3BvbnNlSAASVAoUY2hlY2tfYW5kX211dGF0ZV9yb3cYBCABKAsyNC5nb29n",
+            "bGUuYmlndGFibGUudjIuU2Vzc2lvbkNoZWNrQW5kTXV0YXRlUm93UmVzcG9u",
+            "c2VIABJWChVyZWFkX21vZGlmeV93cml0ZV9yb3cYBSABKAsyNS5nb29nbGUu",
+            "YmlndGFibGUudjIuU2Vzc2lvblJlYWRNb2RpZnlXcml0ZVJvd1Jlc3BvbnNl",
+            "SAASRAoLbXV0YXRlX3Jvd3MYBiABKAsyLS5nb29nbGUuYmlndGFibGUudjIu",
+            "U2Vzc2lvbk11dGF0ZVJvd3NSZXNwb25zZUgAOgeq7e2RBAECQgkKB3BheWxv",
+            "YWQirQEKF01hdGVyaWFsaXplZFZpZXdSZXF1ZXN0Ej0KCHJlYWRfcm93GAEg",
+            "ASgLMikuZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25SZWFkUm93UmVxdWVz",
+            "dEgAEj8KCXJlYWRfcm93cxgCIAEoCzIqLmdvb2dsZS5iaWd0YWJsZS52Mi5T",
+            "ZXNzaW9uUmVhZFJvd3NSZXF1ZXN0SAA6B6rt7ZEEAQNCCQoHcGF5bG9hZCKw",
+            "AQoYTWF0ZXJpYWxpemVkVmlld1Jlc3BvbnNlEj4KCHJlYWRfcm93GAEgASgL",
+            "MiouZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25SZWFkUm93UmVzcG9uc2VI",
+            "ABJACglyZWFkX3Jvd3MYAiABKAsyKy5nb29nbGUuYmlndGFibGUudjIuU2Vz",
+            "c2lvblJlYWRSb3dzUmVzcG9uc2VIADoHqu3tkQQBA0IJCgdwYXlsb2FkIlMK",
+            "FVNlc3Npb25SZWFkUm93UmVxdWVzdBILCgNrZXkYASABKAwSLQoGZmlsdGVy",
+            "GAIgASgLMh0uZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd0ZpbHRlciJvChZTZXNz",
+            "aW9uUmVhZFJvd1Jlc3BvbnNlEiQKA3JvdxgBIAEoCzIXLmdvb2dsZS5iaWd0",
+            "YWJsZS52Mi5Sb3cSLwoFc3RhdHMYAiABKAsyIC5nb29nbGUuYmlndGFibGUu",
+            "djIuUmVxdWVzdFN0YXRzIpcBChZTZXNzaW9uUmVhZFJvd3NSZXF1ZXN0EigK",
+            "BHJvd3MYASABKAsyGi5nb29nbGUuYmlndGFibGUudjIuUm93U2V0Ei0KBmZp",
+            "bHRlchgCIAEoCzIdLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dGaWx0ZXISEgoK",
+            "cm93c19saW1pdBgDIAEoAxIQCghyZXZlcnNlZBgEIAEoCCJwChdTZXNzaW9u",
+            "UmVhZFJvd3NSZXNwb25zZRIkCgNyb3cYASADKAsyFy5nb29nbGUuYmlndGFi",
+            "bGUudjIuUm93Ei8KBXN0YXRzGAIgASgLMiAuZ29vZ2xlLmJpZ3RhYmxlLnYy",
+            "LlJlcXVlc3RTdGF0cyJXChdTZXNzaW9uTXV0YXRlUm93UmVxdWVzdBILCgNr",
+            "ZXkYASABKAwSLwoJbXV0YXRpb25zGAIgAygLMhwuZ29vZ2xlLmJpZ3RhYmxl",
+            "LnYyLk11dGF0aW9uIhoKGFNlc3Npb25NdXRhdGVSb3dSZXNwb25zZSLUAQof",
+            "U2Vzc2lvbkNoZWNrQW5kTXV0YXRlUm93UmVxdWVzdBILCgNrZXkYASABKAwS",
+            "NwoQcHJlZGljYXRlX2ZpbHRlchgCIAEoCzIdLmdvb2dsZS5iaWd0YWJsZS52",
+            "Mi5Sb3dGaWx0ZXISNAoOdHJ1ZV9tdXRhdGlvbnMYAyADKAsyHC5nb29nbGUu",
+            "YmlndGFibGUudjIuTXV0YXRpb24SNQoPZmFsc2VfbXV0YXRpb25zGAQgAygL",
+            "MhwuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0aW9uIj0KIFNlc3Npb25DaGVj",
+            "a0FuZE11dGF0ZVJvd1Jlc3BvbnNlEhkKEXByZWRpY2F0ZV9tYXRjaGVkGAEg",
+            "ASgIImcKIFNlc3Npb25SZWFkTW9kaWZ5V3JpdGVSb3dSZXF1ZXN0EgsKA2tl",
+            "eRgBIAEoDBI2CgVydWxlcxgCIAMoCzInLmdvb2dsZS5iaWd0YWJsZS52Mi5S",
+            "ZWFkTW9kaWZ5V3JpdGVSdWxlIkkKIVNlc3Npb25SZWFkTW9kaWZ5V3JpdGVS",
+            "b3dSZXNwb25zZRIkCgNyb3cYASABKAsyFy5nb29nbGUuYmlndGFibGUudjIu",
+            "Um93ItwBChhTZXNzaW9uTXV0YXRlUm93c1JlcXVlc3QSQwoHZW50cmllcxgB",
+            "IAMoCzIyLmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNzaW9uTXV0YXRlUm93c1Jl",
+            "cXVlc3QuRW50cnkaewoFRW50cnkSCwoDa2V5GAEgASgMEi8KCW11dGF0aW9u",
+            "cxgCIAMoCzIcLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbhI0CgtpZGVt",
+            "cG90ZW5jeRgDIAEoCzIfLmdvb2dsZS5iaWd0YWJsZS52Mi5JZGVtcG90ZW5j",
+            "eSLYAgoZU2Vzc2lvbk11dGF0ZVJvd3NSZXNwb25zZRJECgdlbnRyaWVzGAEg",
+            "AygLMjMuZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25NdXRhdGVSb3dzUmVz",
+            "cG9uc2UuRW50cnkSWQoPcmF0ZV9saW1pdF9pbmZvGAIgASgLMjsuZ29vZ2xl",
+            "LmJpZ3RhYmxlLnYyLlNlc3Npb25NdXRhdGVSb3dzUmVzcG9uc2UuUmF0ZUxp",
+            "bWl0SW5mb0gAiAEBGjoKBUVudHJ5Eg0KBWluZGV4GAEgASgDEiIKBnN0YXR1",
+            "cxgCIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzGkoKDVJhdGVMaW1pdEluZm8S",
+            "KQoGcGVyaW9kGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEg4K",
+            "BmZhY3RvchgCIAEoAUISChBfcmF0ZV9saW1pdF9pbmZvInsKGVNlc3Npb25Q",
+            "YXJhbWV0ZXJzUmVzcG9uc2USLQoKa2VlcF9hbGl2ZRgBIAEoCzIZLmdvb2ds",
+            "ZS5wcm90b2J1Zi5EdXJhdGlvbhIvCidzb2Z0bWF4X3N0cmVhbWluZ19wcmVm",
+            "ZXRjaF9idWZmZXJfYnl0ZXMYAiABKAUiEwoRSGVhcnRiZWF0UmVzcG9uc2Ui",
+            "UwoOR29Bd2F5UmVzcG9uc2USDgoGcmVhc29uGAEgASgJEhMKC2Rlc2NyaXB0",
+            "aW9uGAIgASgJEhwKFGxhc3RfcnBjX2lkX2FkbWl0dGVkGAMgASgDItoBChRT",
+            "ZXNzaW9uUmVmcmVzaENvbmZpZxJGChZvcHRpbWl6ZWRfb3Blbl9yZXF1ZXN0",
+            "GAEgASgLMiYuZ29vZ2xlLmJpZ3RhYmxlLnYyLk9wZW5TZXNzaW9uUmVxdWVz",
+            "dBJICghtZXRhZGF0YRgCIAMoCzIxLmdvb2dsZS5iaWd0YWJsZS52Mi5TZXNz",
+            "aW9uUmVmcmVzaENvbmZpZy5NZXRhZGF0YUID4EEDGjAKCE1ldGFkYXRhEhAK",
+            "A2tleRgBIAEoCUID4EEDEhIKBXZhbHVlGAIgASgMQgPgQQMqmwEKC1Nlc3Np",
+            "b25UeXBlEhYKElNFU1NJT05fVFlQRV9VTlNFVBAAEhYKElNFU1NJT05fVFlQ",
+            "RV9UQUJMRRABEiAKHFNFU1NJT05fVFlQRV9BVVRIT1JJWkVEX1ZJRVcQAhIi",
+            "Ch5TRVNTSU9OX1RZUEVfTUFURVJJQUxJWkVEX1ZJRVcQAxIWChFTRVNTSU9O",
+            "X1RZUEVfVEVTVBCPTjpeChFvcGVuX3Nlc3Npb25fdHlwZRIfLmdvb2dsZS5w",
+            "cm90b2J1Zi5NZXNzYWdlT3B0aW9ucxiq2J1CIAEoDjIfLmdvb2dsZS5iaWd0",
+            "YWJsZS52Mi5TZXNzaW9uVHlwZTpeChF2cnBjX3Nlc3Npb25fdHlwZRIfLmdv",
+            "b2dsZS5wcm90b2J1Zi5NZXNzYWdlT3B0aW9ucxjV3Z1CIAMoDjIfLmdvb2ds",
+            "ZS5iaWd0YWJsZS52Mi5TZXNzaW9uVHlwZTpcChBycGNfc2Vzc2lvbl90eXBl",
+            "Eh4uZ29vZ2xlLnByb3RvYnVmLk1ldGhvZE9wdGlvbnMYhNrkQSABKA4yHy5n",
+            "b29nbGUuYmlndGFibGUudjIuU2Vzc2lvblR5cGVCtgEKFmNvbS5nb29nbGUu",
+            "YmlndGFibGUudjJCDFNlc3Npb25Qcm90b1ABWjhjbG91ZC5nb29nbGUuY29t",
+            "L2dvL2JpZ3RhYmxlL2FwaXYyL2JpZ3RhYmxlcGI7YmlndGFibGVwYqoCGEdv",
+            "b2dsZS5DbG91ZC5CaWd0YWJsZS5WMsoCGEdvb2dsZVxDbG91ZFxCaWd0YWJs",
+            "ZVxWMuoCG0dvb2dsZTo6Q2xvdWQ6OkJpZ3RhYmxlOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor, global::Google.Cloud.Bigtable.V2.FeatureFlagsReflection.Descriptor, global::Google.Cloud.Bigtable.V2.RequestStatsReflection.Descriptor, global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.ErrorDetailsReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Bigtable.V2.SessionType), }, new pb::Extension[] { SessionExtensions.OpenSessionType, SessionExtensions.VrpcSessionType, SessionExtensions.RpcSessionType }, new pbr::GeneratedClrTypeInfo[] {
@@ -229,13 +297,15 @@ namespace Google.Cloud.Bigtable.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.LoadBalancingOptions), global::Google.Cloud.Bigtable.V2.LoadBalancingOptions.Parser, new[]{ "LeastInFlight", "PeakEwma", "Random" }, new[]{ "LoadBalancingStrategy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.LoadBalancingOptions.Types.LeastInFlight), global::Google.Cloud.Bigtable.V2.LoadBalancingOptions.Types.LeastInFlight.Parser, new[]{ "RandomSubsetSize" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.LoadBalancingOptions.Types.PeakEwma), global::Google.Cloud.Bigtable.V2.LoadBalancingOptions.Types.PeakEwma.Parser, new[]{ "RandomSubsetSize" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.LoadBalancingOptions.Types.Random), global::Google.Cloud.Bigtable.V2.LoadBalancingOptions.Types.Random.Parser, null, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionClientConfiguration), global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Parser, new[]{ "SessionLoad", "LoadBalancingOptions", "ChannelConfiguration", "SessionPoolConfiguration" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.ChannelPoolConfiguration), global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.ChannelPoolConfiguration.Parser, new[]{ "MinServerCount", "MaxServerCount", "PerServerSessionCount", "DirectAccessWithFallback", "DirectAccessOnly", "CloudPathOnly" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.ChannelPoolConfiguration.Types.DirectAccessWithFallback), global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.ChannelPoolConfiguration.Types.DirectAccessWithFallback.Parser, new[]{ "ErrorRateThreshold", "CheckInterval" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration), global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration.Parser, new[]{ "SessionLoad" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration), global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration.Parser, new[]{ "GlobalDiversion", "PerScopeDiversion" }, new[]{ "DiversionStrategy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration.Types.PerScopeDiversion), global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration.Types.PerScopeDiversion.Parser, new[]{ "ScopeDiversions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionClientConfiguration), global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Parser, new[]{ "SessionLoad", "SessionDiversionConfiguration", "LoadBalancingOptions", "ChannelConfiguration", "SessionPoolConfiguration" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.ChannelPoolConfiguration), global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.ChannelPoolConfiguration.Parser, new[]{ "MinServerCount", "MaxServerCount", "PerServerSessionCount", "DirectAccessWithFallback", "DirectAccessOnly", "CloudPathOnly" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.ChannelPoolConfiguration.Types.DirectAccessWithFallback), global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.ChannelPoolConfiguration.Types.DirectAccessWithFallback.Parser, new[]{ "ErrorRateThreshold", "CheckInterval" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.ChannelPoolConfiguration.Types.DirectAccessOnly), global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.ChannelPoolConfiguration.Types.DirectAccessOnly.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.ChannelPoolConfiguration.Types.CloudPathOnly), global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.ChannelPoolConfiguration.Types.CloudPathOnly.Parser, null, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.SessionPoolConfiguration), global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.SessionPoolConfiguration.Parser, new[]{ "Headroom", "MinSessionCount", "MaxSessionCount", "NewSessionQueueLength", "NewSessionCreationBudget", "NewSessionCreationPenalty", "ConsecutiveSessionFailureThreshold", "LoadBalancingOptions" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.SessionPoolConfiguration), global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.SessionPoolConfiguration.Parser, new[]{ "Headroom", "MinSessionCount", "MaxSessionCount", "NewSessionQueueLength", "NewSessionCreationBudget", "NewSessionCreationPenalty", "SoftSessionCloseBudget", "ConsecutiveSessionFailureThreshold", "LoadBalancingOptions" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.TelemetryConfiguration), global::Google.Cloud.Bigtable.V2.TelemetryConfiguration.Parser, new[]{ "DebugTagLevel" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.V2.TelemetryConfiguration.Types.Level) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ClientConfiguration), global::Google.Cloud.Bigtable.V2.ClientConfiguration.Parser, new[]{ "SessionConfiguration", "StopPolling", "PollingInterval", "PollingConfiguration", "TelemetryConfiguration" }, new[]{ "Polling" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ClientConfiguration.Types.PollingConfiguration), global::Google.Cloud.Bigtable.V2.ClientConfiguration.Types.PollingConfiguration.Parser, new[]{ "PollingInterval", "ValidityDuration", "MaxRpcRetryCount" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionRequest), global::Google.Cloud.Bigtable.V2.SessionRequest.Parser, new[]{ "OpenSession", "CloseSession", "VirtualRpc" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionRequest), global::Google.Cloud.Bigtable.V2.SessionRequest.Parser, new[]{ "OpenSession", "CloseSession", "VirtualRpc", "ContinueVirtualRpc", "CancelVirtualRpc" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionResponse), global::Google.Cloud.Bigtable.V2.SessionResponse.Parser, new[]{ "OpenSession", "VirtualRpc", "Error", "SessionParameters", "Heartbeat", "GoAway", "SessionRefreshConfig" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.OpenSessionRequest), global::Google.Cloud.Bigtable.V2.OpenSessionRequest.Parser, new[]{ "ProtocolVersion", "Flags", "ConsecutiveFailedConnectionAttempts", "RoutingCookie", "Payload" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.BackendIdentifier), global::Google.Cloud.Bigtable.V2.BackendIdentifier.Parser, new[]{ "GoogleFrontendId", "ApplicationFrontendId", "ApplicationFrontendZone" }, null, null, null, null),
@@ -247,24 +317,33 @@ namespace Google.Cloud.Bigtable.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.OpenAuthorizedViewResponse), global::Google.Cloud.Bigtable.V2.OpenAuthorizedViewResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.OpenMaterializedViewRequest), global::Google.Cloud.Bigtable.V2.OpenMaterializedViewRequest.Parser, new[]{ "MaterializedViewName", "AppProfileId", "Permission" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.V2.OpenMaterializedViewRequest.Types.Permission) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.OpenMaterializedViewResponse), global::Google.Cloud.Bigtable.V2.OpenMaterializedViewResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.VirtualRpcRequest), global::Google.Cloud.Bigtable.V2.VirtualRpcRequest.Parser, new[]{ "RpcId", "Deadline", "Metadata", "Payload" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.VirtualRpcRequest.Types.Metadata), global::Google.Cloud.Bigtable.V2.VirtualRpcRequest.Types.Metadata.Parser, new[]{ "AttemptNumber", "AttemptStart", "Traceparent" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.VirtualRpcRequest), global::Google.Cloud.Bigtable.V2.VirtualRpcRequest.Parser, new[]{ "RpcId", "Deadline", "Metadata", "Payload" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.VirtualRpcRequest.Types.Metadata), global::Google.Cloud.Bigtable.V2.VirtualRpcRequest.Types.Metadata.Parser, new[]{ "AttemptNumber", "AttemptStart", "Traceparent", "Delay" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ContinueVirtualRpcRequest), global::Google.Cloud.Bigtable.V2.ContinueVirtualRpcRequest.Parser, new[]{ "RpcId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.CancelVirtualRpcRequest), global::Google.Cloud.Bigtable.V2.CancelVirtualRpcRequest.Parser, new[]{ "RpcId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ClusterInformation), global::Google.Cloud.Bigtable.V2.ClusterInformation.Parser, new[]{ "ClusterId", "ZoneId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionRequestStats), global::Google.Cloud.Bigtable.V2.SessionRequestStats.Parser, new[]{ "BackendLatency" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.VirtualRpcResponse), global::Google.Cloud.Bigtable.V2.VirtualRpcResponse.Parser, new[]{ "RpcId", "ClusterInfo", "Stats", "Payload" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.VirtualRpcResponse), global::Google.Cloud.Bigtable.V2.VirtualRpcResponse.Parser, new[]{ "RpcId", "ClusterInfo", "Stats", "Payload", "HasMore" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ErrorResponse), global::Google.Cloud.Bigtable.V2.ErrorResponse.Parser, new[]{ "RpcId", "ClusterInfo", "Status", "RetryInfo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.TableRequest), global::Google.Cloud.Bigtable.V2.TableRequest.Parser, new[]{ "ReadRow", "MutateRow", "CheckAndMutateRow" }, new[]{ "Payload" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.TableResponse), global::Google.Cloud.Bigtable.V2.TableResponse.Parser, new[]{ "ReadRow", "MutateRow", "CheckAndMutateRow" }, new[]{ "Payload" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.AuthorizedViewRequest), global::Google.Cloud.Bigtable.V2.AuthorizedViewRequest.Parser, new[]{ "ReadRow", "MutateRow", "CheckAndMutateRow" }, new[]{ "Payload" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.AuthorizedViewResponse), global::Google.Cloud.Bigtable.V2.AuthorizedViewResponse.Parser, new[]{ "ReadRow", "MutateRow", "CheckAndMutateRow" }, new[]{ "Payload" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MaterializedViewRequest), global::Google.Cloud.Bigtable.V2.MaterializedViewRequest.Parser, new[]{ "ReadRow" }, new[]{ "Payload" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MaterializedViewResponse), global::Google.Cloud.Bigtable.V2.MaterializedViewResponse.Parser, new[]{ "ReadRow" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.TableRequest), global::Google.Cloud.Bigtable.V2.TableRequest.Parser, new[]{ "ReadRow", "MutateRow", "ReadRows", "CheckAndMutateRow", "ReadModifyWriteRow", "MutateRows" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.TableResponse), global::Google.Cloud.Bigtable.V2.TableResponse.Parser, new[]{ "ReadRow", "MutateRow", "ReadRows", "CheckAndMutateRow", "ReadModifyWriteRow", "MutateRows" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.AuthorizedViewRequest), global::Google.Cloud.Bigtable.V2.AuthorizedViewRequest.Parser, new[]{ "ReadRow", "MutateRow", "ReadRows", "CheckAndMutateRow", "ReadModifyWriteRow", "MutateRows" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.AuthorizedViewResponse), global::Google.Cloud.Bigtable.V2.AuthorizedViewResponse.Parser, new[]{ "ReadRow", "MutateRow", "ReadRows", "CheckAndMutateRow", "ReadModifyWriteRow", "MutateRows" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MaterializedViewRequest), global::Google.Cloud.Bigtable.V2.MaterializedViewRequest.Parser, new[]{ "ReadRow", "ReadRows" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MaterializedViewResponse), global::Google.Cloud.Bigtable.V2.MaterializedViewResponse.Parser, new[]{ "ReadRow", "ReadRows" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionReadRowRequest), global::Google.Cloud.Bigtable.V2.SessionReadRowRequest.Parser, new[]{ "Key", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionReadRowResponse), global::Google.Cloud.Bigtable.V2.SessionReadRowResponse.Parser, new[]{ "Row", "Stats" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest), global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest.Parser, new[]{ "Rows", "Filter", "RowsLimit", "Reversed" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse), global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse.Parser, new[]{ "Row", "Stats" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionMutateRowRequest), global::Google.Cloud.Bigtable.V2.SessionMutateRowRequest.Parser, new[]{ "Key", "Mutations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionMutateRowResponse), global::Google.Cloud.Bigtable.V2.SessionMutateRowResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowRequest), global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowRequest.Parser, new[]{ "Key", "PredicateFilter", "TrueMutations", "FalseMutations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowResponse), global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowResponse.Parser, new[]{ "PredicateMatched" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionParametersResponse), global::Google.Cloud.Bigtable.V2.SessionParametersResponse.Parser, new[]{ "KeepAlive" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest), global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest.Parser, new[]{ "Key", "Rules" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse), global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse.Parser, new[]{ "Row" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest), global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest.Parser, new[]{ "Entries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest.Types.Entry), global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest.Types.Entry.Parser, new[]{ "Key", "Mutations", "Idempotency" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse), global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Parser, new[]{ "Entries", "RateLimitInfo" }, new[]{ "RateLimitInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Types.Entry), global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Types.Entry.Parser, new[]{ "Index", "Status" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Types.RateLimitInfo), global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Types.RateLimitInfo.Parser, new[]{ "Period", "Factor" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionParametersResponse), global::Google.Cloud.Bigtable.V2.SessionParametersResponse.Parser, new[]{ "KeepAlive", "SoftmaxStreamingPrefetchBufferBytes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.HeartbeatResponse), global::Google.Cloud.Bigtable.V2.HeartbeatResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.GoAwayResponse), global::Google.Cloud.Bigtable.V2.GoAwayResponse.Parser, new[]{ "Reason", "Description", "LastRpcIdAdmitted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionRefreshConfig), global::Google.Cloud.Bigtable.V2.SessionRefreshConfig.Parser, new[]{ "OptimizedOpenRequest", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SessionRefreshConfig.Types.Metadata), global::Google.Cloud.Bigtable.V2.SessionRefreshConfig.Types.Metadata.Parser, new[]{ "Key", "Value" }, null, null, null, null)})
@@ -1504,6 +1583,719 @@ namespace Google.Cloud.Bigtable.V2 {
   }
 
   /// <summary>
+  /// Configuration for how a given slice of traffic is diverted to sessions.
+  /// Internal usage only.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SessionScopeDiversionConfiguration : pb::IMessage<SessionScopeDiversionConfiguration>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SessionScopeDiversionConfiguration> _parser = new pb::MessageParser<SessionScopeDiversionConfiguration>(() => new SessionScopeDiversionConfiguration());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SessionScopeDiversionConfiguration> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionScopeDiversionConfiguration() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionScopeDiversionConfiguration(SessionScopeDiversionConfiguration other) : this() {
+      sessionLoad_ = other.sessionLoad_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionScopeDiversionConfiguration Clone() {
+      return new SessionScopeDiversionConfiguration(this);
+    }
+
+    /// <summary>Field number for the "session_load" field.</summary>
+    public const int SessionLoadFieldNumber = 1;
+    private float sessionLoad_;
+    /// <summary>
+    /// What share of in-scope requests should operate on a session, [0, 1].
+    /// The remaining requests within this scope should operate on the classic API.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float SessionLoad {
+      get { return sessionLoad_; }
+      set {
+        sessionLoad_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SessionScopeDiversionConfiguration);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SessionScopeDiversionConfiguration other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SessionLoad, other.SessionLoad)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SessionLoad != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SessionLoad);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (SessionLoad != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(SessionLoad);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SessionLoad != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(SessionLoad);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (SessionLoad != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SessionScopeDiversionConfiguration other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SessionLoad != 0F) {
+        SessionLoad = other.SessionLoad;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 13: {
+            SessionLoad = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            SessionLoad = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Configuration for how to divert load to sessions. Internal usage only.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SessionDiversionConfiguration : pb::IMessage<SessionDiversionConfiguration>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SessionDiversionConfiguration> _parser = new pb::MessageParser<SessionDiversionConfiguration>(() => new SessionDiversionConfiguration());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SessionDiversionConfiguration> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionDiversionConfiguration() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionDiversionConfiguration(SessionDiversionConfiguration other) : this() {
+      switch (other.DiversionStrategyCase) {
+        case DiversionStrategyOneofCase.GlobalDiversion:
+          GlobalDiversion = other.GlobalDiversion.Clone();
+          break;
+        case DiversionStrategyOneofCase.PerScopeDiversion:
+          PerScopeDiversion = other.PerScopeDiversion.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionDiversionConfiguration Clone() {
+      return new SessionDiversionConfiguration(this);
+    }
+
+    /// <summary>Field number for the "global_diversion" field.</summary>
+    public const int GlobalDiversionFieldNumber = 1;
+    /// <summary>
+    /// If provided, all scopes should use this diversion config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration GlobalDiversion {
+      get { return diversionStrategyCase_ == DiversionStrategyOneofCase.GlobalDiversion ? (global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration) diversionStrategy_ : null; }
+      set {
+        diversionStrategy_ = value;
+        diversionStrategyCase_ = value == null ? DiversionStrategyOneofCase.None : DiversionStrategyOneofCase.GlobalDiversion;
+      }
+    }
+
+    /// <summary>Field number for the "per_scope_diversion" field.</summary>
+    public const int PerScopeDiversionFieldNumber = 2;
+    /// <summary>
+    /// Diversion happens per-scope.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration.Types.PerScopeDiversion PerScopeDiversion {
+      get { return diversionStrategyCase_ == DiversionStrategyOneofCase.PerScopeDiversion ? (global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration.Types.PerScopeDiversion) diversionStrategy_ : null; }
+      set {
+        diversionStrategy_ = value;
+        diversionStrategyCase_ = value == null ? DiversionStrategyOneofCase.None : DiversionStrategyOneofCase.PerScopeDiversion;
+      }
+    }
+
+    private object diversionStrategy_;
+    /// <summary>Enum of possible cases for the "diversion_strategy" oneof.</summary>
+    public enum DiversionStrategyOneofCase {
+      None = 0,
+      GlobalDiversion = 1,
+      PerScopeDiversion = 2,
+    }
+    private DiversionStrategyOneofCase diversionStrategyCase_ = DiversionStrategyOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DiversionStrategyOneofCase DiversionStrategyCase {
+      get { return diversionStrategyCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDiversionStrategy() {
+      diversionStrategyCase_ = DiversionStrategyOneofCase.None;
+      diversionStrategy_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SessionDiversionConfiguration);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SessionDiversionConfiguration other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GlobalDiversion, other.GlobalDiversion)) return false;
+      if (!object.Equals(PerScopeDiversion, other.PerScopeDiversion)) return false;
+      if (DiversionStrategyCase != other.DiversionStrategyCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (diversionStrategyCase_ == DiversionStrategyOneofCase.GlobalDiversion) hash ^= GlobalDiversion.GetHashCode();
+      if (diversionStrategyCase_ == DiversionStrategyOneofCase.PerScopeDiversion) hash ^= PerScopeDiversion.GetHashCode();
+      hash ^= (int) diversionStrategyCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (diversionStrategyCase_ == DiversionStrategyOneofCase.GlobalDiversion) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GlobalDiversion);
+      }
+      if (diversionStrategyCase_ == DiversionStrategyOneofCase.PerScopeDiversion) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PerScopeDiversion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (diversionStrategyCase_ == DiversionStrategyOneofCase.GlobalDiversion) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GlobalDiversion);
+      }
+      if (diversionStrategyCase_ == DiversionStrategyOneofCase.PerScopeDiversion) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PerScopeDiversion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (diversionStrategyCase_ == DiversionStrategyOneofCase.GlobalDiversion) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GlobalDiversion);
+      }
+      if (diversionStrategyCase_ == DiversionStrategyOneofCase.PerScopeDiversion) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PerScopeDiversion);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SessionDiversionConfiguration other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.DiversionStrategyCase) {
+        case DiversionStrategyOneofCase.GlobalDiversion:
+          if (GlobalDiversion == null) {
+            GlobalDiversion = new global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration();
+          }
+          GlobalDiversion.MergeFrom(other.GlobalDiversion);
+          break;
+        case DiversionStrategyOneofCase.PerScopeDiversion:
+          if (PerScopeDiversion == null) {
+            PerScopeDiversion = new global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration.Types.PerScopeDiversion();
+          }
+          PerScopeDiversion.MergeFrom(other.PerScopeDiversion);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration subBuilder = new global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration();
+            if (diversionStrategyCase_ == DiversionStrategyOneofCase.GlobalDiversion) {
+              subBuilder.MergeFrom(GlobalDiversion);
+            }
+            input.ReadMessage(subBuilder);
+            GlobalDiversion = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration.Types.PerScopeDiversion subBuilder = new global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration.Types.PerScopeDiversion();
+            if (diversionStrategyCase_ == DiversionStrategyOneofCase.PerScopeDiversion) {
+              subBuilder.MergeFrom(PerScopeDiversion);
+            }
+            input.ReadMessage(subBuilder);
+            PerScopeDiversion = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration subBuilder = new global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration();
+            if (diversionStrategyCase_ == DiversionStrategyOneofCase.GlobalDiversion) {
+              subBuilder.MergeFrom(GlobalDiversion);
+            }
+            input.ReadMessage(subBuilder);
+            GlobalDiversion = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration.Types.PerScopeDiversion subBuilder = new global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration.Types.PerScopeDiversion();
+            if (diversionStrategyCase_ == DiversionStrategyOneofCase.PerScopeDiversion) {
+              subBuilder.MergeFrom(PerScopeDiversion);
+            }
+            input.ReadMessage(subBuilder);
+            PerScopeDiversion = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SessionDiversionConfiguration message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Configuration for how to balance sessions per method. Internal usage only.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class PerScopeDiversion : pb::IMessage<PerScopeDiversion>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PerScopeDiversion> _parser = new pb::MessageParser<PerScopeDiversion>(() => new PerScopeDiversion());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PerScopeDiversion> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PerScopeDiversion() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PerScopeDiversion(PerScopeDiversion other) : this() {
+          scopeDiversions_ = other.scopeDiversions_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PerScopeDiversion Clone() {
+          return new PerScopeDiversion(this);
+        }
+
+        /// <summary>Field number for the "scope_diversions" field.</summary>
+        public const int ScopeDiversionsFieldNumber = 1;
+        private static readonly pbc::MapField<string, global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration>.Codec _map_scopeDiversions_codec
+            = new pbc::MapField<string, global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration.Parser), 10);
+        private readonly pbc::MapField<string, global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration> scopeDiversions_ = new pbc::MapField<string, global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration>();
+        /// <summary>
+        /// Keys: Attributes of the request scope that can impact the diversion.
+        /// Valid format is:
+        ///   "method:&lt;service>.&lt;method>" - All requests with this scope will have
+        ///   the specified diversion config applied.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, global::Google.Cloud.Bigtable.V2.SessionScopeDiversionConfiguration> ScopeDiversions {
+          get { return scopeDiversions_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PerScopeDiversion);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PerScopeDiversion other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!ScopeDiversions.Equals(other.ScopeDiversions)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= ScopeDiversions.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          scopeDiversions_.WriteTo(output, _map_scopeDiversions_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          scopeDiversions_.WriteTo(ref output, _map_scopeDiversions_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += scopeDiversions_.CalculateSize(_map_scopeDiversions_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PerScopeDiversion other) {
+          if (other == null) {
+            return;
+          }
+          scopeDiversions_.MergeFrom(other.scopeDiversions_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                scopeDiversions_.AddEntriesFrom(input, _map_scopeDiversions_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                scopeDiversions_.AddEntriesFrom(ref input, _map_scopeDiversions_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Configuration for the Session API. Internal usage only.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1521,7 +2313,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1542,6 +2334,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SessionClientConfiguration(SessionClientConfiguration other) : this() {
       sessionLoad_ = other.sessionLoad_;
+      sessionDiversionConfiguration_ = other.sessionDiversionConfiguration_ != null ? other.sessionDiversionConfiguration_.Clone() : null;
       loadBalancingOptions_ = other.loadBalancingOptions_ != null ? other.loadBalancingOptions_.Clone() : null;
       channelConfiguration_ = other.channelConfiguration_ != null ? other.channelConfiguration_.Clone() : null;
       sessionPoolConfiguration_ = other.sessionPoolConfiguration_ != null ? other.sessionPoolConfiguration_.Clone() : null;
@@ -1558,15 +2351,39 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int SessionLoadFieldNumber = 1;
     private float sessionLoad_;
     /// <summary>
-    /// What share of requests should operate on a session, [0, 1]. The rest
-    /// should operate on the old-style API.
+    /// Deprecated: Prefer session_diversion_configuration. If both are provided,
+    /// the client should apply this session_load to Bigtable.ReadRow &amp;
+    /// Bigtable.MutateRow, then process the session_diversion_configuration,
+    /// overwriting any behavior established by this value.
+    ///
+    /// What share of the following methods should operate on a session, [0, 1]:
+    ///   * Bigtable.ReadRow
+    ///   * Bigtable.MutateRow
+    ///
+    /// The rest should operate on the classic API, e.g. have session_load = 0.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float SessionLoad {
       get { return sessionLoad_; }
       set {
         sessionLoad_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "session_diversion_configuration" field.</summary>
+    public const int SessionDiversionConfigurationFieldNumber = 5;
+    private global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration sessionDiversionConfiguration_;
+    /// <summary>
+    /// How load should be divered to sessions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration SessionDiversionConfiguration {
+      get { return sessionDiversionConfiguration_; }
+      set {
+        sessionDiversionConfiguration_ = value;
       }
     }
 
@@ -1629,6 +2446,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SessionLoad, other.SessionLoad)) return false;
+      if (!object.Equals(SessionDiversionConfiguration, other.SessionDiversionConfiguration)) return false;
       if (!object.Equals(LoadBalancingOptions, other.LoadBalancingOptions)) return false;
       if (!object.Equals(ChannelConfiguration, other.ChannelConfiguration)) return false;
       if (!object.Equals(SessionPoolConfiguration, other.SessionPoolConfiguration)) return false;
@@ -1640,6 +2458,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (SessionLoad != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SessionLoad);
+      if (sessionDiversionConfiguration_ != null) hash ^= SessionDiversionConfiguration.GetHashCode();
       if (loadBalancingOptions_ != null) hash ^= LoadBalancingOptions.GetHashCode();
       if (channelConfiguration_ != null) hash ^= ChannelConfiguration.GetHashCode();
       if (sessionPoolConfiguration_ != null) hash ^= SessionPoolConfiguration.GetHashCode();
@@ -1677,6 +2496,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(34);
         output.WriteMessage(SessionPoolConfiguration);
       }
+      if (sessionDiversionConfiguration_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(SessionDiversionConfiguration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1703,6 +2526,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(34);
         output.WriteMessage(SessionPoolConfiguration);
       }
+      if (sessionDiversionConfiguration_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(SessionDiversionConfiguration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1715,6 +2542,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (SessionLoad != 0F) {
         size += 1 + 4;
+      }
+      if (sessionDiversionConfiguration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SessionDiversionConfiguration);
       }
       if (loadBalancingOptions_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LoadBalancingOptions);
@@ -1739,6 +2569,12 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.SessionLoad != 0F) {
         SessionLoad = other.SessionLoad;
+      }
+      if (other.sessionDiversionConfiguration_ != null) {
+        if (sessionDiversionConfiguration_ == null) {
+          SessionDiversionConfiguration = new global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration();
+        }
+        SessionDiversionConfiguration.MergeFrom(other.SessionDiversionConfiguration);
       }
       if (other.loadBalancingOptions_ != null) {
         if (loadBalancingOptions_ == null) {
@@ -1802,6 +2638,13 @@ namespace Google.Cloud.Bigtable.V2 {
             input.ReadMessage(SessionPoolConfiguration);
             break;
           }
+          case 42: {
+            if (sessionDiversionConfiguration_ == null) {
+              SessionDiversionConfiguration = new global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration();
+            }
+            input.ReadMessage(SessionDiversionConfiguration);
+            break;
+          }
         }
       }
     #endif
@@ -1844,6 +2687,13 @@ namespace Google.Cloud.Bigtable.V2 {
               SessionPoolConfiguration = new global::Google.Cloud.Bigtable.V2.SessionClientConfiguration.Types.SessionPoolConfiguration();
             }
             input.ReadMessage(SessionPoolConfiguration);
+            break;
+          }
+          case 42: {
+            if (sessionDiversionConfiguration_ == null) {
+              SessionDiversionConfiguration = new global::Google.Cloud.Bigtable.V2.SessionDiversionConfiguration();
+            }
+            input.ReadMessage(SessionDiversionConfiguration);
             break;
           }
         }
@@ -2982,6 +3832,7 @@ namespace Google.Cloud.Bigtable.V2 {
           newSessionQueueLength_ = other.newSessionQueueLength_;
           newSessionCreationBudget_ = other.newSessionCreationBudget_;
           newSessionCreationPenalty_ = other.newSessionCreationPenalty_ != null ? other.newSessionCreationPenalty_.Clone() : null;
+          softSessionCloseBudget_ = other.softSessionCloseBudget_;
           consecutiveSessionFailureThreshold_ = other.consecutiveSessionFailureThreshold_;
           loadBalancingOptions_ = other.loadBalancingOptions_ != null ? other.loadBalancingOptions_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3089,6 +3940,24 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
 
+        /// <summary>Field number for the "soft_session_close_budget" field.</summary>
+        public const int SoftSessionCloseBudgetFieldNumber = 7;
+        private int softSessionCloseBudget_;
+        /// <summary>
+        /// How many concurrent session closures are allowed. The client will hold
+        /// onto a count against this budget whenever it is closing a session, and
+        /// release that count once the session is successfully established or failed
+        /// to establish.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int SoftSessionCloseBudget {
+          get { return softSessionCloseBudget_; }
+          set {
+            softSessionCloseBudget_ = value;
+          }
+        }
+
         /// <summary>Field number for the "consecutive_session_failure_threshold" field.</summary>
         public const int ConsecutiveSessionFailureThresholdFieldNumber = 8;
         private int consecutiveSessionFailureThreshold_;
@@ -3113,7 +3982,9 @@ namespace Google.Cloud.Bigtable.V2 {
         private global::Google.Cloud.Bigtable.V2.LoadBalancingOptions loadBalancingOptions_;
         /// <summary>
         /// How to balance vRPC load over connections to AFEs.
-        /// Set only if session_load > 0.
+        ///
+        /// Set only if session_load or session_diversion_configuration indicates
+        /// that there will be some session traffic.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3145,6 +4016,7 @@ namespace Google.Cloud.Bigtable.V2 {
           if (NewSessionQueueLength != other.NewSessionQueueLength) return false;
           if (NewSessionCreationBudget != other.NewSessionCreationBudget) return false;
           if (!object.Equals(NewSessionCreationPenalty, other.NewSessionCreationPenalty)) return false;
+          if (SoftSessionCloseBudget != other.SoftSessionCloseBudget) return false;
           if (ConsecutiveSessionFailureThreshold != other.ConsecutiveSessionFailureThreshold) return false;
           if (!object.Equals(LoadBalancingOptions, other.LoadBalancingOptions)) return false;
           return Equals(_unknownFields, other._unknownFields);
@@ -3160,6 +4032,7 @@ namespace Google.Cloud.Bigtable.V2 {
           if (NewSessionQueueLength != 0) hash ^= NewSessionQueueLength.GetHashCode();
           if (NewSessionCreationBudget != 0) hash ^= NewSessionCreationBudget.GetHashCode();
           if (newSessionCreationPenalty_ != null) hash ^= NewSessionCreationPenalty.GetHashCode();
+          if (SoftSessionCloseBudget != 0) hash ^= SoftSessionCloseBudget.GetHashCode();
           if (ConsecutiveSessionFailureThreshold != 0) hash ^= ConsecutiveSessionFailureThreshold.GetHashCode();
           if (loadBalancingOptions_ != null) hash ^= LoadBalancingOptions.GetHashCode();
           if (_unknownFields != null) {
@@ -3204,6 +4077,10 @@ namespace Google.Cloud.Bigtable.V2 {
             output.WriteRawTag(50);
             output.WriteMessage(NewSessionCreationPenalty);
           }
+          if (SoftSessionCloseBudget != 0) {
+            output.WriteRawTag(56);
+            output.WriteInt32(SoftSessionCloseBudget);
+          }
           if (ConsecutiveSessionFailureThreshold != 0) {
             output.WriteRawTag(64);
             output.WriteInt32(ConsecutiveSessionFailureThreshold);
@@ -3246,6 +4123,10 @@ namespace Google.Cloud.Bigtable.V2 {
             output.WriteRawTag(50);
             output.WriteMessage(NewSessionCreationPenalty);
           }
+          if (SoftSessionCloseBudget != 0) {
+            output.WriteRawTag(56);
+            output.WriteInt32(SoftSessionCloseBudget);
+          }
           if (ConsecutiveSessionFailureThreshold != 0) {
             output.WriteRawTag(64);
             output.WriteInt32(ConsecutiveSessionFailureThreshold);
@@ -3281,6 +4162,9 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           if (newSessionCreationPenalty_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(NewSessionCreationPenalty);
+          }
+          if (SoftSessionCloseBudget != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(SoftSessionCloseBudget);
           }
           if (ConsecutiveSessionFailureThreshold != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(ConsecutiveSessionFailureThreshold);
@@ -3320,6 +4204,9 @@ namespace Google.Cloud.Bigtable.V2 {
               NewSessionCreationPenalty = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
             NewSessionCreationPenalty.MergeFrom(other.NewSessionCreationPenalty);
+          }
+          if (other.SoftSessionCloseBudget != 0) {
+            SoftSessionCloseBudget = other.SoftSessionCloseBudget;
           }
           if (other.ConsecutiveSessionFailureThreshold != 0) {
             ConsecutiveSessionFailureThreshold = other.ConsecutiveSessionFailureThreshold;
@@ -3374,6 +4261,10 @@ namespace Google.Cloud.Bigtable.V2 {
                   NewSessionCreationPenalty = new global::Google.Protobuf.WellKnownTypes.Duration();
                 }
                 input.ReadMessage(NewSessionCreationPenalty);
+                break;
+              }
+              case 56: {
+                SoftSessionCloseBudget = input.ReadInt32();
                 break;
               }
               case 64: {
@@ -3433,6 +4324,10 @@ namespace Google.Cloud.Bigtable.V2 {
                 input.ReadMessage(NewSessionCreationPenalty);
                 break;
               }
+              case 56: {
+                SoftSessionCloseBudget = input.ReadInt32();
+                break;
+              }
               case 64: {
                 ConsecutiveSessionFailureThreshold = input.ReadInt32();
                 break;
@@ -3475,7 +4370,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3713,7 +4608,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4491,7 +5386,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4520,6 +5415,12 @@ namespace Google.Cloud.Bigtable.V2 {
           break;
         case PayloadOneofCase.VirtualRpc:
           VirtualRpc = other.VirtualRpc.Clone();
+          break;
+        case PayloadOneofCase.ContinueVirtualRpc:
+          ContinueVirtualRpc = other.ContinueVirtualRpc.Clone();
+          break;
+        case PayloadOneofCase.CancelVirtualRpc:
+          CancelVirtualRpc = other.CancelVirtualRpc.Clone();
           break;
       }
 
@@ -4568,6 +5469,30 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "continue_virtual_rpc" field.</summary>
+    public const int ContinueVirtualRpcFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.ContinueVirtualRpcRequest ContinueVirtualRpc {
+      get { return payloadCase_ == PayloadOneofCase.ContinueVirtualRpc ? (global::Google.Cloud.Bigtable.V2.ContinueVirtualRpcRequest) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ContinueVirtualRpc;
+      }
+    }
+
+    /// <summary>Field number for the "cancel_virtual_rpc" field.</summary>
+    public const int CancelVirtualRpcFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.CancelVirtualRpcRequest CancelVirtualRpc {
+      get { return payloadCase_ == PayloadOneofCase.CancelVirtualRpc ? (global::Google.Cloud.Bigtable.V2.CancelVirtualRpcRequest) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.CancelVirtualRpc;
+      }
+    }
+
     private object payload_;
     /// <summary>Enum of possible cases for the "payload" oneof.</summary>
     public enum PayloadOneofCase {
@@ -4575,6 +5500,8 @@ namespace Google.Cloud.Bigtable.V2 {
       OpenSession = 1,
       CloseSession = 2,
       VirtualRpc = 3,
+      ContinueVirtualRpc = 4,
+      CancelVirtualRpc = 5,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4608,6 +5535,8 @@ namespace Google.Cloud.Bigtable.V2 {
       if (!object.Equals(OpenSession, other.OpenSession)) return false;
       if (!object.Equals(CloseSession, other.CloseSession)) return false;
       if (!object.Equals(VirtualRpc, other.VirtualRpc)) return false;
+      if (!object.Equals(ContinueVirtualRpc, other.ContinueVirtualRpc)) return false;
+      if (!object.Equals(CancelVirtualRpc, other.CancelVirtualRpc)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4619,6 +5548,8 @@ namespace Google.Cloud.Bigtable.V2 {
       if (payloadCase_ == PayloadOneofCase.OpenSession) hash ^= OpenSession.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.CloseSession) hash ^= CloseSession.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.VirtualRpc) hash ^= VirtualRpc.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.ContinueVirtualRpc) hash ^= ContinueVirtualRpc.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.CancelVirtualRpc) hash ^= CancelVirtualRpc.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4650,6 +5581,14 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(26);
         output.WriteMessage(VirtualRpc);
       }
+      if (payloadCase_ == PayloadOneofCase.ContinueVirtualRpc) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ContinueVirtualRpc);
+      }
+      if (payloadCase_ == PayloadOneofCase.CancelVirtualRpc) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CancelVirtualRpc);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4672,6 +5611,14 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(26);
         output.WriteMessage(VirtualRpc);
       }
+      if (payloadCase_ == PayloadOneofCase.ContinueVirtualRpc) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ContinueVirtualRpc);
+      }
+      if (payloadCase_ == PayloadOneofCase.CancelVirtualRpc) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CancelVirtualRpc);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4690,6 +5637,12 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (payloadCase_ == PayloadOneofCase.VirtualRpc) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(VirtualRpc);
+      }
+      if (payloadCase_ == PayloadOneofCase.ContinueVirtualRpc) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContinueVirtualRpc);
+      }
+      if (payloadCase_ == PayloadOneofCase.CancelVirtualRpc) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CancelVirtualRpc);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4721,6 +5674,18 @@ namespace Google.Cloud.Bigtable.V2 {
             VirtualRpc = new global::Google.Cloud.Bigtable.V2.VirtualRpcRequest();
           }
           VirtualRpc.MergeFrom(other.VirtualRpc);
+          break;
+        case PayloadOneofCase.ContinueVirtualRpc:
+          if (ContinueVirtualRpc == null) {
+            ContinueVirtualRpc = new global::Google.Cloud.Bigtable.V2.ContinueVirtualRpcRequest();
+          }
+          ContinueVirtualRpc.MergeFrom(other.ContinueVirtualRpc);
+          break;
+        case PayloadOneofCase.CancelVirtualRpc:
+          if (CancelVirtualRpc == null) {
+            CancelVirtualRpc = new global::Google.Cloud.Bigtable.V2.CancelVirtualRpcRequest();
+          }
+          CancelVirtualRpc.MergeFrom(other.CancelVirtualRpc);
           break;
       }
 
@@ -4770,6 +5735,24 @@ namespace Google.Cloud.Bigtable.V2 {
             VirtualRpc = subBuilder;
             break;
           }
+          case 34: {
+            global::Google.Cloud.Bigtable.V2.ContinueVirtualRpcRequest subBuilder = new global::Google.Cloud.Bigtable.V2.ContinueVirtualRpcRequest();
+            if (payloadCase_ == PayloadOneofCase.ContinueVirtualRpc) {
+              subBuilder.MergeFrom(ContinueVirtualRpc);
+            }
+            input.ReadMessage(subBuilder);
+            ContinueVirtualRpc = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Bigtable.V2.CancelVirtualRpcRequest subBuilder = new global::Google.Cloud.Bigtable.V2.CancelVirtualRpcRequest();
+            if (payloadCase_ == PayloadOneofCase.CancelVirtualRpc) {
+              subBuilder.MergeFrom(CancelVirtualRpc);
+            }
+            input.ReadMessage(subBuilder);
+            CancelVirtualRpc = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -4816,6 +5799,24 @@ namespace Google.Cloud.Bigtable.V2 {
             VirtualRpc = subBuilder;
             break;
           }
+          case 34: {
+            global::Google.Cloud.Bigtable.V2.ContinueVirtualRpcRequest subBuilder = new global::Google.Cloud.Bigtable.V2.ContinueVirtualRpcRequest();
+            if (payloadCase_ == PayloadOneofCase.ContinueVirtualRpc) {
+              subBuilder.MergeFrom(ContinueVirtualRpc);
+            }
+            input.ReadMessage(subBuilder);
+            ContinueVirtualRpc = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Bigtable.V2.CancelVirtualRpcRequest subBuilder = new global::Google.Cloud.Bigtable.V2.CancelVirtualRpcRequest();
+            if (payloadCase_ == PayloadOneofCase.CancelVirtualRpc) {
+              subBuilder.MergeFrom(CancelVirtualRpc);
+            }
+            input.ReadMessage(subBuilder);
+            CancelVirtualRpc = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -4841,7 +5842,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5408,7 +6409,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5789,7 +6790,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6075,7 +7076,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6329,7 +7330,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6589,7 +7590,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6879,7 +7880,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7043,7 +8044,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7343,7 +8344,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7507,7 +8508,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7805,7 +8806,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7969,7 +8970,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8341,6 +9342,7 @@ namespace Google.Cloud.Bigtable.V2 {
           attemptNumber_ = other.attemptNumber_;
           attemptStart_ = other.attemptStart_ != null ? other.attemptStart_.Clone() : null;
           traceparent_ = other.traceparent_;
+          delay_ = other.delay_ != null ? other.delay_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -8399,6 +9401,21 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
 
+        /// <summary>Field number for the "delay" field.</summary>
+        public const int DelayFieldNumber = 4;
+        private global::Google.Protobuf.WellKnownTypes.Duration delay_;
+        /// <summary>
+        /// How long to delay the operation for on the server-side, for testing.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration Delay {
+          get { return delay_; }
+          set {
+            delay_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -8417,6 +9434,7 @@ namespace Google.Cloud.Bigtable.V2 {
           if (AttemptNumber != other.AttemptNumber) return false;
           if (!object.Equals(AttemptStart, other.AttemptStart)) return false;
           if (Traceparent != other.Traceparent) return false;
+          if (!object.Equals(Delay, other.Delay)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -8427,6 +9445,7 @@ namespace Google.Cloud.Bigtable.V2 {
           if (AttemptNumber != 0L) hash ^= AttemptNumber.GetHashCode();
           if (attemptStart_ != null) hash ^= AttemptStart.GetHashCode();
           if (Traceparent.Length != 0) hash ^= Traceparent.GetHashCode();
+          if (delay_ != null) hash ^= Delay.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -8457,6 +9476,10 @@ namespace Google.Cloud.Bigtable.V2 {
             output.WriteRawTag(26);
             output.WriteString(Traceparent);
           }
+          if (delay_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(Delay);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -8479,6 +9502,10 @@ namespace Google.Cloud.Bigtable.V2 {
             output.WriteRawTag(26);
             output.WriteString(Traceparent);
           }
+          if (delay_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(Delay);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -8497,6 +9524,9 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           if (Traceparent.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Traceparent);
+          }
+          if (delay_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Delay);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -8521,6 +9551,12 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           if (other.Traceparent.Length != 0) {
             Traceparent = other.Traceparent;
+          }
+          if (other.delay_ != null) {
+            if (delay_ == null) {
+              Delay = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            Delay.MergeFrom(other.Delay);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -8554,6 +9590,13 @@ namespace Google.Cloud.Bigtable.V2 {
               }
               case 26: {
                 Traceparent = input.ReadString();
+                break;
+              }
+              case 34: {
+                if (delay_ == null) {
+                  Delay = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(Delay);
                 break;
               }
             }
@@ -8590,6 +9633,13 @@ namespace Google.Cloud.Bigtable.V2 {
                 Traceparent = input.ReadString();
                 break;
               }
+              case 34: {
+                if (delay_ == null) {
+                  Delay = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(Delay);
+                break;
+              }
             }
           }
         }
@@ -8599,6 +9649,408 @@ namespace Google.Cloud.Bigtable.V2 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Internal usage only.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ContinueVirtualRpcRequest : pb::IMessage<ContinueVirtualRpcRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ContinueVirtualRpcRequest> _parser = new pb::MessageParser<ContinueVirtualRpcRequest>(() => new ContinueVirtualRpcRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ContinueVirtualRpcRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContinueVirtualRpcRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContinueVirtualRpcRequest(ContinueVirtualRpcRequest other) : this() {
+      rpcId_ = other.rpcId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContinueVirtualRpcRequest Clone() {
+      return new ContinueVirtualRpcRequest(this);
+    }
+
+    /// <summary>Field number for the "rpc_id" field.</summary>
+    public const int RpcIdFieldNumber = 1;
+    private long rpcId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long RpcId {
+      get { return rpcId_; }
+      set {
+        rpcId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ContinueVirtualRpcRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ContinueVirtualRpcRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RpcId != other.RpcId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RpcId != 0L) hash ^= RpcId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RpcId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RpcId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RpcId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RpcId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (RpcId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RpcId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ContinueVirtualRpcRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RpcId != 0L) {
+        RpcId = other.RpcId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RpcId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RpcId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Internal usage only.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CancelVirtualRpcRequest : pb::IMessage<CancelVirtualRpcRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CancelVirtualRpcRequest> _parser = new pb::MessageParser<CancelVirtualRpcRequest>(() => new CancelVirtualRpcRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CancelVirtualRpcRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelVirtualRpcRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelVirtualRpcRequest(CancelVirtualRpcRequest other) : this() {
+      rpcId_ = other.rpcId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelVirtualRpcRequest Clone() {
+      return new CancelVirtualRpcRequest(this);
+    }
+
+    /// <summary>Field number for the "rpc_id" field.</summary>
+    public const int RpcIdFieldNumber = 1;
+    private long rpcId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long RpcId {
+      get { return rpcId_; }
+      set {
+        rpcId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CancelVirtualRpcRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CancelVirtualRpcRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RpcId != other.RpcId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RpcId != 0L) hash ^= RpcId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RpcId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RpcId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RpcId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RpcId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (RpcId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RpcId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CancelVirtualRpcRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RpcId != 0L) {
+        RpcId = other.RpcId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RpcId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RpcId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -8621,7 +10073,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8859,7 +10311,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9072,7 +10524,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9096,6 +10548,7 @@ namespace Google.Cloud.Bigtable.V2 {
       clusterInfo_ = other.clusterInfo_ != null ? other.clusterInfo_.Clone() : null;
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       payload_ = other.payload_;
+      hasMore_ = other.hasMore_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9159,6 +10612,21 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "has_more" field.</summary>
+    public const int HasMoreFieldNumber = 5;
+    private bool hasMore_;
+    /// <summary>
+    /// If there are more responses for this rpc_id coming.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMore {
+      get { return hasMore_; }
+      set {
+        hasMore_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -9178,6 +10646,7 @@ namespace Google.Cloud.Bigtable.V2 {
       if (!object.Equals(ClusterInfo, other.ClusterInfo)) return false;
       if (!object.Equals(Stats, other.Stats)) return false;
       if (Payload != other.Payload) return false;
+      if (HasMore != other.HasMore) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9189,6 +10658,7 @@ namespace Google.Cloud.Bigtable.V2 {
       if (clusterInfo_ != null) hash ^= ClusterInfo.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
       if (Payload.Length != 0) hash ^= Payload.GetHashCode();
+      if (HasMore != false) hash ^= HasMore.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9223,6 +10693,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(34);
         output.WriteMessage(Stats);
       }
+      if (HasMore != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(HasMore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9249,6 +10723,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(34);
         output.WriteMessage(Stats);
       }
+      if (HasMore != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(HasMore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9270,6 +10748,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (Payload.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Payload);
+      }
+      if (HasMore != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9300,6 +10781,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.Payload.Length != 0) {
         Payload = other.Payload;
+      }
+      if (other.HasMore != false) {
+        HasMore = other.HasMore;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9340,6 +10824,10 @@ namespace Google.Cloud.Bigtable.V2 {
               Stats = new global::Google.Cloud.Bigtable.V2.SessionRequestStats();
             }
             input.ReadMessage(Stats);
+            break;
+          }
+          case 40: {
+            HasMore = input.ReadBool();
             break;
           }
         }
@@ -9383,6 +10871,10 @@ namespace Google.Cloud.Bigtable.V2 {
             input.ReadMessage(Stats);
             break;
           }
+          case 40: {
+            HasMore = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -9408,7 +10900,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9753,7 +11245,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9780,8 +11272,17 @@ namespace Google.Cloud.Bigtable.V2 {
         case PayloadOneofCase.MutateRow:
           MutateRow = other.MutateRow.Clone();
           break;
+        case PayloadOneofCase.ReadRows:
+          ReadRows = other.ReadRows.Clone();
+          break;
         case PayloadOneofCase.CheckAndMutateRow:
           CheckAndMutateRow = other.CheckAndMutateRow.Clone();
+          break;
+        case PayloadOneofCase.ReadModifyWriteRow:
+          ReadModifyWriteRow = other.ReadModifyWriteRow.Clone();
+          break;
+        case PayloadOneofCase.MutateRows:
+          MutateRows = other.MutateRows.Clone();
           break;
       }
 
@@ -9818,6 +11319,18 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "read_rows" field.</summary>
+    public const int ReadRowsFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest ReadRows {
+      get { return payloadCase_ == PayloadOneofCase.ReadRows ? (global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ReadRows;
+      }
+    }
+
     /// <summary>Field number for the "check_and_mutate_row" field.</summary>
     public const int CheckAndMutateRowFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9830,13 +11343,40 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "read_modify_write_row" field.</summary>
+    public const int ReadModifyWriteRowFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest ReadModifyWriteRow {
+      get { return payloadCase_ == PayloadOneofCase.ReadModifyWriteRow ? (global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ReadModifyWriteRow;
+      }
+    }
+
+    /// <summary>Field number for the "mutate_rows" field.</summary>
+    public const int MutateRowsFieldNumber = 6;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest MutateRows {
+      get { return payloadCase_ == PayloadOneofCase.MutateRows ? (global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.MutateRows;
+      }
+    }
+
     private object payload_;
     /// <summary>Enum of possible cases for the "payload" oneof.</summary>
     public enum PayloadOneofCase {
       None = 0,
       ReadRow = 1,
       MutateRow = 2,
+      ReadRows = 3,
       CheckAndMutateRow = 4,
+      ReadModifyWriteRow = 5,
+      MutateRows = 6,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9869,7 +11409,10 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (!object.Equals(ReadRow, other.ReadRow)) return false;
       if (!object.Equals(MutateRow, other.MutateRow)) return false;
+      if (!object.Equals(ReadRows, other.ReadRows)) return false;
       if (!object.Equals(CheckAndMutateRow, other.CheckAndMutateRow)) return false;
+      if (!object.Equals(ReadModifyWriteRow, other.ReadModifyWriteRow)) return false;
+      if (!object.Equals(MutateRows, other.MutateRows)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -9880,7 +11423,10 @@ namespace Google.Cloud.Bigtable.V2 {
       int hash = 1;
       if (payloadCase_ == PayloadOneofCase.ReadRow) hash ^= ReadRow.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.MutateRow) hash ^= MutateRow.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.ReadRows) hash ^= ReadRows.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) hash ^= CheckAndMutateRow.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) hash ^= ReadModifyWriteRow.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.MutateRows) hash ^= MutateRows.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -9908,9 +11454,21 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(MutateRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadRows);
+      }
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
         output.WriteRawTag(34);
         output.WriteMessage(CheckAndMutateRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReadModifyWriteRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.MutateRows) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MutateRows);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -9930,9 +11488,21 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(MutateRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadRows);
+      }
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
         output.WriteRawTag(34);
         output.WriteMessage(CheckAndMutateRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReadModifyWriteRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.MutateRows) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MutateRows);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -9950,8 +11520,17 @@ namespace Google.Cloud.Bigtable.V2 {
       if (payloadCase_ == PayloadOneofCase.MutateRow) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MutateRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadRows);
+      }
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CheckAndMutateRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadModifyWriteRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.MutateRows) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MutateRows);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9978,11 +11557,29 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           MutateRow.MergeFrom(other.MutateRow);
           break;
+        case PayloadOneofCase.ReadRows:
+          if (ReadRows == null) {
+            ReadRows = new global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest();
+          }
+          ReadRows.MergeFrom(other.ReadRows);
+          break;
         case PayloadOneofCase.CheckAndMutateRow:
           if (CheckAndMutateRow == null) {
             CheckAndMutateRow = new global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowRequest();
           }
           CheckAndMutateRow.MergeFrom(other.CheckAndMutateRow);
+          break;
+        case PayloadOneofCase.ReadModifyWriteRow:
+          if (ReadModifyWriteRow == null) {
+            ReadModifyWriteRow = new global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest();
+          }
+          ReadModifyWriteRow.MergeFrom(other.ReadModifyWriteRow);
+          break;
+        case PayloadOneofCase.MutateRows:
+          if (MutateRows == null) {
+            MutateRows = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest();
+          }
+          MutateRows.MergeFrom(other.MutateRows);
           break;
       }
 
@@ -10023,6 +11620,15 @@ namespace Google.Cloud.Bigtable.V2 {
             MutateRow = subBuilder;
             break;
           }
+          case 26: {
+            global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest();
+            if (payloadCase_ == PayloadOneofCase.ReadRows) {
+              subBuilder.MergeFrom(ReadRows);
+            }
+            input.ReadMessage(subBuilder);
+            ReadRows = subBuilder;
+            break;
+          }
           case 34: {
             global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowRequest();
             if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
@@ -10030,6 +11636,24 @@ namespace Google.Cloud.Bigtable.V2 {
             }
             input.ReadMessage(subBuilder);
             CheckAndMutateRow = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest();
+            if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+              subBuilder.MergeFrom(ReadModifyWriteRow);
+            }
+            input.ReadMessage(subBuilder);
+            ReadModifyWriteRow = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest();
+            if (payloadCase_ == PayloadOneofCase.MutateRows) {
+              subBuilder.MergeFrom(MutateRows);
+            }
+            input.ReadMessage(subBuilder);
+            MutateRows = subBuilder;
             break;
           }
         }
@@ -10069,6 +11693,15 @@ namespace Google.Cloud.Bigtable.V2 {
             MutateRow = subBuilder;
             break;
           }
+          case 26: {
+            global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest();
+            if (payloadCase_ == PayloadOneofCase.ReadRows) {
+              subBuilder.MergeFrom(ReadRows);
+            }
+            input.ReadMessage(subBuilder);
+            ReadRows = subBuilder;
+            break;
+          }
           case 34: {
             global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowRequest();
             if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
@@ -10076,6 +11709,24 @@ namespace Google.Cloud.Bigtable.V2 {
             }
             input.ReadMessage(subBuilder);
             CheckAndMutateRow = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest();
+            if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+              subBuilder.MergeFrom(ReadModifyWriteRow);
+            }
+            input.ReadMessage(subBuilder);
+            ReadModifyWriteRow = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest();
+            if (payloadCase_ == PayloadOneofCase.MutateRows) {
+              subBuilder.MergeFrom(MutateRows);
+            }
+            input.ReadMessage(subBuilder);
+            MutateRows = subBuilder;
             break;
           }
         }
@@ -10103,7 +11754,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10130,8 +11781,17 @@ namespace Google.Cloud.Bigtable.V2 {
         case PayloadOneofCase.MutateRow:
           MutateRow = other.MutateRow.Clone();
           break;
+        case PayloadOneofCase.ReadRows:
+          ReadRows = other.ReadRows.Clone();
+          break;
         case PayloadOneofCase.CheckAndMutateRow:
           CheckAndMutateRow = other.CheckAndMutateRow.Clone();
+          break;
+        case PayloadOneofCase.ReadModifyWriteRow:
+          ReadModifyWriteRow = other.ReadModifyWriteRow.Clone();
+          break;
+        case PayloadOneofCase.MutateRows:
+          MutateRows = other.MutateRows.Clone();
           break;
       }
 
@@ -10168,6 +11828,18 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "read_rows" field.</summary>
+    public const int ReadRowsFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse ReadRows {
+      get { return payloadCase_ == PayloadOneofCase.ReadRows ? (global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ReadRows;
+      }
+    }
+
     /// <summary>Field number for the "check_and_mutate_row" field.</summary>
     public const int CheckAndMutateRowFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10180,13 +11852,40 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "read_modify_write_row" field.</summary>
+    public const int ReadModifyWriteRowFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse ReadModifyWriteRow {
+      get { return payloadCase_ == PayloadOneofCase.ReadModifyWriteRow ? (global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ReadModifyWriteRow;
+      }
+    }
+
+    /// <summary>Field number for the "mutate_rows" field.</summary>
+    public const int MutateRowsFieldNumber = 6;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse MutateRows {
+      get { return payloadCase_ == PayloadOneofCase.MutateRows ? (global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.MutateRows;
+      }
+    }
+
     private object payload_;
     /// <summary>Enum of possible cases for the "payload" oneof.</summary>
     public enum PayloadOneofCase {
       None = 0,
       ReadRow = 1,
       MutateRow = 2,
+      ReadRows = 3,
       CheckAndMutateRow = 4,
+      ReadModifyWriteRow = 5,
+      MutateRows = 6,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10219,7 +11918,10 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (!object.Equals(ReadRow, other.ReadRow)) return false;
       if (!object.Equals(MutateRow, other.MutateRow)) return false;
+      if (!object.Equals(ReadRows, other.ReadRows)) return false;
       if (!object.Equals(CheckAndMutateRow, other.CheckAndMutateRow)) return false;
+      if (!object.Equals(ReadModifyWriteRow, other.ReadModifyWriteRow)) return false;
+      if (!object.Equals(MutateRows, other.MutateRows)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -10230,7 +11932,10 @@ namespace Google.Cloud.Bigtable.V2 {
       int hash = 1;
       if (payloadCase_ == PayloadOneofCase.ReadRow) hash ^= ReadRow.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.MutateRow) hash ^= MutateRow.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.ReadRows) hash ^= ReadRows.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) hash ^= CheckAndMutateRow.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) hash ^= ReadModifyWriteRow.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.MutateRows) hash ^= MutateRows.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -10258,9 +11963,21 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(MutateRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadRows);
+      }
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
         output.WriteRawTag(34);
         output.WriteMessage(CheckAndMutateRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReadModifyWriteRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.MutateRows) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MutateRows);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -10280,9 +11997,21 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(MutateRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadRows);
+      }
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
         output.WriteRawTag(34);
         output.WriteMessage(CheckAndMutateRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReadModifyWriteRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.MutateRows) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MutateRows);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -10300,8 +12029,17 @@ namespace Google.Cloud.Bigtable.V2 {
       if (payloadCase_ == PayloadOneofCase.MutateRow) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MutateRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadRows);
+      }
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CheckAndMutateRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadModifyWriteRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.MutateRows) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MutateRows);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -10328,11 +12066,29 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           MutateRow.MergeFrom(other.MutateRow);
           break;
+        case PayloadOneofCase.ReadRows:
+          if (ReadRows == null) {
+            ReadRows = new global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse();
+          }
+          ReadRows.MergeFrom(other.ReadRows);
+          break;
         case PayloadOneofCase.CheckAndMutateRow:
           if (CheckAndMutateRow == null) {
             CheckAndMutateRow = new global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowResponse();
           }
           CheckAndMutateRow.MergeFrom(other.CheckAndMutateRow);
+          break;
+        case PayloadOneofCase.ReadModifyWriteRow:
+          if (ReadModifyWriteRow == null) {
+            ReadModifyWriteRow = new global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse();
+          }
+          ReadModifyWriteRow.MergeFrom(other.ReadModifyWriteRow);
+          break;
+        case PayloadOneofCase.MutateRows:
+          if (MutateRows == null) {
+            MutateRows = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse();
+          }
+          MutateRows.MergeFrom(other.MutateRows);
           break;
       }
 
@@ -10373,6 +12129,15 @@ namespace Google.Cloud.Bigtable.V2 {
             MutateRow = subBuilder;
             break;
           }
+          case 26: {
+            global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse();
+            if (payloadCase_ == PayloadOneofCase.ReadRows) {
+              subBuilder.MergeFrom(ReadRows);
+            }
+            input.ReadMessage(subBuilder);
+            ReadRows = subBuilder;
+            break;
+          }
           case 34: {
             global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowResponse();
             if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
@@ -10380,6 +12145,24 @@ namespace Google.Cloud.Bigtable.V2 {
             }
             input.ReadMessage(subBuilder);
             CheckAndMutateRow = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse();
+            if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+              subBuilder.MergeFrom(ReadModifyWriteRow);
+            }
+            input.ReadMessage(subBuilder);
+            ReadModifyWriteRow = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse();
+            if (payloadCase_ == PayloadOneofCase.MutateRows) {
+              subBuilder.MergeFrom(MutateRows);
+            }
+            input.ReadMessage(subBuilder);
+            MutateRows = subBuilder;
             break;
           }
         }
@@ -10419,6 +12202,15 @@ namespace Google.Cloud.Bigtable.V2 {
             MutateRow = subBuilder;
             break;
           }
+          case 26: {
+            global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse();
+            if (payloadCase_ == PayloadOneofCase.ReadRows) {
+              subBuilder.MergeFrom(ReadRows);
+            }
+            input.ReadMessage(subBuilder);
+            ReadRows = subBuilder;
+            break;
+          }
           case 34: {
             global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowResponse();
             if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
@@ -10426,6 +12218,24 @@ namespace Google.Cloud.Bigtable.V2 {
             }
             input.ReadMessage(subBuilder);
             CheckAndMutateRow = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse();
+            if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+              subBuilder.MergeFrom(ReadModifyWriteRow);
+            }
+            input.ReadMessage(subBuilder);
+            ReadModifyWriteRow = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse();
+            if (payloadCase_ == PayloadOneofCase.MutateRows) {
+              subBuilder.MergeFrom(MutateRows);
+            }
+            input.ReadMessage(subBuilder);
+            MutateRows = subBuilder;
             break;
           }
         }
@@ -10453,7 +12263,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10480,8 +12290,17 @@ namespace Google.Cloud.Bigtable.V2 {
         case PayloadOneofCase.MutateRow:
           MutateRow = other.MutateRow.Clone();
           break;
+        case PayloadOneofCase.ReadRows:
+          ReadRows = other.ReadRows.Clone();
+          break;
         case PayloadOneofCase.CheckAndMutateRow:
           CheckAndMutateRow = other.CheckAndMutateRow.Clone();
+          break;
+        case PayloadOneofCase.ReadModifyWriteRow:
+          ReadModifyWriteRow = other.ReadModifyWriteRow.Clone();
+          break;
+        case PayloadOneofCase.MutateRows:
+          MutateRows = other.MutateRows.Clone();
           break;
       }
 
@@ -10518,6 +12337,18 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "read_rows" field.</summary>
+    public const int ReadRowsFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest ReadRows {
+      get { return payloadCase_ == PayloadOneofCase.ReadRows ? (global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ReadRows;
+      }
+    }
+
     /// <summary>Field number for the "check_and_mutate_row" field.</summary>
     public const int CheckAndMutateRowFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10530,13 +12361,40 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "read_modify_write_row" field.</summary>
+    public const int ReadModifyWriteRowFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest ReadModifyWriteRow {
+      get { return payloadCase_ == PayloadOneofCase.ReadModifyWriteRow ? (global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ReadModifyWriteRow;
+      }
+    }
+
+    /// <summary>Field number for the "mutate_rows" field.</summary>
+    public const int MutateRowsFieldNumber = 6;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest MutateRows {
+      get { return payloadCase_ == PayloadOneofCase.MutateRows ? (global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.MutateRows;
+      }
+    }
+
     private object payload_;
     /// <summary>Enum of possible cases for the "payload" oneof.</summary>
     public enum PayloadOneofCase {
       None = 0,
       ReadRow = 1,
       MutateRow = 2,
+      ReadRows = 3,
       CheckAndMutateRow = 4,
+      ReadModifyWriteRow = 5,
+      MutateRows = 6,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10569,7 +12427,10 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (!object.Equals(ReadRow, other.ReadRow)) return false;
       if (!object.Equals(MutateRow, other.MutateRow)) return false;
+      if (!object.Equals(ReadRows, other.ReadRows)) return false;
       if (!object.Equals(CheckAndMutateRow, other.CheckAndMutateRow)) return false;
+      if (!object.Equals(ReadModifyWriteRow, other.ReadModifyWriteRow)) return false;
+      if (!object.Equals(MutateRows, other.MutateRows)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -10580,7 +12441,10 @@ namespace Google.Cloud.Bigtable.V2 {
       int hash = 1;
       if (payloadCase_ == PayloadOneofCase.ReadRow) hash ^= ReadRow.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.MutateRow) hash ^= MutateRow.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.ReadRows) hash ^= ReadRows.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) hash ^= CheckAndMutateRow.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) hash ^= ReadModifyWriteRow.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.MutateRows) hash ^= MutateRows.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -10608,9 +12472,21 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(MutateRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadRows);
+      }
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
         output.WriteRawTag(34);
         output.WriteMessage(CheckAndMutateRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReadModifyWriteRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.MutateRows) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MutateRows);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -10630,9 +12506,21 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(MutateRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadRows);
+      }
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
         output.WriteRawTag(34);
         output.WriteMessage(CheckAndMutateRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReadModifyWriteRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.MutateRows) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MutateRows);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -10650,8 +12538,17 @@ namespace Google.Cloud.Bigtable.V2 {
       if (payloadCase_ == PayloadOneofCase.MutateRow) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MutateRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadRows);
+      }
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CheckAndMutateRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadModifyWriteRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.MutateRows) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MutateRows);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -10678,11 +12575,29 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           MutateRow.MergeFrom(other.MutateRow);
           break;
+        case PayloadOneofCase.ReadRows:
+          if (ReadRows == null) {
+            ReadRows = new global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest();
+          }
+          ReadRows.MergeFrom(other.ReadRows);
+          break;
         case PayloadOneofCase.CheckAndMutateRow:
           if (CheckAndMutateRow == null) {
             CheckAndMutateRow = new global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowRequest();
           }
           CheckAndMutateRow.MergeFrom(other.CheckAndMutateRow);
+          break;
+        case PayloadOneofCase.ReadModifyWriteRow:
+          if (ReadModifyWriteRow == null) {
+            ReadModifyWriteRow = new global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest();
+          }
+          ReadModifyWriteRow.MergeFrom(other.ReadModifyWriteRow);
+          break;
+        case PayloadOneofCase.MutateRows:
+          if (MutateRows == null) {
+            MutateRows = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest();
+          }
+          MutateRows.MergeFrom(other.MutateRows);
           break;
       }
 
@@ -10723,6 +12638,15 @@ namespace Google.Cloud.Bigtable.V2 {
             MutateRow = subBuilder;
             break;
           }
+          case 26: {
+            global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest();
+            if (payloadCase_ == PayloadOneofCase.ReadRows) {
+              subBuilder.MergeFrom(ReadRows);
+            }
+            input.ReadMessage(subBuilder);
+            ReadRows = subBuilder;
+            break;
+          }
           case 34: {
             global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowRequest();
             if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
@@ -10730,6 +12654,24 @@ namespace Google.Cloud.Bigtable.V2 {
             }
             input.ReadMessage(subBuilder);
             CheckAndMutateRow = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest();
+            if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+              subBuilder.MergeFrom(ReadModifyWriteRow);
+            }
+            input.ReadMessage(subBuilder);
+            ReadModifyWriteRow = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest();
+            if (payloadCase_ == PayloadOneofCase.MutateRows) {
+              subBuilder.MergeFrom(MutateRows);
+            }
+            input.ReadMessage(subBuilder);
+            MutateRows = subBuilder;
             break;
           }
         }
@@ -10769,6 +12711,15 @@ namespace Google.Cloud.Bigtable.V2 {
             MutateRow = subBuilder;
             break;
           }
+          case 26: {
+            global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest();
+            if (payloadCase_ == PayloadOneofCase.ReadRows) {
+              subBuilder.MergeFrom(ReadRows);
+            }
+            input.ReadMessage(subBuilder);
+            ReadRows = subBuilder;
+            break;
+          }
           case 34: {
             global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowRequest();
             if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
@@ -10776,6 +12727,24 @@ namespace Google.Cloud.Bigtable.V2 {
             }
             input.ReadMessage(subBuilder);
             CheckAndMutateRow = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowRequest();
+            if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+              subBuilder.MergeFrom(ReadModifyWriteRow);
+            }
+            input.ReadMessage(subBuilder);
+            ReadModifyWriteRow = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest();
+            if (payloadCase_ == PayloadOneofCase.MutateRows) {
+              subBuilder.MergeFrom(MutateRows);
+            }
+            input.ReadMessage(subBuilder);
+            MutateRows = subBuilder;
             break;
           }
         }
@@ -10803,7 +12772,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10830,8 +12799,17 @@ namespace Google.Cloud.Bigtable.V2 {
         case PayloadOneofCase.MutateRow:
           MutateRow = other.MutateRow.Clone();
           break;
+        case PayloadOneofCase.ReadRows:
+          ReadRows = other.ReadRows.Clone();
+          break;
         case PayloadOneofCase.CheckAndMutateRow:
           CheckAndMutateRow = other.CheckAndMutateRow.Clone();
+          break;
+        case PayloadOneofCase.ReadModifyWriteRow:
+          ReadModifyWriteRow = other.ReadModifyWriteRow.Clone();
+          break;
+        case PayloadOneofCase.MutateRows:
+          MutateRows = other.MutateRows.Clone();
           break;
       }
 
@@ -10868,6 +12846,18 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "read_rows" field.</summary>
+    public const int ReadRowsFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse ReadRows {
+      get { return payloadCase_ == PayloadOneofCase.ReadRows ? (global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ReadRows;
+      }
+    }
+
     /// <summary>Field number for the "check_and_mutate_row" field.</summary>
     public const int CheckAndMutateRowFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10880,13 +12870,40 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "read_modify_write_row" field.</summary>
+    public const int ReadModifyWriteRowFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse ReadModifyWriteRow {
+      get { return payloadCase_ == PayloadOneofCase.ReadModifyWriteRow ? (global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ReadModifyWriteRow;
+      }
+    }
+
+    /// <summary>Field number for the "mutate_rows" field.</summary>
+    public const int MutateRowsFieldNumber = 6;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse MutateRows {
+      get { return payloadCase_ == PayloadOneofCase.MutateRows ? (global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.MutateRows;
+      }
+    }
+
     private object payload_;
     /// <summary>Enum of possible cases for the "payload" oneof.</summary>
     public enum PayloadOneofCase {
       None = 0,
       ReadRow = 1,
       MutateRow = 2,
+      ReadRows = 3,
       CheckAndMutateRow = 4,
+      ReadModifyWriteRow = 5,
+      MutateRows = 6,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10919,7 +12936,10 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (!object.Equals(ReadRow, other.ReadRow)) return false;
       if (!object.Equals(MutateRow, other.MutateRow)) return false;
+      if (!object.Equals(ReadRows, other.ReadRows)) return false;
       if (!object.Equals(CheckAndMutateRow, other.CheckAndMutateRow)) return false;
+      if (!object.Equals(ReadModifyWriteRow, other.ReadModifyWriteRow)) return false;
+      if (!object.Equals(MutateRows, other.MutateRows)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -10930,7 +12950,10 @@ namespace Google.Cloud.Bigtable.V2 {
       int hash = 1;
       if (payloadCase_ == PayloadOneofCase.ReadRow) hash ^= ReadRow.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.MutateRow) hash ^= MutateRow.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.ReadRows) hash ^= ReadRows.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) hash ^= CheckAndMutateRow.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) hash ^= ReadModifyWriteRow.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.MutateRows) hash ^= MutateRows.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -10958,9 +12981,21 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(MutateRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadRows);
+      }
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
         output.WriteRawTag(34);
         output.WriteMessage(CheckAndMutateRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReadModifyWriteRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.MutateRows) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MutateRows);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -10980,9 +13015,21 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(MutateRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadRows);
+      }
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
         output.WriteRawTag(34);
         output.WriteMessage(CheckAndMutateRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReadModifyWriteRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.MutateRows) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MutateRows);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -11000,8 +13047,17 @@ namespace Google.Cloud.Bigtable.V2 {
       if (payloadCase_ == PayloadOneofCase.MutateRow) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MutateRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadRows);
+      }
       if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CheckAndMutateRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadModifyWriteRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.MutateRows) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MutateRows);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -11028,11 +13084,29 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           MutateRow.MergeFrom(other.MutateRow);
           break;
+        case PayloadOneofCase.ReadRows:
+          if (ReadRows == null) {
+            ReadRows = new global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse();
+          }
+          ReadRows.MergeFrom(other.ReadRows);
+          break;
         case PayloadOneofCase.CheckAndMutateRow:
           if (CheckAndMutateRow == null) {
             CheckAndMutateRow = new global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowResponse();
           }
           CheckAndMutateRow.MergeFrom(other.CheckAndMutateRow);
+          break;
+        case PayloadOneofCase.ReadModifyWriteRow:
+          if (ReadModifyWriteRow == null) {
+            ReadModifyWriteRow = new global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse();
+          }
+          ReadModifyWriteRow.MergeFrom(other.ReadModifyWriteRow);
+          break;
+        case PayloadOneofCase.MutateRows:
+          if (MutateRows == null) {
+            MutateRows = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse();
+          }
+          MutateRows.MergeFrom(other.MutateRows);
           break;
       }
 
@@ -11073,6 +13147,15 @@ namespace Google.Cloud.Bigtable.V2 {
             MutateRow = subBuilder;
             break;
           }
+          case 26: {
+            global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse();
+            if (payloadCase_ == PayloadOneofCase.ReadRows) {
+              subBuilder.MergeFrom(ReadRows);
+            }
+            input.ReadMessage(subBuilder);
+            ReadRows = subBuilder;
+            break;
+          }
           case 34: {
             global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowResponse();
             if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
@@ -11080,6 +13163,24 @@ namespace Google.Cloud.Bigtable.V2 {
             }
             input.ReadMessage(subBuilder);
             CheckAndMutateRow = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse();
+            if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+              subBuilder.MergeFrom(ReadModifyWriteRow);
+            }
+            input.ReadMessage(subBuilder);
+            ReadModifyWriteRow = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse();
+            if (payloadCase_ == PayloadOneofCase.MutateRows) {
+              subBuilder.MergeFrom(MutateRows);
+            }
+            input.ReadMessage(subBuilder);
+            MutateRows = subBuilder;
             break;
           }
         }
@@ -11119,6 +13220,15 @@ namespace Google.Cloud.Bigtable.V2 {
             MutateRow = subBuilder;
             break;
           }
+          case 26: {
+            global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse();
+            if (payloadCase_ == PayloadOneofCase.ReadRows) {
+              subBuilder.MergeFrom(ReadRows);
+            }
+            input.ReadMessage(subBuilder);
+            ReadRows = subBuilder;
+            break;
+          }
           case 34: {
             global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionCheckAndMutateRowResponse();
             if (payloadCase_ == PayloadOneofCase.CheckAndMutateRow) {
@@ -11126,6 +13236,24 @@ namespace Google.Cloud.Bigtable.V2 {
             }
             input.ReadMessage(subBuilder);
             CheckAndMutateRow = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadModifyWriteRowResponse();
+            if (payloadCase_ == PayloadOneofCase.ReadModifyWriteRow) {
+              subBuilder.MergeFrom(ReadModifyWriteRow);
+            }
+            input.ReadMessage(subBuilder);
+            ReadModifyWriteRow = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse();
+            if (payloadCase_ == PayloadOneofCase.MutateRows) {
+              subBuilder.MergeFrom(MutateRows);
+            }
+            input.ReadMessage(subBuilder);
+            MutateRows = subBuilder;
             break;
           }
         }
@@ -11153,7 +13281,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11176,6 +13304,9 @@ namespace Google.Cloud.Bigtable.V2 {
       switch (other.PayloadCase) {
         case PayloadOneofCase.ReadRow:
           ReadRow = other.ReadRow.Clone();
+          break;
+        case PayloadOneofCase.ReadRows:
+          ReadRows = other.ReadRows.Clone();
           break;
       }
 
@@ -11200,11 +13331,24 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "read_rows" field.</summary>
+    public const int ReadRowsFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest ReadRows {
+      get { return payloadCase_ == PayloadOneofCase.ReadRows ? (global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ReadRows;
+      }
+    }
+
     private object payload_;
     /// <summary>Enum of possible cases for the "payload" oneof.</summary>
     public enum PayloadOneofCase {
       None = 0,
       ReadRow = 1,
+      ReadRows = 2,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11236,6 +13380,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (!object.Equals(ReadRow, other.ReadRow)) return false;
+      if (!object.Equals(ReadRows, other.ReadRows)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -11245,6 +13390,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (payloadCase_ == PayloadOneofCase.ReadRow) hash ^= ReadRow.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.ReadRows) hash ^= ReadRows.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -11268,6 +13414,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(ReadRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ReadRows);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -11282,6 +13432,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(ReadRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ReadRows);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -11294,6 +13448,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (payloadCase_ == PayloadOneofCase.ReadRow) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadRows);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -11313,6 +13470,12 @@ namespace Google.Cloud.Bigtable.V2 {
             ReadRow = new global::Google.Cloud.Bigtable.V2.SessionReadRowRequest();
           }
           ReadRow.MergeFrom(other.ReadRow);
+          break;
+        case PayloadOneofCase.ReadRows:
+          if (ReadRows == null) {
+            ReadRows = new global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest();
+          }
+          ReadRows.MergeFrom(other.ReadRows);
           break;
       }
 
@@ -11344,6 +13507,15 @@ namespace Google.Cloud.Bigtable.V2 {
             ReadRow = subBuilder;
             break;
           }
+          case 18: {
+            global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest();
+            if (payloadCase_ == PayloadOneofCase.ReadRows) {
+              subBuilder.MergeFrom(ReadRows);
+            }
+            input.ReadMessage(subBuilder);
+            ReadRows = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -11372,6 +13544,15 @@ namespace Google.Cloud.Bigtable.V2 {
             ReadRow = subBuilder;
             break;
           }
+          case 18: {
+            global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadRowsRequest();
+            if (payloadCase_ == PayloadOneofCase.ReadRows) {
+              subBuilder.MergeFrom(ReadRows);
+            }
+            input.ReadMessage(subBuilder);
+            ReadRows = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -11398,7 +13579,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11421,6 +13602,9 @@ namespace Google.Cloud.Bigtable.V2 {
       switch (other.PayloadCase) {
         case PayloadOneofCase.ReadRow:
           ReadRow = other.ReadRow.Clone();
+          break;
+        case PayloadOneofCase.ReadRows:
+          ReadRows = other.ReadRows.Clone();
           break;
       }
 
@@ -11445,11 +13629,24 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "read_rows" field.</summary>
+    public const int ReadRowsFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse ReadRows {
+      get { return payloadCase_ == PayloadOneofCase.ReadRows ? (global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ReadRows;
+      }
+    }
+
     private object payload_;
     /// <summary>Enum of possible cases for the "payload" oneof.</summary>
     public enum PayloadOneofCase {
       None = 0,
       ReadRow = 1,
+      ReadRows = 2,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11481,6 +13678,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (!object.Equals(ReadRow, other.ReadRow)) return false;
+      if (!object.Equals(ReadRows, other.ReadRows)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -11490,6 +13688,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (payloadCase_ == PayloadOneofCase.ReadRow) hash ^= ReadRow.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.ReadRows) hash ^= ReadRows.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -11513,6 +13712,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(ReadRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ReadRows);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -11527,6 +13730,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(ReadRow);
       }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ReadRows);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -11539,6 +13746,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (payloadCase_ == PayloadOneofCase.ReadRow) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadRow);
+      }
+      if (payloadCase_ == PayloadOneofCase.ReadRows) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadRows);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -11558,6 +13768,12 @@ namespace Google.Cloud.Bigtable.V2 {
             ReadRow = new global::Google.Cloud.Bigtable.V2.SessionReadRowResponse();
           }
           ReadRow.MergeFrom(other.ReadRow);
+          break;
+        case PayloadOneofCase.ReadRows:
+          if (ReadRows == null) {
+            ReadRows = new global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse();
+          }
+          ReadRows.MergeFrom(other.ReadRows);
           break;
       }
 
@@ -11589,6 +13805,15 @@ namespace Google.Cloud.Bigtable.V2 {
             ReadRow = subBuilder;
             break;
           }
+          case 18: {
+            global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse();
+            if (payloadCase_ == PayloadOneofCase.ReadRows) {
+              subBuilder.MergeFrom(ReadRows);
+            }
+            input.ReadMessage(subBuilder);
+            ReadRows = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -11617,6 +13842,15 @@ namespace Google.Cloud.Bigtable.V2 {
             ReadRow = subBuilder;
             break;
           }
+          case 18: {
+            global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse subBuilder = new global::Google.Cloud.Bigtable.V2.SessionReadRowsResponse();
+            if (payloadCase_ == PayloadOneofCase.ReadRows) {
+              subBuilder.MergeFrom(ReadRows);
+            }
+            input.ReadMessage(subBuilder);
+            ReadRows = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -11642,7 +13876,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11889,7 +14123,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12131,6 +14365,572 @@ namespace Google.Cloud.Bigtable.V2 {
   /// Internal usage only.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SessionReadRowsRequest : pb::IMessage<SessionReadRowsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SessionReadRowsRequest> _parser = new pb::MessageParser<SessionReadRowsRequest>(() => new SessionReadRowsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SessionReadRowsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[34]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionReadRowsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionReadRowsRequest(SessionReadRowsRequest other) : this() {
+      rows_ = other.rows_ != null ? other.rows_.Clone() : null;
+      filter_ = other.filter_ != null ? other.filter_.Clone() : null;
+      rowsLimit_ = other.rowsLimit_;
+      reversed_ = other.reversed_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionReadRowsRequest Clone() {
+      return new SessionReadRowsRequest(this);
+    }
+
+    /// <summary>Field number for the "rows" field.</summary>
+    public const int RowsFieldNumber = 1;
+    private global::Google.Cloud.Bigtable.V2.RowSet rows_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.RowSet Rows {
+      get { return rows_; }
+      set {
+        rows_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 2;
+    private global::Google.Cloud.Bigtable.V2.RowFilter filter_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.RowFilter Filter {
+      get { return filter_; }
+      set {
+        filter_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rows_limit" field.</summary>
+    public const int RowsLimitFieldNumber = 3;
+    private long rowsLimit_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long RowsLimit {
+      get { return rowsLimit_; }
+      set {
+        rowsLimit_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "reversed" field.</summary>
+    public const int ReversedFieldNumber = 4;
+    private bool reversed_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Reversed {
+      get { return reversed_; }
+      set {
+        reversed_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SessionReadRowsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SessionReadRowsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Rows, other.Rows)) return false;
+      if (!object.Equals(Filter, other.Filter)) return false;
+      if (RowsLimit != other.RowsLimit) return false;
+      if (Reversed != other.Reversed) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (rows_ != null) hash ^= Rows.GetHashCode();
+      if (filter_ != null) hash ^= Filter.GetHashCode();
+      if (RowsLimit != 0L) hash ^= RowsLimit.GetHashCode();
+      if (Reversed != false) hash ^= Reversed.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (rows_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Rows);
+      }
+      if (filter_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Filter);
+      }
+      if (RowsLimit != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(RowsLimit);
+      }
+      if (Reversed != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Reversed);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (rows_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Rows);
+      }
+      if (filter_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Filter);
+      }
+      if (RowsLimit != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(RowsLimit);
+      }
+      if (Reversed != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Reversed);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (rows_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rows);
+      }
+      if (filter_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Filter);
+      }
+      if (RowsLimit != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RowsLimit);
+      }
+      if (Reversed != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SessionReadRowsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.rows_ != null) {
+        if (rows_ == null) {
+          Rows = new global::Google.Cloud.Bigtable.V2.RowSet();
+        }
+        Rows.MergeFrom(other.Rows);
+      }
+      if (other.filter_ != null) {
+        if (filter_ == null) {
+          Filter = new global::Google.Cloud.Bigtable.V2.RowFilter();
+        }
+        Filter.MergeFrom(other.Filter);
+      }
+      if (other.RowsLimit != 0L) {
+        RowsLimit = other.RowsLimit;
+      }
+      if (other.Reversed != false) {
+        Reversed = other.Reversed;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (rows_ == null) {
+              Rows = new global::Google.Cloud.Bigtable.V2.RowSet();
+            }
+            input.ReadMessage(Rows);
+            break;
+          }
+          case 18: {
+            if (filter_ == null) {
+              Filter = new global::Google.Cloud.Bigtable.V2.RowFilter();
+            }
+            input.ReadMessage(Filter);
+            break;
+          }
+          case 24: {
+            RowsLimit = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            Reversed = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (rows_ == null) {
+              Rows = new global::Google.Cloud.Bigtable.V2.RowSet();
+            }
+            input.ReadMessage(Rows);
+            break;
+          }
+          case 18: {
+            if (filter_ == null) {
+              Filter = new global::Google.Cloud.Bigtable.V2.RowFilter();
+            }
+            input.ReadMessage(Filter);
+            break;
+          }
+          case 24: {
+            RowsLimit = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            Reversed = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Internal usage only.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SessionReadRowsResponse : pb::IMessage<SessionReadRowsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SessionReadRowsResponse> _parser = new pb::MessageParser<SessionReadRowsResponse>(() => new SessionReadRowsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SessionReadRowsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[35]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionReadRowsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionReadRowsResponse(SessionReadRowsResponse other) : this() {
+      row_ = other.row_.Clone();
+      stats_ = other.stats_ != null ? other.stats_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionReadRowsResponse Clone() {
+      return new SessionReadRowsResponse(this);
+    }
+
+    /// <summary>Field number for the "row" field.</summary>
+    public const int RowFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Bigtable.V2.Row> _repeated_row_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Bigtable.V2.Row.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Row> row_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Row>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Row> Row {
+      get { return row_; }
+    }
+
+    /// <summary>Field number for the "stats" field.</summary>
+    public const int StatsFieldNumber = 2;
+    private global::Google.Cloud.Bigtable.V2.RequestStats stats_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.RequestStats Stats {
+      get { return stats_; }
+      set {
+        stats_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SessionReadRowsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SessionReadRowsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!row_.Equals(other.row_)) return false;
+      if (!object.Equals(Stats, other.Stats)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= row_.GetHashCode();
+      if (stats_ != null) hash ^= Stats.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      row_.WriteTo(output, _repeated_row_codec);
+      if (stats_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Stats);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      row_.WriteTo(ref output, _repeated_row_codec);
+      if (stats_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Stats);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += row_.CalculateSize(_repeated_row_codec);
+      if (stats_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SessionReadRowsResponse other) {
+      if (other == null) {
+        return;
+      }
+      row_.Add(other.row_);
+      if (other.stats_ != null) {
+        if (stats_ == null) {
+          Stats = new global::Google.Cloud.Bigtable.V2.RequestStats();
+        }
+        Stats.MergeFrom(other.Stats);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            row_.AddEntriesFrom(input, _repeated_row_codec);
+            break;
+          }
+          case 18: {
+            if (stats_ == null) {
+              Stats = new global::Google.Cloud.Bigtable.V2.RequestStats();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            row_.AddEntriesFrom(ref input, _repeated_row_codec);
+            break;
+          }
+          case 18: {
+            if (stats_ == null) {
+              Stats = new global::Google.Cloud.Bigtable.V2.RequestStats();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Internal usage only.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SessionMutateRowRequest : pb::IMessage<SessionMutateRowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12145,7 +14945,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12372,7 +15172,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12536,7 +15336,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12835,7 +15635,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[33]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13022,6 +15822,1683 @@ namespace Google.Cloud.Bigtable.V2 {
   /// Internal usage only.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SessionReadModifyWriteRowRequest : pb::IMessage<SessionReadModifyWriteRowRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SessionReadModifyWriteRowRequest> _parser = new pb::MessageParser<SessionReadModifyWriteRowRequest>(() => new SessionReadModifyWriteRowRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SessionReadModifyWriteRowRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[40]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionReadModifyWriteRowRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionReadModifyWriteRowRequest(SessionReadModifyWriteRowRequest other) : this() {
+      key_ = other.key_;
+      rules_ = other.rules_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionReadModifyWriteRowRequest Clone() {
+      return new SessionReadModifyWriteRowRequest(this);
+    }
+
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 1;
+    private pb::ByteString key_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Key {
+      get { return key_; }
+      set {
+        key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "rules" field.</summary>
+    public const int RulesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRule> _repeated_rules_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRule.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRule> rules_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRule>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRule> Rules {
+      get { return rules_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SessionReadModifyWriteRowRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SessionReadModifyWriteRowRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Key != other.Key) return false;
+      if(!rules_.Equals(other.rules_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Key.Length != 0) hash ^= Key.GetHashCode();
+      hash ^= rules_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Key);
+      }
+      rules_.WriteTo(output, _repeated_rules_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Key);
+      }
+      rules_.WriteTo(ref output, _repeated_rules_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Key.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Key);
+      }
+      size += rules_.CalculateSize(_repeated_rules_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SessionReadModifyWriteRowRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Key.Length != 0) {
+        Key = other.Key;
+      }
+      rules_.Add(other.rules_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Key = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            rules_.AddEntriesFrom(input, _repeated_rules_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Key = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            rules_.AddEntriesFrom(ref input, _repeated_rules_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Internal usage only.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SessionReadModifyWriteRowResponse : pb::IMessage<SessionReadModifyWriteRowResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SessionReadModifyWriteRowResponse> _parser = new pb::MessageParser<SessionReadModifyWriteRowResponse>(() => new SessionReadModifyWriteRowResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SessionReadModifyWriteRowResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[41]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionReadModifyWriteRowResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionReadModifyWriteRowResponse(SessionReadModifyWriteRowResponse other) : this() {
+      row_ = other.row_ != null ? other.row_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionReadModifyWriteRowResponse Clone() {
+      return new SessionReadModifyWriteRowResponse(this);
+    }
+
+    /// <summary>Field number for the "row" field.</summary>
+    public const int RowFieldNumber = 1;
+    private global::Google.Cloud.Bigtable.V2.Row row_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.Row Row {
+      get { return row_; }
+      set {
+        row_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SessionReadModifyWriteRowResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SessionReadModifyWriteRowResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Row, other.Row)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (row_ != null) hash ^= Row.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (row_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Row);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (row_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Row);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (row_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Row);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SessionReadModifyWriteRowResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.row_ != null) {
+        if (row_ == null) {
+          Row = new global::Google.Cloud.Bigtable.V2.Row();
+        }
+        Row.MergeFrom(other.Row);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (row_ == null) {
+              Row = new global::Google.Cloud.Bigtable.V2.Row();
+            }
+            input.ReadMessage(Row);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (row_ == null) {
+              Row = new global::Google.Cloud.Bigtable.V2.Row();
+            }
+            input.ReadMessage(Row);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Internal usage only.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SessionMutateRowsRequest : pb::IMessage<SessionMutateRowsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SessionMutateRowsRequest> _parser = new pb::MessageParser<SessionMutateRowsRequest>(() => new SessionMutateRowsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SessionMutateRowsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[42]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionMutateRowsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionMutateRowsRequest(SessionMutateRowsRequest other) : this() {
+      entries_ = other.entries_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionMutateRowsRequest Clone() {
+      return new SessionMutateRowsRequest(this);
+    }
+
+    /// <summary>Field number for the "entries" field.</summary>
+    public const int EntriesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest.Types.Entry> _repeated_entries_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest.Types.Entry.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest.Types.Entry> entries_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest.Types.Entry>();
+    /// <summary>
+    /// The row keys and corresponding mutations to be applied in bulk.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest.Types.Entry> Entries {
+      get { return entries_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SessionMutateRowsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SessionMutateRowsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!entries_.Equals(other.entries_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= entries_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      entries_.WriteTo(output, _repeated_entries_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      entries_.WriteTo(ref output, _repeated_entries_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += entries_.CalculateSize(_repeated_entries_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SessionMutateRowsRequest other) {
+      if (other == null) {
+        return;
+      }
+      entries_.Add(other.entries_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            entries_.AddEntriesFrom(input, _repeated_entries_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            entries_.AddEntriesFrom(ref input, _repeated_entries_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SessionMutateRowsRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// A mutation for a given row.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Entry : pb::IMessage<Entry>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Entry> _parser = new pb::MessageParser<Entry>(() => new Entry());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Entry> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.V2.SessionMutateRowsRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Entry() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Entry(Entry other) : this() {
+          key_ = other.key_;
+          mutations_ = other.mutations_.Clone();
+          idempotency_ = other.idempotency_ != null ? other.idempotency_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Entry Clone() {
+          return new Entry(this);
+        }
+
+        /// <summary>Field number for the "key" field.</summary>
+        public const int KeyFieldNumber = 1;
+        private pb::ByteString key_ = pb::ByteString.Empty;
+        /// <summary>
+        /// The key of the row to which the `mutations` should be applied.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pb::ByteString Key {
+          get { return key_; }
+          set {
+            key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "mutations" field.</summary>
+        public const int MutationsFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Bigtable.V2.Mutation> _repeated_mutations_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.V2.Mutation.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Mutation> mutations_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Mutation>();
+        /// <summary>
+        /// Changes to be atomically applied to the specified row.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Mutation> Mutations {
+          get { return mutations_; }
+        }
+
+        /// <summary>Field number for the "idempotency" field.</summary>
+        public const int IdempotencyFieldNumber = 3;
+        private global::Google.Cloud.Bigtable.V2.Idempotency idempotency_;
+        /// <summary>
+        /// The idempotency of the mutation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.V2.Idempotency Idempotency {
+          get { return idempotency_; }
+          set {
+            idempotency_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Entry);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Entry other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Key != other.Key) return false;
+          if(!mutations_.Equals(other.mutations_)) return false;
+          if (!object.Equals(Idempotency, other.Idempotency)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Key.Length != 0) hash ^= Key.GetHashCode();
+          hash ^= mutations_.GetHashCode();
+          if (idempotency_ != null) hash ^= Idempotency.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Key.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteBytes(Key);
+          }
+          mutations_.WriteTo(output, _repeated_mutations_codec);
+          if (idempotency_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Idempotency);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Key.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteBytes(Key);
+          }
+          mutations_.WriteTo(ref output, _repeated_mutations_codec);
+          if (idempotency_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Idempotency);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Key.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(Key);
+          }
+          size += mutations_.CalculateSize(_repeated_mutations_codec);
+          if (idempotency_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Idempotency);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Entry other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Key.Length != 0) {
+            Key = other.Key;
+          }
+          mutations_.Add(other.mutations_);
+          if (other.idempotency_ != null) {
+            if (idempotency_ == null) {
+              Idempotency = new global::Google.Cloud.Bigtable.V2.Idempotency();
+            }
+            Idempotency.MergeFrom(other.Idempotency);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Key = input.ReadBytes();
+                break;
+              }
+              case 18: {
+                mutations_.AddEntriesFrom(input, _repeated_mutations_codec);
+                break;
+              }
+              case 26: {
+                if (idempotency_ == null) {
+                  Idempotency = new global::Google.Cloud.Bigtable.V2.Idempotency();
+                }
+                input.ReadMessage(Idempotency);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Key = input.ReadBytes();
+                break;
+              }
+              case 18: {
+                mutations_.AddEntriesFrom(ref input, _repeated_mutations_codec);
+                break;
+              }
+              case 26: {
+                if (idempotency_ == null) {
+                  Idempotency = new global::Google.Cloud.Bigtable.V2.Idempotency();
+                }
+                input.ReadMessage(Idempotency);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Internal usage only.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SessionMutateRowsResponse : pb::IMessage<SessionMutateRowsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SessionMutateRowsResponse> _parser = new pb::MessageParser<SessionMutateRowsResponse>(() => new SessionMutateRowsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SessionMutateRowsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[43]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionMutateRowsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionMutateRowsResponse(SessionMutateRowsResponse other) : this() {
+      entries_ = other.entries_.Clone();
+      rateLimitInfo_ = other.rateLimitInfo_ != null ? other.rateLimitInfo_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionMutateRowsResponse Clone() {
+      return new SessionMutateRowsResponse(this);
+    }
+
+    /// <summary>Field number for the "entries" field.</summary>
+    public const int EntriesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Types.Entry> _repeated_entries_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Types.Entry.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Types.Entry> entries_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Types.Entry>();
+    /// <summary>
+    /// One or more results for Entries from the batch request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Types.Entry> Entries {
+      get { return entries_; }
+    }
+
+    /// <summary>Field number for the "rate_limit_info" field.</summary>
+    public const int RateLimitInfoFieldNumber = 2;
+    private global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Types.RateLimitInfo rateLimitInfo_;
+    /// <summary>
+    /// Information about how the client should adjust its rate of requests.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Types.RateLimitInfo RateLimitInfo {
+      get { return rateLimitInfo_; }
+      set {
+        rateLimitInfo_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SessionMutateRowsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SessionMutateRowsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!entries_.Equals(other.entries_)) return false;
+      if (!object.Equals(RateLimitInfo, other.RateLimitInfo)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= entries_.GetHashCode();
+      if (rateLimitInfo_ != null) hash ^= RateLimitInfo.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      entries_.WriteTo(output, _repeated_entries_codec);
+      if (rateLimitInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RateLimitInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      entries_.WriteTo(ref output, _repeated_entries_codec);
+      if (rateLimitInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RateLimitInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += entries_.CalculateSize(_repeated_entries_codec);
+      if (rateLimitInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RateLimitInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SessionMutateRowsResponse other) {
+      if (other == null) {
+        return;
+      }
+      entries_.Add(other.entries_);
+      if (other.rateLimitInfo_ != null) {
+        if (rateLimitInfo_ == null) {
+          RateLimitInfo = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Types.RateLimitInfo();
+        }
+        RateLimitInfo.MergeFrom(other.RateLimitInfo);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            entries_.AddEntriesFrom(input, _repeated_entries_codec);
+            break;
+          }
+          case 18: {
+            if (rateLimitInfo_ == null) {
+              RateLimitInfo = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Types.RateLimitInfo();
+            }
+            input.ReadMessage(RateLimitInfo);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            entries_.AddEntriesFrom(ref input, _repeated_entries_codec);
+            break;
+          }
+          case 18: {
+            if (rateLimitInfo_ == null) {
+              RateLimitInfo = new global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Types.RateLimitInfo();
+            }
+            input.ReadMessage(RateLimitInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SessionMutateRowsResponse message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The result of applying a passed mutation in the original request.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Entry : pb::IMessage<Entry>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Entry> _parser = new pb::MessageParser<Entry>(() => new Entry());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Entry> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Entry() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Entry(Entry other) : this() {
+          index_ = other.index_;
+          status_ = other.status_ != null ? other.status_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Entry Clone() {
+          return new Entry(this);
+        }
+
+        /// <summary>Field number for the "index" field.</summary>
+        public const int IndexFieldNumber = 1;
+        private long index_;
+        /// <summary>
+        /// The index into the original request's `entries` list of the Entry
+        /// for which a result is being reported.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long Index {
+          get { return index_; }
+          set {
+            index_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "status" field.</summary>
+        public const int StatusFieldNumber = 2;
+        private global::Google.Rpc.Status status_;
+        /// <summary>
+        /// The result of the request Entry identified by `index`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Rpc.Status Status {
+          get { return status_; }
+          set {
+            status_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Entry);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Entry other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Index != other.Index) return false;
+          if (!object.Equals(Status, other.Status)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Index != 0L) hash ^= Index.GetHashCode();
+          if (status_ != null) hash ^= Status.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Index != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(Index);
+          }
+          if (status_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Status);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Index != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(Index);
+          }
+          if (status_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Status);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Index != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(Index);
+          }
+          if (status_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Entry other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Index != 0L) {
+            Index = other.Index;
+          }
+          if (other.status_ != null) {
+            if (status_ == null) {
+              Status = new global::Google.Rpc.Status();
+            }
+            Status.MergeFrom(other.Status);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Index = input.ReadInt64();
+                break;
+              }
+              case 18: {
+                if (status_ == null) {
+                  Status = new global::Google.Rpc.Status();
+                }
+                input.ReadMessage(Status);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Index = input.ReadInt64();
+                break;
+              }
+              case 18: {
+                if (status_ == null) {
+                  Status = new global::Google.Rpc.Status();
+                }
+                input.ReadMessage(Status);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Rate limiting information for batched mutations.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RateLimitInfo : pb::IMessage<RateLimitInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RateLimitInfo> _parser = new pb::MessageParser<RateLimitInfo>(() => new RateLimitInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RateLimitInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.V2.SessionMutateRowsResponse.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RateLimitInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RateLimitInfo(RateLimitInfo other) : this() {
+          period_ = other.period_ != null ? other.period_.Clone() : null;
+          factor_ = other.factor_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RateLimitInfo Clone() {
+          return new RateLimitInfo(this);
+        }
+
+        /// <summary>Field number for the "period" field.</summary>
+        public const int PeriodFieldNumber = 1;
+        private global::Google.Protobuf.WellKnownTypes.Duration period_;
+        /// <summary>
+        /// Time that must pass before the client should adjust its rate again.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration Period {
+          get { return period_; }
+          set {
+            period_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "factor" field.</summary>
+        public const int FactorFieldNumber = 2;
+        private double factor_;
+        /// <summary>
+        /// Multiplier that the client should apply to its current request rate.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double Factor {
+          get { return factor_; }
+          set {
+            factor_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RateLimitInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RateLimitInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Period, other.Period)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Factor, other.Factor)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (period_ != null) hash ^= Period.GetHashCode();
+          if (Factor != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Factor);
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (period_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Period);
+          }
+          if (Factor != 0D) {
+            output.WriteRawTag(17);
+            output.WriteDouble(Factor);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (period_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Period);
+          }
+          if (Factor != 0D) {
+            output.WriteRawTag(17);
+            output.WriteDouble(Factor);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (period_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Period);
+          }
+          if (Factor != 0D) {
+            size += 1 + 8;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RateLimitInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.period_ != null) {
+            if (period_ == null) {
+              Period = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            Period.MergeFrom(other.Period);
+          }
+          if (other.Factor != 0D) {
+            Factor = other.Factor;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (period_ == null) {
+                  Period = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(Period);
+                break;
+              }
+              case 17: {
+                Factor = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (period_ == null) {
+                  Period = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(Period);
+                break;
+              }
+              case 17: {
+                Factor = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Internal usage only.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SessionParametersResponse : pb::IMessage<SessionParametersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -13036,7 +17513,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[34]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[44]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13057,6 +17534,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SessionParametersResponse(SessionParametersResponse other) : this() {
       keepAlive_ = other.keepAlive_ != null ? other.keepAlive_.Clone() : null;
+      softmaxStreamingPrefetchBufferBytes_ = other.softmaxStreamingPrefetchBufferBytes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -13086,6 +17564,23 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "softmax_streaming_prefetch_buffer_bytes" field.</summary>
+    public const int SoftmaxStreamingPrefetchBufferBytesFieldNumber = 2;
+    private int softmaxStreamingPrefetchBufferBytes_;
+    /// <summary>
+    /// Client will pull this many bytes at most to make messages for steamed
+    /// responses. If the last byte is mid-message, it will continue until a full
+    /// message comes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int SoftmaxStreamingPrefetchBufferBytes {
+      get { return softmaxStreamingPrefetchBufferBytes_; }
+      set {
+        softmaxStreamingPrefetchBufferBytes_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -13102,6 +17597,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (!object.Equals(KeepAlive, other.KeepAlive)) return false;
+      if (SoftmaxStreamingPrefetchBufferBytes != other.SoftmaxStreamingPrefetchBufferBytes) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -13110,6 +17606,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (keepAlive_ != null) hash ^= KeepAlive.GetHashCode();
+      if (SoftmaxStreamingPrefetchBufferBytes != 0) hash ^= SoftmaxStreamingPrefetchBufferBytes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -13132,6 +17629,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(KeepAlive);
       }
+      if (SoftmaxStreamingPrefetchBufferBytes != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SoftmaxStreamingPrefetchBufferBytes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -13146,6 +17647,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(KeepAlive);
       }
+      if (SoftmaxStreamingPrefetchBufferBytes != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SoftmaxStreamingPrefetchBufferBytes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -13158,6 +17663,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (keepAlive_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(KeepAlive);
+      }
+      if (SoftmaxStreamingPrefetchBufferBytes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SoftmaxStreamingPrefetchBufferBytes);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -13176,6 +17684,9 @@ namespace Google.Cloud.Bigtable.V2 {
           KeepAlive = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         KeepAlive.MergeFrom(other.KeepAlive);
+      }
+      if (other.SoftmaxStreamingPrefetchBufferBytes != 0) {
+        SoftmaxStreamingPrefetchBufferBytes = other.SoftmaxStreamingPrefetchBufferBytes;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -13201,6 +17712,10 @@ namespace Google.Cloud.Bigtable.V2 {
               KeepAlive = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
             input.ReadMessage(KeepAlive);
+            break;
+          }
+          case 16: {
+            SoftmaxStreamingPrefetchBufferBytes = input.ReadInt32();
             break;
           }
         }
@@ -13229,6 +17744,10 @@ namespace Google.Cloud.Bigtable.V2 {
             input.ReadMessage(KeepAlive);
             break;
           }
+          case 16: {
+            SoftmaxStreamingPrefetchBufferBytes = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -13254,7 +17773,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[35]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[45]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13418,7 +17937,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[36]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[46]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13702,7 +18221,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[37]; }
+      get { return global::Google.Cloud.Bigtable.V2.SessionReflection.Descriptor.MessageTypes[47]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
