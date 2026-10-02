@@ -373,5 +373,33 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             Assert.Equal(System.Data.IsolationLevel.RepeatableRead, builder.IsolationLevel);
         }
+
+        [Fact]
+        public void CredentialType_Default()
+        {
+            var builder = new SpannerConnectionStringBuilder();
+            Assert.Equal(JsonCredentialParameters.ServiceAccountCredentialType, builder.CredentialType);
+        }
+
+        [Fact]
+        public void CredentialType_Explicit()
+        {
+            var builder = new SpannerConnectionStringBuilder("CredentialType=authorized_user");
+            Assert.Equal("authorized_user", builder.CredentialType);
+            builder.CredentialType = "service_account";
+            Assert.Equal("service_account", builder.CredentialType);
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("credentialtype=service_account", builder.ToString());
+        }
+
+        [Fact]
+        public void CredentialType_NullSet_RestoresDefault()
+        {
+            var builder = new SpannerConnectionStringBuilder();
+            builder.CredentialType = "authorized_user";
+            Assert.Equal("authorized_user", builder.CredentialType);
+            builder.CredentialType = null;
+            Assert.Equal(JsonCredentialParameters.ServiceAccountCredentialType, builder.CredentialType);
+        }
     }
 }
