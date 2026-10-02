@@ -5229,6 +5229,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.NetworkServices.V1Beta1/Google.Cloud.NetworkServices.V1Beta1"
             ]
+        },
+        {
+            "id": "Google.DevicesAndServices.Health.V4Beta",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/devicesandservices/health/v4beta"
+            ],
+            "sourcePaths": [
+                "apis/Google.DevicesAndServices.Health.V4Beta/Google.DevicesAndServices.Health.V4Beta"
+            ]
         }
     ],
     "ignoredApiPaths": [
