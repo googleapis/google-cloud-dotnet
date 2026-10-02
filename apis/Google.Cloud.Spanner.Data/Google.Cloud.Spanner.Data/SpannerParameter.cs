@@ -33,6 +33,8 @@ namespace Google.Cloud.Spanner.Data
 
         private SpannerDbType _spannerDbType;
 
+        internal const string PayloadParameterName = "Payload";
+
         /// <summary>
         /// Specifies the data type of a field, a property, or a Parameter object of a .NET
         /// Framework data provider.
