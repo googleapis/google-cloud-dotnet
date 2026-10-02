@@ -22,6 +22,7 @@ using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Spanner.V1.Tests.MetricsCapture;
 
 namespace Google.Cloud.Spanner.V1.Tests;
 
@@ -82,7 +83,7 @@ public class SpannerBuiltInMetricsInterceptorTests
         StatusCode expectedStatus,
         string expectedMethod)
     {
-        var client = CreateClient(new FakeCallInvoker(s_serverTimingMetadata, new RpcException(new Status(expectedStatus, "Test"))));
+        var client = CreateClient(new FakeCallInvoker(s_serverTimingMetadata, expectedStatus));
 
         var measurements = await RunWithMeterListenerAsync(() => Assert.ThrowsAny<RpcException>(() => callSync(client)));
 
@@ -126,29 +127,13 @@ public class SpannerBuiltInMetricsInterceptorTests
         StatusCode expectedStatus,
         string expectedMethod)
     {
-        var client = CreateClient(new FakeCallInvoker(s_serverTimingMetadata, new RpcException(new Status(expectedStatus, "Test"))));
+        var client = CreateClient(new FakeCallInvoker(s_serverTimingMetadata, expectedStatus));
 
         var measurements = await RunWithMeterListenerAsync(() => Assert.ThrowsAnyAsync<RpcException>(() => callAsync(client)));
 
         ValidateEmittedMetrics(measurements, expectedStatus, methodName: expectedMethod);
     }
 
-    // Represents a successfully captured telemetry metric measurement event.
-    private class Measurement
-    {
-        public string Name { get; }
-        public object Value { get; }
-        public KeyValuePair<string, object>[] Tags { get; }
-
-        public Measurement(string name, object value, KeyValuePair<string, object>[] tags)
-        {
-            Name = name;
-            Value = value;
-            Tags = tags ?? Array.Empty<KeyValuePair<string, object>>();
-        }
-
-        public string GetTag(string key) => Tags.FirstOrDefault(t => t.Key == key).Value?.ToString();
-    }
 
 
     /// <summary>
@@ -195,103 +180,4 @@ public class SpannerBuiltInMetricsInterceptorTests
             });
         }
     }
-
-    private static Task<IReadOnlyList<Measurement>> RunWithMeterListenerAsync(Action action) =>
-        RunWithMeterListenerAsync(() =>
-        {
-            action();
-            return Task.CompletedTask;
-        });
-
-    private static async Task<IReadOnlyList<Measurement>> RunWithMeterListenerAsync(Func<Task> action)
-    {
-        // Use a thread-safe collection because metrics (such as attempt latency and server-timing)
-        // are emitted concurrently across threads during call completion.
-        var measurements = new ConcurrentQueue<Measurement>();
-        using var listener = new MeterListener();
-
-        // Arrange our listener so it tracks metrics on the BuiltInMetrics meter
-        listener.InstrumentPublished = (instrument, l) =>
-        {
-            if (instrument.Meter.Name == SpannerBuiltInMetrics.MeterName)
-            {
-                l.EnableMeasurementEvents(instrument);
-            }
-        };
-
-        // Record all metrics that are emitted
-        listener.SetMeasurementEventCallback<double>((instrument, measurement, tags, state) =>
-            measurements.Enqueue(new Measurement(instrument.Name, measurement, tags.ToArray())));
-        listener.SetMeasurementEventCallback<long>((instrument, measurement, tags, state) =>
-            measurements.Enqueue(new Measurement(instrument.Name, measurement, tags.ToArray())));
-
-        // Start listening and execute the action that emits metrics
-        listener.Start();
-        await action();
-        listener.Dispose();
-
-        return measurements.ToList();
-    }
-
-    private class FakeCallInvoker : CallInvoker
-    {
-        private readonly Metadata _responseHeaders;
-        private readonly Queue<StatusCode> _statuses;
-
-        public FakeCallInvoker(Metadata responseHeaders = null, Exception exception = null)
-            : this(responseHeaders, exception is RpcException rpc ? [rpc.StatusCode] : exception != null ? [StatusCode.Unknown] : [StatusCode.OK])
-        {
-        }
-
-        public FakeCallInvoker(Metadata responseHeaders, IEnumerable<StatusCode> statuses)
-        {
-            _responseHeaders = responseHeaders ?? new Metadata();
-            _statuses = new Queue<StatusCode>(statuses ?? [StatusCode.OK]);
-        }
-
-        public override AsyncUnaryCall<TResponse> AsyncUnaryCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options, TRequest request)
-        {
-            var status = _statuses.Count > 0 ? _statuses.Dequeue() : StatusCode.OK;
-            if (status != StatusCode.OK)
-            {
-                var ex = new RpcException(new Status(status, "Transient test error"));
-                return new AsyncUnaryCall<TResponse>(
-                    Task.FromException<TResponse>(ex),
-                    Task.FromResult(_responseHeaders),
-                    () => ex.Status,
-                    () => new Metadata(),
-                    () => { });
-            }
-
-            return new AsyncUnaryCall<TResponse>(
-                Task.FromResult((TResponse)Activator.CreateInstance(typeof(TResponse))),
-                Task.FromResult(_responseHeaders),
-                () => Status.DefaultSuccess,
-                () => new Metadata(),
-                () => { });
-        }
-
-        public override TResponse BlockingUnaryCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options, TRequest request) =>
-            throw new NotImplementedException("BlockingUnaryCall should not be invoked when ResponseMetadataHandler is configured");
-        public override AsyncServerStreamingCall<TResponse> AsyncServerStreamingCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options, TRequest request) =>
-            throw new NotImplementedException();
-        public override AsyncClientStreamingCall<TRequest, TResponse> AsyncClientStreamingCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options) =>
-            throw new NotImplementedException();
-        public override AsyncDuplexStreamingCall<TRequest, TResponse> AsyncDuplexStreamingCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string host, CallOptions options) =>
-            throw new NotImplementedException();
-    }
-
-    private class FakeStopwatchProvider : SpannerBuiltInMetrics.IStopwatchProvider
-    {
-        public double ElapsedTimeMs { get; set; } = 123.0;
-
-        public SpannerBuiltInMetrics.IStopwatch StartNew() => new FakeStopwatch(this);
-
-        private class FakeStopwatch(FakeStopwatchProvider provider) : SpannerBuiltInMetrics.IStopwatch
-        {
-            public double ElapsedMilliseconds => provider.ElapsedTimeMs;
-            public void Stop() { }
-        }
-    }
-
 }
