@@ -380,7 +380,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string description_ = "";
     /// <summary>
     /// Human readable description for better understanding an intent like its
-    /// scope, content, result etc. Maximum character limit: 140 characters.
+    /// scope, content, result etc. Maximum character limit: 1000 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
