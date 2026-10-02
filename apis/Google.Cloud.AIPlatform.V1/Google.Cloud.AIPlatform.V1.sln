@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.AIPlatform.V1.GeneratedSnippets", "Google.Cloud.AIPlatform.V1.GeneratedSnippets\Google.Cloud.AIPlatform.V1.GeneratedSnippets.csproj", "{4926456D-5A34-4008-78E1-5436834192D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.AIPlatform.V1.Tests", "Google.Cloud.AIPlatform.V1.Tests\Google.Cloud.AIPlatform.V1.Tests.csproj", "{269A2718-994E-9302-9106-D25522016430}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.AIPlatform.V1.IntegrationTests", "Google.Cloud.AIPlatform.V1.IntegrationTests\Google.Cloud.AIPlatform.V1.IntegrationTests.csproj", "{11E3F57B-5A54-4C49-9B28-8686CEEF2F9C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
 EndProject
@@ -35,6 +37,10 @@ Global
 		{269A2718-994E-9302-9106-D25522016430}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{269A2718-994E-9302-9106-D25522016430}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{269A2718-994E-9302-9106-D25522016430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11E3F57B-5A54-4C49-9B28-8686CEEF2F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11E3F57B-5A54-4C49-9B28-8686CEEF2F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11E3F57B-5A54-4C49-9B28-8686CEEF2F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11E3F57B-5A54-4C49-9B28-8686CEEF2F9C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
