@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,6 +21,10 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassProperty
 
     namespace PropertyRemoved.A { public class C { public int P { get; } } }
     namespace PropertyRemoved.B { public class C { } }
+
+    namespace PropertyRemovedWithAncestorImplementation.Virtual { public class C { public virtual int P => 5; } }
+    namespace PropertyRemovedWithAncestorImplementation.A { public class C : Virtual.C { public override int P => 6; } }
+    namespace PropertyRemovedWithAncestorImplementation.B { public class C : Virtual.C { } }
 
     namespace PropertyMadeExported.A { public class C { private int P { get; } } }
     namespace PropertyMadeExported.B { public class C { public int P { get; } } }
@@ -102,13 +106,30 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassProperty
     namespace PropertyGetRemoved.A { public class C { public int P { get; set; } } }
     namespace PropertyGetRemoved.B { public class C { public int P { set { } } } }
 
+    namespace PropertyGetRemovedWithAncestorImplementation.Virtual { public class C { public virtual int P { get; set; } } }
+    namespace PropertyGetRemovedWithAncestorImplementation.A { public class C : Virtual.C { public override int P => 0; } }
+    namespace PropertyGetRemovedWithAncestorImplementation.B { public class C : Virtual.C { } }
+
+    namespace PropertyGetRemovedWithAncestorImplementation2.Virtual { public class C { public virtual int P { get; private set; } } }
+    namespace PropertyGetRemovedWithAncestorImplementation2.A { public class C : Virtual.C { public override int P => 0; } }
+    namespace PropertyGetRemovedWithAncestorImplementation2.B { public class C : Virtual.C { } }
+
     namespace PropertySetRemoved.A { public class C { public int P { get; set; } } }
     namespace PropertySetRemoved.B { public class C { public int P { get; } } }
+
+    namespace PropertySetRemovedWithAncestorImplementation.Virtual { public class C { public virtual int P { get; set; } } }
+    namespace PropertySetRemovedWithAncestorImplementation.A { public class C : Virtual.C { public override int P { set => _ = 0; } } }
+    namespace PropertySetRemovedWithAncestorImplementation.B { public class C : Virtual.C { } }
+
+    namespace PropertySetRemovedWithAncestorImplementation2.Virtual { public class C { public virtual int P { private get; set; } } }
+    namespace PropertySetRemovedWithAncestorImplementation2.A { public class C : Virtual.C { public override int P { set => _ = 0; } } }
+    namespace PropertySetRemovedWithAncestorImplementation2.B { public class C : Virtual.C { } }
 
     public class ClassPropertyTest : TestBase
     {
         [Fact] public void PropertyAdded() => TestMinor(Cause.PropertyAdded);
         [Fact] public void PropertyRemoved() => TestMajor(Cause.PropertyRemoved);
+        [Fact] public void PropertyRemovedWithAncestorImplementation() => TestNone();
         [Fact] public void PropertyMadeExported() => TestMinor(Cause.PropertyMadeExported);
         [Fact] public void PropertyMadeNotExported() => TestMajor(Cause.PropertyMadeNotExported);
         [Fact] public void PropertyTypeChanged() => TestMajor(Cause.PropertyTypeChanged);
@@ -135,6 +156,10 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassProperty
         [Fact] public void PropertyGetAdded() => TestMinor(Cause.PropertyAccessModifierChanged);
         [Fact] public void PropertySetAdded() => TestMinor(Cause.PropertyAccessModifierChanged);
         [Fact] public void PropertyGetRemoved() => TestMajor(Cause.PropertyAccessModifierChanged);
+        [Fact] public void PropertyGetRemovedWithAncestorImplementation() => TestNone();
+        [Fact] public void PropertyGetRemovedWithAncestorImplementation2() => TestNone();
         [Fact] public void PropertySetRemoved() => TestMajor(Cause.PropertyAccessModifierChanged);
+        [Fact] public void PropertySetRemovedWithAncestorImplementation() => TestNone();
+        [Fact] public void PropertySetRemovedWithAncestorImplementation2() => TestNone();
     }
 }
