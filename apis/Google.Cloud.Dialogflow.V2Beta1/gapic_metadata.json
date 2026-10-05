@@ -95,6 +95,45 @@
         }
       }
     },
+    "CompanionAgents": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CompanionAgentsClient",
+          "rpcs": {
+            "CreateCompanionAgent": {
+              "methods": [
+                "CreateCompanionAgent",
+                "CreateCompanionAgentAsync"
+              ]
+            },
+            "DeleteCompanionAgent": {
+              "methods": [
+                "DeleteCompanionAgent",
+                "DeleteCompanionAgentAsync"
+              ]
+            },
+            "GetCompanionAgent": {
+              "methods": [
+                "GetCompanionAgent",
+                "GetCompanionAgentAsync"
+              ]
+            },
+            "ListCompanionAgents": {
+              "methods": [
+                "ListCompanionAgents",
+                "ListCompanionAgentsAsync"
+              ]
+            },
+            "UpdateCompanionAgent": {
+              "methods": [
+                "UpdateCompanionAgent",
+                "UpdateCompanionAgentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "Contexts": {
       "clients": {
         "grpc": {
@@ -692,6 +731,12 @@
               "methods": [
                 "StreamingAnalyzeContent",
                 "StreamingAnalyzeContentAsync"
+              ]
+            },
+            "StreamingReactiveCompanionSuggestions": {
+              "methods": [
+                "StreamingReactiveCompanionSuggestions",
+                "StreamingReactiveCompanionSuggestionsAsync"
               ]
             },
             "SuggestArticles": {
