@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.3.0, released 2026-10-05
+
+### New features
+
+- Add Boundary resource and GetBoundary, UpdateBoundary RPCs in apphub v1
+- Add ExtendedMetadataSchema resource and GetExtendedMetadataSchema, ListExtendedMetadataSchemas RPCs in apphub v1
+- Add functional_type, registration_type, identity, and extended_metadata to Service in apphub v1
+- Add functional_type, identity, and extended_metadata to Workload in apphub v1
+- Add application_properties and application_type to Application in apphub v1
+
+### Documentation improvements
+
+- Relax update_mask from REQUIRED to OPTIONAL on update requests in apphub v1
+- Add service overview, summary, and location listing documentation in apphub_v1.yaml
+
 ## Version 1.2.0, released 2025-11-03
 
 ### New features

@@ -378,12 +378,12 @@
         },
         {
             "id": "Google.Cloud.AppHub.V1",
-            "currentVersion": "1.2.0",
+            "currentVersion": "1.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-03T18:52:13.069926695Z",
+            "releaseTimestamp": "2026-10-05T19:10:18.250098153Z",
             "lastGeneratedCommit": "03a91044136a014466d4293eb1fe91f2b02075d2",
-            "lastReleasedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
+            "lastReleasedCommit": "03a91044136a014466d4293eb1fe91f2b02075d2",
             "apiPaths": [
                 "google/cloud/apphub/v1"
             ],
