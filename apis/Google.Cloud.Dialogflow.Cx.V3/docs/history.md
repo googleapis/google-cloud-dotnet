@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.2.0, released 2026-10-05
+
+### New features
+
+- Fulfillment supports code_block_function
+
+### Documentation improvements
+
+- Intent's description could be 1000-character long
+- Clarified OUTPUT_AUDIO_ENCODING_MP3 bit rate with deprecation and DETECT_INTENT_RESPONSE_VIEW_BASIC
+
 ## Version 3.1.0, released 2026-03-30
 
 ### New features
