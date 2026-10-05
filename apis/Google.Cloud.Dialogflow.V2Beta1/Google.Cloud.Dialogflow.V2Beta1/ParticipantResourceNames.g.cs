@@ -876,6 +876,36 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         }
     }
 
+    public partial class CompanionSuggestion
+    {
+        public partial class Types
+        {
+            public partial class Guidance
+            {
+                /// <summary>
+                /// <see cref="AnswerRecordName"/>-typed view over the <see cref="TriggeringToolCallAnswerRecords"/>
+                /// resource name property.
+                /// </summary>
+                public gax::ResourceNameList<AnswerRecordName> TriggeringToolCallAnswerRecordsAsAnswerRecordNames
+                {
+                    get => new gax::ResourceNameList<AnswerRecordName>(TriggeringToolCallAnswerRecords, s => string.IsNullOrEmpty(s) ? null : AnswerRecordName.Parse(s, allowUnparsed: true));
+                }
+            }
+        }
+    }
+
+    public partial class GenerateCompanionSuggestionsResponse
+    {
+        /// <summary>
+        /// <see cref="AnswerRecordName"/>-typed view over the <see cref="AnswerRecord"/> resource name property.
+        /// </summary>
+        public AnswerRecordName AnswerRecordAsAnswerRecordName
+        {
+            get => string.IsNullOrEmpty(AnswerRecord) ? null : AnswerRecordName.Parse(AnswerRecord, allowUnparsed: true);
+            set => AnswerRecord = value?.ToString() ?? "";
+        }
+    }
+
     public partial class SuggestKnowledgeAssistRequest
     {
         /// <summary>
@@ -943,6 +973,30 @@ namespace Google.Cloud.Dialogflow.V2Beta1
                     set => Intent = value?.ToString() ?? "";
                 }
             }
+        }
+    }
+
+    public partial class StreamingReactiveCompanionSuggestionsRequest
+    {
+        /// <summary>
+        /// <see cref="ParticipantName"/>-typed view over the <see cref="Participant"/> resource name property.
+        /// </summary>
+        public ParticipantName ParticipantAsParticipantName
+        {
+            get => string.IsNullOrEmpty(Participant) ? null : ParticipantName.Parse(Participant, allowUnparsed: true);
+            set => Participant = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class StreamingReactiveCompanionSuggestionsResponse
+    {
+        /// <summary>
+        /// <see cref="AnswerRecordName"/>-typed view over the <see cref="AnswerRecord"/> resource name property.
+        /// </summary>
+        public AnswerRecordName AnswerRecordAsAnswerRecordName
+        {
+            get => string.IsNullOrEmpty(AnswerRecord) ? null : AnswerRecordName.Parse(AnswerRecord, allowUnparsed: true);
+            set => AnswerRecord = value?.ToString() ?? "";
         }
     }
 }

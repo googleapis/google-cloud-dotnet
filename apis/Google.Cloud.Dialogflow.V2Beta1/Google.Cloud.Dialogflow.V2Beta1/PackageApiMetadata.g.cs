@@ -67,6 +67,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             yield return AudioConfigReflection.Descriptor;
             yield return CesAppReflection.Descriptor;
             yield return CesToolReflection.Descriptor;
+            yield return CompanionAgentReflection.Descriptor;
             yield return ContextReflection.Descriptor;
             yield return ConversationReflection.Descriptor;
             yield return ConversationEventReflection.Descriptor;
@@ -79,6 +80,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             yield return GcsReflection.Descriptor;
             yield return GeneratorReflection.Descriptor;
             yield return GeneratorEvaluationReflection.Descriptor;
+            yield return GroundingReflection.Descriptor;
             yield return HumanAgentAssistantEventReflection.Descriptor;
             yield return IntentReflection.Descriptor;
             yield return KnowledgeBaseReflection.Descriptor;

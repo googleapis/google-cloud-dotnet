@@ -54,6 +54,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             AnalyzeContentSettings = existing.AnalyzeContentSettings;
             StreamingAnalyzeContentSettings = existing.StreamingAnalyzeContentSettings;
             StreamingAnalyzeContentStreamingSettings = existing.StreamingAnalyzeContentStreamingSettings;
+            StreamingReactiveCompanionSuggestionsSettings = existing.StreamingReactiveCompanionSuggestionsSettings;
+            StreamingReactiveCompanionSuggestionsStreamingSettings = existing.StreamingReactiveCompanionSuggestionsStreamingSettings;
             BidiStreamingAnalyzeContentSettings = existing.BidiStreamingAnalyzeContentSettings;
             BidiStreamingAnalyzeContentStreamingSettings = existing.BidiStreamingAnalyzeContentStreamingSettings;
             SuggestArticlesSettings = existing.SuggestArticlesSettings;
@@ -178,6 +180,27 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <remarks>The default local send queue size is 100.</remarks>
         public gaxgrpc::BidirectionalStreamingSettings StreamingAnalyzeContentStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParticipantsClient.StreamingReactiveCompanionSuggestions</c> and
+        /// <c>ParticipantsClient.StreamingReactiveCompanionSuggestionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 5400 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StreamingReactiveCompanionSuggestionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5400000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
+        /// <c>ParticipantsClient.StreamingReactiveCompanionSuggestions</c> and
+        /// <c>ParticipantsClient.StreamingReactiveCompanionSuggestionsAsync</c>.
+        /// </summary>
+        /// <remarks>The default local send queue size is 100.</remarks>
+        public gaxgrpc::BidirectionalStreamingSettings StreamingReactiveCompanionSuggestionsStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1446,6 +1469,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1
 
         /// <summary>
         /// Bidirectional streaming methods for
+        /// <see cref="StreamingReactiveCompanionSuggestions(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>
+        /// .
+        /// </summary>
+        public abstract partial class StreamingReactiveCompanionSuggestionsStream : gaxgrpc::BidirectionalStreamingBase<StreamingReactiveCompanionSuggestionsRequest, StreamingReactiveCompanionSuggestionsResponse>
+        {
+        }
+
+        /// <summary>
+        /// External streaming API for human-agent queries to the companion bot.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual StreamingReactiveCompanionSuggestionsStream StreamingReactiveCompanionSuggestions(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Bidirectional streaming methods for
         /// <see cref="BidiStreamingAnalyzeContent(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
         /// </summary>
         public abstract partial class BidiStreamingAnalyzeContentStream : gaxgrpc::BidirectionalStreamingBase<BidiStreamingAnalyzeContentRequest, BidiStreamingAnalyzeContentResponse>
@@ -2090,6 +2131,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
 
         private readonly gaxgrpc::ApiBidirectionalStreamingCall<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse> _callStreamingAnalyzeContent;
 
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<StreamingReactiveCompanionSuggestionsRequest, StreamingReactiveCompanionSuggestionsResponse> _callStreamingReactiveCompanionSuggestions;
+
         private readonly gaxgrpc::ApiBidirectionalStreamingCall<BidiStreamingAnalyzeContentRequest, BidiStreamingAnalyzeContentResponse> _callBidiStreamingAnalyzeContent;
 
         private readonly gaxgrpc::ApiCall<SuggestArticlesRequest, SuggestArticlesResponse> _callSuggestArticles;
@@ -2140,6 +2183,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             _callStreamingAnalyzeContent = clientHelper.BuildApiCall<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse>("StreamingAnalyzeContent", grpcClient.StreamingAnalyzeContent, effectiveSettings.StreamingAnalyzeContentSettings, effectiveSettings.StreamingAnalyzeContentStreamingSettings);
             Modify_ApiCall(ref _callStreamingAnalyzeContent);
             Modify_StreamingAnalyzeContentApiCall(ref _callStreamingAnalyzeContent);
+            _callStreamingReactiveCompanionSuggestions = clientHelper.BuildApiCall<StreamingReactiveCompanionSuggestionsRequest, StreamingReactiveCompanionSuggestionsResponse>("StreamingReactiveCompanionSuggestions", grpcClient.StreamingReactiveCompanionSuggestions, effectiveSettings.StreamingReactiveCompanionSuggestionsSettings, effectiveSettings.StreamingReactiveCompanionSuggestionsStreamingSettings);
+            Modify_ApiCall(ref _callStreamingReactiveCompanionSuggestions);
+            Modify_StreamingReactiveCompanionSuggestionsApiCall(ref _callStreamingReactiveCompanionSuggestions);
             _callBidiStreamingAnalyzeContent = clientHelper.BuildApiCall<BidiStreamingAnalyzeContentRequest, BidiStreamingAnalyzeContentResponse>("BidiStreamingAnalyzeContent", grpcClient.BidiStreamingAnalyzeContent, effectiveSettings.BidiStreamingAnalyzeContentSettings, effectiveSettings.BidiStreamingAnalyzeContentStreamingSettings);
             Modify_ApiCall(ref _callBidiStreamingAnalyzeContent);
             Modify_BidiStreamingAnalyzeContentApiCall(ref _callBidiStreamingAnalyzeContent);
@@ -2184,6 +2230,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
 
         partial void Modify_StreamingAnalyzeContentApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse> call);
 
+        partial void Modify_StreamingReactiveCompanionSuggestionsApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<StreamingReactiveCompanionSuggestionsRequest, StreamingReactiveCompanionSuggestionsResponse> call);
+
         partial void Modify_BidiStreamingAnalyzeContentApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<BidiStreamingAnalyzeContentRequest, BidiStreamingAnalyzeContentResponse> call);
 
         partial void Modify_SuggestArticlesApiCall(ref gaxgrpc::ApiCall<SuggestArticlesRequest, SuggestArticlesResponse> call);
@@ -2221,6 +2269,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         partial void Modify_StreamingAnalyzeContentRequestCallSettings(ref gaxgrpc::CallSettings settings);
 
         partial void Modify_StreamingAnalyzeContentRequestRequest(ref StreamingAnalyzeContentRequest request);
+
+        partial void Modify_StreamingReactiveCompanionSuggestionsRequestCallSettings(ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StreamingReactiveCompanionSuggestionsRequestRequest(ref StreamingReactiveCompanionSuggestionsRequest request);
 
         partial void Modify_BidiStreamingAnalyzeContentRequestCallSettings(ref gaxgrpc::CallSettings settings);
 
@@ -2442,6 +2494,68 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             grpccore::AsyncDuplexStreamingCall<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse> call = _callStreamingAnalyzeContent.Call(callSettings);
             gaxgrpc::BufferedClientStreamWriter<StreamingAnalyzeContentRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<StreamingAnalyzeContentRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
             return new StreamingAnalyzeContentStreamImpl(this, call, writeBuffer);
+        }
+
+        internal sealed partial class StreamingReactiveCompanionSuggestionsStreamImpl : StreamingReactiveCompanionSuggestionsStream
+        {
+            /// <summary>
+            /// Construct the bidirectional streaming method for <c>StreamingReactiveCompanionSuggestions</c>.
+            /// </summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">
+            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{StreamingReactiveCompanionSuggestionsRequest}"/>
+            /// instance associated with this streaming call.
+            /// </param>
+            public StreamingReactiveCompanionSuggestionsStreamImpl(ParticipantsClientImpl service, grpccore::AsyncDuplexStreamingCall<StreamingReactiveCompanionSuggestionsRequest, StreamingReactiveCompanionSuggestionsResponse> call, gaxgrpc::BufferedClientStreamWriter<StreamingReactiveCompanionSuggestionsRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private ParticipantsClientImpl _service;
+
+            private gaxgrpc::BufferedClientStreamWriter<StreamingReactiveCompanionSuggestionsRequest> _writeBuffer;
+
+            public override grpccore::AsyncDuplexStreamingCall<StreamingReactiveCompanionSuggestionsRequest, StreamingReactiveCompanionSuggestionsResponse> GrpcCall { get; }
+
+            private StreamingReactiveCompanionSuggestionsRequest ModifyRequest(StreamingReactiveCompanionSuggestionsRequest request)
+            {
+                _service.Modify_StreamingReactiveCompanionSuggestionsRequestRequest(ref request);
+                return request;
+            }
+
+            public override stt::Task TryWriteAsync(StreamingReactiveCompanionSuggestionsRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override stt::Task WriteAsync(StreamingReactiveCompanionSuggestionsRequest message) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override stt::Task TryWriteAsync(StreamingReactiveCompanionSuggestionsRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task WriteAsync(StreamingReactiveCompanionSuggestionsRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+
+            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+        }
+
+        /// <summary>
+        /// External streaming API for human-agent queries to the companion bot.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override ParticipantsClient.StreamingReactiveCompanionSuggestionsStream StreamingReactiveCompanionSuggestions(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_StreamingReactiveCompanionSuggestionsRequestCallSettings(ref callSettings);
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callStreamingReactiveCompanionSuggestions.StreamingSettings;
+            grpccore::AsyncDuplexStreamingCall<StreamingReactiveCompanionSuggestionsRequest, StreamingReactiveCompanionSuggestionsResponse> call = _callStreamingReactiveCompanionSuggestions.Call(callSettings);
+            gaxgrpc::BufferedClientStreamWriter<StreamingReactiveCompanionSuggestionsRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<StreamingReactiveCompanionSuggestionsRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new StreamingReactiveCompanionSuggestionsStreamImpl(this, call, writeBuffer);
         }
 
         internal sealed partial class BidiStreamingAnalyzeContentStreamImpl : BidiStreamingAnalyzeContentStream

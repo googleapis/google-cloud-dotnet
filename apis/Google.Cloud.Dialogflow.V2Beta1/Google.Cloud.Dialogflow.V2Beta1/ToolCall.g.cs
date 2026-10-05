@@ -42,7 +42,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "ASgOMi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5Ub29sQ2Fs",
             "bC5TdGF0ZUID4EEDIkUKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAAS",
             "DQoJVFJJR0dFUkVEEAESFgoSTkVFRFNfQ09ORklSTUFUSU9OEAJCCAoGc291",
-            "cmNlIoYECg5Ub29sQ2FsbFJlc3VsdBI2CgR0b29sGAEgASgJQibgQQH6QSAK",
+            "cmNlIp4ECg5Ub29sQ2FsbFJlc3VsdBI2CgR0b29sGAEgASgJQibgQQH6QSAK",
             "HmRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vVG9vbEgAEjMKCGNlc190b29s",
             "GAwgASgJQh/gQQH6QRkKF2Nlcy5nb29nbGVhcGlzLmNvbS9Ub29sSAASOQoL",
             "Y2VzX3Rvb2xzZXQYDSABKAlCIuBBAfpBHAoaY2VzLmdvb2dsZWFwaXMuY29t",
@@ -52,17 +52,18 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "bENhbGxSZXN1bHQuRXJyb3JCA+BBAUgBEhoKC3Jhd19jb250ZW50GAUgASgM",
             "QgPgQQFIARIWCgdjb250ZW50GAYgASgJQgPgQQFIARI0CgtjcmVhdGVfdGlt",
             "ZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIaCg1h",
-            "bnN3ZXJfcmVjb3JkGAkgASgJQgPgQQEaHQoFRXJyb3ISFAoHbWVzc2FnZRgB",
-            "IAEoCUID4EEBQggKBnNvdXJjZUIICgZyZXN1bHRCogEKI2NvbS5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy52MmJldGExQg1Ub29sQ2FsbFByb3RvUAFaQ2Ns",
-            "b3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2MmJldGExL2RpYWxv",
-            "Z2Zsb3dwYjtkaWFsb2dmbG93cGKiAgJERqoCH0dvb2dsZS5DbG91ZC5EaWFs",
-            "b2dmbG93LlYyQmV0YTFiBnByb3RvMw=="));
+            "bnN3ZXJfcmVjb3JkGAkgASgJQgPgQQEaNQoFRXJyb3ISFAoHbWVzc2FnZRgB",
+            "IAEoCUID4EEBEhYKCXJldHJ5YWJsZRgCIAEoCEID4EEBQggKBnNvdXJjZUII",
+            "CgZyZXN1bHRCogEKI2NvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJl",
+            "dGExQg1Ub29sQ2FsbFByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vZGlh",
+            "bG9nZmxvdy9hcGl2MmJldGExL2RpYWxvZ2Zsb3dwYjtkaWFsb2dmbG93cGKi",
+            "AgJERqoCH0dvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYyQmV0YTFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.ToolCall), global::Google.Cloud.Dialogflow.V2Beta1.ToolCall.Parser, new[]{ "Tool", "CesTool", "CesToolset", "CesApp", "ToolDisplayName", "ToolDisplayDetails", "Action", "InputParameters", "CreateTime", "AnswerRecord", "State" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.Dialogflow.V2Beta1.ToolCall.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.ToolCallResult), global::Google.Cloud.Dialogflow.V2Beta1.ToolCallResult.Parser, new[]{ "Tool", "CesTool", "CesToolset", "CesApp", "Action", "Error", "RawContent", "Content", "CreateTime", "AnswerRecord" }, new[]{ "Source", "Result" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.ToolCallResult.Types.Error), global::Google.Cloud.Dialogflow.V2Beta1.ToolCallResult.Types.Error.Parser, new[]{ "Message" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.ToolCallResult), global::Google.Cloud.Dialogflow.V2Beta1.ToolCallResult.Parser, new[]{ "Tool", "CesTool", "CesToolset", "CesApp", "Action", "Error", "RawContent", "Content", "CreateTime", "AnswerRecord" }, new[]{ "Source", "Result" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.ToolCallResult.Types.Error), global::Google.Cloud.Dialogflow.V2Beta1.ToolCallResult.Types.Error.Parser, new[]{ "Message", "Retryable" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -1616,6 +1617,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Error(Error other) : this() {
           message_ = other.message_;
+          retryable_ = other.retryable_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1640,6 +1642,21 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           }
         }
 
+        /// <summary>Field number for the "retryable" field.</summary>
+        public const int RetryableFieldNumber = 2;
+        private bool retryable_;
+        /// <summary>
+        /// Optional. Specifies whether the tool call is retryable.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Retryable {
+          get { return retryable_; }
+          set {
+            retryable_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1656,6 +1673,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             return true;
           }
           if (Message != other.Message) return false;
+          if (Retryable != other.Retryable) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1664,6 +1682,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         public override int GetHashCode() {
           int hash = 1;
           if (Message.Length != 0) hash ^= Message.GetHashCode();
+          if (Retryable != false) hash ^= Retryable.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1686,6 +1705,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             output.WriteRawTag(10);
             output.WriteString(Message);
           }
+          if (Retryable != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(Retryable);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1700,6 +1723,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             output.WriteRawTag(10);
             output.WriteString(Message);
           }
+          if (Retryable != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(Retryable);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1712,6 +1739,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           int size = 0;
           if (Message.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+          }
+          if (Retryable != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1727,6 +1757,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           }
           if (other.Message.Length != 0) {
             Message = other.Message;
+          }
+          if (other.Retryable != false) {
+            Retryable = other.Retryable;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1751,6 +1784,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
                 Message = input.ReadString();
                 break;
               }
+              case 16: {
+                Retryable = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -1772,6 +1809,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
                 break;
               case 10: {
                 Message = input.ReadString();
+                break;
+              }
+              case 16: {
+                Retryable = input.ReadBool();
                 break;
               }
             }
