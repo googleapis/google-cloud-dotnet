@@ -28,47 +28,55 @@ namespace Google.Cloud.AppHub.V1 {
             "bGUuY2xvdWQuYXBwaHViLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
             "LnByb3RvGhtnb29nbGUvYXBpL2ZpZWxkX2luZm8ucHJvdG8aGWdvb2dsZS9h",
             "cGkvcmVzb3VyY2UucHJvdG8aJ2dvb2dsZS9jbG91ZC9hcHBodWIvdjEvYXR0",
-            "cmlidXRlcy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "byKoBgoIV29ya2xvYWQSEQoEbmFtZRgBIAEoCUID4EEIEhkKDGRpc3BsYXlf",
-            "bmFtZRgCIAEoCUID4EEBEhgKC2Rlc2NyaXB0aW9uGAMgASgJQgPgQQESSgoS",
-            "d29ya2xvYWRfcmVmZXJlbmNlGAQgASgLMikuZ29vZ2xlLmNsb3VkLmFwcGh1",
-            "Yi52MS5Xb3JrbG9hZFJlZmVyZW5jZUID4EEDEkwKE3dvcmtsb2FkX3Byb3Bl",
-            "cnRpZXMYBSABKAsyKi5nb29nbGUuY2xvdWQuYXBwaHViLnYxLldvcmtsb2Fk",
-            "UHJvcGVydGllc0ID4EEDElAKE2Rpc2NvdmVyZWRfd29ya2xvYWQYBiABKAlC",
-            "M+BBAuBBBfpBKhIoYXBwaHViLmdvb2dsZWFwaXMuY29tL0Rpc2NvdmVyZWRX",
-            "b3JrbG9hZBI7CgphdHRyaWJ1dGVzGAcgASgLMiIuZ29vZ2xlLmNsb3VkLmFw",
-            "cGh1Yi52MS5BdHRyaWJ1dGVzQgPgQQESNAoLY3JlYXRlX3RpbWUYCCABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3Rp",
-            "bWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGAoD",
-            "dWlkGAogASgJQgvgQQPijM/XCAIIARI6CgVzdGF0ZRgLIAEoDjImLmdvb2ds",
-            "ZS5jbG91ZC5hcHBodWIudjEuV29ya2xvYWQuU3RhdGVCA+BBAyJUCgVTdGF0",
-            "ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCgoGQUNU",
-            "SVZFEAISDAoIREVMRVRJTkcQAxIMCghERVRBQ0hFRBAEOpIB6kGOAQoeYXBw",
-            "aHViLmdvb2dsZWFwaXMuY29tL1dvcmtsb2FkEldwcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXBwbGljYXRpb25zL3thcHBsaWNh",
-            "dGlvbn0vd29ya2xvYWRzL3t3b3JrbG9hZH0qCXdvcmtsb2FkczIId29ya2xv",
-            "YWQiJQoRV29ya2xvYWRSZWZlcmVuY2USEAoDdXJpGAEgASgJQgPgQQMiWAoS",
-            "V29ya2xvYWRQcm9wZXJ0aWVzEhgKC2djcF9wcm9qZWN0GAEgASgJQgPgQQMS",
-            "FQoIbG9jYXRpb24YAiABKAlCA+BBAxIRCgR6b25lGAMgASgJQgPgQQMi7gIK",
-            "EkRpc2NvdmVyZWRXb3JrbG9hZBIRCgRuYW1lGAEgASgJQgPgQQgSSgoSd29y",
-            "a2xvYWRfcmVmZXJlbmNlGAIgASgLMikuZ29vZ2xlLmNsb3VkLmFwcGh1Yi52",
-            "MS5Xb3JrbG9hZFJlZmVyZW5jZUID4EEDEkwKE3dvcmtsb2FkX3Byb3BlcnRp",
-            "ZXMYAyABKAsyKi5nb29nbGUuY2xvdWQuYXBwaHViLnYxLldvcmtsb2FkUHJv",
-            "cGVydGllc0ID4EEDOqoB6kGmAQooYXBwaHViLmdvb2dsZWFwaXMuY29tL0Rp",
-            "c2NvdmVyZWRXb3JrbG9hZBJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L2Rpc2NvdmVyZWRXb3JrbG9hZHMve2Rpc2NvdmVyZWRf",
-            "d29ya2xvYWR9KhNkaXNjb3ZlcmVkV29ya2xvYWRzMhJkaXNjb3ZlcmVkV29y",
-            "a2xvYWRCrwEKGmNvbS5nb29nbGUuY2xvdWQuYXBwaHViLnYxQg1Xb3JrbG9h",
-            "ZFByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vYXBwaHViL2FwaXYxL2Fw",
-            "cGh1YnBiO2FwcGh1YnBiqgIWR29vZ2xlLkNsb3VkLkFwcEh1Yi5WMcoCFkdv",
-            "b2dsZVxDbG91ZFxBcHBIdWJcVjHqAhlHb29nbGU6OkNsb3VkOjpBcHBIdWI6",
-            "OlYxYgZwcm90bzM="));
+            "cmlidXRlcy5wcm90bxonZ29vZ2xlL2Nsb3VkL2FwcGh1Yi92MS9wcm9wZXJ0",
+            "aWVzLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIqgG",
+            "CghXb3JrbG9hZBIRCgRuYW1lGAEgASgJQgPgQQgSGQoMZGlzcGxheV9uYW1l",
+            "GAIgASgJQgPgQQESGAoLZGVzY3JpcHRpb24YAyABKAlCA+BBARJKChJ3b3Jr",
+            "bG9hZF9yZWZlcmVuY2UYBCABKAsyKS5nb29nbGUuY2xvdWQuYXBwaHViLnYx",
+            "Lldvcmtsb2FkUmVmZXJlbmNlQgPgQQMSTAoTd29ya2xvYWRfcHJvcGVydGll",
+            "cxgFIAEoCzIqLmdvb2dsZS5jbG91ZC5hcHBodWIudjEuV29ya2xvYWRQcm9w",
+            "ZXJ0aWVzQgPgQQMSUAoTZGlzY292ZXJlZF93b3JrbG9hZBgGIAEoCUIz4EEC",
+            "4EEF+kEqEihhcHBodWIuZ29vZ2xlYXBpcy5jb20vRGlzY292ZXJlZFdvcmts",
+            "b2FkEjsKCmF0dHJpYnV0ZXMYByABKAsyIi5nb29nbGUuY2xvdWQuYXBwaHVi",
+            "LnYxLkF0dHJpYnV0ZXNCA+BBARI0CgtjcmVhdGVfdGltZRgIIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgJ",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIYCgN1aWQY",
+            "CiABKAlCC+BBA+KMz9cIAggBEjoKBXN0YXRlGAsgASgOMiYuZ29vZ2xlLmNs",
+            "b3VkLmFwcGh1Yi52MS5Xb3JrbG9hZC5TdGF0ZUID4EEDIlQKBVN0YXRlEhUK",
+            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIKCgZBQ1RJVkUQ",
+            "AhIMCghERUxFVElORxADEgwKCERFVEFDSEVEEAQ6kgHqQY4BCh5hcHBodWIu",
+            "Z29vZ2xlYXBpcy5jb20vV29ya2xvYWQSV3Byb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9hcHBsaWNhdGlvbnMve2FwcGxpY2F0aW9u",
+            "fS93b3JrbG9hZHMve3dvcmtsb2FkfSoJd29ya2xvYWRzMgh3b3JrbG9hZCIl",
+            "ChFXb3JrbG9hZFJlZmVyZW5jZRIQCgN1cmkYASABKAlCA+BBAyKcAwoSV29y",
+            "a2xvYWRQcm9wZXJ0aWVzEhgKC2djcF9wcm9qZWN0GAEgASgJQgPgQQMSFQoI",
+            "bG9jYXRpb24YAiABKAlCA+BBAxIRCgR6b25lGAMgASgJQgPgQQMSRAoPZnVu",
+            "Y3Rpb25hbF90eXBlGAQgASgLMiYuZ29vZ2xlLmNsb3VkLmFwcGh1Yi52MS5G",
+            "dW5jdGlvbmFsVHlwZUID4EEDEmAKEWV4dGVuZGVkX21ldGFkYXRhGAUgAygL",
+            "MkAuZ29vZ2xlLmNsb3VkLmFwcGh1Yi52MS5Xb3JrbG9hZFByb3BlcnRpZXMu",
+            "RXh0ZW5kZWRNZXRhZGF0YUVudHJ5QgPgQQMSNwoIaWRlbnRpdHkYBiABKAsy",
+            "IC5nb29nbGUuY2xvdWQuYXBwaHViLnYxLklkZW50aXR5QgPgQQMaYQoVRXh0",
+            "ZW5kZWRNZXRhZGF0YUVudHJ5EgsKA2tleRgBIAEoCRI3CgV2YWx1ZRgCIAEo",
+            "CzIoLmdvb2dsZS5jbG91ZC5hcHBodWIudjEuRXh0ZW5kZWRNZXRhZGF0YToC",
+            "OAEi7gIKEkRpc2NvdmVyZWRXb3JrbG9hZBIRCgRuYW1lGAEgASgJQgPgQQgS",
+            "SgoSd29ya2xvYWRfcmVmZXJlbmNlGAIgASgLMikuZ29vZ2xlLmNsb3VkLmFw",
+            "cGh1Yi52MS5Xb3JrbG9hZFJlZmVyZW5jZUID4EEDEkwKE3dvcmtsb2FkX3By",
+            "b3BlcnRpZXMYAyABKAsyKi5nb29nbGUuY2xvdWQuYXBwaHViLnYxLldvcmts",
+            "b2FkUHJvcGVydGllc0ID4EEDOqoB6kGmAQooYXBwaHViLmdvb2dsZWFwaXMu",
+            "Y29tL0Rpc2NvdmVyZWRXb3JrbG9hZBJRcHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L2Rpc2NvdmVyZWRXb3JrbG9hZHMve2Rpc2Nv",
+            "dmVyZWRfd29ya2xvYWR9KhNkaXNjb3ZlcmVkV29ya2xvYWRzMhJkaXNjb3Zl",
+            "cmVkV29ya2xvYWRCrwEKGmNvbS5nb29nbGUuY2xvdWQuYXBwaHViLnYxQg1X",
+            "b3JrbG9hZFByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vYXBwaHViL2Fw",
+            "aXYxL2FwcGh1YnBiO2FwcGh1YnBiqgIWR29vZ2xlLkNsb3VkLkFwcEh1Yi5W",
+            "McoCFkdvb2dsZVxDbG91ZFxBcHBIdWJcVjHqAhlHb29nbGU6OkNsb3VkOjpB",
+            "cHBIdWI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AppHub.V1.AttributesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AppHub.V1.AttributesReflection.Descriptor, global::Google.Cloud.AppHub.V1.PropertiesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppHub.V1.Workload), global::Google.Cloud.AppHub.V1.Workload.Parser, new[]{ "Name", "DisplayName", "Description", "WorkloadReference", "WorkloadProperties", "DiscoveredWorkload", "Attributes", "CreateTime", "UpdateTime", "Uid", "State" }, null, new[]{ typeof(global::Google.Cloud.AppHub.V1.Workload.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppHub.V1.WorkloadReference), global::Google.Cloud.AppHub.V1.WorkloadReference.Parser, new[]{ "Uri" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppHub.V1.WorkloadProperties), global::Google.Cloud.AppHub.V1.WorkloadProperties.Parser, new[]{ "GcpProject", "Location", "Zone" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppHub.V1.WorkloadProperties), global::Google.Cloud.AppHub.V1.WorkloadProperties.Parser, new[]{ "GcpProject", "Location", "Zone", "FunctionalType", "ExtendedMetadata", "Identity" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppHub.V1.DiscoveredWorkload), global::Google.Cloud.AppHub.V1.DiscoveredWorkload.Parser, new[]{ "Name", "WorkloadReference", "WorkloadProperties" }, null, null, null, null)
           }));
     }
@@ -1013,6 +1021,9 @@ namespace Google.Cloud.AppHub.V1 {
       gcpProject_ = other.gcpProject_;
       location_ = other.location_;
       zone_ = other.zone_;
+      functionalType_ = other.functionalType_ != null ? other.functionalType_.Clone() : null;
+      extendedMetadata_ = other.extendedMetadata_.Clone();
+      identity_ = other.identity_ != null ? other.identity_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1070,6 +1081,53 @@ namespace Google.Cloud.AppHub.V1 {
       }
     }
 
+    /// <summary>Field number for the "functional_type" field.</summary>
+    public const int FunctionalTypeFieldNumber = 4;
+    private global::Google.Cloud.AppHub.V1.FunctionalType functionalType_;
+    /// <summary>
+    /// Output only. The type of the workload.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AppHub.V1.FunctionalType FunctionalType {
+      get { return functionalType_; }
+      set {
+        functionalType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "extended_metadata" field.</summary>
+    public const int ExtendedMetadataFieldNumber = 5;
+    private static readonly pbc::MapField<string, global::Google.Cloud.AppHub.V1.ExtendedMetadata>.Codec _map_extendedMetadata_codec
+        = new pbc::MapField<string, global::Google.Cloud.AppHub.V1.ExtendedMetadata>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.AppHub.V1.ExtendedMetadata.Parser), 42);
+    private readonly pbc::MapField<string, global::Google.Cloud.AppHub.V1.ExtendedMetadata> extendedMetadata_ = new pbc::MapField<string, global::Google.Cloud.AppHub.V1.ExtendedMetadata>();
+    /// <summary>
+    /// Output only. Additional metadata specific to the resource type.
+    /// The key is a string that identifies the type of metadata and the value is
+    /// the metadata contents specific to that type.
+    /// Key format: `apphub.googleapis.com/{metadataType}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.AppHub.V1.ExtendedMetadata> ExtendedMetadata {
+      get { return extendedMetadata_; }
+    }
+
+    /// <summary>Field number for the "identity" field.</summary>
+    public const int IdentityFieldNumber = 6;
+    private global::Google.Cloud.AppHub.V1.Identity identity_;
+    /// <summary>
+    /// Output only. The identity associated with the workload.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AppHub.V1.Identity Identity {
+      get { return identity_; }
+      set {
+        identity_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1088,6 +1146,9 @@ namespace Google.Cloud.AppHub.V1 {
       if (GcpProject != other.GcpProject) return false;
       if (Location != other.Location) return false;
       if (Zone != other.Zone) return false;
+      if (!object.Equals(FunctionalType, other.FunctionalType)) return false;
+      if (!ExtendedMetadata.Equals(other.ExtendedMetadata)) return false;
+      if (!object.Equals(Identity, other.Identity)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1098,6 +1159,9 @@ namespace Google.Cloud.AppHub.V1 {
       if (GcpProject.Length != 0) hash ^= GcpProject.GetHashCode();
       if (Location.Length != 0) hash ^= Location.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
+      if (functionalType_ != null) hash ^= FunctionalType.GetHashCode();
+      hash ^= ExtendedMetadata.GetHashCode();
+      if (identity_ != null) hash ^= Identity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1128,6 +1192,15 @@ namespace Google.Cloud.AppHub.V1 {
         output.WriteRawTag(26);
         output.WriteString(Zone);
       }
+      if (functionalType_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(FunctionalType);
+      }
+      extendedMetadata_.WriteTo(output, _map_extendedMetadata_codec);
+      if (identity_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Identity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1150,6 +1223,15 @@ namespace Google.Cloud.AppHub.V1 {
         output.WriteRawTag(26);
         output.WriteString(Zone);
       }
+      if (functionalType_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(FunctionalType);
+      }
+      extendedMetadata_.WriteTo(ref output, _map_extendedMetadata_codec);
+      if (identity_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Identity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1168,6 +1250,13 @@ namespace Google.Cloud.AppHub.V1 {
       }
       if (Zone.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Zone);
+      }
+      if (functionalType_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FunctionalType);
+      }
+      size += extendedMetadata_.CalculateSize(_map_extendedMetadata_codec);
+      if (identity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Identity);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1189,6 +1278,19 @@ namespace Google.Cloud.AppHub.V1 {
       }
       if (other.Zone.Length != 0) {
         Zone = other.Zone;
+      }
+      if (other.functionalType_ != null) {
+        if (functionalType_ == null) {
+          FunctionalType = new global::Google.Cloud.AppHub.V1.FunctionalType();
+        }
+        FunctionalType.MergeFrom(other.FunctionalType);
+      }
+      extendedMetadata_.MergeFrom(other.extendedMetadata_);
+      if (other.identity_ != null) {
+        if (identity_ == null) {
+          Identity = new global::Google.Cloud.AppHub.V1.Identity();
+        }
+        Identity.MergeFrom(other.Identity);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1221,6 +1323,24 @@ namespace Google.Cloud.AppHub.V1 {
             Zone = input.ReadString();
             break;
           }
+          case 34: {
+            if (functionalType_ == null) {
+              FunctionalType = new global::Google.Cloud.AppHub.V1.FunctionalType();
+            }
+            input.ReadMessage(FunctionalType);
+            break;
+          }
+          case 42: {
+            extendedMetadata_.AddEntriesFrom(input, _map_extendedMetadata_codec);
+            break;
+          }
+          case 50: {
+            if (identity_ == null) {
+              Identity = new global::Google.Cloud.AppHub.V1.Identity();
+            }
+            input.ReadMessage(Identity);
+            break;
+          }
         }
       }
     #endif
@@ -1250,6 +1370,24 @@ namespace Google.Cloud.AppHub.V1 {
           }
           case 26: {
             Zone = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (functionalType_ == null) {
+              FunctionalType = new global::Google.Cloud.AppHub.V1.FunctionalType();
+            }
+            input.ReadMessage(FunctionalType);
+            break;
+          }
+          case 42: {
+            extendedMetadata_.AddEntriesFrom(ref input, _map_extendedMetadata_codec);
+            break;
+          }
+          case 50: {
+            if (identity_ == null) {
+              Identity = new global::Google.Cloud.AppHub.V1.Identity();
+            }
+            input.ReadMessage(Identity);
             break;
           }
         }
