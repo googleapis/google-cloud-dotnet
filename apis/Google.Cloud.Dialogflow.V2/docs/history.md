@@ -1,5 +1,12 @@
 # Version history
 
+## Version 4.33.0, released 2026-10-05
+
+### New features
+
+- New required peer_hostnames and optional google_root_cert_file in SipTrunk
+- New WebRtcLiveListenCall API
+
 ## Version 4.32.0, released 2026-09-28
 
 ### New features
