@@ -1,5 +1,23 @@
 # Version history
 
+## Version 1.0.0-beta86, released 2026-10-05
+
+### New features
+
+- Add context to Memory, MemoryRevision, and IntermediateExtractedMemory in Vertex AI v1beta1
+
+### Documentation improvements
+
+- A comment for field `expire_time` in message `.google.cloud.aiplatform.v1beta1.Memory` is changed
+- A comment for field `ttl` in message `.google.cloud.aiplatform.v1beta1.Memory` is changed
+- A comment for field `name` in message `.google.cloud.aiplatform.v1beta1.Memory` is changed
+- A comment for field `display_name` in message `.google.cloud.aiplatform.v1beta1.Memory` is changed
+- A comment for field `description` in message `.google.cloud.aiplatform.v1beta1.Memory` is changed
+- A comment for field `create_time` in message `.google.cloud.aiplatform.v1beta1.Memory` is changed
+- A comment for field `update_time` in message `.google.cloud.aiplatform.v1beta1.Memory` is changed
+- A comment for field `fact` in message `.google.cloud.aiplatform.v1beta1.Memory` is changed
+- A comment for field `scope` in message `.google.cloud.aiplatform.v1beta1.Memory` is changed
+
 ## Version 1.0.0-beta85, released 2026-08-24
 
 ### New features
