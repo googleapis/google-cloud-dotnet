@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-beta33, released 2026-10-05
+
+### New features
+
+- New required peer_hostnames and optional google_root_cert_file in SipTrunk
+- New WebRtcLiveListenCall and StreamingReactiveCompanionSuggestions API
+- ToolCallResult supports retryable indicator for errors
+
 ## Version 1.0.0-beta32, released 2026-07-14
 
 ### New features
