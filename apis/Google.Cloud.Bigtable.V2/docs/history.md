@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.33.0, released 2026-10-05
+
+### New features
+
+- Add session support on ReadRows, MutateRows, ReadModifyWrite
+
 ## Version 3.32.0, released 2026-09-28
 
 ### New features
