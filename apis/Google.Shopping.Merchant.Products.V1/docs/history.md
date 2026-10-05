@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.8.0, released 2026-10-05
+
+### New features
+
+- Add offer-level Returns to ProductAttributes
+- Add LeaseTerm, WarrantyDurationUnit, mileage_allowance, and certification links to ProductAttributes
+
+### Documentation improvements
+
+- Update comments for duration, mileage, certifications, warranty, and LoyaltyProgram
+
 ## Version 1.7.0, released 2026-07-14
 
 ### New features
