@@ -317,6 +317,7 @@
     "apis/Google.Cloud.Workstations.V1/Google.Cloud.Workstations.V1/**",
     "apis/Google.Developers.DeveloperKnowledge.V1/Google.Developers.DeveloperKnowledge.V1/**",
     "apis/Google.DevicesAndServices.Health.V4/Google.DevicesAndServices.Health.V4/**",
+    "apis/Google.DevicesAndServices.Health.V4Beta/Google.DevicesAndServices.Health.V4Beta/**",
     "apis/Google.Geo.Type/Google.Geo.Type/**",
     "apis/Google.Identity.AccessContextManager.Type/Google.Identity.AccessContextManager.Type/**",
     "apis/Google.Identity.AccessContextManager.V1/Google.Identity.AccessContextManager.V1/**",
