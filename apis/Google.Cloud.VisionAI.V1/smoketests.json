@@ -9,6 +9,7 @@
   {
     "method": "ListPrebuiltProcessors",
     "client": "AppPlatformClient",
+    "skip": "b/568491847",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/us-central1"
     }
@@ -23,6 +24,7 @@
   {
     "method": "ListPublicOperators",
     "client": "LiveVideoAnalyticsClient",
+    "skip": "b/568491847",
     "arguments": {
       "parent": "projects/${PROJECT_ID}/locations/us-central1"
     }
