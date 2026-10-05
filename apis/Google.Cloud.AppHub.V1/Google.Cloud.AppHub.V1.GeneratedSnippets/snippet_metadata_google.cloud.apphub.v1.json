@@ -7849,6 +7849,1099 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_GetBoundary_sync",
+      "title": "GetBoundaryRequestObject",
+      "description": "Snippet for GetBoundary",
+      "file": "AppHubClient.GetBoundaryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBoundary",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.GetBoundary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppHub.V1.GetBoundaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppHub.V1.Boundary",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "GetBoundary",
+          "fullName": "google.cloud.apphub.v1.AppHub.GetBoundary",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_GetBoundary_async",
+      "title": "GetBoundaryRequestObjectAsync",
+      "description": "Snippet for GetBoundaryAsync",
+      "file": "AppHubClient.GetBoundaryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBoundaryAsync",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.GetBoundaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppHub.V1.GetBoundaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppHub.V1.Boundary>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "GetBoundary",
+          "fullName": "google.cloud.apphub.v1.AppHub.GetBoundary",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_GetBoundary_sync_flattened",
+      "title": "GetBoundary",
+      "description": "Snippet for GetBoundary",
+      "file": "AppHubClient.GetBoundarySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBoundary",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.GetBoundary",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppHub.V1.Boundary",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "GetBoundary",
+          "fullName": "google.cloud.apphub.v1.AppHub.GetBoundary",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_GetBoundary_async_flattened",
+      "title": "GetBoundaryAsync",
+      "description": "Snippet for GetBoundaryAsync",
+      "file": "AppHubClient.GetBoundaryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBoundaryAsync",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.GetBoundaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppHub.V1.Boundary>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "GetBoundary",
+          "fullName": "google.cloud.apphub.v1.AppHub.GetBoundary",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_GetBoundary_sync_flattened_resourceNames",
+      "title": "GetBoundaryResourceNames",
+      "description": "Snippet for GetBoundary",
+      "file": "AppHubClient.GetBoundaryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBoundary",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.GetBoundary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppHub.V1.BoundaryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppHub.V1.Boundary",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "GetBoundary",
+          "fullName": "google.cloud.apphub.v1.AppHub.GetBoundary",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_GetBoundary_async_flattened_resourceNames",
+      "title": "GetBoundaryResourceNamesAsync",
+      "description": "Snippet for GetBoundaryAsync",
+      "file": "AppHubClient.GetBoundaryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBoundaryAsync",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.GetBoundaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppHub.V1.BoundaryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppHub.V1.Boundary>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "GetBoundary",
+          "fullName": "google.cloud.apphub.v1.AppHub.GetBoundary",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_UpdateBoundary_sync",
+      "title": "UpdateBoundaryRequestObject",
+      "description": "Snippet for UpdateBoundary",
+      "file": "AppHubClient.UpdateBoundaryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBoundary",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.UpdateBoundary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppHub.V1.UpdateBoundaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AppHub.V1.Boundary, Google.Cloud.AppHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "UpdateBoundary",
+          "fullName": "google.cloud.apphub.v1.AppHub.UpdateBoundary",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_UpdateBoundary_async",
+      "title": "UpdateBoundaryRequestObjectAsync",
+      "description": "Snippet for UpdateBoundaryAsync",
+      "file": "AppHubClient.UpdateBoundaryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBoundaryAsync",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.UpdateBoundaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppHub.V1.UpdateBoundaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AppHub.V1.Boundary, Google.Cloud.AppHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "UpdateBoundary",
+          "fullName": "google.cloud.apphub.v1.AppHub.UpdateBoundary",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_UpdateBoundary_sync_flattened",
+      "title": "UpdateBoundary",
+      "description": "Snippet for UpdateBoundary",
+      "file": "AppHubClient.UpdateBoundarySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBoundary",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.UpdateBoundary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppHub.V1.Boundary",
+            "name": "boundary"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AppHub.V1.Boundary, Google.Cloud.AppHub.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "UpdateBoundary",
+          "fullName": "google.cloud.apphub.v1.AppHub.UpdateBoundary",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_UpdateBoundary_async_flattened",
+      "title": "UpdateBoundaryAsync",
+      "description": "Snippet for UpdateBoundaryAsync",
+      "file": "AppHubClient.UpdateBoundaryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBoundaryAsync",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.UpdateBoundaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppHub.V1.Boundary",
+            "name": "boundary"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AppHub.V1.Boundary, Google.Cloud.AppHub.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "UpdateBoundary",
+          "fullName": "google.cloud.apphub.v1.AppHub.UpdateBoundary",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_GetExtendedMetadataSchema_sync",
+      "title": "GetExtendedMetadataSchemaRequestObject",
+      "description": "Snippet for GetExtendedMetadataSchema",
+      "file": "AppHubClient.GetExtendedMetadataSchemaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExtendedMetadataSchema",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.GetExtendedMetadataSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppHub.V1.GetExtendedMetadataSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppHub.V1.ExtendedMetadataSchema",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "GetExtendedMetadataSchema",
+          "fullName": "google.cloud.apphub.v1.AppHub.GetExtendedMetadataSchema",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_GetExtendedMetadataSchema_async",
+      "title": "GetExtendedMetadataSchemaRequestObjectAsync",
+      "description": "Snippet for GetExtendedMetadataSchemaAsync",
+      "file": "AppHubClient.GetExtendedMetadataSchemaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExtendedMetadataSchemaAsync",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.GetExtendedMetadataSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppHub.V1.GetExtendedMetadataSchemaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppHub.V1.ExtendedMetadataSchema>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "GetExtendedMetadataSchema",
+          "fullName": "google.cloud.apphub.v1.AppHub.GetExtendedMetadataSchema",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_GetExtendedMetadataSchema_sync_flattened",
+      "title": "GetExtendedMetadataSchema",
+      "description": "Snippet for GetExtendedMetadataSchema",
+      "file": "AppHubClient.GetExtendedMetadataSchemaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExtendedMetadataSchema",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.GetExtendedMetadataSchema",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppHub.V1.ExtendedMetadataSchema",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "GetExtendedMetadataSchema",
+          "fullName": "google.cloud.apphub.v1.AppHub.GetExtendedMetadataSchema",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_GetExtendedMetadataSchema_async_flattened",
+      "title": "GetExtendedMetadataSchemaAsync",
+      "description": "Snippet for GetExtendedMetadataSchemaAsync",
+      "file": "AppHubClient.GetExtendedMetadataSchemaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExtendedMetadataSchemaAsync",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.GetExtendedMetadataSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppHub.V1.ExtendedMetadataSchema>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "GetExtendedMetadataSchema",
+          "fullName": "google.cloud.apphub.v1.AppHub.GetExtendedMetadataSchema",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_GetExtendedMetadataSchema_sync_flattened_resourceNames",
+      "title": "GetExtendedMetadataSchemaResourceNames",
+      "description": "Snippet for GetExtendedMetadataSchema",
+      "file": "AppHubClient.GetExtendedMetadataSchemaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExtendedMetadataSchema",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.GetExtendedMetadataSchema",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppHub.V1.ExtendedMetadataSchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AppHub.V1.ExtendedMetadataSchema",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "GetExtendedMetadataSchema",
+          "fullName": "google.cloud.apphub.v1.AppHub.GetExtendedMetadataSchema",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_GetExtendedMetadataSchema_async_flattened_resourceNames",
+      "title": "GetExtendedMetadataSchemaResourceNamesAsync",
+      "description": "Snippet for GetExtendedMetadataSchemaAsync",
+      "file": "AppHubClient.GetExtendedMetadataSchemaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExtendedMetadataSchemaAsync",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.GetExtendedMetadataSchemaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppHub.V1.ExtendedMetadataSchemaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AppHub.V1.ExtendedMetadataSchema>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "GetExtendedMetadataSchema",
+          "fullName": "google.cloud.apphub.v1.AppHub.GetExtendedMetadataSchema",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_ListExtendedMetadataSchemas_sync",
+      "title": "ListExtendedMetadataSchemasRequestObject",
+      "description": "Snippet for ListExtendedMetadataSchemas",
+      "file": "AppHubClient.ListExtendedMetadataSchemasRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExtendedMetadataSchemas",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.ListExtendedMetadataSchemas",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse, Google.Cloud.AppHub.V1.ExtendedMetadataSchema>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "ListExtendedMetadataSchemas",
+          "fullName": "google.cloud.apphub.v1.AppHub.ListExtendedMetadataSchemas",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_ListExtendedMetadataSchemas_async",
+      "title": "ListExtendedMetadataSchemasRequestObjectAsync",
+      "description": "Snippet for ListExtendedMetadataSchemasAsync",
+      "file": "AppHubClient.ListExtendedMetadataSchemasRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExtendedMetadataSchemasAsync",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.ListExtendedMetadataSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse, Google.Cloud.AppHub.V1.ExtendedMetadataSchema>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "ListExtendedMetadataSchemas",
+          "fullName": "google.cloud.apphub.v1.AppHub.ListExtendedMetadataSchemas",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_ListExtendedMetadataSchemas_sync_flattened",
+      "title": "ListExtendedMetadataSchemas",
+      "description": "Snippet for ListExtendedMetadataSchemas",
+      "file": "AppHubClient.ListExtendedMetadataSchemasSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExtendedMetadataSchemas",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.ListExtendedMetadataSchemas",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse, Google.Cloud.AppHub.V1.ExtendedMetadataSchema>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "ListExtendedMetadataSchemas",
+          "fullName": "google.cloud.apphub.v1.AppHub.ListExtendedMetadataSchemas",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_ListExtendedMetadataSchemas_async_flattened",
+      "title": "ListExtendedMetadataSchemasAsync",
+      "description": "Snippet for ListExtendedMetadataSchemasAsync",
+      "file": "AppHubClient.ListExtendedMetadataSchemasAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExtendedMetadataSchemasAsync",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.ListExtendedMetadataSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse, Google.Cloud.AppHub.V1.ExtendedMetadataSchema>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "ListExtendedMetadataSchemas",
+          "fullName": "google.cloud.apphub.v1.AppHub.ListExtendedMetadataSchemas",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_ListExtendedMetadataSchemas_sync_flattened_resourceNames",
+      "title": "ListExtendedMetadataSchemasResourceNames",
+      "description": "Snippet for ListExtendedMetadataSchemas",
+      "file": "AppHubClient.ListExtendedMetadataSchemasResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExtendedMetadataSchemas",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.ListExtendedMetadataSchemas",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse, Google.Cloud.AppHub.V1.ExtendedMetadataSchema>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "ListExtendedMetadataSchemas",
+          "fullName": "google.cloud.apphub.v1.AppHub.ListExtendedMetadataSchemas",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apphub_v1_generated_AppHub_ListExtendedMetadataSchemas_async_flattened_resourceNames",
+      "title": "ListExtendedMetadataSchemasResourceNamesAsync",
+      "description": "Snippet for ListExtendedMetadataSchemasAsync",
+      "file": "AppHubClient.ListExtendedMetadataSchemasResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExtendedMetadataSchemasAsync",
+        "fullName": "Google.Cloud.AppHub.V1.AppHubClient.ListExtendedMetadataSchemasAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse, Google.Cloud.AppHub.V1.ExtendedMetadataSchema>",
+        "client": {
+          "shortName": "AppHubClient",
+          "fullName": "Google.Cloud.AppHub.V1.AppHubClient"
+        },
+        "method": {
+          "shortName": "ListExtendedMetadataSchemas",
+          "fullName": "google.cloud.apphub.v1.AppHub.ListExtendedMetadataSchemas",
+          "service": {
+            "shortName": "AppHub",
+            "fullName": "google.cloud.apphub.v1.AppHub"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

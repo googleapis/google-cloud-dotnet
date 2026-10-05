@@ -85,6 +85,9 @@ namespace Google.Cloud.AppHub.V1
             yield return ApphubServiceReflection.Descriptor;
             yield return ApplicationReflection.Descriptor;
             yield return AttributesReflection.Descriptor;
+            yield return BoundaryReflection.Descriptor;
+            yield return ExtendedMetadataSchemaReflection.Descriptor;
+            yield return PropertiesReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
             yield return ServiceProjectAttachmentReflection.Descriptor;
             yield return WorkloadReflection.Descriptor;

@@ -88,6 +88,11 @@ namespace Google.Cloud.AppHub.V1
             UpdateApplicationOperationsSettings = existing.UpdateApplicationOperationsSettings.Clone();
             DeleteApplicationSettings = existing.DeleteApplicationSettings;
             DeleteApplicationOperationsSettings = existing.DeleteApplicationOperationsSettings.Clone();
+            GetBoundarySettings = existing.GetBoundarySettings;
+            UpdateBoundarySettings = existing.UpdateBoundarySettings;
+            UpdateBoundaryOperationsSettings = existing.UpdateBoundaryOperationsSettings.Clone();
+            GetExtendedMetadataSchemaSettings = existing.GetExtendedMetadataSchemaSettings;
+            ListExtendedMetadataSchemasSettings = existing.ListExtendedMetadataSchemasSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -711,6 +716,72 @@ namespace Google.Cloud.AppHub.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AppHubClient.GetBoundary</c>
+        ///  and <c>AppHubClient.GetBoundaryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBoundarySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AppHubClient.UpdateBoundary</c>
+        ///  and <c>AppHubClient.UpdateBoundaryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBoundarySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AppHubClient.UpdateBoundary</c> and
+        /// <c>AppHubClient.UpdateBoundaryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateBoundaryOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AppHubClient.GetExtendedMetadataSchema</c> and <c>AppHubClient.GetExtendedMetadataSchemaAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetExtendedMetadataSchemaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AppHubClient.ListExtendedMetadataSchemas</c> and <c>AppHubClient.ListExtendedMetadataSchemasAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListExtendedMetadataSchemasSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -2718,7 +2789,7 @@ namespace Google.Cloud.AppHub.V1
         /// Required. The resource being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
         /// Service resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
         /// the full request.
@@ -2733,7 +2804,7 @@ namespace Google.Cloud.AppHub.V1
         public virtual lro::Operation<Service, OperationMetadata> UpdateService(Service service, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateService(new UpdateServiceRequest
             {
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
                 Service = gax::GaxPreconditions.CheckNotNull(service, nameof(service)),
             }, callSettings);
 
@@ -2744,7 +2815,7 @@ namespace Google.Cloud.AppHub.V1
         /// Required. The resource being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
         /// Service resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
         /// the full request.
@@ -2759,7 +2830,7 @@ namespace Google.Cloud.AppHub.V1
         public virtual stt::Task<lro::Operation<Service, OperationMetadata>> UpdateServiceAsync(Service service, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateServiceAsync(new UpdateServiceRequest
             {
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
                 Service = gax::GaxPreconditions.CheckNotNull(service, nameof(service)),
             }, callSettings);
 
@@ -2770,7 +2841,7 @@ namespace Google.Cloud.AppHub.V1
         /// Required. The resource being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
         /// Service resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
         /// the full request.
@@ -3899,7 +3970,7 @@ namespace Google.Cloud.AppHub.V1
         /// Required. The resource being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
         /// Workload resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
         /// the full request.
@@ -3914,7 +3985,7 @@ namespace Google.Cloud.AppHub.V1
         public virtual lro::Operation<Workload, OperationMetadata> UpdateWorkload(Workload workload, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateWorkload(new UpdateWorkloadRequest
             {
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
                 Workload = gax::GaxPreconditions.CheckNotNull(workload, nameof(workload)),
             }, callSettings);
 
@@ -3925,7 +3996,7 @@ namespace Google.Cloud.AppHub.V1
         /// Required. The resource being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
         /// Workload resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
         /// the full request.
@@ -3940,7 +4011,7 @@ namespace Google.Cloud.AppHub.V1
         public virtual stt::Task<lro::Operation<Workload, OperationMetadata>> UpdateWorkloadAsync(Workload workload, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateWorkloadAsync(new UpdateWorkloadRequest
             {
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
                 Workload = gax::GaxPreconditions.CheckNotNull(workload, nameof(workload)),
             }, callSettings);
 
@@ -3951,7 +4022,7 @@ namespace Google.Cloud.AppHub.V1
         /// Required. The resource being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
         /// Workload resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
         /// the full request.
@@ -4641,7 +4712,7 @@ namespace Google.Cloud.AppHub.V1
         /// Required. The resource being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
         /// Application resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
         /// the full request.
@@ -4656,7 +4727,7 @@ namespace Google.Cloud.AppHub.V1
         public virtual lro::Operation<Application, OperationMetadata> UpdateApplication(Application application, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateApplication(new UpdateApplicationRequest
             {
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
                 Application = gax::GaxPreconditions.CheckNotNull(application, nameof(application)),
             }, callSettings);
 
@@ -4667,7 +4738,7 @@ namespace Google.Cloud.AppHub.V1
         /// Required. The resource being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
         /// Application resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
         /// the full request.
@@ -4682,7 +4753,7 @@ namespace Google.Cloud.AppHub.V1
         public virtual stt::Task<lro::Operation<Application, OperationMetadata>> UpdateApplicationAsync(Application application, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateApplicationAsync(new UpdateApplicationRequest
             {
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
                 Application = gax::GaxPreconditions.CheckNotNull(application, nameof(application)),
             }, callSettings);
 
@@ -4693,7 +4764,7 @@ namespace Google.Cloud.AppHub.V1
         /// Required. The resource being updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
         /// Application resource by the update.
         /// The fields specified in the update_mask are relative to the resource, not
         /// the full request.
@@ -4851,6 +4922,521 @@ namespace Google.Cloud.AppHub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteApplicationAsync(ApplicationName name, st::CancellationToken cancellationToken) =>
             DeleteApplicationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a Boundary.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Boundary GetBoundary(GetBoundaryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a Boundary.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Boundary> GetBoundaryAsync(GetBoundaryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a Boundary.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Boundary> GetBoundaryAsync(GetBoundaryRequest request, st::CancellationToken cancellationToken) =>
+            GetBoundaryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a Boundary.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the boundary to retrieve.
+        /// Format: `projects/{project}/locations/{location}/boundary`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Boundary GetBoundary(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBoundary(new GetBoundaryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a Boundary.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the boundary to retrieve.
+        /// Format: `projects/{project}/locations/{location}/boundary`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Boundary> GetBoundaryAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBoundaryAsync(new GetBoundaryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a Boundary.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the boundary to retrieve.
+        /// Format: `projects/{project}/locations/{location}/boundary`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Boundary> GetBoundaryAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBoundaryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a Boundary.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the boundary to retrieve.
+        /// Format: `projects/{project}/locations/{location}/boundary`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Boundary GetBoundary(BoundaryName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBoundary(new GetBoundaryRequest
+            {
+                BoundaryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a Boundary.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the boundary to retrieve.
+        /// Format: `projects/{project}/locations/{location}/boundary`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Boundary> GetBoundaryAsync(BoundaryName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBoundaryAsync(new GetBoundaryRequest
+            {
+                BoundaryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a Boundary.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the boundary to retrieve.
+        /// Format: `projects/{project}/locations/{location}/boundary`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Boundary> GetBoundaryAsync(BoundaryName name, st::CancellationToken cancellationToken) =>
+            GetBoundaryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a Boundary.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Boundary, OperationMetadata> UpdateBoundary(UpdateBoundaryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Boundary.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Boundary, OperationMetadata>> UpdateBoundaryAsync(UpdateBoundaryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Boundary.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Boundary, OperationMetadata>> UpdateBoundaryAsync(UpdateBoundaryRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBoundaryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateBoundary</c>.</summary>
+        public virtual lro::OperationsClient UpdateBoundaryOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateBoundary</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Boundary, OperationMetadata> PollOnceUpdateBoundary(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Boundary, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBoundaryOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateBoundary</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Boundary, OperationMetadata>> PollOnceUpdateBoundaryAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Boundary, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBoundaryOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a Boundary.
+        /// </summary>
+        /// <param name="boundary">
+        /// Required. The boundary to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Boundary resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Boundary, OperationMetadata> UpdateBoundary(Boundary boundary, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBoundary(new UpdateBoundaryRequest
+            {
+                UpdateMask = updateMask,
+                Boundary = gax::GaxPreconditions.CheckNotNull(boundary, nameof(boundary)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Boundary.
+        /// </summary>
+        /// <param name="boundary">
+        /// Required. The boundary to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Boundary resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Boundary, OperationMetadata>> UpdateBoundaryAsync(Boundary boundary, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBoundaryAsync(new UpdateBoundaryRequest
+            {
+                UpdateMask = updateMask,
+                Boundary = gax::GaxPreconditions.CheckNotNull(boundary, nameof(boundary)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Boundary.
+        /// </summary>
+        /// <param name="boundary">
+        /// Required. The boundary to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Boundary resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Boundary, OperationMetadata>> UpdateBoundaryAsync(Boundary boundary, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBoundaryAsync(boundary, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an Extended Metadata Schema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExtendedMetadataSchema GetExtendedMetadataSchema(GetExtendedMetadataSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an Extended Metadata Schema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExtendedMetadataSchema> GetExtendedMetadataSchemaAsync(GetExtendedMetadataSchemaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an Extended Metadata Schema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExtendedMetadataSchema> GetExtendedMetadataSchemaAsync(GetExtendedMetadataSchemaRequest request, st::CancellationToken cancellationToken) =>
+            GetExtendedMetadataSchemaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an Extended Metadata Schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Schema resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/extendedMetadataSchemas/{extended_metadata_schema}`.
+        /// 
+        /// `{extended_metadata_schema}` has the format
+        /// `"apphub.googleapis.com/{SchemaName}"`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExtendedMetadataSchema GetExtendedMetadataSchema(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExtendedMetadataSchema(new GetExtendedMetadataSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Extended Metadata Schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Schema resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/extendedMetadataSchemas/{extended_metadata_schema}`.
+        /// 
+        /// `{extended_metadata_schema}` has the format
+        /// `"apphub.googleapis.com/{SchemaName}"`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExtendedMetadataSchema> GetExtendedMetadataSchemaAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExtendedMetadataSchemaAsync(new GetExtendedMetadataSchemaRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Extended Metadata Schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Schema resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/extendedMetadataSchemas/{extended_metadata_schema}`.
+        /// 
+        /// `{extended_metadata_schema}` has the format
+        /// `"apphub.googleapis.com/{SchemaName}"`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExtendedMetadataSchema> GetExtendedMetadataSchemaAsync(string name, st::CancellationToken cancellationToken) =>
+            GetExtendedMetadataSchemaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an Extended Metadata Schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Schema resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/extendedMetadataSchemas/{extended_metadata_schema}`.
+        /// 
+        /// `{extended_metadata_schema}` has the format
+        /// `"apphub.googleapis.com/{SchemaName}"`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExtendedMetadataSchema GetExtendedMetadataSchema(ExtendedMetadataSchemaName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExtendedMetadataSchema(new GetExtendedMetadataSchemaRequest
+            {
+                ExtendedMetadataSchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Extended Metadata Schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Schema resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/extendedMetadataSchemas/{extended_metadata_schema}`.
+        /// 
+        /// `{extended_metadata_schema}` has the format
+        /// `"apphub.googleapis.com/{SchemaName}"`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExtendedMetadataSchema> GetExtendedMetadataSchemaAsync(ExtendedMetadataSchemaName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExtendedMetadataSchemaAsync(new GetExtendedMetadataSchemaRequest
+            {
+                ExtendedMetadataSchemaName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Extended Metadata Schema.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Schema resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/extendedMetadataSchemas/{extended_metadata_schema}`.
+        /// 
+        /// `{extended_metadata_schema}` has the format
+        /// `"apphub.googleapis.com/{SchemaName}"`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExtendedMetadataSchema> GetExtendedMetadataSchemaAsync(ExtendedMetadataSchemaName name, st::CancellationToken cancellationToken) =>
+            GetExtendedMetadataSchemaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists Extended Metadata Schemas available in a host project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExtendedMetadataSchema"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema> ListExtendedMetadataSchemas(ListExtendedMetadataSchemasRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Extended Metadata Schemas available in a host project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExtendedMetadataSchema"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema> ListExtendedMetadataSchemasAsync(ListExtendedMetadataSchemasRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Extended Metadata Schemas available in a host project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project and location to list Extended Metadata Schemas on.
+        /// Expected format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExtendedMetadataSchema"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema> ListExtendedMetadataSchemas(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExtendedMetadataSchemasRequest request = new ListExtendedMetadataSchemasRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExtendedMetadataSchemas(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Extended Metadata Schemas available in a host project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project and location to list Extended Metadata Schemas on.
+        /// Expected format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExtendedMetadataSchema"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema> ListExtendedMetadataSchemasAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExtendedMetadataSchemasRequest request = new ListExtendedMetadataSchemasRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExtendedMetadataSchemasAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Extended Metadata Schemas available in a host project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project and location to list Extended Metadata Schemas on.
+        /// Expected format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExtendedMetadataSchema"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema> ListExtendedMetadataSchemas(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExtendedMetadataSchemasRequest request = new ListExtendedMetadataSchemasRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExtendedMetadataSchemas(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Extended Metadata Schemas available in a host project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Project and location to list Extended Metadata Schemas on.
+        /// Expected format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExtendedMetadataSchema"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema> ListExtendedMetadataSchemasAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExtendedMetadataSchemasRequest request = new ListExtendedMetadataSchemasRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExtendedMetadataSchemasAsync(request, callSettings);
+        }
     }
 
     /// <summary>AppHub client wrapper implementation, for convenient use.</summary>
@@ -4913,6 +5499,14 @@ namespace Google.Cloud.AppHub.V1
 
         private readonly gaxgrpc::ApiCall<DeleteApplicationRequest, lro::Operation> _callDeleteApplication;
 
+        private readonly gaxgrpc::ApiCall<GetBoundaryRequest, Boundary> _callGetBoundary;
+
+        private readonly gaxgrpc::ApiCall<UpdateBoundaryRequest, lro::Operation> _callUpdateBoundary;
+
+        private readonly gaxgrpc::ApiCall<GetExtendedMetadataSchemaRequest, ExtendedMetadataSchema> _callGetExtendedMetadataSchema;
+
+        private readonly gaxgrpc::ApiCall<ListExtendedMetadataSchemasRequest, ListExtendedMetadataSchemasResponse> _callListExtendedMetadataSchemas;
+
         /// <summary>
         /// Constructs a client wrapper for the AppHub service, with the specified gRPC client and settings.
         /// </summary>
@@ -4939,6 +5533,7 @@ namespace Google.Cloud.AppHub.V1
             CreateApplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateApplicationOperationsSettings, logger);
             UpdateApplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateApplicationOperationsSettings, logger);
             DeleteApplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteApplicationOperationsSettings, logger);
+            UpdateBoundaryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBoundaryOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callLookupServiceProjectAttachment = clientHelper.BuildApiCall<LookupServiceProjectAttachmentRequest, LookupServiceProjectAttachmentResponse>("LookupServiceProjectAttachment", grpcClient.LookupServiceProjectAttachmentAsync, grpcClient.LookupServiceProjectAttachment, effectiveSettings.LookupServiceProjectAttachmentSettings).WithGoogleRequestParam("name", request => request.Name);
@@ -5022,6 +5617,18 @@ namespace Google.Cloud.AppHub.V1
             _callDeleteApplication = clientHelper.BuildApiCall<DeleteApplicationRequest, lro::Operation>("DeleteApplication", grpcClient.DeleteApplicationAsync, grpcClient.DeleteApplication, effectiveSettings.DeleteApplicationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteApplication);
             Modify_DeleteApplicationApiCall(ref _callDeleteApplication);
+            _callGetBoundary = clientHelper.BuildApiCall<GetBoundaryRequest, Boundary>("GetBoundary", grpcClient.GetBoundaryAsync, grpcClient.GetBoundary, effectiveSettings.GetBoundarySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBoundary);
+            Modify_GetBoundaryApiCall(ref _callGetBoundary);
+            _callUpdateBoundary = clientHelper.BuildApiCall<UpdateBoundaryRequest, lro::Operation>("UpdateBoundary", grpcClient.UpdateBoundaryAsync, grpcClient.UpdateBoundary, effectiveSettings.UpdateBoundarySettings).WithGoogleRequestParam("boundary.name", request => request.Boundary?.Name);
+            Modify_ApiCall(ref _callUpdateBoundary);
+            Modify_UpdateBoundaryApiCall(ref _callUpdateBoundary);
+            _callGetExtendedMetadataSchema = clientHelper.BuildApiCall<GetExtendedMetadataSchemaRequest, ExtendedMetadataSchema>("GetExtendedMetadataSchema", grpcClient.GetExtendedMetadataSchemaAsync, grpcClient.GetExtendedMetadataSchema, effectiveSettings.GetExtendedMetadataSchemaSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetExtendedMetadataSchema);
+            Modify_GetExtendedMetadataSchemaApiCall(ref _callGetExtendedMetadataSchema);
+            _callListExtendedMetadataSchemas = clientHelper.BuildApiCall<ListExtendedMetadataSchemasRequest, ListExtendedMetadataSchemasResponse>("ListExtendedMetadataSchemas", grpcClient.ListExtendedMetadataSchemasAsync, grpcClient.ListExtendedMetadataSchemas, effectiveSettings.ListExtendedMetadataSchemasSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListExtendedMetadataSchemas);
+            Modify_ListExtendedMetadataSchemasApiCall(ref _callListExtendedMetadataSchemas);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5080,6 +5687,14 @@ namespace Google.Cloud.AppHub.V1
         partial void Modify_UpdateApplicationApiCall(ref gaxgrpc::ApiCall<UpdateApplicationRequest, lro::Operation> call);
 
         partial void Modify_DeleteApplicationApiCall(ref gaxgrpc::ApiCall<DeleteApplicationRequest, lro::Operation> call);
+
+        partial void Modify_GetBoundaryApiCall(ref gaxgrpc::ApiCall<GetBoundaryRequest, Boundary> call);
+
+        partial void Modify_UpdateBoundaryApiCall(ref gaxgrpc::ApiCall<UpdateBoundaryRequest, lro::Operation> call);
+
+        partial void Modify_GetExtendedMetadataSchemaApiCall(ref gaxgrpc::ApiCall<GetExtendedMetadataSchemaRequest, ExtendedMetadataSchema> call);
+
+        partial void Modify_ListExtendedMetadataSchemasApiCall(ref gaxgrpc::ApiCall<ListExtendedMetadataSchemasRequest, ListExtendedMetadataSchemasResponse> call);
 
         partial void OnConstruction(AppHub.AppHubClient grpcClient, AppHubSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -5145,6 +5760,14 @@ namespace Google.Cloud.AppHub.V1
         partial void Modify_UpdateApplicationRequest(ref UpdateApplicationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteApplicationRequest(ref DeleteApplicationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBoundaryRequest(ref GetBoundaryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateBoundaryRequest(ref UpdateBoundaryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetExtendedMetadataSchemaRequest(ref GetExtendedMetadataSchemaRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListExtendedMetadataSchemasRequest(ref ListExtendedMetadataSchemasRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists a service project attachment for a given service project. You can
@@ -5840,6 +6463,105 @@ namespace Google.Cloud.AppHub.V1
             Modify_DeleteApplicationRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteApplication.Async(request, callSettings).ConfigureAwait(false), DeleteApplicationOperationsClient);
         }
+
+        /// <summary>
+        /// Gets a Boundary.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Boundary GetBoundary(GetBoundaryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBoundaryRequest(ref request, ref callSettings);
+            return _callGetBoundary.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a Boundary.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Boundary> GetBoundaryAsync(GetBoundaryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBoundaryRequest(ref request, ref callSettings);
+            return _callGetBoundary.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateBoundary</c>.</summary>
+        public override lro::OperationsClient UpdateBoundaryOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a Boundary.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Boundary, OperationMetadata> UpdateBoundary(UpdateBoundaryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBoundaryRequest(ref request, ref callSettings);
+            return new lro::Operation<Boundary, OperationMetadata>(_callUpdateBoundary.Sync(request, callSettings), UpdateBoundaryOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a Boundary.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Boundary, OperationMetadata>> UpdateBoundaryAsync(UpdateBoundaryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBoundaryRequest(ref request, ref callSettings);
+            return new lro::Operation<Boundary, OperationMetadata>(await _callUpdateBoundary.Async(request, callSettings).ConfigureAwait(false), UpdateBoundaryOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets an Extended Metadata Schema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExtendedMetadataSchema GetExtendedMetadataSchema(GetExtendedMetadataSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetExtendedMetadataSchemaRequest(ref request, ref callSettings);
+            return _callGetExtendedMetadataSchema.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an Extended Metadata Schema.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExtendedMetadataSchema> GetExtendedMetadataSchemaAsync(GetExtendedMetadataSchemaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetExtendedMetadataSchemaRequest(ref request, ref callSettings);
+            return _callGetExtendedMetadataSchema.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Extended Metadata Schemas available in a host project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExtendedMetadataSchema"/> resources.</returns>
+        public override gax::PagedEnumerable<ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema> ListExtendedMetadataSchemas(ListExtendedMetadataSchemasRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListExtendedMetadataSchemasRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListExtendedMetadataSchemasRequest, ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema>(_callListExtendedMetadataSchemas, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Extended Metadata Schemas available in a host project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExtendedMetadataSchema"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema> ListExtendedMetadataSchemasAsync(ListExtendedMetadataSchemasRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListExtendedMetadataSchemasRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListExtendedMetadataSchemasRequest, ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema>(_callListExtendedMetadataSchemas, request, callSettings);
+        }
     }
 
     public partial class ListServiceProjectAttachmentsRequest : gaxgrpc::IPageRequest
@@ -5863,6 +6585,10 @@ namespace Google.Cloud.AppHub.V1
     }
 
     public partial class ListApplicationsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListExtendedMetadataSchemasRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -5910,6 +6636,14 @@ namespace Google.Cloud.AppHub.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Application> GetEnumerator() => Applications.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListExtendedMetadataSchemasResponse : gaxgrpc::IPageResponse<ExtendedMetadataSchema>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ExtendedMetadataSchema> GetEnumerator() => ExtendedMetadataSchemas.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

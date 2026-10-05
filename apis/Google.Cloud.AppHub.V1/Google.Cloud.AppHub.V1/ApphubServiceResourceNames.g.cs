@@ -309,4 +309,41 @@ namespace Google.Cloud.AppHub.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetBoundaryRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::BoundaryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::BoundaryName BoundaryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::BoundaryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetExtendedMetadataSchemaRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ExtendedMetadataSchemaName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcav::ExtendedMetadataSchemaName ExtendedMetadataSchemaName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ExtendedMetadataSchemaName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListExtendedMetadataSchemasRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

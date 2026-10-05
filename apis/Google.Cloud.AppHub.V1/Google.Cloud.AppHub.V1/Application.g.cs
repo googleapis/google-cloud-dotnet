@@ -28,33 +28,47 @@ namespace Google.Cloud.AppHub.V1 {
             "b29nbGUuY2xvdWQuYXBwaHViLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
             "aW9yLnByb3RvGhtnb29nbGUvYXBpL2ZpZWxkX2luZm8ucHJvdG8aGWdvb2ds",
             "ZS9hcGkvcmVzb3VyY2UucHJvdG8aJ2dvb2dsZS9jbG91ZC9hcHBodWIvdjEv",
-            "YXR0cmlidXRlcy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
-            "cm90byLeBAoLQXBwbGljYXRpb24SEQoEbmFtZRgBIAEoCUID4EEIEhkKDGRp",
-            "c3BsYXlfbmFtZRgCIAEoCUID4EEBEhgKC2Rlc2NyaXB0aW9uGAMgASgJQgPg",
-            "QQESOwoKYXR0cmlidXRlcxgEIAEoCzIiLmdvb2dsZS5jbG91ZC5hcHBodWIu",
-            "djEuQXR0cmlidXRlc0ID4EEBEjQKC2NyZWF0ZV90aW1lGAUgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAYg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKBXNjb3Bl",
-            "GAkgASgLMh0uZ29vZ2xlLmNsb3VkLmFwcGh1Yi52MS5TY29wZUIG4EEC4EEF",
-            "EhgKA3VpZBgKIAEoCUIL4EED4ozP1wgCCAESPQoFc3RhdGUYCyABKA4yKS5n",
-            "b29nbGUuY2xvdWQuYXBwaHViLnYxLkFwcGxpY2F0aW9uLlN0YXRlQgPgQQMi",
-            "RgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxAB",
-            "EgoKBkFDVElWRRACEgwKCERFTEVUSU5HEAM6hgHqQYIBCiFhcHBodWIuZ29v",
-            "Z2xlYXBpcy5jb20vQXBwbGljYXRpb24SQnByb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9hcHBsaWNhdGlvbnMve2FwcGxpY2F0aW9u",
-            "fSoMYXBwbGljYXRpb25zMgthcHBsaWNhdGlvbiJ2CgVTY29wZRI1CgR0eXBl",
-            "GAEgASgOMiIuZ29vZ2xlLmNsb3VkLmFwcGh1Yi52MS5TY29wZS5UeXBlQgPg",
-            "QQIiNgoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDAoIUkVHSU9OQUwQ",
-            "ARIKCgZHTE9CQUwQAkKyAQoaY29tLmdvb2dsZS5jbG91ZC5hcHBodWIudjFC",
-            "EEFwcGxpY2F0aW9uUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9hcHBo",
-            "dWIvYXBpdjEvYXBwaHVicGI7YXBwaHVicGKqAhZHb29nbGUuQ2xvdWQuQXBw",
-            "SHViLlYxygIWR29vZ2xlXENsb3VkXEFwcEh1YlxWMeoCGUdvb2dsZTo6Q2xv",
-            "dWQ6OkFwcEh1Yjo6VjFiBnByb3RvMw=="));
+            "YXR0cmlidXRlcy5wcm90bxonZ29vZ2xlL2Nsb3VkL2FwcGh1Yi92MS9wcm9w",
+            "ZXJ0aWVzLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
+            "IvoFCgtBcHBsaWNhdGlvbhIRCgRuYW1lGAEgASgJQgPgQQgSGQoMZGlzcGxh",
+            "eV9uYW1lGAIgASgJQgPgQQESGAoLZGVzY3JpcHRpb24YAyABKAlCA+BBARI7",
+            "CgphdHRyaWJ1dGVzGAQgASgLMiIuZ29vZ2xlLmNsb3VkLmFwcGh1Yi52MS5B",
+            "dHRyaWJ1dGVzQgPgQQESNAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoFc2NvcGUYCSAB",
+            "KAsyHS5nb29nbGUuY2xvdWQuYXBwaHViLnYxLlNjb3BlQgbgQQLgQQUSGAoD",
+            "dWlkGAogASgJQgvgQQPijM/XCAIIARI9CgVzdGF0ZRgLIAEoDjIpLmdvb2ds",
+            "ZS5jbG91ZC5hcHBodWIudjEuQXBwbGljYXRpb24uU3RhdGVCA+BBAxJSChZh",
+            "cHBsaWNhdGlvbl9wcm9wZXJ0aWVzGAwgASgLMi0uZ29vZ2xlLmNsb3VkLmFw",
+            "cGh1Yi52MS5BcHBsaWNhdGlvblByb3BlcnRpZXNCA+BBAxJGChBhcHBsaWNh",
+            "dGlvbl90eXBlGA0gASgLMicuZ29vZ2xlLmNsb3VkLmFwcGh1Yi52MS5BcHBs",
+            "aWNhdGlvblR5cGVCA+BBAyJGCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklF",
+            "RBAAEgwKCENSRUFUSU5HEAESCgoGQUNUSVZFEAISDAoIREVMRVRJTkcQAzqG",
+            "AepBggEKIWFwcGh1Yi5nb29nbGVhcGlzLmNvbS9BcHBsaWNhdGlvbhJCcHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2FwcGxpY2F0",
+            "aW9ucy97YXBwbGljYXRpb259KgxhcHBsaWNhdGlvbnMyC2FwcGxpY2F0aW9u",
+            "In8KD0FwcGxpY2F0aW9uVHlwZRI6CgR0eXBlGAEgASgOMiwuZ29vZ2xlLmNs",
+            "b3VkLmFwcGh1Yi52MS5BcHBsaWNhdGlvblR5cGUuVHlwZSIwCgRUeXBlEhQK",
+            "EFRZUEVfVU5TUEVDSUZJRUQQABISCg5BSV9BUFBMSUNBVElPThABInYKBVNj",
+            "b3BlEjUKBHR5cGUYASABKA4yIi5nb29nbGUuY2xvdWQuYXBwaHViLnYxLlNj",
+            "b3BlLlR5cGVCA+BBAiI2CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIM",
+            "CghSRUdJT05BTBABEgoKBkdMT0JBTBACIt8BChVBcHBsaWNhdGlvblByb3Bl",
+            "cnRpZXMSYwoRZXh0ZW5kZWRfbWV0YWRhdGEYASADKAsyQy5nb29nbGUuY2xv",
+            "dWQuYXBwaHViLnYxLkFwcGxpY2F0aW9uUHJvcGVydGllcy5FeHRlbmRlZE1l",
+            "dGFkYXRhRW50cnlCA+BBAxphChVFeHRlbmRlZE1ldGFkYXRhRW50cnkSCwoD",
+            "a2V5GAEgASgJEjcKBXZhbHVlGAIgASgLMiguZ29vZ2xlLmNsb3VkLmFwcGh1",
+            "Yi52MS5FeHRlbmRlZE1ldGFkYXRhOgI4AUKyAQoaY29tLmdvb2dsZS5jbG91",
+            "ZC5hcHBodWIudjFCEEFwcGxpY2F0aW9uUHJvdG9QAVoyY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9hcHBodWIvYXBpdjEvYXBwaHVicGI7YXBwaHVicGKqAhZHb29n",
+            "bGUuQ2xvdWQuQXBwSHViLlYxygIWR29vZ2xlXENsb3VkXEFwcEh1YlxWMeoC",
+            "GUdvb2dsZTo6Q2xvdWQ6OkFwcEh1Yjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AppHub.V1.AttributesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AppHub.V1.AttributesReflection.Descriptor, global::Google.Cloud.AppHub.V1.PropertiesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppHub.V1.Application), global::Google.Cloud.AppHub.V1.Application.Parser, new[]{ "Name", "DisplayName", "Description", "Attributes", "CreateTime", "UpdateTime", "Scope", "Uid", "State" }, null, new[]{ typeof(global::Google.Cloud.AppHub.V1.Application.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppHub.V1.Scope), global::Google.Cloud.AppHub.V1.Scope.Parser, new[]{ "Type" }, null, new[]{ typeof(global::Google.Cloud.AppHub.V1.Scope.Types.Type) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppHub.V1.Application), global::Google.Cloud.AppHub.V1.Application.Parser, new[]{ "Name", "DisplayName", "Description", "Attributes", "CreateTime", "UpdateTime", "Scope", "Uid", "State", "ApplicationProperties", "ApplicationType" }, null, new[]{ typeof(global::Google.Cloud.AppHub.V1.Application.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppHub.V1.ApplicationType), global::Google.Cloud.AppHub.V1.ApplicationType.Parser, new[]{ "Type" }, null, new[]{ typeof(global::Google.Cloud.AppHub.V1.ApplicationType.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppHub.V1.Scope), global::Google.Cloud.AppHub.V1.Scope.Parser, new[]{ "Type" }, null, new[]{ typeof(global::Google.Cloud.AppHub.V1.Scope.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppHub.V1.ApplicationProperties), global::Google.Cloud.AppHub.V1.ApplicationProperties.Parser, new[]{ "ExtendedMetadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -111,6 +125,8 @@ namespace Google.Cloud.AppHub.V1 {
       scope_ = other.scope_ != null ? other.scope_.Clone() : null;
       uid_ = other.uid_;
       state_ = other.state_;
+      applicationProperties_ = other.applicationProperties_ != null ? other.applicationProperties_.Clone() : null;
+      applicationType_ = other.applicationType_ != null ? other.applicationType_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -260,6 +276,37 @@ namespace Google.Cloud.AppHub.V1 {
       }
     }
 
+    /// <summary>Field number for the "application_properties" field.</summary>
+    public const int ApplicationPropertiesFieldNumber = 12;
+    private global::Google.Cloud.AppHub.V1.ApplicationProperties applicationProperties_;
+    /// <summary>
+    /// Output only. Properties of an underlying cloud resource that can comprise
+    /// an Application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AppHub.V1.ApplicationProperties ApplicationProperties {
+      get { return applicationProperties_; }
+      set {
+        applicationProperties_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "application_type" field.</summary>
+    public const int ApplicationTypeFieldNumber = 13;
+    private global::Google.Cloud.AppHub.V1.ApplicationType applicationType_;
+    /// <summary>
+    /// Output only. Application type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AppHub.V1.ApplicationType ApplicationType {
+      get { return applicationType_; }
+      set {
+        applicationType_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -284,6 +331,8 @@ namespace Google.Cloud.AppHub.V1 {
       if (!object.Equals(Scope, other.Scope)) return false;
       if (Uid != other.Uid) return false;
       if (State != other.State) return false;
+      if (!object.Equals(ApplicationProperties, other.ApplicationProperties)) return false;
+      if (!object.Equals(ApplicationType, other.ApplicationType)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -300,6 +349,8 @@ namespace Google.Cloud.AppHub.V1 {
       if (scope_ != null) hash ^= Scope.GetHashCode();
       if (Uid.Length != 0) hash ^= Uid.GetHashCode();
       if (State != global::Google.Cloud.AppHub.V1.Application.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (applicationProperties_ != null) hash ^= ApplicationProperties.GetHashCode();
+      if (applicationType_ != null) hash ^= ApplicationType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -354,6 +405,14 @@ namespace Google.Cloud.AppHub.V1 {
         output.WriteRawTag(88);
         output.WriteEnum((int) State);
       }
+      if (applicationProperties_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ApplicationProperties);
+      }
+      if (applicationType_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ApplicationType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -400,6 +459,14 @@ namespace Google.Cloud.AppHub.V1 {
         output.WriteRawTag(88);
         output.WriteEnum((int) State);
       }
+      if (applicationProperties_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ApplicationProperties);
+      }
+      if (applicationType_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ApplicationType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -436,6 +503,12 @@ namespace Google.Cloud.AppHub.V1 {
       }
       if (State != global::Google.Cloud.AppHub.V1.Application.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (applicationProperties_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ApplicationProperties);
+      }
+      if (applicationType_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ApplicationType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -487,6 +560,18 @@ namespace Google.Cloud.AppHub.V1 {
       }
       if (other.State != global::Google.Cloud.AppHub.V1.Application.Types.State.Unspecified) {
         State = other.State;
+      }
+      if (other.applicationProperties_ != null) {
+        if (applicationProperties_ == null) {
+          ApplicationProperties = new global::Google.Cloud.AppHub.V1.ApplicationProperties();
+        }
+        ApplicationProperties.MergeFrom(other.ApplicationProperties);
+      }
+      if (other.applicationType_ != null) {
+        if (applicationType_ == null) {
+          ApplicationType = new global::Google.Cloud.AppHub.V1.ApplicationType();
+        }
+        ApplicationType.MergeFrom(other.ApplicationType);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -553,6 +638,20 @@ namespace Google.Cloud.AppHub.V1 {
           }
           case 88: {
             State = (global::Google.Cloud.AppHub.V1.Application.Types.State) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            if (applicationProperties_ == null) {
+              ApplicationProperties = new global::Google.Cloud.AppHub.V1.ApplicationProperties();
+            }
+            input.ReadMessage(ApplicationProperties);
+            break;
+          }
+          case 106: {
+            if (applicationType_ == null) {
+              ApplicationType = new global::Google.Cloud.AppHub.V1.ApplicationType();
+            }
+            input.ReadMessage(ApplicationType);
             break;
           }
         }
@@ -622,6 +721,20 @@ namespace Google.Cloud.AppHub.V1 {
             State = (global::Google.Cloud.AppHub.V1.Application.Types.State) input.ReadEnum();
             break;
           }
+          case 98: {
+            if (applicationProperties_ == null) {
+              ApplicationProperties = new global::Google.Cloud.AppHub.V1.ApplicationProperties();
+            }
+            input.ReadMessage(ApplicationProperties);
+            break;
+          }
+          case 106: {
+            if (applicationType_ == null) {
+              ApplicationType = new global::Google.Cloud.AppHub.V1.ApplicationType();
+            }
+            input.ReadMessage(ApplicationType);
+            break;
+          }
         }
       }
     }
@@ -660,6 +773,232 @@ namespace Google.Cloud.AppHub.V1 {
   }
 
   /// <summary>
+  /// Application type.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ApplicationType : pb::IMessage<ApplicationType>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ApplicationType> _parser = new pb::MessageParser<ApplicationType>(() => new ApplicationType());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ApplicationType> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AppHub.V1.ApplicationReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ApplicationType() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ApplicationType(ApplicationType other) : this() {
+      type_ = other.type_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ApplicationType Clone() {
+      return new ApplicationType(this);
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 1;
+    private global::Google.Cloud.AppHub.V1.ApplicationType.Types.Type type_ = global::Google.Cloud.AppHub.V1.ApplicationType.Types.Type.Unspecified;
+    /// <summary>
+    /// The type of the application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AppHub.V1.ApplicationType.Types.Type Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ApplicationType);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ApplicationType other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Type != other.Type) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Type != global::Google.Cloud.AppHub.V1.ApplicationType.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Type != global::Google.Cloud.AppHub.V1.ApplicationType.Types.Type.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Type != global::Google.Cloud.AppHub.V1.ApplicationType.Types.Type.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Type != global::Google.Cloud.AppHub.V1.ApplicationType.Types.Type.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ApplicationType other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Type != global::Google.Cloud.AppHub.V1.ApplicationType.Types.Type.Unspecified) {
+        Type = other.Type;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Type = (global::Google.Cloud.AppHub.V1.ApplicationType.Types.Type) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Type = (global::Google.Cloud.AppHub.V1.ApplicationType.Types.Type) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ApplicationType message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Application type enum.
+      /// </summary>
+      public enum Type {
+        /// <summary>
+        /// Unspecified type.
+        /// </summary>
+        [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// AI Application type.
+        /// </summary>
+        [pbr::OriginalName("AI_APPLICATION")] AiApplication = 1,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Scope of an application.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -677,7 +1016,7 @@ namespace Google.Cloud.AppHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AppHub.V1.ApplicationReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.AppHub.V1.ApplicationReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -886,6 +1225,202 @@ namespace Google.Cloud.AppHub.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Additional system properties of an Application.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ApplicationProperties : pb::IMessage<ApplicationProperties>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ApplicationProperties> _parser = new pb::MessageParser<ApplicationProperties>(() => new ApplicationProperties());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ApplicationProperties> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AppHub.V1.ApplicationReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ApplicationProperties() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ApplicationProperties(ApplicationProperties other) : this() {
+      extendedMetadata_ = other.extendedMetadata_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ApplicationProperties Clone() {
+      return new ApplicationProperties(this);
+    }
+
+    /// <summary>Field number for the "extended_metadata" field.</summary>
+    public const int ExtendedMetadataFieldNumber = 1;
+    private static readonly pbc::MapField<string, global::Google.Cloud.AppHub.V1.ExtendedMetadata>.Codec _map_extendedMetadata_codec
+        = new pbc::MapField<string, global::Google.Cloud.AppHub.V1.ExtendedMetadata>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.AppHub.V1.ExtendedMetadata.Parser), 10);
+    private readonly pbc::MapField<string, global::Google.Cloud.AppHub.V1.ExtendedMetadata> extendedMetadata_ = new pbc::MapField<string, global::Google.Cloud.AppHub.V1.ExtendedMetadata>();
+    /// <summary>
+    /// Output only. Additional metadata specific to the App Hub application.
+    /// The key is a string that identifies the type of metadata and the value is
+    /// the metadata contents specific to that type.
+    /// Key format: `apphub.googleapis.com/{metadataType}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.AppHub.V1.ExtendedMetadata> ExtendedMetadata {
+      get { return extendedMetadata_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ApplicationProperties);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ApplicationProperties other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!ExtendedMetadata.Equals(other.ExtendedMetadata)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= ExtendedMetadata.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      extendedMetadata_.WriteTo(output, _map_extendedMetadata_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      extendedMetadata_.WriteTo(ref output, _map_extendedMetadata_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += extendedMetadata_.CalculateSize(_map_extendedMetadata_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ApplicationProperties other) {
+      if (other == null) {
+        return;
+      }
+      extendedMetadata_.MergeFrom(other.extendedMetadata_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            extendedMetadata_.AddEntriesFrom(input, _map_extendedMetadata_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            extendedMetadata_.AddEntriesFrom(ref input, _map_extendedMetadata_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

@@ -3,7 +3,7 @@
 //     source: google/cloud/apphub/v1/apphub_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -151,6 +151,20 @@ namespace Google.Cloud.AppHub.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AppHub.V1.UpdateApplicationRequest> __Marshaller_google_cloud_apphub_v1_UpdateApplicationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppHub.V1.UpdateApplicationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppHub.V1.DeleteApplicationRequest> __Marshaller_google_cloud_apphub_v1_DeleteApplicationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppHub.V1.DeleteApplicationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AppHub.V1.GetBoundaryRequest> __Marshaller_google_cloud_apphub_v1_GetBoundaryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppHub.V1.GetBoundaryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AppHub.V1.Boundary> __Marshaller_google_cloud_apphub_v1_Boundary = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppHub.V1.Boundary.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AppHub.V1.UpdateBoundaryRequest> __Marshaller_google_cloud_apphub_v1_UpdateBoundaryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppHub.V1.UpdateBoundaryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AppHub.V1.GetExtendedMetadataSchemaRequest> __Marshaller_google_cloud_apphub_v1_GetExtendedMetadataSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppHub.V1.GetExtendedMetadataSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AppHub.V1.ExtendedMetadataSchema> __Marshaller_google_cloud_apphub_v1_ExtendedMetadataSchema = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppHub.V1.ExtendedMetadataSchema.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasRequest> __Marshaller_google_cloud_apphub_v1_ListExtendedMetadataSchemasRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse> __Marshaller_google_cloud_apphub_v1_ListExtendedMetadataSchemasResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppHub.V1.LookupServiceProjectAttachmentRequest, global::Google.Cloud.AppHub.V1.LookupServiceProjectAttachmentResponse> __Method_LookupServiceProjectAttachment = new grpc::Method<global::Google.Cloud.AppHub.V1.LookupServiceProjectAttachmentRequest, global::Google.Cloud.AppHub.V1.LookupServiceProjectAttachmentResponse>(
@@ -367,6 +381,38 @@ namespace Google.Cloud.AppHub.V1 {
         "DeleteApplication",
         __Marshaller_google_cloud_apphub_v1_DeleteApplicationRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AppHub.V1.GetBoundaryRequest, global::Google.Cloud.AppHub.V1.Boundary> __Method_GetBoundary = new grpc::Method<global::Google.Cloud.AppHub.V1.GetBoundaryRequest, global::Google.Cloud.AppHub.V1.Boundary>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBoundary",
+        __Marshaller_google_cloud_apphub_v1_GetBoundaryRequest,
+        __Marshaller_google_cloud_apphub_v1_Boundary);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AppHub.V1.UpdateBoundaryRequest, global::Google.LongRunning.Operation> __Method_UpdateBoundary = new grpc::Method<global::Google.Cloud.AppHub.V1.UpdateBoundaryRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBoundary",
+        __Marshaller_google_cloud_apphub_v1_UpdateBoundaryRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AppHub.V1.GetExtendedMetadataSchemaRequest, global::Google.Cloud.AppHub.V1.ExtendedMetadataSchema> __Method_GetExtendedMetadataSchema = new grpc::Method<global::Google.Cloud.AppHub.V1.GetExtendedMetadataSchemaRequest, global::Google.Cloud.AppHub.V1.ExtendedMetadataSchema>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetExtendedMetadataSchema",
+        __Marshaller_google_cloud_apphub_v1_GetExtendedMetadataSchemaRequest,
+        __Marshaller_google_cloud_apphub_v1_ExtendedMetadataSchema);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasRequest, global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse> __Method_ListExtendedMetadataSchemas = new grpc::Method<global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasRequest, global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListExtendedMetadataSchemas",
+        __Marshaller_google_cloud_apphub_v1_ListExtendedMetadataSchemasRequest,
+        __Marshaller_google_cloud_apphub_v1_ListExtendedMetadataSchemasResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -705,6 +751,54 @@ namespace Google.Cloud.AppHub.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteApplication(global::Google.Cloud.AppHub.V1.DeleteApplicationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a Boundary.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppHub.V1.Boundary> GetBoundary(global::Google.Cloud.AppHub.V1.GetBoundaryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a Boundary.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateBoundary(global::Google.Cloud.AppHub.V1.UpdateBoundaryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets an Extended Metadata Schema.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppHub.V1.ExtendedMetadataSchema> GetExtendedMetadataSchema(global::Google.Cloud.AppHub.V1.GetExtendedMetadataSchemaRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Extended Metadata Schemas available in a host project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse> ListExtendedMetadataSchemas(global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2062,6 +2156,198 @@ namespace Google.Cloud.AppHub.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteApplication, null, options, request);
       }
+      /// <summary>
+      /// Gets a Boundary.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AppHub.V1.Boundary GetBoundary(global::Google.Cloud.AppHub.V1.GetBoundaryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBoundary(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a Boundary.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AppHub.V1.Boundary GetBoundary(global::Google.Cloud.AppHub.V1.GetBoundaryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBoundary, null, options, request);
+      }
+      /// <summary>
+      /// Gets a Boundary.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppHub.V1.Boundary> GetBoundaryAsync(global::Google.Cloud.AppHub.V1.GetBoundaryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBoundaryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a Boundary.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppHub.V1.Boundary> GetBoundaryAsync(global::Google.Cloud.AppHub.V1.GetBoundaryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBoundary, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Boundary.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBoundary(global::Google.Cloud.AppHub.V1.UpdateBoundaryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBoundary(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Boundary.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateBoundary(global::Google.Cloud.AppHub.V1.UpdateBoundaryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBoundary, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Boundary.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBoundaryAsync(global::Google.Cloud.AppHub.V1.UpdateBoundaryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBoundaryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Boundary.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateBoundaryAsync(global::Google.Cloud.AppHub.V1.UpdateBoundaryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBoundary, null, options, request);
+      }
+      /// <summary>
+      /// Gets an Extended Metadata Schema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AppHub.V1.ExtendedMetadataSchema GetExtendedMetadataSchema(global::Google.Cloud.AppHub.V1.GetExtendedMetadataSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetExtendedMetadataSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an Extended Metadata Schema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AppHub.V1.ExtendedMetadataSchema GetExtendedMetadataSchema(global::Google.Cloud.AppHub.V1.GetExtendedMetadataSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetExtendedMetadataSchema, null, options, request);
+      }
+      /// <summary>
+      /// Gets an Extended Metadata Schema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppHub.V1.ExtendedMetadataSchema> GetExtendedMetadataSchemaAsync(global::Google.Cloud.AppHub.V1.GetExtendedMetadataSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetExtendedMetadataSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an Extended Metadata Schema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppHub.V1.ExtendedMetadataSchema> GetExtendedMetadataSchemaAsync(global::Google.Cloud.AppHub.V1.GetExtendedMetadataSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetExtendedMetadataSchema, null, options, request);
+      }
+      /// <summary>
+      /// Lists Extended Metadata Schemas available in a host project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse ListExtendedMetadataSchemas(global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListExtendedMetadataSchemas(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Extended Metadata Schemas available in a host project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse ListExtendedMetadataSchemas(global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListExtendedMetadataSchemas, null, options, request);
+      }
+      /// <summary>
+      /// Lists Extended Metadata Schemas available in a host project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse> ListExtendedMetadataSchemasAsync(global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListExtendedMetadataSchemasAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Extended Metadata Schemas available in a host project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse> ListExtendedMetadataSchemasAsync(global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListExtendedMetadataSchemas, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AppHubClient NewInstance(ClientBaseConfiguration configuration)
@@ -2102,7 +2388,11 @@ namespace Google.Cloud.AppHub.V1 {
           .AddMethod(__Method_CreateApplication, serviceImpl.CreateApplication)
           .AddMethod(__Method_GetApplication, serviceImpl.GetApplication)
           .AddMethod(__Method_UpdateApplication, serviceImpl.UpdateApplication)
-          .AddMethod(__Method_DeleteApplication, serviceImpl.DeleteApplication).Build();
+          .AddMethod(__Method_DeleteApplication, serviceImpl.DeleteApplication)
+          .AddMethod(__Method_GetBoundary, serviceImpl.GetBoundary)
+          .AddMethod(__Method_UpdateBoundary, serviceImpl.UpdateBoundary)
+          .AddMethod(__Method_GetExtendedMetadataSchema, serviceImpl.GetExtendedMetadataSchema)
+          .AddMethod(__Method_ListExtendedMetadataSchemas, serviceImpl.ListExtendedMetadataSchemas).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2139,6 +2429,10 @@ namespace Google.Cloud.AppHub.V1 {
       serviceBinder.AddMethod(__Method_GetApplication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppHub.V1.GetApplicationRequest, global::Google.Cloud.AppHub.V1.Application>(serviceImpl.GetApplication));
       serviceBinder.AddMethod(__Method_UpdateApplication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppHub.V1.UpdateApplicationRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateApplication));
       serviceBinder.AddMethod(__Method_DeleteApplication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppHub.V1.DeleteApplicationRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteApplication));
+      serviceBinder.AddMethod(__Method_GetBoundary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppHub.V1.GetBoundaryRequest, global::Google.Cloud.AppHub.V1.Boundary>(serviceImpl.GetBoundary));
+      serviceBinder.AddMethod(__Method_UpdateBoundary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppHub.V1.UpdateBoundaryRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBoundary));
+      serviceBinder.AddMethod(__Method_GetExtendedMetadataSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppHub.V1.GetExtendedMetadataSchemaRequest, global::Google.Cloud.AppHub.V1.ExtendedMetadataSchema>(serviceImpl.GetExtendedMetadataSchema));
+      serviceBinder.AddMethod(__Method_ListExtendedMetadataSchemas, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasRequest, global::Google.Cloud.AppHub.V1.ListExtendedMetadataSchemasResponse>(serviceImpl.ListExtendedMetadataSchemas));
     }
 
   }

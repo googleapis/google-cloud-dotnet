@@ -70,6 +70,12 @@
                 "GetApplicationAsync"
               ]
             },
+            "GetBoundary": {
+              "methods": [
+                "GetBoundary",
+                "GetBoundaryAsync"
+              ]
+            },
             "GetDiscoveredService": {
               "methods": [
                 "GetDiscoveredService",
@@ -80,6 +86,12 @@
               "methods": [
                 "GetDiscoveredWorkload",
                 "GetDiscoveredWorkloadAsync"
+              ]
+            },
+            "GetExtendedMetadataSchema": {
+              "methods": [
+                "GetExtendedMetadataSchema",
+                "GetExtendedMetadataSchemaAsync"
               ]
             },
             "GetService": {
@@ -116,6 +128,12 @@
               "methods": [
                 "ListDiscoveredWorkloads",
                 "ListDiscoveredWorkloadsAsync"
+              ]
+            },
+            "ListExtendedMetadataSchemas": {
+              "methods": [
+                "ListExtendedMetadataSchemas",
+                "ListExtendedMetadataSchemasAsync"
               ]
             },
             "ListServiceProjectAttachments": {
@@ -158,6 +176,12 @@
               "methods": [
                 "UpdateApplication",
                 "UpdateApplicationAsync"
+              ]
+            },
+            "UpdateBoundary": {
+              "methods": [
+                "UpdateBoundary",
+                "UpdateBoundaryAsync"
               ]
             },
             "UpdateService": {

@@ -4506,5 +4506,585 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for GetBoundary</summary>
+        public void GetBoundaryRequestObject()
+        {
+            // Snippet: GetBoundary(GetBoundaryRequest, CallSettings)
+            // Create client
+            AppHubClient appHubClient = AppHubClient.Create();
+            // Initialize request argument(s)
+            GetBoundaryRequest request = new GetBoundaryRequest
+            {
+                BoundaryName = BoundaryName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            Boundary response = appHubClient.GetBoundary(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBoundaryAsync</summary>
+        public async Task GetBoundaryRequestObjectAsync()
+        {
+            // Snippet: GetBoundaryAsync(GetBoundaryRequest, CallSettings)
+            // Additional: GetBoundaryAsync(GetBoundaryRequest, CancellationToken)
+            // Create client
+            AppHubClient appHubClient = await AppHubClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBoundaryRequest request = new GetBoundaryRequest
+            {
+                BoundaryName = BoundaryName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            Boundary response = await appHubClient.GetBoundaryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBoundary</summary>
+        public void GetBoundary()
+        {
+            // Snippet: GetBoundary(string, CallSettings)
+            // Create client
+            AppHubClient appHubClient = AppHubClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/boundary";
+            // Make the request
+            Boundary response = appHubClient.GetBoundary(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBoundaryAsync</summary>
+        public async Task GetBoundaryAsync()
+        {
+            // Snippet: GetBoundaryAsync(string, CallSettings)
+            // Additional: GetBoundaryAsync(string, CancellationToken)
+            // Create client
+            AppHubClient appHubClient = await AppHubClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/boundary";
+            // Make the request
+            Boundary response = await appHubClient.GetBoundaryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBoundary</summary>
+        public void GetBoundaryResourceNames()
+        {
+            // Snippet: GetBoundary(BoundaryName, CallSettings)
+            // Create client
+            AppHubClient appHubClient = AppHubClient.Create();
+            // Initialize request argument(s)
+            BoundaryName name = BoundaryName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Boundary response = appHubClient.GetBoundary(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBoundaryAsync</summary>
+        public async Task GetBoundaryResourceNamesAsync()
+        {
+            // Snippet: GetBoundaryAsync(BoundaryName, CallSettings)
+            // Additional: GetBoundaryAsync(BoundaryName, CancellationToken)
+            // Create client
+            AppHubClient appHubClient = await AppHubClient.CreateAsync();
+            // Initialize request argument(s)
+            BoundaryName name = BoundaryName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Boundary response = await appHubClient.GetBoundaryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBoundary</summary>
+        public void UpdateBoundaryRequestObject()
+        {
+            // Snippet: UpdateBoundary(UpdateBoundaryRequest, CallSettings)
+            // Create client
+            AppHubClient appHubClient = AppHubClient.Create();
+            // Initialize request argument(s)
+            UpdateBoundaryRequest request = new UpdateBoundaryRequest
+            {
+                UpdateMask = new FieldMask(),
+                Boundary = new Boundary(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Boundary, OperationMetadata> response = appHubClient.UpdateBoundary(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Boundary, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Boundary result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Boundary, OperationMetadata> retrievedResponse = appHubClient.PollOnceUpdateBoundary(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Boundary retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBoundaryAsync</summary>
+        public async Task UpdateBoundaryRequestObjectAsync()
+        {
+            // Snippet: UpdateBoundaryAsync(UpdateBoundaryRequest, CallSettings)
+            // Additional: UpdateBoundaryAsync(UpdateBoundaryRequest, CancellationToken)
+            // Create client
+            AppHubClient appHubClient = await AppHubClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBoundaryRequest request = new UpdateBoundaryRequest
+            {
+                UpdateMask = new FieldMask(),
+                Boundary = new Boundary(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Boundary, OperationMetadata> response = await appHubClient.UpdateBoundaryAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Boundary, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Boundary result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Boundary, OperationMetadata> retrievedResponse = await appHubClient.PollOnceUpdateBoundaryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Boundary retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBoundary</summary>
+        public void UpdateBoundary()
+        {
+            // Snippet: UpdateBoundary(Boundary, FieldMask, CallSettings)
+            // Create client
+            AppHubClient appHubClient = AppHubClient.Create();
+            // Initialize request argument(s)
+            Boundary boundary = new Boundary();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Boundary, OperationMetadata> response = appHubClient.UpdateBoundary(boundary, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Boundary, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Boundary result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Boundary, OperationMetadata> retrievedResponse = appHubClient.PollOnceUpdateBoundary(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Boundary retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBoundaryAsync</summary>
+        public async Task UpdateBoundaryAsync()
+        {
+            // Snippet: UpdateBoundaryAsync(Boundary, FieldMask, CallSettings)
+            // Additional: UpdateBoundaryAsync(Boundary, FieldMask, CancellationToken)
+            // Create client
+            AppHubClient appHubClient = await AppHubClient.CreateAsync();
+            // Initialize request argument(s)
+            Boundary boundary = new Boundary();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Boundary, OperationMetadata> response = await appHubClient.UpdateBoundaryAsync(boundary, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Boundary, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Boundary result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Boundary, OperationMetadata> retrievedResponse = await appHubClient.PollOnceUpdateBoundaryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Boundary retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExtendedMetadataSchema</summary>
+        public void GetExtendedMetadataSchemaRequestObject()
+        {
+            // Snippet: GetExtendedMetadataSchema(GetExtendedMetadataSchemaRequest, CallSettings)
+            // Create client
+            AppHubClient appHubClient = AppHubClient.Create();
+            // Initialize request argument(s)
+            GetExtendedMetadataSchemaRequest request = new GetExtendedMetadataSchemaRequest
+            {
+                ExtendedMetadataSchemaName = ExtendedMetadataSchemaName.FromProjectLocationExtendedMetadataSchema("[PROJECT]", "[LOCATION]", "[EXTENDED_METADATA_SCHEMA]"),
+            };
+            // Make the request
+            ExtendedMetadataSchema response = appHubClient.GetExtendedMetadataSchema(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExtendedMetadataSchemaAsync</summary>
+        public async Task GetExtendedMetadataSchemaRequestObjectAsync()
+        {
+            // Snippet: GetExtendedMetadataSchemaAsync(GetExtendedMetadataSchemaRequest, CallSettings)
+            // Additional: GetExtendedMetadataSchemaAsync(GetExtendedMetadataSchemaRequest, CancellationToken)
+            // Create client
+            AppHubClient appHubClient = await AppHubClient.CreateAsync();
+            // Initialize request argument(s)
+            GetExtendedMetadataSchemaRequest request = new GetExtendedMetadataSchemaRequest
+            {
+                ExtendedMetadataSchemaName = ExtendedMetadataSchemaName.FromProjectLocationExtendedMetadataSchema("[PROJECT]", "[LOCATION]", "[EXTENDED_METADATA_SCHEMA]"),
+            };
+            // Make the request
+            ExtendedMetadataSchema response = await appHubClient.GetExtendedMetadataSchemaAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExtendedMetadataSchema</summary>
+        public void GetExtendedMetadataSchema()
+        {
+            // Snippet: GetExtendedMetadataSchema(string, CallSettings)
+            // Create client
+            AppHubClient appHubClient = AppHubClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/extendedMetadataSchemas/[EXTENDED_METADATA_SCHEMA]";
+            // Make the request
+            ExtendedMetadataSchema response = appHubClient.GetExtendedMetadataSchema(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExtendedMetadataSchemaAsync</summary>
+        public async Task GetExtendedMetadataSchemaAsync()
+        {
+            // Snippet: GetExtendedMetadataSchemaAsync(string, CallSettings)
+            // Additional: GetExtendedMetadataSchemaAsync(string, CancellationToken)
+            // Create client
+            AppHubClient appHubClient = await AppHubClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/extendedMetadataSchemas/[EXTENDED_METADATA_SCHEMA]";
+            // Make the request
+            ExtendedMetadataSchema response = await appHubClient.GetExtendedMetadataSchemaAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExtendedMetadataSchema</summary>
+        public void GetExtendedMetadataSchemaResourceNames()
+        {
+            // Snippet: GetExtendedMetadataSchema(ExtendedMetadataSchemaName, CallSettings)
+            // Create client
+            AppHubClient appHubClient = AppHubClient.Create();
+            // Initialize request argument(s)
+            ExtendedMetadataSchemaName name = ExtendedMetadataSchemaName.FromProjectLocationExtendedMetadataSchema("[PROJECT]", "[LOCATION]", "[EXTENDED_METADATA_SCHEMA]");
+            // Make the request
+            ExtendedMetadataSchema response = appHubClient.GetExtendedMetadataSchema(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetExtendedMetadataSchemaAsync</summary>
+        public async Task GetExtendedMetadataSchemaResourceNamesAsync()
+        {
+            // Snippet: GetExtendedMetadataSchemaAsync(ExtendedMetadataSchemaName, CallSettings)
+            // Additional: GetExtendedMetadataSchemaAsync(ExtendedMetadataSchemaName, CancellationToken)
+            // Create client
+            AppHubClient appHubClient = await AppHubClient.CreateAsync();
+            // Initialize request argument(s)
+            ExtendedMetadataSchemaName name = ExtendedMetadataSchemaName.FromProjectLocationExtendedMetadataSchema("[PROJECT]", "[LOCATION]", "[EXTENDED_METADATA_SCHEMA]");
+            // Make the request
+            ExtendedMetadataSchema response = await appHubClient.GetExtendedMetadataSchemaAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExtendedMetadataSchemas</summary>
+        public void ListExtendedMetadataSchemasRequestObject()
+        {
+            // Snippet: ListExtendedMetadataSchemas(ListExtendedMetadataSchemasRequest, CallSettings)
+            // Create client
+            AppHubClient appHubClient = AppHubClient.Create();
+            // Initialize request argument(s)
+            ListExtendedMetadataSchemasRequest request = new ListExtendedMetadataSchemasRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema> response = appHubClient.ListExtendedMetadataSchemas(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExtendedMetadataSchema item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExtendedMetadataSchemasResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExtendedMetadataSchema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExtendedMetadataSchema> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExtendedMetadataSchema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExtendedMetadataSchemasAsync</summary>
+        public async Task ListExtendedMetadataSchemasRequestObjectAsync()
+        {
+            // Snippet: ListExtendedMetadataSchemasAsync(ListExtendedMetadataSchemasRequest, CallSettings)
+            // Create client
+            AppHubClient appHubClient = await AppHubClient.CreateAsync();
+            // Initialize request argument(s)
+            ListExtendedMetadataSchemasRequest request = new ListExtendedMetadataSchemasRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema> response = appHubClient.ListExtendedMetadataSchemasAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (ExtendedMetadataSchema item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListExtendedMetadataSchemasResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExtendedMetadataSchema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExtendedMetadataSchema> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExtendedMetadataSchema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExtendedMetadataSchemas</summary>
+        public void ListExtendedMetadataSchemas()
+        {
+            // Snippet: ListExtendedMetadataSchemas(string, string, int?, CallSettings)
+            // Create client
+            AppHubClient appHubClient = AppHubClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema> response = appHubClient.ListExtendedMetadataSchemas(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExtendedMetadataSchema item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExtendedMetadataSchemasResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExtendedMetadataSchema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExtendedMetadataSchema> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExtendedMetadataSchema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExtendedMetadataSchemasAsync</summary>
+        public async Task ListExtendedMetadataSchemasAsync()
+        {
+            // Snippet: ListExtendedMetadataSchemasAsync(string, string, int?, CallSettings)
+            // Create client
+            AppHubClient appHubClient = await AppHubClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema> response = appHubClient.ListExtendedMetadataSchemasAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (ExtendedMetadataSchema item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListExtendedMetadataSchemasResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExtendedMetadataSchema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExtendedMetadataSchema> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExtendedMetadataSchema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExtendedMetadataSchemas</summary>
+        public void ListExtendedMetadataSchemasResourceNames()
+        {
+            // Snippet: ListExtendedMetadataSchemas(LocationName, string, int?, CallSettings)
+            // Create client
+            AppHubClient appHubClient = AppHubClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema> response = appHubClient.ListExtendedMetadataSchemas(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ExtendedMetadataSchema item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListExtendedMetadataSchemasResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExtendedMetadataSchema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExtendedMetadataSchema> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExtendedMetadataSchema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListExtendedMetadataSchemasAsync</summary>
+        public async Task ListExtendedMetadataSchemasResourceNamesAsync()
+        {
+            // Snippet: ListExtendedMetadataSchemasAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            AppHubClient appHubClient = await AppHubClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListExtendedMetadataSchemasResponse, ExtendedMetadataSchema> response = appHubClient.ListExtendedMetadataSchemasAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (ExtendedMetadataSchema item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListExtendedMetadataSchemasResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ExtendedMetadataSchema item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ExtendedMetadataSchema> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ExtendedMetadataSchema item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }
