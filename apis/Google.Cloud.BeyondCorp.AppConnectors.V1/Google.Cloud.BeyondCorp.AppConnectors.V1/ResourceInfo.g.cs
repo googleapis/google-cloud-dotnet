@@ -34,20 +34,28 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
             "GAMgASgLMhQuZ29vZ2xlLnByb3RvYnVmLkFueRIoCgR0aW1lGAQgASgLMhou",
             "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJDCgNzdWIYBSADKAsyNi5nb29n",
             "bGUuY2xvdWQuYmV5b25kY29ycC5hcHBjb25uZWN0b3JzLnYxLlJlc291cmNl",
-            "SW5mbyppCgxIZWFsdGhTdGF0dXMSHQoZSEVBTFRIX1NUQVRVU19VTlNQRUNJ",
-            "RklFRBAAEgsKB0hFQUxUSFkQARINCglVTkhFQUxUSFkQAhIQCgxVTlJFU1BP",
-            "TlNJVkUQAxIMCghERUdSQURFRBAEQpwCCixjb20uZ29vZ2xlLmNsb3VkLmJl",
-            "eW9uZGNvcnAuYXBwY29ubmVjdG9ycy52MUIRUmVzb3VyY2VJbmZvUHJvdG9Q",
-            "AVpSY2xvdWQuZ29vZ2xlLmNvbS9nby9iZXlvbmRjb3JwL2FwcGNvbm5lY3Rv",
-            "cnMvYXBpdjEvYXBwY29ubmVjdG9yc3BiO2FwcGNvbm5lY3RvcnNwYqoCKEdv",
-            "b2dsZS5DbG91ZC5CZXlvbmRDb3JwLkFwcENvbm5lY3RvcnMuVjHKAihHb29n",
-            "bGVcQ2xvdWRcQmV5b25kQ29ycFxBcHBDb25uZWN0b3JzXFYx6gIsR29vZ2xl",
-            "OjpDbG91ZDo6QmV5b25kQ29ycDo6QXBwQ29ubmVjdG9yczo6VjFiBnByb3Rv",
-            "Mw=="));
+            "SW5mbyKSAgoWQ29udGFpbmVySGVhbHRoRGV0YWlscxIfChdleHBlY3RlZF9j",
+            "b25maWdfdmVyc2lvbhgBIAEoCRIeChZjdXJyZW50X2NvbmZpZ192ZXJzaW9u",
+            "GAIgASgJEm0KD2V4dGVuZGVkX3N0YXR1cxgDIAMoCzJULmdvb2dsZS5jbG91",
+            "ZC5iZXlvbmRjb3JwLmFwcGNvbm5lY3RvcnMudjEuQ29udGFpbmVySGVhbHRo",
+            "RGV0YWlscy5FeHRlbmRlZFN0YXR1c0VudHJ5EhEKCWVycm9yX21zZxgEIAEo",
+            "CRo1ChNFeHRlbmRlZFN0YXR1c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAEiFAoSUmVtb3RlQWdlbnREZXRhaWxzKmkKDEhlYWx0aFN0",
+            "YXR1cxIdChlIRUFMVEhfU1RBVFVTX1VOU1BFQ0lGSUVEEAASCwoHSEVBTFRI",
+            "WRABEg0KCVVOSEVBTFRIWRACEhAKDFVOUkVTUE9OU0lWRRADEgwKCERFR1JB",
+            "REVEEARCnAIKLGNvbS5nb29nbGUuY2xvdWQuYmV5b25kY29ycC5hcHBjb25u",
+            "ZWN0b3JzLnYxQhFSZXNvdXJjZUluZm9Qcm90b1ABWlJjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2JleW9uZGNvcnAvYXBwY29ubmVjdG9ycy9hcGl2MS9hcHBjb25u",
+            "ZWN0b3JzcGI7YXBwY29ubmVjdG9yc3BiqgIoR29vZ2xlLkNsb3VkLkJleW9u",
+            "ZENvcnAuQXBwQ29ubmVjdG9ycy5WMcoCKEdvb2dsZVxDbG91ZFxCZXlvbmRD",
+            "b3JwXEFwcENvbm5lY3RvcnNcVjHqAixHb29nbGU6OkNsb3VkOjpCZXlvbmRD",
+            "b3JwOjpBcHBDb25uZWN0b3JzOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BeyondCorp.AppConnectors.V1.HealthStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResourceInfo), global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResourceInfo.Parser, new[]{ "Id", "Status", "Resource", "Time", "Sub" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResourceInfo), global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResourceInfo.Parser, new[]{ "Id", "Status", "Resource", "Time", "Sub" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BeyondCorp.AppConnectors.V1.ContainerHealthDetails), global::Google.Cloud.BeyondCorp.AppConnectors.V1.ContainerHealthDetails.Parser, new[]{ "ExpectedConfigVersion", "CurrentConfigVersion", "ExtendedStatus", "ErrorMsg" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BeyondCorp.AppConnectors.V1.RemoteAgentDetails), global::Google.Cloud.BeyondCorp.AppConnectors.V1.RemoteAgentDetails.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -84,16 +92,11 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
 
   #region Messages
   /// <summary>
-  /// ResourceInfo represents the information/status of an app connector resource.
-  /// Such as:
-  /// - remote_agent
-  ///   - container
-  ///     - runtime
-  ///     - appgateway
-  ///       - appconnector
-  ///         - appconnection
-  ///           - tunnel
-  ///       - logagent
+  /// ResourceInfo represents the information or status of an app connector
+  /// resource component that's used to report on various parts of the system. For
+  /// example, ResourceInfo can be used to convey the status of a remote_agent,
+  /// including the status of an appgateway for an runtime environment in a
+  /// container instance.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceInfo : pb::IMessage<ResourceInfo>
@@ -458,6 +461,483 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
             sub_.AddEntriesFrom(ref input, _repeated_sub_codec);
             break;
           }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ContainerHealthDetails reflects the health details of a container.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ContainerHealthDetails : pb::IMessage<ContainerHealthDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ContainerHealthDetails> _parser = new pb::MessageParser<ContainerHealthDetails>(() => new ContainerHealthDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ContainerHealthDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResourceInfoReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContainerHealthDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContainerHealthDetails(ContainerHealthDetails other) : this() {
+      expectedConfigVersion_ = other.expectedConfigVersion_;
+      currentConfigVersion_ = other.currentConfigVersion_;
+      extendedStatus_ = other.extendedStatus_.Clone();
+      errorMsg_ = other.errorMsg_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContainerHealthDetails Clone() {
+      return new ContainerHealthDetails(this);
+    }
+
+    /// <summary>Field number for the "expected_config_version" field.</summary>
+    public const int ExpectedConfigVersionFieldNumber = 1;
+    private string expectedConfigVersion_ = "";
+    /// <summary>
+    /// The version of the expected config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ExpectedConfigVersion {
+      get { return expectedConfigVersion_; }
+      set {
+        expectedConfigVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "current_config_version" field.</summary>
+    public const int CurrentConfigVersionFieldNumber = 2;
+    private string currentConfigVersion_ = "";
+    /// <summary>
+    /// The version of the current config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CurrentConfigVersion {
+      get { return currentConfigVersion_; }
+      set {
+        currentConfigVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "extended_status" field.</summary>
+    public const int ExtendedStatusFieldNumber = 3;
+    private static readonly pbc::MapField<string, string>.Codec _map_extendedStatus_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
+    private readonly pbc::MapField<string, string> extendedStatus_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// The extended status. Such as ExitCode, StartedAt, FinishedAt, etc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> ExtendedStatus {
+      get { return extendedStatus_; }
+    }
+
+    /// <summary>Field number for the "error_msg" field.</summary>
+    public const int ErrorMsgFieldNumber = 4;
+    private string errorMsg_ = "";
+    /// <summary>
+    /// The latest error message.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorMsg {
+      get { return errorMsg_; }
+      set {
+        errorMsg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ContainerHealthDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ContainerHealthDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ExpectedConfigVersion != other.ExpectedConfigVersion) return false;
+      if (CurrentConfigVersion != other.CurrentConfigVersion) return false;
+      if (!ExtendedStatus.Equals(other.ExtendedStatus)) return false;
+      if (ErrorMsg != other.ErrorMsg) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ExpectedConfigVersion.Length != 0) hash ^= ExpectedConfigVersion.GetHashCode();
+      if (CurrentConfigVersion.Length != 0) hash ^= CurrentConfigVersion.GetHashCode();
+      hash ^= ExtendedStatus.GetHashCode();
+      if (ErrorMsg.Length != 0) hash ^= ErrorMsg.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ExpectedConfigVersion.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ExpectedConfigVersion);
+      }
+      if (CurrentConfigVersion.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CurrentConfigVersion);
+      }
+      extendedStatus_.WriteTo(output, _map_extendedStatus_codec);
+      if (ErrorMsg.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ErrorMsg);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ExpectedConfigVersion.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ExpectedConfigVersion);
+      }
+      if (CurrentConfigVersion.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CurrentConfigVersion);
+      }
+      extendedStatus_.WriteTo(ref output, _map_extendedStatus_codec);
+      if (ErrorMsg.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ErrorMsg);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ExpectedConfigVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExpectedConfigVersion);
+      }
+      if (CurrentConfigVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CurrentConfigVersion);
+      }
+      size += extendedStatus_.CalculateSize(_map_extendedStatus_codec);
+      if (ErrorMsg.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMsg);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ContainerHealthDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ExpectedConfigVersion.Length != 0) {
+        ExpectedConfigVersion = other.ExpectedConfigVersion;
+      }
+      if (other.CurrentConfigVersion.Length != 0) {
+        CurrentConfigVersion = other.CurrentConfigVersion;
+      }
+      extendedStatus_.MergeFrom(other.extendedStatus_);
+      if (other.ErrorMsg.Length != 0) {
+        ErrorMsg = other.ErrorMsg;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ExpectedConfigVersion = input.ReadString();
+            break;
+          }
+          case 18: {
+            CurrentConfigVersion = input.ReadString();
+            break;
+          }
+          case 26: {
+            extendedStatus_.AddEntriesFrom(input, _map_extendedStatus_codec);
+            break;
+          }
+          case 34: {
+            ErrorMsg = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ExpectedConfigVersion = input.ReadString();
+            break;
+          }
+          case 18: {
+            CurrentConfigVersion = input.ReadString();
+            break;
+          }
+          case 26: {
+            extendedStatus_.AddEntriesFrom(ref input, _map_extendedStatus_codec);
+            break;
+          }
+          case 34: {
+            ErrorMsg = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// RemoteAgentDetails reflects the details of a remote agent.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RemoteAgentDetails : pb::IMessage<RemoteAgentDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RemoteAgentDetails> _parser = new pb::MessageParser<RemoteAgentDetails>(() => new RemoteAgentDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RemoteAgentDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BeyondCorp.AppConnectors.V1.ResourceInfoReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoteAgentDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoteAgentDetails(RemoteAgentDetails other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoteAgentDetails Clone() {
+      return new RemoteAgentDetails(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RemoteAgentDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RemoteAgentDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RemoteAgentDetails other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
         }
       }
     }

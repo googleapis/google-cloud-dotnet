@@ -16,15 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START beyondcorp_v1_generated_AppConnectorsService_DeleteAppConnector_sync_flattened]
+    // [START beyondcorp_v1_generated_AppConnectorsService_ResolveInstanceConfig_sync_flattened]
     using Google.Cloud.BeyondCorp.AppConnectors.V1;
-    using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
     using System;
 
     public sealed partial class GeneratedAppConnectorsServiceClientSnippets
     {
-        /// <summary>Snippet for DeleteAppConnector</summary>
+        /// <summary>Snippet for ResolveInstanceConfig</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -33,35 +31,17 @@ namespace GoogleCSharpSnippets
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
         [ObsoleteAttribute]
-        public void DeleteAppConnector()
+        public void ResolveInstanceConfig()
         {
             // Create client
             AppConnectorsServiceClient appConnectorsServiceClient = AppConnectorsServiceClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/appConnectors/[APP_CONNECTOR]";
+            string appConnector = "projects/[PROJECT]/locations/[LOCATION]/appConnectors/[APP_CONNECTOR]";
             // Make the request
 #pragma warning disable CS0612
-            Operation<Empty, AppConnectorOperationMetadata> response = appConnectorsServiceClient.DeleteAppConnector(name);
+            ResolveInstanceConfigResponse response = appConnectorsServiceClient.ResolveInstanceConfig(appConnector);
 #pragma warning restore CS0612
-
-            // Poll until the returned long-running operation is complete
-            Operation<Empty, AppConnectorOperationMetadata> completedResponse = response.PollUntilCompleted();
-            // Retrieve the operation result
-            Empty result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-#pragma warning disable CS0612
-            Operation<Empty, AppConnectorOperationMetadata> retrievedResponse = appConnectorsServiceClient.PollOnceDeleteAppConnector(operationName);
-#pragma warning restore CS0612
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                Empty retrievedResult = retrievedResponse.Result;
-            }
         }
     }
-    // [END beyondcorp_v1_generated_AppConnectorsService_DeleteAppConnector_sync_flattened]
+    // [END beyondcorp_v1_generated_AppConnectorsService_ResolveInstanceConfig_sync_flattened]
 }

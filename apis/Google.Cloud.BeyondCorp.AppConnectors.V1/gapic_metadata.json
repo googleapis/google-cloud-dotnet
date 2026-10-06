@@ -40,6 +40,12 @@
                 "ReportStatusAsync"
               ]
             },
+            "ResolveInstanceConfig": {
+              "methods": [
+                "ResolveInstanceConfig",
+                "ResolveInstanceConfigAsync"
+              ]
+            },
             "UpdateAppConnector": {
               "methods": [
                 "UpdateAppConnector",

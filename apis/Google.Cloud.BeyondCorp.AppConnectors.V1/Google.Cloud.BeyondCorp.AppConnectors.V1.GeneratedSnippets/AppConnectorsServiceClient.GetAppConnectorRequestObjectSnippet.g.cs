@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START beyondcorp_v1_generated_AppConnectorsService_GetAppConnector_sync]
     using Google.Cloud.BeyondCorp.AppConnectors.V1;
+    using System;
 
     public sealed partial class GeneratedAppConnectorsServiceClientSnippets
     {
@@ -29,6 +30,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void GetAppConnectorRequestObject()
         {
             // Create client
@@ -39,7 +41,9 @@ namespace GoogleCSharpSnippets
                 AppConnectorName = AppConnectorName.FromProjectLocationAppConnector("[PROJECT]", "[LOCATION]", "[APP_CONNECTOR]"),
             };
             // Make the request
+#pragma warning disable CS0612
             AppConnector response = appConnectorsServiceClient.GetAppConnector(request);
+#pragma warning restore CS0612
         }
     }
     // [END beyondcorp_v1_generated_AppConnectorsService_GetAppConnector_sync]
