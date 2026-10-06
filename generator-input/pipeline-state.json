@@ -5176,7 +5176,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-08-31T19:55:40.663258546Z",
-            "lastGeneratedCommit": "4bdc50ed4dbf1c95a5baffeeb88038f5377143a5",
+            "lastGeneratedCommit": "462426382d347da63e69da7b02d908df2c26ecbe",
             "lastReleasedCommit": "4bdc50ed4dbf1c95a5baffeeb88038f5377143a5",
             "apiPaths": [
                 "google/cloud/apptopology/v1"

@@ -47,45 +47,60 @@ namespace Google.Cloud.AppTopology.V1 {
             "cG9sb2d5UmVzcG9uc2USMQoFZ3JhcGgYASABKAsyIi5nb29nbGUuY2xvdWQu",
             "YXBwdG9wb2xvZ3kudjEuR3JhcGgiSwoQR2V0U2NoZW1hUmVxdWVzdBI3CgRu",
             "YW1lGAEgASgJQingQQL6QSMKIWFwcHRvcG9sb2d5Lmdvb2dsZWFwaXMuY29t",
-            "L1NjaGVtYSJLChBHZXREb21haW5SZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBB",
-            "AvpBIwohYXBwdG9wb2xvZ3kuZ29vZ2xlYXBpcy5jb20vRG9tYWluIoABChJM",
-            "aXN0RG9tYWluc1JlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMSIWFw",
-            "cHRvcG9sb2d5Lmdvb2dsZWFwaXMuY29tL0RvbWFpbhIWCglwYWdlX3NpemUY",
-            "AiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQEiZAoTTGlzdERv",
-            "bWFpbnNSZXNwb25zZRI0Cgdkb21haW5zGAEgAygLMiMuZ29vZ2xlLmNsb3Vk",
-            "LmFwcHRvcG9sb2d5LnYxLkRvbWFpbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiAB",
-            "KAky5gcKC0FwcFRvcG9sb2d5EqMCCiNHZW5lcmF0ZURpc2NvdmVyZWRSZXNv",
-            "dXJjZXNUb3BvbG9neRJHLmdvb2dsZS5jbG91ZC5hcHB0b3BvbG9neS52MS5H",
-            "ZW5lcmF0ZURpc2NvdmVyZWRSZXNvdXJjZXNUb3BvbG9neVJlcXVlc3QaSC5n",
+            "L1NjaGVtYSKvAQoURXhwbG9yZVNjaGVtYVJlcXVlc3QSNwoEbmFtZRgBIAEo",
+            "CUIp4EEC+kEjCiFhcHB0b3BvbG9neS5nb29nbGVhcGlzLmNvbS9TY2hlbWES",
+            "GQoMc3RhcnRfbGFiZWxzGAMgAygJQgPgQQESEgoFZGVwdGgYBCABKAVCA+BB",
+            "ARIWCglwYWdlX3NpemUYBSABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAYgASgJ",
+            "QgPgQQEiqQIKFUV4cGxvcmVTY2hlbWFSZXNwb25zZRI5Cgpub2RlX3R5cGVz",
+            "GAEgAygLMiUuZ29vZ2xlLmNsb3VkLmFwcHRvcG9sb2d5LnYxLk5vZGVUeXBl",
+            "EjkKCmVkZ2VfdHlwZXMYAiADKAsyJS5nb29nbGUuY2xvdWQuYXBwdG9wb2xv",
+            "Z3kudjEuRWRnZVR5cGUSRgoQbGFiZWxfcHJvcGVydGllcxgDIAMoCzIsLmdv",
+            "b2dsZS5jbG91ZC5hcHB0b3BvbG9neS52MS5MYWJlbFByb3BlcnRpZXMSOQoK",
+            "ZWRnZV9ydWxlcxgEIAMoCzIlLmdvb2dsZS5jbG91ZC5hcHB0b3BvbG9neS52",
+            "MS5FZGdlUnVsZRIXCg9uZXh0X3BhZ2VfdG9rZW4YBSABKAkiSwoQR2V0RG9t",
+            "YWluUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIWFwcHRvcG9sb2d5",
+            "Lmdvb2dsZWFwaXMuY29tL0RvbWFpbiKAAQoSTGlzdERvbWFpbnNSZXF1ZXN0",
+            "EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjEiFhcHB0b3BvbG9neS5nb29nbGVh",
+            "cGlzLmNvbS9Eb21haW4SFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFn",
+            "ZV90b2tlbhgDIAEoCUID4EEBImQKE0xpc3REb21haW5zUmVzcG9uc2USNAoH",
+            "ZG9tYWlucxgBIAMoCzIjLmdvb2dsZS5jbG91ZC5hcHB0b3BvbG9neS52MS5E",
+            "b21haW4SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJMq0JCgtBcHBUb3BvbG9n",
+            "eRKjAgojR2VuZXJhdGVEaXNjb3ZlcmVkUmVzb3VyY2VzVG9wb2xvZ3kSRy5n",
             "b29nbGUuY2xvdWQuYXBwdG9wb2xvZ3kudjEuR2VuZXJhdGVEaXNjb3ZlcmVk",
-            "UmVzb3VyY2VzVG9wb2xvZ3lSZXNwb25zZSJp2kEVbmFtZSx0b3BvbG9neV9k",
-            "b21haW5zgtPkkwJLIkYvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9kaXNjb3ZlcmVkUmVzb3VyY2VzVG9wb2xvZ3l9OmdlbmVyYXRlOgEqEqIB",
-            "CglHZXRTY2hlbWESLS5nb29nbGUuY2xvdWQuYXBwdG9wb2xvZ3kudjEuR2V0",
-            "U2NoZW1hUmVxdWVzdBojLmdvb2dsZS5jbG91ZC5hcHB0b3BvbG9neS52MS5T",
-            "Y2hlbWEiQdpBBG5hbWWC0+STAjQSMi92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL2RvbWFpbnMvKi9zY2hlbWF9EpsBCglHZXREb21haW4SLS5n",
-            "b29nbGUuY2xvdWQuYXBwdG9wb2xvZ3kudjEuR2V0RG9tYWluUmVxdWVzdBoj",
-            "Lmdvb2dsZS5jbG91ZC5hcHB0b3BvbG9neS52MS5Eb21haW4iOtpBBG5hbWWC",
-            "0+STAi0SKy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RvbWFp",
-            "bnMvKn0SrgEKC0xpc3REb21haW5zEi8uZ29vZ2xlLmNsb3VkLmFwcHRvcG9s",
-            "b2d5LnYxLkxpc3REb21haW5zUmVxdWVzdBowLmdvb2dsZS5jbG91ZC5hcHB0",
-            "b3BvbG9neS52MS5MaXN0RG9tYWluc1Jlc3BvbnNlIjzaQQZwYXJlbnSC0+ST",
-            "Ai0SKy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2RvbWFp",
-            "bnMavAHKQRphcHB0b3BvbG9neS5nb29nbGVhcGlzLmNvbdJBmwFodHRwczov",
-            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2FwcHRvcG9sb2d5LnJlYWQtb25s",
-            "eSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2FwcHRvcG9sb2d5",
-            "LnJlYWQtd3JpdGUsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
-            "bG91ZC1wbGF0Zm9ybUKOAwofY29tLmdvb2dsZS5jbG91ZC5hcHB0b3BvbG9n",
-            "eS52MUIMU2VydmljZVByb3RvUAFaQWNsb3VkLmdvb2dsZS5jb20vZ28vYXBw",
-            "dG9wb2xvZ3kvYXBpdjEvYXBwdG9wb2xvZ3lwYjthcHB0b3BvbG9neXBiqgIb",
-            "R29vZ2xlLkNsb3VkLkFwcFRvcG9sb2d5LlYxygIbR29vZ2xlXENsb3VkXEFw",
-            "cFRvcG9sb2d5XFYx6gIeR29vZ2xlOjpDbG91ZDo6QXBwVG9wb2xvZ3k6OlYx",
-            "6kG5AQo2YXBwdG9wb2xvZ3kuZ29vZ2xlYXBpcy5jb20vRGlzY292ZXJlZFJl",
-            "c291cmNlc1RvcG9sb2d5EkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vZGlzY292ZXJlZFJlc291cmNlc1RvcG9sb2d5Kh1kaXNj",
-            "b3ZlcmVkUmVzb3VyY2VzVG9wb2xvZ2llczIbZGlzY292ZXJlZFJlc291cmNl",
-            "c1RvcG9sb2d5YgZwcm90bzM="));
+            "UmVzb3VyY2VzVG9wb2xvZ3lSZXF1ZXN0GkguZ29vZ2xlLmNsb3VkLmFwcHRv",
+            "cG9sb2d5LnYxLkdlbmVyYXRlRGlzY292ZXJlZFJlc291cmNlc1RvcG9sb2d5",
+            "UmVzcG9uc2UiadpBFW5hbWUsdG9wb2xvZ3lfZG9tYWluc4LT5JMCSyJGL3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGlzY292ZXJlZFJlc291",
+            "cmNlc1RvcG9sb2d5fTpnZW5lcmF0ZToBKhKiAQoJR2V0U2NoZW1hEi0uZ29v",
+            "Z2xlLmNsb3VkLmFwcHRvcG9sb2d5LnYxLkdldFNjaGVtYVJlcXVlc3QaIy5n",
+            "b29nbGUuY2xvdWQuYXBwdG9wb2xvZ3kudjEuU2NoZW1hIkHaQQRuYW1lgtPk",
+            "kwI0EjIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kb21haW5z",
+            "Lyovc2NoZW1hfRLEAQoNRXhwbG9yZVNjaGVtYRIxLmdvb2dsZS5jbG91ZC5h",
+            "cHB0b3BvbG9neS52MS5FeHBsb3JlU2NoZW1hUmVxdWVzdBoyLmdvb2dsZS5j",
+            "bG91ZC5hcHB0b3BvbG9neS52MS5FeHBsb3JlU2NoZW1hUmVzcG9uc2UiTNpB",
+            "BG5hbWWC0+STAj8iOi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2RvbWFpbnMvKi9zY2hlbWF9OmV4cGxvcmU6ASoSmwEKCUdldERvbWFpbhIt",
+            "Lmdvb2dsZS5jbG91ZC5hcHB0b3BvbG9neS52MS5HZXREb21haW5SZXF1ZXN0",
+            "GiMuZ29vZ2xlLmNsb3VkLmFwcHRvcG9sb2d5LnYxLkRvbWFpbiI62kEEbmFt",
+            "ZYLT5JMCLRIrL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZG9t",
+            "YWlucy8qfRKuAQoLTGlzdERvbWFpbnMSLy5nb29nbGUuY2xvdWQuYXBwdG9w",
+            "b2xvZ3kudjEuTGlzdERvbWFpbnNSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmFw",
+            "cHRvcG9sb2d5LnYxLkxpc3REb21haW5zUmVzcG9uc2UiPNpBBnBhcmVudILT",
+            "5JMCLRIrL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZG9t",
+            "YWlucxq8AcpBGmFwcHRvcG9sb2d5Lmdvb2dsZWFwaXMuY29t0kGbAWh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYXBwdG9wb2xvZ3kucmVhZC1v",
+            "bmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYXBwdG9wb2xv",
+            "Z3kucmVhZC13cml0ZSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
+            "L2Nsb3VkLXBsYXRmb3JtQo4DCh9jb20uZ29vZ2xlLmNsb3VkLmFwcHRvcG9s",
+            "b2d5LnYxQgxTZXJ2aWNlUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9h",
+            "cHB0b3BvbG9neS9hcGl2MS9hcHB0b3BvbG9neXBiO2FwcHRvcG9sb2d5cGKq",
+            "AhtHb29nbGUuQ2xvdWQuQXBwVG9wb2xvZ3kuVjHKAhtHb29nbGVcQ2xvdWRc",
+            "QXBwVG9wb2xvZ3lcVjHqAh5Hb29nbGU6OkNsb3VkOjpBcHBUb3BvbG9neTo6",
+            "VjHqQbkBCjZhcHB0b3BvbG9neS5nb29nbGVhcGlzLmNvbS9EaXNjb3ZlcmVk",
+            "UmVzb3VyY2VzVG9wb2xvZ3kSQ3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9kaXNjb3ZlcmVkUmVzb3VyY2VzVG9wb2xvZ3kqHWRp",
+            "c2NvdmVyZWRSZXNvdXJjZXNUb3BvbG9naWVzMhtkaXNjb3ZlcmVkUmVzb3Vy",
+            "Y2VzVG9wb2xvZ3liBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AppTopology.V1.GraphReflection.Descriptor, global::Google.Cloud.AppTopology.V1.QueryReflection.Descriptor, global::Google.Cloud.AppTopology.V1.SchemaReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -93,6 +108,8 @@ namespace Google.Cloud.AppTopology.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppTopology.V1.GenerateDiscoveredResourcesTopologyRequest), global::Google.Cloud.AppTopology.V1.GenerateDiscoveredResourcesTopologyRequest.Parser, new[]{ "Filter", "Name", "TopologyDomains" }, new[]{ "Query" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppTopology.V1.GenerateDiscoveredResourcesTopologyResponse), global::Google.Cloud.AppTopology.V1.GenerateDiscoveredResourcesTopologyResponse.Parser, new[]{ "Graph" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppTopology.V1.GetSchemaRequest), global::Google.Cloud.AppTopology.V1.GetSchemaRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppTopology.V1.ExploreSchemaRequest), global::Google.Cloud.AppTopology.V1.ExploreSchemaRequest.Parser, new[]{ "Name", "StartLabels", "Depth", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppTopology.V1.ExploreSchemaResponse), global::Google.Cloud.AppTopology.V1.ExploreSchemaResponse.Parser, new[]{ "NodeTypes", "EdgeTypes", "LabelProperties", "EdgeRules", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppTopology.V1.GetDomainRequest), global::Google.Cloud.AppTopology.V1.GetDomainRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppTopology.V1.ListDomainsRequest), global::Google.Cloud.AppTopology.V1.ListDomainsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppTopology.V1.ListDomainsResponse), global::Google.Cloud.AppTopology.V1.ListDomainsResponse.Parser, new[]{ "Domains", "NextPageToken" }, null, null, null, null)
@@ -1311,6 +1328,702 @@ namespace Google.Cloud.AppTopology.V1 {
   }
 
   /// <summary>
+  /// Request for ExploreSchema.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExploreSchemaRequest : pb::IMessage<ExploreSchemaRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExploreSchemaRequest> _parser = new pb::MessageParser<ExploreSchemaRequest>(() => new ExploreSchemaRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExploreSchemaRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AppTopology.V1.ServiceReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExploreSchemaRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExploreSchemaRequest(ExploreSchemaRequest other) : this() {
+      name_ = other.name_;
+      startLabels_ = other.startLabels_.Clone();
+      depth_ = other.depth_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExploreSchemaRequest Clone() {
+      return new ExploreSchemaRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the singleton domain schema resource.
+    /// Format: `projects/{project}/locations/{location}/domains/{domain}/schema`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "start_labels" field.</summary>
+    public const int StartLabelsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_startLabels_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> startLabels_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Starting label names to begin traversal.
+    /// Substring, case-insensitive matches are performed against allowed label
+    /// names in the schema. A maximum of 10 `start_labels` can be specified;
+    /// providing more will result in an `INVALID_ARGUMENT` error.
+    /// If `start_labels` is unset or empty, all authorized node types will be used
+    /// as the starting set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> StartLabels {
+      get { return startLabels_; }
+    }
+
+    /// <summary>Field number for the "depth" field.</summary>
+    public const int DepthFieldNumber = 4;
+    private int depth_;
+    /// <summary>
+    /// Optional. The maximum depth of BFS traversal hops to perform from the
+    /// starting node types or label names. Defaults to 0 if unspecified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Depth {
+      get { return depth_; }
+      set {
+        depth_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 5;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. The maximum number of schema elements to return in a single page.
+    ///
+    /// - The service might return fewer elements than this value if adding another
+    ///   edge and its required endpoint nodes exceeds `page_size`.
+    /// - If omitted or set to 0, default (100) will be used.
+    /// - Minimum page_size is 3 to ensure at least one edge and its endpoint
+    ///   nodes fit on a page; values below 3 (e.g. 1 or 2) are changed to 3.
+    /// - Maximum value is 500.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 6;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. A page token received from a previous `ExploreSchema` call.
+    /// Provide this to retrieve the subsequent page.
+    ///
+    /// When paginating, all other parameters (except page_size) provided to
+    /// `ExploreSchema` must match the call that provided the page token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExploreSchemaRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExploreSchemaRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if(!startLabels_.Equals(other.startLabels_)) return false;
+      if (Depth != other.Depth) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= startLabels_.GetHashCode();
+      if (Depth != 0) hash ^= Depth.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      startLabels_.WriteTo(output, _repeated_startLabels_codec);
+      if (Depth != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Depth);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      startLabels_.WriteTo(ref output, _repeated_startLabels_codec);
+      if (Depth != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Depth);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      size += startLabels_.CalculateSize(_repeated_startLabels_codec);
+      if (Depth != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Depth);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExploreSchemaRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      startLabels_.Add(other.startLabels_);
+      if (other.Depth != 0) {
+        Depth = other.Depth;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            startLabels_.AddEntriesFrom(input, _repeated_startLabels_codec);
+            break;
+          }
+          case 32: {
+            Depth = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            startLabels_.AddEntriesFrom(ref input, _repeated_startLabels_codec);
+            break;
+          }
+          case 32: {
+            Depth = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response for ExploreSchema.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExploreSchemaResponse : pb::IMessage<ExploreSchemaResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExploreSchemaResponse> _parser = new pb::MessageParser<ExploreSchemaResponse>(() => new ExploreSchemaResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExploreSchemaResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AppTopology.V1.ServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExploreSchemaResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExploreSchemaResponse(ExploreSchemaResponse other) : this() {
+      nodeTypes_ = other.nodeTypes_.Clone();
+      edgeTypes_ = other.edgeTypes_.Clone();
+      labelProperties_ = other.labelProperties_.Clone();
+      edgeRules_ = other.edgeRules_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExploreSchemaResponse Clone() {
+      return new ExploreSchemaResponse(this);
+    }
+
+    /// <summary>Field number for the "node_types" field.</summary>
+    public const int NodeTypesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AppTopology.V1.NodeType> _repeated_nodeTypes_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AppTopology.V1.NodeType.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AppTopology.V1.NodeType> nodeTypes_ = new pbc::RepeatedField<global::Google.Cloud.AppTopology.V1.NodeType>();
+    /// <summary>
+    /// A list of `NodeType`s defined within this schema.
+    /// Refer to the documentation of `NodeType` for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AppTopology.V1.NodeType> NodeTypes {
+      get { return nodeTypes_; }
+    }
+
+    /// <summary>Field number for the "edge_types" field.</summary>
+    public const int EdgeTypesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AppTopology.V1.EdgeType> _repeated_edgeTypes_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.AppTopology.V1.EdgeType.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AppTopology.V1.EdgeType> edgeTypes_ = new pbc::RepeatedField<global::Google.Cloud.AppTopology.V1.EdgeType>();
+    /// <summary>
+    /// A list of `EdgeType`s defined within this schema.
+    /// Refer to the documentation of `EdgeType` for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AppTopology.V1.EdgeType> EdgeTypes {
+      get { return edgeTypes_; }
+    }
+
+    /// <summary>Field number for the "label_properties" field.</summary>
+    public const int LabelPropertiesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AppTopology.V1.LabelProperties> _repeated_labelProperties_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.AppTopology.V1.LabelProperties.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AppTopology.V1.LabelProperties> labelProperties_ = new pbc::RepeatedField<global::Google.Cloud.AppTopology.V1.LabelProperties>();
+    /// <summary>
+    /// A list of supported labels and corresponding properties.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AppTopology.V1.LabelProperties> LabelProperties {
+      get { return labelProperties_; }
+    }
+
+    /// <summary>Field number for the "edge_rules" field.</summary>
+    public const int EdgeRulesFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AppTopology.V1.EdgeRule> _repeated_edgeRules_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.AppTopology.V1.EdgeRule.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AppTopology.V1.EdgeRule> edgeRules_ = new pbc::RepeatedField<global::Google.Cloud.AppTopology.V1.EdgeRule>();
+    /// <summary>
+    /// Edge rules. These will indicate which node types can be connected and
+    /// through what edge type. This is a list of (source_node_type, edge_type,
+    /// destination_node_type) tuples.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AppTopology.V1.EdgeRule> EdgeRules {
+      get { return edgeRules_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 5;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token to retrieve the next page of results, or empty if there are no
+    /// more results in the traversal set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExploreSchemaResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExploreSchemaResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!nodeTypes_.Equals(other.nodeTypes_)) return false;
+      if(!edgeTypes_.Equals(other.edgeTypes_)) return false;
+      if(!labelProperties_.Equals(other.labelProperties_)) return false;
+      if(!edgeRules_.Equals(other.edgeRules_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= nodeTypes_.GetHashCode();
+      hash ^= edgeTypes_.GetHashCode();
+      hash ^= labelProperties_.GetHashCode();
+      hash ^= edgeRules_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      nodeTypes_.WriteTo(output, _repeated_nodeTypes_codec);
+      edgeTypes_.WriteTo(output, _repeated_edgeTypes_codec);
+      labelProperties_.WriteTo(output, _repeated_labelProperties_codec);
+      edgeRules_.WriteTo(output, _repeated_edgeRules_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      nodeTypes_.WriteTo(ref output, _repeated_nodeTypes_codec);
+      edgeTypes_.WriteTo(ref output, _repeated_edgeTypes_codec);
+      labelProperties_.WriteTo(ref output, _repeated_labelProperties_codec);
+      edgeRules_.WriteTo(ref output, _repeated_edgeRules_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += nodeTypes_.CalculateSize(_repeated_nodeTypes_codec);
+      size += edgeTypes_.CalculateSize(_repeated_edgeTypes_codec);
+      size += labelProperties_.CalculateSize(_repeated_labelProperties_codec);
+      size += edgeRules_.CalculateSize(_repeated_edgeRules_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExploreSchemaResponse other) {
+      if (other == null) {
+        return;
+      }
+      nodeTypes_.Add(other.nodeTypes_);
+      edgeTypes_.Add(other.edgeTypes_);
+      labelProperties_.Add(other.labelProperties_);
+      edgeRules_.Add(other.edgeRules_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            nodeTypes_.AddEntriesFrom(input, _repeated_nodeTypes_codec);
+            break;
+          }
+          case 18: {
+            edgeTypes_.AddEntriesFrom(input, _repeated_edgeTypes_codec);
+            break;
+          }
+          case 26: {
+            labelProperties_.AddEntriesFrom(input, _repeated_labelProperties_codec);
+            break;
+          }
+          case 34: {
+            edgeRules_.AddEntriesFrom(input, _repeated_edgeRules_codec);
+            break;
+          }
+          case 42: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            nodeTypes_.AddEntriesFrom(ref input, _repeated_nodeTypes_codec);
+            break;
+          }
+          case 18: {
+            edgeTypes_.AddEntriesFrom(ref input, _repeated_edgeTypes_codec);
+            break;
+          }
+          case 26: {
+            labelProperties_.AddEntriesFrom(ref input, _repeated_labelProperties_codec);
+            break;
+          }
+          case 34: {
+            edgeRules_.AddEntriesFrom(ref input, _repeated_edgeRules_codec);
+            break;
+          }
+          case 42: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request for GetDomain.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1328,7 +2041,7 @@ namespace Google.Cloud.AppTopology.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AppTopology.V1.ServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.AppTopology.V1.ServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1533,7 +2246,7 @@ namespace Google.Cloud.AppTopology.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AppTopology.V1.ServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.AppTopology.V1.ServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1825,7 +2538,7 @@ namespace Google.Cloud.AppTopology.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AppTopology.V1.ServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.AppTopology.V1.ServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
