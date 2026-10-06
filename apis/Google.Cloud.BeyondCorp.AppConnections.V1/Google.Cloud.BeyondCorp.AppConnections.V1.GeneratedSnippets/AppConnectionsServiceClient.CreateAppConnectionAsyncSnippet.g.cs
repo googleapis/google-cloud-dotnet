@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START beyondcorp_v1_generated_AppConnectionsService_CreateAppConnection_async_flattened]
     using Google.Cloud.BeyondCorp.AppConnections.V1;
     using Google.LongRunning;
+    using System;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedAppConnectionsServiceClientSnippets
@@ -31,6 +32,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task CreateAppConnectionAsync()
         {
             // Create client
@@ -40,7 +42,9 @@ namespace GoogleCSharpSnippets
             AppConnection appConnection = new AppConnection();
             string appConnectionId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AppConnection, AppConnectionOperationMetadata> response = await appConnectionsServiceClient.CreateAppConnectionAsync(parent, appConnection, appConnectionId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<AppConnection, AppConnectionOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -50,7 +54,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AppConnection, AppConnectionOperationMetadata> retrievedResponse = await appConnectionsServiceClient.PollOnceCreateAppConnectionAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

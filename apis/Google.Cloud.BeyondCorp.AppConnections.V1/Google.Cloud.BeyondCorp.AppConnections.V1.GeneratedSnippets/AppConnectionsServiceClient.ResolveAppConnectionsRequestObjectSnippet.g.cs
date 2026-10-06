@@ -32,6 +32,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void ResolveAppConnectionsRequestObject()
         {
             // Create client
@@ -43,7 +44,9 @@ namespace GoogleCSharpSnippets
                 AppConnectorIdAsAppConnectorName = AppConnectorName.FromProjectLocationAppConnector("[PROJECT]", "[LOCATION]", "[APP_CONNECTOR]"),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ResolveAppConnectionsResponse, ResolveAppConnectionsResponse.Types.AppConnectionDetails> response = appConnectionsServiceClient.ResolveAppConnections(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (ResolveAppConnectionsResponse.Types.AppConnectionDetails item in response)
