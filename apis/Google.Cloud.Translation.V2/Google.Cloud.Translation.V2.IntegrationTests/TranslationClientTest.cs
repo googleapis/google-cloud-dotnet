@@ -66,8 +66,6 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
             var translation = client.TranslateText(LargeText, LanguageCodes.French, LanguageCodes.English);
             Assert.Equal(LargeText, translation.OriginalText);
             Assert.Equal(LanguageCodes.French, translation.TargetLanguage);
-            // b/562194171
-            // Assert.Null(translation.DetectedSourceLanguage);
             Assert.Equal(LanguageCodes.English, translation.SpecifiedSourceLanguage);
         }
 
